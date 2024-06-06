@@ -35,16 +35,18 @@ public class CreateSnapshotRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/createSnapshot", rawUrl);
     }
     /**
-     * Invoke action createSnapshot
+     * Create a snapshot for a specific Cloud PC device.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-createsnapshot?view=graph-rest-beta">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Invoke action createSnapshot
+     * Create a snapshot for a specific Cloud PC device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-createsnapshot?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
@@ -53,7 +55,7 @@ public class CreateSnapshotRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action createSnapshot
+     * Create a snapshot for a specific Cloud PC device.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +63,7 @@ public class CreateSnapshotRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action createSnapshot
+     * Create a snapshot for a specific Cloud PC device.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

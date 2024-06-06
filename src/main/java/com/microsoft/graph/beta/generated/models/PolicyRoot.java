@@ -198,6 +198,7 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("mobileAppManagementPolicies", (n) -> { this.setMobileAppManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileDeviceManagementPolicies", (n) -> { this.setMobileDeviceManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("permissionGrantPolicies", (n) -> { this.setPermissionGrantPolicies(n.getCollectionOfObjectValues(PermissionGrantPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("permissionGrantPreApprovalPolicies", (n) -> { this.setPermissionGrantPreApprovalPolicies(n.getCollectionOfObjectValues(PermissionGrantPreApprovalPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("roleManagementPolicies", (n) -> { this.setRoleManagementPolicies(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("roleManagementPolicyAssignments", (n) -> { this.setRoleManagementPolicyAssignments(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePrincipalCreationPolicies", (n) -> { this.setServicePrincipalCreationPolicies(n.getCollectionOfObjectValues(ServicePrincipalCreationPolicy::createFromDiscriminatorValue)); });
@@ -244,6 +245,14 @@ public class PolicyRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<PermissionGrantPolicy> getPermissionGrantPolicies() {
         return this.backingStore.get("permissionGrantPolicies");
+    }
+    /**
+     * Gets the permissionGrantPreApprovalPolicies property value. Policies that specify the conditions under which consent can be granted to a specific application.
+     * @return a {@link java.util.List<PermissionGrantPreApprovalPolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PermissionGrantPreApprovalPolicy> getPermissionGrantPreApprovalPolicies() {
+        return this.backingStore.get("permissionGrantPreApprovalPolicies");
     }
     /**
      * Gets the roleManagementPolicies property value. Represents the role management policies.
@@ -315,6 +324,7 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("mobileAppManagementPolicies", this.getMobileAppManagementPolicies());
         writer.writeCollectionOfObjectValues("mobileDeviceManagementPolicies", this.getMobileDeviceManagementPolicies());
         writer.writeCollectionOfObjectValues("permissionGrantPolicies", this.getPermissionGrantPolicies());
+        writer.writeCollectionOfObjectValues("permissionGrantPreApprovalPolicies", this.getPermissionGrantPreApprovalPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicies", this.getRoleManagementPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicyAssignments", this.getRoleManagementPolicyAssignments());
         writer.writeCollectionOfObjectValues("servicePrincipalCreationPolicies", this.getServicePrincipalCreationPolicies());
@@ -481,6 +491,13 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setPermissionGrantPolicies(@jakarta.annotation.Nullable final java.util.List<PermissionGrantPolicy> value) {
         this.backingStore.set("permissionGrantPolicies", value);
+    }
+    /**
+     * Sets the permissionGrantPreApprovalPolicies property value. Policies that specify the conditions under which consent can be granted to a specific application.
+     * @param value Value to set for the permissionGrantPreApprovalPolicies property.
+     */
+    public void setPermissionGrantPreApprovalPolicies(@jakarta.annotation.Nullable final java.util.List<PermissionGrantPreApprovalPolicy> value) {
+        this.backingStore.set("permissionGrantPreApprovalPolicies", value);
     }
     /**
      * Sets the roleManagementPolicies property value. Represents the role management policies.

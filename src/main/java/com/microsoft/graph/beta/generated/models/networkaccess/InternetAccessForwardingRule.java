@@ -32,7 +32,25 @@ public class InternetAccessForwardingRule extends ForwardingRule implements Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ports", (n) -> { this.setPorts(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("protocol", (n) -> { this.setProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the ports property value. The ports property
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getPorts() {
+        return this.backingStore.get("ports");
+    }
+    /**
+     * Gets the protocol property value. The protocol property
+     * @return a {@link NetworkingProtocol}
+     */
+    @jakarta.annotation.Nullable
+    public NetworkingProtocol getProtocol() {
+        return this.backingStore.get("protocol");
     }
     /**
      * Serializes information the current object
@@ -41,5 +59,21 @@ public class InternetAccessForwardingRule extends ForwardingRule implements Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfPrimitiveValues("ports", this.getPorts());
+        writer.writeEnumValue("protocol", this.getProtocol());
+    }
+    /**
+     * Sets the ports property value. The ports property
+     * @param value Value to set for the ports property.
+     */
+    public void setPorts(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("ports", value);
+    }
+    /**
+     * Sets the protocol property value. The protocol property
+     * @param value Value to set for the protocol property.
+     */
+    public void setProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
+        this.backingStore.set("protocol", value);
     }
 }

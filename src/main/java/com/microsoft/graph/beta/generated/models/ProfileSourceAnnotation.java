@@ -85,7 +85,7 @@ public class ProfileSourceAnnotation implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the properties property value. The names of properties that have data from this source.
+     * Gets the properties property value. Names of properties that have data from this source.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class ProfileSourceAnnotation implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the properties property value. The names of properties that have data from this source.
+     * Sets the properties property value. Names of properties that have data from this source.
      * @param value Value to set for the properties property.
      */
     public void setProperties(@jakarta.annotation.Nullable final java.util.List<String> value) {

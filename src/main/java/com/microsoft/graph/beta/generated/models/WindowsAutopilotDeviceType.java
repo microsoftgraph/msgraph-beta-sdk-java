@@ -5,17 +5,17 @@ import java.util.Objects;
 
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum WindowsAutopilotDeviceType implements ValuedEnum {
-    /** Windows PC */
+    /** Default. Indicates that the device type  is a Windows PC. */
     WindowsPc("windowsPc"),
+    /** Indicates that the device type is a HoloLens. */
+    HoloLens("holoLens"),
     /** Surface Hub 2 */
     SurfaceHub2("surfaceHub2"),
-    /** HoloLens */
-    HoloLens("holoLens"),
     /** SurfaceHub2S */
     SurfaceHub2S("surfaceHub2S"),
     /** VirtualMachine */
     VirtualMachine("virtualMachine"),
-    /** Placeholder for evolvable enum, but this enum is never returned to the caller, so it shouldn't be necessary.          */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsAutopilotDeviceType(final String value) {
@@ -28,8 +28,8 @@ public enum WindowsAutopilotDeviceType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "windowsPc": return WindowsPc;
-            case "surfaceHub2": return SurfaceHub2;
             case "holoLens": return HoloLens;
+            case "surfaceHub2": return SurfaceHub2;
             case "surfaceHub2S": return SurfaceHub2S;
             case "virtualMachine": return VirtualMachine;
             case "unknownFutureValue": return UnknownFutureValue;

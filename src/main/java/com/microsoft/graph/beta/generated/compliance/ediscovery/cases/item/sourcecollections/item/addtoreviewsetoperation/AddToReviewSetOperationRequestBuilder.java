@@ -37,11 +37,12 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/compliance/ediscovery/cases/{case%2Did}/sourceCollections/{sourceCollection%2Did}/addToReviewSetOperation{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      * @return a {@link AddToReviewSetOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-addtoreviewsetoperation?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -49,12 +50,13 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AddToReviewSetOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-list-addtoreviewsetoperation?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -65,7 +67,7 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AddToReviewSetOperation::createFromDiscriminatorValue);
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      * @return a {@link RequestInformation}
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
@@ -76,7 +78,7 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -104,7 +106,7 @@ public class AddToReviewSetOperationRequestBuilder extends BaseRequestBuilder {
         return new AddToReviewSetOperationRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Adds the results of the sourceCollection to the specified reviewSet.
+     * Get the last addToReviewSetOperation object associated with a source collection. 
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

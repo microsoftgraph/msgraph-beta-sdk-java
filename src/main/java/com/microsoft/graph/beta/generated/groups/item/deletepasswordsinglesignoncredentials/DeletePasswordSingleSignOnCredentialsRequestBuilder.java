@@ -35,18 +35,20 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/deletePasswordSingleSignOnCredentials", rawUrl);
     }
     /**
-     * Invoke action deletePasswordSingleSignOnCredentials
+     * Delete the password-based single sign-on credentials for a given group to a given service principal.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-deletepasswordsinglesignoncredentials?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final DeletePasswordSingleSignOnCredentialsPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action deletePasswordSingleSignOnCredentials
+     * Delete the password-based single sign-on credentials for a given group to a given service principal.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/group-deletepasswordsinglesignoncredentials?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final DeletePasswordSingleSignOnCredentialsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -56,7 +58,7 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action deletePasswordSingleSignOnCredentials
+     * Delete the password-based single sign-on credentials for a given group to a given service principal.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +67,7 @@ public class DeletePasswordSingleSignOnCredentialsRequestBuilder extends BaseReq
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action deletePasswordSingleSignOnCredentials
+     * Delete the password-based single sign-on credentials for a given group to a given service principal.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

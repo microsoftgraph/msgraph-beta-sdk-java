@@ -64,19 +64,21 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The configuration of Planner plans that will be created for the scenario.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      * @return a {@link PlannerPlanConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfiguration get() {
         return get(null);
     }
     /**
-     * The configuration of Planner plans that will be created for the scenario.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlanConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +88,23 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property planConfiguration in solutions
+     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
      * @return a {@link PlannerPlanConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfiguration patch(@jakarta.annotation.Nonnull final PlannerPlanConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property planConfiguration in solutions
+     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlanConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfiguration patch(@jakarta.annotation.Nonnull final PlannerPlanConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -131,7 +135,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The configuration of Planner plans that will be created for the scenario.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +143,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The configuration of Planner plans that will be created for the scenario.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property planConfiguration in solutions
+     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +164,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property planConfiguration in solutions
+     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +195,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The configuration of Planner plans that will be created for the scenario.
+     * Read the properties and relationships of a plannerPlanConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -43,6 +43,8 @@ public class RelatedResource implements AdditionalDataHolder, BackedModel, Parsa
                 case "#microsoft.graph.networkaccess.relatedRemoteNetwork": return new RelatedRemoteNetwork();
                 case "#microsoft.graph.networkaccess.relatedTenant": return new RelatedTenant();
                 case "#microsoft.graph.networkaccess.relatedThreatIntelligence": return new RelatedThreatIntelligence();
+                case "#microsoft.graph.networkaccess.relatedToken": return new RelatedToken();
+                case "#microsoft.graph.networkaccess.relatedUser": return new RelatedUser();
                 case "#microsoft.graph.networkaccess.relatedWebCategory": return new RelatedWebCategory();
             }
         }

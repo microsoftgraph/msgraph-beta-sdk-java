@@ -21,7 +21,9 @@ public enum ElevationRequestState implements ValuedEnum {
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue"),
     /** Set to expire when Approved for is elapsed or ExpireDate is elapsed, whichever is sooner. */
-    Revoked("revoked");
+    Revoked("revoked"),
+    /** Indicates an elevation request that was previously approved and expired has been completed. */
+    Completed("completed");
     public final String value;
     ElevationRequestState(final String value) {
         this.value = value;
@@ -39,6 +41,7 @@ public enum ElevationRequestState implements ValuedEnum {
             case "expired": return Expired;
             case "unknownFutureValue": return UnknownFutureValue;
             case "revoked": return Revoked;
+            case "completed": return Completed;
             default: return null;
         }
     }

@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.domains.item.federationconfiguration.FederationC
 import com.microsoft.graph.beta.domains.item.forcedelete.ForceDeleteRequestBuilder;
 import com.microsoft.graph.beta.domains.item.promote.PromoteRequestBuilder;
 import com.microsoft.graph.beta.domains.item.promotetoinitial.PromoteToInitialRequestBuilder;
+import com.microsoft.graph.beta.domains.item.rootdomain.RootDomainRequestBuilder;
 import com.microsoft.graph.beta.domains.item.serviceconfigurationrecords.ServiceConfigurationRecordsRequestBuilder;
 import com.microsoft.graph.beta.domains.item.sharedemaildomaininvitations.SharedEmailDomainInvitationsRequestBuilder;
 import com.microsoft.graph.beta.domains.item.verificationdnsrecords.VerificationDnsRecordsRequestBuilder;
@@ -68,6 +69,14 @@ public class DomainItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PromoteToInitialRequestBuilder promoteToInitial() {
         return new PromoteToInitialRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the rootDomain property of the microsoft.graph.domain entity.
+     * @return a {@link RootDomainRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RootDomainRequestBuilder rootDomain() {
+        return new RootDomainRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.

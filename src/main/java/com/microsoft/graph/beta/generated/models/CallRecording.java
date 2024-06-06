@@ -26,7 +26,7 @@ public class CallRecording extends Entity implements Parsable {
         return new CallRecording();
     }
     /**
-     * Gets the callId property value. The callId property
+     * Gets the callId property value. The unique identifier for the call that is related to this recording. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class CallRecording extends Entity implements Parsable {
         return this.backingStore.get("content");
     }
     /**
-     * Gets the contentCorrelationId property value. The contentCorrelationId property
+     * Gets the contentCorrelationId property value. The unique identifier that links the transcript with its corresponding recording. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class CallRecording extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. Date and time at which the recording ends. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class CallRecording extends Entity implements Parsable {
         return this.backingStore.get("meetingOrganizerId");
     }
     /**
-     * Gets the recordingContentUrl property value. The URL which can be used to access the content of the recording. Read-only.
+     * Gets the recordingContentUrl property value. The URL that can be used to access the content of the recording. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class CallRecording extends Entity implements Parsable {
         writer.writeStringValue("recordingContentUrl", this.getRecordingContentUrl());
     }
     /**
-     * Sets the callId property value. The callId property
+     * Sets the callId property value. The unique identifier for the call that is related to this recording. Read-only.
      * @param value Value to set for the callId property.
      */
     public void setCallId(@jakarta.annotation.Nullable final String value) {
@@ -147,7 +147,7 @@ public class CallRecording extends Entity implements Parsable {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the contentCorrelationId property value. The contentCorrelationId property
+     * Sets the contentCorrelationId property value. The unique identifier that links the transcript with its corresponding recording. Read-only.
      * @param value Value to set for the contentCorrelationId property.
      */
     public void setContentCorrelationId(@jakarta.annotation.Nullable final String value) {
@@ -161,7 +161,7 @@ public class CallRecording extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. Date and time at which the recording ends. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -189,7 +189,7 @@ public class CallRecording extends Entity implements Parsable {
         this.backingStore.set("meetingOrganizerId", value);
     }
     /**
-     * Sets the recordingContentUrl property value. The URL which can be used to access the content of the recording. Read-only.
+     * Sets the recordingContentUrl property value. The URL that can be used to access the content of the recording. Read-only.
      * @param value Value to set for the recordingContentUrl property.
      */
     public void setRecordingContentUrl(@jakarta.annotation.Nullable final String value) {

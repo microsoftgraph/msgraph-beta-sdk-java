@@ -85,7 +85,7 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("isAdminConfigurable");
     }
     /**
-     * Gets the localAdmins property value. The localAdmins property
+     * Gets the localAdmins property value. Determines who becomes a local administrator on joined devices.
      * @return a {@link LocalAdminSettings}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class AzureADJoinPolicy implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("isAdminConfigurable", value);
     }
     /**
-     * Sets the localAdmins property value. The localAdmins property
+     * Sets the localAdmins property value. Determines who becomes a local administrator on joined devices.
      * @param value Value to set for the localAdmins property.
      */
     public void setLocalAdmins(@jakarta.annotation.Nullable final LocalAdminSettings value) {
