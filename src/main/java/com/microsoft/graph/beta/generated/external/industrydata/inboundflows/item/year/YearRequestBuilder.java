@@ -37,7 +37,7 @@ public class YearRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}/year{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The year that the data brought in via this flow applies to.
+     * The year associated to the data that this flow brings in.
      * @return a {@link YearTimePeriodDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class YearRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The year that the data brought in via this flow applies to.
+     * The year associated to the data that this flow brings in.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link YearTimePeriodDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class YearRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, YearTimePeriodDefinition::createFromDiscriminatorValue);
     }
     /**
-     * The year that the data brought in via this flow applies to.
+     * The year associated to the data that this flow brings in.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class YearRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The year that the data brought in via this flow applies to.
+     * The year associated to the data that this flow brings in.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class YearRequestBuilder extends BaseRequestBuilder {
         return new YearRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The year that the data brought in via this flow applies to.
+     * The year associated to the data that this flow brings in.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

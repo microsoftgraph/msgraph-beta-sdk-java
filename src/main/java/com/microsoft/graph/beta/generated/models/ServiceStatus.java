@@ -78,10 +78,12 @@ public class ServiceStatus implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("backupServiceConsumer", (n) -> { this.setBackupServiceConsumer(n.getEnumValue(BackupServiceConsumer::forValue)); });
         deserializerMap.put("disableReason", (n) -> { this.setDisableReason(n.getEnumValue(DisableReason::forValue)); });
         deserializerMap.put("gracePeriodDateTime", (n) -> { this.setGracePeriodDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restoreAllowedTillDateTime", (n) -> { this.setRestoreAllowedTillDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BackupServiceStatus::forValue)); });
@@ -94,6 +96,22 @@ public class ServiceStatus implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nullable
     public OffsetDateTime getGracePeriodDateTime() {
         return this.backingStore.get("gracePeriodDateTime");
+    }
+    /**
+     * Gets the lastModifiedBy property value. Identity of the person who last modified the entity.
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getLastModifiedBy() {
+        return this.backingStore.get("lastModifiedBy");
+    }
+    /**
+     * Gets the lastModifiedDateTime property value. Timestamp of the last modification of the entity.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -128,6 +146,8 @@ public class ServiceStatus implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeEnumValue("backupServiceConsumer", this.getBackupServiceConsumer());
         writer.writeEnumValue("disableReason", this.getDisableReason());
         writer.writeOffsetDateTimeValue("gracePeriodDateTime", this.getGracePeriodDateTime());
+        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
+        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("restoreAllowedTillDateTime", this.getRestoreAllowedTillDateTime());
         writer.writeEnumValue("status", this.getStatus());
@@ -168,6 +188,20 @@ public class ServiceStatus implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setGracePeriodDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("gracePeriodDateTime", value);
+    }
+    /**
+     * Sets the lastModifiedBy property value. Identity of the person who last modified the entity.
+     * @param value Value to set for the lastModifiedBy property.
+     */
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("lastModifiedBy", value);
+    }
+    /**
+     * Sets the lastModifiedDateTime property value. Timestamp of the last modification of the entity.
+     * @param value Value to set for the lastModifiedDateTime property.
+     */
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

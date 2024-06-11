@@ -67,7 +67,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("assignedToTaskBoardFormat");
     }
     /**
-     * Gets the assigneePriority property value. A hint that is used to order items of this type in a list view. For more information, see Using order hints in Planner.
+     * Gets the assigneePriority property value. A hint that is used to order items of this type in a list view. For more information, see Using order hints in planner.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("details");
     }
     /**
-     * Gets the dueDateTime property value. The date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Gets the dueDateTime property value. The date and time at which the task is due. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -228,7 +228,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("isArchived");
     }
     /**
-     * Gets the isOnMyDay property value. A Boolean value that indicates whether to show this task in the MyDay view. true to show the task. Otherwise, false.
+     * Gets the isOnMyDay property value. Indicates whether to show this task in the MyDay view. If true, it shows the task.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -244,7 +244,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("isOnMyDayLastModifiedDate");
     }
     /**
-     * Gets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in Plannern.
+     * Gets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in plannern.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -276,7 +276,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("previewType");
     }
     /**
-     * Gets the priority property value. The priority of the task. Valid values are between 0 and 10, inclusive. Larger values indicate lower priority. For example, 0 has the highest priority and 10 has the lowest priority. Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'. Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+     * Gets the priority property value. The priority of the task. Valid values are between 0 and 10, inclusive. Larger values indicate lower priority. For example, 0 has the highest priority and 10 has the lowest priority. Currently, planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'. Currently, planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -400,7 +400,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("assignedToTaskBoardFormat", value);
     }
     /**
-     * Sets the assigneePriority property value. A hint that is used to order items of this type in a list view. For more information, see Using order hints in Planner.
+     * Sets the assigneePriority property value. A hint that is used to order items of this type in a list view. For more information, see Using order hints in planner.
      * @param value Value to set for the assigneePriority property.
      */
     public void setAssigneePriority(@jakarta.annotation.Nullable final String value) {
@@ -484,7 +484,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("details", value);
     }
     /**
-     * Sets the dueDateTime property value. The date and time at which the task is due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
+     * Sets the dueDateTime property value. The date and time at which the task is due. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -505,7 +505,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("isArchived", value);
     }
     /**
-     * Sets the isOnMyDay property value. A Boolean value that indicates whether to show this task in the MyDay view. true to show the task. Otherwise, false.
+     * Sets the isOnMyDay property value. Indicates whether to show this task in the MyDay view. If true, it shows the task.
      * @param value Value to set for the isOnMyDay property.
      */
     public void setIsOnMyDay(@jakarta.annotation.Nullable final Boolean value) {
@@ -519,7 +519,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("isOnMyDayLastModifiedDate", value);
     }
     /**
-     * Sets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in Plannern.
+     * Sets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in plannern.
      * @param value Value to set for the orderHint property.
      */
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
@@ -547,7 +547,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("previewType", value);
     }
     /**
-     * Sets the priority property value. The priority of the task. Valid values are between 0 and 10, inclusive. Larger values indicate lower priority. For example, 0 has the highest priority and 10 has the lowest priority. Currently, Planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'. Currently, Planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
+     * Sets the priority property value. The priority of the task. Valid values are between 0 and 10, inclusive. Larger values indicate lower priority. For example, 0 has the highest priority and 10 has the lowest priority. Currently, planner interprets values 0 and 1 as 'urgent', 2 and 3 and 4 as 'important', 5, 6, and 7 as 'medium', and 8, 9, and 10 as 'low'. Currently, planner sets the value 1 for 'urgent', 3 for 'important', 5 for 'medium', and 9 for 'low'.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {

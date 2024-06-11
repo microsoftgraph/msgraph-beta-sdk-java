@@ -37,7 +37,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/external/industryData/inboundFlows/{inboundFlow%2Did}/dataConnector{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The data connector in the context of which this flow pulls in data from a source system.
+     * The data connector to the source system from where this flow gets its data.
      * @return a {@link IndustryDataConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The data connector in the context of which this flow pulls in data from a source system.
+     * The data connector to the source system from where this flow gets its data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IndustryDataConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataConnector::createFromDiscriminatorValue);
     }
     /**
-     * The data connector in the context of which this flow pulls in data from a source system.
+     * The data connector to the source system from where this flow gets its data.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The data connector in the context of which this flow pulls in data from a source system.
+     * The data connector to the source system from where this flow gets its data.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class DataConnectorRequestBuilder extends BaseRequestBuilder {
         return new DataConnectorRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The data connector in the context of which this flow pulls in data from a source system.
+     * The data connector to the source system from where this flow gets its data.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
