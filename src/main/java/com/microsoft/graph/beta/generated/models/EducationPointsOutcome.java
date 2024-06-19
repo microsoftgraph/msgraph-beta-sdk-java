@@ -37,7 +37,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the points property value. The numeric grade the teacher has given the student for this assignment.
+     * Gets the points property value. The numeric grade that the teacher gave the student for this assignment.
      * @return a {@link EducationAssignmentPointsGrade}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class EducationPointsOutcome extends EducationOutcome implements Parsable
         writer.writeObjectValue("publishedPoints", this.getPublishedPoints());
     }
     /**
-     * Sets the points property value. The numeric grade the teacher has given the student for this assignment.
+     * Sets the points property value. The numeric grade that the teacher gave the student for this assignment.
      * @param value Value to set for the points property.
      */
     public void setPoints(@jakarta.annotation.Nullable final EducationAssignmentPointsGrade value) {

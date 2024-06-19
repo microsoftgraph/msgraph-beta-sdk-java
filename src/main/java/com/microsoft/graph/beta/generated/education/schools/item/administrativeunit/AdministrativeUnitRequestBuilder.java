@@ -40,7 +40,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
      * Retrieve the directory administrativeUnit that corresponds to this educationSchool.
      * @return a {@link AdministrativeUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get-administrativeUnit?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get-administrativeunit?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdministrativeUnit get() {
@@ -51,7 +51,7 @@ public class AdministrativeUnitRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AdministrativeUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get-administrativeUnit?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationschool-get-administrativeunit?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AdministrativeUnit get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

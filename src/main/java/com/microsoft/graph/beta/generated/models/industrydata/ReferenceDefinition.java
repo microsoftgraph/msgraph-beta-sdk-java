@@ -43,6 +43,14 @@ public class ReferenceDefinition extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
+     * Gets the displayName property value. A human-readable representation of the reference code value for display in a user interface.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDisplayName() {
+        return this.backingStore.get("displayName");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -51,6 +59,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("code", (n) -> { this.setCode(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isDisabled", (n) -> { this.setIsDisabled(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("referenceType", (n) -> { this.setReferenceType(n.getStringValue()); });
@@ -59,7 +68,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isDisabled property value. Indicates whether the definition has been disabled.
+     * Gets the isDisabled property value. Indicates whether the definition is disabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +92,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
         return this.backingStore.get("referenceType");
     }
     /**
-     * Gets the sortIndex property value. The ordering index to present the definitions within a type consistently in user interfaces.
+     * Gets the sortIndex property value. The index that specifies the order in which to present the definition to the user. Must be unique within the referenceType.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -106,6 +115,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("code", this.getCode());
+        writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("isDisabled", this.getIsDisabled());
         writer.writeStringValue("referenceType", this.getReferenceType());
         writer.writeIntegerValue("sortIndex", this.getSortIndex());
@@ -125,7 +135,14 @@ public class ReferenceDefinition extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the isDisabled property value. Indicates whether the definition has been disabled.
+     * Sets the displayName property value. A human-readable representation of the reference code value for display in a user interface.
+     * @param value Value to set for the displayName property.
+     */
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the isDisabled property value. Indicates whether the definition is disabled.
      * @param value Value to set for the isDisabled property.
      */
     public void setIsDisabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -146,7 +163,7 @@ public class ReferenceDefinition extends Entity implements Parsable {
         this.backingStore.set("referenceType", value);
     }
     /**
-     * Sets the sortIndex property value. The ordering index to present the definitions within a type consistently in user interfaces.
+     * Sets the sortIndex property value. The index that specifies the order in which to present the definition to the user. Must be unique within the referenceType.
      * @param value Value to set for the sortIndex property.
      */
     public void setSortIndex(@jakarta.annotation.Nullable final Integer value) {

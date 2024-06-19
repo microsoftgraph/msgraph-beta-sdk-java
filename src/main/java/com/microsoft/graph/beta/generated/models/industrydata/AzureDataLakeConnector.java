@@ -32,7 +32,16 @@ public class AzureDataLakeConnector extends FileDataConnector implements Parsabl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("fileFormat", (n) -> { this.setFileFormat(n.getObjectValue(FileFormatReferenceValue::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the fileFormat property value. The file format that external systems can upload using this connector.
+     * @return a {@link FileFormatReferenceValue}
+     */
+    @jakarta.annotation.Nullable
+    public FileFormatReferenceValue getFileFormat() {
+        return this.backingStore.get("fileFormat");
     }
     /**
      * Serializes information the current object
@@ -41,5 +50,13 @@ public class AzureDataLakeConnector extends FileDataConnector implements Parsabl
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("fileFormat", this.getFileFormat());
+    }
+    /**
+     * Sets the fileFormat property value. The file format that external systems can upload using this connector.
+     * @param value Value to set for the fileFormat property.
+     */
+    public void setFileFormat(@jakarta.annotation.Nullable final FileFormatReferenceValue value) {
+        this.backingStore.set("fileFormat", value);
     }
 }

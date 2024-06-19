@@ -36,21 +36,23 @@ public class AssignSensitivityLabelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/rosters/{plannerRoster%2Did}/assignSensitivityLabel", rawUrl);
     }
     /**
-     * Invoke action assignSensitivityLabel
+     * Assign a sensitivity label to a plannerRoster object.
      * @param body The request body
      * @return a {@link PlannerRoster}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-assignsensitivitylabel?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerRoster post(@jakarta.annotation.Nonnull final AssignSensitivityLabelPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action assignSensitivityLabel
+     * Assign a sensitivity label to a plannerRoster object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerRoster}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/plannerroster-assignsensitivitylabel?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerRoster post(@jakarta.annotation.Nonnull final AssignSensitivityLabelPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class AssignSensitivityLabelRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerRoster::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action assignSensitivityLabel
+     * Assign a sensitivity label to a plannerRoster object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class AssignSensitivityLabelRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action assignSensitivityLabel
+     * Assign a sensitivity label to a plannerRoster object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
