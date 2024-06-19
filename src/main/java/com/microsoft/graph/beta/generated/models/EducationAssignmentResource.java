@@ -53,7 +53,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the resource property value. Resource object that has been associated with this assignment.
+     * Gets the resource property value. Resource object that is associated with this assignment.
      * @return a {@link EducationResource}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
         this.backingStore.set("distributeForStudentWork", value);
     }
     /**
-     * Sets the resource property value. Resource object that has been associated with this assignment.
+     * Sets the resource property value. Resource object that is associated with this assignment.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final EducationResource value) {

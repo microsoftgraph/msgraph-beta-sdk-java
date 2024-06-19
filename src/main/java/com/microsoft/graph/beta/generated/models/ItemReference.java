@@ -64,7 +64,7 @@ public class ItemReference implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("driveId");
     }
     /**
-     * Gets the driveType property value. Identifies the type of drive. Only returned if the item is located in a drive.  See drive resource for values.
+     * Gets the driveType property value. Identifies the type of drive. Only returned if the item is located in a drive. See drive resource for values.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class ItemReference implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the path property value. Path that can be used to navigate to the item. Read-only.
+     * Gets the path property value. Percent-encoded path that can be used to navigate to the item. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class ItemReference implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("sharepointIds");
     }
     /**
-     * Gets the siteId property value. For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource or the parent list of the listItem resource. The value is the same as the id property of that site resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated.
+     * Gets the siteId property value. For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource or the parent list of the listItem resource. The value is the same as the id property of that site resource. It's an opaque string that consists of three identifiers of the site. For OneDrive, this property isn't populated.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -185,7 +185,7 @@ public class ItemReference implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("driveId", value);
     }
     /**
-     * Sets the driveType property value. Identifies the type of drive. Only returned if the item is located in a drive.  See drive resource for values.
+     * Sets the driveType property value. Identifies the type of drive. Only returned if the item is located in a drive. See drive resource for values.
      * @param value Value to set for the driveType property.
      */
     public void setDriveType(@jakarta.annotation.Nullable final String value) {
@@ -213,7 +213,7 @@ public class ItemReference implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the path property value. Path that can be used to navigate to the item. Read-only.
+     * Sets the path property value. Percent-encoded path that can be used to navigate to the item. Read-only.
      * @param value Value to set for the path property.
      */
     public void setPath(@jakarta.annotation.Nullable final String value) {
@@ -234,7 +234,7 @@ public class ItemReference implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("sharepointIds", value);
     }
     /**
-     * Sets the siteId property value. For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource or the parent list of the listItem resource. The value is the same as the id property of that site resource. It is an opaque string that consists of three identifiers of the site. For OneDrive, this property is not populated.
+     * Sets the siteId property value. For OneDrive for Business and SharePoint, this property represents the ID of the site that contains the parent document library of the driveItem resource or the parent list of the listItem resource. The value is the same as the id property of that site resource. It's an opaque string that consists of three identifiers of the site. For OneDrive, this property isn't populated.
      * @param value Value to set for the siteId property.
      */
     public void setSiteId(@jakarta.annotation.Nullable final String value) {

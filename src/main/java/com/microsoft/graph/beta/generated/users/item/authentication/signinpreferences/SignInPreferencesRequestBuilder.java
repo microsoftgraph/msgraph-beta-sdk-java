@@ -37,7 +37,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/signInPreferences{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Read the properties of a user's authentication method states. Use this API to retrieve the following information:
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
      * @return a {@link SignInPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-get?view=graph-rest-beta">Find more info here</a>
@@ -47,7 +47,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties of a user's authentication method states. Use this API to retrieve the following information:
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SignInPreferences}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -88,7 +88,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SignInPreferences::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties of a user's authentication method states. Use this API to retrieve the following information:
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a user's authentication method states. Use this API to retrieve the following information:
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +142,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
         return new SignInPreferencesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties of a user's authentication method states. Use this API to retrieve the following information:
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

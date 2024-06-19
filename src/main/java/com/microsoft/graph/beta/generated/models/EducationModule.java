@@ -34,7 +34,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. Date time the module was created.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
+     * Gets the createdDateTime property value. Date time the module was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. Date time the module was last modified.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
+     * Gets the lastModifiedDateTime property value. Date time the module was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the resources property value. Learning objects that are associated with this module.  Only teachers can modify this list. Nullable.
+     * Gets the resources property value. Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @return a {@link java.util.List<EducationModuleResource>}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class EducationModule extends Entity implements Parsable {
         return this.backingStore.get("resourcesFolderUrl");
     }
     /**
-     * Gets the status property value. Status of the module.  You can't use a PATCH operation to update this value. Possible values are: draft and published.
+     * Gets the status property value. Status of the module. You can't use a PATCH operation to update this value. Possible values are: draft and published.
      * @return a {@link EducationModuleStatus}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class EducationModule extends Entity implements Parsable {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. Date time the module was created.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
+     * Sets the createdDateTime property value. Date time the module was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -179,14 +179,14 @@ public class EducationModule extends Entity implements Parsable {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. Date time the module was last modified.  The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
+     * Sets the lastModifiedDateTime property value. Date time the module was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014, is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the resources property value. Learning objects that are associated with this module.  Only teachers can modify this list. Nullable.
+     * Sets the resources property value. Learning objects that are associated with this module. Only teachers can modify this list. Nullable.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<EducationModuleResource> value) {
@@ -200,7 +200,7 @@ public class EducationModule extends Entity implements Parsable {
         this.backingStore.set("resourcesFolderUrl", value);
     }
     /**
-     * Sets the status property value. Status of the module.  You can't use a PATCH operation to update this value. Possible values are: draft and published.
+     * Sets the status property value. Status of the module. You can't use a PATCH operation to update this value. Possible values are: draft and published.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final EducationModuleStatus value) {

@@ -225,7 +225,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("onPremisesInfo");
     }
     /**
-     * Gets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for more details.
+     * Gets the passwordPolicies property value. Specifies password policies for the user. For more details, see the standard [user] resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -233,7 +233,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("passwordPolicies");
     }
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for more details.
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. For more details, see the standard [user] resource.
      * @return a {@link PasswordProfile}
      */
     @jakarta.annotation.Nullable
@@ -337,7 +337,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("taughtClasses");
     }
     /**
-     * Gets the teacher property value. If the primary role is teacher, this block will contain teacher specific data.
+     * Gets the teacher property value. If the primary role is teacher, this block contains teacher specific data.
      * @return a {@link EducationTeacher}
      */
     @jakarta.annotation.Nullable
@@ -345,7 +345,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("teacher");
     }
     /**
-     * Gets the usageLocation property value. A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
+     * Gets the usageLocation property value. A two-letter country code ([ISO 3166 Alpha-2]). Required for users who are assigned licenses. Not nullable. Supports /$filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -361,7 +361,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("user");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
+     * Gets the userPrincipalName property value. The user principal name (UPN) for the user. Supports $filter and $orderby. For more details, see the standard [user] resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -556,14 +556,14 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("onPremisesInfo", value);
     }
     /**
-     * Sets the passwordPolicies property value. Specifies password policies for the user. See standard [user] resource for more details.
+     * Sets the passwordPolicies property value. Specifies password policies for the user. For more details, see the standard [user] resource.
      * @param value Value to set for the passwordPolicies property.
      */
     public void setPasswordPolicies(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("passwordPolicies", value);
     }
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. See standard [user] resource for more details.
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. For more details, see the standard [user] resource.
      * @param value Value to set for the passwordProfile property.
      */
     public void setPasswordProfile(@jakarta.annotation.Nullable final PasswordProfile value) {
@@ -654,14 +654,14 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("taughtClasses", value);
     }
     /**
-     * Sets the teacher property value. If the primary role is teacher, this block will contain teacher specific data.
+     * Sets the teacher property value. If the primary role is teacher, this block contains teacher specific data.
      * @param value Value to set for the teacher property.
      */
     public void setTeacher(@jakarta.annotation.Nullable final EducationTeacher value) {
         this.backingStore.set("teacher", value);
     }
     /**
-     * Sets the usageLocation property value. A two-letter country code ([ISO 3166 Alpha-2]). Required for users who will be assigned licenses. Not nullable. Supports /$filter.
+     * Sets the usageLocation property value. A two-letter country code ([ISO 3166 Alpha-2]). Required for users who are assigned licenses. Not nullable. Supports /$filter.
      * @param value Value to set for the usageLocation property.
      */
     public void setUsageLocation(@jakarta.annotation.Nullable final String value) {
@@ -675,7 +675,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("user", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) for the user. Supports $filter and $orderby. See standard [user] resource for additional details.
+     * Sets the userPrincipalName property value. The user principal name (UPN) for the user. Supports $filter and $orderby. For more details, see the standard [user] resource.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

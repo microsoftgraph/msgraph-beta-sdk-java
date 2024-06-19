@@ -143,7 +143,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("itemMajorVersionLimit");
     }
     /**
-     * Gets the lockState property value. The lockState property
+     * Gets the lockState property value. Indicates the lock state of the fileStorageContainer. The possible values are unlocked and lockedReadOnly. Read-only.
      * @return a {@link SiteLockState}
      */
     @jakarta.annotation.Nullable
@@ -191,7 +191,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the storageUsedInBytes property value. Storage used in the fileStorageContainer. In bytes. Read-only.
+     * Gets the storageUsedInBytes property value. Storage used in the fileStorageContainer, in bytes. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -311,7 +311,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("itemMajorVersionLimit", value);
     }
     /**
-     * Sets the lockState property value. The lockState property
+     * Sets the lockState property value. Indicates the lock state of the fileStorageContainer. The possible values are unlocked and lockedReadOnly. Read-only.
      * @param value Value to set for the lockState property.
      */
     public void setLockState(@jakarta.annotation.Nullable final SiteLockState value) {
@@ -353,7 +353,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the storageUsedInBytes property value. Storage used in the fileStorageContainer. In bytes. Read-only.
+     * Sets the storageUsedInBytes property value. Storage used in the fileStorageContainer, in bytes. Read-only.
      * @param value Value to set for the storageUsedInBytes property.
      */
     public void setStorageUsedInBytes(@jakarta.annotation.Nullable final Long value) {
