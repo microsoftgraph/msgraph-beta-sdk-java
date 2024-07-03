@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  build-latest-java:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -66,8 +66,21 @@ jobs:
         working-directory: ./java-8
         run: .././gradlew -Dorg.gradle.jvmargs=-Xmx4g build
 
+  build:
+    needs: [build-latest-java, build-java-8]
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: Determine build status
+        run: |
+          if ${{ needs.build-latest-java.result }} == 'success' && ${{ needs.build-java-8.result }} == 'success'; then
+            exit 0
+          else
+            exit 1
+          fi
+
   compare-packages:
-    needs: [build, build-java-8]
+    needs: [build-latest-java, build-java-8]
     runs-on: ubuntu-latest
     env:
       CURRENT_PKG_DIFF: ./artifacts/current/build/libs/msgraph-beta-sdk-java.jar
