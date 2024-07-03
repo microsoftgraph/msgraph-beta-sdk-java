@@ -36,7 +36,7 @@ public class VirtualEventRegistrationPredefinedQuestion extends VirtualEventRegi
         return deserializerMap;
     }
     /**
-     * Gets the label property value. The label property
+     * Gets the label property value. Label of the predefined registration question. The following label values accept a single line  of text: street, city, state, postalCode, countryOrRegion, industry, jobTitle, and organization. unknownFutureValue is an evolvable enumeration sentinel value; do not use this label.
      * @return a {@link VirtualEventRegistrationPredefinedQuestionLabel}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class VirtualEventRegistrationPredefinedQuestion extends VirtualEventRegi
         writer.writeEnumValue("label", this.getLabel());
     }
     /**
-     * Sets the label property value. The label property
+     * Sets the label property value. Label of the predefined registration question. The following label values accept a single line  of text: street, city, state, postalCode, countryOrRegion, industry, jobTitle, and organization. unknownFutureValue is an evolvable enumeration sentinel value; do not use this label.
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final VirtualEventRegistrationPredefinedQuestionLabel value) {

@@ -130,7 +130,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the statusDetails property value. The details of the Cloud PC status.
+     * Gets the statusDetails property value. The details of the Cloud PC status. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
      * @return a {@link CloudPcStatusDetails}
      */
     @jakarta.annotation.Nullable
@@ -218,7 +218,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the statusDetails property value. The details of the Cloud PC status.
+     * Sets the statusDetails property value. The details of the Cloud PC status. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final CloudPcStatusDetails value) {

@@ -78,7 +78,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("lastName");
     }
     /**
-     * Gets the preferredLanguage property value. The preferredLanguage property
+     * Gets the preferredLanguage property value. The registrant's preferred language.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("preferredLanguage");
     }
     /**
-     * Gets the preferredTimezone property value. The preferredTimezone property
+     * Gets the preferredTimezone property value. The registrant's time zone details.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -181,14 +181,14 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         this.backingStore.set("lastName", value);
     }
     /**
-     * Sets the preferredLanguage property value. The preferredLanguage property
+     * Sets the preferredLanguage property value. The registrant's preferred language.
      * @param value Value to set for the preferredLanguage property.
      */
     public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("preferredLanguage", value);
     }
     /**
-     * Sets the preferredTimezone property value. The preferredTimezone property
+     * Sets the preferredTimezone property value. The registrant's time zone details.
      * @param value Value to set for the preferredTimezone property.
      */
     public void setPreferredTimezone(@jakarta.annotation.Nullable final String value) {

@@ -799,7 +799,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("groupPolicyUploadedDefinitionFiles");
     }
     /**
-     * Gets the hardwareConfigurations property value. The hardware configurations for this account.
+     * Gets the hardwareConfigurations property value. BIOS configuration and other settings provides customers the ability to configure hardware/bios settings on the enrolled Windows 10/11 Entra ID joined devices by uploading a configuration file generated with their OEM tool (e.g. Dell Command tool). A BIOS configuration policy can be assigned to multiple devices, allowing admins to remotely control a device's hardware properties (e.g. enable Secure Boot) from the Intune Portal. Supported for Dell only at this time.
      * @return a {@link java.util.List<HardwareConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -815,7 +815,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("hardwarePasswordDetails");
     }
     /**
-     * Gets the hardwarePasswordInfo property value. The hardware password info for this account.
+     * Gets the hardwarePasswordInfo property value. Intune will provide customer the ability to configure hardware/bios settings on the enrolled windows 10 Azure Active Directory joined devices. Starting from June, 2024 (Intune Release 2406), this type will no longer be supported and will be marked as deprecated
      * @return a {@link java.util.List<HardwarePasswordInfo>}
      */
     @jakarta.annotation.Nullable
@@ -847,7 +847,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("intents");
     }
     /**
-     * Gets the intuneAccountId property value. Intune Account Id for given tenant
+     * Gets the intuneAccountId property value. Intune Account ID for given tenant
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -943,7 +943,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("managedDevices");
     }
     /**
-     * Gets the maximumDepTokens property value. Maximum number of dep tokens allowed per-tenant.
+     * Gets the maximumDepTokens property value. Maximum number of DEP tokens allowed per-tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -2442,7 +2442,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("groupPolicyUploadedDefinitionFiles", value);
     }
     /**
-     * Sets the hardwareConfigurations property value. The hardware configurations for this account.
+     * Sets the hardwareConfigurations property value. BIOS configuration and other settings provides customers the ability to configure hardware/bios settings on the enrolled Windows 10/11 Entra ID joined devices by uploading a configuration file generated with their OEM tool (e.g. Dell Command tool). A BIOS configuration policy can be assigned to multiple devices, allowing admins to remotely control a device's hardware properties (e.g. enable Secure Boot) from the Intune Portal. Supported for Dell only at this time.
      * @param value Value to set for the hardwareConfigurations property.
      */
     public void setHardwareConfigurations(@jakarta.annotation.Nullable final java.util.List<HardwareConfiguration> value) {
@@ -2456,7 +2456,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("hardwarePasswordDetails", value);
     }
     /**
-     * Sets the hardwarePasswordInfo property value. The hardware password info for this account.
+     * Sets the hardwarePasswordInfo property value. Intune will provide customer the ability to configure hardware/bios settings on the enrolled windows 10 Azure Active Directory joined devices. Starting from June, 2024 (Intune Release 2406), this type will no longer be supported and will be marked as deprecated
      * @param value Value to set for the hardwarePasswordInfo property.
      */
     public void setHardwarePasswordInfo(@jakarta.annotation.Nullable final java.util.List<HardwarePasswordInfo> value) {
@@ -2484,7 +2484,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("intents", value);
     }
     /**
-     * Sets the intuneAccountId property value. Intune Account Id for given tenant
+     * Sets the intuneAccountId property value. Intune Account ID for given tenant
      * @param value Value to set for the intuneAccountId property.
      */
     public void setIntuneAccountId(@jakarta.annotation.Nullable final UUID value) {
@@ -2568,7 +2568,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("managedDevices", value);
     }
     /**
-     * Sets the maximumDepTokens property value. Maximum number of dep tokens allowed per-tenant.
+     * Sets the maximumDepTokens property value. Maximum number of DEP tokens allowed per-tenant.
      * @param value Value to set for the maximumDepTokens property.
      */
     public void setMaximumDepTokens(@jakarta.annotation.Nullable final Integer value) {

@@ -81,7 +81,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         return deserializerMap;
     }
     /**
-     * Gets the manufacturer property value. Name of the device manufacturer.
+     * Gets the manufacturer property value. Name of the device manufacturer. Deprecated in favor of DeviceManufacturerName.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         return this.backingStore.get("medianMaxCapacityPercentage");
     }
     /**
-     * Gets the model property value. The model name of the device.
+     * Gets the model property value. The model name of the device. Deprecated in favor of DeviceModelName.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         this.backingStore.set("averageMaxCapacityPercentage", value);
     }
     /**
-     * Sets the manufacturer property value. Name of the device manufacturer.
+     * Sets the manufacturer property value. Name of the device manufacturer. Deprecated in favor of DeviceManufacturerName.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
@@ -228,7 +228,7 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         this.backingStore.set("medianMaxCapacityPercentage", value);
     }
     /**
-     * Sets the model property value. The model name of the device.
+     * Sets the model property value. The model name of the device. Deprecated in favor of DeviceModelName.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {

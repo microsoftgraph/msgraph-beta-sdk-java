@@ -29,7 +29,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         return new MicrosoftTunnelServer();
     }
     /**
-     * Gets the agentImageDigest property value. The digest of the current agent image running on this server
+     * Gets the agentImageDigest property value. The digest of the current agent image running on this server. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         return this.backingStore.get("agentImageDigest");
     }
     /**
-     * Gets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only.
+     * Gets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only. Possible values are: standaloneRootful, standaloneRootless, podRootful, podRootless, unknownFutureValue.
      * @return a {@link MicrosoftTunnelDeploymentMode}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         return this.backingStore.get("deploymentMode");
     }
     /**
-     * Gets the displayName property value. The display name for the server. This property is required when a server is created and cannot be cleared during updates.
+     * Gets the displayName property value. The display name of the server. It is the same as the host name during registration and can be changed later. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Max allowed length is 200 chars.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastCheckinDateTime property value. Indicates when the server last checked in
+     * Gets the lastCheckinDateTime property value. Indicates when the server last checked in. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         return this.backingStore.get("lastCheckinDateTime");
     }
     /**
-     * Gets the serverImageDigest property value. The digest of the current server image running on this server
+     * Gets the serverImageDigest property value. The digest of the current server image running on this server. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -106,35 +106,35 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         writer.writeEnumValue("tunnelServerHealthStatus", this.getTunnelServerHealthStatus());
     }
     /**
-     * Sets the agentImageDigest property value. The digest of the current agent image running on this server
+     * Sets the agentImageDigest property value. The digest of the current agent image running on this server. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only.
      * @param value Value to set for the agentImageDigest property.
      */
     public void setAgentImageDigest(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentImageDigest", value);
     }
     /**
-     * Sets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only.
+     * Sets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only. Possible values are: standaloneRootful, standaloneRootless, podRootful, podRootless, unknownFutureValue.
      * @param value Value to set for the deploymentMode property.
      */
     public void setDeploymentMode(@jakarta.annotation.Nullable final MicrosoftTunnelDeploymentMode value) {
         this.backingStore.set("deploymentMode", value);
     }
     /**
-     * Sets the displayName property value. The display name for the server. This property is required when a server is created and cannot be cleared during updates.
+     * Sets the displayName property value. The display name of the server. It is the same as the host name during registration and can be changed later. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Max allowed length is 200 chars.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastCheckinDateTime property value. Indicates when the server last checked in
+     * Sets the lastCheckinDateTime property value. Indicates when the server last checked in. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported Read-only.
      * @param value Value to set for the lastCheckinDateTime property.
      */
     public void setLastCheckinDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastCheckinDateTime", value);
     }
     /**
-     * Sets the serverImageDigest property value. The digest of the current server image running on this server
+     * Sets the serverImageDigest property value. The digest of the current server image running on this server. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only.
      * @param value Value to set for the serverImageDigest property.
      */
     public void setServerImageDigest(@jakarta.annotation.Nullable final String value) {

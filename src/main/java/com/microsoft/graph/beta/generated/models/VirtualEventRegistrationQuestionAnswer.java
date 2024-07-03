@@ -56,7 +56,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
         return this.backingStore;
     }
     /**
-     * Gets the booleanValue property value. Boolean answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is boolean.
+     * Gets the booleanValue property value. Boolean answer to the virtualEventRegistrationCustomQuestion. Only appears when answerInputType is boolean.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
         return deserializerMap;
     }
     /**
-     * Gets the multiChoiceValues property value. Collection of text answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is multiChoice.
+     * Gets the multiChoiceValues property value. A collection of text answers to the virtualEventRegistrationCustomQuestion. Only appears when answerInputType is multiChoice.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the questionId property value. id of the virtualEventRegistrationQuestion.
+     * Gets the questionId property value. The identifier of either a virtualEventRegistrationCustomQuestion or a virtualEventRegistrationPredefinedQuestion.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
         return this.backingStore.get("questionId");
     }
     /**
-     * Gets the value property value. Text answer of the virtualEventRegistrationQuestion. Appears when answerInputType is text, multilineText or singleChoice.
+     * Gets the value property value. Text answer to the virtualEventRegistrationCustomQuestion or the virtualEventRegistrationPredefinedQuestion. Appears when answerInputType is text, multilineText or singleChoice.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
         this.backingStore = value;
     }
     /**
-     * Sets the booleanValue property value. Boolean answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is boolean.
+     * Sets the booleanValue property value. Boolean answer to the virtualEventRegistrationCustomQuestion. Only appears when answerInputType is boolean.
      * @param value Value to set for the booleanValue property.
      */
     public void setBooleanValue(@jakarta.annotation.Nullable final Boolean value) {
@@ -162,7 +162,7 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the multiChoiceValues property value. Collection of text answer of the virtualEventRegistrationQuestion. Only appears when answerInputType is multiChoice.
+     * Sets the multiChoiceValues property value. A collection of text answers to the virtualEventRegistrationCustomQuestion. Only appears when answerInputType is multiChoice.
      * @param value Value to set for the multiChoiceValues property.
      */
     public void setMultiChoiceValues(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -176,14 +176,14 @@ public class VirtualEventRegistrationQuestionAnswer implements AdditionalDataHol
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the questionId property value. id of the virtualEventRegistrationQuestion.
+     * Sets the questionId property value. The identifier of either a virtualEventRegistrationCustomQuestion or a virtualEventRegistrationPredefinedQuestion.
      * @param value Value to set for the questionId property.
      */
     public void setQuestionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("questionId", value);
     }
     /**
-     * Sets the value property value. Text answer of the virtualEventRegistrationQuestion. Appears when answerInputType is text, multilineText or singleChoice.
+     * Sets the value property value. Text answer to the virtualEventRegistrationCustomQuestion or the virtualEventRegistrationPredefinedQuestion. Appears when answerInputType is text, multilineText or singleChoice.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

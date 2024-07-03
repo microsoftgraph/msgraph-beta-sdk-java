@@ -73,7 +73,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get permissions from shares
+     * The set of permissions for the item. Read-only. Nullable.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get permissions from shares
+     * The set of permissions for the item. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get permissions from shares
+     * The set of permissions for the item. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get permissions from shares
+     * The set of permissions for the item. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class PermissionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get permissions from shares
+     * The set of permissions for the item. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

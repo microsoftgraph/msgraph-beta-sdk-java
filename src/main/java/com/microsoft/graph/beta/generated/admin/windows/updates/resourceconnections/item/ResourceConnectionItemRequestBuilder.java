@@ -37,18 +37,18 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/resourceConnections/{resourceConnection%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a resourceConnection object.
+     * Delete an operationalInsightsConnection object.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-delete?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a resourceConnection object.
+     * Delete an operationalInsightsConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-delete?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +57,21 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
+     * Read the properties and relationships of an operationalInsightsConnection object.
      * @return a {@link ResourceConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceConnection get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
+     * Read the properties and relationships of an operationalInsightsConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ResourceConnection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-resourceconnection-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ResourceConnection get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -106,7 +106,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ResourceConnection::createFromDiscriminatorValue);
     }
     /**
-     * Delete a resourceConnection object.
+     * Delete an operationalInsightsConnection object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a resourceConnection object.
+     * Delete an operationalInsightsConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -126,7 +126,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
+     * Read the properties and relationships of an operationalInsightsConnection object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -134,7 +134,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
+     * Read the properties and relationships of an operationalInsightsConnection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -186,7 +186,7 @@ public class ResourceConnectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a resourceConnection object.
+     * Read the properties and relationships of an operationalInsightsConnection object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

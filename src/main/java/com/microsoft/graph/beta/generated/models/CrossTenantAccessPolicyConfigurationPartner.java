@@ -165,7 +165,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.backingStore.get("tenantId");
     }
     /**
-     * Gets the tenantRestrictions property value. Defines the partner-specific tenant restrictions configuration for your organization users accessing a partner organization using partner supplied identities on your network or devices.
+     * Gets the tenantRestrictions property value. Defines the partner-specific tenant restrictions configuration for users in your organization who access a partner organization using partner supplied identities on your network or devices.
      * @return a {@link CrossTenantAccessPolicyTenantRestrictions}
      */
     @jakarta.annotation.Nullable
@@ -285,7 +285,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         this.backingStore.set("tenantId", value);
     }
     /**
-     * Sets the tenantRestrictions property value. Defines the partner-specific tenant restrictions configuration for your organization users accessing a partner organization using partner supplied identities on your network or devices.
+     * Sets the tenantRestrictions property value. Defines the partner-specific tenant restrictions configuration for users in your organization who access a partner organization using partner supplied identities on your network or devices.
      * @param value Value to set for the tenantRestrictions property.
      */
     public void setTenantRestrictions(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTenantRestrictions value) {
