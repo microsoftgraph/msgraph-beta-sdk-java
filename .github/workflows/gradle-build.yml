@@ -73,7 +73,7 @@ jobs:
     steps:
       - name: Determine build status
         run: |
-          if ${{ needs.build-latest-java.result }} == 'success' && ${{ needs.build-java-8.result }} == 'success'; then
+          if [ "${{ needs.build-latest-java.result }}" == "success" ] && [ "${{ needs.build-java-8.result }}" == "success" ]; then
             exit 0
           else
             exit 1
