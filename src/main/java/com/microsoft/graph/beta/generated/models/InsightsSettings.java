@@ -25,7 +25,7 @@ public class InsightsSettings extends Entity implements Parsable {
         return new InsightsSettings();
     }
     /**
-     * Gets the disabledForGroup property value. The ID of a Microsoft Entra group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
+     * Gets the disabledForGroup property value. The ID of a Microsoft Entra group, of which the specified type of insights are disabled for its members. The default value is null. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class InsightsSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabledInOrganization property value. true if insights of the specified type are enabled for the organization; false if insights of the specified type are disabled for all users without exceptions. Default is true. Optional.
+     * Gets the isEnabledInOrganization property value. true if insights of the specified type are enabled for the organization; false if insights of the specified type are disabled for all users without exceptions. The default value is true. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class InsightsSettings extends Entity implements Parsable {
         writer.writeBooleanValue("isEnabledInOrganization", this.getIsEnabledInOrganization());
     }
     /**
-     * Sets the disabledForGroup property value. The ID of a Microsoft Entra group, of which the specified type of insights are disabled for its members. Default is empty. Optional.
+     * Sets the disabledForGroup property value. The ID of a Microsoft Entra group, of which the specified type of insights are disabled for its members. The default value is null. Optional.
      * @param value Value to set for the disabledForGroup property.
      */
     public void setDisabledForGroup(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("disabledForGroup", value);
     }
     /**
-     * Sets the isEnabledInOrganization property value. true if insights of the specified type are enabled for the organization; false if insights of the specified type are disabled for all users without exceptions. Default is true. Optional.
+     * Sets the isEnabledInOrganization property value. true if insights of the specified type are enabled for the organization; false if insights of the specified type are disabled for all users without exceptions. The default value is true. Optional.
      * @param value Value to set for the isEnabledInOrganization property.
      */
     public void setIsEnabledInOrganization(@jakarta.annotation.Nullable final Boolean value) {

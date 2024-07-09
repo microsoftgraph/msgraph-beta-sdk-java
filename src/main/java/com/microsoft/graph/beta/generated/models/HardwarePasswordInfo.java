@@ -28,7 +28,7 @@ public class HardwarePasswordInfo extends Entity implements Parsable {
         return new HardwarePasswordInfo();
     }
     /**
-     * Gets the currentPassword property value. Current device password
+     * Gets the currentPassword property value. Current device password. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class HardwarePasswordInfo extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the previousPasswords property value. List of previous device passwords
+     * Gets the previousPasswords property value. List of previous device passwords. This property is read-only.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class HardwarePasswordInfo extends Entity implements Parsable {
         return this.backingStore.get("previousPasswords");
     }
     /**
-     * Gets the serialNumber property value. Device serial number
+     * Gets the serialNumber property value. Associated device's serial number . This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class HardwarePasswordInfo extends Entity implements Parsable {
         writer.writeStringValue("serialNumber", this.getSerialNumber());
     }
     /**
-     * Sets the currentPassword property value. Current device password
+     * Sets the currentPassword property value. Current device password. This property is read-only.
      * @param value Value to set for the currentPassword property.
      */
     public void setCurrentPassword(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("currentPassword", value);
     }
     /**
-     * Sets the previousPasswords property value. List of previous device passwords
+     * Sets the previousPasswords property value. List of previous device passwords. This property is read-only.
      * @param value Value to set for the previousPasswords property.
      */
     public void setPreviousPasswords(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("previousPasswords", value);
     }
     /**
-     * Sets the serialNumber property value. Device serial number
+     * Sets the serialNumber property value. Associated device's serial number . This property is read-only.
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {

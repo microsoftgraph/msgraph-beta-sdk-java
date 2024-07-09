@@ -51,7 +51,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("appliedCategories");
     }
     /**
-     * Gets the archivalInfo property value. The archivalInfo property
+     * Gets the archivalInfo property value. Read-only. Nullable. Contains information about who archived or unarchived the task and why.
      * @return a {@link PlannerArchivalInfo}
      */
     @jakarta.annotation.Nullable
@@ -220,7 +220,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("hasDescription");
     }
     /**
-     * Gets the isArchived property value. The isArchived property
+     * Gets the isArchived property value. Read-only. If set to true, the task is archived. An archived task is read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -386,7 +386,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("appliedCategories", value);
     }
     /**
-     * Sets the archivalInfo property value. The archivalInfo property
+     * Sets the archivalInfo property value. Read-only. Nullable. Contains information about who archived or unarchived the task and why.
      * @param value Value to set for the archivalInfo property.
      */
     public void setArchivalInfo(@jakarta.annotation.Nullable final PlannerArchivalInfo value) {
@@ -498,7 +498,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("hasDescription", value);
     }
     /**
-     * Sets the isArchived property value. The isArchived property
+     * Sets the isArchived property value. Read-only. If set to true, the task is archived. An archived task is read-only.
      * @param value Value to set for the isArchived property.
      */
     public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {

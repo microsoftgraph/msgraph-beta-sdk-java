@@ -70,7 +70,7 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the justification property value. The justification property
+     * Gets the justification property value. Read-only. Reason why the entity was archived or unarchived.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the statusChangedBy property value. The statusChangedBy property
+     * Gets the statusChangedBy property value. Read-only. Identity of the user who archived or unarchived the entity
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("statusChangedBy");
     }
     /**
-     * Gets the statusChangedDateTime property value. The statusChangedDateTime property
+     * Gets the statusChangedDateTime property value. Read-only. Date and time at which the entity's archive status changed.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the justification property value. The justification property
+     * Sets the justification property value. Read-only. Reason why the entity was archived or unarchived.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
@@ -143,14 +143,14 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the statusChangedBy property value. The statusChangedBy property
+     * Sets the statusChangedBy property value. Read-only. Identity of the user who archived or unarchived the entity
      * @param value Value to set for the statusChangedBy property.
      */
     public void setStatusChangedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("statusChangedBy", value);
     }
     /**
-     * Sets the statusChangedDateTime property value. The statusChangedDateTime property
+     * Sets the statusChangedDateTime property value. Read-only. Date and time at which the entity's archive status changed.
      * @param value Value to set for the statusChangedDateTime property.
      */
     public void setStatusChangedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -58,7 +58,7 @@ public class WorkbookRange extends Entity implements Parsable {
         return this.backingStore.get("columnCount");
     }
     /**
-     * Gets the columnHidden property value. Represents if all columns of the current range are hidden.
+     * Gets the columnHidden property value. Indicates whether all columns of the current range are hidden.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class WorkbookRange extends Entity implements Parsable {
         return this.backingStore.get("rowCount");
     }
     /**
-     * Gets the rowHidden property value. Represents if all rows of the current range are hidden.
+     * Gets the rowHidden property value. Indicates whether all rows of the current range are hidden.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class WorkbookRange extends Entity implements Parsable {
         return this.backingStore.get("sort");
     }
     /**
-     * Gets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
+     * Gets the text property value. Text values of the specified range. The text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -271,7 +271,7 @@ public class WorkbookRange extends Entity implements Parsable {
         this.backingStore.set("columnCount", value);
     }
     /**
-     * Sets the columnHidden property value. Represents if all columns of the current range are hidden.
+     * Sets the columnHidden property value. Indicates whether all columns of the current range are hidden.
      * @param value Value to set for the columnHidden property.
      */
     public void setColumnHidden(@jakarta.annotation.Nullable final Boolean value) {
@@ -334,7 +334,7 @@ public class WorkbookRange extends Entity implements Parsable {
         this.backingStore.set("rowCount", value);
     }
     /**
-     * Sets the rowHidden property value. Represents if all rows of the current range are hidden.
+     * Sets the rowHidden property value. Indicates whether all rows of the current range are hidden.
      * @param value Value to set for the rowHidden property.
      */
     public void setRowHidden(@jakarta.annotation.Nullable final Boolean value) {
@@ -355,7 +355,7 @@ public class WorkbookRange extends Entity implements Parsable {
         this.backingStore.set("sort", value);
     }
     /**
-     * Sets the text property value. Text values of the specified range. The Text value won't depend on the cell width. The # sign substitution that happens in Excel UI won't affect the text value returned by the API. Read-only.
+     * Sets the text property value. Text values of the specified range. The text value doesn't depend on the cell width. The # sign substitution that happens in Excel UI doesn't affect the text value returned by the API. Read-only.
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final UntypedNode value) {

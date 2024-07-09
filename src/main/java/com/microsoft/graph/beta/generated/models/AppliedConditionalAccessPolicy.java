@@ -89,7 +89,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
+     * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -237,7 +237,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multi-factor authentication').
+     * Sets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
      * @param value Value to set for the enforcedGrantControls property.
      */
     public void setEnforcedGrantControls(@jakarta.annotation.Nullable final java.util.List<String> value) {

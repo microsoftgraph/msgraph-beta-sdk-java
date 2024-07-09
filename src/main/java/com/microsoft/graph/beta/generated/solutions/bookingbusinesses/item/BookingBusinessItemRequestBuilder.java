@@ -138,7 +138,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get bookingBusinesses from solutions
+     * A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -147,7 +147,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get bookingBusinesses from solutions
+     * A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -205,7 +205,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get bookingBusinesses from solutions
+     * A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -213,7 +213,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get bookingBusinesses from solutions
+     * A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -265,7 +265,7 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get bookingBusinesses from solutions
+     * A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

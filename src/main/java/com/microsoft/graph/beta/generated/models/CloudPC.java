@@ -58,7 +58,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("connectivityResult");
     }
     /**
-     * Gets the disasterRecoveryCapability property value. The disasterRecoveryCapability property
+     * Gets the disasterRecoveryCapability property value. The disaster recovery status of the Cloud PC, including the primary region, secondary region, and capability type. The default value is null that indicates that the disaster recovery setting is disabled. To receive a response with the disasterRecoveryCapability property, $select and $filter it by disasterRecoveryCapability/{subProperty} in the request URL. For more details, see Example 4: List Cloud PCs filtered by disaster recovery capability type. Read-only.
      * @return a {@link CloudPcDisasterRecoveryCapability}
      */
     @jakarta.annotation.Nullable
@@ -224,7 +224,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisioningPolicyName");
     }
     /**
-     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue,sharedByUser, sharedByUser. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The default value is dedicated. CAUTION: The shared member is deprecated and will stop returning on April 30, 2027 in the future, use the sharedByUser member.
+     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue,sharedByUser, sharedByEntraGroup. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The default value is dedicated. CAUTION: The shared member is deprecated and will stop returning on April 30, 2027 in the future, use the sharedByUser member.
      * @return a {@link CloudPcProvisioningType}
      */
     @jakarta.annotation.Nullable
@@ -272,7 +272,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the statusDetails property value. The details of the Cloud PC status.
+     * Gets the statusDetails property value. The details of the Cloud PC status. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
      * @return a {@link CloudPcStatusDetails}
      */
     @jakarta.annotation.Nullable
@@ -361,7 +361,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("connectivityResult", value);
     }
     /**
-     * Sets the disasterRecoveryCapability property value. The disasterRecoveryCapability property
+     * Sets the disasterRecoveryCapability property value. The disaster recovery status of the Cloud PC, including the primary region, secondary region, and capability type. The default value is null that indicates that the disaster recovery setting is disabled. To receive a response with the disasterRecoveryCapability property, $select and $filter it by disasterRecoveryCapability/{subProperty} in the request URL. For more details, see Example 4: List Cloud PCs filtered by disaster recovery capability type. Read-only.
      * @param value Value to set for the disasterRecoveryCapability property.
      */
     public void setDisasterRecoveryCapability(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryCapability value) {
@@ -473,7 +473,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("provisioningPolicyName", value);
     }
     /**
-     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue,sharedByUser, sharedByUser. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The default value is dedicated. CAUTION: The shared member is deprecated and will stop returning on April 30, 2027 in the future, use the sharedByUser member.
+     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue,sharedByUser, sharedByEntraGroup. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The default value is dedicated. CAUTION: The shared member is deprecated and will stop returning on April 30, 2027 in the future, use the sharedByUser member.
      * @param value Value to set for the provisioningType property.
      */
     public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {
@@ -515,7 +515,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the statusDetails property value. The details of the Cloud PC status.
+     * Sets the statusDetails property value. The details of the Cloud PC status. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final CloudPcStatusDetails value) {

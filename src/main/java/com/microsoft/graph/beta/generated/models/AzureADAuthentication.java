@@ -25,7 +25,7 @@ public class AzureADAuthentication extends Entity implements Parsable {
         return new AzureADAuthentication();
     }
     /**
-     * Gets the attainments property value. A list of monthly serviceLevelAgreementAttainment objects.
+     * Gets the attainments property value. SLA data for a Microsoft Entra tenant for a calendar month.
      * @return a {@link java.util.List<ServiceLevelAgreementAttainment>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AzureADAuthentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("attainments", this.getAttainments());
     }
     /**
-     * Sets the attainments property value. A list of monthly serviceLevelAgreementAttainment objects.
+     * Sets the attainments property value. SLA data for a Microsoft Entra tenant for a calendar month.
      * @param value Value to set for the attainments property.
      */
     public void setAttainments(@jakarta.annotation.Nullable final java.util.List<ServiceLevelAgreementAttainment> value) {

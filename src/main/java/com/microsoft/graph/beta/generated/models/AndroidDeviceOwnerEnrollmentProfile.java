@@ -93,7 +93,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         return this.backingStore.get("enrollmentTokenType");
     }
     /**
-     * Gets the enrollmentTokenUsageCount property value. Total number of AOSP devices that have enrolled using the current token.
+     * Gets the enrollmentTokenUsageCount property value. Total number of AOSP devices that have enrolled using the current token. Valid values 0 to 20000
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -312,7 +312,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         this.backingStore.set("enrollmentTokenType", value);
     }
     /**
-     * Sets the enrollmentTokenUsageCount property value. Total number of AOSP devices that have enrolled using the current token.
+     * Sets the enrollmentTokenUsageCount property value. Total number of AOSP devices that have enrolled using the current token. Valid values 0 to 20000
      * @param value Value to set for the enrollmentTokenUsageCount property.
      */
     public void setEnrollmentTokenUsageCount(@jakarta.annotation.Nullable final Integer value) {

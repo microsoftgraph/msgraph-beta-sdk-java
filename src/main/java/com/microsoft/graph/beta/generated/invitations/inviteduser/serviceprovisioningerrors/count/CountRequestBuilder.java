@@ -1,6 +1,5 @@
-package com.microsoft.graph.beta.invitations.item.invitedusersponsors.item;
+package com.microsoft.graph.beta.invitations.inviteduser.serviceprovisioningerrors.count;
 
-import com.microsoft.graph.beta.models.DirectoryObject;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -16,50 +15,50 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the invitedUserSponsors property of the microsoft.graph.invitation entity.
+ * Provides operations to count the resources in the collection.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
+public class CountRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link CountRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUserSponsors/{directoryObject%2Did}{?%24expand,%24select}", pathParameters);
+    public CountRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/invitations/invitedUser/serviceProvisioningErrors/$count{?%24filter,%24search}", pathParameters);
     }
     /**
-     * Instantiates a new {@link DirectoryObjectItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link CountRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public DirectoryObjectItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/invitations/{invitation%2Did}/invitedUserSponsors/{directoryObject%2Did}{?%24expand,%24select}", rawUrl);
+    public CountRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/invitations/invitedUser/serviceProvisioningErrors/$count{?%24filter,%24search}", rawUrl);
     }
     /**
-     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
-     * @return a {@link DirectoryObject}
+     * Get the number of the resource
+     * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DirectoryObject get() {
+    public Integer get() {
         return get(null);
     }
     /**
-     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * Get the number of the resource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DirectoryObject}
+     * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DirectoryObject get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public Integer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
+        return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Integer.class);
     }
     /**
-     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * Get the number of the resource
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +66,7 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * Get the number of the resource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -75,34 +74,34 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
-        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.headers.tryAdd("Accept", "text/plain;q=0.9");
         return requestInfo;
     }
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link DirectoryObjectItemRequestBuilder}
+     * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DirectoryObjectItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public CountRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new DirectoryObjectItemRequestBuilder(rawUrl, requestAdapter);
+        return new CountRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The users or groups who are sponsors of the invited user. Sponsors are users and groups that are responsible for guest users' privileges in the tenant and for keeping the guest users' information and access up to date.
+     * Get the number of the resource
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
-         * Expand related entities
+         * Filter items by property values
          */
         @jakarta.annotation.Nullable
-        public String[] expand;
+        public String filter;
         /**
-         * Select properties to be returned
+         * Search items by search phrases
          */
         @jakarta.annotation.Nullable
-        public String[] select;
+        public String search;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}
@@ -110,8 +109,8 @@ public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
         @jakarta.annotation.Nonnull
         public Map<String, Object> toQueryParameters() {
             final Map<String, Object> allQueryParams = new HashMap();
-            allQueryParams.put("%24expand", expand);
-            allQueryParams.put("%24select", select);
+            allQueryParams.put("%24filter", filter);
+            allQueryParams.put("%24search", search);
             return allQueryParams;
         }
     }
