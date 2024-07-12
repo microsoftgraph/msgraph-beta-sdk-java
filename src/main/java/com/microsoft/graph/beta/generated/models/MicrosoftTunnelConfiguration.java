@@ -117,7 +117,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         return this.backingStore.get("listenPort");
     }
     /**
-     * Gets the network property value. The subnet that will be used to allocate virtual address for the clients
+     * Gets the network property value. The IPv4 subnet that will be used to allocate virtual address for the clients
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -252,7 +252,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         this.backingStore.set("listenPort", value);
     }
     /**
-     * Sets the network property value. The subnet that will be used to allocate virtual address for the clients
+     * Sets the network property value. The IPv4 subnet that will be used to allocate virtual address for the clients
      * @param value Value to set for the network property.
      */
     public void setNetwork(@jakarta.annotation.Nullable final String value) {

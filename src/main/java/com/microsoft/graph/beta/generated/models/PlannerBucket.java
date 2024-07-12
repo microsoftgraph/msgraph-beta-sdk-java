@@ -25,7 +25,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
         return new PlannerBucket();
     }
     /**
-     * Gets the archivalInfo property value. The archivalInfo property
+     * Gets the archivalInfo property value. Read-only. Nullable. Contains information about who archived or unarchived the bucket and why.
      * @return a {@link PlannerArchivalInfo}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isArchived property value. The isArchived property
+     * Gets the isArchived property value. Read-only. If set totrue, the bucket is archived. An archived bucket is read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
     }
     /**
-     * Sets the archivalInfo property value. The archivalInfo property
+     * Sets the archivalInfo property value. Read-only. Nullable. Contains information about who archived or unarchived the bucket and why.
      * @param value Value to set for the archivalInfo property.
      */
     public void setArchivalInfo(@jakarta.annotation.Nullable final PlannerArchivalInfo value) {
@@ -126,7 +126,7 @@ public class PlannerBucket extends PlannerDelta implements Parsable {
         this.backingStore.set("creationSource", value);
     }
     /**
-     * Sets the isArchived property value. The isArchived property
+     * Sets the isArchived property value. Read-only. If set totrue, the bucket is archived. An archived bucket is read-only.
      * @param value Value to set for the isArchived property.
      */
     public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {

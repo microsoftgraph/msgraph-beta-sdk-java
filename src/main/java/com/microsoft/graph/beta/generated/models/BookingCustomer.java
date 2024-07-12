@@ -37,7 +37,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
         return this.backingStore.get("addresses");
     }
     /**
-     * Gets the createdDateTime property value. The date, time and timezone when the customer was created.
+     * Gets the createdDateTime property value. The date, time, and timezone when the customer was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class BookingCustomer extends BookingPerson implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastUpdatedDateTime property value. The date, time and timezone when the customer was last updated.
+     * Gets the lastUpdatedDateTime property value. The date, time, and timezone when the customer was last updated.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -93,14 +93,14 @@ public class BookingCustomer extends BookingPerson implements Parsable {
         this.backingStore.set("addresses", value);
     }
     /**
-     * Sets the createdDateTime property value. The date, time and timezone when the customer was created.
+     * Sets the createdDateTime property value. The date, time, and timezone when the customer was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the lastUpdatedDateTime property value. The date, time and timezone when the customer was last updated.
+     * Sets the lastUpdatedDateTime property value. The date, time, and timezone when the customer was last updated.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

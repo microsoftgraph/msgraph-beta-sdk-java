@@ -152,7 +152,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("lastUpdateDateTime");
     }
     /**
-     * Gets the recommendedActions property value. A rich text string that represents the actions that are reccomnded to take in order to resolve the incident
+     * Gets the recommendedActions property value. A rich text string that represents the actions that are reccomnded to take in order to resolve the incident.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class Incident extends Entity implements Parsable {
         return this.backingStore.get("recommendedActions");
     }
     /**
-     * Gets the recommendedHuntingQueries property value. List of hunting Kusto Query Language (KQL) queries related to the incident
+     * Gets the recommendedHuntingQueries property value. List of hunting Kusto Query Language (KQL) queries related to the incident.
      * @return a {@link java.util.List<RecommendedHuntingQuery>}
      */
     @jakarta.annotation.Nullable
@@ -328,14 +328,14 @@ public class Incident extends Entity implements Parsable {
         this.backingStore.set("lastUpdateDateTime", value);
     }
     /**
-     * Sets the recommendedActions property value. A rich text string that represents the actions that are reccomnded to take in order to resolve the incident
+     * Sets the recommendedActions property value. A rich text string that represents the actions that are reccomnded to take in order to resolve the incident.
      * @param value Value to set for the recommendedActions property.
      */
     public void setRecommendedActions(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("recommendedActions", value);
     }
     /**
-     * Sets the recommendedHuntingQueries property value. List of hunting Kusto Query Language (KQL) queries related to the incident
+     * Sets the recommendedHuntingQueries property value. List of hunting Kusto Query Language (KQL) queries related to the incident.
      * @param value Value to set for the recommendedHuntingQueries property.
      */
     public void setRecommendedHuntingQueries(@jakarta.annotation.Nullable final java.util.List<RecommendedHuntingQuery> value) {

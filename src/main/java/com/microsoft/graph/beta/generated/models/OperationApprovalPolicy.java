@@ -30,7 +30,7 @@ public class OperationApprovalPolicy extends Entity implements Parsable {
         return new OperationApprovalPolicy();
     }
     /**
-     * Gets the approverGroupIds property value. The Microsoft Entra ID (Azure AD) security group IDs for the approvers for the policy. This property is required when the policy is created, and is defined by the user to define the possible approvers for the policy.
+     * Gets the approverGroupIds property value. The Microsoft Entra ID (Azure AD) security group IDs for the approvers for the policy. This property is required when the policy is created, and is defined by the IT Admins to define the possible approvers for the policy.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -38,7 +38,7 @@ public class OperationApprovalPolicy extends Entity implements Parsable {
         return this.backingStore.get("approverGroupIds");
     }
     /**
-     * Gets the description property value. Indicates the description of the policy. Maximum length of the description is 1024 characters. This property is not required, but can be used by the user to describe the policy.
+     * Gets the description property value. Indicates the description of the policy. Maximum length of the description is 1024 characters. This property is not required, but can be used by the IT Admin to describe the policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class OperationApprovalPolicy extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. Indicates the display name of the policy. Maximum length of the display name is 128 characters. This property is required when the policy is created, and is defined by the user to identify the policy.
+     * Gets the displayName property value. Indicates the display name of the policy. Maximum length of the display name is 128 characters. This property is required when the policy is created, and is defined by the IT Admins to identify the policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class OperationApprovalPolicy extends Entity implements Parsable {
         return this.backingStore.get("policyPlatform");
     }
     /**
-     * Gets the policySet property value. Indicates areas of the Intune UX that could support MAA UX for the current logged in user. This property is required, and is defined by the user in order to correctly show the expected experience.
+     * Gets the policySet property value. Indicates areas of the Intune UX that could support MAA UX for the current logged in IT Admin. This property is required, and is defined by the IT Admins in order to correctly show the expected experience.
      * @return a {@link OperationApprovalPolicySet}
      */
     @jakarta.annotation.Nullable
@@ -116,21 +116,21 @@ public class OperationApprovalPolicy extends Entity implements Parsable {
         writer.writeEnumValue("policyType", this.getPolicyType());
     }
     /**
-     * Sets the approverGroupIds property value. The Microsoft Entra ID (Azure AD) security group IDs for the approvers for the policy. This property is required when the policy is created, and is defined by the user to define the possible approvers for the policy.
+     * Sets the approverGroupIds property value. The Microsoft Entra ID (Azure AD) security group IDs for the approvers for the policy. This property is required when the policy is created, and is defined by the IT Admins to define the possible approvers for the policy.
      * @param value Value to set for the approverGroupIds property.
      */
     public void setApproverGroupIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("approverGroupIds", value);
     }
     /**
-     * Sets the description property value. Indicates the description of the policy. Maximum length of the description is 1024 characters. This property is not required, but can be used by the user to describe the policy.
+     * Sets the description property value. Indicates the description of the policy. Maximum length of the description is 1024 characters. This property is not required, but can be used by the IT Admin to describe the policy.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. Indicates the display name of the policy. Maximum length of the display name is 128 characters. This property is required when the policy is created, and is defined by the user to identify the policy.
+     * Sets the displayName property value. Indicates the display name of the policy. Maximum length of the display name is 128 characters. This property is required when the policy is created, and is defined by the IT Admins to identify the policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -151,7 +151,7 @@ public class OperationApprovalPolicy extends Entity implements Parsable {
         this.backingStore.set("policyPlatform", value);
     }
     /**
-     * Sets the policySet property value. Indicates areas of the Intune UX that could support MAA UX for the current logged in user. This property is required, and is defined by the user in order to correctly show the expected experience.
+     * Sets the policySet property value. Indicates areas of the Intune UX that could support MAA UX for the current logged in IT Admin. This property is required, and is defined by the IT Admins in order to correctly show the expected experience.
      * @param value Value to set for the policySet property.
      */
     public void setPolicySet(@jakarta.annotation.Nullable final OperationApprovalPolicySet value) {

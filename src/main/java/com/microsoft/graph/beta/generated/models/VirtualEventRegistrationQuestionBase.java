@@ -33,7 +33,7 @@ public class VirtualEventRegistrationQuestionBase extends Entity implements Pars
         return new VirtualEventRegistrationQuestionBase();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the registration question.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class VirtualEventRegistrationQuestionBase extends Entity implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the isRequired property value. The isRequired property
+     * Gets the isRequired property value. Indicates whether an answer to the question is required. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -70,14 +70,14 @@ public class VirtualEventRegistrationQuestionBase extends Entity implements Pars
         writer.writeBooleanValue("isRequired", this.getIsRequired());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the registration question.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isRequired property value. The isRequired property
+     * Sets the isRequired property value. Indicates whether an answer to the question is required. The default value is false.
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {

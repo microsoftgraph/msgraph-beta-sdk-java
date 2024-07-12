@@ -26,7 +26,7 @@ public class VirtualEventRegistrationCustomQuestion extends VirtualEventRegistra
         return new VirtualEventRegistrationCustomQuestion();
     }
     /**
-     * Gets the answerChoices property value. The answerChoices property
+     * Gets the answerChoices property value. Answer choices when answerInputType is singleChoice or multiChoice.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class VirtualEventRegistrationCustomQuestion extends VirtualEventRegistra
         return this.backingStore.get("answerChoices");
     }
     /**
-     * Gets the answerInputType property value. The answerInputType property
+     * Gets the answerInputType property value. Input type of the registration question answer.
      * @return a {@link VirtualEventRegistrationQuestionAnswerInputType}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class VirtualEventRegistrationCustomQuestion extends VirtualEventRegistra
         writer.writeEnumValue("answerInputType", this.getAnswerInputType());
     }
     /**
-     * Sets the answerChoices property value. The answerChoices property
+     * Sets the answerChoices property value. Answer choices when answerInputType is singleChoice or multiChoice.
      * @param value Value to set for the answerChoices property.
      */
     public void setAnswerChoices(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("answerChoices", value);
     }
     /**
-     * Sets the answerInputType property value. The answerInputType property
+     * Sets the answerInputType property value. Input type of the registration question answer.
      * @param value Value to set for the answerInputType property.
      */
     public void setAnswerInputType(@jakarta.annotation.Nullable final VirtualEventRegistrationQuestionAnswerInputType value) {

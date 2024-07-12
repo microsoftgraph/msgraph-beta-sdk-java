@@ -64,7 +64,7 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("backupRestore");
     }
     /**
-     * Gets the bookingBusinesses property value. The bookingBusinesses property
+     * Gets the bookingBusinesses property value. A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      * @return a {@link java.util.List<BookingBusiness>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("bookingBusinesses");
     }
     /**
-     * Gets the bookingCurrencies property value. The bookingCurrencies property
+     * Gets the bookingCurrencies property value. A collection of monetary currencies supported by a bookingBusiness. Read-only. Nullable.
      * @return a {@link java.util.List<BookingCurrency>}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("bookingCurrencies");
     }
     /**
-     * Gets the businessScenarios property value. The businessScenarios property
+     * Gets the businessScenarios property value. A collection of scenarios that contain relevant data and configuration information for a specific problem domain.
      * @return a {@link java.util.List<BusinessScenario>}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the virtualEvents property value. The virtualEvents property
+     * Gets the virtualEvents property value. A collection of virtual events.
      * @return a {@link VirtualEventsRoot}
      */
     @jakarta.annotation.Nullable
@@ -155,21 +155,21 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("backupRestore", value);
     }
     /**
-     * Sets the bookingBusinesses property value. The bookingBusinesses property
+     * Sets the bookingBusinesses property value. A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      * @param value Value to set for the bookingBusinesses property.
      */
     public void setBookingBusinesses(@jakarta.annotation.Nullable final java.util.List<BookingBusiness> value) {
         this.backingStore.set("bookingBusinesses", value);
     }
     /**
-     * Sets the bookingCurrencies property value. The bookingCurrencies property
+     * Sets the bookingCurrencies property value. A collection of monetary currencies supported by a bookingBusiness. Read-only. Nullable.
      * @param value Value to set for the bookingCurrencies property.
      */
     public void setBookingCurrencies(@jakarta.annotation.Nullable final java.util.List<BookingCurrency> value) {
         this.backingStore.set("bookingCurrencies", value);
     }
     /**
-     * Sets the businessScenarios property value. The businessScenarios property
+     * Sets the businessScenarios property value. A collection of scenarios that contain relevant data and configuration information for a specific problem domain.
      * @param value Value to set for the businessScenarios property.
      */
     public void setBusinessScenarios(@jakarta.annotation.Nullable final java.util.List<BusinessScenario> value) {
@@ -183,7 +183,7 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the virtualEvents property value. The virtualEvents property
+     * Sets the virtualEvents property value. A collection of virtual events.
      * @param value Value to set for the virtualEvents property.
      */
     public void setVirtualEvents(@jakarta.annotation.Nullable final VirtualEventsRoot value) {

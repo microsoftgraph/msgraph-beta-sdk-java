@@ -57,7 +57,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, BackedMo
         return this.backingStore;
     }
     /**
-     * Gets the failedHealthCheckItems property value. A list of failed health check items. If the status property is available, this property will be empty.
+     * Gets the failedHealthCheckItems property value. A list of failed health check items. If the status property is available, this property is empty.
      * @return a {@link java.util.List<CloudPcHealthCheckItem>}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("status");
     }
     /**
-     * Gets the updatedDateTime property value. Datetime when the status was updated. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
+     * Gets the updatedDateTime property value. Datetime when the status was updated. This property is deprecated and will no longer be supported effective August 31, 2024. Use lastModifiedDateTime instead. Read-Only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the failedHealthCheckItems property value. A list of failed health check items. If the status property is available, this property will be empty.
+     * Sets the failedHealthCheckItems property value. A list of failed health check items. If the status property is available, this property is empty.
      * @param value Value to set for the failedHealthCheckItems property.
      */
     public void setFailedHealthCheckItems(@jakarta.annotation.Nullable final java.util.List<CloudPcHealthCheckItem> value) {
@@ -150,7 +150,7 @@ public class CloudPcConnectivityResult implements AdditionalDataHolder, BackedMo
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the updatedDateTime property value. Datetime when the status was updated. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as 2014-01-01T00:00:00Z.
+     * Sets the updatedDateTime property value. Datetime when the status was updated. This property is deprecated and will no longer be supported effective August 31, 2024. Use lastModifiedDateTime instead. Read-Only.
      * @param value Value to set for the updatedDateTime property.
      */
     public void setUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

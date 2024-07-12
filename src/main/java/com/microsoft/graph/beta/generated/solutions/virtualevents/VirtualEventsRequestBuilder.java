@@ -82,7 +82,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get virtualEvents from solutions
+     * A collection of virtual events.
      * @return a {@link VirtualEventsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -91,7 +91,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get virtualEvents from solutions
+     * A collection of virtual events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -149,7 +149,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get virtualEvents from solutions
+     * A collection of virtual events.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get virtualEvents from solutions
+     * A collection of virtual events.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -209,7 +209,7 @@ public class VirtualEventsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get virtualEvents from solutions
+     * A collection of virtual events.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

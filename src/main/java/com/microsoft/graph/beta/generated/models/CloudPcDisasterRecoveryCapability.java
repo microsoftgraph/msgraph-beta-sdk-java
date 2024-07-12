@@ -56,7 +56,7 @@ public class CloudPcDisasterRecoveryCapability implements AdditionalDataHolder, 
         return this.backingStore;
     }
     /**
-     * Gets the capabilityType property value. The capabilityType property
+     * Gets the capabilityType property value. The disaster recovery action that can be performed for the Cloud PC. The possible values are: none, failover, failback, unknownFutureValue.
      * @return a {@link CloudPcDisasterRecoveryCapabilityType}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class CloudPcDisasterRecoveryCapability implements AdditionalDataHolder, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the primaryRegion property value. The primaryRegion property
+     * Gets the primaryRegion property value. The primary and mainly used region where the Cloud PC is located.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CloudPcDisasterRecoveryCapability implements AdditionalDataHolder, 
         return this.backingStore.get("primaryRegion");
     }
     /**
-     * Gets the secondaryRegion property value. The secondaryRegion property
+     * Gets the secondaryRegion property value. The secondary region to which the Cloud PC can be failed over during a regional outage.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class CloudPcDisasterRecoveryCapability implements AdditionalDataHolder, 
         this.backingStore = value;
     }
     /**
-     * Sets the capabilityType property value. The capabilityType property
+     * Sets the capabilityType property value. The disaster recovery action that can be performed for the Cloud PC. The possible values are: none, failover, failback, unknownFutureValue.
      * @param value Value to set for the capabilityType property.
      */
     public void setCapabilityType(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryCapabilityType value) {
@@ -142,14 +142,14 @@ public class CloudPcDisasterRecoveryCapability implements AdditionalDataHolder, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the primaryRegion property value. The primaryRegion property
+     * Sets the primaryRegion property value. The primary and mainly used region where the Cloud PC is located.
      * @param value Value to set for the primaryRegion property.
      */
     public void setPrimaryRegion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("primaryRegion", value);
     }
     /**
-     * Sets the secondaryRegion property value. The secondaryRegion property
+     * Sets the secondaryRegion property value. The secondary region to which the Cloud PC can be failed over during a regional outage.
      * @param value Value to set for the secondaryRegion property.
      */
     public void setSecondaryRegion(@jakarta.annotation.Nullable final String value) {

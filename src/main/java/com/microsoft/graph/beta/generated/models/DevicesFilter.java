@@ -68,7 +68,7 @@ public class DevicesFilter implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
+     * Gets the mode property value. Determines whether devices that satisfy the rule should be allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
      * @return a {@link CrossTenantAccessPolicyTargetConfigurationAccessType}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class DevicesFilter implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the mode property value. Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.
+     * Sets the mode property value. Determines whether devices that satisfy the rule should be allowed or blocked. The possible values are: allowed, blocked, unknownFutureValue.
      * @param value Value to set for the mode property.
      */
     public void setMode(@jakarta.annotation.Nullable final CrossTenantAccessPolicyTargetConfigurationAccessType value) {

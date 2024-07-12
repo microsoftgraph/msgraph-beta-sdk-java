@@ -130,7 +130,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         return this.backingStore.get("healthStatus");
     }
     /**
-     * Gets the manufacturer property value. The manufacturer name of the device.
+     * Gets the manufacturer property value. The manufacturer name of the device. Deprecated in favor of DeviceManufacturerName.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         return this.backingStore.get("maxCapacityPercentage");
     }
     /**
-     * Gets the model property value. The model name of the device.
+     * Gets the model property value. The model name of the device. Deprecated in favor of DeviceModelName.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -245,7 +245,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         this.backingStore.set("healthStatus", value);
     }
     /**
-     * Sets the manufacturer property value. The manufacturer name of the device.
+     * Sets the manufacturer property value. The manufacturer name of the device. Deprecated in favor of DeviceManufacturerName.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
@@ -259,7 +259,7 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         this.backingStore.set("maxCapacityPercentage", value);
     }
     /**
-     * Sets the model property value. The model name of the device.
+     * Sets the model property value. The model name of the device. Deprecated in favor of DeviceModelName.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {

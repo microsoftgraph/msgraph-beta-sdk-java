@@ -45,7 +45,7 @@ public class VirtualEventsRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the townhalls property value. The townhalls property
+     * Gets the townhalls property value. A collection of town halls. Nullable.
      * @return a {@link java.util.List<VirtualEventTownhall>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class VirtualEventsRoot extends Entity implements Parsable {
         return this.backingStore.get("townhalls");
     }
     /**
-     * Gets the webinars property value. The webinars property
+     * Gets the webinars property value. A collection of webinars. Nullable.
      * @return a {@link java.util.List<VirtualEventWebinar>}
      */
     @jakarta.annotation.Nullable
@@ -79,14 +79,14 @@ public class VirtualEventsRoot extends Entity implements Parsable {
         this.backingStore.set("events", value);
     }
     /**
-     * Sets the townhalls property value. The townhalls property
+     * Sets the townhalls property value. A collection of town halls. Nullable.
      * @param value Value to set for the townhalls property.
      */
     public void setTownhalls(@jakarta.annotation.Nullable final java.util.List<VirtualEventTownhall> value) {
         this.backingStore.set("townhalls", value);
     }
     /**
-     * Sets the webinars property value. The webinars property
+     * Sets the webinars property value. A collection of webinars. Nullable.
      * @param value Value to set for the webinars property.
      */
     public void setWebinars(@jakarta.annotation.Nullable final java.util.List<VirtualEventWebinar> value) {

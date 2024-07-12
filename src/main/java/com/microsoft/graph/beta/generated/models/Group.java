@@ -508,7 +508,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesSamAccountName");
     }
     /**
-     * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values). Read-only.
+     * Gets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1187,7 +1187,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesSamAccountName", value);
     }
     /**
-     * Sets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values). Read-only.
+     * Sets the onPremisesSecurityIdentifier property value. Contains the on-premises security identifier (SID) for the group synchronized from on-premises to the cloud. Read-only. Returned by default. Supports $filter (eq including on null values).
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {

@@ -54,7 +54,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
+     * Gets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults, and types that make up this template. Read-only.
      * @return a {@link java.util.List<SettingTemplateValue>}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class DirectorySettingTemplate extends DirectoryObject implements Parsabl
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults and types that make up this template.  Read-only.
+     * Sets the values property value. Collection of settingTemplateValues that list the set of available settings, defaults, and types that make up this template. Read-only.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final java.util.List<SettingTemplateValue> value) {

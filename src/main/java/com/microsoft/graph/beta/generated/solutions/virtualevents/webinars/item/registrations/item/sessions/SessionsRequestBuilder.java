@@ -59,19 +59,21 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations/{virtualEventRegistration%2Did}/sessions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get sessions from solutions
+     * Get a list of sessions that a registrant registered for in a webinar.
      * @return a {@link VirtualEventSessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-list-sessions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventSessionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get sessions from solutions
+     * Get a list of sessions that a registrant registered for in a webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventSessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistration-list-sessions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public VirtualEventSessionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventSessionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get sessions from solutions
+     * Get a list of sessions that a registrant registered for in a webinar.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sessions from solutions
+     * Get a list of sessions that a registrant registered for in a webinar.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return new SessionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sessions from solutions
+     * Get a list of sessions that a registrant registered for in a webinar.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
