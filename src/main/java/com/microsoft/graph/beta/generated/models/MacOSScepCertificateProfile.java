@@ -54,6 +54,14 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         return this.backingStore.get("customSubjectAlternativeNames");
     }
     /**
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @return a {@link AppleDeploymentChannel}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeploymentChannel getDeploymentChannel() {
+        return this.backingStore.get("deploymentChannel");
+    }
+    /**
      * Gets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.
      * @return a {@link java.util.List<ExtendedKeyUsage>}
      */
@@ -71,6 +79,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         deserializerMap.put("allowAllAppsAccess", (n) -> { this.setAllowAllAppsAccess(n.getBooleanValue()); });
         deserializerMap.put("certificateStore", (n) -> { this.setCertificateStore(n.getEnumValue(CertificateStore::forValue)); });
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
+        deserializerMap.put("deploymentChannel", (n) -> { this.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel::forValue)); });
         deserializerMap.put("extendedKeyUsages", (n) -> { this.setExtendedKeyUsages(n.getCollectionOfObjectValues(ExtendedKeyUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("hashAlgorithm", (n) -> { this.setHashAlgorithm(n.getEnumSetValue(HashAlgorithms::forValue)); });
         deserializerMap.put("keySize", (n) -> { this.setKeySize(n.getEnumValue(KeySize::forValue)); });
@@ -156,6 +165,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         writer.writeBooleanValue("allowAllAppsAccess", this.getAllowAllAppsAccess());
         writer.writeEnumValue("certificateStore", this.getCertificateStore());
         writer.writeCollectionOfObjectValues("customSubjectAlternativeNames", this.getCustomSubjectAlternativeNames());
+        writer.writeEnumValue("deploymentChannel", this.getDeploymentChannel());
         writer.writeCollectionOfObjectValues("extendedKeyUsages", this.getExtendedKeyUsages());
         writer.writeEnumSetValue("hashAlgorithm", this.getHashAlgorithm());
         writer.writeEnumValue("keySize", this.getKeySize());
@@ -186,6 +196,13 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
      */
     public void setCustomSubjectAlternativeNames(@jakarta.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
         this.backingStore.set("customSubjectAlternativeNames", value);
+    }
+    /**
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @param value Value to set for the deploymentChannel property.
+     */
+    public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
+        this.backingStore.set("deploymentChannel", value);
     }
     /**
      * Sets the extendedKeyUsages property value. Extended Key Usage (EKU) settings. This collection can contain a maximum of 500 elements.

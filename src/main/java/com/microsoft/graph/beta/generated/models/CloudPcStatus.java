@@ -18,7 +18,8 @@ public enum CloudPcStatus implements ValuedEnum {
     UnknownFutureValue("unknownFutureValue"),
     MovingRegion("movingRegion"),
     ResizePendingLicense("resizePendingLicense"),
-    UpdatingSingleSignOn("updatingSingleSignOn");
+    UpdatingSingleSignOn("updatingSingleSignOn"),
+    ModifyingSingleSignOn("modifyingSingleSignOn");
     public final String value;
     CloudPcStatus(final String value) {
         this.value = value;
@@ -43,6 +44,7 @@ public enum CloudPcStatus implements ValuedEnum {
             case "movingRegion": return MovingRegion;
             case "resizePendingLicense": return ResizePendingLicense;
             case "updatingSingleSignOn": return UpdatingSingleSignOn;
+            case "modifyingSingleSignOn": return ModifyingSingleSignOn;
             default: return null;
         }
     }

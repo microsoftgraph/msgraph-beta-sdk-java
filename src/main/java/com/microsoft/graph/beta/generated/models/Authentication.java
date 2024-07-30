@@ -56,6 +56,7 @@ public class Authentication extends Entity implements Parsable {
         deserializerMap.put("passwordMethods", (n) -> { this.setPasswordMethods(n.getCollectionOfObjectValues(PasswordAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("phoneMethods", (n) -> { this.setPhoneMethods(n.getCollectionOfObjectValues(PhoneAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("platformCredentialMethods", (n) -> { this.setPlatformCredentialMethods(n.getCollectionOfObjectValues(PlatformCredentialAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("requirements", (n) -> { this.setRequirements(n.getObjectValue(StrongAuthenticationRequirements::createFromDiscriminatorValue)); });
         deserializerMap.put("signInPreferences", (n) -> { this.setSignInPreferences(n.getObjectValue(SignInPreferences::createFromDiscriminatorValue)); });
         deserializerMap.put("softwareOathMethods", (n) -> { this.setSoftwareOathMethods(n.getCollectionOfObjectValues(SoftwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("temporaryAccessPassMethods", (n) -> { this.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
@@ -79,7 +80,7 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("microsoftAuthenticatorMethods");
     }
     /**
-     * Gets the operations property value. The operations property
+     * Gets the operations property value. Represents the status of a long-running operation, such as a password reset operation.
      * @return a {@link java.util.List<LongRunningOperation>}
      */
     @jakarta.annotation.Nullable
@@ -117,6 +118,14 @@ public class Authentication extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<PlatformCredentialAuthenticationMethod> getPlatformCredentialMethods() {
         return this.backingStore.get("platformCredentialMethods");
+    }
+    /**
+     * Gets the requirements property value. The settings and preferences for per-user Microsoft Entra multifactor authentication.
+     * @return a {@link StrongAuthenticationRequirements}
+     */
+    @jakarta.annotation.Nullable
+    public StrongAuthenticationRequirements getRequirements() {
+        return this.backingStore.get("requirements");
     }
     /**
      * Gets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
@@ -166,6 +175,7 @@ public class Authentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("passwordMethods", this.getPasswordMethods());
         writer.writeCollectionOfObjectValues("phoneMethods", this.getPhoneMethods());
         writer.writeCollectionOfObjectValues("platformCredentialMethods", this.getPlatformCredentialMethods());
+        writer.writeObjectValue("requirements", this.getRequirements());
         writer.writeObjectValue("signInPreferences", this.getSignInPreferences());
         writer.writeCollectionOfObjectValues("softwareOathMethods", this.getSoftwareOathMethods());
         writer.writeCollectionOfObjectValues("temporaryAccessPassMethods", this.getTemporaryAccessPassMethods());
@@ -200,7 +210,7 @@ public class Authentication extends Entity implements Parsable {
         this.backingStore.set("microsoftAuthenticatorMethods", value);
     }
     /**
-     * Sets the operations property value. The operations property
+     * Sets the operations property value. Represents the status of a long-running operation, such as a password reset operation.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<LongRunningOperation> value) {
@@ -233,6 +243,13 @@ public class Authentication extends Entity implements Parsable {
      */
     public void setPlatformCredentialMethods(@jakarta.annotation.Nullable final java.util.List<PlatformCredentialAuthenticationMethod> value) {
         this.backingStore.set("platformCredentialMethods", value);
+    }
+    /**
+     * Sets the requirements property value. The settings and preferences for per-user Microsoft Entra multifactor authentication.
+     * @param value Value to set for the requirements property.
+     */
+    public void setRequirements(@jakarta.annotation.Nullable final StrongAuthenticationRequirements value) {
+        this.backingStore.set("requirements", value);
     }
     /**
      * Sets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.

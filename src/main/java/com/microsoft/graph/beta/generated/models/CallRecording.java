@@ -79,7 +79,6 @@ public class CallRecording extends Entity implements Parsable {
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("meetingId", (n) -> { this.setMeetingId(n.getStringValue()); });
         deserializerMap.put("meetingOrganizer", (n) -> { this.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        deserializerMap.put("meetingOrganizerId", (n) -> { this.setMeetingOrganizerId(n.getStringValue()); });
         deserializerMap.put("recordingContentUrl", (n) -> { this.setRecordingContentUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -98,14 +97,6 @@ public class CallRecording extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
         return this.backingStore.get("meetingOrganizer");
-    }
-    /**
-     * Gets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this recording. Read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getMeetingOrganizerId() {
-        return this.backingStore.get("meetingOrganizerId");
     }
     /**
      * Gets the recordingContentUrl property value. The URL that can be used to access the content of the recording. Read-only.
@@ -129,7 +120,6 @@ public class CallRecording extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("meetingId", this.getMeetingId());
         writer.writeObjectValue("meetingOrganizer", this.getMeetingOrganizer());
-        writer.writeStringValue("meetingOrganizerId", this.getMeetingOrganizerId());
         writer.writeStringValue("recordingContentUrl", this.getRecordingContentUrl());
     }
     /**
@@ -180,13 +170,6 @@ public class CallRecording extends Entity implements Parsable {
      */
     public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("meetingOrganizer", value);
-    }
-    /**
-     * Sets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this recording. Read-only.
-     * @param value Value to set for the meetingOrganizerId property.
-     */
-    public void setMeetingOrganizerId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("meetingOrganizerId", value);
     }
     /**
      * Sets the recordingContentUrl property value. The URL that can be used to access the content of the recording. Read-only.

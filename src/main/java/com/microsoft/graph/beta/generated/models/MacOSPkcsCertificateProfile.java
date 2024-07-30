@@ -77,6 +77,14 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
         return this.backingStore.get("customSubjectAlternativeNames");
     }
     /**
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @return a {@link AppleDeploymentChannel}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeploymentChannel getDeploymentChannel() {
+        return this.backingStore.get("deploymentChannel");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -89,6 +97,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
         deserializerMap.put("certificationAuthority", (n) -> { this.setCertificationAuthority(n.getStringValue()); });
         deserializerMap.put("certificationAuthorityName", (n) -> { this.setCertificationAuthorityName(n.getStringValue()); });
         deserializerMap.put("customSubjectAlternativeNames", (n) -> { this.setCustomSubjectAlternativeNames(n.getCollectionOfObjectValues(CustomSubjectAlternativeName::createFromDiscriminatorValue)); });
+        deserializerMap.put("deploymentChannel", (n) -> { this.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel::forValue)); });
         deserializerMap.put("managedDeviceCertificateStates", (n) -> { this.setManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedDeviceCertificateState::createFromDiscriminatorValue)); });
         deserializerMap.put("subjectAlternativeNameFormatString", (n) -> { this.setSubjectAlternativeNameFormatString(n.getStringValue()); });
         deserializerMap.put("subjectNameFormatString", (n) -> { this.setSubjectNameFormatString(n.getStringValue()); });
@@ -131,6 +140,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
         writer.writeStringValue("certificationAuthority", this.getCertificationAuthority());
         writer.writeStringValue("certificationAuthorityName", this.getCertificationAuthorityName());
         writer.writeCollectionOfObjectValues("customSubjectAlternativeNames", this.getCustomSubjectAlternativeNames());
+        writer.writeEnumValue("deploymentChannel", this.getDeploymentChannel());
         writer.writeCollectionOfObjectValues("managedDeviceCertificateStates", this.getManagedDeviceCertificateStates());
         writer.writeStringValue("subjectAlternativeNameFormatString", this.getSubjectAlternativeNameFormatString());
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
@@ -176,6 +186,13 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
      */
     public void setCustomSubjectAlternativeNames(@jakarta.annotation.Nullable final java.util.List<CustomSubjectAlternativeName> value) {
         this.backingStore.set("customSubjectAlternativeNames", value);
+    }
+    /**
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @param value Value to set for the deploymentChannel property.
+     */
+    public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
+        this.backingStore.set("deploymentChannel", value);
     }
     /**
      * Sets the managedDeviceCertificateStates property value. Certificate state for devices. This collection can contain a maximum of 2147483647 elements.

@@ -25,7 +25,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         return new UnifiedRoleAssignment();
     }
     /**
-     * Gets the appScope property value. Details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
+     * Gets the appScope property value. Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
      * @return a {@link AppScope}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         return this.backingStore.get("condition");
     }
     /**
-     * Gets the directoryScope property value. The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * Gets the directoryScope property value. The directory object that is the scope of the assignment. Read-only. Supports $expand for the directory provider.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the principal property value. The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * Gets the principal property value. Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         return this.backingStore.get("resourceScope");
     }
     /**
-     * Gets the roleDefinition property value. The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
+     * Gets the roleDefinition property value. The roleDefinition the assignment is for. Supports $expand.
      * @return a {@link UnifiedRoleDefinition}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         writer.writeStringValue("roleDefinitionId", this.getRoleDefinitionId());
     }
     /**
-     * Sets the appScope property value. Details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
+     * Sets the appScope property value. Read-only property with details of the app specific scope when the assignment scope is app specific. Containment entity. Supports $expand for the entitlement provider only.
      * @param value Value to set for the appScope property.
      */
     public void setAppScope(@jakarta.annotation.Nullable final AppScope value) {
@@ -173,7 +173,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         this.backingStore.set("condition", value);
     }
     /**
-     * Sets the directoryScope property value. The directory object that is the scope of the assignment. Provided so that callers can get the directory object using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * Sets the directoryScope property value. The directory object that is the scope of the assignment. Read-only. Supports $expand for the directory provider.
      * @param value Value to set for the directoryScope property.
      */
     public void setDirectoryScope(@jakarta.annotation.Nullable final DirectoryObject value) {
@@ -187,7 +187,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         this.backingStore.set("directoryScopeId", value);
     }
     /**
-     * Sets the principal property value. The assigned principal. Provided so that callers can get the principal using $expand at the same time as getting the role assignment. Read-only. Supports $expand.
+     * Sets the principal property value. Referencing the assigned principal. Read-only. Supports $expand except for the Exchange provider.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {
@@ -215,7 +215,7 @@ public class UnifiedRoleAssignment extends Entity implements Parsable {
         this.backingStore.set("resourceScope", value);
     }
     /**
-     * Sets the roleDefinition property value. The roleDefinition the assignment is for. Provided so that callers can get the role definition using $expand at the same time as getting the role assignment. roleDefinition.id will be auto expanded. Supports $expand.
+     * Sets the roleDefinition property value. The roleDefinition the assignment is for. Supports $expand.
      * @param value Value to set for the roleDefinition property.
      */
     public void setRoleDefinition(@jakarta.annotation.Nullable final UnifiedRoleDefinition value) {

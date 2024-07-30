@@ -60,19 +60,21 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/communities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * Get a list of the Viva Engage community objects and their properties.
      * @return a {@link CommunityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-list-communities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CommunityCollectionResponse get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * Get a list of the Viva Engage community objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CommunityCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/employeeexperience-list-communities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CommunityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +111,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Community::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * Get a list of the Viva Engage community objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +119,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * Get a list of the Viva Engage community objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +165,7 @@ public class CommunitiesRequestBuilder extends BaseRequestBuilder {
         return new CommunitiesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a community object.
+     * Get a list of the Viva Engage community objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
