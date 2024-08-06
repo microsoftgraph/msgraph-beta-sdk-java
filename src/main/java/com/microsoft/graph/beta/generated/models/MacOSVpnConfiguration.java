@@ -29,12 +29,21 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
         return new MacOSVpnConfiguration();
     }
     /**
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @return a {@link AppleDeploymentChannel}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeploymentChannel getDeploymentChannel() {
+        return this.backingStore.get("deploymentChannel");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deploymentChannel", (n) -> { this.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel::forValue)); });
         deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(MacOSCertificateProfileBase::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -53,7 +62,15 @@ public class MacOSVpnConfiguration extends AppleVpnConfiguration implements Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("deploymentChannel", this.getDeploymentChannel());
         writer.writeObjectValue("identityCertificate", this.getIdentityCertificate());
+    }
+    /**
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @param value Value to set for the deploymentChannel property.
+     */
+    public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
+        this.backingStore.set("deploymentChannel", value);
     }
     /**
      * Sets the identityCertificate property value. Identity certificate for client authentication when authentication method is certificate.

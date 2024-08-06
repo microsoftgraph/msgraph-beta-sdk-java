@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.devicemanagement.comanageddevices.item;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.activatedeviceesim.ActivateDeviceEsimRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.assignmentfilterevaluationstatusdetails.AssignmentFilterEvaluationStatusDetailsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.bypassactivationlock.BypassActivationLockRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.changeassignments.ChangeAssignmentsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.cleanwindowsdevice.CleanWindowsDeviceRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.createdevicelogcollectionrequest.CreateDeviceLogCollectionRequestRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.deleteuserfromsharedappledevice.DeleteUserFromSharedAppleDeviceRequestBuilder;
@@ -101,6 +102,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BypassActivationLockRequestBuilder bypassActivationLock() {
         return new BypassActivationLockRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the changeAssignments method.
+     * @return a {@link ChangeAssignmentsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ChangeAssignmentsRequestBuilder changeAssignments() {
+        return new ChangeAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the cleanWindowsDevice method.

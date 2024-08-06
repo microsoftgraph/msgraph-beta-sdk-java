@@ -20,6 +20,7 @@ public enum DeviceVendor implements ValuedEnum {
     VmWareSdWan("vmWareSdWan"),
     Versa("versa"),
     Other("other"),
+    CiscoCatalyst("ciscoCatalyst"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceVendor(final String value) {
@@ -46,6 +47,7 @@ public enum DeviceVendor implements ValuedEnum {
             case "vmWareSdWan": return VmWareSdWan;
             case "versa": return Versa;
             case "other": return Other;
+            case "ciscoCatalyst": return CiscoCatalyst;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

@@ -11,7 +11,9 @@ public enum AppleDeploymentChannel implements ValuedEnum {
     /** Send payload down over Device Channel. */
     DeviceChannel("deviceChannel"),
     /** Send payload down over User Channel. */
-    UserChannel("userChannel");
+    UserChannel("userChannel"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     AppleDeploymentChannel(final String value) {
         this.value = value;
@@ -24,6 +26,7 @@ public enum AppleDeploymentChannel implements ValuedEnum {
         switch(searchValue) {
             case "deviceChannel": return DeviceChannel;
             case "userChannel": return UserChannel;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

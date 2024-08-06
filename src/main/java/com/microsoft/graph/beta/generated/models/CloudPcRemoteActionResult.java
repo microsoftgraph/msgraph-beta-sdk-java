@@ -86,7 +86,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("actionName", (n) -> { this.setActionName(n.getStringValue()); });
         deserializerMap.put("actionState", (n) -> { this.setActionState(n.getEnumValue(ActionState::forValue)); });
         deserializerMap.put("cloudPcId", (n) -> { this.setCloudPcId(n.getStringValue()); });
@@ -94,6 +94,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("statusDetail", (n) -> { this.setStatusDetail(n.getObjectValue(CloudPcStatusDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getObjectValue(CloudPcStatusDetails::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -130,6 +131,14 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("startDateTime");
     }
     /**
+     * Gets the statusDetail property value. The extended details of the action status, including error code, error message, and additional information. For example, 'statusDetail': {'code': 'internalServerError','message': 'There was an internal server error. Please contact support xxx.','additionalInformation': [ { '@odata.type':'microsoft.graph.keyValuePair','name': 'correlationId','value': '52367774-cfb7-4e9c-ab51-1b864c31f2d1'} ]}
+     * @return a {@link CloudPcStatusDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcStatusDetail getStatusDetail() {
+        return this.backingStore.get("statusDetail");
+    }
+    /**
      * Gets the statusDetails property value. The details of the Cloud PC status. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
      * @return a {@link CloudPcStatusDetails}
      */
@@ -150,6 +159,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         writer.writeStringValue("managedDeviceId", this.getManagedDeviceId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
+        writer.writeObjectValue("statusDetail", this.getStatusDetail());
         writer.writeObjectValue("statusDetails", this.getStatusDetails());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -216,6 +226,13 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("startDateTime", value);
+    }
+    /**
+     * Sets the statusDetail property value. The extended details of the action status, including error code, error message, and additional information. For example, 'statusDetail': {'code': 'internalServerError','message': 'There was an internal server error. Please contact support xxx.','additionalInformation': [ { '@odata.type':'microsoft.graph.keyValuePair','name': 'correlationId','value': '52367774-cfb7-4e9c-ab51-1b864c31f2d1'} ]}
+     * @param value Value to set for the statusDetail property.
+     */
+    public void setStatusDetail(@jakarta.annotation.Nullable final CloudPcStatusDetail value) {
+        this.backingStore.set("statusDetail", value);
     }
     /**
      * Sets the statusDetails property value. The details of the Cloud PC status. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.

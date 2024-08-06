@@ -639,6 +639,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("managedDeviceEncryptionStates", (n) -> { this.setManagedDeviceEncryptionStates(n.getCollectionOfObjectValues(ManagedDeviceEncryptionState::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDeviceOverview", (n) -> { this.setManagedDeviceOverview(n.getObjectValue(ManagedDeviceOverview::createFromDiscriminatorValue)); });
         deserializerMap.put("managedDevices", (n) -> { this.setManagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedDeviceWindowsOSImages", (n) -> { this.setManagedDeviceWindowsOSImages(n.getCollectionOfObjectValues(ManagedDeviceWindowsOperatingSystemImage::createFromDiscriminatorValue)); });
         deserializerMap.put("maximumDepTokens", (n) -> { this.setMaximumDepTokens(n.getIntegerValue()); });
         deserializerMap.put("microsoftTunnelConfigurations", (n) -> { this.setMicrosoftTunnelConfigurations(n.getCollectionOfObjectValues(MicrosoftTunnelConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoftTunnelHealthThresholds", (n) -> { this.setMicrosoftTunnelHealthThresholds(n.getCollectionOfObjectValues(MicrosoftTunnelHealthThreshold::createFromDiscriminatorValue)); });
@@ -941,6 +942,14 @@ public class DeviceManagement extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<ManagedDevice> getManagedDevices() {
         return this.backingStore.get("managedDevices");
+    }
+    /**
+     * Gets the managedDeviceWindowsOSImages property value. A list of ManagedDeviceWindowsOperatingSystemImages
+     * @return a {@link java.util.List<ManagedDeviceWindowsOperatingSystemImage>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ManagedDeviceWindowsOperatingSystemImage> getManagedDeviceWindowsOSImages() {
+        return this.backingStore.get("managedDeviceWindowsOSImages");
     }
     /**
      * Gets the maximumDepTokens property value. Maximum number of DEP tokens allowed per-tenant.
@@ -1843,6 +1852,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("managedDeviceEncryptionStates", this.getManagedDeviceEncryptionStates());
         writer.writeObjectValue("managedDeviceOverview", this.getManagedDeviceOverview());
         writer.writeCollectionOfObjectValues("managedDevices", this.getManagedDevices());
+        writer.writeCollectionOfObjectValues("managedDeviceWindowsOSImages", this.getManagedDeviceWindowsOSImages());
         writer.writeIntegerValue("maximumDepTokens", this.getMaximumDepTokens());
         writer.writeCollectionOfObjectValues("microsoftTunnelConfigurations", this.getMicrosoftTunnelConfigurations());
         writer.writeCollectionOfObjectValues("microsoftTunnelHealthThresholds", this.getMicrosoftTunnelHealthThresholds());
@@ -2566,6 +2576,13 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setManagedDevices(@jakarta.annotation.Nullable final java.util.List<ManagedDevice> value) {
         this.backingStore.set("managedDevices", value);
+    }
+    /**
+     * Sets the managedDeviceWindowsOSImages property value. A list of ManagedDeviceWindowsOperatingSystemImages
+     * @param value Value to set for the managedDeviceWindowsOSImages property.
+     */
+    public void setManagedDeviceWindowsOSImages(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceWindowsOperatingSystemImage> value) {
+        this.backingStore.set("managedDeviceWindowsOSImages", value);
     }
     /**
      * Sets the maximumDepTokens property value. Maximum number of DEP tokens allowed per-tenant.

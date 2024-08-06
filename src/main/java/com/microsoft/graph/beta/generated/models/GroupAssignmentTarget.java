@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Represents an assignment to a group.
+ * The AAD Group we are deploying firmware updates to
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupAssignmentTarget extends DeviceAndAppManagementAssignmentTarget implements Parsable {

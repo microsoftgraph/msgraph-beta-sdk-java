@@ -107,7 +107,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("authenticationMethodsUsed");
     }
     /**
-     * Gets the authenticationProcessingDetails property value. More authentication processing details, such as the agent name for  PTA and PHS, or a server or farm name for federated authentication.
+     * Gets the authenticationProcessingDetails property value. More authentication processing details, such as the agent name for PTA and PHS, or a server or farm name for federated authentication.
      * @return a {@link java.util.List<KeyValue>}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("clientCredentialType");
     }
     /**
-     * Gets the conditionalAccessAudiences property value. A list that indicates the audience that was evaluated by Conditional Access during a sign-in event.  Supports $filter (eq).
+     * Gets the conditionalAccessAudiences property value. A list that indicates the audience that Conditional Access evaluated during a sign-in event.  Supports $filter (eq).
      * @return a {@link java.util.List<ConditionalAccessAudience>}
      */
     @jakarta.annotation.Nullable
@@ -187,7 +187,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("conditionalAccessStatus");
     }
     /**
-     * Gets the correlationId property value. The identifier the client sends when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support.  Supports $filter (eq).
+     * Gets the correlationId property value. The identifier the client sends when sign-in is initiated. This property is used for troubleshooting the corresponding sign-in activity when calling for support.  Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -330,7 +330,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("homeTenantId");
     }
     /**
-     * Gets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Microsoft Entra ID to show the tenant content.
+     * Gets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant provides affirmative consent to Microsoft Entra ID to show the tenant content.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -650,7 +650,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. The UPN of the user.  Supports $filter (eq, startsWith).
+     * Gets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the 'true' format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -814,7 +814,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("authenticationMethodsUsed", value);
     }
     /**
-     * Sets the authenticationProcessingDetails property value. More authentication processing details, such as the agent name for  PTA and PHS, or a server or farm name for federated authentication.
+     * Sets the authenticationProcessingDetails property value. More authentication processing details, such as the agent name for PTA and PHS, or a server or farm name for federated authentication.
      * @param value Value to set for the authenticationProcessingDetails property.
      */
     public void setAuthenticationProcessingDetails(@jakarta.annotation.Nullable final java.util.List<KeyValue> value) {
@@ -870,7 +870,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("clientCredentialType", value);
     }
     /**
-     * Sets the conditionalAccessAudiences property value. A list that indicates the audience that was evaluated by Conditional Access during a sign-in event.  Supports $filter (eq).
+     * Sets the conditionalAccessAudiences property value. A list that indicates the audience that Conditional Access evaluated during a sign-in event.  Supports $filter (eq).
      * @param value Value to set for the conditionalAccessAudiences property.
      */
     public void setConditionalAccessAudiences(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessAudience> value) {
@@ -884,7 +884,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("conditionalAccessStatus", value);
     }
     /**
-     * Sets the correlationId property value. The identifier the client sends when sign-in is initiated. This is used for troubleshooting the corresponding sign-in activity when calling for support.  Supports $filter (eq).
+     * Sets the correlationId property value. The identifier the client sends when sign-in is initiated. This property is used for troubleshooting the corresponding sign-in activity when calling for support.  Supports $filter (eq).
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
@@ -940,7 +940,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("homeTenantId", value);
     }
     /**
-     * Sets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant has provided affirmative consent to Microsoft Entra ID to show the tenant content.
+     * Sets the homeTenantName property value. For user sign ins, the identifier of the tenant that the user is a member of. Only populated in cases where the home tenant provides affirmative consent to Microsoft Entra ID to show the tenant content.
      * @param value Value to set for the homeTenantName property.
      */
     public void setHomeTenantName(@jakarta.annotation.Nullable final String value) {
@@ -1220,7 +1220,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. The UPN of the user.  Supports $filter (eq, startsWith).
+     * Sets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the 'true' format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq, startsWith).
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

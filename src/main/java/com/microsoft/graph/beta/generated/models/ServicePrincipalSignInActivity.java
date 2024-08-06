@@ -25,7 +25,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
         return new ServicePrincipalSignInActivity();
     }
     /**
-     * Gets the appId property value. The application ID of the resource.
+     * Gets the appId property value. The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credentialed resource application.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class ServicePrincipalSignInActivity extends Entity implements Parsable {
         writer.writeObjectValue("lastSignInActivity", this.getLastSignInActivity());
     }
     /**
-     * Sets the appId property value. The application ID of the resource.
+     * Sets the appId property value. The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credentialed resource application.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {

@@ -16,7 +16,6 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.Reports
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.retrievescopedpermissions.RetrieveScopedPermissionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.retrievetenantencryptionsetting.RetrieveTenantEncryptionSettingRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.serviceplans.ServicePlansRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.virtualendpoint.shareduseserviceplans.SharedUseServicePlansRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.snapshots.SnapshotsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.supportedregions.SupportedRegionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.usersettings.UserSettingsRequestBuilder;
@@ -167,14 +166,6 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ServicePlansRequestBuilder servicePlans() {
         return new ServicePlansRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the sharedUseServicePlans property of the microsoft.graph.virtualEndpoint entity.
-     * @return a {@link SharedUseServicePlansRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public SharedUseServicePlansRequestBuilder sharedUseServicePlans() {
-        return new SharedUseServicePlansRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the snapshots property of the microsoft.graph.virtualEndpoint entity.
