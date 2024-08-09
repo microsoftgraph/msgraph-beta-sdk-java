@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Represents a group that should be excluded from an assignment.
+ * The AAD Group we are deploying firmware updates to
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExclusionGroupAssignmentTarget extends GroupAssignmentTarget implements Parsable {

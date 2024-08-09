@@ -6,7 +6,6 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.e
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.getcloudpcconnectivityhistory.GetCloudPcConnectivityHistoryRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcLaunchInfoRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.getfrontlinecloudpcaccessstate.GetFrontlineCloudPcAccessStateRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.getshiftworkcloudpcaccessstate.GetShiftWorkCloudPcAccessStateRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.getsupportedcloudpcremoteactions.GetSupportedCloudPcRemoteActionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.poweroff.PowerOffRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.poweron.PowerOnRequestBuilder;
@@ -15,6 +14,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.r
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.resize.ResizeRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievecloudpcremoteactionresults.RetrieveCloudPCRemoteActionResultsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievereviewstatus.RetrieveReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrypartneragentinstallation.RetryPartnerAgentInstallationRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.setreviewstatus.SetReviewStatusRequestBuilder;
@@ -90,14 +90,6 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         return new GetFrontlineCloudPcAccessStateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the getShiftWorkCloudPcAccessState method.
-     * @return a {@link GetShiftWorkCloudPcAccessStateRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetShiftWorkCloudPcAccessStateRequestBuilder getShiftWorkCloudPcAccessState() {
-        return new GetShiftWorkCloudPcAccessStateRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the getSupportedCloudPcRemoteActions method.
      * @return a {@link GetSupportedCloudPcRemoteActionsRequestBuilder}
      */
@@ -160,6 +152,14 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCloudPCRemoteActionResults method.
+     * @return a {@link RetrieveCloudPCRemoteActionResultsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPCRemoteActionResultsRequestBuilder retrieveCloudPCRemoteActionResults() {
+        return new RetrieveCloudPCRemoteActionResultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveReviewStatus method.

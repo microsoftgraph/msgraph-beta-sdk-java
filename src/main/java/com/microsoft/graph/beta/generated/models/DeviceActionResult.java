@@ -41,6 +41,7 @@ public class DeviceActionResult implements AdditionalDataHolder, BackedModel, Pa
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.activateDeviceEsimActionResult": return new ActivateDeviceEsimActionResult();
+                case "#microsoft.graph.changeAssignmentsActionResult": return new ChangeAssignmentsActionResult();
                 case "#microsoft.graph.configurationManagerActionResult": return new ConfigurationManagerActionResult();
                 case "#microsoft.graph.deleteUserFromSharedAppleDeviceActionResult": return new DeleteUserFromSharedAppleDeviceActionResult();
                 case "#microsoft.graph.locateDeviceActionResult": return new LocateDeviceActionResult();

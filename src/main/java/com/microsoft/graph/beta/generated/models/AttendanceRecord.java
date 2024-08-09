@@ -64,7 +64,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         return this.backingStore.get("identity");
     }
     /**
-     * Gets the registrantId property value. Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
+     * Gets the registrantId property value. Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting. (deprecated)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         this.backingStore.set("identity", value);
     }
     /**
-     * Sets the registrantId property value. Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting.
+     * Sets the registrantId property value. Unique identifier of a meetingRegistrant. Presents when the participant has registered for the meeting. (deprecated)
      * @param value Value to set for the registrantId property.
      */
     public void setRegistrantId(@jakarta.annotation.Nullable final String value) {

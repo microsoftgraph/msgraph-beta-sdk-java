@@ -79,7 +79,6 @@ public class CallTranscript extends Entity implements Parsable {
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("meetingId", (n) -> { this.setMeetingId(n.getStringValue()); });
         deserializerMap.put("meetingOrganizer", (n) -> { this.setMeetingOrganizer(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
-        deserializerMap.put("meetingOrganizerId", (n) -> { this.setMeetingOrganizerId(n.getStringValue()); });
         deserializerMap.put("metadataContent", (n) -> { this.setMetadataContent(n.getByteArrayValue()); });
         deserializerMap.put("transcriptContentUrl", (n) -> { this.setTranscriptContentUrl(n.getStringValue()); });
         return deserializerMap;
@@ -99,14 +98,6 @@ public class CallTranscript extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public IdentitySet getMeetingOrganizer() {
         return this.backingStore.get("meetingOrganizer");
-    }
-    /**
-     * Gets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getMeetingOrganizerId() {
-        return this.backingStore.get("meetingOrganizerId");
     }
     /**
      * Gets the metadataContent property value. The time-aligned metadata of the utterances in the transcript. Read-only.
@@ -138,7 +129,6 @@ public class CallTranscript extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("meetingId", this.getMeetingId());
         writer.writeObjectValue("meetingOrganizer", this.getMeetingOrganizer());
-        writer.writeStringValue("meetingOrganizerId", this.getMeetingOrganizerId());
         writer.writeByteArrayValue("metadataContent", this.getMetadataContent());
         writer.writeStringValue("transcriptContentUrl", this.getTranscriptContentUrl());
     }
@@ -190,13 +180,6 @@ public class CallTranscript extends Entity implements Parsable {
      */
     public void setMeetingOrganizer(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("meetingOrganizer", value);
-    }
-    /**
-     * Sets the meetingOrganizerId property value. The unique identifier of the organizer of the onlineMeeting related to this transcript. Read-only.
-     * @param value Value to set for the meetingOrganizerId property.
-     */
-    public void setMeetingOrganizerId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("meetingOrganizerId", value);
     }
     /**
      * Sets the metadataContent property value. The time-aligned metadata of the utterances in the transcript. Read-only.

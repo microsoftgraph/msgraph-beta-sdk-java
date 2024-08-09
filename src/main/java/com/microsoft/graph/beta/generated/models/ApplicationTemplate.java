@@ -33,6 +33,14 @@ public class ApplicationTemplate extends Entity implements Parsable {
         return this.backingStore.get("categories");
     }
     /**
+     * Gets the configurationUris property value. The URIs required for the single sign-on configuration of a preintegrated application.
+     * @return a {@link java.util.List<ConfigurationUri>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConfigurationUri> getConfigurationUris() {
+        return this.backingStore.get("configurationUris");
+    }
+    /**
      * Gets the description property value. A description of the application.
      * @return a {@link String}
      */
@@ -56,6 +64,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("configurationUris", (n) -> { this.setConfigurationUris(n.getCollectionOfObjectValues(ConfigurationUri::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("homePageUrl", (n) -> { this.setHomePageUrl(n.getStringValue()); });
@@ -131,6 +140,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
+        writer.writeCollectionOfObjectValues("configurationUris", this.getConfigurationUris());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("homePageUrl", this.getHomePageUrl());
@@ -147,6 +157,13 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("categories", value);
+    }
+    /**
+     * Sets the configurationUris property value. The URIs required for the single sign-on configuration of a preintegrated application.
+     * @param value Value to set for the configurationUris property.
+     */
+    public void setConfigurationUris(@jakarta.annotation.Nullable final java.util.List<ConfigurationUri> value) {
+        this.backingStore.set("configurationUris", value);
     }
     /**
      * Sets the description property value. A description of the application.

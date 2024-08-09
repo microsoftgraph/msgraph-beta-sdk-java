@@ -27,21 +27,12 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
         return new TemporaryAccessPassAuthenticationMethod();
     }
     /**
-     * Gets the createdDateTime property value. The date and time when the Temporary Access Pass was created.
-     * @return a {@link OffsetDateTime}
-     */
-    @jakarta.annotation.Nullable
-    public OffsetDateTime getCreatedDateTime() {
-        return this.backingStore.get("createdDateTime");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("isUsableOnce", (n) -> { this.setIsUsableOnce(n.getBooleanValue()); });
         deserializerMap.put("lifetimeInMinutes", (n) -> { this.setLifetimeInMinutes(n.getIntegerValue()); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
@@ -87,18 +78,10 @@ public class TemporaryAccessPassAuthenticationMethod extends AuthenticationMetho
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeBooleanValue("isUsableOnce", this.getIsUsableOnce());
         writer.writeIntegerValue("lifetimeInMinutes", this.getLifetimeInMinutes());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("temporaryAccessPass", this.getTemporaryAccessPass());
-    }
-    /**
-     * Sets the createdDateTime property value. The date and time when the Temporary Access Pass was created.
-     * @param value Value to set for the createdDateTime property.
-     */
-    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the isUsableOnce property value. Determines whether the pass is limited to a one-time use. If true, the pass can be used once; if false, the pass can be used multiple times within the Temporary Access Pass lifetime.

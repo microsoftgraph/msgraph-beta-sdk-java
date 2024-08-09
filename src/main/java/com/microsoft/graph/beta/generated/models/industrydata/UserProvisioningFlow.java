@@ -26,7 +26,7 @@ public class UserProvisioningFlow extends ProvisioningFlow implements Parsable {
         return new UserProvisioningFlow();
     }
     /**
-     * Gets the createUnmatchedUsers property value. A boolean choice indicating whether unmatched users should be created or ignored.
+     * Gets the createUnmatchedUsers property value. A Boolean choice indicating whether unmatched users should be created or ignored.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class UserProvisioningFlow extends ProvisioningFlow implements Parsable {
         writer.writeObjectValue("managementOptions", this.getManagementOptions());
     }
     /**
-     * Sets the createUnmatchedUsers property value. A boolean choice indicating whether unmatched users should be created or ignored.
+     * Sets the createUnmatchedUsers property value. A Boolean choice indicating whether unmatched users should be created or ignored.
      * @param value Value to set for the createUnmatchedUsers property.
      */
     public void setCreateUnmatchedUsers(@jakarta.annotation.Nullable final Boolean value) {

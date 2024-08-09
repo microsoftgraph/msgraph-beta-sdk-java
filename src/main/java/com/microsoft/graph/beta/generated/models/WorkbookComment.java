@@ -33,7 +33,7 @@ public class WorkbookComment extends Entity implements Parsable {
         return this.backingStore.get("content");
     }
     /**
-     * Gets the contentType property value. Indicates the type for the comment.
+     * Gets the contentType property value. The content type of the comment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class WorkbookComment extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the replies property value. The replies property
+     * Gets the replies property value. The list of replies to the comment. Read-only. Nullable.
      * @return a {@link java.util.List<WorkbookCommentReply>}
      */
     @jakarta.annotation.Nullable
@@ -89,14 +89,14 @@ public class WorkbookComment extends Entity implements Parsable {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the contentType property value. Indicates the type for the comment.
+     * Sets the contentType property value. The content type of the comment.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("contentType", value);
     }
     /**
-     * Sets the replies property value. The replies property
+     * Sets the replies property value. The list of replies to the comment. Read-only. Nullable.
      * @param value Value to set for the replies property.
      */
     public void setReplies(@jakarta.annotation.Nullable final java.util.List<WorkbookCommentReply> value) {

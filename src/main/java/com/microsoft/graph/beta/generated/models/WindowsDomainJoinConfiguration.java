@@ -67,7 +67,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
         return deserializerMap;
     }
     /**
-     * Gets the networkAccessConfigurations property value. Reference to device configurations required for network connectivity. This collection can contain a maximum of 2 elements.
+     * Gets the networkAccessConfigurations property value. Reference to device configurations required for network connectivity
      * @return a {@link java.util.List<DeviceConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class WindowsDomainJoinConfiguration extends DeviceConfiguration implemen
         this.backingStore.set("computerNameSuffixRandomCharCount", value);
     }
     /**
-     * Sets the networkAccessConfigurations property value. Reference to device configurations required for network connectivity. This collection can contain a maximum of 2 elements.
+     * Sets the networkAccessConfigurations property value. Reference to device configurations required for network connectivity
      * @param value Value to set for the networkAccessConfigurations property.
      */
     public void setNetworkAccessConfigurations(@jakarta.annotation.Nullable final java.util.List<DeviceConfiguration> value) {

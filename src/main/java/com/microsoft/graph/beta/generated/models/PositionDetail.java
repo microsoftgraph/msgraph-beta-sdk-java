@@ -86,7 +86,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("company", (n) -> { this.setCompany(n.getObjectValue(CompanyDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("endMonthYear", (n) -> { this.setEndMonthYear(n.getLocalDateValue()); });
@@ -95,6 +95,8 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         deserializerMap.put("level", (n) -> { this.setLevel(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getStringValue()); });
+        deserializerMap.put("secondaryJobTitle", (n) -> { this.setSecondaryJobTitle(n.getStringValue()); });
+        deserializerMap.put("secondaryRole", (n) -> { this.setSecondaryRole(n.getStringValue()); });
         deserializerMap.put("startMonthYear", (n) -> { this.setStartMonthYear(n.getLocalDateValue()); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getStringValue()); });
         return deserializerMap;
@@ -140,6 +142,22 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("role");
     }
     /**
+     * Gets the secondaryJobTitle property value. The secondaryJobTitle property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSecondaryJobTitle() {
+        return this.backingStore.get("secondaryJobTitle");
+    }
+    /**
+     * Gets the secondaryRole property value. The secondaryRole property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSecondaryRole() {
+        return this.backingStore.get("secondaryRole");
+    }
+    /**
      * Gets the startMonthYear property value. The start month and year of the position.
      * @return a {@link LocalDate}
      */
@@ -169,6 +187,8 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         writer.writeStringValue("level", this.getLevel());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("role", this.getRole());
+        writer.writeStringValue("secondaryJobTitle", this.getSecondaryJobTitle());
+        writer.writeStringValue("secondaryRole", this.getSecondaryRole());
         writer.writeLocalDateValue("startMonthYear", this.getStartMonthYear());
         writer.writeStringValue("summary", this.getSummary());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -243,6 +263,20 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void setRole(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("role", value);
+    }
+    /**
+     * Sets the secondaryJobTitle property value. The secondaryJobTitle property
+     * @param value Value to set for the secondaryJobTitle property.
+     */
+    public void setSecondaryJobTitle(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("secondaryJobTitle", value);
+    }
+    /**
+     * Sets the secondaryRole property value. The secondaryRole property
+     * @param value Value to set for the secondaryRole property.
+     */
+    public void setSecondaryRole(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("secondaryRole", value);
     }
     /**
      * Sets the startMonthYear property value. The start month and year of the position.

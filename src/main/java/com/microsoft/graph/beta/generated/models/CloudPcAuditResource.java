@@ -69,13 +69,12 @@ public class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("modifiedProperties", (n) -> { this.setModifiedProperties(n.getCollectionOfObjectValues(CloudPcAuditProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
         deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getStringValue()); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -111,14 +110,6 @@ public class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("resourceType");
     }
     /**
-     * Gets the type property value. The type property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getType() {
-        return this.backingStore.get("type");
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -129,7 +120,6 @@ public class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, 
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("resourceId", this.getResourceId());
         writer.writeStringValue("resourceType", this.getResourceType());
-        writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -181,12 +171,5 @@ public class CloudPcAuditResource implements AdditionalDataHolder, BackedModel, 
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceType", value);
-    }
-    /**
-     * Sets the type property value. The type property
-     * @param value Value to set for the type property.
-     */
-    public void setType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("type", value);
     }
 }

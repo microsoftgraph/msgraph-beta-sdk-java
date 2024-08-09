@@ -91,6 +91,7 @@ import com.microsoft.graph.beta.devicemanagement.manageddevicecleanuprules.Manag
 import com.microsoft.graph.beta.devicemanagement.manageddeviceencryptionstates.ManagedDeviceEncryptionStatesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddeviceoverview.ManagedDeviceOverviewRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.ManagedDevicesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.manageddevicewindowsosimages.ManagedDeviceWindowsOSImagesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.microsofttunnelconfigurations.MicrosoftTunnelConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.microsofttunnelhealththresholds.MicrosoftTunnelHealthThresholdsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.microsofttunnelserverlogcollectionresponses.MicrosoftTunnelServerLogCollectionResponsesRequestBuilder;
@@ -904,6 +905,14 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ManagedDevicesRequestBuilder managedDevices() {
         return new ManagedDevicesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedDeviceWindowsOSImages property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link ManagedDeviceWindowsOSImagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ManagedDeviceWindowsOSImagesRequestBuilder managedDeviceWindowsOSImages() {
+        return new ManagedDeviceWindowsOSImagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the microsoftTunnelConfigurations property of the microsoft.graph.deviceManagement entity.

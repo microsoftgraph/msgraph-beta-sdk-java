@@ -32,7 +32,7 @@ public class IdentityProvider extends Entity implements Parsable {
         return new IdentityProvider();
     }
     /**
-     * Gets the clientId property value. The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
+     * Gets the clientId property value. The client ID for the application obtained when registering the application with the identity provider. This is a required field. Required. Not nullable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -40,7 +40,7 @@ public class IdentityProvider extends Entity implements Parsable {
         return this.backingStore.get("clientId");
     }
     /**
-     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
+     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation returns . This is a required field. Required. Not nullable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,14 +89,14 @@ public class IdentityProvider extends Entity implements Parsable {
         writer.writeStringValue("type", this.getType());
     }
     /**
-     * Sets the clientId property value. The client ID for the application obtained when registering the application with the identity provider. This is a required field.  Required. Not nullable.
+     * Sets the clientId property value. The client ID for the application obtained when registering the application with the identity provider. This is a required field. Required. Not nullable.
      * @param value Value to set for the clientId property.
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientId", value);
     }
     /**
-     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation will return . This is a required field. Required. Not nullable.
+     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. This is write-only. A read operation returns . This is a required field. Required. Not nullable.
      * @param value Value to set for the clientSecret property.
      */
     public void setClientSecret(@jakarta.annotation.Nullable final String value) {

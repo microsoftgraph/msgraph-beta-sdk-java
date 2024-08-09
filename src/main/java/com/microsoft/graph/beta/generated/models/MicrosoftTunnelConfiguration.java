@@ -89,6 +89,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         deserializerMap.put("disableUdpConnections", (n) -> { this.setDisableUdpConnections(n.getBooleanValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("dnsServers", (n) -> { this.setDnsServers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("ipv6Network", (n) -> { this.setIpv6Network(n.getStringValue()); });
         deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("listenPort", (n) -> { this.setListenPort(n.getIntegerValue()); });
         deserializerMap.put("network", (n) -> { this.setNetwork(n.getStringValue()); });
@@ -99,6 +100,14 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         deserializerMap.put("routesInclude", (n) -> { this.setRoutesInclude(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("splitDNS", (n) -> { this.setSplitDNS(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the ipv6Network property value. The IPv6 subnet that will be used to allocate virtual address for the clients
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getIpv6Network() {
+        return this.backingStore.get("ipv6Network");
     }
     /**
      * Gets the lastUpdateDateTime property value. When the configuration was last updated
@@ -185,6 +194,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         writer.writeBooleanValue("disableUdpConnections", this.getDisableUdpConnections());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("dnsServers", this.getDnsServers());
+        writer.writeStringValue("ipv6Network", this.getIpv6Network());
         writer.writeOffsetDateTimeValue("lastUpdateDateTime", this.getLastUpdateDateTime());
         writer.writeIntegerValue("listenPort", this.getListenPort());
         writer.writeStringValue("network", this.getNetwork());
@@ -236,6 +246,13 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
      */
     public void setDnsServers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("dnsServers", value);
+    }
+    /**
+     * Sets the ipv6Network property value. The IPv6 subnet that will be used to allocate virtual address for the clients
+     * @param value Value to set for the ipv6Network property.
+     */
+    public void setIpv6Network(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("ipv6Network", value);
     }
     /**
      * Sets the lastUpdateDateTime property value. When the configuration was last updated

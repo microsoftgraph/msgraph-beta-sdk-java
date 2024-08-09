@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         return deserializerMap;
     }
     /**
-     * Gets the maximumCount property value. Maximum number of simple settings in the collection. Valid values 1 to 100
+     * Gets the maximumCount property value. Maximum number of simple settings in the collection
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         return this.backingStore.get("maximumCount");
     }
     /**
-     * Gets the minimumCount property value. Minimum number of simple settings in the collection. Valid values 1 to 100
+     * Gets the minimumCount property value. Minimum number of simple settings in the collection
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class DeviceManagementConfigurationSimpleSettingCollectionDefinition exte
         writer.writeIntegerValue("minimumCount", this.getMinimumCount());
     }
     /**
-     * Sets the maximumCount property value. Maximum number of simple settings in the collection. Valid values 1 to 100
+     * Sets the maximumCount property value. Maximum number of simple settings in the collection
      * @param value Value to set for the maximumCount property.
      */
     public void setMaximumCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("maximumCount", value);
     }
     /**
-     * Sets the minimumCount property value. Minimum number of simple settings in the collection. Valid values 1 to 100
+     * Sets the minimumCount property value. Minimum number of simple settings in the collection
      * @param value Value to set for the minimumCount property.
      */
     public void setMinimumCount(@jakarta.annotation.Nullable final Integer value) {

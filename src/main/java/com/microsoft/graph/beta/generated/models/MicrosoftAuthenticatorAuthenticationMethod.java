@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -35,15 +34,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         return this.backingStore.get("clientAppName");
     }
     /**
-     * Gets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
-     * @return a {@link OffsetDateTime}
-     */
-    @jakarta.annotation.Nullable
-    public OffsetDateTime getCreatedDateTime() {
-        return this.backingStore.get("createdDateTime");
-    }
-    /**
-     * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * Gets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device isn't registered for passwordless Phone Sign-In.
      * @return a {@link Device}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +65,6 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("clientAppName", (n) -> { this.setClientAppName(n.getEnumValue(MicrosoftAuthenticatorAuthenticationMethodClientAppName::forValue)); });
-        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceTag", (n) -> { this.setDeviceTag(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -97,7 +87,6 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("clientAppName", this.getClientAppName());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("device", this.getDevice());
         writer.writeStringValue("deviceTag", this.getDeviceTag());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -111,14 +100,7 @@ public class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMe
         this.backingStore.set("clientAppName", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time that this app was registered. This property is null if the device is not registered for passwordless Phone Sign-In.
-     * @param value Value to set for the createdDateTime property.
-     */
-    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.backingStore.set("createdDateTime", value);
-    }
-    /**
-     * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
+     * Sets the device property value. The registered device on which Microsoft Authenticator resides. This property is null if the device isn't registered for passwordless Phone Sign-In.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Device value) {

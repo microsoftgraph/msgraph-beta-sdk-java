@@ -71,12 +71,13 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("certificateBasedApplicationConfigurationIds", (n) -> { this.setCertificateBasedApplicationConfigurationIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("maxLifetime", (n) -> { this.setMaxLifetime(n.getPeriodAndDurationValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restrictForAppsCreatedAfterDateTime", (n) -> { this.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("restrictionType", (n) -> { this.setRestrictionType(n.getEnumValue(AppKeyCredentialRestrictionType::forValue)); });
+        deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AppManagementRestrictionState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -112,6 +113,14 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         return this.backingStore.get("restrictionType");
     }
     /**
+     * Gets the state property value. String value that indicates if the restriction is evaluated. The possible values are: enabled, disabled, and unknownFutureValue. If enabled, the restriction is evaluated. If disabled, the restriction isn't evaluated or enforced.
+     * @return a {@link AppManagementRestrictionState}
+     */
+    @jakarta.annotation.Nullable
+    public AppManagementRestrictionState getState() {
+        return this.backingStore.get("state");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -122,6 +131,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeOffsetDateTimeValue("restrictForAppsCreatedAfterDateTime", this.getRestrictForAppsCreatedAfterDateTime());
         writer.writeEnumValue("restrictionType", this.getRestrictionType());
+        writer.writeEnumValue("state", this.getState());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -173,5 +183,12 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
      */
     public void setRestrictionType(@jakarta.annotation.Nullable final AppKeyCredentialRestrictionType value) {
         this.backingStore.set("restrictionType", value);
+    }
+    /**
+     * Sets the state property value. String value that indicates if the restriction is evaluated. The possible values are: enabled, disabled, and unknownFutureValue. If enabled, the restriction is evaluated. If disabled, the restriction isn't evaluated or enforced.
+     * @param value Value to set for the state property.
+     */
+    public void setState(@jakarta.annotation.Nullable final AppManagementRestrictionState value) {
+        this.backingStore.set("state", value);
     }
 }

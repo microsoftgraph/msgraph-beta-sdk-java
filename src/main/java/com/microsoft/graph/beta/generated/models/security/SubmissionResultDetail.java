@@ -58,7 +58,24 @@ public enum SubmissionResultDetail implements ValuedEnum {
     BadReclassifiedAsBulk("badReclassifiedAsBulk"),
     BadReclassifiedAsBad("badReclassifiedAsBad"),
     BadReclassifiedAsCannotMakeDecision("badReclassifiedAsCannotMakeDecision"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    WillNotifyOnceDone("willNotifyOnceDone"),
+    CheckUserReportedSettings("checkUserReportedSettings"),
+    PartOfEducationCampaign("partOfEducationCampaign"),
+    AllowedByAdvancedDelivery("allowedByAdvancedDelivery"),
+    AllowedByEnhancedFiltering("allowedByEnhancedFiltering"),
+    ItemDeleted("itemDeleted"),
+    ItemFoundClean("itemFoundClean"),
+    ItemFoundMalicious("itemFoundMalicious"),
+    UnableToMakeDecision("unableToMakeDecision"),
+    DomainResembledYourOrganization("domainResembledYourOrganization"),
+    EndUserBeingImpersonated("endUserBeingImpersonated"),
+    AssociatedWithBrand("associatedWithBrand"),
+    SenderFailedAuthentication("senderFailedAuthentication"),
+    EndUserBeingSpoofed("endUserBeingSpoofed"),
+    ItemFoundBulk("itemFoundBulk"),
+    ItemNotReceivedByService("itemNotReceivedByService"),
+    ItemFoundSpam("itemFoundSpam");
     public final String value;
     SubmissionResultDetail(final String value) {
         this.value = value;
@@ -123,6 +140,23 @@ public enum SubmissionResultDetail implements ValuedEnum {
             case "badReclassifiedAsBad": return BadReclassifiedAsBad;
             case "badReclassifiedAsCannotMakeDecision": return BadReclassifiedAsCannotMakeDecision;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "willNotifyOnceDone": return WillNotifyOnceDone;
+            case "checkUserReportedSettings": return CheckUserReportedSettings;
+            case "partOfEducationCampaign": return PartOfEducationCampaign;
+            case "allowedByAdvancedDelivery": return AllowedByAdvancedDelivery;
+            case "allowedByEnhancedFiltering": return AllowedByEnhancedFiltering;
+            case "itemDeleted": return ItemDeleted;
+            case "itemFoundClean": return ItemFoundClean;
+            case "itemFoundMalicious": return ItemFoundMalicious;
+            case "unableToMakeDecision": return UnableToMakeDecision;
+            case "domainResembledYourOrganization": return DomainResembledYourOrganization;
+            case "endUserBeingImpersonated": return EndUserBeingImpersonated;
+            case "associatedWithBrand": return AssociatedWithBrand;
+            case "senderFailedAuthentication": return SenderFailedAuthentication;
+            case "endUserBeingSpoofed": return EndUserBeingSpoofed;
+            case "itemFoundBulk": return ItemFoundBulk;
+            case "itemNotReceivedByService": return ItemNotReceivedByService;
+            case "itemFoundSpam": return ItemFoundSpam;
             default: return null;
         }
     }

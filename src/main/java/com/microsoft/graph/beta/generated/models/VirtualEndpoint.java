@@ -92,7 +92,6 @@ public class VirtualEndpoint extends Entity implements Parsable {
         deserializerMap.put("provisioningPolicies", (n) -> { this.setProvisioningPolicies(n.getCollectionOfObjectValues(CloudPcProvisioningPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(CloudPcReports::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(CloudPcServicePlan::createFromDiscriminatorValue)); });
-        deserializerMap.put("sharedUseServicePlans", (n) -> { this.setSharedUseServicePlans(n.getCollectionOfObjectValues(CloudPcSharedUseServicePlan::createFromDiscriminatorValue)); });
         deserializerMap.put("snapshots", (n) -> { this.setSnapshots(n.getCollectionOfObjectValues(CloudPcSnapshot::createFromDiscriminatorValue)); });
         deserializerMap.put("supportedRegions", (n) -> { this.setSupportedRegions(n.getCollectionOfObjectValues(CloudPcSupportedRegion::createFromDiscriminatorValue)); });
         deserializerMap.put("userSettings", (n) -> { this.setUserSettings(n.getCollectionOfObjectValues(CloudPcUserSetting::createFromDiscriminatorValue)); });
@@ -155,14 +154,6 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("servicePlans");
     }
     /**
-     * Gets the sharedUseServicePlans property value. Cloud PC shared-use service plans. The sharedUseServicePlans relationship is deprecated and stopped returning data on October 8, 2023. Going forward, use the frontLineServicePlans relationship.
-     * @return a {@link java.util.List<CloudPcSharedUseServicePlan>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<CloudPcSharedUseServicePlan> getSharedUseServicePlans() {
-        return this.backingStore.get("sharedUseServicePlans");
-    }
-    /**
      * Gets the snapshots property value. Cloud PC snapshots.
      * @return a {@link java.util.List<CloudPcSnapshot>}
      */
@@ -206,7 +197,6 @@ public class VirtualEndpoint extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("provisioningPolicies", this.getProvisioningPolicies());
         writer.writeObjectValue("reports", this.getReports());
         writer.writeCollectionOfObjectValues("servicePlans", this.getServicePlans());
-        writer.writeCollectionOfObjectValues("sharedUseServicePlans", this.getSharedUseServicePlans());
         writer.writeCollectionOfObjectValues("snapshots", this.getSnapshots());
         writer.writeCollectionOfObjectValues("supportedRegions", this.getSupportedRegions());
         writer.writeCollectionOfObjectValues("userSettings", this.getUserSettings());
@@ -301,13 +291,6 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     public void setServicePlans(@jakarta.annotation.Nullable final java.util.List<CloudPcServicePlan> value) {
         this.backingStore.set("servicePlans", value);
-    }
-    /**
-     * Sets the sharedUseServicePlans property value. Cloud PC shared-use service plans. The sharedUseServicePlans relationship is deprecated and stopped returning data on October 8, 2023. Going forward, use the frontLineServicePlans relationship.
-     * @param value Value to set for the sharedUseServicePlans property.
-     */
-    public void setSharedUseServicePlans(@jakarta.annotation.Nullable final java.util.List<CloudPcSharedUseServicePlan> value) {
-        this.backingStore.set("sharedUseServicePlans", value);
     }
     /**
      * Sets the snapshots property value. Cloud PC snapshots.

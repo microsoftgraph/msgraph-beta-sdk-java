@@ -52,6 +52,14 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this.backingStore.get("connectWhenNetworkNameIsHidden");
     }
     /**
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @return a {@link AppleDeploymentChannel}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeploymentChannel getDeploymentChannel() {
+        return this.backingStore.get("deploymentChannel");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -60,6 +68,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connectAutomatically", (n) -> { this.setConnectAutomatically(n.getBooleanValue()); });
         deserializerMap.put("connectWhenNetworkNameIsHidden", (n) -> { this.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
+        deserializerMap.put("deploymentChannel", (n) -> { this.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel::forValue)); });
         deserializerMap.put("networkName", (n) -> { this.setNetworkName(n.getStringValue()); });
         deserializerMap.put("preSharedKey", (n) -> { this.setPreSharedKey(n.getStringValue()); });
         deserializerMap.put("proxyAutomaticConfigurationUrl", (n) -> { this.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
@@ -143,6 +152,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         super.serialize(writer);
         writer.writeBooleanValue("connectAutomatically", this.getConnectAutomatically());
         writer.writeBooleanValue("connectWhenNetworkNameIsHidden", this.getConnectWhenNetworkNameIsHidden());
+        writer.writeEnumValue("deploymentChannel", this.getDeploymentChannel());
         writer.writeStringValue("networkName", this.getNetworkName());
         writer.writeStringValue("preSharedKey", this.getPreSharedKey());
         writer.writeStringValue("proxyAutomaticConfigurationUrl", this.getProxyAutomaticConfigurationUrl());
@@ -165,6 +175,13 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      */
     public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("connectWhenNetworkNameIsHidden", value);
+    }
+    /**
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @param value Value to set for the deploymentChannel property.
+     */
+    public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
+        this.backingStore.set("deploymentChannel", value);
     }
     /**
      * Sets the networkName property value. Network Name

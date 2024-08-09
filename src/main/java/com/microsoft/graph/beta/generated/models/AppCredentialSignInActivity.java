@@ -26,7 +26,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
         return new AppCredentialSignInActivity();
     }
     /**
-     * Gets the appId property value. The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credential application.
+     * Gets the appId property value. The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credentialed application.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class AppCredentialSignInActivity extends Entity implements Parsable {
         writer.writeObjectValue("signInActivity", this.getSignInActivity());
     }
     /**
-     * Sets the appId property value. The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credential application.
+     * Sets the appId property value. The globally unique appId (also called client ID on the Microsoft Entra admin center) of the credentialed application.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {

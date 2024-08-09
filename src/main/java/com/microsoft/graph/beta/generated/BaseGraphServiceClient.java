@@ -73,6 +73,7 @@ import com.microsoft.graph.beta.messagerecipients.MessageRecipientsRequestBuilde
 import com.microsoft.graph.beta.messagetraces.MessageTracesRequestBuilder;
 import com.microsoft.graph.beta.mobilitymanagementpolicies.MobilityManagementPoliciesRequestBuilder;
 import com.microsoft.graph.beta.monitoring.MonitoringRequestBuilder;
+import com.microsoft.graph.beta.network.NetworkRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.NetworkAccessRequestBuilder;
 import com.microsoft.graph.beta.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.OnPremisesPublishingProfilesRequestBuilder;
@@ -686,6 +687,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MonitoringRequestBuilder monitoring() {
         return new MonitoringRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the network singleton.
+     * @return a {@link NetworkRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public NetworkRequestBuilder network() {
+        return new NetworkRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the networkAccessRoot singleton.

@@ -16,6 +16,7 @@ public enum CloudPcReportName implements ValuedEnum {
     FrontlineLicenseUsageRealTimeReport("frontlineLicenseUsageRealTimeReport"),
     RemoteConnectionQualityReports("remoteConnectionQualityReports"),
     InaccessibleCloudPcReports("inaccessibleCloudPcReports"),
+    ActionStatusReport("actionStatusReport"),
     RawRemoteConnectionReports("rawRemoteConnectionReports"),
     CloudPcUsageCategoryReports("cloudPcUsageCategoryReports"),
     CrossRegionDisasterRecoveryReport("crossRegionDisasterRecoveryReport"),
@@ -42,6 +43,7 @@ public enum CloudPcReportName implements ValuedEnum {
             case "frontlineLicenseUsageRealTimeReport": return FrontlineLicenseUsageRealTimeReport;
             case "remoteConnectionQualityReports": return RemoteConnectionQualityReports;
             case "inaccessibleCloudPcReports": return InaccessibleCloudPcReports;
+            case "actionStatusReport": return ActionStatusReport;
             case "rawRemoteConnectionReports": return RawRemoteConnectionReports;
             case "cloudPcUsageCategoryReports": return CloudPcUsageCategoryReports;
             case "crossRegionDisasterRecoveryReport": return CrossRegionDisasterRecoveryReport;

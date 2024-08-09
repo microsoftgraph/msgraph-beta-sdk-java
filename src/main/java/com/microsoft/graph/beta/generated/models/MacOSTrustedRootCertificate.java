@@ -37,6 +37,14 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
         return this.backingStore.get("certFileName");
     }
     /**
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @return a {@link AppleDeploymentChannel}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeploymentChannel getDeploymentChannel() {
+        return this.backingStore.get("deploymentChannel");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -44,6 +52,7 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certFileName", (n) -> { this.setCertFileName(n.getStringValue()); });
+        deserializerMap.put("deploymentChannel", (n) -> { this.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel::forValue)); });
         deserializerMap.put("trustedRootCertificate", (n) -> { this.setTrustedRootCertificate(n.getByteArrayValue()); });
         return deserializerMap;
     }
@@ -63,6 +72,7 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("certFileName", this.getCertFileName());
+        writer.writeEnumValue("deploymentChannel", this.getDeploymentChannel());
         writer.writeByteArrayValue("trustedRootCertificate", this.getTrustedRootCertificate());
     }
     /**
@@ -71,6 +81,13 @@ public class MacOSTrustedRootCertificate extends DeviceConfiguration implements 
      */
     public void setCertFileName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("certFileName", value);
+    }
+    /**
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @param value Value to set for the deploymentChannel property.
+     */
+    public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
+        this.backingStore.set("deploymentChannel", value);
     }
     /**
      * Sets the trustedRootCertificate property value. Trusted Root Certificate.

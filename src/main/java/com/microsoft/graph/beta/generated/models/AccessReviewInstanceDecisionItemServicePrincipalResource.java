@@ -26,7 +26,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
         return new AccessReviewInstanceDecisionItemServicePrincipalResource();
     }
     /**
-     * Gets the appId property value. The globally unique identifier of the application to which access has been granted.
+     * Gets the appId property value. The globally unique identifier of the application to which access is granted.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class AccessReviewInstanceDecisionItemServicePrincipalResource extends Ac
         writer.writeStringValue("appId", this.getAppId());
     }
     /**
-     * Sets the appId property value. The globally unique identifier of the application to which access has been granted.
+     * Sets the appId property value. The globally unique identifier of the application to which access is granted.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {

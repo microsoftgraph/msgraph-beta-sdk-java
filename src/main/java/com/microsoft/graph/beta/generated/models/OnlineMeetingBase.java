@@ -66,10 +66,10 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the allowLiveShare property value. The allowLiveShare property
-     * @return a {@link Boolean}
+     * @return a {@link MeetingLiveShareOptions}
      */
     @jakarta.annotation.Nullable
-    public Boolean getAllowLiveShare() {
+    public MeetingLiveShareOptions getAllowLiveShare() {
         return this.backingStore.get("allowLiveShare");
     }
     /**
@@ -179,7 +179,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("allowAttendeeToEnableMic", (n) -> { this.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
         deserializerMap.put("allowBreakoutRooms", (n) -> { this.setAllowBreakoutRooms(n.getBooleanValue()); });
         deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters::forValue)); });
-        deserializerMap.put("allowLiveShare", (n) -> { this.setAllowLiveShare(n.getBooleanValue()); });
+        deserializerMap.put("allowLiveShare", (n) -> { this.setAllowLiveShare(n.getEnumValue(MeetingLiveShareOptions::forValue)); });
         deserializerMap.put("allowMeetingChat", (n) -> { this.setAllowMeetingChat(n.getEnumValue(MeetingChatMode::forValue)); });
         deserializerMap.put("allowParticipantsToChangeName", (n) -> { this.setAllowParticipantsToChangeName(n.getBooleanValue()); });
         deserializerMap.put("allowPowerPointSharing", (n) -> { this.setAllowPowerPointSharing(n.getBooleanValue()); });
@@ -304,7 +304,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeBooleanValue("allowAttendeeToEnableMic", this.getAllowAttendeeToEnableMic());
         writer.writeBooleanValue("allowBreakoutRooms", this.getAllowBreakoutRooms());
         writer.writeEnumValue("allowedPresenters", this.getAllowedPresenters());
-        writer.writeBooleanValue("allowLiveShare", this.getAllowLiveShare());
+        writer.writeEnumValue("allowLiveShare", this.getAllowLiveShare());
         writer.writeEnumValue("allowMeetingChat", this.getAllowMeetingChat());
         writer.writeBooleanValue("allowParticipantsToChangeName", this.getAllowParticipantsToChangeName());
         writer.writeBooleanValue("allowPowerPointSharing", this.getAllowPowerPointSharing());
@@ -361,7 +361,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      * Sets the allowLiveShare property value. The allowLiveShare property
      * @param value Value to set for the allowLiveShare property.
      */
-    public void setAllowLiveShare(@jakarta.annotation.Nullable final Boolean value) {
+    public void setAllowLiveShare(@jakarta.annotation.Nullable final MeetingLiveShareOptions value) {
         this.backingStore.set("allowLiveShare", value);
     }
     /**

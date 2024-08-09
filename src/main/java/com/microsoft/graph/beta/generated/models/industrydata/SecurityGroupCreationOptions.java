@@ -64,7 +64,7 @@ public class SecurityGroupCreationOptions implements AdditionalDataHolder, Backe
         return this.backingStore.get("createBasedOnOrgPlusRoleGroup");
     }
     /**
-     * Gets the createBasedOnRoleGroup property value. A boolean choice indicating whether the security group should be created based on the role group
+     * Gets the createBasedOnRoleGroup property value. A Boolean choice indicating whether the security group should be created based on the role group
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class SecurityGroupCreationOptions implements AdditionalDataHolder, Backe
         this.backingStore.set("createBasedOnOrgPlusRoleGroup", value);
     }
     /**
-     * Sets the createBasedOnRoleGroup property value. A boolean choice indicating whether the security group should be created based on the role group
+     * Sets the createBasedOnRoleGroup property value. A Boolean choice indicating whether the security group should be created based on the role group
      * @param value Value to set for the createBasedOnRoleGroup property.
      */
     public void setCreateBasedOnRoleGroup(@jakarta.annotation.Nullable final Boolean value) {

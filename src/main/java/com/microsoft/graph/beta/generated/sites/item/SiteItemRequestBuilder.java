@@ -4,8 +4,10 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Site;
 import com.microsoft.graph.beta.sites.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.beta.sites.item.columns.ColumnsRequestBuilder;
+import com.microsoft.graph.beta.sites.item.contentmodels.ContentModelsRequestBuilder;
 import com.microsoft.graph.beta.sites.item.contenttypes.ContentTypesRequestBuilder;
 import com.microsoft.graph.beta.sites.item.createdbyuser.CreatedByUserRequestBuilder;
+import com.microsoft.graph.beta.sites.item.documentprocessingjobs.DocumentProcessingJobsRequestBuilder;
 import com.microsoft.graph.beta.sites.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.beta.sites.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.beta.sites.item.externalcolumns.ExternalColumnsRequestBuilder;
@@ -58,6 +60,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the contentModels property of the microsoft.graph.site entity.
+     * @return a {@link ContentModelsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ContentModelsRequestBuilder contentModels() {
+        return new ContentModelsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
      * @return a {@link ContentTypesRequestBuilder}
      */
@@ -72,6 +82,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the documentProcessingJobs property of the microsoft.graph.site entity.
+     * @return a {@link DocumentProcessingJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DocumentProcessingJobsRequestBuilder documentProcessingJobs() {
+        return new DocumentProcessingJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.site entity.

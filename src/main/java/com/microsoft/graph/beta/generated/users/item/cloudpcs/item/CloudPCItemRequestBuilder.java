@@ -8,7 +8,6 @@ import com.microsoft.graph.beta.users.item.cloudpcs.item.endgraceperiod.EndGrace
 import com.microsoft.graph.beta.users.item.cloudpcs.item.getcloudpcconnectivityhistory.GetCloudPcConnectivityHistoryRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.getcloudpclaunchinfo.GetCloudPcLaunchInfoRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.getfrontlinecloudpcaccessstate.GetFrontlineCloudPcAccessStateRequestBuilder;
-import com.microsoft.graph.beta.users.item.cloudpcs.item.getshiftworkcloudpcaccessstate.GetShiftWorkCloudPcAccessStateRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.getsupportedcloudpcremoteactions.GetSupportedCloudPcRemoteActionsRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.poweroff.PowerOffRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.poweron.PowerOnRequestBuilder;
@@ -17,6 +16,7 @@ import com.microsoft.graph.beta.users.item.cloudpcs.item.rename.RenameRequestBui
 import com.microsoft.graph.beta.users.item.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.resize.ResizeRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievecloudpcremoteactionresults.RetrieveCloudPCRemoteActionResultsRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievereviewstatus.RetrieveReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrypartneragentinstallation.RetryPartnerAgentInstallationRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.setreviewstatus.SetReviewStatusRequestBuilder;
@@ -90,14 +90,6 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         return new GetFrontlineCloudPcAccessStateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the getShiftWorkCloudPcAccessState method.
-     * @return a {@link GetShiftWorkCloudPcAccessStateRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetShiftWorkCloudPcAccessStateRequestBuilder getShiftWorkCloudPcAccessState() {
-        return new GetShiftWorkCloudPcAccessStateRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the getSupportedCloudPcRemoteActions method.
      * @return a {@link GetSupportedCloudPcRemoteActionsRequestBuilder}
      */
@@ -160,6 +152,14 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCloudPCRemoteActionResults method.
+     * @return a {@link RetrieveCloudPCRemoteActionResultsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPCRemoteActionResultsRequestBuilder retrieveCloudPCRemoteActionResults() {
+        return new RetrieveCloudPCRemoteActionResultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveReviewStatus method.

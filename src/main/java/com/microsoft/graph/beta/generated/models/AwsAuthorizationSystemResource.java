@@ -36,7 +36,7 @@ public class AwsAuthorizationSystemResource extends AuthorizationSystemResource 
         return deserializerMap;
     }
     /**
-     * Gets the service property value. The service associated with the resource in an AWS authorization system. This is auto-expanded.
+     * Gets the service property value. The service associated with the resource in an AWS authorization system. This is autoexpanded.
      * @return a {@link AuthorizationSystemTypeService}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class AwsAuthorizationSystemResource extends AuthorizationSystemResource 
         writer.writeObjectValue("service", this.getService());
     }
     /**
-     * Sets the service property value. The service associated with the resource in an AWS authorization system. This is auto-expanded.
+     * Sets the service property value. The service associated with the resource in an AWS authorization system. This is autoexpanded.
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final AuthorizationSystemTypeService value) {

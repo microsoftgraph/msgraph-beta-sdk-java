@@ -43,6 +43,14 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("columns");
     }
     /**
+     * Gets the contentModels property value. The collection of content models applied to this site.
+     * @return a {@link java.util.List<ContentModel>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ContentModel> getContentModels() {
+        return this.backingStore.get("contentModels");
+    }
+    /**
      * Gets the contentTypes property value. The collection of content types defined for this site.
      * @return a {@link java.util.List<ContentType>}
      */
@@ -65,6 +73,14 @@ public class Site extends BaseItem implements Parsable {
     @jakarta.annotation.Nullable
     public String getDisplayName() {
         return this.backingStore.get("displayName");
+    }
+    /**
+     * Gets the documentProcessingJobs property value. The document processing jobs running on this site.
+     * @return a {@link java.util.List<DocumentProcessingJob>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DocumentProcessingJob> getDocumentProcessingJobs() {
+        return this.backingStore.get("documentProcessingJobs");
     }
     /**
      * Gets the drive property value. The default drive (document library) for this site.
@@ -99,9 +115,11 @@ public class Site extends BaseItem implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("analytics", (n) -> { this.setAnalytics(n.getObjectValue(ItemAnalytics::createFromDiscriminatorValue)); });
         deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentModels", (n) -> { this.setContentModels(n.getCollectionOfObjectValues(ContentModel::createFromDiscriminatorValue)); });
         deserializerMap.put("contentTypes", (n) -> { this.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
         deserializerMap.put("deleted", (n) -> { this.setDeleted(n.getObjectValue(Deleted::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("documentProcessingJobs", (n) -> { this.setDocumentProcessingJobs(n.getCollectionOfObjectValues(DocumentProcessingJob::createFromDiscriminatorValue)); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("externalColumns", (n) -> { this.setExternalColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
@@ -251,9 +269,11 @@ public class Site extends BaseItem implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("analytics", this.getAnalytics());
         writer.writeCollectionOfObjectValues("columns", this.getColumns());
+        writer.writeCollectionOfObjectValues("contentModels", this.getContentModels());
         writer.writeCollectionOfObjectValues("contentTypes", this.getContentTypes());
         writer.writeObjectValue("deleted", this.getDeleted());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeCollectionOfObjectValues("documentProcessingJobs", this.getDocumentProcessingJobs());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
         writer.writeCollectionOfObjectValues("externalColumns", this.getExternalColumns());
@@ -288,6 +308,13 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("columns", value);
     }
     /**
+     * Sets the contentModels property value. The collection of content models applied to this site.
+     * @param value Value to set for the contentModels property.
+     */
+    public void setContentModels(@jakarta.annotation.Nullable final java.util.List<ContentModel> value) {
+        this.backingStore.set("contentModels", value);
+    }
+    /**
      * Sets the contentTypes property value. The collection of content types defined for this site.
      * @param value Value to set for the contentTypes property.
      */
@@ -307,6 +334,13 @@ public class Site extends BaseItem implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the documentProcessingJobs property value. The document processing jobs running on this site.
+     * @param value Value to set for the documentProcessingJobs property.
+     */
+    public void setDocumentProcessingJobs(@jakarta.annotation.Nullable final java.util.List<DocumentProcessingJob> value) {
+        this.backingStore.set("documentProcessingJobs", value);
     }
     /**
      * Sets the drive property value. The default drive (document library) for this site.

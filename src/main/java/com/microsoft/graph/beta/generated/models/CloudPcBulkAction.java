@@ -84,8 +84,18 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         deserializerMap.put("cloudPcIds", (n) -> { this.setCloudPcIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("initiatedByUserPrincipalName", (n) -> { this.setInitiatedByUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("scheduledDuringMaintenanceWindow", (n) -> { this.setScheduledDuringMaintenanceWindow(n.getBooleanValue()); });
+        deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcBulkActionStatus::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the initiatedByUserPrincipalName property value. Indicates the user principal name (UPN) of the user who initiated this bulk action. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getInitiatedByUserPrincipalName() {
+        return this.backingStore.get("initiatedByUserPrincipalName");
     }
     /**
      * Gets the scheduledDuringMaintenanceWindow property value. Indicates whether the bulk action is scheduled according to the maintenance window. When true, the bulk action uses the maintenance window to schedule the action; false means that the bulk action doesn't use the maintenance window. The default value is false.
@@ -94,6 +104,14 @@ public class CloudPcBulkAction extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getScheduledDuringMaintenanceWindow() {
         return this.backingStore.get("scheduledDuringMaintenanceWindow");
+    }
+    /**
+     * Gets the status property value. Indicates the status of bulk actions. Possible values are pending, succeeded, failed, unknownFutureValue. The default value is pending. Read-only.
+     * @return a {@link CloudPcBulkActionStatus}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcBulkActionStatus getStatus() {
+        return this.backingStore.get("status");
     }
     /**
      * Serializes information the current object
@@ -106,7 +124,9 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("cloudPcIds", this.getCloudPcIds());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("initiatedByUserPrincipalName", this.getInitiatedByUserPrincipalName());
         writer.writeBooleanValue("scheduledDuringMaintenanceWindow", this.getScheduledDuringMaintenanceWindow());
+        writer.writeEnumValue("status", this.getStatus());
     }
     /**
      * Sets the actionSummary property value. Run summary of this bulk action.
@@ -137,10 +157,24 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the initiatedByUserPrincipalName property value. Indicates the user principal name (UPN) of the user who initiated this bulk action. Read-only.
+     * @param value Value to set for the initiatedByUserPrincipalName property.
+     */
+    public void setInitiatedByUserPrincipalName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("initiatedByUserPrincipalName", value);
+    }
+    /**
      * Sets the scheduledDuringMaintenanceWindow property value. Indicates whether the bulk action is scheduled according to the maintenance window. When true, the bulk action uses the maintenance window to schedule the action; false means that the bulk action doesn't use the maintenance window. The default value is false.
      * @param value Value to set for the scheduledDuringMaintenanceWindow property.
      */
     public void setScheduledDuringMaintenanceWindow(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("scheduledDuringMaintenanceWindow", value);
+    }
+    /**
+     * Sets the status property value. Indicates the status of bulk actions. Possible values are pending, succeeded, failed, unknownFutureValue. The default value is pending. Read-only.
+     * @param value Value to set for the status property.
+     */
+    public void setStatus(@jakarta.annotation.Nullable final CloudPcBulkActionStatus value) {
+        this.backingStore.set("status", value);
     }
 }

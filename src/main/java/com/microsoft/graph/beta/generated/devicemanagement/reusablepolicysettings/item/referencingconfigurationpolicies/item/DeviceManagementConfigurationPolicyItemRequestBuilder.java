@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.ref
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.reorder.ReorderRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.retrieveenrollmenttimedevicemembershiptarget.RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.retrievelatestupgradedefaultbaselinepolicy.RetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.setenrollmenttimedevicemembershiptarget.SetEnrollmentTimeDeviceMembershipTargetRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.item.referencingconfigurationpolicies.item.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceManagementConfigurationPolicy;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -83,6 +84,14 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public RetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder retrieveLatestUpgradeDefaultBaselinePolicy() {
         return new RetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setEnrollmentTimeDeviceMembershipTarget method.
+     * @return a {@link SetEnrollmentTimeDeviceMembershipTargetRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SetEnrollmentTimeDeviceMembershipTargetRequestBuilder setEnrollmentTimeDeviceMembershipTarget() {
+        return new SetEnrollmentTimeDeviceMembershipTargetRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.deviceManagementConfigurationPolicy entity.
