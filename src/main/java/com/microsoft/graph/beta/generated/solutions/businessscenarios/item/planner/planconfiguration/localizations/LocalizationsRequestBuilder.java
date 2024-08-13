@@ -84,23 +84,21 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfigurationLocalizationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new plannerPlanConfigurationLocalization object.
+     * Create new navigation property to localizations for solutions
      * @param body The request body
      * @return a {@link PlannerPlanConfigurationLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-post-localizations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfigurationLocalization post(@jakarta.annotation.Nonnull final PlannerPlanConfigurationLocalization body) {
         return post(body, null);
     }
     /**
-     * Create a new plannerPlanConfigurationLocalization object.
+     * Create new navigation property to localizations for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlanConfigurationLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-post-localizations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfigurationLocalization post(@jakarta.annotation.Nonnull final PlannerPlanConfigurationLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -131,7 +129,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new plannerPlanConfigurationLocalization object.
+     * Create new navigation property to localizations for solutions
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +138,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new plannerPlanConfigurationLocalization object.
+     * Create new navigation property to localizations for solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

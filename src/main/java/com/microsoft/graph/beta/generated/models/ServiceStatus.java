@@ -65,7 +65,7 @@ public class ServiceStatus implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("backupServiceConsumer");
     }
     /**
-     * Gets the disableReason property value. The reason the service is disabled. The possible values are: none, invalidBillingProfile, userRequested, unknownFutureValue.
+     * Gets the disableReason property value. The reason the service is disabled. The possible values are: none, controllerServiceAppDeleted, invalidBillingProfile, userRequested, unknownFutureValue.
      * @return a {@link DisableReason}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class ServiceStatus implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("backupServiceConsumer", value);
     }
     /**
-     * Sets the disableReason property value. The reason the service is disabled. The possible values are: none, invalidBillingProfile, userRequested, unknownFutureValue.
+     * Sets the disableReason property value. The reason the service is disabled. The possible values are: none, controllerServiceAppDeleted, invalidBillingProfile, userRequested, unknownFutureValue.
      * @param value Value to set for the disableReason property.
      */
     public void setDisableReason(@jakarta.annotation.Nullable final DisableReason value) {

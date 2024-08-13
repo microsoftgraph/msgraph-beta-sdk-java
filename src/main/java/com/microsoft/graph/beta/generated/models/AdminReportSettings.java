@@ -25,7 +25,7 @@ public class AdminReportSettings extends Entity implements Parsable {
         return new AdminReportSettings();
     }
     /**
-     * Gets the displayConcealedNames property value. If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
+     * Gets the displayConcealedNames property value. If set to true, all reports conceal user information such as usernames, groups, and sites. If false, all reports show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AdminReportSettings extends Entity implements Parsable {
         writer.writeBooleanValue("displayConcealedNames", this.getDisplayConcealedNames());
     }
     /**
-     * Sets the displayConcealedNames property value. If set to true, all reports will conceal user information such as usernames, groups, and sites. If false, all reports will show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
+     * Sets the displayConcealedNames property value. If set to true, all reports conceal user information such as usernames, groups, and sites. If false, all reports show identifiable information. This property represents a setting in the Microsoft 365 admin center. Required.
      * @param value Value to set for the displayConcealedNames property.
      */
     public void setDisplayConcealedNames(@jakarta.annotation.Nullable final Boolean value) {

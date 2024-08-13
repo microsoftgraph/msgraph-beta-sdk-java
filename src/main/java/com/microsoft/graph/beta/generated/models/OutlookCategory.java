@@ -25,7 +25,7 @@ public class OutlookCategory extends Entity implements Parsable {
         return new OutlookCategory();
     }
     /**
-     * Gets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
+     * Gets the color property value. A preset color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more information, see the following note.
      * @return a {@link CategoryColor}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class OutlookCategory extends Entity implements Parsable {
         return this.backingStore.get("color");
     }
     /**
-     * Gets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
+     * Gets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name can't be changed. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class OutlookCategory extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
+     * Sets the color property value. A preset color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more information, see the following note.
      * @param value Value to set for the color property.
      */
     public void setColor(@jakarta.annotation.Nullable final CategoryColor value) {
         this.backingStore.set("color", value);
     }
     /**
-     * Sets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
+     * Sets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name can't be changed. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

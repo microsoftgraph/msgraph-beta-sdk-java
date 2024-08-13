@@ -36,7 +36,7 @@ public class GcpAuthorizationSystemResource extends AuthorizationSystemResource 
         return deserializerMap;
     }
     /**
-     * Gets the service property value. The service associated with the resource in an GCP authorization system. This object is auto-expanded.
+     * Gets the service property value. The service associated with the resource in a GCP authorization system. This object is autoexpanded.
      * @return a {@link AuthorizationSystemTypeService}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class GcpAuthorizationSystemResource extends AuthorizationSystemResource 
         writer.writeObjectValue("service", this.getService());
     }
     /**
-     * Sets the service property value. The service associated with the resource in an GCP authorization system. This object is auto-expanded.
+     * Sets the service property value. The service associated with the resource in a GCP authorization system. This object is autoexpanded.
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final AuthorizationSystemTypeService value) {

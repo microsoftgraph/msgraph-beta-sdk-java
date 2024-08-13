@@ -615,6 +615,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("signInActivity", (n) -> { this.setSignInActivity(n.getObjectValue(SignInActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("signInSessionsValidFromDateTime", (n) -> { this.setSignInSessionsValidFromDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("skills", (n) -> { this.setSkills(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("solutions", (n) -> { this.setSolutions(n.getObjectValue(UserSolutionRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
         deserializerMap.put("streetAddress", (n) -> { this.setStreetAddress(n.getStringValue()); });
@@ -696,7 +697,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("informationProtection");
     }
     /**
-     * Gets the insights property value. The insights property
+     * Gets the insights property value. Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
      * @return a {@link ItemInsights}
      */
     @jakarta.annotation.Nullable
@@ -728,7 +729,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("isLicenseReconciliationNeeded");
     }
     /**
-     * Gets the isManagementRestricted property value. true if the user is a member of a restricted management administrative unit, which requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+     * Gets the isManagementRestricted property value. true if the user is a member of a restricted management administrative unit. Default value is false. Read-only.  To manage a user who is a member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1320,6 +1321,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("skills");
     }
     /**
+     * Gets the solutions property value. The solutions property
+     * @return a {@link UserSolutionRoot}
+     */
+    @jakarta.annotation.Nullable
+    public UserSolutionRoot getSolutions() {
+        return this.backingStore.get("solutions");
+    }
+    /**
      * Gets the sponsors property value. The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.
      * @return a {@link java.util.List<DirectoryObject>}
      */
@@ -1579,6 +1588,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeObjectValue("signInActivity", this.getSignInActivity());
         writer.writeOffsetDateTimeValue("signInSessionsValidFromDateTime", this.getSignInSessionsValidFromDateTime());
         writer.writeCollectionOfPrimitiveValues("skills", this.getSkills());
+        writer.writeObjectValue("solutions", this.getSolutions());
         writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
         writer.writeStringValue("state", this.getState());
         writer.writeStringValue("streetAddress", this.getStreetAddress());
@@ -2036,7 +2046,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("informationProtection", value);
     }
     /**
-     * Sets the insights property value. The insights property
+     * Sets the insights property value. Represents relationships between a user and items such as OneDrive for work or school documents, calculated using advanced analytics and machine learning techniques. Read-only. Nullable.
      * @param value Value to set for the insights property.
      */
     public void setInsights(@jakarta.annotation.Nullable final ItemInsights value) {
@@ -2064,7 +2074,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("isLicenseReconciliationNeeded", value);
     }
     /**
-     * Sets the isManagementRestricted property value. true if the user is a member of a restricted management administrative unit, which requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
+     * Sets the isManagementRestricted property value. true if the user is a member of a restricted management administrative unit. Default value is false. Read-only.  To manage a user who is a member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.
      * @param value Value to set for the isManagementRestricted property.
      */
     public void setIsManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {
@@ -2580,6 +2590,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setSkills(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("skills", value);
+    }
+    /**
+     * Sets the solutions property value. The solutions property
+     * @param value Value to set for the solutions property.
+     */
+    public void setSolutions(@jakarta.annotation.Nullable final UserSolutionRoot value) {
+        this.backingStore.set("solutions", value);
     }
     /**
      * Sets the sponsors property value. The users and groups responsible for this guest user's privileges in the tenant and keep the guest user's information and access updated. (HTTP Methods: GET, POST, DELETE.). Supports $expand.

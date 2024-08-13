@@ -64,6 +64,14 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
+     * Gets the companyCode property value. Legal entity number of the company or its subdivision. For information on how to set the value for the companyCode, see profileSourceAnnotation.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCompanyCode() {
+        return this.backingStore.get("companyCode");
+    }
+    /**
      * Gets the department property value. Department Name within a company.
      * @return a {@link String}
      */
@@ -85,13 +93,15 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("companyCode", (n) -> { this.setCompanyCode(n.getStringValue()); });
         deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("officeLocation", (n) -> { this.setOfficeLocation(n.getStringValue()); });
         deserializerMap.put("pronunciation", (n) -> { this.setPronunciation(n.getStringValue()); });
+        deserializerMap.put("secondaryDepartment", (n) -> { this.setSecondaryDepartment(n.getStringValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -120,6 +130,14 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("pronunciation");
     }
     /**
+     * Gets the secondaryDepartment property value. The secondaryDepartment property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSecondaryDepartment() {
+        return this.backingStore.get("secondaryDepartment");
+    }
+    /**
      * Gets the webUrl property value. Link to the company home page.
      * @return a {@link String}
      */
@@ -134,11 +152,13 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("address", this.getAddress());
+        writer.writeStringValue("companyCode", this.getCompanyCode());
         writer.writeStringValue("department", this.getDepartment());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("officeLocation", this.getOfficeLocation());
         writer.writeStringValue("pronunciation", this.getPronunciation());
+        writer.writeStringValue("secondaryDepartment", this.getSecondaryDepartment());
         writer.writeStringValue("webUrl", this.getWebUrl());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -163,6 +183,13 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the companyCode property value. Legal entity number of the company or its subdivision. For information on how to set the value for the companyCode, see profileSourceAnnotation.
+     * @param value Value to set for the companyCode property.
+     */
+    public void setCompanyCode(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("companyCode", value);
     }
     /**
      * Sets the department property value. Department Name within a company.
@@ -198,6 +225,13 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setPronunciation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("pronunciation", value);
+    }
+    /**
+     * Sets the secondaryDepartment property value. The secondaryDepartment property
+     * @param value Value to set for the secondaryDepartment property.
+     */
+    public void setSecondaryDepartment(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("secondaryDepartment", value);
     }
     /**
      * Sets the webUrl property value. Link to the company home page.

@@ -60,6 +60,22 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         return this.backingStore.get("averageMaxCapacityPercentage");
     }
     /**
+     * Gets the deviceManufacturerName property value. The manufacturer name of the device.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDeviceManufacturerName() {
+        return this.backingStore.get("deviceManufacturerName");
+    }
+    /**
+     * Gets the deviceModelName property value. The model name of the device.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDeviceModelName() {
+        return this.backingStore.get("deviceModelName");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -70,6 +86,8 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         deserializerMap.put("averageBatteryAgeInDays", (n) -> { this.setAverageBatteryAgeInDays(n.getIntegerValue()); });
         deserializerMap.put("averageEstimatedRuntimeInMinutes", (n) -> { this.setAverageEstimatedRuntimeInMinutes(n.getIntegerValue()); });
         deserializerMap.put("averageMaxCapacityPercentage", (n) -> { this.setAverageMaxCapacityPercentage(n.getIntegerValue()); });
+        deserializerMap.put("deviceManufacturerName", (n) -> { this.setDeviceManufacturerName(n.getStringValue()); });
+        deserializerMap.put("deviceModelName", (n) -> { this.setDeviceModelName(n.getStringValue()); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("meanFullBatteryDrainCount", (n) -> { this.setMeanFullBatteryDrainCount(n.getIntegerValue()); });
         deserializerMap.put("medianEstimatedRuntimeInMinutes", (n) -> { this.setMedianEstimatedRuntimeInMinutes(n.getIntegerValue()); });
@@ -155,6 +173,8 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
         writer.writeIntegerValue("averageBatteryAgeInDays", this.getAverageBatteryAgeInDays());
         writer.writeIntegerValue("averageEstimatedRuntimeInMinutes", this.getAverageEstimatedRuntimeInMinutes());
         writer.writeIntegerValue("averageMaxCapacityPercentage", this.getAverageMaxCapacityPercentage());
+        writer.writeStringValue("deviceManufacturerName", this.getDeviceManufacturerName());
+        writer.writeStringValue("deviceModelName", this.getDeviceModelName());
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeIntegerValue("meanFullBatteryDrainCount", this.getMeanFullBatteryDrainCount());
         writer.writeIntegerValue("medianEstimatedRuntimeInMinutes", this.getMedianEstimatedRuntimeInMinutes());
@@ -191,6 +211,20 @@ public class UserExperienceAnalyticsBatteryHealthModelPerformance extends Entity
      */
     public void setAverageMaxCapacityPercentage(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("averageMaxCapacityPercentage", value);
+    }
+    /**
+     * Sets the deviceManufacturerName property value. The manufacturer name of the device.
+     * @param value Value to set for the deviceManufacturerName property.
+     */
+    public void setDeviceManufacturerName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("deviceManufacturerName", value);
+    }
+    /**
+     * Sets the deviceModelName property value. The model name of the device.
+     * @param value Value to set for the deviceModelName property.
+     */
+    public void setDeviceModelName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("deviceModelName", value);
     }
     /**
      * Sets the manufacturer property value. Name of the device manufacturer. Deprecated in favor of DeviceManufacturerName.

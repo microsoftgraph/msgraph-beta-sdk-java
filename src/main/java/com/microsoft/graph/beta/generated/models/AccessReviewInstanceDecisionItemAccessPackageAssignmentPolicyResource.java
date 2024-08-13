@@ -26,7 +26,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
         return new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource();
     }
     /**
-     * Gets the accessPackageDisplayName property value. Display name of the access package to which access has been granted.
+     * Gets the accessPackageDisplayName property value. Display name of the access package to which access is granted.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
         return this.backingStore.get("accessPackageDisplayName");
     }
     /**
-     * Gets the accessPackageId property value. Identifier of the access package to which access has been granted.
+     * Gets the accessPackageId property value. Identifier of the access package to which access is granted.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResour
         writer.writeStringValue("accessPackageId", this.getAccessPackageId());
     }
     /**
-     * Sets the accessPackageDisplayName property value. Display name of the access package to which access has been granted.
+     * Sets the accessPackageDisplayName property value. Display name of the access package to which access is granted.
      * @param value Value to set for the accessPackageDisplayName property.
      */
     public void setAccessPackageDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("accessPackageDisplayName", value);
     }
     /**
-     * Sets the accessPackageId property value. Identifier of the access package to which access has been granted.
+     * Sets the accessPackageId property value. Identifier of the access package to which access is granted.
      * @param value Value to set for the accessPackageId property.
      */
     public void setAccessPackageId(@jakarta.annotation.Nullable final String value) {

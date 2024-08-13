@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +26,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return new Fido2AuthenticationMethod();
     }
     /**
-     * Gets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Gets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (such as make and model) of the authenticator.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +34,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("aaGuid");
     }
     /**
-     * Gets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
+     * Gets the attestationCertificates property value. The attestation certificate or certificates attached to this security key.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -49,14 +48,6 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     @jakarta.annotation.Nullable
     public AttestationLevel getAttestationLevel() {
         return this.backingStore.get("attestationLevel");
-    }
-    /**
-     * Gets the createdDateTime property value. The timestamp when this key was registered to the user.
-     * @return a {@link OffsetDateTime}
-     */
-    @jakarta.annotation.Nullable
-    public OffsetDateTime getCreatedDateTime() {
-        return this.backingStore.get("createdDateTime");
     }
     /**
      * Gets the displayName property value. The display name of the key as given by the user.
@@ -76,9 +67,9 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         deserializerMap.put("aaGuid", (n) -> { this.setAaGuid(n.getStringValue()); });
         deserializerMap.put("attestationCertificates", (n) -> { this.setAttestationCertificates(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("attestationLevel", (n) -> { this.setAttestationLevel(n.getEnumValue(AttestationLevel::forValue)); });
-        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("publicKeyCredential", (n) -> { this.setPublicKeyCredential(n.getObjectValue(WebauthnPublicKeyCredential::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -90,6 +81,14 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("model");
     }
     /**
+     * Gets the publicKeyCredential property value. Contains the WebAuthn public key credential information being registered. Only used for write requests. This property isn't returned on read operations.
+     * @return a {@link WebauthnPublicKeyCredential}
+     */
+    @jakarta.annotation.Nullable
+    public WebauthnPublicKeyCredential getPublicKeyCredential() {
+        return this.backingStore.get("publicKeyCredential");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -99,19 +98,19 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         writer.writeStringValue("aaGuid", this.getAaGuid());
         writer.writeCollectionOfPrimitiveValues("attestationCertificates", this.getAttestationCertificates());
         writer.writeEnumValue("attestationLevel", this.getAttestationLevel());
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("model", this.getModel());
+        writer.writeObjectValue("publicKeyCredential", this.getPublicKeyCredential());
     }
     /**
-     * Sets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (e.g. make and model) of the authenticator.
+     * Sets the aaGuid property value. Authenticator Attestation GUID, an identifier that indicates the type (such as make and model) of the authenticator.
      * @param value Value to set for the aaGuid property.
      */
     public void setAaGuid(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("aaGuid", value);
     }
     /**
-     * Sets the attestationCertificates property value. The attestation certificate(s) attached to this security key.
+     * Sets the attestationCertificates property value. The attestation certificate or certificates attached to this security key.
      * @param value Value to set for the attestationCertificates property.
      */
     public void setAttestationCertificates(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -123,13 +122,6 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     public void setAttestationLevel(@jakarta.annotation.Nullable final AttestationLevel value) {
         this.backingStore.set("attestationLevel", value);
-    }
-    /**
-     * Sets the createdDateTime property value. The timestamp when this key was registered to the user.
-     * @param value Value to set for the createdDateTime property.
-     */
-    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the displayName property value. The display name of the key as given by the user.
@@ -144,5 +136,12 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("model", value);
+    }
+    /**
+     * Sets the publicKeyCredential property value. Contains the WebAuthn public key credential information being registered. Only used for write requests. This property isn't returned on read operations.
+     * @param value Value to set for the publicKeyCredential property.
+     */
+    public void setPublicKeyCredential(@jakarta.annotation.Nullable final WebauthnPublicKeyCredential value) {
+        this.backingStore.set("publicKeyCredential", value);
     }
 }

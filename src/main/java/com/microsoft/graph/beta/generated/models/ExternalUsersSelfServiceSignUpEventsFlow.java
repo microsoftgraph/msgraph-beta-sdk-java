@@ -65,7 +65,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
         return this.backingStore.get("onAttributeCollectionSubmit");
     }
     /**
-     * Gets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Gets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @return a {@link OnAuthenticationMethodLoadStartHandler}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class ExternalUsersSelfServiceSignUpEventsFlow extends AuthenticationEven
         this.backingStore.set("onAttributeCollectionSubmit", value);
     }
     /**
-     * Sets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.
+     * Sets the onAuthenticationMethodLoadStart property value. Required. The configuration for what to invoke when authentication methods are ready to be presented to the user. Must have at least one identity provider linked.  Supports $filter (eq). See support for filtering on user flows for syntax information.
      * @param value Value to set for the onAuthenticationMethodLoadStart property.
      */
     public void setOnAuthenticationMethodLoadStart(@jakarta.annotation.Nullable final OnAuthenticationMethodLoadStartHandler value) {

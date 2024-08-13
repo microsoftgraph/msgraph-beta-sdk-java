@@ -76,6 +76,22 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         return this.backingStore.get("deviceId");
     }
     /**
+     * Gets the deviceManufacturerName property value. The manufacturer name of the device.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDeviceManufacturerName() {
+        return this.backingStore.get("deviceManufacturerName");
+    }
+    /**
+     * Gets the deviceModelName property value. The model name of the device.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDeviceModelName() {
+        return this.backingStore.get("deviceModelName");
+    }
+    /**
      * Gets the deviceName property value. Device friendly name.
      * @return a {@link String}
      */
@@ -104,6 +120,8 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         deserializerMap.put("deviceBatteryHealthScore", (n) -> { this.setDeviceBatteryHealthScore(n.getIntegerValue()); });
         deserializerMap.put("deviceBatteryTags", (n) -> { this.setDeviceBatteryTags(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceManufacturerName", (n) -> { this.setDeviceManufacturerName(n.getStringValue()); });
+        deserializerMap.put("deviceModelName", (n) -> { this.setDeviceModelName(n.getStringValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
         deserializerMap.put("estimatedRuntimeInMinutes", (n) -> { this.setEstimatedRuntimeInMinutes(n.getIntegerValue()); });
         deserializerMap.put("fullBatteryDrainCount", (n) -> { this.setFullBatteryDrainCount(n.getIntegerValue()); });
@@ -166,6 +184,8 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
         writer.writeIntegerValue("deviceBatteryHealthScore", this.getDeviceBatteryHealthScore());
         writer.writeCollectionOfPrimitiveValues("deviceBatteryTags", this.getDeviceBatteryTags());
         writer.writeStringValue("deviceId", this.getDeviceId());
+        writer.writeStringValue("deviceManufacturerName", this.getDeviceManufacturerName());
+        writer.writeStringValue("deviceModelName", this.getDeviceModelName());
         writer.writeStringValue("deviceName", this.getDeviceName());
         writer.writeIntegerValue("estimatedRuntimeInMinutes", this.getEstimatedRuntimeInMinutes());
         writer.writeIntegerValue("fullBatteryDrainCount", this.getFullBatteryDrainCount());
@@ -215,6 +235,20 @@ public class UserExperienceAnalyticsBatteryHealthDevicePerformance extends Entit
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceId", value);
+    }
+    /**
+     * Sets the deviceManufacturerName property value. The manufacturer name of the device.
+     * @param value Value to set for the deviceManufacturerName property.
+     */
+    public void setDeviceManufacturerName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("deviceManufacturerName", value);
+    }
+    /**
+     * Sets the deviceModelName property value. The model name of the device.
+     * @param value Value to set for the deviceModelName property.
+     */
+    public void setDeviceModelName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("deviceModelName", value);
     }
     /**
      * Sets the deviceName property value. Device friendly name.
