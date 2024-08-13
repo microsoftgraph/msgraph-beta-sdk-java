@@ -28,8 +28,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Easy detect-secrets
-        uses: RobertFischer/detect-secrets-action@v2.0.0
+      - name: Detect secrets
+        run: |
+          pip install detect-secrets
+          git ls-files -z | xargs -0 detect-secrets-hook --baseline .secrets.baseline
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
@@ -66,8 +68,10 @@ jobs:
           java-version: 21
           distribution: 'temurin'
           cache: gradle
-      - name: Easy detect-secrets
-        uses: RobertFischer/detect-secrets-action@v2.0.0
+      - name: Detect secrets
+        run: |
+          pip install detect-secrets
+          git ls-files -z | xargs -0 detect-secrets-hook --baseline .secrets.baseline
       - name: Download File
         run: .\Scripts\decodeAndWrite.ps1 -encodedValue $env:ENCODED_VALUE -outputPath $env:OUTPUT_PATH
         shell: pwsh
