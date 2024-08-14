@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.crea
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.reorder.ReorderRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.retrieveenrollmenttimedevicemembershiptarget.RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.retrievelatestupgradedefaultbaselinepolicy.RetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.setenrollmenttimedevicemembershiptarget.SetEnrollmentTimeDeviceMembershipTargetRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.configurationpolicies.item.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceManagementConfigurationPolicy;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -83,6 +84,14 @@ public class DeviceManagementConfigurationPolicyItemRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public RetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder retrieveLatestUpgradeDefaultBaselinePolicy() {
         return new RetrieveLatestUpgradeDefaultBaselinePolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setEnrollmentTimeDeviceMembershipTarget method.
+     * @return a {@link SetEnrollmentTimeDeviceMembershipTargetRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SetEnrollmentTimeDeviceMembershipTargetRequestBuilder setEnrollmentTimeDeviceMembershipTarget() {
+        return new SetEnrollmentTimeDeviceMembershipTargetRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.deviceManagementConfigurationPolicy entity.

@@ -27,14 +27,6 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
         return new PasswordlessMicrosoftAuthenticatorAuthenticationMethod();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
-     * @return a {@link OffsetDateTime}
-     */
-    @jakarta.annotation.Nullable
-    public OffsetDateTime getCreatedDateTime() {
-        return this.backingStore.get("createdDateTime");
-    }
-    /**
      * Gets the creationDateTime property value. The timestamp when this method was registered to the user.
      * @return a {@link OffsetDateTime}
      */
@@ -65,7 +57,6 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -78,17 +69,9 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethod extends Auth
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
         writer.writeObjectValue("device", this.getDevice());
         writer.writeStringValue("displayName", this.getDisplayName());
-    }
-    /**
-     * Sets the createdDateTime property value. The createdDateTime property
-     * @param value Value to set for the createdDateTime property.
-     */
-    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
-        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the creationDateTime property value. The timestamp when this method was registered to the user.

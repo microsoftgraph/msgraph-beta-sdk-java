@@ -121,6 +121,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         deserializerMap.put("ownershipType", (n) -> { this.setOwnershipType(n.getEnumValue(FileStorageContainerOwnershipType::forValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("recycleBin", (n) -> { this.setRecycleBin(n.getObjectValue(RecycleBin::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(FileStorageContainerSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(FileStorageContainerStatus::forValue)); });
         deserializerMap.put("storageUsedInBytes", (n) -> { this.setStorageUsedInBytes(n.getLongValue()); });
         deserializerMap.put("viewpoint", (n) -> { this.setViewpoint(n.getObjectValue(FileStorageContainerViewpoint::createFromDiscriminatorValue)); });
@@ -183,6 +184,14 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("recycleBin");
     }
     /**
+     * Gets the settings property value. The settings property
+     * @return a {@link FileStorageContainerSettings}
+     */
+    @jakarta.annotation.Nullable
+    public FileStorageContainerSettings getSettings() {
+        return this.backingStore.get("settings");
+    }
+    /**
      * Gets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive, active. Read-only.
      * @return a {@link FileStorageContainerStatus}
      */
@@ -229,6 +238,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeEnumValue("ownershipType", this.getOwnershipType());
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
         writer.writeObjectValue("recycleBin", this.getRecycleBin());
+        writer.writeObjectValue("settings", this.getSettings());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeLongValue("storageUsedInBytes", this.getStorageUsedInBytes());
         writer.writeObjectValue("viewpoint", this.getViewpoint());
@@ -344,6 +354,13 @@ public class FileStorageContainer extends Entity implements Parsable {
      */
     public void setRecycleBin(@jakarta.annotation.Nullable final RecycleBin value) {
         this.backingStore.set("recycleBin", value);
+    }
+    /**
+     * Sets the settings property value. The settings property
+     * @param value Value to set for the settings property.
+     */
+    public void setSettings(@jakarta.annotation.Nullable final FileStorageContainerSettings value) {
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the status property value. Status of the fileStorageContainer. Containers are created as inactive and require activation. Inactive containers are subjected to automatic deletion in 24 hours. The possible values are: inactive, active. Read-only.

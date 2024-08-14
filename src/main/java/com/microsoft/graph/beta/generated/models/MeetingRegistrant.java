@@ -66,7 +66,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
         return this.backingStore.get("firstName");
     }
     /**
-     * Gets the lastName property value. The last name of the registrant.
+     * Gets the lastName property value. The family name of the registrant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
         this.backingStore.set("firstName", value);
     }
     /**
-     * Sets the lastName property value. The last name of the registrant.
+     * Sets the lastName property value. The family name of the registrant.
      * @param value Value to set for the lastName property.
      */
     public void setLastName(@jakarta.annotation.Nullable final String value) {

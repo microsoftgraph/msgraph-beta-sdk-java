@@ -37,6 +37,14 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         return this.backingStore.get("authenticationMethod");
     }
     /**
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @return a {@link AppleDeploymentChannel}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeploymentChannel getDeploymentChannel() {
+        return this.backingStore.get("deploymentChannel");
+    }
+    /**
      * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @return a {@link EapFastConfiguration}
      */
@@ -68,6 +76,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationMethod", (n) -> { this.setAuthenticationMethod(n.getEnumValue(WiFiAuthenticationMethod::forValue)); });
+        deserializerMap.put("deploymentChannel", (n) -> { this.setDeploymentChannel(n.getEnumValue(AppleDeploymentChannel::forValue)); });
         deserializerMap.put("eapFastConfiguration", (n) -> { this.setEapFastConfiguration(n.getEnumValue(EapFastConfiguration::forValue)); });
         deserializerMap.put("eapType", (n) -> { this.setEapType(n.getEnumValue(EapType::forValue)); });
         deserializerMap.put("enableOuterIdentityPrivacy", (n) -> { this.setEnableOuterIdentityPrivacy(n.getStringValue()); });
@@ -135,6 +144,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("authenticationMethod", this.getAuthenticationMethod());
+        writer.writeEnumValue("deploymentChannel", this.getDeploymentChannel());
         writer.writeEnumValue("eapFastConfiguration", this.getEapFastConfiguration());
         writer.writeEnumValue("eapType", this.getEapType());
         writer.writeStringValue("enableOuterIdentityPrivacy", this.getEnableOuterIdentityPrivacy());
@@ -151,6 +161,13 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
         this.backingStore.set("authenticationMethod", value);
+    }
+    /**
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * @param value Value to set for the deploymentChannel property.
+     */
+    public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
+        this.backingStore.set("deploymentChannel", value);
     }
     /**
      * Sets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.

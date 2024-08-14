@@ -2,14 +2,15 @@ package com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath;
 
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.columns.ColumnsRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.contentmodels.ContentModelsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.contenttypes.ContentTypesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.createdbyuser.CreatedByUserRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.documentprocessingjobs.DocumentProcessingJobsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.drive.DriveRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.drives.DrivesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.externalcolumns.ExternalColumnsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
-import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.getbypathwithpath1.GetByPathWithPath1RequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.items.ItemsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.lastmodifiedbyuser.LastModifiedByUserRequestBuilder;
@@ -57,6 +58,14 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
         return new ColumnsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the contentModels property of the microsoft.graph.site entity.
+     * @return a {@link ContentModelsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ContentModelsRequestBuilder contentModels() {
+        return new ContentModelsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the contentTypes property of the microsoft.graph.site entity.
      * @return a {@link ContentTypesRequestBuilder}
      */
@@ -71,6 +80,14 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CreatedByUserRequestBuilder createdByUser() {
         return new CreatedByUserRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the documentProcessingJobs property of the microsoft.graph.site entity.
+     * @return a {@link DocumentProcessingJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DocumentProcessingJobsRequestBuilder documentProcessingJobs() {
+        return new DocumentProcessingJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.site entity.
@@ -247,16 +264,6 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     public GetApplicableContentTypesForListWithListIdRequestBuilder getApplicableContentTypesForListWithListId(@jakarta.annotation.Nonnull final String listId) {
         Objects.requireNonNull(listId);
         return new GetApplicableContentTypesForListWithListIdRequestBuilder(pathParameters, requestAdapter, listId);
-    }
-    /**
-     * Provides operations to call the getByPath method.
-     * @param path1 Usage: path='{path1}'
-     * @return a {@link GetByPathWithPath1RequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetByPathWithPath1RequestBuilder getByPathWithPath1(@jakarta.annotation.Nonnull final String path1) {
-        Objects.requireNonNull(path1);
-        return new GetByPathWithPath1RequestBuilder(pathParameters, requestAdapter, path1);
     }
     /**
      * Invoke function getByPath

@@ -42,6 +42,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("allotmentDisplayName");
     }
     /**
+     * Gets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read Only.
+     * @return a {@link CloudPcConnectionSetting}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcConnectionSetting getConnectionSetting() {
+        return this.backingStore.get("connectionSetting");
+    }
+    /**
      * Gets the connectionSettings property value. The connectionSettings property
      * @return a {@link CloudPcConnectionSettings}
      */
@@ -56,6 +64,14 @@ public class CloudPC extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public CloudPcConnectivityResult getConnectivityResult() {
         return this.backingStore.get("connectivityResult");
+    }
+    /**
+     * Gets the deviceRegionName property value. The name of the geographical region where the Cloud PC is currently provisioned. For example, westus3, eastus2, and southeastasia. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDeviceRegionName() {
+        return this.backingStore.get("deviceRegionName");
     }
     /**
      * Gets the disasterRecoveryCapability property value. The disaster recovery status of the Cloud PC, including the primary region, secondary region, and capability type. The default value is null that indicates that the disaster recovery setting is disabled. To receive a response with the disasterRecoveryCapability property, $select and $filter it by disasterRecoveryCapability/{subProperty} in the request URL. For more details, see Example 4: List Cloud PCs filtered by disaster recovery capability type. Read-only.
@@ -90,8 +106,10 @@ public class CloudPC extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("aadDeviceId", (n) -> { this.setAadDeviceId(n.getStringValue()); });
         deserializerMap.put("allotmentDisplayName", (n) -> { this.setAllotmentDisplayName(n.getStringValue()); });
+        deserializerMap.put("connectionSetting", (n) -> { this.setConnectionSetting(n.getObjectValue(CloudPcConnectionSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("connectionSettings", (n) -> { this.setConnectionSettings(n.getObjectValue(CloudPcConnectionSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("connectivityResult", (n) -> { this.setConnectivityResult(n.getObjectValue(CloudPcConnectivityResult::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceRegionName", (n) -> { this.setDeviceRegionName(n.getStringValue()); });
         deserializerMap.put("disasterRecoveryCapability", (n) -> { this.setDisasterRecoveryCapability(n.getObjectValue(CloudPcDisasterRecoveryCapability::createFromDiscriminatorValue)); });
         deserializerMap.put("diskEncryptionState", (n) -> { this.setDiskEncryptionState(n.getEnumValue(CloudPcDiskEncryptionState::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -114,6 +132,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("servicePlanName", (n) -> { this.setServicePlanName(n.getStringValue()); });
         deserializerMap.put("servicePlanType", (n) -> { this.setServicePlanType(n.getEnumValue(CloudPcServicePlanType::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcStatus::forValue)); });
+        deserializerMap.put("statusDetail", (n) -> { this.setStatusDetail(n.getObjectValue(CloudPcStatusDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getObjectValue(CloudPcStatusDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPcUserAccountType::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
@@ -272,6 +291,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
+     * Gets the statusDetail property value. Indicates the detailed status associated with Cloud PC, including error/warning code, error/warning message, additionalInformation. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }.
+     * @return a {@link CloudPcStatusDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcStatusDetail getStatusDetail() {
+        return this.backingStore.get("statusDetail");
+    }
+    /**
      * Gets the statusDetails property value. The details of the Cloud PC status. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
      * @return a {@link CloudPcStatusDetails}
      */
@@ -304,8 +331,10 @@ public class CloudPC extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("aadDeviceId", this.getAadDeviceId());
         writer.writeStringValue("allotmentDisplayName", this.getAllotmentDisplayName());
+        writer.writeObjectValue("connectionSetting", this.getConnectionSetting());
         writer.writeObjectValue("connectionSettings", this.getConnectionSettings());
         writer.writeObjectValue("connectivityResult", this.getConnectivityResult());
+        writer.writeStringValue("deviceRegionName", this.getDeviceRegionName());
         writer.writeObjectValue("disasterRecoveryCapability", this.getDisasterRecoveryCapability());
         writer.writeEnumValue("diskEncryptionState", this.getDiskEncryptionState());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -328,6 +357,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeStringValue("servicePlanName", this.getServicePlanName());
         writer.writeEnumValue("servicePlanType", this.getServicePlanType());
         writer.writeEnumValue("status", this.getStatus());
+        writer.writeObjectValue("statusDetail", this.getStatusDetail());
         writer.writeObjectValue("statusDetails", this.getStatusDetails());
         writer.writeEnumValue("userAccountType", this.getUserAccountType());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
@@ -347,6 +377,13 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("allotmentDisplayName", value);
     }
     /**
+     * Sets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read Only.
+     * @param value Value to set for the connectionSetting property.
+     */
+    public void setConnectionSetting(@jakarta.annotation.Nullable final CloudPcConnectionSetting value) {
+        this.backingStore.set("connectionSetting", value);
+    }
+    /**
      * Sets the connectionSettings property value. The connectionSettings property
      * @param value Value to set for the connectionSettings property.
      */
@@ -359,6 +396,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setConnectivityResult(@jakarta.annotation.Nullable final CloudPcConnectivityResult value) {
         this.backingStore.set("connectivityResult", value);
+    }
+    /**
+     * Sets the deviceRegionName property value. The name of the geographical region where the Cloud PC is currently provisioned. For example, westus3, eastus2, and southeastasia. Read-only.
+     * @param value Value to set for the deviceRegionName property.
+     */
+    public void setDeviceRegionName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("deviceRegionName", value);
     }
     /**
      * Sets the disasterRecoveryCapability property value. The disaster recovery status of the Cloud PC, including the primary region, secondary region, and capability type. The default value is null that indicates that the disaster recovery setting is disabled. To receive a response with the disasterRecoveryCapability property, $select and $filter it by disasterRecoveryCapability/{subProperty} in the request URL. For more details, see Example 4: List Cloud PCs filtered by disaster recovery capability type. Read-only.
@@ -513,6 +557,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setStatus(@jakarta.annotation.Nullable final CloudPcStatus value) {
         this.backingStore.set("status", value);
+    }
+    /**
+     * Sets the statusDetail property value. Indicates the detailed status associated with Cloud PC, including error/warning code, error/warning message, additionalInformation. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }.
+     * @param value Value to set for the statusDetail property.
+     */
+    public void setStatusDetail(@jakarta.annotation.Nullable final CloudPcStatusDetail value) {
+        this.backingStore.set("statusDetail", value);
     }
     /**
      * Sets the statusDetails property value. The details of the Cloud PC status. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.

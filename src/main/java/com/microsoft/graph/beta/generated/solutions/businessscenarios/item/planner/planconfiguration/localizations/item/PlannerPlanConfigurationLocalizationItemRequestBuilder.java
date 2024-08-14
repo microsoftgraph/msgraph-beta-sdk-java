@@ -37,18 +37,16 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}/planner/planConfiguration/localizations/{plannerPlanConfigurationLocalization%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a plannerPlanConfigurationLocalization object.
+     * Delete navigation property localizations for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-delete-localizations?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a plannerPlanConfigurationLocalization object.
+     * Delete navigation property localizations for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfiguration-delete-localizations?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,19 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
+     * Localized names for the plan configuration.
      * @return a {@link PlannerPlanConfigurationLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfigurationLocalization get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
+     * Localized names for the plan configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlanConfigurationLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfigurationLocalization get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,23 +77,21 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfigurationLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a plannerPlanConfigurationLocalization object.
+     * Update the navigation property localizations in solutions
      * @param body The request body
      * @return a {@link PlannerPlanConfigurationLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfigurationLocalization patch(@jakarta.annotation.Nonnull final PlannerPlanConfigurationLocalization body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a plannerPlanConfigurationLocalization object.
+     * Update the navigation property localizations in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlanConfigurationLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/plannerplanconfigurationlocalization-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlannerPlanConfigurationLocalization patch(@jakarta.annotation.Nonnull final PlannerPlanConfigurationLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -108,7 +102,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfigurationLocalization::createFromDiscriminatorValue);
     }
     /**
-     * Delete a plannerPlanConfigurationLocalization object.
+     * Delete navigation property localizations for solutions
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +110,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a plannerPlanConfigurationLocalization object.
+     * Delete navigation property localizations for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +122,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
+     * Localized names for the plan configuration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,7 +130,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
+     * Localized names for the plan configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -148,7 +142,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Update the properties of a plannerPlanConfigurationLocalization object.
+     * Update the navigation property localizations in solutions
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +151,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a plannerPlanConfigurationLocalization object.
+     * Update the navigation property localizations in solutions
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -188,7 +182,7 @@ public class PlannerPlanConfigurationLocalizationItemRequestBuilder extends Base
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a plannerPlanConfigurationLocalization object.
+     * Localized names for the plan configuration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

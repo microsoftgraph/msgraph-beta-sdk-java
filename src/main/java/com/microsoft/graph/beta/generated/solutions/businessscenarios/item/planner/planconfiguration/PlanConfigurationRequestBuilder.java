@@ -88,7 +88,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerPlanConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
+     * Update the properties of a plannerPlanConfiguration object and its plannerPlanConfigurationLocalization collection for a businessScenario.
      * @param body The request body
      * @return a {@link PlannerPlanConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -99,7 +99,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
+     * Update the properties of a plannerPlanConfiguration object and its plannerPlanConfigurationLocalization collection for a businessScenario.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlanConfiguration}
@@ -155,7 +155,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
+     * Update the properties of a plannerPlanConfiguration object and its plannerPlanConfigurationLocalization collection for a businessScenario.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -164,7 +164,7 @@ public class PlanConfigurationRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a plannerPlanConfiguration object for a businessScenario.
+     * Update the properties of a plannerPlanConfiguration object and its plannerPlanConfigurationLocalization collection for a businessScenario.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

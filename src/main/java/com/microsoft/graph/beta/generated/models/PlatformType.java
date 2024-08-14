@@ -8,20 +8,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum PlatformType implements ValuedEnum {
-    /** None Platform Type */
+    /** None */
     None("none"),
-    /** Android Platform Type */
+    /** Android */
     Android("android"),
-    /** Android Enterprise Platform Type */
-    AndroidEnterprise("androidEnterprise"),
-    /** iOS Platform Type */
+    /** iOS */
     IOS("iOS"),
-    /** MacOS Platform Type */
+    /** MacOS */
     MacOS("macOS"),
     /** Windows 10X Platform Type */
     Windows10X("windows10X"),
-    /** Windows 10 Platform Type */
-    Windows10("windows10");
+    /** Windows 10 */
+    Windows10("windows10"),
+    /** Linux */
+    Linux("linux"),
+    /** UnknownFutureValue */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     PlatformType(final String value) {
         this.value = value;
@@ -34,11 +36,12 @@ public enum PlatformType implements ValuedEnum {
         switch(searchValue) {
             case "none": return None;
             case "android": return Android;
-            case "androidEnterprise": return AndroidEnterprise;
             case "iOS": return IOS;
             case "macOS": return MacOS;
             case "windows10X": return Windows10X;
             case "windows10": return Windows10;
+            case "linux": return Linux;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }
