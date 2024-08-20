@@ -38,7 +38,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
      * Reprovision a Cloud PC with an Intune managed device ID.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-reprovisioncloudpc?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -50,7 +50,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-reprovisioncloudpc?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -64,7 +64,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
      * Reprovision a Cloud PC with an Intune managed device ID.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -76,7 +76,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -91,7 +91,7 @@ public class ReprovisionCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ReprovisionCloudPcRequestBuilder}
      * @deprecated
-     * The reprovisionCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use reprovision instead as of 2023-07/reprovisionCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated

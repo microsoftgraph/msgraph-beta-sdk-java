@@ -36,7 +36,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
         return this.backingStore.get("applicationId");
     }
     /**
-     * Gets the appLogCollectionRequests property value. The collection property of AppLogUploadRequest.
+     * Gets the appLogCollectionRequests property value. Indicates collection of App Log Upload Request.
      * @return a {@link java.util.List<AppLogCollectionRequest>}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class MobileAppTroubleshootingEvent extends DeviceManagementTroubleshooti
         this.backingStore.set("applicationId", value);
     }
     /**
-     * Sets the appLogCollectionRequests property value. The collection property of AppLogUploadRequest.
+     * Sets the appLogCollectionRequests property value. Indicates collection of App Log Upload Request.
      * @param value Value to set for the appLogCollectionRequests property.
      */
     public void setAppLogCollectionRequests(@jakarta.annotation.Nullable final java.util.List<AppLogCollectionRequest> value) {

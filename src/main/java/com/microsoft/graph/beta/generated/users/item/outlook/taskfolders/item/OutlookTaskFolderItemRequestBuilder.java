@@ -25,7 +25,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the tasks property of the microsoft.graph.outlookTaskFolder entity.
      * @return a {@link TasksRequestBuilder}
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -52,7 +52,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property taskFolders for users
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @Deprecated
     public void delete() {
@@ -63,7 +63,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -77,7 +77,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -90,7 +90,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -106,7 +106,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -120,7 +120,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link OutlookTaskFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -135,7 +135,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property taskFolders for users
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -147,7 +147,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -161,7 +161,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * The user's Outlook task folders. Read-only. Nullable.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -173,7 +173,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -188,7 +188,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -201,7 +201,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -218,7 +218,7 @@ public class OutlookTaskFolderItemRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link OutlookTaskFolderItemRequestBuilder}
      * @deprecated
-     * The Outlook tasks API is deprecated and will stop returning data on February 20, 2023. Please use the new To Do API. For more details, please visit https://developer.microsoft.com/en-us/office/blogs/announcing-the-general-availability-of-microsoft-to-do-apis-on-graph/ as of 2020-08/Outlook_Tasks
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -40,9 +40,12 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @return a {@link CloudPcBulkRemoteActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcBulkRemoteActionResult post(@jakarta.annotation.Nonnull final BulkSetCloudPcReviewStatusPostRequestBody body) {
         return post(body, null);
     }
@@ -52,9 +55,12 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcBulkRemoteActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcBulkRemoteActionResult post(@jakarta.annotation.Nonnull final BulkSetCloudPcReviewStatusPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -66,8 +72,11 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BulkSetCloudPcReviewStatusPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -76,8 +85,11 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final BulkSetCloudPcReviewStatusPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -90,8 +102,11 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link BulkSetCloudPcReviewStatusRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public BulkSetCloudPcReviewStatusRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new BulkSetCloudPcReviewStatusRequestBuilder(rawUrl, requestAdapter);

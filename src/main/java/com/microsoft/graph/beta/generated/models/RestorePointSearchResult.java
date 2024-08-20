@@ -48,6 +48,14 @@ public class RestorePointSearchResult implements AdditionalDataHolder, BackedMod
         return value;
     }
     /**
+     * Gets the artifactHitCount property value. Total number of artifacts restored.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getArtifactHitCount() {
+        return this.backingStore.get("artifactHitCount");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -61,7 +69,8 @@ public class RestorePointSearchResult implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("artifactHitCount", (n) -> { this.setArtifactHitCount(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restorePoint", (n) -> { this.setRestorePoint(n.getObjectValue(RestorePoint::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -88,6 +97,7 @@ public class RestorePointSearchResult implements AdditionalDataHolder, BackedMod
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeIntegerValue("artifactHitCount", this.getArtifactHitCount());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("restorePoint", this.getRestorePoint());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -98,6 +108,13 @@ public class RestorePointSearchResult implements AdditionalDataHolder, BackedMod
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the artifactHitCount property value. Total number of artifacts restored.
+     * @param value Value to set for the artifactHitCount property.
+     */
+    public void setArtifactHitCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("artifactHitCount", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

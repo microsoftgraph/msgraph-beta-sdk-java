@@ -25,7 +25,10 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperienceUser entity.
      * @return a {@link LearningCourseActivitiesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public LearningCourseActivitiesRequestBuilder learningCourseActivities() {
         return new LearningCourseActivitiesRequestBuilder(pathParameters, requestAdapter);
@@ -49,7 +52,10 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property employeeExperience for users
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -57,7 +63,10 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property employeeExperience for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -68,8 +77,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * Get employeeExperience from users
      * @return a {@link EmployeeExperienceUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EmployeeExperienceUser get() {
         return get(null);
     }
@@ -78,8 +90,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmployeeExperienceUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EmployeeExperienceUser get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -90,8 +105,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the learningCourseActivities property of the microsoft.graph.employeeExperienceUser entity.
      * @param externalcourseActivityId Alternate key of learningCourseActivity
      * @return a {@link LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder learningCourseActivitiesWithExternalcourseActivityId(@jakarta.annotation.Nonnull final String externalcourseActivityId) {
         Objects.requireNonNull(externalcourseActivityId);
         return new LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder(pathParameters, requestAdapter, externalcourseActivityId);
@@ -101,8 +119,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link EmployeeExperienceUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EmployeeExperienceUser patch(@jakarta.annotation.Nonnull final EmployeeExperienceUser body) {
         return patch(body, null);
     }
@@ -112,8 +133,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmployeeExperienceUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EmployeeExperienceUser patch(@jakarta.annotation.Nonnull final EmployeeExperienceUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -124,8 +148,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property employeeExperience for users
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -133,8 +160,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property employeeExperience for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -144,8 +174,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get employeeExperience from users
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -153,8 +186,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * Get employeeExperience from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -165,8 +201,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property employeeExperience in users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EmployeeExperienceUser body) {
         return toPatchRequestInformation(body, null);
     }
@@ -175,8 +214,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EmployeeExperienceUser body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -189,8 +231,11 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link EmployeeExperienceRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public EmployeeExperienceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new EmployeeExperienceRequestBuilder(rawUrl, requestAdapter);

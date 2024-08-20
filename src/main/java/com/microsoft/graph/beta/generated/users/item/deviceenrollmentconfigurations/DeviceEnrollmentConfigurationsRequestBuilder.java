@@ -28,7 +28,10 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +39,10 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to call the createEnrollmentNotificationConfiguration method.
      * @return a {@link CreateEnrollmentNotificationConfigurationRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CreateEnrollmentNotificationConfigurationRequestBuilder createEnrollmentNotificationConfiguration() {
         return new CreateEnrollmentNotificationConfigurationRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +50,10 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to call the hasPayloadLinks method.
      * @return a {@link HasPayloadLinksRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public HasPayloadLinksRequestBuilder hasPayloadLinks() {
         return new HasPayloadLinksRequestBuilder(pathParameters, requestAdapter);
@@ -53,8 +62,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.user entity.
      * @param deviceEnrollmentConfigurationId The unique identifier of deviceEnrollmentConfiguration
      * @return a {@link DeviceEnrollmentConfigurationItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public DeviceEnrollmentConfigurationItemRequestBuilder byDeviceEnrollmentConfigurationId(@jakarta.annotation.Nonnull final String deviceEnrollmentConfigurationId) {
         Objects.requireNonNull(deviceEnrollmentConfigurationId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -81,8 +93,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * Get enrollment configurations targeted to the user
      * @return a {@link DeviceEnrollmentConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeviceEnrollmentConfigurationCollectionResponse get() {
         return get(null);
     }
@@ -91,8 +106,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceEnrollmentConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeviceEnrollmentConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -104,8 +122,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @return a {@link DeviceEnrollmentConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeviceEnrollmentConfiguration post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
         return post(body, null);
     }
@@ -115,8 +136,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceEnrollmentConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeviceEnrollmentConfiguration post(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -127,8 +151,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
     /**
      * Get enrollment configurations targeted to the user
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -136,8 +163,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * Get enrollment configurations targeted to the user
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -148,8 +178,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * Create new navigation property to deviceEnrollmentConfigurations for users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body) {
         return toPostRequestInformation(body, null);
     }
@@ -158,8 +191,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceEnrollmentConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -172,8 +208,11 @@ public class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBui
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link DeviceEnrollmentConfigurationsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public DeviceEnrollmentConfigurationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new DeviceEnrollmentConfigurationsRequestBuilder(rawUrl, requestAdapter);

@@ -1321,7 +1321,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("skills");
     }
     /**
-     * Gets the solutions property value. The solutions property
+     * Gets the solutions property value. Represents a user's custom solution entity. Read-Only. Nullable.
      * @return a {@link UserSolutionRoot}
      */
     @jakarta.annotation.Nullable
@@ -2592,7 +2592,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("skills", value);
     }
     /**
-     * Sets the solutions property value. The solutions property
+     * Sets the solutions property value. Represents a user's custom solution entity. Read-Only. Nullable.
      * @param value Value to set for the solutions property.
      */
     public void setSolutions(@jakarta.annotation.Nullable final UserSolutionRoot value) {

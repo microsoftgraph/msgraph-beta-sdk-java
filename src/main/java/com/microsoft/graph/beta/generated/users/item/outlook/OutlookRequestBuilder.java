@@ -30,7 +30,10 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
      * @return a {@link MasterCategoriesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MasterCategoriesRequestBuilder masterCategories() {
         return new MasterCategoriesRequestBuilder(pathParameters, requestAdapter);
@@ -38,7 +41,10 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the supportedLanguages method.
      * @return a {@link SupportedLanguagesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SupportedLanguagesRequestBuilder supportedLanguages() {
         return new SupportedLanguagesRequestBuilder(pathParameters, requestAdapter);
@@ -46,7 +52,10 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the supportedTimeZones method.
      * @return a {@link SupportedTimeZonesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SupportedTimeZonesRequestBuilder supportedTimeZones() {
         return new SupportedTimeZonesRequestBuilder(pathParameters, requestAdapter);
@@ -54,7 +63,10 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the taskFolders property of the microsoft.graph.outlookUser entity.
      * @return a {@link TaskFoldersRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TaskFoldersRequestBuilder taskFolders() {
         return new TaskFoldersRequestBuilder(pathParameters, requestAdapter);
@@ -62,7 +74,10 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the taskGroups property of the microsoft.graph.outlookUser entity.
      * @return a {@link TaskGroupsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TaskGroupsRequestBuilder taskGroups() {
         return new TaskGroupsRequestBuilder(pathParameters, requestAdapter);
@@ -70,7 +85,10 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.outlookUser entity.
      * @return a {@link TasksRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -95,8 +113,11 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
      * Selective Outlook services available to the user. Read-only. Nullable.
      * @return a {@link OutlookUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public OutlookUser get() {
         return get(null);
     }
@@ -105,8 +126,11 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OutlookUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public OutlookUser get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -117,8 +141,11 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the supportedTimeZones method.
      * @param TimeZoneStandard Usage: TimeZoneStandard='{TimeZoneStandard}'
      * @return a {@link SupportedTimeZonesWithTimeZoneStandardRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SupportedTimeZonesWithTimeZoneStandardRequestBuilder supportedTimeZonesWithTimeZoneStandard(@jakarta.annotation.Nonnull final String TimeZoneStandard) {
         Objects.requireNonNull(TimeZoneStandard);
         return new SupportedTimeZonesWithTimeZoneStandardRequestBuilder(pathParameters, requestAdapter, TimeZoneStandard);
@@ -126,8 +153,11 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
     /**
      * Selective Outlook services available to the user. Read-only. Nullable.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -135,8 +165,11 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
      * Selective Outlook services available to the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -147,8 +180,11 @@ public class OutlookRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link OutlookRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public OutlookRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new OutlookRequestBuilder(rawUrl, requestAdapter);

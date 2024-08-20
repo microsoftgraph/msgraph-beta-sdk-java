@@ -26,7 +26,10 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the synchronizationProfiles property of the microsoft.graph.educationRoot entity.
      * @param educationSynchronizationProfileId The unique identifier of educationSynchronizationProfile
      * @return a {@link EducationSynchronizationProfileItemRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public EducationSynchronizationProfileItemRequestBuilder byEducationSynchronizationProfileId(@jakarta.annotation.Nonnull final String educationSynchronizationProfileId) {
         Objects.requireNonNull(educationSynchronizationProfileId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,9 +69,12 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * Retrieve the collection of school data synchronization profiles in the tenant.
      * @return a {@link EducationSynchronizationProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EducationSynchronizationProfileCollectionResponse get() {
         return get(null);
     }
@@ -74,9 +83,12 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EducationSynchronizationProfileCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -88,8 +100,11 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link EducationSynchronizationProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EducationSynchronizationProfile post(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body) {
         return post(body, null);
     }
@@ -99,8 +114,11 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EducationSynchronizationProfile post(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -111,8 +129,11 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the collection of school data synchronization profiles in the tenant.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -120,8 +141,11 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * Retrieve the collection of school data synchronization profiles in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -132,8 +156,11 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to synchronizationProfiles for education
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body) {
         return toPostRequestInformation(body, null);
     }
@@ -142,8 +169,11 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -156,8 +186,11 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SynchronizationProfilesRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SynchronizationProfilesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SynchronizationProfilesRequestBuilder(rawUrl, requestAdapter);

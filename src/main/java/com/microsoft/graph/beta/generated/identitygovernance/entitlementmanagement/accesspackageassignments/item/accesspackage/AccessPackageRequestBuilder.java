@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accessp
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagecatalog.AccessPackageCatalogRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackageresourcerolescopes.AccessPackageResourceRoleScopesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewith.AccessPackagesIncompatibleWithRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.accesspackagesincompatiblewithwithuniquename.AccessPackagesIncompatibleWithWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.getapplicablepolicyrequirements.GetApplicablePolicyRequirementsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatibleaccesspackages.IncompatibleAccessPackagesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackage.incompatiblegroups.IncompatibleGroupsRequestBuilder;
@@ -91,6 +92,16 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MoveToCatalogRequestBuilder moveToCatalog() {
         return new MoveToCatalogRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
+     * @param uniqueName Alternate key of accessPackage
+     * @return a {@link AccessPackagesIncompatibleWithWithUniqueNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AccessPackagesIncompatibleWithWithUniqueNameRequestBuilder accessPackagesIncompatibleWithWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
+        Objects.requireNonNull(uniqueName);
+        return new AccessPackagesIncompatibleWithWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
     }
     /**
      * Instantiates a new {@link AccessPackageRequestBuilder} and sets the default values.

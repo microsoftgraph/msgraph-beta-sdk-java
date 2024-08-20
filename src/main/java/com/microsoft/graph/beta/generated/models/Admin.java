@@ -80,15 +80,24 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("edge");
     }
     /**
+     * Gets the entra property value. The entra property
+     * @return a {@link Entra}
+     */
+    @jakarta.annotation.Nullable
+    public Entra getEntra() {
+        return this.backingStore.get("entra");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
         deserializerMap.put("appsAndServices", (n) -> { this.setAppsAndServices(n.getObjectValue(AdminAppsAndServices::createFromDiscriminatorValue)); });
         deserializerMap.put("dynamics", (n) -> { this.setDynamics(n.getObjectValue(AdminDynamics::createFromDiscriminatorValue)); });
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
+        deserializerMap.put("entra", (n) -> { this.setEntra(n.getObjectValue(Entra::createFromDiscriminatorValue)); });
         deserializerMap.put("forms", (n) -> { this.setForms(n.getObjectValue(AdminForms::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoft365Apps", (n) -> { this.setMicrosoft365Apps(n.getObjectValue(AdminMicrosoft365Apps::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -181,6 +190,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("appsAndServices", this.getAppsAndServices());
         writer.writeObjectValue("dynamics", this.getDynamics());
         writer.writeObjectValue("edge", this.getEdge());
+        writer.writeObjectValue("entra", this.getEntra());
         writer.writeObjectValue("forms", this.getForms());
         writer.writeObjectValue("microsoft365Apps", this.getMicrosoft365Apps());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -227,6 +237,13 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setEdge(@jakarta.annotation.Nullable final Edge value) {
         this.backingStore.set("edge", value);
+    }
+    /**
+     * Sets the entra property value. The entra property
+     * @param value Value to set for the entra property.
+     */
+    public void setEntra(@jakarta.annotation.Nullable final Entra value) {
+        this.backingStore.set("entra", value);
     }
     /**
      * Sets the forms property value. The forms property

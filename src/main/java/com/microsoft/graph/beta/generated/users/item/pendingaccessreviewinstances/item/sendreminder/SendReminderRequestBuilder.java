@@ -37,8 +37,11 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
     /**
      * Send a reminder to the reviewers of a currently active accessReviewInstance.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-sendreminder?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post() {
         post(null);
     }
@@ -46,8 +49,11 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
      * Send a reminder to the reviewers of a currently active accessReviewInstance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-sendreminder?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -57,8 +63,11 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
     /**
      * Send a reminder to the reviewers of a currently active accessReviewInstance.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation() {
         return toPostRequestInformation(null);
     }
@@ -66,8 +75,11 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
      * Send a reminder to the reviewers of a currently active accessReviewInstance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
@@ -78,8 +90,11 @@ public class SendReminderRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SendReminderRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SendReminderRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SendReminderRequestBuilder(rawUrl, requestAdapter);

@@ -41,7 +41,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @return a {@link CloudPcBulkRemoteActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @return a {@link CloudPcBulkRemoteActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulkrestorecloudpc?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -86,7 +86,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -103,7 +103,7 @@ public class BulkRestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link BulkRestoreCloudPcRequestBuilder}
      * @deprecated
-     * The bulkRestoreCloudPc action is deprecated and will stop supporting on September 24, 2023. Please use bulk action entity api. as of 2023-05/bulkRestoreCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
