@@ -10,6 +10,7 @@ import com.microsoft.graph.beta.users.item.calendars.item.calendarview.item.inst
 import com.microsoft.graph.beta.users.item.calendars.item.calendarview.item.instances.item.exceptionoccurrences.item.dismissreminder.DismissReminderRequestBuilder;
 import com.microsoft.graph.beta.users.item.calendars.item.calendarview.item.instances.item.exceptionoccurrences.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.beta.users.item.calendars.item.calendarview.item.instances.item.exceptionoccurrences.item.forward.ForwardRequestBuilder;
+import com.microsoft.graph.beta.users.item.calendars.item.calendarview.item.instances.item.exceptionoccurrences.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.beta.users.item.calendars.item.calendarview.item.instances.item.exceptionoccurrences.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.beta.users.item.calendars.item.calendarview.item.instances.item.exceptionoccurrences.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -33,7 +34,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the accept method.
      * @return a {@link AcceptRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AcceptRequestBuilder accept() {
         return new AcceptRequestBuilder(pathParameters, requestAdapter);
@@ -41,7 +45,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.event entity.
      * @return a {@link AttachmentsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
@@ -49,7 +56,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the calendar property of the microsoft.graph.event entity.
      * @return a {@link CalendarRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CalendarRequestBuilder calendar() {
         return new CalendarRequestBuilder(pathParameters, requestAdapter);
@@ -57,7 +67,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the cancel method.
      * @return a {@link CancelRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
@@ -65,7 +78,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the decline method.
      * @return a {@link DeclineRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DeclineRequestBuilder decline() {
         return new DeclineRequestBuilder(pathParameters, requestAdapter);
@@ -73,7 +89,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the dismissReminder method.
      * @return a {@link DismissReminderRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DismissReminderRequestBuilder dismissReminder() {
         return new DismissReminderRequestBuilder(pathParameters, requestAdapter);
@@ -81,7 +100,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.event entity.
      * @return a {@link ExtensionsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
@@ -89,15 +111,32 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the forward method.
      * @return a {@link ForwardRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the snoozeReminder method.
      * @return a {@link SnoozeReminderRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SnoozeReminderRequestBuilder snoozeReminder() {
         return new SnoozeReminderRequestBuilder(pathParameters, requestAdapter);
@@ -105,7 +144,10 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the tentativelyAccept method.
      * @return a {@link TentativelyAcceptRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TentativelyAcceptRequestBuilder tentativelyAccept() {
         return new TentativelyAcceptRequestBuilder(pathParameters, requestAdapter);
@@ -130,8 +172,11 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * Get exceptionOccurrences from users
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Event get() {
         return get(null);
     }
@@ -140,8 +185,11 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Event get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -151,8 +199,11 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get exceptionOccurrences from users
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -160,8 +211,11 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * Get exceptionOccurrences from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -172,8 +226,11 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link EventItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public EventItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new EventItemRequestBuilder(rawUrl, requestAdapter);

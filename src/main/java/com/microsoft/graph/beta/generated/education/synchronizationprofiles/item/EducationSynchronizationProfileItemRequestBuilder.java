@@ -30,7 +30,10 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Provides operations to manage the errors property of the microsoft.graph.educationSynchronizationProfile entity.
      * @return a {@link ErrorsRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ErrorsRequestBuilder errors() {
         return new ErrorsRequestBuilder(pathParameters, requestAdapter);
@@ -38,7 +41,10 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Provides operations to call the pause method.
      * @return a {@link PauseRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PauseRequestBuilder pause() {
         return new PauseRequestBuilder(pathParameters, requestAdapter);
@@ -46,7 +52,10 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Provides operations to manage the profileStatus property of the microsoft.graph.educationSynchronizationProfile entity.
      * @return a {@link ProfileStatusRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ProfileStatusRequestBuilder profileStatus() {
         return new ProfileStatusRequestBuilder(pathParameters, requestAdapter);
@@ -54,7 +63,10 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Provides operations to call the reset method.
      * @return a {@link ResetRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ResetRequestBuilder reset() {
         return new ResetRequestBuilder(pathParameters, requestAdapter);
@@ -62,7 +74,10 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Provides operations to call the resume method.
      * @return a {@link ResumeRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ResumeRequestBuilder resume() {
         return new ResumeRequestBuilder(pathParameters, requestAdapter);
@@ -70,7 +85,10 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Provides operations to call the start method.
      * @return a {@link StartRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public StartRequestBuilder start() {
         return new StartRequestBuilder(pathParameters, requestAdapter);
@@ -78,7 +96,10 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Provides operations to call the uploadUrl method.
      * @return a {@link UploadUrlRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UploadUrlRequestBuilder uploadUrl() {
         return new UploadUrlRequestBuilder(pathParameters, requestAdapter);
@@ -102,8 +123,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Delete a school data synchronization profile in the tenant based on the identifier.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-delete?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -111,8 +135,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * Delete a school data synchronization profile in the tenant based on the identifier.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-delete?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -123,9 +150,12 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * Retrieve a school data synchronization profile in the tenant based on the identifier.
      * @return a {@link EducationSynchronizationProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EducationSynchronizationProfile get() {
         return get(null);
     }
@@ -134,9 +164,12 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EducationSynchronizationProfile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -148,8 +181,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * @param body The request body
      * @return a {@link EducationSynchronizationProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EducationSynchronizationProfile patch(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body) {
         return patch(body, null);
     }
@@ -159,8 +195,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EducationSynchronizationProfile patch(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -171,8 +210,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Delete a school data synchronization profile in the tenant based on the identifier.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -180,8 +222,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * Delete a school data synchronization profile in the tenant based on the identifier.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -191,8 +236,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
     /**
      * Retrieve a school data synchronization profile in the tenant based on the identifier.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -200,8 +248,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * Retrieve a school data synchronization profile in the tenant based on the identifier.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -212,8 +263,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * Update the navigation property synchronizationProfiles in education
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body) {
         return toPatchRequestInformation(body, null);
     }
@@ -222,8 +276,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final EducationSynchronizationProfile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -236,8 +293,11 @@ public class EducationSynchronizationProfileItemRequestBuilder extends BaseReque
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link EducationSynchronizationProfileItemRequestBuilder}
+     * @deprecated
+     * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public EducationSynchronizationProfileItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new EducationSynchronizationProfileItemRequestBuilder(rawUrl, requestAdapter);

@@ -56,7 +56,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the blockAzureADGraphAccess property value. The blockAzureADGraphAccess property
+     * Gets the blockAzureADGraphAccess property value. If false, allows the app to have extended access to Azure AD Graph until June 30, 2025 when Azure AD Graph is fully retired. For more information on Azure AD retirement updates, see June 2024 update on Azure AD Graph API retirement.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the removeUnverifiedEmailClaim property value. Removes the email claim from tokens sent to an application when the email address's domain can't be verified.
+     * Gets the removeUnverifiedEmailClaim property value. If true, removes the email claim from tokens sent to an application when the email address's domain can't be verified.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("removeUnverifiedEmailClaim");
     }
     /**
-     * Gets the requireClientServicePrincipal property value. Requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they're granted access tokens. This property is only modifiable for multi-tenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
+     * Gets the requireClientServicePrincipal property value. If true, requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they're granted access tokens. This property is only modifiable for multitenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the blockAzureADGraphAccess property value. The blockAzureADGraphAccess property
+     * Sets the blockAzureADGraphAccess property value. If false, allows the app to have extended access to Azure AD Graph until June 30, 2025 when Azure AD Graph is fully retired. For more information on Azure AD retirement updates, see June 2024 update on Azure AD Graph API retirement.
      * @param value Value to set for the blockAzureADGraphAccess property.
      */
     public void setBlockAzureADGraphAccess(@jakarta.annotation.Nullable final Boolean value) {
@@ -142,14 +142,14 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the removeUnverifiedEmailClaim property value. Removes the email claim from tokens sent to an application when the email address's domain can't be verified.
+     * Sets the removeUnverifiedEmailClaim property value. If true, removes the email claim from tokens sent to an application when the email address's domain can't be verified.
      * @param value Value to set for the removeUnverifiedEmailClaim property.
      */
     public void setRemoveUnverifiedEmailClaim(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("removeUnverifiedEmailClaim", value);
     }
     /**
-     * Sets the requireClientServicePrincipal property value. Requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they're granted access tokens. This property is only modifiable for multi-tenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
+     * Sets the requireClientServicePrincipal property value. If true, requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they're granted access tokens. This property is only modifiable for multitenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
      * @param value Value to set for the requireClientServicePrincipal property.
      */
     public void setRequireClientServicePrincipal(@jakarta.annotation.Nullable final Boolean value) {

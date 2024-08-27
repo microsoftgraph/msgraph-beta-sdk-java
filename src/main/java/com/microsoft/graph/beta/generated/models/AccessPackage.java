@@ -119,6 +119,7 @@ public class AccessPackage extends Entity implements Parsable {
         deserializerMap.put("isRoleScopesVisible", (n) -> { this.setIsRoleScopesVisible(n.getBooleanValue()); });
         deserializerMap.put("modifiedBy", (n) -> { this.setModifiedBy(n.getStringValue()); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("uniqueName", (n) -> { this.setUniqueName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -170,6 +171,14 @@ public class AccessPackage extends Entity implements Parsable {
         return this.backingStore.get("modifiedDateTime");
     }
     /**
+     * Gets the uniqueName property value. The uniqueName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getUniqueName() {
+        return this.backingStore.get("uniqueName");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -191,6 +200,7 @@ public class AccessPackage extends Entity implements Parsable {
         writer.writeBooleanValue("isRoleScopesVisible", this.getIsRoleScopesVisible());
         writer.writeStringValue("modifiedBy", this.getModifiedBy());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
+        writer.writeStringValue("uniqueName", this.getUniqueName());
     }
     /**
      * Sets the accessPackageAssignmentPolicies property value. Read-only. Nullable. Supports $expand.
@@ -296,5 +306,12 @@ public class AccessPackage extends Entity implements Parsable {
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("modifiedDateTime", value);
+    }
+    /**
+     * Sets the uniqueName property value. The uniqueName property
+     * @param value Value to set for the uniqueName property.
+     */
+    public void setUniqueName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("uniqueName", value);
     }
 }

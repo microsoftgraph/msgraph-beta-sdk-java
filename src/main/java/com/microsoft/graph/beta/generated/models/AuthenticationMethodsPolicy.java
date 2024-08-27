@@ -60,6 +60,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("microsoftAuthenticatorPlatformSettings", (n) -> { this.setMicrosoftAuthenticatorPlatformSettings(n.getObjectValue(MicrosoftAuthenticatorPlatformSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("policyMigrationState", (n) -> { this.setPolicyMigrationState(n.getEnumValue(AuthenticationMethodsPolicyMigrationState::forValue)); });
         deserializerMap.put("policyVersion", (n) -> { this.setPolicyVersion(n.getStringValue()); });
         deserializerMap.put("reconfirmationInDays", (n) -> { this.setReconfirmationInDays(n.getIntegerValue()); });
@@ -75,6 +76,14 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the microsoftAuthenticatorPlatformSettings property value. The microsoftAuthenticatorPlatformSettings property
+     * @return a {@link MicrosoftAuthenticatorPlatformSettings}
+     */
+    @jakarta.annotation.Nullable
+    public MicrosoftAuthenticatorPlatformSettings getMicrosoftAuthenticatorPlatformSettings() {
+        return this.backingStore.get("microsoftAuthenticatorPlatformSettings");
     }
     /**
      * Gets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Don't use.
@@ -135,6 +144,7 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeObjectValue("microsoftAuthenticatorPlatformSettings", this.getMicrosoftAuthenticatorPlatformSettings());
         writer.writeEnumValue("policyMigrationState", this.getPolicyMigrationState());
         writer.writeStringValue("policyVersion", this.getPolicyVersion());
         writer.writeIntegerValue("reconfirmationInDays", this.getReconfirmationInDays());
@@ -169,6 +179,13 @@ public class AuthenticationMethodsPolicy extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the microsoftAuthenticatorPlatformSettings property value. The microsoftAuthenticatorPlatformSettings property
+     * @param value Value to set for the microsoftAuthenticatorPlatformSettings property.
+     */
+    public void setMicrosoftAuthenticatorPlatformSettings(@jakarta.annotation.Nullable final MicrosoftAuthenticatorPlatformSettings value) {
+        this.backingStore.set("microsoftAuthenticatorPlatformSettings", value);
     }
     /**
      * Sets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Don't use.

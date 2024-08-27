@@ -7,7 +7,9 @@ import java.util.Objects;
 public enum FilteringPolicyAction implements ValuedEnum {
     Block("block"),
     Allow("allow"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Bypass("bypass"),
+    Alert("alert");
     public final String value;
     FilteringPolicyAction(final String value) {
         this.value = value;
@@ -21,6 +23,8 @@ public enum FilteringPolicyAction implements ValuedEnum {
             case "block": return Block;
             case "allow": return Allow;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "bypass": return Bypass;
+            case "alert": return Alert;
             default: return null;
         }
     }

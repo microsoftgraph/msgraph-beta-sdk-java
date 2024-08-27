@@ -22,6 +22,13 @@ public class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsa
     @jakarta.annotation.Nonnull
     public static MailboxRestoreArtifact createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.granularMailboxRestoreArtifact": return new GranularMailboxRestoreArtifact();
+            }
+        }
         return new MailboxRestoreArtifact();
     }
     /**

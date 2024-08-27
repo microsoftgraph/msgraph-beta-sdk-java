@@ -28,7 +28,10 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the clearPresence method.
      * @return a {@link ClearPresenceRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ClearPresenceRequestBuilder clearPresence() {
         return new ClearPresenceRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +39,10 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the clearUserPreferredPresence method.
      * @return a {@link ClearUserPreferredPresenceRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ClearUserPreferredPresenceRequestBuilder clearUserPreferredPresence() {
         return new ClearUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +50,10 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the setPresence method.
      * @return a {@link SetPresenceRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SetPresenceRequestBuilder setPresence() {
         return new SetPresenceRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +61,10 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the setStatusMessage method.
      * @return a {@link SetStatusMessageRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SetStatusMessageRequestBuilder setStatusMessage() {
         return new SetStatusMessageRequestBuilder(pathParameters, requestAdapter);
@@ -60,7 +72,10 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the setUserPreferredPresence method.
      * @return a {@link SetUserPreferredPresenceRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SetUserPreferredPresenceRequestBuilder setUserPreferredPresence() {
         return new SetUserPreferredPresenceRequestBuilder(pathParameters, requestAdapter);
@@ -84,7 +99,10 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property presence for users
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -92,7 +110,10 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property presence for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -103,9 +124,12 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Set a presence status message for a user. An optional expiration date and time can be supplied.
      * @return a {@link Presence}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Presence get() {
         return get(null);
     }
@@ -114,9 +138,12 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Presence}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Presence get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -128,8 +155,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Presence}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Presence patch(@jakarta.annotation.Nonnull final Presence body) {
         return patch(body, null);
     }
@@ -139,8 +169,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Presence}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Presence patch(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -151,8 +184,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property presence for users
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -160,8 +196,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property presence for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -171,8 +210,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
     /**
      * Set a presence status message for a user. An optional expiration date and time can be supplied.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -180,8 +222,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Set a presence status message for a user. An optional expiration date and time can be supplied.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -192,8 +237,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property presence in users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Presence body) {
         return toPatchRequestInformation(body, null);
     }
@@ -202,8 +250,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Presence body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -216,8 +267,11 @@ public class PresenceRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link PresenceRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public PresenceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new PresenceRequestBuilder(rawUrl, requestAdapter);

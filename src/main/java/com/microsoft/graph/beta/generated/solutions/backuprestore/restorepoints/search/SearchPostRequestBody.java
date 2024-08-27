@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.solutions.backuprestore.restorepoints.search;
 
+import com.microsoft.graph.beta.models.ArtifactQuery;
 import com.microsoft.graph.beta.models.RestorePointPreference;
 import com.microsoft.graph.beta.models.RestorePointTags;
 import com.microsoft.graph.beta.models.TimePeriod;
@@ -52,6 +53,14 @@ public class SearchPostRequestBody implements AdditionalDataHolder, BackedModel,
         return value;
     }
     /**
+     * Gets the artifactQuery property value. The artifactQuery property
+     * @return a {@link ArtifactQuery}
+     */
+    @jakarta.annotation.Nullable
+    public ArtifactQuery getArtifactQuery() {
+        return this.backingStore.get("artifactQuery");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -65,7 +74,8 @@ public class SearchPostRequestBody implements AdditionalDataHolder, BackedModel,
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("artifactQuery", (n) -> { this.setArtifactQuery(n.getObjectValue(ArtifactQuery::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionTimePeriod", (n) -> { this.setProtectionTimePeriod(n.getObjectValue(TimePeriod::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionUnitIds", (n) -> { this.setProtectionUnitIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("restorePointPreference", (n) -> { this.setRestorePointPreference(n.getEnumValue(RestorePointPreference::forValue)); });
@@ -110,6 +120,7 @@ public class SearchPostRequestBody implements AdditionalDataHolder, BackedModel,
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("artifactQuery", this.getArtifactQuery());
         writer.writeObjectValue("protectionTimePeriod", this.getProtectionTimePeriod());
         writer.writeCollectionOfPrimitiveValues("protectionUnitIds", this.getProtectionUnitIds());
         writer.writeEnumValue("restorePointPreference", this.getRestorePointPreference());
@@ -122,6 +133,13 @@ public class SearchPostRequestBody implements AdditionalDataHolder, BackedModel,
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the artifactQuery property value. The artifactQuery property
+     * @param value Value to set for the artifactQuery property.
+     */
+    public void setArtifactQuery(@jakarta.annotation.Nullable final ArtifactQuery value) {
+        this.backingStore.set("artifactQuery", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

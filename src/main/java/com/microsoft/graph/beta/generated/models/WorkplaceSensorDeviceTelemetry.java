@@ -73,15 +73,25 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         return this.backingStore.get("deviceId");
     }
     /**
+     * Gets the eventValue property value. The extra values associated with badge signals.
+     * @return a {@link WorkplaceSensorEventValue}
+     */
+    @jakarta.annotation.Nullable
+    public WorkplaceSensorEventValue getEventValue() {
+        return this.backingStore.get("eventValue");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("boolValue", (n) -> { this.setBoolValue(n.getBooleanValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("eventValue", (n) -> { this.setEventValue(n.getObjectValue(WorkplaceSensorEventValue::createFromDiscriminatorValue)); });
         deserializerMap.put("intValue", (n) -> { this.setIntValue(n.getIntegerValue()); });
+        deserializerMap.put("locationHint", (n) -> { this.setLocationHint(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("sensorId", (n) -> { this.setSensorId(n.getStringValue()); });
         deserializerMap.put("sensorType", (n) -> { this.setSensorType(n.getEnumValue(WorkplaceSensorType::forValue)); });
@@ -95,6 +105,14 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
     @jakarta.annotation.Nullable
     public Integer getIntValue() {
         return this.backingStore.get("intValue");
+    }
+    /**
+     * Gets the locationHint property value. The additional information to indicate the location of the device.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLocationHint() {
+        return this.backingStore.get("locationHint");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -136,7 +154,9 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("boolValue", this.getBoolValue());
         writer.writeStringValue("deviceId", this.getDeviceId());
+        writer.writeObjectValue("eventValue", this.getEventValue());
         writer.writeIntegerValue("intValue", this.getIntValue());
+        writer.writeStringValue("locationHint", this.getLocationHint());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sensorId", this.getSensorId());
         writer.writeEnumValue("sensorType", this.getSensorType());
@@ -173,11 +193,25 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         this.backingStore.set("deviceId", value);
     }
     /**
+     * Sets the eventValue property value. The extra values associated with badge signals.
+     * @param value Value to set for the eventValue property.
+     */
+    public void setEventValue(@jakarta.annotation.Nullable final WorkplaceSensorEventValue value) {
+        this.backingStore.set("eventValue", value);
+    }
+    /**
      * Sets the intValue property value. The value of the sensor as an integer. Use it for sensors that report numerical values, such as people count.
      * @param value Value to set for the intValue property.
      */
     public void setIntValue(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("intValue", value);
+    }
+    /**
+     * Sets the locationHint property value. The additional information to indicate the location of the device.
+     * @param value Value to set for the locationHint property.
+     */
+    public void setLocationHint(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("locationHint", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

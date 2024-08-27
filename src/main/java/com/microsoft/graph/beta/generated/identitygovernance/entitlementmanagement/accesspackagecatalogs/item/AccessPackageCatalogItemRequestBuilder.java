@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accessp
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackageresources.AccessPackageResourcesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackageresourcescopes.AccessPackageResourceScopesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackages.AccessPackagesRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.accesspackageswithuniquename.AccessPackagesWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackagecatalogs.item.customaccesspackageworkflowextensions.CustomAccessPackageWorkflowExtensionsRequestBuilder;
 import com.microsoft.graph.beta.models.AccessPackageCatalog;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -91,6 +92,19 @@ public class AccessPackageCatalogItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CustomAccessPackageWorkflowExtensionsRequestBuilder customAccessPackageWorkflowExtensions() {
         return new CustomAccessPackageWorkflowExtensionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the accessPackages property of the microsoft.graph.accessPackageCatalog entity.
+     * @param uniqueName Alternate key of accessPackage
+     * @return a {@link AccessPackagesWithUniqueNameRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public AccessPackagesWithUniqueNameRequestBuilder accessPackagesWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
+        Objects.requireNonNull(uniqueName);
+        return new AccessPackagesWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
     }
     /**
      * Instantiates a new {@link AccessPackageCatalogItemRequestBuilder} and sets the default values.

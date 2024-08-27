@@ -36,7 +36,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
      * @return a {@link EmailMethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EmailMethodsRequestBuilder emailMethods() {
         return new EmailMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +47,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
      * @return a {@link Fido2MethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public Fido2MethodsRequestBuilder fido2Methods() {
         return new Fido2MethodsRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +58,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
      * @return a {@link MethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MethodsRequestBuilder methods() {
         return new MethodsRequestBuilder(pathParameters, requestAdapter);
@@ -60,7 +69,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
      * @return a {@link MicrosoftAuthenticatorMethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftAuthenticatorMethodsRequestBuilder microsoftAuthenticatorMethods() {
         return new MicrosoftAuthenticatorMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -68,7 +80,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the operations property of the microsoft.graph.authentication entity.
      * @return a {@link OperationsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
@@ -76,7 +91,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the passwordlessMicrosoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
      * @return a {@link PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder passwordlessMicrosoftAuthenticatorMethods() {
         return new PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -84,7 +102,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity.
      * @return a {@link PasswordMethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PasswordMethodsRequestBuilder passwordMethods() {
         return new PasswordMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -92,7 +113,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
      * @return a {@link PhoneMethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PhoneMethodsRequestBuilder phoneMethods() {
         return new PhoneMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -100,7 +124,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the platformCredentialMethods property of the microsoft.graph.authentication entity.
      * @return a {@link PlatformCredentialMethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PlatformCredentialMethodsRequestBuilder platformCredentialMethods() {
         return new PlatformCredentialMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -108,7 +135,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * The signInPreferences property
      * @return a {@link SignInPreferencesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SignInPreferencesRequestBuilder signInPreferences() {
         return new SignInPreferencesRequestBuilder(pathParameters, requestAdapter);
@@ -116,7 +146,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
      * @return a {@link SoftwareOathMethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SoftwareOathMethodsRequestBuilder softwareOathMethods() {
         return new SoftwareOathMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -124,7 +157,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the temporaryAccessPassMethods property of the microsoft.graph.authentication entity.
      * @return a {@link TemporaryAccessPassMethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TemporaryAccessPassMethodsRequestBuilder temporaryAccessPassMethods() {
         return new TemporaryAccessPassMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -132,7 +168,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
      * @return a {@link WindowsHelloForBusinessMethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public WindowsHelloForBusinessMethodsRequestBuilder windowsHelloForBusinessMethods() {
         return new WindowsHelloForBusinessMethodsRequestBuilder(pathParameters, requestAdapter);
@@ -156,7 +195,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property authentication for users
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -164,7 +206,10 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property authentication for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -175,8 +220,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * The authentication methods that are supported for the user.
      * @return a {@link Authentication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Authentication get() {
         return get(null);
     }
@@ -185,8 +233,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Authentication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Authentication get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -198,8 +249,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Authentication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Authentication patch(@jakarta.annotation.Nonnull final Authentication body) {
         return patch(body, null);
     }
@@ -209,8 +263,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Authentication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Authentication patch(@jakarta.annotation.Nonnull final Authentication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -221,8 +278,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property authentication for users
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -230,8 +290,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property authentication for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -241,8 +304,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     /**
      * The authentication methods that are supported for the user.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -250,8 +316,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * The authentication methods that are supported for the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -262,8 +331,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property authentication in users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Authentication body) {
         return toPatchRequestInformation(body, null);
     }
@@ -272,8 +344,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Authentication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -286,8 +361,11 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AuthenticationRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AuthenticationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AuthenticationRequestBuilder(rawUrl, requestAdapter);

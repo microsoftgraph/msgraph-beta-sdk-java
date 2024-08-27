@@ -28,6 +28,7 @@ public class RestoreArtifactBase extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.driveRestoreArtifact": return new DriveRestoreArtifact();
+                case "#microsoft.graph.granularMailboxRestoreArtifact": return new GranularMailboxRestoreArtifact();
                 case "#microsoft.graph.mailboxRestoreArtifact": return new MailboxRestoreArtifact();
                 case "#microsoft.graph.siteRestoreArtifact": return new SiteRestoreArtifact();
             }

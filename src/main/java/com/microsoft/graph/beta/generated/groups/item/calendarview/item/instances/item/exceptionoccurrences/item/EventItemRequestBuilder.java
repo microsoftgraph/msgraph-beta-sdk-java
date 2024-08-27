@@ -8,6 +8,7 @@ import com.microsoft.graph.beta.groups.item.calendarview.item.instances.item.exc
 import com.microsoft.graph.beta.groups.item.calendarview.item.instances.item.exceptionoccurrences.item.dismissreminder.DismissReminderRequestBuilder;
 import com.microsoft.graph.beta.groups.item.calendarview.item.instances.item.exceptionoccurrences.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.calendarview.item.instances.item.exceptionoccurrences.item.forward.ForwardRequestBuilder;
+import com.microsoft.graph.beta.groups.item.calendarview.item.instances.item.exceptionoccurrences.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.beta.groups.item.calendarview.item.instances.item.exceptionoccurrences.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.beta.groups.item.calendarview.item.instances.item.exceptionoccurrences.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
 import com.microsoft.graph.beta.models.Event;
@@ -93,6 +94,14 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the snoozeReminder method.

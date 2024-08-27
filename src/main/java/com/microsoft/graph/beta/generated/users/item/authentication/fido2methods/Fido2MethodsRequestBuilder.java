@@ -26,7 +26,10 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -34,7 +37,10 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the creationOptions method.
      * @return a {@link CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder creationOptionsWithChallengeTimeoutInMinutes() {
         return new CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder(pathParameters, requestAdapter);
@@ -43,8 +49,11 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the fido2Methods property of the microsoft.graph.authentication entity.
      * @param fido2AuthenticationMethodId The unique identifier of fido2AuthenticationMethod
      * @return a {@link Fido2AuthenticationMethodItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public Fido2AuthenticationMethodItemRequestBuilder byFido2AuthenticationMethodId(@jakarta.annotation.Nonnull final String fido2AuthenticationMethodId) {
         Objects.requireNonNull(fido2AuthenticationMethodId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -71,8 +80,11 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
      * Represents the FIDO2 security keys registered to a user for authentication.
      * @return a {@link Fido2AuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Fido2AuthenticationMethodCollectionResponse get() {
         return get(null);
     }
@@ -81,8 +93,11 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Fido2AuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Fido2AuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -92,8 +107,11 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents the FIDO2 security keys registered to a user for authentication.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -101,8 +119,11 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
      * Represents the FIDO2 security keys registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -113,8 +134,11 @@ public class Fido2MethodsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link Fido2MethodsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public Fido2MethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new Fido2MethodsRequestBuilder(rawUrl, requestAdapter);
