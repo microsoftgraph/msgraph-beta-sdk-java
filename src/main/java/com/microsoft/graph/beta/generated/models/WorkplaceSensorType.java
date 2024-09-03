@@ -13,6 +13,8 @@ public enum WorkplaceSensorType implements ValuedEnum {
     InferredOccupancy("inferredOccupancy"),
     /** The heartbeat sensor type. */
     Heartbeat("heartbeat"),
+    /** The badge swipe sensor type. */
+    Badge("badge"),
     /** The unknown feature value. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -29,6 +31,7 @@ public enum WorkplaceSensorType implements ValuedEnum {
             case "peopleCount": return PeopleCount;
             case "inferredOccupancy": return InferredOccupancy;
             case "heartbeat": return Heartbeat;
+            case "badge": return Badge;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

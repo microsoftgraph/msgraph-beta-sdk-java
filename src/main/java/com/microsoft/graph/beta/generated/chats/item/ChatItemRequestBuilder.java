@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.chats.item;
 
+import com.microsoft.graph.beta.chats.item.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.beta.chats.item.hideforuser.HideForUserRequestBuilder;
 import com.microsoft.graph.beta.chats.item.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.beta.chats.item.lastmessagepreview.LastMessagePreviewRequestBuilder;
@@ -34,6 +35,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ChatItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the completeMigration method.
+     * @return a {@link CompleteMigrationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CompleteMigrationRequestBuilder completeMigration() {
+        return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the hideForUser method.
      * @return a {@link HideForUserRequestBuilder}

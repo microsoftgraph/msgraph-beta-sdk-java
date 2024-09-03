@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.admin;
 import com.microsoft.graph.beta.admin.appsandservices.AppsAndServicesRequestBuilder;
 import com.microsoft.graph.beta.admin.dynamics.DynamicsRequestBuilder;
 import com.microsoft.graph.beta.admin.edge.EdgeRequestBuilder;
+import com.microsoft.graph.beta.admin.entra.EntraRequestBuilder;
 import com.microsoft.graph.beta.admin.forms.FormsRequestBuilder;
 import com.microsoft.graph.beta.admin.microsoft365apps.Microsoft365AppsRequestBuilder;
 import com.microsoft.graph.beta.admin.people.PeopleRequestBuilder;
@@ -54,6 +55,14 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EdgeRequestBuilder edge() {
         return new EdgeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the entra property of the microsoft.graph.admin entity.
+     * @return a {@link EntraRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EntraRequestBuilder entra() {
+        return new EntraRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the forms property of the microsoft.graph.admin entity.

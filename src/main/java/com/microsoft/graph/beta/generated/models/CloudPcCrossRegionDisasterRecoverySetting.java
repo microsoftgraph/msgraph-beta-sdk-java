@@ -56,7 +56,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return this.backingStore;
     }
     /**
-     * Gets the crossRegionDisasterRecoveryEnabled property value. The crossRegionDisasterRecoveryEnabled property
+     * Gets the crossRegionDisasterRecoveryEnabled property value. True if an end user is allowed to set up cross-region disaster recovery for Cloud PC; otherwise, false. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return this.backingStore.get("crossRegionDisasterRecoveryEnabled");
     }
     /**
-     * Gets the disasterRecoveryNetworkSetting property value. The disasterRecoveryNetworkSetting property
+     * Gets the disasterRecoveryNetworkSetting property value. Indicates the network settings of the Cloud PC during a cross-region disaster recovery operation.
      * @return a {@link CloudPcDisasterRecoveryNetworkSetting}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return deserializerMap;
     }
     /**
-     * Gets the maintainCrossRegionRestorePointEnabled property value. The maintainCrossRegionRestorePointEnabled property
+     * Gets the maintainCrossRegionRestorePointEnabled property value. Indicates whether Windows 365 maintain the cross-region disaster recovery function generated restore points. If true, the Windows 365 stored restore points; false indicates that Windows 365 doesn't generate or keep the restore point from the original Cloud PC. If a disaster occurs, the new Cloud PC can only be provisioned using the initial image. This limitation can result in the loss of some user data on the original Cloud PC. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -128,21 +128,21 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         this.backingStore = value;
     }
     /**
-     * Sets the crossRegionDisasterRecoveryEnabled property value. The crossRegionDisasterRecoveryEnabled property
+     * Sets the crossRegionDisasterRecoveryEnabled property value. True if an end user is allowed to set up cross-region disaster recovery for Cloud PC; otherwise, false. The default value is false.
      * @param value Value to set for the crossRegionDisasterRecoveryEnabled property.
      */
     public void setCrossRegionDisasterRecoveryEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("crossRegionDisasterRecoveryEnabled", value);
     }
     /**
-     * Sets the disasterRecoveryNetworkSetting property value. The disasterRecoveryNetworkSetting property
+     * Sets the disasterRecoveryNetworkSetting property value. Indicates the network settings of the Cloud PC during a cross-region disaster recovery operation.
      * @param value Value to set for the disasterRecoveryNetworkSetting property.
      */
     public void setDisasterRecoveryNetworkSetting(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryNetworkSetting value) {
         this.backingStore.set("disasterRecoveryNetworkSetting", value);
     }
     /**
-     * Sets the maintainCrossRegionRestorePointEnabled property value. The maintainCrossRegionRestorePointEnabled property
+     * Sets the maintainCrossRegionRestorePointEnabled property value. Indicates whether Windows 365 maintain the cross-region disaster recovery function generated restore points. If true, the Windows 365 stored restore points; false indicates that Windows 365 doesn't generate or keep the restore point from the original Cloud PC. If a disaster occurs, the new Cloud PC can only be provisioned using the initial image. This limitation can result in the loss of some user data on the original Cloud PC. The default value is false.
      * @param value Value to set for the maintainCrossRegionRestorePointEnabled property.
      */
     public void setMaintainCrossRegionRestorePointEnabled(@jakarta.annotation.Nullable final Boolean value) {

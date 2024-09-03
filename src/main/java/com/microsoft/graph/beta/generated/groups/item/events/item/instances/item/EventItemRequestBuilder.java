@@ -9,6 +9,7 @@ import com.microsoft.graph.beta.groups.item.events.item.instances.item.dismissre
 import com.microsoft.graph.beta.groups.item.events.item.instances.item.exceptionoccurrences.ExceptionOccurrencesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.events.item.instances.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.events.item.instances.item.forward.ForwardRequestBuilder;
+import com.microsoft.graph.beta.groups.item.events.item.instances.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.beta.groups.item.events.item.instances.item.snoozereminder.SnoozeReminderRequestBuilder;
 import com.microsoft.graph.beta.groups.item.events.item.instances.item.tentativelyaccept.TentativelyAcceptRequestBuilder;
 import com.microsoft.graph.beta.models.Event;
@@ -104,6 +105,14 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the snoozeReminder method.
      * @return a {@link SnoozeReminderRequestBuilder}
      */
@@ -136,7 +145,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/events/{event%2Did}/instances/{event%2Did1}?endDateTime={endDateTime}&startDateTime={startDateTime}{&%24expand,%24select}", rawUrl);
     }
     /**
-     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
+     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern and exceptions that have been modified. It doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -145,7 +154,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
+     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern and exceptions that have been modified. It doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Event}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -158,7 +167,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Event::createFromDiscriminatorValue);
     }
     /**
-     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
+     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern and exceptions that have been modified. It doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -166,7 +175,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
+     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern and exceptions that have been modified. It doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -188,7 +197,7 @@ public class EventItemRequestBuilder extends BaseRequestBuilder {
         return new EventItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern, and exceptions that have been modified, but doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
+     * The occurrences of a recurring series, if the event is a series master. This property includes occurrences that are part of the recurrence pattern and exceptions that have been modified. It doesn't include occurrences that have been canceled from the series. Navigation property. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

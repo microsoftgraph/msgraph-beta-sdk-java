@@ -29,7 +29,10 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the media for the user entity.
      * @return a {@link ContentRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
@@ -37,7 +40,10 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the copyToSection method.
      * @return a {@link CopyToSectionRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CopyToSectionRequestBuilder copyToSection() {
         return new CopyToSectionRequestBuilder(pathParameters, requestAdapter);
@@ -45,7 +51,10 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the onenotePatchContent method.
      * @return a {@link OnenotePatchContentRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OnenotePatchContentRequestBuilder onenotePatchContent() {
         return new OnenotePatchContentRequestBuilder(pathParameters, requestAdapter);
@@ -53,7 +62,10 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the parentNotebook property of the microsoft.graph.onenotePage entity.
      * @return a {@link ParentNotebookRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ParentNotebookRequestBuilder parentNotebook() {
         return new ParentNotebookRequestBuilder(pathParameters, requestAdapter);
@@ -61,7 +73,10 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the parentSection property of the microsoft.graph.onenotePage entity.
      * @return a {@link ParentSectionRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ParentSectionRequestBuilder parentSection() {
         return new ParentSectionRequestBuilder(pathParameters, requestAdapter);
@@ -69,7 +84,10 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the preview method.
      * @return a {@link PreviewRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PreviewRequestBuilder preview() {
         return new PreviewRequestBuilder(pathParameters, requestAdapter);
@@ -93,7 +111,10 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property pages for users
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -101,7 +122,10 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property pages for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -112,8 +136,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * The collection of pages in the section.  Read-only. Nullable.
      * @return a {@link OnenotePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public OnenotePage get() {
         return get(null);
     }
@@ -122,8 +149,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenotePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public OnenotePage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -135,8 +165,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link OnenotePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public OnenotePage patch(@jakarta.annotation.Nonnull final OnenotePage body) {
         return patch(body, null);
     }
@@ -146,8 +179,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenotePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public OnenotePage patch(@jakarta.annotation.Nonnull final OnenotePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -158,8 +194,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property pages for users
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -167,8 +206,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property pages for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -178,8 +220,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of pages in the section.  Read-only. Nullable.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -187,8 +232,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * The collection of pages in the section.  Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -199,8 +247,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property pages in users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OnenotePage body) {
         return toPatchRequestInformation(body, null);
     }
@@ -209,8 +260,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OnenotePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -223,8 +277,11 @@ public class OnenotePageItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link OnenotePageItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public OnenotePageItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new OnenotePageItemRequestBuilder(rawUrl, requestAdapter);

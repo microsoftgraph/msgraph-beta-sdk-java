@@ -40,9 +40,12 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link UploadSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-createuploadsession?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UploadSession post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body) {
         return post(body, null);
     }
@@ -52,9 +55,12 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UploadSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/taskfileattachment-createuploadsession?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UploadSession post(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -66,8 +72,11 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
      * Create an upload session to iteratively upload ranges of a file as an attachment to a todoTask. As part of the response, this action returns an upload URL that you can use in subsequent sequential PUT queries. The request headers for each PUT operation let you specify the exact range of bytes to be uploaded. This allows the transfer to be resumed, in case the network connection is dropped during the upload. The following are the steps to attach a file to a Microsoft To Do task using an upload session: For an example that describes the end-to-end attachment process, see attach files to a To Do task.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -76,8 +85,11 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CreateUploadSessionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -90,8 +102,11 @@ public class CreateUploadSessionRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CreateUploadSessionRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CreateUploadSessionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CreateUploadSessionRequestBuilder(rawUrl, requestAdapter);

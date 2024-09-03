@@ -416,7 +416,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("permissionGrantPreApprovalPolicies");
     }
     /**
-     * Gets the preferredSingleSignOnMode property value. Specifies the single sign-on mode configured for this application. Microsoft Entra ID uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Microsoft Entra My Apps. The supported values are password, saml, notSupported, and oidc.
+     * Gets the preferredSingleSignOnMode property value. Specifies the single sign-on mode configured for this application. Microsoft Entra ID uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Microsoft Entra My Apps. The supported values are password, saml, notSupported, and oidc. Note: This field might be null for older SAML apps and for OIDC applications where it isn't set automatically.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -915,7 +915,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("permissionGrantPreApprovalPolicies", value);
     }
     /**
-     * Sets the preferredSingleSignOnMode property value. Specifies the single sign-on mode configured for this application. Microsoft Entra ID uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Microsoft Entra My Apps. The supported values are password, saml, notSupported, and oidc.
+     * Sets the preferredSingleSignOnMode property value. Specifies the single sign-on mode configured for this application. Microsoft Entra ID uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Microsoft Entra My Apps. The supported values are password, saml, notSupported, and oidc. Note: This field might be null for older SAML apps and for OIDC applications where it isn't set automatically.
      * @param value Value to set for the preferredSingleSignOnMode property.
      */
     public void setPreferredSingleSignOnMode(@jakarta.annotation.Nullable final String value) {

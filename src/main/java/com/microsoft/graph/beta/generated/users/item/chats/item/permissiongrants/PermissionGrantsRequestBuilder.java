@@ -26,7 +26,10 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the permissionGrants property of the microsoft.graph.chat entity.
      * @param resourceSpecificPermissionGrantId The unique identifier of resourceSpecificPermissionGrant
      * @return a {@link ResourceSpecificPermissionGrantItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ResourceSpecificPermissionGrantItemRequestBuilder byResourceSpecificPermissionGrantId(@jakarta.annotation.Nonnull final String resourceSpecificPermissionGrantId) {
         Objects.requireNonNull(resourceSpecificPermissionGrantId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,8 +69,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * A collection of permissions granted to apps for the chat.
      * @return a {@link ResourceSpecificPermissionGrantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ResourceSpecificPermissionGrantCollectionResponse get() {
         return get(null);
     }
@@ -73,8 +82,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ResourceSpecificPermissionGrantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ResourceSpecificPermissionGrantCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -86,8 +98,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ResourceSpecificPermissionGrant}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ResourceSpecificPermissionGrant post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
         return post(body, null);
     }
@@ -97,8 +112,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ResourceSpecificPermissionGrant}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ResourceSpecificPermissionGrant post(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -109,8 +127,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of permissions granted to apps for the chat.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -118,8 +139,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * A collection of permissions granted to apps for the chat.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -130,8 +154,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to permissionGrants for users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body) {
         return toPostRequestInformation(body, null);
     }
@@ -140,8 +167,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ResourceSpecificPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -154,8 +184,11 @@ public class PermissionGrantsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link PermissionGrantsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public PermissionGrantsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new PermissionGrantsRequestBuilder(rawUrl, requestAdapter);

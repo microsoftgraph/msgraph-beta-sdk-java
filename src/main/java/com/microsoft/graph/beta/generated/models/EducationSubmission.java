@@ -26,7 +26,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return new EducationSubmission();
     }
     /**
-     * Gets the excusedBy property value. The excusedBy property
+     * Gets the excusedBy property value. The user that marked the submission as excused.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class EducationSubmission extends Entity implements Parsable {
         return this.backingStore.get("excusedBy");
     }
     /**
-     * Gets the excusedDateTime property value. The excusedDateTime property
+     * Gets the excusedDateTime property value. Moment in time when the submission was moved to the excused state. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,6 +50,8 @@ public class EducationSubmission extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("excusedBy", (n) -> { this.setExcusedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("excusedDateTime", (n) -> { this.setExcusedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("outcomes", (n) -> { this.setOutcomes(n.getCollectionOfObjectValues(EducationOutcome::createFromDiscriminatorValue)); });
         deserializerMap.put("reassignedBy", (n) -> { this.setReassignedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("reassignedDateTime", (n) -> { this.setReassignedDateTime(n.getOffsetDateTimeValue()); });
@@ -66,6 +68,22 @@ public class EducationSubmission extends Entity implements Parsable {
         deserializerMap.put("unsubmittedDateTime", (n) -> { this.setUnsubmittedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getLastModifiedBy() {
+        return this.backingStore.get("lastModifiedBy");
+    }
+    /**
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the outcomes property value. The outcomes property
@@ -200,18 +218,32 @@ public class EducationSubmission extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("submittedResources", this.getSubmittedResources());
     }
     /**
-     * Sets the excusedBy property value. The excusedBy property
+     * Sets the excusedBy property value. The user that marked the submission as excused.
      * @param value Value to set for the excusedBy property.
      */
     public void setExcusedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("excusedBy", value);
     }
     /**
-     * Sets the excusedDateTime property value. The excusedDateTime property
+     * Sets the excusedDateTime property value. Moment in time when the submission was moved to the excused state. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the excusedDateTime property.
      */
     public void setExcusedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("excusedDateTime", value);
+    }
+    /**
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * @param value Value to set for the lastModifiedBy property.
+     */
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("lastModifiedBy", value);
+    }
+    /**
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * @param value Value to set for the lastModifiedDateTime property.
+     */
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the outcomes property value. The outcomes property

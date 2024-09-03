@@ -26,7 +26,10 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -34,7 +37,10 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the delta method.
      * @return a {@link DeltaRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
@@ -43,8 +49,11 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the calendarView property of the microsoft.graph.user entity.
      * @param eventId The unique identifier of event
      * @return a {@link EventItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public EventItemRequestBuilder byEventId(@jakarta.annotation.Nonnull final String eventId) {
         Objects.requireNonNull(eventId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -71,8 +80,11 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * The calendar view for the calendar. Read-only. Nullable.
      * @return a {@link EventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EventCollectionResponse get() {
         return get(null);
     }
@@ -81,8 +93,11 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public EventCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -92,8 +107,11 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
     /**
      * The calendar view for the calendar. Read-only. Nullable.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -101,8 +119,11 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * The calendar view for the calendar. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -113,8 +134,11 @@ public class CalendarViewRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CalendarViewRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CalendarViewRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CalendarViewRequestBuilder(rawUrl, requestAdapter);

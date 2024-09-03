@@ -29,7 +29,10 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the allMessages method.
      * @return a {@link AllMessagesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AllMessagesRequestBuilder allMessages() {
         return new AllMessagesRequestBuilder(pathParameters, requestAdapter);
@@ -37,7 +40,10 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -45,7 +51,10 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAllMessages method.
      * @return a {@link GetAllMessagesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetAllMessagesRequestBuilder getAllMessages() {
         return new GetAllMessagesRequestBuilder(pathParameters, requestAdapter);
@@ -53,7 +62,10 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getAllRetainedMessages method.
      * @return a {@link GetAllRetainedMessagesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetAllRetainedMessagesRequestBuilder getAllRetainedMessages() {
         return new GetAllRetainedMessagesRequestBuilder(pathParameters, requestAdapter);
@@ -62,8 +74,11 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the chats property of the microsoft.graph.user entity.
      * @param chatId The unique identifier of chat
      * @return a {@link ChatItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ChatItemRequestBuilder byChatId(@jakarta.annotation.Nonnull final String chatId) {
         Objects.requireNonNull(chatId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -90,9 +105,12 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      * @return a {@link ChatCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ChatCollectionResponse get() {
         return get(null);
     }
@@ -101,9 +119,12 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChatCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/chat-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ChatCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -115,8 +136,11 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Chat post(@jakarta.annotation.Nonnull final Chat body) {
         return post(body, null);
     }
@@ -126,8 +150,11 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Chat post(@jakarta.annotation.Nonnull final Chat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -138,8 +165,11 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -147,8 +177,11 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of chats that the user is part of. This method supports federation. When a user ID is provided, the calling application must belong to the same tenant that the user belongs to.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -159,8 +192,11 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to chats for users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Chat body) {
         return toPostRequestInformation(body, null);
     }
@@ -169,8 +205,11 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Chat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -183,8 +222,11 @@ public class ChatsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ChatsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ChatsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ChatsRequestBuilder(rawUrl, requestAdapter);

@@ -42,7 +42,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the crossRegionDisasterRecoverySetting property value. The crossRegionDisasterRecoverySetting property
+     * Gets the crossRegionDisasterRecoverySetting property value. Defines whether the user's Cloud PC enables cross-region disaster recovery and specifies the network for the disaster recovery.
      * @return a {@link CloudPcCrossRegionDisasterRecoverySetting}
      */
     @jakarta.annotation.Nullable
@@ -70,6 +70,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("localAdminEnabled", (n) -> { this.setLocalAdminEnabled(n.getBooleanValue()); });
+        deserializerMap.put("notificationSetting", (n) -> { this.setNotificationSetting(n.getObjectValue(CloudPcNotificationSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("resetEnabled", (n) -> { this.setResetEnabled(n.getBooleanValue()); });
         deserializerMap.put("restorePointSetting", (n) -> { this.setRestorePointSetting(n.getObjectValue(CloudPcRestorePointSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("selfServiceEnabled", (n) -> { this.setSelfServiceEnabled(n.getBooleanValue()); });
@@ -92,7 +93,15 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("localAdminEnabled");
     }
     /**
-     * Gets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
+     * Gets the notificationSetting property value. The notificationSetting property
+     * @return a {@link CloudPcNotificationSetting}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcNotificationSetting getNotificationSetting() {
+        return this.backingStore.get("notificationSetting");
+    }
+    /**
+     * Gets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset isn't allowed. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -128,6 +137,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeBooleanValue("localAdminEnabled", this.getLocalAdminEnabled());
+        writer.writeObjectValue("notificationSetting", this.getNotificationSetting());
         writer.writeBooleanValue("resetEnabled", this.getResetEnabled());
         writer.writeObjectValue("restorePointSetting", this.getRestorePointSetting());
         writer.writeBooleanValue("selfServiceEnabled", this.getSelfServiceEnabled());
@@ -147,7 +157,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the crossRegionDisasterRecoverySetting property value. The crossRegionDisasterRecoverySetting property
+     * Sets the crossRegionDisasterRecoverySetting property value. Defines whether the user's Cloud PC enables cross-region disaster recovery and specifies the network for the disaster recovery.
      * @param value Value to set for the crossRegionDisasterRecoverySetting property.
      */
     public void setCrossRegionDisasterRecoverySetting(@jakarta.annotation.Nullable final CloudPcCrossRegionDisasterRecoverySetting value) {
@@ -175,7 +185,14 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("localAdminEnabled", value);
     }
     /**
-     * Sets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset is not allowed. The default value is false.
+     * Sets the notificationSetting property value. The notificationSetting property
+     * @param value Value to set for the notificationSetting property.
+     */
+    public void setNotificationSetting(@jakarta.annotation.Nullable final CloudPcNotificationSetting value) {
+        this.backingStore.set("notificationSetting", value);
+    }
+    /**
+     * Sets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset isn't allowed. The default value is false.
      * @param value Value to set for the resetEnabled property.
      */
     public void setResetEnabled(@jakarta.annotation.Nullable final Boolean value) {

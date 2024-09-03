@@ -25,7 +25,7 @@ public class Community extends Entity implements Parsable {
         return new Community();
     }
     /**
-     * Gets the description property value. The description of the community. The maximum length is 1024 characters.
+     * Gets the description property value. The description of the community. The maximum length is 1,024 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class Community extends Entity implements Parsable {
         writer.writeEnumValue("privacy", this.getPrivacy());
     }
     /**
-     * Sets the description property value. The description of the community. The maximum length is 1024 characters.
+     * Sets the description property value. The description of the community. The maximum length is 1,024 characters.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

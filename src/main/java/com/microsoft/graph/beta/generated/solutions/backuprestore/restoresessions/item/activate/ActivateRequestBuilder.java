@@ -36,7 +36,7 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/restoreSessions/{restoreSessionBase%2Did}/activate", rawUrl);
     }
     /**
-     * Activate a draft restoreSessionBase object.
+     * Activate a draft restoreSessionBase object to restore a protection unit. The following points apply to restoring a protection unit:
      * @return a {@link RestoreSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/restoresessionbase-activate?view=graph-rest-beta">Find more info here</a>
@@ -46,7 +46,7 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Activate a draft restoreSessionBase object.
+     * Activate a draft restoreSessionBase object to restore a protection unit. The following points apply to restoring a protection unit:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RestoreSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RestoreSessionBase::createFromDiscriminatorValue);
     }
     /**
-     * Activate a draft restoreSessionBase object.
+     * Activate a draft restoreSessionBase object to restore a protection unit. The following points apply to restoring a protection unit:
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class ActivateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Activate a draft restoreSessionBase object.
+     * Activate a draft restoreSessionBase object to restore a protection unit. The following points apply to restoring a protection unit:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

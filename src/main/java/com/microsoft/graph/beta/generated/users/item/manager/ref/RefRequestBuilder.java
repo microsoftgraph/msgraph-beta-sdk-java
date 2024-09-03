@@ -38,8 +38,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove a user's manager.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/user-delete-manager?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -47,8 +50,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Remove a user's manager.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/user-delete-manager?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -59,9 +65,12 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @return a {@link String}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public String get() {
         return get(null);
     }
@@ -70,9 +79,12 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link String}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/user-list-manager?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public String get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -83,8 +95,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Assign a user's manager.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-manager?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body) {
         put(body, null);
     }
@@ -93,8 +108,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/user-post-manager?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void put(@jakarta.annotation.Nonnull final ReferenceUpdate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
@@ -105,8 +123,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Remove a user's manager.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -114,8 +135,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Remove a user's manager.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -125,8 +149,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -134,8 +161,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
@@ -146,8 +176,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Assign a user's manager.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ReferenceUpdate body) {
         return toPutRequestInformation(body, null);
     }
@@ -156,8 +189,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ReferenceUpdate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
@@ -170,8 +206,11 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link RefRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RefRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new RefRequestBuilder(rawUrl, requestAdapter);

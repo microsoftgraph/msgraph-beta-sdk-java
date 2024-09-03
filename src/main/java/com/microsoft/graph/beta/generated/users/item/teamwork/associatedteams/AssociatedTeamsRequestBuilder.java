@@ -26,7 +26,10 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
      * @param associatedTeamInfoId The unique identifier of associatedTeamInfo
      * @return a {@link AssociatedTeamInfoItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AssociatedTeamInfoItemRequestBuilder byAssociatedTeamInfoId(@jakarta.annotation.Nonnull final String associatedTeamInfoId) {
         Objects.requireNonNull(associatedTeamInfoId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,8 +69,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * The list of associatedTeamInfo objects that a user is associated with.
      * @return a {@link AssociatedTeamInfoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AssociatedTeamInfoCollectionResponse get() {
         return get(null);
     }
@@ -73,8 +82,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AssociatedTeamInfoCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AssociatedTeamInfoCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -86,8 +98,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link AssociatedTeamInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AssociatedTeamInfo post(@jakarta.annotation.Nonnull final AssociatedTeamInfo body) {
         return post(body, null);
     }
@@ -97,8 +112,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AssociatedTeamInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AssociatedTeamInfo post(@jakarta.annotation.Nonnull final AssociatedTeamInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -109,8 +127,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of associatedTeamInfo objects that a user is associated with.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -118,8 +139,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * The list of associatedTeamInfo objects that a user is associated with.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -130,8 +154,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to associatedTeams for users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AssociatedTeamInfo body) {
         return toPostRequestInformation(body, null);
     }
@@ -140,8 +167,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AssociatedTeamInfo body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -154,8 +184,11 @@ public class AssociatedTeamsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AssociatedTeamsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AssociatedTeamsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AssociatedTeamsRequestBuilder(rawUrl, requestAdapter);

@@ -36,7 +36,7 @@ public class CloudPcDisasterRecoveryAzureConnectionSetting extends CloudPcDisast
         return deserializerMap;
     }
     /**
-     * Gets the onPremisesConnectionId property value. The onPremisesConnectionId property
+     * Gets the onPremisesConnectionId property value. Indicates the unique ID of the virtual network that the new Cloud PC joins.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CloudPcDisasterRecoveryAzureConnectionSetting extends CloudPcDisast
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
     }
     /**
-     * Sets the onPremisesConnectionId property value. The onPremisesConnectionId property
+     * Sets the onPremisesConnectionId property value. Indicates the unique ID of the virtual network that the new Cloud PC joins.
      * @param value Value to set for the onPremisesConnectionId property.
      */
     public void setOnPremisesConnectionId(@jakarta.annotation.Nullable final String value) {

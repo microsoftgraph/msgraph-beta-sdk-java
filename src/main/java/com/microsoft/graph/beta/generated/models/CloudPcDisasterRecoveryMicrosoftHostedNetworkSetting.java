@@ -45,7 +45,7 @@ public class CloudPcDisasterRecoveryMicrosoftHostedNetworkSetting extends CloudP
         return this.backingStore.get("regionGroup");
     }
     /**
-     * Gets the regionName property value. The regionName property
+     * Gets the regionName property value. Indicates the Azure region that the new Cloud PC is assigned to. The Windows 365 service creates and manages the underlying virtual network.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class CloudPcDisasterRecoveryMicrosoftHostedNetworkSetting extends CloudP
         this.backingStore.set("regionGroup", value);
     }
     /**
-     * Sets the regionName property value. The regionName property
+     * Sets the regionName property value. Indicates the Azure region that the new Cloud PC is assigned to. The Windows 365 service creates and manages the underlying virtual network.
      * @param value Value to set for the regionName property.
      */
     public void setRegionName(@jakarta.annotation.Nullable final String value) {

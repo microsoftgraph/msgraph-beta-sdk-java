@@ -48,6 +48,14 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         return value;
     }
     /**
+     * Gets the approval property value. The approval property
+     * @return a {@link ApprovalSolution}
+     */
+    @jakarta.annotation.Nullable
+    public ApprovalSolution getApproval() {
+        return this.backingStore.get("approval");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -93,7 +101,8 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("approval", (n) -> { this.setApproval(n.getObjectValue(ApprovalSolution::createFromDiscriminatorValue)); });
         deserializerMap.put("backupRestore", (n) -> { this.setBackupRestore(n.getObjectValue(BackupRestoreRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("bookingBusinesses", (n) -> { this.setBookingBusinesses(n.getCollectionOfObjectValues(BookingBusiness::createFromDiscriminatorValue)); });
         deserializerMap.put("bookingCurrencies", (n) -> { this.setBookingCurrencies(n.getCollectionOfObjectValues(BookingCurrency::createFromDiscriminatorValue)); });
@@ -124,6 +133,7 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("approval", this.getApproval());
         writer.writeObjectValue("backupRestore", this.getBackupRestore());
         writer.writeCollectionOfObjectValues("bookingBusinesses", this.getBookingBusinesses());
         writer.writeCollectionOfObjectValues("bookingCurrencies", this.getBookingCurrencies());
@@ -138,6 +148,13 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the approval property value. The approval property
+     * @param value Value to set for the approval property.
+     */
+    public void setApproval(@jakarta.annotation.Nullable final ApprovalSolution value) {
+        this.backingStore.set("approval", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

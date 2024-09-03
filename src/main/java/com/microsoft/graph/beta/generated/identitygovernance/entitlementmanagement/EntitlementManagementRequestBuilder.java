@@ -6,11 +6,13 @@ import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accessp
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignmentresourceroles.AccessPackageAssignmentResourceRolesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.AccessPackageAssignmentsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackagecatalogs.AccessPackageCatalogsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackagecatalogswithuniquename.AccessPackageCatalogsWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageresourceenvironments.AccessPackageResourceEnvironmentsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageresourcerequests.AccessPackageResourceRequestsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageresourcerolescopes.AccessPackageResourceRoleScopesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageresources.AccessPackageResourcesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackages.AccessPackagesRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageswithuniquename.AccessPackagesWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.assignmentrequests.AssignmentRequestsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
@@ -155,6 +157,29 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SubjectsRequestBuilder subjects() {
         return new SubjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the accessPackageCatalogs property of the microsoft.graph.entitlementManagement entity.
+     * @param uniqueName Alternate key of accessPackageCatalog
+     * @return a {@link AccessPackageCatalogsWithUniqueNameRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public AccessPackageCatalogsWithUniqueNameRequestBuilder accessPackageCatalogsWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
+        Objects.requireNonNull(uniqueName);
+        return new AccessPackageCatalogsWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
+    }
+    /**
+     * Provides operations to manage the accessPackages property of the microsoft.graph.entitlementManagement entity.
+     * @param uniqueName Alternate key of accessPackage
+     * @return a {@link AccessPackagesWithUniqueNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AccessPackagesWithUniqueNameRequestBuilder accessPackagesWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
+        Objects.requireNonNull(uniqueName);
+        return new AccessPackagesWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
     }
     /**
      * Instantiates a new {@link EntitlementManagementRequestBuilder} and sets the default values.

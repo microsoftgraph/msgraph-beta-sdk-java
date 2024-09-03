@@ -35,17 +35,25 @@ public class StartWorkingTimeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/solutions/workingTimeSchedule/startWorkingTime", rawUrl);
     }
     /**
-     * Triggers the policies associated with the end of working hours.
+     * Trigger the policies associated with the start of working hours for a specific user.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * @see <a href="https://learn.microsoft.com/graph/api/workingtimeschedule-startworkingtime?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post() {
         post(null);
     }
     /**
-     * Triggers the policies associated with the end of working hours.
+     * Trigger the policies associated with the start of working hours for a specific user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * @see <a href="https://learn.microsoft.com/graph/api/workingtimeschedule-startworkingtime?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -53,19 +61,25 @@ public class StartWorkingTimeRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Triggers the policies associated with the end of working hours.
+     * Trigger the policies associated with the start of working hours for a specific user.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation() {
         return toPostRequestInformation(null);
     }
     /**
-     * Triggers the policies associated with the end of working hours.
+     * Trigger the policies associated with the start of working hours for a specific user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
@@ -76,8 +90,11 @@ public class StartWorkingTimeRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link StartWorkingTimeRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public StartWorkingTimeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new StartWorkingTimeRequestBuilder(rawUrl, requestAdapter);

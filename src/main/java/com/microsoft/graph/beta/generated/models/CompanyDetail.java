@@ -130,7 +130,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("pronunciation");
     }
     /**
-     * Gets the secondaryDepartment property value. The secondaryDepartment property
+     * Gets the secondaryDepartment property value. Secondary Department Name within a company.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -227,7 +227,7 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("pronunciation", value);
     }
     /**
-     * Sets the secondaryDepartment property value. The secondaryDepartment property
+     * Sets the secondaryDepartment property value. Secondary Department Name within a company.
      * @param value Value to set for the secondaryDepartment property.
      */
     public void setSecondaryDepartment(@jakarta.annotation.Nullable final String value) {

@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.security.partner;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.partner.security.PartnerSecurity;
 import com.microsoft.graph.beta.security.partner.securityalerts.SecurityAlertsRequestBuilder;
+import com.microsoft.graph.beta.security.partner.securityscore.SecurityScoreRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class PartnerRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SecurityAlertsRequestBuilder securityAlerts() {
         return new SecurityAlertsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the securityScore property of the microsoft.graph.partner.security.partnerSecurity entity.
+     * @return a {@link SecurityScoreRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SecurityScoreRequestBuilder securityScore() {
+        return new SecurityScoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PartnerRequestBuilder} and sets the default values.

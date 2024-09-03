@@ -39,7 +39,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-resizecloudpc?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -52,7 +52,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-resizecloudpc?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -68,7 +68,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -81,7 +81,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -98,7 +98,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ResizeCloudPcRequestBuilder}
      * @deprecated
-     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -68,7 +68,7 @@ public class Contact extends OutlookItem implements Parsable {
         return this.backingStore.get("department");
     }
     /**
-     * Gets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
+     * Gets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Later updates to other properties might cause an automatically generated value to overwrite the displayName value you specified. To preserve a pre-existing value, always include it as displayName in an update operation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -450,7 +450,7 @@ public class Contact extends OutlookItem implements Parsable {
         this.backingStore.set("department", value);
     }
     /**
-     * Sets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.
+     * Sets the displayName property value. The contact's display name. You can specify the display name in a create or update operation. Later updates to other properties might cause an automatically generated value to overwrite the displayName value you specified. To preserve a pre-existing value, always include it as displayName in an update operation.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

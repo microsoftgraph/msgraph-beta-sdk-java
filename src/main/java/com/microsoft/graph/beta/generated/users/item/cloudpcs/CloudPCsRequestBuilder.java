@@ -29,7 +29,10 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the bulkResize method.
      * @return a {@link BulkResizeRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public BulkResizeRequestBuilder bulkResize() {
         return new BulkResizeRequestBuilder(pathParameters, requestAdapter);
@@ -37,7 +40,10 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -45,7 +51,10 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the validateBulkResize method.
      * @return a {@link ValidateBulkResizeRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ValidateBulkResizeRequestBuilder validateBulkResize() {
         return new ValidateBulkResizeRequestBuilder(pathParameters, requestAdapter);
@@ -54,8 +63,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the cloudPCs property of the microsoft.graph.user entity.
      * @param cloudPCId The unique identifier of cloudPC
      * @return a {@link CloudPCItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CloudPCItemRequestBuilder byCloudPCId(@jakarta.annotation.Nonnull final String cloudPCId) {
         Objects.requireNonNull(cloudPCId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -82,8 +94,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * Get cloudPCs from users
      * @return a {@link CloudPCCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPCCollectionResponse get() {
         return get(null);
     }
@@ -92,8 +107,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPCCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPCCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -105,8 +123,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * @param groupId Usage: groupId='{groupId}'
      * @param servicePlanId Usage: servicePlanId='{servicePlanId}'
      * @return a {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder getProvisionedCloudPCsWithGroupIdWithServicePlanId(@jakarta.annotation.Nonnull final String groupId, @jakarta.annotation.Nonnull final String servicePlanId) {
         Objects.requireNonNull(groupId);
         Objects.requireNonNull(servicePlanId);
@@ -117,8 +138,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link CloudPC}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPC post(@jakarta.annotation.Nonnull final CloudPC body) {
         return post(body, null);
     }
@@ -128,8 +152,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPC}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPC post(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -140,8 +167,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get cloudPCs from users
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -149,8 +179,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * Get cloudPCs from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -161,8 +194,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to cloudPCs for users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CloudPC body) {
         return toPostRequestInformation(body, null);
     }
@@ -171,8 +207,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -185,8 +224,11 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CloudPCsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CloudPCsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CloudPCsRequestBuilder(rawUrl, requestAdapter);

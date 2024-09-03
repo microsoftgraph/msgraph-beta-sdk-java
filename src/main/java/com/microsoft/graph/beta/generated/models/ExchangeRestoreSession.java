@@ -32,8 +32,17 @@ public class ExchangeRestoreSession extends RestoreSessionBase implements Parsab
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("granularMailboxRestoreArtifacts", (n) -> { this.setGranularMailboxRestoreArtifacts(n.getCollectionOfObjectValues(GranularMailboxRestoreArtifact::createFromDiscriminatorValue)); });
         deserializerMap.put("mailboxRestoreArtifacts", (n) -> { this.setMailboxRestoreArtifacts(n.getCollectionOfObjectValues(MailboxRestoreArtifact::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the granularMailboxRestoreArtifacts property value. The granularMailboxRestoreArtifacts property
+     * @return a {@link java.util.List<GranularMailboxRestoreArtifact>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<GranularMailboxRestoreArtifact> getGranularMailboxRestoreArtifacts() {
+        return this.backingStore.get("granularMailboxRestoreArtifacts");
     }
     /**
      * Gets the mailboxRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore Exchange mailboxes.
@@ -50,7 +59,15 @@ public class ExchangeRestoreSession extends RestoreSessionBase implements Parsab
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("granularMailboxRestoreArtifacts", this.getGranularMailboxRestoreArtifacts());
         writer.writeCollectionOfObjectValues("mailboxRestoreArtifacts", this.getMailboxRestoreArtifacts());
+    }
+    /**
+     * Sets the granularMailboxRestoreArtifacts property value. The granularMailboxRestoreArtifacts property
+     * @param value Value to set for the granularMailboxRestoreArtifacts property.
+     */
+    public void setGranularMailboxRestoreArtifacts(@jakarta.annotation.Nullable final java.util.List<GranularMailboxRestoreArtifact> value) {
+        this.backingStore.set("granularMailboxRestoreArtifacts", value);
     }
     /**
      * Sets the mailboxRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore Exchange mailboxes.
