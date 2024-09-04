@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.solutions.backuprestore.exchangerestoresessions
 
 import com.microsoft.graph.beta.models.ExchangeRestoreSession;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.solutions.backuprestore.exchangerestoresessions.item.granularmailboxrestoreartifacts.GranularMailboxRestoreArtifactsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.exchangerestoresessions.item.mailboxrestoreartifacts.MailboxRestoreArtifactsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExchangeRestoreSessionItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the granularMailboxRestoreArtifacts property of the microsoft.graph.exchangeRestoreSession entity.
+     * @return a {@link GranularMailboxRestoreArtifactsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GranularMailboxRestoreArtifactsRequestBuilder granularMailboxRestoreArtifacts() {
+        return new GranularMailboxRestoreArtifactsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the mailboxRestoreArtifacts property of the microsoft.graph.exchangeRestoreSession entity.
      * @return a {@link MailboxRestoreArtifactsRequestBuilder}

@@ -8,7 +8,8 @@ public enum DisableReason implements ValuedEnum {
     None("none"),
     InvalidBillingProfile("invalidBillingProfile"),
     UserRequested("userRequested"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ControllerServiceAppDeleted("controllerServiceAppDeleted");
     public final String value;
     DisableReason(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum DisableReason implements ValuedEnum {
             case "invalidBillingProfile": return InvalidBillingProfile;
             case "userRequested": return UserRequested;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "controllerServiceAppDeleted": return ControllerServiceAppDeleted;
             default: return null;
         }
     }

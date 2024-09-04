@@ -61,7 +61,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("appRoles");
     }
     /**
-     * Gets the authenticationBehaviors property value. The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
+     * Gets the authenticationBehaviors property value. The collection of breaking change behaviors related to token issuance that are configured for the application. Authentication behaviors are unset by default (null) and must be explicitly enabled or disabled. Nullable. Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
      * @return a {@link AuthenticationBehaviors}
      */
     @jakarta.annotation.Nullable
@@ -554,7 +554,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("appRoles", value);
     }
     /**
-     * Sets the authenticationBehaviors property value. The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
+     * Sets the authenticationBehaviors property value. The collection of breaking change behaviors related to token issuance that are configured for the application. Authentication behaviors are unset by default (null) and must be explicitly enabled or disabled. Nullable. Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
      * @param value Value to set for the authenticationBehaviors property.
      */
     public void setAuthenticationBehaviors(@jakarta.annotation.Nullable final AuthenticationBehaviors value) {

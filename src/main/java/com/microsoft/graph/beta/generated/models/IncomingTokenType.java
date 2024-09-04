@@ -10,7 +10,8 @@ public enum IncomingTokenType implements ValuedEnum {
     Saml11("saml11"),
     Saml20("saml20"),
     UnknownFutureValue("unknownFutureValue"),
-    RemoteDesktopToken("remoteDesktopToken");
+    RemoteDesktopToken("remoteDesktopToken"),
+    RefreshToken("refreshToken");
     public final String value;
     IncomingTokenType(final String value) {
         this.value = value;
@@ -27,6 +28,7 @@ public enum IncomingTokenType implements ValuedEnum {
             case "saml20": return Saml20;
             case "unknownFutureValue": return UnknownFutureValue;
             case "remoteDesktopToken": return RemoteDesktopToken;
+            case "refreshToken": return RefreshToken;
             default: return null;
         }
     }

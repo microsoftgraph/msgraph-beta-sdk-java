@@ -40,9 +40,12 @@ public class ConvertExternalToInternalMemberUserRequestBuilder extends BaseReque
      * @param body The request body
      * @return a {@link ConversionUserDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/user-convertexternaltointernalmemberuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ConversionUserDetails post(@jakarta.annotation.Nonnull final ConvertExternalToInternalMemberUserPostRequestBody body) {
         return post(body, null);
     }
@@ -52,9 +55,12 @@ public class ConvertExternalToInternalMemberUserRequestBuilder extends BaseReque
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConversionUserDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/user-convertexternaltointernalmemberuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ConversionUserDetails post(@jakarta.annotation.Nonnull final ConvertExternalToInternalMemberUserPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -66,8 +72,11 @@ public class ConvertExternalToInternalMemberUserRequestBuilder extends BaseReque
      * Convert an externally authenticated user into an internal user. The user is able to sign into the host tenant as an internal user and access resources as a member. For more information about this conversion, see Convert external users to internal users.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConvertExternalToInternalMemberUserPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -76,8 +85,11 @@ public class ConvertExternalToInternalMemberUserRequestBuilder extends BaseReque
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ConvertExternalToInternalMemberUserPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -90,8 +102,11 @@ public class ConvertExternalToInternalMemberUserRequestBuilder extends BaseReque
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ConvertExternalToInternalMemberUserRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ConvertExternalToInternalMemberUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ConvertExternalToInternalMemberUserRequestBuilder(rawUrl, requestAdapter);

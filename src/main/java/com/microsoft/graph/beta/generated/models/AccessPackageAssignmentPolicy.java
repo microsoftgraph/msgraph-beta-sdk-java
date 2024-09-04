@@ -50,6 +50,14 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this.backingStore.get("accessPackageId");
     }
     /**
+     * Gets the accessPackageNotificationSettings property value. The accessPackageNotificationSettings property
+     * @return a {@link AccessPackageNotificationSettings}
+     */
+    @jakarta.annotation.Nullable
+    public AccessPackageNotificationSettings getAccessPackageNotificationSettings() {
+        return this.backingStore.get("accessPackageNotificationSettings");
+    }
+    /**
      * Gets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
      * @return a {@link AssignmentReviewSettings}
      */
@@ -139,6 +147,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         deserializerMap.put("accessPackage", (n) -> { this.setAccessPackage(n.getObjectValue(AccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("accessPackageCatalog", (n) -> { this.setAccessPackageCatalog(n.getObjectValue(AccessPackageCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("accessPackageId", (n) -> { this.setAccessPackageId(n.getStringValue()); });
+        deserializerMap.put("accessPackageNotificationSettings", (n) -> { this.setAccessPackageNotificationSettings(n.getObjectValue(AccessPackageNotificationSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("accessReviewSettings", (n) -> { this.setAccessReviewSettings(n.getObjectValue(AssignmentReviewSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("canExtend", (n) -> { this.setCanExtend(n.getBooleanValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getStringValue()); });
@@ -215,6 +224,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         writer.writeObjectValue("accessPackage", this.getAccessPackage());
         writer.writeObjectValue("accessPackageCatalog", this.getAccessPackageCatalog());
         writer.writeStringValue("accessPackageId", this.getAccessPackageId());
+        writer.writeObjectValue("accessPackageNotificationSettings", this.getAccessPackageNotificationSettings());
         writer.writeObjectValue("accessReviewSettings", this.getAccessReviewSettings());
         writer.writeBooleanValue("canExtend", this.getCanExtend());
         writer.writeStringValue("createdBy", this.getCreatedBy());
@@ -252,6 +262,13 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
      */
     public void setAccessPackageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("accessPackageId", value);
+    }
+    /**
+     * Sets the accessPackageNotificationSettings property value. The accessPackageNotificationSettings property
+     * @param value Value to set for the accessPackageNotificationSettings property.
+     */
+    public void setAccessPackageNotificationSettings(@jakarta.annotation.Nullable final AccessPackageNotificationSettings value) {
+        this.backingStore.set("accessPackageNotificationSettings", value);
     }
     /**
      * Sets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.

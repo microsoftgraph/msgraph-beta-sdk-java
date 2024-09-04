@@ -57,7 +57,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore;
     }
     /**
-     * Gets the company property value. Detail about the company or employer.
+     * Gets the company property value. Information about the company or employer.
      * @return a {@link CompanyDetail}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("company");
     }
     /**
-     * Gets the description property value. Description of the position in question.
+     * Gets the description property value. A description for the position in question.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("description");
     }
     /**
-     * Gets the endMonthYear property value. When the position ended.
+     * Gets the endMonthYear property value. The date when the position ended.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return deserializerMap;
     }
     /**
-     * Gets the jobTitle property value. The title held when in that position.
+     * Gets the jobTitle property value. The title of the position.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("role");
     }
     /**
-     * Gets the secondaryJobTitle property value. The secondaryJobTitle property
+     * Gets the secondaryJobTitle property value. An optional job title for the position.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("secondaryJobTitle");
     }
     /**
-     * Gets the secondaryRole property value. The secondaryRole property
+     * Gets the secondaryRole property value. An optional role for the position entailed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("secondaryRole");
     }
     /**
-     * Gets the startMonthYear property value. The start month and year of the position.
+     * Gets the startMonthYear property value. The start date of the position.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("startMonthYear");
     }
     /**
-     * Gets the summary property value. summary of the position.
+     * Gets the summary property value. The summary of the position.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -209,28 +209,28 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the company property value. Detail about the company or employer.
+     * Sets the company property value. Information about the company or employer.
      * @param value Value to set for the company property.
      */
     public void setCompany(@jakarta.annotation.Nullable final CompanyDetail value) {
         this.backingStore.set("company", value);
     }
     /**
-     * Sets the description property value. Description of the position in question.
+     * Sets the description property value. A description for the position in question.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the endMonthYear property value. When the position ended.
+     * Sets the endMonthYear property value. The date when the position ended.
      * @param value Value to set for the endMonthYear property.
      */
     public void setEndMonthYear(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("endMonthYear", value);
     }
     /**
-     * Sets the jobTitle property value. The title held when in that position.
+     * Sets the jobTitle property value. The title of the position.
      * @param value Value to set for the jobTitle property.
      */
     public void setJobTitle(@jakarta.annotation.Nullable final String value) {
@@ -265,28 +265,28 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("role", value);
     }
     /**
-     * Sets the secondaryJobTitle property value. The secondaryJobTitle property
+     * Sets the secondaryJobTitle property value. An optional job title for the position.
      * @param value Value to set for the secondaryJobTitle property.
      */
     public void setSecondaryJobTitle(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("secondaryJobTitle", value);
     }
     /**
-     * Sets the secondaryRole property value. The secondaryRole property
+     * Sets the secondaryRole property value. An optional role for the position entailed.
      * @param value Value to set for the secondaryRole property.
      */
     public void setSecondaryRole(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("secondaryRole", value);
     }
     /**
-     * Sets the startMonthYear property value. The start month and year of the position.
+     * Sets the startMonthYear property value. The start date of the position.
      * @param value Value to set for the startMonthYear property.
      */
     public void setStartMonthYear(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("startMonthYear", value);
     }
     /**
-     * Sets the summary property value. summary of the position.
+     * Sets the summary property value. The summary of the position.
      * @param value Value to set for the summary property.
      */
     public void setSummary(@jakarta.annotation.Nullable final String value) {

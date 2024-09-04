@@ -33,15 +33,24 @@ public class PartnerSecurity extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("securityAlerts", (n) -> { this.setSecurityAlerts(n.getCollectionOfObjectValues(PartnerSecurityAlert::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityScore", (n) -> { this.setSecurityScore(n.getObjectValue(PartnerSecurityScore::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the securityAlerts property value. The security alerts or a vulnerability of a CSP partner's customer that the partner must be made aware of for further action.
+     * Gets the securityAlerts property value. The security alerts or a vulnerability of a Cloud Solution Provider (CSP) partner's customer that the partner must be made aware of for further action.
      * @return a {@link java.util.List<PartnerSecurityAlert>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PartnerSecurityAlert> getSecurityAlerts() {
         return this.backingStore.get("securityAlerts");
+    }
+    /**
+     * Gets the securityScore property value. The security score calculated for the CSP partner and their customers.
+     * @return a {@link PartnerSecurityScore}
+     */
+    @jakarta.annotation.Nullable
+    public PartnerSecurityScore getSecurityScore() {
+        return this.backingStore.get("securityScore");
     }
     /**
      * Serializes information the current object
@@ -51,12 +60,20 @@ public class PartnerSecurity extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("securityAlerts", this.getSecurityAlerts());
+        writer.writeObjectValue("securityScore", this.getSecurityScore());
     }
     /**
-     * Sets the securityAlerts property value. The security alerts or a vulnerability of a CSP partner's customer that the partner must be made aware of for further action.
+     * Sets the securityAlerts property value. The security alerts or a vulnerability of a Cloud Solution Provider (CSP) partner's customer that the partner must be made aware of for further action.
      * @param value Value to set for the securityAlerts property.
      */
     public void setSecurityAlerts(@jakarta.annotation.Nullable final java.util.List<PartnerSecurityAlert> value) {
         this.backingStore.set("securityAlerts", value);
+    }
+    /**
+     * Sets the securityScore property value. The security score calculated for the CSP partner and their customers.
+     * @param value Value to set for the securityScore property.
+     */
+    public void setSecurityScore(@jakarta.annotation.Nullable final PartnerSecurityScore value) {
+        this.backingStore.set("securityScore", value);
     }
 }

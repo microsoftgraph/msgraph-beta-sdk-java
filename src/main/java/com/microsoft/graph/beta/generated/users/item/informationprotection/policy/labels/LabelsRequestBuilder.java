@@ -31,7 +31,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -42,7 +42,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the evaluateApplication method.
      * @return a {@link EvaluateApplicationRequestBuilder}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the evaluateClassificationResults method.
      * @return a {@link EvaluateClassificationResultsRequestBuilder}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the evaluateRemoval method.
      * @return a {@link EvaluateRemovalRequestBuilder}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the extractLabel method.
      * @return a {@link ExtractLabelRequestBuilder}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -87,7 +87,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * @param informationProtectionLabelId The unique identifier of informationProtectionLabel
      * @return a {@link InformationProtectionLabelItemRequestBuilder}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -118,7 +118,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InformationProtectionLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -131,7 +131,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InformationProtectionLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -147,7 +147,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InformationProtectionLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -161,7 +161,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InformationProtectionLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -176,7 +176,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * Get labels from users
      * @return a {@link RequestInformation}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -188,7 +188,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -203,7 +203,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -216,7 +216,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -233,7 +233,7 @@ public class LabelsRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link LabelsRequestBuilder}
      * @deprecated
-     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated

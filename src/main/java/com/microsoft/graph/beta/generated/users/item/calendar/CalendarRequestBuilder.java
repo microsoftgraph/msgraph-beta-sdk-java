@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.users.item.calendar.calendarpermissions.Calendar
 import com.microsoft.graph.beta.users.item.calendar.calendarview.CalendarViewRequestBuilder;
 import com.microsoft.graph.beta.users.item.calendar.events.EventsRequestBuilder;
 import com.microsoft.graph.beta.users.item.calendar.getschedule.GetScheduleRequestBuilder;
+import com.microsoft.graph.beta.users.item.calendar.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,7 +29,10 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
      * @return a {@link CalendarPermissionsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CalendarPermissionsRequestBuilder calendarPermissions() {
         return new CalendarPermissionsRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +40,10 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
      * @return a {@link CalendarViewRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
         return new CalendarViewRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +51,10 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the events property of the microsoft.graph.calendar entity.
      * @return a {@link EventsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EventsRequestBuilder events() {
         return new EventsRequestBuilder(pathParameters, requestAdapter);
@@ -52,17 +62,34 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSchedule method.
      * @return a {@link GetScheduleRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetScheduleRequestBuilder getSchedule() {
         return new GetScheduleRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the allowedCalendarSharingRoles method.
      * @param User Usage: User='{User}'
      * @return a {@link AllowedCalendarSharingRolesWithUserRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AllowedCalendarSharingRolesWithUserRequestBuilder allowedCalendarSharingRolesWithUser(@jakarta.annotation.Nonnull final String User) {
         Objects.requireNonNull(User);
         return new AllowedCalendarSharingRolesWithUserRequestBuilder(pathParameters, requestAdapter, User);
@@ -87,8 +114,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * The user's primary calendar. Read-only.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Calendar get() {
         return get(null);
     }
@@ -97,8 +127,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Calendar get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -110,8 +143,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Calendar patch(@jakarta.annotation.Nonnull final Calendar body) {
         return patch(body, null);
     }
@@ -121,8 +157,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Calendar patch(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -133,8 +172,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     /**
      * The user's primary calendar. Read-only.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -142,8 +184,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * The user's primary calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -154,8 +199,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property calendar in users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Calendar body) {
         return toPatchRequestInformation(body, null);
     }
@@ -164,8 +212,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Calendar body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -178,8 +229,11 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CalendarRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CalendarRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CalendarRequestBuilder(rawUrl, requestAdapter);

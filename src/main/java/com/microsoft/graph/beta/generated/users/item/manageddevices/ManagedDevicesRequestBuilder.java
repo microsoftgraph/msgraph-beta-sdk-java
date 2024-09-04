@@ -33,7 +33,10 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the bulkReprovisionCloudPc method.
      * @return a {@link BulkReprovisionCloudPcRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public BulkReprovisionCloudPcRequestBuilder bulkReprovisionCloudPc() {
         return new BulkReprovisionCloudPcRequestBuilder(pathParameters, requestAdapter);
@@ -41,7 +44,10 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the bulkRestoreCloudPc method.
      * @return a {@link BulkRestoreCloudPcRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public BulkRestoreCloudPcRequestBuilder bulkRestoreCloudPc() {
         return new BulkRestoreCloudPcRequestBuilder(pathParameters, requestAdapter);
@@ -49,7 +55,10 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the bulkSetCloudPcReviewStatus method.
      * @return a {@link BulkSetCloudPcReviewStatusRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public BulkSetCloudPcReviewStatusRequestBuilder bulkSetCloudPcReviewStatus() {
         return new BulkSetCloudPcReviewStatusRequestBuilder(pathParameters, requestAdapter);
@@ -57,7 +66,10 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -65,7 +77,10 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the downloadAppDiagnostics method.
      * @return a {@link DownloadAppDiagnosticsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DownloadAppDiagnosticsRequestBuilder downloadAppDiagnostics() {
         return new DownloadAppDiagnosticsRequestBuilder(pathParameters, requestAdapter);
@@ -73,7 +88,10 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the executeAction method.
      * @return a {@link ExecuteActionRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExecuteActionRequestBuilder executeAction() {
         return new ExecuteActionRequestBuilder(pathParameters, requestAdapter);
@@ -81,7 +99,10 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the moveDevicesToOU method.
      * @return a {@link MoveDevicesToOURequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MoveDevicesToOURequestBuilder moveDevicesToOU() {
         return new MoveDevicesToOURequestBuilder(pathParameters, requestAdapter);
@@ -90,8 +111,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the appDiagnostics method.
      * @param upn Usage: upn='{upn}'
      * @return a {@link AppDiagnosticsWithUpnRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AppDiagnosticsWithUpnRequestBuilder appDiagnosticsWithUpn(@jakarta.annotation.Nonnull final String upn) {
         Objects.requireNonNull(upn);
         return new AppDiagnosticsWithUpnRequestBuilder(pathParameters, requestAdapter, upn);
@@ -100,8 +124,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the managedDevices property of the microsoft.graph.user entity.
      * @param managedDeviceId The unique identifier of managedDevice
      * @return a {@link ManagedDeviceItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ManagedDeviceItemRequestBuilder byManagedDeviceId(@jakarta.annotation.Nonnull final String managedDeviceId) {
         Objects.requireNonNull(managedDeviceId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -128,8 +155,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * The managed devices associated with the user.
      * @return a {@link ManagedDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ManagedDeviceCollectionResponse get() {
         return get(null);
     }
@@ -138,8 +168,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ManagedDeviceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -151,8 +184,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ManagedDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ManagedDevice post(@jakarta.annotation.Nonnull final ManagedDevice body) {
         return post(body, null);
     }
@@ -162,8 +198,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ManagedDevice post(@jakarta.annotation.Nonnull final ManagedDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -174,8 +213,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * The managed devices associated with the user.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -183,8 +225,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * The managed devices associated with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -195,8 +240,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to managedDevices for users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedDevice body) {
         return toPostRequestInformation(body, null);
     }
@@ -205,8 +253,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -219,8 +270,11 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ManagedDevicesRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ManagedDevicesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ManagedDevicesRequestBuilder(rawUrl, requestAdapter);

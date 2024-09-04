@@ -13,6 +13,7 @@ import com.microsoft.graph.beta.users.item.mailfolders.item.messages.item.markas
 import com.microsoft.graph.beta.users.item.mailfolders.item.messages.item.markasnotjunk.MarkAsNotJunkRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.messages.item.mentions.MentionsRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.messages.item.move.MoveRequestBuilder;
+import com.microsoft.graph.beta.users.item.mailfolders.item.messages.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.messages.item.reply.ReplyRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.messages.item.replyall.ReplyAllRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.messages.item.send.SendRequestBuilder;
@@ -39,7 +40,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the attachments property of the microsoft.graph.message entity.
      * @return a {@link AttachmentsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AttachmentsRequestBuilder attachments() {
         return new AttachmentsRequestBuilder(pathParameters, requestAdapter);
@@ -47,7 +51,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the media for the user entity.
      * @return a {@link ContentRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ContentRequestBuilder content() {
         return new ContentRequestBuilder(pathParameters, requestAdapter);
@@ -55,7 +62,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the copy method.
      * @return a {@link CopyRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CopyRequestBuilder copy() {
         return new CopyRequestBuilder(pathParameters, requestAdapter);
@@ -63,7 +73,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the createForward method.
      * @return a {@link CreateForwardRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CreateForwardRequestBuilder createForward() {
         return new CreateForwardRequestBuilder(pathParameters, requestAdapter);
@@ -71,7 +84,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the createReply method.
      * @return a {@link CreateReplyRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CreateReplyRequestBuilder createReply() {
         return new CreateReplyRequestBuilder(pathParameters, requestAdapter);
@@ -79,7 +95,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the createReplyAll method.
      * @return a {@link CreateReplyAllRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CreateReplyAllRequestBuilder createReplyAll() {
         return new CreateReplyAllRequestBuilder(pathParameters, requestAdapter);
@@ -87,7 +106,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.message entity.
      * @return a {@link ExtensionsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
@@ -95,7 +117,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the forward method.
      * @return a {@link ForwardRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ForwardRequestBuilder forward() {
         return new ForwardRequestBuilder(pathParameters, requestAdapter);
@@ -103,7 +128,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the markAsJunk method.
      * @return a {@link MarkAsJunkRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MarkAsJunkRequestBuilder markAsJunk() {
         return new MarkAsJunkRequestBuilder(pathParameters, requestAdapter);
@@ -111,7 +139,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the markAsNotJunk method.
      * @return a {@link MarkAsNotJunkRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MarkAsNotJunkRequestBuilder markAsNotJunk() {
         return new MarkAsNotJunkRequestBuilder(pathParameters, requestAdapter);
@@ -119,7 +150,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the mentions property of the microsoft.graph.message entity.
      * @return a {@link MentionsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MentionsRequestBuilder mentions() {
         return new MentionsRequestBuilder(pathParameters, requestAdapter);
@@ -127,15 +161,32 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the move method.
      * @return a {@link MoveRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MoveRequestBuilder move() {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the permanentDelete method.
+     * @return a {@link PermanentDeleteRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public PermanentDeleteRequestBuilder permanentDelete() {
+        return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the reply method.
      * @return a {@link ReplyRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ReplyRequestBuilder reply() {
         return new ReplyRequestBuilder(pathParameters, requestAdapter);
@@ -143,7 +194,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the replyAll method.
      * @return a {@link ReplyAllRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ReplyAllRequestBuilder replyAll() {
         return new ReplyAllRequestBuilder(pathParameters, requestAdapter);
@@ -151,7 +205,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the send method.
      * @return a {@link SendRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SendRequestBuilder send() {
         return new SendRequestBuilder(pathParameters, requestAdapter);
@@ -159,7 +216,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the unsubscribe method.
      * @return a {@link UnsubscribeRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UnsubscribeRequestBuilder unsubscribe() {
         return new UnsubscribeRequestBuilder(pathParameters, requestAdapter);
@@ -183,7 +243,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property messages for users
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -191,7 +254,10 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property messages for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -202,8 +268,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * The collection of messages in the mailFolder.
      * @return a {@link Message}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Message get() {
         return get(null);
     }
@@ -212,8 +281,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Message}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Message get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -225,8 +297,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Message}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Message patch(@jakarta.annotation.Nonnull final Message body) {
         return patch(body, null);
     }
@@ -236,8 +311,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Message}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Message patch(@jakarta.annotation.Nonnull final Message body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -248,8 +326,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property messages for users
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -257,8 +338,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property messages for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -268,8 +352,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of messages in the mailFolder.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -277,8 +364,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * The collection of messages in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -289,8 +379,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property messages in users
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Message body) {
         return toPatchRequestInformation(body, null);
     }
@@ -299,8 +392,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Message body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -313,8 +409,11 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MessageItemRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public MessageItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MessageItemRequestBuilder(rawUrl, requestAdapter);
