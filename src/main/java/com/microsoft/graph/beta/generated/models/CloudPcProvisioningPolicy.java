@@ -50,6 +50,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("autopatch");
     }
     /**
+     * Gets the autopilotConfiguration property value. The autopilotConfiguration property
+     * @return a {@link CloudPcAutopilotConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcAutopilotConfiguration getAutopilotConfiguration() {
+        return this.backingStore.get("autopilotConfiguration");
+    }
+    /**
      * Gets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.
      * @return a {@link String}
      */
@@ -107,6 +115,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("alternateResourceUrl", (n) -> { this.setAlternateResourceUrl(n.getStringValue()); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(CloudPcProvisioningPolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("autopatch", (n) -> { this.setAutopatch(n.getObjectValue(CloudPcProvisioningPolicyAutopatch::createFromDiscriminatorValue)); });
+        deserializerMap.put("autopilotConfiguration", (n) -> { this.setAutopilotConfiguration(n.getObjectValue(CloudPcAutopilotConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPcGroupDisplayName", (n) -> { this.setCloudPcGroupDisplayName(n.getStringValue()); });
         deserializerMap.put("cloudPcNamingTemplate", (n) -> { this.setCloudPcNamingTemplate(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -224,6 +233,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeStringValue("alternateResourceUrl", this.getAlternateResourceUrl());
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeObjectValue("autopatch", this.getAutopatch());
+        writer.writeObjectValue("autopilotConfiguration", this.getAutopilotConfiguration());
         writer.writeStringValue("cloudPcGroupDisplayName", this.getCloudPcGroupDisplayName());
         writer.writeStringValue("cloudPcNamingTemplate", this.getCloudPcNamingTemplate());
         writer.writeStringValue("description", this.getDescription());
@@ -262,6 +272,13 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setAutopatch(@jakarta.annotation.Nullable final CloudPcProvisioningPolicyAutopatch value) {
         this.backingStore.set("autopatch", value);
+    }
+    /**
+     * Sets the autopilotConfiguration property value. The autopilotConfiguration property
+     * @param value Value to set for the autopilotConfiguration property.
+     */
+    public void setAutopilotConfiguration(@jakarta.annotation.Nullable final CloudPcAutopilotConfiguration value) {
+        this.backingStore.set("autopilotConfiguration", value);
     }
     /**
      * Sets the cloudPcGroupDisplayName property value. The display name of the Cloud PC group that the Cloud PCs reside in. Read-only.

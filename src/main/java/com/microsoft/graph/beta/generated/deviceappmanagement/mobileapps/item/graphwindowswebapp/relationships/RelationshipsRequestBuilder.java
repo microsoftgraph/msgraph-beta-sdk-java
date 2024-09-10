@@ -60,7 +60,7 @@ public class RelationshipsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/graph.windowsWebApp/relationships{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      * @return a {@link MobileAppRelationshipCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class RelationshipsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileAppRelationshipCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class RelationshipsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileAppRelationship::createFromDiscriminatorValue);
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class RelationshipsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class RelationshipsRequestBuilder extends BaseRequestBuilder {
         return new RelationshipsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

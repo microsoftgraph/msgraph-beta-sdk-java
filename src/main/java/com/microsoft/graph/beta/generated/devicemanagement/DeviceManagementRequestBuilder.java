@@ -55,6 +55,7 @@ import com.microsoft.graph.beta.devicemanagement.domainjoinconnectors.DomainJoin
 import com.microsoft.graph.beta.devicemanagement.elevationrequests.ElevationRequestsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.embeddedsimactivationcodepools.EmbeddedSIMActivationCodePoolsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.enableandroiddeviceadministratorenrollment.EnableAndroidDeviceAdministratorEnrollmentRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.enableendpointprivilegemanagement.EnableEndpointPrivilegeManagementRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.enablelegacypcmanagement.EnableLegacyPcManagementRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.enableunlicensedadminstrators.EnableUnlicensedAdminstratorsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.endpointprivilegemanagementprovisioningstatus.EndpointPrivilegeManagementProvisioningStatusRequestBuilder;
@@ -649,6 +650,14 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EnableAndroidDeviceAdministratorEnrollmentRequestBuilder enableAndroidDeviceAdministratorEnrollment() {
         return new EnableAndroidDeviceAdministratorEnrollmentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the enableEndpointPrivilegeManagement method.
+     * @return a {@link EnableEndpointPrivilegeManagementRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public EnableEndpointPrivilegeManagementRequestBuilder enableEndpointPrivilegeManagement() {
+        return new EnableEndpointPrivilegeManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the enableLegacyPcManagement method.

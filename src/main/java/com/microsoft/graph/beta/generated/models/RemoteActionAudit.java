@@ -53,6 +53,14 @@ public class RemoteActionAudit extends Entity implements Parsable {
         return this.backingStore.get("bulkDeviceActionId");
     }
     /**
+     * Gets the deviceActionCategory property value. Enum type used for DeviceActionCategory
+     * @return a {@link DeviceActionCategory}
+     */
+    @jakarta.annotation.Nullable
+    public DeviceActionCategory getDeviceActionCategory() {
+        return this.backingStore.get("deviceActionCategory");
+    }
+    /**
      * Gets the deviceDisplayName property value. Intune device name.
      * @return a {@link String}
      */
@@ -86,6 +94,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(RemoteAction::forValue)); });
         deserializerMap.put("actionState", (n) -> { this.setActionState(n.getEnumValue(ActionState::forValue)); });
         deserializerMap.put("bulkDeviceActionId", (n) -> { this.setBulkDeviceActionId(n.getStringValue()); });
+        deserializerMap.put("deviceActionCategory", (n) -> { this.setDeviceActionCategory(n.getEnumValue(DeviceActionCategory::forValue)); });
         deserializerMap.put("deviceDisplayName", (n) -> { this.setDeviceDisplayName(n.getStringValue()); });
         deserializerMap.put("deviceIMEI", (n) -> { this.setDeviceIMEI(n.getStringValue()); });
         deserializerMap.put("deviceOwnerUserPrincipalName", (n) -> { this.setDeviceOwnerUserPrincipalName(n.getStringValue()); });
@@ -137,6 +146,7 @@ public class RemoteActionAudit extends Entity implements Parsable {
         writer.writeEnumValue("action", this.getAction());
         writer.writeEnumValue("actionState", this.getActionState());
         writer.writeStringValue("bulkDeviceActionId", this.getBulkDeviceActionId());
+        writer.writeEnumValue("deviceActionCategory", this.getDeviceActionCategory());
         writer.writeStringValue("deviceDisplayName", this.getDeviceDisplayName());
         writer.writeStringValue("deviceIMEI", this.getDeviceIMEI());
         writer.writeStringValue("deviceOwnerUserPrincipalName", this.getDeviceOwnerUserPrincipalName());
@@ -165,6 +175,13 @@ public class RemoteActionAudit extends Entity implements Parsable {
      */
     public void setBulkDeviceActionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("bulkDeviceActionId", value);
+    }
+    /**
+     * Sets the deviceActionCategory property value. Enum type used for DeviceActionCategory
+     * @param value Value to set for the deviceActionCategory property.
+     */
+    public void setDeviceActionCategory(@jakarta.annotation.Nullable final DeviceActionCategory value) {
+        this.backingStore.set("deviceActionCategory", value);
     }
     /**
      * Sets the deviceDisplayName property value. Intune device name.

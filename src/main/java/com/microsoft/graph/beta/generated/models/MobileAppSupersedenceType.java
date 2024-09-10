@@ -11,7 +11,9 @@ public enum MobileAppSupersedenceType implements ValuedEnum {
     /** Indicates that the child app should be updated by the internal logic of the parent app. */
     Update("update"),
     /** Indicates that the child app should be uninstalled before installing the parent app. */
-    Replace("replace");
+    Replace("replace"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     MobileAppSupersedenceType(final String value) {
         this.value = value;
@@ -24,6 +26,7 @@ public enum MobileAppSupersedenceType implements ValuedEnum {
         switch(searchValue) {
             case "update": return Update;
             case "replace": return Replace;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

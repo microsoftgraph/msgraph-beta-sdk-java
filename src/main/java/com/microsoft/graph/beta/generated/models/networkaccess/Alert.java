@@ -89,7 +89,7 @@ public class Alert extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(FilteringPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("relatedResources", (n) -> { this.setRelatedResources(n.getCollectionOfObjectValues(RelatedResource::createFromDiscriminatorValue)); });
-        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(ThreatSeverity::forValue)); });
+        deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity::forValue)); });
         deserializerMap.put("vendorName", (n) -> { this.setVendorName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -111,10 +111,10 @@ public class Alert extends Entity implements Parsable {
     }
     /**
      * Gets the severity property value. The severity property
-     * @return a {@link ThreatSeverity}
+     * @return a {@link AlertSeverity}
      */
     @jakarta.annotation.Nullable
-    public ThreatSeverity getSeverity() {
+    public AlertSeverity getSeverity() {
         return this.backingStore.get("severity");
     }
     /**
@@ -203,7 +203,7 @@ public class Alert extends Entity implements Parsable {
      * Sets the severity property value. The severity property
      * @param value Value to set for the severity property.
      */
-    public void setSeverity(@jakarta.annotation.Nullable final ThreatSeverity value) {
+    public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
         this.backingStore.set("severity", value);
     }
     /**

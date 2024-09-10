@@ -61,7 +61,7 @@ public class GetGroupPolicySettingsDeviceSettingsReportPostRequestBody implement
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
         deserializerMap.put("groupBy", (n) -> { this.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -70,6 +70,7 @@ public class GetGroupPolicySettingsDeviceSettingsReportPostRequestBody implement
         deserializerMap.put("select", (n) -> { this.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
         deserializerMap.put("skip", (n) -> { this.setSkip(n.getIntegerValue()); });
+        deserializerMap.put("skiptoken", (n) -> { this.setSkiptoken(n.getStringValue()); });
         deserializerMap.put("top", (n) -> { this.setTop(n.getIntegerValue()); });
         return deserializerMap;
     }
@@ -138,6 +139,14 @@ public class GetGroupPolicySettingsDeviceSettingsReportPostRequestBody implement
         return this.backingStore.get("skip");
     }
     /**
+     * Gets the skiptoken property value. The skiptoken property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSkiptoken() {
+        return this.backingStore.get("skiptoken");
+    }
+    /**
      * Gets the top property value. The top property
      * @return a {@link Integer}
      */
@@ -159,6 +168,7 @@ public class GetGroupPolicySettingsDeviceSettingsReportPostRequestBody implement
         writer.writeCollectionOfPrimitiveValues("select", this.getSelect());
         writer.writeStringValue("sessionId", this.getSessionId());
         writer.writeIntegerValue("skip", this.getSkip());
+        writer.writeStringValue("skiptoken", this.getSkiptoken());
         writer.writeIntegerValue("top", this.getTop());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -232,6 +242,13 @@ public class GetGroupPolicySettingsDeviceSettingsReportPostRequestBody implement
      */
     public void setSkip(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("skip", value);
+    }
+    /**
+     * Sets the skiptoken property value. The skiptoken property
+     * @param value Value to set for the skiptoken property.
+     */
+    public void setSkiptoken(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("skiptoken", value);
     }
     /**
      * Sets the top property value. The top property

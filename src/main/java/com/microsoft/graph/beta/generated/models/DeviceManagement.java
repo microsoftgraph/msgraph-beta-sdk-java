@@ -816,7 +816,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("hardwarePasswordDetails");
     }
     /**
-     * Gets the hardwarePasswordInfo property value. Intune will provide customer the ability to configure hardware/bios settings on the enrolled windows 10 Azure Active Directory joined devices. Starting from June, 2024 (Intune Release 2406), this type will no longer be supported and will be marked as deprecated
+     * Gets the hardwarePasswordInfo property value. Intune will provide customer the ability to configure BIOS configuration settings on the enrolled Windows 10 and Windows 11 Microsoft Entra joined devices. Starting from June, 2024, customers should start using hardwarePasswordDetail resource type - Microsoft Graph beta | Microsoft Learn. HardwarePasswordInfo will be marked as deprecated with Intune Release 2409
      * @return a {@link java.util.List<HardwarePasswordInfo>}
      */
     @jakarta.annotation.Nullable
@@ -2466,7 +2466,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("hardwarePasswordDetails", value);
     }
     /**
-     * Sets the hardwarePasswordInfo property value. Intune will provide customer the ability to configure hardware/bios settings on the enrolled windows 10 Azure Active Directory joined devices. Starting from June, 2024 (Intune Release 2406), this type will no longer be supported and will be marked as deprecated
+     * Sets the hardwarePasswordInfo property value. Intune will provide customer the ability to configure BIOS configuration settings on the enrolled Windows 10 and Windows 11 Microsoft Entra joined devices. Starting from June, 2024, customers should start using hardwarePasswordDetail resource type - Microsoft Graph beta | Microsoft Learn. HardwarePasswordInfo will be marked as deprecated with Intune Release 2409
      * @param value Value to set for the hardwarePasswordInfo property.
      */
     public void setHardwarePasswordInfo(@jakarta.annotation.Nullable final java.util.List<HardwarePasswordInfo> value) {

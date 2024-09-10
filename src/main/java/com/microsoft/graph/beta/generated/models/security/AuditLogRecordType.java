@@ -257,6 +257,41 @@ public enum AuditLogRecordType implements ValuedEnum {
     VfamDeletePolicy("VfamDeletePolicy"),
     M365DAAD("M365DAAD"),
     CdpColdCrawlStatus("CdpColdCrawlStatus"),
+    PowerPlatformAdministratorActivity("PowerPlatformAdministratorActivity"),
+    Windows365CustomerLockbox("Windows365CustomerLockbox"),
+    CdpResourceScopeChangeEvent("CdpResourceScopeChangeEvent"),
+    ComplianceCCExchangeExecutionResult("ComplianceCCExchangeExecutionResult"),
+    CdpOcrCostEstimatorRecord("CdpOcrCostEstimatorRecord"),
+    CopilotInteraction("CopilotInteraction"),
+    CdpOcrBillingRecord("CdpOcrBillingRecord"),
+    ComplianceDLPApplications("ComplianceDLPApplications"),
+    UAMOperation("UAMOperation"),
+    VivaLearning("VivaLearning"),
+    VivaLearningAdmin("VivaLearningAdmin"),
+    PurviewPolicyOperation("PurviewPolicyOperation"),
+    PurviewMetadataPolicyOperation("PurviewMetadataPolicyOperation"),
+    PeopleAdminSettings("PeopleAdminSettings"),
+    CdpComplianceDLPExchangeClassification("CdpComplianceDLPExchangeClassification"),
+    CdpComplianceDLPSharePointClassification("CdpComplianceDLPSharePointClassification"),
+    FilteringBulkSenderInsightData("FilteringBulkSenderInsightData"),
+    FilteringBulkThresholdInsightData("FilteringBulkThresholdInsightData"),
+    PrivacyOpenAccess("PrivacyOpenAccess"),
+    OWAAuth("OWAAuth"),
+    ComplianceDLPApplicationsClassification("ComplianceDLPApplicationsClassification"),
+    SharePointESignature("SharePointESignature"),
+    Dynamics365BusinessCentral("Dynamics365BusinessCentral"),
+    MeshWorlds("MeshWorlds"),
+    VivaPulseResponse("VivaPulseResponse"),
+    VivaPulseOrganizer("VivaPulseOrganizer"),
+    VivaPulseAdmin("VivaPulseAdmin"),
+    VivaPulseReport("VivaPulseReport"),
+    AIAppInteraction("AIAppInteraction"),
+    ComplianceDLMExchange("ComplianceDLMExchange"),
+    ComplianceDLMSharePoint("ComplianceDLMSharePoint"),
+    ProjectForTheWebAssignedToMeSettings("ProjectForTheWebAssignedToMeSettings"),
+    CPSOperation("CPSOperation"),
+    ComplianceDLPExchangeDiscovery("ComplianceDLPExchangeDiscovery"),
+    PurviewMCRecommendation("PurviewMCRecommendation"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AuditLogRecordType(final String value) {
@@ -520,6 +555,41 @@ public enum AuditLogRecordType implements ValuedEnum {
             case "VfamDeletePolicy": return VfamDeletePolicy;
             case "M365DAAD": return M365DAAD;
             case "CdpColdCrawlStatus": return CdpColdCrawlStatus;
+            case "PowerPlatformAdministratorActivity": return PowerPlatformAdministratorActivity;
+            case "Windows365CustomerLockbox": return Windows365CustomerLockbox;
+            case "CdpResourceScopeChangeEvent": return CdpResourceScopeChangeEvent;
+            case "ComplianceCCExchangeExecutionResult": return ComplianceCCExchangeExecutionResult;
+            case "CdpOcrCostEstimatorRecord": return CdpOcrCostEstimatorRecord;
+            case "CopilotInteraction": return CopilotInteraction;
+            case "CdpOcrBillingRecord": return CdpOcrBillingRecord;
+            case "ComplianceDLPApplications": return ComplianceDLPApplications;
+            case "UAMOperation": return UAMOperation;
+            case "VivaLearning": return VivaLearning;
+            case "VivaLearningAdmin": return VivaLearningAdmin;
+            case "PurviewPolicyOperation": return PurviewPolicyOperation;
+            case "PurviewMetadataPolicyOperation": return PurviewMetadataPolicyOperation;
+            case "PeopleAdminSettings": return PeopleAdminSettings;
+            case "CdpComplianceDLPExchangeClassification": return CdpComplianceDLPExchangeClassification;
+            case "CdpComplianceDLPSharePointClassification": return CdpComplianceDLPSharePointClassification;
+            case "FilteringBulkSenderInsightData": return FilteringBulkSenderInsightData;
+            case "FilteringBulkThresholdInsightData": return FilteringBulkThresholdInsightData;
+            case "PrivacyOpenAccess": return PrivacyOpenAccess;
+            case "OWAAuth": return OWAAuth;
+            case "ComplianceDLPApplicationsClassification": return ComplianceDLPApplicationsClassification;
+            case "SharePointESignature": return SharePointESignature;
+            case "Dynamics365BusinessCentral": return Dynamics365BusinessCentral;
+            case "MeshWorlds": return MeshWorlds;
+            case "VivaPulseResponse": return VivaPulseResponse;
+            case "VivaPulseOrganizer": return VivaPulseOrganizer;
+            case "VivaPulseAdmin": return VivaPulseAdmin;
+            case "VivaPulseReport": return VivaPulseReport;
+            case "AIAppInteraction": return AIAppInteraction;
+            case "ComplianceDLMExchange": return ComplianceDLMExchange;
+            case "ComplianceDLMSharePoint": return ComplianceDLMSharePoint;
+            case "ProjectForTheWebAssignedToMeSettings": return ProjectForTheWebAssignedToMeSettings;
+            case "CPSOperation": return CPSOperation;
+            case "ComplianceDLPExchangeDiscovery": return ComplianceDLPExchangeDiscovery;
+            case "PurviewMCRecommendation": return PurviewMCRecommendation;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

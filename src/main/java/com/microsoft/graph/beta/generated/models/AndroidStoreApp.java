@@ -29,14 +29,6 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
         return new AndroidStoreApp();
     }
     /**
-     * Gets the appIdentifier property value. The Identity Name. This property is read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getAppIdentifier() {
-        return this.backingStore.get("appIdentifier");
-    }
-    /**
      * Gets the appStoreUrl property value. The Android app store URL.
      * @return a {@link String}
      */
@@ -51,7 +43,6 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("appIdentifier", (n) -> { this.setAppIdentifier(n.getStringValue()); });
         deserializerMap.put("appStoreUrl", (n) -> { this.setAppStoreUrl(n.getStringValue()); });
         deserializerMap.put("minimumSupportedOperatingSystem", (n) -> { this.setMinimumSupportedOperatingSystem(n.getObjectValue(AndroidMinimumOperatingSystem::createFromDiscriminatorValue)); });
         deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
@@ -82,13 +73,6 @@ public class AndroidStoreApp extends MobileApp implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("appStoreUrl", this.getAppStoreUrl());
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
-    }
-    /**
-     * Sets the appIdentifier property value. The Identity Name. This property is read-only.
-     * @param value Value to set for the appIdentifier property.
-     */
-    public void setAppIdentifier(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("appIdentifier", value);
     }
     /**
      * Sets the appStoreUrl property value. The Android app store URL.
