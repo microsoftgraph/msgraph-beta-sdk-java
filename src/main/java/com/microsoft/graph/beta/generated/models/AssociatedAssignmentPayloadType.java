@@ -31,7 +31,9 @@ public enum AssociatedAssignmentPayloadType implements ValuedEnum {
     /** Indicates that this filter is associated with a Win32 app payload type */
     Win32app("win32app"),
     /** Indicates that this filter is associated with a configuration or compliance policy on Device Configuration v2 Infrastructure payload type */
-    DeviceManagmentConfigurationAndCompliancePolicy("deviceManagmentConfigurationAndCompliancePolicy");
+    DeviceManagmentConfigurationAndCompliancePolicy("deviceManagmentConfigurationAndCompliancePolicy"),
+    /** Indicates that this filter is associated with Bios Configurations And Other Settings payload type */
+    HardwareConfiguration("hardwareConfiguration");
     public final String value;
     AssociatedAssignmentPayloadType(final String value) {
         this.value = value;
@@ -54,6 +56,7 @@ public enum AssociatedAssignmentPayloadType implements ValuedEnum {
             case "resourceAccessPolicy": return ResourceAccessPolicy;
             case "win32app": return Win32app;
             case "deviceManagmentConfigurationAndCompliancePolicy": return DeviceManagmentConfigurationAndCompliancePolicy;
+            case "hardwareConfiguration": return HardwareConfiguration;
             default: return null;
         }
     }

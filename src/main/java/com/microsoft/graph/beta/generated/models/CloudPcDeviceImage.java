@@ -64,6 +64,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
         deserializerMap.put("osBuildNumber", (n) -> { this.setOsBuildNumber(n.getStringValue()); });
         deserializerMap.put("osStatus", (n) -> { this.setOsStatus(n.getEnumValue(CloudPcDeviceImageOsStatus::forValue)); });
+        deserializerMap.put("osVersionNumber", (n) -> { this.setOsVersionNumber(n.getStringValue()); });
         deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("sourceImageResourceId", (n) -> { this.setSourceImageResourceId(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcDeviceImageStatus::forValue)); });
@@ -102,6 +103,14 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public CloudPcDeviceImageOsStatus getOsStatus() {
         return this.backingStore.get("osStatus");
+    }
+    /**
+     * Gets the osVersionNumber property value. The osVersionNumber property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOsVersionNumber() {
+        return this.backingStore.get("osVersionNumber");
     }
     /**
      * Gets the scopeIds property value. The scopeIds property
@@ -157,6 +166,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         writer.writeStringValue("operatingSystem", this.getOperatingSystem());
         writer.writeStringValue("osBuildNumber", this.getOsBuildNumber());
         writer.writeEnumValue("osStatus", this.getOsStatus());
+        writer.writeStringValue("osVersionNumber", this.getOsVersionNumber());
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
         writer.writeStringValue("sourceImageResourceId", this.getSourceImageResourceId());
         writer.writeEnumValue("status", this.getStatus());
@@ -211,6 +221,13 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     public void setOsStatus(@jakarta.annotation.Nullable final CloudPcDeviceImageOsStatus value) {
         this.backingStore.set("osStatus", value);
+    }
+    /**
+     * Sets the osVersionNumber property value. The osVersionNumber property
+     * @param value Value to set for the osVersionNumber property.
+     */
+    public void setOsVersionNumber(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("osVersionNumber", value);
     }
     /**
      * Sets the scopeIds property value. The scopeIds property

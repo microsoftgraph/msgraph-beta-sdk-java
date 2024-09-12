@@ -21,7 +21,10 @@ public enum CloudPcReportName implements ValuedEnum {
     CloudPcUsageCategoryReports("cloudPcUsageCategoryReports"),
     CrossRegionDisasterRecoveryReport("crossRegionDisasterRecoveryReport"),
     PerformanceTrendReport("performanceTrendReport"),
-    InaccessibleCloudPcTrendReport("inaccessibleCloudPcTrendReport");
+    InaccessibleCloudPcTrendReport("inaccessibleCloudPcTrendReport"),
+    RegionalConnectionQualityTrendReport("regionalConnectionQualityTrendReport"),
+    RegionalConnectionQualityInsightsReport("regionalConnectionQualityInsightsReport"),
+    RemoteConnectionQualityReport("remoteConnectionQualityReport");
     public final String value;
     CloudPcReportName(final String value) {
         this.value = value;
@@ -49,6 +52,9 @@ public enum CloudPcReportName implements ValuedEnum {
             case "crossRegionDisasterRecoveryReport": return CrossRegionDisasterRecoveryReport;
             case "performanceTrendReport": return PerformanceTrendReport;
             case "inaccessibleCloudPcTrendReport": return InaccessibleCloudPcTrendReport;
+            case "regionalConnectionQualityTrendReport": return RegionalConnectionQualityTrendReport;
+            case "regionalConnectionQualityInsightsReport": return RegionalConnectionQualityInsightsReport;
+            case "remoteConnectionQualityReport": return RemoteConnectionQualityReport;
             default: return null;
         }
     }

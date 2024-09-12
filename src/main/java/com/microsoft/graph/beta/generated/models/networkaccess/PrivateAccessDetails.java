@@ -56,6 +56,14 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return value;
     }
     /**
+     * Gets the appSegmentId property value. The appSegmentId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAppSegmentId() {
+        return this.backingStore.get("appSegmentId");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -101,8 +109,9 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("accessType", (n) -> { this.setAccessType(n.getEnumValue(AccessType::forValue)); });
+        deserializerMap.put("appSegmentId", (n) -> { this.setAppSegmentId(n.getStringValue()); });
         deserializerMap.put("connectionStatus", (n) -> { this.setConnectionStatus(n.getEnumValue(ConnectionStatus::forValue)); });
         deserializerMap.put("connectorId", (n) -> { this.setConnectorId(n.getStringValue()); });
         deserializerMap.put("connectorIp", (n) -> { this.setConnectorIp(n.getStringValue()); });
@@ -143,6 +152,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("accessType", this.getAccessType());
+        writer.writeStringValue("appSegmentId", this.getAppSegmentId());
         writer.writeEnumValue("connectionStatus", this.getConnectionStatus());
         writer.writeStringValue("connectorId", this.getConnectorId());
         writer.writeStringValue("connectorIp", this.getConnectorIp());
@@ -165,6 +175,13 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the appSegmentId property value. The appSegmentId property
+     * @param value Value to set for the appSegmentId property.
+     */
+    public void setAppSegmentId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("appSegmentId", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

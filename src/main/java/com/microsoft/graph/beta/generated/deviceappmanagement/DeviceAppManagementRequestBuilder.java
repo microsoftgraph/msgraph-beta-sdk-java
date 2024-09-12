@@ -15,6 +15,7 @@ import com.microsoft.graph.beta.deviceappmanagement.mdmwindowsinformationprotect
 import com.microsoft.graph.beta.deviceappmanagement.mobileappcatalogpackages.MobileAppCatalogPackagesRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileappcategories.MobileAppCategoriesRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileappconfigurations.MobileAppConfigurationsRequestBuilder;
+import com.microsoft.graph.beta.deviceappmanagement.mobileapprelationships.MobileAppRelationshipsRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileapps.MobileAppsRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.policysets.PolicySetsRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.symanteccodesigningcertificate.SymantecCodeSigningCertificateRequestBuilder;
@@ -166,6 +167,14 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MobileAppConfigurationsRequestBuilder mobileAppConfigurations() {
         return new MobileAppConfigurationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mobileAppRelationships property of the microsoft.graph.deviceAppManagement entity.
+     * @return a {@link MobileAppRelationshipsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MobileAppRelationshipsRequestBuilder mobileAppRelationships() {
+        return new MobileAppRelationshipsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the mobileApps property of the microsoft.graph.deviceAppManagement entity.

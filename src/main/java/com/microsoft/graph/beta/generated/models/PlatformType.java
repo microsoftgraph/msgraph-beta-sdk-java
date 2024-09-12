@@ -23,7 +23,11 @@ public enum PlatformType implements ValuedEnum {
     /** Linux */
     Linux("linux"),
     /** UnknownFutureValue */
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    /** AndroidEnterprise */
+    AndroidEnterprise("androidEnterprise"),
+    /** Android Open Source Project */
+    Aosp("aosp");
     public final String value;
     PlatformType(final String value) {
         this.value = value;
@@ -42,6 +46,8 @@ public enum PlatformType implements ValuedEnum {
             case "windows10": return Windows10;
             case "linux": return Linux;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "androidEnterprise": return AndroidEnterprise;
+            case "aosp": return Aosp;
             default: return null;
         }
     }

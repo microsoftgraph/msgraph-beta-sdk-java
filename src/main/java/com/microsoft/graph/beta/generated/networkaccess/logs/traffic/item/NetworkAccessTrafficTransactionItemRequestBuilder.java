@@ -2,6 +2,8 @@ package com.microsoft.graph.beta.networkaccess.logs.traffic.item;
 
 import com.microsoft.graph.beta.models.networkaccess.NetworkAccessTraffic;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.networkaccess.logs.traffic.item.device.DeviceRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.logs.traffic.item.user.UserRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +22,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class NetworkAccessTrafficTransactionItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the device property of the microsoft.graph.networkaccess.networkAccessTraffic entity.
+     * @return a {@link DeviceRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceRequestBuilder device() {
+        return new DeviceRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the user property of the microsoft.graph.networkaccess.networkAccessTraffic entity.
+     * @return a {@link UserRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserRequestBuilder user() {
+        return new UserRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link NetworkAccessTrafficTransactionItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

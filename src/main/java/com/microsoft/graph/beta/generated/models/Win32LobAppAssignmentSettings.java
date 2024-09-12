@@ -36,6 +36,14 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
         return new Win32LobAppAssignmentSettings();
     }
     /**
+     * Gets the autoUpdateSettings property value. The auto-update settings to apply for this app assignment.
+     * @return a {@link Win32LobAppAutoUpdateSettings}
+     */
+    @jakarta.annotation.Nullable
+    public Win32LobAppAutoUpdateSettings getAutoUpdateSettings() {
+        return this.backingStore.get("autoUpdateSettings");
+    }
+    /**
      * Gets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.
      * @return a {@link Win32LobAppDeliveryOptimizationPriority}
      */
@@ -50,6 +58,7 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("autoUpdateSettings", (n) -> { this.setAutoUpdateSettings(n.getObjectValue(Win32LobAppAutoUpdateSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("deliveryOptimizationPriority", (n) -> { this.setDeliveryOptimizationPriority(n.getEnumValue(Win32LobAppDeliveryOptimizationPriority::forValue)); });
         deserializerMap.put("installTimeSettings", (n) -> { this.setInstallTimeSettings(n.getObjectValue(MobileAppInstallTimeSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("notifications", (n) -> { this.setNotifications(n.getEnumValue(Win32LobAppNotification::forValue)); });
@@ -87,10 +96,18 @@ public class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings i
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("autoUpdateSettings", this.getAutoUpdateSettings());
         writer.writeEnumValue("deliveryOptimizationPriority", this.getDeliveryOptimizationPriority());
         writer.writeObjectValue("installTimeSettings", this.getInstallTimeSettings());
         writer.writeEnumValue("notifications", this.getNotifications());
         writer.writeObjectValue("restartSettings", this.getRestartSettings());
+    }
+    /**
+     * Sets the autoUpdateSettings property value. The auto-update settings to apply for this app assignment.
+     * @param value Value to set for the autoUpdateSettings property.
+     */
+    public void setAutoUpdateSettings(@jakarta.annotation.Nullable final Win32LobAppAutoUpdateSettings value) {
+        this.backingStore.set("autoUpdateSettings", value);
     }
     /**
      * Sets the deliveryOptimizationPriority property value. Contains value for delivery optimization priority.

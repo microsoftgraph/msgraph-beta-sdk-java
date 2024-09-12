@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Contains properties for the installation summary of a mobile app. This will be deprecated starting May, 2023 (Intune Release 2305).
+ * Contains properties for the installation summary of a mobile app. This will be deprecated in May, 2023
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppInstallSummary extends Entity implements Parsable {

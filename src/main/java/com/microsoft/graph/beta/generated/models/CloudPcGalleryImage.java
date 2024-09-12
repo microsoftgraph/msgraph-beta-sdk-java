@@ -62,6 +62,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         deserializerMap.put("offer", (n) -> { this.setOffer(n.getStringValue()); });
         deserializerMap.put("offerDisplayName", (n) -> { this.setOfferDisplayName(n.getStringValue()); });
         deserializerMap.put("offerName", (n) -> { this.setOfferName(n.getStringValue()); });
+        deserializerMap.put("osVersionNumber", (n) -> { this.setOsVersionNumber(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
         deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
         deserializerMap.put("recommendedSku", (n) -> { this.setRecommendedSku(n.getStringValue()); });
@@ -96,6 +97,14 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getOfferName() {
         return this.backingStore.get("offerName");
+    }
+    /**
+     * Gets the osVersionNumber property value. The osVersionNumber property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOsVersionNumber() {
+        return this.backingStore.get("osVersionNumber");
     }
     /**
      * Gets the publisher property value. The publisher name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The publisher property is deprecated and will stop returning data on January 31, 2024. Going forward, use the publisherName property.
@@ -182,6 +191,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         writer.writeStringValue("offer", this.getOffer());
         writer.writeStringValue("offerDisplayName", this.getOfferDisplayName());
         writer.writeStringValue("offerName", this.getOfferName());
+        writer.writeStringValue("osVersionNumber", this.getOsVersionNumber());
         writer.writeStringValue("publisher", this.getPublisher());
         writer.writeStringValue("publisherName", this.getPublisherName());
         writer.writeStringValue("recommendedSku", this.getRecommendedSku());
@@ -233,6 +243,13 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      */
     public void setOfferName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("offerName", value);
+    }
+    /**
+     * Sets the osVersionNumber property value. The osVersionNumber property
+     * @param value Value to set for the osVersionNumber property.
+     */
+    public void setOsVersionNumber(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("osVersionNumber", value);
     }
     /**
      * Sets the publisher property value. The publisher name of this gallery image that is passed to ARM to retrieve the image resource. Read-only. The publisher property is deprecated and will stop returning data on January 31, 2024. Going forward, use the publisherName property.

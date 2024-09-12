@@ -11,7 +11,9 @@ public enum MobileAppRelationshipType implements ValuedEnum {
     /** Indicates that the target of a relationship is the child in the relationship. */
     Child("child"),
     /** Indicates that the target of a relationship is the parent in the relationship. */
-    Parent("parent");
+    Parent("parent"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     MobileAppRelationshipType(final String value) {
         this.value = value;
@@ -24,6 +26,7 @@ public enum MobileAppRelationshipType implements ValuedEnum {
         switch(searchValue) {
             case "child": return Child;
             case "parent": return Parent;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

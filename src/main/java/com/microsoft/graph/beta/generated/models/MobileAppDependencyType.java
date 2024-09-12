@@ -11,7 +11,9 @@ public enum MobileAppDependencyType implements ValuedEnum {
     /** Indicates that the child app should be detected before installing the parent app. */
     Detect("detect"),
     /** Indicates that the child app should be installed before installing the parent app. */
-    AutoInstall("autoInstall");
+    AutoInstall("autoInstall"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     MobileAppDependencyType(final String value) {
         this.value = value;
@@ -24,6 +26,7 @@ public enum MobileAppDependencyType implements ValuedEnum {
         switch(searchValue) {
             case "detect": return Detect;
             case "autoInstall": return AutoInstall;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

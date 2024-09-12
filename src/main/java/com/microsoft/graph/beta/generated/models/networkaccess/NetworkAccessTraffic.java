@@ -1,5 +1,7 @@
 package com.microsoft.graph.beta.models.networkaccess;
 
+import com.microsoft.graph.beta.models.Device;
+import com.microsoft.graph.beta.models.User;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -145,6 +147,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("destinationWebCategory");
     }
     /**
+     * Gets the device property value. The device property
+     * @return a {@link Device}
+     */
+    @jakarta.annotation.Nullable
+    public Device getDevice() {
+        return this.backingStore.get("device");
+    }
+    /**
      * Gets the deviceCategory property value. Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @return a {@link DeviceCategory}
      */
@@ -182,7 +192,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(40);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(42);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
         deserializerMap.put("applicationSnapshot", (n) -> { this.setApplicationSnapshot(n.getObjectValue(ApplicationSnapshot::createFromDiscriminatorValue)); });
@@ -194,6 +204,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("destinationPort", (n) -> { this.setDestinationPort(n.getIntegerValue()); });
         deserializerMap.put("destinationUrl", (n) -> { this.setDestinationUrl(n.getStringValue()); });
         deserializerMap.put("destinationWebCategory", (n) -> { this.setDestinationWebCategory(n.getObjectValue(WebCategory::createFromDiscriminatorValue)); });
+        deserializerMap.put("device", (n) -> { this.setDevice(n.getObjectValue(Device::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceCategory", (n) -> { this.setDeviceCategory(n.getEnumValue(DeviceCategory::forValue)); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceOperatingSystem", (n) -> { this.setDeviceOperatingSystem(n.getStringValue()); });
@@ -220,6 +231,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("trafficType", (n) -> { this.setTrafficType(n.getEnumValue(TrafficType::forValue)); });
         deserializerMap.put("transactionId", (n) -> { this.setTransactionId(n.getStringValue()); });
         deserializerMap.put("transportProtocol", (n) -> { this.setTransportProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
+        deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(User::createFromDiscriminatorValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("vendorNames", (n) -> { this.setVendorNames(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -402,6 +414,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("transportProtocol");
     }
     /**
+     * Gets the user property value. The user property
+     * @return a {@link User}
+     */
+    @jakarta.annotation.Nullable
+    public User getUser() {
+        return this.backingStore.get("user");
+    }
+    /**
      * Gets the userId property value. Represents a unique identifier assigned to a user. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
@@ -442,6 +462,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeIntegerValue("destinationPort", this.getDestinationPort());
         writer.writeStringValue("destinationUrl", this.getDestinationUrl());
         writer.writeObjectValue("destinationWebCategory", this.getDestinationWebCategory());
+        writer.writeObjectValue("device", this.getDevice());
         writer.writeEnumValue("deviceCategory", this.getDeviceCategory());
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceOperatingSystem", this.getDeviceOperatingSystem());
@@ -468,6 +489,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeEnumValue("trafficType", this.getTrafficType());
         writer.writeStringValue("transactionId", this.getTransactionId());
         writer.writeEnumValue("transportProtocol", this.getTransportProtocol());
+        writer.writeObjectValue("user", this.getUser());
         writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeCollectionOfPrimitiveValues("vendorNames", this.getVendorNames());
@@ -564,6 +586,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setDestinationWebCategory(@jakarta.annotation.Nullable final WebCategory value) {
         this.backingStore.set("destinationWebCategory", value);
+    }
+    /**
+     * Sets the device property value. The device property
+     * @param value Value to set for the device property.
+     */
+    public void setDevice(@jakarta.annotation.Nullable final Device value) {
+        this.backingStore.set("device", value);
     }
     /**
      * Sets the deviceCategory property value. Represents the category classification of a device within a network infrastructure. The possible values are: client, branch, unknownFutureValue. Supports $filter (eq) and $orderby.
@@ -746,6 +775,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setTransportProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
         this.backingStore.set("transportProtocol", value);
+    }
+    /**
+     * Sets the user property value. The user property
+     * @param value Value to set for the user property.
+     */
+    public void setUser(@jakarta.annotation.Nullable final User value) {
+        this.backingStore.set("user", value);
     }
     /**
      * Sets the userId property value. Represents a unique identifier assigned to a user. Supports $filter (eq) and $orderby.
