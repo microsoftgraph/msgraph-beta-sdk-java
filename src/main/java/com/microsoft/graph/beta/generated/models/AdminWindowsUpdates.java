@@ -32,7 +32,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         return new AdminWindowsUpdates();
     }
     /**
-     * Gets the catalog property value. Catalog of content that can be approved for deployment by the deployment service. Read-only.
+     * Gets the catalog property value. Catalog of content that can be approved for deployment by Windows Autopatch. Read-only.
      * @return a {@link Catalog}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         return this.backingStore.get("deploymentAudiences");
     }
     /**
-     * Gets the deployments property value. Deployments created using the deployment service.
+     * Gets the deployments property value. Deployments created using Windows Autopatch.
      * @return a {@link java.util.List<Deployment>}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         return this.backingStore.get("resourceConnections");
     }
     /**
-     * Gets the updatableAssets property value. Assets registered with the deployment service that can receive updates.
+     * Gets the updatableAssets property value. Assets registered with Windows Autopatch that can receive updates.
      * @return a {@link java.util.List<UpdatableAsset>}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("updatePolicies", this.getUpdatePolicies());
     }
     /**
-     * Sets the catalog property value. Catalog of content that can be approved for deployment by the deployment service. Read-only.
+     * Sets the catalog property value. Catalog of content that can be approved for deployment by Windows Autopatch. Read-only.
      * @param value Value to set for the catalog property.
      */
     public void setCatalog(@jakarta.annotation.Nullable final Catalog value) {
@@ -133,7 +133,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         this.backingStore.set("deploymentAudiences", value);
     }
     /**
-     * Sets the deployments property value. Deployments created using the deployment service.
+     * Sets the deployments property value. Deployments created using Windows Autopatch.
      * @param value Value to set for the deployments property.
      */
     public void setDeployments(@jakarta.annotation.Nullable final java.util.List<Deployment> value) {
@@ -154,7 +154,7 @@ public class AdminWindowsUpdates extends Entity implements Parsable {
         this.backingStore.set("resourceConnections", value);
     }
     /**
-     * Sets the updatableAssets property value. Assets registered with the deployment service that can receive updates.
+     * Sets the updatableAssets property value. Assets registered with Windows Autopatch that can receive updates.
      * @param value Value to set for the updatableAssets property.
      */
     public void setUpdatableAssets(@jakarta.annotation.Nullable final java.util.List<UpdatableAsset> value) {

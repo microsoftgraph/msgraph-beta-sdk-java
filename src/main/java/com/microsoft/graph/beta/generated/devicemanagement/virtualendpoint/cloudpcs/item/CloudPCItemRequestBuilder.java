@@ -16,6 +16,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.r
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievecloudpcremoteactionresults.RetrieveCloudPCRemoteActionResultsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievereviewstatus.RetrieveReviewStatusRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievesnapshots.RetrieveSnapshotsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrypartneragentinstallation.RetryPartnerAgentInstallationRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.setreviewstatus.SetReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.start.StartRequestBuilder;
@@ -168,6 +169,14 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RetrieveReviewStatusRequestBuilder retrieveReviewStatus() {
         return new RetrieveReviewStatusRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveSnapshots method.
+     * @return a {@link RetrieveSnapshotsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveSnapshotsRequestBuilder retrieveSnapshots() {
+        return new RetrieveSnapshotsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retryPartnerAgentInstallation method.

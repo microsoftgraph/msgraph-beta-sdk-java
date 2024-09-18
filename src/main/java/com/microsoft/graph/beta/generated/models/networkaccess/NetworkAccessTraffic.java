@@ -192,7 +192,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(42);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(43);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
         deserializerMap.put("applicationSnapshot", (n) -> { this.setApplicationSnapshot(n.getObjectValue(ApplicationSnapshot::createFromDiscriminatorValue)); });
@@ -221,6 +221,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("policyRuleName", (n) -> { this.setPolicyRuleName(n.getStringValue()); });
         deserializerMap.put("privateAccessDetails", (n) -> { this.setPrivateAccessDetails(n.getObjectValue(PrivateAccessDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("receivedBytes", (n) -> { this.setReceivedBytes(n.getLongValue()); });
+        deserializerMap.put("remoteNetworkId", (n) -> { this.setRemoteNetworkId(n.getStringValue()); });
         deserializerMap.put("resourceTenantId", (n) -> { this.setResourceTenantId(n.getStringValue()); });
         deserializerMap.put("sentBytes", (n) -> { this.setSentBytes(n.getLongValue()); });
         deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
@@ -332,6 +333,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nullable
     public Long getReceivedBytes() {
         return this.backingStore.get("receivedBytes");
+    }
+    /**
+     * Gets the remoteNetworkId property value. The remoteNetworkId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRemoteNetworkId() {
+        return this.backingStore.get("remoteNetworkId");
     }
     /**
      * Gets the resourceTenantId property value. The resourceTenantId property
@@ -479,6 +488,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeStringValue("policyRuleName", this.getPolicyRuleName());
         writer.writeObjectValue("privateAccessDetails", this.getPrivateAccessDetails());
         writer.writeLongValue("receivedBytes", this.getReceivedBytes());
+        writer.writeStringValue("remoteNetworkId", this.getRemoteNetworkId());
         writer.writeStringValue("resourceTenantId", this.getResourceTenantId());
         writer.writeLongValue("sentBytes", this.getSentBytes());
         writer.writeStringValue("sessionId", this.getSessionId());
@@ -705,6 +715,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setReceivedBytes(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("receivedBytes", value);
+    }
+    /**
+     * Sets the remoteNetworkId property value. The remoteNetworkId property
+     * @param value Value to set for the remoteNetworkId property.
+     */
+    public void setRemoteNetworkId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("remoteNetworkId", value);
     }
     /**
      * Sets the resourceTenantId property value. The resourceTenantId property

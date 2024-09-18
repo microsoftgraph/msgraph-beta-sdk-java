@@ -64,6 +64,14 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("cloudPC");
     }
     /**
+     * Gets the defender property value. The defender property
+     * @return a {@link RbacApplicationMultiple}
+     */
+    @jakarta.annotation.Nullable
+    public RbacApplicationMultiple getDefender() {
+        return this.backingStore.get("defender");
+    }
+    /**
      * Gets the deviceManagement property value. The RbacApplication for Device Management
      * @return a {@link RbacApplicationMultiple}
      */
@@ -109,8 +117,9 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("cloudPC", (n) -> { this.setCloudPC(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
+        deserializerMap.put("defender", (n) -> { this.setDefender(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceManagement", (n) -> { this.setDeviceManagement(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
         deserializerMap.put("directory", (n) -> { this.setDirectory(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
         deserializerMap.put("enterpriseApps", (n) -> { this.setEnterpriseApps(n.getCollectionOfObjectValues(RbacApplication::createFromDiscriminatorValue)); });
@@ -134,6 +143,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("cloudPC", this.getCloudPC());
+        writer.writeObjectValue("defender", this.getDefender());
         writer.writeObjectValue("deviceManagement", this.getDeviceManagement());
         writer.writeObjectValue("directory", this.getDirectory());
         writer.writeCollectionOfObjectValues("enterpriseApps", this.getEnterpriseApps());
@@ -163,6 +173,13 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void setCloudPC(@jakarta.annotation.Nullable final RbacApplicationMultiple value) {
         this.backingStore.set("cloudPC", value);
+    }
+    /**
+     * Sets the defender property value. The defender property
+     * @param value Value to set for the defender property.
+     */
+    public void setDefender(@jakarta.annotation.Nullable final RbacApplicationMultiple value) {
+        this.backingStore.set("defender", value);
     }
     /**
      * Sets the deviceManagement property value. The RbacApplication for Device Management

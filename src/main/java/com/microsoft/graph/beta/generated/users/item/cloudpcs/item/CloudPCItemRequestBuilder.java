@@ -18,6 +18,7 @@ import com.microsoft.graph.beta.users.item.cloudpcs.item.resize.ResizeRequestBui
 import com.microsoft.graph.beta.users.item.cloudpcs.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievecloudpcremoteactionresults.RetrieveCloudPCRemoteActionResultsRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievereviewstatus.RetrieveReviewStatusRequestBuilder;
+import com.microsoft.graph.beta.users.item.cloudpcs.item.retrievesnapshots.RetrieveSnapshotsRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.retrypartneragentinstallation.RetryPartnerAgentInstallationRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.setreviewstatus.SetReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.start.StartRequestBuilder;
@@ -216,6 +217,17 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RetrieveReviewStatusRequestBuilder retrieveReviewStatus() {
         return new RetrieveReviewStatusRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveSnapshots method.
+     * @return a {@link RetrieveSnapshotsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public RetrieveSnapshotsRequestBuilder retrieveSnapshots() {
+        return new RetrieveSnapshotsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retryPartnerAgentInstallation method.

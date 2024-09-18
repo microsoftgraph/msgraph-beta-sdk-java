@@ -64,7 +64,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
+     * Catalog of content that can be approved for deployment by Windows Autopatch. Read-only.
      * @return a {@link Catalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
+     * Catalog of content that can be approved for deployment by Windows Autopatch. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Catalog}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
+     * Catalog of content that can be approved for deployment by Windows Autopatch. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
+     * Catalog of content that can be approved for deployment by Windows Autopatch. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class CatalogRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
+     * Catalog of content that can be approved for deployment by Windows Autopatch. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

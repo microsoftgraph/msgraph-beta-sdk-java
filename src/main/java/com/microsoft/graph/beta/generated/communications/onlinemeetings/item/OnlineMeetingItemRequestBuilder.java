@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.communications.onlinemeetings.item;
 
+import com.microsoft.graph.beta.communications.onlinemeetings.item.aiinsights.AiInsightsRequestBuilder;
 import com.microsoft.graph.beta.communications.onlinemeetings.item.alternativerecording.AlternativeRecordingRequestBuilder;
 import com.microsoft.graph.beta.communications.onlinemeetings.item.attendancereports.AttendanceReportsRequestBuilder;
 import com.microsoft.graph.beta.communications.onlinemeetings.item.attendeereport.AttendeeReportRequestBuilder;
@@ -32,6 +33,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the aiInsights property of the microsoft.graph.onlineMeeting entity.
+     * @return a {@link AiInsightsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AiInsightsRequestBuilder aiInsights() {
+        return new AiInsightsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the media for the cloudCommunications entity.
      * @return a {@link AlternativeRecordingRequestBuilder}

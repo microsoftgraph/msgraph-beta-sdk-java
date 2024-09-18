@@ -19,6 +19,7 @@ import com.microsoft.graph.beta.groups.item.sites.item.lists.ListsRequestBuilder
 import com.microsoft.graph.beta.groups.item.sites.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.pages.PagesRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.pagetemplates.PageTemplatesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.sites.SitesRequestBuilder;
@@ -170,6 +171,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PagesRequestBuilder pages() {
         return new PagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the pageTemplates property of the microsoft.graph.site entity.
+     * @return a {@link PageTemplatesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PageTemplatesRequestBuilder pageTemplates() {
+        return new PageTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.site entity.

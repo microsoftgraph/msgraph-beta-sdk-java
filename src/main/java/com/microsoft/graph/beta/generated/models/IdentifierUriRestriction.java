@@ -57,7 +57,7 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
-     * Gets the excludeAppsReceivingV2Tokens property value. The excludeAppsReceivingV2Tokens property
+     * Gets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn't enforced for applications that are configured to receive V2 tokens in Entra ID; else, the restriction isn't enforced for those applications.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("excludeAppsReceivingV2Tokens");
     }
     /**
-     * Gets the excludeSaml property value. The excludeSaml property
+     * Gets the excludeSaml property value. If true, the restriction isn't enforced for SAML applications in Microsoft Entra ID; else, the restriction is enforced for those applications.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the restrictForAppsCreatedAfterDateTime property value. The restrictForAppsCreatedAfterDateTime property
+     * Gets the restrictForAppsCreatedAfterDateTime property value. Specifies the date from which the policy restriction applies to newly created applications. For existing applications, the enforcement date can be retroactively applied.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -139,14 +139,14 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the excludeAppsReceivingV2Tokens property value. The excludeAppsReceivingV2Tokens property
+     * Sets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn't enforced for applications that are configured to receive V2 tokens in Entra ID; else, the restriction isn't enforced for those applications.
      * @param value Value to set for the excludeAppsReceivingV2Tokens property.
      */
     public void setExcludeAppsReceivingV2Tokens(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("excludeAppsReceivingV2Tokens", value);
     }
     /**
-     * Sets the excludeSaml property value. The excludeSaml property
+     * Sets the excludeSaml property value. If true, the restriction isn't enforced for SAML applications in Microsoft Entra ID; else, the restriction is enforced for those applications.
      * @param value Value to set for the excludeSaml property.
      */
     public void setExcludeSaml(@jakarta.annotation.Nullable final Boolean value) {
@@ -160,7 +160,7 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the restrictForAppsCreatedAfterDateTime property value. The restrictForAppsCreatedAfterDateTime property
+     * Sets the restrictForAppsCreatedAfterDateTime property value. Specifies the date from which the policy restriction applies to newly created applications. For existing applications, the enforcement date can be retroactively applied.
      * @param value Value to set for the restrictForAppsCreatedAfterDateTime property.
      */
     public void setRestrictForAppsCreatedAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

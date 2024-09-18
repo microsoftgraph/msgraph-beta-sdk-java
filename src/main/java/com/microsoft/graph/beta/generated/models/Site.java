@@ -130,6 +130,7 @@ public class Site extends BaseItem implements Parsable {
         deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(BaseSitePage::createFromDiscriminatorValue)); });
+        deserializerMap.put("pageTemplates", (n) -> { this.setPageTemplates(n.getCollectionOfObjectValues(PageTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("recycleBin", (n) -> { this.setRecycleBin(n.getObjectValue(RecycleBin::createFromDiscriminatorValue)); });
         deserializerMap.put("root", (n) -> { this.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
@@ -195,6 +196,14 @@ public class Site extends BaseItem implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<BaseSitePage> getPages() {
         return this.backingStore.get("pages");
+    }
+    /**
+     * Gets the pageTemplates property value. The collection of page templates on this site.
+     * @return a {@link java.util.List<PageTemplate>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PageTemplate> getPageTemplates() {
+        return this.backingStore.get("pageTemplates");
     }
     /**
      * Gets the permissions property value. The permissions associated with the site. Nullable.
@@ -284,6 +293,7 @@ public class Site extends BaseItem implements Parsable {
         writer.writeObjectValue("onenote", this.getOnenote());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeCollectionOfObjectValues("pages", this.getPages());
+        writer.writeCollectionOfObjectValues("pageTemplates", this.getPageTemplates());
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
         writer.writeObjectValue("recycleBin", this.getRecycleBin());
         writer.writeObjectValue("root", this.getRoot());
@@ -411,6 +421,13 @@ public class Site extends BaseItem implements Parsable {
      */
     public void setPages(@jakarta.annotation.Nullable final java.util.List<BaseSitePage> value) {
         this.backingStore.set("pages", value);
+    }
+    /**
+     * Sets the pageTemplates property value. The collection of page templates on this site.
+     * @param value Value to set for the pageTemplates property.
+     */
+    public void setPageTemplates(@jakarta.annotation.Nullable final java.util.List<PageTemplate> value) {
+        this.backingStore.set("pageTemplates", value);
     }
     /**
      * Sets the permissions property value. The permissions associated with the site. Nullable.

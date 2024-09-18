@@ -18,6 +18,7 @@ import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.lists.L
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.operations.OperationsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.pages.PagesRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.pagetemplates.PageTemplatesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.sites.SitesRequestBuilder;
@@ -168,6 +169,14 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PagesRequestBuilder pages() {
         return new PagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the pageTemplates property of the microsoft.graph.site entity.
+     * @return a {@link PageTemplatesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PageTemplatesRequestBuilder pageTemplates() {
+        return new PageTemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permissions property of the microsoft.graph.site entity.

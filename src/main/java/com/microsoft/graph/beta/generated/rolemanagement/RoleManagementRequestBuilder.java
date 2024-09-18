@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.rolemanagement;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.RoleManagement;
 import com.microsoft.graph.beta.rolemanagement.cloudpc.CloudPCRequestBuilder;
+import com.microsoft.graph.beta.rolemanagement.defender.DefenderRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.devicemanagement.DeviceManagementRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.directory.DirectoryRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.enterpriseapps.EnterpriseAppsRequestBuilder;
@@ -33,6 +34,14 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CloudPCRequestBuilder cloudPC() {
         return new CloudPCRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the defender property of the microsoft.graph.roleManagement entity.
+     * @return a {@link DefenderRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DefenderRequestBuilder defender() {
+        return new DefenderRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deviceManagement property of the microsoft.graph.roleManagement entity.

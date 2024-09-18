@@ -67,7 +67,7 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
         return deserializerMap;
     }
     /**
-     * Gets the isOcrEnabled property value. Indicates whether OCR is enabled for a given container. If OCR is enabled on a container, OCR extraction is performed for recently added or updated documents (of supported document types) and the extracted fields are added to the metadata of the document. This enables end-user search and search-driven solutions.
+     * Gets the isOcrEnabled property value. Whether optical character recognition (OCR) is enabled for a given container. When OCR is enabled on a container, OCR extraction is performed for new and updated documents of supported types. The extracted fields are added to the metadata of the document, enabling end-user search and search-driven solutions. Changing this property from true to false doesn't remove OCR metadata that was created while it was true. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the isOcrEnabled property value. Indicates whether OCR is enabled for a given container. If OCR is enabled on a container, OCR extraction is performed for recently added or updated documents (of supported document types) and the extracted fields are added to the metadata of the document. This enables end-user search and search-driven solutions.
+     * Sets the isOcrEnabled property value. Whether optical character recognition (OCR) is enabled for a given container. When OCR is enabled on a container, OCR extraction is performed for new and updated documents of supported types. The extracted fields are added to the metadata of the document, enabling end-user search and search-driven solutions. Changing this property from true to false doesn't remove OCR metadata that was created while it was true. Default value is false.
      * @param value Value to set for the isOcrEnabled property.
      */
     public void setIsOcrEnabled(@jakarta.annotation.Nullable final Boolean value) {

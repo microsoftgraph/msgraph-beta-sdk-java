@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.financials.companies.item.salesinvoices.item.salesinvoicelines.item;
 
 import com.microsoft.graph.beta.financials.companies.item.salesinvoices.item.salesinvoicelines.item.account.AccountRequestBuilder;
-import com.microsoft.graph.beta.financials.companies.item.salesinvoices.item.salesinvoicelines.item.item.ItemRequestBuilder;
+import com.microsoft.graph.beta.financials.companies.item.salesinvoices.item.salesinvoicelines.item.item_escaped.ItemEscapedRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SalesInvoiceLine;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -32,11 +32,11 @@ public class SalesInvoiceLineItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the item property of the microsoft.graph.salesInvoiceLine entity.
-     * @return a {@link ItemRequestBuilder}
+     * @return a {@link ItemEscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public ItemRequestBuilder item() {
-        return new ItemRequestBuilder(pathParameters, requestAdapter);
+    public ItemEscapedRequestBuilder item() {
+        return new ItemEscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SalesInvoiceLineItemRequestBuilder} and sets the default values.
