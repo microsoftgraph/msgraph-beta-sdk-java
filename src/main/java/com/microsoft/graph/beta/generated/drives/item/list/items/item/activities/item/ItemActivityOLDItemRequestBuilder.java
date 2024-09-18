@@ -1,7 +1,5 @@
 package com.microsoft.graph.beta.drives.item.list.items.item.activities.item;
 
-import com.microsoft.graph.beta.drives.item.list.items.item.activities.item.driveitem.DriveItemRequestBuilder;
-import com.microsoft.graph.beta.drives.item.list.items.item.activities.item.listitem.ListItemRequestBuilder;
 import com.microsoft.graph.beta.models.ItemActivityOLD;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -24,19 +22,19 @@ import java.util.Objects;
 public class ItemActivityOLDItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the driveItem property of the microsoft.graph.itemActivityOLD entity.
-     * @return a {@link DriveItemRequestBuilder}
+     * @return a {@link DriveItem_EscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public DriveItemRequestBuilder driveItem() {
-        return new DriveItemRequestBuilder(pathParameters, requestAdapter);
+    public DriveItem_EscapedRequestBuilder driveItem() {
+        return new DriveItem_EscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the listItem property of the microsoft.graph.itemActivityOLD entity.
-     * @return a {@link ListItemRequestBuilder}
+     * @return a {@link ListItem_EscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public ListItemRequestBuilder listItem() {
-        return new ListItemRequestBuilder(pathParameters, requestAdapter);
+    public ListItem_EscapedRequestBuilder listItem() {
+        return new ListItem_EscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ItemActivityOLDItemRequestBuilder} and sets the default values.

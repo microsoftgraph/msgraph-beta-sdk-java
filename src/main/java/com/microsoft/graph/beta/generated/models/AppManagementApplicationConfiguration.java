@@ -36,7 +36,7 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
         return deserializerMap;
     }
     /**
-     * Gets the identifierUris property value. The identifierUris property
+     * Gets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application
      * @return a {@link IdentifierUriConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
         writer.writeObjectValue("identifierUris", this.getIdentifierUris());
     }
     /**
-     * Sets the identifierUris property value. The identifierUris property
+     * Sets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application
      * @param value Value to set for the identifierUris property.
      */
     public void setIdentifierUris(@jakarta.annotation.Nullable final IdentifierUriConfiguration value) {

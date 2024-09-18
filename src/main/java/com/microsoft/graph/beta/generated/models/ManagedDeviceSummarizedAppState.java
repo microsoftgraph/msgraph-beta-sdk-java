@@ -59,7 +59,7 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Ba
         return this.backingStore;
     }
     /**
-     * Gets the deviceId property value. DeviceId of device represented by this object
+     * Gets the deviceId property value. The unique identifier (DeviceId) associated with the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Ba
         this.backingStore = value;
     }
     /**
-     * Sets the deviceId property value. DeviceId of device represented by this object
+     * Sets the deviceId property value. The unique identifier (DeviceId) associated with the device.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {

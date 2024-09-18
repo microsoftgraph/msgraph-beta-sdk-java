@@ -26,7 +26,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
         return new ChatMessageMentionedIdentitySet();
     }
     /**
-     * Gets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
+     * Gets the conversation property value. If present, represents a conversation (for example, team, channel, or chat) @mentioned in a message.
      * @return a {@link TeamworkConversationIdentity}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class ChatMessageMentionedIdentitySet extends IdentitySet implements Pars
         writer.writeObjectValue("tag", this.getTag());
     }
     /**
-     * Sets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
+     * Sets the conversation property value. If present, represents a conversation (for example, team, channel, or chat) @mentioned in a message.
      * @param value Value to set for the conversation property.
      */
     public void setConversation(@jakarta.annotation.Nullable final TeamworkConversationIdentity value) {

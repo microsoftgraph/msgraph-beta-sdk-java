@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.financials.companies.item.salesquotelines.item;
 
 import com.microsoft.graph.beta.financials.companies.item.salesquotelines.item.account.AccountRequestBuilder;
-import com.microsoft.graph.beta.financials.companies.item.salesquotelines.item.item.ItemRequestBuilder;
+import com.microsoft.graph.beta.financials.companies.item.salesquotelines.item.item_escaped.ItemEscapedRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SalesQuoteLine;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -32,11 +32,11 @@ public class SalesQuoteLineItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the item property of the microsoft.graph.salesQuoteLine entity.
-     * @return a {@link ItemRequestBuilder}
+     * @return a {@link ItemEscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public ItemRequestBuilder item() {
-        return new ItemRequestBuilder(pathParameters, requestAdapter);
+    public ItemEscapedRequestBuilder item() {
+        return new ItemEscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SalesQuoteLineItemRequestBuilder} and sets the default values.

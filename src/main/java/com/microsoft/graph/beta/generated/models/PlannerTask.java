@@ -198,6 +198,8 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isOnMyDay", (n) -> { this.setIsOnMyDay(n.getBooleanValue()); });
         deserializerMap.put("isOnMyDayLastModifiedDate", (n) -> { this.setIsOnMyDayLastModifiedDate(n.getLocalDateValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
         deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getIntegerValue()); });
         deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
@@ -242,6 +244,22 @@ public class PlannerTask extends PlannerDelta implements Parsable {
     @jakarta.annotation.Nullable
     public LocalDate getIsOnMyDayLastModifiedDate() {
         return this.backingStore.get("isOnMyDayLastModifiedDate");
+    }
+    /**
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getLastModifiedBy() {
+        return this.backingStore.get("lastModifiedBy");
+    }
+    /**
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in plannern.
@@ -359,6 +377,8 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isOnMyDay", this.getIsOnMyDay());
         writer.writeLocalDateValue("isOnMyDayLastModifiedDate", this.getIsOnMyDayLastModifiedDate());
+        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
+        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("orderHint", this.getOrderHint());
         writer.writeIntegerValue("percentComplete", this.getPercentComplete());
         writer.writeStringValue("planId", this.getPlanId());
@@ -517,6 +537,20 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     public void setIsOnMyDayLastModifiedDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("isOnMyDayLastModifiedDate", value);
+    }
+    /**
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * @param value Value to set for the lastModifiedBy property.
+     */
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("lastModifiedBy", value);
+    }
+    /**
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * @param value Value to set for the lastModifiedDateTime property.
+     */
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in plannern.

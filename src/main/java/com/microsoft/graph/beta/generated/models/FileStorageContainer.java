@@ -160,7 +160,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("owners");
     }
     /**
-     * Gets the ownershipType property value. Ownership type of the fileStorageContainer.The possible values are: tenantOwned. Read-only.
+     * Gets the ownershipType property value. Ownership type of the fileStorageContainer. The possible values are: tenantOwned. Read-only.
      * @return a {@link FileStorageContainerOwnershipType}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("ownershipType");
     }
     /**
-     * Gets the permissions property value. The set of permissions for users in the fileStorageContainer. The permission for each user is set by the roles property. The possible values are 'reader', 'writer', 'manager', and 'owner'. Read-write.
+     * Gets the permissions property value. The set of permissions for users in the fileStorageContainer. The permission for each user is set by the roles property. The possible values are reader, writer, manager, and owner. Read-write.
      * @return a {@link java.util.List<Permission>}
      */
     @jakarta.annotation.Nullable
@@ -335,14 +335,14 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("owners", value);
     }
     /**
-     * Sets the ownershipType property value. Ownership type of the fileStorageContainer.The possible values are: tenantOwned. Read-only.
+     * Sets the ownershipType property value. Ownership type of the fileStorageContainer. The possible values are: tenantOwned. Read-only.
      * @param value Value to set for the ownershipType property.
      */
     public void setOwnershipType(@jakarta.annotation.Nullable final FileStorageContainerOwnershipType value) {
         this.backingStore.set("ownershipType", value);
     }
     /**
-     * Sets the permissions property value. The set of permissions for users in the fileStorageContainer. The permission for each user is set by the roles property. The possible values are 'reader', 'writer', 'manager', and 'owner'. Read-write.
+     * Sets the permissions property value. The set of permissions for users in the fileStorageContainer. The permission for each user is set by the roles property. The possible values are reader, writer, manager, and owner. Read-write.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {

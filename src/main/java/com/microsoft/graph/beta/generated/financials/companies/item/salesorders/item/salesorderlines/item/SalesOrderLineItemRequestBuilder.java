@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.financials.companies.item.salesorders.item.salesorderlines.item;
 
 import com.microsoft.graph.beta.financials.companies.item.salesorders.item.salesorderlines.item.account.AccountRequestBuilder;
-import com.microsoft.graph.beta.financials.companies.item.salesorders.item.salesorderlines.item.item.ItemRequestBuilder;
+import com.microsoft.graph.beta.financials.companies.item.salesorders.item.salesorderlines.item.item_escaped.ItemEscapedRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SalesOrderLine;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -32,11 +32,11 @@ public class SalesOrderLineItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the item property of the microsoft.graph.salesOrderLine entity.
-     * @return a {@link ItemRequestBuilder}
+     * @return a {@link ItemEscapedRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public ItemRequestBuilder item() {
-        return new ItemRequestBuilder(pathParameters, requestAdapter);
+    public ItemEscapedRequestBuilder item() {
+        return new ItemEscapedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SalesOrderLineItemRequestBuilder} and sets the default values.

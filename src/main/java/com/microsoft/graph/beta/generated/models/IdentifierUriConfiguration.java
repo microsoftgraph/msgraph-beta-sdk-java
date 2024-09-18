@@ -67,7 +67,7 @@ public class IdentifierUriConfiguration implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the nonDefaultUriAddition property value. The nonDefaultUriAddition property
+     * Gets the nonDefaultUriAddition property value. Block new identifier URIs for applications, unless they are the 'default' URI of the format api://{appId}.
      * @return a {@link IdentifierUriRestriction}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class IdentifierUriConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the nonDefaultUriAddition property value. The nonDefaultUriAddition property
+     * Sets the nonDefaultUriAddition property value. Block new identifier URIs for applications, unless they are the 'default' URI of the format api://{appId}.
      * @param value Value to set for the nonDefaultUriAddition property.
      */
     public void setNonDefaultUriAddition(@jakarta.annotation.Nullable final IdentifierUriRestriction value) {

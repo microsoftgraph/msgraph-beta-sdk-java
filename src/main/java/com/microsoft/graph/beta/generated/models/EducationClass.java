@@ -121,7 +121,7 @@ public class EducationClass extends Entity implements Parsable {
         return this.backingStore.get("externalSource");
     }
     /**
-     * Gets the externalSourceDetail property value. The name of the external source this resources was generated from.
+     * Gets the externalSourceDetail property value. The name of the external source from which this resource was generated.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -336,7 +336,7 @@ public class EducationClass extends Entity implements Parsable {
         this.backingStore.set("externalSource", value);
     }
     /**
-     * Sets the externalSourceDetail property value. The name of the external source this resources was generated from.
+     * Sets the externalSourceDetail property value. The name of the external source from which this resource was generated.
      * @param value Value to set for the externalSourceDetail property.
      */
     public void setExternalSourceDetail(@jakarta.annotation.Nullable final String value) {

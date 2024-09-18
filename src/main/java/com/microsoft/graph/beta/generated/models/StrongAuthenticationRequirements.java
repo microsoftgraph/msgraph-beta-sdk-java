@@ -75,7 +75,7 @@ public class StrongAuthenticationRequirements implements AdditionalDataHolder, B
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the perUserMfaState property value. Sets the per-user MFA state for the user. The possible values are: disabled, enforced, enabled, unknownFutureValue.
+     * Gets the perUserMfaState property value. Sets the per-user MFA state for the user. The possible values are: disabled, enforced, enabled, unknownFutureValue. When you update a user's MFA state to enabled and the user has already registered an MFA method, their state changes automatically to enforced.
      * @return a {@link PerUserMfaState}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class StrongAuthenticationRequirements implements AdditionalDataHolder, B
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the perUserMfaState property value. Sets the per-user MFA state for the user. The possible values are: disabled, enforced, enabled, unknownFutureValue.
+     * Sets the perUserMfaState property value. Sets the per-user MFA state for the user. The possible values are: disabled, enforced, enabled, unknownFutureValue. When you update a user's MFA state to enabled and the user has already registered an MFA method, their state changes automatically to enforced.
      * @param value Value to set for the perUserMfaState property.
      */
     public void setPerUserMfaState(@jakarta.annotation.Nullable final PerUserMfaState value) {

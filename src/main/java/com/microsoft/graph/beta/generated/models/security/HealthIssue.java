@@ -35,7 +35,7 @@ public class HealthIssue extends Entity implements Parsable {
         return this.backingStore.get("additionalInformation");
     }
     /**
-     * Gets the createdDateTime property value. The date and time of when the health issue was generated.
+     * Gets the createdDateTime property value. The date and time when the health issue was generated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class HealthIssue extends Entity implements Parsable {
         return this.backingStore.get("issueTypeId");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time of when the health issue was last updated.
+     * Gets the lastModifiedDateTime property value. The date and time when the health issue was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class HealthIssue extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the recommendations property value. This field contains a list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include how to investigate the issue further. Not limited to prewritten responses.
+     * Gets the recommendations property value. A list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include instructions for further investigation and aren't limited to prewritten responses.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class HealthIssue extends Entity implements Parsable {
         return this.backingStore.get("recommendations");
     }
     /**
-     * Gets the recommendedActionCommands property value. Contains a list of commands from the product's PowerShell module that can be used to resolve the issue, if available. If there aren't any commands that can be used to solve the issue, this field is empty. The commands, if present, provide a quick and efficient way to address the issue. The commands run in order for the single recommended fix.
+     * Gets the recommendedActionCommands property value. A list of commands from the PowerShell module for the product that can be used to resolve the issue, if available. If no commands can be used to solve the issue, this property is empty. The commands, if present, provide a quick and efficient way to address the issue. These commands run in sequence for the single recommended fix.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class HealthIssue extends Entity implements Parsable {
         return this.backingStore.get("recommendedActionCommands");
     }
     /**
-     * Gets the sensorDNSNames property value. A list of the dns names of the sensors the health issue is related to.
+     * Gets the sensorDNSNames property value. A list of the DNS names of the sensors the health issue is related to.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class HealthIssue extends Entity implements Parsable {
         this.backingStore.set("additionalInformation", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time of when the health issue was generated.
+     * Sets the createdDateTime property value. The date and time when the health issue was generated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -223,28 +223,28 @@ public class HealthIssue extends Entity implements Parsable {
         this.backingStore.set("issueTypeId", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time of when the health issue was last updated.
+     * Sets the lastModifiedDateTime property value. The date and time when the health issue was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the recommendations property value. This field contains a list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include how to investigate the issue further. Not limited to prewritten responses.
+     * Sets the recommendations property value. A list of recommended actions that can be taken to resolve the issue effectively and efficiently. These actions might include instructions for further investigation and aren't limited to prewritten responses.
      * @param value Value to set for the recommendations property.
      */
     public void setRecommendations(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("recommendations", value);
     }
     /**
-     * Sets the recommendedActionCommands property value. Contains a list of commands from the product's PowerShell module that can be used to resolve the issue, if available. If there aren't any commands that can be used to solve the issue, this field is empty. The commands, if present, provide a quick and efficient way to address the issue. The commands run in order for the single recommended fix.
+     * Sets the recommendedActionCommands property value. A list of commands from the PowerShell module for the product that can be used to resolve the issue, if available. If no commands can be used to solve the issue, this property is empty. The commands, if present, provide a quick and efficient way to address the issue. These commands run in sequence for the single recommended fix.
      * @param value Value to set for the recommendedActionCommands property.
      */
     public void setRecommendedActionCommands(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("recommendedActionCommands", value);
     }
     /**
-     * Sets the sensorDNSNames property value. A list of the dns names of the sensors the health issue is related to.
+     * Sets the sensorDNSNames property value. A list of the DNS names of the sensors the health issue is related to.
      * @param value Value to set for the sensorDNSNames property.
      */
     public void setSensorDNSNames(@jakarta.annotation.Nullable final java.util.List<String> value) {

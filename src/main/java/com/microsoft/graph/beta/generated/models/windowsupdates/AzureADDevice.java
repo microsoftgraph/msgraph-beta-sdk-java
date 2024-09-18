@@ -26,7 +26,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
         return new AzureADDevice();
     }
     /**
-     * Gets the enrollments property value. Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
+     * Gets the enrollments property value. Specifies areas in which the device is enrolled. Read-only. Returned by default.
      * @return a {@link java.util.List<UpdatableAssetEnrollment>}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
         writer.writeCollectionOfObjectValues("errors", this.getErrors());
     }
     /**
-     * Sets the enrollments property value. Specifies areas of the service in which the device is enrolled. Read-only. Returned by default.
+     * Sets the enrollments property value. Specifies areas in which the device is enrolled. Read-only. Returned by default.
      * @param value Value to set for the enrollments property.
      */
     public void setEnrollments(@jakarta.annotation.Nullable final java.util.List<UpdatableAssetEnrollment> value) {
