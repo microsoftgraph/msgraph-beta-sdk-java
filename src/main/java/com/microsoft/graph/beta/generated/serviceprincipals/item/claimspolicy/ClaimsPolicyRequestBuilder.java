@@ -37,24 +37,6 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/claimsPolicy{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property claimsPolicy for servicePrincipals
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    public void delete() {
-        delete(null);
-    }
-    /**
-     * Delete navigation property claimsPolicy for servicePrincipals
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @throws ODataError When receiving a 4XX or 5XX status code
-     */
-    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
-        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
-        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
-    }
-    /**
      * Get the properties and relationships of a customClaimsPolicy object.
      * @return a {@link CustomClaimsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -133,26 +115,6 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomClaimsPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property claimsPolicy for servicePrincipals
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation() {
-        return toDeleteRequestInformation(null);
-    }
-    /**
-     * Delete navigation property claimsPolicy for servicePrincipals
-     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RequestInformation}
-     */
-    @jakarta.annotation.Nonnull
-    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
-        return requestInfo;
-    }
-    /**
      * Get the properties and relationships of a customClaimsPolicy object.
      * @return a {@link RequestInformation}
      */
@@ -229,12 +191,6 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
     public ClaimsPolicyRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ClaimsPolicyRequestBuilder(rawUrl, requestAdapter);
-    }
-    /**
-     * Configuration for the request such as headers, query parameters, and middleware options.
-     */
-    @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * Get the properties and relationships of a customClaimsPolicy object.

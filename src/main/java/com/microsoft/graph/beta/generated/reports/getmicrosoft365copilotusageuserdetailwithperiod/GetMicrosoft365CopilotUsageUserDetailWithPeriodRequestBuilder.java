@@ -38,19 +38,21 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
         super(requestAdapter, "{+baseurl}/reports/getMicrosoft365CopilotUsageUserDetail(period='{period}')", rawUrl);
     }
     /**
-     * Invoke function getMicrosoft365CopilotUsageUserDetail
+     * Get the most recent activity data for enabled users of Copilot for Microsoft 365 apps.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getmicrosoft365copilotusageuserdetail?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Invoke function getMicrosoft365CopilotUsageUserDetail
+     * Get the most recent activity data for enabled users of Copilot for Microsoft 365 apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getmicrosoft365copilotusageuserdetail?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Invoke function getMicrosoft365CopilotUsageUserDetail
+     * Get the most recent activity data for enabled users of Copilot for Microsoft 365 apps.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getMicrosoft365CopilotUsageUserDetail
+     * Get the most recent activity data for enabled users of Copilot for Microsoft 365 apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -27,6 +27,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.cloudPcBulkCreateSnapshot": return new CloudPcBulkCreateSnapshot();
                 case "#microsoft.graph.cloudPcBulkDisasterRecoveryFailback": return new CloudPcBulkDisasterRecoveryFailback();
                 case "#microsoft.graph.cloudPcBulkDisasterRecoveryFailover": return new CloudPcBulkDisasterRecoveryFailover();
                 case "#microsoft.graph.cloudPcBulkModifyDiskEncryptionType": return new CloudPcBulkModifyDiskEncryptionType();
@@ -36,6 +37,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
                 case "#microsoft.graph.cloudPcBulkResize": return new CloudPcBulkResize();
                 case "#microsoft.graph.cloudPcBulkRestart": return new CloudPcBulkRestart();
                 case "#microsoft.graph.cloudPcBulkRestore": return new CloudPcBulkRestore();
+                case "#microsoft.graph.cloudPcBulkSetReviewStatus": return new CloudPcBulkSetReviewStatus();
                 case "#microsoft.graph.cloudPcBulkTroubleshoot": return new CloudPcBulkTroubleshoot();
             }
         }

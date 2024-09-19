@@ -67,7 +67,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the newPassword property value. The newPassword property
+     * Gets the newPassword property value. The Microsoft Entra ID-generated password.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class PasswordResetResponse implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the newPassword property value. The newPassword property
+     * Sets the newPassword property value. The Microsoft Entra ID-generated password.
      * @param value Value to set for the newPassword property.
      */
     public void setNewPassword(@jakarta.annotation.Nullable final String value) {

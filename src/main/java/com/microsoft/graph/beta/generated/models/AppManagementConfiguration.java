@@ -77,7 +77,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the keyCredentials property value. Collection of keyCredential restrictions settings to be applied to an application or service principal.
+     * Gets the keyCredentials property value. Collection of certificate restrictions settings to be applied to an application or service principal.
      * @return a {@link java.util.List<KeyCredentialConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the keyCredentials property value. Collection of keyCredential restrictions settings to be applied to an application or service principal.
+     * Sets the keyCredentials property value. Collection of certificate restrictions settings to be applied to an application or service principal.
      * @param value Value to set for the keyCredentials property.
      */
     public void setKeyCredentials(@jakarta.annotation.Nullable final java.util.List<KeyCredentialConfiguration> value) {

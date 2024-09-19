@@ -27,6 +27,14 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return new OnlineMeeting();
     }
     /**
+     * Gets the aiInsights property value. The aiInsights property
+     * @return a {@link java.util.List<CallAiInsight>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CallAiInsight> getAiInsights() {
+        return this.backingStore.get("aiInsights");
+    }
+    /**
      * Gets the alternativeRecording property value. The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
      * @return a {@link byte[]}
      */
@@ -97,6 +105,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("aiInsights", (n) -> { this.setAiInsights(n.getCollectionOfObjectValues(CallAiInsight::createFromDiscriminatorValue)); });
         deserializerMap.put("alternativeRecording", (n) -> { this.setAlternativeRecording(n.getByteArrayValue()); });
         deserializerMap.put("attendeeReport", (n) -> { this.setAttendeeReport(n.getByteArrayValue()); });
         deserializerMap.put("broadcastRecording", (n) -> { this.setBroadcastRecording(n.getByteArrayValue()); });
@@ -204,6 +213,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("aiInsights", this.getAiInsights());
         writer.writeByteArrayValue("alternativeRecording", this.getAlternativeRecording());
         writer.writeByteArrayValue("attendeeReport", this.getAttendeeReport());
         writer.writeByteArrayValue("broadcastRecording", this.getBroadcastRecording());
@@ -222,6 +232,13 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         writer.writeObjectValue("registration", this.getRegistration());
         writer.writeOffsetDateTimeValue("startDateTime", this.getStartDateTime());
         writer.writeCollectionOfObjectValues("transcripts", this.getTranscripts());
+    }
+    /**
+     * Sets the aiInsights property value. The aiInsights property
+     * @param value Value to set for the aiInsights property.
+     */
+    public void setAiInsights(@jakarta.annotation.Nullable final java.util.List<CallAiInsight> value) {
+        this.backingStore.set("aiInsights", value);
     }
     /**
      * Sets the alternativeRecording property value. The content stream of the alternative recording of a Microsoft Teams live event. Read-only.

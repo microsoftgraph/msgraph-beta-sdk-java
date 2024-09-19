@@ -5,6 +5,8 @@ import com.microsoft.graph.beta.models.networkaccess.AlertCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.alerts.count.CountRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.alerts.item.AlertItemRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.alerts.microsoftgraphnetworkaccessgetalertfrequencieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessGetAlertFrequenciesWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.alerts.microsoftgraphnetworkaccessgetalertseveritysummarieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -14,6 +16,7 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
+import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -80,6 +83,36 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AlertCollectionResponse::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the getAlertFrequencies method.
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
+     * @return a {@link MicrosoftGraphNetworkaccessGetAlertFrequenciesWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @deprecated
+     *  as of 2022-06/PrivatePreview:NetworkAccess
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public MicrosoftGraphNetworkaccessGetAlertFrequenciesWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphNetworkaccessGetAlertFrequenciesWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(startDateTime);
+        return new MicrosoftGraphNetworkaccessGetAlertFrequenciesWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
+    }
+    /**
+     * Provides operations to call the getAlertSeveritySummaries method.
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
+     * @return a {@link MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @deprecated
+     *  as of 2022-06/PrivatePreview:NetworkAccess
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(startDateTime);
+        return new MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Create new navigation property to alerts for networkAccess

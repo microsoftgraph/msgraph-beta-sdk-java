@@ -70,11 +70,20 @@ public class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("childrenOnly", (n) -> { this.setChildrenOnly(n.getBooleanValue()); });
+        deserializerMap.put("includeAllVersionHistory", (n) -> { this.setIncludeAllVersionHistory(n.getBooleanValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("parentReference", (n) -> { this.setParentReference(n.getObjectValue(ItemReference::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the includeAllVersionHistory property value. The includeAllVersionHistory property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIncludeAllVersionHistory() {
+        return this.backingStore.get("includeAllVersionHistory");
     }
     /**
      * Gets the name property value. The name property
@@ -99,6 +108,7 @@ public class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, P
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("childrenOnly", this.getChildrenOnly());
+        writer.writeBooleanValue("includeAllVersionHistory", this.getIncludeAllVersionHistory());
         writer.writeStringValue("name", this.getName());
         writer.writeObjectValue("parentReference", this.getParentReference());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -124,6 +134,13 @@ public class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, P
      */
     public void setChildrenOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("childrenOnly", value);
+    }
+    /**
+     * Sets the includeAllVersionHistory property value. The includeAllVersionHistory property
+     * @param value Value to set for the includeAllVersionHistory property.
+     */
+    public void setIncludeAllVersionHistory(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("includeAllVersionHistory", value);
     }
     /**
      * Sets the name property value. The name property

@@ -50,7 +50,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the targetDisplayName property value. The target mobile app's display name. This property is read-only.
+     * Gets the targetDisplayName property value. The display name of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this.backingStore.get("targetDisplayName");
     }
     /**
-     * Gets the targetDisplayVersion property value. The target mobile app's display version. This property is read-only.
+     * Gets the targetDisplayVersion property value. The display version of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this.backingStore.get("targetDisplayVersion");
     }
     /**
-     * Gets the targetId property value. The target mobile app's app id.
+     * Gets the targetId property value. App ID of the app that is the target of the mobile app relationship entity. Read-Only
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this.backingStore.get("targetId");
     }
     /**
-     * Gets the targetPublisher property value. The target mobile app's publisher. This property is read-only.
+     * Gets the targetPublisher property value. The publisher of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,28 +100,28 @@ public class MobileAppRelationship extends Entity implements Parsable {
         writer.writeEnumValue("targetType", this.getTargetType());
     }
     /**
-     * Sets the targetDisplayName property value. The target mobile app's display name. This property is read-only.
+     * Sets the targetDisplayName property value. The display name of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
      * @param value Value to set for the targetDisplayName property.
      */
     public void setTargetDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetDisplayName", value);
     }
     /**
-     * Sets the targetDisplayVersion property value. The target mobile app's display version. This property is read-only.
+     * Sets the targetDisplayVersion property value. The display version of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
      * @param value Value to set for the targetDisplayVersion property.
      */
     public void setTargetDisplayVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetDisplayVersion", value);
     }
     /**
-     * Sets the targetId property value. The target mobile app's app id.
+     * Sets the targetId property value. App ID of the app that is the target of the mobile app relationship entity. Read-Only
      * @param value Value to set for the targetId property.
      */
     public void setTargetId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetId", value);
     }
     /**
-     * Sets the targetPublisher property value. The target mobile app's publisher. This property is read-only.
+     * Sets the targetPublisher property value. The publisher of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
      * @param value Value to set for the targetPublisher property.
      */
     public void setTargetPublisher(@jakarta.annotation.Nullable final String value) {

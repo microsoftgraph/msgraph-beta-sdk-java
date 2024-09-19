@@ -96,7 +96,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         return this.backingStore.get("restrictForAppsCreatedAfterDateTime");
     }
     /**
-     * Gets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
+     * Gets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime, customPasswordAddition, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @return a {@link AppCredentialRestrictionType}
      */
     @jakarta.annotation.Nullable
@@ -161,7 +161,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         this.backingStore.set("restrictForAppsCreatedAfterDateTime", value);
     }
     /**
-     * Sets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
+     * Sets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime, customPasswordAddition, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @param value Value to set for the restrictionType property.
      */
     public void setRestrictionType(@jakarta.annotation.Nullable final AppCredentialRestrictionType value) {
