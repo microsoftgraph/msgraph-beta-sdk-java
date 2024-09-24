@@ -37,7 +37,7 @@ public class NetworkAdapter extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether the network adapter is selected for capturing and analyzing network traffic.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class NetworkAdapter extends Entity implements Parsable {
         return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the network adapter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class NetworkAdapter extends Entity implements Parsable {
         writer.writeStringValue("name", this.getName());
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether the network adapter is selected for capturing and analyzing network traffic.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the network adapter.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

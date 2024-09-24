@@ -36,19 +36,21 @@ public class MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder extends 
         super(requestAdapter, "{+baseurl}/security/identities/sensors/microsoft.graph.security.getDeploymentAccessKey()", rawUrl);
     }
     /**
-     * Invoke function getDeploymentAccessKey
+     * Get the deployment access key associated with a Microsoft Defender for Identity, needed to install sensors associated with the workspace.
      * @return a {@link DeploymentAccessKeyType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-getdeploymentaccesskey?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAccessKeyType get() {
         return get(null);
     }
     /**
-     * Invoke function getDeploymentAccessKey
+     * Get the deployment access key associated with a Microsoft Defender for Identity, needed to install sensors associated with the workspace.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeploymentAccessKeyType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-getdeploymentaccesskey?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAccessKeyType get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder extends 
         return this.requestAdapter.send(requestInfo, errorMapping, DeploymentAccessKeyType::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getDeploymentAccessKey
+     * Get the deployment access key associated with a Microsoft Defender for Identity, needed to install sensors associated with the workspace.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class MicrosoftGraphSecurityGetDeploymentAccessKeyRequestBuilder extends 
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getDeploymentAccessKey
+     * Get the deployment access key associated with a Microsoft Defender for Identity, needed to install sensors associated with the workspace.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

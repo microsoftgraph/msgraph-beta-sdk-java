@@ -56,7 +56,7 @@ public class DeploymentAccessKeyType implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the deploymentAccessKey property value. The deploymentAccessKey property
+     * Gets the deploymentAccessKey property value. The deployment access key.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class DeploymentAccessKeyType implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the deploymentAccessKey property value. The deploymentAccessKey property
+     * Sets the deploymentAccessKey property value. The deployment access key.
      * @param value Value to set for the deploymentAccessKey property.
      */
     public void setDeploymentAccessKey(@jakarta.annotation.Nullable final String value) {

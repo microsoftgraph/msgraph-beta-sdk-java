@@ -36,19 +36,21 @@ public class MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder e
         super(requestAdapter, "{+baseurl}/security/identities/sensors/microsoft.graph.security.regenerateDeploymentAccessKey", rawUrl);
     }
     /**
-     * Invoke action regenerateDeploymentAccessKey
+     * Generate a new deployment access key that can be used to install a sensor associated with the workspace.
      * @return a {@link DeploymentAccessKeyType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-regeneratedeploymentaccesskey?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAccessKeyType post() {
         return post(null);
     }
     /**
-     * Invoke action regenerateDeploymentAccessKey
+     * Generate a new deployment access key that can be used to install a sensor associated with the workspace.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeploymentAccessKeyType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-regeneratedeploymentaccesskey?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeploymentAccessKeyType post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder e
         return this.requestAdapter.send(requestInfo, errorMapping, DeploymentAccessKeyType::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action regenerateDeploymentAccessKey
+     * Generate a new deployment access key that can be used to install a sensor associated with the workspace.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class MicrosoftGraphSecurityRegenerateDeploymentAccessKeyRequestBuilder e
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action regenerateDeploymentAccessKey
+     * Generate a new deployment access key that can be used to install a sensor associated with the workspace.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
