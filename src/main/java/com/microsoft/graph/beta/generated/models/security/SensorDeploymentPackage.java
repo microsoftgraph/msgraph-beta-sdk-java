@@ -56,7 +56,7 @@ public class SensorDeploymentPackage implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the downloadUrl property value. The downloadUrl property
+     * Gets the downloadUrl property value. URL to download the sensor deployment package.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class SensorDeploymentPackage implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. Version of the sensor.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class SensorDeploymentPackage implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the downloadUrl property value. The downloadUrl property
+     * Sets the downloadUrl property value. URL to download the sensor deployment package.
      * @param value Value to set for the downloadUrl property.
      */
     public void setDownloadUrl(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class SensorDeploymentPackage implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. Version of the sensor.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

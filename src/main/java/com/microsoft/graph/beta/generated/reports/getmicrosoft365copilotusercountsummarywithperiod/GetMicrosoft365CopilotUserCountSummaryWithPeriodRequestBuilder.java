@@ -38,7 +38,7 @@ public class GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder exte
         super(requestAdapter, "{+baseurl}/reports/getMicrosoft365CopilotUserCountSummary(period='{period}')", rawUrl);
     }
     /**
-     * Get the aggregated number of active and enabled users of Copilot for Microsoft 365 for a specified time period.
+     * Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getmicrosoft365copilotusercountsummary?view=graph-rest-beta">Find more info here</a>
@@ -48,7 +48,7 @@ public class GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder exte
         return get(null);
     }
     /**
-     * Get the aggregated number of active and enabled users of Copilot for Microsoft 365 for a specified time period.
+     * Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -62,7 +62,7 @@ public class GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder exte
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the aggregated number of active and enabled users of Copilot for Microsoft 365 for a specified time period.
+     * Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder exte
         return toGetRequestInformation(null);
     }
     /**
-     * Get the aggregated number of active and enabled users of Copilot for Microsoft 365 for a specified time period.
+     * Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

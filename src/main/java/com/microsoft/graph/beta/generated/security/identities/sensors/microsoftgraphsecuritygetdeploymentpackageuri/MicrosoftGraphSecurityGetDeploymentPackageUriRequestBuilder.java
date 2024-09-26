@@ -36,19 +36,21 @@ public class MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilder extends
         super(requestAdapter, "{+baseurl}/security/identities/sensors/microsoft.graph.security.getDeploymentPackageUri()", rawUrl);
     }
     /**
-     * Invoke function getDeploymentPackageUri
+     * Get the sensor deployment package URL and version. You can use this URL to download the installer to install the sensor on a server.
      * @return a {@link SensorDeploymentPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-getdeploymentpackageuri?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensorDeploymentPackage get() {
         return get(null);
     }
     /**
-     * Invoke function getDeploymentPackageUri
+     * Get the sensor deployment package URL and version. You can use this URL to download the installer to install the sensor on a server.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SensorDeploymentPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensor-getdeploymentpackageuri?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensorDeploymentPackage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilder extends
         return this.requestAdapter.send(requestInfo, errorMapping, SensorDeploymentPackage::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getDeploymentPackageUri
+     * Get the sensor deployment package URL and version. You can use this URL to download the installer to install the sensor on a server.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class MicrosoftGraphSecurityGetDeploymentPackageUriRequestBuilder extends
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getDeploymentPackageUri
+     * Get the sensor deployment package URL and version. You can use this URL to download the installer to install the sensor on a server.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

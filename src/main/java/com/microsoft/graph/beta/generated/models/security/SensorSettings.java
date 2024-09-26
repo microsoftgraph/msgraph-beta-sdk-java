@@ -56,7 +56,7 @@ public class SensorSettings implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the sensor.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class SensorSettings implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("description");
     }
     /**
-     * Gets the domainControllerDnsNames property value. The domainControllerDnsNames property
+     * Gets the domainControllerDnsNames property value. DNS names for the domain controller
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class SensorSettings implements AdditionalDataHolder, BackedModel, Parsab
         return deserializerMap;
     }
     /**
-     * Gets the isDelayedDeploymentEnabled property value. The isDelayedDeploymentEnabled property
+     * Gets the isDelayedDeploymentEnabled property value. Indicates whether to delay updates for the sensor.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class SensorSettings implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the sensor.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the domainControllerDnsNames property value. The domainControllerDnsNames property
+     * Sets the domainControllerDnsNames property value. DNS names for the domain controller
      * @param value Value to set for the domainControllerDnsNames property.
      */
     public void setDomainControllerDnsNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("domainControllerDnsNames", value);
     }
     /**
-     * Sets the isDelayedDeploymentEnabled property value. The isDelayedDeploymentEnabled property
+     * Sets the isDelayedDeploymentEnabled property value. Indicates whether to delay updates for the sensor.
      * @param value Value to set for the isDelayedDeploymentEnabled property.
      */
     public void setIsDelayedDeploymentEnabled(@jakarta.annotation.Nullable final Boolean value) {

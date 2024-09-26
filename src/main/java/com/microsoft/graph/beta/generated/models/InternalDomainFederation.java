@@ -75,7 +75,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         return this.backingStore.get("nextSigningCertificate");
     }
     /**
-     * Gets the passwordResetUri property value. The passwordResetUri property
+     * Gets the passwordResetUri property value. URI that clients are redirected to for resetting their password.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         this.backingStore.set("nextSigningCertificate", value);
     }
     /**
-     * Sets the passwordResetUri property value. The passwordResetUri property
+     * Sets the passwordResetUri property value. URI that clients are redirected to for resetting their password.
      * @param value Value to set for the passwordResetUri property.
      */
     public void setPasswordResetUri(@jakarta.annotation.Nullable final String value) {

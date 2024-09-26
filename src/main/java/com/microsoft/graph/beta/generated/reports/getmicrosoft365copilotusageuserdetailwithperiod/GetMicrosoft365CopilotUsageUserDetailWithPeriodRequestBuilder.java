@@ -38,7 +38,7 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
         super(requestAdapter, "{+baseurl}/reports/getMicrosoft365CopilotUsageUserDetail(period='{period}')", rawUrl);
     }
     /**
-     * Get the most recent activity data for enabled users of Copilot for Microsoft 365 apps.
+     * Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getmicrosoft365copilotusageuserdetail?view=graph-rest-beta">Find more info here</a>
@@ -48,7 +48,7 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
         return get(null);
     }
     /**
-     * Get the most recent activity data for enabled users of Copilot for Microsoft 365 apps.
+     * Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -62,7 +62,7 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the most recent activity data for enabled users of Copilot for Microsoft 365 apps.
+     * Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +70,7 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
         return toGetRequestInformation(null);
     }
     /**
-     * Get the most recent activity data for enabled users of Copilot for Microsoft 365 apps.
+     * Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

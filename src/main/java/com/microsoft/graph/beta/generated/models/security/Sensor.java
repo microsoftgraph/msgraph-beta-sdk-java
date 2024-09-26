@@ -27,7 +27,7 @@ public class Sensor extends Entity implements Parsable {
         return new Sensor();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the sensor was generated.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class Sensor extends Entity implements Parsable {
         return this.backingStore.get("deploymentStatus");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the sensor.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class Sensor extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the domainName property value. The domainName property
+     * Gets the domainName property value. The fully qualified domain name of the sensor.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class Sensor extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthIssues property value. The healthIssues property
+     * Gets the healthIssues property value. Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified related to the sensor.
      * @return a {@link java.util.List<HealthIssue>}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class Sensor extends Entity implements Parsable {
         return this.backingStore.get("healthStatus");
     }
     /**
-     * Gets the openHealthIssuesCount property value. The openHealthIssuesCount property
+     * Gets the openHealthIssuesCount property value. This field displays the count of health issues related to this sensor.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class Sensor extends Entity implements Parsable {
         return this.backingStore.get("settings");
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version of the sensor.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class Sensor extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the sensor was generated.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -158,21 +158,21 @@ public class Sensor extends Entity implements Parsable {
         this.backingStore.set("deploymentStatus", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the sensor.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the domainName property value. The domainName property
+     * Sets the domainName property value. The fully qualified domain name of the sensor.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("domainName", value);
     }
     /**
-     * Sets the healthIssues property value. The healthIssues property
+     * Sets the healthIssues property value. Represents potential issues within a customer's Microsoft Defender for Identity configuration that Microsoft Defender for Identity identified related to the sensor.
      * @param value Value to set for the healthIssues property.
      */
     public void setHealthIssues(@jakarta.annotation.Nullable final java.util.List<HealthIssue> value) {
@@ -186,7 +186,7 @@ public class Sensor extends Entity implements Parsable {
         this.backingStore.set("healthStatus", value);
     }
     /**
-     * Sets the openHealthIssuesCount property value. The openHealthIssuesCount property
+     * Sets the openHealthIssuesCount property value. This field displays the count of health issues related to this sensor.
      * @param value Value to set for the openHealthIssuesCount property.
      */
     public void setOpenHealthIssuesCount(@jakarta.annotation.Nullable final Long value) {
@@ -207,7 +207,7 @@ public class Sensor extends Entity implements Parsable {
         this.backingStore.set("settings", value);
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version of the sensor.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {
