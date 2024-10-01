@@ -297,6 +297,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("tokenIssuerName", (n) -> { this.setTokenIssuerName(n.getStringValue()); });
         deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType::forValue)); });
+        deserializerMap.put("tokenProtectionStatusDetails", (n) -> { this.setTokenProtectionStatusDetails(n.getObjectValue(TokenProtectionStatusDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("uniqueTokenIdentifier", (n) -> { this.setUniqueTokenIdentifier(n.getStringValue()); });
         deserializerMap.put("userAgent", (n) -> { this.setUserAgent(n.getStringValue()); });
         deserializerMap.put("userDisplayName", (n) -> { this.setUserDisplayName(n.getStringValue()); });
@@ -618,6 +619,14 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("tokenIssuerType");
     }
     /**
+     * Gets the tokenProtectionStatusDetails property value. The tokenProtectionStatusDetails property
+     * @return a {@link TokenProtectionStatusDetails}
+     */
+    @jakarta.annotation.Nullable
+    public TokenProtectionStatusDetails getTokenProtectionStatusDetails() {
+        return this.backingStore.get("tokenProtectionStatusDetails");
+    }
+    /**
      * Gets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they're redeemed at resource providers.
      * @return a {@link String}
      */
@@ -736,6 +745,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeObjectValue("status", this.getStatus());
         writer.writeStringValue("tokenIssuerName", this.getTokenIssuerName());
         writer.writeEnumValue("tokenIssuerType", this.getTokenIssuerType());
+        writer.writeObjectValue("tokenProtectionStatusDetails", this.getTokenProtectionStatusDetails());
         writer.writeStringValue("uniqueTokenIdentifier", this.getUniqueTokenIdentifier());
         writer.writeStringValue("userAgent", this.getUserAgent());
         writer.writeStringValue("userDisplayName", this.getUserDisplayName());
@@ -1190,6 +1200,13 @@ public class SignIn extends Entity implements Parsable {
      */
     public void setTokenIssuerType(@jakarta.annotation.Nullable final TokenIssuerType value) {
         this.backingStore.set("tokenIssuerType", value);
+    }
+    /**
+     * Sets the tokenProtectionStatusDetails property value. The tokenProtectionStatusDetails property
+     * @param value Value to set for the tokenProtectionStatusDetails property.
+     */
+    public void setTokenProtectionStatusDetails(@jakarta.annotation.Nullable final TokenProtectionStatusDetails value) {
+        this.backingStore.set("tokenProtectionStatusDetails", value);
     }
     /**
      * Sets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they're redeemed at resource providers.

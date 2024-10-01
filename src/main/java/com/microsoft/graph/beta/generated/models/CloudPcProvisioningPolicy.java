@@ -50,7 +50,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("autopatch");
     }
     /**
-     * Gets the autopilotConfiguration property value. The autopilotConfiguration property
+     * Gets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. Supports $select.
      * @return a {@link CloudPcAutopilotConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -274,7 +274,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.backingStore.set("autopatch", value);
     }
     /**
-     * Sets the autopilotConfiguration property value. The autopilotConfiguration property
+     * Sets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. Supports $select.
      * @param value Value to set for the autopilotConfiguration property.
      */
     public void setAutopilotConfiguration(@jakarta.annotation.Nullable final CloudPcAutopilotConfiguration value) {

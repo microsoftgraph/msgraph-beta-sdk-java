@@ -36,7 +36,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/bulkSetCloudPcReviewStatus", rawUrl);
     }
     /**
-     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
+     * Invoke action bulkSetCloudPcReviewStatus
      * @param body The request body
      * @return a {@link CloudPcBulkRemoteActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -50,7 +50,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
         return post(body, null);
     }
     /**
-     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
+     * Invoke action bulkSetCloudPcReviewStatus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcBulkRemoteActionResult}
@@ -69,7 +69,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcBulkRemoteActionResult::createFromDiscriminatorValue);
     }
     /**
-     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
+     * Invoke action bulkSetCloudPcReviewStatus
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -81,7 +81,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set the review status of multiple Cloud PC devices with a single request that includes the IDs of Intune managed devices.
+     * Invoke action bulkSetCloudPcReviewStatus
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

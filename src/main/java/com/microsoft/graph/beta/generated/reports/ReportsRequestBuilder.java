@@ -132,6 +132,7 @@ import com.microsoft.graph.beta.reports.getyammergroupsactivitycountswithperiod.
 import com.microsoft.graph.beta.reports.getyammergroupsactivitydetailwithdate.GetYammerGroupsActivityDetailWithDateRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammergroupsactivitydetailwithperiod.GetYammerGroupsActivityDetailWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammergroupsactivitygroupcountswithperiod.GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.healthmonitoring.HealthMonitoringRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentdetailswithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentsummarywithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentfailuredetails.ManagedDeviceEnrollmentFailureDetailsRequestBuilder;
@@ -313,6 +314,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetOffice365ActivationsUserDetailRequestBuilder getOffice365ActivationsUserDetail() {
         return new GetOffice365ActivationsUserDetailRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the healthMonitoring property of the microsoft.graph.reportRoot entity.
+     * @return a {@link HealthMonitoringRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public HealthMonitoringRequestBuilder healthMonitoring() {
+        return new HealthMonitoringRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the managedDeviceEnrollmentFailureDetails method.

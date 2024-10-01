@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.chats.item.members.add.AddRequestBuilder;
 import com.microsoft.graph.beta.users.item.chats.item.members.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.chats.item.members.item.ConversationMemberItemRequestBuilder;
+import com.microsoft.graph.beta.users.item.chats.item.members.remove.RemoveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -45,6 +46,17 @@ public class MembersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the remove method.
+     * @return a {@link RemoveRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public RemoveRequestBuilder remove() {
+        return new RemoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.chat entity.
