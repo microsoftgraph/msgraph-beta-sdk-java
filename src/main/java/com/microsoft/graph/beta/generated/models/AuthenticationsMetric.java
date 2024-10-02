@@ -42,6 +42,22 @@ public class AuthenticationsMetric extends Entity implements Parsable {
         return this.backingStore.get("attemptsCount");
     }
     /**
+     * Gets the authFlow property value. The authFlow property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAuthFlow() {
+        return this.backingStore.get("authFlow");
+    }
+    /**
+     * Gets the browser property value. The browser property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getBrowser() {
+        return this.backingStore.get("browser");
+    }
+    /**
      * Gets the country property value. The location where the customers authenticated from. Supports $filter (eq).
      * @return a {@link String}
      */
@@ -58,6 +74,14 @@ public class AuthenticationsMetric extends Entity implements Parsable {
         return this.backingStore.get("factDate");
     }
     /**
+     * Gets the failures property value. The failures property
+     * @return a {@link java.util.List<AuthenticationFailure>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AuthenticationFailure> getFailures() {
+        return this.backingStore.get("failures");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -66,8 +90,11 @@ public class AuthenticationsMetric extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appid", (n) -> { this.setAppid(n.getStringValue()); });
         deserializerMap.put("attemptsCount", (n) -> { this.setAttemptsCount(n.getLongValue()); });
+        deserializerMap.put("authFlow", (n) -> { this.setAuthFlow(n.getStringValue()); });
+        deserializerMap.put("browser", (n) -> { this.setBrowser(n.getStringValue()); });
         deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
         deserializerMap.put("factDate", (n) -> { this.setFactDate(n.getLocalDateValue()); });
+        deserializerMap.put("failures", (n) -> { this.setFailures(n.getCollectionOfObjectValues(AuthenticationFailure::createFromDiscriminatorValue)); });
         deserializerMap.put("identityProvider", (n) -> { this.setIdentityProvider(n.getStringValue()); });
         deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
         deserializerMap.put("os", (n) -> { this.setOs(n.getStringValue()); });
@@ -115,8 +142,11 @@ public class AuthenticationsMetric extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("appid", this.getAppid());
         writer.writeLongValue("attemptsCount", this.getAttemptsCount());
+        writer.writeStringValue("authFlow", this.getAuthFlow());
+        writer.writeStringValue("browser", this.getBrowser());
         writer.writeStringValue("country", this.getCountry());
         writer.writeLocalDateValue("factDate", this.getFactDate());
+        writer.writeCollectionOfObjectValues("failures", this.getFailures());
         writer.writeStringValue("identityProvider", this.getIdentityProvider());
         writer.writeStringValue("language", this.getLanguage());
         writer.writeStringValue("os", this.getOs());
@@ -137,6 +167,20 @@ public class AuthenticationsMetric extends Entity implements Parsable {
         this.backingStore.set("attemptsCount", value);
     }
     /**
+     * Sets the authFlow property value. The authFlow property
+     * @param value Value to set for the authFlow property.
+     */
+    public void setAuthFlow(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("authFlow", value);
+    }
+    /**
+     * Sets the browser property value. The browser property
+     * @param value Value to set for the browser property.
+     */
+    public void setBrowser(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("browser", value);
+    }
+    /**
      * Sets the country property value. The location where the customers authenticated from. Supports $filter (eq).
      * @param value Value to set for the country property.
      */
@@ -149,6 +193,13 @@ public class AuthenticationsMetric extends Entity implements Parsable {
      */
     public void setFactDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("factDate", value);
+    }
+    /**
+     * Sets the failures property value. The failures property
+     * @param value Value to set for the failures property.
+     */
+    public void setFailures(@jakarta.annotation.Nullable final java.util.List<AuthenticationFailure> value) {
+        this.backingStore.set("failures", value);
     }
     /**
      * Sets the identityProvider property value. The identityProvider property

@@ -105,7 +105,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("osStatus");
     }
     /**
-     * Gets the osVersionNumber property value. The osVersionNumber property
+     * Gets the osVersionNumber property value. The operating system version of this image. For example, 10.0.22000.296. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -223,7 +223,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("osStatus", value);
     }
     /**
-     * Sets the osVersionNumber property value. The osVersionNumber property
+     * Sets the osVersionNumber property value. The operating system version of this image. For example, 10.0.22000.296. Read-only.
      * @param value Value to set for the osVersionNumber property.
      */
     public void setOsVersionNumber(@jakarta.annotation.Nullable final String value) {

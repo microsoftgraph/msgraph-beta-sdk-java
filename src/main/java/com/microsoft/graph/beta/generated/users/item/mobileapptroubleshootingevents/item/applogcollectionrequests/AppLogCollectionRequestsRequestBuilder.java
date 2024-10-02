@@ -66,7 +66,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mobileAppTroubleshootingEvents/{mobileAppTroubleshootingEvent%2Did}/appLogCollectionRequests{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * The collection property of AppLogUploadRequest.
      * @return a {@link AppLogCollectionRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -78,7 +78,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * The collection property of AppLogUploadRequest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppLogCollectionRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -125,7 +125,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppLogCollectionRequest::createFromDiscriminatorValue);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * The collection property of AppLogUploadRequest.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2024-07/PrivatePreview:copilotExportAPI
@@ -136,7 +136,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * The collection property of AppLogUploadRequest.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -194,7 +194,7 @@ public class AppLogCollectionRequestsRequestBuilder extends BaseRequestBuilder {
         return new AppLogCollectionRequestsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Indicates collection of App Log Upload Request.
+     * The collection property of AppLogUploadRequest.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

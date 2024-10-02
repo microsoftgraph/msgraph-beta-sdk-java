@@ -34,6 +34,14 @@ public class UserSignUpMetric extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
+     * Gets the browser property value. The browser property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getBrowser() {
+        return this.backingStore.get("browser");
+    }
+    /**
      * Gets the count property value. The total number of users who signed up in the specified period. Supports $filter (eq).
      * @return a {@link Long}
      */
@@ -65,6 +73,7 @@ public class UserSignUpMetric extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("browser", (n) -> { this.setBrowser(n.getStringValue()); });
         deserializerMap.put("count", (n) -> { this.setCount(n.getLongValue()); });
         deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
         deserializerMap.put("factDate", (n) -> { this.setFactDate(n.getLocalDateValue()); });
@@ -105,6 +114,7 @@ public class UserSignUpMetric extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appId", this.getAppId());
+        writer.writeStringValue("browser", this.getBrowser());
         writer.writeLongValue("count", this.getCount());
         writer.writeStringValue("country", this.getCountry());
         writer.writeLocalDateValue("factDate", this.getFactDate());
@@ -118,6 +128,13 @@ public class UserSignUpMetric extends Entity implements Parsable {
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
+    }
+    /**
+     * Sets the browser property value. The browser property
+     * @param value Value to set for the browser property.
+     */
+    public void setBrowser(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("browser", value);
     }
     /**
      * Sets the count property value. The total number of users who signed up in the specified period. Supports $filter (eq).

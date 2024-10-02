@@ -128,7 +128,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isItemVersioningEnabled property value. Indicates whether versioning is enabled for the fileStorageContainer. The setting is applicable to all items in the fileStorageContainer. Read-Write.
+     * Gets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("isItemVersioningEnabled");
     }
     /**
-     * Gets the itemMajorVersionLimit property value. Maximum number of major versions allowed for items in the fileStorageContainer. Read-write.
+     * Gets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -307,14 +307,14 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("externalGroupId", value);
     }
     /**
-     * Sets the isItemVersioningEnabled property value. Indicates whether versioning is enabled for the fileStorageContainer. The setting is applicable to all items in the fileStorageContainer. Read-Write.
+     * Sets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
      * @param value Value to set for the isItemVersioningEnabled property.
      */
     public void setIsItemVersioningEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isItemVersioningEnabled", value);
     }
     /**
-     * Sets the itemMajorVersionLimit property value. Maximum number of major versions allowed for items in the fileStorageContainer. Read-write.
+     * Sets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
      * @param value Value to set for the itemMajorVersionLimit property.
      */
     public void setItemMajorVersionLimit(@jakarta.annotation.Nullable final Integer value) {

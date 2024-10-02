@@ -41,7 +41,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("availabilityStatus");
     }
     /**
-     * Gets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
+     * Gets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Does not support $expand. Supports $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("domainNameReferences");
     }
     /**
-     * Gets the federationConfiguration property value. Domain settings configured by customer when federated with Microsoft Entra ID. Supports $expand.
+     * Gets the federationConfiguration property value. Domain settings configured by customer when federated with Microsoft Entra ID. Does not support $expand.
      * @return a {@link java.util.List<InternalDomainFederation>}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("rootDomain");
     }
     /**
-     * Gets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
+     * Gets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Does not support $expand.
      * @return a {@link java.util.List<DomainDnsRecord>}
      */
     @jakarta.annotation.Nullable
@@ -179,7 +179,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("supportedServices");
     }
     /**
-     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
+     * Gets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Does not support $expand.
      * @return a {@link java.util.List<DomainDnsRecord>}
      */
     @jakarta.annotation.Nullable
@@ -226,14 +226,14 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("availabilityStatus", value);
     }
     /**
-     * Sets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Supports $expand and $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
+     * Sets the domainNameReferences property value. The objects such as users and groups that reference the domain ID. Read-only, Nullable. Does not support $expand. Supports $filter by the OData type of objects returned. For example, /domains/{domainId}/domainNameReferences/microsoft.graph.user and /domains/{domainId}/domainNameReferences/microsoft.graph.group.
      * @param value Value to set for the domainNameReferences property.
      */
     public void setDomainNameReferences(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
         this.backingStore.set("domainNameReferences", value);
     }
     /**
-     * Sets the federationConfiguration property value. Domain settings configured by customer when federated with Microsoft Entra ID. Supports $expand.
+     * Sets the federationConfiguration property value. Domain settings configured by customer when federated with Microsoft Entra ID. Does not support $expand.
      * @param value Value to set for the federationConfiguration property.
      */
     public void setFederationConfiguration(@jakarta.annotation.Nullable final java.util.List<InternalDomainFederation> value) {
@@ -296,7 +296,7 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("rootDomain", value);
     }
     /**
-     * Sets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
+     * Sets the serviceConfigurationRecords property value. DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Does not support $expand.
      * @param value Value to set for the serviceConfigurationRecords property.
      */
     public void setServiceConfigurationRecords(@jakarta.annotation.Nullable final java.util.List<DomainDnsRecord> value) {
@@ -324,7 +324,7 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("supportedServices", value);
     }
     /**
-     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Supports $expand.
+     * Sets the verificationDnsRecords property value. DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Microsoft Entra ID. Read-only, Nullable. Does not support $expand.
      * @param value Value to set for the verificationDnsRecords property.
      */
     public void setVerificationDnsRecords(@jakarta.annotation.Nullable final java.util.List<DomainDnsRecord> value) {

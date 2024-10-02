@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.healthmonitoring.HealthMonitoringRoot;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -115,6 +116,7 @@ public class ReportRoot extends Entity implements Parsable {
         deserializerMap.put("dailyPrintUsageByUser", (n) -> { this.setDailyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageSummariesByPrinter", (n) -> { this.setDailyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageSummariesByUser", (n) -> { this.setDailyPrintUsageSummariesByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
+        deserializerMap.put("healthMonitoring", (n) -> { this.setHealthMonitoring(n.getObjectValue(HealthMonitoringRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByPrinter", (n) -> { this.setMonthlyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByUser", (n) -> { this.setMonthlyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageSummariesByPrinter", (n) -> { this.setMonthlyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
@@ -127,6 +129,14 @@ public class ReportRoot extends Entity implements Parsable {
         deserializerMap.put("userCredentialUsageDetails", (n) -> { this.setUserCredentialUsageDetails(n.getCollectionOfObjectValues(UserCredentialUsageDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("userInsights", (n) -> { this.setUserInsights(n.getObjectValue(UserInsightsRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the healthMonitoring property value. The healthMonitoring property
+     * @return a {@link HealthMonitoringRoot}
+     */
+    @jakarta.annotation.Nullable
+    public HealthMonitoringRoot getHealthMonitoring() {
+        return this.backingStore.get("healthMonitoring");
     }
     /**
      * Gets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
@@ -232,6 +242,7 @@ public class ReportRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("dailyPrintUsageByUser", this.getDailyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("dailyPrintUsageSummariesByPrinter", this.getDailyPrintUsageSummariesByPrinter());
         writer.writeCollectionOfObjectValues("dailyPrintUsageSummariesByUser", this.getDailyPrintUsageSummariesByUser());
+        writer.writeObjectValue("healthMonitoring", this.getHealthMonitoring());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByPrinter", this.getMonthlyPrintUsageByPrinter());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByUser", this.getMonthlyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageSummariesByPrinter", this.getMonthlyPrintUsageSummariesByPrinter());
@@ -306,6 +317,13 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public void setDailyPrintUsageSummariesByUser(@jakarta.annotation.Nullable final java.util.List<PrintUsageByUser> value) {
         this.backingStore.set("dailyPrintUsageSummariesByUser", value);
+    }
+    /**
+     * Sets the healthMonitoring property value. The healthMonitoring property
+     * @param value Value to set for the healthMonitoring property.
+     */
+    public void setHealthMonitoring(@jakarta.annotation.Nullable final HealthMonitoringRoot value) {
+        this.backingStore.set("healthMonitoring", value);
     }
     /**
      * Sets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.

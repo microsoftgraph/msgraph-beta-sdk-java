@@ -60,21 +60,19 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containers/{fileStorageContainer%2Did}/permissions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the permission objects associated with a fileStorageContainer.
+     * The set of permissions for users in the fileStorageContainer. The permission for each user is set by the roles property. The possible values are reader, writer, manager, and owner. Read-write.
      * @return a {@link PermissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-list-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the permission objects associated with a fileStorageContainer.
+     * The set of permissions for users in the fileStorageContainer. The permission for each user is set by the roles property. The possible values are reader, writer, manager, and owner. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-list-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +82,21 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add a permission to an existing fileStorageContainer. 
+     * Create new navigation property to permissions for storage
      * @param body The request body
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-post-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final Permission body) {
         return post(body, null);
     }
     /**
-     * Add a permission to an existing fileStorageContainer. 
+     * Create new navigation property to permissions for storage
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-post-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final Permission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +107,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Permission::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the permission objects associated with a fileStorageContainer.
+     * The set of permissions for users in the fileStorageContainer. The permission for each user is set by the roles property. The possible values are reader, writer, manager, and owner. Read-write.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +115,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the permission objects associated with a fileStorageContainer.
+     * The set of permissions for users in the fileStorageContainer. The permission for each user is set by the roles property. The possible values are reader, writer, manager, and owner. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +127,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add a permission to an existing fileStorageContainer. 
+     * Create new navigation property to permissions for storage
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +136,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add a permission to an existing fileStorageContainer. 
+     * Create new navigation property to permissions for storage
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +161,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return new PermissionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the permission objects associated with a fileStorageContainer.
+     * The set of permissions for users in the fileStorageContainer. The permission for each user is set by the roles property. The possible values are reader, writer, manager, and owner. Read-write.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

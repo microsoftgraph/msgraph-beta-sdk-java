@@ -142,23 +142,21 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainer::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a fileStorageContainer object.
+     * Update the navigation property containers in storage
      * @param body The request body
      * @return a {@link FileStorageContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainer patch(@jakarta.annotation.Nonnull final FileStorageContainer body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a fileStorageContainer object.
+     * Update the navigation property containers in storage
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainer patch(@jakarta.annotation.Nonnull final FileStorageContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -209,7 +207,7 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a fileStorageContainer object.
+     * Update the navigation property containers in storage
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -218,7 +216,7 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a fileStorageContainer object.
+     * Update the navigation property containers in storage
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

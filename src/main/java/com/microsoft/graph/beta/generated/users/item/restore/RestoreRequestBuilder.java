@@ -37,7 +37,6 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Restore a recently deleted application, externalUserProfile, group, pendingExternalUserProfile, servicePrincipal, administrative unit, or user object from deleted items. If an item was accidentally deleted, you can fully restore the item. This isn't applicable to security groups, which are deleted permanently. Also, restoring an application doesn't restore the associated service principal automatically. You must call this API to explicitly restore the deleted service principal. A recently deleted item remains available for up to 30 days. After 30 days, the item is permanently deleted.
-     * @param body The request body
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -46,12 +45,11 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public DirectoryObject post(@jakarta.annotation.Nonnull final RestorePostRequestBody body) {
-        return post(body, null);
+    public DirectoryObject post() {
+        return post(null);
     }
     /**
      * Restore a recently deleted application, externalUserProfile, group, pendingExternalUserProfile, servicePrincipal, administrative unit, or user object from deleted items. If an item was accidentally deleted, you can fully restore the item. This isn't applicable to security groups, which are deleted permanently. Also, restoring an application doesn't restore the associated service principal automatically. You must call this API to explicitly restore the deleted service principal. A recently deleted item remains available for up to 30 days. After 30 days, the item is permanently deleted.
-     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -61,28 +59,25 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public DirectoryObject post(@jakarta.annotation.Nonnull final RestorePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+    public DirectoryObject post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
      * Restore a recently deleted application, externalUserProfile, group, pendingExternalUserProfile, servicePrincipal, administrative unit, or user object from deleted items. If an item was accidentally deleted, you can fully restore the item. This isn't applicable to security groups, which are deleted permanently. Also, restoring an application doesn't restore the associated service principal automatically. You must call this API to explicitly restore the deleted service principal. A recently deleted item remains available for up to 30 days. After 30 days, the item is permanently deleted.
-     * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RestorePostRequestBody body) {
-        return toPostRequestInformation(body, null);
+    public RequestInformation toPostRequestInformation() {
+        return toPostRequestInformation(null);
     }
     /**
      * Restore a recently deleted application, externalUserProfile, group, pendingExternalUserProfile, servicePrincipal, administrative unit, or user object from deleted items. If an item was accidentally deleted, you can fully restore the item. This isn't applicable to security groups, which are deleted permanently. Also, restoring an application doesn't restore the associated service principal automatically. You must call this API to explicitly restore the deleted service principal. A recently deleted item remains available for up to 30 days. After 30 days, the item is permanently deleted.
-     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -90,12 +85,10 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final RestorePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
-        Objects.requireNonNull(body);
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
-        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**

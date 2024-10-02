@@ -48,7 +48,7 @@ public class CloudPcAutopilotConfiguration implements AdditionalDataHolder, Back
         return value;
     }
     /**
-     * Gets the applicationTimeoutInMinutes property value. The applicationTimeoutInMinutes property
+     * Gets the applicationTimeoutInMinutes property value. Indicates the number of minutes allowed for the Autopilot application to apply the device preparation profile (DPP) configurations to the device. If the Autopilot application doesn't finish within the specified time (applicationTimeoutInMinutes), the application error is added to the statusDetail property of the cloudPC object. The supported value is an integer between 10 and 360. Required.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class CloudPcAutopilotConfiguration implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the devicePreparationProfileId property value. The devicePreparationProfileId property
+     * Gets the devicePreparationProfileId property value. The unique identifier (ID) of the Autopilot device preparation profile (DPP) that links a Windows Autopilot device preparation policy to ensure that devices are ready for users after provisioning. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CloudPcAutopilotConfiguration implements AdditionalDataHolder, Back
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the onFailureDeviceAccessDenied property value. The onFailureDeviceAccessDenied property
+     * Gets the onFailureDeviceAccessDenied property value. Indicates whether the access to the device is allowed when the application of Autopilot device preparation profile (DPP) configurations fails or times out. If true, the status of the device is failed and the device is unable to access; otherwise, the status of the device is provisionedWithWarnings and the device is allowed to access. The default value is false. Required.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class CloudPcAutopilotConfiguration implements AdditionalDataHolder, Back
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the applicationTimeoutInMinutes property value. The applicationTimeoutInMinutes property
+     * Sets the applicationTimeoutInMinutes property value. Indicates the number of minutes allowed for the Autopilot application to apply the device preparation profile (DPP) configurations to the device. If the Autopilot application doesn't finish within the specified time (applicationTimeoutInMinutes), the application error is added to the statusDetail property of the cloudPC object. The supported value is an integer between 10 and 360. Required.
      * @param value Value to set for the applicationTimeoutInMinutes property.
      */
     public void setApplicationTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {
@@ -135,7 +135,7 @@ public class CloudPcAutopilotConfiguration implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the devicePreparationProfileId property value. The devicePreparationProfileId property
+     * Sets the devicePreparationProfileId property value. The unique identifier (ID) of the Autopilot device preparation profile (DPP) that links a Windows Autopilot device preparation policy to ensure that devices are ready for users after provisioning. Required.
      * @param value Value to set for the devicePreparationProfileId property.
      */
     public void setDevicePreparationProfileId(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class CloudPcAutopilotConfiguration implements AdditionalDataHolder, Back
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the onFailureDeviceAccessDenied property value. The onFailureDeviceAccessDenied property
+     * Sets the onFailureDeviceAccessDenied property value. Indicates whether the access to the device is allowed when the application of Autopilot device preparation profile (DPP) configurations fails or times out. If true, the status of the device is failed and the device is unable to access; otherwise, the status of the device is provisionedWithWarnings and the device is allowed to access. The default value is false. Required.
      * @param value Value to set for the onFailureDeviceAccessDenied property.
      */
     public void setOnFailureDeviceAccessDenied(@jakarta.annotation.Nullable final Boolean value) {
