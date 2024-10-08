@@ -1,8 +1,12 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -67,8 +71,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
         deserializerMap.put("managedDeviceId", (n) -> { this.setManagedDeviceId(n.getUUIDValue()); });
         deserializerMap.put("receivedDateTimeUTC", (n) -> { this.setReceivedDateTimeUTC(n.getOffsetDateTimeValue()); });
         deserializerMap.put("requestedDateTimeUTC", (n) -> { this.setRequestedDateTimeUTC(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("size", (n) -> { this.setSize(n.getDoubleValue()); });
-        deserializerMap.put("sizeInKB", (n) -> { this.setSizeInKB(n.getDoubleValue()); });
+        deserializerMap.put("size", (n) -> { this.setSize(n.getObjectValue(DeviceLogCollectionResponseSize::createFromDiscriminatorValue)); });
+        deserializerMap.put("sizeInKB", (n) -> { this.setSizeInKB(n.getObjectValue(DeviceLogCollectionResponseSizeInKB::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(AppLogUploadState::forValue)); });
         return deserializerMap;
     }
@@ -106,18 +110,18 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
     }
     /**
      * Gets the size property value. The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a {@link Double}
+     * @return a {@link DeviceLogCollectionResponseSize}
      */
     @jakarta.annotation.Nullable
-    public Double getSize() {
+    public DeviceLogCollectionResponseSize getSize() {
         return this.backingStore.get("size");
     }
     /**
      * Gets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     * @return a {@link Double}
+     * @return a {@link DeviceLogCollectionResponseSizeInKB}
      */
     @jakarta.annotation.Nullable
-    public Double getSizeInKB() {
+    public DeviceLogCollectionResponseSizeInKB getSizeInKB() {
         return this.backingStore.get("sizeInKB");
     }
     /**
@@ -142,8 +146,8 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
         writer.writeUUIDValue("managedDeviceId", this.getManagedDeviceId());
         writer.writeOffsetDateTimeValue("receivedDateTimeUTC", this.getReceivedDateTimeUTC());
         writer.writeOffsetDateTimeValue("requestedDateTimeUTC", this.getRequestedDateTimeUTC());
-        writer.writeDoubleValue("size", this.getSize());
-        writer.writeDoubleValue("sizeInKB", this.getSizeInKB());
+        writer.writeObjectValue("size", this.getSize());
+        writer.writeObjectValue("sizeInKB", this.getSizeInKB());
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
@@ -199,14 +203,14 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      * Sets the size property value. The size of the logs. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the size property.
      */
-    public void setSize(@jakarta.annotation.Nullable final Double value) {
+    public void setSize(@jakarta.annotation.Nullable final DeviceLogCollectionResponseSize value) {
         this.backingStore.set("size", value);
     }
     /**
      * Sets the sizeInKB property value. The size of the logs in KB. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
      * @param value Value to set for the sizeInKB property.
      */
-    public void setSizeInKB(@jakarta.annotation.Nullable final Double value) {
+    public void setSizeInKB(@jakarta.annotation.Nullable final DeviceLogCollectionResponseSizeInKB value) {
         this.backingStore.set("sizeInKB", value);
     }
     /**
@@ -215,5 +219,249 @@ public class DeviceLogCollectionResponse extends Entity implements Parsable {
      */
     public void setStatus(@jakarta.annotation.Nullable final AppLogUploadState value) {
         this.backingStore.set("status", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class DeviceLogCollectionResponseSize implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link DeviceLogCollectionResponseSize} and sets the default values.
+         */
+        public DeviceLogCollectionResponseSize() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link DeviceLogCollectionResponseSize}
+         */
+        @jakarta.annotation.Nonnull
+        public static DeviceLogCollectionResponseSize createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final DeviceLogCollectionResponseSize result = new DeviceLogCollectionResponseSize();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class DeviceLogCollectionResponseSizeInKB implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link DeviceLogCollectionResponseSizeInKB} and sets the default values.
+         */
+        public DeviceLogCollectionResponseSizeInKB() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link DeviceLogCollectionResponseSizeInKB}
+         */
+        @jakarta.annotation.Nonnull
+        public static DeviceLogCollectionResponseSizeInKB createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final DeviceLogCollectionResponseSizeInKB result = new DeviceLogCollectionResponseSizeInKB();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

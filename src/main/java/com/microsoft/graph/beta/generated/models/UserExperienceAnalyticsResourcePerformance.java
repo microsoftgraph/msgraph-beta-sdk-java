@@ -1,8 +1,12 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -37,10 +41,10 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuClockSpeedInMHz property value. The clock speed of the processor, in MHz. Valid values 0 to 1000000
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz}
      */
     @jakarta.annotation.Nullable
-    public Double getCpuClockSpeedInMHz() {
+    public UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz getCpuClockSpeedInMHz() {
         return this.backingStore.get("cpuClockSpeedInMHz");
     }
     /**
@@ -53,18 +57,18 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the cpuSpikeTimePercentage property value. CPU spike time in percentage. Valid values 0 to 100
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage}
      */
     @jakarta.annotation.Nullable
-    public Double getCpuSpikeTimePercentage() {
+    public UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage getCpuSpikeTimePercentage() {
         return this.backingStore.get("cpuSpikeTimePercentage");
     }
     /**
      * Gets the cpuSpikeTimePercentageThreshold property value. Threshold of cpuSpikeTimeScore. Valid values 0 to 100
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold}
      */
     @jakarta.annotation.Nullable
-    public Double getCpuSpikeTimePercentageThreshold() {
+    public UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold getCpuSpikeTimePercentageThreshold() {
         return this.backingStore.get("cpuSpikeTimePercentageThreshold");
     }
     /**
@@ -123,10 +127,10 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("averageSpikeTimeScore", (n) -> { this.setAverageSpikeTimeScore(n.getIntegerValue()); });
-        deserializerMap.put("cpuClockSpeedInMHz", (n) -> { this.setCpuClockSpeedInMHz(n.getDoubleValue()); });
+        deserializerMap.put("cpuClockSpeedInMHz", (n) -> { this.setCpuClockSpeedInMHz(n.getObjectValue(UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz::createFromDiscriminatorValue)); });
         deserializerMap.put("cpuDisplayName", (n) -> { this.setCpuDisplayName(n.getStringValue()); });
-        deserializerMap.put("cpuSpikeTimePercentage", (n) -> { this.setCpuSpikeTimePercentage(n.getDoubleValue()); });
-        deserializerMap.put("cpuSpikeTimePercentageThreshold", (n) -> { this.setCpuSpikeTimePercentageThreshold(n.getDoubleValue()); });
+        deserializerMap.put("cpuSpikeTimePercentage", (n) -> { this.setCpuSpikeTimePercentage(n.getObjectValue(UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage::createFromDiscriminatorValue)); });
+        deserializerMap.put("cpuSpikeTimePercentageThreshold", (n) -> { this.setCpuSpikeTimePercentageThreshold(n.getObjectValue(UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold::createFromDiscriminatorValue)); });
         deserializerMap.put("cpuSpikeTimeScore", (n) -> { this.setCpuSpikeTimeScore(n.getIntegerValue()); });
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getLongValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
@@ -137,11 +141,11 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
         deserializerMap.put("machineType", (n) -> { this.setMachineType(n.getEnumValue(UserExperienceAnalyticsMachineType::forValue)); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
-        deserializerMap.put("ramSpikeTimePercentage", (n) -> { this.setRamSpikeTimePercentage(n.getDoubleValue()); });
-        deserializerMap.put("ramSpikeTimePercentageThreshold", (n) -> { this.setRamSpikeTimePercentageThreshold(n.getDoubleValue()); });
+        deserializerMap.put("ramSpikeTimePercentage", (n) -> { this.setRamSpikeTimePercentage(n.getObjectValue(UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage::createFromDiscriminatorValue)); });
+        deserializerMap.put("ramSpikeTimePercentageThreshold", (n) -> { this.setRamSpikeTimePercentageThreshold(n.getObjectValue(UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold::createFromDiscriminatorValue)); });
         deserializerMap.put("ramSpikeTimeScore", (n) -> { this.setRamSpikeTimeScore(n.getIntegerValue()); });
         deserializerMap.put("totalProcessorCoreCount", (n) -> { this.setTotalProcessorCoreCount(n.getIntegerValue()); });
-        deserializerMap.put("totalRamInMB", (n) -> { this.setTotalRamInMB(n.getDoubleValue()); });
+        deserializerMap.put("totalRamInMB", (n) -> { this.setTotalRamInMB(n.getObjectValue(UserExperienceAnalyticsResourcePerformanceTotalRamInMB::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -178,18 +182,18 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the ramSpikeTimePercentage property value. RAM spike time in percentage. Valid values 0 to 100
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage}
      */
     @jakarta.annotation.Nullable
-    public Double getRamSpikeTimePercentage() {
+    public UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage getRamSpikeTimePercentage() {
         return this.backingStore.get("ramSpikeTimePercentage");
     }
     /**
      * Gets the ramSpikeTimePercentageThreshold property value. Threshold of ramSpikeTimeScore. Valid values 0 to 100
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold}
      */
     @jakarta.annotation.Nullable
-    public Double getRamSpikeTimePercentageThreshold() {
+    public UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold getRamSpikeTimePercentageThreshold() {
         return this.backingStore.get("ramSpikeTimePercentageThreshold");
     }
     /**
@@ -210,10 +214,10 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
     }
     /**
      * Gets the totalRamInMB property value. The total RAM of the device, in MB. Valid values 0 to 1000000
-     * @return a {@link Double}
+     * @return a {@link UserExperienceAnalyticsResourcePerformanceTotalRamInMB}
      */
     @jakarta.annotation.Nullable
-    public Double getTotalRamInMB() {
+    public UserExperienceAnalyticsResourcePerformanceTotalRamInMB getTotalRamInMB() {
         return this.backingStore.get("totalRamInMB");
     }
     /**
@@ -224,10 +228,10 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("averageSpikeTimeScore", this.getAverageSpikeTimeScore());
-        writer.writeDoubleValue("cpuClockSpeedInMHz", this.getCpuClockSpeedInMHz());
+        writer.writeObjectValue("cpuClockSpeedInMHz", this.getCpuClockSpeedInMHz());
         writer.writeStringValue("cpuDisplayName", this.getCpuDisplayName());
-        writer.writeDoubleValue("cpuSpikeTimePercentage", this.getCpuSpikeTimePercentage());
-        writer.writeDoubleValue("cpuSpikeTimePercentageThreshold", this.getCpuSpikeTimePercentageThreshold());
+        writer.writeObjectValue("cpuSpikeTimePercentage", this.getCpuSpikeTimePercentage());
+        writer.writeObjectValue("cpuSpikeTimePercentageThreshold", this.getCpuSpikeTimePercentageThreshold());
         writer.writeIntegerValue("cpuSpikeTimeScore", this.getCpuSpikeTimeScore());
         writer.writeLongValue("deviceCount", this.getDeviceCount());
         writer.writeStringValue("deviceId", this.getDeviceId());
@@ -238,11 +242,11 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
         writer.writeEnumValue("machineType", this.getMachineType());
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeStringValue("model", this.getModel());
-        writer.writeDoubleValue("ramSpikeTimePercentage", this.getRamSpikeTimePercentage());
-        writer.writeDoubleValue("ramSpikeTimePercentageThreshold", this.getRamSpikeTimePercentageThreshold());
+        writer.writeObjectValue("ramSpikeTimePercentage", this.getRamSpikeTimePercentage());
+        writer.writeObjectValue("ramSpikeTimePercentageThreshold", this.getRamSpikeTimePercentageThreshold());
         writer.writeIntegerValue("ramSpikeTimeScore", this.getRamSpikeTimeScore());
         writer.writeIntegerValue("totalProcessorCoreCount", this.getTotalProcessorCoreCount());
-        writer.writeDoubleValue("totalRamInMB", this.getTotalRamInMB());
+        writer.writeObjectValue("totalRamInMB", this.getTotalRamInMB());
     }
     /**
      * Sets the averageSpikeTimeScore property value. AverageSpikeTimeScore of a device or a model type. Valid values 0 to 100
@@ -255,7 +259,7 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * Sets the cpuClockSpeedInMHz property value. The clock speed of the processor, in MHz. Valid values 0 to 1000000
      * @param value Value to set for the cpuClockSpeedInMHz property.
      */
-    public void setCpuClockSpeedInMHz(@jakarta.annotation.Nullable final Double value) {
+    public void setCpuClockSpeedInMHz(@jakarta.annotation.Nullable final UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz value) {
         this.backingStore.set("cpuClockSpeedInMHz", value);
     }
     /**
@@ -269,14 +273,14 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * Sets the cpuSpikeTimePercentage property value. CPU spike time in percentage. Valid values 0 to 100
      * @param value Value to set for the cpuSpikeTimePercentage property.
      */
-    public void setCpuSpikeTimePercentage(@jakarta.annotation.Nullable final Double value) {
+    public void setCpuSpikeTimePercentage(@jakarta.annotation.Nullable final UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage value) {
         this.backingStore.set("cpuSpikeTimePercentage", value);
     }
     /**
      * Sets the cpuSpikeTimePercentageThreshold property value. Threshold of cpuSpikeTimeScore. Valid values 0 to 100
      * @param value Value to set for the cpuSpikeTimePercentageThreshold property.
      */
-    public void setCpuSpikeTimePercentageThreshold(@jakarta.annotation.Nullable final Double value) {
+    public void setCpuSpikeTimePercentageThreshold(@jakarta.annotation.Nullable final UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold value) {
         this.backingStore.set("cpuSpikeTimePercentageThreshold", value);
     }
     /**
@@ -353,14 +357,14 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * Sets the ramSpikeTimePercentage property value. RAM spike time in percentage. Valid values 0 to 100
      * @param value Value to set for the ramSpikeTimePercentage property.
      */
-    public void setRamSpikeTimePercentage(@jakarta.annotation.Nullable final Double value) {
+    public void setRamSpikeTimePercentage(@jakarta.annotation.Nullable final UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage value) {
         this.backingStore.set("ramSpikeTimePercentage", value);
     }
     /**
      * Sets the ramSpikeTimePercentageThreshold property value. Threshold of ramSpikeTimeScore. Valid values 0 to 100
      * @param value Value to set for the ramSpikeTimePercentageThreshold property.
      */
-    public void setRamSpikeTimePercentageThreshold(@jakarta.annotation.Nullable final Double value) {
+    public void setRamSpikeTimePercentageThreshold(@jakarta.annotation.Nullable final UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold value) {
         this.backingStore.set("ramSpikeTimePercentageThreshold", value);
     }
     /**
@@ -381,7 +385,739 @@ public class UserExperienceAnalyticsResourcePerformance extends Entity implement
      * Sets the totalRamInMB property value. The total RAM of the device, in MB. Valid values 0 to 1000000
      * @param value Value to set for the totalRamInMB property.
      */
-    public void setTotalRamInMB(@jakarta.annotation.Nullable final Double value) {
+    public void setTotalRamInMB(@jakarta.annotation.Nullable final UserExperienceAnalyticsResourcePerformanceTotalRamInMB value) {
         this.backingStore.set("totalRamInMB", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz} and sets the default values.
+         */
+        public UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz result = new UserExperienceAnalyticsResourcePerformanceCpuClockSpeedInMHz();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage} and sets the default values.
+         */
+        public UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage result = new UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentage();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold} and sets the default values.
+         */
+        public UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold result = new UserExperienceAnalyticsResourcePerformanceCpuSpikeTimePercentageThreshold();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage} and sets the default values.
+         */
+        public UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage result = new UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentage();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold} and sets the default values.
+         */
+        public UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold result = new UserExperienceAnalyticsResourcePerformanceRamSpikeTimePercentageThreshold();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class UserExperienceAnalyticsResourcePerformanceTotalRamInMB implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link UserExperienceAnalyticsResourcePerformanceTotalRamInMB} and sets the default values.
+         */
+        public UserExperienceAnalyticsResourcePerformanceTotalRamInMB() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link UserExperienceAnalyticsResourcePerformanceTotalRamInMB}
+         */
+        @jakarta.annotation.Nonnull
+        public static UserExperienceAnalyticsResourcePerformanceTotalRamInMB createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final UserExperienceAnalyticsResourcePerformanceTotalRamInMB result = new UserExperienceAnalyticsResourcePerformanceTotalRamInMB();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

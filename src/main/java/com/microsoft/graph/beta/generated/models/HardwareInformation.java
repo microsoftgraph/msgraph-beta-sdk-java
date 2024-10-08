@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.ComposedTypeWrapper;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -76,10 +77,10 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
     }
     /**
      * Gets the batteryLevelPercentage property value. The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
-     * @return a {@link Double}
+     * @return a {@link HardwareInformationBatteryLevelPercentage}
      */
     @jakarta.annotation.Nullable
-    public Double getBatteryLevelPercentage() {
+    public HardwareInformationBatteryLevelPercentage getBatteryLevelPercentage() {
         return this.backingStore.get("batteryLevelPercentage");
     }
     /**
@@ -171,7 +172,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(41);
         deserializerMap.put("batteryChargeCycles", (n) -> { this.setBatteryChargeCycles(n.getIntegerValue()); });
         deserializerMap.put("batteryHealthPercentage", (n) -> { this.setBatteryHealthPercentage(n.getIntegerValue()); });
-        deserializerMap.put("batteryLevelPercentage", (n) -> { this.setBatteryLevelPercentage(n.getDoubleValue()); });
+        deserializerMap.put("batteryLevelPercentage", (n) -> { this.setBatteryLevelPercentage(n.getObjectValue(HardwareInformationBatteryLevelPercentage::createFromDiscriminatorValue)); });
         deserializerMap.put("batterySerialNumber", (n) -> { this.setBatterySerialNumber(n.getStringValue()); });
         deserializerMap.put("cellularTechnology", (n) -> { this.setCellularTechnology(n.getStringValue()); });
         deserializerMap.put("deviceFullQualifiedDomainName", (n) -> { this.setDeviceFullQualifiedDomainName(n.getStringValue()); });
@@ -444,7 +445,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("batteryChargeCycles", this.getBatteryChargeCycles());
         writer.writeIntegerValue("batteryHealthPercentage", this.getBatteryHealthPercentage());
-        writer.writeDoubleValue("batteryLevelPercentage", this.getBatteryLevelPercentage());
+        writer.writeObjectValue("batteryLevelPercentage", this.getBatteryLevelPercentage());
         writer.writeStringValue("batterySerialNumber", this.getBatterySerialNumber());
         writer.writeStringValue("cellularTechnology", this.getCellularTechnology());
         writer.writeStringValue("deviceFullQualifiedDomainName", this.getDeviceFullQualifiedDomainName());
@@ -518,7 +519,7 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
      * Sets the batteryLevelPercentage property value. The battery level, between 0.0 and 100, or null if the battery level cannot be determined. The update frequency of this property is per-checkin. Note this property is currently supported only on devices running iOS 5.0 and later, and is available only when Device Information access right is obtained. Valid values 0 to 100
      * @param value Value to set for the batteryLevelPercentage property.
      */
-    public void setBatteryLevelPercentage(@jakarta.annotation.Nullable final Double value) {
+    public void setBatteryLevelPercentage(@jakarta.annotation.Nullable final HardwareInformationBatteryLevelPercentage value) {
         this.backingStore.set("batteryLevelPercentage", value);
     }
     /**
@@ -786,5 +787,127 @@ public class HardwareInformation implements AdditionalDataHolder, BackedModel, P
      */
     public void setWiredIPv4Addresses(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("wiredIPv4Addresses", value);
+    }
+    /**
+     * Composed type wrapper for classes {@link Double}, {@link ReferenceNumeric}, {@link String}
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public static class HardwareInformationBatteryLevelPercentage implements BackedModel, ComposedTypeWrapper, Parsable {
+        /**
+         * Stores model information.
+         */
+        @jakarta.annotation.Nonnull
+        protected BackingStore backingStore;
+        /**
+         * Instantiates a new {@link HardwareInformationBatteryLevelPercentage} and sets the default values.
+         */
+        public HardwareInformationBatteryLevelPercentage() {
+            this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        }
+        /**
+         * Creates a new instance of the appropriate class based on discriminator value
+         * @param parseNode The parse node to use to read the discriminator value and create the object
+         * @return a {@link HardwareInformationBatteryLevelPercentage}
+         */
+        @jakarta.annotation.Nonnull
+        public static HardwareInformationBatteryLevelPercentage createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+            Objects.requireNonNull(parseNode);
+            final HardwareInformationBatteryLevelPercentage result = new HardwareInformationBatteryLevelPercentage();
+            final ParseNode mappingValueNode = parseNode.getChildNode("");
+            if (mappingValueNode != null) {
+                final String mappingValue = mappingValueNode.getStringValue();
+            }
+            if (parseNode.getEnumValue(ReferenceNumeric::forValue) != null) {
+                result.setReferenceNumeric(parseNode.getEnumValue(ReferenceNumeric::forValue));
+            } else if (parseNode.getDoubleValue() != null) {
+                result.setDouble(parseNode.getDoubleValue());
+            } else if (parseNode.getStringValue() != null) {
+                result.setString(parseNode.getStringValue());
+            }
+            return result;
+        }
+        /**
+         * Gets the backingStore property value. Stores model information.
+         * @return a {@link BackingStore}
+         */
+        @jakarta.annotation.Nonnull
+        public BackingStore getBackingStore() {
+            return this.backingStore;
+        }
+        /**
+         * Gets the double property value. Composed type representation for type {@link Double}
+         * @return a {@link Double}
+         */
+        @jakarta.annotation.Nullable
+        public Double getDouble() {
+            return this.backingStore.get("double");
+        }
+        /**
+         * The deserialization information for the current model
+         * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+         */
+        @jakarta.annotation.Nonnull
+        public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+            return new HashMap<String, java.util.function.Consumer<ParseNode>>();
+        }
+        /**
+         * Gets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @return a {@link ReferenceNumeric}
+         */
+        @jakarta.annotation.Nullable
+        public ReferenceNumeric getReferenceNumeric() {
+            return this.backingStore.get("referenceNumeric");
+        }
+        /**
+         * Gets the string property value. Composed type representation for type {@link String}
+         * @return a {@link String}
+         */
+        @jakarta.annotation.Nullable
+        public String getString() {
+            return this.backingStore.get("string");
+        }
+        /**
+         * Serializes information the current object
+         * @param writer Serialization writer to use to serialize this model
+         */
+        public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+            Objects.requireNonNull(writer);
+            if (this.getReferenceNumeric() != null) {
+                writer.writeEnumValue(null, this.getReferenceNumeric());
+            } else if (this.getDouble() != null) {
+                writer.writeDoubleValue(null, this.getDouble());
+            } else if (this.getString() != null) {
+                writer.writeStringValue(null, this.getString());
+            }
+        }
+        /**
+         * Sets the backingStore property value. Stores model information.
+         * @param value Value to set for the backingStore property.
+         */
+        public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+            Objects.requireNonNull(value);
+            this.backingStore = value;
+        }
+        /**
+         * Sets the double property value. Composed type representation for type {@link Double}
+         * @param value Value to set for the double property.
+         */
+        public void setDouble(@jakarta.annotation.Nullable final Double value) {
+            this.backingStore.set("double", value);
+        }
+        /**
+         * Sets the ReferenceNumeric property value. Composed type representation for type {@link ReferenceNumeric}
+         * @param value Value to set for the ReferenceNumeric property.
+         */
+        public void setReferenceNumeric(@jakarta.annotation.Nullable final ReferenceNumeric value) {
+            this.backingStore.set("referenceNumeric", value);
+        }
+        /**
+         * Sets the string property value. Composed type representation for type {@link String}
+         * @param value Value to set for the string property.
+         */
+        public void setString(@jakarta.annotation.Nullable final String value) {
+            this.backingStore.set("string", value);
+        }
     }
 }

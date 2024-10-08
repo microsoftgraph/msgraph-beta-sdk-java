@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.users.item.manageddevices.item.devicecategory;
 
 import com.microsoft.graph.beta.models.DeviceCategory;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.users.item.manageddevices.item.devicecategory.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,17 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the collection of user entities.
+     * @return a {@link RefRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link DeviceCategoryRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
