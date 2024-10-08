@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.comanageddevices.item.devicecategory;
 
+import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.devicecategory.ref.RefRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceCategory;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceCategoryRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the collection of deviceManagement entities.
+     * @return a {@link RefRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link DeviceCategoryRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
