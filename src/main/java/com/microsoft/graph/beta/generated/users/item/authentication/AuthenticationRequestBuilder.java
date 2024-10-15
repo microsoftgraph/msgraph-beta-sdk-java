@@ -11,6 +11,7 @@ import com.microsoft.graph.beta.users.item.authentication.passwordlessmicrosofta
 import com.microsoft.graph.beta.users.item.authentication.passwordmethods.PasswordMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.phonemethods.PhoneMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.platformcredentialmethods.PlatformCredentialMethodsRequestBuilder;
+import com.microsoft.graph.beta.users.item.authentication.requirements.RequirementsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.signinpreferences.SignInPreferencesRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.softwareoathmethods.SoftwareOathMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.temporaryaccesspassmethods.TemporaryAccessPassMethodsRequestBuilder;
@@ -131,6 +132,17 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PlatformCredentialMethodsRequestBuilder platformCredentialMethods() {
         return new PlatformCredentialMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * The requirements property
+     * @return a {@link RequirementsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public RequirementsRequestBuilder requirements() {
+        return new RequirementsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * The signInPreferences property

@@ -1,7 +1,7 @@
-package com.microsoft.graph.beta.external.connections.item.schema;
+package com.microsoft.graph.beta.users.item.authentication.requirements;
 
-import com.microsoft.graph.beta.models.externalconnectors.Schema;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.models.StrongAuthenticationRequirements;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,91 +16,109 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the schema property of the microsoft.graph.externalConnectors.externalConnection entity.
+ * Builds and executes requests for operations under /users/{user-id}/authentication/requirements
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class SchemaRequestBuilder extends BaseRequestBuilder {
+public class RequirementsRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link SchemaRequestBuilder} and sets the default values.
+     * Instantiates a new {@link RequirementsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public SchemaRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}/schema{?%24expand,%24select}", pathParameters);
+    public RequirementsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/requirements{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new {@link SchemaRequestBuilder} and sets the default values.
+     * Instantiates a new {@link RequirementsRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public SchemaRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/external/connections/{externalConnection%2Did}/schema{?%24expand,%24select}", rawUrl);
+    public RequirementsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/requirements{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Retrieve the properties of a schema for an externalConnection.
-     * @return a {@link Schema}
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
+     * @return a {@link StrongAuthenticationRequirements}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-beta">Find more info here</a>
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public Schema get() {
+    @Deprecated
+    public StrongAuthenticationRequirements get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of a schema for an externalConnection.
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link Schema}
+     * @return a {@link StrongAuthenticationRequirements}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-get?view=graph-rest-beta">Find more info here</a>
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public Schema get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @Deprecated
+    public StrongAuthenticationRequirements get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, Schema::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, StrongAuthenticationRequirements::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a schema for an externalConnection.
+     * Update the properties of a user's authentication method states. Use this API to update the following information:
      * @param body The request body
-     * @return a {@link Schema}
+     * @return a {@link StrongAuthenticationRequirements}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-beta">Find more info here</a>
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public Schema patch(@jakarta.annotation.Nonnull final Schema body) {
+    @Deprecated
+    public StrongAuthenticationRequirements patch(@jakarta.annotation.Nonnull final StrongAuthenticationRequirements body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a schema for an externalConnection.
+     * Update the properties of a user's authentication method states. Use this API to update the following information:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link Schema}
+     * @return a {@link StrongAuthenticationRequirements}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-schema-update?view=graph-rest-beta">Find more info here</a>
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public Schema patch(@jakarta.annotation.Nonnull final Schema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @Deprecated
+    public StrongAuthenticationRequirements patch(@jakarta.annotation.Nonnull final StrongAuthenticationRequirements body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, Schema::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, StrongAuthenticationRequirements::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties of a schema for an externalConnection.
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a schema for an externalConnection.
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -108,22 +126,28 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a schema for an externalConnection.
+     * Update the properties of a user's authentication method states. Use this API to update the following information:
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Schema body) {
+    @Deprecated
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final StrongAuthenticationRequirements body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a schema for an externalConnection.
+     * Update the properties of a user's authentication method states. Use this API to update the following information:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Schema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @Deprecated
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final StrongAuthenticationRequirements body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
@@ -134,15 +158,18 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link SchemaRequestBuilder}
+     * @return a {@link RequirementsRequestBuilder}
+     * @deprecated
+     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    public SchemaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    @Deprecated
+    public RequirementsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new SchemaRequestBuilder(rawUrl, requestAdapter);
+        return new RequirementsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties of a schema for an externalConnection.
+     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

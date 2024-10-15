@@ -58,7 +58,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. An optional description for the team. Maximum length: 1024 characters.
+     * Gets the description property value. An optional description for the team. Maximum length: 1,024 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -315,7 +315,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("visibility");
     }
     /**
-     * Gets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. It is the URL you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     * Gets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. It's the URL you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -391,7 +391,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. An optional description for the team. Maximum length: 1024 characters.
+     * Sets the description property value. An optional description for the team. Maximum length: 1,024 characters.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -580,7 +580,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("visibility", value);
     }
     /**
-     * Sets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. It is the URL you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     * Sets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. It's the URL you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

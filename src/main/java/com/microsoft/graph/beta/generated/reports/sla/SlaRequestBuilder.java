@@ -64,7 +64,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
+     * Reports that relate to tenant-level Microsoft Entra Health SLA attainment.
      * @return a {@link ServiceLevelAgreementRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
+     * Reports that relate to tenant-level Microsoft Entra Health SLA attainment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServiceLevelAgreementRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
+     * Reports that relate to tenant-level Microsoft Entra Health SLA attainment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
+     * Reports that relate to tenant-level Microsoft Entra Health SLA attainment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class SlaRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Reports that relate to tenant-level Microsoft Entra SLA attainment.
+     * Reports that relate to tenant-level Microsoft Entra Health SLA attainment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

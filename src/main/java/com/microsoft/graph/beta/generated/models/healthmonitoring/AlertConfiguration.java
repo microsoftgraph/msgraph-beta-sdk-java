@@ -26,7 +26,7 @@ public class AlertConfiguration extends Entity implements Parsable {
         return new AlertConfiguration();
     }
     /**
-     * Gets the emailNotificationConfigurations property value. The emailNotificationConfigurations property
+     * Gets the emailNotificationConfigurations property value. Defines the recipients of email notifications for an alert type. Currently, only one email notification configuration is supported for an alert configuration, meaning only one group can receive notifications for an alert type.
      * @return a {@link java.util.List<EmailNotificationConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class AlertConfiguration extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("emailNotificationConfigurations", this.getEmailNotificationConfigurations());
     }
     /**
-     * Sets the emailNotificationConfigurations property value. The emailNotificationConfigurations property
+     * Sets the emailNotificationConfigurations property value. Defines the recipients of email notifications for an alert type. Currently, only one email notification configuration is supported for an alert configuration, meaning only one group can receive notifications for an alert type.
      * @param value Value to set for the emailNotificationConfigurations property.
      */
     public void setEmailNotificationConfigurations(@jakarta.annotation.Nullable final java.util.List<EmailNotificationConfiguration> value) {

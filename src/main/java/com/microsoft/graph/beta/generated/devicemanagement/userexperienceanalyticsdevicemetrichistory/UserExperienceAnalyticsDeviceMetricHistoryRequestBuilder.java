@@ -60,7 +60,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsDeviceMetricHistory{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * User experience analytics device metric history
+     * User experience analytics device metric history. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
      * @return a {@link UserExperienceAnalyticsMetricHistoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
         return get(null);
     }
     /**
-     * User experience analytics device metric history
+     * User experience analytics device metric history. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserExperienceAnalyticsMetricHistoryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
         return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsMetricHistory::createFromDiscriminatorValue);
     }
     /**
-     * User experience analytics device metric history
+     * User experience analytics device metric history. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * User experience analytics device metric history
+     * User experience analytics device metric history. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
         return new UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * User experience analytics device metric history
+     * User experience analytics device metric history. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
