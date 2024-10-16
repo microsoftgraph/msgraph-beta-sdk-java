@@ -23,7 +23,11 @@ public enum DeviceManagementConfigurationPlatforms implements ValuedEnum {
     /** Indicates that the settings contained in associated configuration applies to the Linux operating system. */
     Linux("linux"),
     /** Evolvable enumeration sentinel value. Do not use. */
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    /** Indicates that the settings contained in associated configuration applies to the android operating system corporate owned devices. */
+    AndroidEnterprise("androidEnterprise"),
+    /** Indicates that the settings contained in associated configuration applies to the android open source operating system. */
+    Aosp("aosp");
     public final String value;
     DeviceManagementConfigurationPlatforms(final String value) {
         this.value = value;
@@ -42,6 +46,8 @@ public enum DeviceManagementConfigurationPlatforms implements ValuedEnum {
             case "windows10": return Windows10;
             case "linux": return Linux;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "androidEnterprise": return AndroidEnterprise;
+            case "aosp": return Aosp;
             default: return null;
         }
     }

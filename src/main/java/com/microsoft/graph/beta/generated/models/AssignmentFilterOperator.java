@@ -32,7 +32,7 @@ public enum AssignmentFilterOperator implements ValuedEnum {
     NotEndsWith("notEndsWith"),
     /** Indicates the devices whose property value is greater than the configured input in Assignment Filters. */
     GreaterThan("greaterThan"),
-    /** `Indicates the devices whose property value is greater than or equal to the configured input in Assignment Filters. */
+    /** Indicates the devices whose property value is greater than or equal to the configured input in Assignment Filters. */
     GreaterThanOrEquals("greaterThanOrEquals"),
     /** Indicates the devices whose property value is less than the configured input in Assignment Filters. */
     LessThan("lessThan"),

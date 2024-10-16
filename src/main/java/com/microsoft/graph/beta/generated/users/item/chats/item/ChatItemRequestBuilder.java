@@ -38,10 +38,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the completeMigration method.
      * @return a {@link CompleteMigrationRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CompleteMigrationRequestBuilder completeMigration() {
         return new CompleteMigrationRequestBuilder(pathParameters, requestAdapter);
@@ -49,10 +46,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the hideForUser method.
      * @return a {@link HideForUserRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public HideForUserRequestBuilder hideForUser() {
         return new HideForUserRequestBuilder(pathParameters, requestAdapter);
@@ -60,10 +54,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
      * @return a {@link InstalledAppsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
         return new InstalledAppsRequestBuilder(pathParameters, requestAdapter);
@@ -71,10 +62,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the lastMessagePreview property of the microsoft.graph.chat entity.
      * @return a {@link LastMessagePreviewRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public LastMessagePreviewRequestBuilder lastMessagePreview() {
         return new LastMessagePreviewRequestBuilder(pathParameters, requestAdapter);
@@ -82,10 +70,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the markChatReadForUser method.
      * @return a {@link MarkChatReadForUserRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MarkChatReadForUserRequestBuilder markChatReadForUser() {
         return new MarkChatReadForUserRequestBuilder(pathParameters, requestAdapter);
@@ -93,10 +78,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the markChatUnreadForUser method.
      * @return a {@link MarkChatUnreadForUserRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MarkChatUnreadForUserRequestBuilder markChatUnreadForUser() {
         return new MarkChatUnreadForUserRequestBuilder(pathParameters, requestAdapter);
@@ -104,10 +86,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the members property of the microsoft.graph.chat entity.
      * @return a {@link MembersRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MembersRequestBuilder members() {
         return new MembersRequestBuilder(pathParameters, requestAdapter);
@@ -115,10 +94,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the messages property of the microsoft.graph.chat entity.
      * @return a {@link MessagesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
@@ -126,10 +102,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the operations property of the microsoft.graph.chat entity.
      * @return a {@link OperationsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public OperationsRequestBuilder operations() {
         return new OperationsRequestBuilder(pathParameters, requestAdapter);
@@ -137,10 +110,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the permissionGrants property of the microsoft.graph.chat entity.
      * @return a {@link PermissionGrantsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PermissionGrantsRequestBuilder permissionGrants() {
         return new PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
@@ -148,10 +118,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
      * @return a {@link PinnedMessagesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PinnedMessagesRequestBuilder pinnedMessages() {
         return new PinnedMessagesRequestBuilder(pathParameters, requestAdapter);
@@ -159,10 +126,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the removeAllAccessForUser method.
      * @return a {@link RemoveAllAccessForUserRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RemoveAllAccessForUserRequestBuilder removeAllAccessForUser() {
         return new RemoveAllAccessForUserRequestBuilder(pathParameters, requestAdapter);
@@ -170,10 +134,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the sendActivityNotification method.
      * @return a {@link SendActivityNotificationRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
@@ -181,10 +142,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tabs property of the microsoft.graph.chat entity.
      * @return a {@link TabsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
@@ -192,10 +150,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the unhideForUser method.
      * @return a {@link UnhideForUserRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public UnhideForUserRequestBuilder unhideForUser() {
         return new UnhideForUserRequestBuilder(pathParameters, requestAdapter);
@@ -219,10 +174,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property chats for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -230,10 +182,7 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property chats for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -244,12 +193,9 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Chat get() {
         return get(null);
     }
@@ -258,12 +204,9 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/chat-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Chat get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -275,11 +218,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Chat patch(@jakarta.annotation.Nonnull final Chat body) {
         return patch(body, null);
     }
@@ -289,11 +229,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Chat}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Chat patch(@jakarta.annotation.Nonnull final Chat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -304,11 +241,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property chats for users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -316,11 +250,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property chats for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -330,11 +261,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -342,11 +270,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve a single chat (without its messages). This method supports federation. To access a chat, at least one chat member must belong to the tenant the request initiated from.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -357,11 +282,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property chats in users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Chat body) {
         return toPatchRequestInformation(body, null);
     }
@@ -370,11 +292,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Chat body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -387,11 +306,8 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ChatItemRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ChatItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ChatItemRequestBuilder(rawUrl, requestAdapter);

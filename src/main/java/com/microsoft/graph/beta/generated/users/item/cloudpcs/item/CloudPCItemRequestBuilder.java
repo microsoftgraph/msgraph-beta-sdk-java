@@ -45,10 +45,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the changeUserAccountType method.
      * @return a {@link ChangeUserAccountTypeRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ChangeUserAccountTypeRequestBuilder changeUserAccountType() {
         return new ChangeUserAccountTypeRequestBuilder(pathParameters, requestAdapter);
@@ -56,10 +53,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the createSnapshot method.
      * @return a {@link CreateSnapshotRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CreateSnapshotRequestBuilder createSnapshot() {
         return new CreateSnapshotRequestBuilder(pathParameters, requestAdapter);
@@ -67,10 +61,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the endGracePeriod method.
      * @return a {@link EndGracePeriodRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public EndGracePeriodRequestBuilder endGracePeriod() {
         return new EndGracePeriodRequestBuilder(pathParameters, requestAdapter);
@@ -78,10 +69,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCloudPcConnectivityHistory method.
      * @return a {@link GetCloudPcConnectivityHistoryRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCloudPcConnectivityHistoryRequestBuilder getCloudPcConnectivityHistory() {
         return new GetCloudPcConnectivityHistoryRequestBuilder(pathParameters, requestAdapter);
@@ -89,10 +77,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCloudPcLaunchInfo method.
      * @return a {@link GetCloudPcLaunchInfoRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCloudPcLaunchInfoRequestBuilder getCloudPcLaunchInfo() {
         return new GetCloudPcLaunchInfoRequestBuilder(pathParameters, requestAdapter);
@@ -100,10 +85,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getFrontlineCloudPcAccessState method.
      * @return a {@link GetFrontlineCloudPcAccessStateRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetFrontlineCloudPcAccessStateRequestBuilder getFrontlineCloudPcAccessState() {
         return new GetFrontlineCloudPcAccessStateRequestBuilder(pathParameters, requestAdapter);
@@ -111,10 +93,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSupportedCloudPcRemoteActions method.
      * @return a {@link GetSupportedCloudPcRemoteActionsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetSupportedCloudPcRemoteActionsRequestBuilder getSupportedCloudPcRemoteActions() {
         return new GetSupportedCloudPcRemoteActionsRequestBuilder(pathParameters, requestAdapter);
@@ -122,10 +101,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the powerOff method.
      * @return a {@link PowerOffRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PowerOffRequestBuilder powerOff() {
         return new PowerOffRequestBuilder(pathParameters, requestAdapter);
@@ -133,10 +109,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the powerOn method.
      * @return a {@link PowerOnRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PowerOnRequestBuilder powerOn() {
         return new PowerOnRequestBuilder(pathParameters, requestAdapter);
@@ -144,10 +117,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the reboot method.
      * @return a {@link RebootRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RebootRequestBuilder reboot() {
         return new RebootRequestBuilder(pathParameters, requestAdapter);
@@ -155,10 +125,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the rename method.
      * @return a {@link RenameRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RenameRequestBuilder rename() {
         return new RenameRequestBuilder(pathParameters, requestAdapter);
@@ -166,10 +133,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the reprovision method.
      * @return a {@link ReprovisionRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ReprovisionRequestBuilder reprovision() {
         return new ReprovisionRequestBuilder(pathParameters, requestAdapter);
@@ -177,10 +141,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the resize method.
      * @return a {@link ResizeRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ResizeRequestBuilder resize() {
         return new ResizeRequestBuilder(pathParameters, requestAdapter);
@@ -188,10 +149,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the restore method.
      * @return a {@link RestoreRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
@@ -199,10 +157,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveCloudPCRemoteActionResults method.
      * @return a {@link RetrieveCloudPCRemoteActionResultsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveCloudPCRemoteActionResultsRequestBuilder retrieveCloudPCRemoteActionResults() {
         return new RetrieveCloudPCRemoteActionResultsRequestBuilder(pathParameters, requestAdapter);
@@ -210,10 +165,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveReviewStatus method.
      * @return a {@link RetrieveReviewStatusRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveReviewStatusRequestBuilder retrieveReviewStatus() {
         return new RetrieveReviewStatusRequestBuilder(pathParameters, requestAdapter);
@@ -221,10 +173,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveSnapshots method.
      * @return a {@link RetrieveSnapshotsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveSnapshotsRequestBuilder retrieveSnapshots() {
         return new RetrieveSnapshotsRequestBuilder(pathParameters, requestAdapter);
@@ -232,10 +181,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retryPartnerAgentInstallation method.
      * @return a {@link RetryPartnerAgentInstallationRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RetryPartnerAgentInstallationRequestBuilder retryPartnerAgentInstallation() {
         return new RetryPartnerAgentInstallationRequestBuilder(pathParameters, requestAdapter);
@@ -243,10 +189,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the setReviewStatus method.
      * @return a {@link SetReviewStatusRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SetReviewStatusRequestBuilder setReviewStatus() {
         return new SetReviewStatusRequestBuilder(pathParameters, requestAdapter);
@@ -254,10 +197,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the start method.
      * @return a {@link StartRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public StartRequestBuilder start() {
         return new StartRequestBuilder(pathParameters, requestAdapter);
@@ -265,10 +205,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the stop method.
      * @return a {@link StopRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public StopRequestBuilder stop() {
         return new StopRequestBuilder(pathParameters, requestAdapter);
@@ -276,10 +213,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the troubleshoot method.
      * @return a {@link TroubleshootRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public TroubleshootRequestBuilder troubleshoot() {
         return new TroubleshootRequestBuilder(pathParameters, requestAdapter);
@@ -303,10 +237,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property cloudPCs for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -314,10 +245,7 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property cloudPCs for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -328,11 +256,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * Get cloudPCs from users
      * @return a {@link CloudPC}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CloudPC get() {
         return get(null);
     }
@@ -341,11 +266,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPC}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CloudPC get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -357,11 +279,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link CloudPC}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CloudPC patch(@jakarta.annotation.Nonnull final CloudPC body) {
         return patch(body, null);
     }
@@ -371,11 +290,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPC}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CloudPC patch(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -386,11 +302,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property cloudPCs for users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -398,11 +311,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property cloudPCs for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -412,11 +322,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get cloudPCs from users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -424,11 +331,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * Get cloudPCs from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -439,11 +343,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property cloudPCs in users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPC body) {
         return toPatchRequestInformation(body, null);
     }
@@ -452,11 +353,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPC body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -469,11 +367,8 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CloudPCItemRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public CloudPCItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CloudPCItemRequestBuilder(rawUrl, requestAdapter);

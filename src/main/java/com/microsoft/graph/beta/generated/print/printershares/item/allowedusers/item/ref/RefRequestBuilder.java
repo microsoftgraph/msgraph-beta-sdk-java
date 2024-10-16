@@ -38,7 +38,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -50,7 +50,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      * @see <a href="https://learn.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -64,7 +64,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * Revoke the specified user's access to submit print jobs to the associated printerShare.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -76,7 +76,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -91,7 +91,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link RefRequestBuilder}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
      */
     @jakarta.annotation.Nonnull
     @Deprecated

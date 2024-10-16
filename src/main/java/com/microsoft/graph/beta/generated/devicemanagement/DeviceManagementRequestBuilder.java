@@ -16,6 +16,8 @@ import com.microsoft.graph.beta.devicemanagement.carttoclassassociations.CartToC
 import com.microsoft.graph.beta.devicemanagement.categories.CategoriesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.certificateconnectordetails.CertificateConnectorDetailsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.chromeosonboardingsettings.ChromeOSOnboardingSettingsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.CloudCertificationAuthorityRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthorityleafcertificate.CloudCertificationAuthorityLeafCertificateRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudpcconnectivityissues.CloudPCConnectivityIssuesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.ComanagedDevicesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanagementeligibledevices.ComanagementEligibleDevicesRequestBuilder;
@@ -40,7 +42,6 @@ import com.microsoft.graph.beta.devicemanagement.devicecompliancepolicysettingst
 import com.microsoft.graph.beta.devicemanagement.devicecompliancescripts.DeviceComplianceScriptsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationconflictsummary.DeviceConfigurationConflictSummaryRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationdevicestatesummaries.DeviceConfigurationDeviceStateSummariesRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.deviceconfigurationprofiles.DeviceConfigurationProfilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationrestrictedappsviolations.DeviceConfigurationRestrictedAppsViolationsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurations.DeviceConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates.DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder;
@@ -340,6 +341,22 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         return new ChromeOSOnboardingSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the cloudCertificationAuthority property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link CloudCertificationAuthorityRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CloudCertificationAuthorityRequestBuilder cloudCertificationAuthority() {
+        return new CloudCertificationAuthorityRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the cloudCertificationAuthorityLeafCertificate property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link CloudCertificationAuthorityLeafCertificateRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CloudCertificationAuthorityLeafCertificateRequestBuilder cloudCertificationAuthorityLeafCertificate() {
+        return new CloudCertificationAuthorityLeafCertificateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the cloudPCConnectivityIssues property of the microsoft.graph.deviceManagement entity.
      * @return a {@link CloudPCConnectivityIssuesRequestBuilder}
      */
@@ -530,14 +547,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeviceConfigurationDeviceStateSummariesRequestBuilder deviceConfigurationDeviceStateSummaries() {
         return new DeviceConfigurationDeviceStateSummariesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the deviceConfigurationProfiles property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link DeviceConfigurationProfilesRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public DeviceConfigurationProfilesRequestBuilder deviceConfigurationProfiles() {
-        return new DeviceConfigurationProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deviceConfigurationRestrictedAppsViolations property of the microsoft.graph.deviceManagement entity.

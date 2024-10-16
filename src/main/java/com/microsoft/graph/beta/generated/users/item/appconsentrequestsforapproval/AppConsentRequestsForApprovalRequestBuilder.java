@@ -27,10 +27,7 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -39,11 +36,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * Provides operations to manage the appConsentRequestsForApproval property of the microsoft.graph.user entity.
      * @param appConsentRequestId The unique identifier of appConsentRequest
      * @return a {@link AppConsentRequestItemRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AppConsentRequestItemRequestBuilder byAppConsentRequestId(@jakarta.annotation.Nonnull final String appConsentRequestId) {
         Objects.requireNonNull(appConsentRequestId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -70,11 +64,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on='{on}'
      * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
         Objects.requireNonNull(on);
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
@@ -83,11 +74,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * Get appConsentRequestsForApproval from users
      * @return a {@link AppConsentRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AppConsentRequestCollectionResponse get() {
         return get(null);
     }
@@ -96,11 +84,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppConsentRequestCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AppConsentRequestCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -112,11 +97,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * @param body The request body
      * @return a {@link AppConsentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AppConsentRequest post(@jakarta.annotation.Nonnull final AppConsentRequest body) {
         return post(body, null);
     }
@@ -126,11 +108,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppConsentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AppConsentRequest post(@jakarta.annotation.Nonnull final AppConsentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -141,11 +120,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
     /**
      * Get appConsentRequestsForApproval from users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -153,11 +129,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * Get appConsentRequestsForApproval from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -168,11 +141,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * Create new navigation property to appConsentRequestsForApproval for users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AppConsentRequest body) {
         return toPostRequestInformation(body, null);
     }
@@ -181,11 +151,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AppConsentRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -198,11 +165,8 @@ public class AppConsentRequestsForApprovalRequestBuilder extends BaseRequestBuil
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AppConsentRequestsForApprovalRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AppConsentRequestsForApprovalRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AppConsentRequestsForApprovalRequestBuilder(rawUrl, requestAdapter);

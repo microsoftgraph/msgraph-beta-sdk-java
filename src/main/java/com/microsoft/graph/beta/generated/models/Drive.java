@@ -135,7 +135,7 @@ public class Drive extends BaseItem implements Parsable {
         return this.backingStore.get("special");
     }
     /**
-     * Gets the system property value. If present, indicates that this is a system-managed drive. Read-only.
+     * Gets the system property value. If present, indicates that it's a system-managed drive. Read-only.
      * @return a {@link SystemFacet}
      */
     @jakarta.annotation.Nullable
@@ -240,7 +240,7 @@ public class Drive extends BaseItem implements Parsable {
         this.backingStore.set("special", value);
     }
     /**
-     * Sets the system property value. If present, indicates that this is a system-managed drive. Read-only.
+     * Sets the system property value. If present, indicates that it's a system-managed drive. Read-only.
      * @param value Value to set for the system property.
      */
     public void setSystem(@jakarta.annotation.Nullable final SystemFacet value) {

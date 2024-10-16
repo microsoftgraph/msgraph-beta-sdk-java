@@ -60,19 +60,21 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/healthMonitoring/alerts{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get alerts from reports
+     * Get the list of the Microsoft Entra health monitoring alert objects and their properties from the past 30 days.
      * @return a {@link AlertCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/healthmonitoring-healthmonitoringroot-list-alerts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AlertCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get alerts from reports
+     * Get the list of the Microsoft Entra health monitoring alert objects and their properties from the past 30 days.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AlertCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/healthmonitoring-healthmonitoringroot-list-alerts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AlertCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Alert::createFromDiscriminatorValue);
     }
     /**
-     * Get alerts from reports
+     * Get the list of the Microsoft Entra health monitoring alert objects and their properties from the past 30 days.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get alerts from reports
+     * Get the list of the Microsoft Entra health monitoring alert objects and their properties from the past 30 days.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         return new AlertsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get alerts from reports
+     * Get the list of the Microsoft Entra health monitoring alert objects and their properties from the past 30 days.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

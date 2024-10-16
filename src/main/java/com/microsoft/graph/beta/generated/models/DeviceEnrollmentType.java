@@ -45,7 +45,11 @@ public enum DeviceEnrollmentType implements ValuedEnum {
     /** Indicates the device enrollment is for android device owned by/associated with user using Android Open Source Project (AOSP) on a non-Google mobile services. */
     AndroidAOSPUserOwnedDeviceEnrollment("androidAOSPUserOwnedDeviceEnrollment"),
     /** Indicates the device enrollment is for user less android device using Android Open Source Project (AOSP) on a non-Google mobile services. */
-    AndroidAOSPUserlessDeviceEnrollment("androidAOSPUserlessDeviceEnrollment");
+    AndroidAOSPUserlessDeviceEnrollment("androidAOSPUserlessDeviceEnrollment"),
+    /** Indicates the device is enrolled via Apple Account Driven User Enrollment, a form of enrollment where the user enrolls via iOS Settings without using the iOS Company Portal. It results in an enrollment with a new partition for managed apps and data and which supports a limited set of management capabilities. */
+    AppleAccountDrivenUserEnrollment("appleAccountDrivenUserEnrollment"),
+    /** Evolvable enum member */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceEnrollmentType(final String value) {
         this.value = value;
@@ -75,6 +79,8 @@ public enum DeviceEnrollmentType implements ValuedEnum {
             case "androidEnterpriseCorporateWorkProfile": return AndroidEnterpriseCorporateWorkProfile;
             case "androidAOSPUserOwnedDeviceEnrollment": return AndroidAOSPUserOwnedDeviceEnrollment;
             case "androidAOSPUserlessDeviceEnrollment": return AndroidAOSPUserlessDeviceEnrollment;
+            case "appleAccountDrivenUserEnrollment": return AppleAccountDrivenUserEnrollment;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

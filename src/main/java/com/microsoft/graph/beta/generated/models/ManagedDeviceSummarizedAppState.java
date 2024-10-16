@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Event representing a user's devices with failed or pending apps.
+ * The summarized information associated with managed device app installation status.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, BackedModel, Parsable {
@@ -75,7 +75,7 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Ba
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("summarizedAppState", (n) -> { this.setSummarizedAppState(n.getEnumValue(RunState::forValue)); });
+        deserializerMap.put("summarizedAppState", (n) -> { this.setSummarizedAppState(n.getEnumValue(DeviceManagementScriptRunState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -87,11 +87,11 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Ba
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the summarizedAppState property value. Indicates the type of execution status of the device management script.
-     * @return a {@link RunState}
+     * Gets the summarizedAppState property value. Indicates the type of execution status of the device management script. This status provides insights into whether the script has been successfully executed, encountered errors, or is pending execution.
+     * @return a {@link DeviceManagementScriptRunState}
      */
     @jakarta.annotation.Nullable
-    public RunState getSummarizedAppState() {
+    public DeviceManagementScriptRunState getSummarizedAppState() {
         return this.backingStore.get("summarizedAppState");
     }
     /**
@@ -135,10 +135,10 @@ public class ManagedDeviceSummarizedAppState implements AdditionalDataHolder, Ba
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the summarizedAppState property value. Indicates the type of execution status of the device management script.
+     * Sets the summarizedAppState property value. Indicates the type of execution status of the device management script. This status provides insights into whether the script has been successfully executed, encountered errors, or is pending execution.
      * @param value Value to set for the summarizedAppState property.
      */
-    public void setSummarizedAppState(@jakarta.annotation.Nullable final RunState value) {
+    public void setSummarizedAppState(@jakarta.annotation.Nullable final DeviceManagementScriptRunState value) {
         this.backingStore.set("summarizedAppState", value);
     }
 }

@@ -29,10 +29,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the archive method.
      * @return a {@link ArchiveRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ArchiveRequestBuilder archive() {
         return new ArchiveRequestBuilder(pathParameters, requestAdapter);
@@ -40,10 +37,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
      * @return a {@link BucketsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public BucketsRequestBuilder buckets() {
         return new BucketsRequestBuilder(pathParameters, requestAdapter);
@@ -51,10 +45,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the details property of the microsoft.graph.plannerPlan entity.
      * @return a {@link DetailsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DetailsRequestBuilder details() {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
@@ -62,10 +53,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the moveToContainer method.
      * @return a {@link MoveToContainerRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MoveToContainerRequestBuilder moveToContainer() {
         return new MoveToContainerRequestBuilder(pathParameters, requestAdapter);
@@ -73,10 +61,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity.
      * @return a {@link TasksRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -84,10 +69,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the unarchive method.
      * @return a {@link UnarchiveRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public UnarchiveRequestBuilder unarchive() {
         return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
@@ -111,10 +93,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property plans for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -122,10 +101,7 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property plans for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -136,11 +112,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Get plans from users
      * @return a {@link PlannerPlan}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PlannerPlan get() {
         return get(null);
     }
@@ -149,11 +122,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlan}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PlannerPlan get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -165,11 +135,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link PlannerPlan}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PlannerPlan patch(@jakarta.annotation.Nonnull final PlannerPlan body) {
         return patch(body, null);
     }
@@ -179,11 +146,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerPlan}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PlannerPlan patch(@jakarta.annotation.Nonnull final PlannerPlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -194,11 +158,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property plans for users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -206,11 +167,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property plans for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -220,11 +178,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get plans from users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -232,11 +187,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Get plans from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -247,11 +199,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property plans in users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PlannerPlan body) {
         return toPatchRequestInformation(body, null);
     }
@@ -260,11 +209,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PlannerPlan body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -277,11 +223,8 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link PlannerPlanItemRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public PlannerPlanItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new PlannerPlanItemRequestBuilder(rawUrl, requestAdapter);

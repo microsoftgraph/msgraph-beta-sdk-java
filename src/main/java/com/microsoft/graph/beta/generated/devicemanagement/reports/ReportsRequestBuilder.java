@@ -72,7 +72,7 @@ import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdate
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport.GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsummaryreport.GetWindowsUpdateAlertSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getzebrafotadeploymentreport.GetZebraFotaDeploymentReportRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.reports.retrieveassignedapplicationsreport.RetrieveAssignedApplicationsReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.retrievesecuritytaskappsreport.RetrieveSecurityTaskAppsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievewin32catalogappsupdatereport.RetrieveWin32CatalogAppsUpdateReportRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceManagementReports;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -671,12 +671,12 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new GetZebraFotaDeploymentReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the retrieveAssignedApplicationsReport method.
-     * @return a {@link RetrieveAssignedApplicationsReportRequestBuilder}
+     * Provides operations to call the retrieveSecurityTaskAppsReport method.
+     * @return a {@link RetrieveSecurityTaskAppsReportRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public RetrieveAssignedApplicationsReportRequestBuilder retrieveAssignedApplicationsReport() {
-        return new RetrieveAssignedApplicationsReportRequestBuilder(pathParameters, requestAdapter);
+    public RetrieveSecurityTaskAppsReportRequestBuilder retrieveSecurityTaskAppsReport() {
+        return new RetrieveSecurityTaskAppsReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveWin32CatalogAppsUpdateReport method.

@@ -35,25 +35,23 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/restoreCloudPc", rawUrl);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
+     * Invoke action restoreCloudPc
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
-     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-restorecloudpc?view=graph-rest-beta">Find more info here</a>
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final RestoreCloudPcPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
+     * Invoke action restoreCloudPc
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
-     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-restorecloudpc?view=graph-rest-beta">Find more info here</a>
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final RestoreCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -64,11 +62,11 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
+     * Invoke action restoreCloudPc
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -76,12 +74,12 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Restore a Cloud PC device to a previous state with an Intune managed device ID.
+     * Invoke action restoreCloudPc
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -98,7 +96,7 @@ public class RestoreCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link RestoreCloudPcRequestBuilder}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The restoreCloudPc API is deprecated and will stop returning on Sep 30, 2023. Please use restore instead as of 2023-07/restoreCloudPc
      */
     @jakarta.annotation.Nonnull
     @Deprecated

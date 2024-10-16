@@ -104,6 +104,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         deserializerMap.put("customExtensionCalloutInstances", (n) -> { this.setCustomExtensionCalloutInstances(n.getCollectionOfObjectValues(CustomExtensionCalloutInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("customExtensionHandlerInstances", (n) -> { this.setCustomExtensionHandlerInstances(n.getCollectionOfObjectValues(CustomExtensionHandlerInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(RequestActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("isValidationOnly", (n) -> { this.setIsValidationOnly(n.getBooleanValue()); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
         deserializerMap.put("requestor", (n) -> { this.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
@@ -113,6 +114,14 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
         deserializerMap.put("verifiedCredentialsData", (n) -> { this.setVerifiedCredentialsData(n.getCollectionOfObjectValues(VerifiedCredentialData::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the history property value. The history property
+     * @return a {@link java.util.List<RequestActivity>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RequestActivity> getHistory() {
+        return this.backingStore.get("history");
     }
     /**
      * Gets the isValidationOnly property value. True if the request isn't to be processed for assignment.
@@ -193,6 +202,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("customExtensionCalloutInstances", this.getCustomExtensionCalloutInstances());
         writer.writeCollectionOfObjectValues("customExtensionHandlerInstances", this.getCustomExtensionHandlerInstances());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
+        writer.writeCollectionOfObjectValues("history", this.getHistory());
         writer.writeBooleanValue("isValidationOnly", this.getIsValidationOnly());
         writer.writeStringValue("justification", this.getJustification());
         writer.writeObjectValue("requestor", this.getRequestor());
@@ -257,6 +267,13 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
+    }
+    /**
+     * Sets the history property value. The history property
+     * @param value Value to set for the history property.
+     */
+    public void setHistory(@jakarta.annotation.Nullable final java.util.List<RequestActivity> value) {
+        this.backingStore.set("history", value);
     }
     /**
      * Sets the isValidationOnly property value. True if the request isn't to be processed for assignment.
