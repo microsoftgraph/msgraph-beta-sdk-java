@@ -252,7 +252,7 @@ public class ManagedDevice extends Entity implements Parsable {
         return this.backingStore.get("deviceHealthScriptStates");
     }
     /**
-     * Gets the deviceName property value. Name of the device. This property is read-only.
+     * Gets the deviceName property value. Name of the device. Supports $filter operator 'eq' and 'contains'. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1124,7 +1124,7 @@ public class ManagedDevice extends Entity implements Parsable {
         this.backingStore.set("deviceHealthScriptStates", value);
     }
     /**
-     * Sets the deviceName property value. Name of the device. This property is read-only.
+     * Sets the deviceName property value. Name of the device. Supports $filter operator 'eq' and 'contains'. This property is read-only.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {

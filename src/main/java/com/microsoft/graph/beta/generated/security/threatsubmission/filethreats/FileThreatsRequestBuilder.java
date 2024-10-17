@@ -84,21 +84,23 @@ public class FileThreatsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FileThreatSubmissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to fileThreats for security
+     * Create a new fileThreatSubmission object.
      * @param body The request body
      * @return a {@link FileThreatSubmission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-filethreatsubmission-post-filethreats?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileThreatSubmission post(@jakarta.annotation.Nonnull final FileThreatSubmission body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to fileThreats for security
+     * Create a new fileThreatSubmission object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileThreatSubmission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-filethreatsubmission-post-filethreats?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileThreatSubmission post(@jakarta.annotation.Nonnull final FileThreatSubmission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -129,7 +131,7 @@ public class FileThreatsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to fileThreats for security
+     * Create a new fileThreatSubmission object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +140,7 @@ public class FileThreatsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to fileThreats for security
+     * Create a new fileThreatSubmission object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

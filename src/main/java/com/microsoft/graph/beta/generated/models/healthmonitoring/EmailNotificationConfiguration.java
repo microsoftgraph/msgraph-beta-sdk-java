@@ -68,7 +68,7 @@ public class EmailNotificationConfiguration implements AdditionalDataHolder, Bac
         return deserializerMap;
     }
     /**
-     * Gets the groupId property value. The groupId property
+     * Gets the groupId property value. The identifier of the group to send an email to. All group types with configured email addresses are supported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class EmailNotificationConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore.get("groupId");
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether email notifications are enabled on the alert type.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class EmailNotificationConfiguration implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
-     * Sets the groupId property value. The groupId property
+     * Sets the groupId property value. The identifier of the group to send an email to. All group types with configured email addresses are supported.
      * @param value Value to set for the groupId property.
      */
     public void setGroupId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("groupId", value);
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether email notifications are enabled on the alert type.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {

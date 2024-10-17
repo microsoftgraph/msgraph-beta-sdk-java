@@ -43,11 +43,8 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
      * Invoke function exportDeviceAndAppManagementData
      * @return a {@link DeviceAndAppManagementData}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DeviceAndAppManagementData get() {
         return get(null);
     }
@@ -56,11 +53,8 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceAndAppManagementData}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DeviceAndAppManagementData get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -70,11 +64,8 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
     /**
      * Invoke function exportDeviceAndAppManagementData
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -82,11 +73,8 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
      * Invoke function exportDeviceAndAppManagementData
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
@@ -97,11 +85,8 @@ public class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder exten
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder(rawUrl, requestAdapter);

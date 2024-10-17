@@ -81,7 +81,7 @@ public class ResourceImpactSummary implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the impactedCount property value. The impactedCount property
+     * Gets the impactedCount property value. The number of resources impacted. The number could be an exhaustive count or a sampling count.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class ResourceImpactSummary implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("impactedCount");
     }
     /**
-     * Gets the impactedCountLimitExceeded property value. The impactedCountLimitExceeded property
+     * Gets the impactedCountLimitExceeded property value. Indicates whether impactedCount is exhaustive or a sampling. When this value is true, the limit was exceeded and impactedCount represents a sampling; otherwise, impactedCount represents the true number of impacts.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class ResourceImpactSummary implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the resourceType property value. The resourceType property
+     * Gets the resourceType property value. The type of resource that was impacted. Examples include user, group, application, servicePrincipal, device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,14 +140,14 @@ public class ResourceImpactSummary implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the impactedCount property value. The impactedCount property
+     * Sets the impactedCount property value. The number of resources impacted. The number could be an exhaustive count or a sampling count.
      * @param value Value to set for the impactedCount property.
      */
     public void setImpactedCount(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("impactedCount", value);
     }
     /**
-     * Sets the impactedCountLimitExceeded property value. The impactedCountLimitExceeded property
+     * Sets the impactedCountLimitExceeded property value. Indicates whether impactedCount is exhaustive or a sampling. When this value is true, the limit was exceeded and impactedCount represents a sampling; otherwise, impactedCount represents the true number of impacts.
      * @param value Value to set for the impactedCountLimitExceeded property.
      */
     public void setImpactedCountLimitExceeded(@jakarta.annotation.Nullable final Boolean value) {
@@ -161,7 +161,7 @@ public class ResourceImpactSummary implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the resourceType property value. The resourceType property
+     * Sets the resourceType property value. The type of resource that was impacted. Examples include user, group, application, servicePrincipal, device.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {

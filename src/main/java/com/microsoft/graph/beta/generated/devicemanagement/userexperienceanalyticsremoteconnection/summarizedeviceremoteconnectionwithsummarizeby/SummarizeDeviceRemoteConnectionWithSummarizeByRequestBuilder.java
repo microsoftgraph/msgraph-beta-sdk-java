@@ -38,7 +38,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder extend
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/summarizeDeviceRemoteConnection(summarizeBy='{summarizeBy}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
+     * Invoke function summarizeDeviceRemoteConnection
      * @return a {@link SummarizeDeviceRemoteConnectionWithSummarizeByGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -47,7 +47,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder extend
         return get(null);
     }
     /**
-     * The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
+     * Invoke function summarizeDeviceRemoteConnection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SummarizeDeviceRemoteConnectionWithSummarizeByGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder extend
         return this.requestAdapter.send(requestInfo, errorMapping, SummarizeDeviceRemoteConnectionWithSummarizeByGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
+     * Invoke function summarizeDeviceRemoteConnection
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
+     * Invoke function summarizeDeviceRemoteConnection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +90,7 @@ public class SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder extend
         return new SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://go.microsoft.com/fwlink/?linkid=2283835.
+     * Invoke function summarizeDeviceRemoteConnection
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

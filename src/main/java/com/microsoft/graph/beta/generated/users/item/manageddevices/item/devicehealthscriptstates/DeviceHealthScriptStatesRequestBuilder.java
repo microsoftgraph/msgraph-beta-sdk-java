@@ -26,10 +26,7 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -54,11 +51,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @return a {@link DeviceHealthScriptPolicyStateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DeviceHealthScriptPolicyStateCollectionResponse get() {
         return get(null);
     }
@@ -67,11 +61,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceHealthScriptPolicyStateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DeviceHealthScriptPolicyStateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -83,11 +74,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * @param body Contains properties for policy run state of the device health script.
      * @return a {@link DeviceHealthScriptPolicyState}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DeviceHealthScriptPolicyState post(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body) {
         return post(body, null);
     }
@@ -97,11 +85,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceHealthScriptPolicyState}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DeviceHealthScriptPolicyState post(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -112,11 +97,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
     /**
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -124,11 +106,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -139,11 +118,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to deviceHealthScriptStates for users
      * @param body Contains properties for policy run state of the device health script.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body) {
         return toPostRequestInformation(body, null);
     }
@@ -152,11 +128,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * @param body Contains properties for policy run state of the device health script.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceHealthScriptPolicyState body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -171,11 +144,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * @param id Property in multi-part unique identifier of deviceHealthScriptPolicyState
      * @param policyId Property in multi-part unique identifier of deviceHealthScriptPolicyState
      * @return a {@link WithIdWithPolicyIdWithDeviceIdRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public WithIdWithPolicyIdWithDeviceIdRequestBuilder withIdWithPolicyIdWithDeviceId(@jakarta.annotation.Nonnull final String deviceId, @jakarta.annotation.Nonnull final String id, @jakarta.annotation.Nonnull final String policyId) {
         Objects.requireNonNull(deviceId);
         Objects.requireNonNull(id);
@@ -186,11 +156,8 @@ public class DeviceHealthScriptStatesRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link DeviceHealthScriptStatesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public DeviceHealthScriptStatesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new DeviceHealthScriptStatesRequestBuilder(rawUrl, requestAdapter);

@@ -33,6 +33,7 @@ public class RecycleBin extends BaseItem implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(RecycleBinItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(RecycleBinSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -44,6 +45,14 @@ public class RecycleBin extends BaseItem implements Parsable {
         return this.backingStore.get("items");
     }
     /**
+     * Gets the settings property value. Settings of the recycleBin.
+     * @return a {@link RecycleBinSettings}
+     */
+    @jakarta.annotation.Nullable
+    public RecycleBinSettings getSettings() {
+        return this.backingStore.get("settings");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -51,6 +60,7 @@ public class RecycleBin extends BaseItem implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("items", this.getItems());
+        writer.writeObjectValue("settings", this.getSettings());
     }
     /**
      * Sets the items property value. List of the recycleBinItems deleted by a user.
@@ -58,5 +68,12 @@ public class RecycleBin extends BaseItem implements Parsable {
      */
     public void setItems(@jakarta.annotation.Nullable final java.util.List<RecycleBinItem> value) {
         this.backingStore.set("items", value);
+    }
+    /**
+     * Sets the settings property value. Settings of the recycleBin.
+     * @param value Value to set for the settings property.
+     */
+    public void setSettings(@jakarta.annotation.Nullable final RecycleBinSettings value) {
+        this.backingStore.set("settings", value);
     }
 }

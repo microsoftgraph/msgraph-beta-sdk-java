@@ -35,25 +35,23 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/managedDevices/{managedDevice%2Did}/resizeCloudPc", rawUrl);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Invoke action resizeCloudPc
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
-     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-resizecloudpc?view=graph-rest-beta">Find more info here</a>
+     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final ResizeCloudPcPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Invoke action resizeCloudPc
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
-     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-resizecloudpc?view=graph-rest-beta">Find more info here</a>
+     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final ResizeCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -64,11 +62,11 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Invoke action resizeCloudPc
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -76,12 +74,12 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Invoke action resizeCloudPc
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -98,7 +96,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ResizeCloudPcRequestBuilder}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
      */
     @jakarta.annotation.Nonnull
     @Deprecated

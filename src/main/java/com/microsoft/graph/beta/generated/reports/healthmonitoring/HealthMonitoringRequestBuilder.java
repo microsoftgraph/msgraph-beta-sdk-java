@@ -73,7 +73,7 @@ public class HealthMonitoringRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get healthMonitoring from reports
+     * Reports for Microsoft Entra Health Monitoring.
      * @return a {@link HealthMonitoringRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class HealthMonitoringRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get healthMonitoring from reports
+     * Reports for Microsoft Entra Health Monitoring.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HealthMonitoringRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class HealthMonitoringRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get healthMonitoring from reports
+     * Reports for Microsoft Entra Health Monitoring.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class HealthMonitoringRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get healthMonitoring from reports
+     * Reports for Microsoft Entra Health Monitoring.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class HealthMonitoringRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get healthMonitoring from reports
+     * Reports for Microsoft Entra Health Monitoring.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

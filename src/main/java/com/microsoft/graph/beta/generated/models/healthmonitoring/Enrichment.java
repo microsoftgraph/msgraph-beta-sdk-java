@@ -69,7 +69,7 @@ public class Enrichment implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the impacts property value. The impacts property
+     * Gets the impacts property value. A collection of resource impact summaries that gives a high level view of the kind of resources that were impacted and to what degree.
      * @return a {@link java.util.List<ResourceImpactSummary>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class Enrichment implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("state");
     }
     /**
-     * Gets the supportingData property value. The supportingData property
+     * Gets the supportingData property value. A collection of supportingData locations that can be queried for debugging the alert.
      * @return a {@link SupportingData}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class Enrichment implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the impacts property value. The impacts property
+     * Sets the impacts property value. A collection of resource impact summaries that gives a high level view of the kind of resources that were impacted and to what degree.
      * @param value Value to set for the impacts property.
      */
     public void setImpacts(@jakarta.annotation.Nullable final java.util.List<ResourceImpactSummary> value) {
@@ -149,7 +149,7 @@ public class Enrichment implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("state", value);
     }
     /**
-     * Sets the supportingData property value. The supportingData property
+     * Sets the supportingData property value. A collection of supportingData locations that can be queried for debugging the alert.
      * @param value Value to set for the supportingData property.
      */
     public void setSupportingData(@jakarta.annotation.Nullable final SupportingData value) {

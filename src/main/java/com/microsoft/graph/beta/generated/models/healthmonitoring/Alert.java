@@ -43,7 +43,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("category");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The time when Microsoft Entra Health monitoring generated the alert. Supports $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the documentation property value. The documentation property
+     * Gets the documentation property value. A key-value pair that contains the name of and link to the documentation to aid in investigation of the alert.
      * @return a {@link Documentation}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("documentation");
     }
     /**
-     * Gets the enrichment property value. The enrichment property
+     * Gets the enrichment property value. Investigative information on the alert. This information typically includes counts of impacted objects, which include directory objects such as users, groups, and devices, and a pointer to supporting data.
      * @return a {@link Enrichment}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class Alert extends Entity implements Parsable {
         return this.backingStore.get("scenario");
     }
     /**
-     * Gets the signals property value. The signals property
+     * Gets the signals property value. The collection of signals that were used in the generation of the alert. These signals are sourced from serviceActivity APIs and are added to the alert as key-value pairs.
      * @return a {@link Signals}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("category", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The time when Microsoft Entra Health monitoring generated the alert. Supports $orderby.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the documentation property value. The documentation property
+     * Sets the documentation property value. A key-value pair that contains the name of and link to the documentation to aid in investigation of the alert.
      * @param value Value to set for the documentation property.
      */
     public void setDocumentation(@jakarta.annotation.Nullable final Documentation value) {
         this.backingStore.set("documentation", value);
     }
     /**
-     * Sets the enrichment property value. The enrichment property
+     * Sets the enrichment property value. Investigative information on the alert. This information typically includes counts of impacted objects, which include directory objects such as users, groups, and devices, and a pointer to supporting data.
      * @param value Value to set for the enrichment property.
      */
     public void setEnrichment(@jakarta.annotation.Nullable final Enrichment value) {
@@ -166,7 +166,7 @@ public class Alert extends Entity implements Parsable {
         this.backingStore.set("scenario", value);
     }
     /**
-     * Sets the signals property value. The signals property
+     * Sets the signals property value. The collection of signals that were used in the generation of the alert. These signals are sourced from serviceActivity APIs and are added to the alert as key-value pairs.
      * @param value Value to set for the signals property.
      */
     public void setSignals(@jakarta.annotation.Nullable final Signals value) {

@@ -6,9 +6,11 @@ import com.microsoft.graph.beta.devicemanagement.comanageddevices.bulkrestoreclo
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.bulksetcloudpcreviewstatus.BulkSetCloudPcReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.count.CountRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.downloadappdiagnostics.DownloadAppDiagnosticsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.comanageddevices.downloadpowerliftappdiagnostic.DownloadPowerliftAppDiagnosticRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.executeaction.ExecuteActionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.comanageddevices.retrievepowerliftappdiagnosticsdetailswithuserprincipalname.RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.models.ManagedDevice;
 import com.microsoft.graph.beta.models.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -69,6 +71,14 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DownloadAppDiagnosticsRequestBuilder downloadAppDiagnostics() {
         return new DownloadAppDiagnosticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the downloadPowerliftAppDiagnostic method.
+     * @return a {@link DownloadPowerliftAppDiagnosticRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DownloadPowerliftAppDiagnosticRequestBuilder downloadPowerliftAppDiagnostic() {
+        return new DownloadPowerliftAppDiagnosticRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the executeAction method.
@@ -170,6 +180,16 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, ManagedDevice::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the retrievePowerliftAppDiagnosticsDetails method.
+     * @param userPrincipalName Usage: userPrincipalName='{userPrincipalName}'
+     * @return a {@link RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder retrievePowerliftAppDiagnosticsDetailsWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * The list of co-managed devices report

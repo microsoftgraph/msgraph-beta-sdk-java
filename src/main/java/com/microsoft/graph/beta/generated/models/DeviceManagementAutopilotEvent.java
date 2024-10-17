@@ -94,14 +94,6 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         return this.backingStore.get("deviceId");
     }
     /**
-     * Gets the devicePreparationDuration property value. Time spent in device enrollment.
-     * @return a {@link PeriodAndDuration}
-     */
-    @jakarta.annotation.Nullable
-    public PeriodAndDuration getDevicePreparationDuration() {
-        return this.backingStore.get("devicePreparationDuration");
-    }
-    /**
      * Gets the deviceRegisteredDateTime property value. Device registration date.
      * @return a {@link OffsetDateTime}
      */
@@ -188,7 +180,6 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         deserializerMap.put("deploymentState", (n) -> { this.setDeploymentState(n.getEnumValue(WindowsAutopilotDeploymentState::forValue)); });
         deserializerMap.put("deploymentTotalDuration", (n) -> { this.setDeploymentTotalDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
-        deserializerMap.put("devicePreparationDuration", (n) -> { this.setDevicePreparationDuration(n.getPeriodAndDurationValue()); });
         deserializerMap.put("deviceRegisteredDateTime", (n) -> { this.setDeviceRegisteredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("deviceSerialNumber", (n) -> { this.setDeviceSerialNumber(n.getStringValue()); });
         deserializerMap.put("deviceSetupDuration", (n) -> { this.setDeviceSetupDuration(n.getPeriodAndDurationValue()); });
@@ -200,9 +191,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managedDeviceName", (n) -> { this.setManagedDeviceName(n.getStringValue()); });
         deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getStringValue()); });
-        deserializerMap.put("policyStatusDetails", (n) -> { this.setPolicyStatusDetails(n.getCollectionOfObjectValues(DeviceManagementAutopilotPolicyStatusDetail::createFromDiscriminatorValue)); });
-        deserializerMap.put("targetedAppCount", (n) -> { this.setTargetedAppCount(n.getIntegerValue()); });
-        deserializerMap.put("targetedPolicyCount", (n) -> { this.setTargetedPolicyCount(n.getIntegerValue()); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("windows10EnrollmentCompletionPageConfigurationDisplayName", (n) -> { this.setWindows10EnrollmentCompletionPageConfigurationDisplayName(n.getStringValue()); });
         deserializerMap.put("windows10EnrollmentCompletionPageConfigurationId", (n) -> { this.setWindows10EnrollmentCompletionPageConfigurationId(n.getStringValue()); });
@@ -226,28 +215,12 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         return this.backingStore.get("osVersion");
     }
     /**
-     * Gets the policyStatusDetails property value. Policy and application status details for this device.
-     * @return a {@link java.util.List<DeviceManagementAutopilotPolicyStatusDetail>}
+     * Gets the userId property value. UserId id associated with the object
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<DeviceManagementAutopilotPolicyStatusDetail> getPolicyStatusDetails() {
-        return this.backingStore.get("policyStatusDetails");
-    }
-    /**
-     * Gets the targetedAppCount property value. Count of applications targeted.
-     * @return a {@link Integer}
-     */
-    @jakarta.annotation.Nullable
-    public Integer getTargetedAppCount() {
-        return this.backingStore.get("targetedAppCount");
-    }
-    /**
-     * Gets the targetedPolicyCount property value. Count of policies targeted.
-     * @return a {@link Integer}
-     */
-    @jakarta.annotation.Nullable
-    public Integer getTargetedPolicyCount() {
-        return this.backingStore.get("targetedPolicyCount");
+    public String getUserId() {
+        return this.backingStore.get("userId");
     }
     /**
      * Gets the userPrincipalName property value. User principal name used to enroll the device.
@@ -296,7 +269,6 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         writer.writeEnumValue("deploymentState", this.getDeploymentState());
         writer.writePeriodAndDurationValue("deploymentTotalDuration", this.getDeploymentTotalDuration());
         writer.writeStringValue("deviceId", this.getDeviceId());
-        writer.writePeriodAndDurationValue("devicePreparationDuration", this.getDevicePreparationDuration());
         writer.writeOffsetDateTimeValue("deviceRegisteredDateTime", this.getDeviceRegisteredDateTime());
         writer.writeStringValue("deviceSerialNumber", this.getDeviceSerialNumber());
         writer.writePeriodAndDurationValue("deviceSetupDuration", this.getDeviceSetupDuration());
@@ -308,9 +280,7 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
         writer.writeStringValue("managedDeviceName", this.getManagedDeviceName());
         writer.writeStringValue("osVersion", this.getOsVersion());
-        writer.writeCollectionOfObjectValues("policyStatusDetails", this.getPolicyStatusDetails());
-        writer.writeIntegerValue("targetedAppCount", this.getTargetedAppCount());
-        writer.writeIntegerValue("targetedPolicyCount", this.getTargetedPolicyCount());
+        writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeStringValue("windows10EnrollmentCompletionPageConfigurationDisplayName", this.getWindows10EnrollmentCompletionPageConfigurationDisplayName());
         writer.writeStringValue("windows10EnrollmentCompletionPageConfigurationId", this.getWindows10EnrollmentCompletionPageConfigurationId());
@@ -371,13 +341,6 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceId", value);
-    }
-    /**
-     * Sets the devicePreparationDuration property value. Time spent in device enrollment.
-     * @param value Value to set for the devicePreparationDuration property.
-     */
-    public void setDevicePreparationDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {
-        this.backingStore.set("devicePreparationDuration", value);
     }
     /**
      * Sets the deviceRegisteredDateTime property value. Device registration date.
@@ -457,25 +420,11 @@ public class DeviceManagementAutopilotEvent extends Entity implements Parsable {
         this.backingStore.set("osVersion", value);
     }
     /**
-     * Sets the policyStatusDetails property value. Policy and application status details for this device.
-     * @param value Value to set for the policyStatusDetails property.
+     * Sets the userId property value. UserId id associated with the object
+     * @param value Value to set for the userId property.
      */
-    public void setPolicyStatusDetails(@jakarta.annotation.Nullable final java.util.List<DeviceManagementAutopilotPolicyStatusDetail> value) {
-        this.backingStore.set("policyStatusDetails", value);
-    }
-    /**
-     * Sets the targetedAppCount property value. Count of applications targeted.
-     * @param value Value to set for the targetedAppCount property.
-     */
-    public void setTargetedAppCount(@jakarta.annotation.Nullable final Integer value) {
-        this.backingStore.set("targetedAppCount", value);
-    }
-    /**
-     * Sets the targetedPolicyCount property value. Count of policies targeted.
-     * @param value Value to set for the targetedPolicyCount property.
-     */
-    public void setTargetedPolicyCount(@jakarta.annotation.Nullable final Integer value) {
-        this.backingStore.set("targetedPolicyCount", value);
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("userId", value);
     }
     /**
      * Sets the userPrincipalName property value. User principal name used to enroll the device.

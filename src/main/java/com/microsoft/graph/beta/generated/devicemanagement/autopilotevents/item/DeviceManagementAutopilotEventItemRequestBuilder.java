@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.devicemanagement.autopilotevents.item;
 
-import com.microsoft.graph.beta.devicemanagement.autopilotevents.item.policystatusdetails.PolicyStatusDetailsRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceManagementAutopilotEvent;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,14 +20,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagementAutopilotEventItemRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to manage the policyStatusDetails property of the microsoft.graph.deviceManagementAutopilotEvent entity.
-     * @return a {@link PolicyStatusDetailsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public PolicyStatusDetailsRequestBuilder policyStatusDetails() {
-        return new PolicyStatusDetailsRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new {@link DeviceManagementAutopilotEventItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

@@ -131,7 +131,7 @@ public class ReportRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthMonitoring property value. The healthMonitoring property
+     * Gets the healthMonitoring property value. Reports for Microsoft Entra Health Monitoring.
      * @return a {@link HealthMonitoringRoot}
      */
     @jakarta.annotation.Nullable
@@ -203,7 +203,7 @@ public class ReportRoot extends Entity implements Parsable {
         return this.backingStore.get("servicePrincipalSignInActivities");
     }
     /**
-     * Gets the sla property value. Reports that relate to tenant-level Microsoft Entra SLA attainment.
+     * Gets the sla property value. Reports that relate to tenant-level Microsoft Entra Health SLA attainment.
      * @return a {@link ServiceLevelAgreementRoot}
      */
     @jakarta.annotation.Nullable
@@ -319,7 +319,7 @@ public class ReportRoot extends Entity implements Parsable {
         this.backingStore.set("dailyPrintUsageSummariesByUser", value);
     }
     /**
-     * Sets the healthMonitoring property value. The healthMonitoring property
+     * Sets the healthMonitoring property value. Reports for Microsoft Entra Health Monitoring.
      * @param value Value to set for the healthMonitoring property.
      */
     public void setHealthMonitoring(@jakarta.annotation.Nullable final HealthMonitoringRoot value) {
@@ -382,7 +382,7 @@ public class ReportRoot extends Entity implements Parsable {
         this.backingStore.set("servicePrincipalSignInActivities", value);
     }
     /**
-     * Sets the sla property value. Reports that relate to tenant-level Microsoft Entra SLA attainment.
+     * Sets the sla property value. Reports that relate to tenant-level Microsoft Entra Health SLA attainment.
      * @param value Value to set for the sla property.
      */
     public void setSla(@jakarta.annotation.Nullable final ServiceLevelAgreementRoot value) {

@@ -176,6 +176,22 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("chromeOSOnboardingSettings");
     }
     /**
+     * Gets the cloudCertificationAuthority property value. Collection of CloudCertificationAuthority records associated with account.
+     * @return a {@link java.util.List<CloudCertificationAuthority>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudCertificationAuthority> getCloudCertificationAuthority() {
+        return this.backingStore.get("cloudCertificationAuthority");
+    }
+    /**
+     * Gets the cloudCertificationAuthorityLeafCertificate property value. Collection of CloudCertificationAuthorityLeafCertificate records associated with account.
+     * @return a {@link java.util.List<CloudCertificationAuthorityLeafCertificate>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudCertificationAuthorityLeafCertificate> getCloudCertificationAuthorityLeafCertificate() {
+        return this.backingStore.get("cloudCertificationAuthorityLeafCertificate");
+    }
+    /**
      * Gets the cloudPCConnectivityIssues property value. The list of CloudPC Connectivity Issue.
      * @return a {@link java.util.List<CloudPCConnectivityIssue>}
      */
@@ -392,14 +408,6 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("deviceConfigurationDeviceStateSummaries");
     }
     /**
-     * Gets the deviceConfigurationProfiles property value. Profile Id of the object.
-     * @return a {@link java.util.List<DeviceConfigurationProfile>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<DeviceConfigurationProfile> getDeviceConfigurationProfiles() {
-        return this.backingStore.get("deviceConfigurationProfiles");
-    }
-    /**
      * Gets the deviceConfigurationRestrictedAppsViolations property value. Restricted apps violations for this account.
      * @return a {@link java.util.List<RestrictedAppsViolation>}
      */
@@ -568,6 +576,8 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfObjectValues(DeviceManagementSettingCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("certificateConnectorDetails", (n) -> { this.setCertificateConnectorDetails(n.getCollectionOfObjectValues(CertificateConnectorDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("chromeOSOnboardingSettings", (n) -> { this.setChromeOSOnboardingSettings(n.getCollectionOfObjectValues(ChromeOSOnboardingSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudCertificationAuthority", (n) -> { this.setCloudCertificationAuthority(n.getCollectionOfObjectValues(CloudCertificationAuthority::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudCertificationAuthorityLeafCertificate", (n) -> { this.setCloudCertificationAuthorityLeafCertificate(n.getCollectionOfObjectValues(CloudCertificationAuthorityLeafCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPCConnectivityIssues", (n) -> { this.setCloudPCConnectivityIssues(n.getCollectionOfObjectValues(CloudPCConnectivityIssue::createFromDiscriminatorValue)); });
         deserializerMap.put("comanagedDevices", (n) -> { this.setComanagedDevices(n.getCollectionOfObjectValues(ManagedDevice::createFromDiscriminatorValue)); });
         deserializerMap.put("comanagementEligibleDevices", (n) -> { this.setComanagementEligibleDevices(n.getCollectionOfObjectValues(ComanagementEligibleDevice::createFromDiscriminatorValue)); });
@@ -595,7 +605,6 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("deviceComplianceScripts", (n) -> { this.setDeviceComplianceScripts(n.getCollectionOfObjectValues(DeviceComplianceScript::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurationConflictSummary", (n) -> { this.setDeviceConfigurationConflictSummary(n.getCollectionOfObjectValues(DeviceConfigurationConflictSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurationDeviceStateSummaries", (n) -> { this.setDeviceConfigurationDeviceStateSummaries(n.getObjectValue(DeviceConfigurationDeviceStateSummary::createFromDiscriminatorValue)); });
-        deserializerMap.put("deviceConfigurationProfiles", (n) -> { this.setDeviceConfigurationProfiles(n.getCollectionOfObjectValues(DeviceConfigurationProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurationRestrictedAppsViolations", (n) -> { this.setDeviceConfigurationRestrictedAppsViolations(n.getCollectionOfObjectValues(RestrictedAppsViolation::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurations", (n) -> { this.setDeviceConfigurations(n.getCollectionOfObjectValues(DeviceConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceConfigurationsAllManagedDeviceCertificateStates", (n) -> { this.setDeviceConfigurationsAllManagedDeviceCertificateStates(n.getCollectionOfObjectValues(ManagedAllDeviceCertificateState::createFromDiscriminatorValue)); });
@@ -1784,6 +1793,8 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("categories", this.getCategories());
         writer.writeCollectionOfObjectValues("certificateConnectorDetails", this.getCertificateConnectorDetails());
         writer.writeCollectionOfObjectValues("chromeOSOnboardingSettings", this.getChromeOSOnboardingSettings());
+        writer.writeCollectionOfObjectValues("cloudCertificationAuthority", this.getCloudCertificationAuthority());
+        writer.writeCollectionOfObjectValues("cloudCertificationAuthorityLeafCertificate", this.getCloudCertificationAuthorityLeafCertificate());
         writer.writeCollectionOfObjectValues("cloudPCConnectivityIssues", this.getCloudPCConnectivityIssues());
         writer.writeCollectionOfObjectValues("comanagedDevices", this.getComanagedDevices());
         writer.writeCollectionOfObjectValues("comanagementEligibleDevices", this.getComanagementEligibleDevices());
@@ -1810,7 +1821,6 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceComplianceScripts", this.getDeviceComplianceScripts());
         writer.writeCollectionOfObjectValues("deviceConfigurationConflictSummary", this.getDeviceConfigurationConflictSummary());
         writer.writeObjectValue("deviceConfigurationDeviceStateSummaries", this.getDeviceConfigurationDeviceStateSummaries());
-        writer.writeCollectionOfObjectValues("deviceConfigurationProfiles", this.getDeviceConfigurationProfiles());
         writer.writeCollectionOfObjectValues("deviceConfigurationRestrictedAppsViolations", this.getDeviceConfigurationRestrictedAppsViolations());
         writer.writeCollectionOfObjectValues("deviceConfigurations", this.getDeviceConfigurations());
         writer.writeCollectionOfObjectValues("deviceConfigurationsAllManagedDeviceCertificateStates", this.getDeviceConfigurationsAllManagedDeviceCertificateStates());
@@ -2081,6 +2091,20 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("chromeOSOnboardingSettings", value);
     }
     /**
+     * Sets the cloudCertificationAuthority property value. Collection of CloudCertificationAuthority records associated with account.
+     * @param value Value to set for the cloudCertificationAuthority property.
+     */
+    public void setCloudCertificationAuthority(@jakarta.annotation.Nullable final java.util.List<CloudCertificationAuthority> value) {
+        this.backingStore.set("cloudCertificationAuthority", value);
+    }
+    /**
+     * Sets the cloudCertificationAuthorityLeafCertificate property value. Collection of CloudCertificationAuthorityLeafCertificate records associated with account.
+     * @param value Value to set for the cloudCertificationAuthorityLeafCertificate property.
+     */
+    public void setCloudCertificationAuthorityLeafCertificate(@jakarta.annotation.Nullable final java.util.List<CloudCertificationAuthorityLeafCertificate> value) {
+        this.backingStore.set("cloudCertificationAuthorityLeafCertificate", value);
+    }
+    /**
      * Sets the cloudPCConnectivityIssues property value. The list of CloudPC Connectivity Issue.
      * @param value Value to set for the cloudPCConnectivityIssues property.
      */
@@ -2268,13 +2292,6 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setDeviceConfigurationDeviceStateSummaries(@jakarta.annotation.Nullable final DeviceConfigurationDeviceStateSummary value) {
         this.backingStore.set("deviceConfigurationDeviceStateSummaries", value);
-    }
-    /**
-     * Sets the deviceConfigurationProfiles property value. Profile Id of the object.
-     * @param value Value to set for the deviceConfigurationProfiles property.
-     */
-    public void setDeviceConfigurationProfiles(@jakarta.annotation.Nullable final java.util.List<DeviceConfigurationProfile> value) {
-        this.backingStore.set("deviceConfigurationProfiles", value);
     }
     /**
      * Sets the deviceConfigurationRestrictedAppsViolations property value. Restricted apps violations for this account.

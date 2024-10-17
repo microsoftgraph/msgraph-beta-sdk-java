@@ -25,7 +25,7 @@ public class ServiceLevelAgreementRoot extends Entity implements Parsable {
         return new ServiceLevelAgreementRoot();
     }
     /**
-     * Gets the azureADAuthentication property value. Collects the Microsoft Entra SLA attainment for each month for a Microsoft Entra tenant.
+     * Gets the azureADAuthentication property value. Collects the monthly Microsoft Entra Health SLA attainment metrics for a Microsoft Entra tenant.
      * @return a {@link AzureADAuthentication}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class ServiceLevelAgreementRoot extends Entity implements Parsable {
         writer.writeObjectValue("azureADAuthentication", this.getAzureADAuthentication());
     }
     /**
-     * Sets the azureADAuthentication property value. Collects the Microsoft Entra SLA attainment for each month for a Microsoft Entra tenant.
+     * Sets the azureADAuthentication property value. Collects the monthly Microsoft Entra Health SLA attainment metrics for a Microsoft Entra tenant.
      * @param value Value to set for the azureADAuthentication property.
      */
     public void setAzureADAuthentication(@jakarta.annotation.Nullable final AzureADAuthentication value) {

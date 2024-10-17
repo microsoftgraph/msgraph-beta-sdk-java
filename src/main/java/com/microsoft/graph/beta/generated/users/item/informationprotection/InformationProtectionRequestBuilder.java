@@ -33,10 +33,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the bitlocker property of the microsoft.graph.informationProtection entity.
      * @return a {@link BitlockerRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public BitlockerRequestBuilder bitlocker() {
         return new BitlockerRequestBuilder(pathParameters, requestAdapter);
@@ -44,10 +41,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the dataLossPreventionPolicies property of the microsoft.graph.informationProtection entity.
      * @return a {@link DataLossPreventionPoliciesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DataLossPreventionPoliciesRequestBuilder dataLossPreventionPolicies() {
         return new DataLossPreventionPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -55,10 +49,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the decryptBuffer method.
      * @return a {@link DecryptBufferRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DecryptBufferRequestBuilder decryptBuffer() {
         return new DecryptBufferRequestBuilder(pathParameters, requestAdapter);
@@ -66,10 +57,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the encryptBuffer method.
      * @return a {@link EncryptBufferRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public EncryptBufferRequestBuilder encryptBuffer() {
         return new EncryptBufferRequestBuilder(pathParameters, requestAdapter);
@@ -77,10 +65,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the policy property of the microsoft.graph.informationProtection entity.
      * @return a {@link PolicyRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PolicyRequestBuilder policy() {
         return new PolicyRequestBuilder(pathParameters, requestAdapter);
@@ -88,10 +73,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sensitivityLabels property of the microsoft.graph.informationProtection entity.
      * @return a {@link SensitivityLabelsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SensitivityLabelsRequestBuilder sensitivityLabels() {
         return new SensitivityLabelsRequestBuilder(pathParameters, requestAdapter);
@@ -99,10 +81,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sensitivityPolicySettings property of the microsoft.graph.informationProtection entity.
      * @return a {@link SensitivityPolicySettingsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SensitivityPolicySettingsRequestBuilder sensitivityPolicySettings() {
         return new SensitivityPolicySettingsRequestBuilder(pathParameters, requestAdapter);
@@ -110,10 +89,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the signDigest method.
      * @return a {@link SignDigestRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SignDigestRequestBuilder signDigest() {
         return new SignDigestRequestBuilder(pathParameters, requestAdapter);
@@ -121,10 +97,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
      * @return a {@link ThreatAssessmentRequestsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ThreatAssessmentRequestsRequestBuilder threatAssessmentRequests() {
         return new ThreatAssessmentRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -132,10 +105,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the verifySignature method.
      * @return a {@link VerifySignatureRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public VerifySignatureRequestBuilder verifySignature() {
         return new VerifySignatureRequestBuilder(pathParameters, requestAdapter);
@@ -159,10 +129,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property informationProtection for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -170,10 +137,7 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property informationProtection for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -184,11 +148,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Get informationProtection from users
      * @return a {@link InformationProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public InformationProtection get() {
         return get(null);
     }
@@ -197,11 +158,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InformationProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public InformationProtection get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -213,11 +171,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link InformationProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public InformationProtection patch(@jakarta.annotation.Nonnull final InformationProtection body) {
         return patch(body, null);
     }
@@ -227,11 +182,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InformationProtection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public InformationProtection patch(@jakarta.annotation.Nonnull final InformationProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -242,11 +194,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property informationProtection for users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -254,11 +203,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property informationProtection for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -268,11 +214,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
     /**
      * Get informationProtection from users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -280,11 +223,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Get informationProtection from users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -295,11 +235,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property informationProtection in users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final InformationProtection body) {
         return toPatchRequestInformation(body, null);
     }
@@ -308,11 +245,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final InformationProtection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -325,11 +259,8 @@ public class InformationProtectionRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link InformationProtectionRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public InformationProtectionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new InformationProtectionRequestBuilder(rawUrl, requestAdapter);
