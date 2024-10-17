@@ -24,10 +24,7 @@ public class GraphUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -52,11 +49,8 @@ public class GraphUserRequestBuilder extends BaseRequestBuilder {
      * Get the items of type microsoft.graph.user in the microsoft.graph.directoryObject collection
      * @return a {@link UserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UserCollectionResponse get() {
         return get(null);
     }
@@ -65,11 +59,8 @@ public class GraphUserRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -79,11 +70,8 @@ public class GraphUserRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the items of type microsoft.graph.user in the microsoft.graph.directoryObject collection
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -91,11 +79,8 @@ public class GraphUserRequestBuilder extends BaseRequestBuilder {
      * Get the items of type microsoft.graph.user in the microsoft.graph.directoryObject collection
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -106,11 +91,8 @@ public class GraphUserRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link GraphUserRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public GraphUserRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new GraphUserRequestBuilder(rawUrl, requestAdapter);

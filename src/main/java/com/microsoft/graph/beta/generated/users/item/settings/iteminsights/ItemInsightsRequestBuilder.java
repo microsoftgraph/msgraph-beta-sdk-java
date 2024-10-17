@@ -39,10 +39,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property itemInsights for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -50,10 +47,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property itemInsights for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -64,11 +58,8 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @return a {@link UserInsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UserInsightsSettings get() {
         return get(null);
     }
@@ -77,11 +68,8 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserInsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UserInsightsSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -93,12 +81,9 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link UserInsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UserInsightsSettings patch(@jakarta.annotation.Nonnull final UserInsightsSettings body) {
         return patch(body, null);
     }
@@ -108,12 +93,9 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserInsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/userinsightssettings-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UserInsightsSettings patch(@jakarta.annotation.Nonnull final UserInsightsSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -124,11 +106,8 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property itemInsights for users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -136,11 +115,8 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property itemInsights for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -150,11 +126,8 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
     /**
      * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -162,11 +135,8 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -177,11 +147,8 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * Update the privacy settings for itemInsights and meeting hours insights of a user.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserInsightsSettings body) {
         return toPatchRequestInformation(body, null);
     }
@@ -190,11 +157,8 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UserInsightsSettings body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -207,11 +171,8 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ItemInsightsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ItemInsightsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ItemInsightsRequestBuilder(rawUrl, requestAdapter);

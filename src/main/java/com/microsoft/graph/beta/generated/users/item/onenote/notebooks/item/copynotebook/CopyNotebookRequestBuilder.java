@@ -40,12 +40,9 @@ public class CopyNotebookRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link OnenoteOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/notebook-copynotebook?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OnenoteOperation post(@jakarta.annotation.Nonnull final CopyNotebookPostRequestBody body) {
         return post(body, null);
     }
@@ -55,12 +52,9 @@ public class CopyNotebookRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenoteOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/notebook-copynotebook?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OnenoteOperation post(@jakarta.annotation.Nonnull final CopyNotebookPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -72,11 +66,8 @@ public class CopyNotebookRequestBuilder extends BaseRequestBuilder {
      * Copies a notebook to the Notebooks folder in the destination Documents library. The folder is created if it doesn't exist. For Copy operations, you follow an asynchronous calling pattern:  First call the Copy action, and then poll the operation endpoint for the result.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CopyNotebookPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -85,11 +76,8 @@ public class CopyNotebookRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CopyNotebookPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -102,11 +90,8 @@ public class CopyNotebookRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CopyNotebookRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public CopyNotebookRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CopyNotebookRequestBuilder(rawUrl, requestAdapter);

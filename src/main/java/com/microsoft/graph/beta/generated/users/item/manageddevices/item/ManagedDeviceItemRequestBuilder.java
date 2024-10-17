@@ -82,10 +82,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the activateDeviceEsim method.
      * @return a {@link ActivateDeviceEsimRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ActivateDeviceEsimRequestBuilder activateDeviceEsim() {
         return new ActivateDeviceEsimRequestBuilder(pathParameters, requestAdapter);
@@ -93,10 +90,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignmentFilterEvaluationStatusDetails property of the microsoft.graph.managedDevice entity.
      * @return a {@link AssignmentFilterEvaluationStatusDetailsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AssignmentFilterEvaluationStatusDetailsRequestBuilder assignmentFilterEvaluationStatusDetails() {
         return new AssignmentFilterEvaluationStatusDetailsRequestBuilder(pathParameters, requestAdapter);
@@ -104,10 +98,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the bypassActivationLock method.
      * @return a {@link BypassActivationLockRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public BypassActivationLockRequestBuilder bypassActivationLock() {
         return new BypassActivationLockRequestBuilder(pathParameters, requestAdapter);
@@ -115,10 +106,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the changeAssignments method.
      * @return a {@link ChangeAssignmentsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ChangeAssignmentsRequestBuilder changeAssignments() {
         return new ChangeAssignmentsRequestBuilder(pathParameters, requestAdapter);
@@ -126,10 +114,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the cleanWindowsDevice method.
      * @return a {@link CleanWindowsDeviceRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CleanWindowsDeviceRequestBuilder cleanWindowsDevice() {
         return new CleanWindowsDeviceRequestBuilder(pathParameters, requestAdapter);
@@ -137,10 +122,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the createDeviceLogCollectionRequest method.
      * @return a {@link CreateDeviceLogCollectionRequestRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CreateDeviceLogCollectionRequestRequestBuilder createDeviceLogCollectionRequest() {
         return new CreateDeviceLogCollectionRequestRequestBuilder(pathParameters, requestAdapter);
@@ -148,10 +130,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the deleteUserFromSharedAppleDevice method.
      * @return a {@link DeleteUserFromSharedAppleDeviceRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DeleteUserFromSharedAppleDeviceRequestBuilder deleteUserFromSharedAppleDevice() {
         return new DeleteUserFromSharedAppleDeviceRequestBuilder(pathParameters, requestAdapter);
@@ -159,10 +138,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the deprovision method.
      * @return a {@link DeprovisionRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DeprovisionRequestBuilder deprovision() {
         return new DeprovisionRequestBuilder(pathParameters, requestAdapter);
@@ -170,10 +146,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the detectedApps property of the microsoft.graph.managedDevice entity.
      * @return a {@link DetectedAppsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DetectedAppsRequestBuilder detectedApps() {
         return new DetectedAppsRequestBuilder(pathParameters, requestAdapter);
@@ -181,10 +154,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceCategory property of the microsoft.graph.managedDevice entity.
      * @return a {@link DeviceCategoryRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DeviceCategoryRequestBuilder deviceCategory() {
         return new DeviceCategoryRequestBuilder(pathParameters, requestAdapter);
@@ -192,10 +162,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceCompliancePolicyStates property of the microsoft.graph.managedDevice entity.
      * @return a {@link DeviceCompliancePolicyStatesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DeviceCompliancePolicyStatesRequestBuilder deviceCompliancePolicyStates() {
         return new DeviceCompliancePolicyStatesRequestBuilder(pathParameters, requestAdapter);
@@ -203,10 +170,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceConfigurationStates property of the microsoft.graph.managedDevice entity.
      * @return a {@link DeviceConfigurationStatesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DeviceConfigurationStatesRequestBuilder deviceConfigurationStates() {
         return new DeviceConfigurationStatesRequestBuilder(pathParameters, requestAdapter);
@@ -214,10 +178,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceHealthScriptStates property of the microsoft.graph.managedDevice entity.
      * @return a {@link DeviceHealthScriptStatesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DeviceHealthScriptStatesRequestBuilder deviceHealthScriptStates() {
         return new DeviceHealthScriptStatesRequestBuilder(pathParameters, requestAdapter);
@@ -225,10 +186,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the disable method.
      * @return a {@link DisableRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DisableRequestBuilder disable() {
         return new DisableRequestBuilder(pathParameters, requestAdapter);
@@ -236,10 +194,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the disableLostMode method.
      * @return a {@link DisableLostModeRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DisableLostModeRequestBuilder disableLostMode() {
         return new DisableLostModeRequestBuilder(pathParameters, requestAdapter);
@@ -247,10 +202,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the enableLostMode method.
      * @return a {@link EnableLostModeRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public EnableLostModeRequestBuilder enableLostMode() {
         return new EnableLostModeRequestBuilder(pathParameters, requestAdapter);
@@ -258,10 +210,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the enrollNowAction method.
      * @return a {@link EnrollNowActionRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public EnrollNowActionRequestBuilder enrollNowAction() {
         return new EnrollNowActionRequestBuilder(pathParameters, requestAdapter);
@@ -269,10 +218,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCloudPcRemoteActionResults method.
      * @return a {@link GetCloudPcRemoteActionResultsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCloudPcRemoteActionResultsRequestBuilder getCloudPcRemoteActionResults() {
         return new GetCloudPcRemoteActionResultsRequestBuilder(pathParameters, requestAdapter);
@@ -280,10 +226,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCloudPcReviewStatus method.
      * @return a {@link GetCloudPcReviewStatusRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCloudPcReviewStatusRequestBuilder getCloudPcReviewStatus() {
         return new GetCloudPcReviewStatusRequestBuilder(pathParameters, requestAdapter);
@@ -291,10 +234,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getFileVaultKey method.
      * @return a {@link GetFileVaultKeyRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetFileVaultKeyRequestBuilder getFileVaultKey() {
         return new GetFileVaultKeyRequestBuilder(pathParameters, requestAdapter);
@@ -302,10 +242,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getNonCompliantSettings method.
      * @return a {@link GetNonCompliantSettingsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetNonCompliantSettingsRequestBuilder getNonCompliantSettings() {
         return new GetNonCompliantSettingsRequestBuilder(pathParameters, requestAdapter);
@@ -313,10 +250,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the initiateDeviceAttestation method.
      * @return a {@link InitiateDeviceAttestationRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public InitiateDeviceAttestationRequestBuilder initiateDeviceAttestation() {
         return new InitiateDeviceAttestationRequestBuilder(pathParameters, requestAdapter);
@@ -324,10 +258,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the initiateMobileDeviceManagementKeyRecovery method.
      * @return a {@link InitiateMobileDeviceManagementKeyRecoveryRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public InitiateMobileDeviceManagementKeyRecoveryRequestBuilder initiateMobileDeviceManagementKeyRecovery() {
         return new InitiateMobileDeviceManagementKeyRecoveryRequestBuilder(pathParameters, requestAdapter);
@@ -335,10 +266,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the initiateOnDemandProactiveRemediation method.
      * @return a {@link InitiateOnDemandProactiveRemediationRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public InitiateOnDemandProactiveRemediationRequestBuilder initiateOnDemandProactiveRemediation() {
         return new InitiateOnDemandProactiveRemediationRequestBuilder(pathParameters, requestAdapter);
@@ -346,10 +274,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the locateDevice method.
      * @return a {@link LocateDeviceRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public LocateDeviceRequestBuilder locateDevice() {
         return new LocateDeviceRequestBuilder(pathParameters, requestAdapter);
@@ -357,10 +282,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the logCollectionRequests property of the microsoft.graph.managedDevice entity.
      * @return a {@link LogCollectionRequestsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public LogCollectionRequestsRequestBuilder logCollectionRequests() {
         return new LogCollectionRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -368,10 +290,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the logoutSharedAppleDeviceActiveUser method.
      * @return a {@link LogoutSharedAppleDeviceActiveUserRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public LogoutSharedAppleDeviceActiveUserRequestBuilder logoutSharedAppleDeviceActiveUser() {
         return new LogoutSharedAppleDeviceActiveUserRequestBuilder(pathParameters, requestAdapter);
@@ -379,10 +298,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the managedDeviceMobileAppConfigurationStates property of the microsoft.graph.managedDevice entity.
      * @return a {@link ManagedDeviceMobileAppConfigurationStatesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ManagedDeviceMobileAppConfigurationStatesRequestBuilder managedDeviceMobileAppConfigurationStates() {
         return new ManagedDeviceMobileAppConfigurationStatesRequestBuilder(pathParameters, requestAdapter);
@@ -390,10 +306,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the overrideComplianceState method.
      * @return a {@link OverrideComplianceStateRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public OverrideComplianceStateRequestBuilder overrideComplianceState() {
         return new OverrideComplianceStateRequestBuilder(pathParameters, requestAdapter);
@@ -401,10 +314,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the pauseConfigurationRefresh method.
      * @return a {@link PauseConfigurationRefreshRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PauseConfigurationRefreshRequestBuilder pauseConfigurationRefresh() {
         return new PauseConfigurationRefreshRequestBuilder(pathParameters, requestAdapter);
@@ -412,10 +322,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the playLostModeSound method.
      * @return a {@link PlayLostModeSoundRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PlayLostModeSoundRequestBuilder playLostModeSound() {
         return new PlayLostModeSoundRequestBuilder(pathParameters, requestAdapter);
@@ -423,10 +330,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the rebootNow method.
      * @return a {@link RebootNowRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RebootNowRequestBuilder rebootNow() {
         return new RebootNowRequestBuilder(pathParameters, requestAdapter);
@@ -434,10 +338,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the recoverPasscode method.
      * @return a {@link RecoverPasscodeRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RecoverPasscodeRequestBuilder recoverPasscode() {
         return new RecoverPasscodeRequestBuilder(pathParameters, requestAdapter);
@@ -445,10 +346,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the reenable method.
      * @return a {@link ReenableRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ReenableRequestBuilder reenable() {
         return new ReenableRequestBuilder(pathParameters, requestAdapter);
@@ -456,10 +354,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the remoteLock method.
      * @return a {@link RemoteLockRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RemoteLockRequestBuilder remoteLock() {
         return new RemoteLockRequestBuilder(pathParameters, requestAdapter);
@@ -467,10 +362,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the removeDeviceFirmwareConfigurationInterfaceManagement method.
      * @return a {@link RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder removeDeviceFirmwareConfigurationInterfaceManagement() {
         return new RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder(pathParameters, requestAdapter);
@@ -478,10 +370,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the reprovisionCloudPc method.
      * @return a {@link ReprovisionCloudPcRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ReprovisionCloudPcRequestBuilder reprovisionCloudPc() {
         return new ReprovisionCloudPcRequestBuilder(pathParameters, requestAdapter);
@@ -489,10 +378,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the requestRemoteAssistance method.
      * @return a {@link RequestRemoteAssistanceRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RequestRemoteAssistanceRequestBuilder requestRemoteAssistance() {
         return new RequestRemoteAssistanceRequestBuilder(pathParameters, requestAdapter);
@@ -500,10 +386,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the resetPasscode method.
      * @return a {@link ResetPasscodeRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ResetPasscodeRequestBuilder resetPasscode() {
         return new ResetPasscodeRequestBuilder(pathParameters, requestAdapter);
@@ -511,10 +394,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the resizeCloudPc method.
      * @return a {@link ResizeCloudPcRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ResizeCloudPcRequestBuilder resizeCloudPc() {
         return new ResizeCloudPcRequestBuilder(pathParameters, requestAdapter);
@@ -522,10 +402,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the restoreCloudPc method.
      * @return a {@link RestoreCloudPcRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RestoreCloudPcRequestBuilder restoreCloudPc() {
         return new RestoreCloudPcRequestBuilder(pathParameters, requestAdapter);
@@ -533,10 +410,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retire method.
      * @return a {@link RetireRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RetireRequestBuilder retire() {
         return new RetireRequestBuilder(pathParameters, requestAdapter);
@@ -544,10 +418,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the revokeAppleVppLicenses method.
      * @return a {@link RevokeAppleVppLicensesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RevokeAppleVppLicensesRequestBuilder revokeAppleVppLicenses() {
         return new RevokeAppleVppLicensesRequestBuilder(pathParameters, requestAdapter);
@@ -555,10 +426,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the rotateBitLockerKeys method.
      * @return a {@link RotateBitLockerKeysRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RotateBitLockerKeysRequestBuilder rotateBitLockerKeys() {
         return new RotateBitLockerKeysRequestBuilder(pathParameters, requestAdapter);
@@ -566,10 +434,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the rotateFileVaultKey method.
      * @return a {@link RotateFileVaultKeyRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RotateFileVaultKeyRequestBuilder rotateFileVaultKey() {
         return new RotateFileVaultKeyRequestBuilder(pathParameters, requestAdapter);
@@ -577,10 +442,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the rotateLocalAdminPassword method.
      * @return a {@link RotateLocalAdminPasswordRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RotateLocalAdminPasswordRequestBuilder rotateLocalAdminPassword() {
         return new RotateLocalAdminPasswordRequestBuilder(pathParameters, requestAdapter);
@@ -588,10 +450,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the securityBaselineStates property of the microsoft.graph.managedDevice entity.
      * @return a {@link SecurityBaselineStatesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SecurityBaselineStatesRequestBuilder securityBaselineStates() {
         return new SecurityBaselineStatesRequestBuilder(pathParameters, requestAdapter);
@@ -599,10 +458,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the sendCustomNotificationToCompanyPortal method.
      * @return a {@link SendCustomNotificationToCompanyPortalRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SendCustomNotificationToCompanyPortalRequestBuilder sendCustomNotificationToCompanyPortal() {
         return new SendCustomNotificationToCompanyPortalRequestBuilder(pathParameters, requestAdapter);
@@ -610,10 +466,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the setCloudPcReviewStatus method.
      * @return a {@link SetCloudPcReviewStatusRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SetCloudPcReviewStatusRequestBuilder setCloudPcReviewStatus() {
         return new SetCloudPcReviewStatusRequestBuilder(pathParameters, requestAdapter);
@@ -621,10 +474,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the setDeviceName method.
      * @return a {@link SetDeviceNameRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SetDeviceNameRequestBuilder setDeviceName() {
         return new SetDeviceNameRequestBuilder(pathParameters, requestAdapter);
@@ -632,10 +482,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the shutDown method.
      * @return a {@link ShutDownRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ShutDownRequestBuilder shutDown() {
         return new ShutDownRequestBuilder(pathParameters, requestAdapter);
@@ -643,10 +490,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the syncDevice method.
      * @return a {@link SyncDeviceRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SyncDeviceRequestBuilder syncDevice() {
         return new SyncDeviceRequestBuilder(pathParameters, requestAdapter);
@@ -654,10 +498,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the triggerConfigurationManagerAction method.
      * @return a {@link TriggerConfigurationManagerActionRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public TriggerConfigurationManagerActionRequestBuilder triggerConfigurationManagerAction() {
         return new TriggerConfigurationManagerActionRequestBuilder(pathParameters, requestAdapter);
@@ -665,10 +506,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the updateWindowsDeviceAccount method.
      * @return a {@link UpdateWindowsDeviceAccountRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public UpdateWindowsDeviceAccountRequestBuilder updateWindowsDeviceAccount() {
         return new UpdateWindowsDeviceAccountRequestBuilder(pathParameters, requestAdapter);
@@ -676,10 +514,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the users property of the microsoft.graph.managedDevice entity.
      * @return a {@link UsersRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
@@ -687,10 +522,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the windowsDefenderScan method.
      * @return a {@link WindowsDefenderScanRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public WindowsDefenderScanRequestBuilder windowsDefenderScan() {
         return new WindowsDefenderScanRequestBuilder(pathParameters, requestAdapter);
@@ -698,10 +530,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the windowsDefenderUpdateSignatures method.
      * @return a {@link WindowsDefenderUpdateSignaturesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public WindowsDefenderUpdateSignaturesRequestBuilder windowsDefenderUpdateSignatures() {
         return new WindowsDefenderUpdateSignaturesRequestBuilder(pathParameters, requestAdapter);
@@ -709,10 +538,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the windowsProtectionState property of the microsoft.graph.managedDevice entity.
      * @return a {@link WindowsProtectionStateRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public WindowsProtectionStateRequestBuilder windowsProtectionState() {
         return new WindowsProtectionStateRequestBuilder(pathParameters, requestAdapter);
@@ -720,10 +546,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the wipe method.
      * @return a {@link WipeRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public WipeRequestBuilder wipe() {
         return new WipeRequestBuilder(pathParameters, requestAdapter);
@@ -747,10 +570,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property managedDevices for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -758,10 +578,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property managedDevices for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -772,11 +589,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * The managed devices associated with the user.
      * @return a {@link ManagedDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ManagedDevice get() {
         return get(null);
     }
@@ -785,11 +599,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ManagedDevice get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -801,11 +612,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ManagedDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ManagedDevice patch(@jakarta.annotation.Nonnull final ManagedDevice body) {
         return patch(body, null);
     }
@@ -815,11 +623,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagedDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ManagedDevice patch(@jakarta.annotation.Nonnull final ManagedDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -830,11 +635,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property managedDevices for users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -842,11 +644,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property managedDevices for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -856,11 +655,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The managed devices associated with the user.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -868,11 +664,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * The managed devices associated with the user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -883,11 +676,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property managedDevices in users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedDevice body) {
         return toPatchRequestInformation(body, null);
     }
@@ -896,11 +686,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ManagedDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -913,11 +700,8 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ManagedDeviceItemRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ManagedDeviceItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ManagedDeviceItemRequestBuilder(rawUrl, requestAdapter);

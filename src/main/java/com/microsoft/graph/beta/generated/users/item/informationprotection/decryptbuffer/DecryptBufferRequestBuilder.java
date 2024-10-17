@@ -41,7 +41,7 @@ public class DecryptBufferRequestBuilder extends BaseRequestBuilder {
      * @return a {@link BufferDecryptionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -55,7 +55,7 @@ public class DecryptBufferRequestBuilder extends BaseRequestBuilder {
      * @return a {@link BufferDecryptionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -71,7 +71,7 @@ public class DecryptBufferRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -84,7 +84,7 @@ public class DecryptBufferRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -101,7 +101,7 @@ public class DecryptBufferRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link DecryptBufferRequestBuilder}
      * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
+     * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels
      */
     @jakarta.annotation.Nonnull
     @Deprecated

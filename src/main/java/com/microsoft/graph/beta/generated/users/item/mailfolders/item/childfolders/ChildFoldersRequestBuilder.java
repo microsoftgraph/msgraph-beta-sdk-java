@@ -27,10 +27,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -38,10 +35,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the delta method.
      * @return a {@link DeltaRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
@@ -50,11 +44,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the childFolders property of the microsoft.graph.mailFolder entity.
      * @param mailFolderId1 The unique identifier of mailFolder
      * @return a {@link MailFolderItemRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public MailFolderItemRequestBuilder byMailFolderId1(@jakarta.annotation.Nonnull final String mailFolderId1) {
         Objects.requireNonNull(mailFolderId1);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -81,11 +72,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * The collection of child folders in the mailFolder.
      * @return a {@link MailFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailFolderCollectionResponse get() {
         return get(null);
     }
@@ -94,11 +82,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailFolderCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -110,11 +95,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link MailFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailFolder post(@jakarta.annotation.Nonnull final MailFolder body) {
         return post(body, null);
     }
@@ -124,11 +106,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailFolder post(@jakarta.annotation.Nonnull final MailFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -139,11 +118,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
     /**
      * The collection of child folders in the mailFolder.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -151,11 +127,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * The collection of child folders in the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -166,11 +139,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to childFolders for users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailFolder body) {
         return toPostRequestInformation(body, null);
     }
@@ -179,11 +149,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MailFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -196,11 +163,8 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ChildFoldersRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ChildFoldersRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ChildFoldersRequestBuilder(rawUrl, requestAdapter);

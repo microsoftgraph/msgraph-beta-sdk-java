@@ -27,10 +27,7 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -38,10 +35,7 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the delta method.
      * @return a {@link DeltaRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
@@ -50,11 +44,8 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the transcripts property of the microsoft.graph.onlineMeeting entity.
      * @param callTranscriptId The unique identifier of callTranscript
      * @return a {@link CallTranscriptItemRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public CallTranscriptItemRequestBuilder byCallTranscriptId(@jakarta.annotation.Nonnull final String callTranscriptId) {
         Objects.requireNonNull(callTranscriptId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -81,12 +72,9 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of callTranscript objects associated with a scheduled onlineMeeting. This API doesn't support getting call transcripts from channel meetings. 
      * @return a {@link CallTranscriptCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CallTranscriptCollectionResponse get() {
         return get(null);
     }
@@ -95,12 +83,9 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CallTranscriptCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/onlinemeeting-list-transcripts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CallTranscriptCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -112,11 +97,8 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link CallTranscript}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CallTranscript post(@jakarta.annotation.Nonnull final CallTranscript body) {
         return post(body, null);
     }
@@ -126,11 +108,8 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CallTranscript}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public CallTranscript post(@jakarta.annotation.Nonnull final CallTranscript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -141,11 +120,8 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the list of callTranscript objects associated with a scheduled onlineMeeting. This API doesn't support getting call transcripts from channel meetings. 
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -153,11 +129,8 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
      * Retrieve the list of callTranscript objects associated with a scheduled onlineMeeting. This API doesn't support getting call transcripts from channel meetings. 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -168,11 +141,8 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to transcripts for users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CallTranscript body) {
         return toPostRequestInformation(body, null);
     }
@@ -181,11 +151,8 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CallTranscript body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -198,11 +165,8 @@ public class TranscriptsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link TranscriptsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public TranscriptsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new TranscriptsRequestBuilder(rawUrl, requestAdapter);

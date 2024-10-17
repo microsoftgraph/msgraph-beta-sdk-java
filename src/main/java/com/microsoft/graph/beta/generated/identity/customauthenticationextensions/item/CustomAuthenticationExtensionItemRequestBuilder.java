@@ -46,7 +46,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/identity/customAuthenticationExtensions/{customAuthenticationExtension%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a customAuthenticationExtension object.
+     * Delete a customAuthenticationExtension object. The following derived types are currently supported.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         delete(null);
     }
     /**
-     * Delete a customAuthenticationExtension object.
+     * Delete a customAuthenticationExtension object. The following derived types are currently supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-delete?view=graph-rest-beta">Find more info here</a>
@@ -66,21 +66,21 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationeventlistener-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -115,7 +115,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtension::createFromDiscriminatorValue);
     }
     /**
-     * Delete a customAuthenticationExtension object.
+     * Delete a customAuthenticationExtension object. The following derived types are currently supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a customAuthenticationExtension object.
+     * Delete a customAuthenticationExtension object. The following derived types are currently supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -135,7 +135,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -143,7 +143,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -195,7 +195,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a customAuthenticationExtension object.
+     * Read the properties and relationships of an authenticationEventListener object. The @odata.type property in the response object indicates the type of the authenticationEventListener object. The following derived types are currently supported.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

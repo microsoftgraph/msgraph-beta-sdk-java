@@ -42,10 +42,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the account property of the microsoft.graph.profile entity.
      * @return a {@link AccountRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AccountRequestBuilder account() {
         return new AccountRequestBuilder(pathParameters, requestAdapter);
@@ -53,10 +50,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the addresses property of the microsoft.graph.profile entity.
      * @return a {@link AddressesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AddressesRequestBuilder addresses() {
         return new AddressesRequestBuilder(pathParameters, requestAdapter);
@@ -64,10 +58,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the anniversaries property of the microsoft.graph.profile entity.
      * @return a {@link AnniversariesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AnniversariesRequestBuilder anniversaries() {
         return new AnniversariesRequestBuilder(pathParameters, requestAdapter);
@@ -75,10 +66,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the awards property of the microsoft.graph.profile entity.
      * @return a {@link AwardsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AwardsRequestBuilder awards() {
         return new AwardsRequestBuilder(pathParameters, requestAdapter);
@@ -86,10 +74,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the certifications property of the microsoft.graph.profile entity.
      * @return a {@link CertificationsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CertificationsRequestBuilder certifications() {
         return new CertificationsRequestBuilder(pathParameters, requestAdapter);
@@ -97,10 +82,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the educationalActivities property of the microsoft.graph.profile entity.
      * @return a {@link EducationalActivitiesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public EducationalActivitiesRequestBuilder educationalActivities() {
         return new EducationalActivitiesRequestBuilder(pathParameters, requestAdapter);
@@ -108,10 +90,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the emails property of the microsoft.graph.profile entity.
      * @return a {@link EmailsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public EmailsRequestBuilder emails() {
         return new EmailsRequestBuilder(pathParameters, requestAdapter);
@@ -119,10 +98,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the interests property of the microsoft.graph.profile entity.
      * @return a {@link InterestsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public InterestsRequestBuilder interests() {
         return new InterestsRequestBuilder(pathParameters, requestAdapter);
@@ -130,10 +106,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the languages property of the microsoft.graph.profile entity.
      * @return a {@link LanguagesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public LanguagesRequestBuilder languages() {
         return new LanguagesRequestBuilder(pathParameters, requestAdapter);
@@ -141,10 +114,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the names property of the microsoft.graph.profile entity.
      * @return a {@link NamesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public NamesRequestBuilder names() {
         return new NamesRequestBuilder(pathParameters, requestAdapter);
@@ -152,10 +122,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the notes property of the microsoft.graph.profile entity.
      * @return a {@link NotesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public NotesRequestBuilder notes() {
         return new NotesRequestBuilder(pathParameters, requestAdapter);
@@ -163,10 +130,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the patents property of the microsoft.graph.profile entity.
      * @return a {@link PatentsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PatentsRequestBuilder patents() {
         return new PatentsRequestBuilder(pathParameters, requestAdapter);
@@ -174,10 +138,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the phones property of the microsoft.graph.profile entity.
      * @return a {@link PhonesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PhonesRequestBuilder phones() {
         return new PhonesRequestBuilder(pathParameters, requestAdapter);
@@ -185,10 +146,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the positions property of the microsoft.graph.profile entity.
      * @return a {@link PositionsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PositionsRequestBuilder positions() {
         return new PositionsRequestBuilder(pathParameters, requestAdapter);
@@ -196,10 +154,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the projects property of the microsoft.graph.profile entity.
      * @return a {@link ProjectsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ProjectsRequestBuilder projects() {
         return new ProjectsRequestBuilder(pathParameters, requestAdapter);
@@ -207,10 +162,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the publications property of the microsoft.graph.profile entity.
      * @return a {@link PublicationsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PublicationsRequestBuilder publications() {
         return new PublicationsRequestBuilder(pathParameters, requestAdapter);
@@ -218,10 +170,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the skills property of the microsoft.graph.profile entity.
      * @return a {@link SkillsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SkillsRequestBuilder skills() {
         return new SkillsRequestBuilder(pathParameters, requestAdapter);
@@ -229,10 +178,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the webAccounts property of the microsoft.graph.profile entity.
      * @return a {@link WebAccountsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public WebAccountsRequestBuilder webAccounts() {
         return new WebAccountsRequestBuilder(pathParameters, requestAdapter);
@@ -240,10 +186,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the websites property of the microsoft.graph.profile entity.
      * @return a {@link WebsitesRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public WebsitesRequestBuilder websites() {
         return new WebsitesRequestBuilder(pathParameters, requestAdapter);
@@ -267,10 +210,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property profile for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -278,10 +218,7 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property profile for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -292,11 +229,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * Represents properties that are descriptive of a user in a tenant.
      * @return a {@link Profile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Profile get() {
         return get(null);
     }
@@ -305,11 +239,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Profile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Profile get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -321,11 +252,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Profile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Profile patch(@jakarta.annotation.Nonnull final Profile body) {
         return patch(body, null);
     }
@@ -335,11 +263,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Profile}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Profile patch(@jakarta.annotation.Nonnull final Profile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -350,11 +275,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property profile for users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -362,11 +284,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property profile for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -376,11 +295,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
     /**
      * Represents properties that are descriptive of a user in a tenant.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -388,11 +304,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * Represents properties that are descriptive of a user in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -403,11 +316,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property profile in users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Profile body) {
         return toPatchRequestInformation(body, null);
     }
@@ -416,11 +326,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Profile body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -433,11 +340,8 @@ public class ProfileRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ProfileRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ProfileRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ProfileRequestBuilder(rawUrl, requestAdapter);

@@ -33,7 +33,6 @@ import com.microsoft.graph.beta.contracts.ContractsRequestBuilder;
 import com.microsoft.graph.beta.dataclassification.DataClassificationRequestBuilder;
 import com.microsoft.graph.beta.datapolicyoperations.DataPolicyOperationsRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.DeviceAppManagementRequestBuilder;
-import com.microsoft.graph.beta.devicelocalcredentials.DeviceLocalCredentialsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.DeviceManagementRequestBuilder;
 import com.microsoft.graph.beta.devices.DevicesRequestBuilder;
 import com.microsoft.graph.beta.deviceswithdeviceid.DevicesWithDeviceIdRequestBuilder;
@@ -391,14 +390,6 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeviceAppManagementRequestBuilder deviceAppManagement() {
         return new DeviceAppManagementRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the collection of deviceLocalCredentialInfo entities.
-     * @return a {@link DeviceLocalCredentialsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public DeviceLocalCredentialsRequestBuilder deviceLocalCredentials() {
-        return new DeviceLocalCredentialsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deviceManagement singleton.

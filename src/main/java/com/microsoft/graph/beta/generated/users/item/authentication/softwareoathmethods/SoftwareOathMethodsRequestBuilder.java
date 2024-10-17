@@ -25,10 +25,7 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -37,11 +34,8 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
      * @param softwareOathAuthenticationMethodId The unique identifier of softwareOathAuthenticationMethod
      * @return a {@link SoftwareOathAuthenticationMethodItemRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public SoftwareOathAuthenticationMethodItemRequestBuilder bySoftwareOathAuthenticationMethodId(@jakarta.annotation.Nonnull final String softwareOathAuthenticationMethodId) {
         Objects.requireNonNull(softwareOathAuthenticationMethodId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -68,11 +62,8 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
      * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return a {@link SoftwareOathAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SoftwareOathAuthenticationMethodCollectionResponse get() {
         return get(null);
     }
@@ -81,11 +72,8 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SoftwareOathAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SoftwareOathAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -95,11 +83,8 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
     /**
      * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -107,11 +92,8 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
      * The software OATH time-based one-time password (TOTP) applications registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -122,11 +104,8 @@ public class SoftwareOathMethodsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SoftwareOathMethodsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public SoftwareOathMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SoftwareOathMethodsRequestBuilder(rawUrl, requestAdapter);

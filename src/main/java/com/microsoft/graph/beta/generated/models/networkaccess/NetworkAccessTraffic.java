@@ -192,7 +192,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(43);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(45);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
         deserializerMap.put("applicationSnapshot", (n) -> { this.setApplicationSnapshot(n.getObjectValue(ApplicationSnapshot::createFromDiscriminatorValue)); });
@@ -212,6 +212,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("filteringProfileId", (n) -> { this.setFilteringProfileId(n.getStringValue()); });
         deserializerMap.put("filteringProfileName", (n) -> { this.setFilteringProfileName(n.getStringValue()); });
         deserializerMap.put("headers", (n) -> { this.setHeaders(n.getObjectValue(Headers::createFromDiscriminatorValue)); });
+        deserializerMap.put("httpMethod", (n) -> { this.setHttpMethod(n.getEnumValue(HttpMethod::forValue)); });
         deserializerMap.put("initiatingProcessName", (n) -> { this.setInitiatingProcessName(n.getStringValue()); });
         deserializerMap.put("networkProtocol", (n) -> { this.setNetworkProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -223,6 +224,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("receivedBytes", (n) -> { this.setReceivedBytes(n.getLongValue()); });
         deserializerMap.put("remoteNetworkId", (n) -> { this.setRemoteNetworkId(n.getStringValue()); });
         deserializerMap.put("resourceTenantId", (n) -> { this.setResourceTenantId(n.getStringValue()); });
+        deserializerMap.put("responseCode", (n) -> { this.setResponseCode(n.getIntegerValue()); });
         deserializerMap.put("sentBytes", (n) -> { this.setSentBytes(n.getLongValue()); });
         deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
         deserializerMap.put("sourceIp", (n) -> { this.setSourceIp(n.getStringValue()); });
@@ -261,6 +263,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nullable
     public Headers getHeaders() {
         return this.backingStore.get("headers");
+    }
+    /**
+     * Gets the httpMethod property value. The httpMethod property
+     * @return a {@link HttpMethod}
+     */
+    @jakarta.annotation.Nullable
+    public HttpMethod getHttpMethod() {
+        return this.backingStore.get("httpMethod");
     }
     /**
      * Gets the initiatingProcessName property value. The initiatingProcessName property
@@ -349,6 +359,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nullable
     public String getResourceTenantId() {
         return this.backingStore.get("resourceTenantId");
+    }
+    /**
+     * Gets the responseCode property value. The responseCode property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getResponseCode() {
+        return this.backingStore.get("responseCode");
     }
     /**
      * Gets the sentBytes property value. Represents the total number of bytes sent in a network communication or data transfer. Supports $filter (eq) and $orderby.
@@ -479,6 +497,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeStringValue("filteringProfileId", this.getFilteringProfileId());
         writer.writeStringValue("filteringProfileName", this.getFilteringProfileName());
         writer.writeObjectValue("headers", this.getHeaders());
+        writer.writeEnumValue("httpMethod", this.getHttpMethod());
         writer.writeStringValue("initiatingProcessName", this.getInitiatingProcessName());
         writer.writeEnumValue("networkProtocol", this.getNetworkProtocol());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -490,6 +509,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeLongValue("receivedBytes", this.getReceivedBytes());
         writer.writeStringValue("remoteNetworkId", this.getRemoteNetworkId());
         writer.writeStringValue("resourceTenantId", this.getResourceTenantId());
+        writer.writeIntegerValue("responseCode", this.getResponseCode());
         writer.writeLongValue("sentBytes", this.getSentBytes());
         writer.writeStringValue("sessionId", this.getSessionId());
         writer.writeStringValue("sourceIp", this.getSourceIp());
@@ -654,6 +674,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("headers", value);
     }
     /**
+     * Sets the httpMethod property value. The httpMethod property
+     * @param value Value to set for the httpMethod property.
+     */
+    public void setHttpMethod(@jakarta.annotation.Nullable final HttpMethod value) {
+        this.backingStore.set("httpMethod", value);
+    }
+    /**
      * Sets the initiatingProcessName property value. The initiatingProcessName property
      * @param value Value to set for the initiatingProcessName property.
      */
@@ -729,6 +756,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setResourceTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceTenantId", value);
+    }
+    /**
+     * Sets the responseCode property value. The responseCode property
+     * @param value Value to set for the responseCode property.
+     */
+    public void setResponseCode(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("responseCode", value);
     }
     /**
      * Sets the sentBytes property value. Represents the total number of bytes sent in a network communication or data transfer. Supports $filter (eq) and $orderby.

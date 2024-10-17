@@ -26,7 +26,7 @@ public class HealthMonitoringRoot extends Entity implements Parsable {
         return new HealthMonitoringRoot();
     }
     /**
-     * Gets the alertConfigurations property value. The alertConfigurations property
+     * Gets the alertConfigurations property value. The configuration of an alert type, which defines behavior that occurs when an alert is created.
      * @return a {@link java.util.List<AlertConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class HealthMonitoringRoot extends Entity implements Parsable {
         return this.backingStore.get("alertConfigurations");
     }
     /**
-     * Gets the alerts property value. The alerts property
+     * Gets the alerts property value. The collection of health monitoring system detected alerts for anomalous usage patterns found in a Microsoft Entra tenant.
      * @return a {@link java.util.List<Alert>}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class HealthMonitoringRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
     }
     /**
-     * Sets the alertConfigurations property value. The alertConfigurations property
+     * Sets the alertConfigurations property value. The configuration of an alert type, which defines behavior that occurs when an alert is created.
      * @param value Value to set for the alertConfigurations property.
      */
     public void setAlertConfigurations(@jakarta.annotation.Nullable final java.util.List<AlertConfiguration> value) {
         this.backingStore.set("alertConfigurations", value);
     }
     /**
-     * Sets the alerts property value. The alerts property
+     * Sets the alerts property value. The collection of health monitoring system detected alerts for anomalous usage patterns found in a Microsoft Entra tenant.
      * @param value Value to set for the alerts property.
      */
     public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {

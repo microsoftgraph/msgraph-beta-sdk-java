@@ -26,10 +26,7 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to call the getVirtualAppointmentJoinWebUrl method.
      * @return a {@link GetVirtualAppointmentJoinWebUrlRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetVirtualAppointmentJoinWebUrlRequestBuilder getVirtualAppointmentJoinWebUrl() {
         return new GetVirtualAppointmentJoinWebUrlRequestBuilder(pathParameters, requestAdapter);
@@ -37,10 +34,7 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to call the sendVirtualAppointmentReminderSms method.
      * @return a {@link SendVirtualAppointmentReminderSmsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SendVirtualAppointmentReminderSmsRequestBuilder sendVirtualAppointmentReminderSms() {
         return new SendVirtualAppointmentReminderSmsRequestBuilder(pathParameters, requestAdapter);
@@ -48,10 +42,7 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to call the sendVirtualAppointmentSms method.
      * @return a {@link SendVirtualAppointmentSmsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SendVirtualAppointmentSmsRequestBuilder sendVirtualAppointmentSms() {
         return new SendVirtualAppointmentSmsRequestBuilder(pathParameters, requestAdapter);
@@ -77,10 +68,7 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
     /**
      * Delete navigation property onlineMeetings for users
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -88,10 +76,7 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * Delete navigation property onlineMeetings for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -102,11 +87,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OnlineMeeting get() {
         return get(null);
     }
@@ -115,11 +97,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OnlineMeeting get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -131,11 +110,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OnlineMeeting patch(@jakarta.annotation.Nonnull final OnlineMeeting body) {
         return patch(body, null);
     }
@@ -145,11 +121,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnlineMeeting}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OnlineMeeting patch(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -160,11 +133,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
     /**
      * Delete navigation property onlineMeetings for users
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -172,11 +142,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * Delete navigation property onlineMeetings for users
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -186,11 +153,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
     /**
      * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -198,11 +162,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * Information about a meeting, including the URL used to join a meeting, the attendees list, and the description.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -213,11 +174,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * Update the navigation property onlineMeetings in users
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OnlineMeeting body) {
         return toPatchRequestInformation(body, null);
     }
@@ -226,11 +184,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OnlineMeeting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -243,11 +198,8 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link OnlineMeetingsWithJoinWebUrlRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public OnlineMeetingsWithJoinWebUrlRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new OnlineMeetingsWithJoinWebUrlRequestBuilder(rawUrl, requestAdapter);

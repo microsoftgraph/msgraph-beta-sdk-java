@@ -71,7 +71,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
         return this.backingStore;
     }
     /**
-     * Gets the deviceAndAppManagementAssignmentFilterId property value. The Id of the filter for the target assignment.
+     * Gets the deviceAndAppManagementAssignmentFilterId property value. The ID of the filter for the target assignment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class DeviceAndAppManagementAssignmentTarget implements AdditionalDataHol
         this.backingStore = value;
     }
     /**
-     * Sets the deviceAndAppManagementAssignmentFilterId property value. The Id of the filter for the target assignment.
+     * Sets the deviceAndAppManagementAssignmentFilterId property value. The ID of the filter for the target assignment.
      * @param value Value to set for the deviceAndAppManagementAssignmentFilterId property.
      */
     public void setDeviceAndAppManagementAssignmentFilterId(@jakarta.annotation.Nullable final String value) {

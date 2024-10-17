@@ -35,25 +35,23 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/{managedDevice%2Did}/resizeCloudPc", rawUrl);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Invoke action resizeCloudPc
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
-     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-resizecloudpc?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final ResizeCloudPcPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Invoke action resizeCloudPc
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The resizeCloudPc API is deprecated and will stop returning on Oct 30, 2023. Please use resize instead as of 2023-05/resizeCloudPc
-     * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-resizecloudpc?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final ResizeCloudPcPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -64,7 +62,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Invoke action resizeCloudPc
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -76,7 +74,7 @@ public class ResizeCloudPcRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Upgrade or downgrade an existing Cloud PC to another configuration with a new virtual CPU (vCPU) and storage size.
+     * Invoke action resizeCloudPc
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -25,10 +25,7 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -37,11 +34,8 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
      * Provides operations to manage the microsoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
      * @param microsoftAuthenticatorAuthenticationMethodId The unique identifier of microsoftAuthenticatorAuthenticationMethod
      * @return a {@link MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder byMicrosoftAuthenticatorAuthenticationMethodId(@jakarta.annotation.Nonnull final String microsoftAuthenticatorAuthenticationMethodId) {
         Objects.requireNonNull(microsoftAuthenticatorAuthenticationMethodId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -68,12 +62,9 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
      * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
      * @return a {@link MicrosoftAuthenticatorAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MicrosoftAuthenticatorAuthenticationMethodCollectionResponse get() {
         return get(null);
     }
@@ -82,12 +73,9 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MicrosoftAuthenticatorAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      * @see <a href="https://learn.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MicrosoftAuthenticatorAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -97,11 +85,8 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
     /**
      * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -109,11 +94,8 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
      * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -124,11 +106,8 @@ public class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuil
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MicrosoftAuthenticatorMethodsRequestBuilder}
-     * @deprecated
-     *  as of 2024-07/PrivatePreview:copilotExportAPI
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public MicrosoftAuthenticatorMethodsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MicrosoftAuthenticatorMethodsRequestBuilder(rawUrl, requestAdapter);
