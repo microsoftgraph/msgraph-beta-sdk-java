@@ -129,7 +129,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.backingStore.get("defaultAppManagementPolicy");
     }
     /**
-     * Gets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
+     * Gets the deviceRegistrationPolicy property value. Represents the policy scope that controls quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @return a {@link DeviceRegistrationPolicy}
      */
     @jakarta.annotation.Nullable
@@ -423,7 +423,7 @@ public class PolicyRoot extends Entity implements Parsable {
         this.backingStore.set("defaultAppManagementPolicy", value);
     }
     /**
-     * Sets the deviceRegistrationPolicy property value. The deviceRegistrationPolicy property
+     * Sets the deviceRegistrationPolicy property value. Represents the policy scope that controls quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
      * @param value Value to set for the deviceRegistrationPolicy property.
      */
     public void setDeviceRegistrationPolicy(@jakarta.annotation.Nullable final DeviceRegistrationPolicy value) {
