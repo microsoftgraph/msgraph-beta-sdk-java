@@ -77,7 +77,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("apps");
     }
     /**
-     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
+     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -308,7 +308,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("apps", value);
     }
     /**
-     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
+     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserProtocol property.
      */
     public void setCustomBrowserProtocol(@jakarta.annotation.Nullable final String value) {
