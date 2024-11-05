@@ -167,6 +167,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         deserializerMap.put("tpmRequired", (n) -> { this.setTpmRequired(n.getBooleanValue()); });
         deserializerMap.put("validOperatingSystemBuildRanges", (n) -> { this.setValidOperatingSystemBuildRanges(n.getCollectionOfObjectValues(OperatingSystemVersionRange::createFromDiscriminatorValue)); });
         deserializerMap.put("virtualizationBasedSecurityEnabled", (n) -> { this.setVirtualizationBasedSecurityEnabled(n.getBooleanValue()); });
+        deserializerMap.put("wslDistributions", (n) -> { this.setWslDistributions(n.getCollectionOfObjectValues(WslDistributionConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -362,6 +363,14 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         return this.backingStore.get("virtualizationBasedSecurityEnabled");
     }
     /**
+     * Gets the wslDistributions property value. The wslDistributions property
+     * @return a {@link java.util.List<WslDistributionConfiguration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WslDistributionConfiguration> getWslDistributions() {
+        return this.backingStore.get("wslDistributions");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -404,6 +413,7 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
         writer.writeBooleanValue("tpmRequired", this.getTpmRequired());
         writer.writeCollectionOfObjectValues("validOperatingSystemBuildRanges", this.getValidOperatingSystemBuildRanges());
         writer.writeBooleanValue("virtualizationBasedSecurityEnabled", this.getVirtualizationBasedSecurityEnabled());
+        writer.writeCollectionOfObjectValues("wslDistributions", this.getWslDistributions());
     }
     /**
      * Sets the activeFirewallRequired property value. Require active firewall on Windows devices.
@@ -656,5 +666,12 @@ public class Windows10CompliancePolicy extends DeviceCompliancePolicy implements
      */
     public void setVirtualizationBasedSecurityEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("virtualizationBasedSecurityEnabled", value);
+    }
+    /**
+     * Sets the wslDistributions property value. The wslDistributions property
+     * @param value Value to set for the wslDistributions property.
+     */
+    public void setWslDistributions(@jakarta.annotation.Nullable final java.util.List<WslDistributionConfiguration> value) {
+        this.backingStore.set("wslDistributions", value);
     }
 }

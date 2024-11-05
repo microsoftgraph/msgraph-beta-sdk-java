@@ -112,6 +112,7 @@ import com.microsoft.graph.beta.devicemanagement.remoteassistancesettings.Remote
 import com.microsoft.graph.beta.devicemanagement.reports.ReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.resourceaccessprofiles.ResourceAccessProfilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.resourceoperations.ResourceOperationsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.retrieveuserroledetailwithuserid.RetrieveUserRoleDetailWithUseridRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablepolicysettings.ReusablePolicySettingsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reusablesettings.ReusableSettingsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.roleassignments.RoleAssignmentsRequestBuilder;
@@ -1802,6 +1803,16 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagement::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the retrieveUserRoleDetail method.
+     * @param userid Usage: userid='{userid}'
+     * @return a {@link RetrieveUserRoleDetailWithUseridRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveUserRoleDetailWithUseridRequestBuilder retrieveUserRoleDetailWithUserid(@jakarta.annotation.Nonnull final String userid) {
+        Objects.requireNonNull(userid);
+        return new RetrieveUserRoleDetailWithUseridRequestBuilder(pathParameters, requestAdapter, userid);
     }
     /**
      * Provides operations to call the scopedForResource method.

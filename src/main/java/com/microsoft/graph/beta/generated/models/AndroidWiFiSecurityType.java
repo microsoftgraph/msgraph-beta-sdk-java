@@ -4,16 +4,22 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Wi-Fi Security Types for Android.
+ * The possible security types for Android Wi-Fi profiles. Default value 'Open', indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. 'WpaEnterprise' and 'Wpa2Enterprise' options are available for Enterprise Wi-Fi profiles. 'Wep' and 'WpaPersonal' (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidWiFiSecurityType implements ValuedEnum {
-    /** Open (No Authentication). */
+    /** Default. Indicates Android Wifi Security Type is set to "Open" i.e. no authentication is required. (No Authentication). */
     Open("open"),
-    /** WPA-Enterprise. Must use AndroidEnterpriseWifiConfiguration type to configure enterprise options. */
+    /** Indicates Android Wifi Security Type is set to WPA encryption. Must use AndroidWorkProfileEnterpriseWifiConfiguration type to configure enterprise options. */
     WpaEnterprise("wpaEnterprise"),
-    /** WPA2-Enterprise. Must use AndroidEnterpriseWifiConfiguration type to configure enterprise options. */
-    Wpa2Enterprise("wpa2Enterprise");
+    /** Indicates Android Wifi Security Type is set to WPA2 encryption. Must use AndroidWorkProfileEnterpriseWifiConfiguration type to configure enterprise options. */
+    Wpa2Enterprise("wpa2Enterprise"),
+    /** Indicates Android Wifi Security Type is set to WEP encryption. This restricts the preSharedKey to a valid passphrase (5 or 13 characters) or a valid HEX key (10 or 26 hexidecimal characters). Use AndroidWorkProfileWifiConfiguration to configure basic Wi-Fi options. */
+    Wep("wep"),
+    /**  Indicates Android Wifi Security Type is set to WPA encryption. This restricts the preSharedKey to a string between 8 and 64 characters long. Use AndroidWorkProfileWifiConfiguration to configure basic Wi-Fi options. */
+    WpaPersonal("wpaPersonal"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     AndroidWiFiSecurityType(final String value) {
         this.value = value;
@@ -27,6 +33,9 @@ public enum AndroidWiFiSecurityType implements ValuedEnum {
             case "open": return Open;
             case "wpaEnterprise": return WpaEnterprise;
             case "wpa2Enterprise": return Wpa2Enterprise;
+            case "wep": return Wep;
+            case "wpaPersonal": return WpaPersonal;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

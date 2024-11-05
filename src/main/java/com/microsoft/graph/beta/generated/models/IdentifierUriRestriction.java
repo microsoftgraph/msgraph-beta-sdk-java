@@ -57,6 +57,14 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
+     * Gets the excludeActors property value. The excludeActors property
+     * @return a {@link AppManagementPolicyActorExemptions}
+     */
+    @jakarta.annotation.Nullable
+    public AppManagementPolicyActorExemptions getExcludeActors() {
+        return this.backingStore.get("excludeActors");
+    }
+    /**
      * Gets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn't enforced for applications that are configured to receive V2 tokens in Entra ID; else, the restriction isn't enforced for those applications.
      * @return a {@link Boolean}
      */
@@ -78,7 +86,8 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        deserializerMap.put("excludeActors", (n) -> { this.setExcludeActors(n.getObjectValue(AppManagementPolicyActorExemptions::createFromDiscriminatorValue)); });
         deserializerMap.put("excludeAppsReceivingV2Tokens", (n) -> { this.setExcludeAppsReceivingV2Tokens(n.getBooleanValue()); });
         deserializerMap.put("excludeSaml", (n) -> { this.setExcludeSaml(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -116,6 +125,7 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("excludeActors", this.getExcludeActors());
         writer.writeBooleanValue("excludeAppsReceivingV2Tokens", this.getExcludeAppsReceivingV2Tokens());
         writer.writeBooleanValue("excludeSaml", this.getExcludeSaml());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -137,6 +147,13 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the excludeActors property value. The excludeActors property
+     * @param value Value to set for the excludeActors property.
+     */
+    public void setExcludeActors(@jakarta.annotation.Nullable final AppManagementPolicyActorExemptions value) {
+        this.backingStore.set("excludeActors", value);
     }
     /**
      * Sets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn't enforced for applications that are configured to receive V2 tokens in Entra ID; else, the restriction isn't enforced for those applications.

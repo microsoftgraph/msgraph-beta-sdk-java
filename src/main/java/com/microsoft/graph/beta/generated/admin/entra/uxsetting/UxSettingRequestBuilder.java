@@ -61,11 +61,12 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get uxSetting from admin
+     * Get the properties and relationships of a uxSetting object.
      * @return a {@link UxSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2023-11/PrivatePreview:BulkJobs
+     * @see <a href="https://learn.microsoft.com/graph/api/uxsetting-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -73,12 +74,13 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get uxSetting from admin
+     * Get the properties and relationships of a uxSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UxSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2023-11/PrivatePreview:BulkJobs
+     * @see <a href="https://learn.microsoft.com/graph/api/uxsetting-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -89,12 +91,13 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UxSetting::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property uxSetting in admin
+     * Update the properties of a uxSetting object.
      * @param body The request body
      * @return a {@link UxSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2023-11/PrivatePreview:BulkJobs
+     * @see <a href="https://learn.microsoft.com/graph/api/uxsetting-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -102,13 +105,14 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the navigation property uxSetting in admin
+     * Update the properties of a uxSetting object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UxSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2023-11/PrivatePreview:BulkJobs
+     * @see <a href="https://learn.microsoft.com/graph/api/uxsetting-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -146,7 +150,7 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get uxSetting from admin
+     * Get the properties and relationships of a uxSetting object.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2023-11/PrivatePreview:BulkJobs
@@ -157,7 +161,7 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get uxSetting from admin
+     * Get the properties and relationships of a uxSetting object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -172,7 +176,7 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property uxSetting in admin
+     * Update the properties of a uxSetting object.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -184,7 +188,7 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property uxSetting in admin
+     * Update the properties of a uxSetting object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -221,7 +225,7 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get uxSetting from admin
+     * Get the properties and relationships of a uxSetting object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

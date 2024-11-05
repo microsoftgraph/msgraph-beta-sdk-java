@@ -1457,7 +1457,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("userExperienceAnalyticsCategories");
     }
     /**
-     * Gets the userExperienceAnalyticsDeviceMetricHistory property value. User experience analytics device metric history
+     * Gets the userExperienceAnalyticsDeviceMetricHistory property value. User experience analytics device metric history. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
      * @return a {@link java.util.List<UserExperienceAnalyticsMetricHistory>}
      */
     @jakarta.annotation.Nullable
@@ -1577,7 +1577,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("userExperienceAnalyticsOverview");
     }
     /**
-     * Gets the userExperienceAnalyticsRemoteConnection property value. User experience analytics remote connection
+     * Gets the userExperienceAnalyticsRemoteConnection property value. User experience analytics remote connection. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
      * @return a {@link java.util.List<UserExperienceAnalyticsRemoteConnection>}
      */
     @jakarta.annotation.Nullable
@@ -3036,7 +3036,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("userExperienceAnalyticsCategories", value);
     }
     /**
-     * Sets the userExperienceAnalyticsDeviceMetricHistory property value. User experience analytics device metric history
+     * Sets the userExperienceAnalyticsDeviceMetricHistory property value. User experience analytics device metric history. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
      * @param value Value to set for the userExperienceAnalyticsDeviceMetricHistory property.
      */
     public void setUserExperienceAnalyticsDeviceMetricHistory(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsMetricHistory> value) {
@@ -3141,7 +3141,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("userExperienceAnalyticsOverview", value);
     }
     /**
-     * Sets the userExperienceAnalyticsRemoteConnection property value. User experience analytics remote connection
+     * Sets the userExperienceAnalyticsRemoteConnection property value. User experience analytics remote connection. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
      * @param value Value to set for the userExperienceAnalyticsRemoteConnection property.
      */
     public void setUserExperienceAnalyticsRemoteConnection(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsRemoteConnection> value) {

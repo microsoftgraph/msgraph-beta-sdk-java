@@ -103,7 +103,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("operator");
     }
     /**
-     * Gets the relationshipType property value. The relationship type.  Possible values are: and, or.
+     * Gets the relationshipType property value. The relationship type. Possible values are: and, or.
      * @return a {@link RelationshipType}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("operator", value);
     }
     /**
-     * Sets the relationshipType property value. The relationship type.  Possible values are: and, or.
+     * Sets the relationshipType property value. The relationship type. Possible values are: and, or.
      * @param value Value to set for the relationshipType property.
      */
     public void setRelationshipType(@jakarta.annotation.Nullable final RelationshipType value) {

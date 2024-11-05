@@ -57,6 +57,14 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowBreakoutRooms");
     }
     /**
+     * Gets the allowedLobbyAdmitters property value. The allowedLobbyAdmitters property
+     * @return a {@link AllowedLobbyAdmitterRoles}
+     */
+    @jakarta.annotation.Nullable
+    public AllowedLobbyAdmitterRoles getAllowedLobbyAdmitters() {
+        return this.backingStore.get("allowedLobbyAdmitters");
+    }
+    /**
      * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue.
      * @return a {@link OnlineMeetingPresenters}
      */
@@ -178,6 +186,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("allowAttendeeToEnableCamera", (n) -> { this.setAllowAttendeeToEnableCamera(n.getBooleanValue()); });
         deserializerMap.put("allowAttendeeToEnableMic", (n) -> { this.setAllowAttendeeToEnableMic(n.getBooleanValue()); });
         deserializerMap.put("allowBreakoutRooms", (n) -> { this.setAllowBreakoutRooms(n.getBooleanValue()); });
+        deserializerMap.put("allowedLobbyAdmitters", (n) -> { this.setAllowedLobbyAdmitters(n.getEnumValue(AllowedLobbyAdmitterRoles::forValue)); });
         deserializerMap.put("allowedPresenters", (n) -> { this.setAllowedPresenters(n.getEnumValue(OnlineMeetingPresenters::forValue)); });
         deserializerMap.put("allowLiveShare", (n) -> { this.setAllowLiveShare(n.getEnumValue(MeetingLiveShareOptions::forValue)); });
         deserializerMap.put("allowMeetingChat", (n) -> { this.setAllowMeetingChat(n.getEnumValue(MeetingChatMode::forValue)); });
@@ -303,6 +312,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeBooleanValue("allowAttendeeToEnableCamera", this.getAllowAttendeeToEnableCamera());
         writer.writeBooleanValue("allowAttendeeToEnableMic", this.getAllowAttendeeToEnableMic());
         writer.writeBooleanValue("allowBreakoutRooms", this.getAllowBreakoutRooms());
+        writer.writeEnumValue("allowedLobbyAdmitters", this.getAllowedLobbyAdmitters());
         writer.writeEnumValue("allowedPresenters", this.getAllowedPresenters());
         writer.writeEnumValue("allowLiveShare", this.getAllowLiveShare());
         writer.writeEnumValue("allowMeetingChat", this.getAllowMeetingChat());
@@ -349,6 +359,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      */
     public void setAllowBreakoutRooms(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowBreakoutRooms", value);
+    }
+    /**
+     * Sets the allowedLobbyAdmitters property value. The allowedLobbyAdmitters property
+     * @param value Value to set for the allowedLobbyAdmitters property.
+     */
+    public void setAllowedLobbyAdmitters(@jakarta.annotation.Nullable final AllowedLobbyAdmitterRoles value) {
+        this.backingStore.set("allowedLobbyAdmitters", value);
     }
     /**
      * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are: everyone, organization, roleIsPresenter, organizer, unknownFutureValue.

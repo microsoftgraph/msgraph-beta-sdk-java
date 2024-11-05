@@ -11,6 +11,7 @@ import com.microsoft.graph.beta.groups.item.team.installedapps.InstalledAppsRequ
 import com.microsoft.graph.beta.groups.item.team.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.operations.OperationsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.owners.OwnersRequestBuilder;
+import com.microsoft.graph.beta.groups.item.team.ownerswithuserprincipalname.OwnersWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.photo.PhotoRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.PrimaryChannelRequestBuilder;
@@ -255,6 +256,16 @@ public class TeamRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the owners property of the microsoft.graph.team entity.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link OwnersWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OwnersWithUserPrincipalNameRequestBuilder ownersWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new OwnersWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * Create a new team from a group. In order to create a team, the group must have a least one owner. If the creation of the team call is delayed, you can retry the call up to three times before you have to wait for 15 minutes due to a propagation delay. If the group was created less than 15 minutes ago, the call might fail with a 404 error code due to replication delays. If the group was created less than 15 minutes ago, it's possible for a call to create a team to fail with a 404 error code, due to ongoing replication delays.The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.

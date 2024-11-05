@@ -26,7 +26,10 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the customQuestions property of the microsoft.graph.meetingRegistration entity.
      * @param meetingRegistrationQuestionId The unique identifier of meetingRegistrationQuestion
      * @return a {@link MeetingRegistrationQuestionItemRequestBuilder}
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public MeetingRegistrationQuestionItemRequestBuilder byMeetingRegistrationQuestionId(@jakarta.annotation.Nonnull final String meetingRegistrationQuestionId) {
         Objects.requireNonNull(meetingRegistrationQuestionId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,8 +69,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * Custom registration questions.
      * @return a {@link MeetingRegistrationQuestionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public MeetingRegistrationQuestionCollectionResponse get() {
         return get(null);
     }
@@ -73,8 +82,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MeetingRegistrationQuestionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public MeetingRegistrationQuestionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -86,8 +98,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link MeetingRegistrationQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public MeetingRegistrationQuestion post(@jakarta.annotation.Nonnull final MeetingRegistrationQuestion body) {
         return post(body, null);
     }
@@ -97,8 +112,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MeetingRegistrationQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public MeetingRegistrationQuestion post(@jakarta.annotation.Nonnull final MeetingRegistrationQuestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -109,8 +127,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Custom registration questions.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -118,8 +139,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * Custom registration questions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -130,8 +154,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to customQuestions for app
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MeetingRegistrationQuestion body) {
         return toPostRequestInformation(body, null);
     }
@@ -140,8 +167,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MeetingRegistrationQuestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -154,8 +184,11 @@ public class CustomQuestionsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CustomQuestionsRequestBuilder}
+     * @deprecated
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CustomQuestionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CustomQuestionsRequestBuilder(rawUrl, requestAdapter);

@@ -26,7 +26,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return new ServicePrincipalRiskDetection();
     }
     /**
-     * Gets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
+     * Gets the activity property value. Indicates the activity type the detected risk is linked to. The possible values are: signin, servicePrincipal. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipal.
      * @return a {@link ActivityType}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity.
+     * Gets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection isn't associated with a sign-in activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("detectedDateTime");
     }
     /**
-     * Gets the detectionTimingType property value. Timing of the detected risk , whether real-time or offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * Gets the detectionTimingType property value. Timing of the detected risk, whether real-time or offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @return a {@link RiskDetectionTimingType}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("mitreTechniqueId");
     }
     /**
-     * Gets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
+     * Gets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection isn't associated with a sign-in activity. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("requestId");
     }
     /**
-     * Gets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
+     * Gets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license are returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @return a {@link RiskDetail}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("riskDetail");
     }
     /**
-     * Gets the riskEventType property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
+     * Gets the riskEventType property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication, suspiciousAPITraffic.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("riskEventType");
     }
     /**
-     * Gets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
+     * Gets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license are returned hidden. The possible values are: low, medium, high, hidden, none.
      * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -253,7 +253,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         writer.writeEnumValue("tokenIssuerType", this.getTokenIssuerType());
     }
     /**
-     * Sets the activity property value. Indicates the activity type the detected risk is linked to.  The possible values are: signin, servicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: servicePrincipal.
+     * Sets the activity property value. Indicates the activity type the detected risk is linked to. The possible values are: signin, servicePrincipal. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipal.
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final ActivityType value) {
@@ -281,7 +281,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity.
+     * Sets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection isn't associated with a sign-in activity.
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
@@ -295,7 +295,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         this.backingStore.set("detectedDateTime", value);
     }
     /**
-     * Sets the detectionTimingType property value. Timing of the detected risk , whether real-time or offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
+     * Sets the detectionTimingType property value. Timing of the detected risk, whether real-time or offline). The possible values are: notDefined, realtime, nearRealtime, offline, unknownFutureValue.
      * @param value Value to set for the detectionTimingType property.
      */
     public void setDetectionTimingType(@jakarta.annotation.Nullable final RiskDetectionTimingType value) {
@@ -337,28 +337,28 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         this.backingStore.set("mitreTechniqueId", value);
     }
     /**
-     * Sets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection is not associated with a sign-in activity. Supports $filter (eq).
+     * Sets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection isn't associated with a sign-in activity. Supports $filter (eq).
      * @param value Value to set for the requestId property.
      */
     public void setRequestId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("requestId", value);
     }
     /**
-     * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
+     * Sets the riskDetail property value. Details of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license are returned hidden. The possible values are: none, hidden, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: adminConfirmedServicePrincipalCompromised , adminDismissedAllRiskForServicePrincipal.
      * @param value Value to set for the riskDetail property.
      */
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
         this.backingStore.set("riskDetail", value);
     }
     /**
-     * Sets the riskEventType property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication.
+     * Sets the riskEventType property value. The type of risk event detected. The possible values are: investigationsThreatIntelligence, generic, adminConfirmedServicePrincipalCompromised, suspiciousSignins, leakedCredentials, anomalousServicePrincipalActivity, maliciousApplication, suspiciousApplication, suspiciousAPITraffic.
      * @param value Value to set for the riskEventType property.
      */
     public void setRiskEventType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("riskEventType", value);
     }
     /**
-     * Sets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license will be returned hidden. The possible values are: low, medium, high, hidden, none.
+     * Sets the riskLevel property value. Level of the detected risk. Note: Details for this property are only available for Workload Identities Premium customers. Events in tenants without this license are returned hidden. The possible values are: low, medium, high, hidden, none.
      * @param value Value to set for the riskLevel property.
      */
     public void setRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {

@@ -61,6 +61,10 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         deserializerMap.put("connectAutomatically", (n) -> { this.setConnectAutomatically(n.getBooleanValue()); });
         deserializerMap.put("connectWhenNetworkNameIsHidden", (n) -> { this.setConnectWhenNetworkNameIsHidden(n.getBooleanValue()); });
         deserializerMap.put("networkName", (n) -> { this.setNetworkName(n.getStringValue()); });
+        deserializerMap.put("preSharedKey", (n) -> { this.setPreSharedKey(n.getStringValue()); });
+        deserializerMap.put("preSharedKeyIsSet", (n) -> { this.setPreSharedKeyIsSet(n.getBooleanValue()); });
+        deserializerMap.put("proxyAutomaticConfigurationUrl", (n) -> { this.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
+        deserializerMap.put("proxySettings", (n) -> { this.setProxySettings(n.getEnumValue(WiFiProxySetting::forValue)); });
         deserializerMap.put("ssid", (n) -> { this.setSsid(n.getStringValue()); });
         deserializerMap.put("wiFiSecurityType", (n) -> { this.setWiFiSecurityType(n.getEnumValue(AndroidWiFiSecurityType::forValue)); });
         return deserializerMap;
@@ -74,6 +78,38 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         return this.backingStore.get("networkName");
     }
     /**
+     * Gets the preSharedKey property value. Specify the pre-shared key for a WEP or WPA personal Wi-Fi network. Restrictions depend on the value set for wiFiSecurityType. If WEP type security is used, then preSharedKey must be a valid passphrase (5 or 13 characters) or a valid HEX key (10 or 26 hexidecimal characters). If WPA security type is used, then preSharedKey can be any string between 8 and 64 characters long.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPreSharedKey() {
+        return this.backingStore.get("preSharedKey");
+    }
+    /**
+     * Gets the preSharedKeyIsSet property value. When set to true, indicates that the pre-shared key is configured. When set to false, indicates that pre-shared key is not configured (any values set for preSharedKey will be ignored). Default value is false.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getPreSharedKeyIsSet() {
+        return this.backingStore.get("preSharedKeyIsSet");
+    }
+    /**
+     * Gets the proxyAutomaticConfigurationUrl property value. URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getProxyAutomaticConfigurationUrl() {
+        return this.backingStore.get("proxyAutomaticConfigurationUrl");
+    }
+    /**
+     * Gets the proxySettings property value. Wi-Fi Proxy Settings.
+     * @return a {@link WiFiProxySetting}
+     */
+    @jakarta.annotation.Nullable
+    public WiFiProxySetting getProxySettings() {
+        return this.backingStore.get("proxySettings");
+    }
+    /**
      * Gets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
      * @return a {@link String}
      */
@@ -82,7 +118,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         return this.backingStore.get("ssid");
     }
     /**
-     * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
+     * Gets the wiFiSecurityType property value. The possible security types for Android Wi-Fi profiles. Default value 'Open', indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. 'WpaEnterprise' and 'Wpa2Enterprise' options are available for Enterprise Wi-Fi profiles. 'Wep' and 'WpaPersonal' (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
      * @return a {@link AndroidWiFiSecurityType}
      */
     @jakarta.annotation.Nullable
@@ -99,6 +135,10 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         writer.writeBooleanValue("connectAutomatically", this.getConnectAutomatically());
         writer.writeBooleanValue("connectWhenNetworkNameIsHidden", this.getConnectWhenNetworkNameIsHidden());
         writer.writeStringValue("networkName", this.getNetworkName());
+        writer.writeStringValue("preSharedKey", this.getPreSharedKey());
+        writer.writeBooleanValue("preSharedKeyIsSet", this.getPreSharedKeyIsSet());
+        writer.writeStringValue("proxyAutomaticConfigurationUrl", this.getProxyAutomaticConfigurationUrl());
+        writer.writeEnumValue("proxySettings", this.getProxySettings());
         writer.writeStringValue("ssid", this.getSsid());
         writer.writeEnumValue("wiFiSecurityType", this.getWiFiSecurityType());
     }
@@ -124,6 +164,34 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         this.backingStore.set("networkName", value);
     }
     /**
+     * Sets the preSharedKey property value. Specify the pre-shared key for a WEP or WPA personal Wi-Fi network. Restrictions depend on the value set for wiFiSecurityType. If WEP type security is used, then preSharedKey must be a valid passphrase (5 or 13 characters) or a valid HEX key (10 or 26 hexidecimal characters). If WPA security type is used, then preSharedKey can be any string between 8 and 64 characters long.
+     * @param value Value to set for the preSharedKey property.
+     */
+    public void setPreSharedKey(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("preSharedKey", value);
+    }
+    /**
+     * Sets the preSharedKeyIsSet property value. When set to true, indicates that the pre-shared key is configured. When set to false, indicates that pre-shared key is not configured (any values set for preSharedKey will be ignored). Default value is false.
+     * @param value Value to set for the preSharedKeyIsSet property.
+     */
+    public void setPreSharedKeyIsSet(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("preSharedKeyIsSet", value);
+    }
+    /**
+     * Sets the proxyAutomaticConfigurationUrl property value. URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+     * @param value Value to set for the proxyAutomaticConfigurationUrl property.
+     */
+    public void setProxyAutomaticConfigurationUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("proxyAutomaticConfigurationUrl", value);
+    }
+    /**
+     * Sets the proxySettings property value. Wi-Fi Proxy Settings.
+     * @param value Value to set for the proxySettings property.
+     */
+    public void setProxySettings(@jakarta.annotation.Nullable final WiFiProxySetting value) {
+        this.backingStore.set("proxySettings", value);
+    }
+    /**
      * Sets the ssid property value. This is the name of the Wi-Fi network that is broadcast to all devices.
      * @param value Value to set for the ssid property.
      */
@@ -131,7 +199,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         this.backingStore.set("ssid", value);
     }
     /**
-     * Sets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
+     * Sets the wiFiSecurityType property value. The possible security types for Android Wi-Fi profiles. Default value 'Open', indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. 'WpaEnterprise' and 'Wpa2Enterprise' options are available for Enterprise Wi-Fi profiles. 'Wep' and 'WpaPersonal' (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
      * @param value Value to set for the wiFiSecurityType property.
      */
     public void setWiFiSecurityType(@jakarta.annotation.Nullable final AndroidWiFiSecurityType value) {

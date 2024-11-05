@@ -64,13 +64,14 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Back
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(20);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(21);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("v10_0", (n) -> { this.setV100(n.getBooleanValue()); });
         deserializerMap.put("v11_0", (n) -> { this.setV110(n.getBooleanValue()); });
         deserializerMap.put("v12_0", (n) -> { this.setV120(n.getBooleanValue()); });
         deserializerMap.put("v13_0", (n) -> { this.setV130(n.getBooleanValue()); });
         deserializerMap.put("v14_0", (n) -> { this.setV140(n.getBooleanValue()); });
+        deserializerMap.put("v15_0", (n) -> { this.setV150(n.getBooleanValue()); });
         deserializerMap.put("v4_0", (n) -> { this.setV40(n.getBooleanValue()); });
         deserializerMap.put("v4_0_3", (n) -> { this.setV403(n.getBooleanValue()); });
         deserializerMap.put("v4_1", (n) -> { this.setV41(n.getBooleanValue()); });
@@ -134,6 +135,14 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Back
     @jakarta.annotation.Nullable
     public Boolean getV140() {
         return this.backingStore.get("v140");
+    }
+    /**
+     * Gets the v15_0 property value. When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getV150() {
+        return this.backingStore.get("v150");
     }
     /**
      * Gets the v4_0 property value. When TRUE, only Version 4.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
@@ -259,6 +268,7 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Back
         writer.writeBooleanValue("v12_0", this.getV120());
         writer.writeBooleanValue("v13_0", this.getV130());
         writer.writeBooleanValue("v14_0", this.getV140());
+        writer.writeBooleanValue("v15_0", this.getV150());
         writer.writeBooleanValue("v4_0", this.getV40());
         writer.writeBooleanValue("v4_0_3", this.getV403());
         writer.writeBooleanValue("v4_1", this.getV41());
@@ -331,6 +341,13 @@ public class AndroidMinimumOperatingSystem implements AdditionalDataHolder, Back
      */
     public void setV140(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v140", value);
+    }
+    /**
+     * Sets the v15_0 property value. When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v15_0 property.
+     */
+    public void setV150(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("v150", value);
     }
     /**
      * Sets the v4_0 property value. When TRUE, only Version 4.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.

@@ -13,6 +13,7 @@ import com.microsoft.graph.beta.teams.item.installedapps.InstalledAppsRequestBui
 import com.microsoft.graph.beta.teams.item.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.teams.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.beta.teams.item.owners.OwnersRequestBuilder;
+import com.microsoft.graph.beta.teams.item.ownerswithuserprincipalname.OwnersWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.teams.item.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.beta.teams.item.photo.PhotoRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.PrimaryChannelRequestBuilder;
@@ -257,6 +258,16 @@ public class TeamItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the owners property of the microsoft.graph.team entity.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link OwnersWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OwnersWithUserPrincipalNameRequestBuilder ownersWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new OwnersWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * Update the properties of the specified team.

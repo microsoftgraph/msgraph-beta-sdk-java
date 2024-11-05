@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.bulkactions.item;
 
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.bulkactions.item.retry.RetryRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcBulkAction;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcBulkActionItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the retry method.
+     * @return a {@link RetryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetryRequestBuilder retry() {
+        return new RetryRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link CloudPcBulkActionItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

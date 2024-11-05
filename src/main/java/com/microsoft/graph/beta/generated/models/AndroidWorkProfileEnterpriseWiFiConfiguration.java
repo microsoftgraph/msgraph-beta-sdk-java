@@ -57,8 +57,6 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
         deserializerMap.put("innerAuthenticationProtocolForEapTtls", (n) -> { this.setInnerAuthenticationProtocolForEapTtls(n.getEnumValue(NonEapAuthenticationMethodForEapTtlsType::forValue)); });
         deserializerMap.put("innerAuthenticationProtocolForPeap", (n) -> { this.setInnerAuthenticationProtocolForPeap(n.getEnumValue(NonEapAuthenticationMethodForPeap::forValue)); });
         deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { this.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
-        deserializerMap.put("proxyAutomaticConfigurationUrl", (n) -> { this.setProxyAutomaticConfigurationUrl(n.getStringValue()); });
-        deserializerMap.put("proxySettings", (n) -> { this.setProxySettings(n.getEnumValue(WiFiProxySetting::forValue)); });
         deserializerMap.put("rootCertificateForServerValidation", (n) -> { this.setRootCertificateForServerValidation(n.getObjectValue(AndroidWorkProfileTrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("trustedServerCertificateNames", (n) -> { this.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
@@ -96,22 +94,6 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
         return this.backingStore.get("outerIdentityPrivacyTemporaryValue");
     }
     /**
-     * Gets the proxyAutomaticConfigurationUrl property value. URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getProxyAutomaticConfigurationUrl() {
-        return this.backingStore.get("proxyAutomaticConfigurationUrl");
-    }
-    /**
-     * Gets the proxySettings property value. Wi-Fi Proxy Settings.
-     * @return a {@link WiFiProxySetting}
-     */
-    @jakarta.annotation.Nullable
-    public WiFiProxySetting getProxySettings() {
-        return this.backingStore.get("proxySettings");
-    }
-    /**
      * Gets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.
      * @return a {@link AndroidWorkProfileTrustedRootCertificate}
      */
@@ -140,8 +122,6 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
         writer.writeEnumValue("innerAuthenticationProtocolForEapTtls", this.getInnerAuthenticationProtocolForEapTtls());
         writer.writeEnumValue("innerAuthenticationProtocolForPeap", this.getInnerAuthenticationProtocolForPeap());
         writer.writeStringValue("outerIdentityPrivacyTemporaryValue", this.getOuterIdentityPrivacyTemporaryValue());
-        writer.writeStringValue("proxyAutomaticConfigurationUrl", this.getProxyAutomaticConfigurationUrl());
-        writer.writeEnumValue("proxySettings", this.getProxySettings());
         writer.writeObjectValue("rootCertificateForServerValidation", this.getRootCertificateForServerValidation());
         writer.writeCollectionOfPrimitiveValues("trustedServerCertificateNames", this.getTrustedServerCertificateNames());
     }
@@ -186,20 +166,6 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
      */
     public void setOuterIdentityPrivacyTemporaryValue(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("outerIdentityPrivacyTemporaryValue", value);
-    }
-    /**
-     * Sets the proxyAutomaticConfigurationUrl property value. URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
-     * @param value Value to set for the proxyAutomaticConfigurationUrl property.
-     */
-    public void setProxyAutomaticConfigurationUrl(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("proxyAutomaticConfigurationUrl", value);
-    }
-    /**
-     * Sets the proxySettings property value. Wi-Fi Proxy Settings.
-     * @param value Value to set for the proxySettings property.
-     */
-    public void setProxySettings(@jakarta.annotation.Nullable final WiFiProxySetting value) {
-        this.backingStore.set("proxySettings", value);
     }
     /**
      * Sets the rootCertificateForServerValidation property value. Trusted Root Certificate for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt.

@@ -82,7 +82,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
         return this.backingStore.get("ssid");
     }
     /**
-     * Gets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
+     * Gets the wiFiSecurityType property value. The possible security types for Android Wi-Fi profiles. Default value 'Open', indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. 'WpaEnterprise' and 'Wpa2Enterprise' options are available for Enterprise Wi-Fi profiles. 'Wep' and 'WpaPersonal' (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
      * @return a {@link AndroidWiFiSecurityType}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
         this.backingStore.set("ssid", value);
     }
     /**
-     * Sets the wiFiSecurityType property value. Wi-Fi Security Types for Android.
+     * Sets the wiFiSecurityType property value. The possible security types for Android Wi-Fi profiles. Default value 'Open', indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. 'WpaEnterprise' and 'Wpa2Enterprise' options are available for Enterprise Wi-Fi profiles. 'Wep' and 'WpaPersonal' (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
      * @param value Value to set for the wiFiSecurityType property.
      */
     public void setWiFiSecurityType(@jakarta.annotation.Nullable final AndroidWiFiSecurityType value) {

@@ -73,7 +73,7 @@ public class EntraRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get entra from admin
+     * A container for Microsoft Entra resources. Read-only.
      * @return a {@link Entra}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -85,7 +85,7 @@ public class EntraRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get entra from admin
+     * A container for Microsoft Entra resources. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Entra}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -158,7 +158,7 @@ public class EntraRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get entra from admin
+     * A container for Microsoft Entra resources. Read-only.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2023-11/PrivatePreview:BulkJobs
@@ -169,7 +169,7 @@ public class EntraRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get entra from admin
+     * A container for Microsoft Entra resources. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -233,7 +233,7 @@ public class EntraRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get entra from admin
+     * A container for Microsoft Entra resources. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

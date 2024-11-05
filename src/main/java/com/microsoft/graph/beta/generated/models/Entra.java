@@ -35,7 +35,7 @@ public class Entra extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the uxSetting property value. The uxSetting property
+     * Gets the uxSetting property value. Represents settings related to access to the Microsoft Entra admin center.
      * @return a {@link UxSetting}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class Entra extends Entity implements Parsable {
         writer.writeObjectValue("uxSetting", this.getUxSetting());
     }
     /**
-     * Sets the uxSetting property value. The uxSetting property
+     * Sets the uxSetting property value. Represents settings related to access to the Microsoft Entra admin center.
      * @param value Value to set for the uxSetting property.
      */
     public void setUxSetting(@jakarta.annotation.Nullable final UxSetting value) {

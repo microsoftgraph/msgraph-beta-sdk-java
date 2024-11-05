@@ -13,6 +13,7 @@ import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.insta
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.operations.OperationsRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.owners.OwnersRequestBuilder;
+import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.ownerswithuserprincipalname.OwnersWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.photo.PhotoRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.PrimaryChannelRequestBuilder;
@@ -255,6 +256,16 @@ public class TeamDefinitionRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Team::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the owners property of the microsoft.graph.team entity.
+     * @param userPrincipalName Alternate key of user
+     * @return a {@link OwnersWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OwnersWithUserPrincipalNameRequestBuilder ownersWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new OwnersWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * Update the navigation property teamDefinition in teamTemplateDefinition

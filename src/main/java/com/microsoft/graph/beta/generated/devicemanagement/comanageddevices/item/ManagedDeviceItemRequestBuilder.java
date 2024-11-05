@@ -36,11 +36,8 @@ import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.recoverpa
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.reenable.ReenableRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.remotelock.RemoteLockRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.removedevicefirmwareconfigurationinterfacemanagement.RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.reprovisioncloudpc.ReprovisionCloudPcRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.resizecloudpc.ResizeCloudPcRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.restorecloudpc.RestoreCloudPcRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.retire.RetireRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.revokeapplevpplicenses.RevokeAppleVppLicensesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.rotatebitlockerkeys.RotateBitLockerKeysRequestBuilder;
@@ -368,14 +365,6 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return new RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the reprovisionCloudPc method.
-     * @return a {@link ReprovisionCloudPcRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public ReprovisionCloudPcRequestBuilder reprovisionCloudPc() {
-        return new ReprovisionCloudPcRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the requestRemoteAssistance method.
      * @return a {@link RequestRemoteAssistanceRequestBuilder}
      */
@@ -390,22 +379,6 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ResetPasscodeRequestBuilder resetPasscode() {
         return new ResetPasscodeRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the resizeCloudPc method.
-     * @return a {@link ResizeCloudPcRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public ResizeCloudPcRequestBuilder resizeCloudPc() {
-        return new ResizeCloudPcRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the restoreCloudPc method.
-     * @return a {@link RestoreCloudPcRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public RestoreCloudPcRequestBuilder restoreCloudPc() {
-        return new RestoreCloudPcRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retire method.

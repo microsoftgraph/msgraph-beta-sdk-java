@@ -63,8 +63,9 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("policySettings", (n) -> { this.setPolicySettings(n.getEnumSetValue(CloudPcPolicySettingType::forValue)); });
+        deserializerMap.put("reservePercentage", (n) -> { this.setReservePercentage(n.getIntegerValue()); });
         return deserializerMap;
     }
     /**
@@ -76,12 +77,21 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("policySettings");
     }
     /**
+     * Gets the reservePercentage property value. The reservePercentage property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getReservePercentage() {
+        return this.backingStore.get("reservePercentage");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumSetValue("policySettings", this.getPolicySettings());
+        writer.writeIntegerValue("reservePercentage", this.getReservePercentage());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -105,5 +115,12 @@ public class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, 
      */
     public void setPolicySettings(@jakarta.annotation.Nullable final EnumSet<CloudPcPolicySettingType> value) {
         this.backingStore.set("policySettings", value);
+    }
+    /**
+     * Sets the reservePercentage property value. The reservePercentage property
+     * @param value Value to set for the reservePercentage property.
+     */
+    public void setReservePercentage(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("reservePercentage", value);
     }
 }

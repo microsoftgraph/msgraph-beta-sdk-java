@@ -192,7 +192,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(45);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(47);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
         deserializerMap.put("applicationSnapshot", (n) -> { this.setApplicationSnapshot(n.getObjectValue(ApplicationSnapshot::createFromDiscriminatorValue)); });
@@ -216,10 +216,12 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("initiatingProcessName", (n) -> { this.setInitiatingProcessName(n.getStringValue()); });
         deserializerMap.put("networkProtocol", (n) -> { this.setNetworkProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operationStatus", (n) -> { this.setOperationStatus(n.getEnumValue(NetworkTrafficOperationStatus::forValue)); });
         deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
         deserializerMap.put("policyName", (n) -> { this.setPolicyName(n.getStringValue()); });
         deserializerMap.put("policyRuleId", (n) -> { this.setPolicyRuleId(n.getStringValue()); });
         deserializerMap.put("policyRuleName", (n) -> { this.setPolicyRuleName(n.getStringValue()); });
+        deserializerMap.put("popProcessingRegion", (n) -> { this.setPopProcessingRegion(n.getStringValue()); });
         deserializerMap.put("privateAccessDetails", (n) -> { this.setPrivateAccessDetails(n.getObjectValue(PrivateAccessDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("receivedBytes", (n) -> { this.setReceivedBytes(n.getLongValue()); });
         deserializerMap.put("remoteNetworkId", (n) -> { this.setRemoteNetworkId(n.getStringValue()); });
@@ -297,6 +299,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the operationStatus property value. The operationStatus property
+     * @return a {@link NetworkTrafficOperationStatus}
+     */
+    @jakarta.annotation.Nullable
+    public NetworkTrafficOperationStatus getOperationStatus() {
+        return this.backingStore.get("operationStatus");
+    }
+    /**
      * Gets the policyId property value. Represents a unique identifier assigned to a policy. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
@@ -327,6 +337,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nullable
     public String getPolicyRuleName() {
         return this.backingStore.get("policyRuleName");
+    }
+    /**
+     * Gets the popProcessingRegion property value. The popProcessingRegion property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPopProcessingRegion() {
+        return this.backingStore.get("popProcessingRegion");
     }
     /**
      * Gets the privateAccessDetails property value. The privateAccessDetails property
@@ -501,10 +519,12 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeStringValue("initiatingProcessName", this.getInitiatingProcessName());
         writer.writeEnumValue("networkProtocol", this.getNetworkProtocol());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeEnumValue("operationStatus", this.getOperationStatus());
         writer.writeStringValue("policyId", this.getPolicyId());
         writer.writeStringValue("policyName", this.getPolicyName());
         writer.writeStringValue("policyRuleId", this.getPolicyRuleId());
         writer.writeStringValue("policyRuleName", this.getPolicyRuleName());
+        writer.writeStringValue("popProcessingRegion", this.getPopProcessingRegion());
         writer.writeObjectValue("privateAccessDetails", this.getPrivateAccessDetails());
         writer.writeLongValue("receivedBytes", this.getReceivedBytes());
         writer.writeStringValue("remoteNetworkId", this.getRemoteNetworkId());
@@ -702,6 +722,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
+     * Sets the operationStatus property value. The operationStatus property
+     * @param value Value to set for the operationStatus property.
+     */
+    public void setOperationStatus(@jakarta.annotation.Nullable final NetworkTrafficOperationStatus value) {
+        this.backingStore.set("operationStatus", value);
+    }
+    /**
      * Sets the policyId property value. Represents a unique identifier assigned to a policy. Supports $filter (eq) and $orderby.
      * @param value Value to set for the policyId property.
      */
@@ -728,6 +755,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     public void setPolicyRuleName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyRuleName", value);
+    }
+    /**
+     * Sets the popProcessingRegion property value. The popProcessingRegion property
+     * @param value Value to set for the popProcessingRegion property.
+     */
+    public void setPopProcessingRegion(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("popProcessingRegion", value);
     }
     /**
      * Sets the privateAccessDetails property value. The privateAccessDetails property

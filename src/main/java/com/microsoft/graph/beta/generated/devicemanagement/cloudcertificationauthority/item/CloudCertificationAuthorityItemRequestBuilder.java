@@ -9,6 +9,8 @@ import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.ite
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.postcloudcertificationauthority.PostCloudCertificationAuthorityRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.revokecloudcertificationauthoritycertificate.RevokeCloudCertificationAuthorityCertificateRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.revokeleafcertificate.RevokeLeafCertificateRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.revokeleafcertificatebyserialnumber.RevokeLeafCertificateBySerialNumberRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.searchcloudcertificationauthorityleafcertificatebyserialnumber.SearchCloudCertificationAuthorityLeafCertificateBySerialNumberRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.uploadexternallysignedcertificationauthoritycertificate.UploadExternallySignedCertificationAuthorityCertificateRequestBuilder;
 import com.microsoft.graph.beta.models.CloudCertificationAuthority;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -101,6 +103,22 @@ public class CloudCertificationAuthorityItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public RevokeLeafCertificateRequestBuilder revokeLeafCertificate() {
         return new RevokeLeafCertificateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the revokeLeafCertificateBySerialNumber method.
+     * @return a {@link RevokeLeafCertificateBySerialNumberRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RevokeLeafCertificateBySerialNumberRequestBuilder revokeLeafCertificateBySerialNumber() {
+        return new RevokeLeafCertificateBySerialNumberRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the searchCloudCertificationAuthorityLeafCertificateBySerialNumber method.
+     * @return a {@link SearchCloudCertificationAuthorityLeafCertificateBySerialNumberRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SearchCloudCertificationAuthorityLeafCertificateBySerialNumberRequestBuilder searchCloudCertificationAuthorityLeafCertificateBySerialNumber() {
+        return new SearchCloudCertificationAuthorityLeafCertificateBySerialNumberRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the uploadExternallySignedCertificationAuthorityCertificate method.
