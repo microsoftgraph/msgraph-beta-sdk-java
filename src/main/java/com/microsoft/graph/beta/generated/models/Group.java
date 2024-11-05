@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.cloudlicensing.GroupCloudLicensing;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -108,6 +109,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getClassification() {
         return this.backingStore.get("classification");
+    }
+    /**
+     * Gets the cloudLicensing property value. The relationships of a group to cloud licensing resources.
+     * @return a {@link GroupCloudLicensing}
+     */
+    @jakarta.annotation.Nullable
+    public GroupCloudLicensing getCloudLicensing() {
+        return this.backingStore.get("cloudLicensing");
     }
     /**
      * Gets the conversations property value. The group's conversations.
@@ -222,6 +231,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("calendar", (n) -> { this.setCalendar(n.getObjectValue(Calendar::createFromDiscriminatorValue)); });
         deserializerMap.put("calendarView", (n) -> { this.setCalendarView(n.getCollectionOfObjectValues(Event::createFromDiscriminatorValue)); });
         deserializerMap.put("classification", (n) -> { this.setClassification(n.getStringValue()); });
+        deserializerMap.put("cloudLicensing", (n) -> { this.setCloudLicensing(n.getObjectValue(GroupCloudLicensing::createFromDiscriminatorValue)); });
         deserializerMap.put("conversations", (n) -> { this.setConversations(n.getCollectionOfObjectValues(Conversation::createFromDiscriminatorValue)); });
         deserializerMap.put("createdByAppId", (n) -> { this.setCreatedByAppId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -775,6 +785,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeObjectValue("calendar", this.getCalendar());
         writer.writeCollectionOfObjectValues("calendarView", this.getCalendarView());
         writer.writeStringValue("classification", this.getClassification());
+        writer.writeObjectValue("cloudLicensing", this.getCloudLicensing());
         writer.writeCollectionOfObjectValues("conversations", this.getConversations());
         writer.writeStringValue("createdByAppId", this.getCreatedByAppId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -915,6 +926,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setClassification(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("classification", value);
+    }
+    /**
+     * Sets the cloudLicensing property value. The relationships of a group to cloud licensing resources.
+     * @param value Value to set for the cloudLicensing property.
+     */
+    public void setCloudLicensing(@jakarta.annotation.Nullable final GroupCloudLicensing value) {
+        this.backingStore.set("cloudLicensing", value);
     }
     /**
      * Sets the conversations property value. The group's conversations.

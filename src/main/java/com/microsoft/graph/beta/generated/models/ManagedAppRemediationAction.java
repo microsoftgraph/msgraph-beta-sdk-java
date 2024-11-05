@@ -8,12 +8,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppRemediationAction implements ValuedEnum {
-    /** app and the corresponding company data to be blocked */
+    /** Indicates the user will be blocked from accessing the app and corporate data */
     Block("block"),
-    /** app and the corresponding company data to be wiped */
+    /** Indicates the corporate data will be removed from the app */
     Wipe("wipe"),
-    /** app and the corresponding user to be warned */
-    Warn("warn");
+    /** Indicates user will be warned the when accessing the app */
+    Warn("warn"),
+    /** Indicates user will be blocked from accessing the app and corporate data if devices supports this setting */
+    BlockWhenSettingIsSupported("blockWhenSettingIsSupported");
     public final String value;
     ManagedAppRemediationAction(final String value) {
         this.value = value;
@@ -27,6 +29,7 @@ public enum ManagedAppRemediationAction implements ValuedEnum {
             case "block": return Block;
             case "wipe": return Wipe;
             case "warn": return Warn;
+            case "blockWhenSettingIsSupported": return BlockWhenSettingIsSupported;
             default: return null;
         }
     }

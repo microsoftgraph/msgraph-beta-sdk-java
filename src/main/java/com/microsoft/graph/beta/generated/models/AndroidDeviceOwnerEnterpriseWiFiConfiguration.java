@@ -67,6 +67,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
         deserializerMap.put("innerAuthenticationProtocolForPeap", (n) -> { this.setInnerAuthenticationProtocolForPeap(n.getEnumValue(NonEapAuthenticationMethodForPeap::forValue)); });
         deserializerMap.put("outerIdentityPrivacyTemporaryValue", (n) -> { this.setOuterIdentityPrivacyTemporaryValue(n.getStringValue()); });
         deserializerMap.put("rootCertificateForServerValidation", (n) -> { this.setRootCertificateForServerValidation(n.getObjectValue(AndroidDeviceOwnerTrustedRootCertificate::createFromDiscriminatorValue)); });
+        deserializerMap.put("rootCertificatesForServerValidation", (n) -> { this.setRootCertificatesForServerValidation(n.getCollectionOfObjectValues(AndroidDeviceOwnerTrustedRootCertificate::createFromDiscriminatorValue)); });
         deserializerMap.put("trustedServerCertificateNames", (n) -> { this.setTrustedServerCertificateNames(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
@@ -111,6 +112,14 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
         return this.backingStore.get("rootCertificateForServerValidation");
     }
     /**
+     * Gets the rootCertificatesForServerValidation property value. Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt. This collection can contain a maximum of 500 elements.
+     * @return a {@link java.util.List<AndroidDeviceOwnerTrustedRootCertificate>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AndroidDeviceOwnerTrustedRootCertificate> getRootCertificatesForServerValidation() {
+        return this.backingStore.get("rootCertificatesForServerValidation");
+    }
+    /**
      * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
      * @return a {@link java.util.List<String>}
      */
@@ -133,6 +142,7 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
         writer.writeEnumValue("innerAuthenticationProtocolForPeap", this.getInnerAuthenticationProtocolForPeap());
         writer.writeStringValue("outerIdentityPrivacyTemporaryValue", this.getOuterIdentityPrivacyTemporaryValue());
         writer.writeObjectValue("rootCertificateForServerValidation", this.getRootCertificateForServerValidation());
+        writer.writeCollectionOfObjectValues("rootCertificatesForServerValidation", this.getRootCertificatesForServerValidation());
         writer.writeCollectionOfPrimitiveValues("trustedServerCertificateNames", this.getTrustedServerCertificateNames());
     }
     /**
@@ -190,6 +200,13 @@ public class AndroidDeviceOwnerEnterpriseWiFiConfiguration extends AndroidDevice
      */
     public void setRootCertificateForServerValidation(@jakarta.annotation.Nullable final AndroidDeviceOwnerTrustedRootCertificate value) {
         this.backingStore.set("rootCertificateForServerValidation", value);
+    }
+    /**
+     * Sets the rootCertificatesForServerValidation property value. Trusted Root Certificates for Server Validation when EAP Type is configured to EAP-TLS, EAP-TTLS or PEAP. This is the certificate presented by the Wi-Fi endpoint when the device attempts to connect to Wi-Fi endpoint. The device (or user) must accept this certificate to continue the connection attempt. This collection can contain a maximum of 500 elements.
+     * @param value Value to set for the rootCertificatesForServerValidation property.
+     */
+    public void setRootCertificatesForServerValidation(@jakarta.annotation.Nullable final java.util.List<AndroidDeviceOwnerTrustedRootCertificate> value) {
+        this.backingStore.set("rootCertificatesForServerValidation", value);
     }
     /**
      * Sets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.

@@ -34,7 +34,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("additionalOptions");
     }
     /**
-     * Gets the description property value. The name of export provided by the user.
+     * Gets the description property value. The description of the export by the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The description of the export by the user.
+     * Gets the displayName property value. The name of export provided by the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,14 +140,14 @@ public class EdiscoverySearchExportOperation extends CaseOperation implements Pa
         this.backingStore.set("additionalOptions", value);
     }
     /**
-     * Sets the description property value. The name of export provided by the user.
+     * Sets the description property value. The description of the export by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The description of the export by the user.
+     * Sets the displayName property value. The name of export provided by the user.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

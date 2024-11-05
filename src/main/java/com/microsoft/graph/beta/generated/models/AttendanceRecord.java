@@ -51,6 +51,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("registrantId", (n) -> { this.setRegistrantId(n.getStringValue()); });
+        deserializerMap.put("registrationId", (n) -> { this.setRegistrationId(n.getStringValue()); });
         deserializerMap.put("role", (n) -> { this.setRole(n.getStringValue()); });
         deserializerMap.put("totalAttendanceInSeconds", (n) -> { this.setTotalAttendanceInSeconds(n.getIntegerValue()); });
         return deserializerMap;
@@ -70,6 +71,14 @@ public class AttendanceRecord extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getRegistrantId() {
         return this.backingStore.get("registrantId");
+    }
+    /**
+     * Gets the registrationId property value. Unique identifier of a virtualEventRegistration. Presents for all participant who has registered for the virtualEventWebinar.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRegistrationId() {
+        return this.backingStore.get("registrationId");
     }
     /**
      * Gets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.
@@ -98,6 +107,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         writer.writeStringValue("emailAddress", this.getEmailAddress());
         writer.writeObjectValue("identity", this.getIdentity());
         writer.writeStringValue("registrantId", this.getRegistrantId());
+        writer.writeStringValue("registrationId", this.getRegistrationId());
         writer.writeStringValue("role", this.getRole());
         writer.writeIntegerValue("totalAttendanceInSeconds", this.getTotalAttendanceInSeconds());
     }
@@ -128,6 +138,13 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     public void setRegistrantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("registrantId", value);
+    }
+    /**
+     * Sets the registrationId property value. Unique identifier of a virtualEventRegistration. Presents for all participant who has registered for the virtualEventWebinar.
+     * @param value Value to set for the registrationId property.
+     */
+    public void setRegistrationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("registrationId", value);
     }
     /**
      * Sets the role property value. Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.

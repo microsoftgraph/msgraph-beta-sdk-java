@@ -16,6 +16,12 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     Windows10XManagement("windows10XManagement"),
     /** Setting can be deployed through the ConfigManager channel. */
     ConfigManager("configManager"),
+    /** Setting can be deployed through the IntuneManagementExtension channel. */
+    IntuneManagementExtension("intuneManagementExtension"),
+    /** Setting can be deployed through a ThirdParty channel. */
+    ThirdParty("thirdParty"),
+    /** Setting can be deployed through Document Gateway Service. */
+    DocumentGateway("documentGateway"),
     /** Setting can be deployed through the AppleRemoteManagement channel. */
     AppleRemoteManagement("appleRemoteManagement"),
     /** Setting can be deployed through the SENSE agent channel. */
@@ -33,7 +39,9 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue"),
     /** Setting can be deployed using the Operating System Recovery channel */
-    WindowsOsRecovery("windowsOsRecovery");
+    WindowsOsRecovery("windowsOsRecovery"),
+    /** Indicates the settings that can be deployed through the Android channel. */
+    Android("android");
     public final String value;
     DeviceManagementConfigurationTechnologies(final String value) {
         this.value = value;
@@ -48,6 +56,9 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
             case "mdm": return Mdm;
             case "windows10XManagement": return Windows10XManagement;
             case "configManager": return ConfigManager;
+            case "intuneManagementExtension": return IntuneManagementExtension;
+            case "thirdParty": return ThirdParty;
+            case "documentGateway": return DocumentGateway;
             case "appleRemoteManagement": return AppleRemoteManagement;
             case "microsoftSense": return MicrosoftSense;
             case "exchangeOnline": return ExchangeOnline;
@@ -57,6 +68,7 @@ public enum DeviceManagementConfigurationTechnologies implements ValuedEnum {
             case "endpointPrivilegeManagement": return EndpointPrivilegeManagement;
             case "unknownFutureValue": return UnknownFutureValue;
             case "windowsOsRecovery": return WindowsOsRecovery;
+            case "android": return Android;
             default: return null;
         }
     }

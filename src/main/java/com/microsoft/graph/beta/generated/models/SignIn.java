@@ -289,6 +289,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("servicePrincipalCredentialThumbprint", (n) -> { this.setServicePrincipalCredentialThumbprint(n.getStringValue()); });
         deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
         deserializerMap.put("servicePrincipalName", (n) -> { this.setServicePrincipalName(n.getStringValue()); });
+        deserializerMap.put("sessionId", (n) -> { this.setSessionId(n.getStringValue()); });
         deserializerMap.put("sessionLifetimePolicies", (n) -> { this.setSessionLifetimePolicies(n.getCollectionOfObjectValues(SessionLifetimePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("signInEventTypes", (n) -> { this.setSignInEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("signInIdentifier", (n) -> { this.setSignInIdentifier(n.getStringValue()); });
@@ -555,6 +556,14 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("servicePrincipalName");
     }
     /**
+     * Gets the sessionId property value. The sessionId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSessionId() {
+        return this.backingStore.get("sessionId");
+    }
+    /**
      * Gets the sessionLifetimePolicies property value. Any conditional access session management policies that were applied during the sign-in event.
      * @return a {@link java.util.List<SessionLifetimePolicy>}
      */
@@ -737,6 +746,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("servicePrincipalCredentialThumbprint", this.getServicePrincipalCredentialThumbprint());
         writer.writeStringValue("servicePrincipalId", this.getServicePrincipalId());
         writer.writeStringValue("servicePrincipalName", this.getServicePrincipalName());
+        writer.writeStringValue("sessionId", this.getSessionId());
         writer.writeCollectionOfObjectValues("sessionLifetimePolicies", this.getSessionLifetimePolicies());
         writer.writeCollectionOfPrimitiveValues("signInEventTypes", this.getSignInEventTypes());
         writer.writeStringValue("signInIdentifier", this.getSignInIdentifier());
@@ -1144,6 +1154,13 @@ public class SignIn extends Entity implements Parsable {
      */
     public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("servicePrincipalName", value);
+    }
+    /**
+     * Sets the sessionId property value. The sessionId property
+     * @param value Value to set for the sessionId property.
+     */
+    public void setSessionId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("sessionId", value);
     }
     /**
      * Sets the sessionLifetimePolicies property value. Any conditional access session management policies that were applied during the sign-in event.

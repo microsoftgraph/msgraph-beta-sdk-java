@@ -72,6 +72,7 @@ import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdate
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport.GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsummaryreport.GetWindowsUpdateAlertSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getzebrafotadeploymentreport.GetZebraFotaDeploymentReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.retrievedeviceappinstallationstatusreport.RetrieveDeviceAppInstallationStatusReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievesecuritytaskappsreport.RetrieveSecurityTaskAppsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievewin32catalogappsupdatereport.RetrieveWin32CatalogAppsUpdateReportRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceManagementReports;
@@ -669,6 +670,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport() {
         return new GetZebraFotaDeploymentReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveDeviceAppInstallationStatusReport method.
+     * @return a {@link RetrieveDeviceAppInstallationStatusReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveDeviceAppInstallationStatusReportRequestBuilder retrieveDeviceAppInstallationStatusReport() {
+        return new RetrieveDeviceAppInstallationStatusReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveSecurityTaskAppsReport method.

@@ -86,10 +86,12 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         deserializerMap.put("alternateResourceUrl", (n) -> { this.setAlternateResourceUrl(n.getStringValue()); });
         deserializerMap.put("connectionType", (n) -> { this.setConnectionType(n.getEnumValue(CloudPcOnPremisesConnectionType::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("healthCheckPaused", (n) -> { this.setHealthCheckPaused(n.getBooleanValue()); });
         deserializerMap.put("healthCheckStatus", (n) -> { this.setHealthCheckStatus(n.getEnumValue(CloudPcOnPremisesConnectionStatus::forValue)); });
         deserializerMap.put("healthCheckStatusDetail", (n) -> { this.setHealthCheckStatusDetail(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("healthCheckStatusDetails", (n) -> { this.setHealthCheckStatusDetails(n.getObjectValue(CloudPcOnPremisesConnectionStatusDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("inUse", (n) -> { this.setInUse(n.getBooleanValue()); });
+        deserializerMap.put("inUseByCloudPc", (n) -> { this.setInUseByCloudPc(n.getBooleanValue()); });
         deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumSetValue(CloudPcManagementService::forValue)); });
         deserializerMap.put("organizationalUnit", (n) -> { this.setOrganizationalUnit(n.getStringValue()); });
         deserializerMap.put("resourceGroupId", (n) -> { this.setResourceGroupId(n.getStringValue()); });
@@ -101,6 +103,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         deserializerMap.put("virtualNetworkId", (n) -> { this.setVirtualNetworkId(n.getStringValue()); });
         deserializerMap.put("virtualNetworkLocation", (n) -> { this.setVirtualNetworkLocation(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the healthCheckPaused property value. false if the regular health checks on the network/domain configuration are currently active. true if the checks are paused. If you perform a create or update operation on a onPremisesNetworkConnection resource, this value is set to false for 4 weeks. If you retry a health check on network/domain configuration, this value is set to false for two weeks. If the onPremisesNetworkConnection resource is attached in a provisioningPolicy or used by a Cloud PC in the past 4 weeks, healthCheckPaused is set to false. Read-only. Default is false.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getHealthCheckPaused() {
+        return this.backingStore.get("healthCheckPaused");
     }
     /**
      * Gets the healthCheckStatus property value. The healthCheckStatus property
@@ -135,6 +145,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("inUse");
     }
     /**
+     * Gets the inUseByCloudPc property value. Indicates whether a Cloud PC is using this on-premises network connection. true if at least one Cloud PC is using it. Otherwise, false. Read-only. Default is false.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getInUseByCloudPc() {
+        return this.backingStore.get("inUseByCloudPc");
+    }
+    /**
      * Gets the managedBy property value. The managedBy property
      * @return a {@link EnumSet<CloudPcManagementService>}
      */
@@ -143,7 +161,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("managedBy");
     }
     /**
-     * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
+     * Gets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -191,7 +209,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("subscriptionName");
     }
     /**
-     * Gets the type property value. Specifies the method by which a provisioned Cloud PC is joined to Microsoft Entra. The azureADJoin option indicates the absence of an on-premises Active Directory (AD) in the current tenant that results in the Cloud PC device only joining to Microsoft Entra. The hybridAzureADJoin option indicates the presence of an on-premises AD in the current tenant and that the Cloud PC joins both the on-premises AD and Microsoft Entra. The selected option also determines the types of users who can be assigned and can sign into a Cloud PC. The azureADJoin option allows both cloud-only and hybrid users to be assigned and sign in, whereas hybridAzureADJoin is restricted to hybrid users only. The default value is hybridAzureADJoin. The possible values are: hybridAzureADJoin, azureADJoin, unknownFutureValue. The type property is deprecated and stopped returning data on January 31, 2024. Goind forward, use the connectionType property.
+     * Gets the type property value. Specifies the method by which a provisioned Cloud PC is joined to Microsoft Entra. The azureADJoin option indicates the absence of an on-premises Active Directory (AD) in the current tenant that results in the Cloud PC device only joining to Microsoft Entra. The hybridAzureADJoin option indicates the presence of an on-premises AD in the current tenant and that the Cloud PC joins both the on-premises AD and Microsoft Entra. The selected option also determines the types of users who can be assigned and can sign into a Cloud PC. The azureADJoin option allows both cloud-only and hybrid users to be assigned and sign in, whereas hybridAzureADJoin is restricted to hybrid users only. The default value is hybridAzureADJoin. The possible values are: hybridAzureADJoin, azureADJoin, unknownFutureValue. The type property is deprecated and stopped returning data on January 31, 2024. Going forward, use the connectionType property.
      * @return a {@link CloudPcOnPremisesConnectionType}
      */
     @jakarta.annotation.Nullable
@@ -227,10 +245,12 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         writer.writeStringValue("alternateResourceUrl", this.getAlternateResourceUrl());
         writer.writeEnumValue("connectionType", this.getConnectionType());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("healthCheckPaused", this.getHealthCheckPaused());
         writer.writeEnumValue("healthCheckStatus", this.getHealthCheckStatus());
         writer.writeObjectValue("healthCheckStatusDetail", this.getHealthCheckStatusDetail());
         writer.writeObjectValue("healthCheckStatusDetails", this.getHealthCheckStatusDetails());
         writer.writeBooleanValue("inUse", this.getInUse());
+        writer.writeBooleanValue("inUseByCloudPc", this.getInUseByCloudPc());
         writer.writeEnumSetValue("managedBy", this.getManagedBy());
         writer.writeStringValue("organizationalUnit", this.getOrganizationalUnit());
         writer.writeStringValue("resourceGroupId", this.getResourceGroupId());
@@ -285,6 +305,13 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the healthCheckPaused property value. false if the regular health checks on the network/domain configuration are currently active. true if the checks are paused. If you perform a create or update operation on a onPremisesNetworkConnection resource, this value is set to false for 4 weeks. If you retry a health check on network/domain configuration, this value is set to false for two weeks. If the onPremisesNetworkConnection resource is attached in a provisioningPolicy or used by a Cloud PC in the past 4 weeks, healthCheckPaused is set to false. Read-only. Default is false.
+     * @param value Value to set for the healthCheckPaused property.
+     */
+    public void setHealthCheckPaused(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("healthCheckPaused", value);
+    }
+    /**
      * Sets the healthCheckStatus property value. The healthCheckStatus property
      * @param value Value to set for the healthCheckStatus property.
      */
@@ -313,6 +340,13 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("inUse", value);
     }
     /**
+     * Sets the inUseByCloudPc property value. Indicates whether a Cloud PC is using this on-premises network connection. true if at least one Cloud PC is using it. Otherwise, false. Read-only. Default is false.
+     * @param value Value to set for the inUseByCloudPc property.
+     */
+    public void setInUseByCloudPc(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("inUseByCloudPc", value);
+    }
+    /**
      * Sets the managedBy property value. The managedBy property
      * @param value Value to set for the managedBy property.
      */
@@ -320,7 +354,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("managedBy", value);
     }
     /**
-     * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU thats configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
+     * Sets the organizationalUnit property value. The organizational unit (OU) in which the computer account is created. If left null, the OU configured as the default (a well-known computer object container) in your Active Directory domain (OU) is used. Optional.
      * @param value Value to set for the organizationalUnit property.
      */
     public void setOrganizationalUnit(@jakarta.annotation.Nullable final String value) {
@@ -362,7 +396,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("subscriptionName", value);
     }
     /**
-     * Sets the type property value. Specifies the method by which a provisioned Cloud PC is joined to Microsoft Entra. The azureADJoin option indicates the absence of an on-premises Active Directory (AD) in the current tenant that results in the Cloud PC device only joining to Microsoft Entra. The hybridAzureADJoin option indicates the presence of an on-premises AD in the current tenant and that the Cloud PC joins both the on-premises AD and Microsoft Entra. The selected option also determines the types of users who can be assigned and can sign into a Cloud PC. The azureADJoin option allows both cloud-only and hybrid users to be assigned and sign in, whereas hybridAzureADJoin is restricted to hybrid users only. The default value is hybridAzureADJoin. The possible values are: hybridAzureADJoin, azureADJoin, unknownFutureValue. The type property is deprecated and stopped returning data on January 31, 2024. Goind forward, use the connectionType property.
+     * Sets the type property value. Specifies the method by which a provisioned Cloud PC is joined to Microsoft Entra. The azureADJoin option indicates the absence of an on-premises Active Directory (AD) in the current tenant that results in the Cloud PC device only joining to Microsoft Entra. The hybridAzureADJoin option indicates the presence of an on-premises AD in the current tenant and that the Cloud PC joins both the on-premises AD and Microsoft Entra. The selected option also determines the types of users who can be assigned and can sign into a Cloud PC. The azureADJoin option allows both cloud-only and hybrid users to be assigned and sign in, whereas hybridAzureADJoin is restricted to hybrid users only. The default value is hybridAzureADJoin. The possible values are: hybridAzureADJoin, azureADJoin, unknownFutureValue. The type property is deprecated and stopped returning data on January 31, 2024. Going forward, use the connectionType property.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionType value) {

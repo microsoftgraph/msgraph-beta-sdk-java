@@ -31,6 +31,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
                 case "#microsoft.graph.cloudPcBulkDisasterRecoveryFailback": return new CloudPcBulkDisasterRecoveryFailback();
                 case "#microsoft.graph.cloudPcBulkDisasterRecoveryFailover": return new CloudPcBulkDisasterRecoveryFailover();
                 case "#microsoft.graph.cloudPcBulkModifyDiskEncryptionType": return new CloudPcBulkModifyDiskEncryptionType();
+                case "#microsoft.graph.cloudPcBulkMove": return new CloudPcBulkMove();
                 case "#microsoft.graph.cloudPcBulkPowerOff": return new CloudPcBulkPowerOff();
                 case "#microsoft.graph.cloudPcBulkPowerOn": return new CloudPcBulkPowerOn();
                 case "#microsoft.graph.cloudPcBulkReprovision": return new CloudPcBulkReprovision();

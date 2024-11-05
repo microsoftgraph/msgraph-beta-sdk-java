@@ -7,7 +7,10 @@ import java.util.Objects;
 public enum AuthenticationEventType implements ValuedEnum {
     TokenIssuanceStart("tokenIssuanceStart"),
     PageRenderStart("pageRenderStart"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    AttributeCollectionStart("attributeCollectionStart"),
+    AttributeCollectionSubmit("attributeCollectionSubmit"),
+    EmailOtpSend("emailOtpSend");
     public final String value;
     AuthenticationEventType(final String value) {
         this.value = value;
@@ -21,6 +24,9 @@ public enum AuthenticationEventType implements ValuedEnum {
             case "tokenIssuanceStart": return TokenIssuanceStart;
             case "pageRenderStart": return PageRenderStart;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "attributeCollectionStart": return AttributeCollectionStart;
+            case "attributeCollectionSubmit": return AttributeCollectionSubmit;
+            case "emailOtpSend": return EmailOtpSend;
             default: return null;
         }
     }

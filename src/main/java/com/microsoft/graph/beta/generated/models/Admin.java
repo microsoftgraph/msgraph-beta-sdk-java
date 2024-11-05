@@ -80,7 +80,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("edge");
     }
     /**
-     * Gets the entra property value. The entra property
+     * Gets the entra property value. A container for Microsoft Entra resources. Read-only.
      * @return a {@link Entra}
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("edge", value);
     }
     /**
-     * Sets the entra property value. The entra property
+     * Sets the entra property value. A container for Microsoft Entra resources. Read-only.
      * @param value Value to set for the entra property.
      */
     public void setEntra(@jakarta.annotation.Nullable final Entra value) {

@@ -7,9 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * The resource that represents an instance of Enrollment Failure Reports.
- */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReportRoot extends Entity implements Parsable {
     /**

@@ -69,10 +69,11 @@ public class EducationRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("classes", (n) -> { this.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
         deserializerMap.put("me", (n) -> { this.setMe(n.getObjectValue(EducationUser::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(ReportsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("schools", (n) -> { this.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
         deserializerMap.put("synchronizationProfiles", (n) -> { this.setSynchronizationProfiles(n.getCollectionOfObjectValues(EducationSynchronizationProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("users", (n) -> { this.setUsers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
@@ -93,6 +94,14 @@ public class EducationRoot implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the reports property value. The reports property
+     * @return a {@link ReportsRoot}
+     */
+    @jakarta.annotation.Nullable
+    public ReportsRoot getReports() {
+        return this.backingStore.get("reports");
     }
     /**
      * Gets the schools property value. The schools property
@@ -127,6 +136,7 @@ public class EducationRoot implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeCollectionOfObjectValues("classes", this.getClasses());
         writer.writeObjectValue("me", this.getMe());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("reports", this.getReports());
         writer.writeCollectionOfObjectValues("schools", this.getSchools());
         writer.writeCollectionOfObjectValues("synchronizationProfiles", this.getSynchronizationProfiles());
         writer.writeCollectionOfObjectValues("users", this.getUsers());
@@ -167,6 +177,13 @@ public class EducationRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the reports property value. The reports property
+     * @param value Value to set for the reports property.
+     */
+    public void setReports(@jakarta.annotation.Nullable final ReportsRoot value) {
+        this.backingStore.set("reports", value);
     }
     /**
      * Sets the schools property value. The schools property

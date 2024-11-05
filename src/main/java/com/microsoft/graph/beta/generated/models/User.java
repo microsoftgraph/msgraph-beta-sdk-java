@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.cloudlicensing.UserCloudLicensing;
 import com.microsoft.graph.beta.models.security.Security;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -213,6 +214,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public CloudClipboardRoot getCloudClipboard() {
         return this.backingStore.get("cloudClipboard");
+    }
+    /**
+     * Gets the cloudLicensing property value. The relationships of a user to cloud licensing resources.
+     * @return a {@link UserCloudLicensing}
+     */
+    @jakarta.annotation.Nullable
+    public UserCloudLicensing getCloudLicensing() {
+        return this.backingStore.get("cloudLicensing");
     }
     /**
      * Gets the cloudPCs property value. The cloudPCs property
@@ -500,6 +509,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("chats", (n) -> { this.setChats(n.getCollectionOfObjectValues(Chat::createFromDiscriminatorValue)); });
         deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
         deserializerMap.put("cloudClipboard", (n) -> { this.setCloudClipboard(n.getObjectValue(CloudClipboardRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudLicensing", (n) -> { this.setCloudLicensing(n.getObjectValue(UserCloudLicensing::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudRealtimeCommunicationInfo", (n) -> { this.setCloudRealtimeCommunicationInfo(n.getObjectValue(CloudRealtimeCommunicationInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
@@ -1473,6 +1483,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("chats", this.getChats());
         writer.writeStringValue("city", this.getCity());
         writer.writeObjectValue("cloudClipboard", this.getCloudClipboard());
+        writer.writeObjectValue("cloudLicensing", this.getCloudLicensing());
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
         writer.writeObjectValue("cloudRealtimeCommunicationInfo", this.getCloudRealtimeCommunicationInfo());
         writer.writeStringValue("companyName", this.getCompanyName());
@@ -1767,6 +1778,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setCloudClipboard(@jakarta.annotation.Nullable final CloudClipboardRoot value) {
         this.backingStore.set("cloudClipboard", value);
+    }
+    /**
+     * Sets the cloudLicensing property value. The relationships of a user to cloud licensing resources.
+     * @param value Value to set for the cloudLicensing property.
+     */
+    public void setCloudLicensing(@jakarta.annotation.Nullable final UserCloudLicensing value) {
+        this.backingStore.set("cloudLicensing", value);
     }
     /**
      * Sets the cloudPCs property value. The cloudPCs property

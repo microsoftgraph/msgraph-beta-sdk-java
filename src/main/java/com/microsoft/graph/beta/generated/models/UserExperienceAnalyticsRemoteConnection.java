@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * The user experience analyte remote connection entity.
+ * The user experience analytics remote connection entity. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsRemoteConnection extends Entity implements Parsable {

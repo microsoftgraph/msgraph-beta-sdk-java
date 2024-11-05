@@ -72,14 +72,23 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return this.backingStore.get("disasterRecoveryNetworkSetting");
     }
     /**
+     * Gets the disasterRecoveryType property value. The disasterRecoveryType property
+     * @return a {@link CloudPcDisasterRecoveryType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDisasterRecoveryType getDisasterRecoveryType() {
+        return this.backingStore.get("disasterRecoveryType");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("crossRegionDisasterRecoveryEnabled", (n) -> { this.setCrossRegionDisasterRecoveryEnabled(n.getBooleanValue()); });
         deserializerMap.put("disasterRecoveryNetworkSetting", (n) -> { this.setDisasterRecoveryNetworkSetting(n.getObjectValue(CloudPcDisasterRecoveryNetworkSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("disasterRecoveryType", (n) -> { this.setDisasterRecoveryType(n.getEnumValue(CloudPcDisasterRecoveryType::forValue)); });
         deserializerMap.put("maintainCrossRegionRestorePointEnabled", (n) -> { this.setMaintainCrossRegionRestorePointEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -108,6 +117,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("crossRegionDisasterRecoveryEnabled", this.getCrossRegionDisasterRecoveryEnabled());
         writer.writeObjectValue("disasterRecoveryNetworkSetting", this.getDisasterRecoveryNetworkSetting());
+        writer.writeEnumValue("disasterRecoveryType", this.getDisasterRecoveryType());
         writer.writeBooleanValue("maintainCrossRegionRestorePointEnabled", this.getMaintainCrossRegionRestorePointEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -140,6 +150,13 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
      */
     public void setDisasterRecoveryNetworkSetting(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryNetworkSetting value) {
         this.backingStore.set("disasterRecoveryNetworkSetting", value);
+    }
+    /**
+     * Sets the disasterRecoveryType property value. The disasterRecoveryType property
+     * @param value Value to set for the disasterRecoveryType property.
+     */
+    public void setDisasterRecoveryType(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryType value) {
+        this.backingStore.set("disasterRecoveryType", value);
     }
     /**
      * Sets the maintainCrossRegionRestorePointEnabled property value. Indicates whether Windows 365 maintain the cross-region disaster recovery function generated restore points. If true, the Windows 365 stored restore points; false indicates that Windows 365 doesn't generate or keep the restore point from the original Cloud PC. If a disaster occurs, the new Cloud PC can only be provisioned using the initial image. This limitation can result in the loss of some user data on the original Cloud PC. The default value is false.

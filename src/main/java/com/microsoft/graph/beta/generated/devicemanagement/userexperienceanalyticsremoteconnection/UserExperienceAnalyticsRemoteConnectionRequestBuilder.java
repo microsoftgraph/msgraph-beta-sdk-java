@@ -61,7 +61,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * User experience analytics remote connection
+     * User experience analytics remote connection. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
      * @return a {@link UserExperienceAnalyticsRemoteConnectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -70,7 +70,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
         return get(null);
     }
     /**
-     * User experience analytics remote connection
+     * User experience analytics remote connection. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserExperienceAnalyticsRemoteConnectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -118,7 +118,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
         return new SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder(pathParameters, requestAdapter, summarizeBy);
     }
     /**
-     * User experience analytics remote connection
+     * User experience analytics remote connection. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -126,7 +126,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * User experience analytics remote connection
+     * User experience analytics remote connection. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -172,7 +172,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
         return new UserExperienceAnalyticsRemoteConnectionRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * User experience analytics remote connection
+     * User experience analytics remote connection. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -35,14 +35,14 @@ public class EnableEndpointPrivilegeManagementRequestBuilder extends BaseRequest
         super(requestAdapter, "{+baseurl}/deviceManagement/enableEndpointPrivilegeManagement", rawUrl);
     }
     /**
-     * Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C).
+     * DEPRECATED - DO NOT USE. (Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C)).
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     public void post() {
         post(null);
     }
     /**
-     * Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C).
+     * DEPRECATED - DO NOT USE. (Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C)).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -53,7 +53,7 @@ public class EnableEndpointPrivilegeManagementRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C).
+     * DEPRECATED - DO NOT USE. (Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C)).
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class EnableEndpointPrivilegeManagementRequestBuilder extends BaseRequest
         return toPostRequestInformation(null);
     }
     /**
-     * Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C).
+     * DEPRECATED - DO NOT USE. (Triggers onboarding of tenant to Microsoft Managed Platform - Cloud (MMP-C)).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

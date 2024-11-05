@@ -14,8 +14,10 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getreal
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getremoteconnectionhistoricalreports.GetRemoteConnectionHistoricalReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getshareduselicenseusagereport.GetSharedUseLicenseUsageReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.gettotalaggregatedremoteconnectionreports.GetTotalAggregatedRemoteConnectionReportsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievebulkactionstatusreport.RetrieveBulkActionStatusReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrieveconnectionqualityreports.RetrieveConnectionQualityReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievecrossregiondisasterrecoveryreport.RetrieveCrossRegionDisasterRecoveryReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievefrontlinereports.RetrieveFrontlineReportsRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcReports;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -133,6 +135,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new GetTotalAggregatedRemoteConnectionReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the retrieveBulkActionStatusReport method.
+     * @return a {@link RetrieveBulkActionStatusReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveBulkActionStatusReportRequestBuilder retrieveBulkActionStatusReport() {
+        return new RetrieveBulkActionStatusReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the retrieveConnectionQualityReports method.
      * @return a {@link RetrieveConnectionQualityReportsRequestBuilder}
      */
@@ -147,6 +157,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RetrieveCrossRegionDisasterRecoveryReportRequestBuilder retrieveCrossRegionDisasterRecoveryReport() {
         return new RetrieveCrossRegionDisasterRecoveryReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveFrontlineReports method.
+     * @return a {@link RetrieveFrontlineReportsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveFrontlineReportsRequestBuilder retrieveFrontlineReports() {
+        return new RetrieveFrontlineReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.
