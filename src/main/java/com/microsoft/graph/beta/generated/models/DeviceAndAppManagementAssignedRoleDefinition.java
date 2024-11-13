@@ -87,7 +87,7 @@ public class DeviceAndAppManagementAssignedRoleDefinition implements AdditionalD
         return this.backingStore.get("permissions");
     }
     /**
-     * Gets the roleDefinitionDisplayName property value. The RoleDefinitionDisplayName property represents the human-readable name of a specific role definition in Microsoft Intune. This property provides a clear and descriptive name that indicates the purpose or scope of the role, helping administrators identify and assign appropriate roles to users or groups.Some example values for RoleDefinitionDisplayName might include: "Helpdesk Operator," "Application Manager," or "Policy Administrator." This display name is primarily used in the Intune console or Graph API to present roles in a user-friendly manner, making it easier for administrators to manage role-based access control (RBAC) efficiently. This property is read-only.
+     * Gets the roleDefinitionDisplayName property value. The RoleDefinitionDisplayName property represents the human-readable name of a specific role definition in Microsoft Intune. This property provides a clear and descriptive name that indicates the purpose or scope of the role, helping administrators identify and assign appropriate roles to users or groups.Some example values for RoleDefinitionDisplayName might include: 'Helpdesk Operator,' 'Application Manager,' or 'Policy Administrator.' This display name is primarily used in the Intune console or Graph API to present roles in a user-friendly manner, making it easier for administrators to manage role-based access control (RBAC) efficiently. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class DeviceAndAppManagementAssignedRoleDefinition implements AdditionalD
         this.backingStore.set("permissions", value);
     }
     /**
-     * Sets the roleDefinitionDisplayName property value. The RoleDefinitionDisplayName property represents the human-readable name of a specific role definition in Microsoft Intune. This property provides a clear and descriptive name that indicates the purpose or scope of the role, helping administrators identify and assign appropriate roles to users or groups.Some example values for RoleDefinitionDisplayName might include: "Helpdesk Operator," "Application Manager," or "Policy Administrator." This display name is primarily used in the Intune console or Graph API to present roles in a user-friendly manner, making it easier for administrators to manage role-based access control (RBAC) efficiently. This property is read-only.
+     * Sets the roleDefinitionDisplayName property value. The RoleDefinitionDisplayName property represents the human-readable name of a specific role definition in Microsoft Intune. This property provides a clear and descriptive name that indicates the purpose or scope of the role, helping administrators identify and assign appropriate roles to users or groups.Some example values for RoleDefinitionDisplayName might include: 'Helpdesk Operator,' 'Application Manager,' or 'Policy Administrator.' This display name is primarily used in the Intune console or Graph API to present roles in a user-friendly manner, making it easier for administrators to manage role-based access control (RBAC) efficiently. This property is read-only.
      * @param value Value to set for the roleDefinitionDisplayName property.
      */
     public void setRoleDefinitionDisplayName(@jakarta.annotation.Nullable final String value) {

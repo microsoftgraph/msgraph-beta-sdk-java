@@ -75,7 +75,7 @@ public class RecycleBinSettings implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the retentionPeriodOverrideDays property value. Recycle bin retention period override in days for deleted content. The default value is 93; the value range is 93 to 180. The setting applies to newly deleted content only. Setting this property to null reverts to its default value. Read-write.
+     * Gets the retentionPeriodOverrideDays property value. Recycle bin retention period override in days for deleted content. The default value is 93; the value range is 7 to 180 inclusively. The setting applies to newly deleted content only. Setting this property to null reverts to its default value. Read-write.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class RecycleBinSettings implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the retentionPeriodOverrideDays property value. Recycle bin retention period override in days for deleted content. The default value is 93; the value range is 93 to 180. The setting applies to newly deleted content only. Setting this property to null reverts to its default value. Read-write.
+     * Sets the retentionPeriodOverrideDays property value. Recycle bin retention period override in days for deleted content. The default value is 93; the value range is 7 to 180 inclusively. The setting applies to newly deleted content only. Setting this property to null reverts to its default value. Read-write.
      * @param value Value to set for the retentionPeriodOverrideDays property.
      */
     public void setRetentionPeriodOverrideDays(@jakarta.annotation.Nullable final Integer value) {

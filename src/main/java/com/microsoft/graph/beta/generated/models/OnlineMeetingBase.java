@@ -57,7 +57,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("allowBreakoutRooms");
     }
     /**
-     * Gets the allowedLobbyAdmitters property value. The allowedLobbyAdmitters property
+     * Gets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. Possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
      * @return a {@link AllowedLobbyAdmitterRoles}
      */
     @jakarta.annotation.Nullable
@@ -361,7 +361,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("allowBreakoutRooms", value);
     }
     /**
-     * Sets the allowedLobbyAdmitters property value. The allowedLobbyAdmitters property
+     * Sets the allowedLobbyAdmitters property value. Specifies the users who can admit from the lobby. Possible values are: organizerAndCoOrganizersAndPresenters, organizerAndCoOrganizers, unknownFutureValue.
      * @param value Value to set for the allowedLobbyAdmitters property.
      */
     public void setAllowedLobbyAdmitters(@jakarta.annotation.Nullable final AllowedLobbyAdmitterRoles value) {
