@@ -85,7 +85,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
         return this.backingStore.get("intendedSettings");
     }
     /**
-     * Gets the managedDeviceCount property value. The number of vulnerable devices. Valid values 0 to 65536
+     * Gets the managedDeviceCount property value. The number of vulnerable devices.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class SecurityConfigurationTask extends DeviceAppManagementTask implement
         this.backingStore.set("intendedSettings", value);
     }
     /**
-     * Sets the managedDeviceCount property value. The number of vulnerable devices. Valid values 0 to 65536
+     * Sets the managedDeviceCount property value. The number of vulnerable devices.
      * @param value Value to set for the managedDeviceCount property.
      */
     public void setManagedDeviceCount(@jakarta.annotation.Nullable final Integer value) {

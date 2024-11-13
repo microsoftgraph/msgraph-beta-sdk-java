@@ -36,7 +36,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         return new AndroidWorkProfileWiFiConfiguration();
     }
     /**
-     * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
+     * Gets the connectAutomatically property value. When set to true, device will connect automatically to the Wi-Fi network when in range, skipping the user prompt. When false, user will need to connect manually through Settings on the Android device. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         return this.backingStore.get("connectAutomatically");
     }
     /**
-     * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
+     * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices. When false, device will not automatically connect to hidden networks. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         return deserializerMap;
     }
     /**
-     * Gets the networkName property value. Network Name
+     * Gets the networkName property value. The name of the Wi-Fi network.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -143,21 +143,21 @@ public class AndroidWorkProfileWiFiConfiguration extends DeviceConfiguration imp
         writer.writeEnumValue("wiFiSecurityType", this.getWiFiSecurityType());
     }
     /**
-     * Sets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
+     * Sets the connectAutomatically property value. When set to true, device will connect automatically to the Wi-Fi network when in range, skipping the user prompt. When false, user will need to connect manually through Settings on the Android device. Default value is false.
      * @param value Value to set for the connectAutomatically property.
      */
     public void setConnectAutomatically(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("connectAutomatically", value);
     }
     /**
-     * Sets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
+     * Sets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices. When false, device will not automatically connect to hidden networks. Default value is false.
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      */
     public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("connectWhenNetworkNameIsHidden", value);
     }
     /**
-     * Sets the networkName property value. Network Name
+     * Sets the networkName property value. The name of the Wi-Fi network.
      * @param value Value to set for the networkName property.
      */
     public void setNetworkName(@jakarta.annotation.Nullable final String value) {

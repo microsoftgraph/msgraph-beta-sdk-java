@@ -87,7 +87,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this.backingStore.get("sourcePublisherDisplayName");
     }
     /**
-     * Gets the targetDisplayName property value. The display name of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
+     * Gets the targetDisplayName property value. The display name of the app that is the target of the mobile app relationship entity. For example: Firefox Setup 52.0.2 32bit.intunewin. Maximum length is 500 characters. Read-Only. Returned by default. Supports: $select. Does not support $search, $filter, $orderBy. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this.backingStore.get("targetDisplayName");
     }
     /**
-     * Gets the targetDisplayVersion property value. The display version of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
+     * Gets the targetDisplayVersion property value. The display version of the app that is the target of the mobile app relationship entity. For example 1.0 or 1.2203.156. Read-Only. Returned by default. Supports: $select. Does not support $search, $filter, $orderBy. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this.backingStore.get("targetDisplayVersion");
     }
     /**
-     * Gets the targetId property value. App ID of the app that is the target of the mobile app relationship entity. Read-Only
+     * Gets the targetId property value. The unique app identifier of the target of the mobile app relationship entity. For example: 2dbc75b9-e993-4e4d-a071-91ac5a218672. Read-Only. Returned by default. Supports: $select. Does not support $search, $filter, $orderBy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class MobileAppRelationship extends Entity implements Parsable {
         return this.backingStore.get("targetId");
     }
     /**
-     * Gets the targetPublisher property value. The publisher of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
+     * Gets the targetPublisher property value. The publisher of the app that is the target of the mobile app relationship entity. For example: Fabrikam. Maximum length is 500 characters. Read-Only. Returned by default. Supports: $select. Does not support $search, $filter, $orderBy. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,28 +173,28 @@ public class MobileAppRelationship extends Entity implements Parsable {
         this.backingStore.set("sourcePublisherDisplayName", value);
     }
     /**
-     * Sets the targetDisplayName property value. The display name of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
+     * Sets the targetDisplayName property value. The display name of the app that is the target of the mobile app relationship entity. For example: Firefox Setup 52.0.2 32bit.intunewin. Maximum length is 500 characters. Read-Only. Returned by default. Supports: $select. Does not support $search, $filter, $orderBy. This property is read-only.
      * @param value Value to set for the targetDisplayName property.
      */
     public void setTargetDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetDisplayName", value);
     }
     /**
-     * Sets the targetDisplayVersion property value. The display version of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
+     * Sets the targetDisplayVersion property value. The display version of the app that is the target of the mobile app relationship entity. For example 1.0 or 1.2203.156. Read-Only. Returned by default. Supports: $select. Does not support $search, $filter, $orderBy. This property is read-only.
      * @param value Value to set for the targetDisplayVersion property.
      */
     public void setTargetDisplayVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetDisplayVersion", value);
     }
     /**
-     * Sets the targetId property value. App ID of the app that is the target of the mobile app relationship entity. Read-Only
+     * Sets the targetId property value. The unique app identifier of the target of the mobile app relationship entity. For example: 2dbc75b9-e993-4e4d-a071-91ac5a218672. Read-Only. Returned by default. Supports: $select. Does not support $search, $filter, $orderBy.
      * @param value Value to set for the targetId property.
      */
     public void setTargetId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetId", value);
     }
     /**
-     * Sets the targetPublisher property value. The publisher of the app that is the target of the mobile app relationship entity. Read-Only. This property is read-only.
+     * Sets the targetPublisher property value. The publisher of the app that is the target of the mobile app relationship entity. For example: Fabrikam. Maximum length is 500 characters. Read-Only. Returned by default. Supports: $select. Does not support $search, $filter, $orderBy. This property is read-only.
      * @param value Value to set for the targetPublisher property.
      */
     public void setTargetPublisher(@jakarta.annotation.Nullable final String value) {
