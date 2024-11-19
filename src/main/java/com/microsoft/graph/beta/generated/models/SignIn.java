@@ -556,7 +556,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("servicePrincipalName");
     }
     /**
-     * Gets the sessionId property value. The sessionId property
+     * Gets the sessionId property value. Identifier of the session that was generated during the sign-in.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1156,7 +1156,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("servicePrincipalName", value);
     }
     /**
-     * Sets the sessionId property value. The sessionId property
+     * Sets the sessionId property value. Identifier of the session that was generated during the sign-in.
      * @param value Value to set for the sessionId property.
      */
     public void setSessionId(@jakarta.annotation.Nullable final String value) {
