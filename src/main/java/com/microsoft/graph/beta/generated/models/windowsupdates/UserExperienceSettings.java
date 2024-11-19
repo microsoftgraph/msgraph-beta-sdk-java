@@ -77,7 +77,7 @@ public class UserExperienceSettings implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the isHotpatchEnabled property value. The isHotpatchEnabled property
+     * Gets the isHotpatchEnabled property value. Specifies whether the update is offered as a hotpatch. It can only be set to true on automatic policies that target monthly security updates.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class UserExperienceSettings implements AdditionalDataHolder, BackedModel
         this.backingStore.set("daysUntilForcedReboot", value);
     }
     /**
-     * Sets the isHotpatchEnabled property value. The isHotpatchEnabled property
+     * Sets the isHotpatchEnabled property value. Specifies whether the update is offered as a hotpatch. It can only be set to true on automatic policies that target monthly security updates.
      * @param value Value to set for the isHotpatchEnabled property.
      */
     public void setIsHotpatchEnabled(@jakarta.annotation.Nullable final Boolean value) {

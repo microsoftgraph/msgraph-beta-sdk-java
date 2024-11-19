@@ -26,7 +26,7 @@ public class QualityUpdateFilter extends WindowsUpdateFilter implements Parsable
         return new QualityUpdateFilter();
     }
     /**
-     * Gets the cadence property value. The cadence property
+     * Gets the cadence property value. Specifies the cadence for publishing quality updates of the filter. The possible values are: monthly, outOfBand, unknownFutureValue.
      * @return a {@link QualityUpdateCadence}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class QualityUpdateFilter extends WindowsUpdateFilter implements Parsable
         return this.backingStore.get("cadence");
     }
     /**
-     * Gets the classification property value. The classification property
+     * Gets the classification property value. Specifies the quality update classification of the filter. The possible values are: all, security, nonSecurity, unknownFutureValue.
      * @return a {@link QualityUpdateClassification}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class QualityUpdateFilter extends WindowsUpdateFilter implements Parsable
         writer.writeEnumValue("classification", this.getClassification());
     }
     /**
-     * Sets the cadence property value. The cadence property
+     * Sets the cadence property value. Specifies the cadence for publishing quality updates of the filter. The possible values are: monthly, outOfBand, unknownFutureValue.
      * @param value Value to set for the cadence property.
      */
     public void setCadence(@jakarta.annotation.Nullable final QualityUpdateCadence value) {
         this.backingStore.set("cadence", value);
     }
     /**
-     * Sets the classification property value. The classification property
+     * Sets the classification property value. Specifies the quality update classification of the filter. The possible values are: all, security, nonSecurity, unknownFutureValue.
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final QualityUpdateClassification value) {
