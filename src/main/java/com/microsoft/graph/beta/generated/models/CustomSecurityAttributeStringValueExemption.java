@@ -36,7 +36,7 @@ public class CustomSecurityAttributeStringValueExemption extends CustomSecurityA
         return deserializerMap;
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Value representing custom security attribute value to compare against while evaluating the exemption.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CustomSecurityAttributeStringValueExemption extends CustomSecurityA
         writer.writeStringValue("value", this.getValue());
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Value representing custom security attribute value to compare against while evaluating the exemption.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

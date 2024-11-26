@@ -52,6 +52,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         deserializerMap.put("inactiveUsers", (n) -> { this.setInactiveUsers(n.getCollectionOfObjectValues(MonthlyInactiveUsersMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("inactiveUsersByApplication", (n) -> { this.setInactiveUsersByApplication(n.getCollectionOfObjectValues(MonthlyInactiveUsersByApplicationMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("mfaCompletions", (n) -> { this.setMfaCompletions(n.getCollectionOfObjectValues(MfaCompletionMetric::createFromDiscriminatorValue)); });
+        deserializerMap.put("mfaRegisteredUsers", (n) -> { this.setMfaRegisteredUsers(n.getCollectionOfObjectValues(MfaUserCountMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("requests", (n) -> { this.setRequests(n.getCollectionOfObjectValues(UserRequestsMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("signUps", (n) -> { this.setSignUps(n.getCollectionOfObjectValues(UserSignUpMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getCollectionOfObjectValues(InsightSummary::createFromDiscriminatorValue)); });
@@ -80,6 +81,14 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<MfaCompletionMetric> getMfaCompletions() {
         return this.backingStore.get("mfaCompletions");
+    }
+    /**
+     * Gets the mfaRegisteredUsers property value. The mfaRegisteredUsers property
+     * @return a {@link java.util.List<MfaUserCountMetric>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MfaUserCountMetric> getMfaRegisteredUsers() {
+        return this.backingStore.get("mfaRegisteredUsers");
     }
     /**
      * Gets the requests property value. Insights for all user requests on apps registered in the tenant for a specified period.
@@ -117,6 +126,7 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("inactiveUsers", this.getInactiveUsers());
         writer.writeCollectionOfObjectValues("inactiveUsersByApplication", this.getInactiveUsersByApplication());
         writer.writeCollectionOfObjectValues("mfaCompletions", this.getMfaCompletions());
+        writer.writeCollectionOfObjectValues("mfaRegisteredUsers", this.getMfaRegisteredUsers());
         writer.writeCollectionOfObjectValues("requests", this.getRequests());
         writer.writeCollectionOfObjectValues("signUps", this.getSignUps());
         writer.writeCollectionOfObjectValues("summary", this.getSummary());
@@ -155,6 +165,13 @@ public class MonthlyUserInsightMetricsRoot extends Entity implements Parsable {
      */
     public void setMfaCompletions(@jakarta.annotation.Nullable final java.util.List<MfaCompletionMetric> value) {
         this.backingStore.set("mfaCompletions", value);
+    }
+    /**
+     * Sets the mfaRegisteredUsers property value. The mfaRegisteredUsers property
+     * @param value Value to set for the mfaRegisteredUsers property.
+     */
+    public void setMfaRegisteredUsers(@jakarta.annotation.Nullable final java.util.List<MfaUserCountMetric> value) {
+        this.backingStore.set("mfaRegisteredUsers", value);
     }
     /**
      * Sets the requests property value. Insights for all user requests on apps registered in the tenant for a specified period.

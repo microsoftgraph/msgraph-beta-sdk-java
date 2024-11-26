@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.app.calls.item.contentsharingsessions.item;
 
+import com.microsoft.graph.beta.app.calls.item.contentsharingsessions.item.pngofcurrentslide.PngOfCurrentSlideRequestBuilder;
 import com.microsoft.graph.beta.models.ContentSharingSession;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ContentSharingSessionItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the media for the commsApplication entity.
+     * @return a {@link PngOfCurrentSlideRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PngOfCurrentSlideRequestBuilder pngOfCurrentSlide() {
+        return new PngOfCurrentSlideRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link ContentSharingSessionItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

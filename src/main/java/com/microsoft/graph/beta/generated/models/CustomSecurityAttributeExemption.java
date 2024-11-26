@@ -42,7 +42,7 @@ public class CustomSecurityAttributeExemption extends Entity implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the operator property value. The operator property
+     * Gets the operator property value. The possible values are: equals, unknownFutureValue. If equals, the customSecurityAttributeExemption value is compared to match the custom security attribute value for the exemption to be applied. The comparison is case sensitive.
      * @return a {@link CustomSecurityAttributeComparisonOperator}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class CustomSecurityAttributeExemption extends Entity implements Parsable
         writer.writeEnumValue("operator", this.getOperator());
     }
     /**
-     * Sets the operator property value. The operator property
+     * Sets the operator property value. The possible values are: equals, unknownFutureValue. If equals, the customSecurityAttributeExemption value is compared to match the custom security attribute value for the exemption to be applied. The comparison is case sensitive.
      * @param value Value to set for the operator property.
      */
     public void setOperator(@jakarta.annotation.Nullable final CustomSecurityAttributeComparisonOperator value) {

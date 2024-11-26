@@ -36,7 +36,7 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/getCloudPcLaunchInfo()", rawUrl);
     }
     /**
-     * Get the cloudPCLaunchInfo for the signed-in user.
+     * Get the cloudPCLaunchInfo for a specific cloudPC.
      * @return a {@link CloudPcLaunchInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getcloudpclaunchinfo?view=graph-rest-beta">Find more info here</a>
@@ -46,7 +46,7 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the cloudPCLaunchInfo for the signed-in user.
+     * Get the cloudPCLaunchInfo for a specific cloudPC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcLaunchInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcLaunchInfo::createFromDiscriminatorValue);
     }
     /**
-     * Get the cloudPCLaunchInfo for the signed-in user.
+     * Get the cloudPCLaunchInfo for a specific cloudPC.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the cloudPCLaunchInfo for the signed-in user.
+     * Get the cloudPCLaunchInfo for a specific cloudPC.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

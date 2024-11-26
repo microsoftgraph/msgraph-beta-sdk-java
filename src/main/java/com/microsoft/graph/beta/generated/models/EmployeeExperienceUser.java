@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Represents a container that exposes navigation properties for employee experience user resources.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EmployeeExperienceUser extends Entity implements Parsable {
     /**

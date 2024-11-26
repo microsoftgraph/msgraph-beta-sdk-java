@@ -31,7 +31,25 @@ public class ContentSharingSession extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("pngOfCurrentSlide", (n) -> { this.setPngOfCurrentSlide(n.getByteArrayValue()); });
+        deserializerMap.put("presenterParticipantId", (n) -> { this.setPresenterParticipantId(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the pngOfCurrentSlide property value. The pngOfCurrentSlide property
+     * @return a {@link byte[]}
+     */
+    @jakarta.annotation.Nullable
+    public byte[] getPngOfCurrentSlide() {
+        return this.backingStore.get("pngOfCurrentSlide");
+    }
+    /**
+     * Gets the presenterParticipantId property value. The presenterParticipantId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPresenterParticipantId() {
+        return this.backingStore.get("presenterParticipantId");
     }
     /**
      * Serializes information the current object
@@ -40,5 +58,21 @@ public class ContentSharingSession extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeByteArrayValue("pngOfCurrentSlide", this.getPngOfCurrentSlide());
+        writer.writeStringValue("presenterParticipantId", this.getPresenterParticipantId());
+    }
+    /**
+     * Sets the pngOfCurrentSlide property value. The pngOfCurrentSlide property
+     * @param value Value to set for the pngOfCurrentSlide property.
+     */
+    public void setPngOfCurrentSlide(@jakarta.annotation.Nullable final byte[] value) {
+        this.backingStore.set("pngOfCurrentSlide", value);
+    }
+    /**
+     * Sets the presenterParticipantId property value. The presenterParticipantId property
+     * @param value Value to set for the presenterParticipantId property.
+     */
+    public void setPresenterParticipantId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("presenterParticipantId", value);
     }
 }

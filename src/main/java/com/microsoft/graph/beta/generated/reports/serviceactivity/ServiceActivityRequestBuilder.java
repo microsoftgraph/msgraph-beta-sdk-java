@@ -2,11 +2,30 @@ package com.microsoft.graph.beta.reports.serviceactivity;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.ServiceActivity;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsfordesktopmailbyreademailwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForDesktopMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforemailbymodernauthenticationwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforexcelwebwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforiosorandroidmailbyreademailwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForiOSOrAndroidMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforonenotewebwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForOneNoteWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforoutlookmacbyreademailwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForOutlookMacByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforoutlookmobilebyreademailwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForOutlookMobileByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforoutlookwebbyappopeningwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforoutlookwebbyreademailwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforpowerpointwebwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForPowerPointWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforvisiowebwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForVisioWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getactiveusermetricsforwordwebwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getaudiostreamqoemetricsforteamswithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getaudiostreamsoverudpmetricsforteamswithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetAudioStreamsOverUdpMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getconnectivitymetricsforexchangewithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetConnectivityMetricsForExchangeWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getmessagevolumemetricsforemaildeliverywithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetMessageVolumeMetricsForEmailDeliveryWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getmessagevolumemetricsforteamschatwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
 import com.microsoft.graph.beta.reports.serviceactivity.getmetricsforconditionalaccesscompliantdevicessigninsuccesswithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetMetricsForConditionalAccessCompliantDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
 import com.microsoft.graph.beta.reports.serviceactivity.getmetricsforconditionalaccessmanageddevicessigninsuccesswithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
 import com.microsoft.graph.beta.reports.serviceactivity.getmetricsformfasigninfailurewithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
 import com.microsoft.graph.beta.reports.serviceactivity.getmetricsformfasigninsuccesswithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetMetricsForMfaSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
 import com.microsoft.graph.beta.reports.serviceactivity.getmetricsforsamlsigninsuccesswithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getusagemetricsforteamsbylaunchwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
+import com.microsoft.graph.beta.reports.serviceactivity.getusagemetricsforteamsbymeetingsjoinedwithinclusiveintervalstartdatetimewithexclusiveintervalenddatetimewithaggregationintervalinminutes.GetUsageMetricsForTeamsByMeetingsJoinedWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -83,6 +102,210 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ServiceActivity::createFromDiscriminatorValue);
     }
     /**
+     * Provides operations to call the getActiveUserMetricsForDesktopMailByReadEmail method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForDesktopMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForDesktopMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForDesktopMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForDesktopMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForEmailByModernAuthentication method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForExcelWeb method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForiOSOrAndroidMailByReadEmail method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForiOSOrAndroidMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForiOSOrAndroidMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForiOSOrAndroidMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForiOSOrAndroidMailByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForOneNoteWeb method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForOneNoteWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForOneNoteWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForOneNoteWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForOneNoteWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForOutlookMacByReadEmail method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForOutlookMacByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForOutlookMacByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForOutlookMacByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForOutlookMacByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForOutlookMobileByReadEmail method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForOutlookMobileByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForOutlookMobileByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForOutlookMobileByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForOutlookMobileByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForOutlookWebByAppOpening method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForOutlookWebByReadEmail method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForPowerPointWeb method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForPowerPointWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForPowerPointWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForPowerPointWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForPowerPointWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForVisioWeb method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForVisioWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForVisioWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForVisioWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForVisioWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getActiveUserMetricsForWordWeb method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getAudioStreamQoEMetricsForTeams method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getAudioStreamsOverUdpMetricsForTeams method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetAudioStreamsOverUdpMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAudioStreamsOverUdpMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getAudioStreamsOverUdpMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetAudioStreamsOverUdpMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getConnectivityMetricsForExchange method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetConnectivityMetricsForExchangeWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetConnectivityMetricsForExchangeWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getConnectivityMetricsForExchangeWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetConnectivityMetricsForExchangeWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getMessageVolumeMetricsForEmailDelivery method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetMessageVolumeMetricsForEmailDeliveryWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetMessageVolumeMetricsForEmailDeliveryWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getMessageVolumeMetricsForEmailDeliveryWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetMessageVolumeMetricsForEmailDeliveryWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getMessageVolumeMetricsForTeamsChat method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
      * Provides operations to call the getMetricsForConditionalAccessCompliantDevicesSignInSuccess method.
      * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
      * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
@@ -141,6 +364,30 @@ public class ServiceActivityRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(exclusiveIntervalEndDateTime);
         Objects.requireNonNull(inclusiveIntervalStartDateTime);
         return new GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getUsageMetricsForTeamsByLaunch method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
+    }
+    /**
+     * Provides operations to call the getUsageMetricsForTeamsByMeetingsJoined method.
+     * @param exclusiveIntervalEndDateTime Usage: exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime}
+     * @param inclusiveIntervalStartDateTime Usage: inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime}
+     * @return a {@link GetUsageMetricsForTeamsByMeetingsJoinedWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetUsageMetricsForTeamsByMeetingsJoinedWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder getUsageMetricsForTeamsByMeetingsJoinedWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutes(@jakarta.annotation.Nonnull final OffsetDateTime exclusiveIntervalEndDateTime, @jakarta.annotation.Nonnull final OffsetDateTime inclusiveIntervalStartDateTime) {
+        Objects.requireNonNull(exclusiveIntervalEndDateTime);
+        Objects.requireNonNull(inclusiveIntervalStartDateTime);
+        return new GetUsageMetricsForTeamsByMeetingsJoinedWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(pathParameters, requestAdapter, exclusiveIntervalEndDateTime, inclusiveIntervalStartDateTime);
     }
     /**
      * Update the navigation property serviceActivity in reports

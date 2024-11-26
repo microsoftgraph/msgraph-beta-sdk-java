@@ -36,6 +36,14 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
         return new CloudPcReviewStatus();
     }
     /**
+     * Gets the accessTier property value. The accessTier property
+     * @return a {@link CloudPcBlobAccessTier}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcBlobAccessTier getAccessTier() {
+        return this.backingStore.get("accessTier");
+    }
+    /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a {@link Map<String, Object>}
      */
@@ -86,7 +94,8 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        deserializerMap.put("accessTier", (n) -> { this.setAccessTier(n.getEnumValue(CloudPcBlobAccessTier::forValue)); });
         deserializerMap.put("azureStorageAccountId", (n) -> { this.setAzureStorageAccountId(n.getStringValue()); });
         deserializerMap.put("azureStorageAccountName", (n) -> { this.setAzureStorageAccountName(n.getStringValue()); });
         deserializerMap.put("azureStorageContainerName", (n) -> { this.setAzureStorageContainerName(n.getStringValue()); });
@@ -161,6 +170,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("accessTier", this.getAccessTier());
         writer.writeStringValue("azureStorageAccountId", this.getAzureStorageAccountId());
         writer.writeStringValue("azureStorageAccountName", this.getAzureStorageAccountName());
         writer.writeStringValue("azureStorageContainerName", this.getAzureStorageContainerName());
@@ -172,6 +182,13 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
         writer.writeStringValue("subscriptionName", this.getSubscriptionName());
         writer.writeEnumValue("userAccessLevel", this.getUserAccessLevel());
         writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the accessTier property value. The accessTier property
+     * @param value Value to set for the accessTier property.
+     */
+    public void setAccessTier(@jakarta.annotation.Nullable final CloudPcBlobAccessTier value) {
+        this.backingStore.set("accessTier", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.

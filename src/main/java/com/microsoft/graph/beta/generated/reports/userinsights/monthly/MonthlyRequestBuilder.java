@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.reports.userinsights.monthly.authentications.Aut
 import com.microsoft.graph.beta.reports.userinsights.monthly.inactiveusers.InactiveUsersRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.monthly.inactiveusersbyapplication.InactiveUsersByApplicationRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.monthly.mfacompletions.MfaCompletionsRequestBuilder;
+import com.microsoft.graph.beta.reports.userinsights.monthly.mfaregisteredusers.MfaRegisteredUsersRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.monthly.requests.RequestsRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.monthly.signups.SignUpsRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.monthly.summary.SummaryRequestBuilder;
@@ -67,6 +68,14 @@ public class MonthlyRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MfaCompletionsRequestBuilder mfaCompletions() {
         return new MfaCompletionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mfaRegisteredUsers property of the microsoft.graph.monthlyUserInsightMetricsRoot entity.
+     * @return a {@link MfaRegisteredUsersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MfaRegisteredUsersRequestBuilder mfaRegisteredUsers() {
+        return new MfaRegisteredUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the requests property of the microsoft.graph.monthlyUserInsightMetricsRoot entity.

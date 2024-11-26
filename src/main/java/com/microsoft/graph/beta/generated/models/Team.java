@@ -95,6 +95,7 @@ public class Team extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("discoverySettings", (n) -> { this.setDiscoverySettings(n.getObjectValue(TeamDiscoverySettings::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("firstChannelName", (n) -> { this.setFirstChannelName(n.getStringValue()); });
         deserializerMap.put("funSettings", (n) -> { this.setFunSettings(n.getObjectValue(TeamFunSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
         deserializerMap.put("guestSettings", (n) -> { this.setGuestSettings(n.getObjectValue(TeamGuestSettings::createFromDiscriminatorValue)); });
@@ -121,6 +122,14 @@ public class Team extends Entity implements Parsable {
         deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getEnumValue(TeamVisibilityType::forValue)); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the firstChannelName property value. The firstChannelName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getFirstChannelName() {
+        return this.backingStore.get("firstChannelName");
     }
     /**
      * Gets the funSettings property value. Settings to configure the use of Giphy, memes, and stickers in the team.
@@ -336,6 +345,7 @@ public class Team extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeObjectValue("discoverySettings", this.getDiscoverySettings());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("firstChannelName", this.getFirstChannelName());
         writer.writeObjectValue("funSettings", this.getFunSettings());
         writer.writeObjectValue("group", this.getGroup());
         writer.writeObjectValue("guestSettings", this.getGuestSettings());
@@ -410,6 +420,13 @@ public class Team extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the firstChannelName property value. The firstChannelName property
+     * @param value Value to set for the firstChannelName property.
+     */
+    public void setFirstChannelName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("firstChannelName", value);
     }
     /**
      * Sets the funSettings property value. Settings to configure the use of Giphy, memes, and stickers in the team.
