@@ -57,7 +57,7 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
-     * Gets the excludeActors property value. The excludeActors property
+     * Gets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute, they're exempted from the restriction.
      * @return a {@link AppManagementPolicyActorExemptions}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("excludeActors");
     }
     /**
-     * Gets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn't enforced for applications that are configured to receive V2 tokens in Entra ID; else, the restriction isn't enforced for those applications.
+     * Gets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn't enforced for applications that are configured to receive V2 tokens in Microsoft Entra ID; else, the restriction isn't enforced for those applications.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -149,14 +149,14 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the excludeActors property value. The excludeActors property
+     * Sets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute, they're exempted from the restriction.
      * @param value Value to set for the excludeActors property.
      */
     public void setExcludeActors(@jakarta.annotation.Nullable final AppManagementPolicyActorExemptions value) {
         this.backingStore.set("excludeActors", value);
     }
     /**
-     * Sets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn't enforced for applications that are configured to receive V2 tokens in Entra ID; else, the restriction isn't enforced for those applications.
+     * Sets the excludeAppsReceivingV2Tokens property value. If true, the restriction isn't enforced for applications that are configured to receive V2 tokens in Microsoft Entra ID; else, the restriction isn't enforced for those applications.
      * @param value Value to set for the excludeAppsReceivingV2Tokens property.
      */
     public void setExcludeAppsReceivingV2Tokens(@jakarta.annotation.Nullable final Boolean value) {

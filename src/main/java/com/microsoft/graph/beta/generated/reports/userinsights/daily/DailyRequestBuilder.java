@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.reports.userinsights.daily.authentications.Authe
 import com.microsoft.graph.beta.reports.userinsights.daily.inactiveusers.InactiveUsersRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.daily.inactiveusersbyapplication.InactiveUsersByApplicationRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.daily.mfacompletions.MfaCompletionsRequestBuilder;
+import com.microsoft.graph.beta.reports.userinsights.daily.mfatelecomfraud.MfaTelecomFraudRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.daily.signups.SignUpsRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.daily.summary.SummaryRequestBuilder;
 import com.microsoft.graph.beta.reports.userinsights.daily.usercount.UserCountRequestBuilder;
@@ -67,6 +68,14 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MfaCompletionsRequestBuilder mfaCompletions() {
         return new MfaCompletionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mfaTelecomFraud property of the microsoft.graph.dailyUserInsightMetricsRoot entity.
+     * @return a {@link MfaTelecomFraudRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MfaTelecomFraudRequestBuilder mfaTelecomFraud() {
+        return new MfaTelecomFraudRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the signUps property of the microsoft.graph.dailyUserInsightMetricsRoot entity.

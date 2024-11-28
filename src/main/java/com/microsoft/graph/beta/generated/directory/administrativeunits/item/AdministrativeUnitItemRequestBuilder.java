@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.directory.administrativeunits.item;
 
+import com.microsoft.graph.beta.directory.administrativeunits.item.deletedmembers.DeletedMembersRequestBuilder;
 import com.microsoft.graph.beta.directory.administrativeunits.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.beta.directory.administrativeunits.item.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.directory.administrativeunits.item.scopedrolemembers.ScopedRoleMembersRequestBuilder;
@@ -23,6 +24,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the deletedMembers property of the microsoft.graph.administrativeUnit entity.
+     * @return a {@link DeletedMembersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeletedMembersRequestBuilder deletedMembers() {
+        return new DeletedMembersRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.administrativeUnit entity.
      * @return a {@link ExtensionsRequestBuilder}

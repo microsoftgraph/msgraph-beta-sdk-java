@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.administrativeunits.item;
 
 import com.microsoft.graph.beta.administrativeunits.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.beta.administrativeunits.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.beta.administrativeunits.item.deletedmembers.DeletedMembersRequestBuilder;
 import com.microsoft.graph.beta.administrativeunits.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.beta.administrativeunits.item.getmembergroups.GetMemberGroupsRequestBuilder;
 import com.microsoft.graph.beta.administrativeunits.item.getmemberobjects.GetMemberObjectsRequestBuilder;
@@ -43,6 +44,14 @@ public class AdministrativeUnitItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deletedMembers property of the microsoft.graph.administrativeUnit entity.
+     * @return a {@link DeletedMembersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeletedMembersRequestBuilder deletedMembers() {
+        return new DeletedMembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.administrativeUnit entity.

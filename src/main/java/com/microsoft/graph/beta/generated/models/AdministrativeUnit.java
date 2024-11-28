@@ -26,6 +26,14 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         return new AdministrativeUnit();
     }
     /**
+     * Gets the deletedMembers property value. The deletedMembers property
+     * @return a {@link java.util.List<DirectoryObject>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DirectoryObject> getDeletedMembers() {
+        return this.backingStore.get("deletedMembers");
+    }
+    /**
      * Gets the description property value. The description property
      * @return a {@link String}
      */
@@ -56,6 +64,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deletedMembers", (n) -> { this.setDeletedMembers(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
@@ -131,6 +140,7 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("deletedMembers", this.getDeletedMembers());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
@@ -141,6 +151,13 @@ public class AdministrativeUnit extends DirectoryObject implements Parsable {
         writer.writeStringValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("scopedRoleMembers", this.getScopedRoleMembers());
         writer.writeStringValue("visibility", this.getVisibility());
+    }
+    /**
+     * Sets the deletedMembers property value. The deletedMembers property
+     * @param value Value to set for the deletedMembers property.
+     */
+    public void setDeletedMembers(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
+        this.backingStore.set("deletedMembers", value);
     }
     /**
      * Sets the description property value. The description property

@@ -35,7 +35,7 @@ public class StopRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs/{cloudPC%2Did}/stop", rawUrl);
     }
     /**
-     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
+     * Stop a specific Cloud PC. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-stop?view=graph-rest-beta">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class StopRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
+     * Stop a specific Cloud PC. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-stop?view=graph-rest-beta">Find more info here</a>
@@ -55,7 +55,7 @@ public class StopRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
+     * Stop a specific Cloud PC. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class StopRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Stop a specific Cloud PC for a user. Currently, only Windows 365 Frontline Cloud PCs are supported.
+     * Stop a specific Cloud PC. Currently, only Windows 365 Frontline Cloud PCs are supported.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

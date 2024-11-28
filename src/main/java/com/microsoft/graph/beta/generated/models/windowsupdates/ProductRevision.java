@@ -51,12 +51,21 @@ public class ProductRevision extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("catalogEntry", (n) -> { this.setCatalogEntry(n.getObjectValue(CatalogEntry::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isHotpatchUpdate", (n) -> { this.setIsHotpatchUpdate(n.getBooleanValue()); });
         deserializerMap.put("knowledgeBaseArticle", (n) -> { this.setKnowledgeBaseArticle(n.getObjectValue(KnowledgeBaseArticle::createFromDiscriminatorValue)); });
         deserializerMap.put("osBuild", (n) -> { this.setOsBuild(n.getObjectValue(BuildVersionDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("product", (n) -> { this.setProduct(n.getStringValue()); });
         deserializerMap.put("releaseDateTime", (n) -> { this.setReleaseDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isHotpatchUpdate property value. True indicates that the content is hotpatchable; otherwise, false. For more information, see Deploy a hotpatch quality update using Windows Autopatch. Read-only.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsHotpatchUpdate() {
+        return this.backingStore.get("isHotpatchUpdate");
     }
     /**
      * Gets the knowledgeBaseArticle property value. The knowledge base article associated with the product revision.
@@ -107,6 +116,7 @@ public class ProductRevision extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("catalogEntry", this.getCatalogEntry());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("isHotpatchUpdate", this.getIsHotpatchUpdate());
         writer.writeObjectValue("knowledgeBaseArticle", this.getKnowledgeBaseArticle());
         writer.writeObjectValue("osBuild", this.getOsBuild());
         writer.writeStringValue("product", this.getProduct());
@@ -126,6 +136,13 @@ public class ProductRevision extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the isHotpatchUpdate property value. True indicates that the content is hotpatchable; otherwise, false. For more information, see Deploy a hotpatch quality update using Windows Autopatch. Read-only.
+     * @param value Value to set for the isHotpatchUpdate property.
+     */
+    public void setIsHotpatchUpdate(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isHotpatchUpdate", value);
     }
     /**
      * Sets the knowledgeBaseArticle property value. The knowledge base article associated with the product revision.

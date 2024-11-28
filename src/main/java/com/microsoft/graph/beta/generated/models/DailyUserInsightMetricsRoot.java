@@ -52,6 +52,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
         deserializerMap.put("inactiveUsers", (n) -> { this.setInactiveUsers(n.getCollectionOfObjectValues(DailyInactiveUsersMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("inactiveUsersByApplication", (n) -> { this.setInactiveUsersByApplication(n.getCollectionOfObjectValues(DailyInactiveUsersByApplicationMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("mfaCompletions", (n) -> { this.setMfaCompletions(n.getCollectionOfObjectValues(MfaCompletionMetric::createFromDiscriminatorValue)); });
+        deserializerMap.put("mfaTelecomFraud", (n) -> { this.setMfaTelecomFraud(n.getCollectionOfObjectValues(MfaTelecomFraudMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("signUps", (n) -> { this.setSignUps(n.getCollectionOfObjectValues(UserSignUpMetric::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getCollectionOfObjectValues(InsightSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("userCount", (n) -> { this.setUserCount(n.getCollectionOfObjectValues(UserCountMetric::createFromDiscriminatorValue)); });
@@ -80,6 +81,14 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<MfaCompletionMetric> getMfaCompletions() {
         return this.backingStore.get("mfaCompletions");
+    }
+    /**
+     * Gets the mfaTelecomFraud property value. The mfaTelecomFraud property
+     * @return a {@link java.util.List<MfaTelecomFraudMetric>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MfaTelecomFraudMetric> getMfaTelecomFraud() {
+        return this.backingStore.get("mfaTelecomFraud");
     }
     /**
      * Gets the signUps property value. Total sign-ups on apps registered in the tenant for a specified period.
@@ -117,6 +126,7 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("inactiveUsers", this.getInactiveUsers());
         writer.writeCollectionOfObjectValues("inactiveUsersByApplication", this.getInactiveUsersByApplication());
         writer.writeCollectionOfObjectValues("mfaCompletions", this.getMfaCompletions());
+        writer.writeCollectionOfObjectValues("mfaTelecomFraud", this.getMfaTelecomFraud());
         writer.writeCollectionOfObjectValues("signUps", this.getSignUps());
         writer.writeCollectionOfObjectValues("summary", this.getSummary());
         writer.writeCollectionOfObjectValues("userCount", this.getUserCount());
@@ -155,6 +165,13 @@ public class DailyUserInsightMetricsRoot extends Entity implements Parsable {
      */
     public void setMfaCompletions(@jakarta.annotation.Nullable final java.util.List<MfaCompletionMetric> value) {
         this.backingStore.set("mfaCompletions", value);
+    }
+    /**
+     * Sets the mfaTelecomFraud property value. The mfaTelecomFraud property
+     * @param value Value to set for the mfaTelecomFraud property.
+     */
+    public void setMfaTelecomFraud(@jakarta.annotation.Nullable final java.util.List<MfaTelecomFraudMetric> value) {
+        this.backingStore.set("mfaTelecomFraud", value);
     }
     /**
      * Sets the signUps property value. Total sign-ups on apps registered in the tenant for a specified period.
