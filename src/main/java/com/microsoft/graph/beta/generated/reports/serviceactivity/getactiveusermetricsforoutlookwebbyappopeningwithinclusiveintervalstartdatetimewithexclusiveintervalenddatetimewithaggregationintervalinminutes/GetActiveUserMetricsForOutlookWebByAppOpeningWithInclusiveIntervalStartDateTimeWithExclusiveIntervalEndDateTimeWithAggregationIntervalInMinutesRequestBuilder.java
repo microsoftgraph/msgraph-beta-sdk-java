@@ -41,19 +41,21 @@ public class GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalS
         super(requestAdapter, "{+baseurl}/reports/serviceActivity/getActiveUserMetricsForOutlookWebByAppOpening(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes){?%24count,%24filter,%24search,%24skip,%24top,aggregationIntervalInMinutes*}", rawUrl);
     }
     /**
-     * Invoke function getActiveUserMetricsForOutlookWebByAppOpening
+     * Get all the active usage based on the number of active users that signed in and started Outlook for the web.
      * @return a {@link GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforoutlookwebbyappopening?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getActiveUserMetricsForOutlookWebByAppOpening
+     * Get all the active usage based on the number of active users that signed in and started Outlook for the web.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforoutlookwebbyappopening?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalS
         return this.requestAdapter.send(requestInfo, errorMapping, GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getActiveUserMetricsForOutlookWebByAppOpening
+     * Get all the active usage based on the number of active users that signed in and started Outlook for the web.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalS
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getActiveUserMetricsForOutlookWebByAppOpening
+     * Get all the active usage based on the number of active users that signed in and started Outlook for the web.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalS
         return new GetActiveUserMetricsForOutlookWebByAppOpeningWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getActiveUserMetricsForOutlookWebByAppOpening
+     * Get all the active usage based on the number of active users that signed in and started Outlook for the web.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

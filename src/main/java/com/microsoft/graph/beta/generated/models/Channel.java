@@ -69,6 +69,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
         deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("getAllMembers", (n) -> { this.setGetAllMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
@@ -89,6 +90,14 @@ public class Channel extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public DriveItem getFilesFolder() {
         return this.backingStore.get("filesFolder");
+    }
+    /**
+     * Gets the getAllMembers property value. The getAllMembers property
+     * @return a {@link java.util.List<ConversationMember>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConversationMember> getGetAllMembers() {
+        return this.backingStore.get("getAllMembers");
     }
     /**
      * Gets the isArchived property value. Indicates whether the channel is archived. Read-only.
@@ -190,6 +199,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
         writer.writeObjectValue("filesFolder", this.getFilesFolder());
+        writer.writeCollectionOfObjectValues("getAllMembers", this.getGetAllMembers());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isFavoriteByDefault", this.getIsFavoriteByDefault());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
@@ -236,6 +246,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setFilesFolder(@jakarta.annotation.Nullable final DriveItem value) {
         this.backingStore.set("filesFolder", value);
+    }
+    /**
+     * Sets the getAllMembers property value. The getAllMembers property
+     * @param value Value to set for the getAllMembers property.
+     */
+    public void setGetAllMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
+        this.backingStore.set("getAllMembers", value);
     }
     /**
      * Sets the isArchived property value. Indicates whether the channel is archived. Read-only.

@@ -33,7 +33,7 @@ public class PrinterBase extends Entity implements Parsable {
         return new PrinterBase();
     }
     /**
-     * Gets the capabilities property value. The capabilities property
+     * Gets the capabilities property value. The capabilities of the printer/printerShare.
      * @return a {@link PrinterCapabilities}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this.backingStore.get("capabilities");
     }
     /**
-     * Gets the defaults property value. The defaults property
+     * Gets the defaults property value. The default print settings of printer/printerShare.
      * @return a {@link PrinterDefaults}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this.backingStore.get("defaults");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The name of the printer/printerShare.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class PrinterBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isAcceptingJobs property value. The isAcceptingJobs property
+     * Gets the isAcceptingJobs property value. Specifies whether the printer/printerShare is currently accepting new print jobs.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this.backingStore.get("isAcceptingJobs");
     }
     /**
-     * Gets the jobs property value. The jobs property
+     * Gets the jobs property value. The list of jobs that are queued for printing by the printer/printerShare.
      * @return a {@link java.util.List<PrintJob>}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this.backingStore.get("jobs");
     }
     /**
-     * Gets the location property value. The location property
+     * Gets the location property value. The physical and/or organizational location of the printer/printerShare.
      * @return a {@link PrinterLocation}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this.backingStore.get("location");
     }
     /**
-     * Gets the manufacturer property value. The manufacturer property
+     * Gets the manufacturer property value. The manufacturer of the printer/printerShare.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class PrinterBase extends Entity implements Parsable {
         return this.backingStore.get("manufacturer");
     }
     /**
-     * Gets the model property value. The model property
+     * Gets the model property value. The model name of the printer/printerShare.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -150,56 +150,56 @@ public class PrinterBase extends Entity implements Parsable {
         writer.writeObjectValue("status", this.getStatus());
     }
     /**
-     * Sets the capabilities property value. The capabilities property
+     * Sets the capabilities property value. The capabilities of the printer/printerShare.
      * @param value Value to set for the capabilities property.
      */
     public void setCapabilities(@jakarta.annotation.Nullable final PrinterCapabilities value) {
         this.backingStore.set("capabilities", value);
     }
     /**
-     * Sets the defaults property value. The defaults property
+     * Sets the defaults property value. The default print settings of printer/printerShare.
      * @param value Value to set for the defaults property.
      */
     public void setDefaults(@jakarta.annotation.Nullable final PrinterDefaults value) {
         this.backingStore.set("defaults", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The name of the printer/printerShare.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isAcceptingJobs property value. The isAcceptingJobs property
+     * Sets the isAcceptingJobs property value. Specifies whether the printer/printerShare is currently accepting new print jobs.
      * @param value Value to set for the isAcceptingJobs property.
      */
     public void setIsAcceptingJobs(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isAcceptingJobs", value);
     }
     /**
-     * Sets the jobs property value. The jobs property
+     * Sets the jobs property value. The list of jobs that are queued for printing by the printer/printerShare.
      * @param value Value to set for the jobs property.
      */
     public void setJobs(@jakarta.annotation.Nullable final java.util.List<PrintJob> value) {
         this.backingStore.set("jobs", value);
     }
     /**
-     * Sets the location property value. The location property
+     * Sets the location property value. The physical and/or organizational location of the printer/printerShare.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final PrinterLocation value) {
         this.backingStore.set("location", value);
     }
     /**
-     * Sets the manufacturer property value. The manufacturer property
+     * Sets the manufacturer property value. The manufacturer of the printer/printerShare.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("manufacturer", value);
     }
     /**
-     * Sets the model property value. The model property
+     * Sets the model property value. The model name of the printer/printerShare.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {

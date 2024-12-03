@@ -41,19 +41,21 @@ public class GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTi
         super(requestAdapter, "{+baseurl}/reports/serviceActivity/getMessageVolumeMetricsForTeamsChat(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes){?%24count,%24filter,%24search,%24skip,%24top,aggregationIntervalInMinutes*}", rawUrl);
     }
     /**
-     * Invoke function getMessageVolumeMetricsForTeamsChat
+     * Get the number of chat messages successfully sent and delivered in Teams.
      * @return a {@link GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmessagevolumemetricsforteamschat?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getMessageVolumeMetricsForTeamsChat
+     * Get the number of chat messages successfully sent and delivered in Teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmessagevolumemetricsforteamschat?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTi
         return this.requestAdapter.send(requestInfo, errorMapping, GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getMessageVolumeMetricsForTeamsChat
+     * Get the number of chat messages successfully sent and delivered in Teams.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTi
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getMessageVolumeMetricsForTeamsChat
+     * Get the number of chat messages successfully sent and delivered in Teams.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTi
         return new GetMessageVolumeMetricsForTeamsChatWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getMessageVolumeMetricsForTeamsChat
+     * Get the number of chat messages successfully sent and delivered in Teams.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

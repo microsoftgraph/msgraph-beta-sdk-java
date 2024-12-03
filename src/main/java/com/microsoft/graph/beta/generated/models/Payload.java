@@ -66,7 +66,7 @@ public class Payload extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the detail property value. Additional details about the payload.
+     * Gets the detail property value. More details about the payload.
      * @return a {@link PayloadDetail}
      */
     @jakarta.annotation.Nullable
@@ -217,7 +217,7 @@ public class Payload extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
+     * Gets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant, phishTraining. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant, phishTraining. For more information on the types of social engineering attack techniques, see simulations.
      * @return a {@link SimulationAttackTechnique}
      */
     @jakarta.annotation.Nullable
@@ -298,7 +298,7 @@ public class Payload extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the detail property value. Additional details about the payload.
+     * Sets the detail property value. More details about the payload.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final PayloadDetail value) {
@@ -403,7 +403,7 @@ public class Payload extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant. For more information on the types of social engineering attack techniques, see simulations.
+     * Sets the technique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue, oAuthConsentGrant, phishTraining. You must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: oAuthConsentGrant, phishTraining. For more information on the types of social engineering attack techniques, see simulations.
      * @param value Value to set for the technique property.
      */
     public void setTechnique(@jakarta.annotation.Nullable final SimulationAttackTechnique value) {

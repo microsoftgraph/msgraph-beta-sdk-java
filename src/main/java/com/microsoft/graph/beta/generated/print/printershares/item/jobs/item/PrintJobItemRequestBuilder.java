@@ -157,7 +157,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get jobs from print
+     * The list of jobs that are queued for printing by the printer/printerShare.
      * @return a {@link PrintJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -169,7 +169,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get jobs from print
+     * The list of jobs that are queued for printing by the printer/printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -242,7 +242,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get jobs from print
+     * The list of jobs that are queued for printing by the printer/printerShare.
      * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
@@ -253,7 +253,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get jobs from print
+     * The list of jobs that are queued for printing by the printer/printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -317,7 +317,7 @@ public class PrintJobItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get jobs from print
+     * The list of jobs that are queued for printing by the printer/printerShare.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

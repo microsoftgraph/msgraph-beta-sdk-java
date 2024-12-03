@@ -41,19 +41,21 @@ public class GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWi
         super(requestAdapter, "{+baseurl}/reports/serviceActivity/getActiveUserMetricsForExcelWeb(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes){?%24count,%24filter,%24search,%24skip,%24top,aggregationIntervalInMinutes*}", rawUrl);
     }
     /**
-     * Invoke function getActiveUserMetricsForExcelWeb
+     * Get all the active usage based on the number of active users who open or save Excel for the web.
      * @return a {@link GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforexcelweb?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getActiveUserMetricsForExcelWeb
+     * Get all the active usage based on the number of active users who open or save Excel for the web.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforexcelweb?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWi
         return this.requestAdapter.send(requestInfo, errorMapping, GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getActiveUserMetricsForExcelWeb
+     * Get all the active usage based on the number of active users who open or save Excel for the web.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWi
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getActiveUserMetricsForExcelWeb
+     * Get all the active usage based on the number of active users who open or save Excel for the web.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWi
         return new GetActiveUserMetricsForExcelWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getActiveUserMetricsForExcelWeb
+     * Get all the active usage based on the number of active users who open or save Excel for the web.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

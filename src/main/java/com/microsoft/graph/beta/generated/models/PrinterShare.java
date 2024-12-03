@@ -27,7 +27,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
         return new PrinterShare();
     }
     /**
-     * Gets the allowAllUsers property value. If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
+     * Gets the allowAllUsers property value. If true, all users and groups can access this printer share. This property supersedes the lists of allowed users and groups defined by the allowedUsers and allowedGroups navigation properties.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
         return this.backingStore.get("printer");
     }
     /**
-     * Gets the viewPoint property value. Additional data for a printer share as viewed by the signed-in user.
+     * Gets the viewPoint property value. More data for a printer share as viewed by the signed-in user.
      * @return a {@link PrinterShareViewpoint}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
         writer.writeObjectValue("viewPoint", this.getViewPoint());
     }
     /**
-     * Sets the allowAllUsers property value. If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.
+     * Sets the allowAllUsers property value. If true, all users and groups can access this printer share. This property supersedes the lists of allowed users and groups defined by the allowedUsers and allowedGroups navigation properties.
      * @param value Value to set for the allowAllUsers property.
      */
     public void setAllowAllUsers(@jakarta.annotation.Nullable final Boolean value) {
@@ -139,7 +139,7 @@ public class PrinterShare extends PrinterBase implements Parsable {
         this.backingStore.set("printer", value);
     }
     /**
-     * Sets the viewPoint property value. Additional data for a printer share as viewed by the signed-in user.
+     * Sets the viewPoint property value. More data for a printer share as viewed by the signed-in user.
      * @param value Value to set for the viewPoint property.
      */
     public void setViewPoint(@jakarta.annotation.Nullable final PrinterShareViewpoint value) {

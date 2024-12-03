@@ -29,6 +29,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.emailAuthenticationMethod": return new EmailAuthenticationMethod();
                 case "#microsoft.graph.fido2AuthenticationMethod": return new Fido2AuthenticationMethod();
+                case "#microsoft.graph.hardwareOathAuthenticationMethod": return new HardwareOathAuthenticationMethod();
                 case "#microsoft.graph.microsoftAuthenticatorAuthenticationMethod": return new MicrosoftAuthenticatorAuthenticationMethod();
                 case "#microsoft.graph.passwordAuthenticationMethod": return new PasswordAuthenticationMethod();
                 case "#microsoft.graph.passwordlessMicrosoftAuthenticatorAuthenticationMethod": return new PasswordlessMicrosoftAuthenticatorAuthenticationMethod();

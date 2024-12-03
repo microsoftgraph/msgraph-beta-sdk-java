@@ -41,19 +41,21 @@ public class GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWit
         super(requestAdapter, "{+baseurl}/reports/serviceActivity/getActiveUserMetricsForWordWeb(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes){?%24count,%24filter,%24search,%24skip,%24top,aggregationIntervalInMinutes*}", rawUrl);
     }
     /**
-     * Invoke function getActiveUserMetricsForWordWeb
+     * Get all the active usage based on the number of active users who open or save Word for the web.
      * @return a {@link GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforwordweb?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getActiveUserMetricsForWordWeb
+     * Get all the active usage based on the number of active users who open or save Word for the web.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforwordweb?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWit
         return this.requestAdapter.send(requestInfo, errorMapping, GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getActiveUserMetricsForWordWeb
+     * Get all the active usage based on the number of active users who open or save Word for the web.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWit
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getActiveUserMetricsForWordWeb
+     * Get all the active usage based on the number of active users who open or save Word for the web.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWit
         return new GetActiveUserMetricsForWordWebWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getActiveUserMetricsForWordWeb
+     * Get all the active usage based on the number of active users who open or save Word for the web.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

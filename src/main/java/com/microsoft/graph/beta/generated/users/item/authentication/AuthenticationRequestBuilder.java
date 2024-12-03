@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.Authentication;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.authentication.emailmethods.EmailMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.fido2methods.Fido2MethodsRequestBuilder;
+import com.microsoft.graph.beta.users.item.authentication.hardwareoathmethods.HardwareOathMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.methods.MethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.microsoftauthenticatormethods.MicrosoftAuthenticatorMethodsRequestBuilder;
 import com.microsoft.graph.beta.users.item.authentication.operations.OperationsRequestBuilder;
@@ -49,6 +50,14 @@ public class AuthenticationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public Fido2MethodsRequestBuilder fido2Methods() {
         return new Fido2MethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the hardwareOathMethods property of the microsoft.graph.authentication entity.
+     * @return a {@link HardwareOathMethodsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public HardwareOathMethodsRequestBuilder hardwareOathMethods() {
+        return new HardwareOathMethodsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the methods property of the microsoft.graph.authentication entity.

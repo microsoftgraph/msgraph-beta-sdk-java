@@ -18,6 +18,7 @@ import com.microsoft.graph.beta.approleassignments.AppRoleAssignmentsRequestBuil
 import com.microsoft.graph.beta.approvalworkflowproviders.ApprovalWorkflowProvidersRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.AuditLogsRequestBuilder;
 import com.microsoft.graph.beta.authenticationmethodconfigurations.AuthenticationMethodConfigurationsRequestBuilder;
+import com.microsoft.graph.beta.authenticationmethoddevices.AuthenticationMethodDevicesRequestBuilder;
 import com.microsoft.graph.beta.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.beta.bookingbusinesses.BookingBusinessesRequestBuilder;
 import com.microsoft.graph.beta.bookingcurrencies.BookingCurrenciesRequestBuilder;
@@ -271,6 +272,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AuthenticationMethodConfigurationsRequestBuilder authenticationMethodConfigurations() {
         return new AuthenticationMethodConfigurationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of authenticationMethodDevice entities.
+     * @return a {@link AuthenticationMethodDevicesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AuthenticationMethodDevicesRequestBuilder authenticationMethodDevices() {
+        return new AuthenticationMethodDevicesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the authenticationMethodsPolicy singleton.

@@ -41,19 +41,21 @@ public class GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveInte
         super(requestAdapter, "{+baseurl}/reports/serviceActivity/getActiveUserMetricsForEmailByModernAuthentication(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes){?%24count,%24filter,%24search,%24skip,%24top,aggregationIntervalInMinutes*}", rawUrl);
     }
     /**
-     * Invoke function getActiveUserMetricsForEmailByModernAuthentication
+     * Get all the active usage based on the number of users who signed in with modern authentication across all email apps.
      * @return a {@link GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforemailbymodernauthentication?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getActiveUserMetricsForEmailByModernAuthentication
+     * Get all the active usage based on the number of users who signed in with modern authentication across all email apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforemailbymodernauthentication?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveInte
         return this.requestAdapter.send(requestInfo, errorMapping, GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getActiveUserMetricsForEmailByModernAuthentication
+     * Get all the active usage based on the number of users who signed in with modern authentication across all email apps.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveInte
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getActiveUserMetricsForEmailByModernAuthentication
+     * Get all the active usage based on the number of users who signed in with modern authentication across all email apps.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveInte
         return new GetActiveUserMetricsForEmailByModernAuthenticationWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getActiveUserMetricsForEmailByModernAuthentication
+     * Get all the active usage based on the number of users who signed in with modern authentication across all email apps.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

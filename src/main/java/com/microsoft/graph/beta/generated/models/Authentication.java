@@ -49,6 +49,7 @@ public class Authentication extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("emailMethods", (n) -> { this.setEmailMethods(n.getCollectionOfObjectValues(EmailAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("fido2Methods", (n) -> { this.setFido2Methods(n.getCollectionOfObjectValues(Fido2AuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("hardwareOathMethods", (n) -> { this.setHardwareOathMethods(n.getCollectionOfObjectValues(HardwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("methods", (n) -> { this.setMethods(n.getCollectionOfObjectValues(AuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("microsoftAuthenticatorMethods", (n) -> { this.setMicrosoftAuthenticatorMethods(n.getCollectionOfObjectValues(MicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(LongRunningOperation::createFromDiscriminatorValue)); });
@@ -62,6 +63,14 @@ public class Authentication extends Entity implements Parsable {
         deserializerMap.put("temporaryAccessPassMethods", (n) -> { this.setTemporaryAccessPassMethods(n.getCollectionOfObjectValues(TemporaryAccessPassAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsHelloForBusinessMethods", (n) -> { this.setWindowsHelloForBusinessMethods(n.getCollectionOfObjectValues(WindowsHelloForBusinessAuthenticationMethod::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the hardwareOathMethods property value. The hardwareOathMethods property
+     * @return a {@link java.util.List<HardwareOathAuthenticationMethod>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<HardwareOathAuthenticationMethod> getHardwareOathMethods() {
+        return this.backingStore.get("hardwareOathMethods");
     }
     /**
      * Gets the methods property value. Represents all authentication methods registered to a user.
@@ -168,6 +177,7 @@ public class Authentication extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("emailMethods", this.getEmailMethods());
         writer.writeCollectionOfObjectValues("fido2Methods", this.getFido2Methods());
+        writer.writeCollectionOfObjectValues("hardwareOathMethods", this.getHardwareOathMethods());
         writer.writeCollectionOfObjectValues("methods", this.getMethods());
         writer.writeCollectionOfObjectValues("microsoftAuthenticatorMethods", this.getMicrosoftAuthenticatorMethods());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
@@ -194,6 +204,13 @@ public class Authentication extends Entity implements Parsable {
      */
     public void setFido2Methods(@jakarta.annotation.Nullable final java.util.List<Fido2AuthenticationMethod> value) {
         this.backingStore.set("fido2Methods", value);
+    }
+    /**
+     * Sets the hardwareOathMethods property value. The hardwareOathMethods property
+     * @param value Value to set for the hardwareOathMethods property.
+     */
+    public void setHardwareOathMethods(@jakarta.annotation.Nullable final java.util.List<HardwareOathAuthenticationMethod> value) {
+        this.backingStore.set("hardwareOathMethods", value);
     }
     /**
      * Sets the methods property value. Represents all authentication methods registered to a user.
