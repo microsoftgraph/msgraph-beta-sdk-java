@@ -41,19 +41,21 @@ public class GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWi
         super(requestAdapter, "{+baseurl}/reports/serviceActivity/getUsageMetricsForTeamsByLaunch(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes){?%24count,%24filter,%24search,%24skip,%24top,aggregationIntervalInMinutes*}", rawUrl);
     }
     /**
-     * Invoke function getUsageMetricsForTeamsByLaunch
+     * Get usage metrics based on the number of times users opened the Teams app without error.
      * @return a {@link GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getusagemetricsforteamsbylaunch?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getUsageMetricsForTeamsByLaunch
+     * Get usage metrics based on the number of times users opened the Teams app without error.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getusagemetricsforteamsbylaunch?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWi
         return this.requestAdapter.send(requestInfo, errorMapping, GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getUsageMetricsForTeamsByLaunch
+     * Get usage metrics based on the number of times users opened the Teams app without error.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWi
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getUsageMetricsForTeamsByLaunch
+     * Get usage metrics based on the number of times users opened the Teams app without error.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWi
         return new GetUsageMetricsForTeamsByLaunchWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getUsageMetricsForTeamsByLaunch
+     * Get usage metrics based on the number of times users opened the Teams app without error.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

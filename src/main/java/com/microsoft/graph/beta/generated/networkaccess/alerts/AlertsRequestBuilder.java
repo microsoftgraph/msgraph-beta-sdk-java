@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.networkaccess.alerts.count.CountRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.alerts.item.AlertItemRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.alerts.microsoftgraphnetworkaccessgetalertfrequencieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessGetAlertFrequenciesWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.alerts.microsoftgraphnetworkaccessgetalertseveritysummarieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.alerts.microsoftgraphnetworkaccessgetalertsummarieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessGetAlertSummariesWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -113,6 +114,18 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
         return new MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
+    }
+    /**
+     * Provides operations to call the getAlertSummaries method.
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
+     * @return a {@link MicrosoftGraphNetworkaccessGetAlertSummariesWithStartDateTimeWithEndDateTimeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphNetworkaccessGetAlertSummariesWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphNetworkaccessGetAlertSummariesWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(startDateTime);
+        return new MicrosoftGraphNetworkaccessGetAlertSummariesWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Create new navigation property to alerts for networkAccess

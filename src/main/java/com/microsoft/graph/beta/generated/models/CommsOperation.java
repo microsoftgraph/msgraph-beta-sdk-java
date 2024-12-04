@@ -35,7 +35,11 @@ public class CommsOperation extends Entity implements Parsable {
                 case "#microsoft.graph.recordOperation": return new RecordOperation();
                 case "#microsoft.graph.sendDtmfTonesOperation": return new SendDtmfTonesOperation();
                 case "#microsoft.graph.startHoldMusicOperation": return new StartHoldMusicOperation();
+                case "#microsoft.graph.startRecordingOperation": return new StartRecordingOperation();
+                case "#microsoft.graph.startTranscriptionOperation": return new StartTranscriptionOperation();
                 case "#microsoft.graph.stopHoldMusicOperation": return new StopHoldMusicOperation();
+                case "#microsoft.graph.stopRecordingOperation": return new StopRecordingOperation();
+                case "#microsoft.graph.stopTranscriptionOperation": return new StopTranscriptionOperation();
                 case "#microsoft.graph.subscribeToToneOperation": return new SubscribeToToneOperation();
                 case "#microsoft.graph.unmuteParticipantOperation": return new UnmuteParticipantOperation();
                 case "#microsoft.graph.updateRecordingStatusOperation": return new UpdateRecordingStatusOperation();

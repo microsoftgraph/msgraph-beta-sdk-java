@@ -41,19 +41,21 @@ public class GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeW
         super(requestAdapter, "{+baseurl}/reports/serviceActivity/getAudioStreamQoEMetricsForTeams(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes){?%24count,%24filter,%24search,%24skip,%24top,aggregationIntervalInMinutes*}", rawUrl);
     }
     /**
-     * Invoke function getAudioStreamQoEMetricsForTeams
+     * Get metrics based on the percentage of audio streams for which quality of experience (QoE) telemetry was received by the Teams service.
      * @return a {@link GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getaudiostreamqoemetricsforteams?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getAudioStreamQoEMetricsForTeams
+     * Get metrics based on the percentage of audio streams for which quality of experience (QoE) telemetry was received by the Teams service.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getaudiostreamqoemetricsforteams?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeW
         return this.requestAdapter.send(requestInfo, errorMapping, GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getAudioStreamQoEMetricsForTeams
+     * Get metrics based on the percentage of audio streams for which quality of experience (QoE) telemetry was received by the Teams service.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeW
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getAudioStreamQoEMetricsForTeams
+     * Get metrics based on the percentage of audio streams for which quality of experience (QoE) telemetry was received by the Teams service.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeW
         return new GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getAudioStreamQoEMetricsForTeams
+     * Get metrics based on the percentage of audio streams for which quality of experience (QoE) telemetry was received by the Teams service.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

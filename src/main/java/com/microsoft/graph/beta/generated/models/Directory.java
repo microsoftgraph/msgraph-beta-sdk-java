@@ -41,6 +41,14 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("attributeSets");
     }
     /**
+     * Gets the authenticationMethodDevices property value. The authenticationMethodDevices property
+     * @return a {@link AuthenticationMethodDevice}
+     */
+    @jakarta.annotation.Nullable
+    public AuthenticationMethodDevice getAuthenticationMethodDevices() {
+        return this.backingStore.get("authenticationMethodDevices");
+    }
+    /**
      * Gets the certificateAuthorities property value. The certificateAuthorities property
      * @return a {@link CertificateAuthorityPath}
      */
@@ -105,6 +113,7 @@ public class Directory extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("administrativeUnits", (n) -> { this.setAdministrativeUnits(n.getCollectionOfObjectValues(AdministrativeUnit::createFromDiscriminatorValue)); });
         deserializerMap.put("attributeSets", (n) -> { this.setAttributeSets(n.getCollectionOfObjectValues(AttributeSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("authenticationMethodDevices", (n) -> { this.setAuthenticationMethodDevices(n.getObjectValue(AuthenticationMethodDevice::createFromDiscriminatorValue)); });
         deserializerMap.put("certificateAuthorities", (n) -> { this.setCertificateAuthorities(n.getObjectValue(CertificateAuthorityPath::createFromDiscriminatorValue)); });
         deserializerMap.put("customSecurityAttributeDefinitions", (n) -> { this.setCustomSecurityAttributeDefinitions(n.getCollectionOfObjectValues(CustomSecurityAttributeDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -204,6 +213,7 @@ public class Directory extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("administrativeUnits", this.getAdministrativeUnits());
         writer.writeCollectionOfObjectValues("attributeSets", this.getAttributeSets());
+        writer.writeObjectValue("authenticationMethodDevices", this.getAuthenticationMethodDevices());
         writer.writeObjectValue("certificateAuthorities", this.getCertificateAuthorities());
         writer.writeCollectionOfObjectValues("customSecurityAttributeDefinitions", this.getCustomSecurityAttributeDefinitions());
         writer.writeCollectionOfObjectValues("deletedItems", this.getDeletedItems());
@@ -234,6 +244,13 @@ public class Directory extends Entity implements Parsable {
      */
     public void setAttributeSets(@jakarta.annotation.Nullable final java.util.List<AttributeSet> value) {
         this.backingStore.set("attributeSets", value);
+    }
+    /**
+     * Sets the authenticationMethodDevices property value. The authenticationMethodDevices property
+     * @param value Value to set for the authenticationMethodDevices property.
+     */
+    public void setAuthenticationMethodDevices(@jakarta.annotation.Nullable final AuthenticationMethodDevice value) {
+        this.backingStore.set("authenticationMethodDevices", value);
     }
     /**
      * Sets the certificateAuthorities property value. The certificateAuthorities property

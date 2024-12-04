@@ -37,7 +37,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/appRoleAssignments/{appRoleAssignment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes an appRoleAssignment that a group has been granted.
+     * Delete an appRoleAssignment that a group has been granted.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete-approleassignments?view=graph-rest-beta">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Deletes an appRoleAssignment that a group has been granted.
+     * Delete an appRoleAssignment that a group has been granted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-delete-approleassignments?view=graph-rest-beta">Find more info here</a>
@@ -104,7 +104,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AppRoleAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Deletes an appRoleAssignment that a group has been granted.
+     * Delete an appRoleAssignment that a group has been granted.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes an appRoleAssignment that a group has been granted.
+     * Delete an appRoleAssignment that a group has been granted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

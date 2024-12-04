@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.directory;
 
 import com.microsoft.graph.beta.directory.administrativeunits.AdministrativeUnitsRequestBuilder;
 import com.microsoft.graph.beta.directory.attributesets.AttributeSetsRequestBuilder;
+import com.microsoft.graph.beta.directory.authenticationmethoddevices.AuthenticationMethodDevicesRequestBuilder;
 import com.microsoft.graph.beta.directory.certificateauthorities.CertificateAuthoritiesRequestBuilder;
 import com.microsoft.graph.beta.directory.customsecurityattributedefinitions.CustomSecurityAttributeDefinitionsRequestBuilder;
 import com.microsoft.graph.beta.directory.deleteditems.DeletedItemsRequestBuilder;
@@ -55,6 +56,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AttributeSetsRequestBuilder attributeSets() {
         return new AttributeSetsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the authenticationMethodDevices property of the microsoft.graph.directory entity.
+     * @return a {@link AuthenticationMethodDevicesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AuthenticationMethodDevicesRequestBuilder authenticationMethodDevices() {
+        return new AuthenticationMethodDevicesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the certificateAuthorities property of the microsoft.graph.directory entity.

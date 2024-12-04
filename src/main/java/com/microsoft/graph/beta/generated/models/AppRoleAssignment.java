@@ -59,7 +59,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
+     * Gets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Maximum length is 256 characters. Read-only. Supports $filter (eq and startswith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
         return this.backingStore.get("principalType");
     }
     /**
-     * Gets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made.
+     * Gets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made. Maximum length is 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
         this.backingStore.set("creationTimestamp", value);
     }
     /**
-     * Sets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
+     * Sets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Maximum length is 256 characters. Read-only. Supports $filter (eq and startswith).
      * @param value Value to set for the principalDisplayName property.
      */
     public void setPrincipalDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class AppRoleAssignment extends Entity implements Parsable {
         this.backingStore.set("principalType", value);
     }
     /**
-     * Sets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made.
+     * Sets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made. Maximum length is 256 characters.
      * @param value Value to set for the resourceDisplayName property.
      */
     public void setResourceDisplayName(@jakarta.annotation.Nullable final String value) {

@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.chann
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.filesfolder.FilesFolderRequestBuilder;
+import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.getallmembers.GetAllMembersRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.provisionemail.ProvisionEmailRequestBuilder;
@@ -62,6 +63,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the getAllMembers property of the microsoft.graph.channel entity.
+     * @return a {@link GetAllMembersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllMembersRequestBuilder getAllMembers() {
+        return new GetAllMembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.
