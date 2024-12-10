@@ -56,7 +56,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return this.backingStore;
     }
     /**
-     * Gets the crossRegionDisasterRecoveryEnabled property value. True if an end user is allowed to set up cross-region disaster recovery for Cloud PC; otherwise, false. The default value is false.
+     * Gets the crossRegionDisasterRecoveryEnabled property value. True if an end user is allowed to set up cross-region disaster recovery for Cloud PC; otherwise, false. The default value is false. This property is deprecated and will no longer be supported effective February 11, 2025. For scenarios where crossRegionDisasterRecoveryEnabled is true, set disasterRecoveryType to crossRegion. For scenarios where crossRegionDisasterRecoveryEnabled is false,  set disasterRecoveryType to notconfigured.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return this.backingStore.get("disasterRecoveryNetworkSetting");
     }
     /**
-     * Gets the disasterRecoveryType property value. The disasterRecoveryType property
+     * Gets the disasterRecoveryType property value. Indicates the type of disaster recovery to perform when a disaster occurs on the user's Cloud PC. The possible values are: notConfigured, crossRegion, premium, unknownFutureValue. The default value is notConfigured.
      * @return a {@link CloudPcDisasterRecoveryType}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         this.backingStore = value;
     }
     /**
-     * Sets the crossRegionDisasterRecoveryEnabled property value. True if an end user is allowed to set up cross-region disaster recovery for Cloud PC; otherwise, false. The default value is false.
+     * Sets the crossRegionDisasterRecoveryEnabled property value. True if an end user is allowed to set up cross-region disaster recovery for Cloud PC; otherwise, false. The default value is false. This property is deprecated and will no longer be supported effective February 11, 2025. For scenarios where crossRegionDisasterRecoveryEnabled is true, set disasterRecoveryType to crossRegion. For scenarios where crossRegionDisasterRecoveryEnabled is false,  set disasterRecoveryType to notconfigured.
      * @param value Value to set for the crossRegionDisasterRecoveryEnabled property.
      */
     public void setCrossRegionDisasterRecoveryEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -152,7 +152,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         this.backingStore.set("disasterRecoveryNetworkSetting", value);
     }
     /**
-     * Sets the disasterRecoveryType property value. The disasterRecoveryType property
+     * Sets the disasterRecoveryType property value. Indicates the type of disaster recovery to perform when a disaster occurs on the user's Cloud PC. The possible values are: notConfigured, crossRegion, premium, unknownFutureValue. The default value is notConfigured.
      * @param value Value to set for the disasterRecoveryType property.
      */
     public void setDisasterRecoveryType(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryType value) {

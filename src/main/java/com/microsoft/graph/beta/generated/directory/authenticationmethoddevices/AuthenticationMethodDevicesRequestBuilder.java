@@ -64,7 +64,7 @@ public class AuthenticationMethodDevicesRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get authenticationMethodDevices from directory
+     * Exposes the hardware OATH method in the directory.
      * @return a {@link AuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class AuthenticationMethodDevicesRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * Get authenticationMethodDevices from directory
+     * Exposes the hardware OATH method in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class AuthenticationMethodDevicesRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get authenticationMethodDevices from directory
+     * Exposes the hardware OATH method in the directory.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class AuthenticationMethodDevicesRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get authenticationMethodDevices from directory
+     * Exposes the hardware OATH method in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class AuthenticationMethodDevicesRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get authenticationMethodDevices from directory
+     * Exposes the hardware OATH method in the directory.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

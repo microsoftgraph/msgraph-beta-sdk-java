@@ -25,7 +25,7 @@ public class NewsLinkPage extends BaseSitePage implements Parsable {
         return new NewsLinkPage();
     }
     /**
-     * Gets the bannerImageWebUrl property value. The bannerImageWebUrl property
+     * Gets the bannerImageWebUrl property value. A link to the banner image for the newsLinkPage.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class NewsLinkPage extends BaseSitePage implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the newsSharepointIds property value. The newsSharepointIds property
+     * Gets the newsSharepointIds property value. The SharePoint IDs of the referenced news article if it's recognized as a SharePoint resource. Read-only.
      * @return a {@link SharepointIds}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class NewsLinkPage extends BaseSitePage implements Parsable {
         return this.backingStore.get("newsSharepointIds");
     }
     /**
-     * Gets the newsWebUrl property value. The newsWebUrl property
+     * Gets the newsWebUrl property value. The URL of the news article referenced by the newsLinkPage. It can be an external link.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class NewsLinkPage extends BaseSitePage implements Parsable {
         writer.writeStringValue("newsWebUrl", this.getNewsWebUrl());
     }
     /**
-     * Sets the bannerImageWebUrl property value. The bannerImageWebUrl property
+     * Sets the bannerImageWebUrl property value. A link to the banner image for the newsLinkPage.
      * @param value Value to set for the bannerImageWebUrl property.
      */
     public void setBannerImageWebUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("bannerImageWebUrl", value);
     }
     /**
-     * Sets the newsSharepointIds property value. The newsSharepointIds property
+     * Sets the newsSharepointIds property value. The SharePoint IDs of the referenced news article if it's recognized as a SharePoint resource. Read-only.
      * @param value Value to set for the newsSharepointIds property.
      */
     public void setNewsSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {
         this.backingStore.set("newsSharepointIds", value);
     }
     /**
-     * Sets the newsWebUrl property value. The newsWebUrl property
+     * Sets the newsWebUrl property value. The URL of the news article referenced by the newsLinkPage. It can be an external link.
      * @param value Value to set for the newsWebUrl property.
      */
     public void setNewsWebUrl(@jakarta.annotation.Nullable final String value) {

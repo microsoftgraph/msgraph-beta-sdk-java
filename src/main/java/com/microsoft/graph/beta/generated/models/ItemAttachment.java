@@ -36,7 +36,7 @@ public class ItemAttachment extends Attachment implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the item property value. The attached contact, message or event. Navigation property.
+     * Gets the item property value. The attached contact, message, or event. Navigation property.
      * @return a {@link OutlookItem}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ItemAttachment extends Attachment implements Parsable {
         writer.writeObjectValue("item", this.getItem());
     }
     /**
-     * Sets the item property value. The attached contact, message or event. Navigation property.
+     * Sets the item property value. The attached contact, message, or event. Navigation property.
      * @param value Value to set for the item property.
      */
     public void setItem(@jakarta.annotation.Nullable final OutlookItem value) {

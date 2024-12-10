@@ -55,7 +55,7 @@ public class AssignToRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/authenticationMethodDevices/{authenticationMethodDevice%2Did}/hardwareOathDevices/{hardwareOathTokenAuthenticationMethodDevice%2Did}/assignTo{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get assignTo from authenticationMethodDevices
+     * Assign the hardware OATH token to a user.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class AssignToRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get assignTo from authenticationMethodDevices
+     * Assign the hardware OATH token to a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -77,7 +77,7 @@ public class AssignToRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
-     * Get assignTo from authenticationMethodDevices
+     * Assign the hardware OATH token to a user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class AssignToRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get assignTo from authenticationMethodDevices
+     * Assign the hardware OATH token to a user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -107,7 +107,7 @@ public class AssignToRequestBuilder extends BaseRequestBuilder {
         return new AssignToRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get assignTo from authenticationMethodDevices
+     * Assign the hardware OATH token to a user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

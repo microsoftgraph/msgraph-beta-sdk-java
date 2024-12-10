@@ -26,7 +26,7 @@ public class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase im
         return new OneDriveForBusinessProtectionPolicy();
     }
     /**
-     * Gets the driveInclusionRules property value. Contains the details of the Onedrive for Business protection rule.
+     * Gets the driveInclusionRules property value. Contains the details of the OneDrive for Work or School protection rule.
      * @return a {@link java.util.List<DriveProtectionRule>}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase im
         return this.backingStore.get("driveInclusionRules");
     }
     /**
-     * Gets the driveProtectionUnits property value. Contains the protection units associated with a  OneDrive for Business protection policy.
+     * Gets the driveProtectionUnits property value. Contains the protection units associated with a  OneDrive for Work or School protection policy.
      * @return a {@link java.util.List<DriveProtectionUnit>}
      */
     @jakarta.annotation.Nullable
@@ -73,14 +73,14 @@ public class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase im
         writer.writeCollectionOfObjectValues("driveProtectionUnitsBulkAdditionJobs", this.getDriveProtectionUnitsBulkAdditionJobs());
     }
     /**
-     * Sets the driveInclusionRules property value. Contains the details of the Onedrive for Business protection rule.
+     * Sets the driveInclusionRules property value. Contains the details of the OneDrive for Work or School protection rule.
      * @param value Value to set for the driveInclusionRules property.
      */
     public void setDriveInclusionRules(@jakarta.annotation.Nullable final java.util.List<DriveProtectionRule> value) {
         this.backingStore.set("driveInclusionRules", value);
     }
     /**
-     * Sets the driveProtectionUnits property value. Contains the protection units associated with a  OneDrive for Business protection policy.
+     * Sets the driveProtectionUnits property value. Contains the protection units associated with a  OneDrive for Work or School protection policy.
      * @param value Value to set for the driveProtectionUnits property.
      */
     public void setDriveProtectionUnits(@jakarta.annotation.Nullable final java.util.List<DriveProtectionUnit> value) {

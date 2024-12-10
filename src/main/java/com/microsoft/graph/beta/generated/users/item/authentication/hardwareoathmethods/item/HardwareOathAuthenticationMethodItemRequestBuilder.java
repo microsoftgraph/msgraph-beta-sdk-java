@@ -82,7 +82,7 @@ public class HardwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get hardwareOathMethods from users
+     * The hardware OATH time-based one-time password (TOTP) devices assigned to a user for authentication.
      * @return a {@link HardwareOathAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -91,7 +91,7 @@ public class HardwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Get hardwareOathMethods from users
+     * The hardware OATH time-based one-time password (TOTP) devices assigned to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareOathAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -124,7 +124,7 @@ public class HardwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Get hardwareOathMethods from users
+     * The hardware OATH time-based one-time password (TOTP) devices assigned to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class HardwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Get hardwareOathMethods from users
+     * The hardware OATH time-based one-time password (TOTP) devices assigned to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -160,7 +160,7 @@ public class HardwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get hardwareOathMethods from users
+     * The hardware OATH time-based one-time password (TOTP) devices assigned to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

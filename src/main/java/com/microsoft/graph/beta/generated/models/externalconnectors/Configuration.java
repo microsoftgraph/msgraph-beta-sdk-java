@@ -48,7 +48,7 @@ public class Configuration implements AdditionalDataHolder, BackedModel, Parsabl
         return value;
     }
     /**
-     * Gets the authorizedAppIds property value. A collection of application IDs for registered Microsoft Entra apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+     * Gets the authorizedAppIds property value. A collection of application IDs for registered Microsoft Entra apps allowed to manage the externalConnection and index content in the externalConnection.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class Configuration implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the authorizedAppIds property value. A collection of application IDs for registered Microsoft Entra apps that are allowed to manage the externalConnection and to index content in the externalConnection.
+     * Sets the authorizedAppIds property value. A collection of application IDs for registered Microsoft Entra apps allowed to manage the externalConnection and index content in the externalConnection.
      * @param value Value to set for the authorizedAppIds property.
      */
     public void setAuthorizedAppIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

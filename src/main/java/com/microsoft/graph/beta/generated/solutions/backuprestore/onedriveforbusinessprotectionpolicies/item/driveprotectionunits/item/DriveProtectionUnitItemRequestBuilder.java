@@ -37,7 +37,7 @@ public class DriveProtectionUnitItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessProtectionPolicies/{oneDriveForBusinessProtectionPolicy%2Did}/driveProtectionUnits/{driveProtectionUnit%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Contains the protection units associated with a  OneDrive for Business protection policy.
+     * Contains the protection units associated with a  OneDrive for Work or School protection policy.
      * @return a {@link DriveProtectionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class DriveProtectionUnitItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Contains the protection units associated with a  OneDrive for Business protection policy.
+     * Contains the protection units associated with a  OneDrive for Work or School protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveProtectionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class DriveProtectionUnitItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveProtectionUnit::createFromDiscriminatorValue);
     }
     /**
-     * Contains the protection units associated with a  OneDrive for Business protection policy.
+     * Contains the protection units associated with a  OneDrive for Work or School protection policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DriveProtectionUnitItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Contains the protection units associated with a  OneDrive for Business protection policy.
+     * Contains the protection units associated with a  OneDrive for Work or School protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class DriveProtectionUnitItemRequestBuilder extends BaseRequestBuilder {
         return new DriveProtectionUnitItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Contains the protection units associated with a  OneDrive for Business protection policy.
+     * Contains the protection units associated with a  OneDrive for Work or School protection policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

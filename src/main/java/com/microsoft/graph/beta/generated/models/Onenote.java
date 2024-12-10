@@ -40,7 +40,7 @@ public class Onenote extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the notebooks property value. The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Gets the notebooks property value. The collection of OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @return a {@link java.util.List<Notebook>}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class Onenote extends Entity implements Parsable {
         return this.backingStore.get("operations");
     }
     /**
-     * Gets the pages property value. The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Gets the pages property value. The pages in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @return a {@link java.util.List<OnenotePage>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class Onenote extends Entity implements Parsable {
         return this.backingStore.get("resources");
     }
     /**
-     * Gets the sectionGroups property value. The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Gets the sectionGroups property value. The section groups in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @return a {@link java.util.List<SectionGroup>}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class Onenote extends Entity implements Parsable {
         return this.backingStore.get("sectionGroups");
     }
     /**
-     * Gets the sections property value. The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Gets the sections property value. The sections in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @return a {@link java.util.List<OnenoteSection>}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class Onenote extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("sections", this.getSections());
     }
     /**
-     * Sets the notebooks property value. The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Sets the notebooks property value. The collection of OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @param value Value to set for the notebooks property.
      */
     public void setNotebooks(@jakarta.annotation.Nullable final java.util.List<Notebook> value) {
@@ -116,7 +116,7 @@ public class Onenote extends Entity implements Parsable {
         this.backingStore.set("operations", value);
     }
     /**
-     * Sets the pages property value. The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Sets the pages property value. The pages in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @param value Value to set for the pages property.
      */
     public void setPages(@jakarta.annotation.Nullable final java.util.List<OnenotePage> value) {
@@ -130,14 +130,14 @@ public class Onenote extends Entity implements Parsable {
         this.backingStore.set("resources", value);
     }
     /**
-     * Sets the sectionGroups property value. The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Sets the sectionGroups property value. The section groups in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @param value Value to set for the sectionGroups property.
      */
     public void setSectionGroups(@jakarta.annotation.Nullable final java.util.List<SectionGroup> value) {
         this.backingStore.set("sectionGroups", value);
     }
     /**
-     * Sets the sections property value. The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Sets the sections property value. The sections in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @param value Value to set for the sections property.
      */
     public void setSections(@jakarta.annotation.Nullable final java.util.List<OnenoteSection> value) {

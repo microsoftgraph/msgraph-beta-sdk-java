@@ -58,7 +58,7 @@ public class Profile extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. Profile last modified time.
+     * Gets the lastModifiedDateTime property value. The date and time when the profile was last modified.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class Profile extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the name property value. Profile name.
+     * Gets the name property value. The name of the profile.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class Profile extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the policies property value. Traffic forwarding policies associated with this profile.
+     * Gets the policies property value. The traffic forwarding policies associated with this profile.
      * @return a {@link java.util.List<PolicyLink>}
      */
     @jakarta.annotation.Nullable
@@ -119,21 +119,21 @@ public class Profile extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. Profile last modified time.
+     * Sets the lastModifiedDateTime property value. The date and time when the profile was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the name property value. Profile name.
+     * Sets the name property value. The name of the profile.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the policies property value. Traffic forwarding policies associated with this profile.
+     * Sets the policies property value. The traffic forwarding policies associated with this profile.
      * @param value Value to set for the policies property.
      */
     public void setPolicies(@jakarta.annotation.Nullable final java.util.List<PolicyLink> value) {

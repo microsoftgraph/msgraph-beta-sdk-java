@@ -100,7 +100,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * The sections in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @return a {@link OnenoteSection}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -109,7 +109,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * The sections in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnenoteSection}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -167,7 +167,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * The sections in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -175,7 +175,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * The sections in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -227,7 +227,7 @@ public class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * The sections in all OneNote notebooks that the user or group owns. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

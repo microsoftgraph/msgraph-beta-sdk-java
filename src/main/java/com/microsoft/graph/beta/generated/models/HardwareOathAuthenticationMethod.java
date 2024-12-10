@@ -26,7 +26,7 @@ public class HardwareOathAuthenticationMethod extends AuthenticationMethod imple
         return new HardwareOathAuthenticationMethod();
     }
     /**
-     * Gets the device property value. The device property
+     * Gets the device property value. Exposes the hardware OATH method in the directory.
      * @return a {@link HardwareOathTokenAuthenticationMethodDevice}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class HardwareOathAuthenticationMethod extends AuthenticationMethod imple
         writer.writeObjectValue("device", this.getDevice());
     }
     /**
-     * Sets the device property value. The device property
+     * Sets the device property value. Exposes the hardware OATH method in the directory.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final HardwareOathTokenAuthenticationMethodDevice value) {

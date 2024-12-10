@@ -26,7 +26,7 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
         return new OneDriveForBusinessRestoreSession();
     }
     /**
-     * Gets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for Business drive.
+     * Gets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for Work or School drive.
      * @return a {@link java.util.List<DriveRestoreArtifact>}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class OneDriveForBusinessRestoreSession extends RestoreSessionBase implem
         writer.writeCollectionOfObjectValues("driveRestoreArtifactsBulkAdditionRequests", this.getDriveRestoreArtifactsBulkAdditionRequests());
     }
     /**
-     * Sets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for Business drive.
+     * Sets the driveRestoreArtifacts property value. A collection of restore points and destination details that can be used to restore a OneDrive for Work or School drive.
      * @param value Value to set for the driveRestoreArtifacts property.
      */
     public void setDriveRestoreArtifacts(@jakarta.annotation.Nullable final java.util.List<DriveRestoreArtifact> value) {
