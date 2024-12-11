@@ -44,7 +44,7 @@ public class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the restoredFolderId property value. The new restored folder identifier for the user.
+     * Gets the restoredFolderId property value. The newly restored folder identifier for the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -60,7 +60,7 @@ public class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsa
         return this.backingStore.get("restoredFolderName");
     }
     /**
-     * Gets the restoredItemCount property value. The restoredItemCount property
+     * Gets the restoredItemCount property value. The number of items that are being restored in the folder.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsa
         writer.writeIntegerValue("restoredItemCount", this.getRestoredItemCount());
     }
     /**
-     * Sets the restoredFolderId property value. The new restored folder identifier for the user.
+     * Sets the restoredFolderId property value. The newly restored folder identifier for the user.
      * @param value Value to set for the restoredFolderId property.
      */
     public void setRestoredFolderId(@jakarta.annotation.Nullable final String value) {
@@ -92,7 +92,7 @@ public class MailboxRestoreArtifact extends RestoreArtifactBase implements Parsa
         this.backingStore.set("restoredFolderName", value);
     }
     /**
-     * Sets the restoredItemCount property value. The restoredItemCount property
+     * Sets the restoredItemCount property value. The number of items that are being restored in the folder.
      * @param value Value to set for the restoredItemCount property.
      */
     public void setRestoredItemCount(@jakarta.annotation.Nullable final Integer value) {

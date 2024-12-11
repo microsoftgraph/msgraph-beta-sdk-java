@@ -70,7 +70,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/onenote/notebooks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * The collection of OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @return a {@link NotebookCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -79,7 +79,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * The collection of OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link NotebookCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -127,7 +127,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Notebook::createFromDiscriminatorValue);
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * The collection of OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -135,7 +135,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * The collection of OneNote notebooks that the user or group owns. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +181,7 @@ public class NotebooksRequestBuilder extends BaseRequestBuilder {
         return new NotebooksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * The collection of OneNote notebooks that the user or group owns. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -46,16 +46,18 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
         super(requestAdapter, "{+baseurl}/directory/authenticationMethodDevices/hardwareOathDevices/{hardwareOathTokenAuthenticationMethodDevice%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property hardwareOathDevices for directory
+     * Delete a Hardware OATH token. Token needs to be unassigned.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethoddevice-delete-hardwareoathdevices?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property hardwareOathDevices for directory
+     * Delete a Hardware OATH token. Token needs to be unassigned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethoddevice-delete-hardwareoathdevices?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get hardwareOathDevices from directory
+     * Read the properties and relationships of a hardwareOathTokenAuthenticationMethodDevice object.
      * @return a {@link HardwareOathTokenAuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/hardwareoathtokenauthenticationmethoddevice-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HardwareOathTokenAuthenticationMethodDevice get() {
         return get(null);
     }
     /**
-     * Get hardwareOathDevices from directory
+     * Read the properties and relationships of a hardwareOathTokenAuthenticationMethodDevice object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareOathTokenAuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/hardwareoathtokenauthenticationmethoddevice-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HardwareOathTokenAuthenticationMethodDevice get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
         return this.requestAdapter.send(requestInfo, errorMapping, HardwareOathTokenAuthenticationMethodDevice::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property hardwareOathDevices in directory
+     * Update the properties of a hardwareOathTokenAuthenticationMethodDevice object. The token needs to unassigned.
      * @param body The request body
      * @return a {@link HardwareOathTokenAuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/hardwareoathtokenauthenticationmethoddevice-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HardwareOathTokenAuthenticationMethodDevice patch(@jakarta.annotation.Nonnull final HardwareOathTokenAuthenticationMethodDevice body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property hardwareOathDevices in directory
+     * Update the properties of a hardwareOathTokenAuthenticationMethodDevice object. The token needs to unassigned.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareOathTokenAuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/hardwareoathtokenauthenticationmethoddevice-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HardwareOathTokenAuthenticationMethodDevice patch(@jakarta.annotation.Nonnull final HardwareOathTokenAuthenticationMethodDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
         return this.requestAdapter.send(requestInfo, errorMapping, HardwareOathTokenAuthenticationMethodDevice::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property hardwareOathDevices for directory
+     * Delete a Hardware OATH token. Token needs to be unassigned.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property hardwareOathDevices for directory
+     * Delete a Hardware OATH token. Token needs to be unassigned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
         return requestInfo;
     }
     /**
-     * Get hardwareOathDevices from directory
+     * Read the properties and relationships of a hardwareOathTokenAuthenticationMethodDevice object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
         return toGetRequestInformation(null);
     }
     /**
-     * Get hardwareOathDevices from directory
+     * Read the properties and relationships of a hardwareOathTokenAuthenticationMethodDevice object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
         return requestInfo;
     }
     /**
-     * Update the navigation property hardwareOathDevices in directory
+     * Update the properties of a hardwareOathTokenAuthenticationMethodDevice object. The token needs to unassigned.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property hardwareOathDevices in directory
+     * Update the properties of a hardwareOathTokenAuthenticationMethodDevice object. The token needs to unassigned.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get hardwareOathDevices from directory
+     * Read the properties and relationships of a hardwareOathTokenAuthenticationMethodDevice object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

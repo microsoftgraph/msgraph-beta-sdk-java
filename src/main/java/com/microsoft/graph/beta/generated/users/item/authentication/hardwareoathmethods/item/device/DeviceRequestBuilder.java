@@ -73,7 +73,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get device from users
+     * Exposes the hardware OATH method in the directory.
      * @return a {@link HardwareOathTokenAuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get device from users
+     * Exposes the hardware OATH method in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareOathTokenAuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get device from users
+     * Exposes the hardware OATH method in the directory.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get device from users
+     * Exposes the hardware OATH method in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get device from users
+     * Exposes the hardware OATH method in the directory.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

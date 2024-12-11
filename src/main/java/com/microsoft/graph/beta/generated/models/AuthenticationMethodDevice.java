@@ -32,7 +32,7 @@ public class AuthenticationMethodDevice extends Entity implements Parsable {
         return new AuthenticationMethodDevice();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Optional name given to the hardware OATH device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class AuthenticationMethodDevice extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hardwareOathDevices property value. The hardwareOathDevices property
+     * Gets the hardwareOathDevices property value. Exposes the hardware OATH method in the directory.
      * @return a {@link java.util.List<HardwareOathTokenAuthenticationMethodDevice>}
      */
     @jakarta.annotation.Nullable
@@ -69,14 +69,14 @@ public class AuthenticationMethodDevice extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("hardwareOathDevices", this.getHardwareOathDevices());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Optional name given to the hardware OATH device.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the hardwareOathDevices property value. The hardwareOathDevices property
+     * Sets the hardwareOathDevices property value. Exposes the hardware OATH method in the directory.
      * @param value Value to set for the hardwareOathDevices property.
      */
     public void setHardwareOathDevices(@jakarta.annotation.Nullable final java.util.List<HardwareOathTokenAuthenticationMethodDevice> value) {

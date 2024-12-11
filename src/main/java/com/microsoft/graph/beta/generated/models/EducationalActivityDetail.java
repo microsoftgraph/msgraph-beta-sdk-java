@@ -88,7 +88,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. Long-form name of the program that the user has provided.
+     * Gets the displayName property value. Long-form name of the program that the user provided.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("fieldsOfStudy");
     }
     /**
-     * Gets the grade property value. The final grade, class, GPA or score.
+     * Gets the grade property value. The final grade, class, GPA, or score.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("grade");
     }
     /**
-     * Gets the notes property value. Additional notes the user has provided.
+     * Gets the notes property value. More notes the user provided.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -216,7 +216,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. Long-form name of the program that the user has provided.
+     * Sets the displayName property value. Long-form name of the program that the user provided.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -230,14 +230,14 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         this.backingStore.set("fieldsOfStudy", value);
     }
     /**
-     * Sets the grade property value. The final grade, class, GPA or score.
+     * Sets the grade property value. The final grade, class, GPA, or score.
      * @param value Value to set for the grade property.
      */
     public void setGrade(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("grade", value);
     }
     /**
-     * Sets the notes property value. Additional notes the user has provided.
+     * Sets the notes property value. More notes the user provided.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final String value) {

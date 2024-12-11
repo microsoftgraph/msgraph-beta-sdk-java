@@ -26,7 +26,7 @@ public class Connectivity extends Entity implements Parsable {
         return new Connectivity();
     }
     /**
-     * Gets the branches property value. Branches represent locations for connectivity. DEPRECATED AND TO BE RETIRED SOON. Use the remoteNetwork relationship and its associated APIs instead.
+     * Gets the branches property value. The locations for connectivity. DEPRECATED AND TO BE RETIRED SOON. Use the remoteNetwork relationship and its associated APIs instead.
      * @return a {@link java.util.List<BranchSite>}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class Connectivity extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the remoteNetworks property value. Represent locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
+     * Gets the remoteNetworks property value. The locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
      * @return a {@link java.util.List<RemoteNetwork>}
      */
     @jakarta.annotation.Nullable
@@ -73,14 +73,14 @@ public class Connectivity extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("webCategories", this.getWebCategories());
     }
     /**
-     * Sets the branches property value. Branches represent locations for connectivity. DEPRECATED AND TO BE RETIRED SOON. Use the remoteNetwork relationship and its associated APIs instead.
+     * Sets the branches property value. The locations for connectivity. DEPRECATED AND TO BE RETIRED SOON. Use the remoteNetwork relationship and its associated APIs instead.
      * @param value Value to set for the branches property.
      */
     public void setBranches(@jakarta.annotation.Nullable final java.util.List<BranchSite> value) {
         this.backingStore.set("branches", value);
     }
     /**
-     * Sets the remoteNetworks property value. Represent locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
+     * Sets the remoteNetworks property value. The locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
      * @param value Value to set for the remoteNetworks property.
      */
     public void setRemoteNetworks(@jakarta.annotation.Nullable final java.util.List<RemoteNetwork> value) {

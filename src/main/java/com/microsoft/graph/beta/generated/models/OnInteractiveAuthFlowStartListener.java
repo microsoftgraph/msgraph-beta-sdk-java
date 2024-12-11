@@ -36,7 +36,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
         return deserializerMap;
     }
     /**
-     * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+     * Gets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. You can use this handler to define potential handler configurations for specific events.
      * @return a {@link OnInteractiveAuthFlowStartHandler}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class OnInteractiveAuthFlowStartListener extends AuthenticationEventListe
         writer.writeObjectValue("handler", this.getHandler());
     }
     /**
-     * Sets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. This lets us define potential handler configurations per-event.
+     * Sets the handler property value. Required. Configuration for what to invoke if the event resolves to this listener. You can use this handler to define potential handler configurations for specific events.
      * @param value Value to set for the handler property.
      */
     public void setHandler(@jakarta.annotation.Nullable final OnInteractiveAuthFlowStartHandler value) {

@@ -50,7 +50,7 @@ public class External implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
-     * Gets the authorizationSystems property value. Represents an onboarded AWS account, Azure subscription, or GCP project that Microsoft Entra Permissions Management will collect and analyze permissions and actions on.
+     * Gets the authorizationSystems property value. Represents an onboarded Amazon Web Services (AWS) account, Azure subscription, or Google Cloud Platform (GCP) project that Microsoft Entra Permissions Management collects and analyzes permissions and actions on.
      * @return a {@link java.util.List<AuthorizationSystem>}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class External implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the authorizationSystems property value. Represents an onboarded AWS account, Azure subscription, or GCP project that Microsoft Entra Permissions Management will collect and analyze permissions and actions on.
+     * Sets the authorizationSystems property value. Represents an onboarded Amazon Web Services (AWS) account, Azure subscription, or Google Cloud Platform (GCP) project that Microsoft Entra Permissions Management collects and analyzes permissions and actions on.
      * @param value Value to set for the authorizationSystems property.
      */
     public void setAuthorizationSystems(@jakarta.annotation.Nullable final java.util.List<AuthorizationSystem> value) {

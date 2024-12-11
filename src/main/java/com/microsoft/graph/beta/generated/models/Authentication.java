@@ -65,7 +65,7 @@ public class Authentication extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hardwareOathMethods property value. The hardwareOathMethods property
+     * Gets the hardwareOathMethods property value. The hardware OATH time-based one-time password (TOTP) devices assigned to a user for authentication.
      * @return a {@link java.util.List<HardwareOathAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
@@ -206,7 +206,7 @@ public class Authentication extends Entity implements Parsable {
         this.backingStore.set("fido2Methods", value);
     }
     /**
-     * Sets the hardwareOathMethods property value. The hardwareOathMethods property
+     * Sets the hardwareOathMethods property value. The hardware OATH time-based one-time password (TOTP) devices assigned to a user for authentication.
      * @param value Value to set for the hardwareOathMethods property.
      */
     public void setHardwareOathMethods(@jakarta.annotation.Nullable final java.util.List<HardwareOathAuthenticationMethod> value) {

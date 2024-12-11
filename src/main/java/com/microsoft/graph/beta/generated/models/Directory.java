@@ -41,7 +41,7 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("attributeSets");
     }
     /**
-     * Gets the authenticationMethodDevices property value. The authenticationMethodDevices property
+     * Gets the authenticationMethodDevices property value. Exposes the hardware OATH method in the directory.
      * @return a {@link AuthenticationMethodDevice}
      */
     @jakarta.annotation.Nullable
@@ -246,7 +246,7 @@ public class Directory extends Entity implements Parsable {
         this.backingStore.set("attributeSets", value);
     }
     /**
-     * Sets the authenticationMethodDevices property value. The authenticationMethodDevices property
+     * Sets the authenticationMethodDevices property value. Exposes the hardware OATH method in the directory.
      * @param value Value to set for the authenticationMethodDevices property.
      */
     public void setAuthenticationMethodDevices(@jakarta.annotation.Nullable final AuthenticationMethodDevice value) {

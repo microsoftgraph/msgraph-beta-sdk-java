@@ -56,7 +56,7 @@ public class RestoreSessionArtifactCount implements AdditionalDataHolder, Backed
         return this.backingStore;
     }
     /**
-     * Gets the completed property value. The completed property
+     * Gets the completed property value. The number of artifacts whose restoration completed.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class RestoreSessionArtifactCount implements AdditionalDataHolder, Backed
         return this.backingStore.get("completed");
     }
     /**
-     * Gets the failed property value. The failed property
+     * Gets the failed property value. The number of artifacts whose restoration failed.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class RestoreSessionArtifactCount implements AdditionalDataHolder, Backed
         return deserializerMap;
     }
     /**
-     * Gets the inProgress property value. The inProgress property
+     * Gets the inProgress property value. The number of artifacts whose restoration is in progress.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class RestoreSessionArtifactCount implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the total property value. The total property
+     * Gets the total property value. The number of artifacts present in the restore session.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class RestoreSessionArtifactCount implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the completed property value. The completed property
+     * Sets the completed property value. The number of artifacts whose restoration completed.
      * @param value Value to set for the completed property.
      */
     public void setCompleted(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("completed", value);
     }
     /**
-     * Sets the failed property value. The failed property
+     * Sets the failed property value. The number of artifacts whose restoration failed.
      * @param value Value to set for the failed property.
      */
     public void setFailed(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("failed", value);
     }
     /**
-     * Sets the inProgress property value. The inProgress property
+     * Sets the inProgress property value. The number of artifacts whose restoration is in progress.
      * @param value Value to set for the inProgress property.
      */
     public void setInProgress(@jakarta.annotation.Nullable final Integer value) {
@@ -166,7 +166,7 @@ public class RestoreSessionArtifactCount implements AdditionalDataHolder, Backed
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the total property value. The total property
+     * Sets the total property value. The number of artifacts present in the restore session.
      * @param value Value to set for the total property.
      */
     public void setTotal(@jakarta.annotation.Nullable final Integer value) {

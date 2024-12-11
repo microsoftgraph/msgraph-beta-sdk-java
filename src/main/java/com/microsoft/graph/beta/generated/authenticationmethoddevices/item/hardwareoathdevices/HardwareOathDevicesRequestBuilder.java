@@ -60,7 +60,7 @@ public class HardwareOathDevicesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/authenticationMethodDevices/{authenticationMethodDevice%2Did}/hardwareOathDevices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get hardwareOathDevices from authenticationMethodDevices
+     * Exposes the hardware OATH method in the directory.
      * @return a {@link HardwareOathTokenAuthenticationMethodDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class HardwareOathDevicesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get hardwareOathDevices from authenticationMethodDevices
+     * Exposes the hardware OATH method in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareOathTokenAuthenticationMethodDeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class HardwareOathDevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HardwareOathTokenAuthenticationMethodDevice::createFromDiscriminatorValue);
     }
     /**
-     * Get hardwareOathDevices from authenticationMethodDevices
+     * Exposes the hardware OATH method in the directory.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class HardwareOathDevicesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get hardwareOathDevices from authenticationMethodDevices
+     * Exposes the hardware OATH method in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class HardwareOathDevicesRequestBuilder extends BaseRequestBuilder {
         return new HardwareOathDevicesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get hardwareOathDevices from authenticationMethodDevices
+     * Exposes the hardware OATH method in the directory.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
