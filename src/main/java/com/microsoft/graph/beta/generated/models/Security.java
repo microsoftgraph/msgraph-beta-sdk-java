@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.security.Alert;
 import com.microsoft.graph.beta.models.security.AuditCoreRoot;
 import com.microsoft.graph.beta.models.security.CasesRoot;
 import com.microsoft.graph.beta.models.security.CollaborationRoot;
+import com.microsoft.graph.beta.models.security.DataDiscoveryRoot;
 import com.microsoft.graph.beta.models.security.IdentityContainer;
 import com.microsoft.graph.beta.models.security.Incident;
 import com.microsoft.graph.beta.models.security.InformationProtection;
@@ -126,6 +127,14 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("collaboration");
     }
     /**
+     * Gets the dataDiscovery property value. The dataDiscovery property
+     * @return a {@link DataDiscoveryRoot}
+     */
+    @jakarta.annotation.Nullable
+    public DataDiscoveryRoot getDataDiscovery() {
+        return this.backingStore.get("dataDiscovery");
+    }
+    /**
      * Gets the domainSecurityProfiles property value. The domainSecurityProfiles property
      * @return a {@link java.util.List<DomainSecurityProfile>}
      */
@@ -139,7 +148,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(29);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(30);
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
@@ -147,6 +156,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudAppSecurityProfiles", (n) -> { this.setCloudAppSecurityProfiles(n.getCollectionOfObjectValues(CloudAppSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("collaboration", (n) -> { this.setCollaboration(n.getObjectValue(CollaborationRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataDiscovery", (n) -> { this.setDataDiscovery(n.getObjectValue(DataDiscoveryRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("domainSecurityProfiles", (n) -> { this.setDomainSecurityProfiles(n.getCollectionOfObjectValues(DomainSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("fileSecurityProfiles", (n) -> { this.setFileSecurityProfiles(n.getCollectionOfObjectValues(FileSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("hostSecurityProfiles", (n) -> { this.setHostSecurityProfiles(n.getCollectionOfObjectValues(HostSecurityProfile::createFromDiscriminatorValue)); });
@@ -352,6 +362,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("cases", this.getCases());
         writer.writeCollectionOfObjectValues("cloudAppSecurityProfiles", this.getCloudAppSecurityProfiles());
         writer.writeObjectValue("collaboration", this.getCollaboration());
+        writer.writeObjectValue("dataDiscovery", this.getDataDiscovery());
         writer.writeCollectionOfObjectValues("domainSecurityProfiles", this.getDomainSecurityProfiles());
         writer.writeCollectionOfObjectValues("fileSecurityProfiles", this.getFileSecurityProfiles());
         writer.writeCollectionOfObjectValues("hostSecurityProfiles", this.getHostSecurityProfiles());
@@ -439,6 +450,13 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setCollaboration(@jakarta.annotation.Nullable final CollaborationRoot value) {
         this.backingStore.set("collaboration", value);
+    }
+    /**
+     * Sets the dataDiscovery property value. The dataDiscovery property
+     * @param value Value to set for the dataDiscovery property.
+     */
+    public void setDataDiscovery(@jakarta.annotation.Nullable final DataDiscoveryRoot value) {
+        this.backingStore.set("dataDiscovery", value);
     }
     /**
      * Sets the domainSecurityProfiles property value. The domainSecurityProfiles property

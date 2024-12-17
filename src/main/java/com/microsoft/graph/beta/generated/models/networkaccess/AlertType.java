@@ -13,7 +13,9 @@ public enum AlertType implements ValuedEnum {
     ThreatIntelligenceTransactions("threatIntelligenceTransactions"),
     UnknownFutureValue("unknownFutureValue"),
     WebContentBlocked("webContentBlocked"),
-    Malware("malware");
+    Malware("malware"),
+    PatientZero("patientZero"),
+    Dlp("dlp");
     public final String value;
     AlertType(final String value) {
         this.value = value;
@@ -33,6 +35,8 @@ public enum AlertType implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "webContentBlocked": return WebContentBlocked;
             case "malware": return Malware;
+            case "patientZero": return PatientZero;
+            case "dlp": return Dlp;
             default: return null;
         }
     }

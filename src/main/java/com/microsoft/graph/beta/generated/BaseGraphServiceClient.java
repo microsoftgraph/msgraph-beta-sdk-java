@@ -23,6 +23,7 @@ import com.microsoft.graph.beta.authenticationmethodspolicy.AuthenticationMethod
 import com.microsoft.graph.beta.bookingbusinesses.BookingBusinessesRequestBuilder;
 import com.microsoft.graph.beta.bookingcurrencies.BookingCurrenciesRequestBuilder;
 import com.microsoft.graph.beta.businessflowtemplates.BusinessFlowTemplatesRequestBuilder;
+import com.microsoft.graph.beta.certificateauthorities.CertificateAuthoritiesRequestBuilder;
 import com.microsoft.graph.beta.certificatebasedauthconfiguration.CertificateBasedAuthConfigurationRequestBuilder;
 import com.microsoft.graph.beta.chats.ChatsRequestBuilder;
 import com.microsoft.graph.beta.commands.CommandsRequestBuilder;
@@ -117,6 +118,7 @@ import com.microsoft.graph.beta.teams.TeamsRequestBuilder;
 import com.microsoft.graph.beta.teamstemplates.TeamsTemplatesRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.TeamTemplateDefinitionRequestBuilder;
 import com.microsoft.graph.beta.teamwork.TeamworkRequestBuilder;
+import com.microsoft.graph.beta.templates.TemplatesRequestBuilder;
 import com.microsoft.graph.beta.tenantrelationships.TenantRelationshipsRequestBuilder;
 import com.microsoft.graph.beta.termstore.TermStoreRequestBuilder;
 import com.microsoft.graph.beta.threatsubmission.ThreatSubmissionRequestBuilder;
@@ -312,6 +314,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BusinessFlowTemplatesRequestBuilder businessFlowTemplates() {
         return new BusinessFlowTemplatesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the certificateAuthorityPath singleton.
+     * @return a {@link CertificateAuthoritiesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CertificateAuthoritiesRequestBuilder certificateAuthorities() {
+        return new CertificateAuthoritiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
@@ -1024,6 +1034,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TeamworkRequestBuilder teamwork() {
         return new TeamworkRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the template singleton.
+     * @return a {@link TemplatesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TemplatesRequestBuilder templates() {
+        return new TemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tenantRelationship singleton.

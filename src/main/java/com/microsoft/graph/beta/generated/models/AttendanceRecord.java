@@ -41,6 +41,14 @@ public class AttendanceRecord extends Entity implements Parsable {
         return this.backingStore.get("emailAddress");
     }
     /**
+     * Gets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * @return a {@link VirtualEventExternalRegistrationInformation}
+     */
+    @jakarta.annotation.Nullable
+    public VirtualEventExternalRegistrationInformation getExternalRegistrationInformation() {
+        return this.backingStore.get("externalRegistrationInformation");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -49,6 +57,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attendanceIntervals", (n) -> { this.setAttendanceIntervals(n.getCollectionOfObjectValues(AttendanceInterval::createFromDiscriminatorValue)); });
         deserializerMap.put("emailAddress", (n) -> { this.setEmailAddress(n.getStringValue()); });
+        deserializerMap.put("externalRegistrationInformation", (n) -> { this.setExternalRegistrationInformation(n.getObjectValue(VirtualEventExternalRegistrationInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("identity", (n) -> { this.setIdentity(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("registrantId", (n) -> { this.setRegistrantId(n.getStringValue()); });
         deserializerMap.put("registrationId", (n) -> { this.setRegistrationId(n.getStringValue()); });
@@ -105,6 +114,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("attendanceIntervals", this.getAttendanceIntervals());
         writer.writeStringValue("emailAddress", this.getEmailAddress());
+        writer.writeObjectValue("externalRegistrationInformation", this.getExternalRegistrationInformation());
         writer.writeObjectValue("identity", this.getIdentity());
         writer.writeStringValue("registrantId", this.getRegistrantId());
         writer.writeStringValue("registrationId", this.getRegistrationId());
@@ -124,6 +134,13 @@ public class AttendanceRecord extends Entity implements Parsable {
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emailAddress", value);
+    }
+    /**
+     * Sets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * @param value Value to set for the externalRegistrationInformation property.
+     */
+    public void setExternalRegistrationInformation(@jakarta.annotation.Nullable final VirtualEventExternalRegistrationInformation value) {
+        this.backingStore.set("externalRegistrationInformation", value);
     }
     /**
      * Sets the identity property value. Identity of the user associated with this attendance record. The specific type will be one of the following derived types of identity, depending on the type of the user: communicationsUserIdentity, azureCommunicationServicesUserIdentity.

@@ -3,6 +3,9 @@ package com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpo
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.apply.ApplyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.AssignmentsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.retrievepolicyapplyactionresult.RetrievePolicyApplyActionResultRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.retrievepolicyapplyschedule.RetrievePolicyApplyScheduleRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.schedulepolicyapplytask.SchedulePolicyApplyTaskRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcProvisioningPolicy;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -46,6 +49,30 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
     @jakarta.annotation.Nonnull
     public AssignmentsRequestBuilder assignments() {
         return new AssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrievePolicyApplyActionResult method.
+     * @return a {@link RetrievePolicyApplyActionResultRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrievePolicyApplyActionResultRequestBuilder retrievePolicyApplyActionResult() {
+        return new RetrievePolicyApplyActionResultRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrievePolicyApplySchedule method.
+     * @return a {@link RetrievePolicyApplyScheduleRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrievePolicyApplyScheduleRequestBuilder retrievePolicyApplySchedule() {
+        return new RetrievePolicyApplyScheduleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the schedulePolicyApplyTask method.
+     * @return a {@link SchedulePolicyApplyTaskRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SchedulePolicyApplyTaskRequestBuilder schedulePolicyApplyTask() {
+        return new SchedulePolicyApplyTaskRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CloudPcProvisioningPolicyItemRequestBuilder} and sets the default values.

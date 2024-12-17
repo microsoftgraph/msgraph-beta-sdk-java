@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.directory.certificateauthorities;
 
 import com.microsoft.graph.beta.directory.certificateauthorities.certificatebasedapplicationconfigurations.CertificateBasedApplicationConfigurationsRequestBuilder;
+import com.microsoft.graph.beta.directory.certificateauthorities.mutualtlsoauthconfigurations.MutualTlsOauthConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.models.CertificateAuthorityPath;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -28,6 +29,14 @@ public class CertificateAuthoritiesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CertificateBasedApplicationConfigurationsRequestBuilder certificateBasedApplicationConfigurations() {
         return new CertificateBasedApplicationConfigurationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mutualTlsOauthConfigurations property of the microsoft.graph.certificateAuthorityPath entity.
+     * @return a {@link MutualTlsOauthConfigurationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MutualTlsOauthConfigurationsRequestBuilder mutualTlsOauthConfigurations() {
+        return new MutualTlsOauthConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CertificateAuthoritiesRequestBuilder} and sets the default values.

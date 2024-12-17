@@ -26,7 +26,7 @@ public class CloudPcBulkCreateSnapshot extends CloudPcBulkAction implements Pars
         return new CloudPcBulkCreateSnapshot();
     }
     /**
-     * Gets the accessTier property value. The accessTier property
+     * Gets the accessTier property value. Indicates the access tier of the blob file that the snapshot is copied to. Possible values are hot, cool, cold, archive, and unknownFutureValue. The default value is hot. Read-Only.
      * @return a {@link CloudPcBlobAccessTier}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class CloudPcBulkCreateSnapshot extends CloudPcBulkAction implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the storageAccountId property value. The storageAccountId property
+     * Gets the storageAccountId property value. The unique identifier for Secure Azure Storage Account, which receives the restore points (snapshots). The value can't be modified after it's created. For example, '/subscriptions/06199b73-30a1-4922-8734-93feca64cdf6/resourceGroups/res2627/providers/Microsoft.Storage/storageAccounts/sto1125'. Read-Only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class CloudPcBulkCreateSnapshot extends CloudPcBulkAction implements Pars
         writer.writeStringValue("storageAccountId", this.getStorageAccountId());
     }
     /**
-     * Sets the accessTier property value. The accessTier property
+     * Sets the accessTier property value. Indicates the access tier of the blob file that the snapshot is copied to. Possible values are hot, cool, cold, archive, and unknownFutureValue. The default value is hot. Read-Only.
      * @param value Value to set for the accessTier property.
      */
     public void setAccessTier(@jakarta.annotation.Nullable final CloudPcBlobAccessTier value) {
         this.backingStore.set("accessTier", value);
     }
     /**
-     * Sets the storageAccountId property value. The storageAccountId property
+     * Sets the storageAccountId property value. The unique identifier for Secure Azure Storage Account, which receives the restore points (snapshots). The value can't be modified after it's created. For example, '/subscriptions/06199b73-30a1-4922-8734-93feca64cdf6/resourceGroups/res2627/providers/Microsoft.Storage/storageAccounts/sto1125'. Read-Only.
      * @param value Value to set for the storageAccountId property.
      */
     public void setStorageAccountId(@jakarta.annotation.Nullable final String value) {

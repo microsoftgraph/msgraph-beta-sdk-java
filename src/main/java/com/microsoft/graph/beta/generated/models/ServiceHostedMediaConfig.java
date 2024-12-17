@@ -32,8 +32,17 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("liveCaptionOptions", (n) -> { this.setLiveCaptionOptions(n.getObjectValue(LiveCaptionOptions::createFromDiscriminatorValue)); });
         deserializerMap.put("preFetchMedia", (n) -> { this.setPreFetchMedia(n.getCollectionOfObjectValues(MediaInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the liveCaptionOptions property value. The liveCaptionOptions property
+     * @return a {@link LiveCaptionOptions}
+     */
+    @jakarta.annotation.Nullable
+    public LiveCaptionOptions getLiveCaptionOptions() {
+        return this.backingStore.get("liveCaptionOptions");
     }
     /**
      * Gets the preFetchMedia property value. The list of media to prefetch.
@@ -50,7 +59,15 @@ public class ServiceHostedMediaConfig extends MediaConfig implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("liveCaptionOptions", this.getLiveCaptionOptions());
         writer.writeCollectionOfObjectValues("preFetchMedia", this.getPreFetchMedia());
+    }
+    /**
+     * Sets the liveCaptionOptions property value. The liveCaptionOptions property
+     * @param value Value to set for the liveCaptionOptions property.
+     */
+    public void setLiveCaptionOptions(@jakarta.annotation.Nullable final LiveCaptionOptions value) {
+        this.backingStore.set("liveCaptionOptions", value);
     }
     /**
      * Sets the preFetchMedia property value. The list of media to prefetch.

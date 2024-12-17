@@ -9,6 +9,7 @@ import com.microsoft.graph.beta.identity.conditionalaccess.ConditionalAccessRequ
 import com.microsoft.graph.beta.identity.continuousaccessevaluationpolicy.ContinuousAccessEvaluationPolicyRequestBuilder;
 import com.microsoft.graph.beta.identity.customauthenticationextensions.CustomAuthenticationExtensionsRequestBuilder;
 import com.microsoft.graph.beta.identity.identityproviders.IdentityProvidersRequestBuilder;
+import com.microsoft.graph.beta.identity.productchanges.ProductChangesRequestBuilder;
 import com.microsoft.graph.beta.identity.userflowattributes.UserFlowAttributesRequestBuilder;
 import com.microsoft.graph.beta.identity.userflows.UserFlowsRequestBuilder;
 import com.microsoft.graph.beta.models.IdentityContainer;
@@ -102,6 +103,14 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public IdentityProvidersRequestBuilder identityProviders() {
         return new IdentityProvidersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the productChanges property of the microsoft.graph.identityContainer entity.
+     * @return a {@link ProductChangesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProductChangesRequestBuilder productChanges() {
+        return new ProductChangesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.

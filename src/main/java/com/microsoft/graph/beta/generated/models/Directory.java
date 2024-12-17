@@ -130,6 +130,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("recommendations", (n) -> { this.setRecommendations(n.getCollectionOfObjectValues(Recommendation::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedEmailDomains", (n) -> { this.setSharedEmailDomains(n.getCollectionOfObjectValues(SharedEmailDomain::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
+        deserializerMap.put("templates", (n) -> { this.setTemplates(n.getObjectValue(Template::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -205,6 +206,14 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("subscriptions");
     }
     /**
+     * Gets the templates property value. The templates property
+     * @return a {@link Template}
+     */
+    @jakarta.annotation.Nullable
+    public Template getTemplates() {
+        return this.backingStore.get("templates");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -230,6 +239,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("recommendations", this.getRecommendations());
         writer.writeCollectionOfObjectValues("sharedEmailDomains", this.getSharedEmailDomains());
         writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
+        writer.writeObjectValue("templates", this.getTemplates());
     }
     /**
      * Sets the administrativeUnits property value. Conceptual container for user and group directory objects.
@@ -363,5 +373,12 @@ public class Directory extends Entity implements Parsable {
      */
     public void setSubscriptions(@jakarta.annotation.Nullable final java.util.List<CompanySubscription> value) {
         this.backingStore.set("subscriptions", value);
+    }
+    /**
+     * Sets the templates property value. The templates property
+     * @param value Value to set for the templates property.
+     */
+    public void setTemplates(@jakarta.annotation.Nullable final Template value) {
+        this.backingStore.set("templates", value);
     }
 }

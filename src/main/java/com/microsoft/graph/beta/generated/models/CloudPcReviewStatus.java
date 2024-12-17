@@ -36,7 +36,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
         return new CloudPcReviewStatus();
     }
     /**
-     * Gets the accessTier property value. The accessTier property
+     * Gets the accessTier property value. The blob access tier of the Azure Storage account in which the Cloud PC snapshot is saved with. Possible values are hot, cool, cold, and archive, default value is hot.
      * @return a {@link CloudPcBlobAccessTier}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class CloudPcReviewStatus implements AdditionalDataHolder, BackedModel, P
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accessTier property value. The accessTier property
+     * Sets the accessTier property value. The blob access tier of the Azure Storage account in which the Cloud PC snapshot is saved with. Possible values are hot, cool, cold, and archive, default value is hot.
      * @param value Value to set for the accessTier property.
      */
     public void setAccessTier(@jakarta.annotation.Nullable final CloudPcBlobAccessTier value) {
