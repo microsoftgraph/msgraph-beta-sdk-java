@@ -64,7 +64,7 @@ public class DriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A collection of restore points and destination details that can be used to restore a OneDrive for Work or School drive.
+     * A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
      * @return a {@link DriveRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class DriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A collection of restore points and destination details that can be used to restore a OneDrive for Work or School drive.
+     * A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class DriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of restore points and destination details that can be used to restore a OneDrive for Work or School drive.
+     * A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class DriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of restore points and destination details that can be used to restore a OneDrive for Work or School drive.
+     * A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class DriveRestoreArtifactItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of restore points and destination details that can be used to restore a OneDrive for Work or School drive.
+     * A collection of restore points and destination details that can be used to restore a OneDrive for work or school drive.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

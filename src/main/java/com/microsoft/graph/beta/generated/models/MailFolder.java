@@ -69,6 +69,7 @@ public class MailFolder extends Entity implements Parsable {
         deserializerMap.put("messageRules", (n) -> { this.setMessageRules(n.getCollectionOfObjectValues(MessageRule::createFromDiscriminatorValue)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(Message::createFromDiscriminatorValue)); });
         deserializerMap.put("multiValueExtendedProperties", (n) -> { this.setMultiValueExtendedProperties(n.getCollectionOfObjectValues(MultiValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(MailFolderOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("parentFolderId", (n) -> { this.setParentFolderId(n.getStringValue()); });
         deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("totalItemCount", (n) -> { this.setTotalItemCount(n.getIntegerValue()); });
@@ -108,6 +109,14 @@ public class MailFolder extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<MultiValueLegacyExtendedProperty> getMultiValueExtendedProperties() {
         return this.backingStore.get("multiValueExtendedProperties");
+    }
+    /**
+     * Gets the operations property value. The operations property
+     * @return a {@link java.util.List<MailFolderOperation>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MailFolderOperation> getOperations() {
+        return this.backingStore.get("operations");
     }
     /**
      * Gets the parentFolderId property value. The unique identifier for the mailFolder's parent mailFolder.
@@ -171,6 +180,7 @@ public class MailFolder extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("messageRules", this.getMessageRules());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
         writer.writeCollectionOfObjectValues("multiValueExtendedProperties", this.getMultiValueExtendedProperties());
+        writer.writeCollectionOfObjectValues("operations", this.getOperations());
         writer.writeStringValue("parentFolderId", this.getParentFolderId());
         writer.writeCollectionOfObjectValues("singleValueExtendedProperties", this.getSingleValueExtendedProperties());
         writer.writeIntegerValue("totalItemCount", this.getTotalItemCount());
@@ -226,6 +236,13 @@ public class MailFolder extends Entity implements Parsable {
      */
     public void setMultiValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<MultiValueLegacyExtendedProperty> value) {
         this.backingStore.set("multiValueExtendedProperties", value);
+    }
+    /**
+     * Sets the operations property value. The operations property
+     * @param value Value to set for the operations property.
+     */
+    public void setOperations(@jakarta.annotation.Nullable final java.util.List<MailFolderOperation> value) {
+        this.backingStore.set("operations", value);
     }
     /**
      * Sets the parentFolderId property value. The unique identifier for the mailFolder's parent mailFolder.

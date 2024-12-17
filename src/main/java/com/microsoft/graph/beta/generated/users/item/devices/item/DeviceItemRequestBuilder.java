@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.users.item.devices.item;
 import com.microsoft.graph.beta.models.Device;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.devices.item.commands.CommandsRequestBuilder;
+import com.microsoft.graph.beta.users.item.devices.item.devicetemplate.DeviceTemplateRequestBuilder;
 import com.microsoft.graph.beta.users.item.devices.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.beta.users.item.devices.item.memberof.MemberOfRequestBuilder;
 import com.microsoft.graph.beta.users.item.devices.item.registeredowners.RegisteredOwnersRequestBuilder;
@@ -34,6 +35,14 @@ public class DeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CommandsRequestBuilder commands() {
         return new CommandsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the deviceTemplate property of the microsoft.graph.device entity.
+     * @return a {@link DeviceTemplateRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeviceTemplateRequestBuilder deviceTemplate() {
+        return new DeviceTemplateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the extensions property of the microsoft.graph.device entity.

@@ -40,7 +40,16 @@ public class CertificateAuthorityPath extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateBasedApplicationConfigurations", (n) -> { this.setCertificateBasedApplicationConfigurations(n.getCollectionOfObjectValues(CertificateBasedApplicationConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("mutualTlsOauthConfigurations", (n) -> { this.setMutualTlsOauthConfigurations(n.getCollectionOfObjectValues(MutualTlsOauthConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the mutualTlsOauthConfigurations property value. The mutualTlsOauthConfigurations property
+     * @return a {@link java.util.List<MutualTlsOauthConfiguration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MutualTlsOauthConfiguration> getMutualTlsOauthConfigurations() {
+        return this.backingStore.get("mutualTlsOauthConfigurations");
     }
     /**
      * Serializes information the current object
@@ -50,6 +59,7 @@ public class CertificateAuthorityPath extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("certificateBasedApplicationConfigurations", this.getCertificateBasedApplicationConfigurations());
+        writer.writeCollectionOfObjectValues("mutualTlsOauthConfigurations", this.getMutualTlsOauthConfigurations());
     }
     /**
      * Sets the certificateBasedApplicationConfigurations property value. Defines the trusted certificate authorities for certificates that can be added to apps and service principals in the tenant.
@@ -57,5 +67,12 @@ public class CertificateAuthorityPath extends Entity implements Parsable {
      */
     public void setCertificateBasedApplicationConfigurations(@jakarta.annotation.Nullable final java.util.List<CertificateBasedApplicationConfiguration> value) {
         this.backingStore.set("certificateBasedApplicationConfigurations", value);
+    }
+    /**
+     * Sets the mutualTlsOauthConfigurations property value. The mutualTlsOauthConfigurations property
+     * @param value Value to set for the mutualTlsOauthConfigurations property.
+     */
+    public void setMutualTlsOauthConfigurations(@jakarta.annotation.Nullable final java.util.List<MutualTlsOauthConfiguration> value) {
+        this.backingStore.set("mutualTlsOauthConfigurations", value);
     }
 }

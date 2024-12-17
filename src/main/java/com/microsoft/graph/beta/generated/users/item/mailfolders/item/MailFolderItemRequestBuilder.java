@@ -7,7 +7,9 @@ import com.microsoft.graph.beta.users.item.mailfolders.item.copy.CopyRequestBuil
 import com.microsoft.graph.beta.users.item.mailfolders.item.messagerules.MessageRulesRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.move.MoveRequestBuilder;
+import com.microsoft.graph.beta.users.item.mailfolders.item.operations.OperationsRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.permanentdelete.PermanentDeleteRequestBuilder;
+import com.microsoft.graph.beta.users.item.mailfolders.item.updateallmessagesreadstate.UpdateAllMessagesReadStateRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.userconfigurations.UserConfigurationsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -68,12 +70,28 @@ public class MailFolderItemRequestBuilder extends BaseRequestBuilder {
         return new MoveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the operations property of the microsoft.graph.mailFolder entity.
+     * @return a {@link OperationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OperationsRequestBuilder operations() {
+        return new OperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the permanentDelete method.
      * @return a {@link PermanentDeleteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public PermanentDeleteRequestBuilder permanentDelete() {
         return new PermanentDeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the updateAllMessagesReadState method.
+     * @return a {@link UpdateAllMessagesReadStateRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UpdateAllMessagesReadStateRequestBuilder updateAllMessagesReadState() {
+        return new UpdateAllMessagesReadStateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userConfigurations property of the microsoft.graph.mailFolder entity.

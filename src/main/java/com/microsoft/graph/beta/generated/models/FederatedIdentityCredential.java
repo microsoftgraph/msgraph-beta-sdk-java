@@ -33,6 +33,14 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         return this.backingStore.get("audiences");
     }
     /**
+     * Gets the claimsMatchingExpression property value. Enables the use of claims matching expressions against specified claims. For the list of supported expression syntax and claims, visit the Flexible FIC reference.
+     * @return a {@link FederatedIdentityExpression}
+     */
+    @jakarta.annotation.Nullable
+    public FederatedIdentityExpression getClaimsMatchingExpression() {
+        return this.backingStore.get("claimsMatchingExpression");
+    }
+    /**
      * Gets the description property value. The un-validated, user-provided description of the federated identity credential. It has a limit of 600 characters. Optional.
      * @return a {@link String}
      */
@@ -48,6 +56,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audiences", (n) -> { this.setAudiences(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("claimsMatchingExpression", (n) -> { this.setClaimsMatchingExpression(n.getObjectValue(FederatedIdentityExpression::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("issuer", (n) -> { this.setIssuer(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -86,6 +95,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("audiences", this.getAudiences());
+        writer.writeObjectValue("claimsMatchingExpression", this.getClaimsMatchingExpression());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("issuer", this.getIssuer());
         writer.writeStringValue("name", this.getName());
@@ -97,6 +107,13 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
      */
     public void setAudiences(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("audiences", value);
+    }
+    /**
+     * Sets the claimsMatchingExpression property value. Enables the use of claims matching expressions against specified claims. For the list of supported expression syntax and claims, visit the Flexible FIC reference.
+     * @param value Value to set for the claimsMatchingExpression property.
+     */
+    public void setClaimsMatchingExpression(@jakarta.annotation.Nullable final FederatedIdentityExpression value) {
+        this.backingStore.set("claimsMatchingExpression", value);
     }
     /**
      * Sets the description property value. The un-validated, user-provided description of the federated identity credential. It has a limit of 600 characters. Optional.

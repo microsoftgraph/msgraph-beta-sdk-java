@@ -21,6 +21,7 @@ import com.microsoft.graph.beta.directory.sharedemaildomains.SharedEmailDomainsR
 import com.microsoft.graph.beta.directory.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptionswithcommercesubscriptionid.SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptionswithocpsubscriptionid.SubscriptionsWithOcpSubscriptionIdRequestBuilder;
+import com.microsoft.graph.beta.directory.templates.TemplatesRequestBuilder;
 import com.microsoft.graph.beta.models.Directory;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -192,6 +193,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SubscriptionsRequestBuilder subscriptions() {
         return new SubscriptionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the templates property of the microsoft.graph.directory entity.
+     * @return a {@link TemplatesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TemplatesRequestBuilder templates() {
+        return new TemplatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link DirectoryRequestBuilder} and sets the default values.

@@ -101,7 +101,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(24);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(27);
         deserializerMap.put("alternateUrl", (n) -> { this.setAlternateUrl(n.getStringValue()); });
         deserializerMap.put("applicationServerTimeout", (n) -> { this.setApplicationServerTimeout(n.getStringValue()); });
         deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getStringValue()); });
@@ -126,6 +126,9 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("verifiedCustomDomainCertificatesMetadata", (n) -> { this.setVerifiedCustomDomainCertificatesMetadata(n.getObjectValue(VerifiedCustomDomainCertificatesMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("verifiedCustomDomainKeyCredential", (n) -> { this.setVerifiedCustomDomainKeyCredential(n.getObjectValue(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("verifiedCustomDomainPasswordCredential", (n) -> { this.setVerifiedCustomDomainPasswordCredential(n.getObjectValue(PasswordCredential::createFromDiscriminatorValue)); });
+        deserializerMap.put("wafAllowedHeaders", (n) -> { this.setWafAllowedHeaders(n.getObjectValue(WafAllowedHeadersDictionary::createFromDiscriminatorValue)); });
+        deserializerMap.put("wafIpRanges", (n) -> { this.setWafIpRanges(n.getCollectionOfObjectValues(IpRange::createFromDiscriminatorValue)); });
+        deserializerMap.put("wafProvider", (n) -> { this.setWafProvider(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -281,6 +284,30 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("verifiedCustomDomainPasswordCredential");
     }
     /**
+     * Gets the wafAllowedHeaders property value. The wafAllowedHeaders property
+     * @return a {@link WafAllowedHeadersDictionary}
+     */
+    @jakarta.annotation.Nullable
+    public WafAllowedHeadersDictionary getWafAllowedHeaders() {
+        return this.backingStore.get("wafAllowedHeaders");
+    }
+    /**
+     * Gets the wafIpRanges property value. The wafIpRanges property
+     * @return a {@link java.util.List<IpRange>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<IpRange> getWafIpRanges() {
+        return this.backingStore.get("wafIpRanges");
+    }
+    /**
+     * Gets the wafProvider property value. The wafProvider property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getWafProvider() {
+        return this.backingStore.get("wafProvider");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -310,6 +337,9 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         writer.writeObjectValue("verifiedCustomDomainCertificatesMetadata", this.getVerifiedCustomDomainCertificatesMetadata());
         writer.writeObjectValue("verifiedCustomDomainKeyCredential", this.getVerifiedCustomDomainKeyCredential());
         writer.writeObjectValue("verifiedCustomDomainPasswordCredential", this.getVerifiedCustomDomainPasswordCredential());
+        writer.writeObjectValue("wafAllowedHeaders", this.getWafAllowedHeaders());
+        writer.writeCollectionOfObjectValues("wafIpRanges", this.getWafIpRanges());
+        writer.writeStringValue("wafProvider", this.getWafProvider());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -494,5 +524,26 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
      */
     public void setVerifiedCustomDomainPasswordCredential(@jakarta.annotation.Nullable final PasswordCredential value) {
         this.backingStore.set("verifiedCustomDomainPasswordCredential", value);
+    }
+    /**
+     * Sets the wafAllowedHeaders property value. The wafAllowedHeaders property
+     * @param value Value to set for the wafAllowedHeaders property.
+     */
+    public void setWafAllowedHeaders(@jakarta.annotation.Nullable final WafAllowedHeadersDictionary value) {
+        this.backingStore.set("wafAllowedHeaders", value);
+    }
+    /**
+     * Sets the wafIpRanges property value. The wafIpRanges property
+     * @param value Value to set for the wafIpRanges property.
+     */
+    public void setWafIpRanges(@jakarta.annotation.Nullable final java.util.List<IpRange> value) {
+        this.backingStore.set("wafIpRanges", value);
+    }
+    /**
+     * Sets the wafProvider property value. The wafProvider property
+     * @param value Value to set for the wafProvider property.
+     */
+    public void setWafProvider(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("wafProvider", value);
     }
 }

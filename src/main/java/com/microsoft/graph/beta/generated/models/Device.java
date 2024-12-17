@@ -35,6 +35,14 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("accountEnabled");
     }
     /**
+     * Gets the alternativeNames property value. The alternativeNames property
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getAlternativeNames() {
+        return this.backingStore.get("alternativeNames");
+    }
+    /**
      * Gets the alternativeSecurityIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
      * @return a {@link java.util.List<AlternativeSecurityId>}
      */
@@ -97,6 +105,14 @@ public class Device extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getDeviceOwnership() {
         return this.backingStore.get("deviceOwnership");
+    }
+    /**
+     * Gets the deviceTemplate property value. The deviceTemplate property
+     * @return a {@link java.util.List<DeviceTemplate>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DeviceTemplate> getDeviceTemplate() {
+        return this.backingStore.get("deviceTemplate");
     }
     /**
      * Gets the deviceVersion property value. For internal use only.
@@ -162,6 +178,7 @@ public class Device extends DirectoryObject implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
+        deserializerMap.put("alternativeNames", (n) -> { this.setAlternativeNames(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("alternativeSecurityIds", (n) -> { this.setAlternativeSecurityIds(n.getCollectionOfObjectValues(AlternativeSecurityId::createFromDiscriminatorValue)); });
         deserializerMap.put("approximateLastSignInDateTime", (n) -> { this.setApproximateLastSignInDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("commands", (n) -> { this.setCommands(n.getCollectionOfObjectValues(Command::createFromDiscriminatorValue)); });
@@ -170,6 +187,7 @@ public class Device extends DirectoryObject implements Parsable {
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceMetadata", (n) -> { this.setDeviceMetadata(n.getStringValue()); });
         deserializerMap.put("deviceOwnership", (n) -> { this.setDeviceOwnership(n.getStringValue()); });
+        deserializerMap.put("deviceTemplate", (n) -> { this.setDeviceTemplate(n.getCollectionOfObjectValues(DeviceTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceVersion", (n) -> { this.setDeviceVersion(n.getIntegerValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
@@ -439,6 +457,7 @@ public class Device extends DirectoryObject implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("accountEnabled", this.getAccountEnabled());
+        writer.writeCollectionOfPrimitiveValues("alternativeNames", this.getAlternativeNames());
         writer.writeCollectionOfObjectValues("alternativeSecurityIds", this.getAlternativeSecurityIds());
         writer.writeOffsetDateTimeValue("approximateLastSignInDateTime", this.getApproximateLastSignInDateTime());
         writer.writeCollectionOfObjectValues("commands", this.getCommands());
@@ -447,6 +466,7 @@ public class Device extends DirectoryObject implements Parsable {
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceMetadata", this.getDeviceMetadata());
         writer.writeStringValue("deviceOwnership", this.getDeviceOwnership());
+        writer.writeCollectionOfObjectValues("deviceTemplate", this.getDeviceTemplate());
         writer.writeIntegerValue("deviceVersion", this.getDeviceVersion());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("domainName", this.getDomainName());
@@ -489,6 +509,13 @@ public class Device extends DirectoryObject implements Parsable {
      */
     public void setAccountEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("accountEnabled", value);
+    }
+    /**
+     * Sets the alternativeNames property value. The alternativeNames property
+     * @param value Value to set for the alternativeNames property.
+     */
+    public void setAlternativeNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("alternativeNames", value);
     }
     /**
      * Sets the alternativeSecurityIds property value. For internal use only. Not nullable. Supports $filter (eq, not, ge, le).
@@ -545,6 +572,13 @@ public class Device extends DirectoryObject implements Parsable {
      */
     public void setDeviceOwnership(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceOwnership", value);
+    }
+    /**
+     * Sets the deviceTemplate property value. The deviceTemplate property
+     * @param value Value to set for the deviceTemplate property.
+     */
+    public void setDeviceTemplate(@jakarta.annotation.Nullable final java.util.List<DeviceTemplate> value) {
+        this.backingStore.set("deviceTemplate", value);
     }
     /**
      * Sets the deviceVersion property value. For internal use only.
