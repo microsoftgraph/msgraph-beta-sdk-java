@@ -111,7 +111,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the textType property value. The type of text being stored. Must be one of plain or richText
+     * Gets the textType property value. The type of text being stored. Must be one of plain or richText.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class TextColumn implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the textType property value. The type of text being stored. Must be one of plain or richText
+     * Sets the textType property value. The type of text being stored. Must be one of plain or richText.
      * @param value Value to set for the textType property.
      */
     public void setTextType(@jakarta.annotation.Nullable final String value) {

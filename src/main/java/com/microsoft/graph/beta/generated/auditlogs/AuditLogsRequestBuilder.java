@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.auditlogs.directoryaudits.DirectoryAuditsRequest
 import com.microsoft.graph.beta.auditlogs.directoryprovisioning.DirectoryProvisioningRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.provisioning.ProvisioningRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signins.SignInsRequestBuilder;
+import com.microsoft.graph.beta.auditlogs.signups.SignUpsRequestBuilder;
 import com.microsoft.graph.beta.models.AuditLogRoot;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -64,6 +65,14 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SignInsRequestBuilder signIns() {
         return new SignInsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the signUps property of the microsoft.graph.auditLogRoot entity.
+     * @return a {@link SignUpsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SignUpsRequestBuilder signUps() {
+        return new SignUpsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AuditLogsRequestBuilder} and sets the default values.

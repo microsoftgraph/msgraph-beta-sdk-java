@@ -37,7 +37,7 @@ public class IpApplicationSegmentItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/onPremisesPublishingProfiles/{onPremisesPublishingProfile%2Did}/applicationSegments/{ipApplicationSegment%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get applicationSegments from onPremisesPublishingProfiles
+     * Represents the segment configurations that are allowed for an on-premises non-web application published through Microsoft Entra application proxy.
      * @return a {@link IpApplicationSegment}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class IpApplicationSegmentItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get applicationSegments from onPremisesPublishingProfiles
+     * Represents the segment configurations that are allowed for an on-premises non-web application published through Microsoft Entra application proxy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IpApplicationSegment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class IpApplicationSegmentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IpApplicationSegment::createFromDiscriminatorValue);
     }
     /**
-     * Get applicationSegments from onPremisesPublishingProfiles
+     * Represents the segment configurations that are allowed for an on-premises non-web application published through Microsoft Entra application proxy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class IpApplicationSegmentItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get applicationSegments from onPremisesPublishingProfiles
+     * Represents the segment configurations that are allowed for an on-premises non-web application published through Microsoft Entra application proxy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class IpApplicationSegmentItemRequestBuilder extends BaseRequestBuilder {
         return new IpApplicationSegmentItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get applicationSegments from onPremisesPublishingProfiles
+     * Represents the segment configurations that are allowed for an on-premises non-web application published through Microsoft Entra application proxy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

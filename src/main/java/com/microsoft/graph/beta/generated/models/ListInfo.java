@@ -56,7 +56,7 @@ public class ListInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the contentTypesEnabled property value. If true, indicates that content types are enabled for this list.
+     * Gets the contentTypesEnabled property value. If true, it indicates that content types are enabled for this list.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class ListInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hidden property value. If true, indicates that the list isn't normally visible in the SharePoint user experience.
+     * Gets the hidden property value. If true, it indicates that the list isn't normally visible in the SharePoint user experience.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ListInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the template property value. An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
+     * Gets the template property value. Represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class ListInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the contentTypesEnabled property value. If true, indicates that content types are enabled for this list.
+     * Sets the contentTypesEnabled property value. If true, it indicates that content types are enabled for this list.
      * @param value Value to set for the contentTypesEnabled property.
      */
     public void setContentTypesEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("contentTypesEnabled", value);
     }
     /**
-     * Sets the hidden property value. If true, indicates that the list isn't normally visible in the SharePoint user experience.
+     * Sets the hidden property value. If true, it indicates that the list isn't normally visible in the SharePoint user experience.
      * @param value Value to set for the hidden property.
      */
     public void setHidden(@jakarta.annotation.Nullable final Boolean value) {
@@ -149,7 +149,7 @@ public class ListInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the template property value. An enumerated value that represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
+     * Sets the template property value. Represents the base list template used in creating the list. Possible values include documentLibrary, genericList, task, survey, announcements, contacts, and more.
      * @param value Value to set for the template property.
      */
     public void setTemplate(@jakarta.annotation.Nullable final String value) {

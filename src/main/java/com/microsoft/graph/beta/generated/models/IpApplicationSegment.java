@@ -27,7 +27,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         return new IpApplicationSegment();
     }
     /**
-     * Gets the application property value. The application property
+     * Gets the application property value. The on-premises nonweb application published through Microsoft Entra application proxy. Expanded by default and supports $expand.
      * @return a {@link Application}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         return this.backingStore.get("application");
     }
     /**
-     * Gets the destinationHost property value. The destinationHost property
+     * Gets the destinationHost property value. Either the IP address, IP range, or FQDN of the applicationSegment, with or without wildcards.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         return this.backingStore.get("destinationHost");
     }
     /**
-     * Gets the destinationType property value. The destinationType property
+     * Gets the destinationType property value. The possible values are: ipAddress, ipRange, ipRangeCidr, fqdn, dnsSuffix, unknownFutureValue.
      * @return a {@link PrivateNetworkDestinationType}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         return deserializerMap;
     }
     /**
-     * Gets the port property value. The port property
+     * Gets the port property value. Port supported for the application segment. DO NOT USE.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         return this.backingStore.get("port");
     }
     /**
-     * Gets the ports property value. The ports property
+     * Gets the ports property value. List of ports supported for the application segment.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         return this.backingStore.get("ports");
     }
     /**
-     * Gets the protocol property value. The protocol property
+     * Gets the protocol property value. Indicates the protocol of the network traffic acquired for the application segment. The possible values are: tcp, udp, unknownFutureValue.
      * @return a {@link EnumSet<PrivateNetworkProtocol>}
      */
     @jakarta.annotation.Nullable
@@ -104,42 +104,42 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         writer.writeEnumSetValue("protocol", this.getProtocol());
     }
     /**
-     * Sets the application property value. The application property
+     * Sets the application property value. The on-premises nonweb application published through Microsoft Entra application proxy. Expanded by default and supports $expand.
      * @param value Value to set for the application property.
      */
     public void setApplication(@jakarta.annotation.Nullable final Application value) {
         this.backingStore.set("application", value);
     }
     /**
-     * Sets the destinationHost property value. The destinationHost property
+     * Sets the destinationHost property value. Either the IP address, IP range, or FQDN of the applicationSegment, with or without wildcards.
      * @param value Value to set for the destinationHost property.
      */
     public void setDestinationHost(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("destinationHost", value);
     }
     /**
-     * Sets the destinationType property value. The destinationType property
+     * Sets the destinationType property value. The possible values are: ipAddress, ipRange, ipRangeCidr, fqdn, dnsSuffix, unknownFutureValue.
      * @param value Value to set for the destinationType property.
      */
     public void setDestinationType(@jakarta.annotation.Nullable final PrivateNetworkDestinationType value) {
         this.backingStore.set("destinationType", value);
     }
     /**
-     * Sets the port property value. The port property
+     * Sets the port property value. Port supported for the application segment. DO NOT USE.
      * @param value Value to set for the port property.
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("port", value);
     }
     /**
-     * Sets the ports property value. The ports property
+     * Sets the ports property value. List of ports supported for the application segment.
      * @param value Value to set for the ports property.
      */
     public void setPorts(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("ports", value);
     }
     /**
-     * Sets the protocol property value. The protocol property
+     * Sets the protocol property value. Indicates the protocol of the network traffic acquired for the application segment. The possible values are: tcp, udp, unknownFutureValue.
      * @param value Value to set for the protocol property.
      */
     public void setProtocol(@jakarta.annotation.Nullable final EnumSet<PrivateNetworkProtocol> value) {

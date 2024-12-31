@@ -76,7 +76,7 @@ public class DateTimeColumn implements AdditionalDataHolder, BackedModel, Parsab
         return deserializerMap;
     }
     /**
-     * Gets the format property value. Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
+     * Gets the format property value. Indicates whether the value should be presented as a date only or a date and time. It must be either dateOnly or dateTime.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class DateTimeColumn implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("displayAs", value);
     }
     /**
-     * Sets the format property value. Indicates whether the value should be presented as a date only or a date and time. Must be one of dateOnly or dateTime
+     * Sets the format property value. Indicates whether the value should be presented as a date only or a date and time. It must be either dateOnly or dateTime.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final String value) {

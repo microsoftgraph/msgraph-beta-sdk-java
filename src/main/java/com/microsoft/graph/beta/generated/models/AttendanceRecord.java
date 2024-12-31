@@ -41,7 +41,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         return this.backingStore.get("emailAddress");
     }
     /**
-     * Gets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * Gets the externalRegistrationInformation property value. The external information for a virtual event registration.
      * @return a {@link VirtualEventExternalRegistrationInformation}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class AttendanceRecord extends Entity implements Parsable {
         this.backingStore.set("emailAddress", value);
     }
     /**
-     * Sets the externalRegistrationInformation property value. The externalRegistrationInformation property
+     * Sets the externalRegistrationInformation property value. The external information for a virtual event registration.
      * @param value Value to set for the externalRegistrationInformation property.
      */
     public void setExternalRegistrationInformation(@jakarta.annotation.Nullable final VirtualEventExternalRegistrationInformation value) {

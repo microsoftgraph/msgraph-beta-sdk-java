@@ -113,6 +113,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("disasterRecoveryCapability", (n) -> { this.setDisasterRecoveryCapability(n.getObjectValue(CloudPcDisasterRecoveryCapability::createFromDiscriminatorValue)); });
         deserializerMap.put("diskEncryptionState", (n) -> { this.setDiskEncryptionState(n.getEnumValue(CloudPcDiskEncryptionState::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("frontlineCloudPcAvailability", (n) -> { this.setFrontlineCloudPcAvailability(n.getEnumValue(FrontlineCloudPcAvailability::forValue)); });
         deserializerMap.put("gracePeriodEndDateTime", (n) -> { this.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("imageDisplayName", (n) -> { this.setImageDisplayName(n.getStringValue()); });
         deserializerMap.put("lastLoginResult", (n) -> { this.setLastLoginResult(n.getObjectValue(CloudPcLoginResult::createFromDiscriminatorValue)); });
@@ -137,6 +138,14 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPcUserAccountType::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the frontlineCloudPcAvailability property value. The frontlineCloudPcAvailability property
+     * @return a {@link FrontlineCloudPcAvailability}
+     */
+    @jakarta.annotation.Nullable
+    public FrontlineCloudPcAvailability getFrontlineCloudPcAvailability() {
+        return this.backingStore.get("frontlineCloudPcAvailability");
     }
     /**
      * Gets the gracePeriodEndDateTime property value. The date and time when the grace period ends and reprovisioning or deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -338,6 +347,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeObjectValue("disasterRecoveryCapability", this.getDisasterRecoveryCapability());
         writer.writeEnumValue("diskEncryptionState", this.getDiskEncryptionState());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("frontlineCloudPcAvailability", this.getFrontlineCloudPcAvailability());
         writer.writeOffsetDateTimeValue("gracePeriodEndDateTime", this.getGracePeriodEndDateTime());
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
         writer.writeObjectValue("lastLoginResult", this.getLastLoginResult());
@@ -424,6 +434,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the frontlineCloudPcAvailability property value. The frontlineCloudPcAvailability property
+     * @param value Value to set for the frontlineCloudPcAvailability property.
+     */
+    public void setFrontlineCloudPcAvailability(@jakarta.annotation.Nullable final FrontlineCloudPcAvailability value) {
+        this.backingStore.set("frontlineCloudPcAvailability", value);
     }
     /**
      * Sets the gracePeriodEndDateTime property value. The date and time when the grace period ends and reprovisioning or deprovisioning happens. Required only if the status is inGracePeriod. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.

@@ -12,9 +12,9 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getrawr
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getrealtimeremoteconnectionlatencywithcloudpcid.GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getrealtimeremoteconnectionstatuswithcloudpcid.GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getremoteconnectionhistoricalreports.GetRemoteConnectionHistoricalReportsRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getshareduselicenseusagereport.GetSharedUseLicenseUsageReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.gettotalaggregatedremoteconnectionreports.GetTotalAggregatedRemoteConnectionReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievebulkactionstatusreport.RetrieveBulkActionStatusReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievecloudpctroubleshootreports.RetrieveCloudPcTroubleshootReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrieveconnectionqualityreports.RetrieveConnectionQualityReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievecrossregiondisasterrecoveryreport.RetrieveCrossRegionDisasterRecoveryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievefrontlinereports.RetrieveFrontlineReportsRequestBuilder;
@@ -119,14 +119,6 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new GetRemoteConnectionHistoricalReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the getSharedUseLicenseUsageReport method.
-     * @return a {@link GetSharedUseLicenseUsageReportRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetSharedUseLicenseUsageReportRequestBuilder getSharedUseLicenseUsageReport() {
-        return new GetSharedUseLicenseUsageReportRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the getTotalAggregatedRemoteConnectionReports method.
      * @return a {@link GetTotalAggregatedRemoteConnectionReportsRequestBuilder}
      */
@@ -141,6 +133,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RetrieveBulkActionStatusReportRequestBuilder retrieveBulkActionStatusReport() {
         return new RetrieveBulkActionStatusReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCloudPcTroubleshootReports method.
+     * @return a {@link RetrieveCloudPcTroubleshootReportsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPcTroubleshootReportsRequestBuilder retrieveCloudPcTroubleshootReports() {
+        return new RetrieveCloudPcTroubleshootReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveConnectionQualityReports method.

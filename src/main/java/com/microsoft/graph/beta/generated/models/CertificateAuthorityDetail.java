@@ -59,12 +59,12 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the deltacertificateRevocationListUrl property value. The URL to check to find out whether the certificate is revoked.
+     * Gets the deltaCertificateRevocationListUrl property value. The deltaCertificateRevocationListUrl property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public String getDeltacertificateRevocationListUrl() {
-        return this.backingStore.get("deltacertificateRevocationListUrl");
+    public String getDeltaCertificateRevocationListUrl() {
+        return this.backingStore.get("deltaCertificateRevocationListUrl");
     }
     /**
      * Gets the displayName property value. The display name of the certificate authority.
@@ -93,7 +93,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         deserializerMap.put("certificateAuthorityType", (n) -> { this.setCertificateAuthorityType(n.getEnumValue(CertificateAuthorityType::forValue)); });
         deserializerMap.put("certificateRevocationListUrl", (n) -> { this.setCertificateRevocationListUrl(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("deltacertificateRevocationListUrl", (n) -> { this.setDeltacertificateRevocationListUrl(n.getStringValue()); });
+        deserializerMap.put("deltaCertificateRevocationListUrl", (n) -> { this.setDeltaCertificateRevocationListUrl(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("isIssuerHintEnabled", (n) -> { this.setIsIssuerHintEnabled(n.getBooleanValue()); });
@@ -145,7 +145,7 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         writer.writeEnumValue("certificateAuthorityType", this.getCertificateAuthorityType());
         writer.writeStringValue("certificateRevocationListUrl", this.getCertificateRevocationListUrl());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeStringValue("deltacertificateRevocationListUrl", this.getDeltacertificateRevocationListUrl());
+        writer.writeStringValue("deltaCertificateRevocationListUrl", this.getDeltaCertificateRevocationListUrl());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeBooleanValue("isIssuerHintEnabled", this.getIsIssuerHintEnabled());
@@ -182,11 +182,11 @@ public class CertificateAuthorityDetail extends DirectoryObject implements Parsa
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the deltacertificateRevocationListUrl property value. The URL to check to find out whether the certificate is revoked.
-     * @param value Value to set for the deltacertificateRevocationListUrl property.
+     * Sets the deltaCertificateRevocationListUrl property value. The deltaCertificateRevocationListUrl property
+     * @param value Value to set for the deltaCertificateRevocationListUrl property.
      */
-    public void setDeltacertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("deltacertificateRevocationListUrl", value);
+    public void setDeltaCertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("deltaCertificateRevocationListUrl", value);
     }
     /**
      * Sets the displayName property value. The display name of the certificate authority.

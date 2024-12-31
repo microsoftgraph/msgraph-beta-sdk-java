@@ -43,14 +43,6 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("attachments");
     }
     /**
-     * Gets the attachmentsCount property value. The number of attachments in the email.
-     * @return a {@link Integer}
-     */
-    @jakarta.annotation.Nullable
-    public Integer getAttachmentsCount() {
-        return this.backingStore.get("attachmentsCount");
-    }
-    /**
      * Gets the authenticationDetails property value. The authentication details associated with the email.
      * @return a {@link AnalyzedEmailAuthenticationDetail}
      */
@@ -65,6 +57,14 @@ public class AnalyzedEmail extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getBulkComplaintLevel() {
         return this.backingStore.get("bulkComplaintLevel");
+    }
+    /**
+     * Gets the clientType property value. The clientType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getClientType() {
+        return this.backingStore.get("clientType");
     }
     /**
      * Gets the contexts property value. Provides context of the email.
@@ -99,6 +99,14 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("distributionList");
     }
     /**
+     * Gets the dlpRules property value. The dlpRules property
+     * @return a {@link java.util.List<AnalyzedEmailDlpRuleInfo>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AnalyzedEmailDlpRuleInfo> getDlpRules() {
+        return this.backingStore.get("dlpRules");
+    }
+    /**
      * Gets the emailClusterId property value. The identifier for the group of similar emails clustered based on heuristic analysis of their content.
      * @return a {@link String}
      */
@@ -123,15 +131,18 @@ public class AnalyzedEmail extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alertIds", (n) -> { this.setAlertIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(AnalyzedEmailAttachment::createFromDiscriminatorValue)); });
-        deserializerMap.put("attachmentsCount", (n) -> { this.setAttachmentsCount(n.getIntegerValue()); });
         deserializerMap.put("authenticationDetails", (n) -> { this.setAuthenticationDetails(n.getObjectValue(AnalyzedEmailAuthenticationDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("bulkComplaintLevel", (n) -> { this.setBulkComplaintLevel(n.getStringValue()); });
+        deserializerMap.put("clientType", (n) -> { this.setClientType(n.getStringValue()); });
         deserializerMap.put("contexts", (n) -> { this.setContexts(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("detectionMethods", (n) -> { this.setDetectionMethods(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("directionality", (n) -> { this.setDirectionality(n.getEnumValue(AntispamDirectionality::forValue)); });
         deserializerMap.put("distributionList", (n) -> { this.setDistributionList(n.getStringValue()); });
+        deserializerMap.put("dlpRules", (n) -> { this.setDlpRules(n.getCollectionOfObjectValues(AnalyzedEmailDlpRuleInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("emailClusterId", (n) -> { this.setEmailClusterId(n.getStringValue()); });
         deserializerMap.put("exchangeTransportRules", (n) -> { this.setExchangeTransportRules(n.getCollectionOfObjectValues(AnalyzedEmailExchangeTransportRuleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("forwardingDetail", (n) -> { this.setForwardingDetail(n.getStringValue()); });
+        deserializerMap.put("inboundConnectorFormattedName", (n) -> { this.setInboundConnectorFormattedName(n.getStringValue()); });
         deserializerMap.put("internetMessageId", (n) -> { this.setInternetMessageId(n.getStringValue()); });
         deserializerMap.put("language", (n) -> { this.setLanguage(n.getStringValue()); });
         deserializerMap.put("latestDelivery", (n) -> { this.setLatestDelivery(n.getObjectValue(AnalyzedEmailDeliveryDetail::createFromDiscriminatorValue)); });
@@ -142,16 +153,36 @@ public class AnalyzedEmail extends Entity implements Parsable {
         deserializerMap.put("phishConfidenceLevel", (n) -> { this.setPhishConfidenceLevel(n.getStringValue()); });
         deserializerMap.put("policy", (n) -> { this.setPolicy(n.getStringValue()); });
         deserializerMap.put("policyAction", (n) -> { this.setPolicyAction(n.getStringValue()); });
+        deserializerMap.put("policyType", (n) -> { this.setPolicyType(n.getStringValue()); });
+        deserializerMap.put("primaryOverrideSource", (n) -> { this.setPrimaryOverrideSource(n.getStringValue()); });
+        deserializerMap.put("recipientDetail", (n) -> { this.setRecipientDetail(n.getObjectValue(AnalyzedEmailRecipientDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("recipientEmailAddress", (n) -> { this.setRecipientEmailAddress(n.getStringValue()); });
         deserializerMap.put("returnPath", (n) -> { this.setReturnPath(n.getStringValue()); });
         deserializerMap.put("senderDetail", (n) -> { this.setSenderDetail(n.getObjectValue(AnalyzedEmailSenderDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("sizeInBytes", (n) -> { this.setSizeInBytes(n.getIntegerValue()); });
         deserializerMap.put("spamConfidenceLevel", (n) -> { this.setSpamConfidenceLevel(n.getStringValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
+        deserializerMap.put("threatDetectionDetails", (n) -> { this.setThreatDetectionDetails(n.getCollectionOfObjectValues(ThreatDetectionDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("threatTypes", (n) -> { this.setThreatTypes(n.getCollectionOfEnumValues(ThreatType::forValue)); });
+        deserializerMap.put("timelineEvents", (n) -> { this.setTimelineEvents(n.getCollectionOfObjectValues(TimelineEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("urls", (n) -> { this.setUrls(n.getCollectionOfObjectValues(AnalyzedEmailUrl::createFromDiscriminatorValue)); });
-        deserializerMap.put("urlsCount", (n) -> { this.setUrlsCount(n.getIntegerValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the forwardingDetail property value. The forwardingDetail property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getForwardingDetail() {
+        return this.backingStore.get("forwardingDetail");
+    }
+    /**
+     * Gets the inboundConnectorFormattedName property value. The inboundConnectorFormattedName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getInboundConnectorFormattedName() {
+        return this.backingStore.get("inboundConnectorFormattedName");
     }
     /**
      * Gets the internetMessageId property value. A public-facing identifier for the email that is sent. The message ID is in the format specified by RFC2822.
@@ -234,6 +265,30 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("policyAction");
     }
     /**
+     * Gets the policyType property value. The policyType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPolicyType() {
+        return this.backingStore.get("policyType");
+    }
+    /**
+     * Gets the primaryOverrideSource property value. The primaryOverrideSource property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPrimaryOverrideSource() {
+        return this.backingStore.get("primaryOverrideSource");
+    }
+    /**
+     * Gets the recipientDetail property value. The recipientDetail property
+     * @return a {@link AnalyzedEmailRecipientDetail}
+     */
+    @jakarta.annotation.Nullable
+    public AnalyzedEmailRecipientDetail getRecipientDetail() {
+        return this.backingStore.get("recipientDetail");
+    }
+    /**
      * Gets the recipientEmailAddress property value. Contains the email address of the recipient.
      * @return a {@link String}
      */
@@ -282,12 +337,28 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("subject");
     }
     /**
+     * Gets the threatDetectionDetails property value. The threatDetectionDetails property
+     * @return a {@link java.util.List<ThreatDetectionDetail>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ThreatDetectionDetail> getThreatDetectionDetails() {
+        return this.backingStore.get("threatDetectionDetails");
+    }
+    /**
      * Gets the threatTypes property value. Indicates the threat types. The possible values are: unknown, spam, malware, phish, none, unknownFutureValue.
      * @return a {@link java.util.List<ThreatType>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ThreatType> getThreatTypes() {
         return this.backingStore.get("threatTypes");
+    }
+    /**
+     * Gets the timelineEvents property value. The timelineEvents property
+     * @return a {@link java.util.List<TimelineEvent>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TimelineEvent> getTimelineEvents() {
+        return this.backingStore.get("timelineEvents");
     }
     /**
      * Gets the urls property value. A collection of the URLs in the email.
@@ -298,14 +369,6 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("urls");
     }
     /**
-     * Gets the urlsCount property value. The number of URLs in the email.
-     * @return a {@link Integer}
-     */
-    @jakarta.annotation.Nullable
-    public Integer getUrlsCount() {
-        return this.backingStore.get("urlsCount");
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -314,15 +377,18 @@ public class AnalyzedEmail extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("alertIds", this.getAlertIds());
         writer.writeCollectionOfObjectValues("attachments", this.getAttachments());
-        writer.writeIntegerValue("attachmentsCount", this.getAttachmentsCount());
         writer.writeObjectValue("authenticationDetails", this.getAuthenticationDetails());
         writer.writeStringValue("bulkComplaintLevel", this.getBulkComplaintLevel());
+        writer.writeStringValue("clientType", this.getClientType());
         writer.writeCollectionOfPrimitiveValues("contexts", this.getContexts());
         writer.writeCollectionOfPrimitiveValues("detectionMethods", this.getDetectionMethods());
         writer.writeEnumValue("directionality", this.getDirectionality());
         writer.writeStringValue("distributionList", this.getDistributionList());
+        writer.writeCollectionOfObjectValues("dlpRules", this.getDlpRules());
         writer.writeStringValue("emailClusterId", this.getEmailClusterId());
         writer.writeCollectionOfObjectValues("exchangeTransportRules", this.getExchangeTransportRules());
+        writer.writeStringValue("forwardingDetail", this.getForwardingDetail());
+        writer.writeStringValue("inboundConnectorFormattedName", this.getInboundConnectorFormattedName());
         writer.writeStringValue("internetMessageId", this.getInternetMessageId());
         writer.writeStringValue("language", this.getLanguage());
         writer.writeObjectValue("latestDelivery", this.getLatestDelivery());
@@ -333,15 +399,19 @@ public class AnalyzedEmail extends Entity implements Parsable {
         writer.writeStringValue("phishConfidenceLevel", this.getPhishConfidenceLevel());
         writer.writeStringValue("policy", this.getPolicy());
         writer.writeStringValue("policyAction", this.getPolicyAction());
+        writer.writeStringValue("policyType", this.getPolicyType());
+        writer.writeStringValue("primaryOverrideSource", this.getPrimaryOverrideSource());
+        writer.writeObjectValue("recipientDetail", this.getRecipientDetail());
         writer.writeStringValue("recipientEmailAddress", this.getRecipientEmailAddress());
         writer.writeStringValue("returnPath", this.getReturnPath());
         writer.writeObjectValue("senderDetail", this.getSenderDetail());
         writer.writeIntegerValue("sizeInBytes", this.getSizeInBytes());
         writer.writeStringValue("spamConfidenceLevel", this.getSpamConfidenceLevel());
         writer.writeStringValue("subject", this.getSubject());
+        writer.writeCollectionOfObjectValues("threatDetectionDetails", this.getThreatDetectionDetails());
         writer.writeCollectionOfEnumValues("threatTypes", this.getThreatTypes());
+        writer.writeCollectionOfObjectValues("timelineEvents", this.getTimelineEvents());
         writer.writeCollectionOfObjectValues("urls", this.getUrls());
-        writer.writeIntegerValue("urlsCount", this.getUrlsCount());
     }
     /**
      * Sets the alertIds property value. A collection of values that contain the IDs of any alerts associated with the email.
@@ -358,13 +428,6 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("attachments", value);
     }
     /**
-     * Sets the attachmentsCount property value. The number of attachments in the email.
-     * @param value Value to set for the attachmentsCount property.
-     */
-    public void setAttachmentsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.backingStore.set("attachmentsCount", value);
-    }
-    /**
      * Sets the authenticationDetails property value. The authentication details associated with the email.
      * @param value Value to set for the authenticationDetails property.
      */
@@ -377,6 +440,13 @@ public class AnalyzedEmail extends Entity implements Parsable {
      */
     public void setBulkComplaintLevel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("bulkComplaintLevel", value);
+    }
+    /**
+     * Sets the clientType property value. The clientType property
+     * @param value Value to set for the clientType property.
+     */
+    public void setClientType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("clientType", value);
     }
     /**
      * Sets the contexts property value. Provides context of the email.
@@ -407,6 +477,13 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("distributionList", value);
     }
     /**
+     * Sets the dlpRules property value. The dlpRules property
+     * @param value Value to set for the dlpRules property.
+     */
+    public void setDlpRules(@jakarta.annotation.Nullable final java.util.List<AnalyzedEmailDlpRuleInfo> value) {
+        this.backingStore.set("dlpRules", value);
+    }
+    /**
      * Sets the emailClusterId property value. The identifier for the group of similar emails clustered based on heuristic analysis of their content.
      * @param value Value to set for the emailClusterId property.
      */
@@ -419,6 +496,20 @@ public class AnalyzedEmail extends Entity implements Parsable {
      */
     public void setExchangeTransportRules(@jakarta.annotation.Nullable final java.util.List<AnalyzedEmailExchangeTransportRuleInfo> value) {
         this.backingStore.set("exchangeTransportRules", value);
+    }
+    /**
+     * Sets the forwardingDetail property value. The forwardingDetail property
+     * @param value Value to set for the forwardingDetail property.
+     */
+    public void setForwardingDetail(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("forwardingDetail", value);
+    }
+    /**
+     * Sets the inboundConnectorFormattedName property value. The inboundConnectorFormattedName property
+     * @param value Value to set for the inboundConnectorFormattedName property.
+     */
+    public void setInboundConnectorFormattedName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("inboundConnectorFormattedName", value);
     }
     /**
      * Sets the internetMessageId property value. A public-facing identifier for the email that is sent. The message ID is in the format specified by RFC2822.
@@ -491,6 +582,27 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("policyAction", value);
     }
     /**
+     * Sets the policyType property value. The policyType property
+     * @param value Value to set for the policyType property.
+     */
+    public void setPolicyType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("policyType", value);
+    }
+    /**
+     * Sets the primaryOverrideSource property value. The primaryOverrideSource property
+     * @param value Value to set for the primaryOverrideSource property.
+     */
+    public void setPrimaryOverrideSource(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("primaryOverrideSource", value);
+    }
+    /**
+     * Sets the recipientDetail property value. The recipientDetail property
+     * @param value Value to set for the recipientDetail property.
+     */
+    public void setRecipientDetail(@jakarta.annotation.Nullable final AnalyzedEmailRecipientDetail value) {
+        this.backingStore.set("recipientDetail", value);
+    }
+    /**
      * Sets the recipientEmailAddress property value. Contains the email address of the recipient.
      * @param value Value to set for the recipientEmailAddress property.
      */
@@ -533,6 +645,13 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("subject", value);
     }
     /**
+     * Sets the threatDetectionDetails property value. The threatDetectionDetails property
+     * @param value Value to set for the threatDetectionDetails property.
+     */
+    public void setThreatDetectionDetails(@jakarta.annotation.Nullable final java.util.List<ThreatDetectionDetail> value) {
+        this.backingStore.set("threatDetectionDetails", value);
+    }
+    /**
      * Sets the threatTypes property value. Indicates the threat types. The possible values are: unknown, spam, malware, phish, none, unknownFutureValue.
      * @param value Value to set for the threatTypes property.
      */
@@ -540,17 +659,17 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("threatTypes", value);
     }
     /**
+     * Sets the timelineEvents property value. The timelineEvents property
+     * @param value Value to set for the timelineEvents property.
+     */
+    public void setTimelineEvents(@jakarta.annotation.Nullable final java.util.List<TimelineEvent> value) {
+        this.backingStore.set("timelineEvents", value);
+    }
+    /**
      * Sets the urls property value. A collection of the URLs in the email.
      * @param value Value to set for the urls property.
      */
     public void setUrls(@jakarta.annotation.Nullable final java.util.List<AnalyzedEmailUrl> value) {
         this.backingStore.set("urls", value);
-    }
-    /**
-     * Sets the urlsCount property value. The number of URLs in the email.
-     * @param value Value to set for the urlsCount property.
-     */
-    public void setUrlsCount(@jakarta.annotation.Nullable final Integer value) {
-        this.backingStore.set("urlsCount", value);
     }
 }

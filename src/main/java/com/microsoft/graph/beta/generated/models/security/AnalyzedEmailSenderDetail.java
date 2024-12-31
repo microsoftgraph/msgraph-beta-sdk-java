@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -56,15 +57,53 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore;
     }
     /**
+     * Gets the displayName property value. The displayName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDisplayName() {
+        return this.backingStore.get("displayName");
+    }
+    /**
+     * Gets the domainCreationDateTime property value. The domainCreationDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getDomainCreationDateTime() {
+        return this.backingStore.get("domainCreationDateTime");
+    }
+    /**
+     * Gets the domainName property value. The domainName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDomainName() {
+        return this.backingStore.get("domainName");
+    }
+    /**
+     * Gets the domainOwner property value. The domainOwner property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDomainOwner() {
+        return this.backingStore.get("domainOwner");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("domainCreationDateTime", (n) -> { this.setDomainCreationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
+        deserializerMap.put("domainOwner", (n) -> { this.setDomainOwner(n.getStringValue()); });
         deserializerMap.put("fromAddress", (n) -> { this.setFromAddress(n.getStringValue()); });
         deserializerMap.put("ipv4", (n) -> { this.setIpv4(n.getStringValue()); });
+        deserializerMap.put("location", (n) -> { this.setLocation(n.getStringValue()); });
         deserializerMap.put("mailFromAddress", (n) -> { this.setMailFromAddress(n.getStringValue()); });
+        deserializerMap.put("mailFromDomainName", (n) -> { this.setMailFromDomainName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -85,12 +124,28 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("ipv4");
     }
     /**
+     * Gets the location property value. The location property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLocation() {
+        return this.backingStore.get("location");
+    }
+    /**
      * Gets the mailFromAddress property value. The sender email address in the From header, which is visible to email recipients on their email clients. Also known as P2 sender.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMailFromAddress() {
         return this.backingStore.get("mailFromAddress");
+    }
+    /**
+     * Gets the mailFromDomainName property value. The mailFromDomainName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMailFromDomainName() {
+        return this.backingStore.get("mailFromDomainName");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -106,9 +161,15 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeOffsetDateTimeValue("domainCreationDateTime", this.getDomainCreationDateTime());
+        writer.writeStringValue("domainName", this.getDomainName());
+        writer.writeStringValue("domainOwner", this.getDomainOwner());
         writer.writeStringValue("fromAddress", this.getFromAddress());
         writer.writeStringValue("ipv4", this.getIpv4());
+        writer.writeStringValue("location", this.getLocation());
         writer.writeStringValue("mailFromAddress", this.getMailFromAddress());
+        writer.writeStringValue("mailFromDomainName", this.getMailFromDomainName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -128,6 +189,34 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
+     * Sets the displayName property value. The displayName property
+     * @param value Value to set for the displayName property.
+     */
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the domainCreationDateTime property value. The domainCreationDateTime property
+     * @param value Value to set for the domainCreationDateTime property.
+     */
+    public void setDomainCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("domainCreationDateTime", value);
+    }
+    /**
+     * Sets the domainName property value. The domainName property
+     * @param value Value to set for the domainName property.
+     */
+    public void setDomainName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("domainName", value);
+    }
+    /**
+     * Sets the domainOwner property value. The domainOwner property
+     * @param value Value to set for the domainOwner property.
+     */
+    public void setDomainOwner(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("domainOwner", value);
+    }
+    /**
      * Sets the fromAddress property value. The sender email address in the mail From header, also known as the envelope sender or the P1 sender.
      * @param value Value to set for the fromAddress property.
      */
@@ -142,11 +231,25 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         this.backingStore.set("ipv4", value);
     }
     /**
+     * Sets the location property value. The location property
+     * @param value Value to set for the location property.
+     */
+    public void setLocation(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("location", value);
+    }
+    /**
      * Sets the mailFromAddress property value. The sender email address in the From header, which is visible to email recipients on their email clients. Also known as P2 sender.
      * @param value Value to set for the mailFromAddress property.
      */
     public void setMailFromAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mailFromAddress", value);
+    }
+    /**
+     * Sets the mailFromDomainName property value. The mailFromDomainName property
+     * @param value Value to set for the mailFromDomainName property.
+     */
+    public void setMailFromDomainName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("mailFromDomainName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

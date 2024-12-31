@@ -85,12 +85,13 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("crossRegionDisasterRecoveryEnabled", (n) -> { this.setCrossRegionDisasterRecoveryEnabled(n.getBooleanValue()); });
         deserializerMap.put("disasterRecoveryNetworkSetting", (n) -> { this.setDisasterRecoveryNetworkSetting(n.getObjectValue(CloudPcDisasterRecoveryNetworkSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("disasterRecoveryType", (n) -> { this.setDisasterRecoveryType(n.getEnumValue(CloudPcDisasterRecoveryType::forValue)); });
         deserializerMap.put("maintainCrossRegionRestorePointEnabled", (n) -> { this.setMaintainCrossRegionRestorePointEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("userInitiatedDisasterRecoveryAllowed", (n) -> { this.setUserInitiatedDisasterRecoveryAllowed(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -110,6 +111,14 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the userInitiatedDisasterRecoveryAllowed property value. Indicates whether the client allows the end user to initiate a disaster recovery activation. True indicates that the client includes the option for the end user to activate Backup Cloud PC. When false, the end user doesn't have the option to activate disaster recovery. The default value is false. Currently, only premium disaster recovery is supported.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getUserInitiatedDisasterRecoveryAllowed() {
+        return this.backingStore.get("userInitiatedDisasterRecoveryAllowed");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -120,6 +129,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         writer.writeEnumValue("disasterRecoveryType", this.getDisasterRecoveryType());
         writer.writeBooleanValue("maintainCrossRegionRestorePointEnabled", this.getMaintainCrossRegionRestorePointEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeBooleanValue("userInitiatedDisasterRecoveryAllowed", this.getUserInitiatedDisasterRecoveryAllowed());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -171,5 +181,12 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the userInitiatedDisasterRecoveryAllowed property value. Indicates whether the client allows the end user to initiate a disaster recovery activation. True indicates that the client includes the option for the end user to activate Backup Cloud PC. When false, the end user doesn't have the option to activate disaster recovery. The default value is false. Currently, only premium disaster recovery is supported.
+     * @param value Value to set for the userInitiatedDisasterRecoveryAllowed property.
+     */
+    public void setUserInitiatedDisasterRecoveryAllowed(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("userInitiatedDisasterRecoveryAllowed", value);
     }
 }

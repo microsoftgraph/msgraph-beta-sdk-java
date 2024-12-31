@@ -77,10 +77,11 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("detectionMethod", (n) -> { this.setDetectionMethod(n.getStringValue()); });
         deserializerMap.put("detonationDetails", (n) -> { this.setDetonationDetails(n.getObjectValue(DetonationDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("tenantAllowBlockListDetailInfo", (n) -> { this.setTenantAllowBlockListDetailInfo(n.getStringValue()); });
         deserializerMap.put("threatType", (n) -> { this.setThreatType(n.getEnumValue(ThreatType::forValue)); });
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
@@ -92,6 +93,14 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the tenantAllowBlockListDetailInfo property value. The tenantAllowBlockListDetailInfo property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getTenantAllowBlockListDetailInfo() {
+        return this.backingStore.get("tenantAllowBlockListDetailInfo");
     }
     /**
      * Gets the threatType property value. The type of threat associated with the URL. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.
@@ -118,6 +127,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
         writer.writeStringValue("detectionMethod", this.getDetectionMethod());
         writer.writeObjectValue("detonationDetails", this.getDetonationDetails());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("tenantAllowBlockListDetailInfo", this.getTenantAllowBlockListDetailInfo());
         writer.writeEnumValue("threatType", this.getThreatType());
         writer.writeStringValue("url", this.getUrl());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -157,6 +167,13 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the tenantAllowBlockListDetailInfo property value. The tenantAllowBlockListDetailInfo property
+     * @param value Value to set for the tenantAllowBlockListDetailInfo property.
+     */
+    public void setTenantAllowBlockListDetailInfo(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("tenantAllowBlockListDetailInfo", value);
     }
     /**
      * Sets the threatType property value. The type of threat associated with the URL. The possible values are: unknown, spam, malware, phishing, none, unknownFutureValue.

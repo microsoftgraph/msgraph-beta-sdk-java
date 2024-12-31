@@ -85,13 +85,14 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("customSecurityAttributeAudits", (n) -> { this.setCustomSecurityAttributeAudits(n.getCollectionOfObjectValues(CustomSecurityAttributeAudit::createFromDiscriminatorValue)); });
         deserializerMap.put("directoryAudits", (n) -> { this.setDirectoryAudits(n.getCollectionOfObjectValues(DirectoryAudit::createFromDiscriminatorValue)); });
         deserializerMap.put("directoryProvisioning", (n) -> { this.setDirectoryProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("provisioning", (n) -> { this.setProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("signIns", (n) -> { this.setSignIns(n.getCollectionOfObjectValues(SignIn::createFromDiscriminatorValue)); });
+        deserializerMap.put("signUps", (n) -> { this.setSignUps(n.getCollectionOfObjectValues(SelfServiceSignUp::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -119,6 +120,14 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("signIns");
     }
     /**
+     * Gets the signUps property value. The signUps property
+     * @return a {@link java.util.List<SelfServiceSignUp>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SelfServiceSignUp> getSignUps() {
+        return this.backingStore.get("signUps");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -130,6 +139,7 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("provisioning", this.getProvisioning());
         writer.writeCollectionOfObjectValues("signIns", this.getSignIns());
+        writer.writeCollectionOfObjectValues("signUps", this.getSignUps());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -188,5 +198,12 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void setSignIns(@jakarta.annotation.Nullable final java.util.List<SignIn> value) {
         this.backingStore.set("signIns", value);
+    }
+    /**
+     * Sets the signUps property value. The signUps property
+     * @param value Value to set for the signUps property.
+     */
+    public void setSignUps(@jakarta.annotation.Nullable final java.util.List<SelfServiceSignUp> value) {
+        this.backingStore.set("signUps", value);
     }
 }
