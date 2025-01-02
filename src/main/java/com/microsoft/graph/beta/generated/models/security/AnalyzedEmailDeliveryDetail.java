@@ -69,11 +69,21 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(DeliveryAction::forValue)); });
+        deserializerMap.put("latestThreats", (n) -> { this.setLatestThreats(n.getStringValue()); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getEnumValue(DeliveryLocation::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("originalThreats", (n) -> { this.setOriginalThreats(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the latestThreats property value. The latestThreats property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLatestThreats() {
+        return this.backingStore.get("latestThreats");
     }
     /**
      * Gets the location property value. The delivery location of the email. The possible values are: unknown, inboxfolder, junkFolder, deletedFolder, quarantine, onpremexternal, failed, dropped, others, unknownFutureValue.
@@ -92,14 +102,24 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the originalThreats property value. The originalThreats property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOriginalThreats() {
+        return this.backingStore.get("originalThreats");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("action", this.getAction());
+        writer.writeStringValue("latestThreats", this.getLatestThreats());
         writer.writeEnumValue("location", this.getLocation());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("originalThreats", this.getOriginalThreats());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -125,6 +145,13 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
+     * Sets the latestThreats property value. The latestThreats property
+     * @param value Value to set for the latestThreats property.
+     */
+    public void setLatestThreats(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("latestThreats", value);
+    }
+    /**
      * Sets the location property value. The delivery location of the email. The possible values are: unknown, inboxfolder, junkFolder, deletedFolder, quarantine, onpremexternal, failed, dropped, others, unknownFutureValue.
      * @param value Value to set for the location property.
      */
@@ -137,5 +164,12 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the originalThreats property value. The originalThreats property
+     * @param value Value to set for the originalThreats property.
+     */
+    public void setOriginalThreats(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("originalThreats", value);
     }
 }

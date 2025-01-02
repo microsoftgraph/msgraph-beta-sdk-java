@@ -48,7 +48,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return value;
     }
     /**
-     * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that points to the traffic manager.
+     * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple app proxy applications, this user-friendly URL points to the traffic manager.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("applicationServerTimeout");
     }
     /**
-     * Gets the applicationType property value. Indicates if this application is an Application Proxy configured application. This is pre-set by the system. Read-only.
+     * Gets the applicationType property value. System-defined value that indicates whether this application is an application proxy configured application. The possible values are quickaccessapp and nonwebapp. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("externalAuthenticationType");
     }
     /**
-     * Gets the externalUrl property value. The published external url for the application. For example, https://intranet-contoso.msappproxy.net/.
+     * Gets the externalUrl property value. The published external URL for the application. For example, https://intranet-contoso.msappproxy.net/.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("internalUrl");
     }
     /**
-     * Gets the isAccessibleViaZTNAClient property value. The isAccessibleViaZTNAClient property
+     * Gets the isAccessibleViaZTNAClient property value. Indicates whether the application is accessible via a Global Secure Access client on a managed device.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("isBackendCertificateValidationEnabled");
     }
     /**
-     * Gets the isDnsResolutionEnabled property value. The isDnsResolutionEnabled property
+     * Gets the isDnsResolutionEnabled property value. Indicates Microsoft Entra Private Access should handle DNS resolution. false by default.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -252,7 +252,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("singleSignOnSettings");
     }
     /**
-     * Gets the useAlternateUrlForTranslationAndRedirect property value. The useAlternateUrlForTranslationAndRedirect property
+     * Gets the useAlternateUrlForTranslationAndRedirect property value. Indicates whether the application should use alternateUrl instead of externalUrl.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -350,7 +350,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that points to the traffic manager.
+     * Sets the alternateUrl property value. If you're configuring a traffic manager in front of multiple app proxy applications, this user-friendly URL points to the traffic manager.
      * @param value Value to set for the alternateUrl property.
      */
     public void setAlternateUrl(@jakarta.annotation.Nullable final String value) {
@@ -364,7 +364,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("applicationServerTimeout", value);
     }
     /**
-     * Sets the applicationType property value. Indicates if this application is an Application Proxy configured application. This is pre-set by the system. Read-only.
+     * Sets the applicationType property value. System-defined value that indicates whether this application is an application proxy configured application. The possible values are quickaccessapp and nonwebapp. Read-only.
      * @param value Value to set for the applicationType property.
      */
     public void setApplicationType(@jakarta.annotation.Nullable final String value) {
@@ -386,7 +386,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("externalAuthenticationType", value);
     }
     /**
-     * Sets the externalUrl property value. The published external url for the application. For example, https://intranet-contoso.msappproxy.net/.
+     * Sets the externalUrl property value. The published external URL for the application. For example, https://intranet-contoso.msappproxy.net/.
      * @param value Value to set for the externalUrl property.
      */
     public void setExternalUrl(@jakarta.annotation.Nullable final String value) {
@@ -400,7 +400,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("internalUrl", value);
     }
     /**
-     * Sets the isAccessibleViaZTNAClient property value. The isAccessibleViaZTNAClient property
+     * Sets the isAccessibleViaZTNAClient property value. Indicates whether the application is accessible via a Global Secure Access client on a managed device.
      * @param value Value to set for the isAccessibleViaZTNAClient property.
      */
     public void setIsAccessibleViaZTNAClient(@jakarta.annotation.Nullable final Boolean value) {
@@ -414,7 +414,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("isBackendCertificateValidationEnabled", value);
     }
     /**
-     * Sets the isDnsResolutionEnabled property value. The isDnsResolutionEnabled property
+     * Sets the isDnsResolutionEnabled property value. Indicates Microsoft Entra Private Access should handle DNS resolution. false by default.
      * @param value Value to set for the isDnsResolutionEnabled property.
      */
     public void setIsDnsResolutionEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -498,7 +498,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("singleSignOnSettings", value);
     }
     /**
-     * Sets the useAlternateUrlForTranslationAndRedirect property value. The useAlternateUrlForTranslationAndRedirect property
+     * Sets the useAlternateUrlForTranslationAndRedirect property value. Indicates whether the application should use alternateUrl instead of externalUrl.
      * @param value Value to set for the useAlternateUrlForTranslationAndRedirect property.
      */
     public void setUseAlternateUrlForTranslationAndRedirect(@jakarta.annotation.Nullable final Boolean value) {

@@ -65,6 +65,22 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
+     * Gets the compromiseIndicators property value. The compromiseIndicators property
+     * @return a {@link java.util.List<CompromiseIndicator>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CompromiseIndicator> getCompromiseIndicators() {
+        return this.backingStore.get("compromiseIndicators");
+    }
+    /**
+     * Gets the detonationBehaviourDetails property value. The detonationBehaviourDetails property
+     * @return a {@link DetonationBehaviourDetails}
+     */
+    @jakarta.annotation.Nullable
+    public DetonationBehaviourDetails getDetonationBehaviourDetails() {
+        return this.backingStore.get("detonationBehaviourDetails");
+    }
+    /**
      * Gets the detonationChain property value. The chain of detonation.
      * @return a {@link DetonationChain}
      */
@@ -79,6 +95,14 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nullable
     public DetonationObservables getDetonationObservables() {
         return this.backingStore.get("detonationObservables");
+    }
+    /**
+     * Gets the detonationScreenshotUri property value. The detonationScreenshotUri property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDetonationScreenshotUri() {
+        return this.backingStore.get("detonationScreenshotUri");
     }
     /**
      * Gets the detonationVerdict property value. The verdict of the detonation.
@@ -102,10 +126,13 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("analysisDateTime", (n) -> { this.setAnalysisDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("compromiseIndicators", (n) -> { this.setCompromiseIndicators(n.getCollectionOfObjectValues(CompromiseIndicator::createFromDiscriminatorValue)); });
+        deserializerMap.put("detonationBehaviourDetails", (n) -> { this.setDetonationBehaviourDetails(n.getObjectValue(DetonationBehaviourDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("detonationChain", (n) -> { this.setDetonationChain(n.getObjectValue(DetonationChain::createFromDiscriminatorValue)); });
         deserializerMap.put("detonationObservables", (n) -> { this.setDetonationObservables(n.getObjectValue(DetonationObservables::createFromDiscriminatorValue)); });
+        deserializerMap.put("detonationScreenshotUri", (n) -> { this.setDetonationScreenshotUri(n.getStringValue()); });
         deserializerMap.put("detonationVerdict", (n) -> { this.setDetonationVerdict(n.getStringValue()); });
         deserializerMap.put("detonationVerdictReason", (n) -> { this.setDetonationVerdictReason(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -126,8 +153,11 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("analysisDateTime", this.getAnalysisDateTime());
+        writer.writeCollectionOfObjectValues("compromiseIndicators", this.getCompromiseIndicators());
+        writer.writeObjectValue("detonationBehaviourDetails", this.getDetonationBehaviourDetails());
         writer.writeObjectValue("detonationChain", this.getDetonationChain());
         writer.writeObjectValue("detonationObservables", this.getDetonationObservables());
+        writer.writeStringValue("detonationScreenshotUri", this.getDetonationScreenshotUri());
         writer.writeStringValue("detonationVerdict", this.getDetonationVerdict());
         writer.writeStringValue("detonationVerdictReason", this.getDetonationVerdictReason());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -156,6 +186,20 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
+     * Sets the compromiseIndicators property value. The compromiseIndicators property
+     * @param value Value to set for the compromiseIndicators property.
+     */
+    public void setCompromiseIndicators(@jakarta.annotation.Nullable final java.util.List<CompromiseIndicator> value) {
+        this.backingStore.set("compromiseIndicators", value);
+    }
+    /**
+     * Sets the detonationBehaviourDetails property value. The detonationBehaviourDetails property
+     * @param value Value to set for the detonationBehaviourDetails property.
+     */
+    public void setDetonationBehaviourDetails(@jakarta.annotation.Nullable final DetonationBehaviourDetails value) {
+        this.backingStore.set("detonationBehaviourDetails", value);
+    }
+    /**
      * Sets the detonationChain property value. The chain of detonation.
      * @param value Value to set for the detonationChain property.
      */
@@ -168,6 +212,13 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
      */
     public void setDetonationObservables(@jakarta.annotation.Nullable final DetonationObservables value) {
         this.backingStore.set("detonationObservables", value);
+    }
+    /**
+     * Sets the detonationScreenshotUri property value. The detonationScreenshotUri property
+     * @param value Value to set for the detonationScreenshotUri property.
+     */
+    public void setDetonationScreenshotUri(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("detonationScreenshotUri", value);
     }
     /**
      * Sets the detonationVerdict property value. The verdict of the detonation.

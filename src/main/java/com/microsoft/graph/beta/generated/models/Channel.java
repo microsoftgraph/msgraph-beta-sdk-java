@@ -26,6 +26,14 @@ public class Channel extends Entity implements Parsable {
         return new Channel();
     }
     /**
+     * Gets the allMembers property value. A collection of membership records associated with the channel. It includes both direct and indirect members of shared channels.
+     * @return a {@link java.util.List<ConversationMember>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConversationMember> getAllMembers() {
+        return this.backingStore.get("allMembers");
+    }
+    /**
      * Gets the createdDateTime property value. Read only. Timestamp at which the channel was created.
      * @return a {@link OffsetDateTime}
      */
@@ -64,14 +72,15 @@ public class Channel extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allMembers", (n) -> { this.setAllMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
         deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
-        deserializerMap.put("getAllMembers", (n) -> { this.setGetAllMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
+        deserializerMap.put("layoutType", (n) -> { this.setLayoutType(n.getEnumValue(ChannelLayoutType::forValue)); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType::forValue)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
@@ -92,14 +101,6 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("filesFolder");
     }
     /**
-     * Gets the getAllMembers property value. The getAllMembers property
-     * @return a {@link java.util.List<ConversationMember>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<ConversationMember> getGetAllMembers() {
-        return this.backingStore.get("getAllMembers");
-    }
-    /**
      * Gets the isArchived property value. Indicates whether the channel is archived. Read-only.
      * @return a {@link Boolean}
      */
@@ -114,6 +115,14 @@ public class Channel extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsFavoriteByDefault() {
         return this.backingStore.get("isFavoriteByDefault");
+    }
+    /**
+     * Gets the layoutType property value. The layoutType property
+     * @return a {@link ChannelLayoutType}
+     */
+    @jakarta.annotation.Nullable
+    public ChannelLayoutType getLayoutType() {
+        return this.backingStore.get("layoutType");
     }
     /**
      * Gets the members property value. A collection of membership records associated with the channel.
@@ -194,14 +203,15 @@ public class Channel extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("allMembers", this.getAllMembers());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("email", this.getEmail());
         writer.writeObjectValue("filesFolder", this.getFilesFolder());
-        writer.writeCollectionOfObjectValues("getAllMembers", this.getGetAllMembers());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isFavoriteByDefault", this.getIsFavoriteByDefault());
+        writer.writeEnumValue("layoutType", this.getLayoutType());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeEnumValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
@@ -211,6 +221,13 @@ public class Channel extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeStringValue("webUrl", this.getWebUrl());
+    }
+    /**
+     * Sets the allMembers property value. A collection of membership records associated with the channel. It includes both direct and indirect members of shared channels.
+     * @param value Value to set for the allMembers property.
+     */
+    public void setAllMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
+        this.backingStore.set("allMembers", value);
     }
     /**
      * Sets the createdDateTime property value. Read only. Timestamp at which the channel was created.
@@ -248,13 +265,6 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("filesFolder", value);
     }
     /**
-     * Sets the getAllMembers property value. The getAllMembers property
-     * @param value Value to set for the getAllMembers property.
-     */
-    public void setGetAllMembers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
-        this.backingStore.set("getAllMembers", value);
-    }
-    /**
      * Sets the isArchived property value. Indicates whether the channel is archived. Read-only.
      * @param value Value to set for the isArchived property.
      */
@@ -267,6 +277,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setIsFavoriteByDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isFavoriteByDefault", value);
+    }
+    /**
+     * Sets the layoutType property value. The layoutType property
+     * @param value Value to set for the layoutType property.
+     */
+    public void setLayoutType(@jakarta.annotation.Nullable final ChannelLayoutType value) {
+        this.backingStore.set("layoutType", value);
     }
     /**
      * Sets the members property value. A collection of membership records associated with the channel.

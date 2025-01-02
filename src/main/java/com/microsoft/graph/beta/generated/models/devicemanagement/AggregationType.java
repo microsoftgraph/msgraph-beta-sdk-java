@@ -9,7 +9,8 @@ public enum AggregationType implements ValuedEnum {
     Percentage("percentage"),
     AffectedCloudPcCount("affectedCloudPcCount"),
     AffectedCloudPcPercentage("affectedCloudPcPercentage"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    DurationInMinutes("durationInMinutes");
     public final String value;
     AggregationType(final String value) {
         this.value = value;
@@ -25,6 +26,7 @@ public enum AggregationType implements ValuedEnum {
             case "affectedCloudPcCount": return AffectedCloudPcCount;
             case "affectedCloudPcPercentage": return AffectedCloudPcPercentage;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "durationInMinutes": return DurationInMinutes;
             default: return null;
         }
     }

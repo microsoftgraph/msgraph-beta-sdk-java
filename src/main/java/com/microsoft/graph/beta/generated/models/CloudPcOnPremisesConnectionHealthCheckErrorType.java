@@ -24,6 +24,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     EndpointConnectivityCheckIntuneUrlNotAllowListed("endpointConnectivityCheckIntuneUrlNotAllowListed"),
     EndpointConnectivityCheckAzureADUrlNotAllowListed("endpointConnectivityCheckAzureADUrlNotAllowListed"),
     EndpointConnectivityCheckLocaleUrlNotAllowListed("endpointConnectivityCheckLocaleUrlNotAllowListed"),
+    EndpointConnectivityCheckVMAgentEndPointCommunicationError("endpointConnectivityCheckVMAgentEndPointCommunicationError"),
     EndpointConnectivityCheckUnknownError("endpointConnectivityCheckUnknownError"),
     AzureAdDeviceSyncCheckDeviceNotFound("azureAdDeviceSyncCheckDeviceNotFound"),
     AzureAdDeviceSyncCheckLongSyncCircle("azureAdDeviceSyncCheckLongSyncCircle"),
@@ -102,6 +103,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "endpointConnectivityCheckIntuneUrlNotAllowListed": return EndpointConnectivityCheckIntuneUrlNotAllowListed;
             case "endpointConnectivityCheckAzureADUrlNotAllowListed": return EndpointConnectivityCheckAzureADUrlNotAllowListed;
             case "endpointConnectivityCheckLocaleUrlNotAllowListed": return EndpointConnectivityCheckLocaleUrlNotAllowListed;
+            case "endpointConnectivityCheckVMAgentEndPointCommunicationError": return EndpointConnectivityCheckVMAgentEndPointCommunicationError;
             case "endpointConnectivityCheckUnknownError": return EndpointConnectivityCheckUnknownError;
             case "azureAdDeviceSyncCheckDeviceNotFound": return AzureAdDeviceSyncCheckDeviceNotFound;
             case "azureAdDeviceSyncCheckLongSyncCircle": return AzureAdDeviceSyncCheckLongSyncCircle;

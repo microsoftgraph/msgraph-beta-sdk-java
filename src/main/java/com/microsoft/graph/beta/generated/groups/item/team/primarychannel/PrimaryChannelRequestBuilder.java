@@ -1,10 +1,10 @@
 package com.microsoft.graph.beta.groups.item.team.primarychannel;
 
+import com.microsoft.graph.beta.groups.item.team.primarychannel.allmembers.AllMembersRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.filesfolder.FilesFolderRequestBuilder;
-import com.microsoft.graph.beta.groups.item.team.primarychannel.getallmembers.GetAllMembersRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.provisionemail.ProvisionEmailRequestBuilder;
@@ -32,6 +32,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the allMembers property of the microsoft.graph.channel entity.
+     * @return a {@link AllMembersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AllMembersRequestBuilder allMembers() {
+        return new AllMembersRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the archive method.
      * @return a {@link ArchiveRequestBuilder}
@@ -63,14 +71,6 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the getAllMembers property of the microsoft.graph.channel entity.
-     * @return a {@link GetAllMembersRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetAllMembersRequestBuilder getAllMembers() {
-        return new GetAllMembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.

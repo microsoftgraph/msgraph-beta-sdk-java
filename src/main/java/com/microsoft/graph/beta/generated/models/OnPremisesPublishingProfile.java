@@ -41,7 +41,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         return this.backingStore.get("agents");
     }
     /**
-     * Gets the applicationSegments property value. The applicationSegments property
+     * Gets the applicationSegments property value. Represents the segment configurations that are allowed for an on-premises non-web application published through Microsoft Entra application proxy.
      * @return a {@link java.util.List<IpApplicationSegment>}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         return this.backingStore.get("hybridAgentUpdaterConfiguration");
     }
     /**
-     * Gets the isDefaultAccessEnabled property value. The isDefaultAccessEnabled property
+     * Gets the isDefaultAccessEnabled property value. Specifies whether default access for app proxy is enabled or disabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         this.backingStore.set("agents", value);
     }
     /**
-     * Sets the applicationSegments property value. The applicationSegments property
+     * Sets the applicationSegments property value. Represents the segment configurations that are allowed for an on-premises non-web application published through Microsoft Entra application proxy.
      * @param value Value to set for the applicationSegments property.
      */
     public void setApplicationSegments(@jakarta.annotation.Nullable final java.util.List<IpApplicationSegment> value) {
@@ -174,7 +174,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         this.backingStore.set("hybridAgentUpdaterConfiguration", value);
     }
     /**
-     * Sets the isDefaultAccessEnabled property value. The isDefaultAccessEnabled property
+     * Sets the isDefaultAccessEnabled property value. Specifies whether default access for app proxy is enabled or disabled.
      * @param value Value to set for the isDefaultAccessEnabled property.
      */
     public void setIsDefaultAccessEnabled(@jakarta.annotation.Nullable final Boolean value) {

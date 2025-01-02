@@ -26,7 +26,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
         return new WebApplicationSegment();
     }
     /**
-     * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, this property contains the user-friendly URL that will point to the traffic manager.
+     * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple app proxy application segments, this property contains the user-friendly URL that points to the traffic manager.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class WebApplicationSegment extends ApplicationSegment implements Parsabl
         writer.writeStringValue("internalUrl", this.getInternalUrl());
     }
     /**
-     * Sets the alternateUrl property value. If you're configuring a traffic manager in front of multiple App Proxy application segments, this property contains the user-friendly URL that will point to the traffic manager.
+     * Sets the alternateUrl property value. If you're configuring a traffic manager in front of multiple app proxy application segments, this property contains the user-friendly URL that points to the traffic manager.
      * @param value Value to set for the alternateUrl property.
      */
     public void setAlternateUrl(@jakarta.annotation.Nullable final String value) {

@@ -69,7 +69,7 @@ public class ResourceReference implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the id property value. The item's unique identifier.
+     * Gets the id property value. The id property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ResourceReference implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
+     * Gets the type property value. The type property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ResourceReference implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("type");
     }
     /**
-     * Gets the webUrl property value. A URL leading to the referenced item.
+     * Gets the webUrl property value. The webUrl property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ResourceReference implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the id property value. The item's unique identifier.
+     * Sets the id property value. The id property
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
@@ -142,14 +142,14 @@ public class ResourceReference implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. A string value that can be used to classify the item, such as 'microsoft.graph.driveItem'
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("type", value);
     }
     /**
-     * Sets the webUrl property value. A URL leading to the referenced item.
+     * Sets the webUrl property value. The webUrl property
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

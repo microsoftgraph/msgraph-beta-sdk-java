@@ -71,7 +71,7 @@ public class Connector extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the version property value. The version of the connector.
+     * Gets the version property value. The version of the connector. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class Connector extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the version property value. The version of the connector.
+     * Sets the version property value. The version of the connector. Read-only.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

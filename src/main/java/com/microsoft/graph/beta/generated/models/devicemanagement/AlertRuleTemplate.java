@@ -11,7 +11,8 @@ public enum AlertRuleTemplate implements ValuedEnum {
     UnknownFutureValue("unknownFutureValue"),
     CloudPcInGracePeriodScenario("cloudPcInGracePeriodScenario"),
     CloudPcFrontlineInsufficientLicensesScenario("cloudPcFrontlineInsufficientLicensesScenario"),
-    CloudPcInaccessibleScenario("cloudPcInaccessibleScenario");
+    CloudPcInaccessibleScenario("cloudPcInaccessibleScenario"),
+    CloudPcFrontlineConcurrencyScenario("cloudPcFrontlineConcurrencyScenario");
     public final String value;
     AlertRuleTemplate(final String value) {
         this.value = value;
@@ -29,6 +30,7 @@ public enum AlertRuleTemplate implements ValuedEnum {
             case "cloudPcInGracePeriodScenario": return CloudPcInGracePeriodScenario;
             case "cloudPcFrontlineInsufficientLicensesScenario": return CloudPcFrontlineInsufficientLicensesScenario;
             case "cloudPcInaccessibleScenario": return CloudPcInaccessibleScenario;
+            case "cloudPcFrontlineConcurrencyScenario": return CloudPcFrontlineConcurrencyScenario;
             default: return null;
         }
     }

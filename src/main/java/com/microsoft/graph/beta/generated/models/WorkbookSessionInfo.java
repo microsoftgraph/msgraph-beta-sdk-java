@@ -84,7 +84,7 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the persistChanges property value. true for persistent session. false for non-persistent session (view mode)
+     * Gets the persistChanges property value. Set to true for persistent session. Set to false for non-persistent session (view mode).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class WorkbookSessionInfo implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the persistChanges property value. true for persistent session. false for non-persistent session (view mode)
+     * Sets the persistChanges property value. Set to true for persistent session. Set to false for non-persistent session (view mode).
      * @param value Value to set for the persistChanges property.
      */
     public void setPersistChanges(@jakarta.annotation.Nullable final Boolean value) {

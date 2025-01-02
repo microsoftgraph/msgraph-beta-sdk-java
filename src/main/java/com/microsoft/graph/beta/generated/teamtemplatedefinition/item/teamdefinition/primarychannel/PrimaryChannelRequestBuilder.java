@@ -2,11 +2,11 @@ package com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.prim
 
 import com.microsoft.graph.beta.models.Channel;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.allmembers.AllMembersRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.completemigration.CompleteMigrationRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.filesfolder.FilesFolderRequestBuilder;
-import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.getallmembers.GetAllMembersRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.provisionemail.ProvisionEmailRequestBuilder;
@@ -32,6 +32,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the allMembers property of the microsoft.graph.channel entity.
+     * @return a {@link AllMembersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AllMembersRequestBuilder allMembers() {
+        return new AllMembersRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the archive method.
      * @return a {@link ArchiveRequestBuilder}
@@ -63,14 +71,6 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the getAllMembers property of the microsoft.graph.channel entity.
-     * @return a {@link GetAllMembersRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetAllMembersRequestBuilder getAllMembers() {
-        return new GetAllMembersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.

@@ -8,8 +8,6 @@ public enum CloudPcReportName implements ValuedEnum {
     RemoteConnectionHistoricalReports("remoteConnectionHistoricalReports"),
     DailyAggregatedRemoteConnectionReports("dailyAggregatedRemoteConnectionReports"),
     TotalAggregatedRemoteConnectionReports("totalAggregatedRemoteConnectionReports"),
-    SharedUseLicenseUsageReport("sharedUseLicenseUsageReport"),
-    SharedUseLicenseUsageRealTimeReport("sharedUseLicenseUsageRealTimeReport"),
     UnknownFutureValue("unknownFutureValue"),
     NoLicenseAvailableConnectivityFailureReport("noLicenseAvailableConnectivityFailureReport"),
     FrontlineLicenseUsageReport("frontlineLicenseUsageReport"),
@@ -27,7 +25,11 @@ public enum CloudPcReportName implements ValuedEnum {
     RemoteConnectionQualityReport("remoteConnectionQualityReport"),
     FrontlineLicenseHourlyUsageReport("frontlineLicenseHourlyUsageReport"),
     FrontlineRealtimeUserConnectionsReport("frontlineRealtimeUserConnectionsReport"),
-    BulkActionStatusReport("bulkActionStatusReport");
+    BulkActionStatusReport("bulkActionStatusReport"),
+    TroubleshootDetailsReport("troubleshootDetailsReport"),
+    TroubleshootTrendCountReport("troubleshootTrendCountReport"),
+    TroubleshootRegionalReport("troubleshootRegionalReport"),
+    TroubleshootIssueCountReport("troubleshootIssueCountReport");
     public final String value;
     CloudPcReportName(final String value) {
         this.value = value;
@@ -41,8 +43,6 @@ public enum CloudPcReportName implements ValuedEnum {
             case "remoteConnectionHistoricalReports": return RemoteConnectionHistoricalReports;
             case "dailyAggregatedRemoteConnectionReports": return DailyAggregatedRemoteConnectionReports;
             case "totalAggregatedRemoteConnectionReports": return TotalAggregatedRemoteConnectionReports;
-            case "sharedUseLicenseUsageReport": return SharedUseLicenseUsageReport;
-            case "sharedUseLicenseUsageRealTimeReport": return SharedUseLicenseUsageRealTimeReport;
             case "unknownFutureValue": return UnknownFutureValue;
             case "noLicenseAvailableConnectivityFailureReport": return NoLicenseAvailableConnectivityFailureReport;
             case "frontlineLicenseUsageReport": return FrontlineLicenseUsageReport;
@@ -61,6 +61,10 @@ public enum CloudPcReportName implements ValuedEnum {
             case "frontlineLicenseHourlyUsageReport": return FrontlineLicenseHourlyUsageReport;
             case "frontlineRealtimeUserConnectionsReport": return FrontlineRealtimeUserConnectionsReport;
             case "bulkActionStatusReport": return BulkActionStatusReport;
+            case "troubleshootDetailsReport": return TroubleshootDetailsReport;
+            case "troubleshootTrendCountReport": return TroubleshootTrendCountReport;
+            case "troubleshootRegionalReport": return TroubleshootRegionalReport;
+            case "troubleshootIssueCountReport": return TroubleshootIssueCountReport;
             default: return null;
         }
     }
