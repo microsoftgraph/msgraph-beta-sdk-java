@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [6.27.1](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.27.0...v6.27.1) (2025-01-03)
+
+
+### Bug Fixes
+
+* Bump Graph core dependency ([ca8c8ff](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/ca8c8ff5918dd36c392f2fd5e96affba23a9a56d))
+
 ## [6.27.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.26.0...v6.27.0) (2025-01-02)
 
 
