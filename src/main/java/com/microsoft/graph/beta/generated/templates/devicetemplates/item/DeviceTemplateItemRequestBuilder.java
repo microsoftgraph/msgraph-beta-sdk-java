@@ -93,7 +93,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
         return new DeviceInstancesWithDeviceIdRequestBuilder(pathParameters, requestAdapter, deviceId);
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      * @return a {@link DeviceTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -102,7 +102,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -160,7 +160,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -168,7 +168,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -220,7 +220,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

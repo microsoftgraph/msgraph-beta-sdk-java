@@ -36,21 +36,23 @@ public class CreateDeviceFromTemplateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/templates/deviceTemplates/{deviceTemplate%2Did}/createDeviceFromTemplate", rawUrl);
     }
     /**
-     * Invoke action createDeviceFromTemplate
+     * Create a new device from a deviceTemplate.
      * @param body The request body
      * @return a {@link Device}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/devicetemplate-createdevicefromtemplate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Device post(@jakarta.annotation.Nonnull final CreateDeviceFromTemplatePostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action createDeviceFromTemplate
+     * Create a new device from a deviceTemplate.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Device}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/devicetemplate-createdevicefromtemplate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Device post(@jakarta.annotation.Nonnull final CreateDeviceFromTemplatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class CreateDeviceFromTemplateRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Device::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action createDeviceFromTemplate
+     * Create a new device from a deviceTemplate.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class CreateDeviceFromTemplateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action createDeviceFromTemplate
+     * Create a new device from a deviceTemplate.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

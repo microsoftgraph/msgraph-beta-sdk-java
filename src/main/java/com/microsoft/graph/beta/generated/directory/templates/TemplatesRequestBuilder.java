@@ -64,7 +64,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get templates from directory
+     * A container for templates, such as device templates used for onboarding devices in Microsoft Entra ID.
      * @return a {@link Template}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get templates from directory
+     * A container for templates, such as device templates used for onboarding devices in Microsoft Entra ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Template}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get templates from directory
+     * A container for templates, such as device templates used for onboarding devices in Microsoft Entra ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get templates from directory
+     * A container for templates, such as device templates used for onboarding devices in Microsoft Entra ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class TemplatesRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get templates from directory
+     * A container for templates, such as device templates used for onboarding devices in Microsoft Entra ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

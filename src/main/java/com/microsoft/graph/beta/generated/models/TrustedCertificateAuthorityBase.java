@@ -33,7 +33,7 @@ public class TrustedCertificateAuthorityBase extends DirectoryObject implements 
         return new TrustedCertificateAuthorityBase();
     }
     /**
-     * Gets the certificateAuthorities property value. The certificateAuthorities property
+     * Gets the certificateAuthorities property value. Multi-value property that represents a list of trusted certificate authorities.
      * @return a {@link java.util.List<CertificateAuthority>}
      */
     @jakarta.annotation.Nullable
@@ -60,7 +60,7 @@ public class TrustedCertificateAuthorityBase extends DirectoryObject implements 
         writer.writeCollectionOfObjectValues("certificateAuthorities", this.getCertificateAuthorities());
     }
     /**
-     * Sets the certificateAuthorities property value. The certificateAuthorities property
+     * Sets the certificateAuthorities property value. Multi-value property that represents a list of trusted certificate authorities.
      * @param value Value to set for the certificateAuthorities property.
      */
     public void setCertificateAuthorities(@jakarta.annotation.Nullable final java.util.List<CertificateAuthority> value) {

@@ -37,7 +37,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/devices/{device%2Did}/deviceTemplate/{deviceTemplate%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get deviceTemplate from devices
+     * Device template used to instantiate this device. Nullable. Read-only.
      * @return a {@link DeviceTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get deviceTemplate from devices
+     * Device template used to instantiate this device. Nullable. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Get deviceTemplate from devices
+     * Device template used to instantiate this device. Nullable. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deviceTemplate from devices
+     * Device template used to instantiate this device. Nullable. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
         return new DeviceTemplateItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get deviceTemplate from devices
+     * Device template used to instantiate this device. Nullable. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

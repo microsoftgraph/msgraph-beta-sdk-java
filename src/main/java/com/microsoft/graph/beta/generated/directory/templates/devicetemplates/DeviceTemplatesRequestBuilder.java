@@ -60,19 +60,21 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/templates/deviceTemplates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get deviceTemplates from directory
+     * Get a list of deviceTemplate objects registered in the directory.
      * @return a {@link DeviceTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/template-list-devicetemplates?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceTemplateCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get deviceTemplates from directory
+     * Get a list of deviceTemplate objects registered in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/template-list-devicetemplates?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to deviceTemplates for directory
+     * Create a new deviceTemplate used to identify attributes and manage a group of devices with similar characteristics.
      * @param body The request body
      * @return a {@link DeviceTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/template-post-devicetemplates?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceTemplate post(@jakarta.annotation.Nonnull final DeviceTemplate body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to deviceTemplates for directory
+     * Create a new deviceTemplate used to identify attributes and manage a group of devices with similar characteristics.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/template-post-devicetemplates?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeviceTemplate post(@jakarta.annotation.Nonnull final DeviceTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Get deviceTemplates from directory
+     * Get a list of deviceTemplate objects registered in the directory.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deviceTemplates from directory
+     * Get a list of deviceTemplate objects registered in the directory.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to deviceTemplates for directory
+     * Create a new deviceTemplate used to identify attributes and manage a group of devices with similar characteristics.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to deviceTemplates for directory
+     * Create a new deviceTemplate used to identify attributes and manage a group of devices with similar characteristics.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return new DeviceTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get deviceTemplates from directory
+     * Get a list of deviceTemplate objects registered in the directory.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

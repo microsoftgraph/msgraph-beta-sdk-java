@@ -49,7 +49,7 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("authenticationMethodDevices");
     }
     /**
-     * Gets the certificateAuthorities property value. The certificateAuthorities property
+     * Gets the certificateAuthorities property value. Container for certificate authorities-related configurations for applications in the tenant.
      * @return a {@link CertificateAuthorityPath}
      */
     @jakarta.annotation.Nullable
@@ -206,7 +206,7 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("subscriptions");
     }
     /**
-     * Gets the templates property value. The templates property
+     * Gets the templates property value. A container for templates, such as device templates used for onboarding devices in Microsoft Entra ID.
      * @return a {@link Template}
      */
     @jakarta.annotation.Nullable
@@ -263,7 +263,7 @@ public class Directory extends Entity implements Parsable {
         this.backingStore.set("authenticationMethodDevices", value);
     }
     /**
-     * Sets the certificateAuthorities property value. The certificateAuthorities property
+     * Sets the certificateAuthorities property value. Container for certificate authorities-related configurations for applications in the tenant.
      * @param value Value to set for the certificateAuthorities property.
      */
     public void setCertificateAuthorities(@jakarta.annotation.Nullable final CertificateAuthorityPath value) {
@@ -375,7 +375,7 @@ public class Directory extends Entity implements Parsable {
         this.backingStore.set("subscriptions", value);
     }
     /**
-     * Sets the templates property value. The templates property
+     * Sets the templates property value. A container for templates, such as device templates used for onboarding devices in Microsoft Entra ID.
      * @param value Value to set for the templates property.
      */
     public void setTemplates(@jakarta.annotation.Nullable final Template value) {

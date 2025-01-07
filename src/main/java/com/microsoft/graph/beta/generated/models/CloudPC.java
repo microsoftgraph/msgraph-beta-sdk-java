@@ -140,7 +140,7 @@ public class CloudPC extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the frontlineCloudPcAvailability property value. The frontlineCloudPcAvailability property
+     * Gets the frontlineCloudPcAvailability property value. The current availability of a frontline assigned Cloud PC. Possible values: notApplicable, available,notAvailable and unknownFutureValue. Default value is notApplicable. Read Only.
      * @return a {@link FrontlineCloudPcAvailability}
      */
     @jakarta.annotation.Nullable
@@ -436,7 +436,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the frontlineCloudPcAvailability property value. The frontlineCloudPcAvailability property
+     * Sets the frontlineCloudPcAvailability property value. The current availability of a frontline assigned Cloud PC. Possible values: notApplicable, available,notAvailable and unknownFutureValue. Default value is notApplicable. Read Only.
      * @param value Value to set for the frontlineCloudPcAvailability property.
      */
     public void setFrontlineCloudPcAvailability(@jakarta.annotation.Nullable final FrontlineCloudPcAvailability value) {

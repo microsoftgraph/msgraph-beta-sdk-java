@@ -37,16 +37,18 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/certificateAuthorities/mutualTlsOauthConfigurations/{mutualTlsOauthConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property mutualTlsOauthConfigurations for certificateAuthorities
+     * Delete the specified mutualTlsOauthConfiguration resource. You must first delete the deviceTemplate object that references the ID.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mutualtlsoauthconfiguration-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property mutualTlsOauthConfigurations for certificateAuthorities
+     * Delete the specified mutualTlsOauthConfiguration resource. You must first delete the deviceTemplate object that references the ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mutualtlsoauthconfiguration-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,7 +57,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get mutualTlsOauthConfigurations from certificateAuthorities
+     * Defines the trusted certificate authorities for certificates that can be added to Internet of Things (IoT) devices.
      * @return a {@link MutualTlsOauthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +66,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get mutualTlsOauthConfigurations from certificateAuthorities
+     * Defines the trusted certificate authorities for certificates that can be added to Internet of Things (IoT) devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MutualTlsOauthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -102,7 +104,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, MutualTlsOauthConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property mutualTlsOauthConfigurations for certificateAuthorities
+     * Delete the specified mutualTlsOauthConfiguration resource. You must first delete the deviceTemplate object that references the ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +112,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property mutualTlsOauthConfigurations for certificateAuthorities
+     * Delete the specified mutualTlsOauthConfiguration resource. You must first delete the deviceTemplate object that references the ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +124,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get mutualTlsOauthConfigurations from certificateAuthorities
+     * Defines the trusted certificate authorities for certificates that can be added to Internet of Things (IoT) devices.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get mutualTlsOauthConfigurations from certificateAuthorities
+     * Defines the trusted certificate authorities for certificates that can be added to Internet of Things (IoT) devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get mutualTlsOauthConfigurations from certificateAuthorities
+     * Defines the trusted certificate authorities for certificates that can be added to Internet of Things (IoT) devices.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

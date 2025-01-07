@@ -26,7 +26,7 @@ public class MutualTlsOauthConfiguration extends TrustedCertificateAuthorityBase
         return new MutualTlsOauthConfiguration();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Friendly name. Supports $filter (eq, in).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class MutualTlsOauthConfiguration extends TrustedCertificateAuthorityBase
         writer.writeEnumValue("tlsClientAuthParameter", this.getTlsClientAuthParameter());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Friendly name. Supports $filter (eq, in).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

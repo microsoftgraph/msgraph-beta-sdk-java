@@ -44,7 +44,7 @@ public class CertificateAuthorityPath extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mutualTlsOauthConfigurations property value. The mutualTlsOauthConfigurations property
+     * Gets the mutualTlsOauthConfigurations property value. Defines the trusted certificate authorities for certificates that can be added to Internet of Things (IoT) devices.
      * @return a {@link java.util.List<MutualTlsOauthConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class CertificateAuthorityPath extends Entity implements Parsable {
         this.backingStore.set("certificateBasedApplicationConfigurations", value);
     }
     /**
-     * Sets the mutualTlsOauthConfigurations property value. The mutualTlsOauthConfigurations property
+     * Sets the mutualTlsOauthConfigurations property value. Defines the trusted certificate authorities for certificates that can be added to Internet of Things (IoT) devices.
      * @param value Value to set for the mutualTlsOauthConfigurations property.
      */
     public void setMutualTlsOauthConfigurations(@jakarta.annotation.Nullable final java.util.List<MutualTlsOauthConfiguration> value) {

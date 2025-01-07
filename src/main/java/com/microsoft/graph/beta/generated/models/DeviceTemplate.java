@@ -26,7 +26,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return new DeviceTemplate();
     }
     /**
-     * Gets the deviceAuthority property value. The deviceAuthority property
+     * Gets the deviceAuthority property value. A tenant-defined name for the party that's responsible for provisioning and managing devices on the Microsoft Entra tenant. For example, Tailwind Traders (the manufacturer) makes security cameras that are installed in customer buildings and managed by Lakeshore Retail (the device authority). This value is provided to the customer by the device authority (manufacturer or reseller).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return this.backingStore.get("deviceAuthority");
     }
     /**
-     * Gets the deviceInstances property value. The deviceInstances property
+     * Gets the deviceInstances property value. Collection of device objects created based on this template.
      * @return a {@link java.util.List<Device>}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the manufacturer property value. The manufacturer property
+     * Gets the manufacturer property value. Manufacturer name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return this.backingStore.get("manufacturer");
     }
     /**
-     * Gets the model property value. The model property
+     * Gets the model property value. Model name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return this.backingStore.get("model");
     }
     /**
-     * Gets the mutualTlsOauthConfigurationId property value. The mutualTlsOauthConfigurationId property
+     * Gets the mutualTlsOauthConfigurationId property value. Object ID of the mutualTlsOauthConfiguration. This value isn't required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return this.backingStore.get("mutualTlsOauthConfigurationId");
     }
     /**
-     * Gets the mutualTlsOauthConfigurationTenantId property value. The mutualTlsOauthConfigurationTenantId property
+     * Gets the mutualTlsOauthConfigurationTenantId property value. ID (tenant ID for device authority) of the tenant that contains the mutualTlsOauthConfiguration. This value isn't required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return this.backingStore.get("mutualTlsOauthConfigurationTenantId");
     }
     /**
-     * Gets the operatingSystem property value. The operatingSystem property
+     * Gets the operatingSystem property value. Operating system type. Supports $filter (eq, in).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return this.backingStore.get("operatingSystem");
     }
     /**
-     * Gets the owners property value. The owners property
+     * Gets the owners property value. Collection of directory objects that can manage the device template and the related deviceInstances. Owners can be represented as service principals, users, or applications. An owner has full privileges over the device template and doesn't require other administrator roles to create, update, or delete devices from this template, as well as to add or remove template owners.  Supports $expand.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -123,56 +123,56 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("owners", this.getOwners());
     }
     /**
-     * Sets the deviceAuthority property value. The deviceAuthority property
+     * Sets the deviceAuthority property value. A tenant-defined name for the party that's responsible for provisioning and managing devices on the Microsoft Entra tenant. For example, Tailwind Traders (the manufacturer) makes security cameras that are installed in customer buildings and managed by Lakeshore Retail (the device authority). This value is provided to the customer by the device authority (manufacturer or reseller).
      * @param value Value to set for the deviceAuthority property.
      */
     public void setDeviceAuthority(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceAuthority", value);
     }
     /**
-     * Sets the deviceInstances property value. The deviceInstances property
+     * Sets the deviceInstances property value. Collection of device objects created based on this template.
      * @param value Value to set for the deviceInstances property.
      */
     public void setDeviceInstances(@jakarta.annotation.Nullable final java.util.List<Device> value) {
         this.backingStore.set("deviceInstances", value);
     }
     /**
-     * Sets the manufacturer property value. The manufacturer property
+     * Sets the manufacturer property value. Manufacturer name.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("manufacturer", value);
     }
     /**
-     * Sets the model property value. The model property
+     * Sets the model property value. Model name.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("model", value);
     }
     /**
-     * Sets the mutualTlsOauthConfigurationId property value. The mutualTlsOauthConfigurationId property
+     * Sets the mutualTlsOauthConfigurationId property value. Object ID of the mutualTlsOauthConfiguration. This value isn't required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
      * @param value Value to set for the mutualTlsOauthConfigurationId property.
      */
     public void setMutualTlsOauthConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mutualTlsOauthConfigurationId", value);
     }
     /**
-     * Sets the mutualTlsOauthConfigurationTenantId property value. The mutualTlsOauthConfigurationTenantId property
+     * Sets the mutualTlsOauthConfigurationTenantId property value. ID (tenant ID for device authority) of the tenant that contains the mutualTlsOauthConfiguration. This value isn't required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
      * @param value Value to set for the mutualTlsOauthConfigurationTenantId property.
      */
     public void setMutualTlsOauthConfigurationTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mutualTlsOauthConfigurationTenantId", value);
     }
     /**
-     * Sets the operatingSystem property value. The operatingSystem property
+     * Sets the operatingSystem property value. Operating system type. Supports $filter (eq, in).
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operatingSystem", value);
     }
     /**
-     * Sets the owners property value. The owners property
+     * Sets the owners property value. Collection of directory objects that can manage the device template and the related deviceInstances. Owners can be represented as service principals, users, or applications. An owner has full privileges over the device template and doesn't require other administrator roles to create, update, or delete devices from this template, as well as to add or remove template owners.  Supports $expand.
      * @param value Value to set for the owners property.
      */
     public void setOwners(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {

@@ -60,19 +60,21 @@ public class MutualTlsOauthConfigurationsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/mutualTlsOauthConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get a list of the available mutualTlsOauthConfiguration resources.
      * @return a {@link MutualTlsOauthConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritypath-list-mutualtlsoauthconfigurations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MutualTlsOauthConfigurationCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get a list of the available mutualTlsOauthConfiguration resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MutualTlsOauthConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritypath-list-mutualtlsoauthconfigurations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MutualTlsOauthConfigurationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class MutualTlsOauthConfigurationsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, MutualTlsOauthConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to mutualTlsOauthConfigurations for directory
+     * Create a mutualTlsOauthConfiguration resource that contains a specified certificate authority object.
      * @param body The request body
      * @return a {@link MutualTlsOauthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritypath-post-mutualtlsoauthconfigurations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MutualTlsOauthConfiguration post(@jakarta.annotation.Nonnull final MutualTlsOauthConfiguration body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to mutualTlsOauthConfigurations for directory
+     * Create a mutualTlsOauthConfiguration resource that contains a specified certificate authority object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MutualTlsOauthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/certificateauthoritypath-post-mutualtlsoauthconfigurations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MutualTlsOauthConfiguration post(@jakarta.annotation.Nonnull final MutualTlsOauthConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class MutualTlsOauthConfigurationsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, MutualTlsOauthConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get a list of the available mutualTlsOauthConfiguration resources.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class MutualTlsOauthConfigurationsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get a list of the available mutualTlsOauthConfiguration resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class MutualTlsOauthConfigurationsRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Create new navigation property to mutualTlsOauthConfigurations for directory
+     * Create a mutualTlsOauthConfiguration resource that contains a specified certificate authority object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class MutualTlsOauthConfigurationsRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to mutualTlsOauthConfigurations for directory
+     * Create a mutualTlsOauthConfiguration resource that contains a specified certificate authority object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class MutualTlsOauthConfigurationsRequestBuilder extends BaseRequestBuild
         return new MutualTlsOauthConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get a list of the available mutualTlsOauthConfiguration resources.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
