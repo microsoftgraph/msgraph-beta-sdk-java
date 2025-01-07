@@ -60,7 +60,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/templates/deviceTemplates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      * @return a {@link DeviceTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceTemplate::createFromDiscriminatorValue);
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class DeviceTemplatesRequestBuilder extends BaseRequestBuilder {
         return new DeviceTemplatesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get deviceTemplates from templates
+     * Defines the templates that are common to a set of device objects, such as IoT devices.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

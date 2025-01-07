@@ -55,19 +55,21 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get the properties and relationships of the specified mutualTlsOauthConfiguration resource.
      * @return a {@link MutualTlsOauthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mutualtlsoauthconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MutualTlsOauthConfiguration get() {
         return get(null);
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get the properties and relationships of the specified mutualTlsOauthConfiguration resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MutualTlsOauthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mutualtlsoauthconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MutualTlsOauthConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, MutualTlsOauthConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property mutualTlsOauthConfigurations in directory
+     * Update the specified mutualTlsOauthConfiguration resource. You can only update the following two properties: displayName, certificateAuthority. To update a subset of objects in the certificateAuthorities collection, first get the complete list, make your modifications, and then repost the entire contents of the certificateAuthorities attribute list in the request body. Excluding a subset of objects removes them from the collection.
      * @param body The request body
      * @return a {@link MutualTlsOauthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mutualtlsoauthconfiguration-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MutualTlsOauthConfiguration patch(@jakarta.annotation.Nonnull final MutualTlsOauthConfiguration body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property mutualTlsOauthConfigurations in directory
+     * Update the specified mutualTlsOauthConfiguration resource. You can only update the following two properties: displayName, certificateAuthority. To update a subset of objects in the certificateAuthorities collection, first get the complete list, make your modifications, and then repost the entire contents of the certificateAuthorities attribute list in the request body. Excluding a subset of objects removes them from the collection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MutualTlsOauthConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mutualtlsoauthconfiguration-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MutualTlsOauthConfiguration patch(@jakarta.annotation.Nonnull final MutualTlsOauthConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get the properties and relationships of the specified mutualTlsOauthConfiguration resource.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get the properties and relationships of the specified mutualTlsOauthConfiguration resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Update the navigation property mutualTlsOauthConfigurations in directory
+     * Update the specified mutualTlsOauthConfiguration resource. You can only update the following two properties: displayName, certificateAuthority. To update a subset of objects in the certificateAuthorities collection, first get the complete list, make your modifications, and then repost the entire contents of the certificateAuthorities attribute list in the request body. Excluding a subset of objects removes them from the collection.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property mutualTlsOauthConfigurations in directory
+     * Update the specified mutualTlsOauthConfiguration resource. You can only update the following two properties: displayName, certificateAuthority. To update a subset of objects in the certificateAuthorities collection, first get the complete list, make your modifications, and then repost the entire contents of the certificateAuthorities attribute list in the request body. Excluding a subset of objects removes them from the collection.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class MutualTlsOauthConfigurationItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get mutualTlsOauthConfigurations from directory
+     * Get the properties and relationships of the specified mutualTlsOauthConfiguration resource.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

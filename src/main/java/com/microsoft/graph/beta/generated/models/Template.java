@@ -25,7 +25,7 @@ public class Template extends Entity implements Parsable {
         return new Template();
     }
     /**
-     * Gets the deviceTemplates property value. The deviceTemplates property
+     * Gets the deviceTemplates property value. Defines the templates that are common to a set of device objects, such as IoT devices.
      * @return a {@link java.util.List<DeviceTemplate>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class Template extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deviceTemplates", this.getDeviceTemplates());
     }
     /**
-     * Sets the deviceTemplates property value. The deviceTemplates property
+     * Sets the deviceTemplates property value. Defines the templates that are common to a set of device objects, such as IoT devices.
      * @param value Value to set for the deviceTemplates property.
      */
     public void setDeviceTemplates(@jakarta.annotation.Nullable final java.util.List<DeviceTemplate> value) {

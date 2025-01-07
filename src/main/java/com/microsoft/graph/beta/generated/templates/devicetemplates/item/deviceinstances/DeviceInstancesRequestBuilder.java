@@ -59,7 +59,7 @@ public class DeviceInstancesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/templates/deviceTemplates/{deviceTemplate%2Did}/deviceInstances{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get deviceInstances from templates
+     * Collection of device objects created based on this template.
      * @return a {@link DeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class DeviceInstancesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get deviceInstances from templates
+     * Collection of device objects created based on this template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class DeviceInstancesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get deviceInstances from templates
+     * Collection of device objects created based on this template.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class DeviceInstancesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get deviceInstances from templates
+     * Collection of device objects created based on this template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class DeviceInstancesRequestBuilder extends BaseRequestBuilder {
         return new DeviceInstancesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get deviceInstances from templates
+     * Collection of device objects created based on this template.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -35,7 +35,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("accountEnabled");
     }
     /**
-     * Gets the alternativeNames property value. The alternativeNames property
+     * Gets the alternativeNames property value. List of alternative names for the device.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("deviceCategory");
     }
     /**
-     * Gets the deviceId property value. Unique Identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Also Supports $filter (eq, ne, not, startsWith).
+     * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This ID is an alternate key that can be used to reference the device object. Also supports $filter (eq, ne, not, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("deviceMetadata");
     }
     /**
-     * Gets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+     * Gets the deviceOwnership property value. Ownership of the device. Intune sets this property. Possible values are: unknown, company, personal.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("deviceOwnership");
     }
     /**
-     * Gets the deviceTemplate property value. The deviceTemplate property
+     * Gets the deviceTemplate property value. Device template used to instantiate this device. Nullable. Read-only.
      * @return a {@link java.util.List<DeviceTemplate>}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the domainName property value. The on-premises domain name of Microsoft Entra hybrid joined devices. This property is set by Intune.
+     * Gets the domainName property value. The on-premises domain name of Microsoft Entra hybrid joined devices. Intune sets this property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("domainName");
     }
     /**
-     * Gets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+     * Gets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. Intune sets this property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("enrollmentProfileName");
     }
     /**
-     * Gets the enrollmentType property value. Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth,appleUserEnrollment, appleUserEnrollmentWithServiceAccount. NOTE: This property might return other values apart from those listed.
+     * Gets the enrollmentType property value. Enrollment type of the device. Intune sets this property. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth,appleUserEnrollment, appleUserEnrollmentWithServiceAccount. NOTE: This property might return other values apart from those listed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -274,7 +274,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("kind");
     }
     /**
-     * Gets the managementType property value. Management channel of the device.  This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
+     * Gets the managementType property value. Management channel of the device. Intune sets this property. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -511,7 +511,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("accountEnabled", value);
     }
     /**
-     * Sets the alternativeNames property value. The alternativeNames property
+     * Sets the alternativeNames property value. List of alternative names for the device.
      * @param value Value to set for the alternativeNames property.
      */
     public void setAlternativeNames(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -553,7 +553,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("deviceCategory", value);
     }
     /**
-     * Sets the deviceId property value. Unique Identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Also Supports $filter (eq, ne, not, startsWith).
+     * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This ID is an alternate key that can be used to reference the device object. Also supports $filter (eq, ne, not, startsWith).
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
@@ -567,14 +567,14 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("deviceMetadata", value);
     }
     /**
-     * Sets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+     * Sets the deviceOwnership property value. Ownership of the device. Intune sets this property. Possible values are: unknown, company, personal.
      * @param value Value to set for the deviceOwnership property.
      */
     public void setDeviceOwnership(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceOwnership", value);
     }
     /**
-     * Sets the deviceTemplate property value. The deviceTemplate property
+     * Sets the deviceTemplate property value. Device template used to instantiate this device. Nullable. Read-only.
      * @param value Value to set for the deviceTemplate property.
      */
     public void setDeviceTemplate(@jakarta.annotation.Nullable final java.util.List<DeviceTemplate> value) {
@@ -595,21 +595,21 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the domainName property value. The on-premises domain name of Microsoft Entra hybrid joined devices. This property is set by Intune.
+     * Sets the domainName property value. The on-premises domain name of Microsoft Entra hybrid joined devices. Intune sets this property.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("domainName", value);
     }
     /**
-     * Sets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+     * Sets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. Intune sets this property.
      * @param value Value to set for the enrollmentProfileName property.
      */
     public void setEnrollmentProfileName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("enrollmentProfileName", value);
     }
     /**
-     * Sets the enrollmentType property value. Enrollment type of the device. This property is set by Intune. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth,appleUserEnrollment, appleUserEnrollmentWithServiceAccount. NOTE: This property might return other values apart from those listed.
+     * Sets the enrollmentType property value. Enrollment type of the device. Intune sets this property. Possible values are: unknown, userEnrollment, deviceEnrollmentManager, appleBulkWithUser, appleBulkWithoutUser, windowsAzureADJoin, windowsBulkUserless, windowsAutoEnrollment, windowsBulkAzureDomainJoin, windowsCoManagement, windowsAzureADJoinUsingDeviceAuth,appleUserEnrollment, appleUserEnrollmentWithServiceAccount. NOTE: This property might return other values apart from those listed.
      * @param value Value to set for the enrollmentType property.
      */
     public void setEnrollmentType(@jakarta.annotation.Nullable final String value) {
@@ -672,7 +672,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("kind", value);
     }
     /**
-     * Sets the managementType property value. Management channel of the device.  This property is set by Intune. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
+     * Sets the managementType property value. Management channel of the device. Intune sets this property. Possible values are: eas, mdm, easMdm, intuneClient, easIntuneClient, configurationManagerClient, configurationManagerClientMdm, configurationManagerClientMdmEas, unknown, jamf, googleCloudDevicePolicyController.
      * @param value Value to set for the managementType property.
      */
     public void setManagementType(@jakarta.annotation.Nullable final String value) {
