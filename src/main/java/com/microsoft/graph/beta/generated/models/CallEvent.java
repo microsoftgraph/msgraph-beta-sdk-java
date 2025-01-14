@@ -33,7 +33,7 @@ public class CallEvent extends Entity implements Parsable {
         return new CallEvent();
     }
     /**
-     * Gets the callEventType property value. The callEventType property
+     * Gets the callEventType property value. The event type of the call. Possible values are: callStarted, callEnded, unknownFutureValue, rosterUpdated. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: rosterUpdated.
      * @return a {@link CallEventType}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class CallEvent extends Entity implements Parsable {
         return this.backingStore.get("callEventType");
     }
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. The time when event occurred.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class CallEvent extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the participants property value. The participants property
+     * Gets the participants property value. Participants collection for the call event.
      * @return a {@link java.util.List<Participant>}
      */
     @jakarta.annotation.Nullable
@@ -80,21 +80,21 @@ public class CallEvent extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
     }
     /**
-     * Sets the callEventType property value. The callEventType property
+     * Sets the callEventType property value. The event type of the call. Possible values are: callStarted, callEnded, unknownFutureValue, rosterUpdated. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: rosterUpdated.
      * @param value Value to set for the callEventType property.
      */
     public void setCallEventType(@jakarta.annotation.Nullable final CallEventType value) {
         this.backingStore.set("callEventType", value);
     }
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. The time when event occurred.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("eventDateTime", value);
     }
     /**
-     * Sets the participants property value. The participants property
+     * Sets the participants property value. Participants collection for the call event.
      * @param value Value to set for the participants property.
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {

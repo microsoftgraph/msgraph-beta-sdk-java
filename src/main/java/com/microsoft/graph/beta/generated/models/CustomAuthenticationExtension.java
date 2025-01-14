@@ -36,7 +36,7 @@ public class CustomAuthenticationExtension extends CustomCalloutExtension implem
         return new CustomAuthenticationExtension();
     }
     /**
-     * Gets the behaviorOnError property value. The behaviorOnError property
+     * Gets the behaviorOnError property value. The behaviour on error for the custom authentication extension.
      * @return a {@link CustomExtensionBehaviorOnError}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class CustomAuthenticationExtension extends CustomCalloutExtension implem
         writer.writeObjectValue("behaviorOnError", this.getBehaviorOnError());
     }
     /**
-     * Sets the behaviorOnError property value. The behaviorOnError property
+     * Sets the behaviorOnError property value. The behaviour on error for the custom authentication extension.
      * @param value Value to set for the behaviorOnError property.
      */
     public void setBehaviorOnError(@jakarta.annotation.Nullable final CustomExtensionBehaviorOnError value) {

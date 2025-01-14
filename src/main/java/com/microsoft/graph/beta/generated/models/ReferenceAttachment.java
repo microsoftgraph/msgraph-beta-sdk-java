@@ -41,7 +41,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isFolder property value. Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
+     * Gets the isFolder property value. Specifies whether the attachment is a link to a folder. You must set this property to true if sourceUrl is a link to a folder. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
         return this.backingStore.get("providerType");
     }
     /**
-     * Gets the sourceUrl property value. URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
+     * Gets the sourceUrl property value. URL to get the attachment content. If this value is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
         writer.writeStringValue("thumbnailUrl", this.getThumbnailUrl());
     }
     /**
-     * Sets the isFolder property value. Specifies whether the attachment is a link to a folder. Must set this to true if sourceUrl is a link to a folder. Optional.
+     * Sets the isFolder property value. Specifies whether the attachment is a link to a folder. You must set this property to true if sourceUrl is a link to a folder. Optional.
      * @param value Value to set for the isFolder property.
      */
     public void setIsFolder(@jakarta.annotation.Nullable final Boolean value) {
@@ -131,7 +131,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
         this.backingStore.set("providerType", value);
     }
     /**
-     * Sets the sourceUrl property value. URL to get the attachment content. If this is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
+     * Sets the sourceUrl property value. URL to get the attachment content. If this value is a URL to a folder, then for the folder to be displayed correctly in Outlook or Outlook on the web, set isFolder to true. Required.
      * @param value Value to set for the sourceUrl property.
      */
     public void setSourceUrl(@jakarta.annotation.Nullable final String value) {
