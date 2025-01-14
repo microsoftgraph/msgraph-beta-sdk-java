@@ -36,7 +36,7 @@ public class OnEmailOtpSendListener extends AuthenticationEventListener implemen
         return deserializerMap;
     }
     /**
-     * Gets the handler property value. The handler property
+     * Gets the handler property value. Used to configure what to invoke if the onEmailOTPSend event resolves to this listener. This base class serves as a generic OTP event handler used for both email and SMS OTP messages.
      * @return a {@link OnOtpSendHandler}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class OnEmailOtpSendListener extends AuthenticationEventListener implemen
         writer.writeObjectValue("handler", this.getHandler());
     }
     /**
-     * Sets the handler property value. The handler property
+     * Sets the handler property value. Used to configure what to invoke if the onEmailOTPSend event resolves to this listener. This base class serves as a generic OTP event handler used for both email and SMS OTP messages.
      * @param value Value to set for the handler property.
      */
     public void setHandler(@jakarta.annotation.Nullable final OnOtpSendHandler value) {

@@ -26,7 +26,7 @@ public class OnOtpSendCustomExtensionHandler extends OnOtpSendHandler implements
         return new OnOtpSendCustomExtensionHandler();
     }
     /**
-     * Gets the configuration property value. The configuration property
+     * Gets the configuration property value. Configuration regarding properties of the custom extension that are can be overwritten for the onEmailOtpSendListener event listener.
      * @return a {@link CustomExtensionOverwriteConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class OnOtpSendCustomExtensionHandler extends OnOtpSendHandler implements
         writer.writeObjectValue("customExtension", this.getCustomExtension());
     }
     /**
-     * Sets the configuration property value. The configuration property
+     * Sets the configuration property value. Configuration regarding properties of the custom extension that are can be overwritten for the onEmailOtpSendListener event listener.
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final CustomExtensionOverwriteConfiguration value) {
