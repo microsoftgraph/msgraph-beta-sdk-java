@@ -56,7 +56,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         return this.backingStore;
     }
     /**
-     * Gets the description property value. Detailed information about the message type.
+     * Gets the description property value. The description property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         return deserializerMap;
     }
     /**
-     * Gets the fileName property value. Source file that contains the error.
+     * Gets the fileName property value. The fileName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. Type of the message. Possible values are: error, warning, information.
+     * Gets the type property value. The type property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         this.backingStore = value;
     }
     /**
-     * Sets the description property value. Detailed information about the message type.
+     * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the fileName property value. Source file that contains the error.
+     * Sets the fileName property value. The fileName property
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class EducationFileSynchronizationVerificationMessage implements Addition
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. Type of the message. Possible values are: error, warning, information.
+     * Sets the type property value. The type property
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

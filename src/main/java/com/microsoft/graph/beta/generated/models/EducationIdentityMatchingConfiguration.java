@@ -36,7 +36,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
         return deserializerMap;
     }
     /**
-     * Gets the matchingOptions property value. Mapping between the user account and the options to use to uniquely identify the user to update.
+     * Gets the matchingOptions property value. The matchingOptions property
      * @return a {@link java.util.List<EducationIdentityMatchingOptions>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EducationIdentityMatchingConfiguration extends EducationIdentitySyn
         writer.writeCollectionOfObjectValues("matchingOptions", this.getMatchingOptions());
     }
     /**
-     * Sets the matchingOptions property value. Mapping between the user account and the options to use to uniquely identify the user to update.
+     * Sets the matchingOptions property value. The matchingOptions property
      * @param value Value to set for the matchingOptions property.
      */
     public void setMatchingOptions(@jakarta.annotation.Nullable final java.util.List<EducationIdentityMatchingOptions> value) {

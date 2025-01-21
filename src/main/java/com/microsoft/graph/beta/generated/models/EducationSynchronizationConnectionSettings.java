@@ -64,7 +64,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         return this.backingStore;
     }
     /**
-     * Gets the clientId property value. Client ID used to connect to the provider.
+     * Gets the clientId property value. The clientId property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         return this.backingStore.get("clientId");
     }
     /**
-     * Gets the clientSecret property value. Client secret to authenticate the connection to the provider.
+     * Gets the clientSecret property value. The clientSecret property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -126,14 +126,14 @@ public class EducationSynchronizationConnectionSettings implements AdditionalDat
         this.backingStore = value;
     }
     /**
-     * Sets the clientId property value. Client ID used to connect to the provider.
+     * Sets the clientId property value. The clientId property
      * @param value Value to set for the clientId property.
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientId", value);
     }
     /**
-     * Sets the clientSecret property value. Client secret to authenticate the connection to the provider.
+     * Sets the clientSecret property value. The clientSecret property
      * @param value Value to set for the clientSecret property.
      */
     public void setClientSecret(@jakarta.annotation.Nullable final String value) {

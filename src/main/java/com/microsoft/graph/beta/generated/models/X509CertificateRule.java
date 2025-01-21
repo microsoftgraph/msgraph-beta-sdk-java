@@ -120,7 +120,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("x509CertificateRequiredAffinityLevel");
     }
     /**
-     * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
+     * Gets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
      * @return a {@link X509CertificateRuleType}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class X509CertificateRule implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("x509CertificateRequiredAffinityLevel", value);
     }
     /**
-     * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Note that you must use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
+     * Sets the x509CertificateRuleType property value. The type of the X.509 certificate mode configuration rule. The possible values are: issuerSubject, policyOID, unknownFutureValue, issuerSubjectAndPolicyOID. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: issuerSubjectAndPolicyOID. Required.
      * @param value Value to set for the x509CertificateRuleType property.
      */
     public void setX509CertificateRuleType(@jakarta.annotation.Nullable final X509CertificateRuleType value) {

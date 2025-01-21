@@ -48,7 +48,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue, newsLink. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: newsLink.
+     * Gets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue, newsLink. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: newsLink.
      * @return a {@link PageLayoutType}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class BaseSitePage extends BaseItem implements Parsable {
         writer.writeStringValue("title", this.getTitle());
     }
     /**
-     * Sets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue, newsLink. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: newsLink.
+     * Sets the pageLayout property value. The name of the page layout of the page. The possible values are: microsoftReserved, article, home, unknownFutureValue, newsLink. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: newsLink.
      * @param value Value to set for the pageLayout property.
      */
     public void setPageLayout(@jakarta.annotation.Nullable final PageLayoutType value) {

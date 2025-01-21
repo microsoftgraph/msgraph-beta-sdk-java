@@ -59,7 +59,16 @@ public class MailboxProtectionUnit extends ProtectionUnitBase implements Parsabl
         deserializerMap.put("directoryObjectId", (n) -> { this.setDirectoryObjectId(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("email", (n) -> { this.setEmail(n.getStringValue()); });
+        deserializerMap.put("mailboxType", (n) -> { this.setMailboxType(n.getEnumValue(MailboxType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the mailboxType property value. The type of mailbox which is assigned to the user with id: directoryObjectId.The possible values are: unknown, user, shared, unknownFutureValue.
+     * @return a {@link MailboxType}
+     */
+    @jakarta.annotation.Nullable
+    public MailboxType getMailboxType() {
+        return this.backingStore.get("mailboxType");
     }
     /**
      * Serializes information the current object
@@ -69,6 +78,7 @@ public class MailboxProtectionUnit extends ProtectionUnitBase implements Parsabl
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("directoryObjectId", this.getDirectoryObjectId());
+        writer.writeEnumValue("mailboxType", this.getMailboxType());
     }
     /**
      * Sets the directoryObjectId property value. The ID of the directory object.
@@ -90,5 +100,12 @@ public class MailboxProtectionUnit extends ProtectionUnitBase implements Parsabl
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("email", value);
+    }
+    /**
+     * Sets the mailboxType property value. The type of mailbox which is assigned to the user with id: directoryObjectId.The possible values are: unknown, user, shared, unknownFutureValue.
+     * @param value Value to set for the mailboxType property.
+     */
+    public void setMailboxType(@jakarta.annotation.Nullable final MailboxType value) {
+        this.backingStore.set("mailboxType", value);
     }
 }

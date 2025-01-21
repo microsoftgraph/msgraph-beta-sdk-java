@@ -37,7 +37,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
         return deserializerMap;
     }
     /**
-     * Gets the scope property value. The scope of the access request (see RFC6749).
+     * Gets the scope property value. The scope property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
         return this.backingStore.get("scope");
     }
     /**
-     * Gets the tokenUrl property value. The URL to get access tokens for the data provider.
+     * Gets the tokenUrl property value. The tokenUrl property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class EducationSynchronizationOAuth2ClientCredentialsConnectionSettings e
         writer.writeStringValue("tokenUrl", this.getTokenUrl());
     }
     /**
-     * Sets the scope property value. The scope of the access request (see RFC6749).
+     * Sets the scope property value. The scope property
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("scope", value);
     }
     /**
-     * Sets the tokenUrl property value. The URL to get access tokens for the data provider.
+     * Sets the tokenUrl property value. The tokenUrl property
      * @param value Value to set for the tokenUrl property.
      */
     public void setTokenUrl(@jakarta.annotation.Nullable final String value) {

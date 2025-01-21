@@ -1,19 +1,28 @@
 package com.microsoft.graph.beta.models.windowsupdates;
 
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdateManagementEnrollment extends UpdatableAssetEnrollment implements Parsable {
+public class UpdateManagementEnrollment implements AdditionalDataHolder, BackedModel, Parsable {
+    /**
+     * Stores model information.
+     */
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new {@link UpdateManagementEnrollment} and sets the default values.
      */
     public UpdateManagementEnrollment() {
-        super();
-        this.setOdataType("#microsoft.graph.windowsUpdates.updateManagementEnrollment");
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -26,22 +35,70 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
         return new UpdateManagementEnrollment();
     }
     /**
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a {@link Map<String, Object>}
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a {@link BackingStore}
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
+    }
+    /**
+     * Gets the driver property value. The driver property
+     * @return a {@link UpdateCategoryEnrollmentInformation}
+     */
+    @jakarta.annotation.Nullable
+    public UpdateCategoryEnrollmentInformation getDriver() {
+        return this.backingStore.get("driver");
+    }
+    /**
+     * Gets the feature property value. The feature property
+     * @return a {@link UpdateCategoryEnrollmentInformation}
+     */
+    @jakarta.annotation.Nullable
+    public UpdateCategoryEnrollmentInformation getFeature() {
+        return this.backingStore.get("feature");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("updateCategory", (n) -> { this.setUpdateCategory(n.getEnumValue(UpdateCategory::forValue)); });
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("driver", (n) -> { this.setDriver(n.getObjectValue(UpdateCategoryEnrollmentInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("feature", (n) -> { this.setFeature(n.getObjectValue(UpdateCategoryEnrollmentInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("quality", (n) -> { this.setQuality(n.getObjectValue(UpdateCategoryEnrollmentInformation::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the updateCategory property value. The updateCategory property
-     * @return a {@link UpdateCategory}
+     * Gets the @odata.type property value. The OdataType property
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public UpdateCategory getUpdateCategory() {
-        return this.backingStore.get("updateCategory");
+    public String getOdataType() {
+        return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the quality property value. The quality property
+     * @return a {@link UpdateCategoryEnrollmentInformation}
+     */
+    @jakarta.annotation.Nullable
+    public UpdateCategoryEnrollmentInformation getQuality() {
+        return this.backingStore.get("quality");
     }
     /**
      * Serializes information the current object
@@ -49,14 +106,53 @@ public class UpdateManagementEnrollment extends UpdatableAssetEnrollment impleme
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        super.serialize(writer);
-        writer.writeEnumValue("updateCategory", this.getUpdateCategory());
+        writer.writeObjectValue("driver", this.getDriver());
+        writer.writeObjectValue("feature", this.getFeature());
+        writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("quality", this.getQuality());
+        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the updateCategory property value. The updateCategory property
-     * @param value Value to set for the updateCategory property.
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
      */
-    public void setUpdateCategory(@jakarta.annotation.Nullable final UpdateCategory value) {
-        this.backingStore.set("updateCategory", value);
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
+    }
+    /**
+     * Sets the driver property value. The driver property
+     * @param value Value to set for the driver property.
+     */
+    public void setDriver(@jakarta.annotation.Nullable final UpdateCategoryEnrollmentInformation value) {
+        this.backingStore.set("driver", value);
+    }
+    /**
+     * Sets the feature property value. The feature property
+     * @param value Value to set for the feature property.
+     */
+    public void setFeature(@jakarta.annotation.Nullable final UpdateCategoryEnrollmentInformation value) {
+        this.backingStore.set("feature", value);
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     */
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the quality property value. The quality property
+     * @param value Value to set for the quality property.
+     */
+    public void setQuality(@jakarta.annotation.Nullable final UpdateCategoryEnrollmentInformation value) {
+        this.backingStore.set("quality", value);
     }
 }

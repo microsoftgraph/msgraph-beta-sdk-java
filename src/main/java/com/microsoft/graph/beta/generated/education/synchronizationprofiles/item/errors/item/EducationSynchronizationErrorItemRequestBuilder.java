@@ -61,7 +61,7 @@ public class EducationSynchronizationErrorItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get errors from education
      * @return a {@link EducationSynchronizationError}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -73,7 +73,7 @@ public class EducationSynchronizationErrorItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get errors from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationError}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -146,7 +146,7 @@ public class EducationSynchronizationErrorItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get errors from education
      * @return a {@link RequestInformation}
      * @deprecated
      * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
@@ -157,7 +157,7 @@ public class EducationSynchronizationErrorItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get errors from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -221,7 +221,7 @@ public class EducationSynchronizationErrorItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * All errors associated with this synchronization profile.
+     * Get errors from education
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

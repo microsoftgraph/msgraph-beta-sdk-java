@@ -26,12 +26,12 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
         return new AzureADDevice();
     }
     /**
-     * Gets the enrollments property value. Specifies areas in which the device is enrolled. Read-only. Returned by default.
-     * @return a {@link java.util.List<UpdatableAssetEnrollment>}
+     * Gets the enrollment property value. The enrollment property
+     * @return a {@link UpdateManagementEnrollment}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<UpdatableAssetEnrollment> getEnrollments() {
-        return this.backingStore.get("enrollments");
+    public UpdateManagementEnrollment getEnrollment() {
+        return this.backingStore.get("enrollment");
     }
     /**
      * Gets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.
@@ -48,7 +48,7 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("enrollments", (n) -> { this.setEnrollments(n.getCollectionOfObjectValues(UpdatableAssetEnrollment::createFromDiscriminatorValue)); });
+        deserializerMap.put("enrollment", (n) -> { this.setEnrollment(n.getObjectValue(UpdateManagementEnrollment::createFromDiscriminatorValue)); });
         deserializerMap.put("errors", (n) -> { this.setErrors(n.getCollectionOfObjectValues(UpdatableAssetError::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -59,15 +59,15 @@ public class AzureADDevice extends UpdatableAsset implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("enrollments", this.getEnrollments());
+        writer.writeObjectValue("enrollment", this.getEnrollment());
         writer.writeCollectionOfObjectValues("errors", this.getErrors());
     }
     /**
-     * Sets the enrollments property value. Specifies areas in which the device is enrolled. Read-only. Returned by default.
-     * @param value Value to set for the enrollments property.
+     * Sets the enrollment property value. The enrollment property
+     * @param value Value to set for the enrollment property.
      */
-    public void setEnrollments(@jakarta.annotation.Nullable final java.util.List<UpdatableAssetEnrollment> value) {
-        this.backingStore.set("enrollments", value);
+    public void setEnrollment(@jakarta.annotation.Nullable final UpdateManagementEnrollment value) {
+        this.backingStore.set("enrollment", value);
     }
     /**
      * Sets the errors property value. Specifies any errors that prevent the device from being enrolled in update management or receving deployed content. Read-only. Returned by default.

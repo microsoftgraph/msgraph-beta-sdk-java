@@ -76,7 +76,7 @@ public class EducationIdentityDomain implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the name property value. Represents the domain for the user account.
+     * Gets the name property value. The name property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class EducationIdentityDomain implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. Represents the domain for the user account.
+     * Sets the name property value. The name property
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

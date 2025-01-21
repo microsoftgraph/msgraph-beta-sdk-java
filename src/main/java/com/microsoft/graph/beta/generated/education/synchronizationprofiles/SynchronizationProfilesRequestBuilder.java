@@ -66,12 +66,11 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
+     * Get synchronizationProfiles from education
      * @return a {@link EducationSynchronizationProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
-     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -79,13 +78,12 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
+     * Get synchronizationProfiles from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationProfileCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
-     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationprofile-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -127,7 +125,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSynchronizationProfile::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
+     * Get synchronizationProfiles from education
      * @return a {@link RequestInformation}
      * @deprecated
      * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
@@ -138,7 +136,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
+     * Get synchronizationProfiles from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -196,7 +194,7 @@ public class SynchronizationProfilesRequestBuilder extends BaseRequestBuilder {
         return new SynchronizationProfilesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the collection of school data synchronization profiles in the tenant.
+     * Get synchronizationProfiles from education
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -86,7 +86,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, B
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sourcePropertyName property value. The name of the source property, which should be a field name in the source data. This property is case-sensitive.
+     * Gets the sourcePropertyName property value. The sourcePropertyName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, B
         return this.backingStore.get("sourcePropertyName");
     }
     /**
-     * Gets the targetDomain property value. The domain to suffix with the source property to match on the target. If provided as null, the source property will be used to match with the target property.
+     * Gets the targetDomain property value. The targetDomain property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, B
         return this.backingStore.get("targetDomain");
     }
     /**
-     * Gets the targetPropertyName property value. The name of the target property, which should be a valid property in Microsoft Entra ID. This property is case-sensitive.
+     * Gets the targetPropertyName property value. The targetPropertyName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -152,21 +152,21 @@ public class EducationIdentityMatchingOptions implements AdditionalDataHolder, B
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sourcePropertyName property value. The name of the source property, which should be a field name in the source data. This property is case-sensitive.
+     * Sets the sourcePropertyName property value. The sourcePropertyName property
      * @param value Value to set for the sourcePropertyName property.
      */
     public void setSourcePropertyName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sourcePropertyName", value);
     }
     /**
-     * Sets the targetDomain property value. The domain to suffix with the source property to match on the target. If provided as null, the source property will be used to match with the target property.
+     * Sets the targetDomain property value. The targetDomain property
      * @param value Value to set for the targetDomain property.
      */
     public void setTargetDomain(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetDomain", value);
     }
     /**
-     * Sets the targetPropertyName property value. The name of the target property, which should be a valid property in Microsoft Entra ID. This property is case-sensitive.
+     * Sets the targetPropertyName property value. The targetPropertyName property
      * @param value Value to set for the targetPropertyName property.
      */
     public void setTargetPropertyName(@jakarta.annotation.Nullable final String value) {

@@ -32,7 +32,16 @@ public class TeamsAdminRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(TeamsPolicyAssignment::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the policy property value. The policy property
+     * @return a {@link TeamsPolicyAssignment}
+     */
+    @jakarta.annotation.Nullable
+    public TeamsPolicyAssignment getPolicy() {
+        return this.backingStore.get("policy");
     }
     /**
      * Serializes information the current object
@@ -41,5 +50,13 @@ public class TeamsAdminRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("policy", this.getPolicy());
+    }
+    /**
+     * Sets the policy property value. The policy property
+     * @param value Value to set for the policy property.
+     */
+    public void setPolicy(@jakarta.annotation.Nullable final TeamsPolicyAssignment value) {
+        this.backingStore.set("policy", value);
     }
 }
