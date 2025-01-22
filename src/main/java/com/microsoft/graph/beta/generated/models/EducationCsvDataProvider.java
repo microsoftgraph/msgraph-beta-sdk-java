@@ -26,7 +26,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
         return new EducationCsvDataProvider();
     }
     /**
-     * Gets the customizations property value. Optional customizations to be applied to the synchronization profile.
+     * Gets the customizations property value. The customizations property
      * @return a {@link EducationSynchronizationCustomizations}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EducationCsvDataProvider extends EducationSynchronizationDataProvid
         writer.writeObjectValue("customizations", this.getCustomizations());
     }
     /**
-     * Sets the customizations property value. Optional customizations to be applied to the synchronization profile.
+     * Sets the customizations property value. The customizations property
      * @param value Value to set for the customizations property.
      */
     public void setCustomizations(@jakarta.annotation.Nullable final EducationSynchronizationCustomizations value) {

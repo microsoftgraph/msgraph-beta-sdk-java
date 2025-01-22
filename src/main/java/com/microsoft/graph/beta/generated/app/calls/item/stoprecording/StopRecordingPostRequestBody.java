@@ -1,4 +1,4 @@
-package com.microsoft.graph.beta.models.windowsupdates;
+package com.microsoft.graph.beta.app.calls.item.stoprecording;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -11,35 +11,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UpdatableAssetEnrollment implements AdditionalDataHolder, BackedModel, Parsable {
+public class StopRecordingPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.
      */
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new {@link UpdatableAssetEnrollment} and sets the default values.
+     * Instantiates a new {@link StopRecordingPostRequestBody} and sets the default values.
      */
-    public UpdatableAssetEnrollment() {
+    public StopRecordingPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link UpdatableAssetEnrollment}
+     * @return a {@link StopRecordingPostRequestBody}
      */
     @jakarta.annotation.Nonnull
-    public static UpdatableAssetEnrollment createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static StopRecordingPostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
-        if (mappingValueNode != null) {
-            final String mappingValue = mappingValueNode.getStringValue();
-            switch (mappingValue) {
-                case "#microsoft.graph.windowsUpdates.updateManagementEnrollment": return new UpdateManagementEnrollment();
-            }
-        }
-        return new UpdatableAssetEnrollment();
+        return new StopRecordingPostRequestBody();
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -63,22 +56,22 @@ public class UpdatableAssetEnrollment implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
+     * Gets the clientContext property value. The clientContext property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getClientContext() {
+        return this.backingStore.get("clientContext");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("clientContext", (n) -> { this.setClientContext(n.getStringValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getOdataType() {
-        return this.backingStore.get("odataType");
     }
     /**
      * Serializes information the current object
@@ -86,7 +79,7 @@ public class UpdatableAssetEnrollment implements AdditionalDataHolder, BackedMod
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("clientContext", this.getClientContext());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -105,10 +98,10 @@ public class UpdatableAssetEnrollment implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the @odata.type property.
+     * Sets the clientContext property value. The clientContext property
+     * @param value Value to set for the clientContext property.
      */
-    public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("odataType", value);
+    public void setClientContext(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("clientContext", value);
     }
 }

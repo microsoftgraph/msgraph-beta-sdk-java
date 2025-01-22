@@ -48,7 +48,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
         return value;
     }
     /**
-     * Gets the appliesTo property value. The user role type to assign to license. Possible values are: student, teacher, faculty.
+     * Gets the appliesTo property value. The appliesTo property
      * @return a {@link EducationUserRole}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the skuIds property value. Represents the SKU identifiers of the licenses to assign.
+     * Gets the skuIds property value. The skuIds property
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appliesTo property value. The user role type to assign to license. Possible values are: student, teacher, faculty.
+     * Sets the appliesTo property value. The appliesTo property
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final EducationUserRole value) {
@@ -132,7 +132,7 @@ public class EducationSynchronizationLicenseAssignment implements AdditionalData
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the skuIds property value. Represents the SKU identifiers of the licenses to assign.
+     * Sets the skuIds property value. The skuIds property
      * @param value Value to set for the skuIds property.
      */
     public void setSkuIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

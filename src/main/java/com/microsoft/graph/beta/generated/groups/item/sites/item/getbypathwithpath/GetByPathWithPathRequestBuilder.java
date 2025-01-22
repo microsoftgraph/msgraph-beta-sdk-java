@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath;
 
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.contentmodels.ContentModelsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.contenttypes.ContentTypesRequestBuilder;
@@ -23,6 +24,7 @@ import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.permiss
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.sites.SitesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.termstore.TermStoreRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Site;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -49,6 +51,14 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the archive method.
+     * @return a {@link ArchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ArchiveRequestBuilder archive() {
+        return new ArchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the columns property of the microsoft.graph.site entity.
@@ -209,6 +219,14 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TermStoreRequestBuilder termStore() {
         return new TermStoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unarchive method.
+     * @return a {@link UnarchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnarchiveRequestBuilder unarchive() {
+        return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link GetByPathWithPathRequestBuilder} and sets the default values.

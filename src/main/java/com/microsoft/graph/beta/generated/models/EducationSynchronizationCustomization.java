@@ -49,7 +49,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
         return value;
     }
     /**
-     * Gets the allowDisplayNameUpdate property value. Indicates whether the display name of the resource can be overwritten by the sync.
+     * Gets the allowDisplayNameUpdate property value. The allowDisplayNameUpdate property
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
         return deserializerMap;
     }
     /**
-     * Gets the isSyncDeferred property value. Indicates whether synchronization of the parent entity is deferred to a later date.
+     * Gets the isSyncDeferred property value. The isSyncDeferred property
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the optionalPropertiesToSync property value. The collection of property names to sync. If set to null, all properties will be synchronized. Does not apply to Student Enrollments or Teacher Rosters
+     * Gets the optionalPropertiesToSync property value. The optionalPropertiesToSync property
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
         return this.backingStore.get("optionalPropertiesToSync");
     }
     /**
-     * Gets the synchronizationStartDate property value. The date that the synchronization should start. This value should be set to a future date. If set to null, the resource will be synchronized when the profile setup completes. Only applies to Student Enrollments
+     * Gets the synchronizationStartDate property value. The synchronizationStartDate property
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowDisplayNameUpdate property value. Indicates whether the display name of the resource can be overwritten by the sync.
+     * Sets the allowDisplayNameUpdate property value. The allowDisplayNameUpdate property
      * @param value Value to set for the allowDisplayNameUpdate property.
      */
     public void setAllowDisplayNameUpdate(@jakarta.annotation.Nullable final Boolean value) {
@@ -146,7 +146,7 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the isSyncDeferred property value. Indicates whether synchronization of the parent entity is deferred to a later date.
+     * Sets the isSyncDeferred property value. The isSyncDeferred property
      * @param value Value to set for the isSyncDeferred property.
      */
     public void setIsSyncDeferred(@jakarta.annotation.Nullable final Boolean value) {
@@ -160,14 +160,14 @@ public class EducationSynchronizationCustomization implements AdditionalDataHold
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the optionalPropertiesToSync property value. The collection of property names to sync. If set to null, all properties will be synchronized. Does not apply to Student Enrollments or Teacher Rosters
+     * Sets the optionalPropertiesToSync property value. The optionalPropertiesToSync property
      * @param value Value to set for the optionalPropertiesToSync property.
      */
     public void setOptionalPropertiesToSync(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("optionalPropertiesToSync", value);
     }
     /**
-     * Sets the synchronizationStartDate property value. The date that the synchronization should start. This value should be set to a future date. If set to null, the resource will be synchronized when the profile setup completes. Only applies to Student Enrollments
+     * Sets the synchronizationStartDate property value. The synchronizationStartDate property
      * @param value Value to set for the synchronizationStartDate property.
      */
     public void setSynchronizationStartDate(@jakarta.annotation.Nullable final OffsetDateTime value) {

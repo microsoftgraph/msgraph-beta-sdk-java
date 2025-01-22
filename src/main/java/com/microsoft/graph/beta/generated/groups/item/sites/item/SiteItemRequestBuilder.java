@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.groups.item.sites.item;
 
 import com.microsoft.graph.beta.groups.item.sites.item.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.contentmodels.ContentModelsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.contenttypes.ContentTypesRequestBuilder;
@@ -24,6 +25,7 @@ import com.microsoft.graph.beta.groups.item.sites.item.permissions.PermissionsRe
 import com.microsoft.graph.beta.groups.item.sites.item.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.sites.SitesRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.termstore.TermStoreRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Site;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -51,6 +53,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the archive method.
+     * @return a {@link ArchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ArchiveRequestBuilder archive() {
+        return new ArchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the columns property of the microsoft.graph.site entity.
@@ -211,6 +221,14 @@ public class SiteItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TermStoreRequestBuilder termStore() {
         return new TermStoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unarchive method.
+     * @return a {@link UnarchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnarchiveRequestBuilder unarchive() {
+        return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SiteItemRequestBuilder} and sets the default values.

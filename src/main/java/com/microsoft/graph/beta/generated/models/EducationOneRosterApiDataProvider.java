@@ -34,7 +34,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         return this.backingStore.get("connectionSettings");
     }
     /**
-     * Gets the connectionUrl property value. The connection URL to the OneRoster instance.
+     * Gets the connectionUrl property value. The connectionUrl property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         return this.backingStore.get("connectionUrl");
     }
     /**
-     * Gets the customizations property value. Optional customization to be applied to the synchronization profile.
+     * Gets the customizations property value. The customizations property
      * @return a {@link EducationSynchronizationCustomizations}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         return deserializerMap;
     }
     /**
-     * Gets the providerName property value. The OneRoster Service Provider name as defined by the OneRoster specification.
+     * Gets the providerName property value. The providerName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         return this.backingStore.get("providerName");
     }
     /**
-     * Gets the schoolsIds property value. The list of School/Org sourcedId to sync.
+     * Gets the schoolsIds property value. The schoolsIds property
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         return this.backingStore.get("schoolsIds");
     }
     /**
-     * Gets the termIds property value. The list of academic sessions to sync.
+     * Gets the termIds property value. The termIds property
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -110,35 +110,35 @@ public class EducationOneRosterApiDataProvider extends EducationSynchronizationD
         this.backingStore.set("connectionSettings", value);
     }
     /**
-     * Sets the connectionUrl property value. The connection URL to the OneRoster instance.
+     * Sets the connectionUrl property value. The connectionUrl property
      * @param value Value to set for the connectionUrl property.
      */
     public void setConnectionUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("connectionUrl", value);
     }
     /**
-     * Sets the customizations property value. Optional customization to be applied to the synchronization profile.
+     * Sets the customizations property value. The customizations property
      * @param value Value to set for the customizations property.
      */
     public void setCustomizations(@jakarta.annotation.Nullable final EducationSynchronizationCustomizations value) {
         this.backingStore.set("customizations", value);
     }
     /**
-     * Sets the providerName property value. The OneRoster Service Provider name as defined by the OneRoster specification.
+     * Sets the providerName property value. The providerName property
      * @param value Value to set for the providerName property.
      */
     public void setProviderName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("providerName", value);
     }
     /**
-     * Sets the schoolsIds property value. The list of School/Org sourcedId to sync.
+     * Sets the schoolsIds property value. The schoolsIds property
      * @param value Value to set for the schoolsIds property.
      */
     public void setSchoolsIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("schoolsIds", value);
     }
     /**
-     * Sets the termIds property value. The list of academic sessions to sync.
+     * Sets the termIds property value. The termIds property
      * @param value Value to set for the termIds property.
      */
     public void setTermIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

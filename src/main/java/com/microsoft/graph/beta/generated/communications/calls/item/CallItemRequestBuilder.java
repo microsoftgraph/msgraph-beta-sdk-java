@@ -16,6 +16,10 @@ import com.microsoft.graph.beta.communications.calls.item.recordresponse.RecordR
 import com.microsoft.graph.beta.communications.calls.item.redirect.RedirectRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.item.reject.RejectRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.item.senddtmftones.SendDtmfTonesRequestBuilder;
+import com.microsoft.graph.beta.communications.calls.item.startrecording.StartRecordingRequestBuilder;
+import com.microsoft.graph.beta.communications.calls.item.starttranscription.StartTranscriptionRequestBuilder;
+import com.microsoft.graph.beta.communications.calls.item.stoprecording.StopRecordingRequestBuilder;
+import com.microsoft.graph.beta.communications.calls.item.stoptranscription.StopTranscriptionRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.item.subscribetotone.SubscribeToToneRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.item.transfer.TransferRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.item.unmute.UnmuteRequestBuilder;
@@ -167,6 +171,38 @@ public class CallItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SendDtmfTonesRequestBuilder sendDtmfTones() {
         return new SendDtmfTonesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the startRecording method.
+     * @return a {@link StartRecordingRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StartRecordingRequestBuilder startRecording() {
+        return new StartRecordingRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the startTranscription method.
+     * @return a {@link StartTranscriptionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StartTranscriptionRequestBuilder startTranscription() {
+        return new StartTranscriptionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the stopRecording method.
+     * @return a {@link StopRecordingRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StopRecordingRequestBuilder stopRecording() {
+        return new StopRecordingRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the stopTranscription method.
+     * @return a {@link StopTranscriptionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StopTranscriptionRequestBuilder stopTranscription() {
+        return new StopTranscriptionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the subscribeToTone method.

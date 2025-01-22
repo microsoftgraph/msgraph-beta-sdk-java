@@ -66,12 +66,11 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/synchronizationProfiles/{educationSynchronizationProfile%2Did}/errors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
+     * Get errors from education
      * @return a {@link EducationSynchronizationErrorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
-     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -79,13 +78,12 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
+     * Get errors from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSynchronizationErrorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
-     * @see <a href="https://learn.microsoft.com/graph/api/educationsynchronizationerrors-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -127,7 +125,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSynchronizationError::createFromDiscriminatorValue);
     }
     /**
-     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
+     * Get errors from education
      * @return a {@link RequestInformation}
      * @deprecated
      * The Education Sync Profile API is deprecated and will stop returning data on December 31, 2024. Please transition to the new IndustryData API. as of 2024-06/Deprecated:SynchronizationProfiles
@@ -138,7 +136,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
+     * Get errors from education
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -196,7 +194,7 @@ public class ErrorsRequestBuilder extends BaseRequestBuilder {
         return new ErrorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the errors generated during validation and/or during a sync of a specific school data synchronization profile in the tenant.
+     * Get errors from education
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
