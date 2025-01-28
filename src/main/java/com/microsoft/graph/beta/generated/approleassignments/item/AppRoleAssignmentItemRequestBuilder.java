@@ -1,5 +1,10 @@
 package com.microsoft.graph.beta.approleassignments.item;
 
+import com.microsoft.graph.beta.approleassignments.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
+import com.microsoft.graph.beta.approleassignments.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
+import com.microsoft.graph.beta.approleassignments.item.getmembergroups.GetMemberGroupsRequestBuilder;
+import com.microsoft.graph.beta.approleassignments.item.getmemberobjects.GetMemberObjectsRequestBuilder;
+import com.microsoft.graph.beta.approleassignments.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.beta.models.AppRoleAssignment;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +25,46 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AppRoleAssignmentItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the checkMemberGroups method.
+     * @return a {@link CheckMemberGroupsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CheckMemberGroupsRequestBuilder checkMemberGroups() {
+        return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the checkMemberObjects method.
+     * @return a {@link CheckMemberObjectsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CheckMemberObjectsRequestBuilder checkMemberObjects() {
+        return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getMemberGroups method.
+     * @return a {@link GetMemberGroupsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetMemberGroupsRequestBuilder getMemberGroups() {
+        return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getMemberObjects method.
+     * @return a {@link GetMemberObjectsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetMemberObjectsRequestBuilder getMemberObjects() {
+        return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link AppRoleAssignmentItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

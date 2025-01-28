@@ -59,6 +59,14 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("appliedEventListeners");
     }
     /**
+     * Gets the appOwnerTenantId property value. The appOwnerTenantId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAppOwnerTenantId() {
+        return this.backingStore.get("appOwnerTenantId");
+    }
+    /**
      * Gets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the app token was bound to the device.
      * @return a {@link TokenProtectionStatus}
      */
@@ -237,6 +245,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("appliedConditionalAccessPolicies", (n) -> { this.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("appliedEventListeners", (n) -> { this.setAppliedEventListeners(n.getCollectionOfObjectValues(AppliedAuthenticationEventListener::createFromDiscriminatorValue)); });
+        deserializerMap.put("appOwnerTenantId", (n) -> { this.setAppOwnerTenantId(n.getStringValue()); });
         deserializerMap.put("appTokenProtectionStatus", (n) -> { this.setAppTokenProtectionStatus(n.getEnumValue(TokenProtectionStatus::forValue)); });
         deserializerMap.put("authenticationAppDeviceDetails", (n) -> { this.setAuthenticationAppDeviceDetails(n.getObjectValue(AuthenticationAppDeviceDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationAppPolicyEvaluationDetails", (n) -> { this.setAuthenticationAppPolicyEvaluationDetails(n.getCollectionOfObjectValues(AuthenticationAppPolicyDetails::createFromDiscriminatorValue)); });
@@ -278,6 +287,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("processingTimeInMilliseconds", (n) -> { this.setProcessingTimeInMilliseconds(n.getIntegerValue()); });
         deserializerMap.put("resourceDisplayName", (n) -> { this.setResourceDisplayName(n.getStringValue()); });
         deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
+        deserializerMap.put("resourceOwnerTenantId", (n) -> { this.setResourceOwnerTenantId(n.getStringValue()); });
         deserializerMap.put("resourceServicePrincipalId", (n) -> { this.setResourceServicePrincipalId(n.getStringValue()); });
         deserializerMap.put("resourceTenantId", (n) -> { this.setResourceTenantId(n.getStringValue()); });
         deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
@@ -468,6 +478,14 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("resourceId");
     }
     /**
+     * Gets the resourceOwnerTenantId property value. The resourceOwnerTenantId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getResourceOwnerTenantId() {
+        return this.backingStore.get("resourceOwnerTenantId");
+    }
+    /**
      * Gets the resourceServicePrincipalId property value. The identifier of the service principal representing the target resource in the sign-in event.
      * @return a {@link String}
      */
@@ -572,7 +590,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("sessionLifetimePolicies");
     }
     /**
-     * Gets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne).
+     * Gets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&$filter=signInEventTypes/any(t: t eq 'nonInteractiveUser').
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -694,6 +712,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("appId", this.getAppId());
         writer.writeCollectionOfObjectValues("appliedConditionalAccessPolicies", this.getAppliedConditionalAccessPolicies());
         writer.writeCollectionOfObjectValues("appliedEventListeners", this.getAppliedEventListeners());
+        writer.writeStringValue("appOwnerTenantId", this.getAppOwnerTenantId());
         writer.writeEnumValue("appTokenProtectionStatus", this.getAppTokenProtectionStatus());
         writer.writeObjectValue("authenticationAppDeviceDetails", this.getAuthenticationAppDeviceDetails());
         writer.writeCollectionOfObjectValues("authenticationAppPolicyEvaluationDetails", this.getAuthenticationAppPolicyEvaluationDetails());
@@ -735,6 +754,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeIntegerValue("processingTimeInMilliseconds", this.getProcessingTimeInMilliseconds());
         writer.writeStringValue("resourceDisplayName", this.getResourceDisplayName());
         writer.writeStringValue("resourceId", this.getResourceId());
+        writer.writeStringValue("resourceOwnerTenantId", this.getResourceOwnerTenantId());
         writer.writeStringValue("resourceServicePrincipalId", this.getResourceServicePrincipalId());
         writer.writeStringValue("resourceTenantId", this.getResourceTenantId());
         writer.writeEnumValue("riskDetail", this.getRiskDetail());
@@ -790,6 +810,13 @@ public class SignIn extends Entity implements Parsable {
      */
     public void setAppliedEventListeners(@jakarta.annotation.Nullable final java.util.List<AppliedAuthenticationEventListener> value) {
         this.backingStore.set("appliedEventListeners", value);
+    }
+    /**
+     * Sets the appOwnerTenantId property value. The appOwnerTenantId property
+     * @param value Value to set for the appOwnerTenantId property.
+     */
+    public void setAppOwnerTenantId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("appOwnerTenantId", value);
     }
     /**
      * Sets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the app token was bound to the device.
@@ -1079,6 +1106,13 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("resourceId", value);
     }
     /**
+     * Sets the resourceOwnerTenantId property value. The resourceOwnerTenantId property
+     * @param value Value to set for the resourceOwnerTenantId property.
+     */
+    public void setResourceOwnerTenantId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("resourceOwnerTenantId", value);
+    }
+    /**
      * Sets the resourceServicePrincipalId property value. The identifier of the service principal representing the target resource in the sign-in event.
      * @param value Value to set for the resourceServicePrincipalId property.
      */
@@ -1170,7 +1204,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("sessionLifetimePolicies", value);
     }
     /**
-     * Sets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne).
+     * Sets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&$filter=signInEventTypes/any(t: t eq 'nonInteractiveUser').
      * @param value Value to set for the signInEventTypes property.
      */
     public void setSignInEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {

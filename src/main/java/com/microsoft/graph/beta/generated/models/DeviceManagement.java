@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 /**
- * Singleton entity that acts as a container for all device management functionality.
+ * Singleton that acts as container for a collection of Resource Access entities.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagement extends Entity implements Parsable {

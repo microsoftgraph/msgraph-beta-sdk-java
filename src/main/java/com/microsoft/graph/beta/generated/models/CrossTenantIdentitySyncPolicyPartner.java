@@ -64,13 +64,22 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the externalCloudAuthorizedApplicationId property value. The externalCloudAuthorizedApplicationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getExternalCloudAuthorizedApplicationId() {
+        return this.backingStore.get("externalCloudAuthorizedApplicationId");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalCloudAuthorizedApplicationId", (n) -> { this.setExternalCloudAuthorizedApplicationId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("userSyncInbound", (n) -> { this.setUserSyncInbound(n.getObjectValue(CrossTenantUserSyncInbound::createFromDiscriminatorValue)); });
@@ -107,6 +116,7 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("externalCloudAuthorizedApplicationId", this.getExternalCloudAuthorizedApplicationId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeObjectValue("userSyncInbound", this.getUserSyncInbound());
@@ -133,6 +143,13 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the externalCloudAuthorizedApplicationId property value. The externalCloudAuthorizedApplicationId property
+     * @param value Value to set for the externalCloudAuthorizedApplicationId property.
+     */
+    public void setExternalCloudAuthorizedApplicationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("externalCloudAuthorizedApplicationId", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

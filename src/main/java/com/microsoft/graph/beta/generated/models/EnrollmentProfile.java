@@ -33,6 +33,8 @@ public class EnrollmentProfile extends Entity implements Parsable {
                 case "#microsoft.graph.depEnrollmentProfile": return new DepEnrollmentProfile();
                 case "#microsoft.graph.depIOSEnrollmentProfile": return new DepIOSEnrollmentProfile();
                 case "#microsoft.graph.depMacOSEnrollmentProfile": return new DepMacOSEnrollmentProfile();
+                case "#microsoft.graph.depTvOSEnrollmentProfile": return new DepTvOSEnrollmentProfile();
+                case "#microsoft.graph.depVisionOSEnrollmentProfile": return new DepVisionOSEnrollmentProfile();
             }
         }
         return new EnrollmentProfile();

@@ -58,6 +58,7 @@ public class Schedule extends Entity implements Parsable {
         deserializerMap.put("activitiesIncludedWhenCopyingShiftsEnabled", (n) -> { this.setActivitiesIncludedWhenCopyingShiftsEnabled(n.getBooleanValue()); });
         deserializerMap.put("dayNotes", (n) -> { this.setDayNotes(n.getCollectionOfObjectValues(DayNote::createFromDiscriminatorValue)); });
         deserializerMap.put("enabled", (n) -> { this.setEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isActivitiesIncludedWhenCopyingShiftsEnabled", (n) -> { this.setIsActivitiesIncludedWhenCopyingShiftsEnabled(n.getBooleanValue()); });
         deserializerMap.put("isCrossLocationShiftRequestApprovalRequired", (n) -> { this.setIsCrossLocationShiftRequestApprovalRequired(n.getBooleanValue()); });
         deserializerMap.put("isCrossLocationShiftsEnabled", (n) -> { this.setIsCrossLocationShiftsEnabled(n.getBooleanValue()); });
         deserializerMap.put("offerShiftRequests", (n) -> { this.setOfferShiftRequests(n.getCollectionOfObjectValues(OfferShiftRequest::createFromDiscriminatorValue)); });
@@ -83,6 +84,14 @@ public class Schedule extends Entity implements Parsable {
         deserializerMap.put("timeZone", (n) -> { this.setTimeZone(n.getStringValue()); });
         deserializerMap.put("workforceIntegrationIds", (n) -> { this.setWorkforceIntegrationIds(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isActivitiesIncludedWhenCopyingShiftsEnabled property value. Indicates whether copied shifts include activities from the original shift.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsActivitiesIncludedWhenCopyingShiftsEnabled() {
+        return this.backingStore.get("isActivitiesIncludedWhenCopyingShiftsEnabled");
     }
     /**
      * Gets the isCrossLocationShiftRequestApprovalRequired property value. Indicates whether approval is required by a manager of this schedule for cross location shift requests.
@@ -286,6 +295,7 @@ public class Schedule extends Entity implements Parsable {
         writer.writeBooleanValue("activitiesIncludedWhenCopyingShiftsEnabled", this.getActivitiesIncludedWhenCopyingShiftsEnabled());
         writer.writeCollectionOfObjectValues("dayNotes", this.getDayNotes());
         writer.writeBooleanValue("enabled", this.getEnabled());
+        writer.writeBooleanValue("isActivitiesIncludedWhenCopyingShiftsEnabled", this.getIsActivitiesIncludedWhenCopyingShiftsEnabled());
         writer.writeBooleanValue("isCrossLocationShiftRequestApprovalRequired", this.getIsCrossLocationShiftRequestApprovalRequired());
         writer.writeBooleanValue("isCrossLocationShiftsEnabled", this.getIsCrossLocationShiftsEnabled());
         writer.writeCollectionOfObjectValues("offerShiftRequests", this.getOfferShiftRequests());
@@ -329,6 +339,13 @@ public class Schedule extends Entity implements Parsable {
      */
     public void setEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("enabled", value);
+    }
+    /**
+     * Sets the isActivitiesIncludedWhenCopyingShiftsEnabled property value. Indicates whether copied shifts include activities from the original shift.
+     * @param value Value to set for the isActivitiesIncludedWhenCopyingShiftsEnabled property.
+     */
+    public void setIsActivitiesIncludedWhenCopyingShiftsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isActivitiesIncludedWhenCopyingShiftsEnabled", value);
     }
     /**
      * Sets the isCrossLocationShiftRequestApprovalRequired property value. Indicates whether approval is required by a manager of this schedule for cross location shift requests.

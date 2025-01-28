@@ -106,6 +106,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         deserializerMap.put("occurrence", (n) -> { this.setOccurrence(n.getObjectValue(DeviceManagementConfigurationSettingOccurrence::createFromDiscriminatorValue)); });
         deserializerMap.put("offsetUri", (n) -> { this.setOffsetUri(n.getStringValue()); });
         deserializerMap.put("referredSettingInformationList", (n) -> { this.setReferredSettingInformationList(n.getCollectionOfObjectValues(DeviceManagementConfigurationReferredSettingInformation::createFromDiscriminatorValue)); });
+        deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumSetValue(DeviceManagementConfigurationSettingRiskLevel::forValue)); });
         deserializerMap.put("rootDefinitionId", (n) -> { this.setRootDefinitionId(n.getStringValue()); });
         deserializerMap.put("settingUsage", (n) -> { this.setSettingUsage(n.getEnumSetValue(DeviceManagementConfigurationSettingUsage::forValue)); });
         deserializerMap.put("uxBehavior", (n) -> { this.setUxBehavior(n.getEnumValue(DeviceManagementConfigurationControlType::forValue)); });
@@ -170,6 +171,14 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.backingStore.get("referredSettingInformationList");
     }
     /**
+     * Gets the riskLevel property value. Setting RiskLevel
+     * @return a {@link EnumSet<DeviceManagementConfigurationSettingRiskLevel>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<DeviceManagementConfigurationSettingRiskLevel> getRiskLevel() {
+        return this.backingStore.get("riskLevel");
+    }
+    /**
      * Gets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
      * @return a {@link String}
      */
@@ -229,6 +238,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         writer.writeObjectValue("occurrence", this.getOccurrence());
         writer.writeStringValue("offsetUri", this.getOffsetUri());
         writer.writeCollectionOfObjectValues("referredSettingInformationList", this.getReferredSettingInformationList());
+        writer.writeEnumSetValue("riskLevel", this.getRiskLevel());
         writer.writeStringValue("rootDefinitionId", this.getRootDefinitionId());
         writer.writeEnumSetValue("settingUsage", this.getSettingUsage());
         writer.writeEnumValue("uxBehavior", this.getUxBehavior());
@@ -325,6 +335,13 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
      */
     public void setReferredSettingInformationList(@jakarta.annotation.Nullable final java.util.List<DeviceManagementConfigurationReferredSettingInformation> value) {
         this.backingStore.set("referredSettingInformationList", value);
+    }
+    /**
+     * Sets the riskLevel property value. Setting RiskLevel
+     * @param value Value to set for the riskLevel property.
+     */
+    public void setRiskLevel(@jakarta.annotation.Nullable final EnumSet<DeviceManagementConfigurationSettingRiskLevel> value) {
+        this.backingStore.set("riskLevel", value);
     }
     /**
      * Sets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.

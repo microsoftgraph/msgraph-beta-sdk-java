@@ -1,7 +1,11 @@
 package com.microsoft.graph.beta.approleassignments;
 
 import com.microsoft.graph.beta.approleassignments.count.CountRequestBuilder;
+import com.microsoft.graph.beta.approleassignments.delta.DeltaRequestBuilder;
+import com.microsoft.graph.beta.approleassignments.getbyids.GetByIdsRequestBuilder;
+import com.microsoft.graph.beta.approleassignments.getuserownedobjects.GetUserOwnedObjectsRequestBuilder;
 import com.microsoft.graph.beta.approleassignments.item.AppRoleAssignmentItemRequestBuilder;
+import com.microsoft.graph.beta.approleassignments.validateproperties.ValidatePropertiesRequestBuilder;
 import com.microsoft.graph.beta.models.AppRoleAssignment;
 import com.microsoft.graph.beta.models.AppRoleAssignmentCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -30,6 +34,38 @@ public class AppRoleAssignmentsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the delta method.
+     * @return a {@link DeltaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeltaRequestBuilder delta() {
+        return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getByIds method.
+     * @return a {@link GetByIdsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetByIdsRequestBuilder getByIds() {
+        return new GetByIdsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getUserOwnedObjects method.
+     * @return a {@link GetUserOwnedObjectsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetUserOwnedObjectsRequestBuilder getUserOwnedObjects() {
+        return new GetUserOwnedObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the validateProperties method.
+     * @return a {@link ValidatePropertiesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ValidatePropertiesRequestBuilder validateProperties() {
+        return new ValidatePropertiesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of appRoleAssignment entities.

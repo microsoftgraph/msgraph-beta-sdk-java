@@ -125,6 +125,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("osVersion", (n) -> { this.setOsVersion(n.getEnumValue(CloudPcOperatingSystem::forValue)); });
         deserializerMap.put("partnerAgentInstallResults", (n) -> { this.setPartnerAgentInstallResults(n.getCollectionOfObjectValues(CloudPcPartnerAgentInstallResult::createFromDiscriminatorValue)); });
         deserializerMap.put("powerState", (n) -> { this.setPowerState(n.getEnumValue(CloudPcPowerState::forValue)); });
+        deserializerMap.put("productType", (n) -> { this.setProductType(n.getEnumValue(CloudPcProductType::forValue)); });
         deserializerMap.put("provisioningPolicyId", (n) -> { this.setProvisioningPolicyId(n.getStringValue()); });
         deserializerMap.put("provisioningPolicyName", (n) -> { this.setProvisioningPolicyName(n.getStringValue()); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
@@ -234,6 +235,14 @@ public class CloudPC extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public CloudPcPowerState getPowerState() {
         return this.backingStore.get("powerState");
+    }
+    /**
+     * Gets the productType property value. The product type of the Cloud PC. The possible values are: enterprise, frontline, devBox, powerAutomate, business, unknownFutureValue. For the available service plans and pricing for enterprise, frontline, and business, see Windows 365 for business. For pricing information for devBox, see Microsoft Dev Box pricing. For the available plans and pricing for powerAutomate, see Power Automate pricing. The default value is enterprise. Supports $filter and $select. For more information, see Example 4: List Cloud PCs filtered by product type. Read-only.
+     * @return a {@link CloudPcProductType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcProductType getProductType() {
+        return this.backingStore.get("productType");
     }
     /**
      * Gets the provisioningPolicyId property value. The provisioning policy ID of the Cloud PC.
@@ -359,6 +368,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeEnumValue("osVersion", this.getOsVersion());
         writer.writeCollectionOfObjectValues("partnerAgentInstallResults", this.getPartnerAgentInstallResults());
         writer.writeEnumValue("powerState", this.getPowerState());
+        writer.writeEnumValue("productType", this.getProductType());
         writer.writeStringValue("provisioningPolicyId", this.getProvisioningPolicyId());
         writer.writeStringValue("provisioningPolicyName", this.getProvisioningPolicyName());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
@@ -518,6 +528,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setPowerState(@jakarta.annotation.Nullable final CloudPcPowerState value) {
         this.backingStore.set("powerState", value);
+    }
+    /**
+     * Sets the productType property value. The product type of the Cloud PC. The possible values are: enterprise, frontline, devBox, powerAutomate, business, unknownFutureValue. For the available service plans and pricing for enterprise, frontline, and business, see Windows 365 for business. For pricing information for devBox, see Microsoft Dev Box pricing. For the available plans and pricing for powerAutomate, see Power Automate pricing. The default value is enterprise. Supports $filter and $select. For more information, see Example 4: List Cloud PCs filtered by product type. Read-only.
+     * @param value Value to set for the productType property.
+     */
+    public void setProductType(@jakarta.annotation.Nullable final CloudPcProductType value) {
+        this.backingStore.set("productType", value);
     }
     /**
      * Sets the provisioningPolicyId property value. The provisioning policy ID of the Cloud PC.

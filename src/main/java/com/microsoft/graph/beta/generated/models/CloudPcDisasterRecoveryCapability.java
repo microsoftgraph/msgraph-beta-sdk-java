@@ -69,12 +69,21 @@ public class CloudPcDisasterRecoveryCapability implements AdditionalDataHolder, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("capabilityType", (n) -> { this.setCapabilityType(n.getEnumValue(CloudPcDisasterRecoveryCapabilityType::forValue)); });
+        deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(CloudPcDisasterRecoveryLicenseType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("primaryRegion", (n) -> { this.setPrimaryRegion(n.getStringValue()); });
         deserializerMap.put("secondaryRegion", (n) -> { this.setSecondaryRegion(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the licenseType property value. The licenseType property
+     * @return a {@link CloudPcDisasterRecoveryLicenseType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDisasterRecoveryLicenseType getLicenseType() {
+        return this.backingStore.get("licenseType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,6 +116,7 @@ public class CloudPcDisasterRecoveryCapability implements AdditionalDataHolder, 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("capabilityType", this.getCapabilityType());
+        writer.writeEnumValue("licenseType", this.getLicenseType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("primaryRegion", this.getPrimaryRegion());
         writer.writeStringValue("secondaryRegion", this.getSecondaryRegion());
@@ -133,6 +143,13 @@ public class CloudPcDisasterRecoveryCapability implements AdditionalDataHolder, 
      */
     public void setCapabilityType(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryCapabilityType value) {
         this.backingStore.set("capabilityType", value);
+    }
+    /**
+     * Sets the licenseType property value. The licenseType property
+     * @param value Value to set for the licenseType property.
+     */
+    public void setLicenseType(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryLicenseType value) {
+        this.backingStore.set("licenseType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

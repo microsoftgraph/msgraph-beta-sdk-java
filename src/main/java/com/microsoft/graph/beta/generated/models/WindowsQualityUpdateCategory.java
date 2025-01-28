@@ -4,10 +4,10 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Windows quality update classification
+ * Windows quality update category
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public enum WindowsQualityUpdateClassification implements ValuedEnum {
+public enum WindowsQualityUpdateCategory implements ValuedEnum {
     /** All update type */
     All("all"),
     /** Security only update type */
@@ -15,13 +15,13 @@ public enum WindowsQualityUpdateClassification implements ValuedEnum {
     /** Non security only update type */
     NonSecurity("nonSecurity");
     public final String value;
-    WindowsQualityUpdateClassification(final String value) {
+    WindowsQualityUpdateCategory(final String value) {
         this.value = value;
     }
     @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
     @jakarta.annotation.Nullable
-    public static WindowsQualityUpdateClassification forValue(@jakarta.annotation.Nonnull final String searchValue) {
+    public static WindowsQualityUpdateCategory forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "all": return All;

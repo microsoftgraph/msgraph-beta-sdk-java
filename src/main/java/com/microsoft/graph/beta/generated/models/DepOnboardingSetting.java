@@ -61,6 +61,22 @@ public class DepOnboardingSetting extends Entity implements Parsable {
         return this.backingStore.get("defaultMacOsEnrollmentProfile");
     }
     /**
+     * Gets the defaultTvOSEnrollmentProfile property value. Default TvOS Enrollment Profile
+     * @return a {@link DepTvOSEnrollmentProfile}
+     */
+    @jakarta.annotation.Nullable
+    public DepTvOSEnrollmentProfile getDefaultTvOSEnrollmentProfile() {
+        return this.backingStore.get("defaultTvOSEnrollmentProfile");
+    }
+    /**
+     * Gets the defaultVisionOSEnrollmentProfile property value. Default VisionOS Enrollment Profile
+     * @return a {@link DepVisionOSEnrollmentProfile}
+     */
+    @jakarta.annotation.Nullable
+    public DepVisionOSEnrollmentProfile getDefaultVisionOSEnrollmentProfile() {
+        return this.backingStore.get("defaultVisionOSEnrollmentProfile");
+    }
+    /**
      * Gets the enrollmentProfiles property value. The enrollment profiles.
      * @return a {@link java.util.List<EnrollmentProfile>}
      */
@@ -79,6 +95,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
         deserializerMap.put("dataSharingConsentGranted", (n) -> { this.setDataSharingConsentGranted(n.getBooleanValue()); });
         deserializerMap.put("defaultIosEnrollmentProfile", (n) -> { this.setDefaultIosEnrollmentProfile(n.getObjectValue(DepIOSEnrollmentProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultMacOsEnrollmentProfile", (n) -> { this.setDefaultMacOsEnrollmentProfile(n.getObjectValue(DepMacOSEnrollmentProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultTvOSEnrollmentProfile", (n) -> { this.setDefaultTvOSEnrollmentProfile(n.getObjectValue(DepTvOSEnrollmentProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("defaultVisionOSEnrollmentProfile", (n) -> { this.setDefaultVisionOSEnrollmentProfile(n.getObjectValue(DepVisionOSEnrollmentProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("enrollmentProfiles", (n) -> { this.setEnrollmentProfiles(n.getCollectionOfObjectValues(EnrollmentProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("importedAppleDeviceIdentities", (n) -> { this.setImportedAppleDeviceIdentities(n.getCollectionOfObjectValues(ImportedAppleDeviceIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -192,6 +210,8 @@ public class DepOnboardingSetting extends Entity implements Parsable {
         writer.writeBooleanValue("dataSharingConsentGranted", this.getDataSharingConsentGranted());
         writer.writeObjectValue("defaultIosEnrollmentProfile", this.getDefaultIosEnrollmentProfile());
         writer.writeObjectValue("defaultMacOsEnrollmentProfile", this.getDefaultMacOsEnrollmentProfile());
+        writer.writeObjectValue("defaultTvOSEnrollmentProfile", this.getDefaultTvOSEnrollmentProfile());
+        writer.writeObjectValue("defaultVisionOSEnrollmentProfile", this.getDefaultVisionOSEnrollmentProfile());
         writer.writeCollectionOfObjectValues("enrollmentProfiles", this.getEnrollmentProfiles());
         writer.writeCollectionOfObjectValues("importedAppleDeviceIdentities", this.getImportedAppleDeviceIdentities());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -232,6 +252,20 @@ public class DepOnboardingSetting extends Entity implements Parsable {
      */
     public void setDefaultMacOsEnrollmentProfile(@jakarta.annotation.Nullable final DepMacOSEnrollmentProfile value) {
         this.backingStore.set("defaultMacOsEnrollmentProfile", value);
+    }
+    /**
+     * Sets the defaultTvOSEnrollmentProfile property value. Default TvOS Enrollment Profile
+     * @param value Value to set for the defaultTvOSEnrollmentProfile property.
+     */
+    public void setDefaultTvOSEnrollmentProfile(@jakarta.annotation.Nullable final DepTvOSEnrollmentProfile value) {
+        this.backingStore.set("defaultTvOSEnrollmentProfile", value);
+    }
+    /**
+     * Sets the defaultVisionOSEnrollmentProfile property value. Default VisionOS Enrollment Profile
+     * @param value Value to set for the defaultVisionOSEnrollmentProfile property.
+     */
+    public void setDefaultVisionOSEnrollmentProfile(@jakarta.annotation.Nullable final DepVisionOSEnrollmentProfile value) {
+        this.backingStore.set("defaultVisionOSEnrollmentProfile", value);
     }
     /**
      * Sets the enrollmentProfiles property value. The enrollment profiles.

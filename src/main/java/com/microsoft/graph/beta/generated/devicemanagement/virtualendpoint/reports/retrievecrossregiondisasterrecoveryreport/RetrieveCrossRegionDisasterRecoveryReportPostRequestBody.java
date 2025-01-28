@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievecrossregiondisasterrecoveryreport;
 
+import com.microsoft.graph.beta.models.CloudPcDisasterRecoveryReportName;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -61,10 +62,11 @@ public class RetrieveCrossRegionDisasterRecoveryReportPostRequestBody implements
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
         deserializerMap.put("groupBy", (n) -> { this.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("orderBy", (n) -> { this.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("reportName", (n) -> { this.setReportName(n.getEnumValue(CloudPcDisasterRecoveryReportName::forValue)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getStringValue()); });
         deserializerMap.put("select", (n) -> { this.setSelect(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("skip", (n) -> { this.setSkip(n.getIntegerValue()); });
@@ -94,6 +96,14 @@ public class RetrieveCrossRegionDisasterRecoveryReportPostRequestBody implements
     @jakarta.annotation.Nullable
     public java.util.List<String> getOrderBy() {
         return this.backingStore.get("orderBy");
+    }
+    /**
+     * Gets the reportName property value. The reportName property
+     * @return a {@link CloudPcDisasterRecoveryReportName}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcDisasterRecoveryReportName getReportName() {
+        return this.backingStore.get("reportName");
     }
     /**
      * Gets the search property value. The search property
@@ -136,6 +146,7 @@ public class RetrieveCrossRegionDisasterRecoveryReportPostRequestBody implements
         writer.writeStringValue("filter", this.getFilter());
         writer.writeCollectionOfPrimitiveValues("groupBy", this.getGroupBy());
         writer.writeCollectionOfPrimitiveValues("orderBy", this.getOrderBy());
+        writer.writeEnumValue("reportName", this.getReportName());
         writer.writeStringValue("search", this.getSearch());
         writer.writeCollectionOfPrimitiveValues("select", this.getSelect());
         writer.writeIntegerValue("skip", this.getSkip());
@@ -177,6 +188,13 @@ public class RetrieveCrossRegionDisasterRecoveryReportPostRequestBody implements
      */
     public void setOrderBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("orderBy", value);
+    }
+    /**
+     * Sets the reportName property value. The reportName property
+     * @param value Value to set for the reportName property.
+     */
+    public void setReportName(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryReportName value) {
+        this.backingStore.set("reportName", value);
     }
     /**
      * Sets the search property value. The search property

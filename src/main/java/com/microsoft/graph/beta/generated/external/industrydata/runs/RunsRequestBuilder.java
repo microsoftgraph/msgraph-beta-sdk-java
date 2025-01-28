@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.external.industrydata.runs;
 import com.microsoft.graph.beta.external.industrydata.runs.count.CountRequestBuilder;
 import com.microsoft.graph.beta.external.industrydata.runs.item.IndustryDataRunItemRequestBuilder;
 import com.microsoft.graph.beta.external.industrydata.runs.microsoftgraphindustrydatagetstatistics.MicrosoftGraphIndustryDataGetStatisticsRequestBuilder;
+import com.microsoft.graph.beta.external.industrydata.runs.microsoftgraphindustrydatastart.MicrosoftGraphIndustryDataStartRequestBuilder;
 import com.microsoft.graph.beta.models.industrydata.IndustryDataRunCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -38,6 +39,14 @@ public class RunsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIndustryDataGetStatisticsRequestBuilder microsoftGraphIndustryDataGetStatistics() {
         return new MicrosoftGraphIndustryDataGetStatisticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the start method.
+     * @return a {@link MicrosoftGraphIndustryDataStartRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIndustryDataStartRequestBuilder microsoftGraphIndustryDataStart() {
+        return new MicrosoftGraphIndustryDataStartRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the runs property of the microsoft.graph.industryData.industryDataRoot entity.

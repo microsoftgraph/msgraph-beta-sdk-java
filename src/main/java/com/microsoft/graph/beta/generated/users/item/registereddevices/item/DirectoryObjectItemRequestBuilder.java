@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.users.item.registereddevices.item;
 
 import com.microsoft.graph.beta.models.DirectoryObject;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.users.item.registereddevices.item.graphapproleassignment.GraphAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.beta.users.item.registereddevices.item.graphdevice.GraphDeviceRequestBuilder;
 import com.microsoft.graph.beta.users.item.registereddevices.item.graphendpoint.GraphEndpointRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Casts the previous resource to appRoleAssignment.
+     * @return a {@link GraphAppRoleAssignmentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
+        return new GraphAppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Casts the previous resource to device.
      * @return a {@link GraphDeviceRequestBuilder}

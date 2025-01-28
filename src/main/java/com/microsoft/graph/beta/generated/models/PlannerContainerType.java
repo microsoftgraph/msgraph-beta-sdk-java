@@ -10,7 +10,8 @@ public enum PlannerContainerType implements ValuedEnum {
     Roster("roster"),
     Project("project"),
     DriveItem("driveItem"),
-    User("user");
+    User("user"),
+    TeamsChannel("teamsChannel");
     public final String value;
     PlannerContainerType(final String value) {
         this.value = value;
@@ -27,6 +28,7 @@ public enum PlannerContainerType implements ValuedEnum {
             case "project": return Project;
             case "driveItem": return DriveItem;
             case "user": return User;
+            case "teamsChannel": return TeamsChannel;
             default: return null;
         }
     }
