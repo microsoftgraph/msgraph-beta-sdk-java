@@ -31,6 +31,7 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.administrativeUnit": return new AdministrativeUnit();
                 case "#microsoft.graph.application": return new Application();
                 case "#microsoft.graph.appManagementPolicy": return new AppManagementPolicy();
+                case "#microsoft.graph.appRoleAssignment": return new AppRoleAssignment();
                 case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
                 case "#microsoft.graph.certificateAuthorityDetail": return new CertificateAuthorityDetail();
                 case "#microsoft.graph.certificateBasedApplicationConfiguration": return new CertificateBasedApplicationConfiguration();

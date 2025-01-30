@@ -70,10 +70,19 @@ public class EndBreakPostRequestBody implements AdditionalDataHolder, BackedMode
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("atApprovedLocation", (n) -> { this.setAtApprovedLocation(n.getBooleanValue()); });
+        deserializerMap.put("isAtApprovedLocation", (n) -> { this.setIsAtApprovedLocation(n.getBooleanValue()); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isAtApprovedLocation property value. The isAtApprovedLocation property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsAtApprovedLocation() {
+        return this.backingStore.get("isAtApprovedLocation");
     }
     /**
      * Gets the notes property value. The notes property
@@ -90,6 +99,7 @@ public class EndBreakPostRequestBody implements AdditionalDataHolder, BackedMode
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("atApprovedLocation", this.getAtApprovedLocation());
+        writer.writeBooleanValue("isAtApprovedLocation", this.getIsAtApprovedLocation());
         writer.writeObjectValue("notes", this.getNotes());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +124,13 @@ public class EndBreakPostRequestBody implements AdditionalDataHolder, BackedMode
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the isAtApprovedLocation property value. The isAtApprovedLocation property
+     * @param value Value to set for the isAtApprovedLocation property.
+     */
+    public void setIsAtApprovedLocation(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isAtApprovedLocation", value);
     }
     /**
      * Sets the notes property value. The notes property

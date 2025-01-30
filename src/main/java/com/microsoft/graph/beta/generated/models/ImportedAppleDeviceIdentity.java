@@ -112,7 +112,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         return this.backingStore.get("lastContactedDateTime");
     }
     /**
-     * Gets the platform property value. The platform property
+     * Gets the platform property value. Supported platform types for policies.
      * @return a {@link Platform}
      */
     @jakarta.annotation.Nullable
@@ -212,7 +212,7 @@ public class ImportedAppleDeviceIdentity extends Entity implements Parsable {
         this.backingStore.set("lastContactedDateTime", value);
     }
     /**
-     * Sets the platform property value. The platform property
+     * Sets the platform property value. Supported platform types for policies.
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final Platform value) {

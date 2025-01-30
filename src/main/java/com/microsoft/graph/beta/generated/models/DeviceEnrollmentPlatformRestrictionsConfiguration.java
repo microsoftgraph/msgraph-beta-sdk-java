@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Device Enrollment Configuration that restricts the types of devices a user can enroll
+ * Default Device Enrollment Platform Restrictions Configuration that restricts the types of devices a user can enroll
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollmentConfiguration implements Parsable {
@@ -56,6 +56,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         deserializerMap.put("iosRestriction", (n) -> { this.setIosRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
         deserializerMap.put("macOSRestriction", (n) -> { this.setMacOSRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
         deserializerMap.put("macRestriction", (n) -> { this.setMacRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("tvosRestriction", (n) -> { this.setTvosRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("visionOSRestriction", (n) -> { this.setVisionOSRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsHomeSkuRestriction", (n) -> { this.setWindowsHomeSkuRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsMobileRestriction", (n) -> { this.setWindowsMobileRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsRestriction", (n) -> { this.setWindowsRestriction(n.getObjectValue(DeviceEnrollmentPlatformRestriction::createFromDiscriminatorValue)); });
@@ -84,6 +86,22 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
     @jakarta.annotation.Nullable
     public DeviceEnrollmentPlatformRestriction getMacRestriction() {
         return this.backingStore.get("macRestriction");
+    }
+    /**
+     * Gets the tvosRestriction property value. Indicates restrictions for TvOS platform.
+     * @return a {@link DeviceEnrollmentPlatformRestriction}
+     */
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentPlatformRestriction getTvosRestriction() {
+        return this.backingStore.get("tvosRestriction");
+    }
+    /**
+     * Gets the visionOSRestriction property value. Indicates restrictions for VisionOS platform.
+     * @return a {@link DeviceEnrollmentPlatformRestriction}
+     */
+    @jakarta.annotation.Nullable
+    public DeviceEnrollmentPlatformRestriction getVisionOSRestriction() {
+        return this.backingStore.get("visionOSRestriction");
     }
     /**
      * Gets the windowsHomeSkuRestriction property value. Windows Home Sku restrictions based on platform, platform operating system version, and device ownership
@@ -121,6 +139,8 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         writer.writeObjectValue("iosRestriction", this.getIosRestriction());
         writer.writeObjectValue("macOSRestriction", this.getMacOSRestriction());
         writer.writeObjectValue("macRestriction", this.getMacRestriction());
+        writer.writeObjectValue("tvosRestriction", this.getTvosRestriction());
+        writer.writeObjectValue("visionOSRestriction", this.getVisionOSRestriction());
         writer.writeObjectValue("windowsHomeSkuRestriction", this.getWindowsHomeSkuRestriction());
         writer.writeObjectValue("windowsMobileRestriction", this.getWindowsMobileRestriction());
         writer.writeObjectValue("windowsRestriction", this.getWindowsRestriction());
@@ -159,6 +179,20 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
      */
     public void setMacRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
         this.backingStore.set("macRestriction", value);
+    }
+    /**
+     * Sets the tvosRestriction property value. Indicates restrictions for TvOS platform.
+     * @param value Value to set for the tvosRestriction property.
+     */
+    public void setTvosRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
+        this.backingStore.set("tvosRestriction", value);
+    }
+    /**
+     * Sets the visionOSRestriction property value. Indicates restrictions for VisionOS platform.
+     * @param value Value to set for the visionOSRestriction property.
+     */
+    public void setVisionOSRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
+        this.backingStore.set("visionOSRestriction", value);
     }
     /**
      * Sets the windowsHomeSkuRestriction property value. Windows Home Sku restrictions based on platform, platform operating system version, and device ownership

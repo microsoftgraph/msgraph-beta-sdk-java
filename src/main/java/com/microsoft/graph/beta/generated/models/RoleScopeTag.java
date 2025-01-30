@@ -62,6 +62,7 @@ public class RoleScopeTag extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isBuiltIn", (n) -> { this.setIsBuiltIn(n.getBooleanValue()); });
+        deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
@@ -71,6 +72,14 @@ public class RoleScopeTag extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsBuiltIn() {
         return this.backingStore.get("isBuiltIn");
+    }
+    /**
+     * Gets the permissions property value. Permissions associated with the Role Scope Tag. This property is read-only.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getPermissions() {
+        return this.backingStore.get("permissions");
     }
     /**
      * Serializes information the current object
@@ -110,5 +119,12 @@ public class RoleScopeTag extends Entity implements Parsable {
      */
     public void setIsBuiltIn(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isBuiltIn", value);
+    }
+    /**
+     * Sets the permissions property value. Permissions associated with the Role Scope Tag. This property is read-only.
+     * @param value Value to set for the permissions property.
+     */
+    public void setPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("permissions", value);
     }
 }

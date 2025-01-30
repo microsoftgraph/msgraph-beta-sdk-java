@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.applications.item.owners;
 
 import com.microsoft.graph.beta.applications.item.owners.count.CountRequestBuilder;
+import com.microsoft.graph.beta.applications.item.owners.graphapproleassignment.GraphAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.beta.applications.item.owners.graphendpoint.GraphEndpointRequestBuilder;
 import com.microsoft.graph.beta.applications.item.owners.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.graph.beta.applications.item.owners.graphuser.GraphUserRequestBuilder;
@@ -33,6 +34,14 @@ public class OwnersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to appRoleAssignment.
+     * @return a {@link GraphAppRoleAssignmentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
+        return new GraphAppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Casts the previous resource to endpoint.

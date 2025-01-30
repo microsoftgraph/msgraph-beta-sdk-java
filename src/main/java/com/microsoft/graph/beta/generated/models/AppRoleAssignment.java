@@ -9,12 +9,13 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AppRoleAssignment extends Entity implements Parsable {
+public class AppRoleAssignment extends DirectoryObject implements Parsable {
     /**
      * Instantiates a new {@link AppRoleAssignment} and sets the default values.
      */
     public AppRoleAssignment() {
         super();
+        this.setOdataType("#microsoft.graph.appRoleAssignment");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

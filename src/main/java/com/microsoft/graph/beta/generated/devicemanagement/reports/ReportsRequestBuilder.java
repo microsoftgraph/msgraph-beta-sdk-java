@@ -72,6 +72,8 @@ import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdate
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport.GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsummaryreport.GetWindowsUpdateAlertSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getzebrafotadeploymentreport.GetZebraFotaDeploymentReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.retrievecloudpkileafcertificatereport.RetrieveCloudPkiLeafCertificateReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.retrievecloudpkileafcertificatesummaryreport.RetrieveCloudPkiLeafCertificateSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievedeviceappinstallationstatusreport.RetrieveDeviceAppInstallationStatusReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievesecuritytaskappsreport.RetrieveSecurityTaskAppsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievewin32catalogappsupdatereport.RetrieveWin32CatalogAppsUpdateReportRequestBuilder;
@@ -670,6 +672,22 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport() {
         return new GetZebraFotaDeploymentReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCloudPkiLeafCertificateReport method.
+     * @return a {@link RetrieveCloudPkiLeafCertificateReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPkiLeafCertificateReportRequestBuilder retrieveCloudPkiLeafCertificateReport() {
+        return new RetrieveCloudPkiLeafCertificateReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCloudPkiLeafCertificateSummaryReport method.
+     * @return a {@link RetrieveCloudPkiLeafCertificateSummaryReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPkiLeafCertificateSummaryReportRequestBuilder retrieveCloudPkiLeafCertificateSummaryReport() {
+        return new RetrieveCloudPkiLeafCertificateSummaryReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveDeviceAppInstallationStatusReport method.

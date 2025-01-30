@@ -2,6 +2,8 @@ package com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item;
 
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.defaultiosenrollmentprofile.DefaultIosEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.defaultmacosenrollmentprofile.DefaultMacOsEnrollmentProfileRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.defaulttvosenrollmentprofile.DefaultTvOSEnrollmentProfileRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.defaultvisionosenrollmentprofile.DefaultVisionOSEnrollmentProfileRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.enrollmentprofiles.EnrollmentProfilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.generateencryptionpublickey.GenerateEncryptionPublicKeyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.getencryptionpublickey.GetEncryptionPublicKeyRequestBuilder;
@@ -45,6 +47,22 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DefaultMacOsEnrollmentProfileRequestBuilder defaultMacOsEnrollmentProfile() {
         return new DefaultMacOsEnrollmentProfileRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the defaultTvOSEnrollmentProfile property of the microsoft.graph.depOnboardingSetting entity.
+     * @return a {@link DefaultTvOSEnrollmentProfileRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DefaultTvOSEnrollmentProfileRequestBuilder defaultTvOSEnrollmentProfile() {
+        return new DefaultTvOSEnrollmentProfileRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the defaultVisionOSEnrollmentProfile property of the microsoft.graph.depOnboardingSetting entity.
+     * @return a {@link DefaultVisionOSEnrollmentProfileRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DefaultVisionOSEnrollmentProfileRequestBuilder defaultVisionOSEnrollmentProfile() {
+        return new DefaultVisionOSEnrollmentProfileRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the enrollmentProfiles property of the microsoft.graph.depOnboardingSetting entity.

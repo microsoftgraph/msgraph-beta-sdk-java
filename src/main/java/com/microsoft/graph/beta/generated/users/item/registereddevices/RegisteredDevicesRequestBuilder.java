@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.users.item.registereddevices;
 import com.microsoft.graph.beta.models.DirectoryObjectCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.registereddevices.count.CountRequestBuilder;
+import com.microsoft.graph.beta.users.item.registereddevices.graphapproleassignment.GraphAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.beta.users.item.registereddevices.graphdevice.GraphDeviceRequestBuilder;
 import com.microsoft.graph.beta.users.item.registereddevices.graphendpoint.GraphEndpointRequestBuilder;
 import com.microsoft.graph.beta.users.item.registereddevices.item.DirectoryObjectItemRequestBuilder;
@@ -31,6 +32,14 @@ public class RegisteredDevicesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to appRoleAssignment.
+     * @return a {@link GraphAppRoleAssignmentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
+        return new GraphAppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Casts the previous resource to device.

@@ -29,11 +29,11 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         return new WindowsQualityUpdateCatalogItem();
     }
     /**
-     * Gets the classification property value. Windows quality update classification
-     * @return a {@link WindowsQualityUpdateClassification}
+     * Gets the classification property value. Windows quality update category
+     * @return a {@link WindowsQualityUpdateCategory}
      */
     @jakarta.annotation.Nullable
-    public WindowsQualityUpdateClassification getClassification() {
+    public WindowsQualityUpdateCategory getClassification() {
         return this.backingStore.get("classification");
     }
     /**
@@ -43,9 +43,11 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(WindowsQualityUpdateClassification::forValue)); });
+        deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(WindowsQualityUpdateCategory::forValue)); });
         deserializerMap.put("isExpeditable", (n) -> { this.setIsExpeditable(n.getBooleanValue()); });
         deserializerMap.put("kbArticleId", (n) -> { this.setKbArticleId(n.getStringValue()); });
+        deserializerMap.put("productRevisions", (n) -> { this.setProductRevisions(n.getCollectionOfObjectValues(WindowsQualityUpdateCatalogProductRevision::createFromDiscriminatorValue)); });
+        deserializerMap.put("qualityUpdateCadence", (n) -> { this.setQualityUpdateCadence(n.getEnumValue(WindowsQualityUpdateCadence::forValue)); });
         return deserializerMap;
     }
     /**
@@ -65,6 +67,22 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         return this.backingStore.get("kbArticleId");
     }
     /**
+     * Gets the productRevisions property value. The operating system product revisions that are released as part of this quality update. Read-only.
+     * @return a {@link java.util.List<WindowsQualityUpdateCatalogProductRevision>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WindowsQualityUpdateCatalogProductRevision> getProductRevisions() {
+        return this.backingStore.get("productRevisions");
+    }
+    /**
+     * Gets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand. This property cannot be modified and is automatically populated when the catalog is created.
+     * @return a {@link WindowsQualityUpdateCadence}
+     */
+    @jakarta.annotation.Nullable
+    public WindowsQualityUpdateCadence getQualityUpdateCadence() {
+        return this.backingStore.get("qualityUpdateCadence");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -74,12 +92,14 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         writer.writeEnumValue("classification", this.getClassification());
         writer.writeBooleanValue("isExpeditable", this.getIsExpeditable());
         writer.writeStringValue("kbArticleId", this.getKbArticleId());
+        writer.writeCollectionOfObjectValues("productRevisions", this.getProductRevisions());
+        writer.writeEnumValue("qualityUpdateCadence", this.getQualityUpdateCadence());
     }
     /**
-     * Sets the classification property value. Windows quality update classification
+     * Sets the classification property value. Windows quality update category
      * @param value Value to set for the classification property.
      */
-    public void setClassification(@jakarta.annotation.Nullable final WindowsQualityUpdateClassification value) {
+    public void setClassification(@jakarta.annotation.Nullable final WindowsQualityUpdateCategory value) {
         this.backingStore.set("classification", value);
     }
     /**
@@ -95,5 +115,19 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      */
     public void setKbArticleId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("kbArticleId", value);
+    }
+    /**
+     * Sets the productRevisions property value. The operating system product revisions that are released as part of this quality update. Read-only.
+     * @param value Value to set for the productRevisions property.
+     */
+    public void setProductRevisions(@jakarta.annotation.Nullable final java.util.List<WindowsQualityUpdateCatalogProductRevision> value) {
+        this.backingStore.set("productRevisions", value);
+    }
+    /**
+     * Sets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand. This property cannot be modified and is automatically populated when the catalog is created.
+     * @param value Value to set for the qualityUpdateCadence property.
+     */
+    public void setQualityUpdateCadence(@jakarta.annotation.Nullable final WindowsQualityUpdateCadence value) {
+        this.backingStore.set("qualityUpdateCadence", value);
     }
 }

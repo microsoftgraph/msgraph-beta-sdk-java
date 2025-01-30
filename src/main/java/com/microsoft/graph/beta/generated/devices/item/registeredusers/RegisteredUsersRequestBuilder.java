@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.devices.item.registeredusers;
 
 import com.microsoft.graph.beta.devices.item.registeredusers.count.CountRequestBuilder;
+import com.microsoft.graph.beta.devices.item.registeredusers.graphapproleassignment.GraphAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.beta.devices.item.registeredusers.graphendpoint.GraphEndpointRequestBuilder;
 import com.microsoft.graph.beta.devices.item.registeredusers.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.graph.beta.devices.item.registeredusers.graphuser.GraphUserRequestBuilder;
@@ -33,6 +34,14 @@ public class RegisteredUsersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to appRoleAssignment.
+     * @return a {@link GraphAppRoleAssignmentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
+        return new GraphAppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Casts the previous resource to endpoint.

@@ -69,7 +69,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/channels/{channel%2Did}/messages{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      * @return a {@link ChatMessageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -78,7 +78,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChatMessageCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -116,7 +116,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ChatMessage::createFromDiscriminatorValue);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +170,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return new MessagesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

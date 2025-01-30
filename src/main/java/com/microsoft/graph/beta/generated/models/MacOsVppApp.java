@@ -70,6 +70,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
         deserializerMap.put("usedLicenseCount", (n) -> { this.setUsedLicenseCount(n.getIntegerValue()); });
         deserializerMap.put("vppTokenAccountType", (n) -> { this.setVppTokenAccountType(n.getEnumValue(VppTokenAccountType::forValue)); });
         deserializerMap.put("vppTokenAppleId", (n) -> { this.setVppTokenAppleId(n.getStringValue()); });
+        deserializerMap.put("vppTokenDisplayName", (n) -> { this.setVppTokenDisplayName(n.getStringValue()); });
         deserializerMap.put("vppTokenId", (n) -> { this.setVppTokenId(n.getStringValue()); });
         deserializerMap.put("vppTokenOrganizationName", (n) -> { this.setVppTokenOrganizationName(n.getStringValue()); });
         return deserializerMap;
@@ -131,6 +132,14 @@ public class MacOsVppApp extends MobileApp implements Parsable {
         return this.backingStore.get("vppTokenAppleId");
     }
     /**
+     * Gets the vppTokenDisplayName property value. Display name of the VPP token associated with this app.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getVppTokenDisplayName() {
+        return this.backingStore.get("vppTokenDisplayName");
+    }
+    /**
      * Gets the vppTokenId property value. Identifier of the VPP token associated with this app.
      * @return a {@link String}
      */
@@ -163,6 +172,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
         writer.writeIntegerValue("usedLicenseCount", this.getUsedLicenseCount());
         writer.writeEnumValue("vppTokenAccountType", this.getVppTokenAccountType());
         writer.writeStringValue("vppTokenAppleId", this.getVppTokenAppleId());
+        writer.writeStringValue("vppTokenDisplayName", this.getVppTokenDisplayName());
         writer.writeStringValue("vppTokenId", this.getVppTokenId());
         writer.writeStringValue("vppTokenOrganizationName", this.getVppTokenOrganizationName());
     }
@@ -235,6 +245,13 @@ public class MacOsVppApp extends MobileApp implements Parsable {
      */
     public void setVppTokenAppleId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("vppTokenAppleId", value);
+    }
+    /**
+     * Sets the vppTokenDisplayName property value. Display name of the VPP token associated with this app.
+     * @param value Value to set for the vppTokenDisplayName property.
+     */
+    public void setVppTokenDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("vppTokenDisplayName", value);
     }
     /**
      * Sets the vppTokenId property value. Identifier of the VPP token associated with this app.

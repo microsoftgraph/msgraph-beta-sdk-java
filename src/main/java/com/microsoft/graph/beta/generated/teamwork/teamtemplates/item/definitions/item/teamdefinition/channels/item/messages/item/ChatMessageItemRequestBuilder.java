@@ -109,7 +109,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      * @return a {@link ChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -118,7 +118,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -176,7 +176,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -184,7 +184,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -236,7 +236,7 @@ public class ChatMessageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of all the messages in the channel. A navigation property. Nullable.
+     * A collection of all the messages in the channel. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

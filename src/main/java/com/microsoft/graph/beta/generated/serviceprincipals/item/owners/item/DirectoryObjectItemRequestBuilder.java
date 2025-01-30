@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.serviceprincipals.item.owners.item;
 
+import com.microsoft.graph.beta.serviceprincipals.item.owners.item.graphapproleassignment.GraphAppRoleAssignmentRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.owners.item.graphendpoint.GraphEndpointRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.owners.item.graphserviceprincipal.GraphServicePrincipalRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.owners.item.graphuser.GraphUserRequestBuilder;
@@ -13,6 +14,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Casts the previous resource to appRoleAssignment.
+     * @return a {@link GraphAppRoleAssignmentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphAppRoleAssignmentRequestBuilder graphAppRoleAssignment() {
+        return new GraphAppRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Casts the previous resource to endpoint.
      * @return a {@link GraphEndpointRequestBuilder}

@@ -141,7 +141,7 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("membershipType");
     }
     /**
-     * Gets the messages property value. A collection of all the messages in the channel. A navigation property. Nullable.
+     * Gets the messages property value. A collection of all the messages in the channel. Nullable.
      * @return a {@link java.util.List<ChatMessage>}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("summary");
     }
     /**
-     * Gets the tabs property value. A collection of all the tabs in the channel. A navigation property.
+     * Gets the tabs property value. A collection of all the tabs in the channel.
      * @return a {@link java.util.List<TeamsTab>}
      */
     @jakarta.annotation.Nullable
@@ -300,7 +300,7 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("membershipType", value);
     }
     /**
-     * Sets the messages property value. A collection of all the messages in the channel. A navigation property. Nullable.
+     * Sets the messages property value. A collection of all the messages in the channel. Nullable.
      * @param value Value to set for the messages property.
      */
     public void setMessages(@jakarta.annotation.Nullable final java.util.List<ChatMessage> value) {
@@ -328,7 +328,7 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("summary", value);
     }
     /**
-     * Sets the tabs property value. A collection of all the tabs in the channel. A navigation property.
+     * Sets the tabs property value. A collection of all the tabs in the channel.
      * @param value Value to set for the tabs property.
      */
     public void setTabs(@jakarta.annotation.Nullable final java.util.List<TeamsTab> value) {

@@ -60,7 +60,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel/tabs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * A collection of all the tabs in the channel.
      * @return a {@link TeamsTabCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * A collection of all the tabs in the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsTabCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsTab::createFromDiscriminatorValue);
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * A collection of all the tabs in the channel.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * A collection of all the tabs in the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class TabsRequestBuilder extends BaseRequestBuilder {
         return new TabsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * A collection of all the tabs in the channel. A navigation property.
+     * A collection of all the tabs in the channel.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
