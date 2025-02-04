@@ -35,7 +35,7 @@ public class AiInteractionHistory extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the interactions property value. The list of AI interactions.
+     * Gets the interactions property value. The interactions property
      * @return a {@link java.util.List<AiInteraction>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AiInteractionHistory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("interactions", this.getInteractions());
     }
     /**
-     * Sets the interactions property value. The list of AI interactions.
+     * Sets the interactions property value. The interactions property
      * @param value Value to set for the interactions property.
      */
     public void setInteractions(@jakarta.annotation.Nullable final java.util.List<AiInteraction> value) {

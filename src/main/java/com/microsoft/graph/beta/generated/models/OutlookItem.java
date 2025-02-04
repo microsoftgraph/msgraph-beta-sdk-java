@@ -33,6 +33,7 @@ public class OutlookItem extends Entity implements Parsable {
                 case "#microsoft.graph.eventMessage": return new EventMessage();
                 case "#microsoft.graph.eventMessageRequest": return new EventMessageRequest();
                 case "#microsoft.graph.eventMessageResponse": return new EventMessageResponse();
+                case "#microsoft.graph.mailboxItem": return new MailboxItem();
                 case "#microsoft.graph.message": return new Message();
                 case "#microsoft.graph.note": return new Note();
                 case "#microsoft.graph.outlookTask": return new OutlookTask();

@@ -86,14 +86,23 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("excludeActors", (n) -> { this.setExcludeActors(n.getObjectValue(AppManagementPolicyActorExemptions::createFromDiscriminatorValue)); });
         deserializerMap.put("excludeAppsReceivingV2Tokens", (n) -> { this.setExcludeAppsReceivingV2Tokens(n.getBooleanValue()); });
         deserializerMap.put("excludeSaml", (n) -> { this.setExcludeSaml(n.getBooleanValue()); });
+        deserializerMap.put("isStateSetByMicrosoft", (n) -> { this.setIsStateSetByMicrosoft(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("restrictForAppsCreatedAfterDateTime", (n) -> { this.setRestrictForAppsCreatedAfterDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(AppManagementRestrictionState::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isStateSetByMicrosoft property value. If true, Microsoft sets the identifierUriRestriction state. If false, the tenant modifies the identifierUriRestriction state. Read-only.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsStateSetByMicrosoft() {
+        return this.backingStore.get("isStateSetByMicrosoft");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -168,6 +177,13 @@ public class IdentifierUriRestriction implements AdditionalDataHolder, BackedMod
      */
     public void setExcludeSaml(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("excludeSaml", value);
+    }
+    /**
+     * Sets the isStateSetByMicrosoft property value. If true, Microsoft sets the identifierUriRestriction state. If false, the tenant modifies the identifierUriRestriction state. Read-only.
+     * @param value Value to set for the isStateSetByMicrosoft property.
+     */
+    public void setIsStateSetByMicrosoft(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isStateSetByMicrosoft", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

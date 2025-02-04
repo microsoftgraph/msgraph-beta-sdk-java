@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.users.item.settings;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.UserSettings;
 import com.microsoft.graph.beta.users.item.settings.contactmergesuggestions.ContactMergeSuggestionsRequestBuilder;
+import com.microsoft.graph.beta.users.item.settings.exchange.ExchangeRequestBuilder;
 import com.microsoft.graph.beta.users.item.settings.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.beta.users.item.settings.regionalandlanguagesettings.RegionalAndLanguageSettingsRequestBuilder;
 import com.microsoft.graph.beta.users.item.settings.shiftpreferences.ShiftPreferencesRequestBuilder;
@@ -33,6 +34,14 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ContactMergeSuggestionsRequestBuilder contactMergeSuggestions() {
         return new ContactMergeSuggestionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the exchange property of the microsoft.graph.userSettings entity.
+     * @return a {@link ExchangeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExchangeRequestBuilder exchange() {
+        return new ExchangeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the itemInsights property of the microsoft.graph.userSettings entity.

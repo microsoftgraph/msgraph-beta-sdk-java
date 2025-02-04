@@ -56,7 +56,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
         return this.backingStore;
     }
     /**
-     * Gets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
+     * Gets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue, attributeCollectionStart, attributeCollectionSubmit, emailOtpSend. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: attributeCollectionStart, attributeCollectionSubmit, emailOtpSend.
      * @return a {@link AuthenticationEventType}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class AppliedAuthenticationEventListener implements AdditionalDataHolder,
         this.backingStore = value;
     }
     /**
-     * Sets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
+     * Sets the eventType property value. The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue, attributeCollectionStart, attributeCollectionSubmit, emailOtpSend. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: attributeCollectionStart, attributeCollectionSubmit, emailOtpSend.
      * @param value Value to set for the eventType property.
      */
     public void setEventType(@jakarta.annotation.Nullable final AuthenticationEventType value) {

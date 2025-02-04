@@ -4,6 +4,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -71,6 +72,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
+        deserializerMap.put("protectionSources", (n) -> { this.setProtectionSources(n.getEnumSetValue(ProtectionSource::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProtectionUnitStatus::forValue)); });
         return deserializerMap;
     }
@@ -99,6 +101,14 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("policyId");
     }
     /**
+     * Gets the protectionSources property value. The protectionSources property
+     * @return a {@link EnumSet<ProtectionSource>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<ProtectionSource> getProtectionSources() {
+        return this.backingStore.get("protectionSources");
+    }
+    /**
      * Gets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue.
      * @return a {@link ProtectionUnitStatus}
      */
@@ -119,6 +129,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("policyId", this.getPolicyId());
+        writer.writeEnumSetValue("protectionSources", this.getProtectionSources());
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
@@ -162,6 +173,13 @@ public class ProtectionUnitBase extends Entity implements Parsable {
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyId", value);
+    }
+    /**
+     * Sets the protectionSources property value. The protectionSources property
+     * @param value Value to set for the protectionSources property.
+     */
+    public void setProtectionSources(@jakarta.annotation.Nullable final EnumSet<ProtectionSource> value) {
+        this.backingStore.set("protectionSources", value);
     }
     /**
      * Sets the status property value. The status of the protection unit. The possible values are: protectRequested, protected, unprotectRequested, unprotected, removeRequested, unknownFutureValue.

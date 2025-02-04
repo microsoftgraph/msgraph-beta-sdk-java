@@ -88,6 +88,33 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomClaimsPolicy::createFromDiscriminatorValue);
     }
     /**
+     * Update a customClaimsPolicy object.
+     * @param body The request body
+     * @return a {@link CustomClaimsPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customclaimspolicy-update?view=graph-rest-beta">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    public CustomClaimsPolicy put(@jakarta.annotation.Nonnull final CustomClaimsPolicy body) {
+        return put(body, null);
+    }
+    /**
+     * Update a customClaimsPolicy object.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link CustomClaimsPolicy}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customclaimspolicy-update?view=graph-rest-beta">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    public CustomClaimsPolicy put(@jakarta.annotation.Nonnull final CustomClaimsPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, CustomClaimsPolicy::createFromDiscriminatorValue);
+    }
+    /**
      * Get the properties and relationships of a customClaimsPolicy object.
      * @return a {@link RequestInformation}
      */
@@ -127,6 +154,30 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        return requestInfo;
+    }
+    /**
+     * Update a customClaimsPolicy object.
+     * @param body The request body
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final CustomClaimsPolicy body) {
+        return toPutRequestInformation(body, null);
+    }
+    /**
+     * Update a customClaimsPolicy object.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final CustomClaimsPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
@@ -184,5 +235,11 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class PatchRequestConfiguration extends BaseRequestConfiguration {
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class PutRequestConfiguration extends BaseRequestConfiguration {
     }
 }

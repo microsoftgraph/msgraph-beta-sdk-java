@@ -35,7 +35,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/microsoft.graph.security.export", rawUrl);
     }
     /**
-     * Initiate an export from a reviewSet.  For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a reviewSet. For more information, see Export documents from a review set in eDiscovery (Premium).
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryreviewset-export?view=graph-rest-beta">Find more info here</a>
@@ -44,7 +44,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         post(body, null);
     }
     /**
-     * Initiate an export from a reviewSet.  For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a reviewSet. For more information, see Export documents from a review set in eDiscovery (Premium).
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Initiate an export from a reviewSet.  For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a reviewSet. For more information, see Export documents from a review set in eDiscovery (Premium).
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class MicrosoftGraphSecurityExportRequestBuilder extends BaseRequestBuild
         return toPostRequestInformation(body, null);
     }
     /**
-     * Initiate an export from a reviewSet.  For details, see Export documents from a review set in eDiscovery (Premium).
+     * Initiate an export from a reviewSet. For more information, see Export documents from a review set in eDiscovery (Premium).
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
