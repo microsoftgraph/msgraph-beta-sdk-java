@@ -49,6 +49,14 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("contributionToContentDiscoveryDisabled");
     }
     /**
+     * Gets the exchange property value. The Exchange settings for mailbox discovery.
+     * @return a {@link ExchangeSettings}
+     */
+    @jakarta.annotation.Nullable
+    public ExchangeSettings getExchange() {
+        return this.backingStore.get("exchange");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -58,6 +66,7 @@ public class UserSettings extends Entity implements Parsable {
         deserializerMap.put("contactMergeSuggestions", (n) -> { this.setContactMergeSuggestions(n.getObjectValue(ContactMergeSuggestions::createFromDiscriminatorValue)); });
         deserializerMap.put("contributionToContentDiscoveryAsOrganizationDisabled", (n) -> { this.setContributionToContentDiscoveryAsOrganizationDisabled(n.getBooleanValue()); });
         deserializerMap.put("contributionToContentDiscoveryDisabled", (n) -> { this.setContributionToContentDiscoveryDisabled(n.getBooleanValue()); });
+        deserializerMap.put("exchange", (n) -> { this.setExchange(n.getObjectValue(ExchangeSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(UserInsightsSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("regionalAndLanguageSettings", (n) -> { this.setRegionalAndLanguageSettings(n.getObjectValue(RegionalAndLanguageSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
@@ -115,6 +124,7 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeObjectValue("contactMergeSuggestions", this.getContactMergeSuggestions());
         writer.writeBooleanValue("contributionToContentDiscoveryAsOrganizationDisabled", this.getContributionToContentDiscoveryAsOrganizationDisabled());
         writer.writeBooleanValue("contributionToContentDiscoveryDisabled", this.getContributionToContentDiscoveryDisabled());
+        writer.writeObjectValue("exchange", this.getExchange());
         writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeObjectValue("regionalAndLanguageSettings", this.getRegionalAndLanguageSettings());
         writer.writeObjectValue("shiftPreferences", this.getShiftPreferences());
@@ -141,6 +151,13 @@ public class UserSettings extends Entity implements Parsable {
      */
     public void setContributionToContentDiscoveryDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("contributionToContentDiscoveryDisabled", value);
+    }
+    /**
+     * Sets the exchange property value. The Exchange settings for mailbox discovery.
+     * @param value Value to set for the exchange property.
+     */
+    public void setExchange(@jakarta.annotation.Nullable final ExchangeSettings value) {
+        this.backingStore.set("exchange", value);
     }
     /**
      * Sets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.

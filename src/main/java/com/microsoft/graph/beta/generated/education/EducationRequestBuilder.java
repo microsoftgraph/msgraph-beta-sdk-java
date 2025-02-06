@@ -4,7 +4,6 @@ import com.microsoft.graph.beta.education.classes.ClassesRequestBuilder;
 import com.microsoft.graph.beta.education.me.MeRequestBuilder;
 import com.microsoft.graph.beta.education.reports.ReportsRequestBuilder;
 import com.microsoft.graph.beta.education.schools.SchoolsRequestBuilder;
-import com.microsoft.graph.beta.education.synchronizationprofiles.SynchronizationProfilesRequestBuilder;
 import com.microsoft.graph.beta.education.users.UsersRequestBuilder;
 import com.microsoft.graph.beta.models.EducationRoot;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -57,14 +56,6 @@ public class EducationRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SchoolsRequestBuilder schools() {
         return new SchoolsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the synchronizationProfiles property of the microsoft.graph.educationRoot entity.
-     * @return a {@link SynchronizationProfilesRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public SynchronizationProfilesRequestBuilder synchronizationProfiles() {
-        return new SynchronizationProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the users property of the microsoft.graph.educationRoot entity.

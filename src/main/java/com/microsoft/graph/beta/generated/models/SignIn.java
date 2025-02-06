@@ -59,7 +59,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("appliedEventListeners");
     }
     /**
-     * Gets the appOwnerTenantId property value. The appOwnerTenantId property
+     * Gets the appOwnerTenantId property value. The identifier of the tenant that owns the client application.  Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -478,7 +478,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("resourceId");
     }
     /**
-     * Gets the resourceOwnerTenantId property value. The resourceOwnerTenantId property
+     * Gets the resourceOwnerTenantId property value. The identifier of the owner of the resource.  Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -812,7 +812,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("appliedEventListeners", value);
     }
     /**
-     * Sets the appOwnerTenantId property value. The appOwnerTenantId property
+     * Sets the appOwnerTenantId property value. The identifier of the tenant that owns the client application.  Supports $filter (eq).
      * @param value Value to set for the appOwnerTenantId property.
      */
     public void setAppOwnerTenantId(@jakarta.annotation.Nullable final String value) {
@@ -1106,7 +1106,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("resourceId", value);
     }
     /**
-     * Sets the resourceOwnerTenantId property value. The resourceOwnerTenantId property
+     * Sets the resourceOwnerTenantId property value. The identifier of the owner of the resource.  Supports $filter (eq).
      * @param value Value to set for the resourceOwnerTenantId property.
      */
     public void setResourceOwnerTenantId(@jakarta.annotation.Nullable final String value) {

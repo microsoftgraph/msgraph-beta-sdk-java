@@ -69,13 +69,12 @@ public class EducationRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("classes", (n) -> { this.setClasses(n.getCollectionOfObjectValues(EducationClass::createFromDiscriminatorValue)); });
         deserializerMap.put("me", (n) -> { this.setMe(n.getObjectValue(EducationUser::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(ReportsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("schools", (n) -> { this.setSchools(n.getCollectionOfObjectValues(EducationSchool::createFromDiscriminatorValue)); });
-        deserializerMap.put("synchronizationProfiles", (n) -> { this.setSynchronizationProfiles(n.getCollectionOfObjectValues(EducationSynchronizationProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("users", (n) -> { this.setUsers(n.getCollectionOfObjectValues(EducationUser::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -112,14 +111,6 @@ public class EducationRoot implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("schools");
     }
     /**
-     * Gets the synchronizationProfiles property value. The synchronizationProfiles property
-     * @return a {@link java.util.List<EducationSynchronizationProfile>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<EducationSynchronizationProfile> getSynchronizationProfiles() {
-        return this.backingStore.get("synchronizationProfiles");
-    }
-    /**
      * Gets the users property value. The users property
      * @return a {@link java.util.List<EducationUser>}
      */
@@ -138,7 +129,6 @@ public class EducationRoot implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("reports", this.getReports());
         writer.writeCollectionOfObjectValues("schools", this.getSchools());
-        writer.writeCollectionOfObjectValues("synchronizationProfiles", this.getSynchronizationProfiles());
         writer.writeCollectionOfObjectValues("users", this.getUsers());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -191,13 +181,6 @@ public class EducationRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setSchools(@jakarta.annotation.Nullable final java.util.List<EducationSchool> value) {
         this.backingStore.set("schools", value);
-    }
-    /**
-     * Sets the synchronizationProfiles property value. The synchronizationProfiles property
-     * @param value Value to set for the synchronizationProfiles property.
-     */
-    public void setSynchronizationProfiles(@jakarta.annotation.Nullable final java.util.List<EducationSynchronizationProfile> value) {
-        this.backingStore.set("synchronizationProfiles", value);
     }
     /**
      * Sets the users property value. The users property
