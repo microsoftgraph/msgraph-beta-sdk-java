@@ -50,6 +50,7 @@ public class Presence extends Entity implements Parsable {
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getStringValue()); });
         deserializerMap.put("availability", (n) -> { this.setAvailability(n.getStringValue()); });
         deserializerMap.put("outOfOfficeSettings", (n) -> { this.setOutOfOfficeSettings(n.getObjectValue(OutOfOfficeSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("sequenceNumber", (n) -> { this.setSequenceNumber(n.getStringValue()); });
         deserializerMap.put("statusMessage", (n) -> { this.setStatusMessage(n.getObjectValue(PresenceStatusMessage::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -60,6 +61,14 @@ public class Presence extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OutOfOfficeSettings getOutOfOfficeSettings() {
         return this.backingStore.get("outOfOfficeSettings");
+    }
+    /**
+     * Gets the sequenceNumber property value. The sequenceNumber property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSequenceNumber() {
+        return this.backingStore.get("sequenceNumber");
     }
     /**
      * Gets the statusMessage property value. The presence status message of a user.
@@ -101,6 +110,13 @@ public class Presence extends Entity implements Parsable {
      */
     public void setOutOfOfficeSettings(@jakarta.annotation.Nullable final OutOfOfficeSettings value) {
         this.backingStore.set("outOfOfficeSettings", value);
+    }
+    /**
+     * Sets the sequenceNumber property value. The sequenceNumber property
+     * @param value Value to set for the sequenceNumber property.
+     */
+    public void setSequenceNumber(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("sequenceNumber", value);
     }
     /**
      * Sets the statusMessage property value. The presence status message of a user.

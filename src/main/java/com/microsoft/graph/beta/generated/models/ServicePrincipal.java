@@ -384,7 +384,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("ownedObjects");
     }
     /**
-     * Gets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of nonadmin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Gets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of nonadmin users or servicePrincipals who are allowed to modify this object. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -887,7 +887,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("ownedObjects", value);
     }
     /**
-     * Sets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of nonadmin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable.  Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
+     * Sets the owners property value. Directory objects that are owners of this servicePrincipal. The owners are a set of nonadmin users or servicePrincipals who are allowed to modify this object. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
      * @param value Value to set for the owners property.
      */
     public void setOwners(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {

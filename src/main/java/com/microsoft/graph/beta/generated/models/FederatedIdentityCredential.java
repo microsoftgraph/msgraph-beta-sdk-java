@@ -33,7 +33,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         return this.backingStore.get("audiences");
     }
     /**
-     * Gets the claimsMatchingExpression property value. Enables the use of claims matching expressions against specified claims. For the list of supported expression syntax and claims, visit the Flexible FIC reference.
+     * Gets the claimsMatchingExpression property value. Nullable.  Defaults to null if not set. Enables the use of claims matching expressions against specified claims. If claimsMatchingExpression is defined, subject must be null. For the list of supported expression syntax and claims, visit the Flexible FIC reference.
      * @return a {@link FederatedIdentityExpression}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the subject property value. Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Microsoft Entra ID. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. Supports $filter (eq).
+     * Gets the subject property value. Nullable.  Defaults to null if not set. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Microsoft Entra ID. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. If subject is defined, claimsMatchingExpression must be null. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         this.backingStore.set("audiences", value);
     }
     /**
-     * Sets the claimsMatchingExpression property value. Enables the use of claims matching expressions against specified claims. For the list of supported expression syntax and claims, visit the Flexible FIC reference.
+     * Sets the claimsMatchingExpression property value. Nullable.  Defaults to null if not set. Enables the use of claims matching expressions against specified claims. If claimsMatchingExpression is defined, subject must be null. For the list of supported expression syntax and claims, visit the Flexible FIC reference.
      * @param value Value to set for the claimsMatchingExpression property.
      */
     public void setClaimsMatchingExpression(@jakarta.annotation.Nullable final FederatedIdentityExpression value) {
@@ -137,7 +137,7 @@ public class FederatedIdentityCredential extends Entity implements Parsable {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the subject property value. Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Microsoft Entra ID. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. Supports $filter (eq).
+     * Sets the subject property value. Nullable.  Defaults to null if not set. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Microsoft Entra ID. The combination of issuer and subject must be unique on the app. It has a limit of 600 characters. If subject is defined, claimsMatchingExpression must be null. Supports $filter (eq).
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
