@@ -9,6 +9,7 @@ import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.prima
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.filesfolder.FilesFolderRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.messages.MessagesRequestBuilder;
+import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.planner.PlannerRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.provisionemail.ProvisionEmailRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.removeemail.RemoveEmailRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.primarychannel.sharedwithteams.SharedWithTeamsRequestBuilder;
@@ -87,6 +88,14 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the planner property of the microsoft.graph.channel entity.
+     * @return a {@link PlannerRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PlannerRequestBuilder planner() {
+        return new PlannerRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the provisionEmail method.

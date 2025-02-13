@@ -31,16 +31,7 @@ public class AiInteractionHistory extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("interactions", (n) -> { this.setInteractions(n.getCollectionOfObjectValues(AiInteraction::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the interactions property value. The interactions property
-     * @return a {@link java.util.List<AiInteraction>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<AiInteraction> getInteractions() {
-        return this.backingStore.get("interactions");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class AiInteractionHistory extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("interactions", this.getInteractions());
-    }
-    /**
-     * Sets the interactions property value. The interactions property
-     * @param value Value to set for the interactions property.
-     */
-    public void setInteractions(@jakarta.annotation.Nullable final java.util.List<AiInteraction> value) {
-        this.backingStore.set("interactions", value);
     }
 }

@@ -36,19 +36,21 @@ public class RetrievePolicyApplyActionResultRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/retrievePolicyApplyActionResult()", rawUrl);
     }
     /**
-     * Invoke function retrievePolicyApplyActionResult
+     * Get the result of the latest apply operation of a provision policy. Frontline shared only. Administrators only.
      * @return a {@link CloudPcPolicyApplyActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-retrievepolicyapplyactionresult?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPolicyApplyActionResult get() {
         return get(null);
     }
     /**
-     * Invoke function retrievePolicyApplyActionResult
+     * Get the result of the latest apply operation of a provision policy. Frontline shared only. Administrators only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcPolicyApplyActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-retrievepolicyapplyactionresult?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPolicyApplyActionResult get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class RetrievePolicyApplyActionResultRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcPolicyApplyActionResult::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function retrievePolicyApplyActionResult
+     * Get the result of the latest apply operation of a provision policy. Frontline shared only. Administrators only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class RetrievePolicyApplyActionResultRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function retrievePolicyApplyActionResult
+     * Get the result of the latest apply operation of a provision policy. Frontline shared only. Administrators only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

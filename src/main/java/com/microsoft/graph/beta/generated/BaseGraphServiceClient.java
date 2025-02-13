@@ -14,7 +14,6 @@ import com.microsoft.graph.beta.applications.ApplicationsRequestBuilder;
 import com.microsoft.graph.beta.applicationswithappid.ApplicationsWithAppIdRequestBuilder;
 import com.microsoft.graph.beta.applicationswithuniquename.ApplicationsWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.applicationtemplates.ApplicationTemplatesRequestBuilder;
-import com.microsoft.graph.beta.approleassignments.AppRoleAssignmentsRequestBuilder;
 import com.microsoft.graph.beta.approvalworkflowproviders.ApprovalWorkflowProvidersRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.AuditLogsRequestBuilder;
 import com.microsoft.graph.beta.authenticationmethodconfigurations.AuthenticationMethodConfigurationsRequestBuilder;
@@ -242,14 +241,6 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ApplicationTemplatesRequestBuilder applicationTemplates() {
         return new ApplicationTemplatesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the collection of appRoleAssignment entities.
-     * @return a {@link AppRoleAssignmentsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
-        return new AppRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of approvalWorkflowProvider entities.
