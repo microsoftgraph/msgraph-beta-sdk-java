@@ -85,6 +85,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType::forValue)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
         deserializerMap.put("moderationSettings", (n) -> { this.setModerationSettings(n.getObjectValue(ChannelModerationSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("planner", (n) -> { this.setPlanner(n.getObjectValue(TeamsChannelPlanner::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedWithTeams", (n) -> { this.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(ChannelSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("tabs", (n) -> { this.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
@@ -157,6 +158,14 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("moderationSettings");
     }
     /**
+     * Gets the planner property value. Selective Planner services available to this channel. Currently, only shared channels are supported. Read-only. Nullable.
+     * @return a {@link TeamsChannelPlanner}
+     */
+    @jakarta.annotation.Nullable
+    public TeamsChannelPlanner getPlanner() {
+        return this.backingStore.get("planner");
+    }
+    /**
      * Gets the sharedWithTeams property value. A collection of teams with which a channel is shared.
      * @return a {@link java.util.List<SharedWithChannelTeamInfo>}
      */
@@ -216,6 +225,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeEnumValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
         writer.writeObjectValue("moderationSettings", this.getModerationSettings());
+        writer.writeObjectValue("planner", this.getPlanner());
         writer.writeCollectionOfObjectValues("sharedWithTeams", this.getSharedWithTeams());
         writer.writeObjectValue("summary", this.getSummary());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
@@ -312,6 +322,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setModerationSettings(@jakarta.annotation.Nullable final ChannelModerationSettings value) {
         this.backingStore.set("moderationSettings", value);
+    }
+    /**
+     * Sets the planner property value. Selective Planner services available to this channel. Currently, only shared channels are supported. Read-only. Nullable.
+     * @param value Value to set for the planner property.
+     */
+    public void setPlanner(@jakarta.annotation.Nullable final TeamsChannelPlanner value) {
+        this.backingStore.set("planner", value);
     }
     /**
      * Sets the sharedWithTeams property value. A collection of teams with which a channel is shared.

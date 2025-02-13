@@ -1,28 +1,18 @@
 package com.microsoft.graph.beta.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import com.microsoft.kiota.store.BackedModel;
-import com.microsoft.kiota.store.BackingStore;
-import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CloudPcPolicyScheduledApplyActionDetail implements AdditionalDataHolder, BackedModel, Parsable {
-    /**
-     * Stores model information.
-     */
-    @jakarta.annotation.Nonnull
-    protected BackingStore backingStore;
+public class CloudPcPolicyScheduledApplyActionDetail extends Entity implements Parsable {
     /**
      * Instantiates a new {@link CloudPcPolicyScheduledApplyActionDetail} and sets the default values.
      */
     public CloudPcPolicyScheduledApplyActionDetail() {
-        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
-        this.setAdditionalData(new HashMap<>());
+        super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -35,28 +25,7 @@ public class CloudPcPolicyScheduledApplyActionDetail implements AdditionalDataHo
         return new CloudPcPolicyScheduledApplyActionDetail();
     }
     /**
-     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a {@link Map<String, Object>}
-     */
-    @jakarta.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        Map<String, Object> value = this.backingStore.get("additionalData");
-        if(value == null) {
-            value = new HashMap<>();
-            this.setAdditionalData(value);
-        }
-        return value;
-    }
-    /**
-     * Gets the backingStore property value. Stores model information.
-     * @return a {@link BackingStore}
-     */
-    @jakarta.annotation.Nonnull
-    public BackingStore getBackingStore() {
-        return this.backingStore;
-    }
-    /**
-     * Gets the cronScheduleExpression property value. The cronScheduleExpression property
+     * Gets the cronScheduleExpression property value. An expression that specifies the cron schedule. (For example, '0 0 0 20  ' means schedules a job to run at midnight on the 20th of every month) Administrators can set a cron expression to define the scheduling rules for automatic regular application. When auto-provision is disabled, cronScheduleExpression is set to null, stopping the automatic task scheduling. Read-Only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,22 +38,13 @@ public class CloudPcPolicyScheduledApplyActionDetail implements AdditionalDataHo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cronScheduleExpression", (n) -> { this.setCronScheduleExpression(n.getStringValue()); });
-        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("reservePercentage", (n) -> { this.setReservePercentage(n.getIntegerValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getOdataType() {
-        return this.backingStore.get("odataType");
-    }
-    /**
-     * Gets the reservePercentage property value. The reservePercentage property
+     * Gets the reservePercentage property value. The percentage of Cloud PCs to keep available. Administrators can set this property to a value from 0 to 99. Cloud PCs are reprovisioned only when there are no active and connected Cloud PC users. Frontline shared only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -97,42 +57,19 @@ public class CloudPcPolicyScheduledApplyActionDetail implements AdditionalDataHo
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeStringValue("cronScheduleExpression", this.getCronScheduleExpression());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeIntegerValue("reservePercentage", this.getReservePercentage());
-        writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     */
-    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.backingStore.set("additionalData", value);
-    }
-    /**
-     * Sets the backingStore property value. Stores model information.
-     * @param value Value to set for the backingStore property.
-     */
-    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
-        Objects.requireNonNull(value);
-        this.backingStore = value;
-    }
-    /**
-     * Sets the cronScheduleExpression property value. The cronScheduleExpression property
+     * Sets the cronScheduleExpression property value. An expression that specifies the cron schedule. (For example, '0 0 0 20  ' means schedules a job to run at midnight on the 20th of every month) Administrators can set a cron expression to define the scheduling rules for automatic regular application. When auto-provision is disabled, cronScheduleExpression is set to null, stopping the automatic task scheduling. Read-Only.
      * @param value Value to set for the cronScheduleExpression property.
      */
     public void setCronScheduleExpression(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("cronScheduleExpression", value);
     }
     /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the @odata.type property.
-     */
-    public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("odataType", value);
-    }
-    /**
-     * Sets the reservePercentage property value. The reservePercentage property
+     * Sets the reservePercentage property value. The percentage of Cloud PCs to keep available. Administrators can set this property to a value from 0 to 99. Cloud PCs are reprovisioned only when there are no active and connected Cloud PC users. Frontline shared only.
      * @param value Value to set for the reservePercentage property.
      */
     public void setReservePercentage(@jakarta.annotation.Nullable final Integer value) {

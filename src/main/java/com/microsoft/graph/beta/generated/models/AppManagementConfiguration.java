@@ -77,7 +77,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the keyCredentials property value. Collection of certificate restrictions settings to be applied to an application or service principal.
+     * Gets the keyCredentials property value. The keyCredentials property
      * @return a {@link java.util.List<KeyCredentialConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the passwordCredentials property value. Collection of password restrictions settings to be applied to an application or service principal.
+     * Gets the passwordCredentials property value. The passwordCredentials property
      * @return a {@link java.util.List<PasswordCredentialConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the keyCredentials property value. Collection of certificate restrictions settings to be applied to an application or service principal.
+     * Sets the keyCredentials property value. The keyCredentials property
      * @param value Value to set for the keyCredentials property.
      */
     public void setKeyCredentials(@jakarta.annotation.Nullable final java.util.List<KeyCredentialConfiguration> value) {
@@ -141,7 +141,7 @@ public class AppManagementConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the passwordCredentials property value. Collection of password restrictions settings to be applied to an application or service principal.
+     * Sets the passwordCredentials property value. The passwordCredentials property
      * @param value Value to set for the passwordCredentials property.
      */
     public void setPasswordCredentials(@jakarta.annotation.Nullable final java.util.List<PasswordCredentialConfiguration> value) {

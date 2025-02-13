@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.groups.item.team.channels.item.doesuserhaveacces
 import com.microsoft.graph.beta.groups.item.team.channels.item.filesfolder.FilesFolderRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.messages.MessagesRequestBuilder;
+import com.microsoft.graph.beta.groups.item.team.channels.item.planner.PlannerRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.provisionemail.ProvisionEmailRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.removeemail.RemoveEmailRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.sharedwithteams.SharedWithTeamsRequestBuilder;
@@ -87,6 +88,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the planner property of the microsoft.graph.channel entity.
+     * @return a {@link PlannerRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PlannerRequestBuilder planner() {
+        return new PlannerRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the provisionEmail method.
