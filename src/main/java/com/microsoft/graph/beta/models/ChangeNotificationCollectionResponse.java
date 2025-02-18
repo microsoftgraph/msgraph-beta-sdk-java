@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * The {@link ChangeNotificationCollectionResponse} model for the response.
+ */
 public class ChangeNotificationCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
      * Instantiates a new {@link ChangeNotificationCollectionResponse} and sets the default values.
