@@ -42,7 +42,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * @return a {@link FilterByCurrentUserWithOnGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-filterbycurrentuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * @return a {@link FilterByCurrentUserWithOnGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-filterbycurrentuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * In Microsoft Entra Entitlement Management, retrieve a list of accessPackageAssignmentRequest objects filtered on the signed-in user.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -83,7 +83,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -98,7 +98,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

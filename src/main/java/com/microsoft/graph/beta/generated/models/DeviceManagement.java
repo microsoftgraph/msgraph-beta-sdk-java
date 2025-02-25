@@ -10,9 +10,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
-/**
- * Singleton that acts as container for a collection of Resource Access entities.
- */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagement extends Entity implements Parsable {
     /**
@@ -1089,7 +1086,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("remoteAssistanceSettings");
     }
     /**
-     * Gets the reports property value. Reports singleton
+     * Gets the reports property value. The reports property
      * @return a {@link DeviceManagementReports}
      */
     @jakarta.annotation.Nullable
@@ -2714,7 +2711,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("remoteAssistanceSettings", value);
     }
     /**
-     * Sets the reports property value. Reports singleton
+     * Sets the reports property value. The reports property
      * @param value Value to set for the reports property.
      */
     public void setReports(@jakarta.annotation.Nullable final DeviceManagementReports value) {

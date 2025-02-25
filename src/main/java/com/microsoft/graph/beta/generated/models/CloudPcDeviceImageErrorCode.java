@@ -14,7 +14,9 @@ public enum CloudPcDeviceImageErrorCode implements ValuedEnum {
     VmAlreadyAzureAdjoined("vmAlreadyAzureAdjoined"),
     PaidSourceImageNotSupport("paidSourceImageNotSupport"),
     SourceImageNotSupportCustomizeVMName("sourceImageNotSupportCustomizeVMName"),
-    SourceImageSizeExceedsLimitation("sourceImageSizeExceedsLimitation");
+    SourceImageSizeExceedsLimitation("sourceImageSizeExceedsLimitation"),
+    SourceImageWithDataDiskNotSupported("sourceImageWithDataDiskNotSupported"),
+    SourceImageWithDiskEncryptionSetNotSupported("sourceImageWithDiskEncryptionSetNotSupported");
     public final String value;
     CloudPcDeviceImageErrorCode(final String value) {
         this.value = value;
@@ -35,6 +37,8 @@ public enum CloudPcDeviceImageErrorCode implements ValuedEnum {
             case "paidSourceImageNotSupport": return PaidSourceImageNotSupport;
             case "sourceImageNotSupportCustomizeVMName": return SourceImageNotSupportCustomizeVMName;
             case "sourceImageSizeExceedsLimitation": return SourceImageSizeExceedsLimitation;
+            case "sourceImageWithDataDiskNotSupported": return SourceImageWithDataDiskNotSupported;
+            case "sourceImageWithDiskEncryptionSetNotSupported": return SourceImageWithDiskEncryptionSetNotSupported;
             default: return null;
         }
     }

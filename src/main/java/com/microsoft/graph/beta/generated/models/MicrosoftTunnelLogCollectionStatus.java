@@ -14,7 +14,7 @@ public enum MicrosoftTunnelLogCollectionStatus implements ValuedEnum {
     Completed("completed"),
     /** Indicates that the log collection has failed */
     Failed("failed"),
-    /** Placeholder value for future expansion enums */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     MicrosoftTunnelLogCollectionStatus(final String value) {

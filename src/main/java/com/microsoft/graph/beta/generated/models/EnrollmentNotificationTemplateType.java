@@ -12,7 +12,7 @@ public enum EnrollmentNotificationTemplateType implements ValuedEnum {
     Email("email"),
     /** Push Notification */
     Push("push"),
-    /** Unknown Type */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     EnrollmentNotificationTemplateType(final String value) {

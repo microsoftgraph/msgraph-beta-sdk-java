@@ -27,7 +27,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -39,7 +39,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * @param customCalloutExtensionId The unique identifier of customCalloutExtension
      * @return a {@link CustomCalloutExtensionItemRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -70,7 +70,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * @return a {@link CustomCalloutExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-accesspackagecustomworkflowextensions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * @return a {@link CustomCalloutExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackagecatalog-list-accesspackagecustomworkflowextensions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * @return a {@link CustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -115,7 +115,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * @return a {@link CustomCalloutExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -130,7 +130,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * Get a list of the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an  accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -142,7 +142,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -157,7 +157,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -170,7 +170,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -187,7 +187,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AccessPackageCustomWorkflowExtensionsRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

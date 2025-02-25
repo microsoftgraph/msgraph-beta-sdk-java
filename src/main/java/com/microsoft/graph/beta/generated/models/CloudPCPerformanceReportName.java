@@ -6,7 +6,8 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CloudPCPerformanceReportName implements ValuedEnum {
     PerformanceTrendReport("performanceTrendReport"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    CloudPcInsightReport("cloudPcInsightReport");
     public final String value;
     CloudPCPerformanceReportName(final String value) {
         this.value = value;
@@ -19,6 +20,7 @@ public enum CloudPCPerformanceReportName implements ValuedEnum {
         switch(searchValue) {
             case "performanceTrendReport": return PerformanceTrendReport;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "cloudPcInsightReport": return CloudPcInsightReport;
             default: return null;
         }
     }

@@ -25,7 +25,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * Provides operations to manage the accessPackageResource property of the microsoft.graph.accessPackageResourceRole entity.
      * @return a {@link AccessPackageResourceRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -52,7 +52,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * Delete navigation property accessPackageResourceRoles for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     public void delete() {
@@ -63,7 +63,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -77,7 +77,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @return a {@link AccessPackageResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -90,7 +90,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @return a {@link AccessPackageResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -106,7 +106,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @return a {@link AccessPackageResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -120,7 +120,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @return a {@link AccessPackageResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -135,7 +135,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * Delete navigation property accessPackageResourceRoles for identityGovernance
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -147,7 +147,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -161,7 +161,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * Read-only. Nullable. Supports $expand.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -173,7 +173,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -188,7 +188,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -201,7 +201,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -218,7 +218,7 @@ public class AccessPackageResourceRoleItemRequestBuilder extends BaseRequestBuil
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AccessPackageResourceRoleItemRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -40,7 +40,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
      * @return a {@link GetCloudPcRemoteActionResultsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults
+     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults on 2024-05-08 and will be removed 2024-09-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-getcloudpcremoteactionresults?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
      * @return a {@link GetCloudPcRemoteActionResultsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults
+     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults on 2024-05-08 and will be removed 2024-09-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-getcloudpcremoteactionresults?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
      * Check the Cloud PC-specified remote action results for a Cloud PC device. Cloud PC supports reprovision and resize remote actions.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults
+     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults on 2024-05-08 and will be removed 2024-09-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -81,7 +81,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults
+     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults on 2024-05-08 and will be removed 2024-09-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -96,7 +96,7 @@ public class GetCloudPcRemoteActionResultsRequestBuilder extends BaseRequestBuil
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link GetCloudPcRemoteActionResultsRequestBuilder}
      * @deprecated
-     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults
+     * Starting September 30, 2024, getCloudPcRemoteActionResults API bound to managedDevice entity will be deprecated and no longer supported. Please use retrieveCloudPcRemoteActionResults API bound to cloudpc entity instead. as of 2024-05/getCloudPcRemoteActionResults on 2024-05-08 and will be removed 2024-09-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -41,7 +41,7 @@ public enum ManagedDeviceRemoteAction implements ValuedEnum {
     InitiateMobileDeviceManagementKeyRecovery("initiateMobileDeviceManagementKeyRecovery"),
     /** Name of action to initiate On Demand Proactive Remediation */
     InitiateOnDemandProactiveRemediation("initiateOnDemandProactiveRemediation"),
-    /** Evolvable enum member */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue"),
     /** Indicates remote device action to intiate Mobile Device Management (MDM) attestation if device is capable for it */
     InitiateDeviceAttestation("initiateDeviceAttestation");

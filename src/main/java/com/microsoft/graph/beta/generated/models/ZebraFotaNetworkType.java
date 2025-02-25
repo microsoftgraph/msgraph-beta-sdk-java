@@ -16,7 +16,7 @@ public enum ZebraFotaNetworkType implements ValuedEnum {
     Cellular("cellular"),
     /** The device will install the update when connected both WiFi and Cellular. */
     WifiAndCellular("wifiAndCellular"),
-    /** Unknown future enum value. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     ZebraFotaNetworkType(final String value) {

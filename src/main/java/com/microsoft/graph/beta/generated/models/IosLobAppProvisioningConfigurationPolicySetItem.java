@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * A class containing the properties used for iOS lob app provisioning configuration PolicySetItem.
+ * A class containing the properties used for iOS LOB app provisioning configuration PolicySetItem.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosLobAppProvisioningConfigurationPolicySetItem extends PolicySetItem implements Parsable {

@@ -28,7 +28,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignmentPolicy entity.
      * @return a {@link AccessPackageRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -39,7 +39,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Provides operations to manage the accessPackageCatalog property of the microsoft.graph.accessPackageAssignmentPolicy entity.
      * @return a {@link AccessPackageCatalogRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -50,7 +50,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Provides operations to manage the customExtensionHandlers property of the microsoft.graph.accessPackageAssignmentPolicy entity.
      * @return a {@link CustomExtensionHandlersRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -61,7 +61,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Provides operations to manage the customExtensionStageSettings property of the microsoft.graph.accessPackageAssignmentPolicy entity.
      * @return a {@link CustomExtensionStageSettingsRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -88,7 +88,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Delete navigation property accessPackageAssignmentPolicies for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     public void delete() {
@@ -99,7 +99,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -113,7 +113,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -126,7 +126,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -142,7 +142,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -156,7 +156,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @return a {@link AccessPackageAssignmentPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -171,7 +171,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Delete navigation property accessPackageAssignmentPolicies for identityGovernance
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -183,7 +183,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -197,7 +197,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * Read-only. Nullable. Supports $expand.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -209,7 +209,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -224,7 +224,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -237,7 +237,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -254,7 +254,7 @@ public class AccessPackageAssignmentPolicyItemRequestBuilder extends BaseRequest
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AccessPackageAssignmentPolicyItemRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

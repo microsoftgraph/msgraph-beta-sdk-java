@@ -40,7 +40,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * Delete navigation property customQuestions for users
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @Deprecated
     public void delete() {
@@ -51,7 +51,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -65,7 +65,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @return a {@link MeetingRegistrationQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,7 +78,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @return a {@link MeetingRegistrationQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -94,7 +94,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @return a {@link MeetingRegistrationQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -108,7 +108,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @return a {@link MeetingRegistrationQuestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -123,7 +123,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * Delete navigation property customQuestions for users
      * @return a {@link RequestInformation}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -135,7 +135,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -149,7 +149,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * Custom registration questions.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -161,7 +161,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -176,7 +176,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -189,7 +189,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -206,7 +206,7 @@ public class MeetingRegistrationQuestionItemRequestBuilder extends BaseRequestBu
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MeetingRegistrationQuestionItemRequestBuilder}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated

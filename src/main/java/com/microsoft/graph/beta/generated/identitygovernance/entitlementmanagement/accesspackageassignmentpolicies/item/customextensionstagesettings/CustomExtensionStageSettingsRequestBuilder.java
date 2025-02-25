@@ -27,7 +27,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -39,7 +39,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * @param customExtensionStageSettingId The unique identifier of customExtensionStageSetting
      * @return a {@link CustomExtensionStageSettingItemRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -70,7 +70,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * @return a {@link CustomExtensionStageSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -83,7 +83,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * @return a {@link CustomExtensionStageSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -99,7 +99,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * @return a {@link CustomExtensionStageSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -113,7 +113,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * @return a {@link CustomExtensionStageSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -128,7 +128,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -140,7 +140,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -155,7 +155,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -168,7 +168,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -185,7 +185,7 @@ public class CustomExtensionStageSettingsRequestBuilder extends BaseRequestBuild
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CustomExtensionStageSettingsRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -40,7 +40,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property itemInsights for organization
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @Deprecated
     public void delete() {
@@ -51,7 +51,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -65,7 +65,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-list-iteminsights?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      * @see <a href="https://learn.microsoft.com/graph/api/organizationsettings-list-iteminsights?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -110,7 +110,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InsightsSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -125,7 +125,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property itemInsights for organization
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -137,7 +137,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -151,7 +151,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * Get the properties of an insightsSettings object for displaying or returning item insights in an organization. To learn how to customize the privacy of item insights in an organization, see Customize item insights privacy. 
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -163,7 +163,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -178,7 +178,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -191,7 +191,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -208,7 +208,7 @@ public class ItemInsightsRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ItemInsightsRequestBuilder}
      * @deprecated
-     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings
+     * The Organization ItemInsights endpoint will stop returning data on January 1st, 2024. Please use the new Admin People ItemInsights endpoint. as of 2023-10/Beta:ItemInsightsOranizationSettings on 2023-10-17 and will be removed 2024-01-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated

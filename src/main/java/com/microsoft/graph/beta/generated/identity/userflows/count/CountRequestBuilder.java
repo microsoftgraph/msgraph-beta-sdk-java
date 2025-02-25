@@ -40,7 +40,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -53,7 +53,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -67,7 +67,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * Get the number of the resource
      * @return a {@link RequestInformation}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -79,7 +79,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -94,7 +94,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated

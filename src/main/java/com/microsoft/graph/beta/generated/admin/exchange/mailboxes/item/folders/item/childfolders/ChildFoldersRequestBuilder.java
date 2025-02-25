@@ -27,7 +27,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -38,7 +38,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the delta method.
      * @return a {@link DeltaRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -50,7 +50,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @param mailboxFolderId1 The unique identifier of mailboxFolder
      * @return a {@link MailboxFolderItemRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -81,7 +81,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MailboxFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-list-childfolders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MailboxFolderCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-list-childfolders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * Get the mailboxFolder collection under the specified mailboxFolder in a mailbox.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -122,7 +122,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -137,7 +137,7 @@ public class ChildFoldersRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ChildFoldersRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated

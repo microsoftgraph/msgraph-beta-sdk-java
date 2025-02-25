@@ -40,7 +40,7 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SubmitTiIndicatorsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-submittiindicators?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SubmitTiIndicatorsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-submittiindicators?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -85,7 +85,7 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -102,7 +102,7 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SubmitTiIndicatorsRequestBuilder}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -40,7 +40,7 @@ public class EvaluateRequestBuilder extends BaseRequestBuilder {
      * @return a {@link EvaluatePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation
+     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation on 2024-07-25 and will be removed 2025-02-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -54,7 +54,7 @@ public class EvaluateRequestBuilder extends BaseRequestBuilder {
      * @return a {@link EvaluatePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation
+     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation on 2024-07-25 and will be removed 2025-02-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -70,7 +70,7 @@ public class EvaluateRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation
+     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation on 2024-07-25 and will be removed 2025-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -83,7 +83,7 @@ public class EvaluateRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation
+     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation on 2024-07-25 and will be removed 2025-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -100,7 +100,7 @@ public class EvaluateRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link EvaluateRequestBuilder}
      * @deprecated
-     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation
+     * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation on 2024-07-25 and will be removed 2025-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated

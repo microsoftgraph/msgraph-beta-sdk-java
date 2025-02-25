@@ -41,7 +41,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @return a {@link CloudPcBulkRemoteActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus
+     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus on 2024-05-15 and will be removed 2024-09-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @return a {@link CloudPcBulkRemoteActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus
+     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus on 2024-05-15 and will be removed 2024-09-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-bulksetcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus
+     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus on 2024-05-15 and will be removed 2024-09-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -86,7 +86,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus
+     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus on 2024-05-15 and will be removed 2024-09-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -103,7 +103,7 @@ public class BulkSetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link BulkSetCloudPcReviewStatusRequestBuilder}
      * @deprecated
-     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus
+     * The BulkSetCloudPcReviewStatus action is deprecated and will stop supporting on September 30, 2024. Please use bulk action entity api. as of 2024-05/BulkSetCloudPcReviewStatus on 2024-05-15 and will be removed 2024-09-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated

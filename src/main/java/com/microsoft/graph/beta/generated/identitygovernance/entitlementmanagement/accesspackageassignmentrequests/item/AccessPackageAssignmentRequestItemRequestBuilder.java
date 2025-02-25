@@ -30,7 +30,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Provides operations to manage the accessPackage property of the microsoft.graph.accessPackageAssignmentRequest entity.
      * @return a {@link AccessPackageRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -41,7 +41,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Provides operations to manage the accessPackageAssignment property of the microsoft.graph.accessPackageAssignmentRequest entity.
      * @return a {@link AccessPackageAssignmentRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -52,7 +52,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Provides operations to call the cancel method.
      * @return a {@link CancelRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Provides operations to call the reprocess method.
      * @return a {@link ReprocessRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -74,7 +74,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Provides operations to manage the requestor property of the microsoft.graph.accessPackageAssignmentRequest entity.
      * @return a {@link RequestorRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Provides operations to call the resume method.
      * @return a {@link ResumeRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can't delete an access package assignment request if it has any accessPackageAssignment objects.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -124,7 +124,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -139,7 +139,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @return a {@link AccessPackageAssignmentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @return a {@link AccessPackageAssignmentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @return a {@link AccessPackageAssignmentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -184,7 +184,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @return a {@link AccessPackageAssignmentRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -199,7 +199,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can't delete an access package assignment request if it has any accessPackageAssignment objects.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -211,7 +211,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -225,7 +225,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * In Microsoft Entra entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -237,7 +237,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -252,7 +252,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -265,7 +265,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -282,7 +282,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AccessPackageAssignmentRequestItemRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

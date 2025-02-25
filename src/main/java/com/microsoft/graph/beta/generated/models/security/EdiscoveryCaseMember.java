@@ -27,7 +27,7 @@ public class EdiscoveryCaseMember extends Entity implements Parsable {
         return new EdiscoveryCaseMember();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the eDiscovery case member. Allowed only for case members of type roleGroup.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -47,7 +47,7 @@ public class EdiscoveryCaseMember extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the recipientType property value. The recipientType property
+     * Gets the recipientType property value. Specifies the recipient type of the eDiscovery case member. The possible values are: user, roleGroup, unknownFutureValue.
      * @return a {@link EnumSet<RecipientType>}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class EdiscoveryCaseMember extends Entity implements Parsable {
         return this.backingStore.get("recipientType");
     }
     /**
-     * Gets the smtpAddress property value. The smtpAddress property
+     * Gets the smtpAddress property value. The smtp address of the eDiscovery case member. Allowed only for case members of type user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -74,21 +74,21 @@ public class EdiscoveryCaseMember extends Entity implements Parsable {
         writer.writeStringValue("smtpAddress", this.getSmtpAddress());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the eDiscovery case member. Allowed only for case members of type roleGroup.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the recipientType property value. The recipientType property
+     * Sets the recipientType property value. Specifies the recipient type of the eDiscovery case member. The possible values are: user, roleGroup, unknownFutureValue.
      * @param value Value to set for the recipientType property.
      */
     public void setRecipientType(@jakarta.annotation.Nullable final EnumSet<RecipientType> value) {
         this.backingStore.set("recipientType", value);
     }
     /**
-     * Sets the smtpAddress property value. The smtpAddress property
+     * Sets the smtpAddress property value. The smtp address of the eDiscovery case member. Allowed only for case members of type user.
      * @param value Value to set for the smtpAddress property.
      */
     public void setSmtpAddress(@jakarta.annotation.Nullable final String value) {

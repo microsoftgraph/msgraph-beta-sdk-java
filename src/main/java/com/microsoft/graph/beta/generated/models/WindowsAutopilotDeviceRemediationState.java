@@ -16,7 +16,7 @@ public enum WindowsAutopilotDeviceRemediationState implements ValuedEnum {
     AutomaticRemediationRequired("automaticRemediationRequired"),
     /** Hardware change detected on client that could not resolved automatically. Additional remediation is required. */
     ManualRemediationRequired("manualRemediationRequired"),
-    /** Marks the end of known enum values, and allows for additional values in the future. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsAutopilotDeviceRemediationState(final String value) {

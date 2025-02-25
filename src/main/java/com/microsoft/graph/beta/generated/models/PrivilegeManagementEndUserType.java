@@ -16,7 +16,7 @@ public enum PrivilegeManagementEndUserType implements ValuedEnum {
     Hybrid("hybrid"),
     /** The user who performed the elevation logged in using a Windows local account. */
     Local("local"),
-    /** Evolvable emuneration sentinel value. Do not use. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     PrivilegeManagementEndUserType(final String value) {

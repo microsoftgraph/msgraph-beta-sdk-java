@@ -27,7 +27,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -39,7 +39,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * @param authenticationCombinationConfigurationId The unique identifier of authenticationCombinationConfiguration
      * @return a {@link AuthenticationCombinationConfigurationItemRequestBuilder}
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -70,7 +70,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * @return a {@link AuthenticationCombinationConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -83,7 +83,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * @return a {@link AuthenticationCombinationConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -99,7 +99,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * @return a {@link AuthenticationCombinationConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -113,7 +113,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * @return a {@link AuthenticationCombinationConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -128,7 +128,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -140,7 +140,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -155,7 +155,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -168,7 +168,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -185,7 +185,7 @@ public class CombinationConfigurationsRequestBuilder extends BaseRequestBuilder 
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CombinationConfigurationsRequestBuilder}
      * @deprecated
-     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove
+     * The &apos;authenticationStrengths&apos; segment is deprecated. Please use &apos;authenticationStrength&apos; instead. as of 2023-02/AuthenticationStrengthsRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

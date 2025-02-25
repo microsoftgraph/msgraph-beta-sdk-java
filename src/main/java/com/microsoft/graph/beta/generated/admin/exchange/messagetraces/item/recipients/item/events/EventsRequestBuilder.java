@@ -27,7 +27,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -39,7 +39,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param messageEventId The unique identifier of messageEvent
      * @return a {@link MessageEventItemRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -70,7 +70,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MessageEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -83,7 +83,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MessageEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -99,7 +99,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MessageEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -113,7 +113,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MessageEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -128,7 +128,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * Get events from admin
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -140,7 +140,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -155,7 +155,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -168,7 +168,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -185,7 +185,7 @@ public class EventsRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link EventsRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated

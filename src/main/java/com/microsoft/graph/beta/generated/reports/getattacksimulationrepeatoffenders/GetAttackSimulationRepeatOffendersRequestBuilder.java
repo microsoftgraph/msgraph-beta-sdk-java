@@ -40,7 +40,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
      * @return a {@link GetAttackSimulationRepeatOffendersGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getattacksimulationrepeatoffenders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
      * @return a {@link GetAttackSimulationRepeatOffendersGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getattacksimulationrepeatoffenders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
      * List the users of a tenant who have yielded to attacks more than once in attack simulation and training campaigns. This function supports @odata.nextLink for pagination.
      * @return a {@link RequestInformation}
      * @deprecated
-     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -81,7 +81,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -96,7 +96,7 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link GetAttackSimulationRepeatOffendersRequestBuilder}
      * @deprecated
-     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans
+     * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated

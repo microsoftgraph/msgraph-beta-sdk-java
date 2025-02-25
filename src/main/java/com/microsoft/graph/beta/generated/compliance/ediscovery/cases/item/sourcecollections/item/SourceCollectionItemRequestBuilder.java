@@ -31,7 +31,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the additionalSources property of the microsoft.graph.ediscovery.sourceCollection entity.
      * @return a {@link AdditionalSourcesRequestBuilder}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -42,7 +42,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the addToReviewSetOperation property of the microsoft.graph.ediscovery.sourceCollection entity.
      * @return a {@link AddToReviewSetOperationRequestBuilder}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -53,7 +53,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the custodianSources property of the microsoft.graph.ediscovery.sourceCollection entity.
      * @return a {@link CustodianSourcesRequestBuilder}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -64,7 +64,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the lastEstimateStatisticsOperation property of the microsoft.graph.ediscovery.sourceCollection entity.
      * @return a {@link LastEstimateStatisticsOperationRequestBuilder}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -75,7 +75,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the estimateStatistics method.
      * @return a {@link MicrosoftGraphEdiscoveryEstimateStatisticsRequestBuilder}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the purgeData method.
      * @return a {@link MicrosoftGraphEdiscoveryPurgeDataRequestBuilder}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -97,7 +97,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the noncustodialSources property of the microsoft.graph.ediscovery.sourceCollection entity.
      * @return a {@link NoncustodialSourcesRequestBuilder}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -124,7 +124,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Delete a sourceCollection object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -136,7 +136,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -151,7 +151,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SourceCollection}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -164,7 +164,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SourceCollection}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -180,7 +180,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SourceCollection}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SourceCollection}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-sourcecollection-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -211,7 +211,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Delete a sourceCollection object.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -223,7 +223,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -237,7 +237,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * Returns a list of sourceCollection objects associated with this case.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -249,7 +249,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -264,7 +264,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -277,7 +277,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -294,7 +294,7 @@ public class SourceCollectionItemRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SourceCollectionItemRequestBuilder}
      * @deprecated
-     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace
+     * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated

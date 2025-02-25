@@ -25,7 +25,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * Provides operations to manage the links property of the microsoft.graph.networkaccess.branchConnectivityConfiguration entity.
      * @return a {@link LinksRequestBuilder}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -52,7 +52,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * Delete navigation property connectivityConfiguration for networkAccess
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @Deprecated
     public void delete() {
@@ -63,7 +63,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -77,7 +77,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @return a {@link BranchConnectivityConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchconnectivityconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @return a {@link BranchConnectivityConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-branchconnectivityconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @return a {@link BranchConnectivityConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -122,7 +122,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @return a {@link BranchConnectivityConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -137,7 +137,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * Delete navigation property connectivityConfiguration for networkAccess
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -149,7 +149,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -163,7 +163,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * Retrieve the IPSec tunnel configuration required to establish a bidirectional communication link between your organization's router and the Microsoft gateway. This information is vital for configuring your router (customer premise equipment) after creating a deviceLink.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -175,7 +175,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -190,7 +190,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -203,7 +203,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -220,7 +220,7 @@ public class ConnectivityConfigurationRequestBuilder extends BaseRequestBuilder 
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ConnectivityConfigurationRequestBuilder}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -27,7 +27,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the createImportSession method.
      * @return a {@link CreateImportSessionRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -38,7 +38,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the exportItems method.
      * @return a {@link ExportItemsRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -49,7 +49,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the folders property of the microsoft.graph.mailbox entity.
      * @return a {@link FoldersRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -76,7 +76,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property mailboxes for admin
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     public void delete() {
@@ -87,7 +87,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -101,7 +101,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -114,7 +114,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -130,7 +130,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -144,7 +144,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -159,7 +159,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property mailboxes for admin
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -171,7 +171,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -185,7 +185,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * Represents a user's mailboxes.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -197,7 +197,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -212,7 +212,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -225,7 +225,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -242,7 +242,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MailboxItemRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated

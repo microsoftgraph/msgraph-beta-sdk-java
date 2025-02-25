@@ -40,7 +40,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -53,7 +53,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -67,7 +67,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * Get the number of the resource
      * @return a {@link RequestInformation}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -79,7 +79,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -94,7 +94,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation
+     * The meetingRegistrationBase Entity is deprecated and will stop returning data on Dec 12th, 2024. Please use the new webinar APIs. as of 2024-04/meetingRegistrationDeprecation on 2024-04-01 and will be removed 2024-12-12
      */
     @jakarta.annotation.Nonnull
     @Deprecated

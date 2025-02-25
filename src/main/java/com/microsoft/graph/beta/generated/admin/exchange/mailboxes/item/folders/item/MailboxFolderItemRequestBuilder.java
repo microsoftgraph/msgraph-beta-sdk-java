@@ -26,7 +26,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the childFolders property of the microsoft.graph.mailboxFolder entity.
      * @return a {@link ChildFoldersRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -37,7 +37,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the items property of the microsoft.graph.mailboxFolder entity.
      * @return a {@link ItemsRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -65,7 +65,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MailboxFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MailboxFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a mailboxFolder object.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -106,7 +106,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -121,7 +121,7 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MailboxFolderItemRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated

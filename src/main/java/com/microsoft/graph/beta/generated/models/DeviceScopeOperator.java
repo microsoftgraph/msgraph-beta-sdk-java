@@ -12,7 +12,7 @@ public enum DeviceScopeOperator implements ValuedEnum {
     None("none"),
     /** Operator for the device configuration query to be used (Equals). */
     Equals("equals"),
-    /** Placeholder value for future expansion enums such as notEquals, contains, notContains, greaterThan, lessThan. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceScopeOperator(final String value) {

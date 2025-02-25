@@ -40,7 +40,7 @@ public class ExportItemsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link ExportItemsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2024-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/mailbox-exportitems?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class ExportItemsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link ExportItemsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2024-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/mailbox-exportitems?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class ExportItemsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -85,7 +85,7 @@ public class ExportItemsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -102,7 +102,7 @@ public class ExportItemsRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ExportItemsRequestBuilder}
      * @deprecated
-     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated

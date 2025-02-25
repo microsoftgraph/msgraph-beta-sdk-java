@@ -14,7 +14,7 @@ public enum AndroidWorkProfileAccountUse implements ValuedEnum {
     BlockAll("blockAll"),
     /** Allow addition of all accounts (including Google accounts) in Android Work Profile. */
     AllowAll("allowAll"),
-    /** Unknown future value for evolvable enum patterns. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AndroidWorkProfileAccountUse(final String value) {

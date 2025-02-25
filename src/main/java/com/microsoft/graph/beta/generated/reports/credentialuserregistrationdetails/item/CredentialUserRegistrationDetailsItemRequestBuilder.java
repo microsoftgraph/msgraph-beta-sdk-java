@@ -40,7 +40,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Delete navigation property credentialUserRegistrationDetails for reports
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @Deprecated
     public void delete() {
@@ -51,7 +51,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -65,7 +65,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @return a {@link CredentialUserRegistrationDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,7 +78,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @return a {@link CredentialUserRegistrationDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -94,7 +94,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @return a {@link CredentialUserRegistrationDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -108,7 +108,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @return a {@link CredentialUserRegistrationDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -123,7 +123,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Delete navigation property credentialUserRegistrationDetails for reports
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -135,7 +135,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -149,7 +149,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -161,7 +161,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -176,7 +176,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -189,7 +189,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -206,7 +206,7 @@ public class CredentialUserRegistrationDetailsItemRequestBuilder extends BaseReq
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CredentialUserRegistrationDetailsItemRequestBuilder}
      * @deprecated
-     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails
+     * The Reporting credentialUserRegistrationDetails API is deprecated and will stop returning data on June 30, 2024. Please use the new userRegistrationDetails API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated

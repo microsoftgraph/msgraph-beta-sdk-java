@@ -12,7 +12,7 @@ public enum AndroidDeviceOwnerCertificateAccessType implements ValuedEnum {
     UserApproval("userApproval"),
     /** Pre-grant certificate access for specific apps (require user approval for other apps). */
     SpecificApps("specificApps"),
-    /** Unknown future value for evolvable enum patterns. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AndroidDeviceOwnerCertificateAccessType(final String value) {

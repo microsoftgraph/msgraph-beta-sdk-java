@@ -14,7 +14,7 @@ public enum ZebraFotaUpdateType implements ValuedEnum {
     Latest("latest"),
     /** The device always looks for the latest package available in the repo and tries to update whenever a new package is available. This continues until the admin cancels the auto update. */
     Auto("auto"),
-    /** Unknown future enum value. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     ZebraFotaUpdateType(final String value) {

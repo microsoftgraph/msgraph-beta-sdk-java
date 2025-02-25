@@ -91,7 +91,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * @param startDateTime Usage: startDateTime={startDateTime}
      * @return a {@link MicrosoftGraphNetworkaccessGetAlertFrequenciesWithStartDateTimeWithEndDateTimeRequestBuilder}
      * @deprecated
-     *  as of 2022-06/PrivatePreview:NetworkAccess
+     *  as of 2022-06/PrivatePreview:NetworkAccess on 2024-09-09 and will be removed 2024-11-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -106,7 +106,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * @param startDateTime Usage: startDateTime={startDateTime}
      * @return a {@link MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeRequestBuilder}
      * @deprecated
-     *  as of 2022-06/PrivatePreview:NetworkAccess
+     *  as of 2022-06/PrivatePreview:NetworkAccess on 2024-09-09 and will be removed 2024-11-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -65,7 +65,7 @@ public class AuthenticationStrengthPoliciesRequestBuilder extends BaseRequestBui
      * @param authenticationMethodModes Usage: authenticationMethodModes={authenticationMethodModes}
      * @return a {@link FindByMethodModeWithAuthenticationMethodModesRequestBuilder}
      * @deprecated
-     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove
+     * The findByMethodMode function is deprecated. Please use OData filter query instead. as of 2023-02/FindByMethodModeRemove on 2023-02-01 and will be removed 2023-03-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

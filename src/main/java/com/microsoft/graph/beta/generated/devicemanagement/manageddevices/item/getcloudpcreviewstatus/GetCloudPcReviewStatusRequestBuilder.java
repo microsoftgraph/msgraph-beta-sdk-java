@@ -40,7 +40,7 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * @return a {@link CloudPcReviewStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus on 2024-01-03 and will be removed 2023-04-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-getcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * @return a {@link CloudPcReviewStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus on 2024-01-03 and will be removed 2023-04-30
      * @see <a href="https://learn.microsoft.com/graph/api/manageddevice-getcloudpcreviewstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * Get the review status of a specific Cloud PC device.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus on 2024-01-03 and will be removed 2023-04-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -81,7 +81,7 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus on 2024-01-03 and will be removed 2023-04-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -96,7 +96,7 @@ public class GetCloudPcReviewStatusRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link GetCloudPcReviewStatusRequestBuilder}
      * @deprecated
-     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus
+     * The getCloudPcReviewStatus API is deprecated and will stop returning data on Apr 30, 2024. Please use the new retrieveReviewStatus API as of 2024-01/getCloudPcReviewStatus on 2024-01-03 and will be removed 2023-04-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated

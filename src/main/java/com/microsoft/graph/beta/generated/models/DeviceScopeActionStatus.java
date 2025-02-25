@@ -12,7 +12,7 @@ public enum DeviceScopeActionStatus implements ValuedEnum {
     Failed("failed"),
     /** Indicates the device scope action was successfully triggered. */
     Succeeded("succeeded"),
-    /** Placeholder value for future expansion. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceScopeActionStatus(final String value) {

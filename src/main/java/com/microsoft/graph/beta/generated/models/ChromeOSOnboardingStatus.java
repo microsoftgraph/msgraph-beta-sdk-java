@@ -18,7 +18,7 @@ public enum ChromeOSOnboardingStatus implements ValuedEnum {
     Failed("failed"),
     /** Offboarding */
     Offboarding("offboarding"),
-    /** UnknownFutureValue */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     ChromeOSOnboardingStatus(final String value) {
