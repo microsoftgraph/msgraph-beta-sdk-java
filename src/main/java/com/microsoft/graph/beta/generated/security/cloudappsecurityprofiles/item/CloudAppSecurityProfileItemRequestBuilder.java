@@ -40,7 +40,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * Delete navigation property cloudAppSecurityProfiles for security
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @Deprecated
     public void delete() {
@@ -51,7 +51,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -65,7 +65,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @return a {@link CloudAppSecurityProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,7 +78,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @return a {@link CloudAppSecurityProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -94,7 +94,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @return a {@link CloudAppSecurityProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -108,7 +108,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @return a {@link CloudAppSecurityProfile}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -123,7 +123,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * Delete navigation property cloudAppSecurityProfiles for security
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -135,7 +135,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -149,7 +149,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * Get cloudAppSecurityProfiles from security
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -161,7 +161,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -176,7 +176,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -189,7 +189,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -206,7 +206,7 @@ public class CloudAppSecurityProfileItemRequestBuilder extends BaseRequestBuilde
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CloudAppSecurityProfileItemRequestBuilder}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated

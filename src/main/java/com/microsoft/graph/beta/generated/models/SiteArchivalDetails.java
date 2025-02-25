@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -48,6 +49,22 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
+     * Gets the archivedBy property value. The archivedBy property
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getArchivedBy() {
+        return this.backingStore.get("archivedBy");
+    }
+    /**
+     * Gets the archivedDateTime property value. The archivedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getArchivedDateTime() {
+        return this.backingStore.get("archivedDateTime");
+    }
+    /**
      * Gets the archiveStatus property value. Represents the current archive status of the site collection. Returned only on $select.
      * @return a {@link SiteArchiveStatus}
      */
@@ -69,7 +86,9 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("archivedBy", (n) -> { this.setArchivedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
+        deserializerMap.put("archivedDateTime", (n) -> { this.setArchivedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("archiveStatus", (n) -> { this.setArchiveStatus(n.getEnumValue(SiteArchiveStatus::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -88,6 +107,8 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("archivedBy", this.getArchivedBy());
+        writer.writeOffsetDateTimeValue("archivedDateTime", this.getArchivedDateTime());
         writer.writeEnumValue("archiveStatus", this.getArchiveStatus());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -98,6 +119,20 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the archivedBy property value. The archivedBy property
+     * @param value Value to set for the archivedBy property.
+     */
+    public void setArchivedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("archivedBy", value);
+    }
+    /**
+     * Sets the archivedDateTime property value. The archivedDateTime property
+     * @param value Value to set for the archivedDateTime property.
+     */
+    public void setArchivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("archivedDateTime", value);
     }
     /**
      * Sets the archiveStatus property value. Represents the current archive status of the site collection. Returned only on $select.

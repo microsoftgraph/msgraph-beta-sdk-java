@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * This topic provides descriptions of the declared methods, properties and relationships exposed by the iOS Lob App Provisioning Configuration resource.
+ * This topic provides descriptions of the declared methods, properties and relationships exposed by the iOS LOB App Provisioning Configuration resource.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IosLobAppProvisioningConfiguration extends Entity implements Parsable {

@@ -30,7 +30,7 @@ public enum Windows10VpnConnectionType implements ValuedEnum {
     PaloAltoGlobalProtect("paloAltoGlobalProtect"),
     /** Cisco AnyConnect */
     CiscoAnyConnect("ciscoAnyConnect"),
-    /** Sentinel member for cases where the client cannot handle the new enum values. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue"),
     /** Microsoft Tunnel connection type */
     MicrosoftTunnel("microsoftTunnel");

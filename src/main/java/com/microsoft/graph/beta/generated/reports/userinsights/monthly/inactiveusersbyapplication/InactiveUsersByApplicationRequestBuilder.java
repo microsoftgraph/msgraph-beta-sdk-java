@@ -26,7 +26,7 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs on 2024-02-02 and will be removed 2024-02-16
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -38,7 +38,7 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * @param monthlyInactiveUsersByApplicationMetricId The unique identifier of monthlyInactiveUsersByApplicationMetric
      * @return a {@link MonthlyInactiveUsersByApplicationMetricItemRequestBuilder}
      * @deprecated
-     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs on 2024-02-02 and will be removed 2024-02-16
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -69,7 +69,7 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * @return a {@link MonthlyInactiveUsersByApplicationMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs on 2024-02-02 and will be removed 2024-02-16
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -82,7 +82,7 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * @return a {@link MonthlyInactiveUsersByApplicationMetricCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs on 2024-02-02 and will be removed 2024-02-16
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -96,7 +96,7 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * Get inactiveUsersByApplication from reports
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs on 2024-02-02 and will be removed 2024-02-16
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -108,7 +108,7 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs on 2024-02-02 and will be removed 2024-02-16
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -123,7 +123,7 @@ public class InactiveUsersByApplicationRequestBuilder extends BaseRequestBuilder
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link InactiveUsersByApplicationRequestBuilder}
      * @deprecated
-     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs
+     * The Inactive Users By Application Metric is deprecated and will stop returning data on February 16, 2024. Please use the existing Inactive Users API. as of 2024-02/Remove_Breakdown_APIs on 2024-02-02 and will be removed 2024-02-16
      */
     @jakarta.annotation.Nonnull
     @Deprecated

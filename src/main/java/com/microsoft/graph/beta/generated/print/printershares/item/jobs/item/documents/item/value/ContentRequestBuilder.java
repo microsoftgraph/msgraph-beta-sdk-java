@@ -39,7 +39,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * The unique identifier for an entity. Read-only.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @Deprecated
     public void delete() {
@@ -50,7 +50,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -64,7 +64,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -77,7 +77,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -93,7 +93,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -107,7 +107,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -122,7 +122,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * The unique identifier for an entity. Read-only.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -134,7 +134,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -148,7 +148,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * The unique identifier for an entity. Read-only.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -160,7 +160,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -175,7 +175,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param body Binary request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -188,7 +188,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -205,7 +205,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ContentRequestBuilder}
      * @deprecated
-     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans
+     * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

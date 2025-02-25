@@ -20,7 +20,7 @@ public enum EnrollmentNotificationBrandingOptions implements ValuedEnum {
     IncludeCompanyPortalLink("includeCompanyPortalLink"),
     /** Indicates that the DeviceDetails is included in the notification. */
     IncludeDeviceDetails("includeDeviceDetails"),
-    /** unknownFutureValue for evolvable enums pattern. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     EnrollmentNotificationBrandingOptions(final String value) {

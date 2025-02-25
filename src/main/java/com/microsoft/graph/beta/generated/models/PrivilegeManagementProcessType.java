@@ -14,7 +14,7 @@ public enum PrivilegeManagementProcessType implements ValuedEnum {
     Parent("parent"),
     /** The elevated process is a child process */
     Child("child"),
-    /** Evolvable emuneration sentinel value. Do not use */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     PrivilegeManagementProcessType(final String value) {

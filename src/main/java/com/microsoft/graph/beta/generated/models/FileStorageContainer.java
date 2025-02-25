@@ -27,6 +27,14 @@ public class FileStorageContainer extends Entity implements Parsable {
         return new FileStorageContainer();
     }
     /**
+     * Gets the archivalDetails property value. The archivalDetails property
+     * @return a {@link SiteArchivalDetails}
+     */
+    @jakarta.annotation.Nullable
+    public SiteArchivalDetails getArchivalDetails() {
+        return this.backingStore.get("archivalDetails");
+    }
+    /**
      * Gets the assignedSensitivityLabel property value. Sensitivity label assigned to the fileStorageContainer. Read-write.
      * @return a {@link AssignedLabel}
      */
@@ -105,6 +113,7 @@ public class FileStorageContainer extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("archivalDetails", (n) -> { this.setArchivalDetails(n.getObjectValue(SiteArchivalDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("assignedSensitivityLabel", (n) -> { this.setAssignedSensitivityLabel(n.getObjectValue(AssignedLabel::createFromDiscriminatorValue)); });
         deserializerMap.put("columns", (n) -> { this.setColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("containerTypeId", (n) -> { this.setContainerTypeId(n.getUUIDValue()); });
@@ -222,6 +231,7 @@ public class FileStorageContainer extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("archivalDetails", this.getArchivalDetails());
         writer.writeObjectValue("assignedSensitivityLabel", this.getAssignedSensitivityLabel());
         writer.writeCollectionOfObjectValues("columns", this.getColumns());
         writer.writeUUIDValue("containerTypeId", this.getContainerTypeId());
@@ -242,6 +252,13 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
         writer.writeLongValue("storageUsedInBytes", this.getStorageUsedInBytes());
         writer.writeObjectValue("viewpoint", this.getViewpoint());
+    }
+    /**
+     * Sets the archivalDetails property value. The archivalDetails property
+     * @param value Value to set for the archivalDetails property.
+     */
+    public void setArchivalDetails(@jakarta.annotation.Nullable final SiteArchivalDetails value) {
+        this.backingStore.set("archivalDetails", value);
     }
     /**
      * Sets the assignedSensitivityLabel property value. Sensitivity label assigned to the fileStorageContainer. Read-write.

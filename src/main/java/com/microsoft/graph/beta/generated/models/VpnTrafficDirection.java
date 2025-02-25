@@ -12,7 +12,7 @@ public enum VpnTrafficDirection implements ValuedEnum {
     Outbound("outbound"),
     /** The rule applies to all inbound traffic. */
     Inbound("inbound"),
-    /** Evolvable enum member */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     VpnTrafficDirection(final String value) {

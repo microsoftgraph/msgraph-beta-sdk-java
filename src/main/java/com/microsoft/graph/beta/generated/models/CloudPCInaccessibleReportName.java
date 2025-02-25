@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum CloudPCInaccessibleReportName implements ValuedEnum {
     InaccessibleCloudPcReports("inaccessibleCloudPcReports"),
     InaccessibleCloudPcTrendReport("inaccessibleCloudPcTrendReport"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    RegionalInaccessibleCloudPcTrendReport("regionalInaccessibleCloudPcTrendReport");
     public final String value;
     CloudPCInaccessibleReportName(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum CloudPCInaccessibleReportName implements ValuedEnum {
             case "inaccessibleCloudPcReports": return InaccessibleCloudPcReports;
             case "inaccessibleCloudPcTrendReport": return InaccessibleCloudPcTrendReport;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "regionalInaccessibleCloudPcTrendReport": return RegionalInaccessibleCloudPcTrendReport;
             default: return null;
         }
     }

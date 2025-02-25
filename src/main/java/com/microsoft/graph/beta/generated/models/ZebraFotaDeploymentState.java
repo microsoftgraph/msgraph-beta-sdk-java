@@ -22,7 +22,7 @@ public enum ZebraFotaDeploymentState implements ValuedEnum {
     PendingCancel("pendingCancel"),
     /** Deployment has been successfully canceled by Zebra. */
     Canceled("canceled"),
-    /** Unknown future enum value. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     ZebraFotaDeploymentState(final String value) {

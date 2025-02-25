@@ -12,7 +12,7 @@ public enum AndroidDeviceOwnerLocationMode implements ValuedEnum {
     NotConfigured("notConfigured"),
     /** Location setting is disabled on the device */
     Disabled("disabled"),
-    /** Evolvable enumeration sentinel value. Do not use */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AndroidDeviceOwnerLocationMode(final String value) {

@@ -40,7 +40,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Delete an existing userFlow object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -52,7 +52,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-delete?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
@@ -67,7 +67,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link IdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link IdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      * @see <a href="https://learn.microsoft.com/graph/api/identityuserflow-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link IdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -112,7 +112,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @return a {@link IdentityUserFlow}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -127,7 +127,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Delete an existing userFlow object.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -139,7 +139,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -153,7 +153,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and associations for an userFlow object.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -165,7 +165,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -180,7 +180,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -193,7 +193,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -210,7 +210,7 @@ public class IdentityUserFlowItemRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link IdentityUserFlowItemRequestBuilder}
      * @deprecated
-     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider
+     * The identity/userflows API is deprecated and will stop returning data on January 2022. Please use the new b2cUserflows or b2xUserflows APIs. as of 2021-05/identityProvider on 2021-05-21 and will be removed 2022-01-15
      */
     @jakarta.annotation.Nonnull
     @Deprecated

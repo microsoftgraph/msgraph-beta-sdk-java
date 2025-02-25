@@ -16,7 +16,7 @@ public enum DeviceScopeStatus implements ValuedEnum {
     InsufficientData("insufficientData"),
     /** Device scope is enabled and finished recalculating the report metric. Device scope is now ready to be used. */
     Completed("completed"),
-    /** Placeholder value for future expansion. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceScopeStatus(final String value) {

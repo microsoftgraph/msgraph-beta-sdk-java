@@ -26,7 +26,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -38,7 +38,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * @param mailFolderOperationId The unique identifier of mailFolderOperation
      * @return a {@link MailFolderOperationItemRequestBuilder}
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -69,7 +69,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MailFolderOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -82,7 +82,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link MailFolderOperationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -96,7 +96,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * Get operations from users
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -108,7 +108,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -123,7 +123,7 @@ public class OperationsRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link OperationsRequestBuilder}
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated

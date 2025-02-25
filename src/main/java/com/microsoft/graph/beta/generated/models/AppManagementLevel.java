@@ -22,7 +22,7 @@ public enum AppManagementLevel implements ValuedEnum {
     AndroidOpenSourceProjectUserAssociated("androidOpenSourceProjectUserAssociated"),
     /** Android Open Source Project (AOSP) userless devices */
     AndroidOpenSourceProjectUserless("androidOpenSourceProjectUserless"),
-    /** Place holder for evolvable enum */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AppManagementLevel(final String value) {

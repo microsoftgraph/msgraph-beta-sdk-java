@@ -12,7 +12,7 @@ public enum MacAddressRandomizationMode implements ValuedEnum {
     Automatic("automatic"),
     /** Indicates MAC randomization is disabled and the factory MAC address is used when connecting to the internet. */
     Hardware("hardware"),
-    /** Indicates evolvable enumeration sentinel value. Do not use. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     MacAddressRandomizationMode(final String value) {

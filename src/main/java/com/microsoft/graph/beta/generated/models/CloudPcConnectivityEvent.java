@@ -36,6 +36,14 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
         return new CloudPcConnectivityEvent();
     }
     /**
+     * Gets the activityId property value. The unique identifier (GUID) that represents the activity associated with this event. When the event type is userConnection, this value is the activity identifier for this event. For any other event types, this value is 00000000-0000-0000-0000-000000000000.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getActivityId() {
+        return this.backingStore.get("activityId");
+    }
+    /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a {@link Map<String, Object>}
      */
@@ -94,7 +102,8 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("activityId", (n) -> { this.setActivityId(n.getStringValue()); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("eventName", (n) -> { this.setEventName(n.getStringValue()); });
         deserializerMap.put("eventResult", (n) -> { this.setEventResult(n.getEnumValue(CloudPcConnectivityEventResult::forValue)); });
@@ -125,6 +134,7 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("activityId", this.getActivityId());
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
         writer.writeStringValue("eventName", this.getEventName());
         writer.writeEnumValue("eventResult", this.getEventResult());
@@ -132,6 +142,13 @@ public class CloudPcConnectivityEvent implements AdditionalDataHolder, BackedMod
         writer.writeStringValue("message", this.getMessage());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the activityId property value. The unique identifier (GUID) that represents the activity associated with this event. When the event type is userConnection, this value is the activity identifier for this event. For any other event types, this value is 00000000-0000-0000-0000-000000000000.
+     * @param value Value to set for the activityId property.
+     */
+    public void setActivityId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("activityId", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.

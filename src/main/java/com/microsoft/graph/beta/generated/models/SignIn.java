@@ -180,10 +180,10 @@ public class SignIn extends Entity implements Parsable {
     }
     /**
      * Gets the conditionalAccessAudiences property value. A list that indicates the audience that Conditional Access evaluated during a sign-in event.  Supports $filter (eq).
-     * @return a {@link java.util.List<ConditionalAccessAudience>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<ConditionalAccessAudience> getConditionalAccessAudiences() {
+    public java.util.List<String> getConditionalAccessAudiences() {
         return this.backingStore.get("conditionalAccessAudiences");
     }
     /**
@@ -260,7 +260,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("azureResourceId", (n) -> { this.setAzureResourceId(n.getStringValue()); });
         deserializerMap.put("clientAppUsed", (n) -> { this.setClientAppUsed(n.getStringValue()); });
         deserializerMap.put("clientCredentialType", (n) -> { this.setClientCredentialType(n.getEnumValue(ClientCredentialType::forValue)); });
-        deserializerMap.put("conditionalAccessAudiences", (n) -> { this.setConditionalAccessAudiences(n.getCollectionOfObjectValues(ConditionalAccessAudience::createFromDiscriminatorValue)); });
+        deserializerMap.put("conditionalAccessAudiences", (n) -> { this.setConditionalAccessAudiences(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus::forValue)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -727,7 +727,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("azureResourceId", this.getAzureResourceId());
         writer.writeStringValue("clientAppUsed", this.getClientAppUsed());
         writer.writeEnumValue("clientCredentialType", this.getClientCredentialType());
-        writer.writeCollectionOfObjectValues("conditionalAccessAudiences", this.getConditionalAccessAudiences());
+        writer.writeCollectionOfPrimitiveValues("conditionalAccessAudiences", this.getConditionalAccessAudiences());
         writer.writeEnumValue("conditionalAccessStatus", this.getConditionalAccessStatus());
         writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -920,7 +920,7 @@ public class SignIn extends Entity implements Parsable {
      * Sets the conditionalAccessAudiences property value. A list that indicates the audience that Conditional Access evaluated during a sign-in event.  Supports $filter (eq).
      * @param value Value to set for the conditionalAccessAudiences property.
      */
-    public void setConditionalAccessAudiences(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessAudience> value) {
+    public void setConditionalAccessAudiences(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("conditionalAccessAudiences", value);
     }
     /**

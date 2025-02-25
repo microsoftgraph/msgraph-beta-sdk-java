@@ -12,7 +12,7 @@ public enum DeviceAssignmentItemIntent implements ValuedEnum {
     Remove("remove"),
     /** Indicates that the application or configuration already under removal through previous actions and is now intended to be restored on the managed device */
     Restore("restore"),
-    /** Evolvable enumeration sentinel value. Do not use */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceAssignmentItemIntent(final String value) {

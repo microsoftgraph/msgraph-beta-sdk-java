@@ -12,7 +12,7 @@ public enum ZebraFotaScheduleMode implements ValuedEnum {
     InstallNow("installNow"),
     /** Schedule an update to be installed at a specified date and time. */
     Scheduled("scheduled"),
-    /** Unknown future enum value. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     ZebraFotaScheduleMode(final String value) {

@@ -163,7 +163,7 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * @param uniqueName Alternate key of accessPackageCatalog
      * @return a {@link AccessPackageCatalogsWithUniqueNameRequestBuilder}
      * @deprecated
-     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

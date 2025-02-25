@@ -14,7 +14,7 @@ public enum WiredNetworkAuthenticationMethod implements ValuedEnum {
     UsernameAndPassword("usernameAndPassword"),
     /** Use Derived Credential for authentication. */
     DerivedCredential("derivedCredential"),
-    /** Sentinel member for cases where the client cannot handle the new enum values. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     WiredNetworkAuthenticationMethod(final String value) {

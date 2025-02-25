@@ -14,7 +14,7 @@ public enum OfficeSuiteDefaultFileFormatType implements ValuedEnum {
     OfficeOpenXMLFormat("officeOpenXMLFormat"),
     /** Office Open Document Format selected */
     OfficeOpenDocumentFormat("officeOpenDocumentFormat"),
-    /** Placeholder for evolvable enum. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     OfficeSuiteDefaultFileFormatType(final String value) {

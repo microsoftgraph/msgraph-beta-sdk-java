@@ -45,7 +45,7 @@ public class MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTi
      * @return a {@link GetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-06/PrivatePreview:NetworkAccess
+     *  as of 2022-06/PrivatePreview:NetworkAccess on 2024-09-09 and will be removed 2024-11-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -58,7 +58,7 @@ public class MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTi
      * @return a {@link GetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2022-06/PrivatePreview:NetworkAccess
+     *  as of 2022-06/PrivatePreview:NetworkAccess on 2024-09-09 and will be removed 2024-11-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -72,7 +72,7 @@ public class MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTi
      * Invoke function getAlertSeveritySummaries
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-06/PrivatePreview:NetworkAccess
+     *  as of 2022-06/PrivatePreview:NetworkAccess on 2024-09-09 and will be removed 2024-11-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -84,7 +84,7 @@ public class MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTi
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2022-06/PrivatePreview:NetworkAccess
+     *  as of 2022-06/PrivatePreview:NetworkAccess on 2024-09-09 and will be removed 2024-11-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -99,7 +99,7 @@ public class MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTi
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MicrosoftGraphNetworkaccessGetAlertSeveritySummariesWithStartDateTimeWithEndDateTimeRequestBuilder}
      * @deprecated
-     *  as of 2022-06/PrivatePreview:NetworkAccess
+     *  as of 2022-06/PrivatePreview:NetworkAccess on 2024-09-09 and will be removed 2024-11-01
      */
     @jakarta.annotation.Nonnull
     @Deprecated

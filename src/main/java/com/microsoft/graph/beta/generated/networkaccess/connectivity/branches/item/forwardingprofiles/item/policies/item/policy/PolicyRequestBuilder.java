@@ -41,7 +41,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Policy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -54,7 +54,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Policy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -68,7 +68,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * Policy.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -80,7 +80,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -95,7 +95,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link PolicyRequestBuilder}
      * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess
+     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
      */
     @jakarta.annotation.Nonnull
     @Deprecated

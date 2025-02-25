@@ -35,7 +35,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/approval/approvalItems/{approvalItem%2Did}/cancel", rawUrl);
     }
     /**
-     * Cancel the approval item. The owner of the approval can trigger this endpoint.
+     * Cancel the approval item. The owner of the approval is the only user who can trigger this endpoint.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/approvalitem-cancel?view=graph-rest-beta">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Cancel the approval item. The owner of the approval can trigger this endpoint.
+     * Cancel the approval item. The owner of the approval is the only user who can trigger this endpoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/approvalitem-cancel?view=graph-rest-beta">Find more info here</a>
@@ -55,7 +55,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Cancel the approval item. The owner of the approval can trigger this endpoint.
+     * Cancel the approval item. The owner of the approval is the only user who can trigger this endpoint.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Cancel the approval item. The owner of the approval can trigger this endpoint.
+     * Cancel the approval item. The owner of the approval is the only user who can trigger this endpoint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

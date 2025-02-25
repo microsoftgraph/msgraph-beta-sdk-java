@@ -20,7 +20,7 @@ public enum DeviceEventLevel implements ValuedEnum {
     Error("error"),
     /** Indicates that the device event level is critical. */
     Critical("critical"),
-    /** Placeholder value for future expansion. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     DeviceEventLevel(final String value) {

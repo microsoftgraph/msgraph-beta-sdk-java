@@ -27,7 +27,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -39,7 +39,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @param securityActionId The unique identifier of securityAction
      * @return a {@link SecurityActionItemRequestBuilder}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -70,7 +70,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SecurityActionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      * @see <a href="https://learn.microsoft.com/graph/api/securityactions-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SecurityActionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      * @see <a href="https://learn.microsoft.com/graph/api/securityactions-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SecurityAction}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      * @see <a href="https://learn.microsoft.com/graph/api/securityactions-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @return a {@link SecurityAction}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      * @see <a href="https://learn.microsoft.com/graph/api/securityactions-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of securityAction objects.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -144,7 +144,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -159,7 +159,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -172,7 +172,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -189,7 +189,7 @@ public class SecurityActionsRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SecurityActionsRequestBuilder}
      * @deprecated
-     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation
+     * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
      */
     @jakarta.annotation.Nonnull
     @Deprecated

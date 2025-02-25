@@ -8,7 +8,8 @@ public enum CloudPcDeviceImageStatus implements ValuedEnum {
     Pending("pending"),
     Ready("ready"),
     Failed("failed"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Warning("warning");
     public final String value;
     CloudPcDeviceImageStatus(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum CloudPcDeviceImageStatus implements ValuedEnum {
             case "ready": return Ready;
             case "failed": return Failed;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "warning": return Warning;
             default: return null;
         }
     }

@@ -16,7 +16,7 @@ public enum GroupPolicyConfigurationIngestionType implements ValuedEnum {
     BuiltIn("builtIn"),
     /** Indicated atleast 1 tenant admin & system ingested definitions configured for this policy */
     Mixed("mixed"),
-    /** Unknown future enum value */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     GroupPolicyConfigurationIngestionType(final String value) {

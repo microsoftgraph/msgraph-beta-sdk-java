@@ -84,7 +84,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, SiteRestoreArtifactsBulkAdditionRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The initial status upon creation of the restore session is active. When all the sites are added to the corresponding SharePoint restore session and the restore session is activated, the status becomes completed. If any failures are encountered during resource resolution, the status of the restore session becomes completedWithErrors.
+     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param body The request body
      * @return a {@link SiteRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return post(body, null);
     }
     /**
-     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The initial status upon creation of the restore session is active. When all the sites are added to the corresponding SharePoint restore session and the restore session is activated, the status becomes completed. If any failures are encountered during resource resolution, the status of the restore session becomes completedWithErrors.
+     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteRestoreArtifactsBulkAdditionRequest}
@@ -131,7 +131,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The initial status upon creation of the restore session is active. When all the sites are added to the corresponding SharePoint restore session and the restore session is activated, the status becomes completed. If any failures are encountered during resource resolution, the status of the restore session becomes completedWithErrors.
+     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class SiteRestoreArtifactsBulkAdditionRequestsRequestBuilder extends Base
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The initial status upon creation of the restore session is active. When all the sites are added to the corresponding SharePoint restore session and the restore session is activated, the status becomes completed. If any failures are encountered during resource resolution, the status of the restore session becomes completedWithErrors.
+     * Create a new siteRestoreArtifactsBulkAdditionRequest object associated with a sharePointRestoreSession. The following steps describe how to create and manage a sharePointRestoreSession with bulk artifact additions:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

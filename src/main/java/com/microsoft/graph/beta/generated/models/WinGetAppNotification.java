@@ -14,7 +14,7 @@ public enum WinGetAppNotification implements ValuedEnum {
     ShowReboot("showReboot"),
     /** Hide all notifications. */
     HideAll("hideAll"),
-    /** Unknown future value, reserved for future usage as expandable enum. */
+    /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     WinGetAppNotification(final String value) {

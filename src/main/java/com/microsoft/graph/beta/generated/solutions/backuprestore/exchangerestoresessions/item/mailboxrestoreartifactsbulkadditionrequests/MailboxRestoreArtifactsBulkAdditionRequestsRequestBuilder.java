@@ -84,7 +84,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxRestoreArtifactsBulkAdditionRequestCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The initial status upon creation of the restore session is active. When all the mailboxes are added to the corresponding Exchange restore session and the restore session is activated, the status becomes completed. If any failures are encountered during resource resolution, the status of the restore session becomes completedWithErrors.
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param body The request body
      * @return a {@link MailboxRestoreArtifactsBulkAdditionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return post(body, null);
     }
     /**
-     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The initial status upon creation of the restore session is active. When all the mailboxes are added to the corresponding Exchange restore session and the restore session is activated, the status becomes completed. If any failures are encountered during resource resolution, the status of the restore session becomes completedWithErrors.
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxRestoreArtifactsBulkAdditionRequest}
@@ -131,7 +131,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The initial status upon creation of the restore session is active. When all the mailboxes are added to the corresponding Exchange restore session and the restore session is activated, the status becomes completed. If any failures are encountered during resource resolution, the status of the restore session becomes completedWithErrors.
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class MailboxRestoreArtifactsBulkAdditionRequestsRequestBuilder extends B
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The initial status upon creation of the restore session is active. When all the mailboxes are added to the corresponding Exchange restore session and the restore session is activated, the status becomes completed. If any failures are encountered during resource resolution, the status of the restore session becomes completedWithErrors.
+     * Create a new mailboxRestoreArtifactsBulkAdditionRequest object associated with an exchangeRestoreSession. The following steps describe how to create and manage an exchangeRestoreSession with bulk artifact additions:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

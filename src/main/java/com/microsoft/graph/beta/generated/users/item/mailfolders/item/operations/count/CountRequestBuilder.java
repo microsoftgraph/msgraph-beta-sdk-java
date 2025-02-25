@@ -40,7 +40,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -53,7 +53,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -67,7 +67,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * Get the number of the resource
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -79,7 +79,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -94,7 +94,7 @@ public class CountRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CountRequestBuilder}
      * @deprecated
-     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI
+     *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
     @Deprecated
