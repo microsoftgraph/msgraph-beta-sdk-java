@@ -25,6 +25,9 @@ jobs:
         run: |
           pip install detect-secrets
           git ls-files -z | xargs -0 detect-secrets-hook --baseline .secrets.baseline
+      - name: Move generated sources to correct package
+        run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\beta\generated'
+        shell: pwsh
       - name: Grant Execute permission for gradlew
         run: chmod +x gradlew
       - name: Build with Gradle
@@ -65,6 +68,9 @@ jobs:
           cache: gradle
       - name: Grant Execute permission for gradlew
         run: chmod +x gradlew
+      - name: Move generated sources to correct package
+        run: .\scripts\copyFilesOnBuild.ps1 -inputPath '.\src\main\java\com\microsoft\graph\beta\generated'
+        shell: pwsh
       - name: Build with Java 8
         working-directory: ./java-8
         run: .././gradlew -Dorg.gradle.jvmargs=-Xmx4g build
