@@ -53,6 +53,10 @@ tasks.withType(Javadoc).configureEach {
     options.addStringOption('Xdoclint:-missing', '-quiet')
 }
 
+tasks.withType(Zip).configureEach {
+    zip64 = true
+}
+
 tasks.jar {
     manifest {
         attributes('Automatic-Module-Name': project.property('mavenGroupId'))
