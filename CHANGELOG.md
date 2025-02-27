@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [6.34.1](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.34.0...v6.34.1) (2025-02-27)
+
+
+### Bug Fixes
+
+* align build files and javadoc file strcuture ([575fda4](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/575fda455a3c2b0fc968ab0f6e8cccb85fcb5331))
+* ensure javadocs are generated in the build ([2099dcc](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/2099dcc525ab9dec53ff31c44aa8989a0a50fa94))
+* resolve javadoc and source locations ([2d4c8fd](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/2d4c8fd2447a27e23aad113d5952c1f3a248b6ae))
+
 ## [6.34.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.33.0...v6.34.0) (2025-02-25)
 
 
