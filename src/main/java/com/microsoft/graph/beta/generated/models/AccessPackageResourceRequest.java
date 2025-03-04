@@ -77,7 +77,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isValidationOnly property value. If set, doesn't add the resource.
+     * Gets the isValidationOnly property value. If set, doesn&apos;t add the resource.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return this.backingStore.get("isValidationOnly");
     }
     /**
-     * Gets the justification property value. The requestor's justification for adding or removing the resource.
+     * Gets the justification property value. The requestor&apos;s justification for adding or removing the resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -171,14 +171,14 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the isValidationOnly property value. If set, doesn't add the resource.
+     * Sets the isValidationOnly property value. If set, doesn&apos;t add the resource.
      * @param value Value to set for the isValidationOnly property.
      */
     public void setIsValidationOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isValidationOnly", value);
     }
     /**
-     * Sets the justification property value. The requestor's justification for adding or removing the resource.
+     * Sets the justification property value. The requestor&apos;s justification for adding or removing the resource.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {

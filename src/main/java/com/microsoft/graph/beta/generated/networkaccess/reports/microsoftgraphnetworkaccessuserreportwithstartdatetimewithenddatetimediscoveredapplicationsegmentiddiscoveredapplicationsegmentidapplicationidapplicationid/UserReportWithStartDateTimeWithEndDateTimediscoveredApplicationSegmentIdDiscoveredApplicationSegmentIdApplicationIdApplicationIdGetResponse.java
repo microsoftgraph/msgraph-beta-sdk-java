@@ -1,4 +1,4 @@
-package com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessuserreportwithstartdatetimewithenddatetimediscoveredapplicationsegmentiddiscoveredapplicationsegmentid;
+package com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessuserreportwithstartdatetimewithenddatetimediscoveredapplicationsegmentiddiscoveredapplicationsegmentidapplicationidapplicationid;
 
 import com.microsoft.graph.beta.models.BaseCollectionPaginationCountResponse;
 import com.microsoft.graph.beta.models.networkaccess.User;
@@ -9,22 +9,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
+public class UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new {@link UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdGetResponse} and sets the default values.
+     * Instantiates a new {@link UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse} and sets the default values.
      */
-    public UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdGetResponse() {
+    public UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse() {
         super();
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdGetResponse}
+     * @return a {@link UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse}
      */
     @jakarta.annotation.Nonnull
-    public static UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdGetResponse();
+        return new UserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse();
     }
     /**
      * The deserialization information for the current model

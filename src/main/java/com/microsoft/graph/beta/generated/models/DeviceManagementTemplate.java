@@ -44,7 +44,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         return this.backingStore.get("categories");
     }
     /**
-     * Gets the description property value. The template's description
+     * Gets the description property value. The template&apos;s description
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The template's display name
+     * Gets the displayName property value. The template&apos;s display name
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         return this.backingStore.get("templateType");
     }
     /**
-     * Gets the versionInfo property value. The template's version information
+     * Gets the versionInfo property value. The template&apos;s version information
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -180,14 +180,14 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         this.backingStore.set("categories", value);
     }
     /**
-     * Sets the description property value. The template's description
+     * Sets the description property value. The template&apos;s description
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The template's display name
+     * Sets the displayName property value. The template&apos;s display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -250,7 +250,7 @@ public class DeviceManagementTemplate extends Entity implements Parsable {
         this.backingStore.set("templateType", value);
     }
     /**
-     * Sets the versionInfo property value. The template's version information
+     * Sets the versionInfo property value. The template&apos;s version information
      * @param value Value to set for the versionInfo property.
      */
     public void setVersionInfo(@jakarta.annotation.Nullable final String value) {

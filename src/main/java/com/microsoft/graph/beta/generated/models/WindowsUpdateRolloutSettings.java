@@ -81,7 +81,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Backe
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the offerEndDateTimeInUTC property value. The feature update's ending  of release date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
+     * Gets the offerEndDateTimeInUTC property value. The feature update&apos;s ending  of release date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Backe
         return this.backingStore.get("offerIntervalInDays");
     }
     /**
-     * Gets the offerStartDateTimeInUTC property value. The feature update's starting date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
+     * Gets the offerStartDateTimeInUTC property value. The feature update&apos;s starting date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Backe
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the offerEndDateTimeInUTC property value. The feature update's ending  of release date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
+     * Sets the offerEndDateTimeInUTC property value. The feature update&apos;s ending  of release date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
      * @param value Value to set for the offerEndDateTimeInUTC property.
      */
     public void setOfferEndDateTimeInUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -153,7 +153,7 @@ public class WindowsUpdateRolloutSettings implements AdditionalDataHolder, Backe
         this.backingStore.set("offerIntervalInDays", value);
     }
     /**
-     * Sets the offerStartDateTimeInUTC property value. The feature update's starting date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
+     * Sets the offerStartDateTimeInUTC property value. The feature update&apos;s starting date and time to be set, update, and displayed for a feature Update profile for example: 2020-06-09T10:00:00Z.
      * @param value Value to set for the offerStartDateTimeInUTC property.
      */
     public void setOfferStartDateTimeInUTC(@jakarta.annotation.Nullable final OffsetDateTime value) {

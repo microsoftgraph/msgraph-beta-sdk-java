@@ -61,7 +61,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         return this.backingStore.get("authenticationRetryDelayPeriodInSeconds");
     }
     /**
-     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you're using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
+     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you&apos;re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
      * @return a {@link WiredNetworkAuthenticationType}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         return this.backingStore.get("authenticationType");
     }
     /**
-     * Gets the cacheCredentials property value. When TRUE, caches user credentials on the device so that users don't need to keep entering them each time they connect. When FALSE, do not cache credentials. Default value is FALSE.
+     * Gets the cacheCredentials property value. When TRUE, caches user credentials on the device so that users don&apos;t need to keep entering them each time they connect. When FALSE, do not cache credentials. Default value is FALSE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         return this.backingStore.get("outerIdentityPrivacyTemporaryValue");
     }
     /**
-     * Gets the performServerValidation property value. When TRUE, enables verification of server's identity by validating the certificate when EAP type is selected as PEAP. When FALSE, the certificate is not validated. Default value is TRUE.
+     * Gets the performServerValidation property value. When TRUE, enables verification of server&apos;s identity by validating the certificate when EAP type is selected as PEAP. When FALSE, the certificate is not validated. Default value is TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -314,14 +314,14 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         this.backingStore.set("authenticationRetryDelayPeriodInSeconds", value);
     }
     /**
-     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you're using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
+     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you&apos;re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final WiredNetworkAuthenticationType value) {
         this.backingStore.set("authenticationType", value);
     }
     /**
-     * Sets the cacheCredentials property value. When TRUE, caches user credentials on the device so that users don't need to keep entering them each time they connect. When FALSE, do not cache credentials. Default value is FALSE.
+     * Sets the cacheCredentials property value. When TRUE, caches user credentials on the device so that users don&apos;t need to keep entering them each time they connect. When FALSE, do not cache credentials. Default value is FALSE.
      * @param value Value to set for the cacheCredentials property.
      */
     public void setCacheCredentials(@jakarta.annotation.Nullable final Boolean value) {
@@ -398,7 +398,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         this.backingStore.set("outerIdentityPrivacyTemporaryValue", value);
     }
     /**
-     * Sets the performServerValidation property value. When TRUE, enables verification of server's identity by validating the certificate when EAP type is selected as PEAP. When FALSE, the certificate is not validated. Default value is TRUE.
+     * Sets the performServerValidation property value. When TRUE, enables verification of server&apos;s identity by validating the certificate when EAP type is selected as PEAP. When FALSE, the certificate is not validated. Default value is TRUE.
      * @param value Value to set for the performServerValidation property.
      */
     public void setPerformServerValidation(@jakarta.annotation.Nullable final Boolean value) {

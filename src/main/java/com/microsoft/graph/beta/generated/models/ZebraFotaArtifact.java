@@ -83,7 +83,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         return this.backingStore.get("patchVersion");
     }
     /**
-     * Gets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
+     * Gets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/&lt;filename.pdf&gt;)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class ZebraFotaArtifact extends Entity implements Parsable {
         this.backingStore.set("patchVersion", value);
     }
     /**
-     * Sets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/<filename.pdf>)
+     * Sets the releaseNotesUrl property value. Artifact release notes URL (e.g.: https://www.zebra.com/&lt;filename.pdf&gt;)
      * @param value Value to set for the releaseNotesUrl property.
      */
     public void setReleaseNotesUrl(@jakarta.annotation.Nullable final String value) {

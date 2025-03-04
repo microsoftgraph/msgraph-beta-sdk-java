@@ -26,7 +26,7 @@ public class Notification extends Entity implements Parsable {
         return new Notification();
     }
     /**
-     * Gets the displayTimeToLive property value. Sets how long (in seconds) this notification content stays in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification stays in the user's Windows Action Center.
+     * Gets the displayTimeToLive property value. Sets how long (in seconds) this notification content stays in each platform&apos;s notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification stays in the user&apos;s Windows Action Center.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class Notification extends Entity implements Parsable {
         return this.backingStore.get("displayTimeToLive");
     }
     /**
-     * Gets the expirationDateTime property value. Sets a UTC expiration date and time on a user notification using ISO 8601 format (for example, midnight UTC on Jan 1, 2019 would look like this: '2019-01-01T00:00:00Z'). When time is up, the notification is removed from the Microsoft Graph notification feed store completely and is no longer part of notification history. Max value is 30 days.
+     * Gets the expirationDateTime property value. Sets a UTC expiration date and time on a user notification using ISO 8601 format (for example, midnight UTC on Jan 1, 2019 would look like this: &apos;2019-01-01T00:00:00Z&apos;). When time is up, the notification is removed from the Microsoft Graph notification feed store completely and is no longer part of notification history. Max value is 30 days.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -113,14 +113,14 @@ public class Notification extends Entity implements Parsable {
         writer.writeObjectValue("targetPolicy", this.getTargetPolicy());
     }
     /**
-     * Sets the displayTimeToLive property value. Sets how long (in seconds) this notification content stays in each platform's notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification stays in the user's Windows Action Center.
+     * Sets the displayTimeToLive property value. Sets how long (in seconds) this notification content stays in each platform&apos;s notification viewer. For example, when the notification is delivered to a Windows device, the value of this property is passed on to ToastNotification.ExpirationTime, which determines how long the toast notification stays in the user&apos;s Windows Action Center.
      * @param value Value to set for the displayTimeToLive property.
      */
     public void setDisplayTimeToLive(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("displayTimeToLive", value);
     }
     /**
-     * Sets the expirationDateTime property value. Sets a UTC expiration date and time on a user notification using ISO 8601 format (for example, midnight UTC on Jan 1, 2019 would look like this: '2019-01-01T00:00:00Z'). When time is up, the notification is removed from the Microsoft Graph notification feed store completely and is no longer part of notification history. Max value is 30 days.
+     * Sets the expirationDateTime property value. Sets a UTC expiration date and time on a user notification using ISO 8601 format (for example, midnight UTC on Jan 1, 2019 would look like this: &apos;2019-01-01T00:00:00Z&apos;). When time is up, the notification is removed from the Microsoft Graph notification feed store completely and is no longer part of notification history. Max value is 30 days.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

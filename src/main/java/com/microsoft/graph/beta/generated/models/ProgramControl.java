@@ -100,7 +100,7 @@ public class ProgramControl extends Entity implements Parsable {
         return this.backingStore.get("programId");
     }
     /**
-     * Gets the resource property value. The resource, a group or an app, targeted by this program control's access review.
+     * Gets the resource property value. The resource, a group or an app, targeted by this program control&apos;s access review.
      * @return a {@link ProgramResource}
      */
     @jakarta.annotation.Nullable
@@ -182,7 +182,7 @@ public class ProgramControl extends Entity implements Parsable {
         this.backingStore.set("programId", value);
     }
     /**
-     * Sets the resource property value. The resource, a group or an app, targeted by this program control's access review.
+     * Sets the resource property value. The resource, a group or an app, targeted by this program control&apos;s access review.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final ProgramResource value) {

@@ -37,7 +37,7 @@ public class TenantStatus extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the onboardingErrorMessage property value. Reflects a message to the user if there's an error.
+     * Gets the onboardingErrorMessage property value. Reflects a message to the user if there&apos;s an error.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class TenantStatus extends Entity implements Parsable {
         writer.writeEnumValue("onboardingStatus", this.getOnboardingStatus());
     }
     /**
-     * Sets the onboardingErrorMessage property value. Reflects a message to the user if there's an error.
+     * Sets the onboardingErrorMessage property value. Reflects a message to the user if there&apos;s an error.
      * @param value Value to set for the onboardingErrorMessage property.
      */
     public void setOnboardingErrorMessage(@jakarta.annotation.Nullable final String value) {

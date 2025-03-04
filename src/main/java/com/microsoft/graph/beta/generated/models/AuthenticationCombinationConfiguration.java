@@ -34,7 +34,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
         return new AuthenticationCombinationConfiguration();
     }
     /**
-     * Gets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object defined for the authenticationStrengthPolicy. For fido2combinationConfigurations use 'fido2', for x509certificatecombinationconfiguration use 'x509CertificateSingleFactor' or 'x509CertificateMultiFactor'.
+     * Gets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object defined for the authenticationStrengthPolicy. For fido2combinationConfigurations use &apos;fido2&apos;, for x509certificatecombinationconfiguration use &apos;x509CertificateSingleFactor&apos; or &apos;x509CertificateMultiFactor&apos;.
      * @return a {@link java.util.List<AuthenticationMethodModes>}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class AuthenticationCombinationConfiguration extends Entity implements Pa
         writer.writeCollectionOfEnumValues("appliesToCombinations", this.getAppliesToCombinations());
     }
     /**
-     * Sets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object defined for the authenticationStrengthPolicy. For fido2combinationConfigurations use 'fido2', for x509certificatecombinationconfiguration use 'x509CertificateSingleFactor' or 'x509CertificateMultiFactor'.
+     * Sets the appliesToCombinations property value. Which authentication method combinations this configuration applies to. Must be an allowedCombinations object defined for the authenticationStrengthPolicy. For fido2combinationConfigurations use &apos;fido2&apos;, for x509certificatecombinationconfiguration use &apos;x509CertificateSingleFactor&apos; or &apos;x509CertificateMultiFactor&apos;.
      * @param value Value to set for the appliesToCombinations property.
      */
     public void setAppliesToCombinations(@jakarta.annotation.Nullable final java.util.List<AuthenticationMethodModes> value) {

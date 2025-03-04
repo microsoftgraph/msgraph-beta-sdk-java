@@ -141,7 +141,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("thumbprint");
     }
     /**
-     * Gets the type property value. The type of key credential. 'AsymmetricX509Cert'.
+     * Gets the type property value. The type of key credential. &apos;AsymmetricX509Cert&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("type");
     }
     /**
-     * Gets the usage property value. A string that describes the purpose for which the key can be used. For example, 'Verify'.
+     * Gets the usage property value. A string that describes the purpose for which the key can be used. For example, &apos;Verify&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -246,14 +246,14 @@ public class SelfSignedCertificate implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("thumbprint", value);
     }
     /**
-     * Sets the type property value. The type of key credential. 'AsymmetricX509Cert'.
+     * Sets the type property value. The type of key credential. &apos;AsymmetricX509Cert&apos;.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("type", value);
     }
     /**
-     * Sets the usage property value. A string that describes the purpose for which the key can be used. For example, 'Verify'.
+     * Sets the usage property value. A string that describes the purpose for which the key can be used. For example, &apos;Verify&apos;.
      * @param value Value to set for the usage property.
      */
     public void setUsage(@jakarta.annotation.Nullable final String value) {

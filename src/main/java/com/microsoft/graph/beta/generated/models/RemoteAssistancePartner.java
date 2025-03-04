@@ -75,7 +75,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
         return this.backingStore.get("onboardingStatus");
     }
     /**
-     * Gets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
+     * Gets the onboardingUrl property value. URL of the partner&apos;s onboarding portal, where an administrator can configure their Remote Assistance service.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class RemoteAssistancePartner extends Entity implements Parsable {
         this.backingStore.set("onboardingStatus", value);
     }
     /**
-     * Sets the onboardingUrl property value. URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
+     * Sets the onboardingUrl property value. URL of the partner&apos;s onboarding portal, where an administrator can configure their Remote Assistance service.
      * @param value Value to set for the onboardingUrl property.
      */
     public void setOnboardingUrl(@jakarta.annotation.Nullable final String value) {

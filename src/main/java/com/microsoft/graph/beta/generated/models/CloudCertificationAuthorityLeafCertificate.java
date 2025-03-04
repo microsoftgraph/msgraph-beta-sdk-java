@@ -77,7 +77,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         return this.backingStore.get("devicePlatform");
     }
     /**
-     * Gets the extendedKeyUsages property value. Certificate extensions that further define the purpose of the public key contained in a certificate. Data is formatted as a comma-separated list of object identifiers (OID). For example a possible value is '1.3.6.1.5.5.7.3.2'. Read-only. Nullable.
+     * Gets the extendedKeyUsages property value. Certificate extensions that further define the purpose of the public key contained in a certificate. Data is formatted as a comma-separated list of object identifiers (OID). For example a possible value is &apos;1.3.6.1.5.5.7.3.2&apos;. Read-only. Nullable.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         return this.backingStore.get("issuerName");
     }
     /**
-     * Gets the keyUsages property value. Certificate extensions that define the purpose of the public key contained in a certificate. For example possible values are 'Key Encipherment' and 'Digital Signature'. Read-only. Nullable.
+     * Gets the keyUsages property value. Certificate extensions that define the purpose of the public key contained in a certificate. For example possible values are &apos;Key Encipherment&apos; and &apos;Digital Signature&apos;. Read-only. Nullable.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         return this.backingStore.get("ocspResponderUri");
     }
     /**
-     * Gets the revocationDateTime property value. The date and time a certificate was revoked. If the certificate was not revoked, this will be null. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only.
+     * Gets the revocationDateTime property value. The date and time a certificate was revoked. If the certificate was not revoked, this will be null. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         return this.backingStore.get("userPrincipalName");
     }
     /**
-     * Gets the validityEndDateTime property value. The end date time of the validity period of a certificate. Certificates cannot be used after this date time as they are longer valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only. Supports $orderby.
+     * Gets the validityEndDateTime property value. The end date time of the validity period of a certificate. Certificates cannot be used after this date time as they are longer valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only. Supports $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -201,7 +201,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         return this.backingStore.get("validityEndDateTime");
     }
     /**
-     * Gets the validityStartDateTime property value. The start date time of the validity period of a certificate. Certificates cannot be used before this date time as they are not yet valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only. Supports $orderby.
+     * Gets the validityStartDateTime property value. The start date time of the validity period of a certificate. Certificates cannot be used before this date time as they are not yet valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only. Supports $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -278,7 +278,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         this.backingStore.set("devicePlatform", value);
     }
     /**
-     * Sets the extendedKeyUsages property value. Certificate extensions that further define the purpose of the public key contained in a certificate. Data is formatted as a comma-separated list of object identifiers (OID). For example a possible value is '1.3.6.1.5.5.7.3.2'. Read-only. Nullable.
+     * Sets the extendedKeyUsages property value. Certificate extensions that further define the purpose of the public key contained in a certificate. Data is formatted as a comma-separated list of object identifiers (OID). For example a possible value is &apos;1.3.6.1.5.5.7.3.2&apos;. Read-only. Nullable.
      * @param value Value to set for the extendedKeyUsages property.
      */
     public void setExtendedKeyUsages(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -299,7 +299,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         this.backingStore.set("issuerName", value);
     }
     /**
-     * Sets the keyUsages property value. Certificate extensions that define the purpose of the public key contained in a certificate. For example possible values are 'Key Encipherment' and 'Digital Signature'. Read-only. Nullable.
+     * Sets the keyUsages property value. Certificate extensions that define the purpose of the public key contained in a certificate. For example possible values are &apos;Key Encipherment&apos; and &apos;Digital Signature&apos;. Read-only. Nullable.
      * @param value Value to set for the keyUsages property.
      */
     public void setKeyUsages(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -313,7 +313,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         this.backingStore.set("ocspResponderUri", value);
     }
     /**
-     * Sets the revocationDateTime property value. The date and time a certificate was revoked. If the certificate was not revoked, this will be null. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only.
+     * Sets the revocationDateTime property value. The date and time a certificate was revoked. If the certificate was not revoked, this will be null. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only.
      * @param value Value to set for the revocationDateTime property.
      */
     public void setRevocationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -355,14 +355,14 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         this.backingStore.set("userPrincipalName", value);
     }
     /**
-     * Sets the validityEndDateTime property value. The end date time of the validity period of a certificate. Certificates cannot be used after this date time as they are longer valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only. Supports $orderby.
+     * Sets the validityEndDateTime property value. The end date time of the validity period of a certificate. Certificates cannot be used after this date time as they are longer valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only. Supports $orderby.
      * @param value Value to set for the validityEndDateTime property.
      */
     public void setValidityEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("validityEndDateTime", value);
     }
     /**
-     * Sets the validityStartDateTime property value. The start date time of the validity period of a certificate. Certificates cannot be used before this date time as they are not yet valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only. Supports $orderby.
+     * Sets the validityStartDateTime property value. The start date time of the validity period of a certificate. Certificates cannot be used before this date time as they are not yet valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only. Supports $orderby.
      * @param value Value to set for the validityStartDateTime property.
      */
     public void setValidityStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

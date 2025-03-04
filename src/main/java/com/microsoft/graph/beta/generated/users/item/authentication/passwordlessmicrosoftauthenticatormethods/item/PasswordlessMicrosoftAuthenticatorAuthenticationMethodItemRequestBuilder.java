@@ -46,7 +46,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Deletes a user&apos;s Microsoft Authenticator Passwordless Phone Sign-in method object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         delete(null);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Deletes a user&apos;s Microsoft Authenticator Passwordless Phone Sign-in method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/passwordlessmicrosoftauthenticatorauthenticationmethod-delete?view=graph-rest-beta">Find more info here</a>
@@ -88,7 +88,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordlessMicrosoftAuthenticatorAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Deletes a user&apos;s Microsoft Authenticator Passwordless Phone Sign-in method object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a user's Microsoft Authenticator Passwordless Phone Sign-in method object.
+     * Deletes a user&apos;s Microsoft Authenticator Passwordless Phone Sign-in method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

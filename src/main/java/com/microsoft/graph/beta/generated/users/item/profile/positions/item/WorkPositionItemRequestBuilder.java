@@ -55,7 +55,7 @@ public class WorkPositionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents detailed information about work positions associated with a user's profile.
+     * Represents detailed information about work positions associated with a user&apos;s profile.
      * @return a {@link WorkPosition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class WorkPositionItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents detailed information about work positions associated with a user's profile.
+     * Represents detailed information about work positions associated with a user&apos;s profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkPosition}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class WorkPositionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents detailed information about work positions associated with a user's profile.
+     * Represents detailed information about work positions associated with a user&apos;s profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class WorkPositionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents detailed information about work positions associated with a user's profile.
+     * Represents detailed information about work positions associated with a user&apos;s profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class WorkPositionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents detailed information about work positions associated with a user's profile.
+     * Represents detailed information about work positions associated with a user&apos;s profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

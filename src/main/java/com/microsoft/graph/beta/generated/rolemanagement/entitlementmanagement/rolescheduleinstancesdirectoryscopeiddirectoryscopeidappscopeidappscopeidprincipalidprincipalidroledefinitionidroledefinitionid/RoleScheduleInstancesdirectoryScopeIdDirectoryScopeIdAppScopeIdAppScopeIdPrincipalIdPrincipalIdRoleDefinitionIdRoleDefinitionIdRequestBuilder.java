@@ -95,7 +95,7 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
         /**
-         * Usage: appScopeId='@appScopeId'
+         * Usage: appScopeId=&apos;@appScopeId&apos;
          */
         @jakarta.annotation.Nullable
         public String appScopeId;
@@ -105,7 +105,7 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
-         * Usage: directoryScopeId='@directoryScopeId'
+         * Usage: directoryScopeId=&apos;@directoryScopeId&apos;
          */
         @jakarta.annotation.Nullable
         public String directoryScopeId;
@@ -125,12 +125,12 @@ public class RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppS
         @jakarta.annotation.Nullable
         public String[] orderby;
         /**
-         * Usage: principalId='@principalId'
+         * Usage: principalId=&apos;@principalId&apos;
          */
         @jakarta.annotation.Nullable
         public String principalId;
         /**
-         * Usage: roleDefinitionId='@roleDefinitionId'
+         * Usage: roleDefinitionId=&apos;@roleDefinitionId&apos;
          */
         @jakarta.annotation.Nullable
         public String roleDefinitionId;

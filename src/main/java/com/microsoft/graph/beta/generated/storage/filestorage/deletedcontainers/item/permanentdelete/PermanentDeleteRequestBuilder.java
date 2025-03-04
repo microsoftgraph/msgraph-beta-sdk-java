@@ -35,7 +35,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/deletedContainers/{fileStorageContainer%2Did}/permanentDelete", rawUrl);
     }
     /**
-     * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn't sent to the deleted container collection. Therefore, it can't be restored later.
+     * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn&apos;t sent to the deleted container collection. Therefore, it can&apos;t be restored later.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-permanentdelete?view=graph-rest-beta">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn't sent to the deleted container collection. Therefore, it can't be restored later.
+     * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn&apos;t sent to the deleted container collection. Therefore, it can&apos;t be restored later.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-permanentdelete?view=graph-rest-beta">Find more info here</a>
@@ -55,7 +55,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn't sent to the deleted container collection. Therefore, it can't be restored later.
+     * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn&apos;t sent to the deleted container collection. Therefore, it can&apos;t be restored later.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn't sent to the deleted container collection. Therefore, it can't be restored later.
+     * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn&apos;t sent to the deleted container collection. Therefore, it can&apos;t be restored later.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

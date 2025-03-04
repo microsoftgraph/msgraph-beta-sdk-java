@@ -94,7 +94,7 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("statusChangedBy");
     }
     /**
-     * Gets the statusChangedDateTime property value. Read-only. Date and time at which the entity's archive status changed.
+     * Gets the statusChangedDateTime property value. Read-only. Date and time at which the entity&apos;s archive status changed.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class PlannerArchivalInfo implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("statusChangedBy", value);
     }
     /**
-     * Sets the statusChangedDateTime property value. Read-only. Date and time at which the entity's archive status changed.
+     * Sets the statusChangedDateTime property value. Read-only. Date and time at which the entity&apos;s archive status changed.
      * @param value Value to set for the statusChangedDateTime property.
      */
     public void setStatusChangedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

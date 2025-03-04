@@ -87,7 +87,7 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         return this.backingStore.get("inProgressUsersCount");
     }
     /**
-     * Gets the notCompletedUsersCount property value. The number of users who didn't complete all the trainings before the due date.
+     * Gets the notCompletedUsersCount property value. The number of users who didn&apos;t complete all the trainings before the due date.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         return this.backingStore.get("notCompletedUsersCount");
     }
     /**
-     * Gets the notStartedUsersCount property value. The number of users who didn't start any training.
+     * Gets the notStartedUsersCount property value. The number of users who didn&apos;t start any training.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -162,14 +162,14 @@ public class UserTrainingCompletionSummary implements AdditionalDataHolder, Back
         this.backingStore.set("inProgressUsersCount", value);
     }
     /**
-     * Sets the notCompletedUsersCount property value. The number of users who didn't complete all the trainings before the due date.
+     * Sets the notCompletedUsersCount property value. The number of users who didn&apos;t complete all the trainings before the due date.
      * @param value Value to set for the notCompletedUsersCount property.
      */
     public void setNotCompletedUsersCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("notCompletedUsersCount", value);
     }
     /**
-     * Sets the notStartedUsersCount property value. The number of users who didn't start any training.
+     * Sets the notStartedUsersCount property value. The number of users who didn&apos;t start any training.
      * @param value Value to set for the notStartedUsersCount property.
      */
     public void setNotStartedUsersCount(@jakarta.annotation.Nullable final Integer value) {

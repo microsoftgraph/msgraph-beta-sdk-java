@@ -56,7 +56,7 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         return this.backingStore;
     }
     /**
-     * Gets the d property value. RSA Key - private exponent. The field isn't readable.
+     * Gets the d property value. RSA Key - private exponent. The field isn&apos;t readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("d");
     }
     /**
-     * Gets the dp property value. RSA Key - first exponent. The field isn't readable.
+     * Gets the dp property value. RSA Key - first exponent. The field isn&apos;t readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("dp");
     }
     /**
-     * Gets the dq property value. RSA Key - second exponent. The field isn't readable.
+     * Gets the dq property value. RSA Key - second exponent. The field isn&apos;t readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the k property value. Symmetric Key for oct key type. The field isn't readable.
+     * Gets the k property value. Symmetric Key for oct key type. The field isn&apos;t readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the p property value. RSA Key - first prime. The field isn't readable.
+     * Gets the p property value. RSA Key - first prime. The field isn&apos;t readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -179,7 +179,7 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("p");
     }
     /**
-     * Gets the q property value. RSA Key - second prime. The field isn't readable.
+     * Gets the q property value. RSA Key - second prime. The field isn&apos;t readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -187,7 +187,7 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("q");
     }
     /**
-     * Gets the qi property value. RSA Key - Coefficient. The field isn't readable.
+     * Gets the qi property value. RSA Key - Coefficient. The field isn&apos;t readable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -268,21 +268,21 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the d property value. RSA Key - private exponent. The field isn't readable.
+     * Sets the d property value. RSA Key - private exponent. The field isn&apos;t readable.
      * @param value Value to set for the d property.
      */
     public void setD(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("d", value);
     }
     /**
-     * Sets the dp property value. RSA Key - first exponent. The field isn't readable.
+     * Sets the dp property value. RSA Key - first exponent. The field isn&apos;t readable.
      * @param value Value to set for the dp property.
      */
     public void setDp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("dp", value);
     }
     /**
-     * Sets the dq property value. RSA Key - second exponent. The field isn't readable.
+     * Sets the dq property value. RSA Key - second exponent. The field isn&apos;t readable.
      * @param value Value to set for the dq property.
      */
     public void setDq(@jakarta.annotation.Nullable final String value) {
@@ -303,7 +303,7 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("exp", value);
     }
     /**
-     * Sets the k property value. Symmetric Key for oct key type. The field isn't readable.
+     * Sets the k property value. Symmetric Key for oct key type. The field isn&apos;t readable.
      * @param value Value to set for the k property.
      */
     public void setK(@jakarta.annotation.Nullable final String value) {
@@ -345,21 +345,21 @@ public class TrustFrameworkKeyV2 implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the p property value. RSA Key - first prime. The field isn't readable.
+     * Sets the p property value. RSA Key - first prime. The field isn&apos;t readable.
      * @param value Value to set for the p property.
      */
     public void setP(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("p", value);
     }
     /**
-     * Sets the q property value. RSA Key - second prime. The field isn't readable.
+     * Sets the q property value. RSA Key - second prime. The field isn&apos;t readable.
      * @param value Value to set for the q property.
      */
     public void setQ(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("q", value);
     }
     /**
-     * Sets the qi property value. RSA Key - Coefficient. The field isn't readable.
+     * Sets the qi property value. RSA Key - Coefficient. The field isn&apos;t readable.
      * @param value Value to set for the qi property.
      */
     public void setQi(@jakarta.annotation.Nullable final String value) {

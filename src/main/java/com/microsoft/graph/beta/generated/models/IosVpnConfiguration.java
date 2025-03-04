@@ -93,7 +93,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
         return this.backingStore.get("microsoftTunnelSiteId");
     }
     /**
-     * Gets the strictEnforcement property value. Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
+     * Gets the strictEnforcement property value. Zscaler only. Blocks network traffic until the user signs into Zscaler app. &apos;True&apos; means traffic is blocked.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
         return this.backingStore.get("targetedMobileApps");
     }
     /**
-     * Gets the userDomain property value. Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
+     * Gets the userDomain property value. Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user&apos;s Azure Active Directory domain will be used instead.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
         this.backingStore.set("microsoftTunnelSiteId", value);
     }
     /**
-     * Sets the strictEnforcement property value. Zscaler only. Blocks network traffic until the user signs into Zscaler app. 'True' means traffic is blocked.
+     * Sets the strictEnforcement property value. Zscaler only. Blocks network traffic until the user signs into Zscaler app. &apos;True&apos; means traffic is blocked.
      * @param value Value to set for the strictEnforcement property.
      */
     public void setStrictEnforcement(@jakarta.annotation.Nullable final Boolean value) {
@@ -182,7 +182,7 @@ public class IosVpnConfiguration extends AppleVpnConfiguration implements Parsab
         this.backingStore.set("targetedMobileApps", value);
     }
     /**
-     * Sets the userDomain property value. Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user's Azure Active Directory domain will be used instead.
+     * Sets the userDomain property value. Zscaler only. Enter a static domain to pre-populate the login field with in the Zscaler app. If this is left empty, the user&apos;s Azure Active Directory domain will be used instead.
      * @param value Value to set for the userDomain property.
      */
     public void setUserDomain(@jakarta.annotation.Nullable final String value) {

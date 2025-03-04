@@ -84,7 +84,7 @@ public class RedundancyConfiguration implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("redundancyTier");
     }
     /**
-     * Gets the zoneLocalIpAddress property value. Indicate the specific IP address used for establishing the Border Gateway Protocol (BGP) connection with Microsoft's network.
+     * Gets the zoneLocalIpAddress property value. Indicate the specific IP address used for establishing the Border Gateway Protocol (BGP) connection with Microsoft&apos;s network.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class RedundancyConfiguration implements AdditionalDataHolder, BackedMode
         this.backingStore.set("redundancyTier", value);
     }
     /**
-     * Sets the zoneLocalIpAddress property value. Indicate the specific IP address used for establishing the Border Gateway Protocol (BGP) connection with Microsoft's network.
+     * Sets the zoneLocalIpAddress property value. Indicate the specific IP address used for establishing the Border Gateway Protocol (BGP) connection with Microsoft&apos;s network.
      * @param value Value to set for the zoneLocalIpAddress property.
      */
     public void setZoneLocalIpAddress(@jakarta.annotation.Nullable final String value) {

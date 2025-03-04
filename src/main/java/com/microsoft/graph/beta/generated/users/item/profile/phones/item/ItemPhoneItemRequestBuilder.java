@@ -37,7 +37,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/phones/{itemPhone%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an itemPhone object from the user's profile.
+     * Delete an itemPhone object from the user&apos;s profile.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/itemphone-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete an itemPhone object from the user's profile.
+     * Delete an itemPhone object from the user&apos;s profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/itemphone-delete?view=graph-rest-beta">Find more info here</a>
@@ -79,7 +79,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemPhone::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an itemPhone object in a user's profile.
+     * Update the properties of an itemPhone object in a user&apos;s profile.
      * @param body The request body
      * @return a {@link ItemPhone}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -90,7 +90,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an itemPhone object in a user's profile.
+     * Update the properties of an itemPhone object in a user&apos;s profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemPhone}
@@ -106,7 +106,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemPhone::createFromDiscriminatorValue);
     }
     /**
-     * Delete an itemPhone object from the user's profile.
+     * Delete an itemPhone object from the user&apos;s profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an itemPhone object from the user's profile.
+     * Delete an itemPhone object from the user&apos;s profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +146,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an itemPhone object in a user's profile.
+     * Update the properties of an itemPhone object in a user&apos;s profile.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +155,7 @@ public class ItemPhoneItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an itemPhone object in a user's profile.
+     * Update the properties of an itemPhone object in a user&apos;s profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

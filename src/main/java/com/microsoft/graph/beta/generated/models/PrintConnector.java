@@ -26,7 +26,7 @@ public class PrintConnector extends Entity implements Parsable {
         return new PrintConnector();
     }
     /**
-     * Gets the appVersion property value. The connector's version.
+     * Gets the appVersion property value. The connector&apos;s version.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class PrintConnector extends Entity implements Parsable {
         return this.backingStore.get("appVersion");
     }
     /**
-     * Gets the deviceHealth property value. The connector's device health.
+     * Gets the deviceHealth property value. The connector&apos;s device health.
      * @return a {@link DeviceHealth}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class PrintConnector extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fullyQualifiedDomainName property value. The connector machine's hostname.
+     * Gets the fullyQualifiedDomainName property value. The connector machine&apos;s hostname.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class PrintConnector extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the operatingSystem property value. The connector machine's operating system version.
+     * Gets the operatingSystem property value. The connector machine&apos;s operating system version.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,14 +123,14 @@ public class PrintConnector extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("registeredDateTime", this.getRegisteredDateTime());
     }
     /**
-     * Sets the appVersion property value. The connector's version.
+     * Sets the appVersion property value. The connector&apos;s version.
      * @param value Value to set for the appVersion property.
      */
     public void setAppVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appVersion", value);
     }
     /**
-     * Sets the deviceHealth property value. The connector's device health.
+     * Sets the deviceHealth property value. The connector&apos;s device health.
      * @param value Value to set for the deviceHealth property.
      */
     public void setDeviceHealth(@jakarta.annotation.Nullable final DeviceHealth value) {
@@ -144,7 +144,7 @@ public class PrintConnector extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the fullyQualifiedDomainName property value. The connector machine's hostname.
+     * Sets the fullyQualifiedDomainName property value. The connector machine&apos;s hostname.
      * @param value Value to set for the fullyQualifiedDomainName property.
      */
     public void setFullyQualifiedDomainName(@jakarta.annotation.Nullable final String value) {
@@ -165,7 +165,7 @@ public class PrintConnector extends Entity implements Parsable {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the operatingSystem property value. The connector machine's operating system version.
+     * Sets the operatingSystem property value. The connector machine&apos;s operating system version.
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {

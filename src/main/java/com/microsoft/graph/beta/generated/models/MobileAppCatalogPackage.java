@@ -48,7 +48,7 @@ public class MobileAppCatalogPackage extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the productDisplayName property value. The name of the product (example: "Fabrikam for Business"). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
+     * Gets the productDisplayName property value. The name of the product (example: &quot;Fabrikam for Business&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class MobileAppCatalogPackage extends Entity implements Parsable {
         return this.backingStore.get("productId");
     }
     /**
-     * Gets the publisherDisplayName property value. The name of the application catalog package publisher (example: "Fabrikam"). Returned by default. Read-only. Supports $filter, $search, $select. This property is read-only.
+     * Gets the publisherDisplayName property value. The name of the application catalog package publisher (example: &quot;Fabrikam&quot;). Returned by default. Read-only. Supports $filter, $search, $select. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class MobileAppCatalogPackage extends Entity implements Parsable {
         return this.backingStore.get("publisherDisplayName");
     }
     /**
-     * Gets the versionDisplayName property value. The name of the product version (example: "1.2203.156"). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
+     * Gets the versionDisplayName property value. The name of the product version (example: &quot;1.2203.156&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class MobileAppCatalogPackage extends Entity implements Parsable {
         super.serialize(writer);
     }
     /**
-     * Sets the productDisplayName property value. The name of the product (example: "Fabrikam for Business"). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
+     * Sets the productDisplayName property value. The name of the product (example: &quot;Fabrikam for Business&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
      * @param value Value to set for the productDisplayName property.
      */
     public void setProductDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -102,14 +102,14 @@ public class MobileAppCatalogPackage extends Entity implements Parsable {
         this.backingStore.set("productId", value);
     }
     /**
-     * Sets the publisherDisplayName property value. The name of the application catalog package publisher (example: "Fabrikam"). Returned by default. Read-only. Supports $filter, $search, $select. This property is read-only.
+     * Sets the publisherDisplayName property value. The name of the application catalog package publisher (example: &quot;Fabrikam&quot;). Returned by default. Read-only. Supports $filter, $search, $select. This property is read-only.
      * @param value Value to set for the publisherDisplayName property.
      */
     public void setPublisherDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publisherDisplayName", value);
     }
     /**
-     * Sets the versionDisplayName property value. The name of the product version (example: "1.2203.156"). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
+     * Sets the versionDisplayName property value. The name of the product version (example: &quot;1.2203.156&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
      * @param value Value to set for the versionDisplayName property.
      */
     public void setVersionDisplayName(@jakarta.annotation.Nullable final String value) {

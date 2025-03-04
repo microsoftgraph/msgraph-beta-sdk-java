@@ -110,7 +110,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         return this.backingStore.get("disconnectOnIdleTimerInSeconds");
     }
     /**
-     * Gets the enablePerApp property value. Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
+     * Gets the enablePerApp property value. Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user&apos;s iOS device.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         return this.backingStore.get("onDemandRules");
     }
     /**
-     * Gets the optInToDeviceIdSharing property value. Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
+     * Gets the optInToDeviceIdSharing property value. Opt-In to sharing the device&apos;s Id to third-party vpn clients for use during network access control validation.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -338,7 +338,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         this.backingStore.set("disconnectOnIdleTimerInSeconds", value);
     }
     /**
-     * Sets the enablePerApp property value. Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user's iOS device.
+     * Sets the enablePerApp property value. Setting this to true creates Per-App VPN payload which can later be associated with Apps that can trigger this VPN conneciton on the end user&apos;s iOS device.
      * @param value Value to set for the enablePerApp property.
      */
     public void setEnablePerApp(@jakarta.annotation.Nullable final Boolean value) {
@@ -380,7 +380,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         this.backingStore.set("onDemandRules", value);
     }
     /**
-     * Sets the optInToDeviceIdSharing property value. Opt-In to sharing the device's Id to third-party vpn clients for use during network access control validation.
+     * Sets the optInToDeviceIdSharing property value. Opt-In to sharing the device&apos;s Id to third-party vpn clients for use during network access control validation.
      * @param value Value to set for the optInToDeviceIdSharing property.
      */
     public void setOptInToDeviceIdSharing(@jakarta.annotation.Nullable final Boolean value) {

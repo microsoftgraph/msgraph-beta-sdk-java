@@ -25,7 +25,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
         return new RoleManagementAlert();
     }
     /**
-     * Gets the alertConfigurations property value. The various configurations of an alert for Microsoft Entra roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
+     * Gets the alertConfigurations property value. The various configurations of an alert for Microsoft Entra roles. The configurations are predefined and can&apos;t be created or deleted, but some of the configurations can be modified.
      * @return a {@link java.util.List<UnifiedRoleManagementAlertConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class RoleManagementAlert extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
     }
     /**
-     * Sets the alertConfigurations property value. The various configurations of an alert for Microsoft Entra roles. The configurations are predefined and can't be created or deleted, but some of the configurations can be modified.
+     * Sets the alertConfigurations property value. The various configurations of an alert for Microsoft Entra roles. The configurations are predefined and can&apos;t be created or deleted, but some of the configurations can be modified.
      * @param value Value to set for the alertConfigurations property.
      */
     public void setAlertConfigurations(@jakarta.annotation.Nullable final java.util.List<UnifiedRoleManagementAlertConfiguration> value) {

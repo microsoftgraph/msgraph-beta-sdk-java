@@ -83,7 +83,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         return deserializerMap;
     }
     /**
-     * Gets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
+     * Gets the firewallBlockAllIncoming property value. Corresponds to the &apos;Block all incoming connections&apos; option.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         return this.backingStore.get("firewallEnabled");
     }
     /**
-     * Gets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
+     * Gets the firewallEnableStealthMode property value. Corresponds to &apos;Enable stealth mode.&apos;
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -277,7 +277,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         this.backingStore.set("deviceThreatProtectionRequiredSecurityLevel", value);
     }
     /**
-     * Sets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
+     * Sets the firewallBlockAllIncoming property value. Corresponds to the &apos;Block all incoming connections&apos; option.
      * @param value Value to set for the firewallBlockAllIncoming property.
      */
     public void setFirewallBlockAllIncoming(@jakarta.annotation.Nullable final Boolean value) {
@@ -291,7 +291,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         this.backingStore.set("firewallEnabled", value);
     }
     /**
-     * Sets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
+     * Sets the firewallEnableStealthMode property value. Corresponds to &apos;Enable stealth mode.&apos;
      * @param value Value to set for the firewallEnableStealthMode property.
      */
     public void setFirewallEnableStealthMode(@jakarta.annotation.Nullable final Boolean value) {

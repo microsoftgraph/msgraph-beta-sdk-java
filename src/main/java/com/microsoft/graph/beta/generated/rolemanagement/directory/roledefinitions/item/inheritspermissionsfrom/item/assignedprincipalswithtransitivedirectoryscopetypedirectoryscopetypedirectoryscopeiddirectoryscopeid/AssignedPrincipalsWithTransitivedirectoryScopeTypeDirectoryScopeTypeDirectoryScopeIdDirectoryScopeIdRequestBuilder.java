@@ -100,12 +100,12 @@ public class AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTyp
         @jakarta.annotation.Nullable
         public Boolean count;
         /**
-         * Usage: directoryScopeId='@directoryScopeId'
+         * Usage: directoryScopeId=&apos;@directoryScopeId&apos;
          */
         @jakarta.annotation.Nullable
         public String directoryScopeId;
         /**
-         * Usage: directoryScopeType='@directoryScopeType'
+         * Usage: directoryScopeType=&apos;@directoryScopeType&apos;
          */
         @jakarta.annotation.Nullable
         public String directoryScopeType;

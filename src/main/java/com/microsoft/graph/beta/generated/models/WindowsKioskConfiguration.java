@@ -80,7 +80,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
         return this.backingStore.get("kioskBrowserDefaultUrl");
     }
     /**
-     * Gets the kioskBrowserEnableEndSessionButton property value. Enable the kiosk browser's end session button. By default, the end session button is disabled.
+     * Gets the kioskBrowserEnableEndSessionButton property value. Enable the kiosk browser&apos;s end session button. By default, the end session button is disabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
         return this.backingStore.get("kioskBrowserEnableEndSessionButton");
     }
     /**
-     * Gets the kioskBrowserEnableHomeButton property value. Enable the kiosk browser's home button. By default, the home button is disabled.
+     * Gets the kioskBrowserEnableHomeButton property value. Enable the kiosk browser&apos;s home button. By default, the home button is disabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
         return this.backingStore.get("kioskBrowserEnableHomeButton");
     }
     /**
-     * Gets the kioskBrowserEnableNavigationButtons property value. Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
+     * Gets the kioskBrowserEnableNavigationButtons property value. Enable the kiosk browser&apos;s navigation buttons(forward/back). By default, the navigation buttons are disabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -174,21 +174,21 @@ public class WindowsKioskConfiguration extends DeviceConfiguration implements Pa
         this.backingStore.set("kioskBrowserDefaultUrl", value);
     }
     /**
-     * Sets the kioskBrowserEnableEndSessionButton property value. Enable the kiosk browser's end session button. By default, the end session button is disabled.
+     * Sets the kioskBrowserEnableEndSessionButton property value. Enable the kiosk browser&apos;s end session button. By default, the end session button is disabled.
      * @param value Value to set for the kioskBrowserEnableEndSessionButton property.
      */
     public void setKioskBrowserEnableEndSessionButton(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("kioskBrowserEnableEndSessionButton", value);
     }
     /**
-     * Sets the kioskBrowserEnableHomeButton property value. Enable the kiosk browser's home button. By default, the home button is disabled.
+     * Sets the kioskBrowserEnableHomeButton property value. Enable the kiosk browser&apos;s home button. By default, the home button is disabled.
      * @param value Value to set for the kioskBrowserEnableHomeButton property.
      */
     public void setKioskBrowserEnableHomeButton(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("kioskBrowserEnableHomeButton", value);
     }
     /**
-     * Sets the kioskBrowserEnableNavigationButtons property value. Enable the kiosk browser's navigation buttons(forward/back). By default, the navigation buttons are disabled.
+     * Sets the kioskBrowserEnableNavigationButtons property value. Enable the kiosk browser&apos;s navigation buttons(forward/back). By default, the navigation buttons are disabled.
      * @param value Value to set for the kioskBrowserEnableNavigationButtons property.
      */
     public void setKioskBrowserEnableNavigationButtons(@jakarta.annotation.Nullable final Boolean value) {

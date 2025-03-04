@@ -41,7 +41,7 @@ public class ApiDataConnector extends IndustryDataConnector implements Parsable 
         return this.backingStore.get("apiFormat");
     }
     /**
-     * Gets the baseUrl property value. The base URL, including the scheme, host, and path for the API, with or without a trailing '/'. For example, 'https://example.com/ims/oneRoster/v1p1'
+     * Gets the baseUrl property value. The base URL, including the scheme, host, and path for the API, with or without a trailing &apos;/&apos;. For example, &apos;https://example.com/ims/oneRoster/v1p1&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class ApiDataConnector extends IndustryDataConnector implements Parsable 
         this.backingStore.set("apiFormat", value);
     }
     /**
-     * Sets the baseUrl property value. The base URL, including the scheme, host, and path for the API, with or without a trailing '/'. For example, 'https://example.com/ims/oneRoster/v1p1'
+     * Sets the baseUrl property value. The base URL, including the scheme, host, and path for the API, with or without a trailing &apos;/&apos;. For example, &apos;https://example.com/ims/oneRoster/v1p1&apos;
      * @param value Value to set for the baseUrl property.
      */
     public void setBaseUrl(@jakarta.annotation.Nullable final String value) {

@@ -21,7 +21,7 @@ import java.util.Objects;
 public class RetrieveMyRequestByIdWithIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link RetrieveMyRequestByIdWithIdRequestBuilder} and sets the default values.
-     * @param id Usage: id='{id}'
+     * @param id Usage: id=&apos;{id}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

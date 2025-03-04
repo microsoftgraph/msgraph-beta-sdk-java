@@ -56,7 +56,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the identity providers that are defined for an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object type.
+     * Get the identity providers that are defined for an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object type.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onauthenticationmethodloadstartexternalusersselfservicesignup-list-identityproviders?view=graph-rest-beta">Find more info here</a>
@@ -66,7 +66,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the identity providers that are defined for an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object type.
+     * Get the identity providers that are defined for an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -80,7 +80,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StringCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Add an identity provider to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object type. The identity provider must first be configured in the tenant.
+     * Add an identity provider to an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object type. The identity provider must first be configured in the tenant.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onauthenticationmethodloadstartexternalusersselfservicesignup-post-identityproviders?view=graph-rest-beta">Find more info here</a>
@@ -89,7 +89,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Add an identity provider to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object type. The identity provider must first be configured in the tenant.
+     * Add an identity provider to an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object type. The identity provider must first be configured in the tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -123,7 +123,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the identity providers that are defined for an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object type.
+     * Get the identity providers that are defined for an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object type.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -131,7 +131,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the identity providers that are defined for an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object type.
+     * Get the identity providers that are defined for an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object type.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -143,7 +143,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Add an identity provider to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object type. The identity provider must first be configured in the tenant.
+     * Add an identity provider to an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object type. The identity provider must first be configured in the tenant.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -152,7 +152,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Add an identity provider to an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object type. The identity provider must first be configured in the tenant.
+     * Add an identity provider to an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object type. The identity provider must first be configured in the tenant.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -209,7 +209,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }
     /**
-     * Get the identity providers that are defined for an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object type.
+     * Get the identity providers that are defined for an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object type.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

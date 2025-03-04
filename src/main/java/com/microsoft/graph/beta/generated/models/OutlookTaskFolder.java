@@ -74,7 +74,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the parentGroupKey property value. The unique GUID identifier for the task folder's parent group.
+     * Gets the parentGroupKey property value. The unique GUID identifier for the task folder&apos;s parent group.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class OutlookTaskFolder extends Entity implements Parsable {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the parentGroupKey property value. The unique GUID identifier for the task folder's parent group.
+     * Sets the parentGroupKey property value. The unique GUID identifier for the task folder&apos;s parent group.
      * @param value Value to set for the parentGroupKey property.
      */
     public void setParentGroupKey(@jakarta.annotation.Nullable final UUID value) {

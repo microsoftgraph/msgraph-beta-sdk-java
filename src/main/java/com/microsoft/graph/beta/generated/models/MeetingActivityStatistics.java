@@ -27,7 +27,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
         return new MeetingActivityStatistics();
     }
     /**
-     * Gets the afterHours property value. Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
+     * Gets the afterHours property value. Time spent on meetings outside of working hours, which is based on the user&apos;s Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class MeetingActivityStatistics extends ActivityStatistics implements Par
         writer.writePeriodAndDurationValue("recurring", this.getRecurring());
     }
     /**
-     * Sets the afterHours property value. Time spent on meetings outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
+     * Sets the afterHours property value. Time spent on meetings outside of working hours, which is based on the user&apos;s Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      * @param value Value to set for the afterHours property.
      */
     public void setAfterHours(@jakarta.annotation.Nullable final PeriodAndDuration value) {

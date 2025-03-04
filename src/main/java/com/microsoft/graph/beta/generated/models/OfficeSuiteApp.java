@@ -30,7 +30,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         return new OfficeSuiteApp();
     }
     /**
-     * Gets the autoAcceptEula property value. The value to accept the EULA automatically on the enduser's device.
+     * Gets the autoAcceptEula property value. The value to accept the EULA automatically on the enduser&apos;s device.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class OfficeSuiteApp extends MobileApp implements Parsable {
         writer.writeBooleanValue("useSharedComputerActivation", this.getUseSharedComputerActivation());
     }
     /**
-     * Sets the autoAcceptEula property value. The value to accept the EULA automatically on the enduser's device.
+     * Sets the autoAcceptEula property value. The value to accept the EULA automatically on the enduser&apos;s device.
      * @param value Value to set for the autoAcceptEula property.
      */
     public void setAutoAcceptEula(@jakarta.annotation.Nullable final Boolean value) {

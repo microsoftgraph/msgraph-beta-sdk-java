@@ -56,7 +56,7 @@ public class HardwarePasswordInfo extends Entity implements Parsable {
         return this.backingStore.get("previousPasswords");
     }
     /**
-     * Gets the serialNumber property value. Associated device's serial number . This property is read-only.
+     * Gets the serialNumber property value. Associated device&apos;s serial number . This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class HardwarePasswordInfo extends Entity implements Parsable {
         this.backingStore.set("previousPasswords", value);
     }
     /**
-     * Sets the serialNumber property value. Associated device's serial number . This property is read-only.
+     * Sets the serialNumber property value. Associated device&apos;s serial number . This property is read-only.
      * @param value Value to set for the serialNumber property.
      */
     public void setSerialNumber(@jakarta.annotation.Nullable final String value) {

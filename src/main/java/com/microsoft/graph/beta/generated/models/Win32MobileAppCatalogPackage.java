@@ -38,7 +38,7 @@ public class Win32MobileAppCatalogPackage extends MobileAppCatalogPackage implem
         return this.backingStore.get("applicableArchitectures");
     }
     /**
-     * Gets the branchDisplayName property value. The product branch name, which is a specific subset of product functionality as defined by the publisher (example: "Fabrikam for Business (x64)"). A specific product will have one or more branchDisplayNames. Read-only. Supports $filter, $search, $select. This property is read-only.
+     * Gets the branchDisplayName property value. The product branch name, which is a specific subset of product functionality as defined by the publisher (example: &quot;Fabrikam for Business (x64)&quot;). A specific product will have one or more branchDisplayNames. Read-only. Supports $filter, $search, $select. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class Win32MobileAppCatalogPackage extends MobileAppCatalogPackage implem
         this.backingStore.set("applicableArchitectures", value);
     }
     /**
-     * Sets the branchDisplayName property value. The product branch name, which is a specific subset of product functionality as defined by the publisher (example: "Fabrikam for Business (x64)"). A specific product will have one or more branchDisplayNames. Read-only. Supports $filter, $search, $select. This property is read-only.
+     * Sets the branchDisplayName property value. The product branch name, which is a specific subset of product functionality as defined by the publisher (example: &quot;Fabrikam for Business (x64)&quot;). A specific product will have one or more branchDisplayNames. Read-only. Supports $filter, $search, $select. This property is read-only.
      * @param value Value to set for the branchDisplayName property.
      */
     public void setBranchDisplayName(@jakarta.annotation.Nullable final String value) {

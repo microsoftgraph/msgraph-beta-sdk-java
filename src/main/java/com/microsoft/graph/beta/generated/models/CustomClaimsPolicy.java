@@ -62,7 +62,7 @@ public class CustomClaimsPolicy extends Entity implements Parsable {
         return this.backingStore.get("includeApplicationIdInIssuer");
     }
     /**
-     * Gets the includeBasicClaimSet property value. Determines whether the basic claim set is included in tokens affected by this policy. If set to true, all claims in the basic claim set are emitted in tokens affected by the policy. By default the basic claim set isn't in the tokens unless they're explicitly configured in this policy.
+     * Gets the includeBasicClaimSet property value. Determines whether the basic claim set is included in tokens affected by this policy. If set to true, all claims in the basic claim set are emitted in tokens affected by the policy. By default the basic claim set isn&apos;t in the tokens unless they&apos;re explicitly configured in this policy.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class CustomClaimsPolicy extends Entity implements Parsable {
         this.backingStore.set("includeApplicationIdInIssuer", value);
     }
     /**
-     * Sets the includeBasicClaimSet property value. Determines whether the basic claim set is included in tokens affected by this policy. If set to true, all claims in the basic claim set are emitted in tokens affected by the policy. By default the basic claim set isn't in the tokens unless they're explicitly configured in this policy.
+     * Sets the includeBasicClaimSet property value. Determines whether the basic claim set is included in tokens affected by this policy. If set to true, all claims in the basic claim set are emitted in tokens affected by the policy. By default the basic claim set isn&apos;t in the tokens unless they&apos;re explicitly configured in this policy.
      * @param value Value to set for the includeBasicClaimSet property.
      */
     public void setIncludeBasicClaimSet(@jakarta.annotation.Nullable final Boolean value) {

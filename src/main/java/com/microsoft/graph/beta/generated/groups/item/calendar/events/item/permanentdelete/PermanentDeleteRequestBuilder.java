@@ -35,7 +35,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/calendar/events/{event%2Did}/permanentDelete", rawUrl);
     }
     /**
-     * Permanently delete an event and place it in the Purges folder in the dumpster in the user's mailbox. Email clients such as Outlook or the Outlook on the web can't access permanently deleted items. Unless there's a hold set on the mailbox, the items are permanently deleted after a set period of time. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
+     * Permanently delete an event and place it in the Purges folder in the dumpster in the user&apos;s mailbox. Email clients such as Outlook or the Outlook on the web can&apos;t access permanently deleted items. Unless there&apos;s a hold set on the mailbox, the items are permanently deleted after a set period of time. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/event-permanentdelete?view=graph-rest-beta">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Permanently delete an event and place it in the Purges folder in the dumpster in the user's mailbox. Email clients such as Outlook or the Outlook on the web can't access permanently deleted items. Unless there's a hold set on the mailbox, the items are permanently deleted after a set period of time. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
+     * Permanently delete an event and place it in the Purges folder in the dumpster in the user&apos;s mailbox. Email clients such as Outlook or the Outlook on the web can&apos;t access permanently deleted items. Unless there&apos;s a hold set on the mailbox, the items are permanently deleted after a set period of time. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/event-permanentdelete?view=graph-rest-beta">Find more info here</a>
@@ -55,7 +55,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Permanently delete an event and place it in the Purges folder in the dumpster in the user's mailbox. Email clients such as Outlook or the Outlook on the web can't access permanently deleted items. Unless there's a hold set on the mailbox, the items are permanently deleted after a set period of time. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
+     * Permanently delete an event and place it in the Purges folder in the dumpster in the user&apos;s mailbox. Email clients such as Outlook or the Outlook on the web can&apos;t access permanently deleted items. Unless there&apos;s a hold set on the mailbox, the items are permanently deleted after a set period of time. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Permanently delete an event and place it in the Purges folder in the dumpster in the user's mailbox. Email clients such as Outlook or the Outlook on the web can't access permanently deleted items. Unless there's a hold set on the mailbox, the items are permanently deleted after a set period of time. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
+     * Permanently delete an event and place it in the Purges folder in the dumpster in the user&apos;s mailbox. Email clients such as Outlook or the Outlook on the web can&apos;t access permanently deleted items. Unless there&apos;s a hold set on the mailbox, the items are permanently deleted after a set period of time. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

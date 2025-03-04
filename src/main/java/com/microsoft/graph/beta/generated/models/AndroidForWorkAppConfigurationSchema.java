@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Schema describing an Android for Work application's custom configurations.
+ * Schema describing an Android for Work application&apos;s custom configurations.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidForWorkAppConfigurationSchema extends Entity implements Parsable {

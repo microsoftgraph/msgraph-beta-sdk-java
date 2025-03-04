@@ -67,7 +67,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         return this.backingStore.get("comparisonResult");
     }
     /**
-     * Gets the currentValueJson property value. JSON representation of current intent (or) template setting's value
+     * Gets the currentValueJson property value. JSON representation of current intent (or) template setting&apos;s value
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         return this.backingStore.get("definitionId");
     }
     /**
-     * Gets the displayName property value. The setting's display name
+     * Gets the displayName property value. The setting&apos;s display name
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         return this.backingStore.get("id");
     }
     /**
-     * Gets the newValueJson property value. JSON representation of new template setting's value
+     * Gets the newValueJson property value. JSON representation of new template setting&apos;s value
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         this.backingStore.set("comparisonResult", value);
     }
     /**
-     * Sets the currentValueJson property value. JSON representation of current intent (or) template setting's value
+     * Sets the currentValueJson property value. JSON representation of current intent (or) template setting&apos;s value
      * @param value Value to set for the currentValueJson property.
      */
     public void setCurrentValueJson(@jakarta.annotation.Nullable final String value) {
@@ -182,7 +182,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         this.backingStore.set("definitionId", value);
     }
     /**
-     * Sets the displayName property value. The setting's display name
+     * Sets the displayName property value. The setting&apos;s display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -196,7 +196,7 @@ public class DeviceManagementSettingComparison implements AdditionalDataHolder, 
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the newValueJson property value. JSON representation of new template setting's value
+     * Sets the newValueJson property value. JSON representation of new template setting&apos;s value
      * @param value Value to set for the newValueJson property.
      */
     public void setNewValueJson(@jakarta.annotation.Nullable final String value) {

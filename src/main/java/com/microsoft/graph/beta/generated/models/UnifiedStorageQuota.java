@@ -65,7 +65,7 @@ public class UnifiedStorageQuota extends Entity implements Parsable {
         return this.backingStore.get("remaining");
     }
     /**
-     * Gets the services property value. The breakdown of services contributing to the user's quota usage.
+     * Gets the services property value. The breakdown of services contributing to the user&apos;s quota usage.
      * @return a {@link java.util.List<ServiceStorageQuotaBreakdown>}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class UnifiedStorageQuota extends Entity implements Parsable {
         this.backingStore.set("remaining", value);
     }
     /**
-     * Sets the services property value. The breakdown of services contributing to the user's quota usage.
+     * Sets the services property value. The breakdown of services contributing to the user&apos;s quota usage.
      * @param value Value to set for the services property.
      */
     public void setServices(@jakarta.annotation.Nullable final java.util.List<ServiceStorageQuotaBreakdown> value) {

@@ -29,7 +29,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
         return new BookingStaffMember();
     }
     /**
-     * Gets the availabilityIsAffectedByPersonalCalendar property value. True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
+     * Gets the availabilityIsAffectedByPersonalCalendar property value. True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member&apos;s availability in their personal calendar in Microsoft 365, before making a booking.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
         return this.backingStore.get("timeZone");
     }
     /**
-     * Gets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
+     * Gets the useBusinessHours property value. True means the staff member&apos;s availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member&apos;s workingHours property setting.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
         return this.backingStore.get("useBusinessHours");
     }
     /**
-     * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they're initialized to be the same as the businessHours property of the business.
+     * Gets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they&apos;re initialized to be the same as the businessHours property of the business.
      * @return a {@link java.util.List<BookingWorkHours>}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
         writer.writeCollectionOfObjectValues("workingHours", this.getWorkingHours());
     }
     /**
-     * Sets the availabilityIsAffectedByPersonalCalendar property value. True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member's availability in their personal calendar in Microsoft 365, before making a booking.
+     * Sets the availabilityIsAffectedByPersonalCalendar property value. True means that if the staff member is a Microsoft 365 user, the Bookings API would verify the staff member&apos;s availability in their personal calendar in Microsoft 365, before making a booking.
      * @param value Value to set for the availabilityIsAffectedByPersonalCalendar property.
      */
     public void setAvailabilityIsAffectedByPersonalCalendar(@jakarta.annotation.Nullable final Boolean value) {
@@ -202,14 +202,14 @@ public class BookingStaffMember extends BookingPerson implements Parsable {
         this.backingStore.set("timeZone", value);
     }
     /**
-     * Sets the useBusinessHours property value. True means the staff member's availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member's workingHours property setting.
+     * Sets the useBusinessHours property value. True means the staff member&apos;s availability is as specified in the businessHours property of the business. False means the availability is determined by the staff member&apos;s workingHours property setting.
      * @param value Value to set for the useBusinessHours property.
      */
     public void setUseBusinessHours(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("useBusinessHours", value);
     }
     /**
-     * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they're initialized to be the same as the businessHours property of the business.
+     * Sets the workingHours property value. The range of hours each day of the week that the staff member is available for booking. By default, they&apos;re initialized to be the same as the businessHours property of the business.
      * @param value Value to set for the workingHours property.
      */
     public void setWorkingHours(@jakarta.annotation.Nullable final java.util.List<BookingWorkHours> value) {

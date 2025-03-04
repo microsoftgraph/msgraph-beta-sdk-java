@@ -34,7 +34,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         return this.backingStore.get("additionalNotificationRecipients");
     }
     /**
-     * Gets the backupReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn't exist, or manager is specified as reviewer but a user's manager doesn't exist.  Supports $select. Note: This property has been replaced by fallbackReviewers. However, specifying either backupReviewers or fallbackReviewers automatically populates the same values to the other property.
+     * Gets the backupReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn&apos;t exist, or manager is specified as reviewer but a user&apos;s manager doesn&apos;t exist.  Supports $select. Note: This property has been replaced by fallbackReviewers. However, specifying either backupReviewers or fallbackReviewers automatically populates the same values to the other property.
      * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn't exist, or manager is specified as reviewer but a user's manager doesn't exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. NOTE: The value of this property will be ignored if fallback reviewers are assigned through the stageSettings property.
+     * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn&apos;t exist, or manager is specified as reviewer but a user&apos;s manager doesn&apos;t exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. NOTE: The value of this property will be ignored if fallback reviewers are assigned through the stageSettings property.
      * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the instanceEnumerationScope property value. This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group becomes a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
+     * Gets the instanceEnumerationScope property value. This property is required when scoping a review to guest users&apos; access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group becomes a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
      * @return a {@link AccessReviewScope}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         return this.backingStore.get("instanceEnumerationScope");
     }
     /**
-     * Gets the instances property value. Set of access reviews instances for this access review series. Access reviews that don't recur will only have one instance; otherwise, there's an instance for each recurrence.
+     * Gets the instances property value. Set of access reviews instances for this access review series. Access reviews that don&apos;t recur will only have one instance; otherwise, there&apos;s an instance for each recurrence.
      * @return a {@link java.util.List<AccessReviewInstance>}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         this.backingStore.set("additionalNotificationRecipients", value);
     }
     /**
-     * Sets the backupReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn't exist, or manager is specified as reviewer but a user's manager doesn't exist.  Supports $select. Note: This property has been replaced by fallbackReviewers. However, specifying either backupReviewers or fallbackReviewers automatically populates the same values to the other property.
+     * Sets the backupReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn&apos;t exist, or manager is specified as reviewer but a user&apos;s manager doesn&apos;t exist.  Supports $select. Note: This property has been replaced by fallbackReviewers. However, specifying either backupReviewers or fallbackReviewers automatically populates the same values to the other property.
      * @param value Value to set for the backupReviewers property.
      */
     public void setBackupReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
@@ -252,21 +252,21 @@ public class AccessReviewScheduleDefinition extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn't exist, or manager is specified as reviewer but a user's manager doesn't exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. NOTE: The value of this property will be ignored if fallback reviewers are assigned through the stageSettings property.
+     * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers will be notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn&apos;t exist, or manager is specified as reviewer but a user&apos;s manager doesn&apos;t exist. See accessReviewReviewerScope. Replaces backupReviewers. Supports $select. NOTE: The value of this property will be ignored if fallback reviewers are assigned through the stageSettings property.
      * @param value Value to set for the fallbackReviewers property.
      */
     public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {
         this.backingStore.set("fallbackReviewers", value);
     }
     /**
-     * Sets the instanceEnumerationScope property value. This property is required when scoping a review to guest users' access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group becomes a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
+     * Sets the instanceEnumerationScope property value. This property is required when scoping a review to guest users&apos; access across all Microsoft 365 groups and determines which Microsoft 365 groups are reviewed. Each group becomes a unique accessReviewInstance of the access review series.  For supported scopes, see accessReviewScope. Supports $select. For examples of options for configuring instanceEnumerationScope, see Configure the scope of your access review definition using the Microsoft Graph API.
      * @param value Value to set for the instanceEnumerationScope property.
      */
     public void setInstanceEnumerationScope(@jakarta.annotation.Nullable final AccessReviewScope value) {
         this.backingStore.set("instanceEnumerationScope", value);
     }
     /**
-     * Sets the instances property value. Set of access reviews instances for this access review series. Access reviews that don't recur will only have one instance; otherwise, there's an instance for each recurrence.
+     * Sets the instances property value. Set of access reviews instances for this access review series. Access reviews that don&apos;t recur will only have one instance; otherwise, there&apos;s an instance for each recurrence.
      * @param value Value to set for the instances property.
      */
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<AccessReviewInstance> value) {

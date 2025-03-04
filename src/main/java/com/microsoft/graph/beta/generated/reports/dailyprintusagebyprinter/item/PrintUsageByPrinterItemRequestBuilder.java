@@ -55,7 +55,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve a printer's usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
+     * Retrieve a printer&apos;s usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      * @return a {@link PrintUsageByPrinter}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printusagebyprinter-get?view=graph-rest-beta">Find more info here</a>
@@ -65,7 +65,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve a printer's usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
+     * Retrieve a printer&apos;s usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrintUsageByPrinter}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -124,7 +124,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve a printer's usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
+     * Retrieve a printer&apos;s usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a printer's usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
+     * Retrieve a printer&apos;s usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +184,7 @@ public class PrintUsageByPrinterItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve a printer's usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
+     * Retrieve a printer&apos;s usage summary for a particular time period. For descriptions of each of the endpoints, see printUsageByPrinter.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

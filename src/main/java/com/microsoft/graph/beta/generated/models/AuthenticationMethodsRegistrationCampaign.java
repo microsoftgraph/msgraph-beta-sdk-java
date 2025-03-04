@@ -103,7 +103,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0  The user is prompted during every MFA attempt.
+     * Gets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select &apos;Not now&apos; and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0  The user is prompted during every MFA attempt.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class AuthenticationMethodsRegistrationCampaign implements AdditionalData
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select 'Not now' and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0  The user is prompted during every MFA attempt.
+     * Sets the snoozeDurationInDays property value. Specifies the number of days that the user sees a prompt again if they select &apos;Not now&apos; and snoozes the prompt. Minimum 0 days. Maximum: 14 days. If the value is 0  The user is prompted during every MFA attempt.
      * @param value Value to set for the snoozeDurationInDays property.
      */
     public void setSnoozeDurationInDays(@jakarta.annotation.Nullable final Integer value) {

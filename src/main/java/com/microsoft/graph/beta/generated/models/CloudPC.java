@@ -157,7 +157,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("gracePeriodEndDateTime");
     }
     /**
-     * Gets the imageDisplayName property value. Name of the OS image that's on the Cloud PC.
+     * Gets the imageDisplayName property value. Name of the OS image that&apos;s on the Cloud PC.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("imageDisplayName");
     }
     /**
-     * Gets the lastLoginResult property value. The last login result of the Cloud PC. For example, { 'time': '2014-01-01T00:00:00Z'}.
+     * Gets the lastLoginResult property value. The last login result of the Cloud PC. For example, { &apos;time&apos;: &apos;2014-01-01T00:00:00Z&apos;}.
      * @return a {@link CloudPcLoginResult}
      */
     @jakarta.annotation.Nullable
@@ -221,7 +221,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("osVersion");
     }
     /**
-     * Gets the partnerAgentInstallResults property value. The results of every partner agent's installation status on Cloud PC.
+     * Gets the partnerAgentInstallResults property value. The results of every partner agent&apos;s installation status on Cloud PC.
      * @return a {@link java.util.List<CloudPcPartnerAgentInstallResult>}
      */
     @jakarta.annotation.Nullable
@@ -309,7 +309,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the statusDetail property value. Indicates the detailed status associated with Cloud PC, including error/warning code, error/warning message, additionalInformation. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }.
+     * Gets the statusDetail property value. Indicates the detailed status associated with Cloud PC, including error/warning code, error/warning message, additionalInformation. For example, { &apos;code&apos;: &apos;internalServerError&apos;, &apos;message&apos;: &apos;There was an error during the Cloud PC upgrade. Please contact support.&apos;, &apos;additionalInformation&apos;: null }.
      * @return a {@link CloudPcStatusDetail}
      */
     @jakarta.annotation.Nullable
@@ -317,7 +317,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("statusDetail");
     }
     /**
-     * Gets the statusDetails property value. The details of the Cloud PC status. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
+     * Gets the statusDetails property value. The details of the Cloud PC status. For example, { &apos;code&apos;: &apos;internalServerError&apos;, &apos;message&apos;: &apos;There was an error during the Cloud PC upgrade. Please contact support.&apos;, &apos;additionalInformation&apos;: null }. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
      * @return a {@link CloudPcStatusDetails}
      */
     @jakarta.annotation.Nullable
@@ -460,14 +460,14 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("gracePeriodEndDateTime", value);
     }
     /**
-     * Sets the imageDisplayName property value. Name of the OS image that's on the Cloud PC.
+     * Sets the imageDisplayName property value. Name of the OS image that&apos;s on the Cloud PC.
      * @param value Value to set for the imageDisplayName property.
      */
     public void setImageDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("imageDisplayName", value);
     }
     /**
-     * Sets the lastLoginResult property value. The last login result of the Cloud PC. For example, { 'time': '2014-01-01T00:00:00Z'}.
+     * Sets the lastLoginResult property value. The last login result of the Cloud PC. For example, { &apos;time&apos;: &apos;2014-01-01T00:00:00Z&apos;}.
      * @param value Value to set for the lastLoginResult property.
      */
     public void setLastLoginResult(@jakarta.annotation.Nullable final CloudPcLoginResult value) {
@@ -516,7 +516,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("osVersion", value);
     }
     /**
-     * Sets the partnerAgentInstallResults property value. The results of every partner agent's installation status on Cloud PC.
+     * Sets the partnerAgentInstallResults property value. The results of every partner agent&apos;s installation status on Cloud PC.
      * @param value Value to set for the partnerAgentInstallResults property.
      */
     public void setPartnerAgentInstallResults(@jakarta.annotation.Nullable final java.util.List<CloudPcPartnerAgentInstallResult> value) {
@@ -593,14 +593,14 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the statusDetail property value. Indicates the detailed status associated with Cloud PC, including error/warning code, error/warning message, additionalInformation. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }.
+     * Sets the statusDetail property value. Indicates the detailed status associated with Cloud PC, including error/warning code, error/warning message, additionalInformation. For example, { &apos;code&apos;: &apos;internalServerError&apos;, &apos;message&apos;: &apos;There was an error during the Cloud PC upgrade. Please contact support.&apos;, &apos;additionalInformation&apos;: null }.
      * @param value Value to set for the statusDetail property.
      */
     public void setStatusDetail(@jakarta.annotation.Nullable final CloudPcStatusDetail value) {
         this.backingStore.set("statusDetail", value);
     }
     /**
-     * Sets the statusDetails property value. The details of the Cloud PC status. For example, { 'code': 'internalServerError', 'message': 'There was an error during the Cloud PC upgrade. Please contact support.', 'additionalInformation': null }. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
+     * Sets the statusDetails property value. The details of the Cloud PC status. For example, { &apos;code&apos;: &apos;internalServerError&apos;, &apos;message&apos;: &apos;There was an error during the Cloud PC upgrade. Please contact support.&apos;, &apos;additionalInformation&apos;: null }. This property is deprecated and will no longer be supported effective August 31, 2024. Use statusDetail instead.
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final CloudPcStatusDetails value) {

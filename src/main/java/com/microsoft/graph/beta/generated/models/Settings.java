@@ -69,7 +69,7 @@ public class Settings implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hasGraphMailbox property value. Specifies if the user's primary mailbox is hosted in the cloud and is enabled for Microsoft Graph.
+     * Gets the hasGraphMailbox property value. Specifies if the user&apos;s primary mailbox is hosted in the cloud and is enabled for Microsoft Graph.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class Settings implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the hasGraphMailbox property value. Specifies if the user's primary mailbox is hosted in the cloud and is enabled for Microsoft Graph.
+     * Sets the hasGraphMailbox property value. Specifies if the user&apos;s primary mailbox is hosted in the cloud and is enabled for Microsoft Graph.
      * @param value Value to set for the hasGraphMailbox property.
      */
     public void setHasGraphMailbox(@jakarta.annotation.Nullable final Boolean value) {

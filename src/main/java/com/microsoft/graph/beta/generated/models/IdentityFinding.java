@@ -79,7 +79,7 @@ public class IdentityFinding extends Finding implements Parsable {
         return this.backingStore.get("identity");
     }
     /**
-     * Gets the identityDetails property value. An identity's information details.
+     * Gets the identityDetails property value. An identity&apos;s information details.
      * @return a {@link IdentityDetails}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class IdentityFinding extends Finding implements Parsable {
         this.backingStore.set("identity", value);
     }
     /**
-     * Sets the identityDetails property value. An identity's information details.
+     * Sets the identityDetails property value. An identity&apos;s information details.
      * @param value Value to set for the identityDetails property.
      */
     public void setIdentityDetails(@jakarta.annotation.Nullable final IdentityDetails value) {

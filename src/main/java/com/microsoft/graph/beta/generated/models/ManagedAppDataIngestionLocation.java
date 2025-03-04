@@ -12,9 +12,9 @@ public enum ManagedAppDataIngestionLocation implements ValuedEnum {
     OneDriveForBusiness("oneDriveForBusiness"),
     /** SharePoint Online */
     SharePoint("sharePoint"),
-    /** The device's camera */
+    /** The device&apos;s camera */
     Camera("camera"),
-    /** The device's photo library */
+    /** The device&apos;s photo library */
     PhotoLibrary("photoLibrary");
     public final String value;
     ManagedAppDataIngestionLocation(final String value) {

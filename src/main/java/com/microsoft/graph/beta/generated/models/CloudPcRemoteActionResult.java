@@ -99,7 +99,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         return deserializerMap;
     }
     /**
-     * Gets the lastUpdatedDateTime property value. Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
+     * Gets the lastUpdatedDateTime property value. Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as&apos;2014-01-01T00:00:00Z&apos;.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
+     * Gets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as&apos;2014-01-01T00:00:00Z&apos;.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the statusDetail property value. The extended details of the action status, including error code, error message, and additional information. For example, 'statusDetail': {'code': 'internalServerError','message': 'There was an internal server error. Please contact support xxx.','additionalInformation': [ { '@odata.type':'microsoft.graph.keyValuePair','name': 'correlationId','value': '52367774-cfb7-4e9c-ab51-1b864c31f2d1'} ]}
+     * Gets the statusDetail property value. The extended details of the action status, including error code, error message, and additional information. For example, &apos;statusDetail&apos;: {&apos;code&apos;: &apos;internalServerError&apos;,&apos;message&apos;: &apos;There was an internal server error. Please contact support xxx.&apos;,&apos;additionalInformation&apos;: [ { &apos;@odata.type&apos;:&apos;microsoft.graph.keyValuePair&apos;,&apos;name&apos;: &apos;correlationId&apos;,&apos;value&apos;: &apos;52367774-cfb7-4e9c-ab51-1b864c31f2d1&apos;} ]}
      * @return a {@link CloudPcStatusDetail}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         this.backingStore.set("cloudPcId", value);
     }
     /**
-     * Sets the lastUpdatedDateTime property value. Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
+     * Sets the lastUpdatedDateTime property value. Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as&apos;2014-01-01T00:00:00Z&apos;.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -221,14 +221,14 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
+     * Sets the startDateTime property value. Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as&apos;2014-01-01T00:00:00Z&apos;.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the statusDetail property value. The extended details of the action status, including error code, error message, and additional information. For example, 'statusDetail': {'code': 'internalServerError','message': 'There was an internal server error. Please contact support xxx.','additionalInformation': [ { '@odata.type':'microsoft.graph.keyValuePair','name': 'correlationId','value': '52367774-cfb7-4e9c-ab51-1b864c31f2d1'} ]}
+     * Sets the statusDetail property value. The extended details of the action status, including error code, error message, and additional information. For example, &apos;statusDetail&apos;: {&apos;code&apos;: &apos;internalServerError&apos;,&apos;message&apos;: &apos;There was an internal server error. Please contact support xxx.&apos;,&apos;additionalInformation&apos;: [ { &apos;@odata.type&apos;:&apos;microsoft.graph.keyValuePair&apos;,&apos;name&apos;: &apos;correlationId&apos;,&apos;value&apos;: &apos;52367774-cfb7-4e9c-ab51-1b864c31f2d1&apos;} ]}
      * @param value Value to set for the statusDetail property.
      */
     public void setStatusDetail(@jakarta.annotation.Nullable final CloudPcStatusDetail value) {

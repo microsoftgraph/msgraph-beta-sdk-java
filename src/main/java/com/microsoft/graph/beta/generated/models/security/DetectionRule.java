@@ -34,7 +34,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
         return this.backingStore.get("detectionAction");
     }
     /**
-     * Gets the detectorId property value. The ID of the detector that triggered the alert. Also see the 'detectorId' field in microsoft.graph.security.alert.
+     * Gets the detectorId property value. The ID of the detector that triggered the alert. Also see the &apos;detectorId&apos; field in microsoft.graph.security.alert.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class DetectionRule extends ProtectionRule implements Parsable {
         this.backingStore.set("detectionAction", value);
     }
     /**
-     * Sets the detectorId property value. The ID of the detector that triggered the alert. Also see the 'detectorId' field in microsoft.graph.security.alert.
+     * Sets the detectorId property value. The ID of the detector that triggered the alert. Also see the &apos;detectorId&apos; field in microsoft.graph.security.alert.
      * @param value Value to set for the detectorId property.
      */
     public void setDetectorId(@jakarta.annotation.Nullable final String value) {

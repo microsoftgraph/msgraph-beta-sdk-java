@@ -127,7 +127,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the previewVisibility property value. Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings.
+     * Gets the previewVisibility property value. Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user&apos;s defined preview settings.
      * @return a {@link IosNotificationPreviewVisibility}
      */
     @jakarta.annotation.Nullable
@@ -243,7 +243,7 @@ public class IosNotificationSettings implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the previewVisibility property value. Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user's defined preview settings.
+     * Sets the previewVisibility property value. Determines when notification previews are visible on an iOS device. Previews can include things like text (from Messages and Mail) and invitation details (from Calendar). When configured, it will override the user&apos;s defined preview settings.
      * @param value Value to set for the previewVisibility property.
      */
     public void setPreviewVisibility(@jakarta.annotation.Nullable final IosNotificationPreviewVisibility value) {

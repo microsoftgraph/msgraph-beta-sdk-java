@@ -84,7 +84,7 @@ public class DepOnboardingSettingsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getExpiringVppTokenCount method.
-     * @param expiringBeforeDateTime Usage: expiringBeforeDateTime='{expiringBeforeDateTime}'
+     * @param expiringBeforeDateTime Usage: expiringBeforeDateTime=&apos;{expiringBeforeDateTime}&apos;
      * @return a {@link GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull

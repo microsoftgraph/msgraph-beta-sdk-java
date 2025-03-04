@@ -77,7 +77,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
         return deserializerMap;
     }
     /**
-     * Gets the roleDefinitionId property value. The identifier for the directory role definition that's in scope of this incident.
+     * Gets the roleDefinitionId property value. The identifier for the directory role definition that&apos;s in scope of this incident.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManage
         this.backingStore.set("assigneeUserPrincipalName", value);
     }
     /**
-     * Sets the roleDefinitionId property value. The identifier for the directory role definition that's in scope of this incident.
+     * Sets the roleDefinitionId property value. The identifier for the directory role definition that&apos;s in scope of this incident.
      * @param value Value to set for the roleDefinitionId property.
      */
     public void setRoleDefinitionId(@jakarta.annotation.Nullable final String value) {

@@ -117,7 +117,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanMedium");
     }
     /**
-     * Gets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Gets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block &amp; wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -573,7 +573,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanMedium", value);
     }
     /**
-     * Sets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block & wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Sets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block &amp; wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @param value Value to set for the appActionIfSamsungKnoxAttestationRequired property.
      */
     public void setAppActionIfSamsungKnoxAttestationRequired(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {

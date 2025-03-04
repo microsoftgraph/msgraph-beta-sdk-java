@@ -87,7 +87,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         return this.backingStore.get("installStatus");
     }
     /**
-     * Gets the isThirdPartyPartner property value. Indicates whether the partner agent is a third party. When true, the agent is a third-party (non-Microsoft) agent and when false, the agent is a Microsoft agent or isn't known.  The default value is false.
+     * Gets the isThirdPartyPartner property value. Indicates whether the partner agent is a third party. When true, the agent is a third-party (non-Microsoft) agent and when false, the agent is a Microsoft agent or isn&apos;t known.  The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         this.backingStore.set("installStatus", value);
     }
     /**
-     * Sets the isThirdPartyPartner property value. Indicates whether the partner agent is a third party. When true, the agent is a third-party (non-Microsoft) agent and when false, the agent is a Microsoft agent or isn't known.  The default value is false.
+     * Sets the isThirdPartyPartner property value. Indicates whether the partner agent is a third party. When true, the agent is a third-party (non-Microsoft) agent and when false, the agent is a Microsoft agent or isn&apos;t known.  The default value is false.
      * @param value Value to set for the isThirdPartyPartner property.
      */
     public void setIsThirdPartyPartner(@jakarta.annotation.Nullable final Boolean value) {

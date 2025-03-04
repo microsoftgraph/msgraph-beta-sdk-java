@@ -26,7 +26,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
         return new Office365GroupsActivityFileCounts();
     }
     /**
-     * Gets the active property value. The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
+     * Gets the active property value. The number of files that were viewed, edited, shared, or synced in the group&apos;s SharePoint document library.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the reportDate property value. The date on which a number of files were active in the group's SharePoint site.
+     * Gets the reportDate property value. The date on which a number of files were active in the group&apos;s SharePoint site.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
         return this.backingStore.get("reportRefreshDate");
     }
     /**
-     * Gets the total property value. The total number of files in the group's SharePoint document library.
+     * Gets the total property value. The total number of files in the group&apos;s SharePoint document library.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -93,14 +93,14 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
         writer.writeLongValue("total", this.getTotal());
     }
     /**
-     * Sets the active property value. The number of files that were viewed, edited, shared, or synced in the group's SharePoint document library.
+     * Sets the active property value. The number of files that were viewed, edited, shared, or synced in the group&apos;s SharePoint document library.
      * @param value Value to set for the active property.
      */
     public void setActive(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("active", value);
     }
     /**
-     * Sets the reportDate property value. The date on which a number of files were active in the group's SharePoint site.
+     * Sets the reportDate property value. The date on which a number of files were active in the group&apos;s SharePoint site.
      * @param value Value to set for the reportDate property.
      */
     public void setReportDate(@jakarta.annotation.Nullable final LocalDate value) {
@@ -121,7 +121,7 @@ public class Office365GroupsActivityFileCounts extends Entity implements Parsabl
         this.backingStore.set("reportRefreshDate", value);
     }
     /**
-     * Sets the total property value. The total number of files in the group's SharePoint document library.
+     * Sets the total property value. The total number of files in the group&apos;s SharePoint document library.
      * @param value Value to set for the total property.
      */
     public void setTotal(@jakarta.annotation.Nullable final Long value) {

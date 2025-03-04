@@ -72,7 +72,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return this.backingStore.get("disasterRecoveryNetworkSetting");
     }
     /**
-     * Gets the disasterRecoveryType property value. Indicates the type of disaster recovery to perform when a disaster occurs on the user's Cloud PC. The possible values are: notConfigured, crossRegion, premium, unknownFutureValue. The default value is notConfigured.
+     * Gets the disasterRecoveryType property value. Indicates the type of disaster recovery to perform when a disaster occurs on the user&apos;s Cloud PC. The possible values are: notConfigured, crossRegion, premium, unknownFutureValue. The default value is notConfigured.
      * @return a {@link CloudPcDisasterRecoveryType}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return deserializerMap;
     }
     /**
-     * Gets the maintainCrossRegionRestorePointEnabled property value. Indicates whether Windows 365 maintain the cross-region disaster recovery function generated restore points. If true, the Windows 365 stored restore points; false indicates that Windows 365 doesn't generate or keep the restore point from the original Cloud PC. If a disaster occurs, the new Cloud PC can only be provisioned using the initial image. This limitation can result in the loss of some user data on the original Cloud PC. The default value is false.
+     * Gets the maintainCrossRegionRestorePointEnabled property value. Indicates whether Windows 365 maintain the cross-region disaster recovery function generated restore points. If true, the Windows 365 stored restore points; false indicates that Windows 365 doesn&apos;t generate or keep the restore point from the original Cloud PC. If a disaster occurs, the new Cloud PC can only be provisioned using the initial image. This limitation can result in the loss of some user data on the original Cloud PC. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the userInitiatedDisasterRecoveryAllowed property value. Indicates whether the client allows the end user to initiate a disaster recovery activation. True indicates that the client includes the option for the end user to activate Backup Cloud PC. When false, the end user doesn't have the option to activate disaster recovery. The default value is false. Currently, only premium disaster recovery is supported.
+     * Gets the userInitiatedDisasterRecoveryAllowed property value. Indicates whether the client allows the end user to initiate a disaster recovery activation. True indicates that the client includes the option for the end user to activate Backup Cloud PC. When false, the end user doesn&apos;t have the option to activate disaster recovery. The default value is false. Currently, only premium disaster recovery is supported.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -162,14 +162,14 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         this.backingStore.set("disasterRecoveryNetworkSetting", value);
     }
     /**
-     * Sets the disasterRecoveryType property value. Indicates the type of disaster recovery to perform when a disaster occurs on the user's Cloud PC. The possible values are: notConfigured, crossRegion, premium, unknownFutureValue. The default value is notConfigured.
+     * Sets the disasterRecoveryType property value. Indicates the type of disaster recovery to perform when a disaster occurs on the user&apos;s Cloud PC. The possible values are: notConfigured, crossRegion, premium, unknownFutureValue. The default value is notConfigured.
      * @param value Value to set for the disasterRecoveryType property.
      */
     public void setDisasterRecoveryType(@jakarta.annotation.Nullable final CloudPcDisasterRecoveryType value) {
         this.backingStore.set("disasterRecoveryType", value);
     }
     /**
-     * Sets the maintainCrossRegionRestorePointEnabled property value. Indicates whether Windows 365 maintain the cross-region disaster recovery function generated restore points. If true, the Windows 365 stored restore points; false indicates that Windows 365 doesn't generate or keep the restore point from the original Cloud PC. If a disaster occurs, the new Cloud PC can only be provisioned using the initial image. This limitation can result in the loss of some user data on the original Cloud PC. The default value is false.
+     * Sets the maintainCrossRegionRestorePointEnabled property value. Indicates whether Windows 365 maintain the cross-region disaster recovery function generated restore points. If true, the Windows 365 stored restore points; false indicates that Windows 365 doesn&apos;t generate or keep the restore point from the original Cloud PC. If a disaster occurs, the new Cloud PC can only be provisioned using the initial image. This limitation can result in the loss of some user data on the original Cloud PC. The default value is false.
      * @param value Value to set for the maintainCrossRegionRestorePointEnabled property.
      */
     public void setMaintainCrossRegionRestorePointEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -183,7 +183,7 @@ public class CloudPcCrossRegionDisasterRecoverySetting implements AdditionalData
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the userInitiatedDisasterRecoveryAllowed property value. Indicates whether the client allows the end user to initiate a disaster recovery activation. True indicates that the client includes the option for the end user to activate Backup Cloud PC. When false, the end user doesn't have the option to activate disaster recovery. The default value is false. Currently, only premium disaster recovery is supported.
+     * Sets the userInitiatedDisasterRecoveryAllowed property value. Indicates whether the client allows the end user to initiate a disaster recovery activation. True indicates that the client includes the option for the end user to activate Backup Cloud PC. When false, the end user doesn&apos;t have the option to activate disaster recovery. The default value is false. Currently, only premium disaster recovery is supported.
      * @param value Value to set for the userInitiatedDisasterRecoveryAllowed property.
      */
     public void setUserInitiatedDisasterRecoveryAllowed(@jakarta.annotation.Nullable final Boolean value) {

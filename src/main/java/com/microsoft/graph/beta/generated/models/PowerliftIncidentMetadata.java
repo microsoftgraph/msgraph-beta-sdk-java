@@ -135,7 +135,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the platform property value. The device's OS the diagnostic is from. Example: iOS
+     * Gets the platform property value. The device&apos;s OS the diagnostic is from. Example: iOS
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -232,7 +232,7 @@ public class PowerliftIncidentMetadata implements AdditionalDataHolder, BackedMo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the platform property value. The device's OS the diagnostic is from. Example: iOS
+     * Sets the platform property value. The device&apos;s OS the diagnostic is from. Example: iOS
      * @param value Value to set for the platform property.
      */
     public void setPlatform(@jakarta.annotation.Nullable final String value) {

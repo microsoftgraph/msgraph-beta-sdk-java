@@ -34,7 +34,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         return this.backingStore.get("assignedProducts");
     }
     /**
-     * Gets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
+     * Gets the deletedDate property value. The date when the delete operation happened. Default value is &apos;null&apos; when the user hasn&apos;t been deleted.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         return this.backingStore.get("deletedDate");
     }
     /**
-     * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
+     * Gets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user&apos;s first name, middle initial, and last name. This property is required when a user is created and it can&apos;t be cleared during updates.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -227,7 +227,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         return this.backingStore.get("teamsLicenseAssignDate");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user&apos;s email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -290,14 +290,14 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         this.backingStore.set("assignedProducts", value);
     }
     /**
-     * Sets the deletedDate property value. The date when the delete operation happened. Default value is 'null' when the user hasn't been deleted.
+     * Sets the deletedDate property value. The date when the delete operation happened. Default value is &apos;null&apos; when the user hasn&apos;t been deleted.
      * @param value Value to set for the deletedDate property.
      */
     public void setDeletedDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("deletedDate", value);
     }
     /**
-     * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it can't be cleared during updates.
+     * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user&apos;s first name, middle initial, and last name. This property is required when a user is created and it can&apos;t be cleared during updates.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -430,7 +430,7 @@ public class Office365ActiveUserDetail extends Entity implements Parsable {
         this.backingStore.set("teamsLicenseAssignDate", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style login name for the user based on the Internet standard RFC 822. By convention, this should map to the user&apos;s email name. The general format is alias@domain, where domain must be present in the tenants collection of verified domains. This property is required when a user is created.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

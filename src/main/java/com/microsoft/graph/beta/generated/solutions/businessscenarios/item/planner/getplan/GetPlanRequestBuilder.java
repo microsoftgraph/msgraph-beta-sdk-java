@@ -36,7 +36,7 @@ public class GetPlanRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}/planner/getPlan", rawUrl);
     }
     /**
-     * Get information about the plannerPlan mapped to a given target. If a plannerPlan doesn't exist for the specified target at the time of the request, a new plan will be created for the businessScenario.
+     * Get information about the plannerPlan mapped to a given target. If a plannerPlan doesn&apos;t exist for the specified target at the time of the request, a new plan will be created for the businessScenario.
      * @param body The request body
      * @return a {@link BusinessScenarioPlanReference}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class GetPlanRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Get information about the plannerPlan mapped to a given target. If a plannerPlan doesn't exist for the specified target at the time of the request, a new plan will be created for the businessScenario.
+     * Get information about the plannerPlan mapped to a given target. If a plannerPlan doesn&apos;t exist for the specified target at the time of the request, a new plan will be created for the businessScenario.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenarioPlanReference}
@@ -63,7 +63,7 @@ public class GetPlanRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BusinessScenarioPlanReference::createFromDiscriminatorValue);
     }
     /**
-     * Get information about the plannerPlan mapped to a given target. If a plannerPlan doesn't exist for the specified target at the time of the request, a new plan will be created for the businessScenario.
+     * Get information about the plannerPlan mapped to a given target. If a plannerPlan doesn&apos;t exist for the specified target at the time of the request, a new plan will be created for the businessScenario.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class GetPlanRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get information about the plannerPlan mapped to a given target. If a plannerPlan doesn't exist for the specified target at the time of the request, a new plan will be created for the businessScenario.
+     * Get information about the plannerPlan mapped to a given target. If a plannerPlan doesn&apos;t exist for the specified target at the time of the request, a new plan will be created for the businessScenario.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

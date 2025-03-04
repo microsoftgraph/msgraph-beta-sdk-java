@@ -48,7 +48,7 @@ public class CloudPcAutopilotConfiguration implements AdditionalDataHolder, Back
         return value;
     }
     /**
-     * Gets the applicationTimeoutInMinutes property value. Indicates the number of minutes allowed for the Autopilot application to apply the device preparation profile (DPP) configurations to the device. If the Autopilot application doesn't finish within the specified time (applicationTimeoutInMinutes), the application error is added to the statusDetail property of the cloudPC object. The supported value is an integer between 10 and 360. Required.
+     * Gets the applicationTimeoutInMinutes property value. Indicates the number of minutes allowed for the Autopilot application to apply the device preparation profile (DPP) configurations to the device. If the Autopilot application doesn&apos;t finish within the specified time (applicationTimeoutInMinutes), the application error is added to the statusDetail property of the cloudPC object. The supported value is an integer between 10 and 360. Required.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class CloudPcAutopilotConfiguration implements AdditionalDataHolder, Back
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the applicationTimeoutInMinutes property value. Indicates the number of minutes allowed for the Autopilot application to apply the device preparation profile (DPP) configurations to the device. If the Autopilot application doesn't finish within the specified time (applicationTimeoutInMinutes), the application error is added to the statusDetail property of the cloudPC object. The supported value is an integer between 10 and 360. Required.
+     * Sets the applicationTimeoutInMinutes property value. Indicates the number of minutes allowed for the Autopilot application to apply the device preparation profile (DPP) configurations to the device. If the Autopilot application doesn&apos;t finish within the specified time (applicationTimeoutInMinutes), the application error is added to the statusDetail property of the cloudPC object. The supported value is an integer between 10 and 360. Required.
      * @param value Value to set for the applicationTimeoutInMinutes property.
      */
     public void setApplicationTimeoutInMinutes(@jakarta.annotation.Nullable final Integer value) {

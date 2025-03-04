@@ -157,7 +157,7 @@ public class Profile extends Entity implements Parsable {
         return this.backingStore.get("phones");
     }
     /**
-     * Gets the positions property value. Represents detailed information about work positions associated with a user's profile.
+     * Gets the positions property value. Represents detailed information about work positions associated with a user&apos;s profile.
      * @return a {@link java.util.List<WorkPosition>}
      */
     @jakarta.annotation.Nullable
@@ -323,7 +323,7 @@ public class Profile extends Entity implements Parsable {
         this.backingStore.set("phones", value);
     }
     /**
-     * Sets the positions property value. Represents detailed information about work positions associated with a user's profile.
+     * Sets the positions property value. Represents detailed information about work positions associated with a user&apos;s profile.
      * @param value Value to set for the positions property.
      */
     public void setPositions(@jakarta.annotation.Nullable final java.util.List<WorkPosition> value) {

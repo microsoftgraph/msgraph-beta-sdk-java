@@ -25,7 +25,7 @@ public class Person extends Entity implements Parsable {
         return new Person();
     }
     /**
-     * Gets the birthday property value. The person's birthday.
+     * Gets the birthday property value. The person&apos;s birthday.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("birthday");
     }
     /**
-     * Gets the companyName property value. The name of the person's company.
+     * Gets the companyName property value. The name of the person&apos;s company.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("companyName");
     }
     /**
-     * Gets the department property value. The person's department.
+     * Gets the department property value. The person&apos;s department.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("department");
     }
     /**
-     * Gets the displayName property value. The person's display name.
+     * Gets the displayName property value. The person&apos;s display name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the emailAddresses property value. The person's email addresses.
+     * Gets the emailAddresses property value. The person&apos;s email addresses.
      * @return a {@link java.util.List<RankedEmailAddress>}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class Person extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the givenName property value. The person's given name.
+     * Gets the givenName property value. The person&apos;s given name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("isFavorite");
     }
     /**
-     * Gets the mailboxType property value. The type of mailbox that is represented by the person's email address.
+     * Gets the mailboxType property value. The type of mailbox that is represented by the person&apos;s email address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("mailboxType");
     }
     /**
-     * Gets the officeLocation property value. The location of the person's office.
+     * Gets the officeLocation property value. The location of the person&apos;s office.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("personType");
     }
     /**
-     * Gets the phones property value. The person's phone numbers.
+     * Gets the phones property value. The person&apos;s phone numbers.
      * @return a {@link java.util.List<Phone>}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("phones");
     }
     /**
-     * Gets the postalAddresses property value. The person's addresses.
+     * Gets the postalAddresses property value. The person&apos;s addresses.
      * @return a {@link java.util.List<Location>}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("postalAddresses");
     }
     /**
-     * Gets the profession property value. The person's profession.
+     * Gets the profession property value. The person&apos;s profession.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("sources");
     }
     /**
-     * Gets the surname property value. The person's surname.
+     * Gets the surname property value. The person&apos;s surname.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -182,7 +182,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("surname");
     }
     /**
-     * Gets the title property value. The person's title.
+     * Gets the title property value. The person&apos;s title.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("title");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person&apos;s email name. The general format is alias@domain.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("userPrincipalName");
     }
     /**
-     * Gets the websites property value. The person's websites.
+     * Gets the websites property value. The person&apos;s websites.
      * @return a {@link java.util.List<Website>}
      */
     @jakarta.annotation.Nullable
@@ -206,7 +206,7 @@ public class Person extends Entity implements Parsable {
         return this.backingStore.get("websites");
     }
     /**
-     * Gets the yomiCompany property value. The phonetic Japanese name of the person's company.
+     * Gets the yomiCompany property value. The phonetic Japanese name of the person&apos;s company.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -242,42 +242,42 @@ public class Person extends Entity implements Parsable {
         writer.writeStringValue("yomiCompany", this.getYomiCompany());
     }
     /**
-     * Sets the birthday property value. The person's birthday.
+     * Sets the birthday property value. The person&apos;s birthday.
      * @param value Value to set for the birthday property.
      */
     public void setBirthday(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("birthday", value);
     }
     /**
-     * Sets the companyName property value. The name of the person's company.
+     * Sets the companyName property value. The name of the person&apos;s company.
      * @param value Value to set for the companyName property.
      */
     public void setCompanyName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("companyName", value);
     }
     /**
-     * Sets the department property value. The person's department.
+     * Sets the department property value. The person&apos;s department.
      * @param value Value to set for the department property.
      */
     public void setDepartment(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("department", value);
     }
     /**
-     * Sets the displayName property value. The person's display name.
+     * Sets the displayName property value. The person&apos;s display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the emailAddresses property value. The person's email addresses.
+     * Sets the emailAddresses property value. The person&apos;s email addresses.
      * @param value Value to set for the emailAddresses property.
      */
     public void setEmailAddresses(@jakarta.annotation.Nullable final java.util.List<RankedEmailAddress> value) {
         this.backingStore.set("emailAddresses", value);
     }
     /**
-     * Sets the givenName property value. The person's given name.
+     * Sets the givenName property value. The person&apos;s given name.
      * @param value Value to set for the givenName property.
      */
     public void setGivenName(@jakarta.annotation.Nullable final String value) {
@@ -291,14 +291,14 @@ public class Person extends Entity implements Parsable {
         this.backingStore.set("isFavorite", value);
     }
     /**
-     * Sets the mailboxType property value. The type of mailbox that is represented by the person's email address.
+     * Sets the mailboxType property value. The type of mailbox that is represented by the person&apos;s email address.
      * @param value Value to set for the mailboxType property.
      */
     public void setMailboxType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mailboxType", value);
     }
     /**
-     * Sets the officeLocation property value. The location of the person's office.
+     * Sets the officeLocation property value. The location of the person&apos;s office.
      * @param value Value to set for the officeLocation property.
      */
     public void setOfficeLocation(@jakarta.annotation.Nullable final String value) {
@@ -319,21 +319,21 @@ public class Person extends Entity implements Parsable {
         this.backingStore.set("personType", value);
     }
     /**
-     * Sets the phones property value. The person's phone numbers.
+     * Sets the phones property value. The person&apos;s phone numbers.
      * @param value Value to set for the phones property.
      */
     public void setPhones(@jakarta.annotation.Nullable final java.util.List<Phone> value) {
         this.backingStore.set("phones", value);
     }
     /**
-     * Sets the postalAddresses property value. The person's addresses.
+     * Sets the postalAddresses property value. The person&apos;s addresses.
      * @param value Value to set for the postalAddresses property.
      */
     public void setPostalAddresses(@jakarta.annotation.Nullable final java.util.List<Location> value) {
         this.backingStore.set("postalAddresses", value);
     }
     /**
-     * Sets the profession property value. The person's profession.
+     * Sets the profession property value. The person&apos;s profession.
      * @param value Value to set for the profession property.
      */
     public void setProfession(@jakarta.annotation.Nullable final String value) {
@@ -347,35 +347,35 @@ public class Person extends Entity implements Parsable {
         this.backingStore.set("sources", value);
     }
     /**
-     * Sets the surname property value. The person's surname.
+     * Sets the surname property value. The person&apos;s surname.
      * @param value Value to set for the surname property.
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("surname", value);
     }
     /**
-     * Sets the title property value. The person's title.
+     * Sets the title property value. The person&apos;s title.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("title", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person's email name. The general format is alias@domain.
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the person. The UPN is an Internet-style login name for the person based on the Internet standard RFC 822. By convention, this should map to the person&apos;s email name. The general format is alias@domain.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userPrincipalName", value);
     }
     /**
-     * Sets the websites property value. The person's websites.
+     * Sets the websites property value. The person&apos;s websites.
      * @param value Value to set for the websites property.
      */
     public void setWebsites(@jakarta.annotation.Nullable final java.util.List<Website> value) {
         this.backingStore.set("websites", value);
     }
     /**
-     * Sets the yomiCompany property value. The phonetic Japanese name of the person's company.
+     * Sets the yomiCompany property value. The phonetic Japanese name of the person&apos;s company.
      * @param value Value to set for the yomiCompany property.
      */
     public void setYomiCompany(@jakarta.annotation.Nullable final String value) {

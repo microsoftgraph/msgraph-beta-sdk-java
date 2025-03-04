@@ -80,7 +80,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, B
         return this.backingStore.get("continuousAccessEvaluation");
     }
     /**
-     * Gets the disableResilienceDefaults property value. Session control that determines whether it's acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
+     * Gets the disableResilienceDefaults property value. Session control that determines whether it&apos;s acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, B
         this.backingStore.set("continuousAccessEvaluation", value);
     }
     /**
-     * Sets the disableResilienceDefaults property value. Session control that determines whether it's acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
+     * Sets the disableResilienceDefaults property value. Session control that determines whether it&apos;s acceptable for Microsoft Entra ID to extend existing sessions based on information collected prior to an outage or not.
      * @param value Value to set for the disableResilienceDefaults property.
      */
     public void setDisableResilienceDefaults(@jakarta.annotation.Nullable final Boolean value) {

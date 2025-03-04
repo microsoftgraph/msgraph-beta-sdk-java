@@ -23,7 +23,7 @@ public class GetStorageAccountsWithSubscriptionIdRequestBuilder extends BaseRequ
      * Instantiates a new {@link GetStorageAccountsWithSubscriptionIdRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param subscriptionId Usage: subscriptionId='{subscriptionId}'
+     * @param subscriptionId Usage: subscriptionId=&apos;{subscriptionId}&apos;
      */
     public GetStorageAccountsWithSubscriptionIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String subscriptionId) {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/snapshots/getStorageAccounts(subscriptionId='{subscriptionId}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

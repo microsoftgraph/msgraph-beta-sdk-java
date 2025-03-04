@@ -79,7 +79,7 @@ public class ResourceOperationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getScopesForUser method.
-     * @param userid Usage: userid='{userid}'
+     * @param userid Usage: userid=&apos;{userid}&apos;
      * @return a {@link GetScopesForUserWithUseridRequestBuilder}
      */
     @jakarta.annotation.Nonnull

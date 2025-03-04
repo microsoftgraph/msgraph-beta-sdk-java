@@ -61,7 +61,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         return this.backingStore.get("eapType");
     }
     /**
-     * Gets the enableOuterIdentityPrivacy property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
+     * Gets the enableOuterIdentityPrivacy property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use &apos;anonymous&apos;, each user that authenticates with this wired network using their real username is displayed as &apos;anonymous&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         this.backingStore.set("eapType", value);
     }
     /**
-     * Sets the enableOuterIdentityPrivacy property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this wired network using their real username is displayed as 'anonymous'.
+     * Sets the enableOuterIdentityPrivacy property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use &apos;anonymous&apos;, each user that authenticates with this wired network using their real username is displayed as &apos;anonymous&apos;.
      * @param value Value to set for the enableOuterIdentityPrivacy property.
      */
     public void setEnableOuterIdentityPrivacy(@jakarta.annotation.Nullable final String value) {

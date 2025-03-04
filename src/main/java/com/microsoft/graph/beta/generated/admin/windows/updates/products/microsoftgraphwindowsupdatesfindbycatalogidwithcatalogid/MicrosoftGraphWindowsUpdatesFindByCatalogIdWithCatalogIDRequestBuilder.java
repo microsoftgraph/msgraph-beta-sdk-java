@@ -21,7 +21,7 @@ import java.util.Objects;
 public class MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder} and sets the default values.
-     * @param catalogID Usage: catalogID='{catalogID}'
+     * @param catalogID Usage: catalogID=&apos;{catalogID}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

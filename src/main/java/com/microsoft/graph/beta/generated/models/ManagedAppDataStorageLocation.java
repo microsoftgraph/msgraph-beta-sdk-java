@@ -16,7 +16,7 @@ public enum ManagedAppDataStorageLocation implements ValuedEnum {
     Box("box"),
     /** Local storage on the device */
     LocalStorage("localStorage"),
-    /** The device's photo library */
+    /** The device&apos;s photo library */
     PhotoLibrary("photoLibrary");
     public final String value;
     ManagedAppDataStorageLocation(final String value) {

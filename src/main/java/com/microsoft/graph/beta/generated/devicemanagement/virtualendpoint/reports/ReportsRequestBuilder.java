@@ -233,7 +233,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getRealTimeRemoteConnectionLatency method.
-     * @param cloudPcId Usage: cloudPcId='{cloudPcId}'
+     * @param cloudPcId Usage: cloudPcId=&apos;{cloudPcId}&apos;
      * @return a {@link GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -243,7 +243,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getRealTimeRemoteConnectionStatus method.
-     * @param cloudPcId Usage: cloudPcId='{cloudPcId}'
+     * @param cloudPcId Usage: cloudPcId=&apos;{cloudPcId}&apos;
      * @return a {@link GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

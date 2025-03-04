@@ -55,7 +55,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The user's preferences for languages, regional locale and date/time formatting.
+     * The user&apos;s preferences for languages, regional locale and date/time formatting.
      * @return a {@link RegionalAndLanguageSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * The user's preferences for languages, regional locale and date/time formatting.
+     * The user&apos;s preferences for languages, regional locale and date/time formatting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RegionalAndLanguageSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The user's preferences for languages, regional locale and date/time formatting.
+     * The user&apos;s preferences for languages, regional locale and date/time formatting.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The user's preferences for languages, regional locale and date/time formatting.
+     * The user&apos;s preferences for languages, regional locale and date/time formatting.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class RegionalAndLanguageSettingsRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The user's preferences for languages, regional locale and date/time formatting.
+     * The user&apos;s preferences for languages, regional locale and date/time formatting.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

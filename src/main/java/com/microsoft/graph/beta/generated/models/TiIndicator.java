@@ -493,7 +493,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this.backingStore.get("networkSourcePort");
     }
     /**
-     * Gets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools won't notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they'll simply log that a match occurred but won't perform the action. Default value is false.
+     * Gets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools won&apos;t notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they&apos;ll simply log that a match occurred but won&apos;t perform the action. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -501,7 +501,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this.backingStore.get("passiveOnly");
     }
     /**
-     * Gets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero isn't severe at all. Default value is 3.
+     * Gets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero isn&apos;t severe at all. Default value is 3.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -973,14 +973,14 @@ public class TiIndicator extends Entity implements Parsable {
         this.backingStore.set("networkSourcePort", value);
     }
     /**
-     * Sets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools won't notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they'll simply log that a match occurred but won't perform the action. Default value is false.
+     * Sets the passiveOnly property value. Determines if the indicator should trigger an event that is visible to an end-user. When set to true, security tools won&apos;t notify the end user that a hit has occurred. This is most often treated as audit or silent mode by security products where they&apos;ll simply log that a match occurred but won&apos;t perform the action. Default value is false.
      * @param value Value to set for the passiveOnly property.
      */
     public void setPassiveOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("passiveOnly", value);
     }
     /**
-     * Sets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero isn't severe at all. Default value is 3.
+     * Sets the severity property value. An integer representing the severity of the malicious behavior identified by the data within the indicator. Acceptable values are 0  5 where 5 is the most severe and zero isn&apos;t severe at all. Default value is 3.
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final Integer value) {

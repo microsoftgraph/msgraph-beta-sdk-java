@@ -29,7 +29,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return new MicrosoftTunnelSite();
     }
     /**
-     * Gets the description property value. The site's description (optional)
+     * Gets the description property value. The site&apos;s description (optional)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the internalNetworkProbeUrl property value. The site's Internal Network Access Probe URL
+     * Gets the internalNetworkProbeUrl property value. The site&apos;s Internal Network Access Probe URL
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this.backingStore.get("microsoftTunnelServers");
     }
     /**
-     * Gets the publicAddress property value. The site's public domain name or IP address
+     * Gets the publicAddress property value. The site&apos;s public domain name or IP address
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this.backingStore.get("roleScopeTagIds");
     }
     /**
-     * Gets the upgradeAutomatically property value. The site's automatic upgrade setting. True for automatic upgrades, false for manual control
+     * Gets the upgradeAutomatically property value. The site&apos;s automatic upgrade setting. True for automatic upgrades, false for manual control
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this.backingStore.get("upgradeAvailable");
     }
     /**
-     * Gets the upgradeWindowEndTime property value. The site's upgrade window end time of day
+     * Gets the upgradeWindowEndTime property value. The site&apos;s upgrade window end time of day
      * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this.backingStore.get("upgradeWindowEndTime");
     }
     /**
-     * Gets the upgradeWindowStartTime property value. The site's upgrade window start time of day
+     * Gets the upgradeWindowStartTime property value. The site&apos;s upgrade window start time of day
      * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         return this.backingStore.get("upgradeWindowStartTime");
     }
     /**
-     * Gets the upgradeWindowUtcOffsetInMinutes property value. The site's timezone represented as a minute offset from UTC
+     * Gets the upgradeWindowUtcOffsetInMinutes property value. The site&apos;s timezone represented as a minute offset from UTC
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         writer.writeIntegerValue("upgradeWindowUtcOffsetInMinutes", this.getUpgradeWindowUtcOffsetInMinutes());
     }
     /**
-     * Sets the description property value. The site's description (optional)
+     * Sets the description property value. The site&apos;s description (optional)
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -180,7 +180,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the internalNetworkProbeUrl property value. The site's Internal Network Access Probe URL
+     * Sets the internalNetworkProbeUrl property value. The site&apos;s Internal Network Access Probe URL
      * @param value Value to set for the internalNetworkProbeUrl property.
      */
     public void setInternalNetworkProbeUrl(@jakarta.annotation.Nullable final String value) {
@@ -201,7 +201,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         this.backingStore.set("microsoftTunnelServers", value);
     }
     /**
-     * Sets the publicAddress property value. The site's public domain name or IP address
+     * Sets the publicAddress property value. The site&apos;s public domain name or IP address
      * @param value Value to set for the publicAddress property.
      */
     public void setPublicAddress(@jakarta.annotation.Nullable final String value) {
@@ -215,7 +215,7 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         this.backingStore.set("roleScopeTagIds", value);
     }
     /**
-     * Sets the upgradeAutomatically property value. The site's automatic upgrade setting. True for automatic upgrades, false for manual control
+     * Sets the upgradeAutomatically property value. The site&apos;s automatic upgrade setting. True for automatic upgrades, false for manual control
      * @param value Value to set for the upgradeAutomatically property.
      */
     public void setUpgradeAutomatically(@jakarta.annotation.Nullable final Boolean value) {
@@ -229,21 +229,21 @@ public class MicrosoftTunnelSite extends Entity implements Parsable {
         this.backingStore.set("upgradeAvailable", value);
     }
     /**
-     * Sets the upgradeWindowEndTime property value. The site's upgrade window end time of day
+     * Sets the upgradeWindowEndTime property value. The site&apos;s upgrade window end time of day
      * @param value Value to set for the upgradeWindowEndTime property.
      */
     public void setUpgradeWindowEndTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.backingStore.set("upgradeWindowEndTime", value);
     }
     /**
-     * Sets the upgradeWindowStartTime property value. The site's upgrade window start time of day
+     * Sets the upgradeWindowStartTime property value. The site&apos;s upgrade window start time of day
      * @param value Value to set for the upgradeWindowStartTime property.
      */
     public void setUpgradeWindowStartTime(@jakarta.annotation.Nullable final LocalTime value) {
         this.backingStore.set("upgradeWindowStartTime", value);
     }
     /**
-     * Sets the upgradeWindowUtcOffsetInMinutes property value. The site's timezone represented as a minute offset from UTC
+     * Sets the upgradeWindowUtcOffsetInMinutes property value. The site&apos;s timezone represented as a minute offset from UTC
      * @param value Value to set for the upgradeWindowUtcOffsetInMinutes property.
      */
     public void setUpgradeWindowUtcOffsetInMinutes(@jakarta.annotation.Nullable final Integer value) {

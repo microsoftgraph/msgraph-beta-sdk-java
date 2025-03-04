@@ -135,7 +135,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
         return this.backingStore.get("firmwareTargetArtifactDescription");
     }
     /**
-     * Gets the firmwareTargetBoardSupportPackageVersion property value. Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type.
+     * Gets the firmwareTargetBoardSupportPackageVersion property value. Deployment&apos;s Board Support Package (BSP. E.g.: &apos;01.18.02.00&apos;). Required only for custom update type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +143,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
         return this.backingStore.get("firmwareTargetBoardSupportPackageVersion");
     }
     /**
-     * Gets the firmwareTargetOsVersion property value. Target OS Version (e.g.: '8.1.0'). Required only for custom update type.
+     * Gets the firmwareTargetOsVersion property value. Target OS Version (e.g.: &apos;8.1.0&apos;). Required only for custom update type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
         return this.backingStore.get("firmwareTargetOsVersion");
     }
     /**
-     * Gets the firmwareTargetPatch property value. Target patch name (e.g.: 'U06'). Required only for custom update type.
+     * Gets the firmwareTargetPatch property value. Target patch name (e.g.: &apos;U06&apos;). Required only for custom update type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -167,7 +167,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
         return this.backingStore.get("installRuleStartDateTime");
     }
     /**
-     * Gets the installRuleWindowEndTime property value. Time of day after which the install cannot start. Possible range is 00:30:00 to 23:59:59. Should be greater than 'installRuleWindowStartTime' by 30 mins. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 23:59:59. Respected for all values of update type, including AUTO.
+     * Gets the installRuleWindowEndTime property value. Time of day after which the install cannot start. Possible range is 00:30:00 to 23:59:59. Should be greater than &apos;installRuleWindowStartTime&apos; by 30 mins. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 23:59:59. Respected for all values of update type, including AUTO.
      * @return a {@link LocalTime}
      */
     @jakarta.annotation.Nullable
@@ -305,21 +305,21 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
         this.backingStore.set("firmwareTargetArtifactDescription", value);
     }
     /**
-     * Sets the firmwareTargetBoardSupportPackageVersion property value. Deployment's Board Support Package (BSP. E.g.: '01.18.02.00'). Required only for custom update type.
+     * Sets the firmwareTargetBoardSupportPackageVersion property value. Deployment&apos;s Board Support Package (BSP. E.g.: &apos;01.18.02.00&apos;). Required only for custom update type.
      * @param value Value to set for the firmwareTargetBoardSupportPackageVersion property.
      */
     public void setFirmwareTargetBoardSupportPackageVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("firmwareTargetBoardSupportPackageVersion", value);
     }
     /**
-     * Sets the firmwareTargetOsVersion property value. Target OS Version (e.g.: '8.1.0'). Required only for custom update type.
+     * Sets the firmwareTargetOsVersion property value. Target OS Version (e.g.: &apos;8.1.0&apos;). Required only for custom update type.
      * @param value Value to set for the firmwareTargetOsVersion property.
      */
     public void setFirmwareTargetOsVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("firmwareTargetOsVersion", value);
     }
     /**
-     * Sets the firmwareTargetPatch property value. Target patch name (e.g.: 'U06'). Required only for custom update type.
+     * Sets the firmwareTargetPatch property value. Target patch name (e.g.: &apos;U06&apos;). Required only for custom update type.
      * @param value Value to set for the firmwareTargetPatch property.
      */
     public void setFirmwareTargetPatch(@jakarta.annotation.Nullable final String value) {
@@ -333,7 +333,7 @@ public class ZebraFotaDeploymentSettings implements AdditionalDataHolder, Backed
         this.backingStore.set("installRuleStartDateTime", value);
     }
     /**
-     * Sets the installRuleWindowEndTime property value. Time of day after which the install cannot start. Possible range is 00:30:00 to 23:59:59. Should be greater than 'installRuleWindowStartTime' by 30 mins. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 23:59:59. Respected for all values of update type, including AUTO.
+     * Sets the installRuleWindowEndTime property value. Time of day after which the install cannot start. Possible range is 00:30:00 to 23:59:59. Should be greater than &apos;installRuleWindowStartTime&apos; by 30 mins. The time is expressed in a 24-hour format, as hh:mm, and is in the device time zone. Default - 23:59:59. Respected for all values of update type, including AUTO.
      * @param value Value to set for the installRuleWindowEndTime property.
      */
     public void setInstallRuleWindowEndTime(@jakarta.annotation.Nullable final LocalTime value) {

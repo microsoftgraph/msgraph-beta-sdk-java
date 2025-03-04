@@ -32,13 +32,13 @@ public enum ResultantAppStateDetail implements ValuedEnum {
     SupersedingAppsNotApplicable("supersedingAppsNotApplicable"),
     /** No additional details are available. */
     NoAdditionalDetails("noAdditionalDetails"),
-    /** One or more of the application's dependencies failed to install. */
+    /** One or more of the application&apos;s dependencies failed to install. */
     DependencyFailedToInstall("dependencyFailedToInstall"),
-    /** One or more of the application's dependencies have requirements which are not met. */
+    /** One or more of the application&apos;s dependencies have requirements which are not met. */
     DependencyWithRequirementsNotMet("dependencyWithRequirementsNotMet"),
-    /** One or more of the application's dependencies require a device reboot to complete installation. */
+    /** One or more of the application&apos;s dependencies require a device reboot to complete installation. */
     DependencyPendingReboot("dependencyPendingReboot"),
-    /** One or more of the application's dependencies are configured to not automatically install. */
+    /** One or more of the application&apos;s dependencies are configured to not automatically install. */
     DependencyWithAutoInstallDisabled("dependencyWithAutoInstallDisabled"),
     /** A superseded app failed to uninstall. */
     SupersededAppUninstallFailed("supersededAppUninstallFailed"),
@@ -76,7 +76,7 @@ public enum ResultantAppStateDetail implements ValuedEnum {
     SeeUninstallErrorCode("seeUninstallErrorCode"),
     /** Device must be rebooted to complete installation of the application. */
     PendingReboot("pendingReboot"),
-    /** One or more of the application's dependencies are installing. */
+    /** One or more of the application&apos;s dependencies are installing. */
     InstallingDependencies("installingDependencies"),
     /** Application content was downloaded to the device. */
     ContentDownloaded("contentDownloaded");

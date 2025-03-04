@@ -76,7 +76,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the findTenantInformationByDomainName method.
-     * @param domainName Usage: domainName='{domainName}'
+     * @param domainName Usage: domainName=&apos;{domainName}&apos;
      * @return a {@link FindTenantInformationByDomainNameWithDomainNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -86,7 +86,7 @@ public class TenantRelationshipsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the findTenantInformationByTenantId method.
-     * @param tenantId Usage: tenantId='{tenantId}'
+     * @param tenantId Usage: tenantId=&apos;{tenantId}&apos;
      * @return a {@link FindTenantInformationByTenantIdWithTenantIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

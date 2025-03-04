@@ -76,7 +76,7 @@ public class VerifiableCredentialType implements AdditionalDataHolder, BackedMod
         return deserializerMap;
     }
     /**
-     * Gets the issuers property value. List of the accepted issuers authority as identified by the Microsoft Entra Verified ID service, for example, did:ion:EiAlrenrtD3Lsw0GlbzS1O2YFdy3Xtu8yo35W/<SNIP/>....
+     * Gets the issuers property value. List of the accepted issuers authority as identified by the Microsoft Entra Verified ID service, for example, did:ion:EiAlrenrtD3Lsw0GlbzS1O2YFdy3Xtu8yo35W/&lt;SNIP/&gt;....
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class VerifiableCredentialType implements AdditionalDataHolder, BackedMod
         this.backingStore.set("credentialType", value);
     }
     /**
-     * Sets the issuers property value. List of the accepted issuers authority as identified by the Microsoft Entra Verified ID service, for example, did:ion:EiAlrenrtD3Lsw0GlbzS1O2YFdy3Xtu8yo35W/<SNIP/>....
+     * Sets the issuers property value. List of the accepted issuers authority as identified by the Microsoft Entra Verified ID service, for example, did:ion:EiAlrenrtD3Lsw0GlbzS1O2YFdy3Xtu8yo35W/&lt;SNIP/&gt;....
      * @param value Value to set for the issuers property.
      */
     public void setIssuers(@jakarta.annotation.Nullable final java.util.List<String> value) {

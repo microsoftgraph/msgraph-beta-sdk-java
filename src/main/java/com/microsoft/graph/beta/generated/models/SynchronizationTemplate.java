@@ -82,7 +82,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values shouldn't be changed.
+     * Gets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values shouldn&apos;t be changed.
      * @return a {@link java.util.List<SynchronizationMetadataEntry>}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class SynchronizationTemplate extends Entity implements Parsable {
         this.backingStore.set("factoryTag", value);
     }
     /**
-     * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values shouldn't be changed.
+     * Sets the metadata property value. Additional extension properties. Unless mentioned explicitly, metadata values shouldn&apos;t be changed.
      * @param value Value to set for the metadata property.
      */
     public void setMetadata(@jakarta.annotation.Nullable final java.util.List<SynchronizationMetadataEntry> value) {

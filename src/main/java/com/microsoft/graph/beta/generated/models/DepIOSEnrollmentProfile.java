@@ -53,7 +53,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
         return this.backingStore.get("carrierActivationUrl");
     }
     /**
-     * Gets the companyPortalVppTokenId property value. If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
+     * Gets the companyPortalVppTokenId property value. If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. &apos;enableAuthenticationViaCompanyPortal&apos; must be set in order for this property to be set.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
         return this.backingStore.get("enableSharedIPad");
     }
     /**
-     * Gets the enableSingleAppEnrollmentMode property value. Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. 'enableAuthenticationViaCompanyPortal' and 'companyPortalVppTokenId' must be set for this property to be set.
+     * Gets the enableSingleAppEnrollmentMode property value. Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. &apos;enableAuthenticationViaCompanyPortal&apos; and &apos;companyPortalVppTokenId&apos; must be set for this property to be set.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -259,7 +259,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
         return this.backingStore.get("updateCompleteScreenDisabled");
     }
     /**
-     * Gets the userlessSharedAadModeEnabled property value. Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See https://learn.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios
+     * Gets the userlessSharedAadModeEnabled property value. Indicates that this apple device is designated to support &apos;shared device mode&apos; scenarios. This is distinct from the &apos;shared iPad&apos; scenario. See https://learn.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -357,7 +357,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
         this.backingStore.set("carrierActivationUrl", value);
     }
     /**
-     * Sets the companyPortalVppTokenId property value. If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. 'enableAuthenticationViaCompanyPortal' must be set in order for this property to be set.
+     * Sets the companyPortalVppTokenId property value. If set, indicates which Vpp token should be used to deploy the Company Portal w/ device licensing. &apos;enableAuthenticationViaCompanyPortal&apos; must be set in order for this property to be set.
      * @param value Value to set for the companyPortalVppTokenId property.
      */
     public void setCompanyPortalVppTokenId(@jakarta.annotation.Nullable final String value) {
@@ -378,7 +378,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
         this.backingStore.set("enableSharedIPad", value);
     }
     /**
-     * Sets the enableSingleAppEnrollmentMode property value. Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. 'enableAuthenticationViaCompanyPortal' and 'companyPortalVppTokenId' must be set for this property to be set.
+     * Sets the enableSingleAppEnrollmentMode property value. Tells the device to enable single app mode and apply app-lock during enrollment. Default is false. &apos;enableAuthenticationViaCompanyPortal&apos; and &apos;companyPortalVppTokenId&apos; must be set for this property to be set.
      * @param value Value to set for the enableSingleAppEnrollmentMode property.
      */
     public void setEnableSingleAppEnrollmentMode(@jakarta.annotation.Nullable final Boolean value) {
@@ -504,7 +504,7 @@ public class DepIOSEnrollmentProfile extends DepEnrollmentBaseProfile implements
         this.backingStore.set("updateCompleteScreenDisabled", value);
     }
     /**
-     * Sets the userlessSharedAadModeEnabled property value. Indicates that this apple device is designated to support 'shared device mode' scenarios. This is distinct from the 'shared iPad' scenario. See https://learn.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios
+     * Sets the userlessSharedAadModeEnabled property value. Indicates that this apple device is designated to support &apos;shared device mode&apos; scenarios. This is distinct from the &apos;shared iPad&apos; scenario. See https://learn.microsoft.com/mem/intune/enrollment/device-enrollment-shared-ios
      * @param value Value to set for the userlessSharedAadModeEnabled property.
      */
     public void setUserlessSharedAadModeEnabled(@jakarta.annotation.Nullable final Boolean value) {

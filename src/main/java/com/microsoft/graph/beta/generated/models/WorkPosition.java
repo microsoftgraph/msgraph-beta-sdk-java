@@ -72,7 +72,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
         return this.backingStore.get("isCurrent");
     }
     /**
-     * Gets the manager property value. Contains detail of the user's manager in this position.
+     * Gets the manager property value. Contains detail of the user&apos;s manager in this position.
      * @return a {@link RelatedPerson}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
         this.backingStore.set("isCurrent", value);
     }
     /**
-     * Sets the manager property value. Contains detail of the user's manager in this position.
+     * Sets the manager property value. Contains detail of the user&apos;s manager in this position.
      * @param value Value to set for the manager property.
      */
     public void setManager(@jakarta.annotation.Nullable final RelatedPerson value) {

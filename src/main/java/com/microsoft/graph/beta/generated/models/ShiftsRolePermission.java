@@ -48,7 +48,7 @@ public class ShiftsRolePermission implements AdditionalDataHolder, BackedModel, 
         return value;
     }
     /**
-     * Gets the allowedResourceActions property value. The permissions that are allowed for a role. Permissions that aren't in this collection are disabled.
+     * Gets the allowedResourceActions property value. The permissions that are allowed for a role. Permissions that aren&apos;t in this collection are disabled.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class ShiftsRolePermission implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowedResourceActions property value. The permissions that are allowed for a role. Permissions that aren't in this collection are disabled.
+     * Sets the allowedResourceActions property value. The permissions that are allowed for a role. Permissions that aren&apos;t in this collection are disabled.
      * @param value Value to set for the allowedResourceActions property.
      */
     public void setAllowedResourceActions(@jakarta.annotation.Nullable final java.util.List<String> value) {

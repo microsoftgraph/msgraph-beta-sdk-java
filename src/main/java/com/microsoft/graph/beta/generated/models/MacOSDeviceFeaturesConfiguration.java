@@ -45,7 +45,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         return this.backingStore.get("appAssociatedDomains");
     }
     /**
-     * Gets the associatedDomains property value. DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
+     * Gets the associatedDomains property value. DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app&apos;s ID, and the value should be a string in the form of &apos;service:domain&apos; where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
@@ -245,7 +245,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         return this.backingStore.get("contentCachingPort");
     }
     /**
-     * Gets the contentCachingPublicRanges property value. A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
+     * Gets the contentCachingPublicRanges property value. A list of custom IP ranges that Apple&apos;s content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
      * @return a {@link java.util.List<IpRange>}
      */
     @jakarta.annotation.Nullable
@@ -261,7 +261,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         return this.backingStore.get("contentCachingShowAlerts");
     }
     /**
-     * Gets the contentCachingType property value. Indicates the type of content allowed to be cached by Apple's content caching service.
+     * Gets the contentCachingType property value. Indicates the type of content allowed to be cached by Apple&apos;s content caching service.
      * @return a {@link MacOSContentCachingType}
      */
     @jakarta.annotation.Nullable
@@ -480,7 +480,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         this.backingStore.set("appAssociatedDomains", value);
     }
     /**
-     * Sets the associatedDomains property value. DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app's ID, and the value should be a string in the form of 'service:domain' where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
+     * Sets the associatedDomains property value. DEPRECATED: use appAssociatedDomains instead. Gets or sets a list that maps apps to their associated domains. The key should match the app&apos;s ID, and the value should be a string in the form of &apos;service:domain&apos; where domain is a fully qualified hostname (e.g. webcredentials:example.com). This collection can contain a maximum of 500 elements.
      * @param value Value to set for the associatedDomains property.
      */
     public void setAssociatedDomains(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
@@ -655,7 +655,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         this.backingStore.set("contentCachingPort", value);
     }
     /**
-     * Sets the contentCachingPublicRanges property value. A list of custom IP ranges that Apple's content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
+     * Sets the contentCachingPublicRanges property value. A list of custom IP ranges that Apple&apos;s content caching service should use to match clients to content caches. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the contentCachingPublicRanges property.
      */
     public void setContentCachingPublicRanges(@jakarta.annotation.Nullable final java.util.List<IpRange> value) {
@@ -669,7 +669,7 @@ public class MacOSDeviceFeaturesConfiguration extends AppleDeviceFeaturesConfigu
         this.backingStore.set("contentCachingShowAlerts", value);
     }
     /**
-     * Sets the contentCachingType property value. Indicates the type of content allowed to be cached by Apple's content caching service.
+     * Sets the contentCachingType property value. Indicates the type of content allowed to be cached by Apple&apos;s content caching service.
      * @param value Value to set for the contentCachingType property.
      */
     public void setContentCachingType(@jakarta.annotation.Nullable final MacOSContentCachingType value) {

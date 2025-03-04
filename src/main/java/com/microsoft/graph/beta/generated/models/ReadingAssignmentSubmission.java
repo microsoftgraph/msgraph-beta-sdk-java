@@ -144,7 +144,7 @@ public class ReadingAssignmentSubmission extends Entity implements Parsable {
         return this.backingStore.get("missedShorts");
     }
     /**
-     * Gets the monotoneScore property value. Score that reflects the student's use of intonation and expression. Lower scores indicate more monotone reading.
+     * Gets the monotoneScore property value. Score that reflects the student&apos;s use of intonation and expression. Lower scores indicate more monotone reading.
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -330,7 +330,7 @@ public class ReadingAssignmentSubmission extends Entity implements Parsable {
         this.backingStore.set("missedShorts", value);
     }
     /**
-     * Sets the monotoneScore property value. Score that reflects the student's use of intonation and expression. Lower scores indicate more monotone reading.
+     * Sets the monotoneScore property value. Score that reflects the student&apos;s use of intonation and expression. Lower scores indicate more monotone reading.
      * @param value Value to set for the monotoneScore property.
      */
     public void setMonotoneScore(@jakarta.annotation.Nullable final Double value) {

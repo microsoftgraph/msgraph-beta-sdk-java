@@ -23,7 +23,7 @@ public class CompareWithTemplateIdRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new {@link CompareWithTemplateIdRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param templateId Usage: templateId='{templateId}'
+     * @param templateId Usage: templateId=&apos;{templateId}&apos;
      */
     public CompareWithTemplateIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String templateId) {
         super(requestAdapter, "{+baseurl}/deviceManagement/templates/{deviceManagementTemplate%2Did}/migratableTo/{deviceManagementTemplate%2Did1}/compare(templateId='{templateId}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

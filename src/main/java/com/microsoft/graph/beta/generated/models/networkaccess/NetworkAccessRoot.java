@@ -77,7 +77,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("filteringProfiles");
     }
     /**
-     * Gets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
+     * Gets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It&apos;s then added to a forwarding profile.
      * @return a {@link java.util.List<ForwardingPolicy>}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         this.backingStore.set("filteringProfiles", value);
     }
     /**
-     * Sets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It's then added to a forwarding profile.
+     * Sets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It&apos;s then added to a forwarding profile.
      * @param value Value to set for the forwardingPolicies property.
      */
     public void setForwardingPolicies(@jakarta.annotation.Nullable final java.util.List<ForwardingPolicy> value) {

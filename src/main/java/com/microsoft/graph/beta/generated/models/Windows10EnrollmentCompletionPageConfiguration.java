@@ -69,7 +69,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         return this.backingStore.get("blockDeviceSetupRetryByUser");
     }
     /**
-     * Gets the customErrorMessage property value. The custom error message to show upon installation failure. Max length is 10000. example: 'Setup could not be completed. Please try again or contact your support person for help.'
+     * Gets the customErrorMessage property value. The custom error message to show upon installation failure. Max length is 10000. example: &apos;Setup could not be completed. Please try again or contact your support person for help.&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -201,7 +201,7 @@ public class Windows10EnrollmentCompletionPageConfiguration extends DeviceEnroll
         this.backingStore.set("blockDeviceSetupRetryByUser", value);
     }
     /**
-     * Sets the customErrorMessage property value. The custom error message to show upon installation failure. Max length is 10000. example: 'Setup could not be completed. Please try again or contact your support person for help.'
+     * Sets the customErrorMessage property value. The custom error message to show upon installation failure. Max length is 10000. example: &apos;Setup could not be completed. Please try again or contact your support person for help.&apos;
      * @param value Value to set for the customErrorMessage property.
      */
     public void setCustomErrorMessage(@jakarta.annotation.Nullable final String value) {

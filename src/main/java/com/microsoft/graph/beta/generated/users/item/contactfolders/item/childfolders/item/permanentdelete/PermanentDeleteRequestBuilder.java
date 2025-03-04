@@ -35,7 +35,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}/childFolders/{contactFolder%2Did1}/permanentDelete", rawUrl);
     }
     /**
-     * Permanently delete a contact folder and remove its items from the user's mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
+     * Permanently delete a contact folder and remove its items from the user&apos;s mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-permanentdelete?view=graph-rest-beta">Find more info here</a>
      */
@@ -43,7 +43,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         post(null);
     }
     /**
-     * Permanently delete a contact folder and remove its items from the user's mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
+     * Permanently delete a contact folder and remove its items from the user&apos;s mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-permanentdelete?view=graph-rest-beta">Find more info here</a>
@@ -55,7 +55,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Permanently delete a contact folder and remove its items from the user's mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
+     * Permanently delete a contact folder and remove its items from the user&apos;s mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -63,7 +63,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Permanently delete a contact folder and remove its items from the user's mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
+     * Permanently delete a contact folder and remove its items from the user&apos;s mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -14,7 +14,7 @@ public enum GroupPolicyConfigurationIngestionType implements ValuedEnum {
     Custom("custom"),
     /** Indicates policy created have definitions ingested through system ingestion process */
     BuiltIn("builtIn"),
-    /** Indicated atleast 1 tenant admin & system ingested definitions configured for this policy */
+    /** Indicated atleast 1 tenant admin &amp; system ingested definitions configured for this policy */
     Mixed("mixed"),
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");

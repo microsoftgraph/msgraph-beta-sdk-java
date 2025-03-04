@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Indicates the status of the Approval Request. The status of a request will change when an action is successfully performed on it, such as when it is `approved` or `rejected`, or when the request's expiration DateTime passes and the result is `expired`.
+ * Indicates the status of the Approval Request. The status of a request will change when an action is successfully performed on it, such as when it is `approved` or `rejected`, or when the request&apos;s expiration DateTime passes and the result is `expired`.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum OperationApprovalRequestStatus implements ValuedEnum {
@@ -16,7 +16,7 @@ public enum OperationApprovalRequestStatus implements ValuedEnum {
     Approved("approved"),
     /** Indicates that the approval request has been rejected. No further action can be taken to complete the operation or to modify the request. */
     Rejected("rejected"),
-    /** Indicates that the approval request has been cancelled by the request's requestor. No further action can be taken to complete the operation or to modify the request. */
+    /** Indicates that the approval request has been cancelled by the request&apos;s requestor. No further action can be taken to complete the operation or to modify the request. */
     Cancelled("cancelled"),
     /** Indicates that the approval request has been completed. This status is feature agnostic and does not indicate success or failure of the operation. No further action is necessary for the operation or to modify the request. */
     Completed("completed"),

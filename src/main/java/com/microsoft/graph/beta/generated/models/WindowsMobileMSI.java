@@ -60,7 +60,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
         return this.backingStore.get("identityVersion");
     }
     /**
-     * Gets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
+     * Gets the ignoreVersionDetection property value. A boolean to control whether the app&apos;s version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
         return this.backingStore.get("productVersion");
     }
     /**
-     * Gets the useDeviceContext property value. Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package's default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application.
+     * Gets the useDeviceContext property value. Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package&apos;s default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
         this.backingStore.set("identityVersion", value);
     }
     /**
-     * Sets the ignoreVersionDetection property value. A boolean to control whether the app's version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
+     * Sets the ignoreVersionDetection property value. A boolean to control whether the app&apos;s version will be used to detect the app after it is installed on a device. Set this to true for Windows Mobile MSI Line of Business (LoB) apps that use a self update feature.
      * @param value Value to set for the ignoreVersionDetection property.
      */
     public void setIgnoreVersionDetection(@jakarta.annotation.Nullable final Boolean value) {
@@ -141,7 +141,7 @@ public class WindowsMobileMSI extends MobileLobApp implements Parsable {
         this.backingStore.set("productVersion", value);
     }
     /**
-     * Sets the useDeviceContext property value. Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package's default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application.
+     * Sets the useDeviceContext property value. Indicates whether to install a dual-mode MSI in the device context. If true, app will be installed for all users. If false, app will be installed per-user. If null, service will use the MSI package&apos;s default install context. In case of dual-mode MSI, this default will be per-user.  Cannot be set for non-dual-mode apps.  Cannot be changed after initial creation of the application.
      * @param value Value to set for the useDeviceContext property.
      */
     public void setUseDeviceContext(@jakarta.annotation.Nullable final Boolean value) {

@@ -60,7 +60,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/assignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The list of assignments for this T&C policy.
+     * The list of assignments for this T&amp;C policy.
      * @return a {@link TermsAndConditionsAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The list of assignments for this T&C policy.
+     * The list of assignments for this T&amp;C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermsAndConditionsAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TermsAndConditionsAssignment::createFromDiscriminatorValue);
     }
     /**
-     * The list of assignments for this T&C policy.
+     * The list of assignments for this T&amp;C policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The list of assignments for this T&C policy.
+     * The list of assignments for this T&amp;C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
         return new AssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The list of assignments for this T&C policy.
+     * The list of assignments for this T&amp;C policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

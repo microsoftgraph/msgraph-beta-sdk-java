@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Enrollment Profile used to enroll Android Enterprise devices using Google's Cloud Management.
+ * Enrollment Profile used to enroll Android Enterprise devices using Google&apos;s Cloud Management.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsable {

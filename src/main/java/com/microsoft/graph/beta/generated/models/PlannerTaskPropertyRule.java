@@ -26,7 +26,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         return new PlannerTaskPropertyRule();
     }
     /**
-     * Gets the appliedCategories property value. Rules and restrictions for applied categories. This value doesn't currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
+     * Gets the appliedCategories property value. Rules and restrictions for applied categories. This value doesn&apos;t currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
      * @return a {@link PlannerFieldRules}
      */
     @jakarta.annotation.Nullable
@@ -213,7 +213,7 @@ public class PlannerTaskPropertyRule extends PlannerPropertyRule implements Pars
         writer.writeCollectionOfPrimitiveValues("title", this.getTitle());
     }
     /**
-     * Sets the appliedCategories property value. Rules and restrictions for applied categories. This value doesn't currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
+     * Sets the appliedCategories property value. Rules and restrictions for applied categories. This value doesn&apos;t currently support overrides. Accepted values for the default rule and individual overrides are allow, block.
      * @param value Value to set for the appliedCategories property.
      */
     public void setAppliedCategories(@jakarta.annotation.Nullable final PlannerFieldRules value) {

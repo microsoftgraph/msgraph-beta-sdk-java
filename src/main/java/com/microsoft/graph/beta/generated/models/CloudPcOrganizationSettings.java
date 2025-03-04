@@ -33,7 +33,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
         return this.backingStore.get("enableMEMAutoEnroll");
     }
     /**
-     * Gets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Microsoft Entra ID with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
+     * Gets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn&apos;t support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Microsoft Entra ID with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class CloudPcOrganizationSettings extends Entity implements Parsable {
         this.backingStore.set("enableMEMAutoEnroll", value);
     }
     /**
-     * Sets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Microsoft Entra ID with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
+     * Sets the enableSingleSignOn property value. True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn&apos;t support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Microsoft Entra ID with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
      * @param value Value to set for the enableSingleSignOn property.
      */
     public void setEnableSingleSignOn(@jakarta.annotation.Nullable final Boolean value) {

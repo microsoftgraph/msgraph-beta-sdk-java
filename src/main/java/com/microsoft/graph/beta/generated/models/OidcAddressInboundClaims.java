@@ -111,7 +111,7 @@ public class OidcAddressInboundClaims implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("region");
     }
     /**
-     * Gets the street_address property value. Full mailing address, formatted for display or use on a mailing label. This field MAY contain multiple lines, separated by newlines. Newlines can be represented either as a carriage return/line feed pair ('/r/n') or as a single line feed character ('/n').
+     * Gets the street_address property value. Full mailing address, formatted for display or use on a mailing label. This field MAY contain multiple lines, separated by newlines. Newlines can be represented either as a carriage return/line feed pair (&apos;/r/n&apos;) or as a single line feed character (&apos;/n&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class OidcAddressInboundClaims implements AdditionalDataHolder, BackedMod
         this.backingStore.set("region", value);
     }
     /**
-     * Sets the street_address property value. Full mailing address, formatted for display or use on a mailing label. This field MAY contain multiple lines, separated by newlines. Newlines can be represented either as a carriage return/line feed pair ('/r/n') or as a single line feed character ('/n').
+     * Sets the street_address property value. Full mailing address, formatted for display or use on a mailing label. This field MAY contain multiple lines, separated by newlines. Newlines can be represented either as a carriage return/line feed pair (&apos;/r/n&apos;) or as a single line feed character (&apos;/n&apos;).
      * @param value Value to set for the street_address property.
      */
     public void setStreetAddress(@jakarta.annotation.Nullable final String value) {

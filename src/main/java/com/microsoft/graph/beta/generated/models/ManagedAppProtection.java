@@ -65,7 +65,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("allowedInboundDataTransferSources");
     }
     /**
-     * Gets the allowedOutboundClipboardSharingExceptionLength property value. Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of '0' means no exception is allowed.
+     * Gets the allowedOutboundClipboardSharingExceptionLength property value. Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of &apos;0&apos; means no exception is allowed.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("allowedOutboundClipboardSharingExceptionLength");
     }
     /**
-     * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
+     * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device&apos;s clipboard may be shared between apps
      * @return a {@link ManagedAppClipboardSharingLevel}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("blockDataIngestionIntoOrganizationDocuments");
     }
     /**
-     * Gets the contactSyncBlocked property value. Indicates whether contacts can be synced to the user's device.
+     * Gets the contactSyncBlocked property value. Indicates whether contacts can be synced to the user&apos;s device.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("contactSyncBlocked");
     }
     /**
-     * Gets the dataBackupBlocked property value. Indicates whether the backup of a managed app's data is blocked.
+     * Gets the dataBackupBlocked property value. Indicates whether the backup of a managed app&apos;s data is blocked.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -409,7 +409,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("periodOnlineBeforeAccessCheck");
     }
     /**
-     * Gets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
+     * Gets the pinCharacterSet property value. Character set which is to be used for a user&apos;s app PIN
      * @return a {@link ManagedAppPinCharacterSet}
      */
     @jakarta.annotation.Nullable
@@ -457,7 +457,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("protectedMessagingRedirectAppType");
     }
     /**
-     * Gets the saveAsBlocked property value. Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
+     * Gets the saveAsBlocked property value. Indicates whether users may use the &apos;Save As&apos; menu item to save a copy of protected files.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -549,14 +549,14 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this.backingStore.set("allowedInboundDataTransferSources", value);
     }
     /**
-     * Sets the allowedOutboundClipboardSharingExceptionLength property value. Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of '0' means no exception is allowed.
+     * Sets the allowedOutboundClipboardSharingExceptionLength property value. Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of &apos;0&apos; means no exception is allowed.
      * @param value Value to set for the allowedOutboundClipboardSharingExceptionLength property.
      */
     public void setAllowedOutboundClipboardSharingExceptionLength(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("allowedOutboundClipboardSharingExceptionLength", value);
     }
     /**
-     * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
+     * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device&apos;s clipboard may be shared between apps
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
      */
     public void setAllowedOutboundClipboardSharingLevel(@jakarta.annotation.Nullable final ManagedAppClipboardSharingLevel value) {
@@ -598,14 +598,14 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this.backingStore.set("blockDataIngestionIntoOrganizationDocuments", value);
     }
     /**
-     * Sets the contactSyncBlocked property value. Indicates whether contacts can be synced to the user's device.
+     * Sets the contactSyncBlocked property value. Indicates whether contacts can be synced to the user&apos;s device.
      * @param value Value to set for the contactSyncBlocked property.
      */
     public void setContactSyncBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("contactSyncBlocked", value);
     }
     /**
-     * Sets the dataBackupBlocked property value. Indicates whether the backup of a managed app's data is blocked.
+     * Sets the dataBackupBlocked property value. Indicates whether the backup of a managed app&apos;s data is blocked.
      * @param value Value to set for the dataBackupBlocked property.
      */
     public void setDataBackupBlocked(@jakarta.annotation.Nullable final Boolean value) {
@@ -801,7 +801,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this.backingStore.set("periodOnlineBeforeAccessCheck", value);
     }
     /**
-     * Sets the pinCharacterSet property value. Character set which is to be used for a user's app PIN
+     * Sets the pinCharacterSet property value. Character set which is to be used for a user&apos;s app PIN
      * @param value Value to set for the pinCharacterSet property.
      */
     public void setPinCharacterSet(@jakarta.annotation.Nullable final ManagedAppPinCharacterSet value) {
@@ -843,7 +843,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this.backingStore.set("protectedMessagingRedirectAppType", value);
     }
     /**
-     * Sets the saveAsBlocked property value. Indicates whether users may use the 'Save As' menu item to save a copy of protected files.
+     * Sets the saveAsBlocked property value. Indicates whether users may use the &apos;Save As&apos; menu item to save a copy of protected files.
      * @param value Value to set for the saveAsBlocked property.
      */
     public void setSaveAsBlocked(@jakarta.annotation.Nullable final Boolean value) {

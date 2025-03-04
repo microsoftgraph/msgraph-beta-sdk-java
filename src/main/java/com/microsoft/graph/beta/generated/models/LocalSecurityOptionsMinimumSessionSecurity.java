@@ -8,13 +8,13 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum LocalSecurityOptionsMinimumSessionSecurity implements ValuedEnum {
-    /** Send LM & NTLM responses */
+    /** Send LM &amp; NTLM responses */
     None("none"),
-    /** Send LM & NTLM-use NTLMv2 session security if negotiated */
+    /** Send LM &amp; NTLM-use NTLMv2 session security if negotiated */
     RequireNtmlV2SessionSecurity("requireNtmlV2SessionSecurity"),
-    /** Send LM & NTLM responses only */
+    /** Send LM &amp; NTLM responses only */
     Require128BitEncryption("require128BitEncryption"),
-    /** Send LM & NTLMv2 responses only */
+    /** Send LM &amp; NTLMv2 responses only */
     NtlmV2And128BitEncryption("ntlmV2And128BitEncryption");
     public final String value;
     LocalSecurityOptionsMinimumSessionSecurity(final String value) {

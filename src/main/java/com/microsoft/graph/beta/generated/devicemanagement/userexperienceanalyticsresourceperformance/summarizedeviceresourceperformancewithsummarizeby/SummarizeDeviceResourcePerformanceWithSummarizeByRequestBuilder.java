@@ -23,7 +23,7 @@ public class SummarizeDeviceResourcePerformanceWithSummarizeByRequestBuilder ext
      * Instantiates a new {@link SummarizeDeviceResourcePerformanceWithSummarizeByRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param summarizeBy Usage: summarizeBy='{summarizeBy}'
+     * @param summarizeBy Usage: summarizeBy=&apos;{summarizeBy}&apos;
      */
     public SummarizeDeviceResourcePerformanceWithSummarizeByRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String summarizeBy) {
         super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsResourcePerformance/summarizeDeviceResourcePerformance(summarizeBy='{summarizeBy}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);

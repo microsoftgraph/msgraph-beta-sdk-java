@@ -28,7 +28,7 @@ public class ChangeAssignmentsActionResult extends DeviceActionResult implements
         return new ChangeAssignmentsActionResult();
     }
     /**
-     * Gets the deviceAssignmentItems property value. Indicates the list of applications or configuration to report live results during their changeAssignments action execution process. The result for each individual application or configuration can contain whether it's being removed or restored, what's the current status with potential message or error code, and when any changes happen on it. Read-Only. This collection can contain a maximum of 30 elements.
+     * Gets the deviceAssignmentItems property value. Indicates the list of applications or configuration to report live results during their changeAssignments action execution process. The result for each individual application or configuration can contain whether it&apos;s being removed or restored, what&apos;s the current status with potential message or error code, and when any changes happen on it. Read-Only. This collection can contain a maximum of 30 elements.
      * @return a {@link java.util.List<DeviceAssignmentItem>}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class ChangeAssignmentsActionResult extends DeviceActionResult implements
         writer.writeCollectionOfObjectValues("deviceAssignmentItems", this.getDeviceAssignmentItems());
     }
     /**
-     * Sets the deviceAssignmentItems property value. Indicates the list of applications or configuration to report live results during their changeAssignments action execution process. The result for each individual application or configuration can contain whether it's being removed or restored, what's the current status with potential message or error code, and when any changes happen on it. Read-Only. This collection can contain a maximum of 30 elements.
+     * Sets the deviceAssignmentItems property value. Indicates the list of applications or configuration to report live results during their changeAssignments action execution process. The result for each individual application or configuration can contain whether it&apos;s being removed or restored, what&apos;s the current status with potential message or error code, and when any changes happen on it. Read-Only. This collection can contain a maximum of 30 elements.
      * @param value Value to set for the deviceAssignmentItems property.
      */
     public void setDeviceAssignmentItems(@jakarta.annotation.Nullable final java.util.List<DeviceAssignmentItem> value) {

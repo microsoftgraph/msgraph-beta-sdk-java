@@ -93,7 +93,7 @@ public class Participant extends Entity implements Parsable {
         return this.backingStore.get("metadata");
     }
     /**
-     * Gets the preferredDisplayName property value. The participant's preferred display name that overrides the original display name.
+     * Gets the preferredDisplayName property value. The participant&apos;s preferred display name that overrides the original display name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -194,7 +194,7 @@ public class Participant extends Entity implements Parsable {
         this.backingStore.set("metadata", value);
     }
     /**
-     * Sets the preferredDisplayName property value. The participant's preferred display name that overrides the original display name.
+     * Sets the preferredDisplayName property value. The participant&apos;s preferred display name that overrides the original display name.
      * @param value Value to set for the preferredDisplayName property.
      */
     public void setPreferredDisplayName(@jakarta.annotation.Nullable final String value) {

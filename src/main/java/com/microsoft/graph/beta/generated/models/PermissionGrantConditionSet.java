@@ -92,7 +92,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         return this.backingStore.get("permissionClassification");
     }
     /**
-     * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
+     * Gets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API&apos;s servicePrincipal object. The id of application permissions can be found in the appRoles property of the API&apos;s servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API&apos;s servicePrincipal object. Default is the single value all.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class PermissionGrantConditionSet extends Entity implements Parsable {
         this.backingStore.set("permissionClassification", value);
     }
     /**
-     * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API's servicePrincipal object. The id of application permissions can be found in the appRoles property of the API's servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API's servicePrincipal object. Default is the single value all.
+     * Sets the permissions property value. The list of id values for the specific permissions to match with, or a list with the single value all to match with any permission. The id of delegated permissions can be found in the publishedPermissionScopes property of the API&apos;s servicePrincipal object. The id of application permissions can be found in the appRoles property of the API&apos;s servicePrincipal object. The id of resource-specific application permissions can be found in the resourceSpecificApplicationPermissions property of the API&apos;s servicePrincipal object. Default is the single value all.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {

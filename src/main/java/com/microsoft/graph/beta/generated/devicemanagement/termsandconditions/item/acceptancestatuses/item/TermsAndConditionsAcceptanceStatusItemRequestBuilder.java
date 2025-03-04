@@ -64,7 +64,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * The list of acceptance statuses for this T&amp;C policy.
      * @return a {@link TermsAndConditionsAcceptanceStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         return get(null);
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * The list of acceptance statuses for this T&amp;C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TermsAndConditionsAcceptanceStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         return requestInfo;
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * The list of acceptance statuses for this T&amp;C policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * The list of acceptance statuses for this T&amp;C policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class TermsAndConditionsAcceptanceStatusItemRequestBuilder extends BaseRe
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of acceptance statuses for this T&C policy.
+     * The list of acceptance statuses for this T&amp;C policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -25,7 +25,7 @@ public class Domain extends Entity implements Parsable {
         return new Domain();
     }
     /**
-     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
+     * Gets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant&apos;s on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("isAdminManaged");
     }
     /**
-     * Gets the isDefault property value. true for the default domain that is used for user creation. There's only one default domain per company. Not nullable.
+     * Gets the isDefault property value. true for the default domain that is used for user creation. There&apos;s only one default domain per company. Not nullable.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Domain extends Entity implements Parsable {
         return this.backingStore.get("isDefault");
     }
     /**
-     * Gets the isInitial property value. true for the initial domain created by Microsoft Online Services. For example, contoso.onmicrosoft.com. There's only one initial domain per company. Not nullable.
+     * Gets the isInitial property value. true for the initial domain created by Microsoft Online Services. For example, contoso.onmicrosoft.com. There&apos;s only one initial domain per company. Not nullable.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -212,7 +212,7 @@ public class Domain extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("verificationDnsRecords", this.getVerificationDnsRecords());
     }
     /**
-     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
+     * Sets the authenticationType property value. Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Microsoft Entra ID performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant&apos;s on-premises Active Directory via Active Directory Federation Services. Not nullable.  To update this property in delegated scenarios, the calling app must be assigned the Directory.AccessAsUser.All delegated permission.
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final String value) {
@@ -247,14 +247,14 @@ public class Domain extends Entity implements Parsable {
         this.backingStore.set("isAdminManaged", value);
     }
     /**
-     * Sets the isDefault property value. true for the default domain that is used for user creation. There's only one default domain per company. Not nullable.
+     * Sets the isDefault property value. true for the default domain that is used for user creation. There&apos;s only one default domain per company. Not nullable.
      * @param value Value to set for the isDefault property.
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDefault", value);
     }
     /**
-     * Sets the isInitial property value. true for the initial domain created by Microsoft Online Services. For example, contoso.onmicrosoft.com. There's only one initial domain per company. Not nullable.
+     * Sets the isInitial property value. true for the initial domain created by Microsoft Online Services. For example, contoso.onmicrosoft.com. There&apos;s only one initial domain per company. Not nullable.
      * @param value Value to set for the isInitial property.
      */
     public void setIsInitial(@jakarta.annotation.Nullable final Boolean value) {

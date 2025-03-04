@@ -84,7 +84,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the justification property value. The reviewer's business justification, if supplied.
+     * Gets the justification property value. The reviewer&apos;s business justification, if supplied.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class AccessReviewDecision extends Entity implements Parsable {
         this.backingStore.set("applyResult", value);
     }
     /**
-     * Sets the justification property value. The reviewer's business justification, if supplied.
+     * Sets the justification property value. The reviewer&apos;s business justification, if supplied.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {

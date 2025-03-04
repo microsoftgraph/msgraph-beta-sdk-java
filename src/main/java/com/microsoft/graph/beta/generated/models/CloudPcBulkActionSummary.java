@@ -87,7 +87,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("inProgressCount");
     }
     /**
-     * Gets the notSupportedCount property value. The number of Cloud PCs where the action isn't supported.
+     * Gets the notSupportedCount property value. The number of Cloud PCs where the action isn&apos;t supported.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class CloudPcBulkActionSummary implements AdditionalDataHolder, BackedMod
         this.backingStore.set("inProgressCount", value);
     }
     /**
-     * Sets the notSupportedCount property value. The number of Cloud PCs where the action isn't supported.
+     * Sets the notSupportedCount property value. The number of Cloud PCs where the action isn&apos;t supported.
      * @param value Value to set for the notSupportedCount property.
      */
     public void setNotSupportedCount(@jakarta.annotation.Nullable final Integer value) {

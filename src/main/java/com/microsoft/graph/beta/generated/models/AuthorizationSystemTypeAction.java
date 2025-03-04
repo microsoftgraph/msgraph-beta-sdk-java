@@ -34,7 +34,7 @@ public class AuthorizationSystemTypeAction extends Entity implements Parsable {
         return new AuthorizationSystemTypeAction();
     }
     /**
-     * Gets the actionType property value. The type of action allowed in the authorization system's service. The possible values are: delete, read, unknownFutureValue. Supports $filter and (eq).
+     * Gets the actionType property value. The type of action allowed in the authorization system&apos;s service. The possible values are: delete, read, unknownFutureValue. Supports $filter and (eq).
      * @return a {@link AuthorizationSystemActionType}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class AuthorizationSystemTypeAction extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the resourceTypes property value. The resource types in the authorization system's service where the action can be performed. Supports $filter and (eq).
+     * Gets the resourceTypes property value. The resource types in the authorization system&apos;s service where the action can be performed. Supports $filter and (eq).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class AuthorizationSystemTypeAction extends Entity implements Parsable {
         writer.writeEnumValue("severity", this.getSeverity());
     }
     /**
-     * Sets the actionType property value. The type of action allowed in the authorization system's service. The possible values are: delete, read, unknownFutureValue. Supports $filter and (eq).
+     * Sets the actionType property value. The type of action allowed in the authorization system&apos;s service. The possible values are: delete, read, unknownFutureValue. Supports $filter and (eq).
      * @param value Value to set for the actionType property.
      */
     public void setActionType(@jakarta.annotation.Nullable final AuthorizationSystemActionType value) {
@@ -105,7 +105,7 @@ public class AuthorizationSystemTypeAction extends Entity implements Parsable {
         this.backingStore.set("externalId", value);
     }
     /**
-     * Sets the resourceTypes property value. The resource types in the authorization system's service where the action can be performed. Supports $filter and (eq).
+     * Sets the resourceTypes property value. The resource types in the authorization system&apos;s service where the action can be performed. Supports $filter and (eq).
      * @param value Value to set for the resourceTypes property.
      */
     public void setResourceTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {

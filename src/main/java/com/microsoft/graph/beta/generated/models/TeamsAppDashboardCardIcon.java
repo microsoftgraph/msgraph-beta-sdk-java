@@ -84,7 +84,7 @@ public class TeamsAppDashboardCardIcon implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the officeUIFabricIconName property value. The friendly name of the Office UI Fabric/Fluent UI icon for the card that is used when the iconUrl property isn't specified. For example, 'officeUIFabricIconName': 'Search'.
+     * Gets the officeUIFabricIconName property value. The friendly name of the Office UI Fabric/Fluent UI icon for the card that is used when the iconUrl property isn&apos;t specified. For example, &apos;officeUIFabricIconName&apos;: &apos;Search&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class TeamsAppDashboardCardIcon implements AdditionalDataHolder, BackedMo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the officeUIFabricIconName property value. The friendly name of the Office UI Fabric/Fluent UI icon for the card that is used when the iconUrl property isn't specified. For example, 'officeUIFabricIconName': 'Search'.
+     * Sets the officeUIFabricIconName property value. The friendly name of the Office UI Fabric/Fluent UI icon for the card that is used when the iconUrl property isn&apos;t specified. For example, &apos;officeUIFabricIconName&apos;: &apos;Search&apos;.
      * @param value Value to set for the officeUIFabricIconName property.
      */
     public void setOfficeUIFabricIconName(@jakarta.annotation.Nullable final String value) {

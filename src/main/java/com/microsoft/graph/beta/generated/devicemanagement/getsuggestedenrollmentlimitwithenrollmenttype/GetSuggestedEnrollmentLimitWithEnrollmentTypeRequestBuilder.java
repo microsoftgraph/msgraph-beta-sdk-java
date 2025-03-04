@@ -21,7 +21,7 @@ import java.util.Objects;
 public class GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder} and sets the default values.
-     * @param enrollmentType Usage: enrollmentType='{enrollmentType}'
+     * @param enrollmentType Usage: enrollmentType=&apos;{enrollmentType}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Indicates the device's feature type. Possible values are: manufacturer, model, osVersion, application or driver.
+ * Indicates the device&apos;s feature type. Possible values are: manufacturer, model, osVersion, application or driver.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum UserExperienceAnalyticsAnomalyDeviceFeatureType implements ValuedEnum {

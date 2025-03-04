@@ -50,7 +50,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("adDomainUsername");
     }
     /**
-     * Gets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Returned only on $select.
+     * Gets the alternateResourceUrl property value. The interface URL of the partner service&apos;s resource that links to this Azure network connection. Returned only on $select.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("healthCheckStatusDetail");
     }
     /**
-     * Gets the healthCheckStatusDetails property value. The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Gets the healthCheckStatusDetails property value. The details of the connection&apos;s health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @return a {@link CloudPcOnPremisesConnectionStatusDetails}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("healthCheckStatusDetails");
     }
     /**
-     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Gets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn&apos;t in use. You can&apos;t delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -284,7 +284,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("adDomainUsername", value);
     }
     /**
-     * Sets the alternateResourceUrl property value. The interface URL of the partner service's resource that links to this Azure network connection. Returned only on $select.
+     * Sets the alternateResourceUrl property value. The interface URL of the partner service&apos;s resource that links to this Azure network connection. Returned only on $select.
      * @param value Value to set for the alternateResourceUrl property.
      */
     public void setAlternateResourceUrl(@jakarta.annotation.Nullable final String value) {
@@ -326,14 +326,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         this.backingStore.set("healthCheckStatusDetail", value);
     }
     /**
-     * Sets the healthCheckStatusDetails property value. The details of the connection's health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Sets the healthCheckStatusDetails property value. The details of the connection&apos;s health checks and the corresponding results. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @param value Value to set for the healthCheckStatusDetails property.
      */
     public void setHealthCheckStatusDetails(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionStatusDetails value) {
         this.backingStore.set("healthCheckStatusDetails", value);
     }
     /**
-     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn't in use. You can't delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
+     * Sets the inUse property value. When true, the Azure network connection is in use. When false, the connection isn&apos;t in use. You can&apos;t delete a connection thats in use. Returned only on $select. For an example that shows how to get the inUse property, see Example 2: Get the selected properties of an Azure network connection, including healthCheckStatusDetails. Read-only.
      * @param value Value to set for the inUse property.
      */
     public void setInUse(@jakarta.annotation.Nullable final Boolean value) {

@@ -10,7 +10,7 @@ import java.util.Objects;
 public enum DeviceAppManagementTaskCategory implements ValuedEnum {
     /** Unknown source. */
     Unknown("unknown"),
-    /** Windows Defender ATP Threat & Vulnerability Management. */
+    /** Windows Defender ATP Threat &amp; Vulnerability Management. */
     AdvancedThreatProtection("advancedThreatProtection");
     public final String value;
     DeviceAppManagementTaskCategory(final String value) {

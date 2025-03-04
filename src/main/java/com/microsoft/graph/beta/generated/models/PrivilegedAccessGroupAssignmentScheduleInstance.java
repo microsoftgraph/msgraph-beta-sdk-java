@@ -34,7 +34,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
         return this.backingStore.get("accessId");
     }
     /**
-     * Gets the activatedUsing property value. When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it's null.
+     * Gets the activatedUsing property value. When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it&apos;s null.
      * @return a {@link PrivilegedAccessGroupEligibilityScheduleInstance}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
         return this.backingStore.get("memberType");
     }
     /**
-     * Gets the principal property value. References the principal that's in the scope of the membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
+     * Gets the principal property value. References the principal that&apos;s in the scope of the membership or ownership assignment request through the group that&apos;s governed by PIM. Supports $expand.
      * @return a {@link DirectoryObject}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
         this.backingStore.set("accessId", value);
     }
     /**
-     * Sets the activatedUsing property value. When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it's null.
+     * Sets the activatedUsing property value. When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it&apos;s null.
      * @param value Value to set for the activatedUsing property.
      */
     public void setActivatedUsing(@jakarta.annotation.Nullable final PrivilegedAccessGroupEligibilityScheduleInstance value) {
@@ -182,7 +182,7 @@ public class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedA
         this.backingStore.set("memberType", value);
     }
     /**
-     * Sets the principal property value. References the principal that's in the scope of the membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
+     * Sets the principal property value. References the principal that&apos;s in the scope of the membership or ownership assignment request through the group that&apos;s governed by PIM. Supports $expand.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final DirectoryObject value) {

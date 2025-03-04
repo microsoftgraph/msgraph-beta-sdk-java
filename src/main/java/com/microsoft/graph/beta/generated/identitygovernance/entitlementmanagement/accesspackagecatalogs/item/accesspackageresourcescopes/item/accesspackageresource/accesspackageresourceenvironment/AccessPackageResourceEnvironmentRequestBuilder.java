@@ -37,7 +37,7 @@ public class AccessPackageResourceEnvironmentRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackageResourceScopes/{accessPackageResourceScope%2Did}/accessPackageResource/accessPackageResourceEnvironment{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment's originId. Supports $expand.
+     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment&apos;s originId. Supports $expand.
      * @return a {@link AccessPackageResourceEnvironment}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -49,7 +49,7 @@ public class AccessPackageResourceEnvironmentRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment's originId. Supports $expand.
+     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment&apos;s originId. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageResourceEnvironment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -65,7 +65,7 @@ public class AccessPackageResourceEnvironmentRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageResourceEnvironment::createFromDiscriminatorValue);
     }
     /**
-     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment's originId. Supports $expand.
+     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment&apos;s originId. Supports $expand.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -76,7 +76,7 @@ public class AccessPackageResourceEnvironmentRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment's originId. Supports $expand.
+     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment&apos;s originId. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -104,7 +104,7 @@ public class AccessPackageResourceEnvironmentRequestBuilder extends BaseRequestB
         return new AccessPackageResourceEnvironmentRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment's originId. Supports $expand.
+     * Contains the environment information for the resource. This environment can be set using either the @odata.bind annotation or the environment&apos;s originId. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

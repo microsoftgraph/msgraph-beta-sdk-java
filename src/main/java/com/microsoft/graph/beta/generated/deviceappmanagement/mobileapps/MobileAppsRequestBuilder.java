@@ -269,7 +269,7 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the convertFromMobileAppCatalogPackage method.
-     * @param mobileAppCatalogPackageId Usage: mobileAppCatalogPackageId='{mobileAppCatalogPackageId}'
+     * @param mobileAppCatalogPackageId Usage: mobileAppCatalogPackageId=&apos;{mobileAppCatalogPackageId}&apos;
      * @return a {@link ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

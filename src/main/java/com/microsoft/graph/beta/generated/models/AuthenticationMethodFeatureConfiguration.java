@@ -56,7 +56,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         return this.backingStore;
     }
     /**
-     * Gets the excludeTarget property value. A single entity that's excluded from using this feature.
+     * Gets the excludeTarget property value. A single entity that&apos;s excluded from using this feature.
      * @return a {@link FeatureTarget}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         return deserializerMap;
     }
     /**
-     * Gets the includeTarget property value. A single entity that's allowed to use this feature.
+     * Gets the includeTarget property value. A single entity that&apos;s allowed to use this feature.
      * @return a {@link FeatureTarget}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
+     * Gets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn&apos;t been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @return a {@link AdvancedConfigState}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         this.backingStore = value;
     }
     /**
-     * Sets the excludeTarget property value. A single entity that's excluded from using this feature.
+     * Sets the excludeTarget property value. A single entity that&apos;s excluded from using this feature.
      * @param value Value to set for the excludeTarget property.
      */
     public void setExcludeTarget(@jakarta.annotation.Nullable final FeatureTarget value) {
         this.backingStore.set("excludeTarget", value);
     }
     /**
-     * Sets the includeTarget property value. A single entity that's allowed to use this feature.
+     * Sets the includeTarget property value. A single entity that&apos;s allowed to use this feature.
      * @param value Value to set for the includeTarget property.
      */
     public void setIncludeTarget(@jakarta.annotation.Nullable final FeatureTarget value) {
@@ -149,7 +149,7 @@ public class AuthenticationMethodFeatureConfiguration implements AdditionalDataH
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
+     * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn&apos;t been explicitly set and uses the default behavior of Microsoft Entra ID for the setting. The default value is disabled.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AdvancedConfigState value) {

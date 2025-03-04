@@ -86,7 +86,7 @@ public class ElevationRequestApplicationDetail implements AdditionalDataHolder, 
         return this.backingStore.get("fileDescription");
     }
     /**
-     * Gets the fileHash property value. The SHA256 hash of the file in the request for elevation, for example, '18ee24150dcb1d96752a4d6dd0f20dfd8ba8c38527e40aa8509b7adecf78f9c6'
+     * Gets the fileHash property value. The SHA256 hash of the file in the request for elevation, for example, &apos;18ee24150dcb1d96752a4d6dd0f20dfd8ba8c38527e40aa8509b7adecf78f9c6&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class ElevationRequestApplicationDetail implements AdditionalDataHolder, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the productInternalName property value. The internal name of the application for which elevation request has been made. For example, 'git'
+     * Gets the productInternalName property value. The internal name of the application for which elevation request has been made. For example, &apos;git&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class ElevationRequestApplicationDetail implements AdditionalDataHolder, 
         return this.backingStore.get("productInternalName");
     }
     /**
-     * Gets the productName property value. The product name of the application for which elevation request has been made. For example, 'Git'
+     * Gets the productName property value. The product name of the application for which elevation request has been made. For example, &apos;Git&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class ElevationRequestApplicationDetail implements AdditionalDataHolder, 
         return this.backingStore.get("productName");
     }
     /**
-     * Gets the productVersion property value. The product version of the application for which elevation request has been made. For example, '2.40.1.0'
+     * Gets the productVersion property value. The product version of the application for which elevation request has been made. For example, &apos;2.40.1.0&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class ElevationRequestApplicationDetail implements AdditionalDataHolder, 
         return this.backingStore.get("publisherCert");
     }
     /**
-     * Gets the publisherName property value. The certificate issuer name of the certificate used to sign the application, for example, 'Sectigo Public Code Signing CA R36'
+     * Gets the publisherName property value. The certificate issuer name of the certificate used to sign the application, for example, &apos;Sectigo Public Code Signing CA R36&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class ElevationRequestApplicationDetail implements AdditionalDataHolder, 
         this.backingStore.set("fileDescription", value);
     }
     /**
-     * Sets the fileHash property value. The SHA256 hash of the file in the request for elevation, for example, '18ee24150dcb1d96752a4d6dd0f20dfd8ba8c38527e40aa8509b7adecf78f9c6'
+     * Sets the fileHash property value. The SHA256 hash of the file in the request for elevation, for example, &apos;18ee24150dcb1d96752a4d6dd0f20dfd8ba8c38527e40aa8509b7adecf78f9c6&apos;
      * @param value Value to set for the fileHash property.
      */
     public void setFileHash(@jakarta.annotation.Nullable final String value) {
@@ -226,21 +226,21 @@ public class ElevationRequestApplicationDetail implements AdditionalDataHolder, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the productInternalName property value. The internal name of the application for which elevation request has been made. For example, 'git'
+     * Sets the productInternalName property value. The internal name of the application for which elevation request has been made. For example, &apos;git&apos;
      * @param value Value to set for the productInternalName property.
      */
     public void setProductInternalName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("productInternalName", value);
     }
     /**
-     * Sets the productName property value. The product name of the application for which elevation request has been made. For example, 'Git'
+     * Sets the productName property value. The product name of the application for which elevation request has been made. For example, &apos;Git&apos;
      * @param value Value to set for the productName property.
      */
     public void setProductName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("productName", value);
     }
     /**
-     * Sets the productVersion property value. The product version of the application for which elevation request has been made. For example, '2.40.1.0'
+     * Sets the productVersion property value. The product version of the application for which elevation request has been made. For example, &apos;2.40.1.0&apos;
      * @param value Value to set for the productVersion property.
      */
     public void setProductVersion(@jakarta.annotation.Nullable final String value) {
@@ -254,7 +254,7 @@ public class ElevationRequestApplicationDetail implements AdditionalDataHolder, 
         this.backingStore.set("publisherCert", value);
     }
     /**
-     * Sets the publisherName property value. The certificate issuer name of the certificate used to sign the application, for example, 'Sectigo Public Code Signing CA R36'
+     * Sets the publisherName property value. The certificate issuer name of the certificate used to sign the application, for example, &apos;Sectigo Public Code Signing CA R36&apos;
      * @param value Value to set for the publisherName property.
      */
     public void setPublisherName(@jakarta.annotation.Nullable final String value) {

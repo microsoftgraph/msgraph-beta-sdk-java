@@ -41,7 +41,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return this.backingStore.get("azureADRegistration");
     }
     /**
-     * Gets the description property value. The description of the device registration policy. It's always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
+     * Gets the description property value. The description of the device registration policy. It&apos;s always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The name of the device registration policy. It's always set to Device Registration Policy. Read-only.
+     * Gets the displayName property value. The name of the device registration policy. It&apos;s always set to Device Registration Policy. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return this.backingStore.get("multiFactorAuthConfiguration");
     }
     /**
-     * Gets the userDeviceQuota property value. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn't specified during the policy update operation, it's automatically reset to 0 to indicate that users aren't allowed to join any devices.
+     * Gets the userDeviceQuota property value. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn&apos;t specified during the policy update operation, it&apos;s automatically reset to 0 to indicate that users aren&apos;t allowed to join any devices.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -126,14 +126,14 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         this.backingStore.set("azureADRegistration", value);
     }
     /**
-     * Sets the description property value. The description of the device registration policy. It's always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
+     * Sets the description property value. The description of the device registration policy. It&apos;s always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The name of the device registration policy. It's always set to Device Registration Policy. Read-only.
+     * Sets the displayName property value. The name of the device registration policy. It&apos;s always set to Device Registration Policy. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -154,7 +154,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         this.backingStore.set("multiFactorAuthConfiguration", value);
     }
     /**
-     * Sets the userDeviceQuota property value. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn't specified during the policy update operation, it's automatically reset to 0 to indicate that users aren't allowed to join any devices.
+     * Sets the userDeviceQuota property value. Specifies the maximum number of devices that a user can have within your organization before blocking new device registrations. The default value is set to 50. If this property isn&apos;t specified during the policy update operation, it&apos;s automatically reset to 0 to indicate that users aren&apos;t allowed to join any devices.
      * @param value Value to set for the userDeviceQuota property.
      */
     public void setUserDeviceQuota(@jakarta.annotation.Nullable final Integer value) {

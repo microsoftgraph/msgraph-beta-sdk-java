@@ -68,7 +68,7 @@ public class AttributesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/graph.externalUsersSelfServiceSignUpEventsFlow/onAttributeCollection/graph.onAttributeCollectionExternalUsersSelfServiceSignUp/attributes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that's defined by the user flow.
+     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that&apos;s defined by the user flow.
      * @return a {@link IdentityUserFlowAttributeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/onattributecollectionexternalusersselfservicesignup-list-attributes?view=graph-rest-beta">Find more info here</a>
@@ -78,7 +78,7 @@ public class AttributesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that's defined by the user flow.
+     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that&apos;s defined by the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityUserFlowAttributeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -92,7 +92,7 @@ public class AttributesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IdentityUserFlowAttributeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that's defined by the user flow.
+     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that&apos;s defined by the user flow.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -100,7 +100,7 @@ public class AttributesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that's defined by the user flow.
+     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that&apos;s defined by the user flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +122,7 @@ public class AttributesRequestBuilder extends BaseRequestBuilder {
         return new AttributesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that's defined by the user flow.
+     * Get an identityUserFlowAttribute collection associated with an external identities self-service sign up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. These are the attributes that are collected from the user during the authentication experience that&apos;s defined by the user flow.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

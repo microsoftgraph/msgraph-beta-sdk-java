@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Data type for a configuration item inside an Android application's custom configuration schema
+ * Data type for a configuration item inside an Android application&apos;s custom configuration schema
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidManagedStoreAppConfigurationSchemaItemDataType implements ValuedEnum {

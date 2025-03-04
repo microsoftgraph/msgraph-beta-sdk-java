@@ -23,7 +23,7 @@ public class FindRoomsWithRoomListRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new {@link FindRoomsWithRoomListRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param RoomList Usage: RoomList='{RoomList}'
+     * @param RoomList Usage: RoomList=&apos;{RoomList}&apos;
      */
     public FindRoomsWithRoomListRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String RoomList) {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/findRooms(RoomList='{RoomList}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

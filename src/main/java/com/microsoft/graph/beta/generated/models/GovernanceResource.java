@@ -34,7 +34,7 @@ public class GovernanceResource extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the externalId property value. The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
+     * Gets the externalId property value. The external id of the resource, representing its original id in the external system. For example, a subscription resource&apos;s external id can be &apos;/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class GovernanceResource extends Entity implements Parsable {
         return this.backingStore.get("registeredDateTime");
     }
     /**
-     * Gets the registeredRoot property value. The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
+     * Gets the registeredRoot property value. The externalId of the resource&apos;s root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class GovernanceResource extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the type property value. Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
+     * Gets the type property value. Required. Resource type. For example, for Azure resources, the type could be &apos;Subscription&apos;, &apos;ResourceGroup&apos;, &apos;Microsoft.Sql/server&apos;, etc.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class GovernanceResource extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the externalId property value. The external id of the resource, representing its original id in the external system. For example, a subscription resource's external id can be '/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac'.
+     * Sets the externalId property value. The external id of the resource, representing its original id in the external system. For example, a subscription resource&apos;s external id can be &apos;/subscriptions/c14ae696-5e0c-4e5d-88cc-bef6637737ac&apos;.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {
@@ -181,7 +181,7 @@ public class GovernanceResource extends Entity implements Parsable {
         this.backingStore.set("registeredDateTime", value);
     }
     /**
-     * Sets the registeredRoot property value. The externalId of the resource's root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
+     * Sets the registeredRoot property value. The externalId of the resource&apos;s root scope that is registered in PIM. The root scope can be the parent, grandparent, or higher ancestor resources.
      * @param value Value to set for the registeredRoot property.
      */
     public void setRegisteredRoot(@jakarta.annotation.Nullable final String value) {
@@ -223,7 +223,7 @@ public class GovernanceResource extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the type property value. Required. Resource type. For example, for Azure resources, the type could be 'Subscription', 'ResourceGroup', 'Microsoft.Sql/server', etc.
+     * Sets the type property value. Required. Resource type. For example, for Azure resources, the type could be &apos;Subscription&apos;, &apos;ResourceGroup&apos;, &apos;Microsoft.Sql/server&apos;, etc.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

@@ -94,7 +94,7 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("relationship");
     }
     /**
-     * Gets the userId property value. The user's directory object ID (Microsoft Entra ID or CID).
+     * Gets the userId property value. The user&apos;s directory object ID (Microsoft Entra ID or CID).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("relationship", value);
     }
     /**
-     * Sets the userId property value. The user's directory object ID (Microsoft Entra ID or CID).
+     * Sets the userId property value. The user&apos;s directory object ID (Microsoft Entra ID or CID).
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

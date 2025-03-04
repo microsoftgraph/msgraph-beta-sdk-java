@@ -37,7 +37,7 @@ public class AuthenticationConditionApplicationAppItemRequestBuilder extends Bas
         super(requestAdapter, "{+baseurl}/identity/authenticationEventsFlows/{authenticationEventsFlow%2Did}/conditions/applications/includeApplications/{authenticationConditionApplication%2DappId}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Remove or unlink an application from an external identities self-service sign-up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. This disables the authentication experience that's defined by the user flow for the application.
+     * Remove or unlink an application from an external identities self-service sign-up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. This disables the authentication experience that&apos;s defined by the user flow for the application.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationconditionapplication-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class AuthenticationConditionApplicationAppItemRequestBuilder extends Bas
         delete(null);
     }
     /**
-     * Remove or unlink an application from an external identities self-service sign-up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. This disables the authentication experience that's defined by the user flow for the application.
+     * Remove or unlink an application from an external identities self-service sign-up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. This disables the authentication experience that&apos;s defined by the user flow for the application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authenticationconditionapplication-delete?view=graph-rest-beta">Find more info here</a>
@@ -104,7 +104,7 @@ public class AuthenticationConditionApplicationAppItemRequestBuilder extends Bas
         return this.requestAdapter.send(requestInfo, errorMapping, AuthenticationConditionApplication::createFromDiscriminatorValue);
     }
     /**
-     * Remove or unlink an application from an external identities self-service sign-up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. This disables the authentication experience that's defined by the user flow for the application.
+     * Remove or unlink an application from an external identities self-service sign-up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. This disables the authentication experience that&apos;s defined by the user flow for the application.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -112,7 +112,7 @@ public class AuthenticationConditionApplicationAppItemRequestBuilder extends Bas
         return toDeleteRequestInformation(null);
     }
     /**
-     * Remove or unlink an application from an external identities self-service sign-up user flow that's represented by an externalUsersSelfServiceSignupEventsFlow object. This disables the authentication experience that's defined by the user flow for the application.
+     * Remove or unlink an application from an external identities self-service sign-up user flow that&apos;s represented by an externalUsersSelfServiceSignupEventsFlow object. This disables the authentication experience that&apos;s defined by the user flow for the application.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

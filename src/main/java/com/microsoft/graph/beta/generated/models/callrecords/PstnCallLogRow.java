@@ -131,7 +131,7 @@ public class PstnCallLogRow extends CallLogRow implements Parsable {
         return this.backingStore.get("currency");
     }
     /**
-     * Gets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
+     * Gets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user&apos;s location.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class PstnCallLogRow extends CallLogRow implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the inventoryType property value. User's phone number type, such as a service of toll-free number.
+     * Gets the inventoryType property value. User&apos;s phone number type, such as a service of toll-free number.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -365,7 +365,7 @@ public class PstnCallLogRow extends CallLogRow implements Parsable {
         this.backingStore.set("currency", value);
     }
     /**
-     * Sets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
+     * Sets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user&apos;s location.
      * @param value Value to set for the destinationContext property.
      */
     public void setDestinationContext(@jakarta.annotation.Nullable final String value) {
@@ -393,7 +393,7 @@ public class PstnCallLogRow extends CallLogRow implements Parsable {
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the inventoryType property value. User's phone number type, such as a service of toll-free number.
+     * Sets the inventoryType property value. User&apos;s phone number type, such as a service of toll-free number.
      * @param value Value to set for the inventoryType property.
      */
     public void setInventoryType(@jakarta.annotation.Nullable final String value) {

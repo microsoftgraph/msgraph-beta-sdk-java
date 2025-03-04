@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Different Windows' versions have Edition specific support timelines. This complex type defines the date until which a particular edition is supported in a Windows' version.
+ * Different Windows&apos; versions have Edition specific support timelines. This complex type defines the date until which a particular edition is supported in a Windows&apos; version.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceWindowsOperatingSystemEdition implements AdditionalDataHolder, BackedModel, Parsable {
@@ -88,7 +88,7 @@ public class ManagedDeviceWindowsOperatingSystemEdition implements AdditionalDat
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the supportEndDate property value. Indicates the Date until which this Operating System edition type is officially supported. The Timestamp type represents date and time information using ISO 8601 format and is always in Pacific Time Zone (PT). For example, 2014-01-01 would mean '2014-01-01T07:00:00Z' in UTC time. Returned by default. Read-only.
+     * Gets the supportEndDate property value. Indicates the Date until which this Operating System edition type is officially supported. The Timestamp type represents date and time information using ISO 8601 format and is always in Pacific Time Zone (PT). For example, 2014-01-01 would mean &apos;2014-01-01T07:00:00Z&apos; in UTC time. Returned by default. Read-only.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class ManagedDeviceWindowsOperatingSystemEdition implements AdditionalDat
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the supportEndDate property value. Indicates the Date until which this Operating System edition type is officially supported. The Timestamp type represents date and time information using ISO 8601 format and is always in Pacific Time Zone (PT). For example, 2014-01-01 would mean '2014-01-01T07:00:00Z' in UTC time. Returned by default. Read-only.
+     * Sets the supportEndDate property value. Indicates the Date until which this Operating System edition type is officially supported. The Timestamp type represents date and time information using ISO 8601 format and is always in Pacific Time Zone (PT). For example, 2014-01-01 would mean &apos;2014-01-01T07:00:00Z&apos; in UTC time. Returned by default. Read-only.
      * @param value Value to set for the supportEndDate property.
      */
     public void setSupportEndDate(@jakarta.annotation.Nullable final LocalDate value) {

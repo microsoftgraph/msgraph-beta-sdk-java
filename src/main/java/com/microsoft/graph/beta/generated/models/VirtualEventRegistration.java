@@ -63,6 +63,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         deserializerMap.put("lastName", (n) -> { this.setLastName(n.getStringValue()); });
         deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
         deserializerMap.put("preferredTimezone", (n) -> { this.setPreferredTimezone(n.getStringValue()); });
+        deserializerMap.put("registrantVideoOnDemandWebUrl", (n) -> { this.setRegistrantVideoOnDemandWebUrl(n.getStringValue()); });
         deserializerMap.put("registrationDateTime", (n) -> { this.setRegistrationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("registrationQuestionAnswers", (n) -> { this.setRegistrationQuestionAnswers(n.getCollectionOfObjectValues(VirtualEventRegistrationQuestionAnswer::createFromDiscriminatorValue)); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
@@ -87,7 +88,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("lastName");
     }
     /**
-     * Gets the preferredLanguage property value. The registrant's preferred language.
+     * Gets the preferredLanguage property value. The registrant&apos;s preferred language.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -95,12 +96,20 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("preferredLanguage");
     }
     /**
-     * Gets the preferredTimezone property value. The registrant's time zone details.
+     * Gets the preferredTimezone property value. The registrant&apos;s time zone details.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getPreferredTimezone() {
         return this.backingStore.get("preferredTimezone");
+    }
+    /**
+     * Gets the registrantVideoOnDemandWebUrl property value. The registrantVideoOnDemandWebUrl property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRegistrantVideoOnDemandWebUrl() {
+        return this.backingStore.get("registrantVideoOnDemandWebUrl");
     }
     /**
      * Gets the registrationDateTime property value. Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -111,7 +120,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("registrationDateTime");
     }
     /**
-     * Gets the registrationQuestionAnswers property value. The registrant's answer to the registration questions.
+     * Gets the registrationQuestionAnswers property value. The registrant&apos;s answer to the registration questions.
      * @return a {@link java.util.List<VirtualEventRegistrationQuestionAnswer>}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +144,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the userId property value. The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
+     * Gets the userId property value. The registrant&apos;s ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -156,6 +165,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         writer.writeStringValue("lastName", this.getLastName());
         writer.writeStringValue("preferredLanguage", this.getPreferredLanguage());
         writer.writeStringValue("preferredTimezone", this.getPreferredTimezone());
+        writer.writeStringValue("registrantVideoOnDemandWebUrl", this.getRegistrantVideoOnDemandWebUrl());
         writer.writeOffsetDateTimeValue("registrationDateTime", this.getRegistrationDateTime());
         writer.writeCollectionOfObjectValues("registrationQuestionAnswers", this.getRegistrationQuestionAnswers());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
@@ -198,18 +208,25 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         this.backingStore.set("lastName", value);
     }
     /**
-     * Sets the preferredLanguage property value. The registrant's preferred language.
+     * Sets the preferredLanguage property value. The registrant&apos;s preferred language.
      * @param value Value to set for the preferredLanguage property.
      */
     public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("preferredLanguage", value);
     }
     /**
-     * Sets the preferredTimezone property value. The registrant's time zone details.
+     * Sets the preferredTimezone property value. The registrant&apos;s time zone details.
      * @param value Value to set for the preferredTimezone property.
      */
     public void setPreferredTimezone(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("preferredTimezone", value);
+    }
+    /**
+     * Sets the registrantVideoOnDemandWebUrl property value. The registrantVideoOnDemandWebUrl property
+     * @param value Value to set for the registrantVideoOnDemandWebUrl property.
+     */
+    public void setRegistrantVideoOnDemandWebUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("registrantVideoOnDemandWebUrl", value);
     }
     /**
      * Sets the registrationDateTime property value. Date and time when the registrant registers for the virtual event. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -219,7 +236,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         this.backingStore.set("registrationDateTime", value);
     }
     /**
-     * Sets the registrationQuestionAnswers property value. The registrant's answer to the registration questions.
+     * Sets the registrationQuestionAnswers property value. The registrant&apos;s answer to the registration questions.
      * @param value Value to set for the registrationQuestionAnswers property.
      */
     public void setRegistrationQuestionAnswers(@jakarta.annotation.Nullable final java.util.List<VirtualEventRegistrationQuestionAnswer> value) {
@@ -240,7 +257,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the userId property value. The registrant's ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
+     * Sets the userId property value. The registrant&apos;s ID in Microsoft Entra ID. Only appears when the registrant is registered in Microsoft Entra ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

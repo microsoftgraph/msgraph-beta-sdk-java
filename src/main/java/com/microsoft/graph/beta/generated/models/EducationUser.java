@@ -169,7 +169,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("givenName");
     }
     /**
-     * Gets the mail property value. The SMTP address for the user; for example, 'jeff@contoso.com'. Read-Only. Supports /$filter.
+     * Gets the mail property value. The SMTP address for the user; for example, &apos;jeff@contoso.com&apos;. Read-Only. Supports /$filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("mail");
     }
     /**
-     * Gets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox aren't supported for educationUser resources.
+     * Gets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox aren&apos;t supported for educationUser resources.
      * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
@@ -233,7 +233,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("passwordPolicies");
     }
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. For more details, see the standard [user] resource.
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. For more details, see the standard [user] resource.
      * @return a {@link PasswordProfile}
      */
     @jakarta.annotation.Nullable
@@ -241,7 +241,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("passwordProfile");
     }
     /**
-     * Gets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
+     * Gets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, &apos;en-US&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -281,7 +281,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("relatedContacts");
     }
     /**
-     * Gets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox aren't supported for educationUser resources.
+     * Gets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox aren&apos;t supported for educationUser resources.
      * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
@@ -321,7 +321,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("student");
     }
     /**
-     * Gets the surname property value. The user's surname (family name or last name). Supports /$filter.
+     * Gets the surname property value. The user&apos;s surname (family name or last name). Supports /$filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -369,7 +369,7 @@ public class EducationUser extends Entity implements Parsable {
         return this.backingStore.get("userPrincipalName");
     }
     /**
-     * Gets the userType property value. A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
+     * Gets the userType property value. A string value that can be used to classify user types in your directory, such as &apos;Member&apos; and &apos;Guest&apos;. Supports /$filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -507,14 +507,14 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("givenName", value);
     }
     /**
-     * Sets the mail property value. The SMTP address for the user; for example, 'jeff@contoso.com'. Read-Only. Supports /$filter.
+     * Sets the mail property value. The SMTP address for the user; for example, &apos;jeff@contoso.com&apos;. Read-Only. Supports /$filter.
      * @param value Value to set for the mail property.
      */
     public void setMail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mail", value);
     }
     /**
-     * Sets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox aren't supported for educationUser resources.
+     * Sets the mailingAddress property value. Mail address of user. Note: type and postOfficeBox aren&apos;t supported for educationUser resources.
      * @param value Value to set for the mailingAddress property.
      */
     public void setMailingAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
@@ -563,14 +563,14 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("passwordPolicies", value);
     }
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. For more details, see the standard [user] resource.
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. For more details, see the standard [user] resource.
      * @param value Value to set for the passwordProfile property.
      */
     public void setPasswordProfile(@jakarta.annotation.Nullable final PasswordProfile value) {
         this.backingStore.set("passwordProfile", value);
     }
     /**
-     * Sets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, 'en-US'.
+     * Sets the preferredLanguage property value. The preferred language for the user. Should follow ISO 639-1 Code; for example, &apos;en-US&apos;.
      * @param value Value to set for the preferredLanguage property.
      */
     public void setPreferredLanguage(@jakarta.annotation.Nullable final String value) {
@@ -605,7 +605,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("relatedContacts", value);
     }
     /**
-     * Sets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox aren't supported for educationUser resources.
+     * Sets the residenceAddress property value. Address where user lives. Note: type and postOfficeBox aren&apos;t supported for educationUser resources.
      * @param value Value to set for the residenceAddress property.
      */
     public void setResidenceAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
@@ -640,7 +640,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("student", value);
     }
     /**
-     * Sets the surname property value. The user's surname (family name or last name). Supports /$filter.
+     * Sets the surname property value. The user&apos;s surname (family name or last name). Supports /$filter.
      * @param value Value to set for the surname property.
      */
     public void setSurname(@jakarta.annotation.Nullable final String value) {
@@ -682,7 +682,7 @@ public class EducationUser extends Entity implements Parsable {
         this.backingStore.set("userPrincipalName", value);
     }
     /**
-     * Sets the userType property value. A string value that can be used to classify user types in your directory, such as 'Member' and 'Guest'. Supports /$filter.
+     * Sets the userType property value. A string value that can be used to classify user types in your directory, such as &apos;Member&apos; and &apos;Guest&apos;. Supports /$filter.
      * @param value Value to set for the userType property.
      */
     public void setUserType(@jakarta.annotation.Nullable final String value) {

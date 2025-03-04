@@ -21,7 +21,7 @@ import java.util.Objects;
 public class GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder} and sets the default values.
-     * @param cloudPcId Usage: cloudPcId='{cloudPcId}'
+     * @param cloudPcId Usage: cloudPcId=&apos;{cloudPcId}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

@@ -34,7 +34,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("accessReviewId");
     }
     /**
-     * Gets the appliedBy property value. The identifier of the user who applied the decision. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. Read-only.
+     * Gets the appliedBy property value. The identifier of the user who applied the decision. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn&apos;t applied the decision or it was automatically applied. Read-only.
      * @return a {@link UserIdentity}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("insights");
     }
     /**
-     * Gets the instance property value. There's exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
+     * Gets the instance property value. There&apos;s exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
      * @return a {@link AccessReviewInstance}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("justification");
     }
     /**
-     * Gets the principal property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
+     * Gets the principal property value. Every decision item in an access review represents a principal&apos;s access to a resource. This property represents details of the principal. For example, if a decision item represents access of User &apos;Bob&apos; to Group &apos;Sales&apos; - The principal is &apos;Bob&apos; and the resource is &apos;Sales&apos;. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("principalLink");
     }
     /**
-     * Gets the principalResourceMembership property value. Every decision item in an access review represents a principal's membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only.
+     * Gets the principalResourceMembership property value. Every decision item in an access review represents a principal&apos;s membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only.
      * @return a {@link DecisionItemPrincipalResourceMembership}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("recommendation");
     }
     /**
-     * Gets the resource property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
+     * Gets the resource property value. Every decision item in an access review represents a principal&apos;s access to a resource. This property represents details of the resource. For example, if a decision item represents access of User &apos;Bob&apos; to Group &apos;Sales&apos; - The principal is Bob and the resource is &apos;Sales&apos;. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
      * @return a {@link AccessReviewInstanceDecisionItemResource}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("resourceLink");
     }
     /**
-     * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
+     * Gets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn&apos;t reviewed. Supports $select. Read-only.
      * @return a {@link UserIdentity}
      */
     @jakarta.annotation.Nullable
@@ -220,7 +220,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("accessReviewId", value);
     }
     /**
-     * Sets the appliedBy property value. The identifier of the user who applied the decision. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. Read-only.
+     * Sets the appliedBy property value. The identifier of the user who applied the decision. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn&apos;t applied the decision or it was automatically applied. Read-only.
      * @param value Value to set for the appliedBy property.
      */
     public void setAppliedBy(@jakarta.annotation.Nullable final UserIdentity value) {
@@ -255,7 +255,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("insights", value);
     }
     /**
-     * Sets the instance property value. There's exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
+     * Sets the instance property value. There&apos;s exactly one accessReviewInstance associated with each decision. The instance is the parent of the decision item, representing the recurrence of the access review the decision is made on.
      * @param value Value to set for the instance property.
      */
     public void setInstance(@jakarta.annotation.Nullable final AccessReviewInstance value) {
@@ -269,7 +269,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("justification", value);
     }
     /**
-     * Sets the principal property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
+     * Sets the principal property value. Every decision item in an access review represents a principal&apos;s access to a resource. This property represents details of the principal. For example, if a decision item represents access of User &apos;Bob&apos; to Group &apos;Sales&apos; - The principal is &apos;Bob&apos; and the resource is &apos;Sales&apos;. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
      * @param value Value to set for the principal property.
      */
     public void setPrincipal(@jakarta.annotation.Nullable final Identity value) {
@@ -283,7 +283,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("principalLink", value);
     }
     /**
-     * Sets the principalResourceMembership property value. Every decision item in an access review represents a principal's membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only.
+     * Sets the principalResourceMembership property value. Every decision item in an access review represents a principal&apos;s membership to a resource. This property provides the details of the membership. For example, whether the principal has direct access or indirect access to the resource. Supports $select. Read-only.
      * @param value Value to set for the principalResourceMembership property.
      */
     public void setPrincipalResourceMembership(@jakarta.annotation.Nullable final DecisionItemPrincipalResourceMembership value) {
@@ -297,7 +297,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("recommendation", value);
     }
     /**
-     * Sets the resource property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
+     * Sets the resource property value. Every decision item in an access review represents a principal&apos;s access to a resource. This property represents details of the resource. For example, if a decision item represents access of User &apos;Bob&apos; to Group &apos;Sales&apos; - The principal is Bob and the resource is &apos;Sales&apos;. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
      * @param value Value to set for the resource property.
      */
     public void setResource(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemResource value) {
@@ -311,7 +311,7 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         this.backingStore.set("resourceLink", value);
     }
     /**
-     * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
+     * Sets the reviewedBy property value. The identifier of the reviewer. 00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn&apos;t reviewed. Supports $select. Read-only.
      * @param value Value to set for the reviewedBy property.
      */
     public void setReviewedBy(@jakarta.annotation.Nullable final UserIdentity value) {

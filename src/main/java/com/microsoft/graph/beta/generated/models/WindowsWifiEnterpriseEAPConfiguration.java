@@ -225,7 +225,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         return this.backingStore.get("outerIdentityPrivacyTemporaryValue");
     }
     /**
-     * Gets the performServerValidation property value. Specify whether to enable verification of server's identity by validating the certificate when EAP type is selected as PEAP.
+     * Gets the performServerValidation property value. Specify whether to enable verification of server&apos;s identity by validating the certificate when EAP type is selected as PEAP.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -456,7 +456,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         this.backingStore.set("outerIdentityPrivacyTemporaryValue", value);
     }
     /**
-     * Sets the performServerValidation property value. Specify whether to enable verification of server's identity by validating the certificate when EAP type is selected as PEAP.
+     * Sets the performServerValidation property value. Specify whether to enable verification of server&apos;s identity by validating the certificate when EAP type is selected as PEAP.
      * @param value Value to set for the performServerValidation property.
      */
     public void setPerformServerValidation(@jakarta.annotation.Nullable final Boolean value) {

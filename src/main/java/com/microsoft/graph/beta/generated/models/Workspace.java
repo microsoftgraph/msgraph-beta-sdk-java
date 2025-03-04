@@ -100,7 +100,7 @@ public class Workspace extends Place implements Parsable {
         return this.backingStore.get("label");
     }
     /**
-     * Gets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
+     * Gets the nickname property value. Specifies a nickname for the workspace, for example, &apos;quiet workspace&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -182,7 +182,7 @@ public class Workspace extends Place implements Parsable {
         this.backingStore.set("label", value);
     }
     /**
-     * Sets the nickname property value. Specifies a nickname for the workspace, for example, 'quiet workspace'.
+     * Sets the nickname property value. Specifies a nickname for the workspace, for example, &apos;quiet workspace&apos;.
      * @param value Value to set for the nickname property.
      */
     public void setNickname(@jakarta.annotation.Nullable final String value) {

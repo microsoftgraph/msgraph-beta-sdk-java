@@ -37,7 +37,7 @@ public class CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder extends 
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/fido2Methods/creationOptions(challengeTimeoutInMinutes=@challengeTimeoutInMinutes){?challengeTimeoutInMinutes*}", rawUrl);
     }
     /**
-     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren't supported.  
+     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren&apos;t supported.  
      * @return a {@link WebauthnCredentialCreationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-creationoptions?view=graph-rest-beta">Find more info here</a>
@@ -47,7 +47,7 @@ public class CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder extends 
         return get(null);
     }
     /**
-     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren't supported.  
+     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren&apos;t supported.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WebauthnCredentialCreationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -61,7 +61,7 @@ public class CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder extends 
         return this.requestAdapter.send(requestInfo, errorMapping, WebauthnCredentialCreationOptions::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren't supported.  
+     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren&apos;t supported.  
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder extends 
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren't supported.  
+     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren&apos;t supported.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -91,7 +91,7 @@ public class CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder extends 
         return new CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren't supported.  
+     * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren&apos;t supported.  
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

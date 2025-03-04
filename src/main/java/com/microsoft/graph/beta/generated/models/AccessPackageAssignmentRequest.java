@@ -124,7 +124,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("history");
     }
     /**
-     * Gets the isValidationOnly property value. True if the request isn't to be processed for assignment.
+     * Gets the isValidationOnly property value. True if the request isn&apos;t to be processed for assignment.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("isValidationOnly");
     }
     /**
-     * Gets the justification property value. The requestor's supplied justification.
+     * Gets the justification property value. The requestor&apos;s supplied justification.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -276,14 +276,14 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("history", value);
     }
     /**
-     * Sets the isValidationOnly property value. True if the request isn't to be processed for assignment.
+     * Sets the isValidationOnly property value. True if the request isn&apos;t to be processed for assignment.
      * @param value Value to set for the isValidationOnly property.
      */
     public void setIsValidationOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isValidationOnly", value);
     }
     /**
-     * Sets the justification property value. The requestor's supplied justification.
+     * Sets the justification property value. The requestor&apos;s supplied justification.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {

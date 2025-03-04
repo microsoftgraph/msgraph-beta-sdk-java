@@ -86,7 +86,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/memberOf{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn't transitive.
+     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn&apos;t transitive.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-memberof?view=graph-rest-beta">Find more info here</a>
@@ -96,7 +96,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn't transitive.
+     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn&apos;t transitive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -110,7 +110,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn't transitive.
+     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn&apos;t transitive.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn't transitive.
+     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn&apos;t transitive.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class MemberOfRequestBuilder extends BaseRequestBuilder {
         return new MemberOfRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn't transitive.
+     * Get the groups and directory roles that this servicePrincipal is a direct member of. This operation isn&apos;t transitive.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

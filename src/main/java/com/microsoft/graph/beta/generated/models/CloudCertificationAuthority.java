@@ -45,7 +45,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("certificateKeySize");
     }
     /**
-     * Gets the certificateRevocationListUrl property value. The cloud certification authority's Certificate Revocation List URL that can be used to determine revocation status. Read-only.
+     * Gets the certificateRevocationListUrl property value. The cloud certification authority&apos;s Certificate Revocation List URL that can be used to determine revocation status. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("commonName");
     }
     /**
-     * Gets the countryName property value. The country name that is used to compose the subject name of a certification authority certificate in the form 'C='. Nullable. Example: US. Read-only.
+     * Gets the countryName property value. The country name that is used to compose the subject name of a certification authority certificate in the form &apos;C=&apos;. Nullable. Example: US. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("countryName");
     }
     /**
-     * Gets the createdDateTime property value. Creation date of this cloud certification authority entity instance. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only.
+     * Gets the createdDateTime property value. Creation date of this cloud certification authority entity instance. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -225,7 +225,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("keyPlatform");
     }
     /**
-     * Gets the lastModifiedDateTime property value. Last modification date and time of this certification authority entity instance. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read/write.
+     * Gets the lastModifiedDateTime property value. Last modification date and time of this certification authority entity instance. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read/write.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -233,7 +233,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the localityName property value. The locality (town, city, etc.) name that is used to compose the subject name of a certification authority certificate in the form 'L='. This is Nullable. Example: Redmond. Read-only.
+     * Gets the localityName property value. The locality (town, city, etc.) name that is used to compose the subject name of a certification authority certificate in the form &apos;L=&apos;. This is Nullable. Example: Redmond. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -249,7 +249,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("ocspResponderUri");
     }
     /**
-     * Gets the organizationName property value. The organization name that is used as a distinguished name in the subject name of a certification authority certificate in the form 'O='. Nullable. Example: Microsoft. Read-only.
+     * Gets the organizationName property value. The organization name that is used as a distinguished name in the subject name of a certification authority certificate in the form &apos;O=&apos;. Nullable. Example: Microsoft. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -257,7 +257,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("organizationName");
     }
     /**
-     * Gets the organizationUnit property value. The organization unit name that is used as a distinguished name in the subject name of a certification authority certificate in the form 'OU='. Nullable. Example: Security. Read-only.
+     * Gets the organizationUnit property value. The organization unit name that is used as a distinguished name in the subject name of a certification authority certificate in the form &apos;OU=&apos;. Nullable. Example: Security. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -273,7 +273,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("roleScopeTagIds");
     }
     /**
-     * Gets the rootCertificateCommonName property value. The common name of the certificate subject name of the certification authority issuer. This property can be used to identify the certification authority that issued the current certification authority. For issuing certification authorities, this is the common name of the certificate subject name of the root certification authority to which it is anchored. For externally signed certification authorities, this is the common name of the certificate subject name of the signing certification authority. For root certification authorities, this is the common name of the certification authority's own certificate subject name. Read-only.
+     * Gets the rootCertificateCommonName property value. The common name of the certificate subject name of the certification authority issuer. This property can be used to identify the certification authority that issued the current certification authority. For issuing certification authorities, this is the common name of the certificate subject name of the root certification authority to which it is anchored. For externally signed certification authorities, this is the common name of the certificate subject name of the signing certification authority. For root certification authorities, this is the common name of the certification authority&apos;s own certificate subject name. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -297,7 +297,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("serialNumber");
     }
     /**
-     * Gets the stateName property value. The state or province name that is used to compose the subject name of a certification authority certificate in the form 'ST='. Nullable. Example: Washington. Read-only.
+     * Gets the stateName property value. The state or province name that is used to compose the subject name of a certification authority certificate in the form &apos;ST=&apos;. Nullable. Example: Washington. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -321,7 +321,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("thumbprint");
     }
     /**
-     * Gets the validityEndDateTime property value. The end date time of the validity period of a certification authority certificate. Certificates cannot be used after this date time as they are longer valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only. Supports $orderby.
+     * Gets the validityEndDateTime property value. The end date time of the validity period of a certification authority certificate. Certificates cannot be used after this date time as they are longer valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only. Supports $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -337,7 +337,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("validityPeriodInYears");
     }
     /**
-     * Gets the validityStartDateTime property value. The start date time of the validity period of a certification authority certificate. Certificates cannot be used before this date time as they are not yet valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only. Supports $orderby.
+     * Gets the validityStartDateTime property value. The start date time of the validity period of a certification authority certificate. Certificates cannot be used before this date time as they are not yet valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only. Supports $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -410,7 +410,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         this.backingStore.set("certificateKeySize", value);
     }
     /**
-     * Sets the certificateRevocationListUrl property value. The cloud certification authority's Certificate Revocation List URL that can be used to determine revocation status. Read-only.
+     * Sets the certificateRevocationListUrl property value. The cloud certification authority&apos;s Certificate Revocation List URL that can be used to determine revocation status. Read-only.
      * @param value Value to set for the certificateRevocationListUrl property.
      */
     public void setCertificateRevocationListUrl(@jakarta.annotation.Nullable final String value) {
@@ -473,14 +473,14 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         this.backingStore.set("commonName", value);
     }
     /**
-     * Sets the countryName property value. The country name that is used to compose the subject name of a certification authority certificate in the form 'C='. Nullable. Example: US. Read-only.
+     * Sets the countryName property value. The country name that is used to compose the subject name of a certification authority certificate in the form &apos;C=&apos;. Nullable. Example: US. Read-only.
      * @param value Value to set for the countryName property.
      */
     public void setCountryName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("countryName", value);
     }
     /**
-     * Sets the createdDateTime property value. Creation date of this cloud certification authority entity instance. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only.
+     * Sets the createdDateTime property value. Creation date of this cloud certification authority entity instance. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -529,14 +529,14 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         this.backingStore.set("keyPlatform", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. Last modification date and time of this certification authority entity instance. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read/write.
+     * Sets the lastModifiedDateTime property value. Last modification date and time of this certification authority entity instance. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read/write.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the localityName property value. The locality (town, city, etc.) name that is used to compose the subject name of a certification authority certificate in the form 'L='. This is Nullable. Example: Redmond. Read-only.
+     * Sets the localityName property value. The locality (town, city, etc.) name that is used to compose the subject name of a certification authority certificate in the form &apos;L=&apos;. This is Nullable. Example: Redmond. Read-only.
      * @param value Value to set for the localityName property.
      */
     public void setLocalityName(@jakarta.annotation.Nullable final String value) {
@@ -550,14 +550,14 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         this.backingStore.set("ocspResponderUri", value);
     }
     /**
-     * Sets the organizationName property value. The organization name that is used as a distinguished name in the subject name of a certification authority certificate in the form 'O='. Nullable. Example: Microsoft. Read-only.
+     * Sets the organizationName property value. The organization name that is used as a distinguished name in the subject name of a certification authority certificate in the form &apos;O=&apos;. Nullable. Example: Microsoft. Read-only.
      * @param value Value to set for the organizationName property.
      */
     public void setOrganizationName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("organizationName", value);
     }
     /**
-     * Sets the organizationUnit property value. The organization unit name that is used as a distinguished name in the subject name of a certification authority certificate in the form 'OU='. Nullable. Example: Security. Read-only.
+     * Sets the organizationUnit property value. The organization unit name that is used as a distinguished name in the subject name of a certification authority certificate in the form &apos;OU=&apos;. Nullable. Example: Security. Read-only.
      * @param value Value to set for the organizationUnit property.
      */
     public void setOrganizationUnit(@jakarta.annotation.Nullable final String value) {
@@ -571,7 +571,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         this.backingStore.set("roleScopeTagIds", value);
     }
     /**
-     * Sets the rootCertificateCommonName property value. The common name of the certificate subject name of the certification authority issuer. This property can be used to identify the certification authority that issued the current certification authority. For issuing certification authorities, this is the common name of the certificate subject name of the root certification authority to which it is anchored. For externally signed certification authorities, this is the common name of the certificate subject name of the signing certification authority. For root certification authorities, this is the common name of the certification authority's own certificate subject name. Read-only.
+     * Sets the rootCertificateCommonName property value. The common name of the certificate subject name of the certification authority issuer. This property can be used to identify the certification authority that issued the current certification authority. For issuing certification authorities, this is the common name of the certificate subject name of the root certification authority to which it is anchored. For externally signed certification authorities, this is the common name of the certificate subject name of the signing certification authority. For root certification authorities, this is the common name of the certification authority&apos;s own certificate subject name. Read-only.
      * @param value Value to set for the rootCertificateCommonName property.
      */
     public void setRootCertificateCommonName(@jakarta.annotation.Nullable final String value) {
@@ -592,7 +592,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         this.backingStore.set("serialNumber", value);
     }
     /**
-     * Sets the stateName property value. The state or province name that is used to compose the subject name of a certification authority certificate in the form 'ST='. Nullable. Example: Washington. Read-only.
+     * Sets the stateName property value. The state or province name that is used to compose the subject name of a certification authority certificate in the form &apos;ST=&apos;. Nullable. Example: Washington. Read-only.
      * @param value Value to set for the stateName property.
      */
     public void setStateName(@jakarta.annotation.Nullable final String value) {
@@ -613,7 +613,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         this.backingStore.set("thumbprint", value);
     }
     /**
-     * Sets the validityEndDateTime property value. The end date time of the validity period of a certification authority certificate. Certificates cannot be used after this date time as they are longer valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only. Supports $orderby.
+     * Sets the validityEndDateTime property value. The end date time of the validity period of a certification authority certificate. Certificates cannot be used after this date time as they are longer valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only. Supports $orderby.
      * @param value Value to set for the validityEndDateTime property.
      */
     public void setValidityEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -627,7 +627,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         this.backingStore.set("validityPeriodInYears", value);
     }
     /**
-     * Sets the validityStartDateTime property value. The start date time of the validity period of a certification authority certificate. Certificates cannot be used before this date time as they are not yet valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Nullable. Read-only. Supports $orderby.
+     * Sets the validityStartDateTime property value. The start date time of the validity period of a certification authority certificate. Certificates cannot be used before this date time as they are not yet valid. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Nullable. Read-only. Supports $orderby.
      * @param value Value to set for the validityStartDateTime property.
      */
     public void setValidityStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

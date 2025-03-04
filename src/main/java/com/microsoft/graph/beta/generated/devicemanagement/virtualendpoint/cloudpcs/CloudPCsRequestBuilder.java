@@ -104,8 +104,8 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getProvisionedCloudPCs method.
-     * @param groupId Usage: groupId='{groupId}'
-     * @param servicePlanId Usage: servicePlanId='{servicePlanId}'
+     * @param groupId Usage: groupId=&apos;{groupId}&apos;
+     * @param servicePlanId Usage: servicePlanId=&apos;{servicePlanId}&apos;
      * @return a {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

@@ -25,7 +25,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
         return new ContinuousAccessEvaluationPolicy();
     }
     /**
-     * Gets the description property value. Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
+     * Gets the description property value. Continuous access evaluation automatically blocks access to resources and applications in near real time when a user&apos;s access is removed or a client IP address changes. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class ContinuousAccessEvaluationPolicy extends Entity implements Parsable
         writer.writeCollectionOfPrimitiveValues("users", this.getUsers());
     }
     /**
-     * Sets the description property value. Continuous access evaluation automatically blocks access to resources and applications in near real time when a user's access is removed or a client IP address changes. Read-only.
+     * Sets the description property value. Continuous access evaluation automatically blocks access to resources and applications in near real time when a user&apos;s access is removed or a client IP address changes. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

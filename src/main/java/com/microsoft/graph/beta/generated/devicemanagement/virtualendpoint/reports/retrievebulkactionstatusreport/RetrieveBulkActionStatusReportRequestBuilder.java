@@ -36,7 +36,7 @@ public class RetrieveBulkActionStatusReportRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/retrieveBulkActionStatusReport", rawUrl);
     }
     /**
-     * Get the bulk remote action status report, including data such as the bulk action ID, bulk action display name, initiating user's principal name, action type, and action state.
+     * Get the bulk remote action status report, including data such as the bulk action ID, bulk action display name, initiating user&apos;s principal name, action type, and action state.
      * @param body The request body
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class RetrieveBulkActionStatusReportRequestBuilder extends BaseRequestBui
         return post(body, null);
     }
     /**
-     * Get the bulk remote action status report, including data such as the bulk action ID, bulk action display name, initiating user's principal name, action type, and action state.
+     * Get the bulk remote action status report, including data such as the bulk action ID, bulk action display name, initiating user&apos;s principal name, action type, and action state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
@@ -63,7 +63,7 @@ public class RetrieveBulkActionStatusReportRequestBuilder extends BaseRequestBui
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the bulk remote action status report, including data such as the bulk action ID, bulk action display name, initiating user's principal name, action type, and action state.
+     * Get the bulk remote action status report, including data such as the bulk action ID, bulk action display name, initiating user&apos;s principal name, action type, and action state.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class RetrieveBulkActionStatusReportRequestBuilder extends BaseRequestBui
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get the bulk remote action status report, including data such as the bulk action ID, bulk action display name, initiating user's principal name, action type, and action state.
+     * Get the bulk remote action status report, including data such as the bulk action ID, bulk action display name, initiating user&apos;s principal name, action type, and action state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

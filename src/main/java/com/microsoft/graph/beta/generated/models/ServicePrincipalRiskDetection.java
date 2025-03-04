@@ -58,7 +58,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection isn't associated with a sign-in activity.
+     * Gets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection isn&apos;t associated with a sign-in activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("mitreTechniqueId");
     }
     /**
-     * Gets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection isn't associated with a sign-in activity. Supports $filter (eq).
+     * Gets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection isn&apos;t associated with a sign-in activity. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -281,7 +281,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection isn't associated with a sign-in activity.
+     * Sets the correlationId property value. Correlation ID of the sign-in activity associated with the risk detection. This property is null if the risk detection isn&apos;t associated with a sign-in activity.
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
@@ -337,7 +337,7 @@ public class ServicePrincipalRiskDetection extends Entity implements Parsable {
         this.backingStore.set("mitreTechniqueId", value);
     }
     /**
-     * Sets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection isn't associated with a sign-in activity. Supports $filter (eq).
+     * Sets the requestId property value. Request identifier of the sign-in activity associated with the risk detection. This property is null if the risk detection isn&apos;t associated with a sign-in activity. Supports $filter (eq).
      * @param value Value to set for the requestId property.
      */
     public void setRequestId(@jakarta.annotation.Nullable final String value) {

@@ -141,7 +141,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
         return this.backingStore.get("roleScopeTagIds");
     }
     /**
-     * Gets the scheduledActionsForRule property value. The list of scheduled action for this rule
+     * Gets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @return a {@link java.util.List<DeviceComplianceScheduledActionForRule>}
      */
     @jakarta.annotation.Nullable
@@ -257,7 +257,7 @@ public class DeviceCompliancePolicy extends Entity implements Parsable {
         this.backingStore.set("roleScopeTagIds", value);
     }
     /**
-     * Sets the scheduledActionsForRule property value. The list of scheduled action for this rule
+     * Sets the scheduledActionsForRule property value. The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
      * @param value Value to set for the scheduledActionsForRule property.
      */
     public void setScheduledActionsForRule(@jakarta.annotation.Nullable final java.util.List<DeviceComplianceScheduledActionForRule> value) {

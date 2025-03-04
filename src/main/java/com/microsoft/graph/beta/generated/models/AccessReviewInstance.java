@@ -42,7 +42,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
         return this.backingStore.get("decisions");
     }
     /**
-     * Gets the definition property value. There's exactly one accessReviewScheduleDefinition associated with each instance. It's the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.
+     * Gets the definition property value. There&apos;s exactly one accessReviewScheduleDefinition associated with each instance. It&apos;s the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.
      * @return a {@link AccessReviewScheduleDefinition}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
         return this.backingStore.get("errors");
     }
     /**
-     * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn't exist, or manager is specified as reviewer but a user's manager doesn't exist. Supports $select.
+     * Gets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn&apos;t exist, or manager is specified as reviewer but a user&apos;s manager doesn&apos;t exist. Supports $select.
      * @return a {@link java.util.List<AccessReviewReviewerScope>}
      */
     @jakarta.annotation.Nullable
@@ -167,7 +167,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
         this.backingStore.set("decisions", value);
     }
     /**
-     * Sets the definition property value. There's exactly one accessReviewScheduleDefinition associated with each instance. It's the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.
+     * Sets the definition property value. There&apos;s exactly one accessReviewScheduleDefinition associated with each instance. It&apos;s the parent schedule for the instance, where instances are created for each recurrence of a review definition and each group selected to review by the definition.
      * @param value Value to set for the definition property.
      */
     public void setDefinition(@jakarta.annotation.Nullable final AccessReviewScheduleDefinition value) {
@@ -188,7 +188,7 @@ public class AccessReviewInstance extends Entity implements Parsable {
         this.backingStore.set("errors", value);
     }
     /**
-     * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn't exist, or manager is specified as reviewer but a user's manager doesn't exist. Supports $select.
+     * Sets the fallbackReviewers property value. This collection of reviewer scopes is used to define the list of fallback reviewers. These fallback reviewers are notified to take action if no users are found from the list of reviewers specified. This could occur when either the group owner is specified as the reviewer but the group owner doesn&apos;t exist, or manager is specified as reviewer but a user&apos;s manager doesn&apos;t exist. Supports $select.
      * @param value Value to set for the fallbackReviewers property.
      */
     public void setFallbackReviewers(@jakarta.annotation.Nullable final java.util.List<AccessReviewReviewerScope> value) {

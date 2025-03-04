@@ -59,7 +59,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupFeature implements Ad
         return this.backingStore;
     }
     /**
-     * Gets the deviceFeatureType property value. Indicates the device's feature type. Possible values are: manufacturer, model, osVersion, application or driver.
+     * Gets the deviceFeatureType property value. Indicates the device&apos;s feature type. Possible values are: manufacturer, model, osVersion, application or driver.
      * @return a {@link UserExperienceAnalyticsAnomalyDeviceFeatureType}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsAnomalyCorrelationGroupFeature implements Ad
         this.backingStore = value;
     }
     /**
-     * Sets the deviceFeatureType property value. Indicates the device's feature type. Possible values are: manufacturer, model, osVersion, application or driver.
+     * Sets the deviceFeatureType property value. Indicates the device&apos;s feature type. Possible values are: manufacturer, model, osVersion, application or driver.
      * @param value Value to set for the deviceFeatureType property.
      */
     public void setDeviceFeatureType(@jakarta.annotation.Nullable final UserExperienceAnalyticsAnomalyDeviceFeatureType value) {

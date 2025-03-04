@@ -21,7 +21,7 @@ import java.util.Objects;
 public class GetLicensesForAppWithBundleIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link GetLicensesForAppWithBundleIdRequestBuilder} and sets the default values.
-     * @param bundleId Usage: bundleId='{bundleId}'
+     * @param bundleId Usage: bundleId=&apos;{bundleId}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

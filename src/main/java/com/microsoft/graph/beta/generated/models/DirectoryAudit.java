@@ -34,7 +34,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.backingStore.get("activityDateTime");
     }
     /**
-     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (for example 'Create User', 'Add member to group'). For a list of activities logged, refer to Microsoft Entra audit log categories and activities. Supports $filter (eq, startswith).
+     * Gets the activityDisplayName property value. Indicates the activity name or the operation name (for example &apos;Create User&apos;, &apos;Add member to group&apos;). For a list of activities logged, refer to Microsoft Entra audit log categories and activities. Supports $filter (eq, startswith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.backingStore.get("additionalDetails");
     }
     /**
-     * Gets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Microsoft Entra audit log categories and activities.
+     * Gets the category property value. Indicates which resource category that&apos;s targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Microsoft Entra audit log categories and activities.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.backingStore.get("loggedByService");
     }
     /**
-     * Gets the operationType property value. Indicates the type of operation that was performed. The possible values include but aren't limited to the following: Add, Assign, Update, Unassign, and Delete.
+     * Gets the operationType property value. Indicates the type of operation that was performed. The possible values include but aren&apos;t limited to the following: Add, Assign, Update, Unassign, and Delete.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.backingStore.set("activityDateTime", value);
     }
     /**
-     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (for example 'Create User', 'Add member to group'). For a list of activities logged, refer to Microsoft Entra audit log categories and activities. Supports $filter (eq, startswith).
+     * Sets the activityDisplayName property value. Indicates the activity name or the operation name (for example &apos;Create User&apos;, &apos;Add member to group&apos;). For a list of activities logged, refer to Microsoft Entra audit log categories and activities. Supports $filter (eq, startswith).
      * @param value Value to set for the activityDisplayName property.
      */
     public void setActivityDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -184,7 +184,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.backingStore.set("additionalDetails", value);
     }
     /**
-     * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Microsoft Entra audit log categories and activities.
+     * Sets the category property value. Indicates which resource category that&apos;s targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement. For a list of categories for activities logged, refer to Microsoft Entra audit log categories and activities.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
@@ -212,7 +212,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.backingStore.set("loggedByService", value);
     }
     /**
-     * Sets the operationType property value. Indicates the type of operation that was performed. The possible values include but aren't limited to the following: Add, Assign, Update, Unassign, and Delete.
+     * Sets the operationType property value. Indicates the type of operation that was performed. The possible values include but aren&apos;t limited to the following: Add, Assign, Update, Unassign, and Delete.
      * @param value Value to set for the operationType property.
      */
     public void setOperationType(@jakarta.annotation.Nullable final String value) {

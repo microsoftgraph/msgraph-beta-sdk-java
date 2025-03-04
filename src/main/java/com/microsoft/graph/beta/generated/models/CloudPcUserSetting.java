@@ -34,7 +34,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
-     * Gets the createdDateTime property value. The date and time the setting was created. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
+     * Gets the createdDateTime property value. The date and time the setting was created. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this: &apos;2014-01-01T00:00:00Z&apos;.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the crossRegionDisasterRecoverySetting property value. Defines whether the user's Cloud PC enables cross-region disaster recovery and specifies the network for the disaster recovery.
+     * Gets the crossRegionDisasterRecoverySetting property value. Defines whether the user&apos;s Cloud PC enables cross-region disaster recovery and specifies the network for the disaster recovery.
      * @return a {@link CloudPcCrossRegionDisasterRecoverySetting}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The last date and time the setting was modified. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'.
+     * Gets the lastModifiedDateTime property value. The last date and time the setting was modified. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this:&apos;2014-01-01T00:00:00Z&apos;.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("notificationSetting");
     }
     /**
-     * Gets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset isn't allowed. The default value is false.
+     * Gets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset isn&apos;t allowed. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("resetEnabled");
     }
     /**
-     * Gets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
+     * Gets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users&apos; provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
      * @return a {@link CloudPcRestorePointSetting}
      */
     @jakarta.annotation.Nullable
@@ -150,14 +150,14 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("assignments", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time the setting was created. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this: '2014-01-01T00:00:00Z'.
+     * Sets the createdDateTime property value. The date and time the setting was created. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this: &apos;2014-01-01T00:00:00Z&apos;.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the crossRegionDisasterRecoverySetting property value. Defines whether the user's Cloud PC enables cross-region disaster recovery and specifies the network for the disaster recovery.
+     * Sets the crossRegionDisasterRecoverySetting property value. Defines whether the user&apos;s Cloud PC enables cross-region disaster recovery and specifies the network for the disaster recovery.
      * @param value Value to set for the crossRegionDisasterRecoverySetting property.
      */
     public void setCrossRegionDisasterRecoverySetting(@jakarta.annotation.Nullable final CloudPcCrossRegionDisasterRecoverySetting value) {
@@ -171,7 +171,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The last date and time the setting was modified. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this:'2014-01-01T00:00:00Z'.
+     * Sets the lastModifiedDateTime property value. The last date and time the setting was modified. The timestamp type represents the date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this:&apos;2014-01-01T00:00:00Z&apos;.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -192,14 +192,14 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("notificationSetting", value);
     }
     /**
-     * Sets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset isn't allowed. The default value is false.
+     * Sets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset isn&apos;t allowed. The default value is false.
      * @param value Value to set for the resetEnabled property.
      */
     public void setResetEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("resetEnabled", value);
     }
     /**
-     * Sets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users' provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
+     * Sets the restorePointSetting property value. Defines how frequently a restore point is created that is, a snapshot is taken) for users&apos; provisioned Cloud PCs (default is 12 hours), and whether the user is allowed to restore their own Cloud PCs to a backup made at a specific point in time.
      * @param value Value to set for the restorePointSetting property.
      */
     public void setRestorePointSetting(@jakarta.annotation.Nullable final CloudPcRestorePointSetting value) {

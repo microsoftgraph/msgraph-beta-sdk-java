@@ -95,7 +95,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         return this.backingStore.get("fulfilledDateTime");
     }
     /**
-     * Gets the instances property value. If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that doesn't recur will have exactly one instance.
+     * Gets the instances property value. If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that doesn&apos;t recur will have exactly one instance.
      * @return a {@link java.util.List<AccessReviewHistoryInstance>}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         return this.backingStore.get("reviewHistoryPeriodEndDateTime");
     }
     /**
-     * Gets the reviewHistoryPeriodStartDateTime property value. A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings isn't defined.
+     * Gets the reviewHistoryPeriodStartDateTime property value. A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings isn&apos;t defined.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         return this.backingStore.get("reviewHistoryPeriodStartDateTime");
     }
     /**
-     * Gets the scheduleSettings property value. The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime aren't defined. Not supported yet.
+     * Gets the scheduleSettings property value. The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime aren&apos;t defined. Not supported yet.
      * @return a {@link AccessReviewHistoryScheduleSettings}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         this.backingStore.set("fulfilledDateTime", value);
     }
     /**
-     * Sets the instances property value. If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that doesn't recur will have exactly one instance.
+     * Sets the instances property value. If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that doesn&apos;t recur will have exactly one instance.
      * @param value Value to set for the instances property.
      */
     public void setInstances(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryInstance> value) {
@@ -219,14 +219,14 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         this.backingStore.set("reviewHistoryPeriodEndDateTime", value);
     }
     /**
-     * Sets the reviewHistoryPeriodStartDateTime property value. A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings isn't defined.
+     * Sets the reviewHistoryPeriodStartDateTime property value. A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings isn&apos;t defined.
      * @param value Value to set for the reviewHistoryPeriodStartDateTime property.
      */
     public void setReviewHistoryPeriodStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("reviewHistoryPeriodStartDateTime", value);
     }
     /**
-     * Sets the scheduleSettings property value. The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime aren't defined. Not supported yet.
+     * Sets the scheduleSettings property value. The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime aren&apos;t defined. Not supported yet.
      * @param value Value to set for the scheduleSettings property.
      */
     public void setScheduleSettings(@jakarta.annotation.Nullable final AccessReviewHistoryScheduleSettings value) {

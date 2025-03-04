@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Represents a user-facing message with locale information as well as a default message to be used if the user's locale doesn't match with any of the localized messages
+ * Represents a user-facing message with locale information as well as a default message to be used if the user&apos;s locale doesn&apos;t match with any of the localized messages
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder, BackedModel, Parsable {
@@ -59,7 +59,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
         return this.backingStore;
     }
     /**
-     * Gets the defaultMessage property value. The default message displayed if the user's locale doesn't match with any of the localized messages
+     * Gets the defaultMessage property value. The default message displayed if the user&apos;s locale doesn&apos;t match with any of the localized messages
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
         return deserializerMap;
     }
     /**
-     * Gets the localizedMessages property value. The list of <locale, message> pairs. This collection can contain a maximum of 500 elements.
+     * Gets the localizedMessages property value. The list of &lt;locale, message&gt; pairs. This collection can contain a maximum of 500 elements.
      * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
@@ -121,14 +121,14 @@ public class AndroidDeviceOwnerUserFacingMessage implements AdditionalDataHolder
         this.backingStore = value;
     }
     /**
-     * Sets the defaultMessage property value. The default message displayed if the user's locale doesn't match with any of the localized messages
+     * Sets the defaultMessage property value. The default message displayed if the user&apos;s locale doesn&apos;t match with any of the localized messages
      * @param value Value to set for the defaultMessage property.
      */
     public void setDefaultMessage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("defaultMessage", value);
     }
     /**
-     * Sets the localizedMessages property value. The list of <locale, message> pairs. This collection can contain a maximum of 500 elements.
+     * Sets the localizedMessages property value. The list of &lt;locale, message&gt; pairs. This collection can contain a maximum of 500 elements.
      * @param value Value to set for the localizedMessages property.
      */
     public void setLocalizedMessages(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {

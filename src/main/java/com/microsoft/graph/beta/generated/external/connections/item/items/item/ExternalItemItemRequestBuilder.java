@@ -75,7 +75,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn't intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
+     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn&apos;t intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
      * @return a {@link ExternalItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-beta">Find more info here</a>
@@ -85,7 +85,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn't intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
+     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn&apos;t intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -99,23 +99,23 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalItem::createFromDiscriminatorValue);
     }
     /**
-     * Create a new externalItem. This API can be used to create a custom item. The containing externalConnection must have a schema registered of the corresponding type.
+     * Update the properties of an externalitem.
      * @param body The request body
      * @return a {@link ExternalItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-put-items?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalItem put(@jakarta.annotation.Nonnull final ExternalItem body) {
         return put(body, null);
     }
     /**
-     * Create a new externalItem. This API can be used to create a custom item. The containing externalConnection must have a schema registered of the corresponding type.
+     * Update the properties of an externalitem.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalconnection-put-items?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/externalconnectors-externalitem-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalItem put(@jakarta.annotation.Nonnull final ExternalItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
@@ -146,7 +146,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn't intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
+     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn&apos;t intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -154,7 +154,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn't intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
+     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn&apos;t intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -166,7 +166,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new externalItem. This API can be used to create a custom item. The containing externalConnection must have a schema registered of the corresponding type.
+     * Update the properties of an externalitem.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -175,7 +175,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Create a new externalItem. This API can be used to create a custom item. The containing externalConnection must have a schema registered of the corresponding type.
+     * Update the properties of an externalitem.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -206,7 +206,7 @@ public class ExternalItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn't intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
+     * Get the properties and relationships of an externalitem object. This API is provided for diagnostic purposes only. It isn&apos;t intended to be used for any other purpose. Repeated requests to this API might result in 429 HTTP errors.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

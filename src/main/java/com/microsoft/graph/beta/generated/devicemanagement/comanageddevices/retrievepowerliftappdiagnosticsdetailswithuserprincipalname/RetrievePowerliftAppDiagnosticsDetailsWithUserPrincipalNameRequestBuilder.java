@@ -23,7 +23,7 @@ public class RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestB
      * Instantiates a new {@link RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param userPrincipalName Usage: userPrincipalName='{userPrincipalName}'
+     * @param userPrincipalName Usage: userPrincipalName=&apos;{userPrincipalName}&apos;
      */
     public RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String userPrincipalName) {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/retrievePowerliftAppDiagnosticsDetails(userPrincipalName='{userPrincipalName}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

@@ -377,7 +377,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("googleAccountsBlocked");
     }
     /**
-     * Gets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device's Settings app while in Kiosk Mode.
+     * Gets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device&apos;s Settings app while in Kiosk Mode.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -649,7 +649,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("kioskModeScreenSaverDisplayTimeInSeconds");
     }
     /**
-     * Gets the kioskModeScreenSaverImageUrl property value. URL for an image that will be the device's screen saver in Kiosk Mode.
+     * Gets the kioskModeScreenSaverImageUrl property value. URL for an image that will be the device&apos;s screen saver in Kiosk Mode.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1065,7 +1065,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("statusBarBlocked");
     }
     /**
-     * Gets the stayOnModes property value. List of modes in which the device's display will stay powered-on. This collection can contain a maximum of 4 elements.
+     * Gets the stayOnModes property value. List of modes in which the device&apos;s display will stay powered-on. This collection can contain a maximum of 4 elements.
      * @return a {@link java.util.List<AndroidDeviceOwnerBatteryPluggedMode>}
      */
     @jakarta.annotation.Nullable
@@ -1611,7 +1611,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("googleAccountsBlocked", value);
     }
     /**
-     * Sets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device's Settings app while in Kiosk Mode.
+     * Sets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device&apos;s Settings app while in Kiosk Mode.
      * @param value Value to set for the kioskCustomizationDeviceSettingsBlocked property.
      */
     public void setKioskCustomizationDeviceSettingsBlocked(@jakarta.annotation.Nullable final Boolean value) {
@@ -1849,7 +1849,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("kioskModeScreenSaverDisplayTimeInSeconds", value);
     }
     /**
-     * Sets the kioskModeScreenSaverImageUrl property value. URL for an image that will be the device's screen saver in Kiosk Mode.
+     * Sets the kioskModeScreenSaverImageUrl property value. URL for an image that will be the device&apos;s screen saver in Kiosk Mode.
      * @param value Value to set for the kioskModeScreenSaverImageUrl property.
      */
     public void setKioskModeScreenSaverImageUrl(@jakarta.annotation.Nullable final String value) {
@@ -2213,7 +2213,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("statusBarBlocked", value);
     }
     /**
-     * Sets the stayOnModes property value. List of modes in which the device's display will stay powered-on. This collection can contain a maximum of 4 elements.
+     * Sets the stayOnModes property value. List of modes in which the device&apos;s display will stay powered-on. This collection can contain a maximum of 4 elements.
      * @param value Value to set for the stayOnModes property.
      */
     public void setStayOnModes(@jakarta.annotation.Nullable final java.util.List<AndroidDeviceOwnerBatteryPluggedMode> value) {

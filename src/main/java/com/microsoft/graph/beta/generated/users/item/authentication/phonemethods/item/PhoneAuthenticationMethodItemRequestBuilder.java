@@ -77,7 +77,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, PhoneAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Update the phone number associated with a phone authentication method. You can't change a phone's type. To change a phone's type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system attempts to register the number for use in that system. Self-service operations aren't supported.
+     * Update the phone number associated with a phone authentication method. You can&apos;t change a phone&apos;s type. To change a phone&apos;s type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system attempts to register the number for use in that system. Self-service operations aren&apos;t supported.
      * @param body The request body
      * @return a {@link PhoneAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -88,7 +88,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return patch(body, null);
     }
     /**
-     * Update the phone number associated with a phone authentication method. You can't change a phone's type. To change a phone's type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system attempts to register the number for use in that system. Self-service operations aren't supported.
+     * Update the phone number associated with a phone authentication method. You can&apos;t change a phone&apos;s type. To change a phone&apos;s type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system attempts to register the number for use in that system. Self-service operations aren&apos;t supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PhoneAuthenticationMethod}
@@ -144,7 +144,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update the phone number associated with a phone authentication method. You can't change a phone's type. To change a phone's type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system attempts to register the number for use in that system. Self-service operations aren't supported.
+     * Update the phone number associated with a phone authentication method. You can&apos;t change a phone&apos;s type. To change a phone&apos;s type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system attempts to register the number for use in that system. Self-service operations aren&apos;t supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -153,7 +153,7 @@ public class PhoneAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the phone number associated with a phone authentication method. You can't change a phone's type. To change a phone's type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system attempts to register the number for use in that system. Self-service operations aren't supported.
+     * Update the phone number associated with a phone authentication method. You can&apos;t change a phone&apos;s type. To change a phone&apos;s type, add a new number of the desired type and then delete the object with the original type. If a user is enabled by policy to use SMS to sign in and the mobile number is changed, the system attempts to register the number for use in that system. Self-service operations aren&apos;t supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

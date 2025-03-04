@@ -81,7 +81,7 @@ public class WebAccount extends ItemFacet implements Parsable {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the webUrl property value. Contains a link to the user's profile on the cloud service if one exists.
+     * Gets the webUrl property value. Contains a link to the user&apos;s profile on the cloud service if one exists.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class WebAccount extends ItemFacet implements Parsable {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the webUrl property value. Contains a link to the user's profile on the cloud service if one exists.
+     * Sets the webUrl property value. Contains a link to the user&apos;s profile on the cloud service if one exists.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

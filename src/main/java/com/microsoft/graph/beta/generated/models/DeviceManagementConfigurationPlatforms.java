@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementConfigurationPlatforms implements ValuedEnum {
-    /** Indicates the settings contained in this configuration don't have a platform set. */
+    /** Indicates the settings contained in this configuration don&apos;t have a platform set. */
     None("none"),
     /** Indicates that the settings contained in associated configuration applies to the Android operating system.  */
     Android("android"),

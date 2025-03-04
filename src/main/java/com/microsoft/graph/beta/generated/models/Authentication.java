@@ -137,7 +137,7 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("requirements");
     }
     /**
-     * Gets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * Gets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user&apos;s default multifactor authentication (MFA) method.
      * @return a {@link SignInPreferences}
      */
     @jakarta.annotation.Nullable
@@ -269,7 +269,7 @@ public class Authentication extends Entity implements Parsable {
         this.backingStore.set("requirements", value);
     }
     /**
-     * Sets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user's default multifactor authentication (MFA) method.
+     * Sets the signInPreferences property value. The settings and preferences for the sign-in experience of a user. Use this property to configure the user&apos;s default multifactor authentication (MFA) method.
      * @param value Value to set for the signInPreferences property.
      */
     public void setSignInPreferences(@jakarta.annotation.Nullable final SignInPreferences value) {

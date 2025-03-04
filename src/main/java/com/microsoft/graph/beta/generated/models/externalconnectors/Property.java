@@ -48,7 +48,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
-     * Gets the aliases property value. A set of aliases or friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
+     * Gets the aliases property value. A set of aliases or friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^. Optional.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("isRetrievable");
     }
     /**
-     * Gets the isSearchable property value. Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties aren't added to the search index. Optional.
+     * Gets the isSearchable property value. Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties aren&apos;t added to the search index. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("labels");
     }
     /**
-     * Gets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
+     * Gets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^.  Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the aliases property value. A set of aliases or friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^. Optional.
+     * Sets the aliases property value. A set of aliases or friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^. Optional.
      * @param value Value to set for the aliases property.
      */
     public void setAliases(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -233,7 +233,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("isRetrievable", value);
     }
     /**
-     * Sets the isSearchable property value. Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties aren't added to the search index. Optional.
+     * Sets the isSearchable property value. Specifies if the property is searchable. Only properties of type string or stringCollection can be searchable. Non-searchable properties aren&apos;t added to the search index. Optional.
      * @param value Value to set for the isSearchable property.
      */
     public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
@@ -247,7 +247,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("labels", value);
     }
     /**
-     * Sets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, ', ', <, >, `, ^.  Required.
+     * Sets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^.  Required.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * The user experience analytics battery health runtime entity contains count of devices broken down into 3 categories - devices with runtime > 5 hours, devices with runtime 3-5 hours and devices with runtime < 3 hours.This API provides the count of devices in these 3 categories.
+ * The user experience analytics battery health runtime entity contains count of devices broken down into 3 categories - devices with runtime &gt; 5 hours, devices with runtime 3-5 hours and devices with runtime &lt; 3 hours.This API provides the count of devices in these 3 categories.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserExperienceAnalyticsBatteryHealthRuntimeDetails extends Entity implements Parsable {

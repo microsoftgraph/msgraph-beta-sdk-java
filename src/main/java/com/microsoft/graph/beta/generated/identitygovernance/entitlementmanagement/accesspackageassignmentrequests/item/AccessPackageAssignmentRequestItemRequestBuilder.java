@@ -109,7 +109,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignmentRequests/{accessPackageAssignmentRequest%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can't delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can&apos;t delete an access package assignment request if it has any accessPackageAssignment objects.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -120,7 +120,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         delete(null);
     }
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can't delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can&apos;t delete an access package assignment request if it has any accessPackageAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -196,7 +196,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageAssignmentRequest::createFromDiscriminatorValue);
     }
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can't delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can&apos;t delete an access package assignment request if it has any accessPackageAssignment objects.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -207,7 +207,7 @@ public class AccessPackageAssignmentRequestItemRequestBuilder extends BaseReques
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can't delete an access package assignment request if it has any accessPackageAssignment objects.
+     * Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You can&apos;t delete an access package assignment request if it has any accessPackageAssignment objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated

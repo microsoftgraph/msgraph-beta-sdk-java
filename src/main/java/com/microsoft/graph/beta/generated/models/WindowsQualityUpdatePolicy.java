@@ -77,7 +77,7 @@ public class WindowsQualityUpdatePolicy extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hotpatchEnabled property value. Indicates if hotpatch is enabled for the tenants. When 'true', tenant can apply quality updates without rebooting their devices. When 'false', tenant devices will receive cold patch associated with Windows quality updates.
+     * Gets the hotpatchEnabled property value. Indicates if hotpatch is enabled for the tenants. When &apos;true&apos;, tenant can apply quality updates without rebooting their devices. When &apos;false&apos;, tenant devices will receive cold patch associated with Windows quality updates.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class WindowsQualityUpdatePolicy extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the hotpatchEnabled property value. Indicates if hotpatch is enabled for the tenants. When 'true', tenant can apply quality updates without rebooting their devices. When 'false', tenant devices will receive cold patch associated with Windows quality updates.
+     * Sets the hotpatchEnabled property value. Indicates if hotpatch is enabled for the tenants. When &apos;true&apos;, tenant can apply quality updates without rebooting their devices. When &apos;false&apos;, tenant devices will receive cold patch associated with Windows quality updates.
      * @param value Value to set for the hotpatchEnabled property.
      */
     public void setHotpatchEnabled(@jakarta.annotation.Nullable final Boolean value) {

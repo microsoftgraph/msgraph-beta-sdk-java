@@ -27,7 +27,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
         return new StaleSignInAlertConfiguration();
     }
     /**
-     * Gets the duration property value. The number of days to look back from current timestamp within which the account hasn't signed in.
+     * Gets the duration property value. The number of days to look back from current timestamp within which the account hasn&apos;t signed in.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertCon
         writer.writePeriodAndDurationValue("duration", this.getDuration());
     }
     /**
-     * Sets the duration property value. The number of days to look back from current timestamp within which the account hasn't signed in.
+     * Sets the duration property value. The number of days to look back from current timestamp within which the account hasn&apos;t signed in.
      * @param value Value to set for the duration property.
      */
     public void setDuration(@jakarta.annotation.Nullable final PeriodAndDuration value) {

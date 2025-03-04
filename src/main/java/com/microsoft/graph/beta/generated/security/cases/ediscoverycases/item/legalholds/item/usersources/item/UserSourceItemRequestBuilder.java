@@ -37,16 +37,18 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/legalHolds/{ediscoveryHoldPolicy%2Did}/userSources/{userSource%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property userSources for security
+     * Delete a userSource object associated with an ediscoveryHoldPolicy.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryholdpolicy-delete-usersources?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property userSources for security
+     * Delete a userSource object associated with an ediscoveryHoldPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-ediscoveryholdpolicy-delete-usersources?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -102,7 +104,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserSource::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property userSources for security
+     * Delete a userSource object associated with an ediscoveryHoldPolicy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +112,7 @@ public class UserSourceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property userSources for security
+     * Delete a userSource object associated with an ediscoveryHoldPolicy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

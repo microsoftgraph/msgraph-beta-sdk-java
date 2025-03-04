@@ -101,7 +101,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("createdOnBehalfOf");
     }
     /**
-     * Gets the defaultRedirectUri property value. The default redirect URI. If specified and there's no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
+     * Gets the defaultRedirectUri property value. The default redirect URI. If specified and there&apos;s no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("homeRealmDiscoveryPolicies");
     }
     /**
-     * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<appId>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * Gets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API&apos;s code, and it must be globally unique. You can use the default value provided, which is in the form api://&lt;appId&gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -230,7 +230,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("identifierUris");
     }
     /**
-     * Gets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Gets the info property value. Basic profile information of the application, such as it&apos;s marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @return a {@link InformationalUrl}
      */
     @jakarta.annotation.Nullable
@@ -246,7 +246,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("isDeviceOnlyAuthSupported");
     }
     /**
-     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false, which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID can't determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
+     * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false, which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID can&apos;t determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -589,7 +589,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("createdOnBehalfOf", value);
     }
     /**
-     * Sets the defaultRedirectUri property value. The default redirect URI. If specified and there's no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
+     * Sets the defaultRedirectUri property value. The default redirect URI. If specified and there&apos;s no explicit redirect URI in the sign-in request for SAML and OIDC flows, Microsoft Entra ID sends the token to this redirect URI. Microsoft Entra ID also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.
      * @param value Value to set for the defaultRedirectUri property.
      */
     public void setDefaultRedirectUri(@jakarta.annotation.Nullable final String value) {
@@ -645,14 +645,14 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("homeRealmDiscoveryPolicies", value);
     }
     /**
-     * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<appId>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
+     * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you reference in your API&apos;s code, and it must be globally unique. You can use the default value provided, which is in the form api://&lt;appId&gt;, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Microsoft Entra application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
      * @param value Value to set for the identifierUris property.
      */
     public void setIdentifierUris(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("identifierUris", value);
     }
     /**
-     * Sets the info property value. Basic profile information of the application, such as it's marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
+     * Sets the info property value. Basic profile information of the application, such as it&apos;s marketing, support, terms of service, and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more information, see How to: Add Terms of service and privacy statement for registered Microsoft Entra apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
      * @param value Value to set for the info property.
      */
     public void setInfo(@jakarta.annotation.Nullable final InformationalUrl value) {
@@ -666,7 +666,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("isDeviceOnlyAuthSupported", value);
     }
     /**
-     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false, which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID can't determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
+     * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false, which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID can&apos;t determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
      * @param value Value to set for the isFallbackPublicClient property.
      */
     public void setIsFallbackPublicClient(@jakarta.annotation.Nullable final Boolean value) {

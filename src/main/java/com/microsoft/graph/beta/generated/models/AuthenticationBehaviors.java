@@ -85,7 +85,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the removeUnverifiedEmailClaim property value. If true, removes the email claim from tokens sent to an application when the email address's domain can't be verified.
+     * Gets the removeUnverifiedEmailClaim property value. If true, removes the email claim from tokens sent to an application when the email address&apos;s domain can&apos;t be verified.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("removeUnverifiedEmailClaim");
     }
     /**
-     * Gets the requireClientServicePrincipal property value. If true, requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they're granted access tokens. This property is only modifiable for multitenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
+     * Gets the requireClientServicePrincipal property value. If true, requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they&apos;re granted access tokens. This property is only modifiable for multitenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -142,14 +142,14 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the removeUnverifiedEmailClaim property value. If true, removes the email claim from tokens sent to an application when the email address's domain can't be verified.
+     * Sets the removeUnverifiedEmailClaim property value. If true, removes the email claim from tokens sent to an application when the email address&apos;s domain can&apos;t be verified.
      * @param value Value to set for the removeUnverifiedEmailClaim property.
      */
     public void setRemoveUnverifiedEmailClaim(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("removeUnverifiedEmailClaim", value);
     }
     /**
-     * Sets the requireClientServicePrincipal property value. If true, requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they're granted access tokens. This property is only modifiable for multitenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
+     * Sets the requireClientServicePrincipal property value. If true, requires multitenant applications to have a service principal in the resource tenant as part of authorization checks before they&apos;re granted access tokens. This property is only modifiable for multitenant resource applications that rely on access from clients without a service principal and had this behavior as set to false by Microsoft. Tenant administrators should respond to security advisories sent through Azure Health Service events and the Microsoft 365 message center.
      * @param value Value to set for the requireClientServicePrincipal property.
      */
     public void setRequireClientServicePrincipal(@jakarta.annotation.Nullable final Boolean value) {

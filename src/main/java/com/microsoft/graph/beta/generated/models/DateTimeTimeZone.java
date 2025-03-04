@@ -56,7 +56,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore;
     }
     /**
-     * Gets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}). For example, '2019-04-16T09:00:00'.
+     * Gets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}). For example, &apos;2019-04-16T09:00:00&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for possible values.
+     * Gets the timeZone property value. Represents a time zone, for example, &apos;Pacific Standard Time&apos;. See below for possible values.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}). For example, '2019-04-16T09:00:00'.
+     * Sets the dateTime property value. A single point of time in a combined date and time representation ({date}T{time}). For example, &apos;2019-04-16T09:00:00&apos;.
      * @param value Value to set for the dateTime property.
      */
     public void setDateTime(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class DateTimeTimeZone implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the timeZone property value. Represents a time zone, for example, 'Pacific Standard Time'. See below for possible values.
+     * Sets the timeZone property value. Represents a time zone, for example, &apos;Pacific Standard Time&apos;. See below for possible values.
      * @param value Value to set for the timeZone property.
      */
     public void setTimeZone(@jakarta.annotation.Nullable final String value) {

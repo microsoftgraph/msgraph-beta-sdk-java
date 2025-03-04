@@ -44,7 +44,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         return this.backingStore.get("connectAutomatically");
     }
     /**
-     * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
+     * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn&apos;t broadcast its SSID to all devices.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class AndroidDeviceOwnerWiFiConfiguration extends DeviceConfiguration imp
         this.backingStore.set("connectAutomatically", value);
     }
     /**
-     * Sets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
+     * Sets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn&apos;t broadcast its SSID to all devices.
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      */
     public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {

@@ -102,7 +102,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
         return this.backingStore.get("rootCertificateForServerValidation");
     }
     /**
-     * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+     * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users&apos; devices when they connect to this Wi-Fi network.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -175,7 +175,7 @@ public class AndroidWorkProfileEnterpriseWiFiConfiguration extends AndroidWorkPr
         this.backingStore.set("rootCertificateForServerValidation", value);
     }
     /**
-     * Sets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+     * Sets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users&apos; devices when they connect to this Wi-Fi network.
      * @param value Value to set for the trustedServerCertificateNames property.
      */
     public void setTrustedServerCertificateNames(@jakarta.annotation.Nullable final java.util.List<String> value) {

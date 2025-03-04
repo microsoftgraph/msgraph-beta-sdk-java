@@ -25,7 +25,7 @@ public class AdminsMfaEnforcedSecurityRequirement extends SecurityRequirement im
         return new AdminsMfaEnforcedSecurityRequirement();
     }
     /**
-     * Gets the adminsRequiredNotUsingMfaCount property value. The number of admins who are required to use MFA, but haven't completed registration.
+     * Gets the adminsRequiredNotUsingMfaCount property value. The number of admins who are required to use MFA, but haven&apos;t completed registration.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class AdminsMfaEnforcedSecurityRequirement extends SecurityRequirement im
         return this.backingStore.get("securityDefaultsStatus");
     }
     /**
-     * Gets the totalAdminsCount property value. The total number of admins in the partner's tenant.
+     * Gets the totalAdminsCount property value. The total number of admins in the partner&apos;s tenant.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class AdminsMfaEnforcedSecurityRequirement extends SecurityRequirement im
         return this.backingStore.get("totalAdminsCount");
     }
     /**
-     * Gets the totalUsersCount property value. The total number of users in the partner's tenant.
+     * Gets the totalUsersCount property value. The total number of users in the partner&apos;s tenant.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class AdminsMfaEnforcedSecurityRequirement extends SecurityRequirement im
         return this.backingStore.get("totalUsersCount");
     }
     /**
-     * Gets the usersRequiredNotUsingMfaCount property value. The number of users who are required to use MFA, but haven't completed registration.
+     * Gets the usersRequiredNotUsingMfaCount property value. The number of users who are required to use MFA, but haven&apos;t completed registration.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class AdminsMfaEnforcedSecurityRequirement extends SecurityRequirement im
         writer.writeLongValue("usersRequiredNotUsingMfaCount", this.getUsersRequiredNotUsingMfaCount());
     }
     /**
-     * Sets the adminsRequiredNotUsingMfaCount property value. The number of admins who are required to use MFA, but haven't completed registration.
+     * Sets the adminsRequiredNotUsingMfaCount property value. The number of admins who are required to use MFA, but haven&apos;t completed registration.
      * @param value Value to set for the adminsRequiredNotUsingMfaCount property.
      */
     public void setAdminsRequiredNotUsingMfaCount(@jakarta.annotation.Nullable final Long value) {
@@ -174,21 +174,21 @@ public class AdminsMfaEnforcedSecurityRequirement extends SecurityRequirement im
         this.backingStore.set("securityDefaultsStatus", value);
     }
     /**
-     * Sets the totalAdminsCount property value. The total number of admins in the partner's tenant.
+     * Sets the totalAdminsCount property value. The total number of admins in the partner&apos;s tenant.
      * @param value Value to set for the totalAdminsCount property.
      */
     public void setTotalAdminsCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalAdminsCount", value);
     }
     /**
-     * Sets the totalUsersCount property value. The total number of users in the partner's tenant.
+     * Sets the totalUsersCount property value. The total number of users in the partner&apos;s tenant.
      * @param value Value to set for the totalUsersCount property.
      */
     public void setTotalUsersCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalUsersCount", value);
     }
     /**
-     * Sets the usersRequiredNotUsingMfaCount property value. The number of users who are required to use MFA, but haven't completed registration.
+     * Sets the usersRequiredNotUsingMfaCount property value. The number of users who are required to use MFA, but haven&apos;t completed registration.
      * @param value Value to set for the usersRequiredNotUsingMfaCount property.
      */
     public void setUsersRequiredNotUsingMfaCount(@jakarta.annotation.Nullable final Long value) {

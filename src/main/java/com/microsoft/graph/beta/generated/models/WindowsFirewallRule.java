@@ -118,7 +118,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the filePath property value. The full file path of an app that's affected by the firewall rule.
+     * Gets the filePath property value. The full file path of an app that&apos;s affected by the firewall rule.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("interfaceTypes");
     }
     /**
-     * Gets the localAddressRanges property value. List of local addresses covered by the rule. Default is any address. Valid tokens include:'' indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
+     * Gets the localAddressRanges property value. List of local addresses covered by the rule. Default is any address. Valid tokens include:&apos;&apos; indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of &apos;start address - end address&apos; with no spaces included.An IPv6 address range in the format of &apos;start address - end address&apos; with no spaces included.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("localAddressRanges");
     }
     /**
-     * Gets the localPortRanges property value. List of local port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
+     * Gets the localPortRanges property value. List of local port ranges. For example, &apos;100-120&apos;, &apos;200&apos;, &apos;300-320&apos;. If not specified, the default is All.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the packageFamilyName property value. The package family name of a Microsoft Store application that's affected by the firewall rule.
+     * Gets the packageFamilyName property value. The package family name of a Microsoft Store application that&apos;s affected by the firewall rule.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("protocol");
     }
     /**
-     * Gets the remoteAddressRanges property value. List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:'' indicates any remote address. If present, this must be the only token included.'Defaultgateway''DHCP''DNS''WINS''Intranet' (supported on Windows versions 1809+)'RmtIntranet' (supported on Windows versions 1809+)'Internet' (supported on Windows versions 1809+)'Ply2Renders' (supported on Windows versions 1809+)'LocalSubnet' indicates any local address on the local subnet.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
+     * Gets the remoteAddressRanges property value. List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:&apos;&apos; indicates any remote address. If present, this must be the only token included.&apos;Defaultgateway&apos;&apos;DHCP&apos;&apos;DNS&apos;&apos;WINS&apos;&apos;Intranet&apos; (supported on Windows versions 1809+)&apos;RmtIntranet&apos; (supported on Windows versions 1809+)&apos;Internet&apos; (supported on Windows versions 1809+)&apos;Ply2Renders&apos; (supported on Windows versions 1809+)&apos;LocalSubnet&apos; indicates any local address on the local subnet.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of &apos;start address - end address&apos; with no spaces included.An IPv6 address range in the format of &apos;start address - end address&apos; with no spaces included.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("remoteAddressRanges");
     }
     /**
-     * Gets the remotePortRanges property value. List of remote port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
+     * Gets the remotePortRanges property value. List of remote port ranges. For example, &apos;100-120&apos;, &apos;200&apos;, &apos;300-320&apos;. If not specified, the default is All.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -290,7 +290,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("edgeTraversal", value);
     }
     /**
-     * Sets the filePath property value. The full file path of an app that's affected by the firewall rule.
+     * Sets the filePath property value. The full file path of an app that&apos;s affected by the firewall rule.
      * @param value Value to set for the filePath property.
      */
     public void setFilePath(@jakarta.annotation.Nullable final String value) {
@@ -304,14 +304,14 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("interfaceTypes", value);
     }
     /**
-     * Sets the localAddressRanges property value. List of local addresses covered by the rule. Default is any address. Valid tokens include:'' indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
+     * Sets the localAddressRanges property value. List of local addresses covered by the rule. Default is any address. Valid tokens include:&apos;&apos; indicates any local address. If present, this must be the only token included.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of &apos;start address - end address&apos; with no spaces included.An IPv6 address range in the format of &apos;start address - end address&apos; with no spaces included.
      * @param value Value to set for the localAddressRanges property.
      */
     public void setLocalAddressRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("localAddressRanges", value);
     }
     /**
-     * Sets the localPortRanges property value. List of local port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
+     * Sets the localPortRanges property value. List of local port ranges. For example, &apos;100-120&apos;, &apos;200&apos;, &apos;300-320&apos;. If not specified, the default is All.
      * @param value Value to set for the localPortRanges property.
      */
     public void setLocalPortRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -332,7 +332,7 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the packageFamilyName property value. The package family name of a Microsoft Store application that's affected by the firewall rule.
+     * Sets the packageFamilyName property value. The package family name of a Microsoft Store application that&apos;s affected by the firewall rule.
      * @param value Value to set for the packageFamilyName property.
      */
     public void setPackageFamilyName(@jakarta.annotation.Nullable final String value) {
@@ -353,14 +353,14 @@ public class WindowsFirewallRule implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("protocol", value);
     }
     /**
-     * Sets the remoteAddressRanges property value. List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:'' indicates any remote address. If present, this must be the only token included.'Defaultgateway''DHCP''DNS''WINS''Intranet' (supported on Windows versions 1809+)'RmtIntranet' (supported on Windows versions 1809+)'Internet' (supported on Windows versions 1809+)'Ply2Renders' (supported on Windows versions 1809+)'LocalSubnet' indicates any local address on the local subnet.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of 'start address - end address' with no spaces included.An IPv6 address range in the format of 'start address - end address' with no spaces included.
+     * Sets the remoteAddressRanges property value. List of tokens specifying the remote addresses covered by the rule. Tokens are case insensitive. Default is any address. Valid tokens include:&apos;&apos; indicates any remote address. If present, this must be the only token included.&apos;Defaultgateway&apos;&apos;DHCP&apos;&apos;DNS&apos;&apos;WINS&apos;&apos;Intranet&apos; (supported on Windows versions 1809+)&apos;RmtIntranet&apos; (supported on Windows versions 1809+)&apos;Internet&apos; (supported on Windows versions 1809+)&apos;Ply2Renders&apos; (supported on Windows versions 1809+)&apos;LocalSubnet&apos; indicates any local address on the local subnet.A subnet can be specified using either the subnet mask or network prefix notation. If neither a subnet mask nor a network prefix is specified, the subnet mask defaults to 255.255.255.255.A valid IPv6 address.An IPv4 address range in the format of &apos;start address - end address&apos; with no spaces included.An IPv6 address range in the format of &apos;start address - end address&apos; with no spaces included.
      * @param value Value to set for the remoteAddressRanges property.
      */
     public void setRemoteAddressRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("remoteAddressRanges", value);
     }
     /**
-     * Sets the remotePortRanges property value. List of remote port ranges. For example, '100-120', '200', '300-320'. If not specified, the default is All.
+     * Sets the remotePortRanges property value. List of remote port ranges. For example, &apos;100-120&apos;, &apos;200&apos;, &apos;300-320&apos;. If not specified, the default is All.
      * @param value Value to set for the remotePortRanges property.
      */
     public void setRemotePortRanges(@jakarta.annotation.Nullable final java.util.List<String> value) {

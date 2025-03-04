@@ -60,7 +60,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
         super(requestAdapter, "{+baseurl}/roleManagement/directory/transitiveRoleAssignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group's ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
+     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group&apos;s ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
      * @return a {@link UnifiedRoleAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-transitiveroleassignments?view=graph-rest-beta">Find more info here</a>
@@ -70,7 +70,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group's ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
+     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group&apos;s ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -109,7 +109,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group's ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
+     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group&apos;s ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group's ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
+     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group&apos;s ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +163,7 @@ public class TransitiveRoleAssignmentsRequestBuilder extends BaseRequestBuilder 
         return new TransitiveRoleAssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group's ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
+     * Get the list of direct and transitive unifiedRoleAssignment objects for a specific principal. For example, if a user is assigned a Microsoft Entra role through group membership, the role assignment is transitive, and this request will list the group&apos;s ID as the principalId. Results can also be filtered by the roleDefinitionId and directoryScopeId. Supported only for directory (Microsoft Entra ID) provider. For more information, see Use Microsoft Entra groups to manage role assignments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

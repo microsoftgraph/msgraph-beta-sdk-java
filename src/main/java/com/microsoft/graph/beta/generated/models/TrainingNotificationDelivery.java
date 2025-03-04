@@ -56,7 +56,7 @@ public class TrainingNotificationDelivery implements AdditionalDataHolder, Backe
         return this.backingStore;
     }
     /**
-     * Gets the failedMessageDeliveryCount property value. The number of users to whom mails couldn't be delivered.
+     * Gets the failedMessageDeliveryCount property value. The number of users to whom mails couldn&apos;t be delivered.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class TrainingNotificationDelivery implements AdditionalDataHolder, Backe
         return this.backingStore.get("resolvedTargetsCount");
     }
     /**
-     * Gets the successfulMessageDeliveryCount property value. The number of users who received a mail while the training campaign was in the 'in progress' state.
+     * Gets the successfulMessageDeliveryCount property value. The number of users who received a mail while the training campaign was in the &apos;in progress&apos; state.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class TrainingNotificationDelivery implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the failedMessageDeliveryCount property value. The number of users to whom mails couldn't be delivered.
+     * Sets the failedMessageDeliveryCount property value. The number of users to whom mails couldn&apos;t be delivered.
      * @param value Value to set for the failedMessageDeliveryCount property.
      */
     public void setFailedMessageDeliveryCount(@jakarta.annotation.Nullable final Integer value) {
@@ -149,7 +149,7 @@ public class TrainingNotificationDelivery implements AdditionalDataHolder, Backe
         this.backingStore.set("resolvedTargetsCount", value);
     }
     /**
-     * Sets the successfulMessageDeliveryCount property value. The number of users who received a mail while the training campaign was in the 'in progress' state.
+     * Sets the successfulMessageDeliveryCount property value. The number of users who received a mail while the training campaign was in the &apos;in progress&apos; state.
      * @param value Value to set for the successfulMessageDeliveryCount property.
      */
     public void setSuccessfulMessageDeliveryCount(@jakarta.annotation.Nullable final Integer value) {

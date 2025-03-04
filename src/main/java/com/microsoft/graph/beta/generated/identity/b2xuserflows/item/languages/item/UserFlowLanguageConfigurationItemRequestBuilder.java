@@ -73,7 +73,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can&apos;t create custom languages in self-service sign-up user flows.
      * @return a {@link UserFlowLanguageConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         return get(null);
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can&apos;t create custom languages in self-service sign-up user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserFlowLanguageConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can&apos;t create custom languages in self-service sign-up user flows.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can&apos;t create custom languages in self-service sign-up user flows.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class UserFlowLanguageConfigurationItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can't create custom languages in self-service sign-up user flows.
+     * The languages supported for customization within the user flow. Language customization is enabled by default in self-service sign-up user flow. You can&apos;t create custom languages in self-service sign-up user flows.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

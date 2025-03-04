@@ -27,7 +27,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
         return new MeetingRegistrant();
     }
     /**
-     * Gets the customQuestionAnswers property value. The registrant's answer to custom questions.
+     * Gets the customQuestionAnswers property value. The registrant&apos;s answer to custom questions.
      * @return a {@link java.util.List<CustomQuestionAnswer>}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class MeetingRegistrant extends MeetingRegistrantBase implements Parsable
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the customQuestionAnswers property value. The registrant's answer to custom questions.
+     * Sets the customQuestionAnswers property value. The registrant&apos;s answer to custom questions.
      * @param value Value to set for the customQuestionAnswers property.
      */
     public void setCustomQuestionAnswers(@jakarta.annotation.Nullable final java.util.List<CustomQuestionAnswer> value) {

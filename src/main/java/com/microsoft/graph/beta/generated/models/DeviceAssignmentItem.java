@@ -60,7 +60,7 @@ public class DeviceAssignmentItem implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("assignmentItemActionIntent");
     }
     /**
-     * Gets the assignmentItemActionStatus property value. A list of possible assignment item action status values for the application or configuration regarding their executed action on the managed device. For example, a configuration included in the deviceAssignmentItems list has just been executed the action. Its status starts with inProgress until it's successfully removed to reflect as removed status or failed to be removed to reflect as error status on the managed device. Similar status change happens for restoration process
+     * Gets the assignmentItemActionStatus property value. A list of possible assignment item action status values for the application or configuration regarding their executed action on the managed device. For example, a configuration included in the deviceAssignmentItems list has just been executed the action. Its status starts with inProgress until it&apos;s successfully removed to reflect as removed status or failed to be removed to reflect as error status on the managed device. Similar status change happens for restoration process
      * @return a {@link DeviceAssignmentItemStatus}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class DeviceAssignmentItem implements AdditionalDataHolder, BackedModel, 
         return deserializerMap;
     }
     /**
-     * Gets the intentActionMessage property value. The intent action message for the application or configuration regarding the executed action on the managed device. When the action is on error, this property provides message on the reason of failure. When the action is in progress, this property provides message on what's being processed on the device. Read-Only. Returned in the action result. Can be null. Max length is 1500. This property is read-only.
+     * Gets the intentActionMessage property value. The intent action message for the application or configuration regarding the executed action on the managed device. When the action is on error, this property provides message on the reason of failure. When the action is in progress, this property provides message on what&apos;s being processed on the device. Read-Only. Returned in the action result. Can be null. Max length is 1500. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class DeviceAssignmentItem implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("itemType");
     }
     /**
-     * Gets the lastActionDateTime property value. The date and time when the application or configuration was initiated an action execution. Read-Only. Returned in the action result. The property value cannot be modified and is automatically populated when the action is initiated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2025 would look like this: '2025-01-01T00:00:00Z'. This property is read-only.
+     * Gets the lastActionDateTime property value. The date and time when the application or configuration was initiated an action execution. Read-Only. Returned in the action result. The property value cannot be modified and is automatically populated when the action is initiated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2025 would look like this: &apos;2025-01-01T00:00:00Z&apos;. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class DeviceAssignmentItem implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("lastActionDateTime");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time when the application or configuration was last modified because of either action execution or status change. Read-Only. Returned in the action result. The property value cannot be modified and is automatically populated when the action is initiated or the device has a status change. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2025 would look like this: '2025-01-01T00:00:00Z'. This property is read-only.
+     * Gets the lastModifiedDateTime property value. The date and time when the application or configuration was last modified because of either action execution or status change. Read-Only. Returned in the action result. The property value cannot be modified and is automatically populated when the action is initiated or the device has a status change. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2025 would look like this: &apos;2025-01-01T00:00:00Z&apos;. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class DeviceAssignmentItem implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("assignmentItemActionIntent", value);
     }
     /**
-     * Sets the assignmentItemActionStatus property value. A list of possible assignment item action status values for the application or configuration regarding their executed action on the managed device. For example, a configuration included in the deviceAssignmentItems list has just been executed the action. Its status starts with inProgress until it's successfully removed to reflect as removed status or failed to be removed to reflect as error status on the managed device. Similar status change happens for restoration process
+     * Sets the assignmentItemActionStatus property value. A list of possible assignment item action status values for the application or configuration regarding their executed action on the managed device. For example, a configuration included in the deviceAssignmentItems list has just been executed the action. Its status starts with inProgress until it&apos;s successfully removed to reflect as removed status or failed to be removed to reflect as error status on the managed device. Similar status change happens for restoration process
      * @param value Value to set for the assignmentItemActionStatus property.
      */
     public void setAssignmentItemActionStatus(@jakarta.annotation.Nullable final DeviceAssignmentItemStatus value) {
@@ -217,7 +217,7 @@ public class DeviceAssignmentItem implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("errorCode", value);
     }
     /**
-     * Sets the intentActionMessage property value. The intent action message for the application or configuration regarding the executed action on the managed device. When the action is on error, this property provides message on the reason of failure. When the action is in progress, this property provides message on what's being processed on the device. Read-Only. Returned in the action result. Can be null. Max length is 1500. This property is read-only.
+     * Sets the intentActionMessage property value. The intent action message for the application or configuration regarding the executed action on the managed device. When the action is on error, this property provides message on the reason of failure. When the action is in progress, this property provides message on what&apos;s being processed on the device. Read-Only. Returned in the action result. Can be null. Max length is 1500. This property is read-only.
      * @param value Value to set for the intentActionMessage property.
      */
     public void setIntentActionMessage(@jakarta.annotation.Nullable final String value) {
@@ -252,14 +252,14 @@ public class DeviceAssignmentItem implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("itemType", value);
     }
     /**
-     * Sets the lastActionDateTime property value. The date and time when the application or configuration was initiated an action execution. Read-Only. Returned in the action result. The property value cannot be modified and is automatically populated when the action is initiated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2025 would look like this: '2025-01-01T00:00:00Z'. This property is read-only.
+     * Sets the lastActionDateTime property value. The date and time when the application or configuration was initiated an action execution. Read-Only. Returned in the action result. The property value cannot be modified and is automatically populated when the action is initiated. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2025 would look like this: &apos;2025-01-01T00:00:00Z&apos;. This property is read-only.
      * @param value Value to set for the lastActionDateTime property.
      */
     public void setLastActionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastActionDateTime", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time when the application or configuration was last modified because of either action execution or status change. Read-Only. Returned in the action result. The property value cannot be modified and is automatically populated when the action is initiated or the device has a status change. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2025 would look like this: '2025-01-01T00:00:00Z'. This property is read-only.
+     * Sets the lastModifiedDateTime property value. The date and time when the application or configuration was last modified because of either action execution or status change. Read-Only. Returned in the action result. The property value cannot be modified and is automatically populated when the action is initiated or the device has a status change. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2025 would look like this: &apos;2025-01-01T00:00:00Z&apos;. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

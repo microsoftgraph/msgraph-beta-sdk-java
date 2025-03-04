@@ -68,7 +68,7 @@ public class AccessPackageAssignmentRequestsRequestBuilder extends BaseRequestBu
     }
     /**
      * Provides operations to call the filterByCurrentUser method.
-     * @param on Usage: on='{on}'
+     * @param on Usage: on=&apos;{on}&apos;
      * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31

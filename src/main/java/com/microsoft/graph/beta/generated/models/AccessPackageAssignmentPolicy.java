@@ -58,7 +58,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this.backingStore.get("accessPackageNotificationSettings");
     }
     /**
-     * Gets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
+     * Gets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren&apos;t required.
      * @return a {@link AssignmentReviewSettings}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the durationInDays property value. The number of days in which assignments from this policy last until they're expired.
+     * Gets the durationInDays property value. The number of days in which assignments from this policy last until they&apos;re expired.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -271,7 +271,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this.backingStore.set("accessPackageNotificationSettings", value);
     }
     /**
-     * Sets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren't required.
+     * Sets the accessReviewSettings property value. Who must review, and how often, the assignments to the access package from this policy. This property is null if reviews aren&apos;t required.
      * @param value Value to set for the accessReviewSettings property.
      */
     public void setAccessReviewSettings(@jakarta.annotation.Nullable final AssignmentReviewSettings value) {
@@ -327,7 +327,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the durationInDays property value. The number of days in which assignments from this policy last until they're expired.
+     * Sets the durationInDays property value. The number of days in which assignments from this policy last until they&apos;re expired.
      * @param value Value to set for the durationInDays property.
      */
     public void setDurationInDays(@jakarta.annotation.Nullable final Integer value) {

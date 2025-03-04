@@ -37,7 +37,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration%2Did}/trustedCertificateAuthorities/{certificateAuthorityAsEntity%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a certificateAuthorityAsEntity object. You can't delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
+     * Delete a certificateAuthorityAsEntity object. You can&apos;t delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/certificateauthorityasentity-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         delete(null);
     }
     /**
-     * Delete a certificateAuthorityAsEntity object. You can't delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
+     * Delete a certificateAuthorityAsEntity object. You can&apos;t delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/certificateauthorityasentity-delete?view=graph-rest-beta">Find more info here</a>
@@ -108,7 +108,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, CertificateAuthorityAsEntity::createFromDiscriminatorValue);
     }
     /**
-     * Delete a certificateAuthorityAsEntity object. You can't delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
+     * Delete a certificateAuthorityAsEntity object. You can&apos;t delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +116,7 @@ public class CertificateAuthorityAsEntityItemRequestBuilder extends BaseRequestB
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a certificateAuthorityAsEntity object. You can't delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
+     * Delete a certificateAuthorityAsEntity object. You can&apos;t delete all items in the collection because this collection requires at least one object that is a root authority to always persist.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

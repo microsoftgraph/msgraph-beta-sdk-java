@@ -76,7 +76,7 @@ public class CloudPcLoginResult implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the time property value. The time of the Cloud PC sign in action. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'. Read-only.
+     * Gets the time property value. The time of the Cloud PC sign in action. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as &apos;2014-01-01T00:00:00Z&apos;. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class CloudPcLoginResult implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the time property value. The time of the Cloud PC sign in action. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as '2014-01-01T00:00:00Z'. Read-only.
+     * Sets the time property value. The time of the Cloud PC sign in action. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as &apos;2014-01-01T00:00:00Z&apos;. Read-only.
      * @param value Value to set for the time property.
      */
     public void setTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

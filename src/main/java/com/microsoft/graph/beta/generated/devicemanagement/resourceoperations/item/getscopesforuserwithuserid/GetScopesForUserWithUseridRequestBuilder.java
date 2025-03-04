@@ -23,7 +23,7 @@ public class GetScopesForUserWithUseridRequestBuilder extends BaseRequestBuilder
      * Instantiates a new {@link GetScopesForUserWithUseridRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param userid Usage: userid='{userid}'
+     * @param userid Usage: userid=&apos;{userid}&apos;
      */
     public GetScopesForUserWithUseridRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String userid) {
         super(requestAdapter, "{+baseurl}/deviceManagement/resourceOperations/{resourceOperation%2Did}/getScopesForUser(userid='{userid}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

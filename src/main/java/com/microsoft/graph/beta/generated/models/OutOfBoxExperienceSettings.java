@@ -83,7 +83,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the hideEscapeLink property value. If set to true, then the user can't start over with different account, on company sign-in
+     * Gets the hideEscapeLink property value. If set to true, then the user can&apos;t start over with different account, on company sign-in
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class OutOfBoxExperienceSettings implements AdditionalDataHolder, BackedM
         this.backingStore.set("deviceUsageType", value);
     }
     /**
-     * Sets the hideEscapeLink property value. If set to true, then the user can't start over with different account, on company sign-in
+     * Sets the hideEscapeLink property value. If set to true, then the user can&apos;t start over with different account, on company sign-in
      * @param value Value to set for the hideEscapeLink property.
      */
     public void setHideEscapeLink(@jakarta.annotation.Nullable final Boolean value) {

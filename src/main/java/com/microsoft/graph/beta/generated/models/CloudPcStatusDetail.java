@@ -48,7 +48,7 @@ public class CloudPcStatusDetail implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
-     * Gets the additionalInformation property value. More information about the Cloud PC status. For example, 'additionalInformation': ['{'@odata.type': 'microsoft.graph.keyValuePair','name': 'retriable','value': true }] '
+     * Gets the additionalInformation property value. More information about the Cloud PC status. For example, &apos;additionalInformation&apos;: [&apos;{&apos;@odata.type&apos;: &apos;microsoft.graph.keyValuePair&apos;,&apos;name&apos;: &apos;retriable&apos;,&apos;value&apos;: true }] &apos;
      * @return a {@link java.util.List<KeyValuePair>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class CloudPcStatusDetail implements AdditionalDataHolder, BackedModel, P
         return this.backingStore;
     }
     /**
-     * Gets the code property value. The error/warning code associated with the Cloud PC status. Example: 'code': 'internalServerError'.
+     * Gets the code property value. The error/warning code associated with the Cloud PC status. Example: &apos;code&apos;: &apos;internalServerError&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class CloudPcStatusDetail implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the message property value. The status message associated with error code. Example: 'message': 'There was an internal server error. Please contact support xxx.'.
+     * Gets the message property value. The status message associated with error code. Example: &apos;message&apos;: &apos;There was an internal server error. Please contact support xxx.&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class CloudPcStatusDetail implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the additionalInformation property value. More information about the Cloud PC status. For example, 'additionalInformation': ['{'@odata.type': 'microsoft.graph.keyValuePair','name': 'retriable','value': true }] '
+     * Sets the additionalInformation property value. More information about the Cloud PC status. For example, &apos;additionalInformation&apos;: [&apos;{&apos;@odata.type&apos;: &apos;microsoft.graph.keyValuePair&apos;,&apos;name&apos;: &apos;retriable&apos;,&apos;value&apos;: true }] &apos;
      * @param value Value to set for the additionalInformation property.
      */
     public void setAdditionalInformation(@jakarta.annotation.Nullable final java.util.List<KeyValuePair> value) {
@@ -135,14 +135,14 @@ public class CloudPcStatusDetail implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the code property value. The error/warning code associated with the Cloud PC status. Example: 'code': 'internalServerError'.
+     * Sets the code property value. The error/warning code associated with the Cloud PC status. Example: &apos;code&apos;: &apos;internalServerError&apos;.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("code", value);
     }
     /**
-     * Sets the message property value. The status message associated with error code. Example: 'message': 'There was an internal server error. Please contact support xxx.'.
+     * Sets the message property value. The status message associated with error code. Example: &apos;message&apos;: &apos;There was an internal server error. Please contact support xxx.&apos;.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {

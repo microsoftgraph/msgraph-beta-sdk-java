@@ -22,7 +22,7 @@ import java.util.Objects;
 public class MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder} and sets the default values.
-     * @param aggregatedBy Usage: aggregatedBy='{aggregatedBy}'
+     * @param aggregatedBy Usage: aggregatedBy=&apos;{aggregatedBy}&apos;
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.

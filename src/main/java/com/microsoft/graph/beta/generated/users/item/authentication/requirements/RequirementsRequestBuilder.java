@@ -37,7 +37,7 @@ public class RequirementsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/requirements{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
+     * Read the properties of a user&apos;s authentication states. Use this API to retrieve the following information:
      * @return a {@link StrongAuthenticationRequirements}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/authentication-get?view=graph-rest-beta">Find more info here</a>
@@ -47,7 +47,7 @@ public class RequirementsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
+     * Read the properties of a user&apos;s authentication states. Use this API to retrieve the following information:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StrongAuthenticationRequirements}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -61,7 +61,7 @@ public class RequirementsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StrongAuthenticationRequirements::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a user's authentication method states. Use this API to update the following information:
+     * Update the properties of a user&apos;s authentication method states. Use this API to update the following information:
      * @param body The request body
      * @return a {@link StrongAuthenticationRequirements}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -72,7 +72,7 @@ public class RequirementsRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a user's authentication method states. Use this API to update the following information:
+     * Update the properties of a user&apos;s authentication method states. Use this API to update the following information:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StrongAuthenticationRequirements}
@@ -88,7 +88,7 @@ public class RequirementsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, StrongAuthenticationRequirements::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
+     * Read the properties of a user&apos;s authentication states. Use this API to retrieve the following information:
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -96,7 +96,7 @@ public class RequirementsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
+     * Read the properties of a user&apos;s authentication states. Use this API to retrieve the following information:
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -108,7 +108,7 @@ public class RequirementsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a user's authentication method states. Use this API to update the following information:
+     * Update the properties of a user&apos;s authentication method states. Use this API to update the following information:
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -117,7 +117,7 @@ public class RequirementsRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a user's authentication method states. Use this API to update the following information:
+     * Update the properties of a user&apos;s authentication method states. Use this API to update the following information:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -142,7 +142,7 @@ public class RequirementsRequestBuilder extends BaseRequestBuilder {
         return new RequirementsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties of a user's authentication states. Use this API to retrieve the following information:
+     * Read the properties of a user&apos;s authentication states. Use this API to retrieve the following information:
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

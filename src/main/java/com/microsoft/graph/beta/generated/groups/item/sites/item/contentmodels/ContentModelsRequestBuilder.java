@@ -84,7 +84,7 @@ public class ContentModelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getByName method.
-     * @param modelName Usage: modelName='{modelName}'
+     * @param modelName Usage: modelName=&apos;{modelName}&apos;
      * @return a {@link GetByNameWithModelNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull

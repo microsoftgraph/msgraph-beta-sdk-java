@@ -48,7 +48,7 @@ public class GetByNameWithModelNameRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Instantiates a new {@link GetByNameWithModelNameRequestBuilder} and sets the default values.
-     * @param modelName Usage: modelName='{modelName}'
+     * @param modelName Usage: modelName=&apos;{modelName}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

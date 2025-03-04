@@ -136,7 +136,7 @@ public class OperationApprovalRequestsRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Provides operations to call the retrieveMyRequestById method.
-     * @param id Usage: id='{id}'
+     * @param id Usage: id=&apos;{id}&apos;
      * @return a {@link RetrieveMyRequestByIdWithIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

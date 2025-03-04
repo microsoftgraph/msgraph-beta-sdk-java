@@ -67,7 +67,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("appOwnerTenantId");
     }
     /**
-     * Gets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the app token was bound to the device.
+     * Gets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the app token was bound to the device.
      * @return a {@link TokenProtectionStatus}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("authenticationProcessingDetails");
     }
     /**
-     * Gets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, nativeAuth. Use none for all authentications that don't have a specific value in that list. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: authenticationTransfer, nativeAuth.
+     * Gets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, nativeAuth. Use none for all authentications that don&apos;t have a specific value in that list. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: authenticationTransfer, nativeAuth.
      * @return a {@link EnumSet<ProtocolType>}
      */
     @jakarta.annotation.Nullable
@@ -211,7 +211,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: passthrough. If the sign in didn't cross tenant boundaries, the value is none.
+     * Gets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: passthrough. If the sign in didn&apos;t cross tenant boundaries, the value is none.
      * @return a {@link EnumSet<SignInAccessType>}
      */
     @jakarta.annotation.Nullable
@@ -227,7 +227,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("deviceDetail");
     }
     /**
-     * Gets the federatedCredentialId property value. Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in.
+     * Gets the federatedCredentialId property value. Contains the identifier of an application&apos;s federated identity credential, if a federated identity credential was used to sign in.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -350,7 +350,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("homeTenantName");
     }
     /**
-     * Gets the incomingTokenType property value. Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken, refreshToken.  NOTE Microsoft Entra ID might have also used token types not listed in this enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: remoteDesktopToken, refreshToken.
+     * Gets the incomingTokenType property value. Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken, refreshToken.  NOTE Microsoft Entra ID might have also used token types not listed in this enum type to authenticate the actor. Don&apos;t infer the lack of a token if it isn&apos;t one of the types listed. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: remoteDesktopToken, refreshToken.
      * @return a {@link EnumSet<IncomingTokenType>}
      */
     @jakarta.annotation.Nullable
@@ -374,7 +374,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("ipAddressFromResourceProvider");
     }
     /**
-     * Gets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Microsoft Entra ID. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Microsoft Entra ID or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+     * Gets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Microsoft Entra ID. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Microsoft Entra ID or an associated app. In non-interactive sign in, the user doesn&apos;t provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user&apos;s behalf in a process transparent to the user.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -502,7 +502,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("resourceTenantId");
     }
     /**
-     * Gets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.  Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.The value none means that Microsoft Entra risk detection hasn't flagged the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * Gets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.  Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.The value none means that Microsoft Entra risk detection hasn&apos;t flagged the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @return a {@link RiskDetail}
      */
     @jakarta.annotation.Nullable
@@ -518,7 +518,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("riskEventTypesV2");
     }
     /**
-     * Gets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * Gets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn&apos;t enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -526,7 +526,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("riskLevelAggregated");
     }
     /**
-     * Gets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * Gets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn&apos;t enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -558,7 +558,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("servicePrincipalCredentialThumbprint");
     }
     /**
-     * Gets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
+     * Gets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you&apos;re signing in using an application.  Supports $filter (eq, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -566,7 +566,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("servicePrincipalId");
     }
     /**
-     * Gets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
+     * Gets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you&apos;re signing in using an application.  Supports $filter (eq, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -590,7 +590,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("sessionLifetimePolicies");
     }
     /**
-     * Gets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&$filter=signInEventTypes/any(t: t eq 'nonInteractiveUser').
+     * Gets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&amp;$filter=signInEventTypes/any(t: t eq &apos;nonInteractiveUser&apos;).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -614,7 +614,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("signInIdentifierType");
     }
     /**
-     * Gets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
+     * Gets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      * @return a {@link TokenProtectionStatus}
      */
     @jakarta.annotation.Nullable
@@ -654,7 +654,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("tokenProtectionStatusDetails");
     }
     /**
-     * Gets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they're redeemed at resource providers.
+     * Gets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they&apos;re redeemed at resource providers.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -686,7 +686,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the 'true' format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq, startsWith).
+     * Gets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the &apos;true&apos; format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -819,7 +819,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("appOwnerTenantId", value);
     }
     /**
-     * Sets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the app token was bound to the device.
+     * Sets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the app token was bound to the device.
      * @param value Value to set for the appTokenProtectionStatus property.
      */
     public void setAppTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {
@@ -868,7 +868,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("authenticationProcessingDetails", value);
     }
     /**
-     * Sets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, nativeAuth. Use none for all authentications that don't have a specific value in that list. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: authenticationTransfer, nativeAuth.
+     * Sets the authenticationProtocol property value. Lists the protocol type or grant type used in the authentication. The possible values are: none, oAuth2, ropc, wsFederation, saml20, deviceCode, unknownFutureValue, authenticationTransfer, nativeAuth. Use none for all authentications that don&apos;t have a specific value in that list. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: authenticationTransfer, nativeAuth.
      * @param value Value to set for the authenticationProtocol property.
      */
     public void setAuthenticationProtocol(@jakarta.annotation.Nullable final EnumSet<ProtocolType> value) {
@@ -945,7 +945,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: passthrough. If the sign in didn't cross tenant boundaries, the value is none.
+     * Sets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: passthrough. If the sign in didn&apos;t cross tenant boundaries, the value is none.
      * @param value Value to set for the crossTenantAccessType property.
      */
     public void setCrossTenantAccessType(@jakarta.annotation.Nullable final EnumSet<SignInAccessType> value) {
@@ -959,7 +959,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("deviceDetail", value);
     }
     /**
-     * Sets the federatedCredentialId property value. Contains the identifier of an application's federated identity credential, if a federated identity credential was used to sign in.
+     * Sets the federatedCredentialId property value. Contains the identifier of an application&apos;s federated identity credential, if a federated identity credential was used to sign in.
      * @param value Value to set for the federatedCredentialId property.
      */
     public void setFederatedCredentialId(@jakarta.annotation.Nullable final String value) {
@@ -994,7 +994,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("homeTenantName", value);
     }
     /**
-     * Sets the incomingTokenType property value. Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken, refreshToken.  NOTE Microsoft Entra ID might have also used token types not listed in this enum type to authenticate the actor. Don't infer the lack of a token if it isn't one of the types listed. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: remoteDesktopToken, refreshToken.
+     * Sets the incomingTokenType property value. Indicates the token types that were presented to Microsoft Entra ID to authenticate the actor in the sign in. The possible values are: none, primaryRefreshToken, saml11, saml20, unknownFutureValue, remoteDesktopToken, refreshToken.  NOTE Microsoft Entra ID might have also used token types not listed in this enum type to authenticate the actor. Don&apos;t infer the lack of a token if it isn&apos;t one of the types listed. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: remoteDesktopToken, refreshToken.
      * @param value Value to set for the incomingTokenType property.
      */
     public void setIncomingTokenType(@jakarta.annotation.Nullable final EnumSet<IncomingTokenType> value) {
@@ -1015,7 +1015,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("ipAddressFromResourceProvider", value);
     }
     /**
-     * Sets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Microsoft Entra ID. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Microsoft Entra ID or an associated app. In non-interactive sign in, the user doesn't provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user's behalf in a process transparent to the user.
+     * Sets the isInteractive property value. Indicates whether a user sign in is interactive. In interactive sign in, the user provides an authentication factor to Microsoft Entra ID. These factors include passwords, responses to MFA challenges, biometric factors, or QR codes that a user provides to Microsoft Entra ID or an associated app. In non-interactive sign in, the user doesn&apos;t provide an authentication factor. Instead, the client app uses a token or code to authenticate or access a resource on behalf of a user. Non-interactive sign ins are commonly used for a client to sign in on a user&apos;s behalf in a process transparent to the user.
      * @param value Value to set for the isInteractive property.
      */
     public void setIsInteractive(@jakarta.annotation.Nullable final Boolean value) {
@@ -1127,7 +1127,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("resourceTenantId", value);
     }
     /**
-     * Sets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.  Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.The value none means that Microsoft Entra risk detection hasn't flagged the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * Sets the riskDetail property value. The reason behind a specific state of a risky user, sign-in, or a risk event. The possible values are none, adminGeneratedTemporaryPassword, userPerformedSecuredPasswordChange, userPerformedSecuredPasswordReset, adminConfirmedSigninSafe, aiConfirmedSigninSafe, userPassedMFADrivenByRiskBasedPolicy, adminDismissedAllRiskForUser, adminConfirmedSigninCompromised, hidden, adminConfirmedUserCompromised, unknownFutureValue, adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.  Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: adminConfirmedServicePrincipalCompromised, adminDismissedAllRiskForServicePrincipal, m365DAdminDismissedDetection, userChangedPasswordOnPremises, adminDismissedRiskForSignIn, adminConfirmedAccountSafe.The value none means that Microsoft Entra risk detection hasn&apos;t flagged the user or the sign-in as a risky event so far.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskDetail property.
      */
     public void setRiskDetail(@jakarta.annotation.Nullable final RiskDetail value) {
@@ -1141,14 +1141,14 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("riskEventTypesV2", value);
     }
     /**
-     * Sets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelAggregated property value. The aggregated risk level. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn&apos;t enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelAggregated property.
      */
     public void setRiskLevelAggregated(@jakarta.annotation.Nullable final RiskLevel value) {
         this.backingStore.set("riskLevelAggregated", value);
     }
     /**
-     * Sets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn't enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
+     * Sets the riskLevelDuringSignIn property value. The risk level during sign-in. Possible values: none, low, medium, high, hidden, or unknownFutureValue. The value hidden means the user or sign-in wasn&apos;t enabled for Microsoft Entra ID Protection.  Supports $filter (eq). Note: Details for this property are only available for Microsoft Entra ID P2 customers. All other customers are returned hidden.
      * @param value Value to set for the riskLevelDuringSignIn property.
      */
     public void setRiskLevelDuringSignIn(@jakarta.annotation.Nullable final RiskLevel value) {
@@ -1176,14 +1176,14 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("servicePrincipalCredentialThumbprint", value);
     }
     /**
-     * Sets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
+     * Sets the servicePrincipalId property value. The application identifier used for sign-in. This field is populated when you&apos;re signing in using an application.  Supports $filter (eq, startsWith).
      * @param value Value to set for the servicePrincipalId property.
      */
     public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("servicePrincipalId", value);
     }
     /**
-     * Sets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you're signing in using an application.  Supports $filter (eq, startsWith).
+     * Sets the servicePrincipalName property value. The application name used for sign-in. This field is populated when you&apos;re signing in using an application.  Supports $filter (eq, startsWith).
      * @param value Value to set for the servicePrincipalName property.
      */
     public void setServicePrincipalName(@jakarta.annotation.Nullable final String value) {
@@ -1204,7 +1204,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("sessionLifetimePolicies", value);
     }
     /**
-     * Sets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&$filter=signInEventTypes/any(t: t eq 'nonInteractiveUser').
+     * Sets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&amp;$filter=signInEventTypes/any(t: t eq &apos;nonInteractiveUser&apos;).
      * @param value Value to set for the signInEventTypes property.
      */
     public void setSignInEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -1225,7 +1225,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("signInIdentifierType", value);
     }
     /**
-     * Sets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it's issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
+     * Sets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
      * @param value Value to set for the signInTokenProtectionStatus property.
      */
     public void setSignInTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {
@@ -1260,7 +1260,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("tokenProtectionStatusDetails", value);
     }
     /**
-     * Sets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they're redeemed at resource providers.
+     * Sets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they&apos;re redeemed at resource providers.
      * @param value Value to set for the uniqueTokenIdentifier property.
      */
     public void setUniqueTokenIdentifier(@jakarta.annotation.Nullable final String value) {
@@ -1288,7 +1288,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the 'true' format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq, startsWith).
+     * Sets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the &apos;true&apos; format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq, startsWith).
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

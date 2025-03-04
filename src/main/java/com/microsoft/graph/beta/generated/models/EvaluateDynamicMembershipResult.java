@@ -69,7 +69,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Ba
         return deserializerMap;
     }
     /**
-     * Gets the membershipRule property value. If a group ID is provided, the value is the membership rule for the group. If a group ID isn't provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Microsoft Entra ID.
+     * Gets the membershipRule property value. If a group ID is provided, the value is the membership rule for the group. If a group ID isn&apos;t provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Microsoft Entra ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class EvaluateDynamicMembershipResult implements AdditionalDataHolder, Ba
         this.backingStore = value;
     }
     /**
-     * Sets the membershipRule property value. If a group ID is provided, the value is the membership rule for the group. If a group ID isn't provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Microsoft Entra ID.
+     * Sets the membershipRule property value. If a group ID is provided, the value is the membership rule for the group. If a group ID isn&apos;t provided, the value is the membership rule that was provided as a parameter. For more information, see Dynamic membership rules for groups in Microsoft Entra ID.
      * @param value Value to set for the membershipRule property.
      */
     public void setMembershipRule(@jakarta.annotation.Nullable final String value) {

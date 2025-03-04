@@ -58,7 +58,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
         return this.backingStore.get("colleagues");
     }
     /**
-     * Gets the detail property value. Contains detail about the user's role on the project.
+     * Gets the detail property value. Contains detail about the user&apos;s role on the project.
      * @return a {@link PositionDetail}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +151,7 @@ public class ProjectParticipation extends ItemFacet implements Parsable {
         this.backingStore.set("colleagues", value);
     }
     /**
-     * Sets the detail property value. Contains detail about the user's role on the project.
+     * Sets the detail property value. Contains detail about the user&apos;s role on the project.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final PositionDetail value) {

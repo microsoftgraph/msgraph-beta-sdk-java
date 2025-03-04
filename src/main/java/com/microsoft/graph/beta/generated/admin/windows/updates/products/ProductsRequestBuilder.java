@@ -85,7 +85,7 @@ public class ProductsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the findByCatalogId method.
-     * @param catalogID Usage: catalogID='{catalogID}'
+     * @param catalogID Usage: catalogID=&apos;{catalogID}&apos;
      * @return a {@link MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder}
      */
     @jakarta.annotation.Nonnull
