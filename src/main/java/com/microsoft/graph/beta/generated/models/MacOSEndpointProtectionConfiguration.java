@@ -151,7 +151,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         return this.backingStore.get("fileVaultEnabled");
     }
     /**
-     * Gets the fileVaultHidePersonalRecoveryKey property value. Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
+     * Gets the fileVaultHidePersonalRecoveryKey property value. Optional. A hidden personal recovery key does not appear on the user&apos;s screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -215,7 +215,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         return this.backingStore.get("firewallApplications");
     }
     /**
-     * Gets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
+     * Gets the firewallBlockAllIncoming property value. Corresponds to the &apos;Block all incoming connections&apos; option.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -231,7 +231,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         return this.backingStore.get("firewallEnabled");
     }
     /**
-     * Gets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
+     * Gets the firewallEnableStealthMode property value. Corresponds to &apos;Enable stealth mode.&apos;
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -364,7 +364,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         this.backingStore.set("fileVaultEnabled", value);
     }
     /**
-     * Sets the fileVaultHidePersonalRecoveryKey property value. Optional. A hidden personal recovery key does not appear on the user's screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
+     * Sets the fileVaultHidePersonalRecoveryKey property value. Optional. A hidden personal recovery key does not appear on the user&apos;s screen during FileVault encryption, reducing the risk of it ending up in the wrong hands.
      * @param value Value to set for the fileVaultHidePersonalRecoveryKey property.
      */
     public void setFileVaultHidePersonalRecoveryKey(@jakarta.annotation.Nullable final Boolean value) {
@@ -420,7 +420,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         this.backingStore.set("firewallApplications", value);
     }
     /**
-     * Sets the firewallBlockAllIncoming property value. Corresponds to the 'Block all incoming connections' option.
+     * Sets the firewallBlockAllIncoming property value. Corresponds to the &apos;Block all incoming connections&apos; option.
      * @param value Value to set for the firewallBlockAllIncoming property.
      */
     public void setFirewallBlockAllIncoming(@jakarta.annotation.Nullable final Boolean value) {
@@ -434,7 +434,7 @@ public class MacOSEndpointProtectionConfiguration extends DeviceConfiguration im
         this.backingStore.set("firewallEnabled", value);
     }
     /**
-     * Sets the firewallEnableStealthMode property value. Corresponds to 'Enable stealth mode.'
+     * Sets the firewallEnableStealthMode property value. Corresponds to &apos;Enable stealth mode.&apos;
      * @param value Value to set for the firewallEnableStealthMode property.
      */
     public void setFirewallEnableStealthMode(@jakarta.annotation.Nullable final Boolean value) {

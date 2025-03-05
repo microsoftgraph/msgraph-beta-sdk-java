@@ -84,7 +84,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the required property value. Value that determines if the child setting is required based on the parent setting's selection
+     * Gets the required property value. Value that determines if the child setting is required based on the parent setting&apos;s selection
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class DeviceManagementConfigurationSettingDependedOnBy implements Additio
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the required property value. Value that determines if the child setting is required based on the parent setting's selection
+     * Sets the required property value. Value that determines if the child setting is required based on the parent setting&apos;s selection
      * @param value Value to set for the required property.
      */
     public void setRequired(@jakarta.annotation.Nullable final Boolean value) {

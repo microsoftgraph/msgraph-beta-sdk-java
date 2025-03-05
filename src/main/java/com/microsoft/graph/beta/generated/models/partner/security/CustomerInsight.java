@@ -68,7 +68,7 @@ public class CustomerInsight implements AdditionalDataHolder, BackedModel, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the mfa property value. Details of the customer's Entra tenant MFA policy configuration and usage.
+     * Gets the mfa property value. Details of the customer&apos;s Entra tenant MFA policy configuration and usage.
      * @return a {@link CustomerMfaInsight}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class CustomerInsight implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the mfa property value. Details of the customer's Entra tenant MFA policy configuration and usage.
+     * Sets the mfa property value. Details of the customer&apos;s Entra tenant MFA policy configuration and usage.
      * @param value Value to set for the mfa property.
      */
     public void setMfa(@jakarta.annotation.Nullable final CustomerMfaInsight value) {

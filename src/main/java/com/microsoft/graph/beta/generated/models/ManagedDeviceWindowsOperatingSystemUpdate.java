@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Updates for different Windows' versions are usually released on the Patch Tuesday or B-week  of each month. This complex type defines the Build-version and the release-date for a particular B-week update of the Windows' version.
+ * Updates for different Windows&apos; versions are usually released on the Patch Tuesday or B-week  of each month. This complex type defines the Build-version and the release-date for a particular B-week update of the Windows&apos; version.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceWindowsOperatingSystemUpdate implements AdditionalDataHolder, BackedModel, Parsable {

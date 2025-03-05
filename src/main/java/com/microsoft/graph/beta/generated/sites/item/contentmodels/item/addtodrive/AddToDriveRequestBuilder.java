@@ -36,7 +36,7 @@ public class AddToDriveRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/sites/{site%2Did}/contentModels/{contentModel%2Did}/addToDrive", rawUrl);
     }
     /**
-     * Apply a contentModel to SharePoint document libraries. For an existing model that's already trained, this action automatically processes new documents that are added to the SharePoint libraries.
+     * Apply a contentModel to SharePoint document libraries. For an existing model that&apos;s already trained, this action automatically processes new documents that are added to the SharePoint libraries.
      * @param body The request body
      * @return a {@link ContentModelUsage}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class AddToDriveRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Apply a contentModel to SharePoint document libraries. For an existing model that's already trained, this action automatically processes new documents that are added to the SharePoint libraries.
+     * Apply a contentModel to SharePoint document libraries. For an existing model that&apos;s already trained, this action automatically processes new documents that are added to the SharePoint libraries.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentModelUsage}
@@ -63,7 +63,7 @@ public class AddToDriveRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ContentModelUsage::createFromDiscriminatorValue);
     }
     /**
-     * Apply a contentModel to SharePoint document libraries. For an existing model that's already trained, this action automatically processes new documents that are added to the SharePoint libraries.
+     * Apply a contentModel to SharePoint document libraries. For an existing model that&apos;s already trained, this action automatically processes new documents that are added to the SharePoint libraries.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class AddToDriveRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Apply a contentModel to SharePoint document libraries. For an existing model that's already trained, this action automatically processes new documents that are added to the SharePoint libraries.
+     * Apply a contentModel to SharePoint document libraries. For an existing model that&apos;s already trained, this action automatically processes new documents that are added to the SharePoint libraries.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

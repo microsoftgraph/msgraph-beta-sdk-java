@@ -45,7 +45,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         return this.backingStore.get("defaultDomainSuffix");
     }
     /**
-     * Gets the description property value. The configuration's description (optional)
+     * Gets the description property value. The configuration&apos;s description (optional)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         return this.backingStore.get("routeIncludes");
     }
     /**
-     * Gets the routesExclude property value. Subsets of the routes that will not be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteExcludes'.
+     * Gets the routesExclude property value. Subsets of the routes that will not be routed by the server. This property is going to be deprecated with the option of using the new property, &apos;RouteExcludes&apos;.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         return this.backingStore.get("routesExclude");
     }
     /**
-     * Gets the routesInclude property value. The routes that will be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteIncludes'.
+     * Gets the routesInclude property value. The routes that will be routed by the server. This property is going to be deprecated with the option of using the new property, &apos;RouteIncludes&apos;.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -220,7 +220,7 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         this.backingStore.set("defaultDomainSuffix", value);
     }
     /**
-     * Sets the description property value. The configuration's description (optional)
+     * Sets the description property value. The configuration&apos;s description (optional)
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -297,14 +297,14 @@ public class MicrosoftTunnelConfiguration extends Entity implements Parsable {
         this.backingStore.set("routeIncludes", value);
     }
     /**
-     * Sets the routesExclude property value. Subsets of the routes that will not be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteExcludes'.
+     * Sets the routesExclude property value. Subsets of the routes that will not be routed by the server. This property is going to be deprecated with the option of using the new property, &apos;RouteExcludes&apos;.
      * @param value Value to set for the routesExclude property.
      */
     public void setRoutesExclude(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("routesExclude", value);
     }
     /**
-     * Sets the routesInclude property value. The routes that will be routed by the server. This property is going to be deprecated with the option of using the new property, 'RouteIncludes'.
+     * Sets the routesInclude property value. The routes that will be routed by the server. This property is going to be deprecated with the option of using the new property, &apos;RouteIncludes&apos;.
      * @param value Value to set for the routesInclude property.
      */
     public void setRoutesInclude(@jakarta.annotation.Nullable final java.util.List<String> value) {

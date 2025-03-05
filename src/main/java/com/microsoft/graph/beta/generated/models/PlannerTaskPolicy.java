@@ -75,7 +75,7 @@ public class PlannerTaskPolicy implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the rules property value. The rules that should be enforced on the tasks when they're being changed outside of the scenario, based on the role of the caller.
+     * Gets the rules property value. The rules that should be enforced on the tasks when they&apos;re being changed outside of the scenario, based on the role of the caller.
      * @return a {@link java.util.List<PlannerTaskRoleBasedRule>}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class PlannerTaskPolicy implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the rules property value. The rules that should be enforced on the tasks when they're being changed outside of the scenario, based on the role of the caller.
+     * Sets the rules property value. The rules that should be enforced on the tasks when they&apos;re being changed outside of the scenario, based on the role of the caller.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final java.util.List<PlannerTaskRoleBasedRule> value) {

@@ -79,7 +79,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Alert::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a Microsoft Entra health monitoring alert object. For example, change an alert's state from active to resolved.
+     * Update the properties of a Microsoft Entra health monitoring alert object. For example, change an alert&apos;s state from active to resolved.
      * @param body The request body
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -90,7 +90,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a Microsoft Entra health monitoring alert object. For example, change an alert's state from active to resolved.
+     * Update the properties of a Microsoft Entra health monitoring alert object. For example, change an alert&apos;s state from active to resolved.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Alert}
@@ -146,7 +146,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a Microsoft Entra health monitoring alert object. For example, change an alert's state from active to resolved.
+     * Update the properties of a Microsoft Entra health monitoring alert object. For example, change an alert&apos;s state from active to resolved.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +155,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a Microsoft Entra health monitoring alert object. For example, change an alert's state from active to resolved.
+     * Update the properties of a Microsoft Entra health monitoring alert object. For example, change an alert&apos;s state from active to resolved.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

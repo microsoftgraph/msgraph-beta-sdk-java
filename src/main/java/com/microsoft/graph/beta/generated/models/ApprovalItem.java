@@ -114,7 +114,7 @@ public class ApprovalItem extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the owner property value. The identity set of the principal who owns the approval item. Only provide a value for this property when creating an approval item on behalf of the principal. If the owner field isn't provided, the user information from the user context is used.
+     * Gets the owner property value. The identity set of the principal who owns the approval item. Only provide a value for this property when creating an approval item on behalf of the principal. If the owner field isn&apos;t provided, the user information from the user context is used.
      * @return a {@link ApprovalIdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class ApprovalItem extends Entity implements Parsable {
         return this.backingStore.get("requests");
     }
     /**
-     * Gets the responsePrompts property value. Approval response prompts. Only provide a value for this property when creating a custom approval item. For custom approval items, supply two response prompt strings. The default response prompts are 'Approve' and 'Reject'.
+     * Gets the responsePrompts property value. Approval response prompts. Only provide a value for this property when creating a custom approval item. For custom approval items, supply two response prompt strings. The default response prompts are &apos;Approve&apos; and &apos;Reject&apos;.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class ApprovalItem extends Entity implements Parsable {
         return this.backingStore.get("responses");
     }
     /**
-     * Gets the result property value. The result field is only populated once the approval item is in its final state. The result of the approval item is based on the approvalType. For basic approval items, the result is either 'Approved' or 'Rejected'. For custom approval items, the result could either be a single response or multiple responses separated by a semi-colon. Read-only.
+     * Gets the result property value. The result field is only populated once the approval item is in its final state. The result of the approval item is based on the approvalType. For basic approval items, the result is either &apos;Approved&apos; or &apos;Rejected&apos;. For custom approval items, the result could either be a single response or multiple responses separated by a semi-colon. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -242,7 +242,7 @@ public class ApprovalItem extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the owner property value. The identity set of the principal who owns the approval item. Only provide a value for this property when creating an approval item on behalf of the principal. If the owner field isn't provided, the user information from the user context is used.
+     * Sets the owner property value. The identity set of the principal who owns the approval item. Only provide a value for this property when creating an approval item on behalf of the principal. If the owner field isn&apos;t provided, the user information from the user context is used.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final ApprovalIdentitySet value) {
@@ -256,7 +256,7 @@ public class ApprovalItem extends Entity implements Parsable {
         this.backingStore.set("requests", value);
     }
     /**
-     * Sets the responsePrompts property value. Approval response prompts. Only provide a value for this property when creating a custom approval item. For custom approval items, supply two response prompt strings. The default response prompts are 'Approve' and 'Reject'.
+     * Sets the responsePrompts property value. Approval response prompts. Only provide a value for this property when creating a custom approval item. For custom approval items, supply two response prompt strings. The default response prompts are &apos;Approve&apos; and &apos;Reject&apos;.
      * @param value Value to set for the responsePrompts property.
      */
     public void setResponsePrompts(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -270,7 +270,7 @@ public class ApprovalItem extends Entity implements Parsable {
         this.backingStore.set("responses", value);
     }
     /**
-     * Sets the result property value. The result field is only populated once the approval item is in its final state. The result of the approval item is based on the approvalType. For basic approval items, the result is either 'Approved' or 'Rejected'. For custom approval items, the result could either be a single response or multiple responses separated by a semi-colon. Read-only.
+     * Sets the result property value. The result field is only populated once the approval item is in its final state. The result of the approval item is based on the approvalType. For basic approval items, the result is either &apos;Approved&apos; or &apos;Rejected&apos;. For custom approval items, the result could either be a single response or multiple responses separated by a semi-colon. Read-only.
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final String value) {

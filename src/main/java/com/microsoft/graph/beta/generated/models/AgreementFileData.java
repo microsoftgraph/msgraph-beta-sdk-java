@@ -56,7 +56,7 @@ public class AgreementFileData implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the data property value. Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'yourfilepath' -Encoding byte)).
+     * Gets the data property value. Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path &apos;yourfilepath&apos; -Encoding byte)).
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class AgreementFileData implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the data property value. Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path 'yourfilepath' -Encoding byte)).
+     * Sets the data property value. Data that represents the terms of use PDF document. Read-only. Note: You can use the .NET Convert.ToBase64String method to convert your file to binary data for uploading using the Create agreements API. A sample syntax using this method in PowerShell is [convert]::ToBase64String((Get-Content -path &apos;yourfilepath&apos; -Encoding byte)).
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final byte[] value) {

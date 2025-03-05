@@ -169,7 +169,7 @@ public class DeviceConfigurationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getOmaSettingPlainTextValue method.
-     * @param secretReferenceValueId Usage: secretReferenceValueId='{secretReferenceValueId}'
+     * @param secretReferenceValueId Usage: secretReferenceValueId=&apos;{secretReferenceValueId}&apos;
      * @return a {@link GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

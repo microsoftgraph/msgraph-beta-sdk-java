@@ -64,7 +64,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the escalationApprovers property value. The users who are asked to approve requests if escalation is enabled and the primary approvers don't respond before the escalation time. This property can be a collection of singleUser, groupMembers, requestorManager, internalSponsors, and externalSponsors. When you create or update a policy, if there are no escalation approvers, or escalation approvers aren't required for the stage, assign an empty collection to this property.
+     * Gets the escalationApprovers property value. The users who are asked to approve requests if escalation is enabled and the primary approvers don&apos;t respond before the escalation time. This property can be a collection of singleUser, groupMembers, requestorManager, internalSponsors, and externalSponsors. When you create or update a policy, if there are no escalation approvers, or escalation approvers aren&apos;t required for the stage, assign an empty collection to this property.
      * @return a {@link java.util.List<UserSet>}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the escalationApprovers property value. The users who are asked to approve requests if escalation is enabled and the primary approvers don't respond before the escalation time. This property can be a collection of singleUser, groupMembers, requestorManager, internalSponsors, and externalSponsors. When you create or update a policy, if there are no escalation approvers, or escalation approvers aren't required for the stage, assign an empty collection to this property.
+     * Sets the escalationApprovers property value. The users who are asked to approve requests if escalation is enabled and the primary approvers don&apos;t respond before the escalation time. This property can be a collection of singleUser, groupMembers, requestorManager, internalSponsors, and externalSponsors. When you create or update a policy, if there are no escalation approvers, or escalation approvers aren&apos;t required for the stage, assign an empty collection to this property.
      * @param value Value to set for the escalationApprovers property.
      */
     public void setEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<UserSet> value) {

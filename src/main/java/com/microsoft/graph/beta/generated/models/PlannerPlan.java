@@ -42,7 +42,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         return this.backingStore.get("buckets");
     }
     /**
-     * Gets the container property value. Identifies the container of the plan. Either specify all properties, or specify only the url, the containerId, and type. After it's set, this property cant be updated. It changes when a plan is moved from one container to another, using plan move to container. Required.
+     * Gets the container property value. Identifies the container of the plan. Either specify all properties, or specify only the url, the containerId, and type. After it&apos;s set, this property cant be updated. It changes when a plan is moved from one container to another, using plan move to container. Required.
      * @return a {@link PlannerPlanContainer}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         return this.backingStore.get("isArchived");
     }
     /**
-     * Gets the owner property value. Use the container property instead. ID of the group that owns the plan. After it's set, this property cant be updated. This property doesn't return a valid group ID if the container of the plan isn't a group.
+     * Gets the owner property value. Use the container property instead. ID of the group that owns the plan. After it&apos;s set, this property cant be updated. This property doesn&apos;t return a valid group ID if the container of the plan isn&apos;t a group.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -187,7 +187,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         this.backingStore.set("buckets", value);
     }
     /**
-     * Sets the container property value. Identifies the container of the plan. Either specify all properties, or specify only the url, the containerId, and type. After it's set, this property cant be updated. It changes when a plan is moved from one container to another, using plan move to container. Required.
+     * Sets the container property value. Identifies the container of the plan. Either specify all properties, or specify only the url, the containerId, and type. After it&apos;s set, this property cant be updated. It changes when a plan is moved from one container to another, using plan move to container. Required.
      * @param value Value to set for the container property.
      */
     public void setContainer(@jakarta.annotation.Nullable final PlannerPlanContainer value) {
@@ -236,7 +236,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         this.backingStore.set("isArchived", value);
     }
     /**
-     * Sets the owner property value. Use the container property instead. ID of the group that owns the plan. After it's set, this property cant be updated. This property doesn't return a valid group ID if the container of the plan isn't a group.
+     * Sets the owner property value. Use the container property instead. ID of the group that owns the plan. After it&apos;s set, this property cant be updated. This property doesn&apos;t return a valid group ID if the container of the plan isn&apos;t a group.
      * @param value Value to set for the owner property.
      */
     public void setOwner(@jakarta.annotation.Nullable final String value) {

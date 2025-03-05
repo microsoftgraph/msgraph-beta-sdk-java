@@ -221,7 +221,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
         return this.backingStore.get("supportPhoneNumber");
     }
     /**
-     * Gets the termsAndConditionsDisabled property value. Indicates if 'Terms and Conditions' setup pane is disabled
+     * Gets the termsAndConditionsDisabled property value. Indicates if &apos;Terms and Conditions&apos; setup pane is disabled
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -408,7 +408,7 @@ public class DepEnrollmentBaseProfile extends EnrollmentProfile implements Parsa
         this.backingStore.set("supportPhoneNumber", value);
     }
     /**
-     * Sets the termsAndConditionsDisabled property value. Indicates if 'Terms and Conditions' setup pane is disabled
+     * Sets the termsAndConditionsDisabled property value. Indicates if &apos;Terms and Conditions&apos; setup pane is disabled
      * @param value Value to set for the termsAndConditionsDisabled property.
      */
     public void setTermsAndConditionsDisabled(@jakarta.annotation.Nullable final Boolean value) {

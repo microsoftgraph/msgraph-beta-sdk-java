@@ -55,7 +55,7 @@ public class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The breakdown of services contributing to the user's quota usage.
+     * The breakdown of services contributing to the user&apos;s quota usage.
      * @return a {@link ServiceStorageQuotaBreakdown}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * The breakdown of services contributing to the user's quota usage.
+     * The breakdown of services contributing to the user&apos;s quota usage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServiceStorageQuotaBreakdown}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * The breakdown of services contributing to the user's quota usage.
+     * The breakdown of services contributing to the user&apos;s quota usage.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * The breakdown of services contributing to the user's quota usage.
+     * The breakdown of services contributing to the user&apos;s quota usage.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class ServiceStorageQuotaBreakdownItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The breakdown of services contributing to the user's quota usage.
+     * The breakdown of services contributing to the user&apos;s quota usage.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

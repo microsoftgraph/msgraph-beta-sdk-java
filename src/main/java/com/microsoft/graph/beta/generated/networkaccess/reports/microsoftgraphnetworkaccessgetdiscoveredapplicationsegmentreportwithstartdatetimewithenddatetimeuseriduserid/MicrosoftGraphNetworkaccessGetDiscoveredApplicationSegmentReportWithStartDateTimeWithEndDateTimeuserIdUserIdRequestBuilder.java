@@ -123,7 +123,7 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
         @jakarta.annotation.Nullable
         public Integer top;
         /**
-         * Usage: userId='@userId'
+         * Usage: userId=&apos;@userId&apos;
          */
         @jakarta.annotation.Nullable
         public String userId;

@@ -32,6 +32,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("namePronunciation", (n) -> { this.setNamePronunciation(n.getObjectValue(NamePronunciationSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("profileCardProperties", (n) -> { this.setProfileCardProperties(n.getCollectionOfObjectValues(ProfileCardProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("pronouns", (n) -> { this.setPronouns(n.getObjectValue(PronounsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -43,6 +44,14 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public InsightsSettings getItemInsights() {
         return this.backingStore.get("itemInsights");
+    }
+    /**
+     * Gets the namePronunciation property value. Administrator settings that manage the support of name pronunciation in an organization.
+     * @return a {@link NamePronunciationSettings}
+     */
+    @jakarta.annotation.Nullable
+    public NamePronunciationSettings getNamePronunciation() {
+        return this.backingStore.get("namePronunciation");
     }
     /**
      * Gets the profileCardProperties property value. A collection of the properties an administrator defined as visible on the Microsoft 365 profile card.
@@ -68,6 +77,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("itemInsights", this.getItemInsights());
+        writer.writeObjectValue("namePronunciation", this.getNamePronunciation());
         writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
         writer.writeObjectValue("pronouns", this.getPronouns());
     }
@@ -77,6 +87,13 @@ public class PeopleAdminSettings extends Entity implements Parsable {
      */
     public void setItemInsights(@jakarta.annotation.Nullable final InsightsSettings value) {
         this.backingStore.set("itemInsights", value);
+    }
+    /**
+     * Sets the namePronunciation property value. Administrator settings that manage the support of name pronunciation in an organization.
+     * @param value Value to set for the namePronunciation property.
+     */
+    public void setNamePronunciation(@jakarta.annotation.Nullable final NamePronunciationSettings value) {
+        this.backingStore.set("namePronunciation", value);
     }
     /**
      * Sets the profileCardProperties property value. A collection of the properties an administrator defined as visible on the Microsoft 365 profile card.

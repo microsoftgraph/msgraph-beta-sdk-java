@@ -26,7 +26,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return new DeviceTemplate();
     }
     /**
-     * Gets the deviceAuthority property value. A tenant-defined name for the party that's responsible for provisioning and managing devices on the Microsoft Entra tenant. For example, Tailwind Traders (the manufacturer) makes security cameras that are installed in customer buildings and managed by Lakeshore Retail (the device authority). This value is provided to the customer by the device authority (manufacturer or reseller).
+     * Gets the deviceAuthority property value. A tenant-defined name for the party that&apos;s responsible for provisioning and managing devices on the Microsoft Entra tenant. For example, Tailwind Traders (the manufacturer) makes security cameras that are installed in customer buildings and managed by Lakeshore Retail (the device authority). This value is provided to the customer by the device authority (manufacturer or reseller).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return this.backingStore.get("model");
     }
     /**
-     * Gets the mutualTlsOauthConfigurationId property value. Object ID of the mutualTlsOauthConfiguration. This value isn't required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
+     * Gets the mutualTlsOauthConfigurationId property value. Object ID of the mutualTlsOauthConfiguration. This value isn&apos;t required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return this.backingStore.get("mutualTlsOauthConfigurationId");
     }
     /**
-     * Gets the mutualTlsOauthConfigurationTenantId property value. ID (tenant ID for device authority) of the tenant that contains the mutualTlsOauthConfiguration. This value isn't required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
+     * Gets the mutualTlsOauthConfigurationTenantId property value. ID (tenant ID for device authority) of the tenant that contains the mutualTlsOauthConfiguration. This value isn&apos;t required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         return this.backingStore.get("operatingSystem");
     }
     /**
-     * Gets the owners property value. Collection of directory objects that can manage the device template and the related deviceInstances. Owners can be represented as service principals, users, or applications. An owner has full privileges over the device template and doesn't require other administrator roles to create, update, or delete devices from this template, as well as to add or remove template owners. There can be a maximum of 100 owners on a device template.  Supports $expand.
+     * Gets the owners property value. Collection of directory objects that can manage the device template and the related deviceInstances. Owners can be represented as service principals, users, or applications. An owner has full privileges over the device template and doesn&apos;t require other administrator roles to create, update, or delete devices from this template, as well as to add or remove template owners. There can be a maximum of 100 owners on a device template.  Supports $expand.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("owners", this.getOwners());
     }
     /**
-     * Sets the deviceAuthority property value. A tenant-defined name for the party that's responsible for provisioning and managing devices on the Microsoft Entra tenant. For example, Tailwind Traders (the manufacturer) makes security cameras that are installed in customer buildings and managed by Lakeshore Retail (the device authority). This value is provided to the customer by the device authority (manufacturer or reseller).
+     * Sets the deviceAuthority property value. A tenant-defined name for the party that&apos;s responsible for provisioning and managing devices on the Microsoft Entra tenant. For example, Tailwind Traders (the manufacturer) makes security cameras that are installed in customer buildings and managed by Lakeshore Retail (the device authority). This value is provided to the customer by the device authority (manufacturer or reseller).
      * @param value Value to set for the deviceAuthority property.
      */
     public void setDeviceAuthority(@jakarta.annotation.Nullable final String value) {
@@ -151,14 +151,14 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         this.backingStore.set("model", value);
     }
     /**
-     * Sets the mutualTlsOauthConfigurationId property value. Object ID of the mutualTlsOauthConfiguration. This value isn't required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
+     * Sets the mutualTlsOauthConfigurationId property value. Object ID of the mutualTlsOauthConfiguration. This value isn&apos;t required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
      * @param value Value to set for the mutualTlsOauthConfigurationId property.
      */
     public void setMutualTlsOauthConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mutualTlsOauthConfigurationId", value);
     }
     /**
-     * Sets the mutualTlsOauthConfigurationTenantId property value. ID (tenant ID for device authority) of the tenant that contains the mutualTlsOauthConfiguration. This value isn't required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
+     * Sets the mutualTlsOauthConfigurationTenantId property value. ID (tenant ID for device authority) of the tenant that contains the mutualTlsOauthConfiguration. This value isn&apos;t required if self-signed certificates are used. This value is provided to the customer by the device authority (manufacturer or reseller).
      * @param value Value to set for the mutualTlsOauthConfigurationTenantId property.
      */
     public void setMutualTlsOauthConfigurationTenantId(@jakarta.annotation.Nullable final String value) {
@@ -172,7 +172,7 @@ public class DeviceTemplate extends DirectoryObject implements Parsable {
         this.backingStore.set("operatingSystem", value);
     }
     /**
-     * Sets the owners property value. Collection of directory objects that can manage the device template and the related deviceInstances. Owners can be represented as service principals, users, or applications. An owner has full privileges over the device template and doesn't require other administrator roles to create, update, or delete devices from this template, as well as to add or remove template owners. There can be a maximum of 100 owners on a device template.  Supports $expand.
+     * Sets the owners property value. Collection of directory objects that can manage the device template and the related deviceInstances. Owners can be represented as service principals, users, or applications. An owner has full privileges over the device template and doesn&apos;t require other administrator roles to create, update, or delete devices from this template, as well as to add or remove template owners. There can be a maximum of 100 owners on a device template.  Supports $expand.
      * @param value Value to set for the owners property.
      */
     public void setOwners(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {

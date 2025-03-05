@@ -26,7 +26,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
         return new GovernanceRoleAssignment();
     }
     /**
-     * Gets the assignmentState property value. The state of the assignment. The value can be Eligible for eligible assignment or Active if it's directly assigned Active by administrators, or activated on an eligible assignment by the users.
+     * Gets the assignmentState property value. The state of the assignment. The value can be Eligible for eligible assignment or Active if it&apos;s directly assigned Active by administrators, or activated on an eligible assignment by the users.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
         return this.backingStore.get("linkedEligibleRoleAssignmentId");
     }
     /**
-     * Gets the memberType property value. The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment isn't inherited, but comes from the membership of a group assignment), or User (if the role assignment isn't inherited or from a group assignment).
+     * Gets the memberType property value. The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment isn&apos;t inherited, but comes from the membership of a group assignment), or User (if the role assignment isn&apos;t inherited or from a group assignment).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
         writer.writeStringValue("subjectId", this.getSubjectId());
     }
     /**
-     * Sets the assignmentState property value. The state of the assignment. The value can be Eligible for eligible assignment or Active if it's directly assigned Active by administrators, or activated on an eligible assignment by the users.
+     * Sets the assignmentState property value. The state of the assignment. The value can be Eligible for eligible assignment or Active if it&apos;s directly assigned Active by administrators, or activated on an eligible assignment by the users.
      * @param value Value to set for the assignmentState property.
      */
     public void setAssignmentState(@jakarta.annotation.Nullable final String value) {
@@ -218,7 +218,7 @@ public class GovernanceRoleAssignment extends Entity implements Parsable {
         this.backingStore.set("linkedEligibleRoleAssignmentId", value);
     }
     /**
-     * Sets the memberType property value. The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment isn't inherited, but comes from the membership of a group assignment), or User (if the role assignment isn't inherited or from a group assignment).
+     * Sets the memberType property value. The type of member. The value can be: Inherited (if the role assignment is inherited from a parent resource scope), Group (if the role assignment isn&apos;t inherited, but comes from the membership of a group assignment), or User (if the role assignment isn&apos;t inherited or from a group assignment).
      * @param value Value to set for the memberType property.
      */
     public void setMemberType(@jakarta.annotation.Nullable final String value) {

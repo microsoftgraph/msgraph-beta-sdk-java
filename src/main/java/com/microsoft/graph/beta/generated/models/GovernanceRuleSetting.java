@@ -84,7 +84,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("ruleIdentifier");
     }
     /**
-     * Gets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
+     * Gets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {&apos;permanentAssignment&apos;:false,&apos;maximumGrantPeriodInMinutes&apos;:129600}
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class GovernanceRuleSetting implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("ruleIdentifier", value);
     }
     /**
-     * Sets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {'permanentAssignment':false,'maximumGrantPeriodInMinutes':129600}
+     * Sets the setting property value. The settings of the rule. The value is a JSON string with a list of pairs in the format of ParameterName:ParameterValue. For example, {&apos;permanentAssignment&apos;:false,&apos;maximumGrantPeriodInMinutes&apos;:129600}
      * @param value Value to set for the setting property.
      */
     public void setSetting(@jakarta.annotation.Nullable final String value) {

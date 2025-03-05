@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Single configuration item inside an Android application's custom configuration schema.
+ * Single configuration item inside an Android application&apos;s custom configuration schema.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedStoreAppConfigurationSchemaItem implements AdditionalDataHolder, BackedModel, Parsable {
@@ -59,7 +59,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
         return this.backingStore;
     }
     /**
-     * Gets the dataType property value. Data type for a configuration item inside an Android application's custom configuration schema
+     * Gets the dataType property value. Data type for a configuration item inside an Android application&apos;s custom configuration schema
      * @return a {@link AndroidManagedStoreAppConfigurationSchemaItemDataType}
      */
     @jakarta.annotation.Nullable
@@ -211,7 +211,7 @@ public class AndroidManagedStoreAppConfigurationSchemaItem implements Additional
         this.backingStore = value;
     }
     /**
-     * Sets the dataType property value. Data type for a configuration item inside an Android application's custom configuration schema
+     * Sets the dataType property value. Data type for a configuration item inside an Android application&apos;s custom configuration schema
      * @param value Value to set for the dataType property.
      */
     public void setDataType(@jakarta.annotation.Nullable final AndroidManagedStoreAppConfigurationSchemaItemDataType value) {

@@ -81,7 +81,7 @@ public class TeamsTab extends Entity implements Parsable {
         return this.backingStore.get("teamsApp");
     }
     /**
-     * Gets the teamsAppId property value. App definition identifier of the tab. This value can't be changed after tab creation. Because this property is deprecated, we recommend expanding teamsApp to retrieve the application that is linked to the tab.
+     * Gets the teamsAppId property value. App definition identifier of the tab. This value can&apos;t be changed after tab creation. Because this property is deprecated, we recommend expanding teamsApp to retrieve the application that is linked to the tab.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class TeamsTab extends Entity implements Parsable {
         this.backingStore.set("teamsApp", value);
     }
     /**
-     * Sets the teamsAppId property value. App definition identifier of the tab. This value can't be changed after tab creation. Because this property is deprecated, we recommend expanding teamsApp to retrieve the application that is linked to the tab.
+     * Sets the teamsAppId property value. App definition identifier of the tab. This value can&apos;t be changed after tab creation. Because this property is deprecated, we recommend expanding teamsApp to retrieve the application that is linked to the tab.
      * @param value Value to set for the teamsAppId property.
      */
     public void setTeamsAppId(@jakarta.annotation.Nullable final String value) {

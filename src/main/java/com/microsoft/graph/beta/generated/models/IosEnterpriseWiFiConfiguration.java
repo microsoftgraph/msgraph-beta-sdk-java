@@ -97,7 +97,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         return this.backingStore.get("innerAuthenticationProtocolForEapTtls");
     }
     /**
-     * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
+     * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use &apos;anonymous&apos;, each user that authenticates with this Wi-Fi connection using their real username is displayed as &apos;anonymous&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         return this.backingStore.get("rootCertificatesForServerValidation");
     }
     /**
-     * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+     * Gets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users&apos; devices when they connect to this Wi-Fi network.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         this.backingStore.set("innerAuthenticationProtocolForEapTtls", value);
     }
     /**
-     * Sets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
+     * Sets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP - TTLS, EAP - FAST or PEAP. This property masks usernames with the text you enter. For example, if you use &apos;anonymous&apos;, each user that authenticates with this Wi-Fi connection using their real username is displayed as &apos;anonymous&apos;.
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      */
     public void setOuterIdentityPrivacyTemporaryValue(@jakarta.annotation.Nullable final String value) {
@@ -219,7 +219,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         this.backingStore.set("rootCertificatesForServerValidation", value);
     }
     /**
-     * Sets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users' devices when they connect to this Wi-Fi network.
+     * Sets the trustedServerCertificateNames property value. Trusted server certificate names when EAP Type is configured to EAP-TLS/TTLS/FAST or PEAP. This is the common name used in the certificates issued by your trusted certificate authority (CA). If you provide this information, you can bypass the dynamic trust dialog that is displayed on end users&apos; devices when they connect to this Wi-Fi network.
      * @param value Value to set for the trustedServerCertificateNames property.
      */
     public void setTrustedServerCertificateNames(@jakarta.annotation.Nullable final java.util.List<String> value) {

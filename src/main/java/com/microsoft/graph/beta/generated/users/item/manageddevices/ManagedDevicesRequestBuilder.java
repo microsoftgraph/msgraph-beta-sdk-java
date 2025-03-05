@@ -98,7 +98,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the appDiagnostics method.
-     * @param upn Usage: upn='{upn}'
+     * @param upn Usage: upn=&apos;{upn}&apos;
      * @return a {@link AppDiagnosticsWithUpnRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -183,7 +183,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the retrievePowerliftAppDiagnosticsDetails method.
-     * @param userPrincipalName Usage: userPrincipalName='{userPrincipalName}'
+     * @param userPrincipalName Usage: userPrincipalName=&apos;{userPrincipalName}&apos;
      * @return a {@link RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull

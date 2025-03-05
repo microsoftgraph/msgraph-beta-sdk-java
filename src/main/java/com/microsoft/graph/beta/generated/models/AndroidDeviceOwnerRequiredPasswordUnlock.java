@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerRequiredPasswordUnlock implements ValuedEnum {
-    /** Timeout period before strong authentication is required is set to the device's default. */
+    /** Timeout period before strong authentication is required is set to the device&apos;s default. */
     DeviceDefault("deviceDefault"),
     /** Timeout period before strong authentication is required is set to 24 hours. */
     Daily("daily"),

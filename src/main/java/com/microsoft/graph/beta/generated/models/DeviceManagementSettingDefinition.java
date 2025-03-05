@@ -53,7 +53,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
         return this.backingStore.get("dependencies");
     }
     /**
-     * Gets the description property value. The setting's description
+     * Gets the description property value. The setting&apos;s description
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The setting's display name
+     * Gets the displayName property value. The setting&apos;s display name
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -178,14 +178,14 @@ public class DeviceManagementSettingDefinition extends Entity implements Parsabl
         this.backingStore.set("dependencies", value);
     }
     /**
-     * Sets the description property value. The setting's description
+     * Sets the description property value. The setting&apos;s description
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The setting's display name
+     * Sets the displayName property value. The setting&apos;s display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

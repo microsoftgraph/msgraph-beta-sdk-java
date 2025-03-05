@@ -36,7 +36,7 @@ public class ExchangeAdmin extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mailboxes property value. Represents a user's mailboxes.
+     * Gets the mailboxes property value. Represents a user&apos;s mailboxes.
      * @return a {@link java.util.List<Mailbox>}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class ExchangeAdmin extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("messageTraces", this.getMessageTraces());
     }
     /**
-     * Sets the mailboxes property value. Represents a user's mailboxes.
+     * Sets the mailboxes property value. Represents a user&apos;s mailboxes.
      * @param value Value to set for the mailboxes property.
      */
     public void setMailboxes(@jakarta.annotation.Nullable final java.util.List<Mailbox> value) {

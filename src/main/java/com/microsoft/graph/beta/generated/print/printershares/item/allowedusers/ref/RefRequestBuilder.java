@@ -38,7 +38,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printerShares/{printerShare%2Did}/allowedUsers/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Revoke the specified user&apos;s access to submit print jobs to the associated printerShare.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
@@ -49,7 +49,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Revoke the specified user&apos;s access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -119,7 +119,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Revoke the specified user&apos;s access to submit print jobs to the associated printerShare.
      * @return a {@link RequestInformation}
      * @deprecated
      * The printerShares navigation property is deprecated and will stop returning data on July 31, 2023. Please use the shares navigation property instead of this. as of 2023-06/Tasks_And_Plans on 2023-06-13 and will be removed 2023-07-31
@@ -130,7 +130,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Revoke the specified user&apos;s access to submit print jobs to the associated printerShare.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -214,7 +214,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return new RefRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Revoke the specified user's access to submit print jobs to the associated printerShare.
+     * Revoke the specified user&apos;s access to submit print jobs to the associated printerShare.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class DeleteQueryParameters implements QueryParameters {

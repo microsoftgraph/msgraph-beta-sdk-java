@@ -68,7 +68,7 @@ public class DowngradeJustification implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the isDowngradeJustified property value. Indicates whether the downgrade is or isn't justified.
+     * Gets the isDowngradeJustified property value. Indicates whether the downgrade is or isn&apos;t justified.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class DowngradeJustification implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the isDowngradeJustified property value. Indicates whether the downgrade is or isn't justified.
+     * Sets the isDowngradeJustified property value. Indicates whether the downgrade is or isn&apos;t justified.
      * @param value Value to set for the isDowngradeJustified property.
      */
     public void setIsDowngradeJustified(@jakarta.annotation.Nullable final Boolean value) {

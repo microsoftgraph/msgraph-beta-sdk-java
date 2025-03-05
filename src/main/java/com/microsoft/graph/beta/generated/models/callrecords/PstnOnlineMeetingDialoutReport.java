@@ -65,7 +65,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
         return this.backingStore.get("currency");
     }
     /**
-     * Gets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
+     * Gets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user&apos;s location.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user&apos;s SIP address, and can be same as the user&apos;s e-mail address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -196,7 +196,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
         this.backingStore.set("currency", value);
     }
     /**
-     * Sets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
+     * Sets the destinationContext property value. Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user&apos;s location.
      * @param value Value to set for the destinationContext property.
      */
     public void setDestinationContext(@jakarta.annotation.Nullable final String value) {
@@ -252,7 +252,7 @@ public class PstnOnlineMeetingDialoutReport implements AdditionalDataHolder, Bac
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user&apos;s SIP address, and can be same as the user&apos;s e-mail address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

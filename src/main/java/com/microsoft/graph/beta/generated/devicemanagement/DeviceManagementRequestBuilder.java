@@ -1741,7 +1741,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getEffectivePermissions method.
-     * @param scope Usage: scope='{scope}'
+     * @param scope Usage: scope=&apos;{scope}&apos;
      * @return a {@link GetEffectivePermissionsWithScopeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -1761,7 +1761,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getRoleScopeTagsByResource method.
-     * @param resource Usage: resource='{resource}'
+     * @param resource Usage: resource=&apos;{resource}&apos;
      * @return a {@link GetRoleScopeTagsByResourceWithResourceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -1771,7 +1771,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getSuggestedEnrollmentLimit method.
-     * @param enrollmentType Usage: enrollmentType='{enrollmentType}'
+     * @param enrollmentType Usage: enrollmentType=&apos;{enrollmentType}&apos;
      * @return a {@link GetSuggestedEnrollmentLimitWithEnrollmentTypeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -1806,7 +1806,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the retrieveUserRoleDetail method.
-     * @param userid Usage: userid='{userid}'
+     * @param userid Usage: userid=&apos;{userid}&apos;
      * @return a {@link RetrieveUserRoleDetailWithUseridRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -1816,7 +1816,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the scopedForResource method.
-     * @param resource Usage: resource='{resource}'
+     * @param resource Usage: resource=&apos;{resource}&apos;
      * @return a {@link ScopedForResourceWithResourceRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -1870,7 +1870,7 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
-     * @param domainName Usage: domainName='{domainName}'
+     * @param domainName Usage: domainName=&apos;{domainName}&apos;
      * @return a {@link VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder}
      */
     @jakarta.annotation.Nonnull

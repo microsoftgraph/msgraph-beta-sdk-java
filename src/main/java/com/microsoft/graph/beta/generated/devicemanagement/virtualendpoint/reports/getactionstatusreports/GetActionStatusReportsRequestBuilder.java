@@ -36,7 +36,7 @@ public class GetActionStatusReportsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/reports/getActionStatusReports", rawUrl);
     }
     /**
-     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user's principal name, device owner's user principal name, action taken, and action state.
+     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user&apos;s principal name, device owner&apos;s user principal name, action taken, and action state.
      * @param body The request body
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class GetActionStatusReportsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user's principal name, device owner's user principal name, action taken, and action state.
+     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user&apos;s principal name, device owner&apos;s user principal name, action taken, and action state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
@@ -63,7 +63,7 @@ public class GetActionStatusReportsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user's principal name, device owner's user principal name, action taken, and action state.
+     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user&apos;s principal name, device owner&apos;s user principal name, action taken, and action state.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class GetActionStatusReportsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user's principal name, device owner's user principal name, action taken, and action state.
+     * Get the remote action status reports, including data such as the Cloud PC ID, Cloud PC device display name, initiating user&apos;s principal name, device owner&apos;s user principal name, action taken, and action state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

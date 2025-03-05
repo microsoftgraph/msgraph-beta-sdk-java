@@ -105,7 +105,7 @@ public class SignInActivity implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("lastSignInRequestId");
     }
     /**
-     * Gets the lastSuccessfulSignInDateTime property value. The date and time of the user's most recent successful sign-in activity. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the lastSuccessfulSignInDateTime property value. The date and time of the user&apos;s most recent successful interactive or non-interactive sign-in. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -187,7 +187,7 @@ public class SignInActivity implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("lastSignInRequestId", value);
     }
     /**
-     * Sets the lastSuccessfulSignInDateTime property value. The date and time of the user's most recent successful sign-in activity. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the lastSuccessfulSignInDateTime property value. The date and time of the user&apos;s most recent successful interactive or non-interactive sign-in. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastSuccessfulSignInDateTime property.
      */
     public void setLastSuccessfulSignInDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

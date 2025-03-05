@@ -93,7 +93,7 @@ public class VppTokensRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getLicensesForApp method.
-     * @param bundleId Usage: bundleId='{bundleId}'
+     * @param bundleId Usage: bundleId=&apos;{bundleId}&apos;
      * @return a {@link GetLicensesForAppWithBundleIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum ManagedAppLogUploadConsent implements ValuedEnum {
-    /** Default. Indicates app log consent state is 'Unknown'. This state is automatically assigned at request creation time and is updated when the log collection completes. */
+    /** Default. Indicates app log consent state is &apos;Unknown&apos;. This state is automatically assigned at request creation time and is updated when the log collection completes. */
     Unknown("unknown"),
     /** The User has Declined the Log Collection Request. The Log collection and uploads will not be initiated/triggered, and the log collection request will be abandoned. */
     Declined("declined"),

@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Android Device Owner possible values for states of the device's app auto update policy.
+ * Android Device Owner possible values for states of the device&apos;s app auto update policy.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerAppAutoUpdatePolicyType implements ValuedEnum {

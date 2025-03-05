@@ -73,7 +73,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
         return this.backingStore.get("httpStatus");
     }
     /**
-     * Gets the numberOfAttempts property value. The number of API calls to the customer's API.
+     * Gets the numberOfAttempts property value. The number of API calls to the customer&apos;s API.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class CustomExtensionCalloutResult extends AuthenticationEventHandlerResu
         this.backingStore.set("httpStatus", value);
     }
     /**
-     * Sets the numberOfAttempts property value. The number of API calls to the customer's API.
+     * Sets the numberOfAttempts property value. The number of API calls to the customer&apos;s API.
      * @param value Value to set for the numberOfAttempts property.
      */
     public void setNumberOfAttempts(@jakarta.annotation.Nullable final Integer value) {

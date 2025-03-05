@@ -121,7 +121,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("scopeIds");
     }
     /**
-     * Gets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'. Read-only.
+     * Gets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}&apos;. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -237,7 +237,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("scopeIds", value);
     }
     /**
-     * Sets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: '/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}'. Read-only.
+     * Sets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}&apos;. Read-only.
      * @param value Value to set for the sourceImageResourceId property.
      */
     public void setSourceImageResourceId(@jakarta.annotation.Nullable final String value) {

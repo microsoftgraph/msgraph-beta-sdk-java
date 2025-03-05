@@ -72,7 +72,7 @@ public class ApprovalItemResponse extends Entity implements Parsable {
         return this.backingStore.get("owners");
     }
     /**
-     * Gets the response property value. Approver response based on the response options. The default response options are 'Approved' and 'Rejected'. The approval item creator can also define custom response options during approval item creation.
+     * Gets the response property value. Approver response based on the response options. The default response options are &apos;Approved&apos; and &apos;Rejected&apos;. The approval item creator can also define custom response options during approval item creation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class ApprovalItemResponse extends Entity implements Parsable {
         this.backingStore.set("owners", value);
     }
     /**
-     * Sets the response property value. Approver response based on the response options. The default response options are 'Approved' and 'Rejected'. The approval item creator can also define custom response options during approval item creation.
+     * Sets the response property value. Approver response based on the response options. The default response options are &apos;Approved&apos; and &apos;Rejected&apos;. The approval item creator can also define custom response options during approval item creation.
      * @param value Value to set for the response property.
      */
     public void setResponse(@jakarta.annotation.Nullable final String value) {

@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Android Device Owner possible values for states of the device's plugged-in power modes.
+ * Android Device Owner possible values for states of the device&apos;s plugged-in power modes.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidDeviceOwnerBatteryPluggedMode implements ValuedEnum {

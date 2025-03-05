@@ -56,7 +56,7 @@ public class PrivilegeEscalationFinding extends Finding implements Parsable {
         return this.backingStore.get("identity");
     }
     /**
-     * Gets the identityDetails property value. An identity's information details. Inherited from finding.
+     * Gets the identityDetails property value. An identity&apos;s information details. Inherited from finding.
      * @return a {@link IdentityDetails}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class PrivilegeEscalationFinding extends Finding implements Parsable {
         this.backingStore.set("identity", value);
     }
     /**
-     * Sets the identityDetails property value. An identity's information details. Inherited from finding.
+     * Sets the identityDetails property value. An identity&apos;s information details. Inherited from finding.
      * @param value Value to set for the identityDetails property.
      */
     public void setIdentityDetails(@jakarta.annotation.Nullable final IdentityDetails value) {

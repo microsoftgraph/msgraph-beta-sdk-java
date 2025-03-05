@@ -44,6 +44,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         deserializerMap.put("presenters", (n) -> { this.setPresenters(n.getCollectionOfObjectValues(VirtualEventPresenter::createFromDiscriminatorValue)); });
         deserializerMap.put("registrations", (n) -> { this.setRegistrations(n.getCollectionOfObjectValues(VirtualEventRegistration::createFromDiscriminatorValue)); });
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
+        deserializerMap.put("videoOnDemandWebUrl", (n) -> { this.setVideoOnDemandWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -71,6 +72,14 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("startDateTime");
     }
     /**
+     * Gets the videoOnDemandWebUrl property value. The videoOnDemandWebUrl property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getVideoOnDemandWebUrl() {
+        return this.backingStore.get("videoOnDemandWebUrl");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -81,6 +90,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         writer.writeCollectionOfObjectValues("presenters", this.getPresenters());
         writer.writeCollectionOfObjectValues("registrations", this.getRegistrations());
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
+        writer.writeStringValue("videoOnDemandWebUrl", this.getVideoOnDemandWebUrl());
     }
     /**
      * Sets the endDateTime property value. The virtual event session end time.
@@ -109,5 +119,12 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final DateTimeTimeZone value) {
         this.backingStore.set("startDateTime", value);
+    }
+    /**
+     * Sets the videoOnDemandWebUrl property value. The videoOnDemandWebUrl property
+     * @param value Value to set for the videoOnDemandWebUrl property.
+     */
+    public void setVideoOnDemandWebUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("videoOnDemandWebUrl", value);
     }
 }

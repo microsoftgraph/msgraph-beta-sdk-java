@@ -25,7 +25,7 @@ public class PlannerTaskConfiguration extends Entity implements Parsable {
         return new PlannerTaskConfiguration();
     }
     /**
-     * Gets the editPolicy property value. Policy configuration for tasks created for the businessScenario when they're being changed outside of the scenario.
+     * Gets the editPolicy property value. Policy configuration for tasks created for the businessScenario when they&apos;re being changed outside of the scenario.
      * @return a {@link PlannerTaskPolicy}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class PlannerTaskConfiguration extends Entity implements Parsable {
         writer.writeObjectValue("editPolicy", this.getEditPolicy());
     }
     /**
-     * Sets the editPolicy property value. Policy configuration for tasks created for the businessScenario when they're being changed outside of the scenario.
+     * Sets the editPolicy property value. Policy configuration for tasks created for the businessScenario when they&apos;re being changed outside of the scenario.
      * @param value Value to set for the editPolicy property.
      */
     public void setEditPolicy(@jakarta.annotation.Nullable final PlannerTaskPolicy value) {

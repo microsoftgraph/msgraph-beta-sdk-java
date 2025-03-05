@@ -28,12 +28,12 @@ public enum ManagementAgentType implements ValuedEnum {
     Unknown("unknown"),
     /** The device attributes are fetched from Jamf. */
     Jamf("jamf"),
-    /** The device is managed by Google's CloudDPC. */
+    /** The device is managed by Google&apos;s CloudDPC. */
     GoogleCloudDevicePolicyController("googleCloudDevicePolicyController"),
     /** This device is managed by Microsoft 365 through Intune. */
     Microsoft365ManagedMdm("microsoft365ManagedMdm"),
     MsSense("msSense"),
-    /** This device is managed by Intune's MDM for AOSP (Android Open Source Project) devices */
+    /** This device is managed by Intune&apos;s MDM for AOSP (Android Open Source Project) devices */
     IntuneAosp("intuneAosp"),
     /** Indicates the management agent to manage the device is Google. */
     Google("google"),

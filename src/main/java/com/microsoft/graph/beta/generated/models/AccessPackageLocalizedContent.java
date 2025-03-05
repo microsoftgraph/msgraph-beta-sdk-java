@@ -56,7 +56,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the defaultText property value. The fallback string, which is used when a requested localization isn't available. Required.
+     * Gets the defaultText property value. The fallback string, which is used when a requested localization isn&apos;t available. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class AccessPackageLocalizedContent implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the defaultText property value. The fallback string, which is used when a requested localization isn't available. Required.
+     * Sets the defaultText property value. The fallback string, which is used when a requested localization isn&apos;t available. Required.
      * @param value Value to set for the defaultText property.
      */
     public void setDefaultText(@jakarta.annotation.Nullable final String value) {

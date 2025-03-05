@@ -140,7 +140,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("onboardingStatus");
     }
     /**
-     * Gets the tenantOnboardingEligibilityReason property value. Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
+     * Gets the tenantOnboardingEligibilityReason property value. Organization&apos;s onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
      * @return a {@link TenantOnboardingEligibilityReason}
      */
     @jakarta.annotation.Nullable
@@ -245,7 +245,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
         this.backingStore.set("onboardingStatus", value);
     }
     /**
-     * Sets the tenantOnboardingEligibilityReason property value. Organization's onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
+     * Sets the tenantOnboardingEligibilityReason property value. Organization&apos;s onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the tenantOnboardingEligibilityReason property.
      */
     public void setTenantOnboardingEligibilityReason(@jakarta.annotation.Nullable final TenantOnboardingEligibilityReason value) {

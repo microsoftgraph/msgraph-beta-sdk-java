@@ -28,7 +28,7 @@ public class HardwarePasswordDetail extends Entity implements Parsable {
         return new HardwarePasswordDetail();
     }
     /**
-     * Gets the currentPassword property value. The current device's BIOS password. Supports: $filter, $select, $top, $OrderBy, $skip. This property is read-only.
+     * Gets the currentPassword property value. The current device&apos;s BIOS password. Supports: $filter, $select, $top, $OrderBy, $skip. This property is read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class HardwarePasswordDetail extends Entity implements Parsable {
         writer.writeStringValue("serialNumber", this.getSerialNumber());
     }
     /**
-     * Sets the currentPassword property value. The current device's BIOS password. Supports: $filter, $select, $top, $OrderBy, $skip. This property is read-only.
+     * Sets the currentPassword property value. The current device&apos;s BIOS password. Supports: $filter, $select, $top, $OrderBy, $skip. This property is read-only.
      * @param value Value to set for the currentPassword property.
      */
     public void setCurrentPassword(@jakarta.annotation.Nullable final String value) {

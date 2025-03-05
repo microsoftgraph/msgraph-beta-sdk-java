@@ -123,7 +123,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Back
         return this.backingStore.get("calendar");
     }
     /**
-     * Gets the codeRequirement property value. Enter the code requirement, which can be obtained with the command 'codesign display -r ' in the Terminal app. Include everything after '=>'.
+     * Gets the codeRequirement property value. Enter the code requirement, which can be obtained with the command &apos;codesign display -r &apos; in the Terminal app. Include everything after &apos;=&gt;&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -417,7 +417,7 @@ public class MacOSPrivacyAccessControlItem implements AdditionalDataHolder, Back
         this.backingStore.set("calendar", value);
     }
     /**
-     * Sets the codeRequirement property value. Enter the code requirement, which can be obtained with the command 'codesign display -r ' in the Terminal app. Include everything after '=>'.
+     * Sets the codeRequirement property value. Enter the code requirement, which can be obtained with the command &apos;codesign display -r &apos; in the Terminal app. Include everything after &apos;=&gt;&apos;.
      * @param value Value to set for the codeRequirement property.
      */
     public void setCodeRequirement(@jakarta.annotation.Nullable final String value) {

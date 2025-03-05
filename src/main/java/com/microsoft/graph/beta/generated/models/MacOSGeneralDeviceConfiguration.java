@@ -78,7 +78,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         return this.backingStore.get("classroomAppBlockRemoteScreenObservation");
     }
     /**
-     * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     * Gets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student&apos;s screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         return this.backingStore.get("classroomAppForceUnpromptedScreenObservation");
     }
     /**
-     * Gets the classroomForceAutomaticallyJoinClasses property value. Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     * Gets the classroomForceAutomaticallyJoinClasses property value. Indicates whether or not to automatically give permission to the teacher&apos;s requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -315,7 +315,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         return this.backingStore.get("iCloudDesktopAndDocumentsBlocked");
     }
     /**
-     * Gets the iCloudPrivateRelayBlocked property value. iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
+     * Gets the iCloudPrivateRelayBlocked property value. iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person&apos;s activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -419,7 +419,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         return this.backingStore.get("passwordExpirationDays");
     }
     /**
-     * Gets the passwordMaximumAttemptCount property value. The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
+     * Gets the passwordMaximumAttemptCount property value. The number of allowed failed attempts to enter the passcode at the device&apos;s lock screen. Valid values 2 to 11
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -689,14 +689,14 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         this.backingStore.set("classroomAppBlockRemoteScreenObservation", value);
     }
     /**
-     * Sets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student's screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     * Sets the classroomAppForceUnpromptedScreenObservation property value. Indicates whether or not to automatically give permission to the teacher of a managed course on the Classroom app to view a student&apos;s screen without prompting. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
      * @param value Value to set for the classroomAppForceUnpromptedScreenObservation property.
      */
     public void setClassroomAppForceUnpromptedScreenObservation(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("classroomAppForceUnpromptedScreenObservation", value);
     }
     /**
-     * Sets the classroomForceAutomaticallyJoinClasses property value. Indicates whether or not to automatically give permission to the teacher's requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
+     * Sets the classroomForceAutomaticallyJoinClasses property value. Indicates whether or not to automatically give permission to the teacher&apos;s requests, without prompting the student. Requires MDM enrollment via Apple School Manager or Apple Business Manager.
      * @param value Value to set for the classroomForceAutomaticallyJoinClasses property.
      */
     public void setClassroomForceAutomaticallyJoinClasses(@jakarta.annotation.Nullable final Boolean value) {
@@ -836,7 +836,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         this.backingStore.set("iCloudDesktopAndDocumentsBlocked", value);
     }
     /**
-     * Sets the iCloudPrivateRelayBlocked property value. iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person's activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
+     * Sets the iCloudPrivateRelayBlocked property value. iCloud private relay is an iCloud+ service that prevents networks and servers from monitoring a person&apos;s activity across the internet. By blocking iCloud private relay, Apple will not encrypt the traffic leaving the device. Available for devices running macOS 12 and later.
      * @param value Value to set for the iCloudPrivateRelayBlocked property.
      */
     public void setICloudPrivateRelayBlocked(@jakarta.annotation.Nullable final Boolean value) {
@@ -927,7 +927,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         this.backingStore.set("passwordExpirationDays", value);
     }
     /**
-     * Sets the passwordMaximumAttemptCount property value. The number of allowed failed attempts to enter the passcode at the device's lock screen. Valid values 2 to 11
+     * Sets the passwordMaximumAttemptCount property value. The number of allowed failed attempts to enter the passcode at the device&apos;s lock screen. Valid values 2 to 11
      * @param value Value to set for the passwordMaximumAttemptCount property.
      */
     public void setPasswordMaximumAttemptCount(@jakarta.annotation.Nullable final Integer value) {

@@ -95,7 +95,7 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getStorageAccounts method.
-     * @param subscriptionId Usage: subscriptionId='{subscriptionId}'
+     * @param subscriptionId Usage: subscriptionId=&apos;{subscriptionId}&apos;
      * @return a {@link GetStorageAccountsWithSubscriptionIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

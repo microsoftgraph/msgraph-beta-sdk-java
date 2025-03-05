@@ -4,11 +4,11 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * The possible security types for Android Wi-Fi profiles. Default value 'Open', indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. 'WpaEnterprise' and 'Wpa2Enterprise' options are available for Enterprise Wi-Fi profiles. 'Wep' and 'WpaPersonal' (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
+ * The possible security types for Android Wi-Fi profiles. Default value &apos;Open&apos;, indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. &apos;WpaEnterprise&apos; and &apos;Wpa2Enterprise&apos; options are available for Enterprise Wi-Fi profiles. &apos;Wep&apos; and &apos;WpaPersonal&apos; (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AndroidWiFiSecurityType implements ValuedEnum {
-    /** Default. Indicates Android Wifi Security Type is set to "Open" i.e. no authentication is required. (No Authentication). */
+    /** Default. Indicates Android Wifi Security Type is set to &quot;Open&quot; i.e. no authentication is required. (No Authentication). */
     Open("open"),
     /** Indicates Android Wifi Security Type is set to WPA encryption. Must use AndroidWorkProfileEnterpriseWifiConfiguration type to configure enterprise options. */
     WpaEnterprise("wpaEnterprise"),

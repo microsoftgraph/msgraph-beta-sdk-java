@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * A class to hold specialty enrollment data used for enrolling via Google's Android Management API, such as Token, Url, and QR code content
+ * A class to hold specialty enrollment data used for enrolling via Google&apos;s Android Management API, such as Token, Url, and QR code content
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidEnrollmentCompanyCode implements AdditionalDataHolder, BackedModel, Parsable {

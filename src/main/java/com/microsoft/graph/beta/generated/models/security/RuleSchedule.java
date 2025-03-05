@@ -69,7 +69,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the nextRunDateTime property value. Timestamp of the custom detection rule's next scheduled run.
+     * Gets the nextRunDateTime property value. Timestamp of the custom detection rule&apos;s next scheduled run.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the period property value. How often the detection rule is set to run. The allowed values are: 0, 1H, 3H, 12H, or 24H. '0' signifies the rule is run continuously.
+     * Gets the period property value. How often the detection rule is set to run. The allowed values are: 0, 1H, 3H, 12H, or 24H. &apos;0&apos; signifies the rule is run continuously.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the nextRunDateTime property value. Timestamp of the custom detection rule's next scheduled run.
+     * Sets the nextRunDateTime property value. Timestamp of the custom detection rule&apos;s next scheduled run.
      * @param value Value to set for the nextRunDateTime property.
      */
     public void setNextRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -133,7 +133,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the period property value. How often the detection rule is set to run. The allowed values are: 0, 1H, 3H, 12H, or 24H. '0' signifies the rule is run continuously.
+     * Sets the period property value. How often the detection rule is set to run. The allowed values are: 0, 1H, 3H, 12H, or 24H. &apos;0&apos; signifies the rule is run continuously.
      * @param value Value to set for the period property.
      */
     public void setPeriod(@jakarta.annotation.Nullable final String value) {

@@ -104,7 +104,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
         return this.backingStore.get("usedLicenseCount");
     }
     /**
-     * Gets the vppOrganizationName property value. The Vpp token's organization name.
+     * Gets the vppOrganizationName property value. The Vpp token&apos;s organization name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class IosVppEBook extends ManagedEBook implements Parsable {
         this.backingStore.set("usedLicenseCount", value);
     }
     /**
-     * Sets the vppOrganizationName property value. The Vpp token's organization name.
+     * Sets the vppOrganizationName property value. The Vpp token&apos;s organization name.
      * @param value Value to set for the vppOrganizationName property.
      */
     public void setVppOrganizationName(@jakarta.annotation.Nullable final String value) {

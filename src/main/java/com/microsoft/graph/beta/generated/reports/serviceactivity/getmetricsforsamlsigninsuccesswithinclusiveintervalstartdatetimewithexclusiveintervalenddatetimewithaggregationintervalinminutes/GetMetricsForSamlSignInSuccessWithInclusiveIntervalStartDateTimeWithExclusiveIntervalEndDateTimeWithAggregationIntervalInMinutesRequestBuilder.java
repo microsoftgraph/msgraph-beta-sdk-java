@@ -41,7 +41,7 @@ public class GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWit
         super(requestAdapter, "{+baseurl}/reports/serviceActivity/getMetricsForSamlSignInSuccess(inclusiveIntervalStartDateTime={inclusiveIntervalStartDateTime},exclusiveIntervalEndDateTime={exclusiveIntervalEndDateTime},aggregationIntervalInMinutes=@aggregationIntervalInMinutes){?%24count,%24filter,%24search,%24skip,%24top,aggregationIntervalInMinutes*}", rawUrl);
     }
     /**
-     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn't include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
+     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn&apos;t include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
      * @return a {@link GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmetricsforsamlsigninsuccess?view=graph-rest-beta">Find more info here</a>
@@ -51,7 +51,7 @@ public class GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWit
         return get(null);
     }
     /**
-     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn't include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
+     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn&apos;t include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -65,7 +65,7 @@ public class GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWit
         return this.requestAdapter.send(requestInfo, errorMapping, GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn't include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
+     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn&apos;t include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWit
         return toGetRequestInformation(null);
     }
     /**
-     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn't include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
+     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn&apos;t include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -95,7 +95,7 @@ public class GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWit
         return new GetMetricsForSamlSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn't include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
+     * Get the number of SAML 2.0 authentications successfully processed by the Microsoft Entra cloud service for the tenant during a specified time period. This health signal currently doesn&apos;t include WS-FED/SAML 1.1 apps that are integrated with Microsoft Entra.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

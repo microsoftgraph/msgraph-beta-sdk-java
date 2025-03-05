@@ -94,7 +94,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Bac
         return this.backingStore.get("recurrenceCount");
     }
     /**
-     * Gets the recurrenceEndType property value. How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it's never, then there's no explicit end of the recurrence series. If it's endBy, then the recurrence ends at a certain date. If it's occurrences, then the series ends after recurrenceCount instances of the review have completed.
+     * Gets the recurrenceEndType property value. How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it&apos;s never, then there&apos;s no explicit end of the recurrence series. If it&apos;s endBy, then the recurrence ends at a certain date. If it&apos;s occurrences, then the series ends after recurrenceCount instances of the review have completed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class AccessReviewRecurrenceSettings implements AdditionalDataHolder, Bac
         this.backingStore.set("recurrenceCount", value);
     }
     /**
-     * Sets the recurrenceEndType property value. How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it's never, then there's no explicit end of the recurrence series. If it's endBy, then the recurrence ends at a certain date. If it's occurrences, then the series ends after recurrenceCount instances of the review have completed.
+     * Sets the recurrenceEndType property value. How the recurrence ends. Possible values: never, endBy, occurrences, or recurrenceCount. If it&apos;s never, then there&apos;s no explicit end of the recurrence series. If it&apos;s endBy, then the recurrence ends at a certain date. If it&apos;s occurrences, then the series ends after recurrenceCount instances of the review have completed.
      * @param value Value to set for the recurrenceEndType property.
      */
     public void setRecurrenceEndType(@jakarta.annotation.Nullable final String value) {

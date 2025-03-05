@@ -65,6 +65,8 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
         deserializerMap.put("iosEnrollmentAssignments", (n) -> { this.setIosEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("iosOnboarded", (n) -> { this.setIosOnboarded(n.getBooleanValue()); });
         deserializerMap.put("lastHeartbeatDateTime", (n) -> { this.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("linuxEnrollmentAssignments", (n) -> { this.setLinuxEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("linuxOnboarded", (n) -> { this.setLinuxOnboarded(n.getBooleanValue()); });
         deserializerMap.put("macOsEnrollmentAssignments", (n) -> { this.setMacOsEnrollmentAssignments(n.getCollectionOfObjectValues(ComplianceManagementPartnerAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("macOsOnboarded", (n) -> { this.setMacOsOnboarded(n.getBooleanValue()); });
         deserializerMap.put("partnerState", (n) -> { this.setPartnerState(n.getEnumValue(DeviceManagementPartnerTenantState::forValue)); });
@@ -93,6 +95,22 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastHeartbeatDateTime() {
         return this.backingStore.get("lastHeartbeatDateTime");
+    }
+    /**
+     * Gets the linuxEnrollmentAssignments property value. User groups which enroll Linux devices through partner.
+     * @return a {@link java.util.List<ComplianceManagementPartnerAssignment>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ComplianceManagementPartnerAssignment> getLinuxEnrollmentAssignments() {
+        return this.backingStore.get("linuxEnrollmentAssignments");
+    }
+    /**
+     * Gets the linuxOnboarded property value. Partner onboarded for Linux devices.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getLinuxOnboarded() {
+        return this.backingStore.get("linuxOnboarded");
     }
     /**
      * Gets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.
@@ -131,6 +149,8 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("iosEnrollmentAssignments", this.getIosEnrollmentAssignments());
         writer.writeBooleanValue("iosOnboarded", this.getIosOnboarded());
         writer.writeOffsetDateTimeValue("lastHeartbeatDateTime", this.getLastHeartbeatDateTime());
+        writer.writeCollectionOfObjectValues("linuxEnrollmentAssignments", this.getLinuxEnrollmentAssignments());
+        writer.writeBooleanValue("linuxOnboarded", this.getLinuxOnboarded());
         writer.writeCollectionOfObjectValues("macOsEnrollmentAssignments", this.getMacOsEnrollmentAssignments());
         writer.writeBooleanValue("macOsOnboarded", this.getMacOsOnboarded());
         writer.writeEnumValue("partnerState", this.getPartnerState());
@@ -176,6 +196,20 @@ public class ComplianceManagementPartner extends Entity implements Parsable {
      */
     public void setLastHeartbeatDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastHeartbeatDateTime", value);
+    }
+    /**
+     * Sets the linuxEnrollmentAssignments property value. User groups which enroll Linux devices through partner.
+     * @param value Value to set for the linuxEnrollmentAssignments property.
+     */
+    public void setLinuxEnrollmentAssignments(@jakarta.annotation.Nullable final java.util.List<ComplianceManagementPartnerAssignment> value) {
+        this.backingStore.set("linuxEnrollmentAssignments", value);
+    }
+    /**
+     * Sets the linuxOnboarded property value. Partner onboarded for Linux devices.
+     * @param value Value to set for the linuxOnboarded property.
+     */
+    public void setLinuxOnboarded(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("linuxOnboarded", value);
     }
     /**
      * Sets the macOsEnrollmentAssignments property value. User groups which enroll Mac devices through partner.

@@ -48,7 +48,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return value;
     }
     /**
-     * Gets the alternateUrl property value. If you're configuring a traffic manager in front of multiple app proxy applications, this user-friendly URL points to the traffic manager.
+     * Gets the alternateUrl property value. If you&apos;re configuring a traffic manager in front of multiple app proxy applications, this user-friendly URL points to the traffic manager.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("alternateUrl");
     }
     /**
-     * Gets the applicationServerTimeout property value. The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
+     * Gets the applicationServerTimeout property value. The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is &apos;Backend Timeout&apos;. Default value is default.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
+     * Gets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn&apos;t require authentication. Possible values are: passthru, aadPreAuthentication.
      * @return a {@link ExternalAuthenticationType}
      */
     @jakarta.annotation.Nullable
@@ -180,7 +180,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("isOnPremPublishingEnabled");
     }
     /**
-     * Gets the isPersistentCookieEnabled property value. Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
+     * Gets the isPersistentCookieEnabled property value. Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can&apos;t share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -212,7 +212,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("isTranslateHostHeaderEnabled");
     }
     /**
-     * Gets the isTranslateLinksInBodyEnabled property value. Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don't use custom domains. For more information, see Link translation with Application Proxy. Default value is false.
+     * Gets the isTranslateLinksInBodyEnabled property value. Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don&apos;t use custom domains. For more information, see Link translation with Application Proxy. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -236,7 +236,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("onPremisesApplicationSegments");
     }
     /**
-     * Gets the segmentsConfiguration property value. Represents the collection of application segments for an on-premises wildcard application that's published through Microsoft Entra application proxy.
+     * Gets the segmentsConfiguration property value. Represents the collection of application segments for an on-premises wildcard application that&apos;s published through Microsoft Entra application proxy.
      * @return a {@link SegmentConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -350,14 +350,14 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the alternateUrl property value. If you're configuring a traffic manager in front of multiple app proxy applications, this user-friendly URL points to the traffic manager.
+     * Sets the alternateUrl property value. If you&apos;re configuring a traffic manager in front of multiple app proxy applications, this user-friendly URL points to the traffic manager.
      * @param value Value to set for the alternateUrl property.
      */
     public void setAlternateUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("alternateUrl", value);
     }
     /**
-     * Sets the applicationServerTimeout property value. The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is 'Backend Timeout'. Default value is default.
+     * Sets the applicationServerTimeout property value. The duration the connector waits for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is &apos;Backend Timeout&apos;. Default value is default.
      * @param value Value to set for the applicationServerTimeout property.
      */
     public void setApplicationServerTimeout(@jakarta.annotation.Nullable final String value) {
@@ -379,7 +379,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn't require authentication. Possible values are: passthru, aadPreAuthentication.
+     * Sets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn&apos;t require authentication. Possible values are: passthru, aadPreAuthentication.
      * @param value Value to set for the externalAuthenticationType property.
      */
     public void setExternalAuthenticationType(@jakarta.annotation.Nullable final ExternalAuthenticationType value) {
@@ -435,7 +435,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("isOnPremPublishingEnabled", value);
     }
     /**
-     * Sets the isPersistentCookieEnabled property value. Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can't share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
+     * Sets the isPersistentCookieEnabled property value. Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can&apos;t share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Microsoft Entra ID. Default value is false.
      * @param value Value to set for the isPersistentCookieEnabled property.
      */
     public void setIsPersistentCookieEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -463,7 +463,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("isTranslateHostHeaderEnabled", value);
     }
     /**
-     * Sets the isTranslateLinksInBodyEnabled property value. Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don't use custom domains. For more information, see Link translation with Application Proxy. Default value is false.
+     * Sets the isTranslateLinksInBodyEnabled property value. Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don&apos;t use custom domains. For more information, see Link translation with Application Proxy. Default value is false.
      * @param value Value to set for the isTranslateLinksInBodyEnabled property.
      */
     public void setIsTranslateLinksInBodyEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -484,7 +484,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("onPremisesApplicationSegments", value);
     }
     /**
-     * Sets the segmentsConfiguration property value. Represents the collection of application segments for an on-premises wildcard application that's published through Microsoft Entra application proxy.
+     * Sets the segmentsConfiguration property value. Represents the collection of application segments for an on-premises wildcard application that&apos;s published through Microsoft Entra application proxy.
      * @param value Value to set for the segmentsConfiguration property.
      */
     public void setSegmentsConfiguration(@jakarta.annotation.Nullable final SegmentConfiguration value) {

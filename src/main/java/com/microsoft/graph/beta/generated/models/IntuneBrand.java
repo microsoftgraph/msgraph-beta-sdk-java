@@ -202,7 +202,7 @@ public class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the isFactoryResetDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
+     * Gets the isFactoryResetDisabled property value. Boolean that represents whether the adminsistrator has disabled the &apos;Factory Reset&apos; action on corporate owned devices.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("isFactoryResetDisabled");
     }
     /**
-     * Gets the isRemoveDeviceDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
+     * Gets the isRemoveDeviceDisabled property value. Boolean that represents whether the adminsistrator has disabled the &apos;Remove Device&apos; action on corporate owned devices.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -482,14 +482,14 @@ public class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("enrollmentAvailability", value);
     }
     /**
-     * Sets the isFactoryResetDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Factory Reset' action on corporate owned devices.
+     * Sets the isFactoryResetDisabled property value. Boolean that represents whether the adminsistrator has disabled the &apos;Factory Reset&apos; action on corporate owned devices.
      * @param value Value to set for the isFactoryResetDisabled property.
      */
     public void setIsFactoryResetDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isFactoryResetDisabled", value);
     }
     /**
-     * Sets the isRemoveDeviceDisabled property value. Boolean that represents whether the adminsistrator has disabled the 'Remove Device' action on corporate owned devices.
+     * Sets the isRemoveDeviceDisabled property value. Boolean that represents whether the adminsistrator has disabled the &apos;Remove Device&apos; action on corporate owned devices.
      * @param value Value to set for the isRemoveDeviceDisabled property.
      */
     public void setIsRemoveDeviceDisabled(@jakarta.annotation.Nullable final Boolean value) {

@@ -26,7 +26,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
         return new PlatformCredentialAuthenticationMethod();
     }
     /**
-     * Gets the device property value. The registered device on which this Platform Credential resides. Supports $expand. When you get a user's Platform Credential registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/platformCredentialAuthenticationMethod/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
+     * Gets the device property value. The registered device on which this Platform Credential resides. Supports $expand. When you get a user&apos;s Platform Credential registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/platformCredentialAuthenticationMethod/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
      * @return a {@link Device}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class PlatformCredentialAuthenticationMethod extends AuthenticationMethod
         writer.writeEnumValue("platform", this.getPlatform());
     }
     /**
-     * Sets the device property value. The registered device on which this Platform Credential resides. Supports $expand. When you get a user's Platform Credential registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/platformCredentialAuthenticationMethod/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
+     * Sets the device property value. The registered device on which this Platform Credential resides. Supports $expand. When you get a user&apos;s Platform Credential registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/platformCredentialAuthenticationMethod/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Device value) {

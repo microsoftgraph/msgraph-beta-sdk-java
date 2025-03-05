@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * This entity defines different Windows Operating System products, like 'Windows 11 22H1', 'Windows 11 22H2' etc., along with their available configurations.
+ * This entity defines different Windows Operating System products, like &apos;Windows 11 22H1&apos;, &apos;Windows 11 22H2&apos; etc., along with their available configurations.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDeviceWindowsOperatingSystemImage extends Entity implements Parsable {
@@ -48,7 +48,7 @@ public class ManagedDeviceWindowsOperatingSystemImage extends Entity implements 
         return deserializerMap;
     }
     /**
-     * Gets the supportedArchitectures property value. Indicates the list of architectures supported by the image. E.g. ['ARM64','X86']. Supports: $filter, $select, $top, $skip. Read-only.
+     * Gets the supportedArchitectures property value. Indicates the list of architectures supported by the image. E.g. [&apos;ARM64&apos;,&apos;X86&apos;]. Supports: $filter, $select, $top, $skip. Read-only.
      * @return a {@link java.util.List<ManagedDeviceArchitecture>}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class ManagedDeviceWindowsOperatingSystemImage extends Entity implements 
         this.backingStore.set("availableUpdates", value);
     }
     /**
-     * Sets the supportedArchitectures property value. Indicates the list of architectures supported by the image. E.g. ['ARM64','X86']. Supports: $filter, $select, $top, $skip. Read-only.
+     * Sets the supportedArchitectures property value. Indicates the list of architectures supported by the image. E.g. [&apos;ARM64&apos;,&apos;X86&apos;]. Supports: $filter, $select, $top, $skip. Read-only.
      * @param value Value to set for the supportedArchitectures property.
      */
     public void setSupportedArchitectures(@jakarta.annotation.Nullable final java.util.List<ManagedDeviceArchitecture> value) {

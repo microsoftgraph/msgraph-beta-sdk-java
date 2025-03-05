@@ -65,7 +65,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore;
     }
     /**
-     * Gets the conditionsNotSatisfied property value. Refers to the conditional access policy conditions that aren't satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk . Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
+     * Gets the conditionsNotSatisfied property value. Refers to the conditional access policy conditions that aren&apos;t satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk . Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
      * @return a {@link EnumSet<ConditionalAccessConditions>}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
+     * Gets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: &apos;Require multifactor authentication&apos;).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("enforcedGrantControls");
     }
     /**
-     * Gets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
+     * Gets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: &apos;Require app enforced controls&apos;).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("enforcedSessionControls");
     }
     /**
-     * Gets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didn't apply, because the DevicePlatform condition was a match.
+     * Gets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{&apos;devicePlatform&apos; : &apos;DevicePlatform&apos;}] means the policy didn&apos;t apply, because the DevicePlatform condition was a match.
      * @return a {@link java.util.List<ConditionalAccessRuleSatisfied>}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("id");
     }
     /**
-     * Gets the includeRulesSatisfied property value. List of key-value pairs containing each matched include condition in the conditional access policy. Example: [{ 'application' : 'AllApps'}, {'users': 'Group'}], meaning Application condition was a match because AllApps are included and Users condition was a match because the user was part of the included Group rule.
+     * Gets the includeRulesSatisfied property value. List of key-value pairs containing each matched include condition in the conditional access policy. Example: [{ &apos;application&apos; : &apos;AllApps&apos;}, {&apos;users&apos;: &apos;Group&apos;}], meaning Application condition was a match because AllApps are included and Users condition was a match because the user was part of the included Group rule.
      * @return a {@link java.util.List<ConditionalAccessRuleSatisfied>}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (this is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
+     * Gets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn&apos;t applied because policy conditions weren&apos;t met), notEnabled (this is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @return a {@link AppliedConditionalAccessPolicyResult}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         return this.backingStore.get("result");
     }
     /**
-     * Gets the sessionControlsNotSatisfied property value. Refers to the session controls that a sign-in activity didn't satisfy. (Example: Application enforced Restrictions).
+     * Gets the sessionControlsNotSatisfied property value. Refers to the session controls that a sign-in activity didn&apos;t satisfy. (Example: Application enforced Restrictions).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -216,7 +216,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
-     * Sets the conditionsNotSatisfied property value. Refers to the conditional access policy conditions that aren't satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk . Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
+     * Sets the conditionsNotSatisfied property value. Refers to the conditional access policy conditions that aren&apos;t satisfied. The possible values are: none, application, users, devicePlatform, location, clientType, signInRisk, userRisk, time, deviceState, client,ipAddressSeenByAzureAD,ipAddressSeenByResourceProvider,unknownFutureValue,servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk . Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: servicePrincipals,servicePrincipalRisk, authenticationFlows, insiderRisk. conditionalAccessConditions is a multi-valued enumeration and the property can contain multiple values in a comma-separated list.
      * @param value Value to set for the conditionsNotSatisfied property.
      */
     public void setConditionsNotSatisfied(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessConditions> value) {
@@ -237,21 +237,21 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: 'Require multifactor authentication').
+     * Sets the enforcedGrantControls property value. Refers to the grant controls enforced by the conditional access policy (example: &apos;Require multifactor authentication&apos;).
      * @param value Value to set for the enforcedGrantControls property.
      */
     public void setEnforcedGrantControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("enforcedGrantControls", value);
     }
     /**
-     * Sets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: 'Require app enforced controls').
+     * Sets the enforcedSessionControls property value. Refers to the session controls enforced by the conditional access policy (example: &apos;Require app enforced controls&apos;).
      * @param value Value to set for the enforcedSessionControls property.
      */
     public void setEnforcedSessionControls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("enforcedSessionControls", value);
     }
     /**
-     * Sets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{'devicePlatform' : 'DevicePlatform'}] means the policy didn't apply, because the DevicePlatform condition was a match.
+     * Sets the excludeRulesSatisfied property value. List of key-value pairs containing each matched exclude condition in the conditional access policy. Example: [{&apos;devicePlatform&apos; : &apos;DevicePlatform&apos;}] means the policy didn&apos;t apply, because the DevicePlatform condition was a match.
      * @param value Value to set for the excludeRulesSatisfied property.
      */
     public void setExcludeRulesSatisfied(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessRuleSatisfied> value) {
@@ -265,7 +265,7 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         this.backingStore.set("id", value);
     }
     /**
-     * Sets the includeRulesSatisfied property value. List of key-value pairs containing each matched include condition in the conditional access policy. Example: [{ 'application' : 'AllApps'}, {'users': 'Group'}], meaning Application condition was a match because AllApps are included and Users condition was a match because the user was part of the included Group rule.
+     * Sets the includeRulesSatisfied property value. List of key-value pairs containing each matched include condition in the conditional access policy. Example: [{ &apos;application&apos; : &apos;AllApps&apos;}, {&apos;users&apos;: &apos;Group&apos;}], meaning Application condition was a match because AllApps are included and Users condition was a match because the user was part of the included Group rule.
      * @param value Value to set for the includeRulesSatisfied property.
      */
     public void setIncludeRulesSatisfied(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessRuleSatisfied> value) {
@@ -279,14 +279,14 @@ public class AppliedConditionalAccessPolicy implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn't applied because policy conditions weren't met), notEnabled (this is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
+     * Sets the result property value. Indicates the result of the CA policy that was triggered. Possible values are: success, failure, notApplied (policy isn&apos;t applied because policy conditions weren&apos;t met), notEnabled (this is due to the policy in a disabled state), unknown, unknownFutureValue, reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: reportOnlySuccess, reportOnlyFailure, reportOnlyNotApplied, reportOnlyInterrupted.
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final AppliedConditionalAccessPolicyResult value) {
         this.backingStore.set("result", value);
     }
     /**
-     * Sets the sessionControlsNotSatisfied property value. Refers to the session controls that a sign-in activity didn't satisfy. (Example: Application enforced Restrictions).
+     * Sets the sessionControlsNotSatisfied property value. Refers to the session controls that a sign-in activity didn&apos;t satisfy. (Example: Application enforced Restrictions).
      * @param value Value to set for the sessionControlsNotSatisfied property.
      */
     public void setSessionControlsNotSatisfied(@jakarta.annotation.Nullable final java.util.List<String> value) {

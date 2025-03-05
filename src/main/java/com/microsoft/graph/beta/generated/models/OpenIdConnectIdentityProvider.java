@@ -43,7 +43,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         return this.backingStore.get("clientId");
     }
     /**
-     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is idtoken, the secret isn't required because there's no code exchange. The idtoken is returned directly from the authorization response. This is write-only. A read operation returns .
+     * Gets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is idtoken, the secret isn&apos;t required because there&apos;s no code exchange. The idtoken is returned directly from the authorization response. This is write-only. A read operation returns .
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         return deserializerMap;
     }
     /**
-     * Gets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required.
+     * Gets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service&apos;s public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         return this.backingStore.get("responseType");
     }
     /**
-     * Gets the scope property value. Scope defines the information and permissions you're looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users aren't able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more information about the scope limitations, see RFC6749 Section 3.3. Required.
+     * Gets the scope property value. Scope defines the information and permissions you&apos;re looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users aren&apos;t able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more information about the scope limitations, see RFC6749 Section 3.3. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         this.backingStore.set("clientId", value);
     }
     /**
-     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is idtoken, the secret isn't required because there's no code exchange. The idtoken is returned directly from the authorization response. This is write-only. A read operation returns .
+     * Sets the clientSecret property value. The client secret for the application obtained when registering the application with the identity provider. The clientSecret has a dependency on responseType. When responseType is code, a secret is required for the auth code exchange.When responseType is idtoken, the secret isn&apos;t required because there&apos;s no code exchange. The idtoken is returned directly from the authorization response. This is write-only. A read operation returns .
      * @param value Value to set for the clientSecret property.
      */
     public void setClientSecret(@jakarta.annotation.Nullable final String value) {
@@ -152,7 +152,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         this.backingStore.set("domainHint", value);
     }
     /**
-     * Sets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service's public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required.
+     * Sets the metadataUrl property value. The URL for the metadata document of the OpenID Connect identity provider. Every OpenID Connect identity provider describes a metadata document that contains most of the information required to perform sign-in. This includes information such as the URLs to use and the location of the service&apos;s public signing keys. The OpenID Connect metadata document is always located at an endpoint that ends in .well-known/openid-configuration. Provide the metadata URL for the OpenID Connect identity provider you add. Read-only. Required.
      * @param value Value to set for the metadataUrl property.
      */
     public void setMetadataUrl(@jakarta.annotation.Nullable final String value) {
@@ -173,7 +173,7 @@ public class OpenIdConnectIdentityProvider extends IdentityProviderBase implemen
         this.backingStore.set("responseType", value);
     }
     /**
-     * Sets the scope property value. Scope defines the information and permissions you're looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users aren't able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more information about the scope limitations, see RFC6749 Section 3.3. Required.
+     * Sets the scope property value. Scope defines the information and permissions you&apos;re looking to gather from your custom identity provider. OpenID Connect requests must contain the openid scope value in order to receive the ID token from the identity provider. Without the ID token, users aren&apos;t able to sign in to Azure AD B2C using the custom identity provider. Other scopes can be appended, separated by a space. For more information about the scope limitations, see RFC6749 Section 3.3. Required.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final String value) {

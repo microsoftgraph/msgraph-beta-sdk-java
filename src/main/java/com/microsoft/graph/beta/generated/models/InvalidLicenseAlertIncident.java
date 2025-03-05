@@ -36,7 +36,7 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
         return deserializerMap;
     }
     /**
-     * Gets the tenantLicenseStatus property value. Status of the tenant's Microsoft Entra ID P2 license.
+     * Gets the tenantLicenseStatus property value. Status of the tenant&apos;s Microsoft Entra ID P2 license.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class InvalidLicenseAlertIncident extends UnifiedRoleManagementAlertIncid
         writer.writeStringValue("tenantLicenseStatus", this.getTenantLicenseStatus());
     }
     /**
-     * Sets the tenantLicenseStatus property value. Status of the tenant's Microsoft Entra ID P2 license.
+     * Sets the tenantLicenseStatus property value. Status of the tenant&apos;s Microsoft Entra ID P2 license.
      * @param value Value to set for the tenantLicenseStatus property.
      */
     public void setTenantLicenseStatus(@jakarta.annotation.Nullable final String value) {

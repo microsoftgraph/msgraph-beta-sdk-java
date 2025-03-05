@@ -35,7 +35,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return new EmailThreatSubmission();
     }
     /**
-     * Gets the attackSimulationInfo property value. If the email is phishing simulation, this field won't be null.
+     * Gets the attackSimulationInfo property value. If the email is phishing simulation, this field won&apos;t be null.
      * @return a {@link AttackSimulationInfo}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         return this.backingStore.get("subject");
     }
     /**
-     * Gets the tenantAllowOrBlockListAction property value. It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
+     * Gets the tenantAllowOrBlockListAction property value. It&apos;s used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @return a {@link TenantAllowOrBlockListAction}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         writer.writeObjectValue("tenantAllowOrBlockListAction", this.getTenantAllowOrBlockListAction());
     }
     /**
-     * Sets the attackSimulationInfo property value. If the email is phishing simulation, this field won't be null.
+     * Sets the attackSimulationInfo property value. If the email is phishing simulation, this field won&apos;t be null.
      * @param value Value to set for the attackSimulationInfo property.
      */
     public void setAttackSimulationInfo(@jakarta.annotation.Nullable final AttackSimulationInfo value) {
@@ -198,7 +198,7 @@ public class EmailThreatSubmission extends ThreatSubmission implements Parsable 
         this.backingStore.set("subject", value);
     }
     /**
-     * Sets the tenantAllowOrBlockListAction property value. It's used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
+     * Sets the tenantAllowOrBlockListAction property value. It&apos;s used to automatically add allows for the components such as URL, file, sender; which are deemed bad by Microsoft so that similar messages in the future can be allowed.
      * @param value Value to set for the tenantAllowOrBlockListAction property.
      */
     public void setTenantAllowOrBlockListAction(@jakarta.annotation.Nullable final TenantAllowOrBlockListAction value) {

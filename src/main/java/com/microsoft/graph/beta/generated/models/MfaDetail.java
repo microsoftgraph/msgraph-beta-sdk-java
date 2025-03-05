@@ -48,7 +48,7 @@ public class MfaDetail implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
-     * Gets the authDetail property value. Indicates the MFA auth detail for the corresponding sign-in activity when the MFA Required is 'Yes'.
+     * Gets the authDetail property value. Indicates the MFA auth detail for the corresponding sign-in activity when the MFA Required is &apos;Yes&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class MfaDetail implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("authDetail");
     }
     /**
-     * Gets the authMethod property value. Indicates the MFA Auth methods (SMS, Phone, Authenticator App are some of the values) for the corresponding sign-in activity when the MFA Required field is 'Yes'.
+     * Gets the authMethod property value. Indicates the MFA Auth methods (SMS, Phone, Authenticator App are some of the values) for the corresponding sign-in activity when the MFA Required field is &apos;Yes&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,14 +110,14 @@ public class MfaDetail implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the authDetail property value. Indicates the MFA auth detail for the corresponding sign-in activity when the MFA Required is 'Yes'.
+     * Sets the authDetail property value. Indicates the MFA auth detail for the corresponding sign-in activity when the MFA Required is &apos;Yes&apos;.
      * @param value Value to set for the authDetail property.
      */
     public void setAuthDetail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("authDetail", value);
     }
     /**
-     * Sets the authMethod property value. Indicates the MFA Auth methods (SMS, Phone, Authenticator App are some of the values) for the corresponding sign-in activity when the MFA Required field is 'Yes'.
+     * Sets the authMethod property value. Indicates the MFA Auth methods (SMS, Phone, Authenticator App are some of the values) for the corresponding sign-in activity when the MFA Required field is &apos;Yes&apos;.
      * @param value Value to set for the authMethod property.
      */
     public void setAuthMethod(@jakarta.annotation.Nullable final String value) {

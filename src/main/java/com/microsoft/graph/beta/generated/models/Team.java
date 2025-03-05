@@ -42,7 +42,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("channels");
     }
     /**
-     * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
+     * Gets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant&apos;s directory.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class Team extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstChannelName property value. The name of the first channel in the team. This property is only used during team creation and isn't returned in methods to get and list teams.
+     * Gets the firstChannelName property value. The name of the first channel in the team. This property is only used during team creation and isn&apos;t returned in methods to get and list teams.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -228,7 +228,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("operations");
     }
     /**
-     * Gets the owners property value. The list of this team's owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user-delegated permissions, no owner can be specified (the current user is the owner). The owner must be specified as an object ID (GUID), not a UPN.
+     * Gets the owners property value. The list of this team&apos;s owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user-delegated permissions, no owner can be specified (the current user is the owner). The owner must be specified as an object ID (GUID), not a UPN.
      * @return a {@link java.util.List<User>}
      */
     @jakarta.annotation.Nullable
@@ -324,7 +324,7 @@ public class Team extends Entity implements Parsable {
         return this.backingStore.get("visibility");
     }
     /**
-     * Gets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. It's the URL you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     * Gets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. It&apos;s the URL you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -387,7 +387,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("channels", value);
     }
     /**
-     * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant's directory.
+     * Sets the classification property value. An optional label. Typically describes the data or business sensitivity of the team. Must match one of a pre-configured set in the tenant&apos;s directory.
      * @param value Value to set for the classification property.
      */
     public void setClassification(@jakarta.annotation.Nullable final String value) {
@@ -422,7 +422,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the firstChannelName property value. The name of the first channel in the team. This property is only used during team creation and isn't returned in methods to get and list teams.
+     * Sets the firstChannelName property value. The name of the first channel in the team. This property is only used during team creation and isn&apos;t returned in methods to get and list teams.
      * @param value Value to set for the firstChannelName property.
      */
     public void setFirstChannelName(@jakarta.annotation.Nullable final String value) {
@@ -513,7 +513,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("operations", value);
     }
     /**
-     * Sets the owners property value. The list of this team's owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user-delegated permissions, no owner can be specified (the current user is the owner). The owner must be specified as an object ID (GUID), not a UPN.
+     * Sets the owners property value. The list of this team&apos;s owners. Currently, when creating a team using application permissions, exactly one owner must be specified. When using user-delegated permissions, no owner can be specified (the current user is the owner). The owner must be specified as an object ID (GUID), not a UPN.
      * @param value Value to set for the owners property.
      */
     public void setOwners(@jakarta.annotation.Nullable final java.util.List<User> value) {
@@ -597,7 +597,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("visibility", value);
     }
     /**
-     * Sets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. It's the URL you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
+     * Sets the webUrl property value. A hyperlink that goes to the team in the Microsoft Teams client. It&apos;s the URL you get when you right-click a team in the Microsoft Teams client and select Get link to team. This URL should be treated as an opaque blob, and not parsed.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

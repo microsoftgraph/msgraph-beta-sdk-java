@@ -35,7 +35,7 @@ public class UpdateStatusRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/deviceAppManagementTasks/{deviceAppManagementTask%2Did}/updateStatus", rawUrl);
     }
     /**
-     * Set the task's status and attach a note.
+     * Set the task&apos;s status and attach a note.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -43,7 +43,7 @@ public class UpdateStatusRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Set the task's status and attach a note.
+     * Set the task&apos;s status and attach a note.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -56,7 +56,7 @@ public class UpdateStatusRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Set the task's status and attach a note.
+     * Set the task&apos;s status and attach a note.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +65,7 @@ public class UpdateStatusRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Set the task's status and attach a note.
+     * Set the task&apos;s status and attach a note.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

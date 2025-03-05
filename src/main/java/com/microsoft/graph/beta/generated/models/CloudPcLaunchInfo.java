@@ -102,7 +102,7 @@ public class CloudPcLaunchInfo implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("windows365SwitchCompatible");
     }
     /**
-     * Gets the windows365SwitchNotCompatibleReason property value. Indicates the reason the Cloud PC doesn't support switch. CPCOsVersionNotMeetRequirement indicates that the user needs to update their Cloud PC operation system version. CPCHardwareNotMeetRequirement indicates that the Cloud PC needs more CPU or RAM to support the functionality.
+     * Gets the windows365SwitchNotCompatibleReason property value. Indicates the reason the Cloud PC doesn&apos;t support switch. CPCOsVersionNotMeetRequirement indicates that the user needs to update their Cloud PC operation system version. CPCHardwareNotMeetRequirement indicates that the Cloud PC needs more CPU or RAM to support the functionality.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class CloudPcLaunchInfo implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("windows365SwitchCompatible", value);
     }
     /**
-     * Sets the windows365SwitchNotCompatibleReason property value. Indicates the reason the Cloud PC doesn't support switch. CPCOsVersionNotMeetRequirement indicates that the user needs to update their Cloud PC operation system version. CPCHardwareNotMeetRequirement indicates that the Cloud PC needs more CPU or RAM to support the functionality.
+     * Sets the windows365SwitchNotCompatibleReason property value. Indicates the reason the Cloud PC doesn&apos;t support switch. CPCOsVersionNotMeetRequirement indicates that the user needs to update their Cloud PC operation system version. CPCHardwareNotMeetRequirement indicates that the Cloud PC needs more CPU or RAM to support the functionality.
      * @param value Value to set for the windows365SwitchNotCompatibleReason property.
      */
     public void setWindows365SwitchNotCompatibleReason(@jakarta.annotation.Nullable final String value) {

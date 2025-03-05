@@ -21,7 +21,7 @@ import java.util.Objects;
 public class ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder} and sets the default values.
-     * @param mobileAppCatalogPackageId Usage: mobileAppCatalogPackageId='{mobileAppCatalogPackageId}'
+     * @param mobileAppCatalogPackageId Usage: mobileAppCatalogPackageId=&apos;{mobileAppCatalogPackageId}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

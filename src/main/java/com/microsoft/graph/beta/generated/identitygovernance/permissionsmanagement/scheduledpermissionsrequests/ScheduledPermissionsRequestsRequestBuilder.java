@@ -40,7 +40,7 @@ public class ScheduledPermissionsRequestsRequestBuilder extends BaseRequestBuild
     }
     /**
      * Provides operations to call the filterByCurrentUser method.
-     * @param on Usage: on='{on}'
+     * @param on Usage: on=&apos;{on}&apos;
      * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
      */
     @jakarta.annotation.Nonnull

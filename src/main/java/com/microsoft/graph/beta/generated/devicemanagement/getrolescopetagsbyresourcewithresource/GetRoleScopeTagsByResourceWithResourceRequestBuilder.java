@@ -23,7 +23,7 @@ public class GetRoleScopeTagsByResourceWithResourceRequestBuilder extends BaseRe
      * Instantiates a new {@link GetRoleScopeTagsByResourceWithResourceRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param resource Usage: resource='{resource}'
+     * @param resource Usage: resource=&apos;{resource}&apos;
      */
     public GetRoleScopeTagsByResourceWithResourceRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String resource) {
         super(requestAdapter, "{+baseurl}/deviceManagement/getRoleScopeTagsByResource(resource='{resource}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);

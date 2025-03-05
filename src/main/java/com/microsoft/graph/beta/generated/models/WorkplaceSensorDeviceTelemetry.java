@@ -65,7 +65,7 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         return this.backingStore.get("boolValue");
     }
     /**
-     * Gets the deviceId property value. The user-defined unique identifier of the device provided at the time of creation. Don't use the system generated identifier of the device.
+     * Gets the deviceId property value. The user-defined unique identifier of the device provided at the time of creation. Don&apos;t use the system generated identifier of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -186,7 +186,7 @@ public class WorkplaceSensorDeviceTelemetry implements AdditionalDataHolder, Bac
         this.backingStore.set("boolValue", value);
     }
     /**
-     * Sets the deviceId property value. The user-defined unique identifier of the device provided at the time of creation. Don't use the system generated identifier of the device.
+     * Sets the deviceId property value. The user-defined unique identifier of the device provided at the time of creation. Don&apos;t use the system generated identifier of the device.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {

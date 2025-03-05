@@ -46,7 +46,7 @@ public class VerifiableCredentialRequired extends VerifiableCredentialRequiremen
         return deserializerMap;
     }
     /**
-     * Gets the url property value. A URL that launches the digital wallet and starts the presentation process. You can present this URL to the user if they can't scan the QR code.
+     * Gets the url property value. A URL that launches the digital wallet and starts the presentation process. You can present this URL to the user if they can&apos;t scan the QR code.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class VerifiableCredentialRequired extends VerifiableCredentialRequiremen
         this.backingStore.set("expiryDateTime", value);
     }
     /**
-     * Sets the url property value. A URL that launches the digital wallet and starts the presentation process. You can present this URL to the user if they can't scan the QR code.
+     * Sets the url property value. A URL that launches the digital wallet and starts the presentation process. You can present this URL to the user if they can&apos;t scan the QR code.
      * @param value Value to set for the url property.
      */
     public void setUrl(@jakarta.annotation.Nullable final String value) {

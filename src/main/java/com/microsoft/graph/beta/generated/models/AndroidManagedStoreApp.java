@@ -78,7 +78,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users. This property is read-only.
+     * Gets the isPrivate property value. Indicates whether the app is only available to a given enterprise&apos;s users. This property is read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class AndroidManagedStoreApp extends MobileApp implements Parsable {
         this.backingStore.set("appTracks", value);
     }
     /**
-     * Sets the isPrivate property value. Indicates whether the app is only available to a given enterprise's users. This property is read-only.
+     * Sets the isPrivate property value. Indicates whether the app is only available to a given enterprise&apos;s users. This property is read-only.
      * @param value Value to set for the isPrivate property.
      */
     public void setIsPrivate(@jakarta.annotation.Nullable final Boolean value) {

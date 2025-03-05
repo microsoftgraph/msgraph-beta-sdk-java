@@ -68,7 +68,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
         return this.backingStore.get("howToPrevent");
     }
     /**
-     * Gets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Microsoft Entra ID P2' can't be configured, because the criteria are restricted.
+     * Gets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the &apos;There are too many global administrators&apos; alert can be configured by users, while the &apos;This organization doesn&apos;t have Microsoft Entra ID P2&apos; can&apos;t be configured, because the criteria are restricted.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
         return this.backingStore.get("isRemediatable");
     }
     /**
-     * Gets the mitigationSteps property value. The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
+     * Gets the mitigationSteps property value. The methods to mitigate the alert when it&apos;s triggered in the tenant. For example, to mitigate the &apos;There are too many global administrators&apos;, you could remove redundant privileged role assignments.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
         this.backingStore.set("howToPrevent", value);
     }
     /**
-     * Sets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization doesn't have Microsoft Entra ID P2' can't be configured, because the criteria are restricted.
+     * Sets the isConfigurable property value. true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the &apos;There are too many global administrators&apos; alert can be configured by users, while the &apos;This organization doesn&apos;t have Microsoft Entra ID P2&apos; can&apos;t be configured, because the criteria are restricted.
      * @param value Value to set for the isConfigurable property.
      */
     public void setIsConfigurable(@jakarta.annotation.Nullable final Boolean value) {
@@ -177,7 +177,7 @@ public class UnifiedRoleManagementAlertDefinition extends Entity implements Pars
         this.backingStore.set("isRemediatable", value);
     }
     /**
-     * Sets the mitigationSteps property value. The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
+     * Sets the mitigationSteps property value. The methods to mitigate the alert when it&apos;s triggered in the tenant. For example, to mitigate the &apos;There are too many global administrators&apos;, you could remove redundant privileged role assignments.
      * @param value Value to set for the mitigationSteps property.
      */
     public void setMitigationSteps(@jakarta.annotation.Nullable final String value) {

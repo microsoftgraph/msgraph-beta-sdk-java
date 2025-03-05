@@ -38,7 +38,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("allowedInboundDataTransferSources");
     }
     /**
-     * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
+     * Gets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device&apos;s clipboard may be shared between apps
      * @return a {@link WindowsManagedAppClipboardSharingLevel}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("maximumAllowedDeviceThreatLevel");
     }
     /**
-     * Gets the maximumRequiredOsVersion property value. Versions bigger than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the maximumRequiredOsVersion property value. Versions bigger than the specified version will block the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("maximumRequiredOsVersion");
     }
     /**
-     * Gets the maximumWarningOsVersion property value. Versions bigger than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the maximumWarningOsVersion property value. Versions bigger than the specified version will result in warning message on the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("maximumWarningOsVersion");
     }
     /**
-     * Gets the maximumWipeOsVersion property value. Versions bigger than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the maximumWipeOsVersion property value. Versions bigger than the specified version will wipe the managed app and the associated company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("maximumWipeOsVersion");
     }
     /**
-     * Gets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("minimumRequiredAppVersion");
     }
     /**
-     * Gets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("minimumRequiredOsVersion");
     }
     /**
-     * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("minimumRequiredSdkVersion");
     }
     /**
-     * Gets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("minimumWarningAppVersion");
     }
     /**
-     * Gets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -208,7 +208,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("minimumWarningOsVersion");
     }
     /**
-     * Gets the minimumWipeAppVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the minimumWipeAppVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -216,7 +216,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("minimumWipeAppVersion");
     }
     /**
-     * Gets the minimumWipeOsVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the minimumWipeOsVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -224,7 +224,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         return this.backingStore.get("minimumWipeOsVersion");
     }
     /**
-     * Gets the minimumWipeSdkVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
+     * Gets the minimumWipeSdkVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -304,7 +304,7 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         this.backingStore.set("allowedInboundDataTransferSources", value);
     }
     /**
-     * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device's clipboard may be shared between apps
+     * Sets the allowedOutboundClipboardSharingLevel property value. Represents the level to which the device&apos;s clipboard may be shared between apps
      * @param value Value to set for the allowedOutboundClipboardSharingLevel property.
      */
     public void setAllowedOutboundClipboardSharingLevel(@jakarta.annotation.Nullable final WindowsManagedAppClipboardSharingLevel value) {
@@ -367,77 +367,77 @@ public class WindowsManagedAppProtection extends ManagedAppPolicy implements Par
         this.backingStore.set("maximumAllowedDeviceThreatLevel", value);
     }
     /**
-     * Sets the maximumRequiredOsVersion property value. Versions bigger than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the maximumRequiredOsVersion property value. Versions bigger than the specified version will block the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the maximumRequiredOsVersion property.
      */
     public void setMaximumRequiredOsVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("maximumRequiredOsVersion", value);
     }
     /**
-     * Sets the maximumWarningOsVersion property value. Versions bigger than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the maximumWarningOsVersion property value. Versions bigger than the specified version will result in warning message on the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the maximumWarningOsVersion property.
      */
     public void setMaximumWarningOsVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("maximumWarningOsVersion", value);
     }
     /**
-     * Sets the maximumWipeOsVersion property value. Versions bigger than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the maximumWipeOsVersion property value. Versions bigger than the specified version will wipe the managed app and the associated company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the maximumWipeOsVersion property.
      */
     public void setMaximumWipeOsVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("maximumWipeOsVersion", value);
     }
     /**
-     * Sets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the minimumRequiredAppVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the minimumRequiredAppVersion property.
      */
     public void setMinimumRequiredAppVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("minimumRequiredAppVersion", value);
     }
     /**
-     * Sets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the minimumRequiredOsVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the minimumRequiredOsVersion property.
      */
     public void setMinimumRequiredOsVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("minimumRequiredOsVersion", value);
     }
     /**
-     * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the minimumRequiredSdkVersion property value. Versions less than the specified version will block the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the minimumRequiredSdkVersion property.
      */
     public void setMinimumRequiredSdkVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("minimumRequiredSdkVersion", value);
     }
     /**
-     * Sets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the minimumWarningAppVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the minimumWarningAppVersion property.
      */
     public void setMinimumWarningAppVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("minimumWarningAppVersion", value);
     }
     /**
-     * Sets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the minimumWarningOsVersion property value. Versions less than the specified version will result in warning message on the managed app from accessing company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the minimumWarningOsVersion property.
      */
     public void setMinimumWarningOsVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("minimumWarningOsVersion", value);
     }
     /**
-     * Sets the minimumWipeAppVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the minimumWipeAppVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the minimumWipeAppVersion property.
      */
     public void setMinimumWipeAppVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("minimumWipeAppVersion", value);
     }
     /**
-     * Sets the minimumWipeOsVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the minimumWipeOsVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the minimumWipeOsVersion property.
      */
     public void setMinimumWipeOsVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("minimumWipeOsVersion", value);
     }
     /**
-     * Sets the minimumWipeSdkVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: '8.1.0' or '13.1.1'.
+     * Sets the minimumWipeSdkVersion property value. Versions less than the specified version will wipe the managed app and the associated company data. For example: &apos;8.1.0&apos; or &apos;13.1.1&apos;.
      * @param value Value to set for the minimumWipeSdkVersion property.
      */
     public void setMinimumWipeSdkVersion(@jakarta.annotation.Nullable final String value) {

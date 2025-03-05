@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsRemoteConnectionRequestBuilder extends BaseR
     }
     /**
      * Provides operations to call the summarizeDeviceRemoteConnection method.
-     * @param summarizeBy Usage: summarizeBy='{summarizeBy}'
+     * @param summarizeBy Usage: summarizeBy=&apos;{summarizeBy}&apos;
      * @return a {@link SummarizeDeviceRemoteConnectionWithSummarizeByRequestBuilder}
      */
     @jakarta.annotation.Nonnull

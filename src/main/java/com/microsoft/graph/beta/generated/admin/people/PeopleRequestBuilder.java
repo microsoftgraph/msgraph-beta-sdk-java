@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.admin.people;
 
 import com.microsoft.graph.beta.admin.people.iteminsights.ItemInsightsRequestBuilder;
+import com.microsoft.graph.beta.admin.people.namepronunciation.NamePronunciationRequestBuilder;
 import com.microsoft.graph.beta.admin.people.profilecardproperties.ProfileCardPropertiesRequestBuilder;
 import com.microsoft.graph.beta.admin.people.pronouns.PronounsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -30,6 +31,14 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ItemInsightsRequestBuilder itemInsights() {
         return new ItemInsightsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the namePronunciation property of the microsoft.graph.peopleAdminSettings entity.
+     * @return a {@link NamePronunciationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public NamePronunciationRequestBuilder namePronunciation() {
+        return new NamePronunciationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the profileCardProperties property of the microsoft.graph.peopleAdminSettings entity.

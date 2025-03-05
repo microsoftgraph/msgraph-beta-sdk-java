@@ -120,7 +120,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustodianCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create a new custodian object. After the custodian object is created, you will need to create the custodian&apos;s userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @return a {@link Custodian}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -134,7 +134,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create a new custodian object. After the custodian object is created, you will need to create the custodian&apos;s userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Custodian}
@@ -179,7 +179,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create a new custodian object. After the custodian object is created, you will need to create the custodian&apos;s userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -191,7 +191,7 @@ public class CustodiansRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new custodian object. After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * Create a new custodian object. After the custodian object is created, you will need to create the custodian&apos;s userSource to reference their mailbox and OneDrive for Business site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

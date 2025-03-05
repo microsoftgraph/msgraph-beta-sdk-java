@@ -72,7 +72,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this.backingStore.get("contentType");
     }
     /**
-     * Gets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'.
+     * Gets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq &apos;value&apos;.
      * @return a {@link SubmissionUserIdentity}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this.backingStore.get("result");
     }
     /**
-     * Gets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user, and unkownFutureValue.
+     * Gets the source property value. Specifies the role of the submitter. Supports $filter = source eq &apos;value&apos;. The possible values are: administrator,  user, and unkownFutureValue.
      * @return a {@link SubmissionSource}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped, and unkownFutureValue.
+     * Gets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq &apos;value&apos;. The possible values are: notStarted, running, succeeded, failed, skipped, and unkownFutureValue.
      * @return a {@link LongRunningOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It's extracted from the token of the post API call.
+     * Gets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It&apos;s extracted from the token of the post API call.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -185,7 +185,7 @@ public class ThreatSubmission extends Entity implements Parsable {
         this.backingStore.set("contentType", value);
     }
     /**
-     * Sets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq 'value'.
+     * Sets the createdBy property value. Specifies who submitted the email as a threat. Supports $filter = createdBy/email eq &apos;value&apos;.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final SubmissionUserIdentity value) {
@@ -206,21 +206,21 @@ public class ThreatSubmission extends Entity implements Parsable {
         this.backingStore.set("result", value);
     }
     /**
-     * Sets the source property value. Specifies the role of the submitter. Supports $filter = source eq 'value'. The possible values are: administrator,  user, and unkownFutureValue.
+     * Sets the source property value. Specifies the role of the submitter. Supports $filter = source eq &apos;value&apos;. The possible values are: administrator,  user, and unkownFutureValue.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SubmissionSource value) {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq 'value'. The possible values are: notStarted, running, succeeded, failed, skipped, and unkownFutureValue.
+     * Sets the status property value. Indicates whether the threat submission has been analyzed by Microsoft. Supports $filter = status eq &apos;value&apos;. The possible values are: notStarted, running, succeeded, failed, skipped, and unkownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final LongRunningOperationStatus value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It's extracted from the token of the post API call.
+     * Sets the tenantId property value. Indicates the tenant id of the submitter. Not required when created using a POST operation. It&apos;s extracted from the token of the post API call.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

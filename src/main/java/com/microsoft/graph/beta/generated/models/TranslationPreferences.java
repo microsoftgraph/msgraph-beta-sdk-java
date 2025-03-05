@@ -85,7 +85,7 @@ public class TranslationPreferences implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the translationBehavior property value. The user's preferred translation behavior.Returned by default. Not nullable.
+     * Gets the translationBehavior property value. The user&apos;s preferred translation behavior.Returned by default. Not nullable.
      * @return a {@link TranslationBehavior}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class TranslationPreferences implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("translationBehavior");
     }
     /**
-     * Gets the untranslatedLanguages property value. The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify 'fr' for the neutral French culture, but not 'fr-FR' for the French culture in France. Returned by default. Read only.
+     * Gets the untranslatedLanguages property value. The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify &apos;fr&apos; for the neutral French culture, but not &apos;fr-FR&apos; for the French culture in France. Returned by default. Read only.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -142,14 +142,14 @@ public class TranslationPreferences implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the translationBehavior property value. The user's preferred translation behavior.Returned by default. Not nullable.
+     * Sets the translationBehavior property value. The user&apos;s preferred translation behavior.Returned by default. Not nullable.
      * @param value Value to set for the translationBehavior property.
      */
     public void setTranslationBehavior(@jakarta.annotation.Nullable final TranslationBehavior value) {
         this.backingStore.set("translationBehavior", value);
     }
     /**
-     * Sets the untranslatedLanguages property value. The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify 'fr' for the neutral French culture, but not 'fr-FR' for the French culture in France. Returned by default. Read only.
+     * Sets the untranslatedLanguages property value. The list of languages the user does not need translated. This is computed from the authoringLanguages collection in regionalAndLanguageSettings, and the languageOverrides collection in translationPreferences. The list specifies neutral culture values that include the language code without any country or region association. For example, it would specify &apos;fr&apos; for the neutral French culture, but not &apos;fr-FR&apos; for the French culture in France. Returned by default. Read only.
      * @param value Value to set for the untranslatedLanguages property.
      */
     public void setUntranslatedLanguages(@jakarta.annotation.Nullable final java.util.List<String> value) {

@@ -12,9 +12,9 @@ public enum MicrosoftTunnelServerHealthStatus implements ValuedEnum {
     Unknown("unknown"),
     /** Indicates that the health status of the server is healthy. This should be the normal operational health status. */
     Healthy("healthy"),
-    /** Indicates that the health status of the server is unhealthy. This is normally a transient condition that will last up to 5 minutes. If the server cannot be remediated while reporting unhealthy state, the health state will change to 'warning'. If it can be remediated, the health state will return to 'healthy'. */
+    /** Indicates that the health status of the server is unhealthy. This is normally a transient condition that will last up to 5 minutes. If the server cannot be remediated while reporting unhealthy state, the health state will change to &apos;warning&apos;. If it can be remediated, the health state will return to &apos;healthy&apos;. */
     Unhealthy("unhealthy"),
-    /** Indicates a warning based on the Tunnel Gateway server's CPU usage, memory usage, latency, TLS certificate, version */
+    /** Indicates a warning based on the Tunnel Gateway server&apos;s CPU usage, memory usage, latency, TLS certificate, version */
     Warning("warning"),
     /** Indicates the server state is offline */
     Offline("offline"),

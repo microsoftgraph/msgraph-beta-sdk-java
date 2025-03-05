@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DriverApprovalStatus implements ValuedEnum {
-    /** This indicates a driver needs IT admin's review. */
+    /** This indicates a driver needs IT admin&apos;s review. */
     NeedsReview("needsReview"),
     /** This indicates IT admin has declined a driver. */
     Declined("declined"),

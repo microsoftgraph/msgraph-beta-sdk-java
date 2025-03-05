@@ -69,7 +69,7 @@ public class IncompleteData implements AdditionalDataHolder, BackedModel, Parsab
         return deserializerMap;
     }
     /**
-     * Gets the missingDataBeforeDateTime property value. The service doesn't have source data before the specified time.
+     * Gets the missingDataBeforeDateTime property value. The service doesn&apos;t have source data before the specified time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class IncompleteData implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the wasThrottled property value. Some data wasn't recorded due to excessive activity.
+     * Gets the wasThrottled property value. Some data wasn&apos;t recorded due to excessive activity.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class IncompleteData implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the missingDataBeforeDateTime property value. The service doesn't have source data before the specified time.
+     * Sets the missingDataBeforeDateTime property value. The service doesn&apos;t have source data before the specified time.
      * @param value Value to set for the missingDataBeforeDateTime property.
      */
     public void setMissingDataBeforeDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -133,7 +133,7 @@ public class IncompleteData implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the wasThrottled property value. Some data wasn't recorded due to excessive activity.
+     * Sets the wasThrottled property value. Some data wasn&apos;t recorded due to excessive activity.
      * @param value Value to set for the wasThrottled property.
      */
     public void setWasThrottled(@jakarta.annotation.Nullable final Boolean value) {

@@ -79,7 +79,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("autoApplyReviewResultsEnabled");
     }
     /**
-     * Gets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
+     * Gets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer didn&apos;t supply one. For use when, auto-apply is enabled. If you don&apos;t want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -208,7 +208,7 @@ public class AccessReviewSettings implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("autoApplyReviewResultsEnabled", value);
     }
     /**
-     * Sets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer didn't supply one. For use when, auto-apply is enabled. If you don't want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
+     * Sets the autoReviewEnabled property value. Indicates whether a decision should be set if the reviewer didn&apos;t supply one. For use when, auto-apply is enabled. If you don&apos;t want to have a review decision recorded unless the reviewer makes an explicit choice, set it to false.
      * @param value Value to set for the autoReviewEnabled property.
      */
     public void setAutoReviewEnabled(@jakarta.annotation.Nullable final Boolean value) {

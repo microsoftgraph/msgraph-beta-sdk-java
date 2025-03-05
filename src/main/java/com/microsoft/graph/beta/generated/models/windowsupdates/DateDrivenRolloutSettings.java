@@ -27,7 +27,7 @@ public class DateDrivenRolloutSettings extends GradualRolloutSettings implements
         return new DateDrivenRolloutSettings();
     }
     /**
-     * Gets the endDateTime property value. Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime isn't set, all devices in the deployment are offered content at the same time.
+     * Gets the endDateTime property value. Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime isn&apos;t set, all devices in the deployment are offered content at the same time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class DateDrivenRolloutSettings extends GradualRolloutSettings implements
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
     }
     /**
-     * Sets the endDateTime property value. Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime isn't set, all devices in the deployment are offered content at the same time.
+     * Sets the endDateTime property value. Specifies the date before which all devices currently in the deployment are offered the update. Devices added after this date are offered immediately. When the endDateTime isn&apos;t set, all devices in the deployment are offered content at the same time.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

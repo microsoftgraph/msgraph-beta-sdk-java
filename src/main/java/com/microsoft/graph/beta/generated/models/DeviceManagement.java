@@ -29,7 +29,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return new DeviceManagement();
     }
     /**
-     * Gets the accountMoveCompletionDateTime property value. The date & time when tenant data moved between scaleunits.
+     * Gets the accountMoveCompletionDateTime property value. The date &amp; time when tenant data moved between scaleunits.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -806,7 +806,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("groupPolicyUploadedDefinitionFiles");
     }
     /**
-     * Gets the hardwareConfigurations property value. BIOS configuration and other settings provides customers the ability to configure hardware/bios settings on the enrolled Windows 10/11 Entra ID joined devices by uploading a configuration file generated with their OEM tool (e.g. Dell Command tool). A BIOS configuration policy can be assigned to multiple devices, allowing admins to remotely control a device's hardware properties (e.g. enable Secure Boot) from the Intune Portal. Supported for Dell only at this time.
+     * Gets the hardwareConfigurations property value. BIOS configuration and other settings provides customers the ability to configure hardware/bios settings on the enrolled Windows 10/11 Entra ID joined devices by uploading a configuration file generated with their OEM tool (e.g. Dell Command tool). A BIOS configuration policy can be assigned to multiple devices, allowing admins to remotely control a device&apos;s hardware properties (e.g. enable Secure Boot) from the Intune Portal. Supported for Dell only at this time.
      * @return a {@link java.util.List<HardwareConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -1962,7 +1962,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("zebraFotaDeployments", this.getZebraFotaDeployments());
     }
     /**
-     * Sets the accountMoveCompletionDateTime property value. The date & time when tenant data moved between scaleunits.
+     * Sets the accountMoveCompletionDateTime property value. The date &amp; time when tenant data moved between scaleunits.
      * @param value Value to set for the accountMoveCompletionDateTime property.
      */
     public void setAccountMoveCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -2466,7 +2466,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("groupPolicyUploadedDefinitionFiles", value);
     }
     /**
-     * Sets the hardwareConfigurations property value. BIOS configuration and other settings provides customers the ability to configure hardware/bios settings on the enrolled Windows 10/11 Entra ID joined devices by uploading a configuration file generated with their OEM tool (e.g. Dell Command tool). A BIOS configuration policy can be assigned to multiple devices, allowing admins to remotely control a device's hardware properties (e.g. enable Secure Boot) from the Intune Portal. Supported for Dell only at this time.
+     * Sets the hardwareConfigurations property value. BIOS configuration and other settings provides customers the ability to configure hardware/bios settings on the enrolled Windows 10/11 Entra ID joined devices by uploading a configuration file generated with their OEM tool (e.g. Dell Command tool). A BIOS configuration policy can be assigned to multiple devices, allowing admins to remotely control a device&apos;s hardware properties (e.g. enable Secure Boot) from the Intune Portal. Supported for Dell only at this time.
      * @param value Value to set for the hardwareConfigurations property.
      */
     public void setHardwareConfigurations(@jakarta.annotation.Nullable final java.util.List<HardwareConfiguration> value) {

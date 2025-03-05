@@ -131,7 +131,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Gets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user&apos;s SIP address, and can be same as the user&apos;s e-mail address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("userPrincipalName");
     }
     /**
-     * Gets the userTelephoneNumber property value. User's blocked number. For details, see E.164.
+     * Gets the userTelephoneNumber property value. User&apos;s blocked number. For details, see E.164.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -228,14 +228,14 @@ public class PstnBlockedUsersLogRow implements AdditionalDataHolder, BackedModel
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
+     * Sets the userPrincipalName property value. The user principal name (sign-in name) in Microsoft Entra ID. This is usually the same as the user&apos;s SIP address, and can be same as the user&apos;s e-mail address.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userPrincipalName", value);
     }
     /**
-     * Sets the userTelephoneNumber property value. User's blocked number. For details, see E.164.
+     * Sets the userTelephoneNumber property value. User&apos;s blocked number. For details, see E.164.
      * @param value Value to set for the userTelephoneNumber property.
      */
     public void setUserTelephoneNumber(@jakarta.annotation.Nullable final String value) {

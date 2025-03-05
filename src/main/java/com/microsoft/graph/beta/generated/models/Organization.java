@@ -91,7 +91,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("countryLetterCode");
     }
     /**
-     * Gets the createdDateTime property value. Timestamp of when the organization was created. The value can't be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Gets the createdDateTime property value. Timestamp of when the organization was created. The value can&apos;t be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isMultipleDataLocationsForServicesEnabled property value. true if organization is Multi-Geo enabled; false if organization isn't Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo.
+     * Gets the isMultipleDataLocationsForServicesEnabled property value. true if organization is Multi-Geo enabled; false if organization isn&apos;t Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -213,7 +213,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesLastSyncDateTime");
     }
     /**
-     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null, if this object isn't synced from on-premises active directory (default).
+     * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null, if this object isn&apos;t synced from on-premises active directory (default).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -317,7 +317,7 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("technicalNotificationMails");
     }
     /**
-     * Gets the tenantType property value. Not nullable. Can be one of the following types:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.   CIAM - A customer identity & access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios.
+     * Gets the tenantType property value. Not nullable. Can be one of the following types:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.   CIAM - A customer identity &amp; access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -430,7 +430,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("countryLetterCode", value);
     }
     /**
-     * Sets the createdDateTime property value. Timestamp of when the organization was created. The value can't be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * Sets the createdDateTime property value. Timestamp of when the organization was created. The value can&apos;t be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -465,7 +465,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("extensions", value);
     }
     /**
-     * Sets the isMultipleDataLocationsForServicesEnabled property value. true if organization is Multi-Geo enabled; false if organization isn't Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo.
+     * Sets the isMultipleDataLocationsForServicesEnabled property value. true if organization is Multi-Geo enabled; false if organization isn&apos;t Multi-Geo enabled; null (default). Read-only. For more information, see OneDrive Online Multi-Geo.
      * @param value Value to set for the isMultipleDataLocationsForServicesEnabled property.
      */
     public void setIsMultipleDataLocationsForServicesEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -500,7 +500,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesLastSyncDateTime", value);
     }
     /**
-     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null, if this object isn't synced from on-premises active directory (default).
+     * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; Nullable. null, if this object isn&apos;t synced from on-premises active directory (default).
      * @param value Value to set for the onPremisesSyncEnabled property.
      */
     public void setOnPremisesSyncEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -591,7 +591,7 @@ public class Organization extends DirectoryObject implements Parsable {
         this.backingStore.set("technicalNotificationMails", value);
     }
     /**
-     * Sets the tenantType property value. Not nullable. Can be one of the following types:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.   CIAM - A customer identity & access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios.
+     * Sets the tenantType property value. Not nullable. Can be one of the following types:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C An identity access management (IAM) service that serves business-to-consumer (B2C) scenarios.   CIAM - A customer identity &amp; access management (CIAM) solution that provides an integrated platform to serve consumers, partners, and citizen scenarios.
      * @param value Value to set for the tenantType property.
      */
     public void setTenantType(@jakarta.annotation.Nullable final String value) {

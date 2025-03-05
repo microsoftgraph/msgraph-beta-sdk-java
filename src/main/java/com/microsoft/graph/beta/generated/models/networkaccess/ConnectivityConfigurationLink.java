@@ -46,7 +46,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the localConfigurations property value. Specifies Microsoft's end of the tunnel configuration for a device link.
+     * Gets the localConfigurations property value. Specifies Microsoft&apos;s end of the tunnel configuration for a device link.
      * @return a {@link java.util.List<LocalConnectivityConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class ConnectivityConfigurationLink extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the localConfigurations property value. Specifies Microsoft's end of the tunnel configuration for a device link.
+     * Sets the localConfigurations property value. Specifies Microsoft&apos;s end of the tunnel configuration for a device link.
      * @param value Value to set for the localConfigurations property.
      */
     public void setLocalConfigurations(@jakarta.annotation.Nullable final java.util.List<LocalConnectivityConfiguration> value) {

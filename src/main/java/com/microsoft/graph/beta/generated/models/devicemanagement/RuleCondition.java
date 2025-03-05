@@ -111,7 +111,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("relationshipType");
     }
     /**
-     * Gets the thresholdValue property value. The threshold value of the alert condition. The threshold value can be a number in string form or string like 'WestUS'.
+     * Gets the thresholdValue property value. The threshold value of the alert condition. The threshold value can be a number in string form or string like &apos;WestUS&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("relationshipType", value);
     }
     /**
-     * Sets the thresholdValue property value. The threshold value of the alert condition. The threshold value can be a number in string form or string like 'WestUS'.
+     * Sets the thresholdValue property value. The threshold value of the alert condition. The threshold value can be a number in string form or string like &apos;WestUS&apos;.
      * @param value Value to set for the thresholdValue property.
      */
     public void setThresholdValue(@jakarta.annotation.Nullable final String value) {

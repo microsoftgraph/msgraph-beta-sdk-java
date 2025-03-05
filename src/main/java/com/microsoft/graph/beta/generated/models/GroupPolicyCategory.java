@@ -53,7 +53,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
         return this.backingStore.get("definitions");
     }
     /**
-     * Gets the displayName property value. The string id of the category's display name
+     * Gets the displayName property value. The string id of the category&apos;s display name
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class GroupPolicyCategory extends Entity implements Parsable {
         this.backingStore.set("definitions", value);
     }
     /**
-     * Sets the displayName property value. The string id of the category's display name
+     * Sets the displayName property value. The string id of the category&apos;s display name
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

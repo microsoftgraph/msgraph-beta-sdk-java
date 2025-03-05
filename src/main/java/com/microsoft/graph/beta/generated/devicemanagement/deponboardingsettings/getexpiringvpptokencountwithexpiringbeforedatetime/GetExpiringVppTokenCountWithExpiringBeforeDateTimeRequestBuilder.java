@@ -20,7 +20,7 @@ import java.util.Objects;
 public class GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link GetExpiringVppTokenCountWithExpiringBeforeDateTimeRequestBuilder} and sets the default values.
-     * @param expiringBeforeDateTime Usage: expiringBeforeDateTime='{expiringBeforeDateTime}'
+     * @param expiringBeforeDateTime Usage: expiringBeforeDateTime=&apos;{expiringBeforeDateTime}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */

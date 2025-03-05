@@ -44,7 +44,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
         return this.backingStore.get("connectAutomatically");
     }
     /**
-     * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
+     * Gets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn&apos;t broadcast its SSID to all devices.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
         return this.backingStore.get("ssid");
     }
     /**
-     * Gets the wiFiSecurityType property value. The possible security types for Android Wi-Fi profiles. Default value 'Open', indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. 'WpaEnterprise' and 'Wpa2Enterprise' options are available for Enterprise Wi-Fi profiles. 'Wep' and 'WpaPersonal' (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
+     * Gets the wiFiSecurityType property value. The possible security types for Android Wi-Fi profiles. Default value &apos;Open&apos;, indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. &apos;WpaEnterprise&apos; and &apos;Wpa2Enterprise&apos; options are available for Enterprise Wi-Fi profiles. &apos;Wep&apos; and &apos;WpaPersonal&apos; (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
      * @return a {@link AndroidWiFiSecurityType}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
         this.backingStore.set("connectAutomatically", value);
     }
     /**
-     * Sets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn't broadcast its SSID to all devices.
+     * Sets the connectWhenNetworkNameIsHidden property value. When set to true, this profile forces the device to connect to a network that doesn&apos;t broadcast its SSID to all devices.
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      */
     public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
@@ -131,7 +131,7 @@ public class AndroidForWorkWiFiConfiguration extends DeviceConfiguration impleme
         this.backingStore.set("ssid", value);
     }
     /**
-     * Sets the wiFiSecurityType property value. The possible security types for Android Wi-Fi profiles. Default value 'Open', indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. 'WpaEnterprise' and 'Wpa2Enterprise' options are available for Enterprise Wi-Fi profiles. 'Wep' and 'WpaPersonal' (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
+     * Sets the wiFiSecurityType property value. The possible security types for Android Wi-Fi profiles. Default value &apos;Open&apos;, indicates no authentication required for the network. The security protocols supported are WEP, WPA and WPA2. &apos;WpaEnterprise&apos; and &apos;Wpa2Enterprise&apos; options are available for Enterprise Wi-Fi profiles. &apos;Wep&apos; and &apos;WpaPersonal&apos; (supports WPA and WPA2) options are available for Basic Wi-Fi profiles.
      * @param value Value to set for the wiFiSecurityType property.
      */
     public void setWiFiSecurityType(@jakarta.annotation.Nullable final AndroidWiFiSecurityType value) {

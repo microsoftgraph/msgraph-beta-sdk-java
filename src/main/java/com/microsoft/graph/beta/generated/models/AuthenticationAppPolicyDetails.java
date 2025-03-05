@@ -48,7 +48,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
         return value;
     }
     /**
-     * Gets the adminConfiguration property value. The admin configuration of the policy on the user's authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
+     * Gets the adminConfiguration property value. The admin configuration of the policy on the user&apos;s authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
      * @return a {@link AuthenticationAppAdminConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
         return this.backingStore.get("adminConfiguration");
     }
     /**
-     * Gets the authenticationEvaluation property value. Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user's client authentication app. The possible values are: success, failure, unknownFutureValue.
+     * Gets the authenticationEvaluation property value. Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user&apos;s client authentication app. The possible values are: success, failure, unknownFutureValue.
      * @return a {@link AuthenticationAppEvaluation}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the policyName property value. The name of the policy enforced on the user's authentication app.
+     * Gets the policyName property value. The name of the policy enforced on the user&apos;s authentication app.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
         return this.backingStore.get("policyName");
     }
     /**
-     * Gets the status property value. Refers to whether the policy executed as expected on the user's client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
+     * Gets the status property value. Refers to whether the policy executed as expected on the user&apos;s client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
      * @return a {@link AuthenticationAppPolicyStatus}
      */
     @jakarta.annotation.Nullable
@@ -130,14 +130,14 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the adminConfiguration property value. The admin configuration of the policy on the user's authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
+     * Sets the adminConfiguration property value. The admin configuration of the policy on the user&apos;s authentication app. For a policy that does not impact the success/failure of the authentication, the evaluation defaults to notApplicable. The possible values are: notApplicable, enabled, disabled, unknownFutureValue.
      * @param value Value to set for the adminConfiguration property.
      */
     public void setAdminConfiguration(@jakarta.annotation.Nullable final AuthenticationAppAdminConfiguration value) {
         this.backingStore.set("adminConfiguration", value);
     }
     /**
-     * Sets the authenticationEvaluation property value. Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user's client authentication app. The possible values are: success, failure, unknownFutureValue.
+     * Sets the authenticationEvaluation property value. Evaluates the success/failure of the authentication based on the admin configuration of the policy on the user&apos;s client authentication app. The possible values are: success, failure, unknownFutureValue.
      * @param value Value to set for the authenticationEvaluation property.
      */
     public void setAuthenticationEvaluation(@jakarta.annotation.Nullable final AuthenticationAppEvaluation value) {
@@ -159,14 +159,14 @@ public class AuthenticationAppPolicyDetails implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the policyName property value. The name of the policy enforced on the user's authentication app.
+     * Sets the policyName property value. The name of the policy enforced on the user&apos;s authentication app.
      * @param value Value to set for the policyName property.
      */
     public void setPolicyName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyName", value);
     }
     /**
-     * Sets the status property value. Refers to whether the policy executed as expected on the user's client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
+     * Sets the status property value. Refers to whether the policy executed as expected on the user&apos;s client authentication app. The possible values are: unknown, appLockOutOfDate, appLockEnabled, appLockDisabled, appContextOutOfDate, appContextShown, appContextNotShown, locationContextOutOfDate, locationContextShown, locationContextNotShown, numberMatchOutOfDate, numberMatchCorrectNumberEntered, numberMatchIncorrectNumberEntered, numberMatchDeny, tamperResistantHardwareOutOfDate, tamperResistantHardwareUsed, tamperResistantHardwareNotUsed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AuthenticationAppPolicyStatus value) {

@@ -84,7 +84,7 @@ public class CloudPcScopedPermission implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("permission");
     }
     /**
-     * Gets the scopeIds property value. The scope IDs of corresponding permission. Currently, it's Intune scope tag ID.
+     * Gets the scopeIds property value. The scope IDs of corresponding permission. Currently, it&apos;s Intune scope tag ID.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class CloudPcScopedPermission implements AdditionalDataHolder, BackedMode
         this.backingStore.set("permission", value);
     }
     /**
-     * Sets the scopeIds property value. The scope IDs of corresponding permission. Currently, it's Intune scope tag ID.
+     * Sets the scopeIds property value. The scope IDs of corresponding permission. Currently, it&apos;s Intune scope tag ID.
      * @param value Value to set for the scopeIds property.
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

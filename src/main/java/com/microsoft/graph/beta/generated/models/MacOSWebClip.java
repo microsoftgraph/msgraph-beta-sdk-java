@@ -57,7 +57,7 @@ public class MacOSWebClip extends MobileApp implements Parsable {
         return this.backingStore.get("fullScreenEnabled");
     }
     /**
-     * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
+     * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding &apos;shine&apos; to the icon. If FALSE, SpringBoard can add &apos;shine&apos;.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class MacOSWebClip extends MobileApp implements Parsable {
         this.backingStore.set("fullScreenEnabled", value);
     }
     /**
-     * Sets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
+     * Sets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding &apos;shine&apos; to the icon. If FALSE, SpringBoard can add &apos;shine&apos;.
      * @param value Value to set for the preComposedIconEnabled property.
      */
     public void setPreComposedIconEnabled(@jakarta.annotation.Nullable final Boolean value) {

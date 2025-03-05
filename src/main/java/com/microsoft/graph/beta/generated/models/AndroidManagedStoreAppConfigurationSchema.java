@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Schema describing an Android application's custom configurations.
+ * Schema describing an Android application&apos;s custom configurations.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidManagedStoreAppConfigurationSchema extends Entity implements Parsable {

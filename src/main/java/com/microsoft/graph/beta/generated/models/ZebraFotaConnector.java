@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * The Zebra FOTA connector entity that represents the tenant's authorization status for Intune to call Zebra Update Services.
+ * The Zebra FOTA connector entity that represents the tenant&apos;s authorization status for Intune to call Zebra Update Services.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ZebraFotaConnector extends Entity implements Parsable {

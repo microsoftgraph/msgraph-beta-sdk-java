@@ -43,7 +43,7 @@ public class SmsLogRow extends CallLogRow implements Parsable {
         return this.backingStore.get("currency");
     }
     /**
-     * Gets the destinationContext property value. Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
+     * Gets the destinationContext property value. Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user&apos;s location.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -188,7 +188,7 @@ public class SmsLogRow extends CallLogRow implements Parsable {
         this.backingStore.set("currency", value);
     }
     /**
-     * Sets the destinationContext property value. Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
+     * Sets the destinationContext property value. Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user&apos;s location.
      * @param value Value to set for the destinationContext property.
      */
     public void setDestinationContext(@jakarta.annotation.Nullable final String value) {

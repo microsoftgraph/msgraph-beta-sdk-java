@@ -54,7 +54,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The policy's description.
+     * Gets the description property value. The policy&apos;s description.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class ManagedAppPolicy extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The policy's description.
+     * Sets the description property value. The policy&apos;s description.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

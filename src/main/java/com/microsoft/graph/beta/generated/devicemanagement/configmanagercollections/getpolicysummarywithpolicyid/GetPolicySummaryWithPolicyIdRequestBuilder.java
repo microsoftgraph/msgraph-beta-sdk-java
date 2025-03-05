@@ -22,7 +22,7 @@ public class GetPolicySummaryWithPolicyIdRequestBuilder extends BaseRequestBuild
     /**
      * Instantiates a new {@link GetPolicySummaryWithPolicyIdRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
-     * @param policyId Usage: policyId='{policyId}'
+     * @param policyId Usage: policyId=&apos;{policyId}&apos;
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetPolicySummaryWithPolicyIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String policyId) {

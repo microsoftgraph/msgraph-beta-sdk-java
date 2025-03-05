@@ -36,7 +36,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
         return this.backingStore.get("azureAdDeviceId");
     }
     /**
-     * Gets the deviceName property value. The tenant attach device's name.
+     * Gets the deviceName property value. The tenant attach device&apos;s name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class UserExperienceAnalyticsDeviceWithoutCloudIdentity extends Entity im
         this.backingStore.set("azureAdDeviceId", value);
     }
     /**
-     * Sets the deviceName property value. The tenant attach device's name.
+     * Sets the deviceName property value. The tenant attach device&apos;s name.
      * @param value Value to set for the deviceName property.
      */
     public void setDeviceName(@jakarta.annotation.Nullable final String value) {

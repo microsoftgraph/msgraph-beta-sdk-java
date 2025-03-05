@@ -112,7 +112,7 @@ public class SharingDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("sharingSubject");
     }
     /**
-     * Gets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
+     * Gets the sharingType property value. Determines the way the document was shared, can be by a &apos;Link&apos;, &apos;Attachment&apos;, &apos;Group&apos;, &apos;Site&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class SharingDetail implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("sharingSubject", value);
     }
     /**
-     * Sets the sharingType property value. Determines the way the document was shared, can be by a 'Link', 'Attachment', 'Group', 'Site'.
+     * Sets the sharingType property value. Determines the way the document was shared, can be by a &apos;Link&apos;, &apos;Attachment&apos;, &apos;Group&apos;, &apos;Site&apos;.
      * @param value Value to set for the sharingType property.
      */
     public void setSharingType(@jakarta.annotation.Nullable final String value) {

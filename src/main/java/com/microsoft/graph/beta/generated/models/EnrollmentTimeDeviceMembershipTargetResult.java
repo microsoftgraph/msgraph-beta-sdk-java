@@ -87,7 +87,7 @@ public class EnrollmentTimeDeviceMembershipTargetResult implements AdditionalDat
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the validationSucceeded property value. Indicates if validations succeeded for the device membership target. When 'true', the device membership target validation found no issues. When 'false', the device membership target validation found issues. default - false
+     * Gets the validationSucceeded property value. Indicates if validations succeeded for the device membership target. When &apos;true&apos;, the device membership target validation found no issues. When &apos;false&apos;, the device membership target validation found issues. default - false
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class EnrollmentTimeDeviceMembershipTargetResult implements AdditionalDat
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the validationSucceeded property value. Indicates if validations succeeded for the device membership target. When 'true', the device membership target validation found no issues. When 'false', the device membership target validation found issues. default - false
+     * Sets the validationSucceeded property value. Indicates if validations succeeded for the device membership target. When &apos;true&apos;, the device membership target validation found no issues. When &apos;false&apos;, the device membership target validation found issues. default - false
      * @param value Value to set for the validationSucceeded property.
      */
     public void setValidationSucceeded(@jakarta.annotation.Nullable final Boolean value) {

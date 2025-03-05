@@ -46,7 +46,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/print/printers/{printer%2Did}/taskTriggers/{printTaskTrigger%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a printer's task trigger to prevent related print events from triggering tasks on the specified printer.
+     * Delete a printer&apos;s task trigger to prevent related print events from triggering tasks on the specified printer.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-delete-tasktrigger?view=graph-rest-beta">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete a printer's task trigger to prevent related print events from triggering tasks on the specified printer.
+     * Delete a printer&apos;s task trigger to prevent related print events from triggering tasks on the specified printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/printer-delete-tasktrigger?view=graph-rest-beta">Find more info here</a>
@@ -115,7 +115,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PrintTaskTrigger::createFromDiscriminatorValue);
     }
     /**
-     * Delete a printer's task trigger to prevent related print events from triggering tasks on the specified printer.
+     * Delete a printer&apos;s task trigger to prevent related print events from triggering tasks on the specified printer.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class PrintTaskTriggerItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a printer's task trigger to prevent related print events from triggering tasks on the specified printer.
+     * Delete a printer&apos;s task trigger to prevent related print events from triggering tasks on the specified printer.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

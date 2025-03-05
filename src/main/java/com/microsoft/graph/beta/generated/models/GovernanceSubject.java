@@ -33,7 +33,7 @@ public class GovernanceSubject extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the email property value. The email address of the user subject. If the subject is in other types, it's empty.
+     * Gets the email property value. The email address of the user subject. If the subject is in other types, it&apos;s empty.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class GovernanceSubject extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the principalName property value. The principal name of the user subject. If the subject is in other types, it's empty.
+     * Gets the principalName property value. The principal name of the user subject. If the subject is in other types, it&apos;s empty.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,14 +89,14 @@ public class GovernanceSubject extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the email property value. The email address of the user subject. If the subject is in other types, it's empty.
+     * Sets the email property value. The email address of the user subject. If the subject is in other types, it&apos;s empty.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the principalName property value. The principal name of the user subject. If the subject is in other types, it's empty.
+     * Sets the principalName property value. The principal name of the user subject. If the subject is in other types, it&apos;s empty.
      * @param value Value to set for the principalName property.
      */
     public void setPrincipalName(@jakarta.annotation.Nullable final String value) {

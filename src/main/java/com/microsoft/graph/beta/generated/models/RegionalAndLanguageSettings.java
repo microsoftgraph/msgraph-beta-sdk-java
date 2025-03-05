@@ -33,7 +33,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
         return this.backingStore.get("authoringLanguages");
     }
     /**
-     * Gets the defaultDisplayLanguage property value. The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
+     * Gets the defaultDisplayLanguage property value. The  user&apos;s preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
      * @return a {@link LocaleInfo}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
         return this.backingStore.get("regionalFormatOverrides");
     }
     /**
-     * Gets the translationPreferences property value. The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
+     * Gets the translationPreferences property value. The user&apos;s preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
      * @return a {@link TranslationPreferences}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
         this.backingStore.set("authoringLanguages", value);
     }
     /**
-     * Sets the defaultDisplayLanguage property value. The  user's preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
+     * Sets the defaultDisplayLanguage property value. The  user&apos;s preferred user interface language (menus, buttons, ribbons, warning messages) for Microsoft web applications.Returned by default. Not nullable.
      * @param value Value to set for the defaultDisplayLanguage property.
      */
     public void setDefaultDisplayLanguage(@jakarta.annotation.Nullable final LocaleInfo value) {
@@ -154,7 +154,7 @@ public class RegionalAndLanguageSettings extends Entity implements Parsable {
         this.backingStore.set("regionalFormatOverrides", value);
     }
     /**
-     * Sets the translationPreferences property value. The user's preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
+     * Sets the translationPreferences property value. The user&apos;s preferred settings when consuming translated documents, emails, messages, and websites.Returned by default. Not nullable.
      * @param value Value to set for the translationPreferences property.
      */
     public void setTranslationPreferences(@jakarta.annotation.Nullable final TranslationPreferences value) {

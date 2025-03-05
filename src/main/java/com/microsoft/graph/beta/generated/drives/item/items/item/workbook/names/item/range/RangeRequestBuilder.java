@@ -204,7 +204,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the boundingRect method.
-     * @param anotherRange Usage: anotherRange='{anotherRange}'
+     * @param anotherRange Usage: anotherRange=&apos;{anotherRange}&apos;
      * @return a {@link BoundingRectWithAnotherRangeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -271,21 +271,21 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/names/{workbookNamedItem%2Did}/range()", rawUrl);
     }
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
+     * Retrieve the properties and relationships of range object.
      * @return a {@link WorkbookRange}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-range?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/range-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookRange get() {
         return get(null);
     }
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
+     * Retrieve the properties and relationships of range object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookRange}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/nameditem-range?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/range-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WorkbookRange get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -296,7 +296,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the intersection method.
-     * @param anotherRange Usage: anotherRange='{anotherRange}'
+     * @param anotherRange Usage: anotherRange=&apos;{anotherRange}&apos;
      * @return a {@link IntersectionWithAnotherRangeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -359,7 +359,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         return new RowWithRowRequestBuilder(pathParameters, requestAdapter, row);
     }
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
+     * Retrieve the properties and relationships of range object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -367,7 +367,7 @@ public class RangeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Returns the range object that is associated with the name. Throws an exception if the named item's type is not a range.
+     * Retrieve the properties and relationships of range object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

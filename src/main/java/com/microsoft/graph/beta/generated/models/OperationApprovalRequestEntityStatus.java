@@ -90,7 +90,7 @@ public class OperationApprovalRequestEntityStatus implements AdditionalDataHolde
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the requestExpirationDateTime property value. Indicates the DateTime when any action on the OperationApprovalRequest is no longer permitted. The value cannot be modified and is automatically populated when the request is created using expiration offset values defined in the service controllers. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. This property is read-only.
+     * Gets the requestExpirationDateTime property value. Indicates the DateTime when any action on the OperationApprovalRequest is no longer permitted. The value cannot be modified and is automatically populated when the request is created using expiration offset values defined in the service controllers. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-only. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class OperationApprovalRequestEntityStatus implements AdditionalDataHolde
         return this.backingStore.get("requestId");
     }
     /**
-     * Gets the requestStatus property value. Indicates the status of the Approval Request. The status of a request will change when an action is successfully performed on it, such as when it is `approved` or `rejected`, or when the request's expiration DateTime passes and the result is `expired`.
+     * Gets the requestStatus property value. Indicates the status of the Approval Request. The status of a request will change when an action is successfully performed on it, such as when it is `approved` or `rejected`, or when the request&apos;s expiration DateTime passes and the result is `expired`.
      * @return a {@link OperationApprovalRequestStatus}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class OperationApprovalRequestEntityStatus implements AdditionalDataHolde
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the requestExpirationDateTime property value. Indicates the DateTime when any action on the OperationApprovalRequest is no longer permitted. The value cannot be modified and is automatically populated when the request is created using expiration offset values defined in the service controllers. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only. This property is read-only.
+     * Sets the requestExpirationDateTime property value. Indicates the DateTime when any action on the OperationApprovalRequest is no longer permitted. The value cannot be modified and is automatically populated when the request is created using expiration offset values defined in the service controllers. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-only. This property is read-only.
      * @param value Value to set for the requestExpirationDateTime property.
      */
     public void setRequestExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -167,7 +167,7 @@ public class OperationApprovalRequestEntityStatus implements AdditionalDataHolde
         this.backingStore.set("requestId", value);
     }
     /**
-     * Sets the requestStatus property value. Indicates the status of the Approval Request. The status of a request will change when an action is successfully performed on it, such as when it is `approved` or `rejected`, or when the request's expiration DateTime passes and the result is `expired`.
+     * Sets the requestStatus property value. Indicates the status of the Approval Request. The status of a request will change when an action is successfully performed on it, such as when it is `approved` or `rejected`, or when the request&apos;s expiration DateTime passes and the result is `expired`.
      * @param value Value to set for the requestStatus property.
      */
     public void setRequestStatus(@jakarta.annotation.Nullable final OperationApprovalRequestStatus value) {

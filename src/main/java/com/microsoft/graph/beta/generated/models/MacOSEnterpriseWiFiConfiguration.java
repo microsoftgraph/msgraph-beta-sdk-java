@@ -87,7 +87,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
         return this.backingStore.get("innerAuthenticationProtocolForEapTtls");
     }
     /**
-     * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
+     * Gets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use &apos;anonymous&apos;, each user that authenticates with this Wi-Fi connection using their real username is displayed as &apos;anonymous&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class MacOSEnterpriseWiFiConfiguration extends MacOSWiFiConfiguration imp
         this.backingStore.set("innerAuthenticationProtocolForEapTtls", value);
     }
     /**
-     * Sets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use 'anonymous', each user that authenticates with this Wi-Fi connection using their real username is displayed as 'anonymous'.
+     * Sets the outerIdentityPrivacyTemporaryValue property value. Enable identity privacy (Outer Identity) when EAP Type is configured to EAP-TTLS, EAP-FAST or PEAP. This property masks usernames with the text you enter. For example, if you use &apos;anonymous&apos;, each user that authenticates with this Wi-Fi connection using their real username is displayed as &apos;anonymous&apos;.
      * @param value Value to set for the outerIdentityPrivacyTemporaryValue property.
      */
     public void setOuterIdentityPrivacyTemporaryValue(@jakarta.annotation.Nullable final String value) {

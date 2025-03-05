@@ -183,7 +183,7 @@ public class Calendar extends Entity implements Parsable {
         return this.backingStore.get("isSharedWithMe");
     }
     /**
-     * Gets the isTallyingResponses property value. Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
+     * Gets the isTallyingResponses property value. Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users&apos; primary calendars support tracking of meeting responses.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -364,7 +364,7 @@ public class Calendar extends Entity implements Parsable {
         this.backingStore.set("isSharedWithMe", value);
     }
     /**
-     * Sets the isTallyingResponses property value. Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
+     * Sets the isTallyingResponses property value. Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users&apos; primary calendars support tracking of meeting responses.
      * @param value Value to set for the isTallyingResponses property.
      */
     public void setIsTallyingResponses(@jakarta.annotation.Nullable final Boolean value) {

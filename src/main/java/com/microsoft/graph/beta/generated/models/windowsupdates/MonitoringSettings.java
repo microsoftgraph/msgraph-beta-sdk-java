@@ -67,7 +67,7 @@ public class MonitoringSettings implements AdditionalDataHolder, BackedModel, Pa
         return deserializerMap;
     }
     /**
-     * Gets the monitoringRules property value. Specifies the rules through which monitoring signals can trigger actions on the deployment. Rules are combined using 'or.'
+     * Gets the monitoringRules property value. Specifies the rules through which monitoring signals can trigger actions on the deployment. Rules are combined using &apos;or.&apos;
      * @return a {@link java.util.List<MonitoringRule>}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class MonitoringSettings implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the monitoringRules property value. Specifies the rules through which monitoring signals can trigger actions on the deployment. Rules are combined using 'or.'
+     * Sets the monitoringRules property value. Specifies the rules through which monitoring signals can trigger actions on the deployment. Rules are combined using &apos;or.&apos;
      * @param value Value to set for the monitoringRules property.
      */
     public void setMonitoringRules(@jakarta.annotation.Nullable final java.util.List<MonitoringRule> value) {

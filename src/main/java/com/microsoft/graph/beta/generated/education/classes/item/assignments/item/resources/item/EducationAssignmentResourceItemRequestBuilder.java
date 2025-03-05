@@ -46,7 +46,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/resources/{educationAssignmentResource%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a specific educationAssignmentResource attached to an assignment. Only teachers in the class can remove a resource. After an assignment has been published to students, teachers can't remove resources that are marked as 'distributeToStudents'.
+     * Delete a specific educationAssignmentResource attached to an assignment. Only teachers in the class can remove a resource. After an assignment has been published to students, teachers can&apos;t remove resources that are marked as &apos;distributeToStudents&apos;.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentresource-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         delete(null);
     }
     /**
-     * Delete a specific educationAssignmentResource attached to an assignment. Only teachers in the class can remove a resource. After an assignment has been published to students, teachers can't remove resources that are marked as 'distributeToStudents'.
+     * Delete a specific educationAssignmentResource attached to an assignment. Only teachers in the class can remove a resource. After an assignment has been published to students, teachers can&apos;t remove resources that are marked as &apos;distributeToStudents&apos;.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentresource-delete?view=graph-rest-beta">Find more info here</a>
@@ -115,7 +115,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignmentResource::createFromDiscriminatorValue);
     }
     /**
-     * Delete a specific educationAssignmentResource attached to an assignment. Only teachers in the class can remove a resource. After an assignment has been published to students, teachers can't remove resources that are marked as 'distributeToStudents'.
+     * Delete a specific educationAssignmentResource attached to an assignment. Only teachers in the class can remove a resource. After an assignment has been published to students, teachers can&apos;t remove resources that are marked as &apos;distributeToStudents&apos;.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a specific educationAssignmentResource attached to an assignment. Only teachers in the class can remove a resource. After an assignment has been published to students, teachers can't remove resources that are marked as 'distributeToStudents'.
+     * Delete a specific educationAssignmentResource attached to an assignment. Only teachers in the class can remove a resource. After an assignment has been published to students, teachers can&apos;t remove resources that are marked as &apos;distributeToStudents&apos;.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

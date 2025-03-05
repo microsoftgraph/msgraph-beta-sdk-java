@@ -140,7 +140,7 @@ public class DeviceManagementIntentItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to call the compare method.
-     * @param templateId Usage: templateId='{templateId}'
+     * @param templateId Usage: templateId=&apos;{templateId}&apos;
      * @return a {@link CompareWithTemplateIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

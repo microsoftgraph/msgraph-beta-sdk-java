@@ -88,7 +88,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
         return deserializerMap;
     }
     /**
-     * Gets the newTenantCount property value. The number of unique tenants that were accessed between endDateTime and discoveryPivotDateTime, but weren't accessed between discoveryPivotDateTime and startDateTime.
+     * Gets the newTenantCount property value. The number of unique tenants that were accessed between endDateTime and discoveryPivotDateTime, but weren&apos;t accessed between discoveryPivotDateTime and startDateTime.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("rarelyUsedTenantCount");
     }
     /**
-     * Gets the tenantCount property value. The number of unique tenants that were accessed, not including the device's tenant.
+     * Gets the tenantCount property value. The number of unique tenants that were accessed, not including the device&apos;s tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("deviceCount", value);
     }
     /**
-     * Sets the newTenantCount property value. The number of unique tenants that were accessed between endDateTime and discoveryPivotDateTime, but weren't accessed between discoveryPivotDateTime and startDateTime.
+     * Sets the newTenantCount property value. The number of unique tenants that were accessed between endDateTime and discoveryPivotDateTime, but weren&apos;t accessed between discoveryPivotDateTime and startDateTime.
      * @param value Value to set for the newTenantCount property.
      */
     public void setNewTenantCount(@jakarta.annotation.Nullable final Integer value) {
@@ -193,7 +193,7 @@ public class CrossTenantSummary implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("rarelyUsedTenantCount", value);
     }
     /**
-     * Sets the tenantCount property value. The number of unique tenants that were accessed, not including the device's tenant.
+     * Sets the tenantCount property value. The number of unique tenants that were accessed, not including the device&apos;s tenant.
      * @param value Value to set for the tenantCount property.
      */
     public void setTenantCount(@jakarta.annotation.Nullable final Integer value) {

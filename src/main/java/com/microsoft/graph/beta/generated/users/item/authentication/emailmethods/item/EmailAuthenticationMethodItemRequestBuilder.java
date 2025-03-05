@@ -37,7 +37,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/emailMethods/{emailAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a user's email Authentication Method object.
+     * Deletes a user&apos;s email Authentication Method object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         delete(null);
     }
     /**
-     * Deletes a user's email Authentication Method object.
+     * Deletes a user&apos;s email Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/emailauthenticationmethod-delete?view=graph-rest-beta">Find more info here</a>
@@ -79,7 +79,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, EmailAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Update a user's email address associated with an email Authentication Method object. Self-service operations aren't supported.
+     * Update a user&apos;s email address associated with an email Authentication Method object. Self-service operations aren&apos;t supported.
      * @param body The request body
      * @return a {@link EmailAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -90,7 +90,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return patch(body, null);
     }
     /**
-     * Update a user's email address associated with an email Authentication Method object. Self-service operations aren't supported.
+     * Update a user&apos;s email address associated with an email Authentication Method object. Self-service operations aren&apos;t supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmailAuthenticationMethod}
@@ -106,7 +106,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, EmailAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a user's email Authentication Method object.
+     * Deletes a user&apos;s email Authentication Method object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a user's email Authentication Method object.
+     * Deletes a user&apos;s email Authentication Method object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +146,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Update a user's email address associated with an email Authentication Method object. Self-service operations aren't supported.
+     * Update a user&apos;s email address associated with an email Authentication Method object. Self-service operations aren&apos;t supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +155,7 @@ public class EmailAuthenticationMethodItemRequestBuilder extends BaseRequestBuil
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update a user's email address associated with an email Authentication Method object. Self-service operations aren't supported.
+     * Update a user&apos;s email address associated with an email Authentication Method object. Self-service operations aren&apos;t supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

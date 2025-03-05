@@ -27,7 +27,7 @@ public class ChatActivityStatistics extends ActivityStatistics implements Parsab
         return new ChatActivityStatistics();
     }
     /**
-     * Gets the afterHours property value. Time spent on chats outside of working hours, which is based on the user's Microsoft Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
+     * Gets the afterHours property value. Time spent on chats outside of working hours, which is based on the user&apos;s Microsoft Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class ChatActivityStatistics extends ActivityStatistics implements Parsab
         writer.writePeriodAndDurationValue("afterHours", this.getAfterHours());
     }
     /**
-     * Sets the afterHours property value. Time spent on chats outside of working hours, which is based on the user's Microsoft Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
+     * Sets the afterHours property value. Time spent on chats outside of working hours, which is based on the user&apos;s Microsoft Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      * @param value Value to set for the afterHours property.
      */
     public void setAfterHours(@jakarta.annotation.Nullable final PeriodAndDuration value) {

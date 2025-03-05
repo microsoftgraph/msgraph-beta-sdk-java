@@ -37,7 +37,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/contacts/{orgContact%2Did}/manager{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get the contact's manager
+     * Get the contact&apos;s manager
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/orgcontact-get-manager?view=graph-rest-beta">Find more info here</a>
@@ -47,7 +47,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the contact's manager
+     * Get the contact&apos;s manager
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObject}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -61,7 +61,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObject::createFromDiscriminatorValue);
     }
     /**
-     * Get the contact's manager
+     * Get the contact&apos;s manager
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the contact's manager
+     * Get the contact&apos;s manager
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -91,7 +91,7 @@ public class ManagerRequestBuilder extends BaseRequestBuilder {
         return new ManagerRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the contact's manager
+     * Get the contact&apos;s manager
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

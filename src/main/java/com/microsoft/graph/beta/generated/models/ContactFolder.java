@@ -41,7 +41,7 @@ public class ContactFolder extends Entity implements Parsable {
         return this.backingStore.get("contacts");
     }
     /**
-     * Gets the displayName property value. The folder's display name.
+     * Gets the displayName property value. The folder&apos;s display name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ContactFolder extends Entity implements Parsable {
         return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
-     * Gets the parentFolderId property value. The ID of the folder's parent folder.
+     * Gets the parentFolderId property value. The ID of the folder&apos;s parent folder.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class ContactFolder extends Entity implements Parsable {
         this.backingStore.set("contacts", value);
     }
     /**
-     * Sets the displayName property value. The folder's display name.
+     * Sets the displayName property value. The folder&apos;s display name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -140,7 +140,7 @@ public class ContactFolder extends Entity implements Parsable {
         this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
-     * Sets the parentFolderId property value. The ID of the folder's parent folder.
+     * Sets the parentFolderId property value. The ID of the folder&apos;s parent folder.
      * @param value Value to set for the parentFolderId property.
      */
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {

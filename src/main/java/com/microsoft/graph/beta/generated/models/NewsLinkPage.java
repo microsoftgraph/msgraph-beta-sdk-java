@@ -45,7 +45,7 @@ public class NewsLinkPage extends BaseSitePage implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the newsSharepointIds property value. The SharePoint IDs of the referenced news article if it's recognized as a SharePoint resource. Read-only.
+     * Gets the newsSharepointIds property value. The SharePoint IDs of the referenced news article if it&apos;s recognized as a SharePoint resource. Read-only.
      * @return a {@link SharepointIds}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class NewsLinkPage extends BaseSitePage implements Parsable {
         this.backingStore.set("bannerImageWebUrl", value);
     }
     /**
-     * Sets the newsSharepointIds property value. The SharePoint IDs of the referenced news article if it's recognized as a SharePoint resource. Read-only.
+     * Sets the newsSharepointIds property value. The SharePoint IDs of the referenced news article if it&apos;s recognized as a SharePoint resource. Read-only.
      * @param value Value to set for the newsSharepointIds property.
      */
     public void setNewsSharepointIds(@jakarta.annotation.Nullable final SharepointIds value) {

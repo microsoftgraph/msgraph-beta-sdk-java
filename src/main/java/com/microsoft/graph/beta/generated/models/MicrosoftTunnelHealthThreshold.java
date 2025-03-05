@@ -28,7 +28,7 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
         return new MicrosoftTunnelHealthThreshold();
     }
     /**
-     * Gets the defaultHealthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized. Read-only.
+     * Gets the defaultHealthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy &lt; 50%, Memory usage healthy &lt; 50%, Disk space healthy &gt; 5GB, Latency healthy &lt; 10ms, health metrics can be customized. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -36,7 +36,7 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
         return this.backingStore.get("defaultHealthyThreshold");
     }
     /**
-     * Gets the defaultUnhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency unhealthy > 20ms, health metrics can be customized. Read-only.
+     * Gets the defaultUnhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy &gt; 75%, Memory usage unhealthy &gt; 75%, Disk space &lt; 3GB, Latency unhealthy &gt; 20ms, health metrics can be customized. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized.
+     * Gets the healthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy &lt; 50%, Memory usage healthy &lt; 50%, Disk space healthy &gt; 5GB, Latency healthy &lt; 10ms, health metrics can be customized.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
         return this.backingStore.get("healthyThreshold");
     }
     /**
-     * Gets the unhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency Unhealthy > 20ms, health metrics can be customized.
+     * Gets the unhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy &gt; 75%, Memory usage unhealthy &gt; 75%, Disk space &lt; 3GB, Latency Unhealthy &gt; 20ms, health metrics can be customized.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -85,28 +85,28 @@ public class MicrosoftTunnelHealthThreshold extends Entity implements Parsable {
         writer.writeLongValue("unhealthyThreshold", this.getUnhealthyThreshold());
     }
     /**
-     * Sets the defaultHealthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized. Read-only.
+     * Sets the defaultHealthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy &lt; 50%, Memory usage healthy &lt; 50%, Disk space healthy &gt; 5GB, Latency healthy &lt; 10ms, health metrics can be customized. Read-only.
      * @param value Value to set for the defaultHealthyThreshold property.
      */
     public void setDefaultHealthyThreshold(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("defaultHealthyThreshold", value);
     }
     /**
-     * Sets the defaultUnhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency unhealthy > 20ms, health metrics can be customized. Read-only.
+     * Sets the defaultUnhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy &gt; 75%, Memory usage unhealthy &gt; 75%, Disk space &lt; 3GB, Latency unhealthy &gt; 20ms, health metrics can be customized. Read-only.
      * @param value Value to set for the defaultUnhealthyThreshold property.
      */
     public void setDefaultUnhealthyThreshold(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("defaultUnhealthyThreshold", value);
     }
     /**
-     * Sets the healthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy < 50%, Memory usage healthy < 50%, Disk space healthy > 5GB, Latency healthy < 10ms, health metrics can be customized.
+     * Sets the healthyThreshold property value. The threshold for being healthy based on default health status metrics: CPU usage healthy &lt; 50%, Memory usage healthy &lt; 50%, Disk space healthy &gt; 5GB, Latency healthy &lt; 10ms, health metrics can be customized.
      * @param value Value to set for the healthyThreshold property.
      */
     public void setHealthyThreshold(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("healthyThreshold", value);
     }
     /**
-     * Sets the unhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy > 75%, Memory usage unhealthy > 75%, Disk space < 3GB, Latency Unhealthy > 20ms, health metrics can be customized.
+     * Sets the unhealthyThreshold property value. The threshold for being unhealthy based on default health status metrics: CPU usage unhealthy &gt; 75%, Memory usage unhealthy &gt; 75%, Disk space &lt; 3GB, Latency Unhealthy &gt; 20ms, health metrics can be customized.
      * @param value Value to set for the unhealthyThreshold property.
      */
     public void setUnhealthyThreshold(@jakarta.annotation.Nullable final Long value) {

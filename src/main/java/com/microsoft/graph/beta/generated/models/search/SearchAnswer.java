@@ -82,7 +82,7 @@ public class SearchAnswer extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the webUrl property value. The URL link for the search answer. When users select this search answer from the search results, they're directed to the specified URL.
+     * Gets the webUrl property value. The URL link for the search answer. When users select this search answer from the search results, they&apos;re directed to the specified URL.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class SearchAnswer extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the webUrl property value. The URL link for the search answer. When users select this search answer from the search results, they're directed to the specified URL.
+     * Sets the webUrl property value. The URL link for the search answer. When users select this search answer from the search results, they&apos;re directed to the specified URL.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

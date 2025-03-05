@@ -25,7 +25,7 @@ public class OrganizationSettings extends Entity implements Parsable {
         return new OrganizationSettings();
     }
     /**
-     * Gets the contactInsights property value. Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
+     * Gets the contactInsights property value. Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user&apos;s contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
      * @return a {@link InsightsSettings}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class OrganizationSettings extends Entity implements Parsable {
         writer.writeObjectValue("peopleInsights", this.getPeopleInsights());
     }
     /**
-     * Sets the contactInsights property value. Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user's contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
+     * Sets the contactInsights property value. Contains the properties that are configured by an administrator as a tenant-level privacy control whether to identify duplicate contacts among a user&apos;s contacts list and suggest the user to merge those contacts to have a cleaner contacts list. List contactInsights returns the settings to display or return contact insights in an organization.
      * @param value Value to set for the contactInsights property.
      */
     public void setContactInsights(@jakarta.annotation.Nullable final InsightsSettings value) {

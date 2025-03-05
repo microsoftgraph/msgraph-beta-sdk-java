@@ -29,7 +29,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         return new IosikEv2VpnConfiguration();
     }
     /**
-     * Gets the allowDefaultChildSecurityAssociationParameters property value. Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
+     * Gets the allowDefaultChildSecurityAssociationParameters property value. Allows the use of child security association parameters by setting all parameters to the device&apos;s default unless explicitly specified.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         return this.backingStore.get("allowDefaultChildSecurityAssociationParameters");
     }
     /**
-     * Gets the allowDefaultSecurityAssociationParameters property value. Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
+     * Gets the allowDefaultSecurityAssociationParameters property value. Allows the use of security association parameters by setting all parameters to the device&apos;s default unless explicitly specified.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -276,14 +276,14 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         writer.writeStringValue("tlsMinimumVersion", this.getTlsMinimumVersion());
     }
     /**
-     * Sets the allowDefaultChildSecurityAssociationParameters property value. Allows the use of child security association parameters by setting all parameters to the device's default unless explicitly specified.
+     * Sets the allowDefaultChildSecurityAssociationParameters property value. Allows the use of child security association parameters by setting all parameters to the device&apos;s default unless explicitly specified.
      * @param value Value to set for the allowDefaultChildSecurityAssociationParameters property.
      */
     public void setAllowDefaultChildSecurityAssociationParameters(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowDefaultChildSecurityAssociationParameters", value);
     }
     /**
-     * Sets the allowDefaultSecurityAssociationParameters property value. Allows the use of security association parameters by setting all parameters to the device's default unless explicitly specified.
+     * Sets the allowDefaultSecurityAssociationParameters property value. Allows the use of security association parameters by setting all parameters to the device&apos;s default unless explicitly specified.
      * @param value Value to set for the allowDefaultSecurityAssociationParameters property.
      */
     public void setAllowDefaultSecurityAssociationParameters(@jakarta.annotation.Nullable final Boolean value) {

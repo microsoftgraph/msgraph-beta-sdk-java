@@ -109,7 +109,7 @@ public class UserExperienceAnalyticsResourcePerformanceRequestBuilder extends Ba
     }
     /**
      * Provides operations to call the summarizeDeviceResourcePerformance method.
-     * @param summarizeBy Usage: summarizeBy='{summarizeBy}'
+     * @param summarizeBy Usage: summarizeBy=&apos;{summarizeBy}&apos;
      * @return a {@link SummarizeDeviceResourcePerformanceWithSummarizeByRequestBuilder}
      */
     @jakarta.annotation.Nonnull

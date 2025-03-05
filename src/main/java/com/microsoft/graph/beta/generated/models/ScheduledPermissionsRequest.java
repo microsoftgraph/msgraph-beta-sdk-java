@@ -59,7 +59,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the justification property value. The identity's justification for the request.
+     * Gets the justification property value. The identity&apos;s justification for the request.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class ScheduledPermissionsRequest extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the justification property value. The identity's justification for the request.
+     * Sets the justification property value. The identity&apos;s justification for the request.
      * @param value Value to set for the justification property.
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {

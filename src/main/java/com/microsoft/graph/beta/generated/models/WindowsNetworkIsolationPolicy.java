@@ -67,7 +67,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Back
         return this.backingStore.get("enterpriseCloudResources");
     }
     /**
-     * Gets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
+     * Gets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, &apos;157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59&apos;. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -188,7 +188,7 @@ public class WindowsNetworkIsolationPolicy implements AdditionalDataHolder, Back
         this.backingStore.set("enterpriseCloudResources", value);
     }
     /**
-     * Sets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, '157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59'. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
+     * Sets the enterpriseInternalProxyServers property value. This is the comma-separated list of internal proxy servers. For example, &apos;157.54.14.28, 157.54.11.118, 10.202.14.167, 157.53.14.163, 157.69.210.59&apos;. These proxies have been configured by the admin to connect to specific resources on the Internet. They are considered to be enterprise network locations. The proxies are only leveraged in configuring the EnterpriseCloudResources policy to force traffic to the matched cloud resources through these proxies.
      * @param value Value to set for the enterpriseInternalProxyServers property.
      */
     public void setEnterpriseInternalProxyServers(@jakarta.annotation.Nullable final java.util.List<String> value) {

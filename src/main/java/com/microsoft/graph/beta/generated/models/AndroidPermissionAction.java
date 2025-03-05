@@ -87,7 +87,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the permission property value. Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
+     * Gets the permission property value. Android permission string, defined in the official Android documentation.  Example &apos;android.permission.READ_CONTACTS&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class AndroidPermissionAction implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the permission property value. Android permission string, defined in the official Android documentation.  Example 'android.permission.READ_CONTACTS'.
+     * Sets the permission property value. Android permission string, defined in the official Android documentation.  Example &apos;android.permission.READ_CONTACTS&apos;.
      * @param value Value to set for the permission property.
      */
     public void setPermission(@jakarta.annotation.Nullable final String value) {

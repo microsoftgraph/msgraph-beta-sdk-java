@@ -39,7 +39,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         super(requestAdapter, "{+baseurl}/employeeExperience/learningProviders/{learningProvider%2Did}/learningContents(externalId='{externalId}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete the specified learningContent resource that represents the metadata of the specified provider&apos;s ingested content.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-beta">Find more info here</a>
      */
@@ -47,7 +47,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         delete(null);
     }
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete the specified learningContent resource that represents the metadata of the specified provider&apos;s ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/learningprovider-delete-learningcontents?view=graph-rest-beta">Find more info here</a>
@@ -59,7 +59,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      * @return a {@link LearningContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/learningcontent-get?view=graph-rest-beta">Find more info here</a>
@@ -69,7 +69,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         return get(null);
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LearningContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -83,7 +83,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, LearningContent::createFromDiscriminatorValue);
     }
     /**
-     * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn't yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
+     * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn&apos;t yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
      * @param body The request body
      * @return a {@link LearningContent}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -94,7 +94,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         return patch(body, null);
     }
     /**
-     * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn't yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
+     * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn&apos;t yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LearningContent}
@@ -110,7 +110,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         return this.requestAdapter.send(requestInfo, errorMapping, LearningContent::createFromDiscriminatorValue);
     }
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete the specified learningContent resource that represents the metadata of the specified provider&apos;s ingested content.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the specified learningContent resource that represents the metadata of the specified provider's ingested content.
+     * Delete the specified learningContent resource that represents the metadata of the specified provider&apos;s ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -130,7 +130,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         return toGetRequestInformation(null);
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -150,7 +150,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         return requestInfo;
     }
     /**
-     * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn't yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
+     * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn&apos;t yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -159,7 +159,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn't yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
+     * Update the specified learningContent resource. Used by a learning provider to ingest or update the metadata for their content in Viva Learning. If the specified learning content doesn&apos;t yet exist for the specified provider, this operation creates the metadata for the new content. Otherwise, this operation replaces the metadata of the existing content.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -190,7 +190,7 @@ public class LearningContentsWithExternalIdRequestBuilder extends BaseRequestBui
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the specified learningContent resource which represents the metadata of the specified provider's ingested content.
+     * Get the specified learningContent resource which represents the metadata of the specified provider&apos;s ingested content.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -27,7 +27,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
         return new EmailActivityStatistics();
     }
     /**
-     * Gets the afterHours property value. Total hours spent on email outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
+     * Gets the afterHours property value. Total hours spent on email outside of working hours, which is based on the user&apos;s Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class EmailActivityStatistics extends ActivityStatistics implements Parsa
         writer.writePeriodAndDurationValue("sentEmail", this.getSentEmail());
     }
     /**
-     * Sets the afterHours property value. Total hours spent on email outside of working hours, which is based on the user's Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
+     * Sets the afterHours property value. Total hours spent on email outside of working hours, which is based on the user&apos;s Outlook calendar setting for work hours. The value is represented in ISO 8601 format for durations.
      * @param value Value to set for the afterHours property.
      */
     public void setAfterHours(@jakarta.annotation.Nullable final PeriodAndDuration value) {

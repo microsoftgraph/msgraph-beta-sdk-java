@@ -60,7 +60,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/groups/{group%2Did}/settings{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Settings that can govern this group&apos;s behavior, like whether members can invite guest users to the group. Nullable.
      * @return a {@link DirectorySettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Settings that can govern this group&apos;s behavior, like whether members can invite guest users to the group. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectorySettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -109,7 +109,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectorySetting::createFromDiscriminatorValue);
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Settings that can govern this group&apos;s behavior, like whether members can invite guest users to the group. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Settings that can govern this group&apos;s behavior, like whether members can invite guest users to the group. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +163,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return new SettingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+     * Settings that can govern this group&apos;s behavior, like whether members can invite guest users to the group. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

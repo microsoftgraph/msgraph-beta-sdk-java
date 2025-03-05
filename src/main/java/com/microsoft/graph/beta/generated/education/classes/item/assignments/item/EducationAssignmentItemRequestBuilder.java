@@ -180,7 +180,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Update an educationAssignment object.  Only teachers in the class can do this. You can't use a PATCH request to change the status of an assignment. Use the publish action to change the assignment status.
+     * Update an educationAssignment object.  Only teachers in the class can do this. You can&apos;t use a PATCH request to change the status of an assignment. Use the publish action to change the assignment status.
      * @param body The request body
      * @return a {@link EducationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -191,7 +191,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an educationAssignment object.  Only teachers in the class can do this. You can't use a PATCH request to change the status of an assignment. Use the publish action to change the assignment status.
+     * Update an educationAssignment object.  Only teachers in the class can do this. You can&apos;t use a PATCH request to change the status of an assignment. Use the publish action to change the assignment status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationAssignment}
@@ -247,7 +247,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an educationAssignment object.  Only teachers in the class can do this. You can't use a PATCH request to change the status of an assignment. Use the publish action to change the assignment status.
+     * Update an educationAssignment object.  Only teachers in the class can do this. You can&apos;t use a PATCH request to change the status of an assignment. Use the publish action to change the assignment status.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -256,7 +256,7 @@ public class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an educationAssignment object.  Only teachers in the class can do this. You can't use a PATCH request to change the status of an assignment. Use the publish action to change the assignment status.
+     * Update an educationAssignment object.  Only teachers in the class can do this. You can&apos;t use a PATCH request to change the status of an assignment. Use the publish action to change the assignment status.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

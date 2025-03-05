@@ -68,7 +68,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the isOutOfOffice property value. True if either:It is currently in the out of office time window configured on the Outlook or Teams client.There is currently an event on the user's calendar that's marked as Show as Out of OfficeOtherwise, false.
+     * Gets the isOutOfOffice property value. True if either:It is currently in the out of office time window configured on the Outlook or Teams client.There is currently an event on the user&apos;s calendar that&apos;s marked as Show as Out of OfficeOtherwise, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class OutOfOfficeSettings implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the isOutOfOffice property value. True if either:It is currently in the out of office time window configured on the Outlook or Teams client.There is currently an event on the user's calendar that's marked as Show as Out of OfficeOtherwise, false.
+     * Sets the isOutOfOffice property value. True if either:It is currently in the out of office time window configured on the Outlook or Teams client.There is currently an event on the user&apos;s calendar that&apos;s marked as Show as Out of OfficeOtherwise, false.
      * @param value Value to set for the isOutOfOffice property.
      */
     public void setIsOutOfOffice(@jakarta.annotation.Nullable final Boolean value) {

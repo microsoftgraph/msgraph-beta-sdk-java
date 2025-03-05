@@ -10,7 +10,7 @@ import java.util.Objects;
 public enum VppTokenActionFailureReason implements ValuedEnum {
     /** None. */
     None("none"),
-    /** There was an error on Apple's service. */
+    /** There was an error on Apple&apos;s service. */
     AppleFailure("appleFailure"),
     /** There was an internal error. */
     InternalError("internalError"),

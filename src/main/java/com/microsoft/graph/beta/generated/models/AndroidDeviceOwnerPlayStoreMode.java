@@ -12,7 +12,7 @@ public enum AndroidDeviceOwnerPlayStoreMode implements ValuedEnum {
     NotConfigured("notConfigured"),
     /** Only apps that are in the policy are available and any app not in the policy will be automatically uninstalled from the device. */
     AllowList("allowList"),
-    /** All apps are available and any app that should not be on the device should be explicitly marked as 'BLOCKED' in the applications policy. */
+    /** All apps are available and any app that should not be on the device should be explicitly marked as &apos;BLOCKED&apos; in the applications policy. */
     BlockList("blockList");
     public final String value;
     AndroidDeviceOwnerPlayStoreMode(final String value) {

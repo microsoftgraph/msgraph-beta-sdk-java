@@ -366,7 +366,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("defenderCheckForSignaturesBeforeRunningScan");
     }
     /**
-     * Gets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Gets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the &apos;Join Microsoft MAPS&apos; setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
      * @return a {@link DefenderCloudBlockLevelType}
      */
     @jakarta.annotation.Nullable
@@ -374,7 +374,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("defenderCloudBlockLevel");
     }
     /**
-     * Gets the defenderCloudExtendedTimeoutInSeconds property value. Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50
+     * Gets the defenderCloudExtendedTimeoutInSeconds property value. Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it&apos;s safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- &apos;Configure the &apos;Block at First Sight&apos; feature; &apos;Join Microsoft MAPS&apos;; &apos;Send file samples when further analysis is required&apos;. Valid values 0 to 50
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -1409,7 +1409,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("lanManagerWorkstationDisableInsecureGuestLogons");
     }
     /**
-     * Gets the localSecurityOptionsAdministratorAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'.
+     * Gets the localSecurityOptionsAdministratorAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account &apos;Administrator&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1625,7 +1625,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser");
     }
     /**
-     * Gets the localSecurityOptionsGuestAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Guest'.
+     * Gets the localSecurityOptionsGuestAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account &apos;Guest&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1745,7 +1745,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("localSecurityOptionsStandardUserElevationPromptBehavior");
     }
     /**
-     * Gets the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property value. Enable all elevation requests to go to the interactive user's desktop rather than the secure desktop. Prompt behavior policy settings for admins and standard users are used.
+     * Gets the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property value. Enable all elevation requests to go to the interactive user&apos;s desktop rather than the secure desktop. Prompt behavior policy settings for admins and standard users are used.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1793,7 +1793,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("smartScreenEnableInShell");
     }
     /**
-     * Gets the userRightsAccessCredentialManagerAsTrustedCaller property value. This user right is used by Credential Manager during Backup/Restore. Users' saved credentials might be compromised if this privilege is given to other entities. Only states NotConfigured and Allowed are supported
+     * Gets the userRightsAccessCredentialManagerAsTrustedCaller property value. This user right is used by Credential Manager during Backup/Restore. Users&apos; saved credentials might be compromised if this privilege is given to other entities. Only states NotConfigured and Allowed are supported
      * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
@@ -1841,7 +1841,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("userRightsChangeSystemTime");
     }
     /**
-     * Gets the userRightsCreateGlobalObjects property value. This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users' sessions, which could lead to application failure or data corruption. Only states NotConfigured and Allowed are supported
+     * Gets the userRightsCreateGlobalObjects property value. This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users&apos; sessions, which could lead to application failure or data corruption. Only states NotConfigured and Allowed are supported
      * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
@@ -1913,7 +1913,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("userRightsGenerateSecurityAudits");
     }
     /**
-     * Gets the userRightsImpersonateClient property value. Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user's permissions to administrative or system levels. Only states NotConfigured and Allowed are supported.
+     * Gets the userRightsImpersonateClient property value. Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user&apos;s permissions to administrative or system levels. Only states NotConfigured and Allowed are supported.
      * @return a {@link DeviceManagementUserRightsSetting}
      */
     @jakarta.annotation.Nullable
@@ -2601,14 +2601,14 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("defenderCheckForSignaturesBeforeRunningScan", value);
     }
     /**
-     * Sets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the 'Join Microsoft MAPS' setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Sets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the &apos;Join Microsoft MAPS&apos; setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
      * @param value Value to set for the defenderCloudBlockLevel property.
      */
     public void setDefenderCloudBlockLevel(@jakarta.annotation.Nullable final DefenderCloudBlockLevelType value) {
         this.backingStore.set("defenderCloudBlockLevel", value);
     }
     /**
-     * Sets the defenderCloudExtendedTimeoutInSeconds property value. Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it's safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- 'Configure the 'Block at First Sight' feature; 'Join Microsoft MAPS'; 'Send file samples when further analysis is required'. Valid values 0 to 50
+     * Sets the defenderCloudExtendedTimeoutInSeconds property value. Added in Windows 10, version 1709. This feature allows Windows Defender Antivirus to block a suspicious file for up to 60 seconds, and scan it in the cloud to make sure it&apos;s safe. Value type is integer, range is 0 - 50. This feature depends on three other MAPS settings the must all be enabled- &apos;Configure the &apos;Block at First Sight&apos; feature; &apos;Join Microsoft MAPS&apos;; &apos;Send file samples when further analysis is required&apos;. Valid values 0 to 50
      * @param value Value to set for the defenderCloudExtendedTimeoutInSeconds property.
      */
     public void setDefenderCloudExtendedTimeoutInSeconds(@jakarta.annotation.Nullable final Integer value) {
@@ -3308,7 +3308,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("lanManagerWorkstationDisableInsecureGuestLogons", value);
     }
     /**
-     * Sets the localSecurityOptionsAdministratorAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Administrator'.
+     * Sets the localSecurityOptionsAdministratorAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account &apos;Administrator&apos;.
      * @param value Value to set for the localSecurityOptionsAdministratorAccountName property.
      */
     public void setLocalSecurityOptionsAdministratorAccountName(@jakarta.annotation.Nullable final String value) {
@@ -3497,7 +3497,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", value);
     }
     /**
-     * Sets the localSecurityOptionsGuestAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account 'Guest'.
+     * Sets the localSecurityOptionsGuestAccountName property value. Define a different account name to be associated with the security identifier (SID) for the account &apos;Guest&apos;.
      * @param value Value to set for the localSecurityOptionsGuestAccountName property.
      */
     public void setLocalSecurityOptionsGuestAccountName(@jakarta.annotation.Nullable final String value) {
@@ -3602,7 +3602,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("localSecurityOptionsStandardUserElevationPromptBehavior", value);
     }
     /**
-     * Sets the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property value. Enable all elevation requests to go to the interactive user's desktop rather than the secure desktop. Prompt behavior policy settings for admins and standard users are used.
+     * Sets the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property value. Enable all elevation requests to go to the interactive user&apos;s desktop rather than the secure desktop. Prompt behavior policy settings for admins and standard users are used.
      * @param value Value to set for the localSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation property.
      */
     public void setLocalSecurityOptionsSwitchToSecureDesktopWhenPromptingForElevation(@jakarta.annotation.Nullable final Boolean value) {
@@ -3644,7 +3644,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("smartScreenEnableInShell", value);
     }
     /**
-     * Sets the userRightsAccessCredentialManagerAsTrustedCaller property value. This user right is used by Credential Manager during Backup/Restore. Users' saved credentials might be compromised if this privilege is given to other entities. Only states NotConfigured and Allowed are supported
+     * Sets the userRightsAccessCredentialManagerAsTrustedCaller property value. This user right is used by Credential Manager during Backup/Restore. Users&apos; saved credentials might be compromised if this privilege is given to other entities. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsAccessCredentialManagerAsTrustedCaller property.
      */
     public void setUserRightsAccessCredentialManagerAsTrustedCaller(@jakarta.annotation.Nullable final DeviceManagementUserRightsSetting value) {
@@ -3686,7 +3686,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("userRightsChangeSystemTime", value);
     }
     /**
-     * Sets the userRightsCreateGlobalObjects property value. This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users' sessions, which could lead to application failure or data corruption. Only states NotConfigured and Allowed are supported
+     * Sets the userRightsCreateGlobalObjects property value. This security setting determines whether users can create global objects that are available to all sessions. Users who can create global objects could affect processes that run under other users&apos; sessions, which could lead to application failure or data corruption. Only states NotConfigured and Allowed are supported
      * @param value Value to set for the userRightsCreateGlobalObjects property.
      */
     public void setUserRightsCreateGlobalObjects(@jakarta.annotation.Nullable final DeviceManagementUserRightsSetting value) {
@@ -3749,7 +3749,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("userRightsGenerateSecurityAudits", value);
     }
     /**
-     * Sets the userRightsImpersonateClient property value. Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user's permissions to administrative or system levels. Only states NotConfigured and Allowed are supported.
+     * Sets the userRightsImpersonateClient property value. Assigning this user right to a user allows programs running on behalf of that user to impersonate a client. Requiring this user right for this kind of impersonation prevents an unauthorized user from convincing a client to connect to a service that they have created and then impersonating that client, which can elevate the unauthorized user&apos;s permissions to administrative or system levels. Only states NotConfigured and Allowed are supported.
      * @param value Value to set for the userRightsImpersonateClient property.
      */
     public void setUserRightsImpersonateClient(@jakarta.annotation.Nullable final DeviceManagementUserRightsSetting value) {

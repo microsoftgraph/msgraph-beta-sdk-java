@@ -94,7 +94,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the objectId property value. The object identifier of the subject. null if the subject isn't yet a user in the tenant. Alternate key.
+     * Gets the objectId property value. The object identifier of the subject. null if the subject isn&apos;t yet a user in the tenant. Alternate key.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class AccessPackageSubject extends Entity implements Parsable {
         return this.backingStore.get("objectId");
     }
     /**
-     * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
+     * Gets the onPremisesSecurityIdentifier property value. A string representation of the principal&apos;s security identifier, if known, or null if the subject doesn&apos;t have a security identifier.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -195,14 +195,14 @@ public class AccessPackageSubject extends Entity implements Parsable {
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the objectId property value. The object identifier of the subject. null if the subject isn't yet a user in the tenant. Alternate key.
+     * Sets the objectId property value. The object identifier of the subject. null if the subject isn&apos;t yet a user in the tenant. Alternate key.
      * @param value Value to set for the objectId property.
      */
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("objectId", value);
     }
     /**
-     * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal's security identifier, if known, or null if the subject doesn't have a security identifier.
+     * Sets the onPremisesSecurityIdentifier property value. A string representation of the principal&apos;s security identifier, if known, or null if the subject doesn&apos;t have a security identifier.
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {

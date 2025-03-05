@@ -35,7 +35,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/riskyUsers/dismiss", rawUrl);
     }
     /**
-     * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user's risk level to none. The maximum count of users to dismiss in one call is 60.
+     * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user&apos;s risk level to none. The maximum count of users to dismiss in one call is 60.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/riskyusers-dismiss?view=graph-rest-beta">Find more info here</a>
@@ -44,7 +44,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user's risk level to none. The maximum count of users to dismiss in one call is 60.
+     * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user&apos;s risk level to none. The maximum count of users to dismiss in one call is 60.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user's risk level to none. The maximum count of users to dismiss in one call is 60.
+     * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user&apos;s risk level to none. The maximum count of users to dismiss in one call is 60.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class DismissRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user's risk level to none. The maximum count of users to dismiss in one call is 60.
+     * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user&apos;s risk level to none. The maximum count of users to dismiss in one call is 60.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

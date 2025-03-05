@@ -92,7 +92,7 @@ public class MailboxFolder extends Entity implements Parsable {
         return this.backingStore.get("parentFolderId");
     }
     /**
-     * Gets the parentMailboxUrl property value. The routing link to the actual underlying mailbox where the folder physically resides. The folder can be accessed using GET {parentMailboxUrl}/folders/{id}, which treats the entire URL as an opaque string.  This method is especially important when auto-expanding archiving is enabled for a user's in-place archive mailbox. The user's archive content can span across multiple mailboxes in such scenarios.
+     * Gets the parentMailboxUrl property value. The routing link to the actual underlying mailbox where the folder physically resides. The folder can be accessed using GET {parentMailboxUrl}/folders/{id}, which treats the entire URL as an opaque string.  This method is especially important when auto-expanding archiving is enabled for a user&apos;s in-place archive mailbox. The user&apos;s archive content can span across multiple mailboxes in such scenarios.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class MailboxFolder extends Entity implements Parsable {
         this.backingStore.set("parentFolderId", value);
     }
     /**
-     * Sets the parentMailboxUrl property value. The routing link to the actual underlying mailbox where the folder physically resides. The folder can be accessed using GET {parentMailboxUrl}/folders/{id}, which treats the entire URL as an opaque string.  This method is especially important when auto-expanding archiving is enabled for a user's in-place archive mailbox. The user's archive content can span across multiple mailboxes in such scenarios.
+     * Sets the parentMailboxUrl property value. The routing link to the actual underlying mailbox where the folder physically resides. The folder can be accessed using GET {parentMailboxUrl}/folders/{id}, which treats the entire URL as an opaque string.  This method is especially important when auto-expanding archiving is enabled for a user&apos;s in-place archive mailbox. The user&apos;s archive content can span across multiple mailboxes in such scenarios.
      * @param value Value to set for the parentMailboxUrl property.
      */
     public void setParentMailboxUrl(@jakarta.annotation.Nullable final String value) {

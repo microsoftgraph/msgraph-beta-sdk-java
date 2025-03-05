@@ -44,7 +44,7 @@ public class CopilotAdminLimitedMode extends Entity implements Parsable {
         return this.backingStore.get("groupId");
     }
     /**
-     * Gets the isEnabledForGroup property value. Enables the user to be in limited mode for Copilot in Teams meetings. When copilotAdminLimitedMode=true, users in this mode can ask any questions, but Copilot doesn't respond to certain questions related to inferring emotions, behavior, or judgments. When copilotAdminLimitedMode=false, it responds to any types of questions grounded to the meeting conversation. The default value is false.
+     * Gets the isEnabledForGroup property value. Enables the user to be in limited mode for Copilot in Teams meetings. When copilotAdminLimitedMode=true, users in this mode can ask any questions, but Copilot doesn&apos;t respond to certain questions related to inferring emotions, behavior, or judgments. When copilotAdminLimitedMode=false, it responds to any types of questions grounded to the meeting conversation. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class CopilotAdminLimitedMode extends Entity implements Parsable {
         this.backingStore.set("groupId", value);
     }
     /**
-     * Sets the isEnabledForGroup property value. Enables the user to be in limited mode for Copilot in Teams meetings. When copilotAdminLimitedMode=true, users in this mode can ask any questions, but Copilot doesn't respond to certain questions related to inferring emotions, behavior, or judgments. When copilotAdminLimitedMode=false, it responds to any types of questions grounded to the meeting conversation. The default value is false.
+     * Sets the isEnabledForGroup property value. Enables the user to be in limited mode for Copilot in Teams meetings. When copilotAdminLimitedMode=true, users in this mode can ask any questions, but Copilot doesn&apos;t respond to certain questions related to inferring emotions, behavior, or judgments. When copilotAdminLimitedMode=false, it responds to any types of questions grounded to the meeting conversation. The default value is false.
      * @param value Value to set for the isEnabledForGroup property.
      */
     public void setIsEnabledForGroup(@jakarta.annotation.Nullable final Boolean value) {

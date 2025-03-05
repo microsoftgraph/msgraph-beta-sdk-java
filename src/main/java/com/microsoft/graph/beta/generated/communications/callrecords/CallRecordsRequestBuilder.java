@@ -66,7 +66,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/callRecords{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don&apos;t include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
      * @return a {@link CallRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/callrecords-cloudcommunications-list-callrecords?view=graph-rest-beta">Find more info here</a>
@@ -76,7 +76,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don&apos;t include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CallRecordCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -175,7 +175,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CallRecord::createFromDiscriminatorValue);
     }
     /**
-     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don&apos;t include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -183,7 +183,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don&apos;t include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -229,7 +229,7 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
         return new CallRecordsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don't include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
+     * Get the list of callRecord objects and their properties. The results can be optionally filtered using the $filter query parameter on the startDateTime and participant id properties. Note that the listed call records don&apos;t include expandable relationships such as sessions and participants_v2. You can expand these relationships using Get callRecord for a specific record.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

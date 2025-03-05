@@ -54,7 +54,7 @@ public class ActivityStatistics extends Entity implements Parsable {
         return this.backingStore.get("duration");
     }
     /**
-     * Gets the endDate property value. Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
+     * Gets the endDate property value. Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be &apos;2019-07-03&apos; that follows the YYYY-MM-DD format.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class ActivityStatistics extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the startDate property value. Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
+     * Gets the startDate property value. Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be &apos;2019-07-04&apos; that follows the YYYY-MM-DD format.
      * @return a {@link LocalDate}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class ActivityStatistics extends Entity implements Parsable {
         return this.backingStore.get("startDate");
     }
     /**
-     * Gets the timeZoneUsed property value. The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
+     * Gets the timeZoneUsed property value. The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be &apos;Pacific Standard Time.&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -119,21 +119,21 @@ public class ActivityStatistics extends Entity implements Parsable {
         this.backingStore.set("duration", value);
     }
     /**
-     * Sets the endDate property value. Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-03' that follows the YYYY-MM-DD format.
+     * Sets the endDate property value. Date when the activity ended, expressed in ISO 8601 format for calendar dates. For example, the property value could be &apos;2019-07-03&apos; that follows the YYYY-MM-DD format.
      * @param value Value to set for the endDate property.
      */
     public void setEndDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("endDate", value);
     }
     /**
-     * Sets the startDate property value. Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be '2019-07-04' that follows the YYYY-MM-DD format.
+     * Sets the startDate property value. Date when the activity started, expressed in ISO 8601 format for calendar dates. For example, the property value could be &apos;2019-07-04&apos; that follows the YYYY-MM-DD format.
      * @param value Value to set for the startDate property.
      */
     public void setStartDate(@jakarta.annotation.Nullable final LocalDate value) {
         this.backingStore.set("startDate", value);
     }
     /**
-     * Sets the timeZoneUsed property value. The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be 'Pacific Standard Time.'
+     * Sets the timeZoneUsed property value. The time zone that the user sets in Microsoft Outlook is used for the computation. For example, the property value could be &apos;Pacific Standard Time.&apos;
      * @param value Value to set for the timeZoneUsed property.
      */
     public void setTimeZoneUsed(@jakarta.annotation.Nullable final String value) {

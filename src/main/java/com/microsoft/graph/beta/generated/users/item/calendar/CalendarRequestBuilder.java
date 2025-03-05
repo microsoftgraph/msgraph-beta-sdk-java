@@ -68,7 +68,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the allowedCalendarSharingRoles method.
-     * @param User Usage: User='{User}'
+     * @param User Usage: User=&apos;{User}&apos;
      * @return a {@link AllowedCalendarSharingRolesWithUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -93,7 +93,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/calendar{?%24expand,%24select}", rawUrl);
     }
     /**
-     * The user's primary calendar. Read-only.
+     * The user&apos;s primary calendar. Read-only.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -102,7 +102,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The user's primary calendar. Read-only.
+     * The user&apos;s primary calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Calendar}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Calendar::createFromDiscriminatorValue);
     }
     /**
-     * The user's primary calendar. Read-only.
+     * The user&apos;s primary calendar. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The user's primary calendar. Read-only.
+     * The user&apos;s primary calendar. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -194,7 +194,7 @@ public class CalendarRequestBuilder extends BaseRequestBuilder {
         return new CalendarRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The user's primary calendar. Read-only.
+     * The user&apos;s primary calendar. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -64,7 +64,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents a user's custom solution entity. Read-Only. Nullable.
+     * Represents a user&apos;s custom solution entity. Read-Only. Nullable.
      * @return a {@link UserSolutionRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents a user's custom solution entity. Read-Only. Nullable.
+     * Represents a user&apos;s custom solution entity. Read-Only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserSolutionRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a user's custom solution entity. Read-Only. Nullable.
+     * Represents a user&apos;s custom solution entity. Read-Only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a user's custom solution entity. Read-Only. Nullable.
+     * Represents a user&apos;s custom solution entity. Read-Only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a user's custom solution entity. Read-Only. Nullable.
+     * Represents a user&apos;s custom solution entity. Read-Only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

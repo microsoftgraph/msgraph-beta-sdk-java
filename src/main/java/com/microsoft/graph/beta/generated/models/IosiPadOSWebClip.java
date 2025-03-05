@@ -29,7 +29,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
         return new IosiPadOSWebClip();
     }
     /**
-     * Gets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
+     * Gets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: &apos;https://www.contoso.com&apos;
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
         return this.backingStore.get("ignoreManifestScope");
     }
     /**
-     * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
+     * Gets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding &apos;shine&apos; to the icon. If FALSE, SpringBoard can add &apos;shine&apos;.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
         writer.writeBooleanValue("useManagedBrowser", this.getUseManagedBrowser());
     }
     /**
-     * Sets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
+     * Sets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: &apos;https://www.contoso.com&apos;
      * @param value Value to set for the appUrl property.
      */
     public void setAppUrl(@jakarta.annotation.Nullable final String value) {
@@ -127,7 +127,7 @@ public class IosiPadOSWebClip extends MobileApp implements Parsable {
         this.backingStore.set("ignoreManifestScope", value);
     }
     /**
-     * Sets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding 'shine' to the icon. If FALSE, SpringBoard can add 'shine'.
+     * Sets the preComposedIconEnabled property value. Whether or not the icon for the app is precomosed. Defaults to false. If TRUE, prevents SpringBoard from adding &apos;shine&apos; to the icon. If FALSE, SpringBoard can add &apos;shine&apos;.
      * @param value Value to set for the preComposedIconEnabled property.
      */
     public void setPreComposedIconEnabled(@jakarta.annotation.Nullable final Boolean value) {

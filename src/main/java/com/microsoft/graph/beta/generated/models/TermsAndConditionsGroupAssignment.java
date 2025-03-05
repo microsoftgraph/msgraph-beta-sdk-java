@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * A termsAndConditionsGroupAssignment entity represents the assignment of a given Terms and Conditions (T&C) policy to a given group. Users in the group will be required to accept the terms in order to have devices enrolled into Intune.
+ * A termsAndConditionsGroupAssignment entity represents the assignment of a given Terms and Conditions (T&amp;C) policy to a given group. Users in the group will be required to accept the terms in order to have devices enrolled into Intune.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class TermsAndConditionsGroupAssignment extends Entity implements Parsable {
@@ -39,7 +39,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the targetGroupId property value. Unique identifier of a group that the T&C policy is assigned to.
+     * Gets the targetGroupId property value. Unique identifier of a group that the T&amp;C policy is assigned to.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class TermsAndConditionsGroupAssignment extends Entity implements Parsabl
         writer.writeObjectValue("termsAndConditions", this.getTermsAndConditions());
     }
     /**
-     * Sets the targetGroupId property value. Unique identifier of a group that the T&C policy is assigned to.
+     * Sets the targetGroupId property value. Unique identifier of a group that the T&amp;C policy is assigned to.
      * @param value Value to set for the targetGroupId property.
      */
     public void setTargetGroupId(@jakarta.annotation.Nullable final String value) {

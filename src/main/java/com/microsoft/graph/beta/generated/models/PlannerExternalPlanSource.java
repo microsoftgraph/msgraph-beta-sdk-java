@@ -26,7 +26,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
         return new PlannerExternalPlanSource();
     }
     /**
-     * Gets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
+     * Gets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like &apos;com.constoso.customerSupport&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
         return this.backingStore.get("contextScenarioId");
     }
     /**
-     * Gets the externalContextId property value. Nullable. The ID of the external entity's containing entity or context.
+     * Gets the externalContextId property value. Nullable. The ID of the external entity&apos;s containing entity or context.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,14 +73,14 @@ public class PlannerExternalPlanSource extends PlannerPlanCreation implements Pa
         writer.writeStringValue("externalObjectId", this.getExternalObjectId());
     }
     /**
-     * Sets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like 'com.constoso.customerSupport'.
+     * Sets the contextScenarioId property value. Nullable. An identifier for the scenario associated with this external source. This should be in reverse DNS format. For example, Contoso company owned application for customer support would have a value like &apos;com.constoso.customerSupport&apos;.
      * @param value Value to set for the contextScenarioId property.
      */
     public void setContextScenarioId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("contextScenarioId", value);
     }
     /**
-     * Sets the externalContextId property value. Nullable. The ID of the external entity's containing entity or context.
+     * Sets the externalContextId property value. Nullable. The ID of the external entity&apos;s containing entity or context.
      * @param value Value to set for the externalContextId property.
      */
     public void setExternalContextId(@jakarta.annotation.Nullable final String value) {

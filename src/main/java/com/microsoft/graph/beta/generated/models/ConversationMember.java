@@ -66,7 +66,7 @@ public class ConversationMember extends Entity implements Parsable {
         return this.backingStore.get("roles");
     }
     /**
-     * Gets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+     * Gets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation&apos;s history is shared with the conversation member. This property is settable only for members of a chat.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ConversationMember extends Entity implements Parsable {
         this.backingStore.set("roles", value);
     }
     /**
-     * Sets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation's history is shared with the conversation member. This property is settable only for members of a chat.
+     * Sets the visibleHistoryStartDateTime property value. The timestamp denoting how far back a conversation&apos;s history is shared with the conversation member. This property is settable only for members of a chat.
      * @param value Value to set for the visibleHistoryStartDateTime property.
      */
     public void setVisibleHistoryStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

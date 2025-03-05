@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * BIOS configuration and other settings provides customers the ability to configure hardware/bios settings on the enrolled Windows 10/11 Entra ID joined devices by uploading a configuration file generated with their OEM tool (e.g. Dell Command tool). A BIOS configuration policy can be assigned to multiple devices, allowing admins to remotely control a device's hardware properties (e.g. enable Secure Boot) from the Intune Portal. Supported for Dell only at this time.
+ * BIOS configuration and other settings provides customers the ability to configure hardware/bios settings on the enrolled Windows 10/11 Entra ID joined devices by uploading a configuration file generated with their OEM tool (e.g. Dell Command tool). A BIOS configuration policy can be assigned to multiple devices, allowing admins to remotely control a device&apos;s hardware properties (e.g. enable Secure Boot) from the Intune Portal. Supported for Dell only at this time.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class HardwareConfiguration extends Entity implements Parsable {
@@ -37,7 +37,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
-     * Gets the configurationFileContent property value. The file content contains custom hardware settings that will be applied to the assigned devices' BIOS. Max allowed file size is 5KB. Represented as bytes. Required.
+     * Gets the configurationFileContent property value. The file content contains custom hardware settings that will be applied to the assigned devices&apos; BIOS. Max allowed file size is 5KB. Represented as bytes. Required.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("configurationFileContent");
     }
     /**
-     * Gets the createdDateTime property value. The date and time  of when the BIOS configuration profile was created. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-Only. This property is read-only.
+     * Gets the createdDateTime property value. The date and time  of when the BIOS configuration profile was created. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-Only. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description of the hardware configuration. Use this to provide context, purpose, applications, etc of the BIOS configuration profile for your organization's admins. Max length is 1000 characters. Optional.
+     * Gets the description property value. The description of the hardware configuration. Use this to provide context, purpose, applications, etc of the BIOS configuration profile for your organization&apos;s admins. Max length is 1000 characters. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fileName property value. The file name for the BIOS configuration profile's ConfigurationFileContent. Max length is 150 characters. Required.
+     * Gets the fileName property value. The file name for the BIOS configuration profile&apos;s ConfigurationFileContent. Max length is 150 characters. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("hardwareConfigurationFormat");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The date and time  of when the BIOS configuration profile was last modified. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-Only. Read-Only. This property is read-only.
+     * Gets the lastModifiedDateTime property value. The date and time  of when the BIOS configuration profile was last modified. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-Only. Read-Only. This property is read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the perDevicePasswordDisabled property value. When TRUE, indicates whether the policy-assigned devices' passwords are disabled. When FALSE, indicates they are enabled. Default is FALSE. Required.
+     * Gets the perDevicePasswordDisabled property value. When TRUE, indicates whether the policy-assigned devices&apos; passwords are disabled. When FALSE, indicates they are enabled. Default is FALSE. Required.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         return this.backingStore.get("userRunStates");
     }
     /**
-     * Gets the version property value. The version of the hardware configuration (E.g. 1, 2, 3 ...). This is incremented after a change to the BIOS configuration profile's settings file name (FileName property), settings file content (ConfigurationFileContent property), or the PerDevicePasswordDisabled property. Read-Only.
+     * Gets the version property value. The version of the hardware configuration (E.g. 1, 2, 3 ...). This is incremented after a change to the BIOS configuration profile&apos;s settings file name (FileName property), settings file content (ConfigurationFileContent property), or the PerDevicePasswordDisabled property. Read-Only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -191,21 +191,21 @@ public class HardwareConfiguration extends Entity implements Parsable {
         this.backingStore.set("assignments", value);
     }
     /**
-     * Sets the configurationFileContent property value. The file content contains custom hardware settings that will be applied to the assigned devices' BIOS. Max allowed file size is 5KB. Represented as bytes. Required.
+     * Sets the configurationFileContent property value. The file content contains custom hardware settings that will be applied to the assigned devices&apos; BIOS. Max allowed file size is 5KB. Represented as bytes. Required.
      * @param value Value to set for the configurationFileContent property.
      */
     public void setConfigurationFileContent(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("configurationFileContent", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time  of when the BIOS configuration profile was created. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-Only. This property is read-only.
+     * Sets the createdDateTime property value. The date and time  of when the BIOS configuration profile was created. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-Only. This property is read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description of the hardware configuration. Use this to provide context, purpose, applications, etc of the BIOS configuration profile for your organization's admins. Max length is 1000 characters. Optional.
+     * Sets the description property value. The description of the hardware configuration. Use this to provide context, purpose, applications, etc of the BIOS configuration profile for your organization&apos;s admins. Max length is 1000 characters. Optional.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -226,7 +226,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the fileName property value. The file name for the BIOS configuration profile's ConfigurationFileContent. Max length is 150 characters. Required.
+     * Sets the fileName property value. The file name for the BIOS configuration profile&apos;s ConfigurationFileContent. Max length is 150 characters. Required.
      * @param value Value to set for the fileName property.
      */
     public void setFileName(@jakarta.annotation.Nullable final String value) {
@@ -240,14 +240,14 @@ public class HardwareConfiguration extends Entity implements Parsable {
         this.backingStore.set("hardwareConfigurationFormat", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The date and time  of when the BIOS configuration profile was last modified. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-Only. Read-Only. This property is read-only.
+     * Sets the lastModifiedDateTime property value. The date and time  of when the BIOS configuration profile was last modified. The value cannot be modified and is automatically populated when the device is enrolled. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-Only. Read-Only. This property is read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the perDevicePasswordDisabled property value. When TRUE, indicates whether the policy-assigned devices' passwords are disabled. When FALSE, indicates they are enabled. Default is FALSE. Required.
+     * Sets the perDevicePasswordDisabled property value. When TRUE, indicates whether the policy-assigned devices&apos; passwords are disabled. When FALSE, indicates they are enabled. Default is FALSE. Required.
      * @param value Value to set for the perDevicePasswordDisabled property.
      */
     public void setPerDevicePasswordDisabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -275,7 +275,7 @@ public class HardwareConfiguration extends Entity implements Parsable {
         this.backingStore.set("userRunStates", value);
     }
     /**
-     * Sets the version property value. The version of the hardware configuration (E.g. 1, 2, 3 ...). This is incremented after a change to the BIOS configuration profile's settings file name (FileName property), settings file content (ConfigurationFileContent property), or the PerDevicePasswordDisabled property. Read-Only.
+     * Sets the version property value. The version of the hardware configuration (E.g. 1, 2, 3 ...). This is incremented after a change to the BIOS configuration profile&apos;s settings file name (FileName property), settings file content (ConfigurationFileContent property), or the PerDevicePasswordDisabled property. Read-Only.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final Integer value) {

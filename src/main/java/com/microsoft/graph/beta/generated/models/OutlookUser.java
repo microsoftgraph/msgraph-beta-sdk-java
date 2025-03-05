@@ -46,7 +46,7 @@ public class OutlookUser extends Entity implements Parsable {
         return this.backingStore.get("masterCategories");
     }
     /**
-     * Gets the taskFolders property value. The user's Outlook task folders. Read-only. Nullable.
+     * Gets the taskFolders property value. The user&apos;s Outlook task folders. Read-only. Nullable.
      * @return a {@link java.util.List<OutlookTaskFolder>}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class OutlookUser extends Entity implements Parsable {
         return this.backingStore.get("taskFolders");
     }
     /**
-     * Gets the taskGroups property value. The user's Outlook task groups. Read-only. Nullable.
+     * Gets the taskGroups property value. The user&apos;s Outlook task groups. Read-only. Nullable.
      * @return a {@link java.util.List<OutlookTaskGroup>}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class OutlookUser extends Entity implements Parsable {
         return this.backingStore.get("taskGroups");
     }
     /**
-     * Gets the tasks property value. The user's Outlook tasks. Read-only. Nullable.
+     * Gets the tasks property value. The user&apos;s Outlook tasks. Read-only. Nullable.
      * @return a {@link java.util.List<OutlookTask>}
      */
     @jakarta.annotation.Nullable
@@ -89,21 +89,21 @@ public class OutlookUser extends Entity implements Parsable {
         this.backingStore.set("masterCategories", value);
     }
     /**
-     * Sets the taskFolders property value. The user's Outlook task folders. Read-only. Nullable.
+     * Sets the taskFolders property value. The user&apos;s Outlook task folders. Read-only. Nullable.
      * @param value Value to set for the taskFolders property.
      */
     public void setTaskFolders(@jakarta.annotation.Nullable final java.util.List<OutlookTaskFolder> value) {
         this.backingStore.set("taskFolders", value);
     }
     /**
-     * Sets the taskGroups property value. The user's Outlook task groups. Read-only. Nullable.
+     * Sets the taskGroups property value. The user&apos;s Outlook task groups. Read-only. Nullable.
      * @param value Value to set for the taskGroups property.
      */
     public void setTaskGroups(@jakarta.annotation.Nullable final java.util.List<OutlookTaskGroup> value) {
         this.backingStore.set("taskGroups", value);
     }
     /**
-     * Sets the tasks property value. The user's Outlook tasks. Read-only. Nullable.
+     * Sets the tasks property value. The user&apos;s Outlook tasks. Read-only. Nullable.
      * @param value Value to set for the tasks property.
      */
     public void setTasks(@jakarta.annotation.Nullable final java.util.List<OutlookTask> value) {

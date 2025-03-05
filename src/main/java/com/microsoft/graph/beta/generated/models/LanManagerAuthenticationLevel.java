@@ -8,17 +8,17 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum LanManagerAuthenticationLevel implements ValuedEnum {
-    /** Send LM & NTLM responses */
+    /** Send LM &amp; NTLM responses */
     LmAndNltm("lmAndNltm"),
-    /** Send LM & NTLM-use NTLMv2 session security if negotiated */
+    /** Send LM &amp; NTLM-use NTLMv2 session security if negotiated */
     LmNtlmAndNtlmV2("lmNtlmAndNtlmV2"),
-    /** Send LM & NTLM responses only */
+    /** Send LM &amp; NTLM responses only */
     LmAndNtlmOnly("lmAndNtlmOnly"),
-    /** Send LM & NTLMv2 responses only */
+    /** Send LM &amp; NTLMv2 responses only */
     LmAndNtlmV2("lmAndNtlmV2"),
-    /** Send LM & NTLMv2 responses only. Refuse LM */
+    /** Send LM &amp; NTLMv2 responses only. Refuse LM */
     LmNtlmV2AndNotLm("lmNtlmV2AndNotLm"),
-    /** Send LM & NTLMv2 responses only. Refuse LM & NTLM */
+    /** Send LM &amp; NTLMv2 responses only. Refuse LM &amp; NTLM */
     LmNtlmV2AndNotLmOrNtm("lmNtlmV2AndNotLmOrNtm");
     public final String value;
     LanManagerAuthenticationLevel(final String value) {

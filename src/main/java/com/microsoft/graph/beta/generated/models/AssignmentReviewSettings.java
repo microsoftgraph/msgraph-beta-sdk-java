@@ -36,7 +36,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
         return new AssignmentReviewSettings();
     }
     /**
-     * Gets the accessReviewTimeoutBehavior property value. The default decision to apply if the request isn't reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
+     * Gets the accessReviewTimeoutBehavior property value. The default decision to apply if the request isn&apos;t reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
      * @return a {@link AccessReviewTimeoutBehavior}
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accessReviewTimeoutBehavior property value. The default decision to apply if the request isn't reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
+     * Sets the accessReviewTimeoutBehavior property value. The default decision to apply if the request isn&apos;t reviewed within the period specified in durationInDays. The possible values are: acceptAccessRecommendation, keepAccess, removeAccess, and unknownFutureValue.
      * @param value Value to set for the accessReviewTimeoutBehavior property.
      */
     public void setAccessReviewTimeoutBehavior(@jakarta.annotation.Nullable final AccessReviewTimeoutBehavior value) {

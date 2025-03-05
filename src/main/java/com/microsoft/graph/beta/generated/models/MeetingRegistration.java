@@ -84,7 +84,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
         return this.backingStore.get("registrationPageWebUrl");
     }
     /**
-     * Gets the speakers property value. The meeting speaker's information.
+     * Gets the speakers property value. The meeting speaker&apos;s information.
      * @return a {@link java.util.List<MeetingSpeaker>}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class MeetingRegistration extends MeetingRegistrationBase implements Pars
         this.backingStore.set("registrationPageWebUrl", value);
     }
     /**
-     * Sets the speakers property value. The meeting speaker's information.
+     * Sets the speakers property value. The meeting speaker&apos;s information.
      * @param value Value to set for the speakers property.
      */
     public void setSpeakers(@jakarta.annotation.Nullable final java.util.List<MeetingSpeaker> value) {

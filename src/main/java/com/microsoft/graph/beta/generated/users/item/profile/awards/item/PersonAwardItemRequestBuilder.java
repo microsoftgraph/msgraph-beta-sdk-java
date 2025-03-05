@@ -37,7 +37,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/awards/{personAward%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a personAward object from a user's profile.
+     * Deletes a personAward object from a user&apos;s profile.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/personaward-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -45,7 +45,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Deletes a personAward object from a user's profile.
+     * Deletes a personAward object from a user&apos;s profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/personaward-delete?view=graph-rest-beta">Find more info here</a>
@@ -79,7 +79,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAward::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a personAward object from a user's profile.
+     * Update the properties of a personAward object from a user&apos;s profile.
      * @param body The request body
      * @return a {@link PersonAward}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -90,7 +90,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a personAward object from a user's profile.
+     * Update the properties of a personAward object from a user&apos;s profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PersonAward}
@@ -106,7 +106,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PersonAward::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a personAward object from a user's profile.
+     * Deletes a personAward object from a user&apos;s profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -114,7 +114,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a personAward object from a user's profile.
+     * Deletes a personAward object from a user&apos;s profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -146,7 +146,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a personAward object from a user's profile.
+     * Update the properties of a personAward object from a user&apos;s profile.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +155,7 @@ public class PersonAwardItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a personAward object from a user's profile.
+     * Update the properties of a personAward object from a user&apos;s profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

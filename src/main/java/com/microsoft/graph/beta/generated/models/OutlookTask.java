@@ -133,7 +133,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("owner");
     }
     /**
-     * Gets the parentFolderId property value. The unique identifier for the task's parent folder.
+     * Gets the parentFolderId property value. The unique identifier for the task&apos;s parent folder.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -293,7 +293,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         this.backingStore.set("owner", value);
     }
     /**
-     * Sets the parentFolderId property value. The unique identifier for the task's parent folder.
+     * Sets the parentFolderId property value. The unique identifier for the task&apos;s parent folder.
      * @param value Value to set for the parentFolderId property.
      */
     public void setParentFolderId(@jakarta.annotation.Nullable final String value) {

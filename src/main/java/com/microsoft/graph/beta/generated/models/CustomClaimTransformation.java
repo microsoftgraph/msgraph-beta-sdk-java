@@ -88,7 +88,7 @@ public class CustomClaimTransformation implements AdditionalDataHolder, BackedMo
         return deserializerMap;
     }
     /**
-     * Gets the input property value. The input attribute that provides the source for the transformation. This parameter is required if it's the first or only transformation in the list of transformations to be applied. Subsequent transformations use the output of the prior transformation as input.
+     * Gets the input property value. The input attribute that provides the source for the transformation. This parameter is required if it&apos;s the first or only transformation in the list of transformations to be applied. Subsequent transformations use the output of the prior transformation as input.
      * @return a {@link TransformationAttribute}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class CustomClaimTransformation implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the input property value. The input attribute that provides the source for the transformation. This parameter is required if it's the first or only transformation in the list of transformations to be applied. Subsequent transformations use the output of the prior transformation as input.
+     * Sets the input property value. The input attribute that provides the source for the transformation. This parameter is required if it&apos;s the first or only transformation in the list of transformations to be applied. Subsequent transformations use the output of the prior transformation as input.
      * @param value Value to set for the input property.
      */
     public void setInput(@jakarta.annotation.Nullable final TransformationAttribute value) {

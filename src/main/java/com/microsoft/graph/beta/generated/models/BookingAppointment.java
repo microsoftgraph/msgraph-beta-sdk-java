@@ -86,7 +86,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("customerLocation");
     }
     /**
-     * Gets the customerName property value. The customer's name.
+     * Gets the customerName property value. The customer&apos;s name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class BookingAppointment extends Entity implements Parsable {
         return this.backingStore.get("customerNotes");
     }
     /**
-     * Gets the customerPhone property value. The customer's phone number.
+     * Gets the customerPhone property value. The customer&apos;s phone number.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -494,7 +494,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this.backingStore.set("customerLocation", value);
     }
     /**
-     * Sets the customerName property value. The customer's name.
+     * Sets the customerName property value. The customer&apos;s name.
      * @param value Value to set for the customerName property.
      */
     public void setCustomerName(@jakarta.annotation.Nullable final String value) {
@@ -508,7 +508,7 @@ public class BookingAppointment extends Entity implements Parsable {
         this.backingStore.set("customerNotes", value);
     }
     /**
-     * Sets the customerPhone property value. The customer's phone number.
+     * Sets the customerPhone property value. The customer&apos;s phone number.
      * @param value Value to set for the customerPhone property.
      */
     public void setCustomerPhone(@jakarta.annotation.Nullable final String value) {

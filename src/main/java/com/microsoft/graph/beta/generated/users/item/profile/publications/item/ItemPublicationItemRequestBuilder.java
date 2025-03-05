@@ -77,7 +77,7 @@ public class ItemPublicationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemPublication::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of an itemPublication object in a user's profile.
+     * Update the properties of an itemPublication object in a user&apos;s profile.
      * @param body The request body
      * @return a {@link ItemPublication}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -88,7 +88,7 @@ public class ItemPublicationItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of an itemPublication object in a user's profile.
+     * Update the properties of an itemPublication object in a user&apos;s profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemPublication}
@@ -144,7 +144,7 @@ public class ItemPublicationItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of an itemPublication object in a user's profile.
+     * Update the properties of an itemPublication object in a user&apos;s profile.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -153,7 +153,7 @@ public class ItemPublicationItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of an itemPublication object in a user's profile.
+     * Update the properties of an itemPublication object in a user&apos;s profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

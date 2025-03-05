@@ -36,7 +36,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/folders/{mailboxFolder%2Did}/childFolders/delta(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user's mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user's mail folders without having to fetch all the folders of that mailbox from the server every time.
+     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user&apos;s mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user&apos;s mail folders without having to fetch all the folders of that mailbox from the server every time.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -49,7 +49,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user's mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user's mail folders without having to fetch all the folders of that mailbox from the server every time.
+     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user&apos;s mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user&apos;s mail folders without having to fetch all the folders of that mailbox from the server every time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -66,7 +66,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DeltaGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user's mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user's mail folders without having to fetch all the folders of that mailbox from the server every time.
+     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user&apos;s mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user&apos;s mail folders without having to fetch all the folders of that mailbox from the server every time.
      * @return a {@link RequestInformation}
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
@@ -77,7 +77,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user's mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user's mail folders without having to fetch all the folders of that mailbox from the server every time.
+     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user&apos;s mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user&apos;s mail folders without having to fetch all the folders of that mailbox from the server every time.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -105,7 +105,7 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
         return new DeltaRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user's mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user's mail folders without having to fetch all the folders of that mailbox from the server every time.
+     * Get a set of mailboxFolder objects that have been added, deleted, or removed from the user&apos;s mailbox. A delta function call for folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the folders. This approach allows you to maintain and synchronize a local store of a user&apos;s mail folders without having to fetch all the folders of that mailbox from the server every time.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

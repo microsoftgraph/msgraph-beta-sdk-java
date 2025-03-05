@@ -104,7 +104,7 @@ public class CompanySubscription extends Entity implements Parsable {
         return this.backingStore.get("ownerTenantId");
     }
     /**
-     * Gets the ownerType property value. Indicates the entity that ownerId belongs to, for example, 'User'.
+     * Gets the ownerType property value. Indicates the entity that ownerId belongs to, for example, &apos;User&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class CompanySubscription extends Entity implements Parsable {
         return this.backingStore.get("ownerType");
     }
     /**
-     * Gets the serviceStatus property value. The provisioning status of each service that's included in this subscription.
+     * Gets the serviceStatus property value. The provisioning status of each service that&apos;s included in this subscription.
      * @return a {@link java.util.List<ServicePlanInfo>}
      */
     @jakarta.annotation.Nullable
@@ -222,14 +222,14 @@ public class CompanySubscription extends Entity implements Parsable {
         this.backingStore.set("ownerTenantId", value);
     }
     /**
-     * Sets the ownerType property value. Indicates the entity that ownerId belongs to, for example, 'User'.
+     * Sets the ownerType property value. Indicates the entity that ownerId belongs to, for example, &apos;User&apos;.
      * @param value Value to set for the ownerType property.
      */
     public void setOwnerType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ownerType", value);
     }
     /**
-     * Sets the serviceStatus property value. The provisioning status of each service that's included in this subscription.
+     * Sets the serviceStatus property value. The provisioning status of each service that&apos;s included in this subscription.
      * @param value Value to set for the serviceStatus property.
      */
     public void setServiceStatus(@jakarta.annotation.Nullable final java.util.List<ServicePlanInfo> value) {

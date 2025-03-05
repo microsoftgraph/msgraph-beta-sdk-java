@@ -97,7 +97,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -109,7 +109,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Mailbox}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -182,7 +182,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      * @return a {@link RequestInformation}
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
@@ -193,7 +193,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -257,7 +257,7 @@ public class MailboxItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -75,7 +75,7 @@ public class CloudPcNotificationSetting implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the restartPromptsDisabled property value. If true, doesn't prompt the user to restart the Cloud PC. If false, prompts the user to restart Cloud PC. The default value is false.
+     * Gets the restartPromptsDisabled property value. If true, doesn&apos;t prompt the user to restart the Cloud PC. If false, prompts the user to restart Cloud PC. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class CloudPcNotificationSetting implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the restartPromptsDisabled property value. If true, doesn't prompt the user to restart the Cloud PC. If false, prompts the user to restart Cloud PC. The default value is false.
+     * Sets the restartPromptsDisabled property value. If true, doesn&apos;t prompt the user to restart the Cloud PC. If false, prompts the user to restart Cloud PC. The default value is false.
      * @param value Value to set for the restartPromptsDisabled property.
      */
     public void setRestartPromptsDisabled(@jakarta.annotation.Nullable final Boolean value) {

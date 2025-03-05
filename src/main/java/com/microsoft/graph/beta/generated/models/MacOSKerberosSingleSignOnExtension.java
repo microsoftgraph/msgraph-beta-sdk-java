@@ -132,7 +132,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         return deserializerMap;
     }
     /**
-     * Gets the isDefaultRealm property value. When true, this profile's realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
+     * Gets the isDefaultRealm property value. When true, this profile&apos;s realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -180,7 +180,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         return this.backingStore.get("passwordChangeUrl");
     }
     /**
-     * Gets the passwordEnableLocalSync property value. Enables or disables password syncing. This won't affect users logged in with a mobile account on macOS.
+     * Gets the passwordEnableLocalSync property value. Enables or disables password syncing. This won&apos;t affect users logged in with a mobile account on macOS.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -228,7 +228,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         return this.backingStore.get("passwordPreviousPasswordBlockCount");
     }
     /**
-     * Gets the passwordRequireActiveDirectoryComplexity property value. Enables or disables whether passwords must meet Active Directory's complexity requirements.
+     * Gets the passwordRequireActiveDirectoryComplexity property value. Enables or disables whether passwords must meet Active Directory&apos;s complexity requirements.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -402,7 +402,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         this.backingStore.set("domains", value);
     }
     /**
-     * Sets the isDefaultRealm property value. When true, this profile's realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
+     * Sets the isDefaultRealm property value. When true, this profile&apos;s realm will be selected as the default. Necessary if multiple Kerberos-type profiles are configured.
      * @param value Value to set for the isDefaultRealm property.
      */
     public void setIsDefaultRealm(@jakarta.annotation.Nullable final Boolean value) {
@@ -444,7 +444,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         this.backingStore.set("passwordChangeUrl", value);
     }
     /**
-     * Sets the passwordEnableLocalSync property value. Enables or disables password syncing. This won't affect users logged in with a mobile account on macOS.
+     * Sets the passwordEnableLocalSync property value. Enables or disables password syncing. This won&apos;t affect users logged in with a mobile account on macOS.
      * @param value Value to set for the passwordEnableLocalSync property.
      */
     public void setPasswordEnableLocalSync(@jakarta.annotation.Nullable final Boolean value) {
@@ -486,7 +486,7 @@ public class MacOSKerberosSingleSignOnExtension extends MacOSSingleSignOnExtensi
         this.backingStore.set("passwordPreviousPasswordBlockCount", value);
     }
     /**
-     * Sets the passwordRequireActiveDirectoryComplexity property value. Enables or disables whether passwords must meet Active Directory's complexity requirements.
+     * Sets the passwordRequireActiveDirectoryComplexity property value. Enables or disables whether passwords must meet Active Directory&apos;s complexity requirements.
      * @param value Value to set for the passwordRequireActiveDirectoryComplexity property.
      */
     public void setPasswordRequireActiveDirectoryComplexity(@jakarta.annotation.Nullable final Boolean value) {

@@ -36,7 +36,7 @@ public class ValidatePasswordRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/validatePassword", rawUrl);
     }
     /**
-     * Check a user's password against the organization's password validation policy and report whether the password is valid. Use this action to provide real-time feedback on password strength while the user types their password.
+     * Check a user&apos;s password against the organization&apos;s password validation policy and report whether the password is valid. Use this action to provide real-time feedback on password strength while the user types their password.
      * @param body The request body
      * @return a {@link PasswordValidationInformation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class ValidatePasswordRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Check a user's password against the organization's password validation policy and report whether the password is valid. Use this action to provide real-time feedback on password strength while the user types their password.
+     * Check a user&apos;s password against the organization&apos;s password validation policy and report whether the password is valid. Use this action to provide real-time feedback on password strength while the user types their password.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PasswordValidationInformation}
@@ -63,7 +63,7 @@ public class ValidatePasswordRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PasswordValidationInformation::createFromDiscriminatorValue);
     }
     /**
-     * Check a user's password against the organization's password validation policy and report whether the password is valid. Use this action to provide real-time feedback on password strength while the user types their password.
+     * Check a user&apos;s password against the organization&apos;s password validation policy and report whether the password is valid. Use this action to provide real-time feedback on password strength while the user types their password.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class ValidatePasswordRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Check a user's password against the organization's password validation policy and report whether the password is valid. Use this action to provide real-time feedback on password strength while the user types their password.
+     * Check a user&apos;s password against the organization&apos;s password validation policy and report whether the password is valid. Use this action to provide real-time feedback on password strength while the user types their password.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum Platform implements ValuedEnum {
-    /** Default.Indicates the managed device is not known and is associated with 'Unknown' device platform. */
+    /** Default.Indicates the managed device is not known and is associated with &apos;Unknown&apos; device platform. */
     Unknown("unknown"),
     /** Indicates the managed device is Apple device that runs on iOS operation system. */
     Ios("ios"),

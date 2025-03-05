@@ -102,7 +102,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the peerIpAddress property value. Specifies the BGP IP address of customer's on-premise VPN router configuration.
+     * Gets the peerIpAddress property value. Specifies the BGP IP address of customer&apos;s on-premise VPN router configuration.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class BgpConfiguration implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the peerIpAddress property value. Specifies the BGP IP address of customer's on-premise VPN router configuration.
+     * Sets the peerIpAddress property value. Specifies the BGP IP address of customer&apos;s on-premise VPN router configuration.
      * @param value Value to set for the peerIpAddress property.
      */
     public void setPeerIpAddress(@jakarta.annotation.Nullable final String value) {

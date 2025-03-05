@@ -27,7 +27,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return new TeamsAppDefinition();
     }
     /**
-     * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data. personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
+     * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team&apos;s data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat&apos;s data. personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user&apos;s data.
      * @return a {@link EnumSet<TeamsAppInstallationScopes>}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this.backingStore.get("bot");
     }
     /**
-     * Gets the colorIcon property value. The color version of the Teams app's icon.
+     * Gets the colorIcon property value. The color version of the Teams app&apos;s icon.
      * @return a {@link TeamsAppIcon}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the outlineIcon property value. The outline version of the Teams app's icon.
+     * Gets the outlineIcon property value. The outline version of the Teams app&apos;s icon.
      * @return a {@link TeamsAppIcon}
      */
     @jakarta.annotation.Nullable
@@ -194,7 +194,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team's data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat's data. personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user's data.
+     * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team&apos;s data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat&apos;s data. personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user&apos;s data.
      * @param value Value to set for the allowedInstallationScopes property.
      */
     public void setAllowedInstallationScopes(@jakarta.annotation.Nullable final EnumSet<TeamsAppInstallationScopes> value) {
@@ -222,7 +222,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         this.backingStore.set("bot", value);
     }
     /**
-     * Sets the colorIcon property value. The color version of the Teams app's icon.
+     * Sets the colorIcon property value. The color version of the Teams app&apos;s icon.
      * @param value Value to set for the colorIcon property.
      */
     public void setColorIcon(@jakarta.annotation.Nullable final TeamsAppIcon value) {
@@ -264,7 +264,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the outlineIcon property value. The outline version of the Teams app's icon.
+     * Sets the outlineIcon property value. The outline version of the Teams app&apos;s icon.
      * @param value Value to set for the outlineIcon property.
      */
     public void setOutlineIcon(@jakarta.annotation.Nullable final TeamsAppIcon value) {

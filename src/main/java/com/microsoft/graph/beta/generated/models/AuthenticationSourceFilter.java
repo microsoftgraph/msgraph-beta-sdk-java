@@ -67,7 +67,7 @@ public class AuthenticationSourceFilter implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the includeApplications property value. Applications to include for evaluation of the authenticationListener. These applications trigger the associated action when used as the client application in the authentication flow. The application identifer is the application's client id.
+     * Gets the includeApplications property value. Applications to include for evaluation of the authenticationListener. These applications trigger the associated action when used as the client application in the authentication flow. The application identifer is the application&apos;s client id.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class AuthenticationSourceFilter implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the includeApplications property value. Applications to include for evaluation of the authenticationListener. These applications trigger the associated action when used as the client application in the authentication flow. The application identifer is the application's client id.
+     * Sets the includeApplications property value. Applications to include for evaluation of the authenticationListener. These applications trigger the associated action when used as the client application in the authentication flow. The application identifer is the application&apos;s client id.
      * @param value Value to set for the includeApplications property.
      */
     public void setIncludeApplications(@jakarta.annotation.Nullable final java.util.List<String> value) {

@@ -48,7 +48,7 @@ public class OidcInboundClaimMappingOverride implements AdditionalDataHolder, Ba
         return value;
     }
     /**
-     * Gets the address property value. End-user's preferred postal address. The value of the address member is a JSON RFC8259 structure containing some or all of the members defined in the resource type
+     * Gets the address property value. End-user&apos;s preferred postal address. The value of the address member is a JSON RFC8259 structure containing some or all of the members defined in the resource type
      * @return a {@link OidcAddressInboundClaims}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class OidcInboundClaimMappingOverride implements AdditionalDataHolder, Ba
         return this.backingStore;
     }
     /**
-     * Gets the email property value. End-user's preferred e-mail address. Its value MUST conform to the RFC 5322 addr-spec syntax.
+     * Gets the email property value. End-user&apos;s preferred e-mail address. Its value MUST conform to the RFC 5322 addr-spec syntax.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class OidcInboundClaimMappingOverride implements AdditionalDataHolder, Ba
         return this.backingStore.get("email");
     }
     /**
-     * Gets the email_verified property value. True if the end-user's e-mail address has been verified by the identity provider; otherwise, false. When this claim value is true, this means that your identity provider took affirmative steps to ensure that this e-mail address was controlled by the end-user at the time the verification was performed. If this claim value is false, or not mapped with any claim of the identity provider, the user is asked to verify email during sign-up if email is required in the user flow.
+     * Gets the email_verified property value. True if the end-user&apos;s e-mail address has been verified by the identity provider; otherwise, false. When this claim value is true, this means that your identity provider took affirmative steps to ensure that this e-mail address was controlled by the end-user at the time the verification was performed. If this claim value is false, or not mapped with any claim of the identity provider, the user is asked to verify email during sign-up if email is required in the user flow.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class OidcInboundClaimMappingOverride implements AdditionalDataHolder, Ba
         return this.backingStore.get("givenName");
     }
     /**
-     * Gets the name property value. End-user's full name in displayable form including all name parts, possibly including titles and suffixes, ordered according to the end-user's locale and preferences.
+     * Gets the name property value. End-user&apos;s full name in displayable form including all name parts, possibly including titles and suffixes, ordered according to the end-user&apos;s locale and preferences.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class OidcInboundClaimMappingOverride implements AdditionalDataHolder, Ba
         return this.backingStore.get("phoneNumber");
     }
     /**
-     * Gets the phone_number_verified property value. True if the end-user's phone number has been verified; otherwise, false. When this claim value is true, this means that your identity provider took affirmative steps to verify the phone number.
+     * Gets the phone_number_verified property value. True if the end-user&apos;s phone number has been verified; otherwise, false. When this claim value is true, this means that your identity provider took affirmative steps to verify the phone number.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -180,7 +180,7 @@ public class OidcInboundClaimMappingOverride implements AdditionalDataHolder, Ba
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the address property value. End-user's preferred postal address. The value of the address member is a JSON RFC8259 structure containing some or all of the members defined in the resource type
+     * Sets the address property value. End-user&apos;s preferred postal address. The value of the address member is a JSON RFC8259 structure containing some or all of the members defined in the resource type
      * @param value Value to set for the address property.
      */
     public void setAddress(@jakarta.annotation.Nullable final OidcAddressInboundClaims value) {
@@ -195,14 +195,14 @@ public class OidcInboundClaimMappingOverride implements AdditionalDataHolder, Ba
         this.backingStore = value;
     }
     /**
-     * Sets the email property value. End-user's preferred e-mail address. Its value MUST conform to the RFC 5322 addr-spec syntax.
+     * Sets the email property value. End-user&apos;s preferred e-mail address. Its value MUST conform to the RFC 5322 addr-spec syntax.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the email_verified property value. True if the end-user's e-mail address has been verified by the identity provider; otherwise, false. When this claim value is true, this means that your identity provider took affirmative steps to ensure that this e-mail address was controlled by the end-user at the time the verification was performed. If this claim value is false, or not mapped with any claim of the identity provider, the user is asked to verify email during sign-up if email is required in the user flow.
+     * Sets the email_verified property value. True if the end-user&apos;s e-mail address has been verified by the identity provider; otherwise, false. When this claim value is true, this means that your identity provider took affirmative steps to ensure that this e-mail address was controlled by the end-user at the time the verification was performed. If this claim value is false, or not mapped with any claim of the identity provider, the user is asked to verify email during sign-up if email is required in the user flow.
      * @param value Value to set for the email_verified property.
      */
     public void setEmailVerified(@jakarta.annotation.Nullable final String value) {
@@ -223,7 +223,7 @@ public class OidcInboundClaimMappingOverride implements AdditionalDataHolder, Ba
         this.backingStore.set("givenName", value);
     }
     /**
-     * Sets the name property value. End-user's full name in displayable form including all name parts, possibly including titles and suffixes, ordered according to the end-user's locale and preferences.
+     * Sets the name property value. End-user&apos;s full name in displayable form including all name parts, possibly including titles and suffixes, ordered according to the end-user&apos;s locale and preferences.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -244,7 +244,7 @@ public class OidcInboundClaimMappingOverride implements AdditionalDataHolder, Ba
         this.backingStore.set("phoneNumber", value);
     }
     /**
-     * Sets the phone_number_verified property value. True if the end-user's phone number has been verified; otherwise, false. When this claim value is true, this means that your identity provider took affirmative steps to verify the phone number.
+     * Sets the phone_number_verified property value. True if the end-user&apos;s phone number has been verified; otherwise, false. When this claim value is true, this means that your identity provider took affirmative steps to verify the phone number.
      * @param value Value to set for the phone_number_verified property.
      */
     public void setPhoneNumberVerified(@jakarta.annotation.Nullable final String value) {

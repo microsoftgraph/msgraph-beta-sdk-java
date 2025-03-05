@@ -155,7 +155,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("enrollmentType");
     }
     /**
-     * Gets the extensionAttributes property value. Contains extension attributes 1-15 for the device. The individual extension attributes aren't selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
+     * Gets the extensionAttributes property value. Contains extension attributes 1-15 for the device. The individual extension attributes aren&apos;t selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
      * @return a {@link OnPremisesExtensionAttributes}
      */
     @jakarta.annotation.Nullable
@@ -250,7 +250,7 @@ public class Device extends DirectoryObject implements Parsable {
         return this.backingStore.get("isManaged");
     }
     /**
-     * Gets the isManagementRestricted property value. Indicates whether the device is a member of a restricted management administrative unit. The default value is false. Read-only.  To manage a device that's a member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.
+     * Gets the isManagementRestricted property value. Indicates whether the device is a member of a restricted management administrative unit. The default value is false. Read-only.  To manage a device that&apos;s a member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -616,7 +616,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("enrollmentType", value);
     }
     /**
-     * Sets the extensionAttributes property value. Contains extension attributes 1-15 for the device. The individual extension attributes aren't selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
+     * Sets the extensionAttributes property value. Contains extension attributes 1-15 for the device. The individual extension attributes aren&apos;t selectable. These properties are mastered in cloud and can be set during creation or update of a device object in Microsoft Entra ID. Supports $filter (eq, not, startsWith, and eq on null values).
      * @param value Value to set for the extensionAttributes property.
      */
     public void setExtensionAttributes(@jakarta.annotation.Nullable final OnPremisesExtensionAttributes value) {
@@ -651,7 +651,7 @@ public class Device extends DirectoryObject implements Parsable {
         this.backingStore.set("isManaged", value);
     }
     /**
-     * Sets the isManagementRestricted property value. Indicates whether the device is a member of a restricted management administrative unit. The default value is false. Read-only.  To manage a device that's a member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.
+     * Sets the isManagementRestricted property value. Indicates whether the device is a member of a restricted management administrative unit. The default value is false. Read-only.  To manage a device that&apos;s a member of a restricted management administrative unit, the administrator or calling app must be assigned a Microsoft Entra role at the scope of the restricted management administrative unit.
      * @param value Value to set for the isManagementRestricted property.
      */
     public void setIsManagementRestricted(@jakarta.annotation.Nullable final Boolean value) {

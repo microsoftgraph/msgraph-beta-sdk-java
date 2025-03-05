@@ -126,7 +126,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
         return this.backingStore.get("roleScopeTagIds");
     }
     /**
-     * Gets the version property value. Indicates the Windows Defender Application Control Supplemental Policy's version.
+     * Gets the version property value. Indicates the Windows Defender Application Control Supplemental Policy&apos;s version.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -223,7 +223,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
         this.backingStore.set("roleScopeTagIds", value);
     }
     /**
-     * Sets the version property value. Indicates the Windows Defender Application Control Supplemental Policy's version.
+     * Sets the version property value. Indicates the Windows Defender Application Control Supplemental Policy&apos;s version.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

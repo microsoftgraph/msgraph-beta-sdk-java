@@ -85,7 +85,7 @@ public class PhoneOptions implements AdditionalDataHolder, BackedModel, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the includeAdditionalRegions property value. A numbers-only set representing the country codes that can be manually added to enable telephony service in those regions, in addition to the list of countries that are already enabled. For more information about regions that require opt in, see Regions that need to opt in for MFA telephony verification. Validates against current International Subscriber Dialing (ISD) country codes where the maximum code length is 4. Values must be positive integers and can't overlap with 'excludeRegions'.
+     * Gets the includeAdditionalRegions property value. A numbers-only set representing the country codes that can be manually added to enable telephony service in those regions, in addition to the list of countries that are already enabled. For more information about regions that require opt in, see Regions that need to opt in for MFA telephony verification. Validates against current International Subscriber Dialing (ISD) country codes where the maximum code length is 4. Values must be positive integers and can&apos;t overlap with &apos;excludeRegions&apos;.
      * @return a {@link java.util.List<Integer>}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class PhoneOptions implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("excludeRegions", value);
     }
     /**
-     * Sets the includeAdditionalRegions property value. A numbers-only set representing the country codes that can be manually added to enable telephony service in those regions, in addition to the list of countries that are already enabled. For more information about regions that require opt in, see Regions that need to opt in for MFA telephony verification. Validates against current International Subscriber Dialing (ISD) country codes where the maximum code length is 4. Values must be positive integers and can't overlap with 'excludeRegions'.
+     * Sets the includeAdditionalRegions property value. A numbers-only set representing the country codes that can be manually added to enable telephony service in those regions, in addition to the list of countries that are already enabled. For more information about regions that require opt in, see Regions that need to opt in for MFA telephony verification. Validates against current International Subscriber Dialing (ISD) country codes where the maximum code length is 4. Values must be positive integers and can&apos;t overlap with &apos;excludeRegions&apos;.
      * @param value Value to set for the includeAdditionalRegions property.
      */
     public void setIncludeAdditionalRegions(@jakarta.annotation.Nullable final java.util.List<Integer> value) {

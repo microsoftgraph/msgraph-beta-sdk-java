@@ -225,7 +225,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         return deserializerMap;
     }
     /**
-     * Gets the firmwareProtection property value. A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "systemGuardSecureLaunch" or "firmwareAttackSurfaceReduction" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Gets the firmwareProtection property value. A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can&apos;t get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;systemGuardSecureLaunch&quot; or &quot;firmwareAttackSurfaceReduction&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @return a {@link FirmwareProtectionType}
      */
     @jakarta.annotation.Nullable
@@ -265,7 +265,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         return this.backingStore.get("lastUpdateDateTime");
     }
     /**
-     * Gets the memoryAccessProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Gets the memoryAccessProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;enabled&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @return a {@link AzureAttestationSettingStatus}
      */
     @jakarta.annotation.Nullable
@@ -273,7 +273,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         return this.backingStore.get("memoryAccessProtection");
     }
     /**
-     * Gets the memoryIntegrityProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Gets the memoryIntegrityProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;enabled&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @return a {@link AzureAttestationSettingStatus}
      */
     @jakarta.annotation.Nullable
@@ -361,7 +361,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         return this.backingStore.get("secureBootConfigurationPolicyFingerPrint");
     }
     /**
-     * Gets the securedCorePC property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Gets the securedCorePC property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;enabled&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @return a {@link AzureAttestationSettingStatus}
      */
     @jakarta.annotation.Nullable
@@ -369,7 +369,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         return this.backingStore.get("securedCorePC");
     }
     /**
-     * Gets the systemManagementMode property value. A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values "notApplicable", "level1", "level2" or "level3". Windows 10 devices will have value "notApplicable".
+     * Gets the systemManagementMode property value. A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values &quot;notApplicable&quot;, &quot;level1&quot;, &quot;level2&quot; or &quot;level3&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @return a {@link SystemManagementModeLevel}
      */
     @jakarta.annotation.Nullable
@@ -393,7 +393,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         return this.backingStore.get("tpmVersion");
     }
     /**
-     * Gets the virtualizationBasedSecurity property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Gets the virtualizationBasedSecurity property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;enabled&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @return a {@link AzureAttestationSettingStatus}
      */
     @jakarta.annotation.Nullable
@@ -401,7 +401,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         return this.backingStore.get("virtualizationBasedSecurity");
     }
     /**
-     * Gets the virtualSecureMode property value. Indicates whether the device has Virtual Secure Mode (VSM) enabled. Virtual Secure Mode (VSM) is a container that protects high value assets from a compromised kernel. This property will be deprecated in beta from August 2023. Support for this property will end in August 2025 for v1.0 API. A new property virtualizationBasedSecurity is added and used instead. The value used for virtualSecureMode will be passed by virtualizationBasedSecurity during the deprecation process. Possible values are 'enabled', 'disabled' and 'notApplicable'. 'enabled' indicates Virtual Secure Mode (VSM) is enabled. 'disabled' indicates Virtual Secure Mode (VSM) is disabled. 'notApplicable' indicates the device is not a Windows 11 device. Default value is 'notApplicable'.
+     * Gets the virtualSecureMode property value. Indicates whether the device has Virtual Secure Mode (VSM) enabled. Virtual Secure Mode (VSM) is a container that protects high value assets from a compromised kernel. This property will be deprecated in beta from August 2023. Support for this property will end in August 2025 for v1.0 API. A new property virtualizationBasedSecurity is added and used instead. The value used for virtualSecureMode will be passed by virtualizationBasedSecurity during the deprecation process. Possible values are &apos;enabled&apos;, &apos;disabled&apos; and &apos;notApplicable&apos;. &apos;enabled&apos; indicates Virtual Secure Mode (VSM) is enabled. &apos;disabled&apos; indicates Virtual Secure Mode (VSM) is disabled. &apos;notApplicable&apos; indicates the device is not a Windows 11 device. Default value is &apos;notApplicable&apos;.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -584,7 +584,7 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         this.backingStore.set("earlyLaunchAntiMalwareDriverProtection", value);
     }
     /**
-     * Sets the firmwareProtection property value. A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can't get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "systemGuardSecureLaunch" or "firmwareAttackSurfaceReduction" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Sets the firmwareProtection property value. A list of possible Firmware protection type for a device. Firmware protection is a set of features that helps to ensure attackers can&apos;t get your device to start with untrusted or malicious firmware. Firmware protection type is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;systemGuardSecureLaunch&quot; or &quot;firmwareAttackSurfaceReduction&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @param value Value to set for the firmwareProtection property.
      */
     public void setFirmwareProtection(@jakarta.annotation.Nullable final FirmwareProtectionType value) {
@@ -619,14 +619,14 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         this.backingStore.set("lastUpdateDateTime", value);
     }
     /**
-     * Sets the memoryAccessProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Sets the memoryAccessProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;enabled&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @param value Value to set for the memoryAccessProtection property.
      */
     public void setMemoryAccessProtection(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
         this.backingStore.set("memoryAccessProtection", value);
     }
     /**
-     * Sets the memoryIntegrityProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Sets the memoryIntegrityProtection property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;enabled&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @param value Value to set for the memoryIntegrityProtection property.
      */
     public void setMemoryIntegrityProtection(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
@@ -703,14 +703,14 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         this.backingStore.set("secureBootConfigurationPolicyFingerPrint", value);
     }
     /**
-     * Sets the securedCorePC property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Sets the securedCorePC property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;enabled&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @param value Value to set for the securedCorePC property.
      */
     public void setSecuredCorePC(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
         this.backingStore.set("securedCorePC", value);
     }
     /**
-     * Sets the systemManagementMode property value. A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values "notApplicable", "level1", "level2" or "level3". Windows 10 devices will have value "notApplicable".
+     * Sets the systemManagementMode property value. A list of possible System Management Mode levels for a device. System Management Mode levels is determined by report sent from Microsoft Azure Attestation service. Only specific hardwares support System Management Mode. Windows 11 devices will have values &quot;notApplicable&quot;, &quot;level1&quot;, &quot;level2&quot; or &quot;level3&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @param value Value to set for the systemManagementMode property.
      */
     public void setSystemManagementMode(@jakarta.annotation.Nullable final SystemManagementModeLevel value) {
@@ -731,14 +731,14 @@ public class DeviceHealthAttestationState implements AdditionalDataHolder, Backe
         this.backingStore.set("tpmVersion", value);
     }
     /**
-     * Sets the virtualizationBasedSecurity property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values "enabled" or "disabled". Windows 10 devices will have value "notApplicable".
+     * Sets the virtualizationBasedSecurity property value. A list of possible Azure Attestation states for a device. Azure Attestation setting status is determined by report sent from Microsoft Azure Attestation service. Only Windows 11 devices will have values &quot;enabled&quot; or &quot;disabled&quot;. Windows 10 devices will have value &quot;notApplicable&quot;.
      * @param value Value to set for the virtualizationBasedSecurity property.
      */
     public void setVirtualizationBasedSecurity(@jakarta.annotation.Nullable final AzureAttestationSettingStatus value) {
         this.backingStore.set("virtualizationBasedSecurity", value);
     }
     /**
-     * Sets the virtualSecureMode property value. Indicates whether the device has Virtual Secure Mode (VSM) enabled. Virtual Secure Mode (VSM) is a container that protects high value assets from a compromised kernel. This property will be deprecated in beta from August 2023. Support for this property will end in August 2025 for v1.0 API. A new property virtualizationBasedSecurity is added and used instead. The value used for virtualSecureMode will be passed by virtualizationBasedSecurity during the deprecation process. Possible values are 'enabled', 'disabled' and 'notApplicable'. 'enabled' indicates Virtual Secure Mode (VSM) is enabled. 'disabled' indicates Virtual Secure Mode (VSM) is disabled. 'notApplicable' indicates the device is not a Windows 11 device. Default value is 'notApplicable'.
+     * Sets the virtualSecureMode property value. Indicates whether the device has Virtual Secure Mode (VSM) enabled. Virtual Secure Mode (VSM) is a container that protects high value assets from a compromised kernel. This property will be deprecated in beta from August 2023. Support for this property will end in August 2025 for v1.0 API. A new property virtualizationBasedSecurity is added and used instead. The value used for virtualSecureMode will be passed by virtualizationBasedSecurity during the deprecation process. Possible values are &apos;enabled&apos;, &apos;disabled&apos; and &apos;notApplicable&apos;. &apos;enabled&apos; indicates Virtual Secure Mode (VSM) is enabled. &apos;disabled&apos; indicates Virtual Secure Mode (VSM) is disabled. &apos;notApplicable&apos; indicates the device is not a Windows 11 device. Default value is &apos;notApplicable&apos;.
      * @param value Value to set for the virtualSecureMode property.
      */
     public void setVirtualSecureMode(@jakarta.annotation.Nullable final String value) {

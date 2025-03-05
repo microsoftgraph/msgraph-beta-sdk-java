@@ -67,7 +67,7 @@ public class VpnProxyServer implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("address");
     }
     /**
-     * Gets the automaticConfigurationScriptUrl property value. Proxy's automatic configuration script url.
+     * Gets the automaticConfigurationScriptUrl property value. Proxy&apos;s automatic configuration script url.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class VpnProxyServer implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("address", value);
     }
     /**
-     * Sets the automaticConfigurationScriptUrl property value. Proxy's automatic configuration script url.
+     * Sets the automaticConfigurationScriptUrl property value. Proxy&apos;s automatic configuration script url.
      * @param value Value to set for the automaticConfigurationScriptUrl property.
      */
     public void setAutomaticConfigurationScriptUrl(@jakarta.annotation.Nullable final String value) {

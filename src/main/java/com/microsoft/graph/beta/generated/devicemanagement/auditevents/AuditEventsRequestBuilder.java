@@ -93,7 +93,7 @@ public class AuditEventsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getAuditActivityTypes method.
-     * @param category Usage: category='{category}'
+     * @param category Usage: category=&apos;{category}&apos;
      * @return a {@link GetAuditActivityTypesWithCategoryRequestBuilder}
      */
     @jakarta.annotation.Nonnull

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Entity that encapsulates all information required for a user's PFX certificates.
+ * Entity that encapsulates all information required for a user&apos;s PFX certificates.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class UserPFXCertificate extends Entity implements Parsable {
@@ -53,7 +53,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
         return this.backingStore.get("encryptedPfxPassword");
     }
     /**
-     * Gets the expirationDateTime property value. Certificate's validity expiration date/time.
+     * Gets the expirationDateTime property value. Certificate&apos;s validity expiration date/time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
         return this.backingStore.get("providerName");
     }
     /**
-     * Gets the startDateTime property value. Certificate's validity start date/time.
+     * Gets the startDateTime property value. Certificate&apos;s validity start date/time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -187,7 +187,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
         this.backingStore.set("encryptedPfxPassword", value);
     }
     /**
-     * Sets the expirationDateTime property value. Certificate's validity expiration date/time.
+     * Sets the expirationDateTime property value. Certificate&apos;s validity expiration date/time.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -229,7 +229,7 @@ public class UserPFXCertificate extends Entity implements Parsable {
         this.backingStore.set("providerName", value);
     }
     /**
-     * Sets the startDateTime property value. Certificate's validity start date/time.
+     * Sets the startDateTime property value. Certificate&apos;s validity start date/time.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

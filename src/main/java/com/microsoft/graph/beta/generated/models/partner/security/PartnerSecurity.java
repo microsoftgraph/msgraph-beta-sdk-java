@@ -37,7 +37,7 @@ public class PartnerSecurity extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the securityAlerts property value. The security alerts or a vulnerability of a Cloud Solution Provider (CSP) partner's customer that the partner must be made aware of for further action.
+     * Gets the securityAlerts property value. The security alerts or a vulnerability of a Cloud Solution Provider (CSP) partner&apos;s customer that the partner must be made aware of for further action.
      * @return a {@link java.util.List<PartnerSecurityAlert>}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class PartnerSecurity extends Entity implements Parsable {
         writer.writeObjectValue("securityScore", this.getSecurityScore());
     }
     /**
-     * Sets the securityAlerts property value. The security alerts or a vulnerability of a Cloud Solution Provider (CSP) partner's customer that the partner must be made aware of for further action.
+     * Sets the securityAlerts property value. The security alerts or a vulnerability of a Cloud Solution Provider (CSP) partner&apos;s customer that the partner must be made aware of for further action.
      * @param value Value to set for the securityAlerts property.
      */
     public void setSecurityAlerts(@jakarta.annotation.Nullable final java.util.List<PartnerSecurityAlert> value) {

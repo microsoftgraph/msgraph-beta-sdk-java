@@ -22,7 +22,7 @@ public class GetPlatformSupportedPropertiesWithPlatformRequestBuilder extends Ba
     /**
      * Instantiates a new {@link GetPlatformSupportedPropertiesWithPlatformRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
-     * @param platform Usage: platform='{platform}'
+     * @param platform Usage: platform=&apos;{platform}&apos;
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GetPlatformSupportedPropertiesWithPlatformRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String platform) {

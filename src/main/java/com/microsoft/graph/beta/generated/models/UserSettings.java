@@ -25,7 +25,7 @@ public class UserSettings extends Entity implements Parsable {
         return new UserSettings();
     }
     /**
-     * Gets the contactMergeSuggestions property value. The user's settings for the visibility of merge suggestion for the duplicate contacts in the user's contact list.
+     * Gets the contactMergeSuggestions property value. The user&apos;s settings for the visibility of merge suggestion for the duplicate contacts in the user&apos;s contact list.
      * @return a {@link ContactMergeSuggestions}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("contactMergeSuggestions");
     }
     /**
-     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn&apos;t have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("contributionToContentDiscoveryAsOrganizationDisabled");
     }
     /**
-     * Gets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+     * Gets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user&apos;s Office Delve are disabled. Users can control this setting in Office Delve.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class UserSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
+     * Gets the itemInsights property value. The user&apos;s settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @return a {@link UserInsightsSettings}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("itemInsights");
     }
     /**
-     * Gets the regionalAndLanguageSettings property value. The user's preferences for languages, regional locale and date/time formatting.
+     * Gets the regionalAndLanguageSettings property value. The user&apos;s preferences for languages, regional locale and date/time formatting.
      * @return a {@link RegionalAndLanguageSettings}
      */
     @jakarta.annotation.Nullable
@@ -132,21 +132,21 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("windows", this.getWindows());
     }
     /**
-     * Sets the contactMergeSuggestions property value. The user's settings for the visibility of merge suggestion for the duplicate contacts in the user's contact list.
+     * Sets the contactMergeSuggestions property value. The user&apos;s settings for the visibility of merge suggestion for the duplicate contacts in the user&apos;s contact list.
      * @param value Value to set for the contactMergeSuggestions property.
      */
     public void setContactMergeSuggestions(@jakarta.annotation.Nullable final ContactMergeSuggestions value) {
         this.backingStore.set("contactMergeSuggestions", value);
     }
     /**
-     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn't have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
+     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. Reflects the Office Delve organization level setting. When set to true, the organization doesn&apos;t have access to Office Delve. This setting is read-only and can only be changed by administrators in the SharePoint admin center.
      * @param value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
      */
     public void setContributionToContentDiscoveryAsOrganizationDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("contributionToContentDiscoveryAsOrganizationDisabled", value);
     }
     /**
-     * Sets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user's Office Delve are disabled. Users can control this setting in Office Delve.
+     * Sets the contributionToContentDiscoveryDisabled property value. When set to true, documents in the user&apos;s Office Delve are disabled. Users can control this setting in Office Delve.
      * @param value Value to set for the contributionToContentDiscoveryDisabled property.
      */
     public void setContributionToContentDiscoveryDisabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -160,14 +160,14 @@ public class UserSettings extends Entity implements Parsable {
         this.backingStore.set("exchange", value);
     }
     /**
-     * Sets the itemInsights property value. The user's settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
+     * Sets the itemInsights property value. The user&apos;s settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.
      * @param value Value to set for the itemInsights property.
      */
     public void setItemInsights(@jakarta.annotation.Nullable final UserInsightsSettings value) {
         this.backingStore.set("itemInsights", value);
     }
     /**
-     * Sets the regionalAndLanguageSettings property value. The user's preferences for languages, regional locale and date/time formatting.
+     * Sets the regionalAndLanguageSettings property value. The user&apos;s preferences for languages, regional locale and date/time formatting.
      * @param value Value to set for the regionalAndLanguageSettings property.
      */
     public void setRegionalAndLanguageSettings(@jakarta.annotation.Nullable final RegionalAndLanguageSettings value) {

@@ -111,7 +111,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
         return this.backingStore.get("ownerUserPrincipalName");
     }
     /**
-     * Gets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
+     * Gets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to &apos;Targeted&apos;
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class AndroidForWorkSettings extends Entity implements Parsable {
         this.backingStore.set("ownerUserPrincipalName", value);
     }
     /**
-     * Sets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to 'Targeted'
+     * Sets the targetGroupIds property value. Specifies which AAD groups can enroll devices in Android for Work device management if enrollmentTarget is set to &apos;Targeted&apos;
      * @param value Value to set for the targetGroupIds property.
      */
     public void setTargetGroupIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

@@ -56,7 +56,7 @@ public class ClaimsMapping implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The claim that provides the display name or full name for the user. It's a required property.
+     * Gets the displayName property value. The claim that provides the display name or full name for the user. It&apos;s a required property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class ClaimsMapping implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The claim that provides the display name or full name for the user. It's a required property.
+     * Sets the displayName property value. The claim that provides the display name or full name for the user. It&apos;s a required property.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

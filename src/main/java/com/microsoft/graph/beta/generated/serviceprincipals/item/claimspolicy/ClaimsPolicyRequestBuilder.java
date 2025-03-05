@@ -61,7 +61,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomClaimsPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
+     * Create a new customClaimsPolicy object if it doesn&apos;t exist, or replace an existing one.
      * @param body The request body
      * @return a {@link CustomClaimsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -72,7 +72,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
+     * Create a new customClaimsPolicy object if it doesn&apos;t exist, or replace an existing one.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomClaimsPolicy}
@@ -88,7 +88,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomClaimsPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
+     * Create a new customClaimsPolicy object if it doesn&apos;t exist, or replace an existing one.
      * @param body The request body
      * @return a {@link CustomClaimsPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -99,7 +99,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
+     * Create a new customClaimsPolicy object if it doesn&apos;t exist, or replace an existing one.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomClaimsPolicy}
@@ -135,7 +135,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
+     * Create a new customClaimsPolicy object if it doesn&apos;t exist, or replace an existing one.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -144,7 +144,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
+     * Create a new customClaimsPolicy object if it doesn&apos;t exist, or replace an existing one.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -159,7 +159,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
+     * Create a new customClaimsPolicy object if it doesn&apos;t exist, or replace an existing one.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -168,7 +168,7 @@ public class ClaimsPolicyRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Create a new customClaimsPolicy object if it doesn't exist, or replace an existing one.
+     * Create a new customClaimsPolicy object if it doesn&apos;t exist, or replace an existing one.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

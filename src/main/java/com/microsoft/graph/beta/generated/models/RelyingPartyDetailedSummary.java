@@ -69,7 +69,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         return this.backingStore.get("migrationValidationDetails");
     }
     /**
-     * Gets the relyingPartyId property value. This identifier is used to identify the relying party to this Federation Service. It's used when issuing claims to the relying party.
+     * Gets the relyingPartyId property value. This identifier is used to identify the relying party to this Federation Service. It&apos;s used when issuing claims to the relying party.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class RelyingPartyDetailedSummary extends Entity implements Parsable {
         this.backingStore.set("migrationValidationDetails", value);
     }
     /**
-     * Sets the relyingPartyId property value. This identifier is used to identify the relying party to this Federation Service. It's used when issuing claims to the relying party.
+     * Sets the relyingPartyId property value. This identifier is used to identify the relying party to this Federation Service. It&apos;s used when issuing claims to the relying party.
      * @param value Value to set for the relyingPartyId property.
      */
     public void setRelyingPartyId(@jakarta.annotation.Nullable final String value) {

@@ -60,7 +60,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/profile/emails{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Retrieve the properties and relationships of an itemEmail object in a user&apos;s profile.
      * @return a {@link ItemEmailCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Retrieve the properties and relationships of an itemEmail object in a user&apos;s profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ItemEmailCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ItemEmail::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Retrieve the properties and relationships of an itemEmail object in a user&apos;s profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Retrieve the properties and relationships of an itemEmail object in a user&apos;s profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class EmailsRequestBuilder extends BaseRequestBuilder {
         return new EmailsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of an itemEmail object in a user's profile.
+     * Retrieve the properties and relationships of an itemEmail object in a user&apos;s profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

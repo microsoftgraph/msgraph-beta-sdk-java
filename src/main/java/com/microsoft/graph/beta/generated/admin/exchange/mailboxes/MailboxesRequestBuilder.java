@@ -66,7 +66,7 @@ public class MailboxesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      * @return a {@link MailboxCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -78,7 +78,7 @@ public class MailboxesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -125,7 +125,7 @@ public class MailboxesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Mailbox::createFromDiscriminatorValue);
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      * @return a {@link RequestInformation}
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
@@ -136,7 +136,7 @@ public class MailboxesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -194,7 +194,7 @@ public class MailboxesRequestBuilder extends BaseRequestBuilder {
         return new MailboxesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents a user's mailboxes.
+     * Represents a user&apos;s mailboxes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

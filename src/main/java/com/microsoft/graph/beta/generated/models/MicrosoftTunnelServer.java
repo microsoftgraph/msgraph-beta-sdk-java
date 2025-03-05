@@ -68,7 +68,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastCheckinDateTime property value. Indicates when the server last checked in. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported Read-only.
+     * Gets the lastCheckinDateTime property value. Indicates when the server last checked in. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastCheckinDateTime property value. Indicates when the server last checked in. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported Read-only.
+     * Sets the lastCheckinDateTime property value. Indicates when the server last checked in. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported Read-only.
      * @param value Value to set for the lastCheckinDateTime property.
      */
     public void setLastCheckinDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

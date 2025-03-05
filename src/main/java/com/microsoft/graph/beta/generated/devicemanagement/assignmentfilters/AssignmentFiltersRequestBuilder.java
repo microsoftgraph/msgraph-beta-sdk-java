@@ -111,7 +111,7 @@ public class AssignmentFiltersRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPlatformSupportedProperties method.
-     * @param platform Usage: platform='{platform}'
+     * @param platform Usage: platform=&apos;{platform}&apos;
      * @return a {@link GetPlatformSupportedPropertiesWithPlatformRequestBuilder}
      */
     @jakarta.annotation.Nonnull

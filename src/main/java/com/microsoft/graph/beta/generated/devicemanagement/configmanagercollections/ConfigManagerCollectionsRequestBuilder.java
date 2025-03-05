@@ -84,7 +84,7 @@ public class ConfigManagerCollectionsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getPolicySummary method.
-     * @param policyId Usage: policyId='{policyId}'
+     * @param policyId Usage: policyId=&apos;{policyId}&apos;
      * @return a {@link GetPolicySummaryWithPolicyIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull

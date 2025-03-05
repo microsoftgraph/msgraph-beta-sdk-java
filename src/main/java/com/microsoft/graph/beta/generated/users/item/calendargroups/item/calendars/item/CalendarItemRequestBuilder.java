@@ -68,7 +68,7 @@ public class CalendarItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the allowedCalendarSharingRoles method.
-     * @param User Usage: User='{User}'
+     * @param User Usage: User=&apos;{User}&apos;
      * @return a {@link AllowedCalendarSharingRolesWithUserRequestBuilder}
      */
     @jakarta.annotation.Nonnull

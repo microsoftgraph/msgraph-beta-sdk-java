@@ -121,7 +121,7 @@ public class RestoreArtifactsBulkRequestBase extends Entity implements Parsable 
         return this.backingStore.get("protectionTimePeriod");
     }
     /**
-     * Gets the protectionUnitIds property value. Indicates which protection units to restore. This property isn't implemented yet. Future value; don't use.
+     * Gets the protectionUnitIds property value. Indicates which protection units to restore. This property isn&apos;t implemented yet. Future value; don&apos;t use.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -229,7 +229,7 @@ public class RestoreArtifactsBulkRequestBase extends Entity implements Parsable 
         this.backingStore.set("protectionTimePeriod", value);
     }
     /**
-     * Sets the protectionUnitIds property value. Indicates which protection units to restore. This property isn't implemented yet. Future value; don't use.
+     * Sets the protectionUnitIds property value. Indicates which protection units to restore. This property isn&apos;t implemented yet. Future value; don&apos;t use.
      * @param value Value to set for the protectionUnitIds property.
      */
     public void setProtectionUnitIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

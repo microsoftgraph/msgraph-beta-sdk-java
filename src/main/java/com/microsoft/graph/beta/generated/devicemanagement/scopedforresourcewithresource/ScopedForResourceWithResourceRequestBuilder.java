@@ -22,7 +22,7 @@ public class ScopedForResourceWithResourceRequestBuilder extends BaseRequestBuil
      * Instantiates a new {@link ScopedForResourceWithResourceRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param resource Usage: resource='{resource}'
+     * @param resource Usage: resource=&apos;{resource}&apos;
      */
     public ScopedForResourceWithResourceRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String resource) {
         super(requestAdapter, "{+baseurl}/deviceManagement/scopedForResource(resource='{resource}')", pathParameters);

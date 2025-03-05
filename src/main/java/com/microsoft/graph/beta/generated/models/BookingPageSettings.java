@@ -133,7 +133,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("isCustomerConsentEnabled");
     }
     /**
-     * Gets the isSearchEngineIndexabilityDisabled property value. Ensures that the web crawlers don't index this page. The defaults value is false.
+     * Gets the isSearchEngineIndexabilityDisabled property value. Ensures that the web crawlers don&apos;t index this page. The defaults value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the privacyPolicyWebUrl property value. RL of a webpage that provides the terms and conditions of the business. If a privacy policy isn't included, the following text appears on the bookings page as default: 'The policies and practices of <booking business's name> apply to the use of your data.
+     * Gets the privacyPolicyWebUrl property value. RL of a webpage that provides the terms and conditions of the business. If a privacy policy isn&apos;t included, the following text appears on the bookings page as default: &apos;The policies and practices of &lt;booking business&apos;s name&gt; apply to the use of your data.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -257,7 +257,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("isCustomerConsentEnabled", value);
     }
     /**
-     * Sets the isSearchEngineIndexabilityDisabled property value. Ensures that the web crawlers don't index this page. The defaults value is false.
+     * Sets the isSearchEngineIndexabilityDisabled property value. Ensures that the web crawlers don&apos;t index this page. The defaults value is false.
      * @param value Value to set for the isSearchEngineIndexabilityDisabled property.
      */
     public void setIsSearchEngineIndexabilityDisabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -278,7 +278,7 @@ public class BookingPageSettings implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the privacyPolicyWebUrl property value. RL of a webpage that provides the terms and conditions of the business. If a privacy policy isn't included, the following text appears on the bookings page as default: 'The policies and practices of <booking business's name> apply to the use of your data.
+     * Sets the privacyPolicyWebUrl property value. RL of a webpage that provides the terms and conditions of the business. If a privacy policy isn&apos;t included, the following text appears on the bookings page as default: &apos;The policies and practices of &lt;booking business&apos;s name&gt; apply to the use of your data.
      * @param value Value to set for the privacyPolicyWebUrl property.
      */
     public void setPrivacyPolicyWebUrl(@jakarta.annotation.Nullable final String value) {

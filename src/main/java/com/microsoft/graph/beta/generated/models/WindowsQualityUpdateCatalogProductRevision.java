@@ -60,7 +60,7 @@ public class WindowsQualityUpdateCatalogProductRevision implements AdditionalDat
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The display name of the windows quality update catalog product revision. For example, 'Windows 11, version 22H2, build 22621.4112'. Read-only
+     * Gets the displayName property value. The display name of the windows quality update catalog product revision. For example, &apos;Windows 11, version 22H2, build 22621.4112&apos;. Read-only
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class WindowsQualityUpdateCatalogProductRevision implements AdditionalDat
         return this.backingStore.get("osBuild");
     }
     /**
-     * Gets the productName property value. The product name of the windows quality update catalog product revision. For example, 'Windows 11'. Read-only
+     * Gets the productName property value. The product name of the windows quality update catalog product revision. For example, &apos;Windows 11&apos;. Read-only
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class WindowsQualityUpdateCatalogProductRevision implements AdditionalDat
         return this.backingStore.get("releaseDateTime");
     }
     /**
-     * Gets the versionName property value. The version name of the windows quality update catalog product revision. For example, '22H2'. Read-only
+     * Gets the versionName property value. The version name of the windows quality update catalog product revision. For example, &apos;22H2&apos;. Read-only
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class WindowsQualityUpdateCatalogProductRevision implements AdditionalDat
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The display name of the windows quality update catalog product revision. For example, 'Windows 11, version 22H2, build 22621.4112'. Read-only
+     * Sets the displayName property value. The display name of the windows quality update catalog product revision. For example, &apos;Windows 11, version 22H2, build 22621.4112&apos;. Read-only
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -190,7 +190,7 @@ public class WindowsQualityUpdateCatalogProductRevision implements AdditionalDat
         this.backingStore.set("osBuild", value);
     }
     /**
-     * Sets the productName property value. The product name of the windows quality update catalog product revision. For example, 'Windows 11'. Read-only
+     * Sets the productName property value. The product name of the windows quality update catalog product revision. For example, &apos;Windows 11&apos;. Read-only
      * @param value Value to set for the productName property.
      */
     public void setProductName(@jakarta.annotation.Nullable final String value) {
@@ -204,7 +204,7 @@ public class WindowsQualityUpdateCatalogProductRevision implements AdditionalDat
         this.backingStore.set("releaseDateTime", value);
     }
     /**
-     * Sets the versionName property value. The version name of the windows quality update catalog product revision. For example, '22H2'. Read-only
+     * Sets the versionName property value. The version name of the windows quality update catalog product revision. For example, &apos;22H2&apos;. Read-only
      * @param value Value to set for the versionName property.
      */
     public void setVersionName(@jakarta.annotation.Nullable final String value) {

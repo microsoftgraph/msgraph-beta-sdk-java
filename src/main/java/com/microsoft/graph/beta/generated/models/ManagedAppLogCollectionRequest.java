@@ -29,7 +29,7 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         return new ManagedAppLogCollectionRequest();
     }
     /**
-     * Gets the completedDateTime property value. DateTime of when the log upload request was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Gets the completedDateTime property value. DateTime of when the log upload request was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         return this.backingStore.get("requestedByUserPrincipalName");
     }
     /**
-     * Gets the requestedDateTime property value. DateTime of when the log upload request was received. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Gets the requestedDateTime property value. DateTime of when the log upload request was received. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the completedDateTime property value. DateTime of when the log upload request was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Sets the completedDateTime property value. DateTime of when the log upload request was completed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -164,7 +164,7 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         this.backingStore.set("requestedByUserPrincipalName", value);
     }
     /**
-     * Sets the requestedDateTime property value. DateTime of when the log upload request was received. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default. Read-only.
+     * Sets the requestedDateTime property value. DateTime of when the log upload request was received. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: &apos;2014-01-01T00:00:00Z&apos;. Returned by default. Read-only.
      * @param value Value to set for the requestedDateTime property.
      */
     public void setRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

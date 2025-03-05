@@ -21,10 +21,10 @@ import java.util.Objects;
 public class GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder extends BaseRequestBuilder {
     /**
      * Instantiates a new {@link GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder} and sets the default values.
-     * @param groupId Usage: groupId='{groupId}'
+     * @param groupId Usage: groupId=&apos;{groupId}&apos;
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param servicePlanId Usage: servicePlanId='{servicePlanId}'
+     * @param servicePlanId Usage: servicePlanId=&apos;{servicePlanId}&apos;
      */
     public GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String groupId, @jakarta.annotation.Nullable final String servicePlanId) {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPCs/getProvisionedCloudPCs(groupId='{groupId}',servicePlanId='{servicePlanId}'){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);

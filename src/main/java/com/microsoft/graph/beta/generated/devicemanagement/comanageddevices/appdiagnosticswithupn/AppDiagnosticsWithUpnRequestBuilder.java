@@ -23,7 +23,7 @@ public class AppDiagnosticsWithUpnRequestBuilder extends BaseRequestBuilder {
      * Instantiates a new {@link AppDiagnosticsWithUpnRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
-     * @param upn Usage: upn='{upn}'
+     * @param upn Usage: upn=&apos;{upn}&apos;
      */
     public AppDiagnosticsWithUpnRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String upn) {
         super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices/appDiagnostics(upn='{upn}'){?%24count,%24filter,%24search,%24skip,%24top}", pathParameters);

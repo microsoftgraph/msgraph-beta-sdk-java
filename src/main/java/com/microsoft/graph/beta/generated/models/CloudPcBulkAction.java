@@ -101,7 +101,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         return this.backingStore.get("initiatedByUserPrincipalName");
     }
     /**
-     * Gets the scheduledDuringMaintenanceWindow property value. Indicates whether the bulk action is scheduled according to the maintenance window. When true, the bulk action uses the maintenance window to schedule the action; false means that the bulk action doesn't use the maintenance window. The default value is false.
+     * Gets the scheduledDuringMaintenanceWindow property value. Indicates whether the bulk action is scheduled according to the maintenance window. When true, the bulk action uses the maintenance window to schedule the action; false means that the bulk action doesn&apos;t use the maintenance window. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -167,7 +167,7 @@ public class CloudPcBulkAction extends Entity implements Parsable {
         this.backingStore.set("initiatedByUserPrincipalName", value);
     }
     /**
-     * Sets the scheduledDuringMaintenanceWindow property value. Indicates whether the bulk action is scheduled according to the maintenance window. When true, the bulk action uses the maintenance window to schedule the action; false means that the bulk action doesn't use the maintenance window. The default value is false.
+     * Sets the scheduledDuringMaintenanceWindow property value. Indicates whether the bulk action is scheduled according to the maintenance window. When true, the bulk action uses the maintenance window to schedule the action; false means that the bulk action doesn&apos;t use the maintenance window. The default value is false.
      * @param value Value to set for the scheduledDuringMaintenanceWindow property.
      */
     public void setScheduledDuringMaintenanceWindow(@jakarta.annotation.Nullable final Boolean value) {

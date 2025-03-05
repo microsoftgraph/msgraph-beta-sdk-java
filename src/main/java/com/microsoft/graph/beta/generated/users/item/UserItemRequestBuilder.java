@@ -1086,7 +1086,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the findRooms method.
-     * @param RoomList Usage: RoomList='{RoomList}'
+     * @param RoomList Usage: RoomList=&apos;{RoomList}&apos;
      * @return a {@link FindRoomsWithRoomListRequestBuilder}
      */
     @jakarta.annotation.Nonnull
@@ -1157,8 +1157,8 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the reminderView method.
-     * @param EndDateTime Usage: EndDateTime='{EndDateTime}'
-     * @param StartDateTime Usage: StartDateTime='{StartDateTime}'
+     * @param EndDateTime Usage: EndDateTime=&apos;{EndDateTime}&apos;
+     * @param StartDateTime Usage: StartDateTime=&apos;{StartDateTime}&apos;
      * @return a {@link ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilder}
      */
     @jakarta.annotation.Nonnull
