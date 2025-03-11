@@ -5,20 +5,35 @@ import java.util.Objects;
 
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum DeviceManagementConfigurationWindowsSkus implements ValuedEnum {
+    /** Indicates the Device Management Configuration Windows SKU is &apos;unknown&apos;  */
     Unknown("unknown"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;windowsHome&apos;  */
     WindowsHome("windowsHome"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;windowsProfessional&apos;  */
     WindowsProfessional("windowsProfessional"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;windowsEnterprise&apos;  */
     WindowsEnterprise("windowsEnterprise"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;windowsEducation&apos;  */
     WindowsEducation("windowsEducation"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;windowsMobile&apos;  */
     WindowsMobile("windowsMobile"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;windowsMobileEnterprise&apos;  */
     WindowsMobileEnterprise("windowsMobileEnterprise"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;windowsTeamSurface&apos;  */
     WindowsTeamSurface("windowsTeamSurface"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;iot&apos;  */
     Iot("iot"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;iotEnterprise&apos;  */
     IotEnterprise("iotEnterprise"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;holoLens&apos;  */
     HoloLens("holoLens"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;holoLensEnterprise&apos;  */
     HoloLensEnterprise("holoLensEnterprise"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;holographicForBusiness&apos;  */
     HolographicForBusiness("holographicForBusiness"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;windowsMultiSession&apos;  */
     WindowsMultiSession("windowsMultiSession"),
+    /** Indicates the Device Management Configuration Windows SKU is &apos;surfaceHub&apos;  */
     SurfaceHub("surfaceHub");
     public final String value;
     DeviceManagementConfigurationWindowsSkus(final String value) {

@@ -35,7 +35,7 @@ public class CertificateBasedAuthPki extends DirectoryObject implements Parsable
         return this.backingStore.get("certificateAuthorities");
     }
     /**
-     * Gets the displayName property value. The name of the object.
+     * Gets the displayName property value. The name of the object. Maximum length is 256 characters.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class CertificateBasedAuthPki extends DirectoryObject implements Parsable
         this.backingStore.set("certificateAuthorities", value);
     }
     /**
-     * Sets the displayName property value. The name of the object.
+     * Sets the displayName property value. The name of the object. Maximum length is 256 characters.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

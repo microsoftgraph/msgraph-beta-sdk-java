@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.security.cases.ediscoverycases.item;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.EdiscoveryCase;
+import com.microsoft.graph.beta.security.cases.ediscoverycases.item.casemembers.CaseMembersRequestBuilder;
 import com.microsoft.graph.beta.security.cases.ediscoverycases.item.custodians.CustodiansRequestBuilder;
 import com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.LegalHoldsRequestBuilder;
 import com.microsoft.graph.beta.security.cases.ediscoverycases.item.microsoftgraphsecurityclose.MicrosoftGraphSecurityCloseRequestBuilder;
@@ -30,6 +31,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryCaseItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the caseMembers property of the microsoft.graph.security.ediscoveryCase entity.
+     * @return a {@link CaseMembersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CaseMembersRequestBuilder caseMembers() {
+        return new CaseMembersRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
      * @return a {@link CustodiansRequestBuilder}

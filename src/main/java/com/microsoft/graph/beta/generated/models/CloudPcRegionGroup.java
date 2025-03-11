@@ -27,7 +27,9 @@ public enum CloudPcRegionGroup implements ValuedEnum {
     Switzerland("switzerland"),
     SouthKorea("southKorea"),
     MiddleEast("middleEast"),
-    Mexico("mexico");
+    Mexico("mexico"),
+    Australasia("australasia"),
+    Europe("europe");
     public final String value;
     CloudPcRegionGroup(final String value) {
         this.value = value;
@@ -61,6 +63,8 @@ public enum CloudPcRegionGroup implements ValuedEnum {
             case "southKorea": return SouthKorea;
             case "middleEast": return MiddleEast;
             case "mexico": return Mexico;
+            case "australasia": return Australasia;
+            case "europe": return Europe;
             default: return null;
         }
     }

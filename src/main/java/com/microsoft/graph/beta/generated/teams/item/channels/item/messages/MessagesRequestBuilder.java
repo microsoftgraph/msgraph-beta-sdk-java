@@ -5,7 +5,9 @@ import com.microsoft.graph.beta.models.ChatMessageCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.teams.item.channels.item.messages.count.CountRequestBuilder;
 import com.microsoft.graph.beta.teams.item.channels.item.messages.delta.DeltaRequestBuilder;
+import com.microsoft.graph.beta.teams.item.channels.item.messages.forwardtochat.ForwardToChatRequestBuilder;
 import com.microsoft.graph.beta.teams.item.channels.item.messages.item.ChatMessageItemRequestBuilder;
+import com.microsoft.graph.beta.teams.item.channels.item.messages.replywithquote.ReplyWithQuoteRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -39,6 +41,22 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the forwardToChat method.
+     * @return a {@link ForwardToChatRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ForwardToChatRequestBuilder forwardToChat() {
+        return new ForwardToChatRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the replyWithQuote method.
+     * @return a {@link ReplyWithQuoteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReplyWithQuoteRequestBuilder replyWithQuote() {
+        return new ReplyWithQuoteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the messages property of the microsoft.graph.channel entity.
@@ -93,23 +111,23 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ChatMessageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Send a new chatMessage in the specified channel.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body The request body
      * @return a {@link ChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messages?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessage post(@jakarta.annotation.Nonnull final ChatMessage body) {
         return post(body, null);
     }
     /**
-     * Send a new chatMessage in the specified channel.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/channel-post-messages?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ChatMessage post(@jakarta.annotation.Nonnull final ChatMessage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +158,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Send a new chatMessage in the specified channel.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +167,7 @@ public class MessagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Send a new chatMessage in the specified channel.
+     * Send a new chatMessage in the specified channel or a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

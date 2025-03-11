@@ -37,6 +37,7 @@ public class ActionResultPart implements AdditionalDataHolder, BackedModel, Pars
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.aadUserConversationMemberResult": return new AadUserConversationMemberResult();
+                case "#microsoft.graph.forwardToChatResult": return new ForwardToChatResult();
             }
         }
         return new ActionResultPart();

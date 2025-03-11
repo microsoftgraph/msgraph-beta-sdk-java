@@ -124,7 +124,7 @@ public class Team extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstChannelName property value. The name of the first channel in the team. This property is only used during team creation and isn&apos;t returned in methods to get and list teams.
+     * Gets the firstChannelName property value. The name of the first channel in the team. This is an optional property, only used during team creation and isn&apos;t returned in methods to get and list teams.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -422,7 +422,7 @@ public class Team extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the firstChannelName property value. The name of the first channel in the team. This property is only used during team creation and isn&apos;t returned in methods to get and list teams.
+     * Sets the firstChannelName property value. The name of the first channel in the team. This is an optional property, only used during team creation and isn&apos;t returned in methods to get and list teams.
      * @param value Value to set for the firstChannelName property.
      */
     public void setFirstChannelName(@jakarta.annotation.Nullable final String value) {

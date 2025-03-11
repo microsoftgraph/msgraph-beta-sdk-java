@@ -55,21 +55,21 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects.
+     * Retrieve the properties of a riskDetection object.
      * @return a {@link RiskDetection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskDetection get() {
         return get(null);
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects.
+     * Retrieve the properties of a riskDetection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RiskDetection}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskdetection-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskDetection get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -124,7 +124,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects.
+     * Retrieve the properties of a riskDetection object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -132,7 +132,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects.
+     * Retrieve the properties of a riskDetection object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -184,7 +184,7 @@ public class RiskDetectionItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Retrieve the properties of a collection of riskDetection objects.
+     * Retrieve the properties of a riskDetection object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
