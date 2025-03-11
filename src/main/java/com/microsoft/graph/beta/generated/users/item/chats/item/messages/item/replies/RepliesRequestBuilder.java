@@ -5,7 +5,9 @@ import com.microsoft.graph.beta.models.ChatMessageCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.chats.item.messages.item.replies.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.chats.item.messages.item.replies.delta.DeltaRequestBuilder;
+import com.microsoft.graph.beta.users.item.chats.item.messages.item.replies.forwardtochat.ForwardToChatRequestBuilder;
 import com.microsoft.graph.beta.users.item.chats.item.messages.item.replies.item.ChatMessageItemRequestBuilder;
+import com.microsoft.graph.beta.users.item.chats.item.messages.item.replies.replywithquote.ReplyWithQuoteRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -39,6 +41,22 @@ public class RepliesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeltaRequestBuilder delta() {
         return new DeltaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the forwardToChat method.
+     * @return a {@link ForwardToChatRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ForwardToChatRequestBuilder forwardToChat() {
+        return new ForwardToChatRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the replyWithQuote method.
+     * @return a {@link ReplyWithQuoteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReplyWithQuoteRequestBuilder replyWithQuote() {
+        return new ReplyWithQuoteRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
