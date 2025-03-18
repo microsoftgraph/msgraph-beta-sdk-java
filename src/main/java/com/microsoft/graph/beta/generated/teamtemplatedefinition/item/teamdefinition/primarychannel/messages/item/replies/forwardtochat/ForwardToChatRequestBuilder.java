@@ -35,21 +35,23 @@ public class ForwardToChatRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamTemplateDefinition/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel/messages/{chatMessage%2Did}/replies/forwardToChat", rawUrl);
     }
     /**
-     * Invoke action forwardToChat
+     * Forward a chat message, a channel message, or a channel message reply to a chat.
      * @param body The request body
      * @return a {@link ForwardToChatPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-forwardtochat?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ForwardToChatPostResponse post(@jakarta.annotation.Nonnull final ForwardToChatPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action forwardToChat
+     * Forward a chat message, a channel message, or a channel message reply to a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ForwardToChatPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chatmessage-forwardtochat?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ForwardToChatPostResponse post(@jakarta.annotation.Nonnull final ForwardToChatPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class ForwardToChatRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ForwardToChatPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action forwardToChat
+     * Forward a chat message, a channel message, or a channel message reply to a chat.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -69,7 +71,7 @@ public class ForwardToChatRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action forwardToChat
+     * Forward a chat message, a channel message, or a channel message reply to a chat.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

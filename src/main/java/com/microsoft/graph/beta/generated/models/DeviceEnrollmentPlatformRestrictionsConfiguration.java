@@ -29,7 +29,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         return new DeviceEnrollmentPlatformRestrictionsConfiguration();
     }
     /**
-     * Gets the androidForWorkRestriction property value. Android for work restrictions based on platform, platform operating system version, and device ownership
+     * Gets the androidForWorkRestriction property value. Indicates restrictions for Android For Work platform.
      * @return a {@link DeviceEnrollmentPlatformRestriction}
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         return this.backingStore.get("androidForWorkRestriction");
     }
     /**
-     * Gets the androidRestriction property value. Android restrictions based on platform, platform operating system version, and device ownership
+     * Gets the androidRestriction property value. Indicates restrictions for Android platform.
      * @return a {@link DeviceEnrollmentPlatformRestriction}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         return deserializerMap;
     }
     /**
-     * Gets the iosRestriction property value. Ios restrictions based on platform, platform operating system version, and device ownership
+     * Gets the iosRestriction property value. Indicates restrictions for IOS platform.
      * @return a {@link DeviceEnrollmentPlatformRestriction}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         return this.backingStore.get("iosRestriction");
     }
     /**
-     * Gets the macOSRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
+     * Gets the macOSRestriction property value. Indicates restrictions for MacOS platform.
      * @return a {@link DeviceEnrollmentPlatformRestriction}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         return this.backingStore.get("macOSRestriction");
     }
     /**
-     * Gets the macRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
+     * Gets the macRestriction property value. Indicates restrictions for Mac platform.
      * @return a {@link DeviceEnrollmentPlatformRestriction}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         return this.backingStore.get("visionOSRestriction");
     }
     /**
-     * Gets the windowsHomeSkuRestriction property value. Windows Home Sku restrictions based on platform, platform operating system version, and device ownership
+     * Gets the windowsHomeSkuRestriction property value. Indicates restrictions for Windows HomeSku platform.
      * @return a {@link DeviceEnrollmentPlatformRestriction}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         return this.backingStore.get("windowsHomeSkuRestriction");
     }
     /**
-     * Gets the windowsMobileRestriction property value. Windows mobile restrictions based on platform, platform operating system version, and device ownership
+     * Gets the windowsMobileRestriction property value. Indicates restrictions for Windows Mobile platform.
      * @return a {@link DeviceEnrollmentPlatformRestriction}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         return this.backingStore.get("windowsMobileRestriction");
     }
     /**
-     * Gets the windowsRestriction property value. Windows restrictions based on platform, platform operating system version, and device ownership
+     * Gets the windowsRestriction property value. Indicates restrictions for Windows platform.
      * @return a {@link DeviceEnrollmentPlatformRestriction}
      */
     @jakarta.annotation.Nullable
@@ -146,35 +146,35 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         writer.writeObjectValue("windowsRestriction", this.getWindowsRestriction());
     }
     /**
-     * Sets the androidForWorkRestriction property value. Android for work restrictions based on platform, platform operating system version, and device ownership
+     * Sets the androidForWorkRestriction property value. Indicates restrictions for Android For Work platform.
      * @param value Value to set for the androidForWorkRestriction property.
      */
     public void setAndroidForWorkRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
         this.backingStore.set("androidForWorkRestriction", value);
     }
     /**
-     * Sets the androidRestriction property value. Android restrictions based on platform, platform operating system version, and device ownership
+     * Sets the androidRestriction property value. Indicates restrictions for Android platform.
      * @param value Value to set for the androidRestriction property.
      */
     public void setAndroidRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
         this.backingStore.set("androidRestriction", value);
     }
     /**
-     * Sets the iosRestriction property value. Ios restrictions based on platform, platform operating system version, and device ownership
+     * Sets the iosRestriction property value. Indicates restrictions for IOS platform.
      * @param value Value to set for the iosRestriction property.
      */
     public void setIosRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
         this.backingStore.set("iosRestriction", value);
     }
     /**
-     * Sets the macOSRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
+     * Sets the macOSRestriction property value. Indicates restrictions for MacOS platform.
      * @param value Value to set for the macOSRestriction property.
      */
     public void setMacOSRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
         this.backingStore.set("macOSRestriction", value);
     }
     /**
-     * Sets the macRestriction property value. Mac restrictions based on platform, platform operating system version, and device ownership
+     * Sets the macRestriction property value. Indicates restrictions for Mac platform.
      * @param value Value to set for the macRestriction property.
      */
     public void setMacRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
@@ -195,21 +195,21 @@ public class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnr
         this.backingStore.set("visionOSRestriction", value);
     }
     /**
-     * Sets the windowsHomeSkuRestriction property value. Windows Home Sku restrictions based on platform, platform operating system version, and device ownership
+     * Sets the windowsHomeSkuRestriction property value. Indicates restrictions for Windows HomeSku platform.
      * @param value Value to set for the windowsHomeSkuRestriction property.
      */
     public void setWindowsHomeSkuRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
         this.backingStore.set("windowsHomeSkuRestriction", value);
     }
     /**
-     * Sets the windowsMobileRestriction property value. Windows mobile restrictions based on platform, platform operating system version, and device ownership
+     * Sets the windowsMobileRestriction property value. Indicates restrictions for Windows Mobile platform.
      * @param value Value to set for the windowsMobileRestriction property.
      */
     public void setWindowsMobileRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {
         this.backingStore.set("windowsMobileRestriction", value);
     }
     /**
-     * Sets the windowsRestriction property value. Windows restrictions based on platform, platform operating system version, and device ownership
+     * Sets the windowsRestriction property value. Indicates restrictions for Windows platform.
      * @param value Value to set for the windowsRestriction property.
      */
     public void setWindowsRestriction(@jakarta.annotation.Nullable final DeviceEnrollmentPlatformRestriction value) {

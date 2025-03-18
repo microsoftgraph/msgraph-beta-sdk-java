@@ -26,7 +26,7 @@ public class CustomAppManagementConfiguration extends AppManagementConfiguration
         return new CustomAppManagementConfiguration();
     }
     /**
-     * Gets the applicationRestrictions property value. Restrictions applicable only to application objects that the policy applies to.
+     * Gets the applicationRestrictions property value. Restrictions that are applicable only to application objects to which the policy is attached.
      * @return a {@link CustomAppManagementApplicationConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CustomAppManagementConfiguration extends AppManagementConfiguration
         writer.writeObjectValue("applicationRestrictions", this.getApplicationRestrictions());
     }
     /**
-     * Sets the applicationRestrictions property value. Restrictions applicable only to application objects that the policy applies to.
+     * Sets the applicationRestrictions property value. Restrictions that are applicable only to application objects to which the policy is attached.
      * @param value Value to set for the applicationRestrictions property.
      */
     public void setApplicationRestrictions(@jakarta.annotation.Nullable final CustomAppManagementApplicationConfiguration value) {

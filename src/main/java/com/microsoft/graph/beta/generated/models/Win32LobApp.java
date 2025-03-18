@@ -37,7 +37,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return new Win32LobApp();
     }
     /**
-     * Gets the allowAvailableUninstall property value. When TRUE, indicates that uninstall is supported from the company portal for the Windows app (Win32) with an Available assignment. When FALSE, indicates that uninstall is not supported for the Windows app (Win32) with an Available assignment. Default value is FALSE.
+     * Gets the allowAvailableUninstall property value. Indicates whether the uninstall is supported from the company portal for the Win32 app with an available assignment. When TRUE, indicates that uninstall is supported from the company portal for the Windows app (Win32) with an available assignment. When FALSE, indicates that uninstall is not supported for the Windows app (Win32) with an Available assignment. Default value is FALSE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("applicableArchitectures");
     }
     /**
-     * Gets the detectionRules property value. The detection rules to detect Win32 Line of Business (LoB) app.
+     * Gets the detectionRules property value. Indicates the detection rules to detect Win32 Line of Business (LoB) app. Possible values are Win32LobAppPowerShellScriptDetection, Win32LobAppRegistryDetection, Win32LobAppFileSystemDetection, Win32LobAppProductCodeDetection.
      * @return a {@link java.util.List<Win32LobAppDetection>}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("detectionRules");
     }
     /**
-     * Gets the displayVersion property value. The version displayed in the UX for this app.
+     * Gets the displayVersion property value. Indicates the version displayed in the UX for this app. Used to set the version of the app. Example: 1.0.3.215.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the installCommandLine property value. The command line to install this app
+     * Gets the installCommandLine property value. Indicates the command line to install this app. Used to install the Win32 app. Example: msiexec /i &apos;Orca.Msi&apos; /qn.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("installCommandLine");
     }
     /**
-     * Gets the installExperience property value. The install experience for this app.
+     * Gets the installExperience property value. Indicates the install experience for this app.
      * @return a {@link Win32LobAppInstallExperience}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("installExperience");
     }
     /**
-     * Gets the minimumCpuSpeedInMHz property value. The value for the minimum CPU speed which is required to install this app.
+     * Gets the minimumCpuSpeedInMHz property value. Indicates the value for the minimum CPU speed which is required to install this app. Allowed range from 0 to clock speed from WMI helper.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("minimumCpuSpeedInMHz");
     }
     /**
-     * Gets the minimumFreeDiskSpaceInMB property value. The value for the minimum free disk space which is required to install this app.
+     * Gets the minimumFreeDiskSpaceInMB property value. Indicates the value for the minimum free disk space which is required to install this app. Allowed range from 0 to driver&apos;s maximum available free space.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("minimumFreeDiskSpaceInMB");
     }
     /**
-     * Gets the minimumMemoryInMB property value. The value for the minimum physical memory which is required to install this app.
+     * Gets the minimumMemoryInMB property value. Indicates the value for the minimum physical memory which is required to install this app. Allowed range from 0 to total physical memory from WMI helper.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("minimumMemoryInMB");
     }
     /**
-     * Gets the minimumNumberOfProcessors property value. The value for the minimum number of processors which is required to install this app.
+     * Gets the minimumNumberOfProcessors property value. Indicates the value for the minimum number of processors which is required to install this app. Minimum value is 0.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("minimumNumberOfProcessors");
     }
     /**
-     * Gets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
+     * Gets the minimumSupportedOperatingSystem property value. Indicates the value for the minimum applicable operating system.
      * @return a {@link WindowsMinimumOperatingSystem}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("minimumSupportedOperatingSystem");
     }
     /**
-     * Gets the minimumSupportedWindowsRelease property value. The value for the minimum supported windows release.
+     * Gets the minimumSupportedWindowsRelease property value. Indicates the value for the minimum supported windows release. Example: Windows11_23H2.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("minimumSupportedWindowsRelease");
     }
     /**
-     * Gets the msiInformation property value. The MSI details if this Win32 app is an MSI app.
+     * Gets the msiInformation property value. Indicates the MSI details if this Win32 app is an MSI app.
      * @return a {@link Win32LobAppMsiInformation}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("msiInformation");
     }
     /**
-     * Gets the requirementRules property value. The requirement rules to detect Win32 Line of Business (LoB) app.
+     * Gets the requirementRules property value. Indicates the requirement rules to detect Win32 Line of Business (LoB) app. Possible values are: Win32LobAppFileSystemRequirement, Win32LobAppPowerShellScriptRequirement, Win32LobAppRegistryRequirement.
      * @return a {@link java.util.List<Win32LobAppRequirement>}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("requirementRules");
     }
     /**
-     * Gets the returnCodes property value. The return codes for post installation behavior.
+     * Gets the returnCodes property value. Indicates the return codes for post installation behavior.
      * @return a {@link java.util.List<Win32LobAppReturnCode>}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("returnCodes");
     }
     /**
-     * Gets the rules property value. The detection and requirement rules for this app.
+     * Gets the rules property value. Indicates the detection and requirement rules for this app. Possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
      * @return a {@link java.util.List<Win32LobAppRule>}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("rules");
     }
     /**
-     * Gets the setupFilePath property value. The relative path of the setup file in the encrypted Win32LobApp package.
+     * Gets the setupFilePath property value. Indicates the relative path of the setup file in the encrypted Win32LobApp package. Example: Intel-SA-00075 Detection and Mitigation Tool.msi.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("setupFilePath");
     }
     /**
-     * Gets the uninstallCommandLine property value. The command line to uninstall this app
+     * Gets the uninstallCommandLine property value. Indicates the command line to uninstall this app. Used to uninstall the app. Example: msiexec /x &apos;{85F4CBCB-9BBC-4B50-A7D8-E1106771498D}&apos; /qn.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -234,7 +234,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         writer.writeStringValue("uninstallCommandLine", this.getUninstallCommandLine());
     }
     /**
-     * Sets the allowAvailableUninstall property value. When TRUE, indicates that uninstall is supported from the company portal for the Windows app (Win32) with an Available assignment. When FALSE, indicates that uninstall is not supported for the Windows app (Win32) with an Available assignment. Default value is FALSE.
+     * Sets the allowAvailableUninstall property value. Indicates whether the uninstall is supported from the company portal for the Win32 app with an available assignment. When TRUE, indicates that uninstall is supported from the company portal for the Windows app (Win32) with an available assignment. When FALSE, indicates that uninstall is not supported for the Windows app (Win32) with an Available assignment. Default value is FALSE.
      * @param value Value to set for the allowAvailableUninstall property.
      */
     public void setAllowAvailableUninstall(@jakarta.annotation.Nullable final Boolean value) {
@@ -248,112 +248,112 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         this.backingStore.set("applicableArchitectures", value);
     }
     /**
-     * Sets the detectionRules property value. The detection rules to detect Win32 Line of Business (LoB) app.
+     * Sets the detectionRules property value. Indicates the detection rules to detect Win32 Line of Business (LoB) app. Possible values are Win32LobAppPowerShellScriptDetection, Win32LobAppRegistryDetection, Win32LobAppFileSystemDetection, Win32LobAppProductCodeDetection.
      * @param value Value to set for the detectionRules property.
      */
     public void setDetectionRules(@jakarta.annotation.Nullable final java.util.List<Win32LobAppDetection> value) {
         this.backingStore.set("detectionRules", value);
     }
     /**
-     * Sets the displayVersion property value. The version displayed in the UX for this app.
+     * Sets the displayVersion property value. Indicates the version displayed in the UX for this app. Used to set the version of the app. Example: 1.0.3.215.
      * @param value Value to set for the displayVersion property.
      */
     public void setDisplayVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayVersion", value);
     }
     /**
-     * Sets the installCommandLine property value. The command line to install this app
+     * Sets the installCommandLine property value. Indicates the command line to install this app. Used to install the Win32 app. Example: msiexec /i &apos;Orca.Msi&apos; /qn.
      * @param value Value to set for the installCommandLine property.
      */
     public void setInstallCommandLine(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("installCommandLine", value);
     }
     /**
-     * Sets the installExperience property value. The install experience for this app.
+     * Sets the installExperience property value. Indicates the install experience for this app.
      * @param value Value to set for the installExperience property.
      */
     public void setInstallExperience(@jakarta.annotation.Nullable final Win32LobAppInstallExperience value) {
         this.backingStore.set("installExperience", value);
     }
     /**
-     * Sets the minimumCpuSpeedInMHz property value. The value for the minimum CPU speed which is required to install this app.
+     * Sets the minimumCpuSpeedInMHz property value. Indicates the value for the minimum CPU speed which is required to install this app. Allowed range from 0 to clock speed from WMI helper.
      * @param value Value to set for the minimumCpuSpeedInMHz property.
      */
     public void setMinimumCpuSpeedInMHz(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("minimumCpuSpeedInMHz", value);
     }
     /**
-     * Sets the minimumFreeDiskSpaceInMB property value. The value for the minimum free disk space which is required to install this app.
+     * Sets the minimumFreeDiskSpaceInMB property value. Indicates the value for the minimum free disk space which is required to install this app. Allowed range from 0 to driver&apos;s maximum available free space.
      * @param value Value to set for the minimumFreeDiskSpaceInMB property.
      */
     public void setMinimumFreeDiskSpaceInMB(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("minimumFreeDiskSpaceInMB", value);
     }
     /**
-     * Sets the minimumMemoryInMB property value. The value for the minimum physical memory which is required to install this app.
+     * Sets the minimumMemoryInMB property value. Indicates the value for the minimum physical memory which is required to install this app. Allowed range from 0 to total physical memory from WMI helper.
      * @param value Value to set for the minimumMemoryInMB property.
      */
     public void setMinimumMemoryInMB(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("minimumMemoryInMB", value);
     }
     /**
-     * Sets the minimumNumberOfProcessors property value. The value for the minimum number of processors which is required to install this app.
+     * Sets the minimumNumberOfProcessors property value. Indicates the value for the minimum number of processors which is required to install this app. Minimum value is 0.
      * @param value Value to set for the minimumNumberOfProcessors property.
      */
     public void setMinimumNumberOfProcessors(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("minimumNumberOfProcessors", value);
     }
     /**
-     * Sets the minimumSupportedOperatingSystem property value. The value for the minimum applicable operating system.
+     * Sets the minimumSupportedOperatingSystem property value. Indicates the value for the minimum applicable operating system.
      * @param value Value to set for the minimumSupportedOperatingSystem property.
      */
     public void setMinimumSupportedOperatingSystem(@jakarta.annotation.Nullable final WindowsMinimumOperatingSystem value) {
         this.backingStore.set("minimumSupportedOperatingSystem", value);
     }
     /**
-     * Sets the minimumSupportedWindowsRelease property value. The value for the minimum supported windows release.
+     * Sets the minimumSupportedWindowsRelease property value. Indicates the value for the minimum supported windows release. Example: Windows11_23H2.
      * @param value Value to set for the minimumSupportedWindowsRelease property.
      */
     public void setMinimumSupportedWindowsRelease(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("minimumSupportedWindowsRelease", value);
     }
     /**
-     * Sets the msiInformation property value. The MSI details if this Win32 app is an MSI app.
+     * Sets the msiInformation property value. Indicates the MSI details if this Win32 app is an MSI app.
      * @param value Value to set for the msiInformation property.
      */
     public void setMsiInformation(@jakarta.annotation.Nullable final Win32LobAppMsiInformation value) {
         this.backingStore.set("msiInformation", value);
     }
     /**
-     * Sets the requirementRules property value. The requirement rules to detect Win32 Line of Business (LoB) app.
+     * Sets the requirementRules property value. Indicates the requirement rules to detect Win32 Line of Business (LoB) app. Possible values are: Win32LobAppFileSystemRequirement, Win32LobAppPowerShellScriptRequirement, Win32LobAppRegistryRequirement.
      * @param value Value to set for the requirementRules property.
      */
     public void setRequirementRules(@jakarta.annotation.Nullable final java.util.List<Win32LobAppRequirement> value) {
         this.backingStore.set("requirementRules", value);
     }
     /**
-     * Sets the returnCodes property value. The return codes for post installation behavior.
+     * Sets the returnCodes property value. Indicates the return codes for post installation behavior.
      * @param value Value to set for the returnCodes property.
      */
     public void setReturnCodes(@jakarta.annotation.Nullable final java.util.List<Win32LobAppReturnCode> value) {
         this.backingStore.set("returnCodes", value);
     }
     /**
-     * Sets the rules property value. The detection and requirement rules for this app.
+     * Sets the rules property value. Indicates the detection and requirement rules for this app. Possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final java.util.List<Win32LobAppRule> value) {
         this.backingStore.set("rules", value);
     }
     /**
-     * Sets the setupFilePath property value. The relative path of the setup file in the encrypted Win32LobApp package.
+     * Sets the setupFilePath property value. Indicates the relative path of the setup file in the encrypted Win32LobApp package. Example: Intel-SA-00075 Detection and Mitigation Tool.msi.
      * @param value Value to set for the setupFilePath property.
      */
     public void setSetupFilePath(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("setupFilePath", value);
     }
     /**
-     * Sets the uninstallCommandLine property value. The command line to uninstall this app
+     * Sets the uninstallCommandLine property value. Indicates the command line to uninstall this app. Used to uninstall the app. Example: msiexec /x &apos;{85F4CBCB-9BBC-4B50-A7D8-E1106771498D}&apos; /qn.
      * @param value Value to set for the uninstallCommandLine property.
      */
     public void setUninstallCommandLine(@jakarta.annotation.Nullable final String value) {
