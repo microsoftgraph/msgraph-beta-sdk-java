@@ -48,6 +48,14 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
         return value;
     }
     /**
+     * Gets the audiences property value. Property to restrict creation or update of apps based on their target signInAudience types.
+     * @return a {@link AudiencesConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public AudiencesConfiguration getAudiences() {
+        return this.backingStore.get("audiences");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -61,13 +69,14 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("audiences", (n) -> { this.setAudiences(n.getObjectValue(AudiencesConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("identifierUris", (n) -> { this.setIdentifierUris(n.getObjectValue(IdentifierUriConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the identifierUris property value. Configuration for identifierUris restrictions
+     * Gets the identifierUris property value. Configuration for identifierUris restrictions.
      * @return a {@link IdentifierUriConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -88,6 +97,7 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("audiences", this.getAudiences());
         writer.writeObjectValue("identifierUris", this.getIdentifierUris());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -100,6 +110,13 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
         this.backingStore.set("additionalData", value);
     }
     /**
+     * Sets the audiences property value. Property to restrict creation or update of apps based on their target signInAudience types.
+     * @param value Value to set for the audiences property.
+     */
+    public void setAudiences(@jakarta.annotation.Nullable final AudiencesConfiguration value) {
+        this.backingStore.set("audiences", value);
+    }
+    /**
      * Sets the backingStore property value. Stores model information.
      * @param value Value to set for the backingStore property.
      */
@@ -108,7 +125,7 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
         this.backingStore = value;
     }
     /**
-     * Sets the identifierUris property value. Configuration for identifierUris restrictions
+     * Sets the identifierUris property value. Configuration for identifierUris restrictions.
      * @param value Value to set for the identifierUris property.
      */
     public void setIdentifierUris(@jakarta.annotation.Nullable final IdentifierUriConfiguration value) {

@@ -26,17 +26,26 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
         return new AppManagementApplicationConfiguration();
     }
     /**
+     * Gets the audiences property value. Property to restrict creation or update of apps based on their target signInAudience types.
+     * @return a {@link AudiencesConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public AudiencesConfiguration getAudiences() {
+        return this.backingStore.get("audiences");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("audiences", (n) -> { this.setAudiences(n.getObjectValue(AudiencesConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("identifierUris", (n) -> { this.setIdentifierUris(n.getObjectValue(IdentifierUriConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application
+     * Gets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application.
      * @return a {@link IdentifierUriConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -50,10 +59,18 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("audiences", this.getAudiences());
         writer.writeObjectValue("identifierUris", this.getIdentifierUris());
     }
     /**
-     * Sets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application
+     * Sets the audiences property value. Property to restrict creation or update of apps based on their target signInAudience types.
+     * @param value Value to set for the audiences property.
+     */
+    public void setAudiences(@jakarta.annotation.Nullable final AudiencesConfiguration value) {
+        this.backingStore.set("audiences", value);
+    }
+    /**
+     * Sets the identifierUris property value. Configuration object for restrictions on identifierUris property for an application.
      * @param value Value to set for the identifierUris property.
      */
     public void setIdentifierUris(@jakarta.annotation.Nullable final IdentifierUriConfiguration value) {

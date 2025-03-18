@@ -51,7 +51,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         return deserializerMap;
     }
     /**
-     * Gets the isExpeditable property value. Flag indicating if update qualifies for expedite
+     * Gets the isExpeditable property value. When TRUE, indicates that the quality updates qualify for expedition. When FALSE, indicates the quality updates do not quality for expedition. Default value is FALSE. Read-only
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         return this.backingStore.get("isExpeditable");
     }
     /**
-     * Gets the kbArticleId property value. Knowledge base article id
+     * Gets the kbArticleId property value. Identifies the knowledge base article associated with the Windows quality update catalog item. Read-only
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,14 +103,14 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         this.backingStore.set("classification", value);
     }
     /**
-     * Sets the isExpeditable property value. Flag indicating if update qualifies for expedite
+     * Sets the isExpeditable property value. When TRUE, indicates that the quality updates qualify for expedition. When FALSE, indicates the quality updates do not quality for expedition. Default value is FALSE. Read-only
      * @param value Value to set for the isExpeditable property.
      */
     public void setIsExpeditable(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isExpeditable", value);
     }
     /**
-     * Sets the kbArticleId property value. Knowledge base article id
+     * Sets the kbArticleId property value. Identifies the knowledge base article associated with the Windows quality update catalog item. Read-only
      * @param value Value to set for the kbArticleId property.
      */
     public void setKbArticleId(@jakarta.annotation.Nullable final String value) {

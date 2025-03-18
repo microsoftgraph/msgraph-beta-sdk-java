@@ -115,7 +115,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the size property value. The size of the file prior to encryption. To be deprecated, please use sizeInBytes property instead.
+     * Gets the size property value. Indicates the original size of the file, in bytes.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("size");
     }
     /**
-     * Gets the sizeEncrypted property value. The size of the file after encryption. To be deprecated, please use sizeEncryptedInBytes property instead.
+     * Gets the sizeEncrypted property value. Indicates the size of the file after encryption, in bytes.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("sizeEncrypted");
     }
     /**
-     * Gets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes. Valid values 0 to 9.22337203685478E+18
+     * Gets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes. To be deprecated in February 2025, please use SizeEncrypted property instead. Valid values 0 to 9.22337203685478E+18
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("sizeEncryptedInBytes");
     }
     /**
-     * Gets the sizeInBytes property value. Indicates the original size of the file, in bytes. Valid values 0 to 9.22337203685478E+18
+     * Gets the sizeInBytes property value. Indicates the original size of the file, in bytes. To be deprecated in February 2025, please use Size property instead. Valid values 0 to 9.22337203685478E+18
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -228,28 +228,28 @@ public class MobileAppContentFile extends Entity implements Parsable {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the size property value. The size of the file prior to encryption. To be deprecated, please use sizeInBytes property instead.
+     * Sets the size property value. Indicates the original size of the file, in bytes.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("size", value);
     }
     /**
-     * Sets the sizeEncrypted property value. The size of the file after encryption. To be deprecated, please use sizeEncryptedInBytes property instead.
+     * Sets the sizeEncrypted property value. Indicates the size of the file after encryption, in bytes.
      * @param value Value to set for the sizeEncrypted property.
      */
     public void setSizeEncrypted(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("sizeEncrypted", value);
     }
     /**
-     * Sets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes. Valid values 0 to 9.22337203685478E+18
+     * Sets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes. To be deprecated in February 2025, please use SizeEncrypted property instead. Valid values 0 to 9.22337203685478E+18
      * @param value Value to set for the sizeEncryptedInBytes property.
      */
     public void setSizeEncryptedInBytes(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("sizeEncryptedInBytes", value);
     }
     /**
-     * Sets the sizeInBytes property value. Indicates the original size of the file, in bytes. Valid values 0 to 9.22337203685478E+18
+     * Sets the sizeInBytes property value. Indicates the original size of the file, in bytes. To be deprecated in February 2025, please use Size property instead. Valid values 0 to 9.22337203685478E+18
      * @param value Value to set for the sizeInBytes property.
      */
     public void setSizeInBytes(@jakarta.annotation.Nullable final Long value) {
