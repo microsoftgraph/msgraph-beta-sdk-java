@@ -30,6 +30,8 @@ public class NamedLocation extends Entity implements Parsable {
                 case "#microsoft.graph.compliantNetworkNamedLocation": return new CompliantNetworkNamedLocation();
                 case "#microsoft.graph.countryNamedLocation": return new CountryNamedLocation();
                 case "#microsoft.graph.ipNamedLocation": return new IpNamedLocation();
+                case "#microsoft.graph.privateLinkNamedLocation": return new PrivateLinkNamedLocation();
+                case "#microsoft.graph.serviceTagNamedLocation": return new ServiceTagNamedLocation();
             }
         }
         return new NamedLocation();

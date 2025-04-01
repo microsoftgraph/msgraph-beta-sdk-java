@@ -43,7 +43,7 @@ public class MailFolderOperation extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the resourceLocation property value. The resourceLocation property
+     * Gets the resourceLocation property value. The location of the long-running operation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class MailFolderOperation extends Entity implements Parsable {
         return this.backingStore.get("resourceLocation");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. The status of the long-running operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      * @return a {@link MailFolderOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -69,14 +69,14 @@ public class MailFolderOperation extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the resourceLocation property value. The resourceLocation property
+     * Sets the resourceLocation property value. The location of the long-running operation.
      * @param value Value to set for the resourceLocation property.
      */
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceLocation", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. The status of the long-running operation. The possible values are: notStarted, running, succeeded, failed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final MailFolderOperationStatus value) {

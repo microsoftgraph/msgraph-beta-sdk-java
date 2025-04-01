@@ -15,6 +15,7 @@ import com.microsoft.graph.beta.drives.item.items.item.createuploadsession.Creat
 import com.microsoft.graph.beta.drives.item.items.item.delta.DeltaRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.deltawithtoken.DeltaWithTokenRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.discardcheckout.DiscardCheckoutRequestBuilder;
+import com.microsoft.graph.beta.drives.item.items.item.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.extractsensitivitylabels.ExtractSensitivityLabelsRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.follow.FollowRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
@@ -164,6 +165,14 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DiscardCheckoutRequestBuilder discardCheckout() {
         return new DiscardCheckoutRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.driveItem entity.
+     * @return a {@link ExtensionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExtensionsRequestBuilder extensions() {
+        return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the extractSensitivityLabels method.

@@ -111,7 +111,7 @@ public class MailFolder extends Entity implements Parsable {
         return this.backingStore.get("multiValueExtendedProperties");
     }
     /**
-     * Gets the operations property value. The operations property
+     * Gets the operations property value. The collection of long-running operations in the mailFolder.
      * @return a {@link java.util.List<MailFolderOperation>}
      */
     @jakarta.annotation.Nullable
@@ -238,7 +238,7 @@ public class MailFolder extends Entity implements Parsable {
         this.backingStore.set("multiValueExtendedProperties", value);
     }
     /**
-     * Sets the operations property value. The operations property
+     * Sets the operations property value. The collection of long-running operations in the mailFolder.
      * @param value Value to set for the operations property.
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<MailFolderOperation> value) {

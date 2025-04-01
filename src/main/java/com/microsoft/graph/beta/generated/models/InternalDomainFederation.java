@@ -26,12 +26,20 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         return new InternalDomainFederation();
     }
     /**
-     * Gets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Gets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-EntraDomainFederationSettings PowerShell cmdlet.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getActiveSignInUri() {
         return this.backingStore.get("activeSignInUri");
+    }
+    /**
+     * Gets the defaultInteractiveAuthenticationMethod property value. The defaultInteractiveAuthenticationMethod property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDefaultInteractiveAuthenticationMethod() {
+        return this.backingStore.get("defaultInteractiveAuthenticationMethod");
     }
     /**
      * Gets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
@@ -49,9 +57,12 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("activeSignInUri", (n) -> { this.setActiveSignInUri(n.getStringValue()); });
+        deserializerMap.put("defaultInteractiveAuthenticationMethod", (n) -> { this.setDefaultInteractiveAuthenticationMethod(n.getStringValue()); });
         deserializerMap.put("federatedIdpMfaBehavior", (n) -> { this.setFederatedIdpMfaBehavior(n.getEnumValue(FederatedIdpMfaBehavior::forValue)); });
         deserializerMap.put("isSignedAuthenticationRequestRequired", (n) -> { this.setIsSignedAuthenticationRequestRequired(n.getBooleanValue()); });
         deserializerMap.put("nextSigningCertificate", (n) -> { this.setNextSigningCertificate(n.getStringValue()); });
+        deserializerMap.put("openIdConnectDiscoveryEndpoint", (n) -> { this.setOpenIdConnectDiscoveryEndpoint(n.getStringValue()); });
+        deserializerMap.put("passwordChangeUri", (n) -> { this.setPasswordChangeUri(n.getStringValue()); });
         deserializerMap.put("passwordResetUri", (n) -> { this.setPasswordResetUri(n.getStringValue()); });
         deserializerMap.put("promptLoginBehavior", (n) -> { this.setPromptLoginBehavior(n.getEnumValue(PromptLoginBehavior::forValue)); });
         deserializerMap.put("signingCertificateUpdateStatus", (n) -> { this.setSigningCertificateUpdateStatus(n.getObjectValue(SigningCertificateUpdateStatus::createFromDiscriminatorValue)); });
@@ -73,6 +84,22 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
     @jakarta.annotation.Nullable
     public String getNextSigningCertificate() {
         return this.backingStore.get("nextSigningCertificate");
+    }
+    /**
+     * Gets the openIdConnectDiscoveryEndpoint property value. The openIdConnectDiscoveryEndpoint property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOpenIdConnectDiscoveryEndpoint() {
+        return this.backingStore.get("openIdConnectDiscoveryEndpoint");
+    }
+    /**
+     * Gets the passwordChangeUri property value. The passwordChangeUri property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPasswordChangeUri() {
+        return this.backingStore.get("passwordChangeUri");
     }
     /**
      * Gets the passwordResetUri property value. URI that clients are redirected to for resetting their password.
@@ -99,7 +126,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         return this.backingStore.get("signingCertificateUpdateStatus");
     }
     /**
-     * Gets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Gets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-EntraDomainFederationSettings PowerShell cmdlet.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -114,20 +141,30 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("activeSignInUri", this.getActiveSignInUri());
+        writer.writeStringValue("defaultInteractiveAuthenticationMethod", this.getDefaultInteractiveAuthenticationMethod());
         writer.writeEnumValue("federatedIdpMfaBehavior", this.getFederatedIdpMfaBehavior());
         writer.writeBooleanValue("isSignedAuthenticationRequestRequired", this.getIsSignedAuthenticationRequestRequired());
         writer.writeStringValue("nextSigningCertificate", this.getNextSigningCertificate());
+        writer.writeStringValue("openIdConnectDiscoveryEndpoint", this.getOpenIdConnectDiscoveryEndpoint());
+        writer.writeStringValue("passwordChangeUri", this.getPasswordChangeUri());
         writer.writeStringValue("passwordResetUri", this.getPasswordResetUri());
         writer.writeEnumValue("promptLoginBehavior", this.getPromptLoginBehavior());
         writer.writeObjectValue("signingCertificateUpdateStatus", this.getSigningCertificateUpdateStatus());
         writer.writeStringValue("signOutUri", this.getSignOutUri());
     }
     /**
-     * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Microsoft Entra ID. Corresponds to the ActiveLogOnUri property of the Set-EntraDomainFederationSettings PowerShell cmdlet.
      * @param value Value to set for the activeSignInUri property.
      */
     public void setActiveSignInUri(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("activeSignInUri", value);
+    }
+    /**
+     * Sets the defaultInteractiveAuthenticationMethod property value. The defaultInteractiveAuthenticationMethod property
+     * @param value Value to set for the defaultInteractiveAuthenticationMethod property.
+     */
+    public void setDefaultInteractiveAuthenticationMethod(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("defaultInteractiveAuthenticationMethod", value);
     }
     /**
      * Sets the federatedIdpMfaBehavior property value. Determines whether Microsoft Entra ID accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
@@ -151,6 +188,20 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         this.backingStore.set("nextSigningCertificate", value);
     }
     /**
+     * Sets the openIdConnectDiscoveryEndpoint property value. The openIdConnectDiscoveryEndpoint property
+     * @param value Value to set for the openIdConnectDiscoveryEndpoint property.
+     */
+    public void setOpenIdConnectDiscoveryEndpoint(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("openIdConnectDiscoveryEndpoint", value);
+    }
+    /**
+     * Sets the passwordChangeUri property value. The passwordChangeUri property
+     * @param value Value to set for the passwordChangeUri property.
+     */
+    public void setPasswordChangeUri(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("passwordChangeUri", value);
+    }
+    /**
      * Sets the passwordResetUri property value. URI that clients are redirected to for resetting their password.
      * @param value Value to set for the passwordResetUri property.
      */
@@ -172,7 +223,7 @@ public class InternalDomainFederation extends SamlOrWsFedProvider implements Par
         this.backingStore.set("signingCertificateUpdateStatus", value);
     }
     /**
-     * Sets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
+     * Sets the signOutUri property value. URI that clients are redirected to when they sign out of Microsoft Entra services. Corresponds to the LogOffUri property of the Set-EntraDomainFederationSettings PowerShell cmdlet.
      * @param value Value to set for the signOutUri property.
      */
     public void setSignOutUri(@jakarta.annotation.Nullable final String value) {

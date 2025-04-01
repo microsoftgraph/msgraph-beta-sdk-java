@@ -25,7 +25,7 @@ public class CallSettings extends Entity implements Parsable {
         return new CallSettings();
     }
     /**
-     * Gets the delegates property value. The delegates property
+     * Gets the delegates property value. Represents the delegate settings.
      * @return a {@link java.util.List<DelegationSettings>}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class CallSettings extends Entity implements Parsable {
         return this.backingStore.get("delegates");
     }
     /**
-     * Gets the delegators property value. The delegators property
+     * Gets the delegators property value. Represents the delegator settings.
      * @return a {@link java.util.List<DelegationSettings>}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class CallSettings extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("delegators", this.getDelegators());
     }
     /**
-     * Sets the delegates property value. The delegates property
+     * Sets the delegates property value. Represents the delegate settings.
      * @param value Value to set for the delegates property.
      */
     public void setDelegates(@jakarta.annotation.Nullable final java.util.List<DelegationSettings> value) {
         this.backingStore.set("delegates", value);
     }
     /**
-     * Sets the delegators property value. The delegators property
+     * Sets the delegators property value. Represents the delegator settings.
      * @param value Value to set for the delegators property.
      */
     public void setDelegators(@jakarta.annotation.Nullable final java.util.List<DelegationSettings> value) {

@@ -36,6 +36,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("publicationId", (n) -> { this.setPublicationId(n.getStringValue()); });
+        deserializerMap.put("publicationName", (n) -> { this.setPublicationName(n.getStringValue()); });
         deserializerMap.put("publishedToPlanId", (n) -> { this.setPublishedToPlanId(n.getStringValue()); });
         deserializerMap.put("publishingTeamId", (n) -> { this.setPublishingTeamId(n.getStringValue()); });
         deserializerMap.put("publishingTeamName", (n) -> { this.setPublishingTeamName(n.getStringValue()); });
@@ -64,6 +65,14 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
     @jakarta.annotation.Nullable
     public String getPublicationId() {
         return this.backingStore.get("publicationId");
+    }
+    /**
+     * Gets the publicationName property value. The name of the published task list. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPublicationName() {
+        return this.backingStore.get("publicationName");
     }
     /**
      * Gets the publishedToPlanId property value. The identifier of the plannerPlan this task was originally placed in. Read-only.
@@ -99,6 +108,7 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("publicationId", this.getPublicationId());
+        writer.writeStringValue("publicationName", this.getPublicationName());
         writer.writeStringValue("publishedToPlanId", this.getPublishedToPlanId());
         writer.writeStringValue("publishingTeamId", this.getPublishingTeamId());
         writer.writeStringValue("publishingTeamName", this.getPublishingTeamName());
@@ -123,6 +133,13 @@ public class PlannerTeamsPublicationInfo extends PlannerTaskCreation implements 
      */
     public void setPublicationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publicationId", value);
+    }
+    /**
+     * Sets the publicationName property value. The name of the published task list. Read-only.
+     * @param value Value to set for the publicationName property.
+     */
+    public void setPublicationName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("publicationName", value);
     }
     /**
      * Sets the publishedToPlanId property value. The identifier of the plannerPlan this task was originally placed in. Read-only.
