@@ -98,6 +98,14 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("deleted");
     }
     /**
+     * Gets the extensions property value. The extensions property
+     * @return a {@link java.util.List<Extension>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Extension> getExtensions() {
+        return this.backingStore.get("extensions");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -113,6 +121,7 @@ public class DriveItem extends BaseItem implements Parsable {
         deserializerMap.put("contentStream", (n) -> { this.setContentStream(n.getByteArrayValue()); });
         deserializerMap.put("cTag", (n) -> { this.setCTag(n.getStringValue()); });
         deserializerMap.put("deleted", (n) -> { this.setDeleted(n.getObjectValue(Deleted::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("file", (n) -> { this.setFile(n.getObjectValue(File::createFromDiscriminatorValue)); });
         deserializerMap.put("fileSystemInfo", (n) -> { this.setFileSystemInfo(n.getObjectValue(FileSystemInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("folder", (n) -> { this.setFolder(n.getObjectValue(Folder::createFromDiscriminatorValue)); });
@@ -392,6 +401,7 @@ public class DriveItem extends BaseItem implements Parsable {
         writer.writeByteArrayValue("contentStream", this.getContentStream());
         writer.writeStringValue("cTag", this.getCTag());
         writer.writeObjectValue("deleted", this.getDeleted());
+        writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeObjectValue("file", this.getFile());
         writer.writeObjectValue("fileSystemInfo", this.getFileSystemInfo());
         writer.writeObjectValue("folder", this.getFolder());
@@ -484,6 +494,13 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     public void setDeleted(@jakarta.annotation.Nullable final Deleted value) {
         this.backingStore.set("deleted", value);
+    }
+    /**
+     * Sets the extensions property value. The extensions property
+     * @param value Value to set for the extensions property.
+     */
+    public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
+        this.backingStore.set("extensions", value);
     }
     /**
      * Sets the file property value. File metadata, if the item is a file. Read-only.

@@ -58,6 +58,7 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.multiTenantOrganizationMember": return new MultiTenantOrganizationMember();
                 case "#microsoft.graph.mutualTlsOauthConfiguration": return new MutualTlsOauthConfiguration();
                 case "#microsoft.graph.organization": return new Organization();
+                case "#microsoft.graph.organizationalUnit": return new OrganizationalUnit();
                 case "#microsoft.graph.orgContact": return new OrgContact();
                 case "#microsoft.graph.pendingExternalUserProfile": return new PendingExternalUserProfile();
                 case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();

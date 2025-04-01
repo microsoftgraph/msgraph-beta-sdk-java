@@ -59,11 +59,11 @@ public class DiscoveredCloudAppInfo extends Entity implements Parsable {
         return this.backingStore.get("dataRetentionPolicy");
     }
     /**
-     * Gets the dataTypes property value. The dataTypes property
-     * @return a {@link AppInfoUploadedDataTypes}
+     * Gets the dataTypes property value. Indicates the data types that an end user can upload to the app. The possible values are: documents, mediaFiles, codingFiles, creditCards, databaseFiles, none, unknown, unknownFutureValue.
+     * @return a {@link java.util.List<AppInfoUploadedDataTypes>}
      */
     @jakarta.annotation.Nullable
-    public AppInfoUploadedDataTypes getDataTypes() {
+    public java.util.List<AppInfoUploadedDataTypes> getDataTypes() {
         return this.backingStore.get("dataTypes");
     }
     /**
@@ -101,7 +101,7 @@ public class DiscoveredCloudAppInfo extends Entity implements Parsable {
         deserializerMap.put("dataAtRestEncryptionMethod", (n) -> { this.setDataAtRestEncryptionMethod(n.getEnumValue(AppInfoDataAtRestEncryptionMethod::forValue)); });
         deserializerMap.put("dataCenter", (n) -> { this.setDataCenter(n.getStringValue()); });
         deserializerMap.put("dataRetentionPolicy", (n) -> { this.setDataRetentionPolicy(n.getEnumValue(AppInfoDataRetentionPolicy::forValue)); });
-        deserializerMap.put("dataTypes", (n) -> { this.setDataTypes(n.getEnumValue(AppInfoUploadedDataTypes::forValue)); });
+        deserializerMap.put("dataTypes", (n) -> { this.setDataTypes(n.getCollectionOfEnumValues(AppInfoUploadedDataTypes::forValue)); });
         deserializerMap.put("domainRegistrationDateTime", (n) -> { this.setDomainRegistrationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("encryptionProtocol", (n) -> { this.setEncryptionProtocol(n.getEnumValue(AppInfoEncryptionProtocol::forValue)); });
         deserializerMap.put("fedRampLevel", (n) -> { this.setFedRampLevel(n.getEnumValue(AppInfoFedRampLevel::forValue)); });
@@ -177,7 +177,7 @@ public class DiscoveredCloudAppInfo extends Entity implements Parsable {
         deserializerMap.put("isUserRolesSupport", (n) -> { this.setIsUserRolesSupport(n.getEnumValue(CloudAppInfoState::forValue)); });
         deserializerMap.put("isValidCertificateName", (n) -> { this.setIsValidCertificateName(n.getEnumValue(CloudAppInfoState::forValue)); });
         deserializerMap.put("latestBreachDateTime", (n) -> { this.setLatestBreachDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("logonUrls", (n) -> { this.setLogonUrls(n.getStringValue()); });
+        deserializerMap.put("logonUrls", (n) -> { this.setLogonUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("pciDssVersion", (n) -> { this.setPciDssVersion(n.getEnumValue(AppInfoPciDssVersion::forValue)); });
         deserializerMap.put("vendor", (n) -> { this.setVendor(n.getStringValue()); });
         return deserializerMap;
@@ -760,10 +760,10 @@ public class DiscoveredCloudAppInfo extends Entity implements Parsable {
     }
     /**
      * Gets the logonUrls property value. Indicates the URL that users can use to sign into the app.
-     * @return a {@link String}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public String getLogonUrls() {
+    public java.util.List<String> getLogonUrls() {
         return this.backingStore.get("logonUrls");
     }
     /**
@@ -793,7 +793,7 @@ public class DiscoveredCloudAppInfo extends Entity implements Parsable {
         writer.writeEnumValue("dataAtRestEncryptionMethod", this.getDataAtRestEncryptionMethod());
         writer.writeStringValue("dataCenter", this.getDataCenter());
         writer.writeEnumValue("dataRetentionPolicy", this.getDataRetentionPolicy());
-        writer.writeEnumValue("dataTypes", this.getDataTypes());
+        writer.writeCollectionOfEnumValues("dataTypes", this.getDataTypes());
         writer.writeOffsetDateTimeValue("domainRegistrationDateTime", this.getDomainRegistrationDateTime());
         writer.writeEnumValue("encryptionProtocol", this.getEncryptionProtocol());
         writer.writeEnumValue("fedRampLevel", this.getFedRampLevel());
@@ -869,7 +869,7 @@ public class DiscoveredCloudAppInfo extends Entity implements Parsable {
         writer.writeEnumValue("isUserRolesSupport", this.getIsUserRolesSupport());
         writer.writeEnumValue("isValidCertificateName", this.getIsValidCertificateName());
         writer.writeOffsetDateTimeValue("latestBreachDateTime", this.getLatestBreachDateTime());
-        writer.writeStringValue("logonUrls", this.getLogonUrls());
+        writer.writeCollectionOfPrimitiveValues("logonUrls", this.getLogonUrls());
         writer.writeEnumValue("pciDssVersion", this.getPciDssVersion());
         writer.writeStringValue("vendor", this.getVendor());
     }
@@ -902,10 +902,10 @@ public class DiscoveredCloudAppInfo extends Entity implements Parsable {
         this.backingStore.set("dataRetentionPolicy", value);
     }
     /**
-     * Sets the dataTypes property value. The dataTypes property
+     * Sets the dataTypes property value. Indicates the data types that an end user can upload to the app. The possible values are: documents, mediaFiles, codingFiles, creditCards, databaseFiles, none, unknown, unknownFutureValue.
      * @param value Value to set for the dataTypes property.
      */
-    public void setDataTypes(@jakarta.annotation.Nullable final AppInfoUploadedDataTypes value) {
+    public void setDataTypes(@jakarta.annotation.Nullable final java.util.List<AppInfoUploadedDataTypes> value) {
         this.backingStore.set("dataTypes", value);
     }
     /**
@@ -1437,7 +1437,7 @@ public class DiscoveredCloudAppInfo extends Entity implements Parsable {
      * Sets the logonUrls property value. Indicates the URL that users can use to sign into the app.
      * @param value Value to set for the logonUrls property.
      */
-    public void setLogonUrls(@jakarta.annotation.Nullable final String value) {
+    public void setLogonUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("logonUrls", value);
     }
     /**

@@ -71,7 +71,7 @@ public class DelegateAllowedActions implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the joinActiveCalls property value. The joinActiveCalls property
+     * Gets the joinActiveCalls property value. Indicates whether the delegator or delegate allows participation in active calls.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class DelegateAllowedActions implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("joinActiveCalls");
     }
     /**
-     * Gets the makeCalls property value. The makeCalls property
+     * Gets the makeCalls property value. Indicates whether the delegator or delegate allows calls to be made on their behalf.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class DelegateAllowedActions implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("makeCalls");
     }
     /**
-     * Gets the manageCallAndDelegateSettings property value. The manageCallAndDelegateSettings property
+     * Gets the manageCallAndDelegateSettings property value. Indicates whether the delegator or delegate allows the management of call and delegation settings.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class DelegateAllowedActions implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the pickUpHeldCalls property value. The pickUpHeldCalls property
+     * Gets the pickUpHeldCalls property value. Indicates whether the delegator or delegate allows held calls to be picked up.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class DelegateAllowedActions implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("pickUpHeldCalls");
     }
     /**
-     * Gets the receiveCalls property value. The receiveCalls property
+     * Gets the receiveCalls property value. Indicates whether the delegator or delegate allows calls to be received on their behalf.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -148,21 +148,21 @@ public class DelegateAllowedActions implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the joinActiveCalls property value. The joinActiveCalls property
+     * Sets the joinActiveCalls property value. Indicates whether the delegator or delegate allows participation in active calls.
      * @param value Value to set for the joinActiveCalls property.
      */
     public void setJoinActiveCalls(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("joinActiveCalls", value);
     }
     /**
-     * Sets the makeCalls property value. The makeCalls property
+     * Sets the makeCalls property value. Indicates whether the delegator or delegate allows calls to be made on their behalf.
      * @param value Value to set for the makeCalls property.
      */
     public void setMakeCalls(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("makeCalls", value);
     }
     /**
-     * Sets the manageCallAndDelegateSettings property value. The manageCallAndDelegateSettings property
+     * Sets the manageCallAndDelegateSettings property value. Indicates whether the delegator or delegate allows the management of call and delegation settings.
      * @param value Value to set for the manageCallAndDelegateSettings property.
      */
     public void setManageCallAndDelegateSettings(@jakarta.annotation.Nullable final Boolean value) {
@@ -176,14 +176,14 @@ public class DelegateAllowedActions implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the pickUpHeldCalls property value. The pickUpHeldCalls property
+     * Sets the pickUpHeldCalls property value. Indicates whether the delegator or delegate allows held calls to be picked up.
      * @param value Value to set for the pickUpHeldCalls property.
      */
     public void setPickUpHeldCalls(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("pickUpHeldCalls", value);
     }
     /**
-     * Sets the receiveCalls property value. The receiveCalls property
+     * Sets the receiveCalls property value. Indicates whether the delegator or delegate allows calls to be received on their behalf.
      * @param value Value to set for the receiveCalls property.
      */
     public void setReceiveCalls(@jakarta.annotation.Nullable final Boolean value) {

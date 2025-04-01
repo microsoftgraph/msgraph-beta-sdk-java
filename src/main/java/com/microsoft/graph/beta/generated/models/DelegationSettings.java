@@ -26,7 +26,7 @@ public class DelegationSettings extends Entity implements Parsable {
         return new DelegationSettings();
     }
     /**
-     * Gets the allowedActions property value. The allowedActions property
+     * Gets the allowedActions property value. The allowed actions for the delegator or delegate.
      * @return a {@link DelegateAllowedActions}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class DelegationSettings extends Entity implements Parsable {
         return this.backingStore.get("allowedActions");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the delegator or delegate entry was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class DelegationSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isActive property value. The isActive property
+     * Gets the isActive property value. Indicates whether the delegator or delegate relationship is currently active.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class DelegationSettings extends Entity implements Parsable {
         writer.writeBooleanValue("isActive", this.getIsActive());
     }
     /**
-     * Sets the allowedActions property value. The allowedActions property
+     * Sets the allowedActions property value. The allowed actions for the delegator or delegate.
      * @param value Value to set for the allowedActions property.
      */
     public void setAllowedActions(@jakarta.annotation.Nullable final DelegateAllowedActions value) {
         this.backingStore.set("allowedActions", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the delegator or delegate entry was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the isActive property value. The isActive property
+     * Sets the isActive property value. Indicates whether the delegator or delegate relationship is currently active.
      * @param value Value to set for the isActive property.
      */
     public void setIsActive(@jakarta.annotation.Nullable final Boolean value) {

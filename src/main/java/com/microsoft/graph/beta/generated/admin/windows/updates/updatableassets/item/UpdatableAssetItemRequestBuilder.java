@@ -73,18 +73,18 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/windows/updates/updatableAssets/{updatableAsset%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
+     * Delete an azureADDevice object. When a Microsoft Entra device is deleted, it is unregistered and automatically unenrolled from management for all update categories, as well as removed from every deploymentAudience and updatableAssetGroup.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-delete?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-azureaddevice-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
+     * Delete an azureADDevice object. When a Microsoft Entra device is deleted, it is unregistered and automatically unenrolled from management for all update categories, as well as removed from every deploymentAudience and updatableAssetGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-delete?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-azureaddevice-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -142,7 +142,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UpdatableAsset::createFromDiscriminatorValue);
     }
     /**
-     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
+     * Delete an azureADDevice object. When a Microsoft Entra device is deleted, it is unregistered and automatically unenrolled from management for all update categories, as well as removed from every deploymentAudience and updatableAssetGroup.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +150,7 @@ public class UpdatableAssetItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.
+     * Delete an azureADDevice object. When a Microsoft Entra device is deleted, it is unregistered and automatically unenrolled from management for all update categories, as well as removed from every deploymentAudience and updatableAssetGroup.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

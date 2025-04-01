@@ -35,23 +35,25 @@ public class UpdateAllMessagesReadStateRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/updateAllMessagesReadState", rawUrl);
     }
     /**
-     * Invoke action updateAllMessagesReadState
+     * Update the read state of all messages in a mailFolder object.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
+     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-updateallmessagesreadstate?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final UpdateAllMessagesReadStatePostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action updateAllMessagesReadState
+     * Update the read state of all messages in a mailFolder object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
+     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-updateallmessagesreadstate?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final UpdateAllMessagesReadStatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -62,7 +64,7 @@ public class UpdateAllMessagesReadStateRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action updateAllMessagesReadState
+     * Update the read state of all messages in a mailFolder object.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -74,7 +76,7 @@ public class UpdateAllMessagesReadStateRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action updateAllMessagesReadState
+     * Update the read state of all messages in a mailFolder object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
