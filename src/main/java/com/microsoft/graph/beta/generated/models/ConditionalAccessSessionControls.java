@@ -93,16 +93,25 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, B
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("applicationEnforcedRestrictions", (n) -> { this.setApplicationEnforcedRestrictions(n.getObjectValue(ApplicationEnforcedRestrictionsSessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudAppSecurity", (n) -> { this.setCloudAppSecurity(n.getObjectValue(CloudAppSecuritySessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("continuousAccessEvaluation", (n) -> { this.setContinuousAccessEvaluation(n.getObjectValue(ContinuousAccessEvaluationSessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("disableResilienceDefaults", (n) -> { this.setDisableResilienceDefaults(n.getBooleanValue()); });
+        deserializerMap.put("globalSecureAccessFilteringProfile", (n) -> { this.setGlobalSecureAccessFilteringProfile(n.getObjectValue(GlobalSecureAccessFilteringProfileSessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("persistentBrowser", (n) -> { this.setPersistentBrowser(n.getObjectValue(PersistentBrowserSessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("secureSignInSession", (n) -> { this.setSecureSignInSession(n.getObjectValue(SecureSignInSessionControl::createFromDiscriminatorValue)); });
         deserializerMap.put("signInFrequency", (n) -> { this.setSignInFrequency(n.getObjectValue(SignInFrequencySessionControl::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the globalSecureAccessFilteringProfile property value. Session control to link to Global Secure Access security profiles or filtering profiles.
+     * @return a {@link GlobalSecureAccessFilteringProfileSessionControl}
+     */
+    @jakarta.annotation.Nullable
+    public GlobalSecureAccessFilteringProfileSessionControl getGlobalSecureAccessFilteringProfile() {
+        return this.backingStore.get("globalSecureAccessFilteringProfile");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -146,6 +155,7 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, B
         writer.writeObjectValue("cloudAppSecurity", this.getCloudAppSecurity());
         writer.writeObjectValue("continuousAccessEvaluation", this.getContinuousAccessEvaluation());
         writer.writeBooleanValue("disableResilienceDefaults", this.getDisableResilienceDefaults());
+        writer.writeObjectValue("globalSecureAccessFilteringProfile", this.getGlobalSecureAccessFilteringProfile());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("persistentBrowser", this.getPersistentBrowser());
         writer.writeObjectValue("secureSignInSession", this.getSecureSignInSession());
@@ -194,6 +204,13 @@ public class ConditionalAccessSessionControls implements AdditionalDataHolder, B
      */
     public void setDisableResilienceDefaults(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("disableResilienceDefaults", value);
+    }
+    /**
+     * Sets the globalSecureAccessFilteringProfile property value. Session control to link to Global Secure Access security profiles or filtering profiles.
+     * @param value Value to set for the globalSecureAccessFilteringProfile property.
+     */
+    public void setGlobalSecureAccessFilteringProfile(@jakarta.annotation.Nullable final GlobalSecureAccessFilteringProfileSessionControl value) {
+        this.backingStore.set("globalSecureAccessFilteringProfile", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

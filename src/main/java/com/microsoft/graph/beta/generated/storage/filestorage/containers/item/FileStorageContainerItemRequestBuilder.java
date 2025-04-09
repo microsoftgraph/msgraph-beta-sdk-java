@@ -10,6 +10,7 @@ import com.microsoft.graph.beta.storage.filestorage.containers.item.permanentdel
 import com.microsoft.graph.beta.storage.filestorage.containers.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.containers.item.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.containers.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.beta.storage.filestorage.containers.item.sharepointgroups.SharePointGroupsRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.containers.item.unlock.UnlockRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -92,6 +93,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sharePointGroups property of the microsoft.graph.fileStorageContainer entity.
+     * @return a {@link SharePointGroupsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SharePointGroupsRequestBuilder sharePointGroups() {
+        return new SharePointGroupsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unlock method.
@@ -201,7 +210,6 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

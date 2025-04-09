@@ -11,6 +11,7 @@ import com.microsoft.graph.beta.models.devicemanagement.AlertRecord;
 import com.microsoft.graph.beta.models.devicemanagement.AlertRule;
 import com.microsoft.graph.beta.models.devicemanagement.Monitoring;
 import com.microsoft.graph.beta.models.ediscovery.AddToReviewSetOperation;
+import com.microsoft.graph.beta.models.ediscovery.CaseEscaped;
 import com.microsoft.graph.beta.models.ediscovery.CaseExportOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseHoldOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseIndexOperation;
@@ -25,11 +26,8 @@ import com.microsoft.graph.beta.models.ediscovery.NoncustodialDataSource;
 import com.microsoft.graph.beta.models.ediscovery.PurgeDataOperation;
 import com.microsoft.graph.beta.models.ediscovery.ReviewSet;
 import com.microsoft.graph.beta.models.ediscovery.ReviewSetQuery;
-import com.microsoft.graph.beta.models.ediscovery.SiteSource;
 import com.microsoft.graph.beta.models.ediscovery.SourceCollection;
-import com.microsoft.graph.beta.models.ediscovery.Tag;
 import com.microsoft.graph.beta.models.ediscovery.TagOperation;
-import com.microsoft.graph.beta.models.ediscovery.UnifiedGroupSource;
 import com.microsoft.graph.beta.models.ediscovery.UserSource;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionQuota;
@@ -117,7 +115,6 @@ import com.microsoft.graph.beta.models.managedtenants.TenantGroup;
 import com.microsoft.graph.beta.models.managedtenants.TenantTag;
 import com.microsoft.graph.beta.models.managedtenants.WindowsDeviceMalwareState;
 import com.microsoft.graph.beta.models.managedtenants.WindowsProtectionState;
-import com.microsoft.graph.beta.models.networkaccess.Alert;
 import com.microsoft.graph.beta.models.networkaccess.BranchSite;
 import com.microsoft.graph.beta.models.networkaccess.ConditionalAccessPolicy;
 import com.microsoft.graph.beta.models.networkaccess.ConditionalAccessSettings;
@@ -175,6 +172,7 @@ import com.microsoft.graph.beta.models.search.Acronym;
 import com.microsoft.graph.beta.models.search.Bookmark;
 import com.microsoft.graph.beta.models.search.Qna;
 import com.microsoft.graph.beta.models.search.SearchAnswer;
+import com.microsoft.graph.beta.models.security.Alert;
 import com.microsoft.graph.beta.models.security.AnalyzedEmail;
 import com.microsoft.graph.beta.models.security.Article;
 import com.microsoft.graph.beta.models.security.ArticleIndicator;
@@ -183,7 +181,6 @@ import com.microsoft.graph.beta.models.security.AuditCoreRoot;
 import com.microsoft.graph.beta.models.security.AuditLogQuery;
 import com.microsoft.graph.beta.models.security.AuditLogRecord;
 import com.microsoft.graph.beta.models.security.AuthorityTemplate;
-import com.microsoft.graph.beta.models.security.CaseEscaped;
 import com.microsoft.graph.beta.models.security.CaseOperation;
 import com.microsoft.graph.beta.models.security.CasesRoot;
 import com.microsoft.graph.beta.models.security.CategoryTemplate;
@@ -260,15 +257,18 @@ import com.microsoft.graph.beta.models.security.Search;
 import com.microsoft.graph.beta.models.security.Security;
 import com.microsoft.graph.beta.models.security.SensitivityLabel;
 import com.microsoft.graph.beta.models.security.Sensor;
+import com.microsoft.graph.beta.models.security.SiteSource;
 import com.microsoft.graph.beta.models.security.SslCertificate;
 import com.microsoft.graph.beta.models.security.SubcategoryTemplate;
 import com.microsoft.graph.beta.models.security.Subdomain;
+import com.microsoft.graph.beta.models.security.Tag;
 import com.microsoft.graph.beta.models.security.ThreatIntelligence;
 import com.microsoft.graph.beta.models.security.ThreatSubmission;
 import com.microsoft.graph.beta.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.beta.models.security.TriggersRoot;
 import com.microsoft.graph.beta.models.security.TriggerTypesRoot;
 import com.microsoft.graph.beta.models.security.UnclassifiedArtifact;
+import com.microsoft.graph.beta.models.security.UnifiedGroupSource;
 import com.microsoft.graph.beta.models.security.UrlThreatSubmission;
 import com.microsoft.graph.beta.models.security.Vulnerability;
 import com.microsoft.graph.beta.models.security.VulnerabilityComponent;
@@ -744,6 +744,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.copilotAdmin": return new CopilotAdmin();
             case "#microsoft.graph.copilotAdminLimitedMode": return new CopilotAdminLimitedMode();
             case "#microsoft.graph.copilotAdminSetting": return new CopilotAdminSetting();
+            case "#microsoft.graph.copilotPeopleAdminSetting": return new CopilotPeopleAdminSetting();
+            case "#microsoft.graph.copilotSetting": return new CopilotSetting();
             case "#microsoft.graph.corsConfiguration_v2": return new CorsConfigurationV2();
             case "#microsoft.graph.countryNamedLocation": return new CountryNamedLocation();
             case "#microsoft.graph.credentialUsageSummary": return new CredentialUsageSummary();
@@ -867,8 +869,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.deviceManagementConfigurationChoiceSettingDefinition": return new DeviceManagementConfigurationChoiceSettingDefinition();
             case "#microsoft.graph.deviceManagementConfigurationPolicy": return new DeviceManagementConfigurationPolicy();
             case "#microsoft.graph.deviceManagementConfigurationPolicyAssignment": return new DeviceManagementConfigurationPolicyAssignment();
-            case "#microsoft.graph.deviceManagementConfigurationPolicyPolicySetItem": return new DeviceManagementConfigurationPolicyPolicySetItem();
-            case "#microsoft.graph.deviceManagementConfigurationPolicyTemplate": return new DeviceManagementConfigurationPolicyTemplate();
         }
         return null;
     }
@@ -880,6 +880,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.deviceManagementConfigurationPolicyPolicySetItem": return new DeviceManagementConfigurationPolicyPolicySetItem();
+            case "#microsoft.graph.deviceManagementConfigurationPolicyTemplate": return new DeviceManagementConfigurationPolicyTemplate();
             case "#microsoft.graph.deviceManagementConfigurationRedirectSettingDefinition": return new DeviceManagementConfigurationRedirectSettingDefinition();
             case "#microsoft.graph.deviceManagementConfigurationSetting": return new DeviceManagementConfigurationSetting();
             case "#microsoft.graph.deviceManagementConfigurationSettingDefinition": return new DeviceManagementConfigurationSettingDefinition();
@@ -1378,8 +1380,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.managedDeviceMobileAppConfigurationUserSummary": return new ManagedDeviceMobileAppConfigurationUserSummary();
             case "#microsoft.graph.managedDeviceOverview": return new ManagedDeviceOverview();
             case "#microsoft.graph.managedDeviceWindowsOperatingSystemImage": return new ManagedDeviceWindowsOperatingSystemImage();
-            case "#microsoft.graph.managedEBook": return new ManagedEBook();
-            case "#microsoft.graph.managedEBookAssignment": return new ManagedEBookAssignment();
         }
         return null;
     }
@@ -1391,6 +1391,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.managedEBook": return new ManagedEBook();
+            case "#microsoft.graph.managedEBookAssignment": return new ManagedEBookAssignment();
             case "#microsoft.graph.managedEBookCategory": return new ManagedEBookCategory();
             case "#microsoft.graph.managedIOSLobApp": return new ManagedIOSLobApp();
             case "#microsoft.graph.managedIOSStoreApp": return new ManagedIOSStoreApp();
@@ -1889,8 +1891,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.security.filePlanReferenceTemplate": return new FilePlanReferenceTemplate();
             case "#microsoft.graph.security.fileThreatSubmission": return new FileThreatSubmission();
             case "#microsoft.graph.security.fileUrlThreatSubmission": return new FileUrlThreatSubmission();
-            case "#microsoft.graph.security.healthIssue": return new HealthIssue();
-            case "#microsoft.graph.security.host": return new Host();
         }
         return null;
     }
@@ -1902,6 +1902,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_3(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.security.healthIssue": return new HealthIssue();
+            case "#microsoft.graph.security.host": return new Host();
             case "#microsoft.graph.security.hostComponent": return new HostComponent();
             case "#microsoft.graph.security.hostCookie": return new HostCookie();
             case "#microsoft.graph.security.hostname": return new Hostname();
@@ -1995,6 +1997,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.sharedPCConfiguration": return new SharedPCConfiguration();
             case "#microsoft.graph.sharedWithChannelTeamInfo": return new SharedWithChannelTeamInfo();
             case "#microsoft.graph.sharepoint": return new Sharepoint();
+            case "#microsoft.graph.sharePointGroup": return new SharePointGroup();
+            case "#microsoft.graph.sharePointGroupMember": return new SharePointGroupMember();
             case "#microsoft.graph.sharePointProtectionPolicy": return new SharePointProtectionPolicy();
             case "#microsoft.graph.sharePointRestoreSession": return new SharePointRestoreSession();
             case "#microsoft.graph.sharepointSettings": return new SharepointSettings();
@@ -2398,10 +2402,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.workbookChart": return new WorkbookChart();
             case "#microsoft.graph.workbookChartAreaFormat": return new WorkbookChartAreaFormat();
             case "#microsoft.graph.workbookChartAxes": return new WorkbookChartAxes();
-            case "#microsoft.graph.workbookChartAxis": return new WorkbookChartAxis();
-            case "#microsoft.graph.workbookChartAxisFormat": return new WorkbookChartAxisFormat();
-            case "#microsoft.graph.workbookChartAxisTitle": return new WorkbookChartAxisTitle();
-            case "#microsoft.graph.workbookChartAxisTitleFormat": return new WorkbookChartAxisTitleFormat();
         }
         return null;
     }
@@ -2413,6 +2413,10 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_4(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.workbookChartAxis": return new WorkbookChartAxis();
+            case "#microsoft.graph.workbookChartAxisFormat": return new WorkbookChartAxisFormat();
+            case "#microsoft.graph.workbookChartAxisTitle": return new WorkbookChartAxisTitle();
+            case "#microsoft.graph.workbookChartAxisTitleFormat": return new WorkbookChartAxisTitleFormat();
             case "#microsoft.graph.workbookChartDataLabelFormat": return new WorkbookChartDataLabelFormat();
             case "#microsoft.graph.workbookChartDataLabels": return new WorkbookChartDataLabels();
             case "#microsoft.graph.workbookChartFill": return new WorkbookChartFill();

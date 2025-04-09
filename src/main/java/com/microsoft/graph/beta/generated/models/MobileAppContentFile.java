@@ -69,8 +69,6 @@ public class MobileAppContentFile extends Entity implements Parsable {
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("size", (n) -> { this.setSize(n.getLongValue()); });
         deserializerMap.put("sizeEncrypted", (n) -> { this.setSizeEncrypted(n.getLongValue()); });
-        deserializerMap.put("sizeEncryptedInBytes", (n) -> { this.setSizeEncryptedInBytes(n.getLongValue()); });
-        deserializerMap.put("sizeInBytes", (n) -> { this.setSizeInBytes(n.getLongValue()); });
         deserializerMap.put("uploadState", (n) -> { this.setUploadState(n.getEnumValue(MobileAppContentFileUploadState::forValue)); });
         return deserializerMap;
     }
@@ -131,22 +129,6 @@ public class MobileAppContentFile extends Entity implements Parsable {
         return this.backingStore.get("sizeEncrypted");
     }
     /**
-     * Gets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes. To be deprecated in February 2025, please use SizeEncrypted property instead. Valid values 0 to 9.22337203685478E+18
-     * @return a {@link Long}
-     */
-    @jakarta.annotation.Nullable
-    public Long getSizeEncryptedInBytes() {
-        return this.backingStore.get("sizeEncryptedInBytes");
-    }
-    /**
-     * Gets the sizeInBytes property value. Indicates the original size of the file, in bytes. To be deprecated in February 2025, please use Size property instead. Valid values 0 to 9.22337203685478E+18
-     * @return a {@link Long}
-     */
-    @jakarta.annotation.Nullable
-    public Long getSizeInBytes() {
-        return this.backingStore.get("sizeInBytes");
-    }
-    /**
      * Gets the uploadState property value. Contains properties for upload request states.
      * @return a {@link MobileAppContentFileUploadState}
      */
@@ -167,8 +149,6 @@ public class MobileAppContentFile extends Entity implements Parsable {
         writer.writeStringValue("name", this.getName());
         writer.writeLongValue("size", this.getSize());
         writer.writeLongValue("sizeEncrypted", this.getSizeEncrypted());
-        writer.writeLongValue("sizeEncryptedInBytes", this.getSizeEncryptedInBytes());
-        writer.writeLongValue("sizeInBytes", this.getSizeInBytes());
         writer.writeEnumValue("uploadState", this.getUploadState());
     }
     /**
@@ -240,20 +220,6 @@ public class MobileAppContentFile extends Entity implements Parsable {
      */
     public void setSizeEncrypted(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("sizeEncrypted", value);
-    }
-    /**
-     * Sets the sizeEncryptedInBytes property value. Indicates the size of the file after encryption, in bytes. To be deprecated in February 2025, please use SizeEncrypted property instead. Valid values 0 to 9.22337203685478E+18
-     * @param value Value to set for the sizeEncryptedInBytes property.
-     */
-    public void setSizeEncryptedInBytes(@jakarta.annotation.Nullable final Long value) {
-        this.backingStore.set("sizeEncryptedInBytes", value);
-    }
-    /**
-     * Sets the sizeInBytes property value. Indicates the original size of the file, in bytes. To be deprecated in February 2025, please use Size property instead. Valid values 0 to 9.22337203685478E+18
-     * @param value Value to set for the sizeInBytes property.
-     */
-    public void setSizeInBytes(@jakarta.annotation.Nullable final Long value) {
-        this.backingStore.set("sizeInBytes", value);
     }
     /**
      * Sets the uploadState property value. Contains properties for upload request states.

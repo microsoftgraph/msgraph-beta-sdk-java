@@ -94,7 +94,7 @@ public class GetCloudPcPerformanceReportRequestBuilder extends BaseRequestBuilde
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json");
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }

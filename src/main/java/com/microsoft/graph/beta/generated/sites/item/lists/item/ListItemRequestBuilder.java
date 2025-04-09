@@ -145,21 +145,21 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      * @return a {@link List}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public List get() {
         return get(null);
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link List}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/list-list-operations?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/list-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public List get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -210,11 +210,10 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -222,7 +221,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -274,7 +273,7 @@ public class ListItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the list of richLongRunningOperations associated with a list.
+     * Return the metadata for a list.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
