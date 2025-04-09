@@ -60,7 +60,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/extensions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get extensions from drives
+     * The collection of open extensions defined for this item. Nullable.
      * @return a {@link ExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get extensions from drives
+     * The collection of open extensions defined for this item. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Extension::createFromDiscriminatorValue);
     }
     /**
-     * Get extensions from drives
+     * The collection of open extensions defined for this item. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get extensions from drives
+     * The collection of open extensions defined for this item. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class ExtensionsRequestBuilder extends BaseRequestBuilder {
         return new ExtensionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get extensions from drives
+     * The collection of open extensions defined for this item. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

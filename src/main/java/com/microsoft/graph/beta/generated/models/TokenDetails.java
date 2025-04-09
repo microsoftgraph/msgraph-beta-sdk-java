@@ -1,4 +1,4 @@
-package com.microsoft.graph.beta.devices.item.restore;
+package com.microsoft.graph.beta.models;
 
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -7,32 +7,33 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class RestorePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable {
+public class TokenDetails implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.
      */
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new {@link RestorePostRequestBody} and sets the default values.
+     * Instantiates a new {@link TokenDetails} and sets the default values.
      */
-    public RestorePostRequestBody() {
+    public TokenDetails() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link RestorePostRequestBody}
+     * @return a {@link TokenDetails}
      */
     @jakarta.annotation.Nonnull
-    public static RestorePostRequestBody createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static TokenDetails createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new RestorePostRequestBody();
+        return new TokenDetails();
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -61,17 +62,35 @@ public class RestorePostRequestBody implements AdditionalDataHolder, BackedModel
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("newUserPrincipalName", (n) -> { this.setNewUserPrincipalName(n.getStringValue()); });
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("issuedAtDateTime", (n) -> { this.setIssuedAtDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("uniqueTokenIdentifier", (n) -> { this.setUniqueTokenIdentifier(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the newUserPrincipalName property value. The newUserPrincipalName property
+     * Gets the issuedAtDateTime property value. Represents when the authentication for this token occurred.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getIssuedAtDateTime() {
+        return this.backingStore.get("issuedAtDateTime");
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public String getNewUserPrincipalName() {
-        return this.backingStore.get("newUserPrincipalName");
+    public String getOdataType() {
+        return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the uniqueTokenIdentifier property value. Represents the token identifier claim. This ID is a unique per-token identifier that is case-sensitive.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getUniqueTokenIdentifier() {
+        return this.backingStore.get("uniqueTokenIdentifier");
     }
     /**
      * Serializes information the current object
@@ -79,7 +98,9 @@ public class RestorePostRequestBody implements AdditionalDataHolder, BackedModel
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("newUserPrincipalName", this.getNewUserPrincipalName());
+        writer.writeOffsetDateTimeValue("issuedAtDateTime", this.getIssuedAtDateTime());
+        writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("uniqueTokenIdentifier", this.getUniqueTokenIdentifier());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -98,10 +119,24 @@ public class RestorePostRequestBody implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the newUserPrincipalName property value. The newUserPrincipalName property
-     * @param value Value to set for the newUserPrincipalName property.
+     * Sets the issuedAtDateTime property value. Represents when the authentication for this token occurred.
+     * @param value Value to set for the issuedAtDateTime property.
      */
-    public void setNewUserPrincipalName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("newUserPrincipalName", value);
+    public void setIssuedAtDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("issuedAtDateTime", value);
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     */
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the uniqueTokenIdentifier property value. Represents the token identifier claim. This ID is a unique per-token identifier that is case-sensitive.
+     * @param value Value to set for the uniqueTokenIdentifier property.
+     */
+    public void setUniqueTokenIdentifier(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("uniqueTokenIdentifier", value);
     }
 }

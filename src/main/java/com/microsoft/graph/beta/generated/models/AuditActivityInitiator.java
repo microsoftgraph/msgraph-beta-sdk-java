@@ -69,11 +69,20 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("app", (n) -> { this.setApp(n.getObjectValue(AppIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("linkableIdentifiers", (n) -> { this.setLinkableIdentifiers(n.getObjectValue(LinkableIdentifiers::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("user", (n) -> { this.setUser(n.getObjectValue(AuditUserIdentity::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the linkableIdentifiers property value. A set of linkable claims to link together all the authentication artifacts issued from a single interactive root authentication.
+     * @return a {@link LinkableIdentifiers}
+     */
+    @jakarta.annotation.Nullable
+    public LinkableIdentifiers getLinkableIdentifiers() {
+        return this.backingStore.get("linkableIdentifiers");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -98,6 +107,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("app", this.getApp());
+        writer.writeObjectValue("linkableIdentifiers", this.getLinkableIdentifiers());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("user", this.getUser());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -123,6 +133,13 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the linkableIdentifiers property value. A set of linkable claims to link together all the authentication artifacts issued from a single interactive root authentication.
+     * @param value Value to set for the linkableIdentifiers property.
+     */
+    public void setLinkableIdentifiers(@jakarta.annotation.Nullable final LinkableIdentifiers value) {
+        this.backingStore.set("linkableIdentifiers", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

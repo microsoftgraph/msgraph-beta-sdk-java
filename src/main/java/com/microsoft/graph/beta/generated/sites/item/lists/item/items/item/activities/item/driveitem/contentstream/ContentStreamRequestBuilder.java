@@ -99,7 +99,7 @@ public class ContentStreamRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/octet-stream, application/json");
+        requestInfo.headers.tryAdd("Accept", "application/octet-stream");
         return requestInfo;
     }
     /**
@@ -122,7 +122,6 @@ public class ContentStreamRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setStreamContent(body, "application/octet-stream");
         return requestInfo;
     }

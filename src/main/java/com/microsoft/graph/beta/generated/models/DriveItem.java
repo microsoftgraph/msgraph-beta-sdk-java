@@ -98,7 +98,7 @@ public class DriveItem extends BaseItem implements Parsable {
         return this.backingStore.get("deleted");
     }
     /**
-     * Gets the extensions property value. The extensions property
+     * Gets the extensions property value. The collection of open extensions defined for this item. Nullable.
      * @return a {@link java.util.List<Extension>}
      */
     @jakarta.annotation.Nullable
@@ -496,7 +496,7 @@ public class DriveItem extends BaseItem implements Parsable {
         this.backingStore.set("deleted", value);
     }
     /**
-     * Sets the extensions property value. The extensions property
+     * Sets the extensions property value. The collection of open extensions defined for this item. Nullable.
      * @param value Value to set for the extensions property.
      */
     public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
