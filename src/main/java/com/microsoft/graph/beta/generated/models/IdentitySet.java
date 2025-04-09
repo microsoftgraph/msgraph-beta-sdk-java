@@ -61,7 +61,7 @@ public class IdentitySet implements AdditionalDataHolder, BackedModel, Parsable 
         return value;
     }
     /**
-     * Gets the application property value. Optional. The application associated with this action.
+     * Gets the application property value. The Identity of the Application. This property is read-only.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class IdentitySet implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore;
     }
     /**
-     * Gets the device property value. Optional. The device associated with this action.
+     * Gets the device property value. The Identity of the Device. This property is read-only.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class IdentitySet implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the user property value. Optional. The user associated with this action.
+     * Gets the user property value. The Identity of the User. This property is read-only.
      * @return a {@link Identity}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class IdentitySet implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the application property value. Optional. The application associated with this action.
+     * Sets the application property value. The Identity of the Application. This property is read-only.
      * @param value Value to set for the application property.
      */
     public void setApplication(@jakarta.annotation.Nullable final Identity value) {
@@ -148,7 +148,7 @@ public class IdentitySet implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore = value;
     }
     /**
-     * Sets the device property value. Optional. The device associated with this action.
+     * Sets the device property value. The Identity of the Device. This property is read-only.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Identity value) {
@@ -162,7 +162,7 @@ public class IdentitySet implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the user property value. Optional. The user associated with this action.
+     * Sets the user property value. The Identity of the User. This property is read-only.
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final Identity value) {

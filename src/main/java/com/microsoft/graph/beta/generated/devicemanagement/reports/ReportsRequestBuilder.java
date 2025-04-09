@@ -29,7 +29,6 @@ import com.microsoft.graph.beta.devicemanagement.reports.getconfigurationsetting
 import com.microsoft.graph.beta.devicemanagement.reports.getconfigurationsettingsreport.GetConfigurationSettingsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdeviceconfigurationpolicysettingssummaryreport.GetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdeviceconfigurationpolicystatussummary.GetDeviceConfigurationPolicyStatusSummaryRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.reports.getdeviceinstallstatusreport.GetDeviceInstallStatusReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdevicemanagementintentpersettingcontributingprofiles.GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdevicemanagementintentsettingsreport.GetDeviceManagementIntentSettingsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdevicenoncompliancereport.GetDeviceNonComplianceReportRequestBuilder;
@@ -328,14 +327,6 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetDeviceConfigurationPolicyStatusSummaryRequestBuilder getDeviceConfigurationPolicyStatusSummary() {
         return new GetDeviceConfigurationPolicyStatusSummaryRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getDeviceInstallStatusReport method.
-     * @return a {@link GetDeviceInstallStatusReportRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetDeviceInstallStatusReportRequestBuilder getDeviceInstallStatusReport() {
-        return new GetDeviceInstallStatusReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getDeviceManagementIntentPerSettingContributingProfiles method.
@@ -811,7 +802,6 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
-        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

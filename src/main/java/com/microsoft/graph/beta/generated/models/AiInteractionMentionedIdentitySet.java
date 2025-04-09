@@ -26,7 +26,7 @@ public class AiInteractionMentionedIdentitySet extends IdentitySet implements Pa
         return new AiInteractionMentionedIdentitySet();
     }
     /**
-     * Gets the conversation property value. The conversation property
+     * Gets the conversation property value. The conversation details.
      * @return a {@link TeamworkConversationIdentity}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class AiInteractionMentionedIdentitySet extends IdentitySet implements Pa
         writer.writeObjectValue("tag", this.getTag());
     }
     /**
-     * Sets the conversation property value. The conversation property
+     * Sets the conversation property value. The conversation details.
      * @param value Value to set for the conversation property.
      */
     public void setConversation(@jakarta.annotation.Nullable final TeamworkConversationIdentity value) {

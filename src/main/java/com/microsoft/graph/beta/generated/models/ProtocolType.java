@@ -13,7 +13,24 @@ public enum ProtocolType implements ValuedEnum {
     DeviceCode("deviceCode"),
     UnknownFutureValue("unknownFutureValue"),
     AuthenticationTransfer("authenticationTransfer"),
-    NativeAuth("nativeAuth");
+    NativeAuth("nativeAuth"),
+    ImplicitAccessTokenAndGetResponseMode("implicitAccessTokenAndGetResponseMode"),
+    ImplicitIdTokenAndGetResponseMode("implicitIdTokenAndGetResponseMode"),
+    ImplicitAccessTokenAndPostResponseMode("implicitAccessTokenAndPostResponseMode"),
+    ImplicitIdTokenAndPostResponseMode("implicitIdTokenAndPostResponseMode"),
+    AuthorizationCodeWithoutPkce("authorizationCodeWithoutPkce"),
+    AuthorizationCodeWithPkce("authorizationCodeWithPkce"),
+    ClientCredentials("clientCredentials"),
+    RefreshTokenGrant("refreshTokenGrant"),
+    EncryptedAuthorizeResponse("encryptedAuthorizeResponse"),
+    DirectUserGrant("directUserGrant"),
+    Kerberos("kerberos"),
+    PrtGrant("prtGrant"),
+    SeamlessSso("seamlessSso"),
+    PrtBrokerBased("prtBrokerBased"),
+    PrtNonBrokerBased("prtNonBrokerBased"),
+    OnBehalfOf("onBehalfOf"),
+    SamlOnBehalfOf("samlOnBehalfOf");
     public final String value;
     ProtocolType(final String value) {
         this.value = value;
@@ -33,6 +50,23 @@ public enum ProtocolType implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "authenticationTransfer": return AuthenticationTransfer;
             case "nativeAuth": return NativeAuth;
+            case "implicitAccessTokenAndGetResponseMode": return ImplicitAccessTokenAndGetResponseMode;
+            case "implicitIdTokenAndGetResponseMode": return ImplicitIdTokenAndGetResponseMode;
+            case "implicitAccessTokenAndPostResponseMode": return ImplicitAccessTokenAndPostResponseMode;
+            case "implicitIdTokenAndPostResponseMode": return ImplicitIdTokenAndPostResponseMode;
+            case "authorizationCodeWithoutPkce": return AuthorizationCodeWithoutPkce;
+            case "authorizationCodeWithPkce": return AuthorizationCodeWithPkce;
+            case "clientCredentials": return ClientCredentials;
+            case "refreshTokenGrant": return RefreshTokenGrant;
+            case "encryptedAuthorizeResponse": return EncryptedAuthorizeResponse;
+            case "directUserGrant": return DirectUserGrant;
+            case "kerberos": return Kerberos;
+            case "prtGrant": return PrtGrant;
+            case "seamlessSso": return SeamlessSso;
+            case "prtBrokerBased": return PrtBrokerBased;
+            case "prtNonBrokerBased": return PrtNonBrokerBased;
+            case "onBehalfOf": return OnBehalfOf;
+            case "samlOnBehalfOf": return SamlOnBehalfOf;
             default: return null;
         }
     }

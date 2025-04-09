@@ -61,6 +61,14 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         return this.backingStore.get("description");
     }
     /**
+     * Gets the deviceNameTemplate property value. Indicates the device name template used for the enrolled Android devices. The maximum length allowed for this property is 63 characters. The template expression contains normal text and tokens, including the serial number of the device, user name, device type, upn prefix, or a randomly generated number. Supported Tokens for device name templates are: (for device naming template expression): {{SERIAL}}, {{SERIALLAST4DIGITS}}, {{ENROLLMENTDATETIME}}, {{USERNAME}}, {{DEVICETYPE}}, {{UPNPREFIX}}, {{rand:x}}. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDeviceNameTemplate() {
+        return this.backingStore.get("deviceNameTemplate");
+    }
+    /**
      * Gets the displayName property value. Display name for the enrollment profile.
      * @return a {@link String}
      */
@@ -111,6 +119,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         deserializerMap.put("configureWifi", (n) -> { this.setConfigureWifi(n.getBooleanValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("deviceNameTemplate", (n) -> { this.setDeviceNameTemplate(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enrolledDeviceCount", (n) -> { this.setEnrolledDeviceCount(n.getIntegerValue()); });
         deserializerMap.put("enrollmentMode", (n) -> { this.setEnrollmentMode(n.getEnumValue(AndroidDeviceOwnerEnrollmentMode::forValue)); });
@@ -237,6 +246,7 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
         writer.writeBooleanValue("configureWifi", this.getConfigureWifi());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeStringValue("deviceNameTemplate", this.getDeviceNameTemplate());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeIntegerValue("enrolledDeviceCount", this.getEnrolledDeviceCount());
         writer.writeEnumValue("enrollmentMode", this.getEnrollmentMode());
@@ -282,6 +292,13 @@ public class AndroidDeviceOwnerEnrollmentProfile extends Entity implements Parsa
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
+    }
+    /**
+     * Sets the deviceNameTemplate property value. Indicates the device name template used for the enrolled Android devices. The maximum length allowed for this property is 63 characters. The template expression contains normal text and tokens, including the serial number of the device, user name, device type, upn prefix, or a randomly generated number. Supported Tokens for device name templates are: (for device naming template expression): {{SERIAL}}, {{SERIALLAST4DIGITS}}, {{ENROLLMENTDATETIME}}, {{USERNAME}}, {{DEVICETYPE}}, {{UPNPREFIX}}, {{rand:x}}. Supports: $select, $top, $skip. $Search, $orderBy and $filter are not supported.
+     * @param value Value to set for the deviceNameTemplate property.
+     */
+    public void setDeviceNameTemplate(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("deviceNameTemplate", value);
     }
     /**
      * Sets the displayName property value. Display name for the enrollment profile.

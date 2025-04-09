@@ -162,7 +162,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         return this.backingStore.get("target");
     }
     /**
-     * Gets the targetId property value. The ID of the subject with the assignment. Read-only.
+     * Gets the targetId property value. This property should not be used as a dependency, as it may change without notice. Instead, expand the target relationship and use the objectId property. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -291,7 +291,7 @@ public class AccessPackageAssignment extends Entity implements Parsable {
         this.backingStore.set("target", value);
     }
     /**
-     * Sets the targetId property value. The ID of the subject with the assignment. Read-only.
+     * Sets the targetId property value. This property should not be used as a dependency, as it may change without notice. Instead, expand the target relationship and use the objectId property. Read-only.
      * @param value Value to set for the targetId property.
      */
     public void setTargetId(@jakarta.annotation.Nullable final String value) {
