@@ -72,7 +72,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the internetAccessTrafficCount property value. The internetAccessTrafficCount property
+     * Gets the internetAccessTrafficCount property value. The count of traffic requests directed to general internet destinations.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("internetAccessTrafficCount");
     }
     /**
-     * Gets the microsoft365AccessTrafficCount property value. The microsoft365AccessTrafficCount property
+     * Gets the microsoft365AccessTrafficCount property value. The count of traffic requests directed to Microsoft 365 services.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the privateAccessTrafficCount property value. The privateAccessTrafficCount property
+     * Gets the privateAccessTrafficCount property value. The count of traffic requests directed to internal private network destinations.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("privateAccessTrafficCount");
     }
     /**
-     * Gets the timeStampDateTime property value. The timeStampDateTime property
+     * Gets the timeStampDateTime property value. The date and time of this data point.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("timeStampDateTime");
     }
     /**
-     * Gets the totalTrafficCount property value. The totalTrafficCount property
+     * Gets the totalTrafficCount property value. The total count of all traffic requests across all access types.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -149,14 +149,14 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the internetAccessTrafficCount property value. The internetAccessTrafficCount property
+     * Sets the internetAccessTrafficCount property value. The count of traffic requests directed to general internet destinations.
      * @param value Value to set for the internetAccessTrafficCount property.
      */
     public void setInternetAccessTrafficCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("internetAccessTrafficCount", value);
     }
     /**
-     * Sets the microsoft365AccessTrafficCount property value. The microsoft365AccessTrafficCount property
+     * Sets the microsoft365AccessTrafficCount property value. The count of traffic requests directed to Microsoft 365 services.
      * @param value Value to set for the microsoft365AccessTrafficCount property.
      */
     public void setMicrosoft365AccessTrafficCount(@jakarta.annotation.Nullable final Long value) {
@@ -170,21 +170,21 @@ public class UsageProfilingPoint implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the privateAccessTrafficCount property value. The privateAccessTrafficCount property
+     * Sets the privateAccessTrafficCount property value. The count of traffic requests directed to internal private network destinations.
      * @param value Value to set for the privateAccessTrafficCount property.
      */
     public void setPrivateAccessTrafficCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("privateAccessTrafficCount", value);
     }
     /**
-     * Sets the timeStampDateTime property value. The timeStampDateTime property
+     * Sets the timeStampDateTime property value. The date and time of this data point.
      * @param value Value to set for the timeStampDateTime property.
      */
     public void setTimeStampDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("timeStampDateTime", value);
     }
     /**
-     * Sets the totalTrafficCount property value. The totalTrafficCount property
+     * Sets the totalTrafficCount property value. The total count of all traffic requests across all access types.
      * @param value Value to set for the totalTrafficCount property.
      */
     public void setTotalTrafficCount(@jakarta.annotation.Nullable final Long value) {

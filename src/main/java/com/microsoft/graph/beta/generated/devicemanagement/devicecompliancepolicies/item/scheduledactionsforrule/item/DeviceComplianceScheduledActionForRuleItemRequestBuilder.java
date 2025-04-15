@@ -64,7 +64,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * The list of scheduled action for this rule
      * @return a {@link DeviceComplianceScheduledActionForRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         return get(null);
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * The list of scheduled action for this rule
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceComplianceScheduledActionForRule}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -130,7 +130,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * The list of scheduled action for this rule
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * The list of scheduled action for this rule
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -190,7 +190,7 @@ public class DeviceComplianceScheduledActionForRuleItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The list of scheduled action per rule for this compliance policy. This is a required property when creating any individual per-platform compliance policies.
+     * The list of scheduled action for this rule
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

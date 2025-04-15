@@ -43,19 +43,21 @@ public class MicrosoftGraphNetworkaccessUsageProfilingWithStartDateTimeWithEndDa
         super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.usageProfiling(startDateTime={startDateTime},endDateTime={endDateTime},aggregatedBy='{aggregatedBy}',discoveredApplicationSegmentId='@discoveredApplicationSegmentId',applicationId='@applicationId'){?%24count,%24filter,%24search,%24skip,%24top,applicationId*,discoveredApplicationSegmentId*}", rawUrl);
     }
     /**
-     * Invoke function usageProfiling
+     * Returns an object containing count tables for the traffic types in Global Secure Access, aggregated by the time period specified.
      * @return a {@link UsageProfilingWithStartDateTimeWithEndDateTimeWithAggregatedBydiscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-usageprofiling?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UsageProfilingWithStartDateTimeWithEndDateTimeWithAggregatedBydiscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function usageProfiling
+     * Returns an object containing count tables for the traffic types in Global Secure Access, aggregated by the time period specified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UsageProfilingWithStartDateTimeWithEndDateTimeWithAggregatedBydiscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-usageprofiling?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UsageProfilingWithStartDateTimeWithEndDateTimeWithAggregatedBydiscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -65,7 +67,7 @@ public class MicrosoftGraphNetworkaccessUsageProfilingWithStartDateTimeWithEndDa
         return this.requestAdapter.send(requestInfo, errorMapping, UsageProfilingWithStartDateTimeWithEndDateTimeWithAggregatedBydiscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function usageProfiling
+     * Returns an object containing count tables for the traffic types in Global Secure Access, aggregated by the time period specified.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +75,7 @@ public class MicrosoftGraphNetworkaccessUsageProfilingWithStartDateTimeWithEndDa
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function usageProfiling
+     * Returns an object containing count tables for the traffic types in Global Secure Access, aggregated by the time period specified.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -95,7 +97,7 @@ public class MicrosoftGraphNetworkaccessUsageProfilingWithStartDateTimeWithEndDa
         return new MicrosoftGraphNetworkaccessUsageProfilingWithStartDateTimeWithEndDateTimeWithAggregatedBydiscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function usageProfiling
+     * Returns an object containing count tables for the traffic types in Global Secure Access, aggregated by the time period specified.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

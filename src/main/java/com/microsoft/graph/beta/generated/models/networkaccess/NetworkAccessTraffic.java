@@ -38,7 +38,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return new NetworkAccessTraffic();
     }
     /**
-     * Gets the action property value. Indicates what action to take based on filtering policies. The possible values are: block, allow.
+     * Gets the action property value. Indicates the action taken based on filtering policies. The possible values are: block, allow, unknownFutureValue, bypass, alert. Use the Prefer: include-unknown-enum-members request header to get the following values from this {evolvable enum}(/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): bypass , alert.
      * @return a {@link FilteringPolicyAction}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return value;
     }
     /**
-     * Gets the agentVersion property value. Represents the version of the Global Secure Access client agent software. Supports $filter (eq) and $orderby.
+     * Gets the agentVersion property value. Represents the version of the Global Secure Access (GSA) client agent software. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("agentVersion");
     }
     /**
-     * Gets the applicationSnapshot property value. The applicationSnapshot property
+     * Gets the applicationSnapshot property value. Destination Application ID accessed in Azure AD during the transaction. Supports $filter (eq) and $orderby.
      * @return a {@link ApplicationSnapshot}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Informational error message. For example: &apos;Threat intelligence detected a transaction and triggered an alert.&apos; or &apos;The Global Secure Access (GSA) policy blocked the destination and triggered an alert.&apos; Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("destinationPort");
     }
     /**
-     * Gets the destinationUrl property value. The destinationUrl property
+     * Gets the destinationUrl property value. Represents the URL of the destination in a network communication. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("destinationUrl");
     }
     /**
-     * Gets the destinationWebCategory property value. The destinationWebCategory property
+     * Gets the destinationWebCategory property value. The destination FQDN&apos;s Web Category (e.g., Gambling). Supports $filter (eq) and $orderby.
      * @return a {@link WebCategory}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("destinationWebCategory");
     }
     /**
-     * Gets the device property value. The device property
+     * Gets the device property value. Represents the device associated with the network traffic, providing details about the hardware or virtual machine involved in the transaction.
      * @return a {@link Device}
      */
     @jakarta.annotation.Nullable
@@ -243,7 +243,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return deserializerMap;
     }
     /**
-     * Gets the filteringProfileId property value. The filteringProfileId property
+     * Gets the filteringProfileId property value. The ID of the Filtering Profile associated with the action performed on traffic. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -251,7 +251,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("filteringProfileId");
     }
     /**
-     * Gets the filteringProfileName property value. The filteringProfileName property
+     * Gets the filteringProfileName property value. The name of the Filtering Profile associated with the action performed on traffic. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -267,7 +267,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("headers");
     }
     /**
-     * Gets the httpMethod property value. The httpMethod property
+     * Gets the httpMethod property value. The HTTP method inspected in the intercepted HTTP traffic. Supports $filter (eq) and $orderby.
      * @return a {@link HttpMethod}
      */
     @jakarta.annotation.Nullable
@@ -275,7 +275,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("httpMethod");
     }
     /**
-     * Gets the initiatingProcessName property value. The initiatingProcessName property
+     * Gets the initiatingProcessName property value. The process initiating the traffic transaction. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -283,7 +283,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("initiatingProcessName");
     }
     /**
-     * Gets the networkProtocol property value. Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
+     * Gets the networkProtocol property value. Represents the networking protocol used for communication. The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @return a {@link NetworkingProtocol}
      */
     @jakarta.annotation.Nullable
@@ -299,7 +299,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the operationStatus property value. The operationStatus property
+     * Gets the operationStatus property value. Indication if traffic was successfully processed. The possible values are: success, failure, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @return a {@link NetworkTrafficOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -315,7 +315,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("policyId");
     }
     /**
-     * Gets the policyName property value. The policyName property
+     * Gets the policyName property value. The name of the filtering policy associated with the action performed on traffic. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -331,7 +331,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("policyRuleId");
     }
     /**
-     * Gets the policyRuleName property value. The policyRuleName property
+     * Gets the policyRuleName property value. The name of the rule associated with the action performed on traffic. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -339,7 +339,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("policyRuleName");
     }
     /**
-     * Gets the popProcessingRegion property value. The popProcessingRegion property
+     * Gets the popProcessingRegion property value. The Point-of-Presence processing region of the traffic. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -347,7 +347,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("popProcessingRegion");
     }
     /**
-     * Gets the privateAccessDetails property value. The privateAccessDetails property
+     * Gets the privateAccessDetails property value. Details about private access traffic. Supports $filter (eq) and $orderby.
      * @return a {@link PrivateAccessDetails}
      */
     @jakarta.annotation.Nullable
@@ -363,7 +363,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("receivedBytes");
     }
     /**
-     * Gets the remoteNetworkId property value. The remoteNetworkId property
+     * Gets the remoteNetworkId property value. The ID from which traffic was sent or received, providing visibility into the origin of the traffic. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -371,7 +371,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("remoteNetworkId");
     }
     /**
-     * Gets the resourceTenantId property value. The resourceTenantId property
+     * Gets the resourceTenantId property value. Tenant ID that owns the resource. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -379,7 +379,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("resourceTenantId");
     }
     /**
-     * Gets the responseCode property value. The responseCode property
+     * Gets the responseCode property value. The HTTP response code inspected in the intercepted HTTP traffic. Supports $filter (eq) and $orderby.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -427,7 +427,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("tenantId");
     }
     /**
-     * Gets the threatType property value. The threatType property
+     * Gets the threatType property value. The type of threat detected in the traffic. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -451,7 +451,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("transactionId");
     }
     /**
-     * Gets the transportProtocol property value. Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
+     * Gets the transportProtocol property value. Represents the transport protocol used for communication. The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @return a {@link NetworkingProtocol}
      */
     @jakarta.annotation.Nullable
@@ -459,7 +459,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("transportProtocol");
     }
     /**
-     * Gets the user property value. The user property
+     * Gets the user property value. Represents the user associated with the network traffic, providing details about the individual or account initiating the transaction.
      * @return a {@link User}
      */
     @jakarta.annotation.Nullable
@@ -483,7 +483,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("userPrincipalName");
     }
     /**
-     * Gets the vendorNames property value. The vendorNames property
+     * Gets the vendorNames property value. The name of the vendors who detected the threat. Supports $filter (eq) and $orderby.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -546,7 +546,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. Indicates what action to take based on filtering policies. The possible values are: block, allow.
+     * Sets the action property value. Indicates the action taken based on filtering policies. The possible values are: block, allow, unknownFutureValue, bypass, alert. Use the Prefer: include-unknown-enum-members request header to get the following values from this {evolvable enum}(/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): bypass , alert.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final FilteringPolicyAction value) {
@@ -560,14 +560,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the agentVersion property value. Represents the version of the Global Secure Access client agent software. Supports $filter (eq) and $orderby.
+     * Sets the agentVersion property value. Represents the version of the Global Secure Access (GSA) client agent software. Supports $filter (eq) and $orderby.
      * @param value Value to set for the agentVersion property.
      */
     public void setAgentVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentVersion", value);
     }
     /**
-     * Sets the applicationSnapshot property value. The applicationSnapshot property
+     * Sets the applicationSnapshot property value. Destination Application ID accessed in Azure AD during the transaction. Supports $filter (eq) and $orderby.
      * @param value Value to set for the applicationSnapshot property.
      */
     public void setApplicationSnapshot(@jakarta.annotation.Nullable final ApplicationSnapshot value) {
@@ -596,7 +596,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Informational error message. For example: &apos;Threat intelligence detected a transaction and triggered an alert.&apos; or &apos;The Global Secure Access (GSA) policy blocked the destination and triggered an alert.&apos; Supports $filter (eq) and $orderby.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -624,21 +624,21 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("destinationPort", value);
     }
     /**
-     * Sets the destinationUrl property value. The destinationUrl property
+     * Sets the destinationUrl property value. Represents the URL of the destination in a network communication. Supports $filter (eq) and $orderby.
      * @param value Value to set for the destinationUrl property.
      */
     public void setDestinationUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("destinationUrl", value);
     }
     /**
-     * Sets the destinationWebCategory property value. The destinationWebCategory property
+     * Sets the destinationWebCategory property value. The destination FQDN&apos;s Web Category (e.g., Gambling). Supports $filter (eq) and $orderby.
      * @param value Value to set for the destinationWebCategory property.
      */
     public void setDestinationWebCategory(@jakarta.annotation.Nullable final WebCategory value) {
         this.backingStore.set("destinationWebCategory", value);
     }
     /**
-     * Sets the device property value. The device property
+     * Sets the device property value. Represents the device associated with the network traffic, providing details about the hardware or virtual machine involved in the transaction.
      * @param value Value to set for the device property.
      */
     public void setDevice(@jakarta.annotation.Nullable final Device value) {
@@ -673,14 +673,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("deviceOperatingSystemVersion", value);
     }
     /**
-     * Sets the filteringProfileId property value. The filteringProfileId property
+     * Sets the filteringProfileId property value. The ID of the Filtering Profile associated with the action performed on traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the filteringProfileId property.
      */
     public void setFilteringProfileId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("filteringProfileId", value);
     }
     /**
-     * Sets the filteringProfileName property value. The filteringProfileName property
+     * Sets the filteringProfileName property value. The name of the Filtering Profile associated with the action performed on traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the filteringProfileName property.
      */
     public void setFilteringProfileName(@jakarta.annotation.Nullable final String value) {
@@ -694,21 +694,21 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("headers", value);
     }
     /**
-     * Sets the httpMethod property value. The httpMethod property
+     * Sets the httpMethod property value. The HTTP method inspected in the intercepted HTTP traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the httpMethod property.
      */
     public void setHttpMethod(@jakarta.annotation.Nullable final HttpMethod value) {
         this.backingStore.set("httpMethod", value);
     }
     /**
-     * Sets the initiatingProcessName property value. The initiatingProcessName property
+     * Sets the initiatingProcessName property value. The process initiating the traffic transaction. Supports $filter (eq) and $orderby.
      * @param value Value to set for the initiatingProcessName property.
      */
     public void setInitiatingProcessName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("initiatingProcessName", value);
     }
     /**
-     * Sets the networkProtocol property value. Represents the networking protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
+     * Sets the networkProtocol property value. Represents the networking protocol used for communication. The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @param value Value to set for the networkProtocol property.
      */
     public void setNetworkProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
@@ -722,7 +722,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the operationStatus property value. The operationStatus property
+     * Sets the operationStatus property value. Indication if traffic was successfully processed. The possible values are: success, failure, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @param value Value to set for the operationStatus property.
      */
     public void setOperationStatus(@jakarta.annotation.Nullable final NetworkTrafficOperationStatus value) {
@@ -736,7 +736,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("policyId", value);
     }
     /**
-     * Sets the policyName property value. The policyName property
+     * Sets the policyName property value. The name of the filtering policy associated with the action performed on traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the policyName property.
      */
     public void setPolicyName(@jakarta.annotation.Nullable final String value) {
@@ -750,21 +750,21 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("policyRuleId", value);
     }
     /**
-     * Sets the policyRuleName property value. The policyRuleName property
+     * Sets the policyRuleName property value. The name of the rule associated with the action performed on traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the policyRuleName property.
      */
     public void setPolicyRuleName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyRuleName", value);
     }
     /**
-     * Sets the popProcessingRegion property value. The popProcessingRegion property
+     * Sets the popProcessingRegion property value. The Point-of-Presence processing region of the traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the popProcessingRegion property.
      */
     public void setPopProcessingRegion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("popProcessingRegion", value);
     }
     /**
-     * Sets the privateAccessDetails property value. The privateAccessDetails property
+     * Sets the privateAccessDetails property value. Details about private access traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the privateAccessDetails property.
      */
     public void setPrivateAccessDetails(@jakarta.annotation.Nullable final PrivateAccessDetails value) {
@@ -778,21 +778,21 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("receivedBytes", value);
     }
     /**
-     * Sets the remoteNetworkId property value. The remoteNetworkId property
+     * Sets the remoteNetworkId property value. The ID from which traffic was sent or received, providing visibility into the origin of the traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the remoteNetworkId property.
      */
     public void setRemoteNetworkId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("remoteNetworkId", value);
     }
     /**
-     * Sets the resourceTenantId property value. The resourceTenantId property
+     * Sets the resourceTenantId property value. Tenant ID that owns the resource. Supports $filter (eq) and $orderby.
      * @param value Value to set for the resourceTenantId property.
      */
     public void setResourceTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceTenantId", value);
     }
     /**
-     * Sets the responseCode property value. The responseCode property
+     * Sets the responseCode property value. The HTTP response code inspected in the intercepted HTTP traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the responseCode property.
      */
     public void setResponseCode(@jakarta.annotation.Nullable final Integer value) {
@@ -834,7 +834,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("tenantId", value);
     }
     /**
-     * Sets the threatType property value. The threatType property
+     * Sets the threatType property value. The type of threat detected in the traffic. Supports $filter (eq) and $orderby.
      * @param value Value to set for the threatType property.
      */
     public void setThreatType(@jakarta.annotation.Nullable final String value) {
@@ -855,14 +855,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("transactionId", value);
     }
     /**
-     * Sets the transportProtocol property value. Represents the transport protocol used for communication.The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
+     * Sets the transportProtocol property value. Represents the transport protocol used for communication. The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue. Supports $filter (eq) and $orderby.
      * @param value Value to set for the transportProtocol property.
      */
     public void setTransportProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
         this.backingStore.set("transportProtocol", value);
     }
     /**
-     * Sets the user property value. The user property
+     * Sets the user property value. Represents the user associated with the network traffic, providing details about the individual or account initiating the transaction.
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final User value) {
@@ -883,7 +883,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("userPrincipalName", value);
     }
     /**
-     * Sets the vendorNames property value. The vendorNames property
+     * Sets the vendorNames property value. The name of the vendors who detected the threat. Supports $filter (eq) and $orderby.
      * @param value Value to set for the vendorNames property.
      */
     public void setVendorNames(@jakarta.annotation.Nullable final java.util.List<String> value) {

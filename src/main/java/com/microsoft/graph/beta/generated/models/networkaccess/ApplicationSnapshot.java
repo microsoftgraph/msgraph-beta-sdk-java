@@ -48,7 +48,7 @@ public class ApplicationSnapshot implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. The unique identifier of the application accessed during the transaction.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class ApplicationSnapshot implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. The unique identifier of the application accessed during the transaction.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {

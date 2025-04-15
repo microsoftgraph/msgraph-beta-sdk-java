@@ -55,7 +55,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/logs/traffic/{networkAccessTraffic%2DtransactionId}/user{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get user from networkAccess
+     * Represents the user associated with the network traffic, providing details about the individual or account initiating the transaction.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get user from networkAccess
+     * Represents the user associated with the network traffic, providing details about the individual or account initiating the transaction.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -77,7 +77,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
-     * Get user from networkAccess
+     * Represents the user associated with the network traffic, providing details about the individual or account initiating the transaction.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get user from networkAccess
+     * Represents the user associated with the network traffic, providing details about the individual or account initiating the transaction.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -107,7 +107,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return new UserRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get user from networkAccess
+     * Represents the user associated with the network traffic, providing details about the individual or account initiating the transaction.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -36,7 +36,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return new DiscoveredApplicationSegmentReport();
     }
     /**
-     * Gets the accessType property value. The accessType property
+     * Gets the accessType property value. The type of access used to connect to this application segment. The possible values are: quickAccess, privateAccess, unknownFutureValue, appAccess. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: appAccess.
      * @return a {@link AccessType}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore;
     }
     /**
-     * Gets the deviceCount property value. The deviceCount property
+     * Gets the deviceCount property value. The number of unique devices that have accessed this application segment.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore.get("deviceCount");
     }
     /**
-     * Gets the discoveredApplicationSegmentId property value. The discoveredApplicationSegmentId property
+     * Gets the discoveredApplicationSegmentId property value. The unique identifier for this discovered application segment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return deserializerMap;
     }
     /**
-     * Gets the firstAccessDateTime property value. The firstAccessDateTime property
+     * Gets the firstAccessDateTime property value. The date and time when this application segment was first accessed.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore.get("firstAccessDateTime");
     }
     /**
-     * Gets the fqdn property value. The fqdn property
+     * Gets the fqdn property value. The fully qualified domain name associated with this application segment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore.get("fqdn");
     }
     /**
-     * Gets the ip property value. The ip property
+     * Gets the ip property value. The IP address associated with this application segment.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore.get("ip");
     }
     /**
-     * Gets the lastAccessDateTime property value. The lastAccessDateTime property
+     * Gets the lastAccessDateTime property value. The date and time when this application segment was last accessed.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the port property value. The port property
+     * Gets the port property value. The port number used to access this application segment.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore.get("port");
     }
     /**
-     * Gets the totalBytesReceived property value. The totalBytesReceived property
+     * Gets the totalBytesReceived property value. The total number of bytes received from this application segment.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore.get("totalBytesReceived");
     }
     /**
-     * Gets the totalBytesSent property value. The totalBytesSent property
+     * Gets the totalBytesSent property value. The total number of bytes sent to this application segment.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore.get("totalBytesSent");
     }
     /**
-     * Gets the transactionCount property value. The transactionCount property
+     * Gets the transactionCount property value. The number of transactions recorded for this application segment.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         return this.backingStore.get("transportProtocol");
     }
     /**
-     * Gets the userCount property value. The userCount property
+     * Gets the userCount property value. The number of unique users who have accessed this application segment.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -214,7 +214,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accessType property value. The accessType property
+     * Sets the accessType property value. The type of access used to connect to this application segment. The possible values are: quickAccess, privateAccess, unknownFutureValue, appAccess. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: appAccess.
      * @param value Value to set for the accessType property.
      */
     public void setAccessType(@jakarta.annotation.Nullable final AccessType value) {
@@ -236,42 +236,42 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         this.backingStore = value;
     }
     /**
-     * Sets the deviceCount property value. The deviceCount property
+     * Sets the deviceCount property value. The number of unique devices that have accessed this application segment.
      * @param value Value to set for the deviceCount property.
      */
     public void setDeviceCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("deviceCount", value);
     }
     /**
-     * Sets the discoveredApplicationSegmentId property value. The discoveredApplicationSegmentId property
+     * Sets the discoveredApplicationSegmentId property value. The unique identifier for this discovered application segment.
      * @param value Value to set for the discoveredApplicationSegmentId property.
      */
     public void setDiscoveredApplicationSegmentId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("discoveredApplicationSegmentId", value);
     }
     /**
-     * Sets the firstAccessDateTime property value. The firstAccessDateTime property
+     * Sets the firstAccessDateTime property value. The date and time when this application segment was first accessed.
      * @param value Value to set for the firstAccessDateTime property.
      */
     public void setFirstAccessDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("firstAccessDateTime", value);
     }
     /**
-     * Sets the fqdn property value. The fqdn property
+     * Sets the fqdn property value. The fully qualified domain name associated with this application segment.
      * @param value Value to set for the fqdn property.
      */
     public void setFqdn(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("fqdn", value);
     }
     /**
-     * Sets the ip property value. The ip property
+     * Sets the ip property value. The IP address associated with this application segment.
      * @param value Value to set for the ip property.
      */
     public void setIp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ip", value);
     }
     /**
-     * Sets the lastAccessDateTime property value. The lastAccessDateTime property
+     * Sets the lastAccessDateTime property value. The date and time when this application segment was last accessed.
      * @param value Value to set for the lastAccessDateTime property.
      */
     public void setLastAccessDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -285,28 +285,28 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the port property value. The port property
+     * Sets the port property value. The port number used to access this application segment.
      * @param value Value to set for the port property.
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("port", value);
     }
     /**
-     * Sets the totalBytesReceived property value. The totalBytesReceived property
+     * Sets the totalBytesReceived property value. The total number of bytes received from this application segment.
      * @param value Value to set for the totalBytesReceived property.
      */
     public void setTotalBytesReceived(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalBytesReceived", value);
     }
     /**
-     * Sets the totalBytesSent property value. The totalBytesSent property
+     * Sets the totalBytesSent property value. The total number of bytes sent to this application segment.
      * @param value Value to set for the totalBytesSent property.
      */
     public void setTotalBytesSent(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalBytesSent", value);
     }
     /**
-     * Sets the transactionCount property value. The transactionCount property
+     * Sets the transactionCount property value. The number of transactions recorded for this application segment.
      * @param value Value to set for the transactionCount property.
      */
     public void setTransactionCount(@jakarta.annotation.Nullable final Integer value) {
@@ -320,7 +320,7 @@ public class DiscoveredApplicationSegmentReport implements AdditionalDataHolder,
         this.backingStore.set("transportProtocol", value);
     }
     /**
-     * Sets the userCount property value. The userCount property
+     * Sets the userCount property value. The number of unique users who have accessed this application segment.
      * @param value Value to set for the userCount property.
      */
     public void setUserCount(@jakarta.annotation.Nullable final Integer value) {

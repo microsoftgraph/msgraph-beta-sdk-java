@@ -35,7 +35,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return new PrivateAccessDetails();
     }
     /**
-     * Gets the accessType property value. The accessType property
+     * Gets the accessType property value. Type of accessed application. Access type options: QuickAccess, PrivateAccess.
      * @return a {@link AccessType}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return value;
     }
     /**
-     * Gets the appSegmentId property value. The appSegmentId property
+     * Gets the appSegmentId property value. The unique identifier for Application segment ID from Azure AD.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the connectionStatus property value. The connectionStatus property
+     * Gets the connectionStatus property value. Status of a connection. Status options: Open, Active, Closed.
      * @return a {@link ConnectionStatus}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("connectionStatus");
     }
     /**
-     * Gets the connectorId property value. The connectorId property
+     * Gets the connectorId property value. Private access connector ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("connectorId");
     }
     /**
-     * Gets the connectorIp property value. The connectorIp property
+     * Gets the connectorIp property value. Private access connector IP address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("connectorIp");
     }
     /**
-     * Gets the connectorName property value. The connectorName property
+     * Gets the connectorName property value. Private access connector name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the processingRegion property value. The processingRegion property
+     * Gets the processingRegion property value. Region where the request was processed by the backend service.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("processingRegion");
     }
     /**
-     * Gets the thirdPartyTokenDetails property value. The thirdPartyTokenDetails property
+     * Gets the thirdPartyTokenDetails property value. Details about third-party tokens used in the transaction.
      * @return a {@link ThirdPartyTokenDetails}
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accessType property value. The accessType property
+     * Sets the accessType property value. Type of accessed application. Access type options: QuickAccess, PrivateAccess.
      * @param value Value to set for the accessType property.
      */
     public void setAccessType(@jakarta.annotation.Nullable final AccessType value) {
@@ -177,7 +177,7 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appSegmentId property value. The appSegmentId property
+     * Sets the appSegmentId property value. The unique identifier for Application segment ID from Azure AD.
      * @param value Value to set for the appSegmentId property.
      */
     public void setAppSegmentId(@jakarta.annotation.Nullable final String value) {
@@ -192,28 +192,28 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the connectionStatus property value. The connectionStatus property
+     * Sets the connectionStatus property value. Status of a connection. Status options: Open, Active, Closed.
      * @param value Value to set for the connectionStatus property.
      */
     public void setConnectionStatus(@jakarta.annotation.Nullable final ConnectionStatus value) {
         this.backingStore.set("connectionStatus", value);
     }
     /**
-     * Sets the connectorId property value. The connectorId property
+     * Sets the connectorId property value. Private access connector ID.
      * @param value Value to set for the connectorId property.
      */
     public void setConnectorId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("connectorId", value);
     }
     /**
-     * Sets the connectorIp property value. The connectorIp property
+     * Sets the connectorIp property value. Private access connector IP address.
      * @param value Value to set for the connectorIp property.
      */
     public void setConnectorIp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("connectorIp", value);
     }
     /**
-     * Sets the connectorName property value. The connectorName property
+     * Sets the connectorName property value. Private access connector name.
      * @param value Value to set for the connectorName property.
      */
     public void setConnectorName(@jakarta.annotation.Nullable final String value) {
@@ -227,14 +227,14 @@ public class PrivateAccessDetails implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the processingRegion property value. The processingRegion property
+     * Sets the processingRegion property value. Region where the request was processed by the backend service.
      * @param value Value to set for the processingRegion property.
      */
     public void setProcessingRegion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("processingRegion", value);
     }
     /**
-     * Sets the thirdPartyTokenDetails property value. The thirdPartyTokenDetails property
+     * Sets the thirdPartyTokenDetails property value. Details about third-party tokens used in the transaction.
      * @param value Value to set for the thirdPartyTokenDetails property.
      */
     public void setThirdPartyTokenDetails(@jakarta.annotation.Nullable final ThirdPartyTokenDetails value) {

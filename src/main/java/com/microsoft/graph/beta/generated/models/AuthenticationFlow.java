@@ -76,7 +76,7 @@ public class AuthenticationFlow implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the transferMethod property value. The transferMethod property
+     * Gets the transferMethod property value. Represents the transfer methods in scope for the policy. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      * @return a {@link EnumSet<ConditionalAccessTransferMethods>}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class AuthenticationFlow implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the transferMethod property value. The transferMethod property
+     * Sets the transferMethod property value. Represents the transfer methods in scope for the policy. The possible values are: none, deviceCodeFlow, authenticationTransfer, unknownFutureValue.
      * @param value Value to set for the transferMethod property.
      */
     public void setTransferMethod(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessTransferMethods> value) {
