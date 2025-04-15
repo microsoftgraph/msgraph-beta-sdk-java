@@ -56,7 +56,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the deviceId property value. The deviceId property
+     * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("deviceId");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name for the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the enrollmentProfileName property value. The enrollmentProfileName property
+     * Gets the enrollmentProfileName property value. Enrollment profile applied to the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("enrollmentProfileName");
     }
     /**
-     * Gets the extensionAttribute1 property value. The extensionAttribute1 property
+     * Gets the extensionAttribute1 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute1");
     }
     /**
-     * Gets the extensionAttribute10 property value. The extensionAttribute10 property
+     * Gets the extensionAttribute10 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute10");
     }
     /**
-     * Gets the extensionAttribute11 property value. The extensionAttribute11 property
+     * Gets the extensionAttribute11 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute11");
     }
     /**
-     * Gets the extensionAttribute12 property value. The extensionAttribute12 property
+     * Gets the extensionAttribute12 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute12");
     }
     /**
-     * Gets the extensionAttribute13 property value. The extensionAttribute13 property
+     * Gets the extensionAttribute13 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute13");
     }
     /**
-     * Gets the extensionAttribute14 property value. The extensionAttribute14 property
+     * Gets the extensionAttribute14 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute14");
     }
     /**
-     * Gets the extensionAttribute15 property value. The extensionAttribute15 property
+     * Gets the extensionAttribute15 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute15");
     }
     /**
-     * Gets the extensionAttribute2 property value. The extensionAttribute2 property
+     * Gets the extensionAttribute2 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute2");
     }
     /**
-     * Gets the extensionAttribute3 property value. The extensionAttribute3 property
+     * Gets the extensionAttribute3 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute3");
     }
     /**
-     * Gets the extensionAttribute4 property value. The extensionAttribute4 property
+     * Gets the extensionAttribute4 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute4");
     }
     /**
-     * Gets the extensionAttribute5 property value. The extensionAttribute5 property
+     * Gets the extensionAttribute5 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute5");
     }
     /**
-     * Gets the extensionAttribute6 property value. The extensionAttribute6 property
+     * Gets the extensionAttribute6 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute6");
     }
     /**
-     * Gets the extensionAttribute7 property value. The extensionAttribute7 property
+     * Gets the extensionAttribute7 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute7");
     }
     /**
-     * Gets the extensionAttribute8 property value. The extensionAttribute8 property
+     * Gets the extensionAttribute8 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("extensionAttribute8");
     }
     /**
-     * Gets the extensionAttribute9 property value. The extensionAttribute9 property
+     * Gets the extensionAttribute9 property value. Extension attribute.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isCompliant property value. The isCompliant property
+     * Gets the isCompliant property value. Indicates the device compliance status with Mobile Management Device (MDM) policies.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("isCompliant");
     }
     /**
-     * Gets the manufacturer property value. The manufacturer property
+     * Gets the manufacturer property value. Manufacturer of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -255,7 +255,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("manufacturer");
     }
     /**
-     * Gets the mdmAppId property value. The mdmAppId property
+     * Gets the mdmAppId property value. Application identifier used to register device into MDM.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -263,7 +263,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("mdmAppId");
     }
     /**
-     * Gets the model property value. The model property
+     * Gets the model property value. Model of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -279,7 +279,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the operatingSystem property value. The operatingSystem property
+     * Gets the operatingSystem property value. The type of operating system on the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -287,7 +287,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("operatingSystem");
     }
     /**
-     * Gets the operatingSystemVersion property value. The operatingSystemVersion property
+     * Gets the operatingSystemVersion property value. The version of the operating system on the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -295,7 +295,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("operatingSystemVersion");
     }
     /**
-     * Gets the ownership property value. The ownership property
+     * Gets the ownership property value. Ownership of the device. This property is set by Intune.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -303,7 +303,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("ownership");
     }
     /**
-     * Gets the physicalIds property value. The physicalIds property
+     * Gets the physicalIds property value. A collection of physical identifiers for the device.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -311,7 +311,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("physicalIds");
     }
     /**
-     * Gets the profileType property value. The profileType property
+     * Gets the profileType property value. The profile type of the device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -319,7 +319,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("profileType");
     }
     /**
-     * Gets the systemLabels property value. The systemLabels property
+     * Gets the systemLabels property value. List of labels applied to the device by the system.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -327,7 +327,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("systemLabels");
     }
     /**
-     * Gets the trustType property value. The trustType property
+     * Gets the trustType property value. Type of trust for the joined device.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -388,154 +388,154 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the deviceId property value. The deviceId property
+     * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceId", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name for the device.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the enrollmentProfileName property value. The enrollmentProfileName property
+     * Sets the enrollmentProfileName property value. Enrollment profile applied to the device.
      * @param value Value to set for the enrollmentProfileName property.
      */
     public void setEnrollmentProfileName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("enrollmentProfileName", value);
     }
     /**
-     * Sets the extensionAttribute1 property value. The extensionAttribute1 property
+     * Sets the extensionAttribute1 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute1 property.
      */
     public void setExtensionAttribute1(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute1", value);
     }
     /**
-     * Sets the extensionAttribute10 property value. The extensionAttribute10 property
+     * Sets the extensionAttribute10 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute10 property.
      */
     public void setExtensionAttribute10(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute10", value);
     }
     /**
-     * Sets the extensionAttribute11 property value. The extensionAttribute11 property
+     * Sets the extensionAttribute11 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute11 property.
      */
     public void setExtensionAttribute11(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute11", value);
     }
     /**
-     * Sets the extensionAttribute12 property value. The extensionAttribute12 property
+     * Sets the extensionAttribute12 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute12 property.
      */
     public void setExtensionAttribute12(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute12", value);
     }
     /**
-     * Sets the extensionAttribute13 property value. The extensionAttribute13 property
+     * Sets the extensionAttribute13 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute13 property.
      */
     public void setExtensionAttribute13(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute13", value);
     }
     /**
-     * Sets the extensionAttribute14 property value. The extensionAttribute14 property
+     * Sets the extensionAttribute14 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute14 property.
      */
     public void setExtensionAttribute14(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute14", value);
     }
     /**
-     * Sets the extensionAttribute15 property value. The extensionAttribute15 property
+     * Sets the extensionAttribute15 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute15 property.
      */
     public void setExtensionAttribute15(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute15", value);
     }
     /**
-     * Sets the extensionAttribute2 property value. The extensionAttribute2 property
+     * Sets the extensionAttribute2 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute2 property.
      */
     public void setExtensionAttribute2(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute2", value);
     }
     /**
-     * Sets the extensionAttribute3 property value. The extensionAttribute3 property
+     * Sets the extensionAttribute3 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute3 property.
      */
     public void setExtensionAttribute3(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute3", value);
     }
     /**
-     * Sets the extensionAttribute4 property value. The extensionAttribute4 property
+     * Sets the extensionAttribute4 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute4 property.
      */
     public void setExtensionAttribute4(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute4", value);
     }
     /**
-     * Sets the extensionAttribute5 property value. The extensionAttribute5 property
+     * Sets the extensionAttribute5 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute5 property.
      */
     public void setExtensionAttribute5(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute5", value);
     }
     /**
-     * Sets the extensionAttribute6 property value. The extensionAttribute6 property
+     * Sets the extensionAttribute6 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute6 property.
      */
     public void setExtensionAttribute6(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute6", value);
     }
     /**
-     * Sets the extensionAttribute7 property value. The extensionAttribute7 property
+     * Sets the extensionAttribute7 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute7 property.
      */
     public void setExtensionAttribute7(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute7", value);
     }
     /**
-     * Sets the extensionAttribute8 property value. The extensionAttribute8 property
+     * Sets the extensionAttribute8 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute8 property.
      */
     public void setExtensionAttribute8(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute8", value);
     }
     /**
-     * Sets the extensionAttribute9 property value. The extensionAttribute9 property
+     * Sets the extensionAttribute9 property value. Extension attribute.
      * @param value Value to set for the extensionAttribute9 property.
      */
     public void setExtensionAttribute9(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("extensionAttribute9", value);
     }
     /**
-     * Sets the isCompliant property value. The isCompliant property
+     * Sets the isCompliant property value. Indicates the device compliance status with Mobile Management Device (MDM) policies.
      * @param value Value to set for the isCompliant property.
      */
     public void setIsCompliant(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCompliant", value);
     }
     /**
-     * Sets the manufacturer property value. The manufacturer property
+     * Sets the manufacturer property value. Manufacturer of the device.
      * @param value Value to set for the manufacturer property.
      */
     public void setManufacturer(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("manufacturer", value);
     }
     /**
-     * Sets the mdmAppId property value. The mdmAppId property
+     * Sets the mdmAppId property value. Application identifier used to register device into MDM.
      * @param value Value to set for the mdmAppId property.
      */
     public void setMdmAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mdmAppId", value);
     }
     /**
-     * Sets the model property value. The model property
+     * Sets the model property value. Model of the device.
      * @param value Value to set for the model property.
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
@@ -549,49 +549,49 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the operatingSystem property value. The operatingSystem property
+     * Sets the operatingSystem property value. The type of operating system on the device.
      * @param value Value to set for the operatingSystem property.
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operatingSystem", value);
     }
     /**
-     * Sets the operatingSystemVersion property value. The operatingSystemVersion property
+     * Sets the operatingSystemVersion property value. The version of the operating system on the device.
      * @param value Value to set for the operatingSystemVersion property.
      */
     public void setOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operatingSystemVersion", value);
     }
     /**
-     * Sets the ownership property value. The ownership property
+     * Sets the ownership property value. Ownership of the device. This property is set by Intune.
      * @param value Value to set for the ownership property.
      */
     public void setOwnership(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ownership", value);
     }
     /**
-     * Sets the physicalIds property value. The physicalIds property
+     * Sets the physicalIds property value. A collection of physical identifiers for the device.
      * @param value Value to set for the physicalIds property.
      */
     public void setPhysicalIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("physicalIds", value);
     }
     /**
-     * Sets the profileType property value. The profileType property
+     * Sets the profileType property value. The profile type of the device.
      * @param value Value to set for the profileType property.
      */
     public void setProfileType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("profileType", value);
     }
     /**
-     * Sets the systemLabels property value. The systemLabels property
+     * Sets the systemLabels property value. List of labels applied to the device by the system.
      * @param value Value to set for the systemLabels property.
      */
     public void setSystemLabels(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("systemLabels", value);
     }
     /**
-     * Sets the trustType property value. The trustType property
+     * Sets the trustType property value. Type of trust for the joined device.
      * @param value Value to set for the trustType property.
      */
     public void setTrustType(@jakarta.annotation.Nullable final String value) {

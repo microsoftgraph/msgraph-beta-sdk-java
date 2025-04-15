@@ -35,12 +35,13 @@ public class EvaluateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/evaluate", rawUrl);
     }
     /**
-     * Invoke action evaluate
+     * Evaluates the applicability of Conditional Access Policies in your tenant based on the provided sign-in properties.
      * @param body The request body
      * @return a {@link EvaluatePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation on 2024-07-25 and will be removed 2025-02-01
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-evaluate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -48,13 +49,14 @@ public class EvaluateRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Invoke action evaluate
+     * Evaluates the applicability of Conditional Access Policies in your tenant based on the provided sign-in properties.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EvaluatePostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Private preview for conditional access what If API as of 2024-07/PrivatePreview:WhatIfEvaluation on 2024-07-25 and will be removed 2025-02-01
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccessroot-evaluate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -66,7 +68,7 @@ public class EvaluateRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EvaluatePostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action evaluate
+     * Evaluates the applicability of Conditional Access Policies in your tenant based on the provided sign-in properties.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -78,7 +80,7 @@ public class EvaluateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action evaluate
+     * Evaluates the applicability of Conditional Access Policies in your tenant based on the provided sign-in properties.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -57,7 +57,7 @@ public class ThirdPartyTokenDetails implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. Time the token will expire.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class ThirdPartyTokenDetails implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the issuedAtDateTime property value. The issuedAtDateTime property
+     * Gets the issuedAtDateTime property value. Time the token was issued at.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class ThirdPartyTokenDetails implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the uniqueTokenIdentifier property value. The uniqueTokenIdentifier property
+     * Gets the uniqueTokenIdentifier property value. Unique token identifier.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class ThirdPartyTokenDetails implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("uniqueTokenIdentifier");
     }
     /**
-     * Gets the validFromDateTime property value. The validFromDateTime property
+     * Gets the validFromDateTime property value. Time the token is valid from.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -139,14 +139,14 @@ public class ThirdPartyTokenDetails implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. Time the token will expire.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the issuedAtDateTime property value. The issuedAtDateTime property
+     * Sets the issuedAtDateTime property value. Time the token was issued at.
      * @param value Value to set for the issuedAtDateTime property.
      */
     public void setIssuedAtDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -160,14 +160,14 @@ public class ThirdPartyTokenDetails implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the uniqueTokenIdentifier property value. The uniqueTokenIdentifier property
+     * Sets the uniqueTokenIdentifier property value. Unique token identifier.
      * @param value Value to set for the uniqueTokenIdentifier property.
      */
     public void setUniqueTokenIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("uniqueTokenIdentifier", value);
     }
     /**
-     * Sets the validFromDateTime property value. The validFromDateTime property
+     * Sets the validFromDateTime property value. Time the token is valid from.
      * @param value Value to set for the validFromDateTime property.
      */
     public void setValidFromDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

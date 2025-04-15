@@ -41,19 +41,21 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
         super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.getDiscoveredApplicationSegmentReport(startDateTime={startDateTime},endDateTime={endDateTime},userId='@userId'){?%24count,%24filter,%24search,%24skip,%24top,userId*}", rawUrl);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
+     * Returns a collection of discoveredApplicationSegmentReport based on aggregated traffic logs for a given period.
      * @return a {@link GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-getdiscoveredapplicationsegmentreport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
+     * Returns a collection of discoveredApplicationSegmentReport based on aggregated traffic logs for a given period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-getdiscoveredapplicationsegmentreport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
         return this.requestAdapter.send(requestInfo, errorMapping, GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
+     * Returns a collection of discoveredApplicationSegmentReport based on aggregated traffic logs for a given period.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
+     * Returns a collection of discoveredApplicationSegmentReport based on aggregated traffic logs for a given period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
         return new MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getDiscoveredApplicationSegmentReport
+     * Returns a collection of discoveredApplicationSegmentReport based on aggregated traffic logs for a given period.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

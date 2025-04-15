@@ -136,7 +136,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("impactStartDateTime");
     }
     /**
-     * Gets the impactType property value. Indicates the scope of impact of a recommendation. Tenant level indicates that the recommendation impacts the whole tenant. Other possible values include users, applications.
+     * Gets the impactType property value. Indicates the scope of impact of a recommendation. tenantLevel indicates that the recommendation impacts the whole tenant. Other possible values include users, apps.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -333,7 +333,7 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("impactStartDateTime", value);
     }
     /**
-     * Sets the impactType property value. Indicates the scope of impact of a recommendation. Tenant level indicates that the recommendation impacts the whole tenant. Other possible values include users, applications.
+     * Sets the impactType property value. Indicates the scope of impact of a recommendation. tenantLevel indicates that the recommendation impacts the whole tenant. Other possible values include users, apps.
      * @param value Value to set for the impactType property.
      */
     public void setImpactType(@jakarta.annotation.Nullable final String value) {

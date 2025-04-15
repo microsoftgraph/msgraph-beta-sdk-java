@@ -37,7 +37,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/logs/traffic/{networkAccessTraffic%2DtransactionId}/device{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get device from networkAccess
+     * Represents the device associated with the network traffic, providing details about the hardware or virtual machine involved in the transaction.
      * @return a {@link Device}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get device from networkAccess
+     * Represents the device associated with the network traffic, providing details about the hardware or virtual machine involved in the transaction.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Device}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Device::createFromDiscriminatorValue);
     }
     /**
-     * Get device from networkAccess
+     * Represents the device associated with the network traffic, providing details about the hardware or virtual machine involved in the transaction.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get device from networkAccess
+     * Represents the device associated with the network traffic, providing details about the hardware or virtual machine involved in the transaction.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class DeviceRequestBuilder extends BaseRequestBuilder {
         return new DeviceRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get device from networkAccess
+     * Represents the device associated with the network traffic, providing details about the hardware or virtual machine involved in the transaction.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
