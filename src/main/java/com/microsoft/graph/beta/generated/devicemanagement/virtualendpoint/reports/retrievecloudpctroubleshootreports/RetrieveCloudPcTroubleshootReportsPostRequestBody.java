@@ -62,8 +62,9 @@ public class RetrieveCloudPcTroubleshootReportsPostRequestBody implements Additi
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
+        deserializerMap.put("groupBy", (n) -> { this.setGroupBy(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("orderBy", (n) -> { this.setOrderBy(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("reportName", (n) -> { this.setReportName(n.getEnumValue(CloudPCTroubleshootReportType::forValue)); });
         deserializerMap.put("search", (n) -> { this.setSearch(n.getStringValue()); });
@@ -79,6 +80,14 @@ public class RetrieveCloudPcTroubleshootReportsPostRequestBody implements Additi
     @jakarta.annotation.Nullable
     public String getFilter() {
         return this.backingStore.get("filter");
+    }
+    /**
+     * Gets the groupBy property value. The groupBy property
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getGroupBy() {
+        return this.backingStore.get("groupBy");
     }
     /**
      * Gets the orderBy property value. The orderBy property
@@ -135,6 +144,7 @@ public class RetrieveCloudPcTroubleshootReportsPostRequestBody implements Additi
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("filter", this.getFilter());
+        writer.writeCollectionOfPrimitiveValues("groupBy", this.getGroupBy());
         writer.writeCollectionOfPrimitiveValues("orderBy", this.getOrderBy());
         writer.writeEnumValue("reportName", this.getReportName());
         writer.writeStringValue("search", this.getSearch());
@@ -164,6 +174,13 @@ public class RetrieveCloudPcTroubleshootReportsPostRequestBody implements Additi
      */
     public void setFilter(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("filter", value);
+    }
+    /**
+     * Sets the groupBy property value. The groupBy property
+     * @param value Value to set for the groupBy property.
+     */
+    public void setGroupBy(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("groupBy", value);
     }
     /**
      * Sets the orderBy property value. The orderBy property

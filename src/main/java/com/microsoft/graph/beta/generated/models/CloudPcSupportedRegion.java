@@ -42,6 +42,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcRegionGroup::forValue)); });
+        deserializerMap.put("regionRestrictionDetail", (n) -> { this.setRegionRestrictionDetail(n.getObjectValue(CloudPcSupportedRegionRestrictionDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("regionStatus", (n) -> { this.setRegionStatus(n.getEnumValue(CloudPcSupportedRegionStatus::forValue)); });
         deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumSetValue(CloudPcManagementService::forValue)); });
         return deserializerMap;
@@ -53,6 +54,14 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public CloudPcRegionGroup getRegionGroup() {
         return this.backingStore.get("regionGroup");
+    }
+    /**
+     * Gets the regionRestrictionDetail property value. When the region isn&apos;t available, all region restrictions are set to true. These restrictions apply to three properties: cPURestricted, gPURestricted, and nestedVirtualizationRestricted. cPURestricted indicates whether the region is available for CPU, gPURestricted indicates whether the region is available for GPU, and nestedVirtualizationRestricted indicates whether the region is available for nested virtualization. Read-only.
+     * @return a {@link CloudPcSupportedRegionRestrictionDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcSupportedRegionRestrictionDetail getRegionRestrictionDetail() {
+        return this.backingStore.get("regionRestrictionDetail");
     }
     /**
      * Gets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
@@ -79,6 +88,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeEnumValue("regionGroup", this.getRegionGroup());
+        writer.writeObjectValue("regionRestrictionDetail", this.getRegionRestrictionDetail());
         writer.writeEnumValue("regionStatus", this.getRegionStatus());
         writer.writeEnumSetValue("supportedSolution", this.getSupportedSolution());
     }
@@ -95,6 +105,13 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      */
     public void setRegionGroup(@jakarta.annotation.Nullable final CloudPcRegionGroup value) {
         this.backingStore.set("regionGroup", value);
+    }
+    /**
+     * Sets the regionRestrictionDetail property value. When the region isn&apos;t available, all region restrictions are set to true. These restrictions apply to three properties: cPURestricted, gPURestricted, and nestedVirtualizationRestricted. cPURestricted indicates whether the region is available for CPU, gPURestricted indicates whether the region is available for GPU, and nestedVirtualizationRestricted indicates whether the region is available for nested virtualization. Read-only.
+     * @param value Value to set for the regionRestrictionDetail property.
+     */
+    public void setRegionRestrictionDetail(@jakarta.annotation.Nullable final CloudPcSupportedRegionRestrictionDetail value) {
+        this.backingStore.set("regionRestrictionDetail", value);
     }
     /**
      * Sets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.

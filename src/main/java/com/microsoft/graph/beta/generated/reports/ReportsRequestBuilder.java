@@ -13,6 +13,7 @@ import com.microsoft.graph.beta.reports.dailyprintusagesummariesbyprinter.DailyP
 import com.microsoft.graph.beta.reports.dailyprintusagesummariesbyuser.DailyPrintUsageSummariesByUserRequestBuilder;
 import com.microsoft.graph.beta.reports.deviceconfigurationdeviceactivity.DeviceConfigurationDeviceActivityRequestBuilder;
 import com.microsoft.graph.beta.reports.deviceconfigurationuseractivity.DeviceConfigurationUserActivityRequestBuilder;
+import com.microsoft.graph.beta.reports.getapiusageserviceareaserviceareaperiodperiodappidappid.GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppIdRequestBuilder;
 import com.microsoft.graph.beta.reports.getattacksimulationrepeatoffenders.GetAttackSimulationRepeatOffendersRequestBuilder;
 import com.microsoft.graph.beta.reports.getattacksimulationsimulationusercoverage.GetAttackSimulationSimulationUserCoverageRequestBuilder;
 import com.microsoft.graph.beta.reports.getattacksimulationtrainingusercoverage.GetAttackSimulationTrainingUserCoverageRequestBuilder;
@@ -258,6 +259,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeviceConfigurationUserActivityRequestBuilder deviceConfigurationUserActivity() {
         return new DeviceConfigurationUserActivityRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getApiUsage method.
+     * @return a {@link GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppIdRequestBuilder getApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppId() {
+        return new GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppIdRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAttackSimulationRepeatOffenders method.

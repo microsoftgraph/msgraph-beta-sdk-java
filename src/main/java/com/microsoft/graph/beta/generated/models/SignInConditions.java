@@ -11,28 +11,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, BackedModel, Parsable {
+public class SignInConditions implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.
      */
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new {@link ConditionalAccessWhatIfConditions} and sets the default values.
+     * Instantiates a new {@link SignInConditions} and sets the default values.
      */
-    public ConditionalAccessWhatIfConditions() {
+    public SignInConditions() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link ConditionalAccessWhatIfConditions}
+     * @return a {@link SignInConditions}
      */
     @jakarta.annotation.Nonnull
-    public static ConditionalAccessWhatIfConditions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static SignInConditions createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new ConditionalAccessWhatIfConditions();
+        return new SignInConditions();
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -48,7 +48,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return value;
     }
     /**
-     * Gets the authenticationFlow property value. The authenticationFlow property
+     * Gets the authenticationFlow property value. Type of authentication flow. The possible value is: deviceCodeFlow or authenticationTransfer. Default value is none.
      * @return a {@link AuthenticationFlow}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return this.backingStore;
     }
     /**
-     * Gets the clientAppType property value. The clientAppType property
+     * Gets the clientAppType property value. Client application type. The possible value is: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other, unknownFutureValue. Default value is all.
      * @return a {@link ConditionalAccessClientApp}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return this.backingStore.get("clientAppType");
     }
     /**
-     * Gets the country property value. The country property
+     * Gets the country property value. Country from where the identity is authenticating.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return this.backingStore.get("country");
     }
     /**
-     * Gets the deviceInfo property value. The deviceInfo property
+     * Gets the deviceInfo property value. Information about the device used for the sign-in.
      * @return a {@link DeviceInfo}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return this.backingStore.get("deviceInfo");
     }
     /**
-     * Gets the devicePlatform property value. The devicePlatform property
+     * Gets the devicePlatform property value. Device platform. The possible value is: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux. Default value is all.
      * @return a {@link ConditionalAccessDevicePlatform}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return deserializerMap;
     }
     /**
-     * Gets the insiderRiskLevel property value. The insiderRiskLevel property
+     * Gets the insiderRiskLevel property value. Insider risk associated with the authenticating user. The possible value is: none, minor, moderate, elevated, unknownFutureValue. Default value is none.
      * @return a {@link InsiderRiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return this.backingStore.get("insiderRiskLevel");
     }
     /**
-     * Gets the ipAddress property value. The ipAddress property
+     * Gets the ipAddress property value. Ip address of the authenticating identity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the servicePrincipalRiskLevel property value. The servicePrincipalRiskLevel property
+     * Gets the servicePrincipalRiskLevel property value. Risk associated with the service principal. The possible value is: low, medium, high, hidden, none, unknownFutureValue. Default value is none.
      * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return this.backingStore.get("servicePrincipalRiskLevel");
     }
     /**
-     * Gets the signInRiskLevel property value. The signInRiskLevel property
+     * Gets the signInRiskLevel property value. Sign-in risk associated with the user. The possible value is: low, medium, high, hidden, none, unknownFutureValue. Default value is none.
      * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         return this.backingStore.get("signInRiskLevel");
     }
     /**
-     * Gets the userRiskLevel property value. The userRiskLevel property
+     * Gets the userRiskLevel property value. The authenticating user&apos;s risk level. The possible value is: low, medium, high, hidden, none, unknownFutureValue. Default value is none.
      * @return a {@link RiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the authenticationFlow property value. The authenticationFlow property
+     * Sets the authenticationFlow property value. Type of authentication flow. The possible value is: deviceCodeFlow or authenticationTransfer. Default value is none.
      * @param value Value to set for the authenticationFlow property.
      */
     public void setAuthenticationFlow(@jakarta.annotation.Nullable final AuthenticationFlow value) {
@@ -205,42 +205,42 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         this.backingStore = value;
     }
     /**
-     * Sets the clientAppType property value. The clientAppType property
+     * Sets the clientAppType property value. Client application type. The possible value is: all, browser, mobileAppsAndDesktopClients, exchangeActiveSync, easSupported, other, unknownFutureValue. Default value is all.
      * @param value Value to set for the clientAppType property.
      */
     public void setClientAppType(@jakarta.annotation.Nullable final ConditionalAccessClientApp value) {
         this.backingStore.set("clientAppType", value);
     }
     /**
-     * Sets the country property value. The country property
+     * Sets the country property value. Country from where the identity is authenticating.
      * @param value Value to set for the country property.
      */
     public void setCountry(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("country", value);
     }
     /**
-     * Sets the deviceInfo property value. The deviceInfo property
+     * Sets the deviceInfo property value. Information about the device used for the sign-in.
      * @param value Value to set for the deviceInfo property.
      */
     public void setDeviceInfo(@jakarta.annotation.Nullable final DeviceInfo value) {
         this.backingStore.set("deviceInfo", value);
     }
     /**
-     * Sets the devicePlatform property value. The devicePlatform property
+     * Sets the devicePlatform property value. Device platform. The possible value is: android, iOS, windows, windowsPhone, macOS, all, unknownFutureValue, linux. Default value is all.
      * @param value Value to set for the devicePlatform property.
      */
     public void setDevicePlatform(@jakarta.annotation.Nullable final ConditionalAccessDevicePlatform value) {
         this.backingStore.set("devicePlatform", value);
     }
     /**
-     * Sets the insiderRiskLevel property value. The insiderRiskLevel property
+     * Sets the insiderRiskLevel property value. Insider risk associated with the authenticating user. The possible value is: none, minor, moderate, elevated, unknownFutureValue. Default value is none.
      * @param value Value to set for the insiderRiskLevel property.
      */
     public void setInsiderRiskLevel(@jakarta.annotation.Nullable final InsiderRiskLevel value) {
         this.backingStore.set("insiderRiskLevel", value);
     }
     /**
-     * Sets the ipAddress property value. The ipAddress property
+     * Sets the ipAddress property value. Ip address of the authenticating identity.
      * @param value Value to set for the ipAddress property.
      */
     public void setIpAddress(@jakarta.annotation.Nullable final String value) {
@@ -254,21 +254,21 @@ public class ConditionalAccessWhatIfConditions implements AdditionalDataHolder, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the servicePrincipalRiskLevel property value. The servicePrincipalRiskLevel property
+     * Sets the servicePrincipalRiskLevel property value. Risk associated with the service principal. The possible value is: low, medium, high, hidden, none, unknownFutureValue. Default value is none.
      * @param value Value to set for the servicePrincipalRiskLevel property.
      */
     public void setServicePrincipalRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
         this.backingStore.set("servicePrincipalRiskLevel", value);
     }
     /**
-     * Sets the signInRiskLevel property value. The signInRiskLevel property
+     * Sets the signInRiskLevel property value. Sign-in risk associated with the user. The possible value is: low, medium, high, hidden, none, unknownFutureValue. Default value is none.
      * @param value Value to set for the signInRiskLevel property.
      */
     public void setSignInRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {
         this.backingStore.set("signInRiskLevel", value);
     }
     /**
-     * Sets the userRiskLevel property value. The userRiskLevel property
+     * Sets the userRiskLevel property value. The authenticating user&apos;s risk level. The possible value is: low, medium, high, hidden, none, unknownFutureValue. Default value is none.
      * @param value Value to set for the userRiskLevel property.
      */
     public void setUserRiskLevel(@jakarta.annotation.Nullable final RiskLevel value) {

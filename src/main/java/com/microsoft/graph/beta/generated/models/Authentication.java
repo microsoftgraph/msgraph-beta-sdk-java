@@ -57,6 +57,7 @@ public class Authentication extends Entity implements Parsable {
         deserializerMap.put("passwordMethods", (n) -> { this.setPasswordMethods(n.getCollectionOfObjectValues(PasswordAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("phoneMethods", (n) -> { this.setPhoneMethods(n.getCollectionOfObjectValues(PhoneAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("platformCredentialMethods", (n) -> { this.setPlatformCredentialMethods(n.getCollectionOfObjectValues(PlatformCredentialAuthenticationMethod::createFromDiscriminatorValue)); });
+        deserializerMap.put("qrCodePinMethod", (n) -> { this.setQrCodePinMethod(n.getObjectValue(QrCodePinAuthenticationMethod::createFromDiscriminatorValue)); });
         deserializerMap.put("requirements", (n) -> { this.setRequirements(n.getObjectValue(StrongAuthenticationRequirements::createFromDiscriminatorValue)); });
         deserializerMap.put("signInPreferences", (n) -> { this.setSignInPreferences(n.getObjectValue(SignInPreferences::createFromDiscriminatorValue)); });
         deserializerMap.put("softwareOathMethods", (n) -> { this.setSoftwareOathMethods(n.getCollectionOfObjectValues(SoftwareOathAuthenticationMethod::createFromDiscriminatorValue)); });
@@ -121,12 +122,20 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("phoneMethods");
     }
     /**
-     * Gets the platformCredentialMethods property value. The platformCredentialMethods property
+     * Gets the platformCredentialMethods property value. Represents a platform credential instance registered to a user on Mac OS.
      * @return a {@link java.util.List<PlatformCredentialAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<PlatformCredentialAuthenticationMethod> getPlatformCredentialMethods() {
         return this.backingStore.get("platformCredentialMethods");
+    }
+    /**
+     * Gets the qrCodePinMethod property value. The qrCodePinMethod property
+     * @return a {@link QrCodePinAuthenticationMethod}
+     */
+    @jakarta.annotation.Nullable
+    public QrCodePinAuthenticationMethod getQrCodePinMethod() {
+        return this.backingStore.get("qrCodePinMethod");
     }
     /**
      * Gets the requirements property value. The settings and preferences for per-user Microsoft Entra multifactor authentication.
@@ -185,6 +194,7 @@ public class Authentication extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("passwordMethods", this.getPasswordMethods());
         writer.writeCollectionOfObjectValues("phoneMethods", this.getPhoneMethods());
         writer.writeCollectionOfObjectValues("platformCredentialMethods", this.getPlatformCredentialMethods());
+        writer.writeObjectValue("qrCodePinMethod", this.getQrCodePinMethod());
         writer.writeObjectValue("requirements", this.getRequirements());
         writer.writeObjectValue("signInPreferences", this.getSignInPreferences());
         writer.writeCollectionOfObjectValues("softwareOathMethods", this.getSoftwareOathMethods());
@@ -255,11 +265,18 @@ public class Authentication extends Entity implements Parsable {
         this.backingStore.set("phoneMethods", value);
     }
     /**
-     * Sets the platformCredentialMethods property value. The platformCredentialMethods property
+     * Sets the platformCredentialMethods property value. Represents a platform credential instance registered to a user on Mac OS.
      * @param value Value to set for the platformCredentialMethods property.
      */
     public void setPlatformCredentialMethods(@jakarta.annotation.Nullable final java.util.List<PlatformCredentialAuthenticationMethod> value) {
         this.backingStore.set("platformCredentialMethods", value);
+    }
+    /**
+     * Sets the qrCodePinMethod property value. The qrCodePinMethod property
+     * @param value Value to set for the qrCodePinMethod property.
+     */
+    public void setQrCodePinMethod(@jakarta.annotation.Nullable final QrCodePinAuthenticationMethod value) {
+        this.backingStore.set("qrCodePinMethod", value);
     }
     /**
      * Sets the requirements property value. The settings and preferences for per-user Microsoft Entra multifactor authentication.

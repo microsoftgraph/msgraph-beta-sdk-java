@@ -66,7 +66,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get platformCredentialMethods from users
+     * Represents a platform credential instance registered to a user on Mac OS.
      * @return a {@link PlatformCredentialAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -75,7 +75,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         return get(null);
     }
     /**
-     * Get platformCredentialMethods from users
+     * Represents a platform credential instance registered to a user on Mac OS.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlatformCredentialAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         return requestInfo;
     }
     /**
-     * Get platformCredentialMethods from users
+     * Represents a platform credential instance registered to a user on Mac OS.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
         return toGetRequestInformation(null);
     }
     /**
-     * Get platformCredentialMethods from users
+     * Represents a platform credential instance registered to a user on Mac OS.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -143,7 +143,7 @@ public class PlatformCredentialAuthenticationMethodItemRequestBuilder extends Ba
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get platformCredentialMethods from users
+     * Represents a platform credential instance registered to a user on Mac OS.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

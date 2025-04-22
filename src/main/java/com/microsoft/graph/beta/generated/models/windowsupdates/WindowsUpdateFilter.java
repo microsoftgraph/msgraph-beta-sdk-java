@@ -29,6 +29,7 @@ public class WindowsUpdateFilter extends SoftwareUpdateFilter implements Parsabl
             switch (mappingValue) {
                 case "#microsoft.graph.windowsUpdates.driverUpdateFilter": return new DriverUpdateFilter();
                 case "#microsoft.graph.windowsUpdates.qualityUpdateFilter": return new QualityUpdateFilter();
+                case "#microsoft.graph.windowsUpdates.remediationUpdateFilter": return new RemediationUpdateFilter();
             }
         }
         return new WindowsUpdateFilter();

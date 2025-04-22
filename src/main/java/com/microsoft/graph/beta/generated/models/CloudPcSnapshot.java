@@ -59,10 +59,19 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         deserializerMap.put("cloudPcId", (n) -> { this.setCloudPcId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("healthCheckStatus", (n) -> { this.setHealthCheckStatus(n.getEnumValue(CloudPcSnapshotHealthCheckStatus::forValue)); });
         deserializerMap.put("lastRestoredDateTime", (n) -> { this.setLastRestoredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("snapshotType", (n) -> { this.setSnapshotType(n.getEnumValue(CloudPcSnapshotType::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcSnapshotStatus::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the healthCheckStatus property value. The healthCheckStatus property
+     * @return a {@link CloudPcSnapshotHealthCheckStatus}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcSnapshotHealthCheckStatus getHealthCheckStatus() {
+        return this.backingStore.get("healthCheckStatus");
     }
     /**
      * Gets the lastRestoredDateTime property value. The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -98,6 +107,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         writer.writeStringValue("cloudPcId", this.getCloudPcId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
+        writer.writeEnumValue("healthCheckStatus", this.getHealthCheckStatus());
         writer.writeOffsetDateTimeValue("lastRestoredDateTime", this.getLastRestoredDateTime());
         writer.writeEnumValue("snapshotType", this.getSnapshotType());
         writer.writeEnumValue("status", this.getStatus());
@@ -122,6 +132,13 @@ public class CloudPcSnapshot extends Entity implements Parsable {
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
+    }
+    /**
+     * Sets the healthCheckStatus property value. The healthCheckStatus property
+     * @param value Value to set for the healthCheckStatus property.
+     */
+    public void setHealthCheckStatus(@jakarta.annotation.Nullable final CloudPcSnapshotHealthCheckStatus value) {
+        this.backingStore.set("healthCheckStatus", value);
     }
     /**
      * Sets the lastRestoredDateTime property value. The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.

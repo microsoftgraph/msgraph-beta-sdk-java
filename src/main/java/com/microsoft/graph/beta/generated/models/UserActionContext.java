@@ -7,23 +7,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ServicePrincipalSubject extends ConditionalAccessWhatIfSubject implements Parsable {
+public class UserActionContext extends SignInContext implements Parsable {
     /**
-     * Instantiates a new {@link ServicePrincipalSubject} and sets the default values.
+     * Instantiates a new {@link UserActionContext} and sets the default values.
      */
-    public ServicePrincipalSubject() {
+    public UserActionContext() {
         super();
-        this.setOdataType("#microsoft.graph.servicePrincipalSubject");
+        this.setOdataType("#microsoft.graph.userActionContext");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link ServicePrincipalSubject}
+     * @return a {@link UserActionContext}
      */
     @jakarta.annotation.Nonnull
-    public static ServicePrincipalSubject createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static UserActionContext createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new ServicePrincipalSubject();
+        return new UserActionContext();
     }
     /**
      * The deserialization information for the current model
@@ -32,16 +32,16 @@ public class ServicePrincipalSubject extends ConditionalAccessWhatIfSubject impl
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("servicePrincipalId", (n) -> { this.setServicePrincipalId(n.getStringValue()); });
+        deserializerMap.put("userAction", (n) -> { this.setUserAction(n.getEnumValue(UserAction::forValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the servicePrincipalId property value. The servicePrincipalId property
-     * @return a {@link String}
+     * Gets the userAction property value. Represents the user action that the authenticating identity is performing. The possible values are: registerSecurityInformation, registerOrJoinDevices, unknownFutureValue.
+     * @return a {@link UserAction}
      */
     @jakarta.annotation.Nullable
-    public String getServicePrincipalId() {
-        return this.backingStore.get("servicePrincipalId");
+    public UserAction getUserAction() {
+        return this.backingStore.get("userAction");
     }
     /**
      * Serializes information the current object
@@ -50,13 +50,13 @@ public class ServicePrincipalSubject extends ConditionalAccessWhatIfSubject impl
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("servicePrincipalId", this.getServicePrincipalId());
+        writer.writeEnumValue("userAction", this.getUserAction());
     }
     /**
-     * Sets the servicePrincipalId property value. The servicePrincipalId property
-     * @param value Value to set for the servicePrincipalId property.
+     * Sets the userAction property value. Represents the user action that the authenticating identity is performing. The possible values are: registerSecurityInformation, registerOrJoinDevices, unknownFutureValue.
+     * @param value Value to set for the userAction property.
      */
-    public void setServicePrincipalId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("servicePrincipalId", value);
+    public void setUserAction(@jakarta.annotation.Nullable final UserAction value) {
+        this.backingStore.set("userAction", value);
     }
 }

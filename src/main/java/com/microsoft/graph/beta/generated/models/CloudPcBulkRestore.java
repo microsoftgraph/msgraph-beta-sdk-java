@@ -33,9 +33,18 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("ignoreUnhealthySnapshots", (n) -> { this.setIgnoreUnhealthySnapshots(n.getBooleanValue()); });
         deserializerMap.put("restorePointDateTime", (n) -> { this.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("timeRange", (n) -> { this.setTimeRange(n.getEnumValue(RestoreTimeRange::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the ignoreUnhealthySnapshots property value. The ignoreUnhealthySnapshots property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIgnoreUnhealthySnapshots() {
+        return this.backingStore.get("ignoreUnhealthySnapshots");
     }
     /**
      * Gets the restorePointDateTime property value. The date and time point for the selected Cloud PCs to restore. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -60,8 +69,16 @@ public class CloudPcBulkRestore extends CloudPcBulkAction implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeBooleanValue("ignoreUnhealthySnapshots", this.getIgnoreUnhealthySnapshots());
         writer.writeOffsetDateTimeValue("restorePointDateTime", this.getRestorePointDateTime());
         writer.writeEnumValue("timeRange", this.getTimeRange());
+    }
+    /**
+     * Sets the ignoreUnhealthySnapshots property value. The ignoreUnhealthySnapshots property
+     * @param value Value to set for the ignoreUnhealthySnapshots property.
+     */
+    public void setIgnoreUnhealthySnapshots(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("ignoreUnhealthySnapshots", value);
     }
     /**
      * Sets the restorePointDateTime property value. The date and time point for the selected Cloud PCs to restore. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
