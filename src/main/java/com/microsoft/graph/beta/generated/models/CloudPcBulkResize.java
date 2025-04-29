@@ -36,7 +36,7 @@ public class CloudPcBulkResize extends CloudPcBulkAction implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the targetServicePlanId property value. The target service plan ID of the resize configuration with new vCPU and storage size.
+     * Gets the targetServicePlanId property value. Indicates the target service plan ID of the resize configuration with new vCPU and storage size.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CloudPcBulkResize extends CloudPcBulkAction implements Parsable {
         writer.writeStringValue("targetServicePlanId", this.getTargetServicePlanId());
     }
     /**
-     * Sets the targetServicePlanId property value. The target service plan ID of the resize configuration with new vCPU and storage size.
+     * Sets the targetServicePlanId property value. Indicates the target service plan ID of the resize configuration with new vCPU and storage size.
      * @param value Value to set for the targetServicePlanId property.
      */
     public void setTargetServicePlanId(@jakarta.annotation.Nullable final String value) {

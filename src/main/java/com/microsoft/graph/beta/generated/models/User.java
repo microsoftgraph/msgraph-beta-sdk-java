@@ -237,6 +237,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("cloudRealtimeCommunicationInfo");
     }
     /**
+     * Gets the communications property value. The user&apos;s communications settings on Teams.
+     * @return a {@link UserCloudCommunication}
+     */
+    @jakarta.annotation.Nullable
+    public UserCloudCommunication getCommunications() {
+        return this.backingStore.get("communications");
+    }
+    /**
      * Gets the companyName property value. The name of the company the user is associated with. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
      * @return a {@link String}
      */
@@ -509,6 +517,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("cloudLicensing", (n) -> { this.setCloudLicensing(n.getObjectValue(UserCloudLicensing::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudRealtimeCommunicationInfo", (n) -> { this.setCloudRealtimeCommunicationInfo(n.getObjectValue(CloudRealtimeCommunicationInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("communications", (n) -> { this.setCommunications(n.getObjectValue(UserCloudCommunication::createFromDiscriminatorValue)); });
         deserializerMap.put("companyName", (n) -> { this.setCompanyName(n.getStringValue()); });
         deserializerMap.put("consentProvidedForMinor", (n) -> { this.setConsentProvidedForMinor(n.getStringValue()); });
         deserializerMap.put("contactFolders", (n) -> { this.setContactFolders(n.getCollectionOfObjectValues(ContactFolder::createFromDiscriminatorValue)); });
@@ -1483,6 +1492,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeObjectValue("cloudLicensing", this.getCloudLicensing());
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
         writer.writeObjectValue("cloudRealtimeCommunicationInfo", this.getCloudRealtimeCommunicationInfo());
+        writer.writeObjectValue("communications", this.getCommunications());
         writer.writeStringValue("companyName", this.getCompanyName());
         writer.writeStringValue("consentProvidedForMinor", this.getConsentProvidedForMinor());
         writer.writeCollectionOfObjectValues("contactFolders", this.getContactFolders());
@@ -1796,6 +1806,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setCloudRealtimeCommunicationInfo(@jakarta.annotation.Nullable final CloudRealtimeCommunicationInfo value) {
         this.backingStore.set("cloudRealtimeCommunicationInfo", value);
+    }
+    /**
+     * Sets the communications property value. The user&apos;s communications settings on Teams.
+     * @param value Value to set for the communications property.
+     */
+    public void setCommunications(@jakarta.annotation.Nullable final UserCloudCommunication value) {
+        this.backingStore.set("communications", value);
     }
     /**
      * Sets the companyName property value. The name of the company the user is associated with. This property can be useful for describing the company that an external user comes from. The maximum length is 64 characters.Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).

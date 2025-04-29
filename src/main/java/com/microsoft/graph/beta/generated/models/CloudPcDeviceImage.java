@@ -66,6 +66,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         deserializerMap.put("osStatus", (n) -> { this.setOsStatus(n.getEnumValue(CloudPcDeviceImageOsStatus::forValue)); });
         deserializerMap.put("osVersionNumber", (n) -> { this.setOsVersionNumber(n.getStringValue()); });
         deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("sizeInGB", (n) -> { this.setSizeInGB(n.getIntegerValue()); });
         deserializerMap.put("sourceImageResourceId", (n) -> { this.setSourceImageResourceId(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcDeviceImageStatus::forValue)); });
         deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getEnumValue(CloudPcDeviceImageStatusDetails::forValue)); });
@@ -121,6 +122,14 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("scopeIds");
     }
     /**
+     * Gets the sizeInGB property value. The sizeInGB property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getSizeInGB() {
+        return this.backingStore.get("sizeInGB");
+    }
+    /**
      * Gets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}&apos;. Read-only.
      * @return a {@link String}
      */
@@ -168,6 +177,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         writer.writeEnumValue("osStatus", this.getOsStatus());
         writer.writeStringValue("osVersionNumber", this.getOsVersionNumber());
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
+        writer.writeIntegerValue("sizeInGB", this.getSizeInGB());
         writer.writeStringValue("sourceImageResourceId", this.getSourceImageResourceId());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeEnumValue("statusDetails", this.getStatusDetails());
@@ -235,6 +245,13 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("scopeIds", value);
+    }
+    /**
+     * Sets the sizeInGB property value. The sizeInGB property
+     * @param value Value to set for the sizeInGB property.
+     */
+    public void setSizeInGB(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("sizeInGB", value);
     }
     /**
      * Sets the sourceImageResourceId property value. The unique identifier (ID) of the source image resource on Azure. The required ID format is: &apos;/subscriptions/{subscription-id}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/images/{imageName}&apos;. Read-only.

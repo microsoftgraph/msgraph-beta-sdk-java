@@ -239,7 +239,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isCompliant property value. Indicates the device compliance status with Mobile Management Device (MDM) policies.
+     * Gets the isCompliant property value. Indicates the device compliance status with Mobile Management Device (MDM) policies. Default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -514,7 +514,7 @@ public class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("extensionAttribute9", value);
     }
     /**
-     * Sets the isCompliant property value. Indicates the device compliance status with Mobile Management Device (MDM) policies.
+     * Sets the isCompliant property value. Indicates the device compliance status with Mobile Management Device (MDM) policies. Default is false.
      * @param value Value to set for the isCompliant property.
      */
     public void setIsCompliant(@jakarta.annotation.Nullable final Boolean value) {

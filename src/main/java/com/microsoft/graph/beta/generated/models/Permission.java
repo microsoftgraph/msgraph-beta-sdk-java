@@ -94,7 +94,7 @@ public class Permission extends Entity implements Parsable {
         return this.backingStore.get("hasPassword");
     }
     /**
-     * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it&apos;s inherited from an ancestor. Read-only.
+     * Gets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if inherited from an ancestor. Read-only.
      * @return a {@link ItemReference}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class Permission extends Entity implements Parsable {
         this.backingStore.set("hasPassword", value);
     }
     /**
-     * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if it&apos;s inherited from an ancestor. Read-only.
+     * Sets the inheritedFrom property value. Provides a reference to the ancestor of the current permission, if inherited from an ancestor. Read-only.
      * @param value Value to set for the inheritedFrom property.
      */
     public void setInheritedFrom(@jakarta.annotation.Nullable final ItemReference value) {
