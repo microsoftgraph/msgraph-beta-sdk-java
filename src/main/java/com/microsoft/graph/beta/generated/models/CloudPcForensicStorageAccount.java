@@ -25,7 +25,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
         return new CloudPcForensicStorageAccount();
     }
     /**
-     * Gets the accessTier property value. The access tier of the storage account. Possible values are hot, cool, premium, cold, and unknownFutureValue. Default value is hot. Read-only.
+     * Gets the accessTier property value. Indicates the access tier of the storage account. Possible values are hot, cool, premium, cold, and unknownFutureValue. Default value is hot. Read-only.
      * @return a {@link CloudPcStorageAccountAccessTier}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
         return this.backingStore.get("immutableStorage");
     }
     /**
-     * Gets the storageAccountId property value. The ID of the storage account. Read-only.
+     * Gets the storageAccountId property value. Indicates the ID of the storage account. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
         return this.backingStore.get("storageAccountId");
     }
     /**
-     * Gets the storageAccountName property value. The name of the storage account. Read-only.
+     * Gets the storageAccountName property value. Indicates the name of the storage account. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
         writer.writeStringValue("storageAccountName", this.getStorageAccountName());
     }
     /**
-     * Sets the accessTier property value. The access tier of the storage account. Possible values are hot, cool, premium, cold, and unknownFutureValue. Default value is hot. Read-only.
+     * Sets the accessTier property value. Indicates the access tier of the storage account. Possible values are hot, cool, premium, cold, and unknownFutureValue. Default value is hot. Read-only.
      * @param value Value to set for the accessTier property.
      */
     public void setAccessTier(@jakarta.annotation.Nullable final CloudPcStorageAccountAccessTier value) {
@@ -96,14 +96,14 @@ public class CloudPcForensicStorageAccount extends Entity implements Parsable {
         this.backingStore.set("immutableStorage", value);
     }
     /**
-     * Sets the storageAccountId property value. The ID of the storage account. Read-only.
+     * Sets the storageAccountId property value. Indicates the ID of the storage account. Read-only.
      * @param value Value to set for the storageAccountId property.
      */
     public void setStorageAccountId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("storageAccountId", value);
     }
     /**
-     * Sets the storageAccountName property value. The name of the storage account. Read-only.
+     * Sets the storageAccountName property value. Indicates the name of the storage account. Read-only.
      * @param value Value to set for the storageAccountName property.
      */
     public void setStorageAccountName(@jakarta.annotation.Nullable final String value) {

@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public enum ConditionalAccessWhatIfReasons implements ValuedEnum {
+public enum WhatIfAnalysisReasons implements ValuedEnum {
     NotSet("notSet"),
     NotEnoughInformation("notEnoughInformation"),
     InvalidCondition("invalidCondition"),
@@ -27,13 +27,13 @@ public enum ConditionalAccessWhatIfReasons implements ValuedEnum {
     AuthenticationFlow("authenticationFlow"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
-    ConditionalAccessWhatIfReasons(final String value) {
+    WhatIfAnalysisReasons(final String value) {
         this.value = value;
     }
     @jakarta.annotation.Nonnull
     public String getValue() { return this.value; }
     @jakarta.annotation.Nullable
-    public static ConditionalAccessWhatIfReasons forValue(@jakarta.annotation.Nonnull final String searchValue) {
+    public static WhatIfAnalysisReasons forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notSet": return NotSet;

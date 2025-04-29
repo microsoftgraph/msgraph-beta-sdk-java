@@ -42,7 +42,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the expirationDateTime property value. The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the expirationDateTime property value. The date and time when the snapshot expires. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -59,10 +59,19 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         deserializerMap.put("cloudPcId", (n) -> { this.setCloudPcId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("healthCheckStatus", (n) -> { this.setHealthCheckStatus(n.getEnumValue(CloudPcSnapshotHealthCheckStatus::forValue)); });
         deserializerMap.put("lastRestoredDateTime", (n) -> { this.setLastRestoredDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("snapshotType", (n) -> { this.setSnapshotType(n.getEnumValue(CloudPcSnapshotType::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcSnapshotStatus::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the healthCheckStatus property value. Indicates the health check status of the Cloud PC snapshot. Possible values are, unknown, healthy, unhealthy, unknownFutureValue. The default value is unknown. Read-only. Nullable.
+     * @return a {@link CloudPcSnapshotHealthCheckStatus}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcSnapshotHealthCheckStatus getHealthCheckStatus() {
+        return this.backingStore.get("healthCheckStatus");
     }
     /**
      * Gets the lastRestoredDateTime property value. The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -98,6 +107,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         writer.writeStringValue("cloudPcId", this.getCloudPcId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
+        writer.writeEnumValue("healthCheckStatus", this.getHealthCheckStatus());
         writer.writeOffsetDateTimeValue("lastRestoredDateTime", this.getLastRestoredDateTime());
         writer.writeEnumValue("snapshotType", this.getSnapshotType());
         writer.writeEnumValue("status", this.getStatus());
@@ -117,11 +127,18 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the expirationDateTime property value. The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the expirationDateTime property value. The date and time when the snapshot expires. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
+    }
+    /**
+     * Sets the healthCheckStatus property value. Indicates the health check status of the Cloud PC snapshot. Possible values are, unknown, healthy, unhealthy, unknownFutureValue. The default value is unknown. Read-only. Nullable.
+     * @param value Value to set for the healthCheckStatus property.
+     */
+    public void setHealthCheckStatus(@jakarta.annotation.Nullable final CloudPcSnapshotHealthCheckStatus value) {
+        this.backingStore.set("healthCheckStatus", value);
     }
     /**
      * Sets the lastRestoredDateTime property value. The date and time at which the snapshot was last used to restore the Cloud PC device. The timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.

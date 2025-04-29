@@ -7,31 +7,22 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WhatIfAuthenticationContext extends ConditionalAccessContext implements Parsable {
+public class DelegationSettingsCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable {
     /**
-     * Instantiates a new {@link WhatIfAuthenticationContext} and sets the default values.
+     * Instantiates a new {@link DelegationSettingsCollectionResponse} and sets the default values.
      */
-    public WhatIfAuthenticationContext() {
+    public DelegationSettingsCollectionResponse() {
         super();
-        this.setOdataType("#microsoft.graph.whatIfAuthenticationContext");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link WhatIfAuthenticationContext}
+     * @return a {@link DelegationSettingsCollectionResponse}
      */
     @jakarta.annotation.Nonnull
-    public static WhatIfAuthenticationContext createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static DelegationSettingsCollectionResponse createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new WhatIfAuthenticationContext();
-    }
-    /**
-     * Gets the authenticationContext property value. The authenticationContext property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getAuthenticationContext() {
-        return this.backingStore.get("authenticationContext");
+        return new DelegationSettingsCollectionResponse();
     }
     /**
      * The deserialization information for the current model
@@ -40,8 +31,16 @@ public class WhatIfAuthenticationContext extends ConditionalAccessContext implem
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("authenticationContext", (n) -> { this.setAuthenticationContext(n.getStringValue()); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(DelegationSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the value property value. The value property
+     * @return a {@link java.util.List<DelegationSettings>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DelegationSettings> getValue() {
+        return this.backingStore.get("value");
     }
     /**
      * Serializes information the current object
@@ -50,13 +49,13 @@ public class WhatIfAuthenticationContext extends ConditionalAccessContext implem
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("authenticationContext", this.getAuthenticationContext());
+        writer.writeCollectionOfObjectValues("value", this.getValue());
     }
     /**
-     * Sets the authenticationContext property value. The authenticationContext property
-     * @param value Value to set for the authenticationContext property.
+     * Sets the value property value. The value property
+     * @param value Value to set for the value property.
      */
-    public void setAuthenticationContext(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("authenticationContext", value);
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<DelegationSettings> value) {
+        this.backingStore.set("value", value);
     }
 }

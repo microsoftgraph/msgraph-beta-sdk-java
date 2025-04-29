@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.identity.conditionalaccess.evaluate;
 
 import com.microsoft.graph.beta.models.BaseCollectionPaginationCountResponse;
-import com.microsoft.graph.beta.models.ConditionalAccessWhatIfPolicy;
+import com.microsoft.graph.beta.models.WhatIfAnalysisResult;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -33,15 +33,15 @@ public class EvaluatePostResponse extends BaseCollectionPaginationCountResponse 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(ConditionalAccessWhatIfPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("value", (n) -> { this.setValue(n.getCollectionOfObjectValues(WhatIfAnalysisResult::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the value property value. The value property
-     * @return a {@link java.util.List<ConditionalAccessWhatIfPolicy>}
+     * @return a {@link java.util.List<WhatIfAnalysisResult>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<ConditionalAccessWhatIfPolicy> getValue() {
+    public java.util.List<WhatIfAnalysisResult> getValue() {
         return this.backingStore.get("value");
     }
     /**
@@ -57,7 +57,7 @@ public class EvaluatePostResponse extends BaseCollectionPaginationCountResponse 
      * Sets the value property value. The value property
      * @param value Value to set for the value property.
      */
-    public void setValue(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessWhatIfPolicy> value) {
+    public void setValue(@jakarta.annotation.Nullable final java.util.List<WhatIfAnalysisResult> value) {
         this.backingStore.set("value", value);
     }
 }

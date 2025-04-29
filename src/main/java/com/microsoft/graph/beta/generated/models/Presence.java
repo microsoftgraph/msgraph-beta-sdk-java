@@ -63,7 +63,7 @@ public class Presence extends Entity implements Parsable {
         return this.backingStore.get("outOfOfficeSettings");
     }
     /**
-     * Gets the sequenceNumber property value. The sequenceNumber property
+     * Gets the sequenceNumber property value. The lexicographically sortable String stamp that represents the version of a presence object.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class Presence extends Entity implements Parsable {
         this.backingStore.set("outOfOfficeSettings", value);
     }
     /**
-     * Sets the sequenceNumber property value. The sequenceNumber property
+     * Sets the sequenceNumber property value. The lexicographically sortable String stamp that represents the version of a presence object.
      * @param value Value to set for the sequenceNumber property.
      */
     public void setSequenceNumber(@jakarta.annotation.Nullable final String value) {

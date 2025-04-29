@@ -36,7 +36,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the subscriptionId property value. The ID of the subscription.
+     * Gets the subscriptionId property value. Indicates the ID of the subscription.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class CloudPcSubscription extends Entity implements Parsable {
         return this.backingStore.get("subscriptionId");
     }
     /**
-     * Gets the subscriptionName property value. The name of the subscription.
+     * Gets the subscriptionName property value. Indicates the name of the subscription.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class CloudPcSubscription extends Entity implements Parsable {
         writer.writeStringValue("subscriptionName", this.getSubscriptionName());
     }
     /**
-     * Sets the subscriptionId property value. The ID of the subscription.
+     * Sets the subscriptionId property value. Indicates the ID of the subscription.
      * @param value Value to set for the subscriptionId property.
      */
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subscriptionId", value);
     }
     /**
-     * Sets the subscriptionName property value. The name of the subscription.
+     * Sets the subscriptionName property value. Indicates the name of the subscription.
      * @param value Value to set for the subscriptionName property.
      */
     public void setSubscriptionName(@jakarta.annotation.Nullable final String value) {

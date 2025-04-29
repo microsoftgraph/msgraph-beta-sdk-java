@@ -22,6 +22,7 @@ import com.microsoft.graph.beta.users.item.checkmembergroups.CheckMemberGroupsRe
 import com.microsoft.graph.beta.users.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudclipboard.CloudClipboardRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.CloudPCsRequestBuilder;
+import com.microsoft.graph.beta.users.item.communications.CommunicationsRequestBuilder;
 import com.microsoft.graph.beta.users.item.contactfolders.ContactFoldersRequestBuilder;
 import com.microsoft.graph.beta.users.item.contacts.ContactsRequestBuilder;
 import com.microsoft.graph.beta.users.item.convertexternaltointernalmemberuser.ConvertExternalToInternalMemberUserRequestBuilder;
@@ -287,6 +288,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CloudPCsRequestBuilder cloudPCs() {
         return new CloudPCsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the communications property of the microsoft.graph.user entity.
+     * @return a {@link CommunicationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CommunicationsRequestBuilder communications() {
+        return new CommunicationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the contactFolders property of the microsoft.graph.user entity.

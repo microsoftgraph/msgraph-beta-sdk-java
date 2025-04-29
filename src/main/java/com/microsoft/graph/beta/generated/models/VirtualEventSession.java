@@ -72,7 +72,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the videoOnDemandWebUrl property value. The videoOnDemandWebUrl property
+     * Gets the videoOnDemandWebUrl property value. The URL of the video on demand (VOD) for Microsoft Teams events that allows webinar and town hall organizers to quickly publish and share event recordings.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -121,7 +121,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the videoOnDemandWebUrl property value. The videoOnDemandWebUrl property
+     * Sets the videoOnDemandWebUrl property value. The URL of the video on demand (VOD) for Microsoft Teams events that allows webinar and town hall organizers to quickly publish and share event recordings.
      * @param value Value to set for the videoOnDemandWebUrl property.
      */
     public void setVideoOnDemandWebUrl(@jakarta.annotation.Nullable final String value) {

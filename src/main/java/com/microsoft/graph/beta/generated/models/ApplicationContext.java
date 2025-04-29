@@ -7,23 +7,23 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class WhatIfApplicationContext extends ConditionalAccessContext implements Parsable {
+public class ApplicationContext extends SignInContext implements Parsable {
     /**
-     * Instantiates a new {@link WhatIfApplicationContext} and sets the default values.
+     * Instantiates a new {@link ApplicationContext} and sets the default values.
      */
-    public WhatIfApplicationContext() {
+    public ApplicationContext() {
         super();
-        this.setOdataType("#microsoft.graph.whatIfApplicationContext");
+        this.setOdataType("#microsoft.graph.applicationContext");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link WhatIfApplicationContext}
+     * @return a {@link ApplicationContext}
      */
     @jakarta.annotation.Nonnull
-    public static WhatIfApplicationContext createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static ApplicationContext createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new WhatIfApplicationContext();
+        return new ApplicationContext();
     }
     /**
      * The deserialization information for the current model
@@ -36,7 +36,7 @@ public class WhatIfApplicationContext extends ConditionalAccessContext implement
         return deserializerMap;
     }
     /**
-     * Gets the includeApplications property value. The includeApplications property
+     * Gets the includeApplications property value. Collection of appId values for the applications.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class WhatIfApplicationContext extends ConditionalAccessContext implement
         writer.writeCollectionOfPrimitiveValues("includeApplications", this.getIncludeApplications());
     }
     /**
-     * Sets the includeApplications property value. The includeApplications property
+     * Sets the includeApplications property value. Collection of appId values for the applications.
      * @param value Value to set for the includeApplications property.
      */
     public void setIncludeApplications(@jakarta.annotation.Nullable final java.util.List<String> value) {

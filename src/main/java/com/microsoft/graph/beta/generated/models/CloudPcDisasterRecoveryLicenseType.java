@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum CloudPcDisasterRecoveryLicenseType implements ValuedEnum {
     None("none"),
     Standard("standard"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Plus("plus");
     public final String value;
     CloudPcDisasterRecoveryLicenseType(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum CloudPcDisasterRecoveryLicenseType implements ValuedEnum {
             case "none": return None;
             case "standard": return Standard;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "plus": return Plus;
             default: return null;
         }
     }

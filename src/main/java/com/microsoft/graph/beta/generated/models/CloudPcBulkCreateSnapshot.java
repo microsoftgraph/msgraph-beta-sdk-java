@@ -45,7 +45,7 @@ public class CloudPcBulkCreateSnapshot extends CloudPcBulkAction implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the storageAccountId property value. The unique identifier for Secure Azure Storage Account, which receives the restore points (snapshots). The value can&apos;t be modified after it&apos;s created. For example, &apos;/subscriptions/06199b73-30a1-4922-8734-93feca64cdf6/resourceGroups/res2627/providers/Microsoft.Storage/storageAccounts/sto1125&apos;. Read-Only.
+     * Gets the storageAccountId property value. Indicates the unique identifier for Secure Azure Storage Account, which receives the restore points (snapshots). The value can&apos;t be modified after it&apos;s created. For example, &apos;/subscriptions/06199b73-30a1-4922-8734-93feca64cdf6/resourceGroups/res2627/providers/Microsoft.Storage/storageAccounts/sto1125&apos;. Read-Only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class CloudPcBulkCreateSnapshot extends CloudPcBulkAction implements Pars
         this.backingStore.set("accessTier", value);
     }
     /**
-     * Sets the storageAccountId property value. The unique identifier for Secure Azure Storage Account, which receives the restore points (snapshots). The value can&apos;t be modified after it&apos;s created. For example, &apos;/subscriptions/06199b73-30a1-4922-8734-93feca64cdf6/resourceGroups/res2627/providers/Microsoft.Storage/storageAccounts/sto1125&apos;. Read-Only.
+     * Sets the storageAccountId property value. Indicates the unique identifier for Secure Azure Storage Account, which receives the restore points (snapshots). The value can&apos;t be modified after it&apos;s created. For example, &apos;/subscriptions/06199b73-30a1-4922-8734-93feca64cdf6/resourceGroups/res2627/providers/Microsoft.Storage/storageAccounts/sto1125&apos;. Read-Only.
      * @param value Value to set for the storageAccountId property.
      */
     public void setStorageAccountId(@jakarta.annotation.Nullable final String value) {
