@@ -12,7 +12,6 @@ import com.microsoft.graph.beta.policies.authenticationstrengthpolicies.Authenti
 import com.microsoft.graph.beta.policies.authorizationpolicy.AuthorizationPolicyRequestBuilder;
 import com.microsoft.graph.beta.policies.b2cauthenticationmethodspolicy.B2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.beta.policies.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
-import com.microsoft.graph.beta.policies.conditionalaccesspolicies.ConditionalAccessPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.crosstenantaccesspolicy.CrossTenantAccessPolicyRequestBuilder;
 import com.microsoft.graph.beta.policies.defaultappmanagementpolicy.DefaultAppManagementPolicyRequestBuilder;
 import com.microsoft.graph.beta.policies.deviceregistrationpolicy.DeviceRegistrationPolicyRequestBuilder;
@@ -128,14 +127,6 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ClaimsMappingPoliciesRequestBuilder claimsMappingPolicies() {
         return new ClaimsMappingPoliciesRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity.
-     * @return a {@link ConditionalAccessPoliciesRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public ConditionalAccessPoliciesRequestBuilder conditionalAccessPolicies() {
-        return new ConditionalAccessPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the crossTenantAccessPolicy property of the microsoft.graph.policyRoot entity.

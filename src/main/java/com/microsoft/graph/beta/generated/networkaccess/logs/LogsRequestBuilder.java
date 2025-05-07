@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.networkaccess.logs;
 
 import com.microsoft.graph.beta.models.networkaccess.Logs;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.networkaccess.logs.connections.ConnectionsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.logs.remotenetworks.RemoteNetworksRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.logs.traffic.TrafficRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class LogsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the connections property of the microsoft.graph.networkaccess.logs entity.
+     * @return a {@link ConnectionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConnectionsRequestBuilder connections() {
+        return new ConnectionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the remoteNetworks property of the microsoft.graph.networkaccess.logs entity.
      * @return a {@link RemoteNetworksRequestBuilder}

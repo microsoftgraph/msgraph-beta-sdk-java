@@ -99,7 +99,7 @@ public class ProtectionUnitsBulkJobBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the status property value. The status of the job. The possible values are: unknown, active, completed, completedWithErrors, and unknownFutureValue.
+     * Gets the status property value. The status property
      * @return a {@link ProtectionUnitsBulkJobStatus}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class ProtectionUnitsBulkJobBase extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the status property value. The status of the job. The possible values are: unknown, active, completed, completedWithErrors, and unknownFutureValue.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ProtectionUnitsBulkJobStatus value) {

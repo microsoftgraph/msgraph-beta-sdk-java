@@ -27,6 +27,7 @@ import com.microsoft.graph.beta.users.item.contactfolders.ContactFoldersRequestB
 import com.microsoft.graph.beta.users.item.contacts.ContactsRequestBuilder;
 import com.microsoft.graph.beta.users.item.convertexternaltointernalmemberuser.ConvertExternalToInternalMemberUserRequestBuilder;
 import com.microsoft.graph.beta.users.item.createdobjects.CreatedObjectsRequestBuilder;
+import com.microsoft.graph.beta.users.item.datasecurityandgovernance.DataSecurityAndGovernanceRequestBuilder;
 import com.microsoft.graph.beta.users.item.deletepasswordsinglesignoncredentials.DeletePasswordSingleSignOnCredentialsRequestBuilder;
 import com.microsoft.graph.beta.users.item.deviceenrollmentconfigurations.DeviceEnrollmentConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.users.item.devicemanagementtroubleshootingevents.DeviceManagementTroubleshootingEventsRequestBuilder;
@@ -328,6 +329,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CreatedObjectsRequestBuilder createdObjects() {
         return new CreatedObjectsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the dataSecurityAndGovernance property of the microsoft.graph.user entity.
+     * @return a {@link DataSecurityAndGovernanceRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DataSecurityAndGovernanceRequestBuilder dataSecurityAndGovernance() {
+        return new DataSecurityAndGovernanceRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the deletePasswordSingleSignOnCredentials method.

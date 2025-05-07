@@ -58,6 +58,14 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this.backingStore.get("autoLabeling");
     }
     /**
+     * Gets the color property value. The color property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getColor() {
+        return this.backingStore.get("color");
+    }
+    /**
      * Gets the description property value. The description property
      * @return a {@link String}
      */
@@ -84,9 +92,11 @@ public class SensitivityLabel extends Entity implements Parsable {
         deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(ApplicationMode::forValue)); });
         deserializerMap.put("assignedPolicies", (n) -> { this.setAssignedPolicies(n.getCollectionOfObjectValues(LabelPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("autoLabeling", (n) -> { this.setAutoLabeling(n.getObjectValue(AutoLabeling::createFromDiscriminatorValue)); });
+        deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("isEndpointProtectionEnabled", (n) -> { this.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("labelActions", (n) -> { this.setLabelActions(n.getCollectionOfObjectValues(LabelActionBase::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -102,6 +112,14 @@ public class SensitivityLabel extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsDefault() {
         return this.backingStore.get("isDefault");
+    }
+    /**
+     * Gets the isEnabled property value. The isEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsEnabled() {
+        return this.backingStore.get("isEnabled");
     }
     /**
      * Gets the isEndpointProtectionEnabled property value. The isEndpointProtectionEnabled property
@@ -162,9 +180,11 @@ public class SensitivityLabel extends Entity implements Parsable {
         writer.writeEnumValue("applicationMode", this.getApplicationMode());
         writer.writeCollectionOfObjectValues("assignedPolicies", this.getAssignedPolicies());
         writer.writeObjectValue("autoLabeling", this.getAutoLabeling());
+        writer.writeStringValue("color", this.getColor());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("isDefault", this.getIsDefault());
+        writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeBooleanValue("isEndpointProtectionEnabled", this.getIsEndpointProtectionEnabled());
         writer.writeCollectionOfObjectValues("labelActions", this.getLabelActions());
         writer.writeStringValue("name", this.getName());
@@ -201,6 +221,13 @@ public class SensitivityLabel extends Entity implements Parsable {
         this.backingStore.set("autoLabeling", value);
     }
     /**
+     * Sets the color property value. The color property
+     * @param value Value to set for the color property.
+     */
+    public void setColor(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("color", value);
+    }
+    /**
      * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
@@ -220,6 +247,13 @@ public class SensitivityLabel extends Entity implements Parsable {
      */
     public void setIsDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDefault", value);
+    }
+    /**
+     * Sets the isEnabled property value. The isEnabled property
+     * @param value Value to set for the isEnabled property.
+     */
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isEnabled", value);
     }
     /**
      * Sets the isEndpointProtectionEnabled property value. The isEndpointProtectionEnabled property

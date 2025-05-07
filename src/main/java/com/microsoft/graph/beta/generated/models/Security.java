@@ -135,6 +135,14 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("dataDiscovery");
     }
     /**
+     * Gets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
+     * @return a {@link TenantDataSecurityAndGovernance}
+     */
+    @jakarta.annotation.Nullable
+    public TenantDataSecurityAndGovernance getDataSecurityAndGovernance() {
+        return this.backingStore.get("dataSecurityAndGovernance");
+    }
+    /**
      * Gets the domainSecurityProfiles property value. The domainSecurityProfiles property
      * @return a {@link java.util.List<DomainSecurityProfile>}
      */
@@ -148,7 +156,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(30);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(31);
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
@@ -157,6 +165,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("cloudAppSecurityProfiles", (n) -> { this.setCloudAppSecurityProfiles(n.getCollectionOfObjectValues(CloudAppSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("collaboration", (n) -> { this.setCollaboration(n.getObjectValue(CollaborationRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("dataDiscovery", (n) -> { this.setDataDiscovery(n.getObjectValue(DataDiscoveryRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("dataSecurityAndGovernance", (n) -> { this.setDataSecurityAndGovernance(n.getObjectValue(TenantDataSecurityAndGovernance::createFromDiscriminatorValue)); });
         deserializerMap.put("domainSecurityProfiles", (n) -> { this.setDomainSecurityProfiles(n.getCollectionOfObjectValues(DomainSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("fileSecurityProfiles", (n) -> { this.setFileSecurityProfiles(n.getCollectionOfObjectValues(FileSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("hostSecurityProfiles", (n) -> { this.setHostSecurityProfiles(n.getCollectionOfObjectValues(HostSecurityProfile::createFromDiscriminatorValue)); });
@@ -363,6 +372,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeCollectionOfObjectValues("cloudAppSecurityProfiles", this.getCloudAppSecurityProfiles());
         writer.writeObjectValue("collaboration", this.getCollaboration());
         writer.writeObjectValue("dataDiscovery", this.getDataDiscovery());
+        writer.writeObjectValue("dataSecurityAndGovernance", this.getDataSecurityAndGovernance());
         writer.writeCollectionOfObjectValues("domainSecurityProfiles", this.getDomainSecurityProfiles());
         writer.writeCollectionOfObjectValues("fileSecurityProfiles", this.getFileSecurityProfiles());
         writer.writeCollectionOfObjectValues("hostSecurityProfiles", this.getHostSecurityProfiles());
@@ -457,6 +467,13 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setDataDiscovery(@jakarta.annotation.Nullable final DataDiscoveryRoot value) {
         this.backingStore.set("dataDiscovery", value);
+    }
+    /**
+     * Sets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
+     * @param value Value to set for the dataSecurityAndGovernance property.
+     */
+    public void setDataSecurityAndGovernance(@jakarta.annotation.Nullable final TenantDataSecurityAndGovernance value) {
+        this.backingStore.set("dataSecurityAndGovernance", value);
     }
     /**
      * Sets the domainSecurityProfiles property value. The domainSecurityProfiles property

@@ -26,12 +26,21 @@ public class Logs extends Entity implements Parsable {
         return new Logs();
     }
     /**
+     * Gets the connections property value. The connections property
+     * @return a {@link java.util.List<Connection>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Connection> getConnections() {
+        return this.backingStore.get("connections");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("connections", (n) -> { this.setConnections(n.getCollectionOfObjectValues(Connection::createFromDiscriminatorValue)); });
         deserializerMap.put("remoteNetworks", (n) -> { this.setRemoteNetworks(n.getCollectionOfObjectValues(RemoteNetworkHealthEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("traffic", (n) -> { this.setTraffic(n.getCollectionOfObjectValues(NetworkAccessTraffic::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -59,8 +68,16 @@ public class Logs extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("connections", this.getConnections());
         writer.writeCollectionOfObjectValues("remoteNetworks", this.getRemoteNetworks());
         writer.writeCollectionOfObjectValues("traffic", this.getTraffic());
+    }
+    /**
+     * Sets the connections property value. The connections property
+     * @param value Value to set for the connections property.
+     */
+    public void setConnections(@jakarta.annotation.Nullable final java.util.List<Connection> value) {
+        this.backingStore.set("connections", value);
     }
     /**
      * Sets the remoteNetworks property value. A collection of remote network health events.

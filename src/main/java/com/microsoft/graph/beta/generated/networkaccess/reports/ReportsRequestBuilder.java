@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkacces
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessdestinationreportwithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessdevicereportwithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessentitiessummarieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetconnectionsummarieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetcrosstenantsummarywithstartdatetimewithenddatetimewithdiscoverypivotdatetime.MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWithEndDateTimeWithDiscoveryPivotDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetdestinationsummarieswithstartdatetimewithenddatetimewithaggregatedby.MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetdeviceusagesummarywithstartdatetimewithenddatetimewithactivitypivotdatetime.MicrosoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWithEndDateTimeWithActivityPivotDateTimeRequestBuilder;
@@ -136,6 +137,18 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
         return new MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
+    }
+    /**
+     * Provides operations to call the getConnectionSummaries method.
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
+     * @return a {@link MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(startDateTime);
+        return new MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Provides operations to call the getCrossTenantSummary method.

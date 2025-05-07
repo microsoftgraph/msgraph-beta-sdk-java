@@ -26,7 +26,10 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the productChanges property of the microsoft.graph.identityContainer entity.
      * @param changeItemBaseId The unique identifier of changeItemBase
      * @return a {@link ChangeItemBaseItemRequestBuilder}
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ChangeItemBaseItemRequestBuilder byChangeItemBaseId(@jakarta.annotation.Nonnull final String changeItemBaseId) {
         Objects.requireNonNull(changeItemBaseId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,9 +69,12 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
      * Get a list of the changeItemBase objects and their properties. The API returns both Microsoft Entra change announcements and releases.
      * @return a {@link ChangeItemBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-productchanges?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ChangeItemBaseCollectionResponse get() {
         return get(null);
     }
@@ -74,9 +83,12 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChangeItemBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      * @see <a href="https://learn.microsoft.com/graph/api/identitycontainer-list-productchanges?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ChangeItemBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -88,8 +100,11 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ChangeItemBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ChangeItemBase post(@jakarta.annotation.Nonnull final ChangeItemBase body) {
         return post(body, null);
     }
@@ -99,8 +114,11 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ChangeItemBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ChangeItemBase post(@jakarta.annotation.Nonnull final ChangeItemBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -111,8 +129,11 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the changeItemBase objects and their properties. The API returns both Microsoft Entra change announcements and releases.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -120,8 +141,11 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
      * Get a list of the changeItemBase objects and their properties. The API returns both Microsoft Entra change announcements and releases.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -132,8 +156,11 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to productChanges for identity
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ChangeItemBase body) {
         return toPostRequestInformation(body, null);
     }
@@ -142,8 +169,11 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ChangeItemBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -156,8 +186,11 @@ public class ProductChangesRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ProductChangesRequestBuilder}
+     * @deprecated
+     * What&apos;s new API is being deprecated and will be removed. as of 2025-04/changeManagement on 2025-04-15 and will be removed 2025-05-15
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ProductChangesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ProductChangesRequestBuilder(rawUrl, requestAdapter);

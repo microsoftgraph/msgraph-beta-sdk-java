@@ -40,8 +40,26 @@ public class ProfileSource extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("kind", (n) -> { this.setKind(n.getStringValue()); });
+        deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the kind property value. The kind property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getKind() {
+        return this.backingStore.get("kind");
+    }
+    /**
+     * Gets the sourceId property value. The sourceId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSourceId() {
+        return this.backingStore.get("sourceId");
     }
     /**
      * Gets the webUrl property value. The webUrl property
@@ -59,6 +77,8 @@ public class ProfileSource extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("kind", this.getKind());
+        writer.writeStringValue("sourceId", this.getSourceId());
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
@@ -67,6 +87,20 @@ public class ProfileSource extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the kind property value. The kind property
+     * @param value Value to set for the kind property.
+     */
+    public void setKind(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("kind", value);
+    }
+    /**
+     * Sets the sourceId property value. The sourceId property
+     * @param value Value to set for the sourceId property.
+     */
+    public void setSourceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("sourceId", value);
     }
     /**
      * Sets the webUrl property value. The webUrl property
