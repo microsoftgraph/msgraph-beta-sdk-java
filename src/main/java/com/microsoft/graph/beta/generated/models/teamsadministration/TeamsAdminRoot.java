@@ -33,6 +33,7 @@ public class TeamsAdminRoot extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(TeamsPolicyAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("userConfigurations", (n) -> { this.setUserConfigurations(n.getCollectionOfObjectValues(TeamsUserConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -44,6 +45,14 @@ public class TeamsAdminRoot extends Entity implements Parsable {
         return this.backingStore.get("policy");
     }
     /**
+     * Gets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams.
+     * @return a {@link java.util.List<TeamsUserConfiguration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TeamsUserConfiguration> getUserConfigurations() {
+        return this.backingStore.get("userConfigurations");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -51,6 +60,7 @@ public class TeamsAdminRoot extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("policy", this.getPolicy());
+        writer.writeCollectionOfObjectValues("userConfigurations", this.getUserConfigurations());
     }
     /**
      * Sets the policy property value. The policy property
@@ -58,5 +68,12 @@ public class TeamsAdminRoot extends Entity implements Parsable {
      */
     public void setPolicy(@jakarta.annotation.Nullable final TeamsPolicyAssignment value) {
         this.backingStore.set("policy", value);
+    }
+    /**
+     * Sets the userConfigurations property value. Represents the configuration information of users who have accounts hosted on Microsoft Teams.
+     * @param value Value to set for the userConfigurations property.
+     */
+    public void setUserConfigurations(@jakarta.annotation.Nullable final java.util.List<TeamsUserConfiguration> value) {
+        this.backingStore.set("userConfigurations", value);
     }
 }

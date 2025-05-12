@@ -105,14 +105,6 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.backingStore.get("claimsMappingPolicies");
     }
     /**
-     * Gets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
-     * @return a {@link java.util.List<ConditionalAccessPolicy>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<ConditionalAccessPolicy> getConditionalAccessPolicies() {
-        return this.backingStore.get("conditionalAccessPolicies");
-    }
-    /**
      * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      * @return a {@link CrossTenantAccessPolicy}
      */
@@ -185,7 +177,6 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("authorizationPolicy", (n) -> { this.setAuthorizationPolicy(n.getCollectionOfObjectValues(AuthorizationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("b2cAuthenticationMethodsPolicy", (n) -> { this.setB2cAuthenticationMethodsPolicy(n.getObjectValue(B2cAuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("conditionalAccessPolicies", (n) -> { this.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("crossTenantAccessPolicy", (n) -> { this.setCrossTenantAccessPolicy(n.getObjectValue(CrossTenantAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultAppManagementPolicy", (n) -> { this.setDefaultAppManagementPolicy(n.getObjectValue(TenantAppManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceRegistrationPolicy", (n) -> { this.setDeviceRegistrationPolicy(n.getObjectValue(DeviceRegistrationPolicy::createFromDiscriminatorValue)); });
@@ -311,7 +302,6 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("authorizationPolicy", this.getAuthorizationPolicy());
         writer.writeObjectValue("b2cAuthenticationMethodsPolicy", this.getB2cAuthenticationMethodsPolicy());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
-        writer.writeCollectionOfObjectValues("conditionalAccessPolicies", this.getConditionalAccessPolicies());
         writer.writeObjectValue("crossTenantAccessPolicy", this.getCrossTenantAccessPolicy());
         writer.writeObjectValue("defaultAppManagementPolicy", this.getDefaultAppManagementPolicy());
         writer.writeObjectValue("deviceRegistrationPolicy", this.getDeviceRegistrationPolicy());
@@ -400,13 +390,6 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setClaimsMappingPolicies(@jakarta.annotation.Nullable final java.util.List<ClaimsMappingPolicy> value) {
         this.backingStore.set("claimsMappingPolicies", value);
-    }
-    /**
-     * Sets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
-     * @param value Value to set for the conditionalAccessPolicies property.
-     */
-    public void setConditionalAccessPolicies(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
-        this.backingStore.set("conditionalAccessPolicies", value);
     }
     /**
      * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.

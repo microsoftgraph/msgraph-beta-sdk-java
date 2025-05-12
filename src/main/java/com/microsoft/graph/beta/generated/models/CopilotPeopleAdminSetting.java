@@ -25,12 +25,21 @@ public class CopilotPeopleAdminSetting extends Entity implements Parsable {
         return new CopilotPeopleAdminSetting();
     }
     /**
+     * Gets the enhancedPersonalization property value. The enhancedPersonalization property
+     * @return a {@link EnhancedPersonalizationSetting}
+     */
+    @jakarta.annotation.Nullable
+    public EnhancedPersonalizationSetting getEnhancedPersonalization() {
+        return this.backingStore.get("enhancedPersonalization");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("enhancedPersonalization", (n) -> { this.setEnhancedPersonalization(n.getObjectValue(EnhancedPersonalizationSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -40,5 +49,13 @@ public class CopilotPeopleAdminSetting extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("enhancedPersonalization", this.getEnhancedPersonalization());
+    }
+    /**
+     * Sets the enhancedPersonalization property value. The enhancedPersonalization property
+     * @param value Value to set for the enhancedPersonalization property.
+     */
+    public void setEnhancedPersonalization(@jakarta.annotation.Nullable final EnhancedPersonalizationSetting value) {
+        this.backingStore.set("enhancedPersonalization", value);
     }
 }

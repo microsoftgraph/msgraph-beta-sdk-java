@@ -137,7 +137,7 @@ public class RestoreArtifactsBulkRequestBase extends Entity implements Parsable 
         return this.backingStore.get("restorePointPreference");
     }
     /**
-     * Gets the status property value. Determines the status of the long-running operation. The possible values area: unknown, active, completed, completedWithErrors, unknownFutureValue.
+     * Gets the status property value. The status property
      * @return a {@link RestoreArtifactsBulkRequestStatus}
      */
     @jakarta.annotation.Nullable
@@ -243,7 +243,7 @@ public class RestoreArtifactsBulkRequestBase extends Entity implements Parsable 
         this.backingStore.set("restorePointPreference", value);
     }
     /**
-     * Sets the status property value. Determines the status of the long-running operation. The possible values area: unknown, active, completed, completedWithErrors, unknownFutureValue.
+     * Sets the status property value. The status property
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final RestoreArtifactsBulkRequestStatus value) {

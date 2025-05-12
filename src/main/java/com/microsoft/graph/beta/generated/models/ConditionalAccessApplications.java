@@ -77,14 +77,24 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("applicationFilter", (n) -> { this.setApplicationFilter(n.getObjectValue(ConditionalAccessFilter::createFromDiscriminatorValue)); });
         deserializerMap.put("excludeApplications", (n) -> { this.setExcludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("globalSecureAccess", (n) -> { this.setGlobalSecureAccess(n.getObjectValue(ConditionalAccessGlobalSecureAccess::createFromDiscriminatorValue)); });
         deserializerMap.put("includeApplications", (n) -> { this.setIncludeApplications(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeAuthenticationContextClassReferences", (n) -> { this.setIncludeAuthenticationContextClassReferences(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeUserActions", (n) -> { this.setIncludeUserActions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("networkAccess", (n) -> { this.setNetworkAccess(n.getObjectValue(ConditionalAccessNetworkAccess::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the globalSecureAccess property value. Represents traffic profile for Global Secure Access. This property is deprecated and will stop returning data on June 1, 2025. Use new Global Secure Access applications instead.
+     * @return a {@link ConditionalAccessGlobalSecureAccess}
+     */
+    @jakarta.annotation.Nullable
+    public ConditionalAccessGlobalSecureAccess getGlobalSecureAccess() {
+        return this.backingStore.get("globalSecureAccess");
     }
     /**
      * Gets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Apps included in Conditional Access Office 365 app suite  MicrosoftAdminPortals - For more information, see Conditional Access Target resources: Microsoft Admin Portals
@@ -111,6 +121,14 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
         return this.backingStore.get("includeUserActions");
     }
     /**
+     * Gets the networkAccess property value. Represents traffic profile for Global Secure Access. This property is deprecated and will stop returning data on June 1, 2025. Use new Global Secure Access applications instead.
+     * @return a {@link ConditionalAccessNetworkAccess}
+     */
+    @jakarta.annotation.Nullable
+    public ConditionalAccessNetworkAccess getNetworkAccess() {
+        return this.backingStore.get("networkAccess");
+    }
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return a {@link String}
      */
@@ -126,9 +144,11 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
         Objects.requireNonNull(writer);
         writer.writeObjectValue("applicationFilter", this.getApplicationFilter());
         writer.writeCollectionOfPrimitiveValues("excludeApplications", this.getExcludeApplications());
+        writer.writeObjectValue("globalSecureAccess", this.getGlobalSecureAccess());
         writer.writeCollectionOfPrimitiveValues("includeApplications", this.getIncludeApplications());
         writer.writeCollectionOfPrimitiveValues("includeAuthenticationContextClassReferences", this.getIncludeAuthenticationContextClassReferences());
         writer.writeCollectionOfPrimitiveValues("includeUserActions", this.getIncludeUserActions());
+        writer.writeObjectValue("networkAccess", this.getNetworkAccess());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -162,6 +182,13 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
         this.backingStore.set("excludeApplications", value);
     }
     /**
+     * Sets the globalSecureAccess property value. Represents traffic profile for Global Secure Access. This property is deprecated and will stop returning data on June 1, 2025. Use new Global Secure Access applications instead.
+     * @param value Value to set for the globalSecureAccess property.
+     */
+    public void setGlobalSecureAccess(@jakarta.annotation.Nullable final ConditionalAccessGlobalSecureAccess value) {
+        this.backingStore.set("globalSecureAccess", value);
+    }
+    /**
      * Sets the includeApplications property value. Can be one of the following:  The list of client IDs (appId) the policy applies to, unless explicitly excluded (in excludeApplications)  All  Office365 - For the list of apps included in Office365, see Apps included in Conditional Access Office 365 app suite  MicrosoftAdminPortals - For more information, see Conditional Access Target resources: Microsoft Admin Portals
      * @param value Value to set for the includeApplications property.
      */
@@ -181,6 +208,13 @@ public class ConditionalAccessApplications implements AdditionalDataHolder, Back
      */
     public void setIncludeUserActions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("includeUserActions", value);
+    }
+    /**
+     * Sets the networkAccess property value. Represents traffic profile for Global Secure Access. This property is deprecated and will stop returning data on June 1, 2025. Use new Global Secure Access applications instead.
+     * @param value Value to set for the networkAccess property.
+     */
+    public void setNetworkAccess(@jakarta.annotation.Nullable final ConditionalAccessNetworkAccess value) {
+        this.backingStore.set("networkAccess", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

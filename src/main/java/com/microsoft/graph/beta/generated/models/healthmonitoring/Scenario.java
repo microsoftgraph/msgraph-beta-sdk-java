@@ -8,7 +8,8 @@ public enum Scenario implements ValuedEnum {
     Unknown("unknown"),
     Mfa("mfa"),
     Devices("devices"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ConditionalAccess("conditionalAccess");
     public final String value;
     Scenario(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum Scenario implements ValuedEnum {
             case "mfa": return Mfa;
             case "devices": return Devices;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "conditionalAccess": return ConditionalAccess;
             default: return null;
         }
     }

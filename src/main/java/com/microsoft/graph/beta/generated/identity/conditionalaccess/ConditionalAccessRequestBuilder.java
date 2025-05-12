@@ -3,9 +3,6 @@ package com.microsoft.graph.beta.identity.conditionalaccess;
 import com.microsoft.graph.beta.identity.conditionalaccess.authenticationcontextclassreferences.AuthenticationContextClassReferencesRequestBuilder;
 import com.microsoft.graph.beta.identity.conditionalaccess.authenticationstrength.AuthenticationStrengthRequestBuilder;
 import com.microsoft.graph.beta.identity.conditionalaccess.authenticationstrengths.AuthenticationStrengthsRequestBuilder;
-import com.microsoft.graph.beta.identity.conditionalaccess.evaluate.EvaluateRequestBuilder;
-import com.microsoft.graph.beta.identity.conditionalaccess.namedlocations.NamedLocationsRequestBuilder;
-import com.microsoft.graph.beta.identity.conditionalaccess.policies.PoliciesRequestBuilder;
 import com.microsoft.graph.beta.identity.conditionalaccess.templates.TemplatesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.RequestAdapter;
@@ -39,30 +36,6 @@ public class ConditionalAccessRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AuthenticationStrengthsRequestBuilder authenticationStrengths() {
         return new AuthenticationStrengthsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the evaluate method.
-     * @return a {@link EvaluateRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public EvaluateRequestBuilder evaluate() {
-        return new EvaluateRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the namedLocations property of the microsoft.graph.conditionalAccessRoot entity.
-     * @return a {@link NamedLocationsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public NamedLocationsRequestBuilder namedLocations() {
-        return new NamedLocationsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the policies property of the microsoft.graph.conditionalAccessRoot entity.
-     * @return a {@link PoliciesRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public PoliciesRequestBuilder policies() {
-        return new PoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the templates property of the microsoft.graph.conditionalAccessRoot entity.
