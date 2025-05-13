@@ -40,8 +40,11 @@ public class AuthenticationContextRequestBuilder extends BaseRequestBuilder {
      * Get authenticationContext from roleManagement
      * @return a {@link AuthenticationContextClassReference}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AuthenticationContextClassReference get() {
         return get(null);
     }
@@ -50,8 +53,11 @@ public class AuthenticationContextRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AuthenticationContextClassReference}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AuthenticationContextClassReference get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -61,8 +67,11 @@ public class AuthenticationContextRequestBuilder extends BaseRequestBuilder {
     /**
      * Get authenticationContext from roleManagement
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -70,8 +79,11 @@ public class AuthenticationContextRequestBuilder extends BaseRequestBuilder {
      * Get authenticationContext from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -82,8 +94,11 @@ public class AuthenticationContextRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AuthenticationContextRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AuthenticationContextRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AuthenticationContextRequestBuilder(rawUrl, requestAdapter);

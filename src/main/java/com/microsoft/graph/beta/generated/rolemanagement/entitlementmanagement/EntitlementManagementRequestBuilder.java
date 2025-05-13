@@ -36,7 +36,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
      * @return a {@link ResourceNamespacesRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ResourceNamespacesRequestBuilder resourceNamespaces() {
         return new ResourceNamespacesRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +47,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleAssignmentApprovals property of the microsoft.graph.rbacApplication entity.
      * @return a {@link RoleAssignmentApprovalsRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleAssignmentApprovalsRequestBuilder roleAssignmentApprovals() {
         return new RoleAssignmentApprovalsRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +58,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
      * @return a {@link RoleAssignmentsRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleAssignmentsRequestBuilder roleAssignments() {
         return new RoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
@@ -60,7 +69,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleAssignmentScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @return a {@link RoleAssignmentScheduleInstancesRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleAssignmentScheduleInstancesRequestBuilder roleAssignmentScheduleInstances() {
         return new RoleAssignmentScheduleInstancesRequestBuilder(pathParameters, requestAdapter);
@@ -68,7 +80,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleAssignmentScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @return a {@link RoleAssignmentScheduleRequestsRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleAssignmentScheduleRequestsRequestBuilder roleAssignmentScheduleRequests() {
         return new RoleAssignmentScheduleRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -76,7 +91,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
      * @return a {@link RoleAssignmentSchedulesRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleAssignmentSchedulesRequestBuilder roleAssignmentSchedules() {
         return new RoleAssignmentSchedulesRequestBuilder(pathParameters, requestAdapter);
@@ -84,7 +102,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleDefinitions property of the microsoft.graph.rbacApplication entity.
      * @return a {@link RoleDefinitionsRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleDefinitionsRequestBuilder roleDefinitions() {
         return new RoleDefinitionsRequestBuilder(pathParameters, requestAdapter);
@@ -92,7 +113,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleEligibilityScheduleInstances property of the microsoft.graph.rbacApplication entity.
      * @return a {@link RoleEligibilityScheduleInstancesRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleEligibilityScheduleInstancesRequestBuilder roleEligibilityScheduleInstances() {
         return new RoleEligibilityScheduleInstancesRequestBuilder(pathParameters, requestAdapter);
@@ -100,7 +124,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleEligibilityScheduleRequests property of the microsoft.graph.rbacApplication entity.
      * @return a {@link RoleEligibilityScheduleRequestsRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleEligibilityScheduleRequestsRequestBuilder roleEligibilityScheduleRequests() {
         return new RoleEligibilityScheduleRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -108,7 +135,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
      * @return a {@link RoleEligibilitySchedulesRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleEligibilitySchedulesRequestBuilder roleEligibilitySchedules() {
         return new RoleEligibilitySchedulesRequestBuilder(pathParameters, requestAdapter);
@@ -116,7 +146,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the roleScheduleInstances method.
      * @return a {@link RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
         return new RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
@@ -124,7 +157,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the roleSchedules method.
      * @return a {@link RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
         return new RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
@@ -132,7 +168,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the transitiveRoleAssignments property of the microsoft.graph.rbacApplication entity.
      * @return a {@link TransitiveRoleAssignmentsRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TransitiveRoleAssignmentsRequestBuilder transitiveRoleAssignments() {
         return new TransitiveRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
@@ -156,7 +195,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property entitlementManagement for roleManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -164,7 +206,10 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property entitlementManagement for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -175,8 +220,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * The RbacApplication for Entitlement Management
      * @return a {@link RbacApplication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public RbacApplication get() {
         return get(null);
     }
@@ -185,8 +233,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RbacApplication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public RbacApplication get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -198,8 +249,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RbacApplication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public RbacApplication patch(@jakarta.annotation.Nonnull final RbacApplication body) {
         return patch(body, null);
     }
@@ -209,8 +263,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RbacApplication}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public RbacApplication patch(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -221,8 +278,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property entitlementManagement for roleManagement
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -230,8 +290,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property entitlementManagement for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -240,8 +303,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * The RbacApplication for Entitlement Management
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -249,8 +315,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * The RbacApplication for Entitlement Management
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -261,8 +330,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property entitlementManagement in roleManagement
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RbacApplication body) {
         return toPatchRequestInformation(body, null);
     }
@@ -271,8 +343,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RbacApplication body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -285,8 +360,11 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link EntitlementManagementRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public EntitlementManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new EntitlementManagementRequestBuilder(rawUrl, requestAdapter);

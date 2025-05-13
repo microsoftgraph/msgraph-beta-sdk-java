@@ -30,7 +30,10 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the cloudPC property of the microsoft.graph.roleManagement entity.
      * @return a {@link CloudPCRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CloudPCRequestBuilder cloudPC() {
         return new CloudPCRequestBuilder(pathParameters, requestAdapter);
@@ -38,7 +41,10 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the defender property of the microsoft.graph.roleManagement entity.
      * @return a {@link DefenderRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DefenderRequestBuilder defender() {
         return new DefenderRequestBuilder(pathParameters, requestAdapter);
@@ -46,7 +52,10 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceManagement property of the microsoft.graph.roleManagement entity.
      * @return a {@link DeviceManagementRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DeviceManagementRequestBuilder deviceManagement() {
         return new DeviceManagementRequestBuilder(pathParameters, requestAdapter);
@@ -54,7 +63,10 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the directory property of the microsoft.graph.roleManagement entity.
      * @return a {@link DirectoryRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DirectoryRequestBuilder directory() {
         return new DirectoryRequestBuilder(pathParameters, requestAdapter);
@@ -62,7 +74,10 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the enterpriseApps property of the microsoft.graph.roleManagement entity.
      * @return a {@link EnterpriseAppsRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EnterpriseAppsRequestBuilder enterpriseApps() {
         return new EnterpriseAppsRequestBuilder(pathParameters, requestAdapter);
@@ -70,7 +85,10 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the entitlementManagement property of the microsoft.graph.roleManagement entity.
      * @return a {@link EntitlementManagementRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EntitlementManagementRequestBuilder entitlementManagement() {
         return new EntitlementManagementRequestBuilder(pathParameters, requestAdapter);
@@ -78,7 +96,10 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the exchange property of the microsoft.graph.roleManagement entity.
      * @return a {@link ExchangeRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExchangeRequestBuilder exchange() {
         return new ExchangeRequestBuilder(pathParameters, requestAdapter);
@@ -103,8 +124,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * Get roleManagement
      * @return a {@link RoleManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public RoleManagement get() {
         return get(null);
     }
@@ -113,8 +137,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoleManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public RoleManagement get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -126,8 +153,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RoleManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public RoleManagement patch(@jakarta.annotation.Nonnull final RoleManagement body) {
         return patch(body, null);
     }
@@ -137,8 +167,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RoleManagement}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public RoleManagement patch(@jakarta.annotation.Nonnull final RoleManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -149,8 +182,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
     /**
      * Get roleManagement
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -158,8 +194,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * Get roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -170,8 +209,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * Update roleManagement
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RoleManagement body) {
         return toPatchRequestInformation(body, null);
     }
@@ -180,8 +222,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RoleManagement body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -194,8 +239,11 @@ public class RoleManagementRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link RoleManagementRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RoleManagementRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new RoleManagementRequestBuilder(rawUrl, requestAdapter);

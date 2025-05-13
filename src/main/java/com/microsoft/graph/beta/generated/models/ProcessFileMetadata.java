@@ -26,7 +26,7 @@ public class ProcessFileMetadata extends ProcessContentMetadataBase implements P
         return new ProcessFileMetadata();
     }
     /**
-     * Gets the customProperties property value. The customProperties property
+     * Gets the customProperties property value. A dictionary containing custom metadata associated with the file, potentially extracted by the calling application.
      * @return a {@link CustomMetadataDictionary}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class ProcessFileMetadata extends ProcessContentMetadataBase implements P
         return deserializerMap;
     }
     /**
-     * Gets the ownerId property value. The ownerId property
+     * Gets the ownerId property value. The unique identifier (for example, Object ID or UPN) of the owner of the file.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class ProcessFileMetadata extends ProcessContentMetadataBase implements P
         writer.writeStringValue("ownerId", this.getOwnerId());
     }
     /**
-     * Sets the customProperties property value. The customProperties property
+     * Sets the customProperties property value. A dictionary containing custom metadata associated with the file, potentially extracted by the calling application.
      * @param value Value to set for the customProperties property.
      */
     public void setCustomProperties(@jakarta.annotation.Nullable final CustomMetadataDictionary value) {
         this.backingStore.set("customProperties", value);
     }
     /**
-     * Sets the ownerId property value. The ownerId property
+     * Sets the ownerId property value. The unique identifier (for example, Object ID or UPN) of the owner of the file.
      * @param value Value to set for the ownerId property.
      */
     public void setOwnerId(@jakarta.annotation.Nullable final String value) {

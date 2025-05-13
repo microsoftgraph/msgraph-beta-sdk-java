@@ -25,7 +25,7 @@ public class AiOnlineMeeting extends Entity implements Parsable {
         return new AiOnlineMeeting();
     }
     /**
-     * Gets the aiInsights property value. The aiInsights property
+     * Gets the aiInsights property value. A set of AI insights associated with an AI online meeting.
      * @return a {@link java.util.List<CallAiInsight>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AiOnlineMeeting extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("aiInsights", this.getAiInsights());
     }
     /**
-     * Sets the aiInsights property value. The aiInsights property
+     * Sets the aiInsights property value. A set of AI insights associated with an AI online meeting.
      * @param value Value to set for the aiInsights property.
      */
     public void setAiInsights(@jakarta.annotation.Nullable final java.util.List<CallAiInsight> value) {

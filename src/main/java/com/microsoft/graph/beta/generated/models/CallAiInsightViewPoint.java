@@ -67,7 +67,7 @@ public class CallAiInsightViewPoint implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the mentionEvents property value. The mentionEvents property
+     * Gets the mentionEvents property value. The collection of AI-generated mention events.
      * @return a {@link java.util.List<MentionEvent>}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class CallAiInsightViewPoint implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the mentionEvents property value. The mentionEvents property
+     * Sets the mentionEvents property value. The collection of AI-generated mention events.
      * @param value Value to set for the mentionEvents property.
      */
     public void setMentionEvents(@jakarta.annotation.Nullable final java.util.List<MentionEvent> value) {

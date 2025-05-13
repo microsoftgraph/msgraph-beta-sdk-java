@@ -58,7 +58,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         return this.backingStore;
     }
     /**
-     * Gets the excludeActors property value. The excludeActors property
+     * Gets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute defined in this section, they&apos;re exempted from the restriction.  This means that calls the user or service principal makes to create or update apps are exempt from this policy enforcement.
      * @return a {@link AppManagementPolicyActorExemptions}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class PasswordCredentialConfiguration implements AdditionalDataHolder, Ba
         this.backingStore = value;
     }
     /**
-     * Sets the excludeActors property value. The excludeActors property
+     * Sets the excludeActors property value. Collection of custom security attribute exemptions. If an actor user or service principal has the custom security attribute defined in this section, they&apos;re exempted from the restriction.  This means that calls the user or service principal makes to create or update apps are exempt from this policy enforcement.
      * @param value Value to set for the excludeActors property.
      */
     public void setExcludeActors(@jakarta.annotation.Nullable final AppManagementPolicyActorExemptions value) {

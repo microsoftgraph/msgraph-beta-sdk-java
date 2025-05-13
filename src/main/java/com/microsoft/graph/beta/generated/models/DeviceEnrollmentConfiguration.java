@@ -37,6 +37,7 @@ public class DeviceEnrollmentConfiguration extends Entity implements Parsable {
                 case "#microsoft.graph.deviceEnrollmentPlatformRestrictionsConfiguration": return new DeviceEnrollmentPlatformRestrictionsConfiguration();
                 case "#microsoft.graph.deviceEnrollmentWindowsHelloForBusinessConfiguration": return new DeviceEnrollmentWindowsHelloForBusinessConfiguration();
                 case "#microsoft.graph.windows10EnrollmentCompletionPageConfiguration": return new Windows10EnrollmentCompletionPageConfiguration();
+                case "#microsoft.graph.windowsRestoreDeviceEnrollmentConfiguration": return new WindowsRestoreDeviceEnrollmentConfiguration();
             }
         }
         return new DeviceEnrollmentConfiguration();

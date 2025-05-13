@@ -55,7 +55,7 @@ public class ContentActivityItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get contentActivities from users
+     * Collection of activity logs related to content processing.
      * @return a {@link ContentActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class ContentActivityItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get contentActivities from users
+     * Collection of activity logs related to content processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ContentActivity}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -121,7 +121,7 @@ public class ContentActivityItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get contentActivities from users
+     * Collection of activity logs related to content processing.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class ContentActivityItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get contentActivities from users
+     * Collection of activity logs related to content processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +181,7 @@ public class ContentActivityItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get contentActivities from users
+     * Collection of activity logs related to content processing.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

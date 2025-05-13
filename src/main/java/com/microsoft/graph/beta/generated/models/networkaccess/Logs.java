@@ -26,7 +26,7 @@ public class Logs extends Entity implements Parsable {
         return new Logs();
     }
     /**
-     * Gets the connections property value. The connections property
+     * Gets the connections property value. An aggregated log entry that contains comprehensive information about network traffic events.
      * @return a {@link java.util.List<Connection>}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class Logs extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("traffic", this.getTraffic());
     }
     /**
-     * Sets the connections property value. The connections property
+     * Sets the connections property value. An aggregated log entry that contains comprehensive information about network traffic events.
      * @param value Value to set for the connections property.
      */
     public void setConnections(@jakarta.annotation.Nullable final java.util.List<Connection> value) {

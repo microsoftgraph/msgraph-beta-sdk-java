@@ -76,7 +76,7 @@ public class ProcessContentResponses implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the requestId property value. The requestId property
+     * Gets the requestId property value. The unique identifier that matches the requestId provided in the corresponding processContentBatchRequest.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class ProcessContentResponses implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the requestId property value. The requestId property
+     * Sets the requestId property value. The unique identifier that matches the requestId provided in the corresponding processContentBatchRequest.
      * @param value Value to set for the requestId property.
      */
     public void setRequestId(@jakarta.annotation.Nullable final String value) {

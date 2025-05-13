@@ -37,12 +37,28 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         return this.backingStore.get("allowPartnerToCollectIOSApplicationMetadata");
     }
     /**
+     * Gets the allowPartnerToCollectIosCertificateMetadata property value. When TRUE, allows the Mobile Threat Defense partner to request a list of installed certificates on iOS/iPadOS devices from Intune to use for threat analysis. This list of installed certificates will be sent from enrolled iOS/iPadOS devices and will include unmanaged certificates (certificates not deployed through Intune). When FALSE, indicates that metadata about installed certificates will not be collected. Default value is FALSE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowPartnerToCollectIosCertificateMetadata() {
+        return this.backingStore.get("allowPartnerToCollectIosCertificateMetadata");
+    }
+    /**
      * Gets the allowPartnerToCollectIOSPersonalApplicationMetadata property value. When TRUE, indicates the Mobile Threat Defense partner may collect metadata about personally installed applications from Intune for iOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about personally installed applications from Intune for iOS devices. Default value is FALSE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getAllowPartnerToCollectIOSPersonalApplicationMetadata() {
         return this.backingStore.get("allowPartnerToCollectIOSPersonalApplicationMetadata");
+    }
+    /**
+     * Gets the allowPartnerToCollectIosPersonalCertificateMetadata property value. When TRUE, allows the Mobile Threat Defense partner to request a list of installed certificates on personally owned iOS/iPadOS devices from Intune to use for threat analysis. This list of installed certificates will be sent from enrolled personally owned iOS/iPadOS devices and will include unmanaged certificates (certificates not deployed through Intune). When FALSE, no metadata for installed certificates is sent for personally owned iOS/iPadOS devices. Default value is FALSE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAllowPartnerToCollectIosPersonalCertificateMetadata() {
+        return this.backingStore.get("allowPartnerToCollectIosPersonalCertificateMetadata");
     }
     /**
      * Gets the androidDeviceBlockedOnMissingPartnerData property value. When TRUE, indicates that Intune must receive data from the Mobile Threat Defense partner prior to marking an Android device compliant. When FALSE, indicates that Intune may mark an Android device compliant before receiving data from the Mobile Threat Defense partner.
@@ -76,7 +92,9 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("allowPartnerToCollectIOSApplicationMetadata", (n) -> { this.setAllowPartnerToCollectIOSApplicationMetadata(n.getBooleanValue()); });
+        deserializerMap.put("allowPartnerToCollectIosCertificateMetadata", (n) -> { this.setAllowPartnerToCollectIosCertificateMetadata(n.getBooleanValue()); });
         deserializerMap.put("allowPartnerToCollectIOSPersonalApplicationMetadata", (n) -> { this.setAllowPartnerToCollectIOSPersonalApplicationMetadata(n.getBooleanValue()); });
+        deserializerMap.put("allowPartnerToCollectIosPersonalCertificateMetadata", (n) -> { this.setAllowPartnerToCollectIosPersonalCertificateMetadata(n.getBooleanValue()); });
         deserializerMap.put("androidDeviceBlockedOnMissingPartnerData", (n) -> { this.setAndroidDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
         deserializerMap.put("androidEnabled", (n) -> { this.setAndroidEnabled(n.getBooleanValue()); });
         deserializerMap.put("androidMobileApplicationManagementEnabled", (n) -> { this.setAndroidMobileApplicationManagementEnabled(n.getBooleanValue()); });
@@ -207,7 +225,9 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("allowPartnerToCollectIOSApplicationMetadata", this.getAllowPartnerToCollectIOSApplicationMetadata());
+        writer.writeBooleanValue("allowPartnerToCollectIosCertificateMetadata", this.getAllowPartnerToCollectIosCertificateMetadata());
         writer.writeBooleanValue("allowPartnerToCollectIOSPersonalApplicationMetadata", this.getAllowPartnerToCollectIOSPersonalApplicationMetadata());
+        writer.writeBooleanValue("allowPartnerToCollectIosPersonalCertificateMetadata", this.getAllowPartnerToCollectIosPersonalCertificateMetadata());
         writer.writeBooleanValue("androidDeviceBlockedOnMissingPartnerData", this.getAndroidDeviceBlockedOnMissingPartnerData());
         writer.writeBooleanValue("androidEnabled", this.getAndroidEnabled());
         writer.writeBooleanValue("androidMobileApplicationManagementEnabled", this.getAndroidMobileApplicationManagementEnabled());
@@ -233,11 +253,25 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         this.backingStore.set("allowPartnerToCollectIOSApplicationMetadata", value);
     }
     /**
+     * Sets the allowPartnerToCollectIosCertificateMetadata property value. When TRUE, allows the Mobile Threat Defense partner to request a list of installed certificates on iOS/iPadOS devices from Intune to use for threat analysis. This list of installed certificates will be sent from enrolled iOS/iPadOS devices and will include unmanaged certificates (certificates not deployed through Intune). When FALSE, indicates that metadata about installed certificates will not be collected. Default value is FALSE.
+     * @param value Value to set for the allowPartnerToCollectIosCertificateMetadata property.
+     */
+    public void setAllowPartnerToCollectIosCertificateMetadata(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowPartnerToCollectIosCertificateMetadata", value);
+    }
+    /**
      * Sets the allowPartnerToCollectIOSPersonalApplicationMetadata property value. When TRUE, indicates the Mobile Threat Defense partner may collect metadata about personally installed applications from Intune for iOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about personally installed applications from Intune for iOS devices. Default value is FALSE.
      * @param value Value to set for the allowPartnerToCollectIOSPersonalApplicationMetadata property.
      */
     public void setAllowPartnerToCollectIOSPersonalApplicationMetadata(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("allowPartnerToCollectIOSPersonalApplicationMetadata", value);
+    }
+    /**
+     * Sets the allowPartnerToCollectIosPersonalCertificateMetadata property value. When TRUE, allows the Mobile Threat Defense partner to request a list of installed certificates on personally owned iOS/iPadOS devices from Intune to use for threat analysis. This list of installed certificates will be sent from enrolled personally owned iOS/iPadOS devices and will include unmanaged certificates (certificates not deployed through Intune). When FALSE, no metadata for installed certificates is sent for personally owned iOS/iPadOS devices. Default value is FALSE.
+     * @param value Value to set for the allowPartnerToCollectIosPersonalCertificateMetadata property.
+     */
+    public void setAllowPartnerToCollectIosPersonalCertificateMetadata(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("allowPartnerToCollectIosPersonalCertificateMetadata", value);
     }
     /**
      * Sets the androidDeviceBlockedOnMissingPartnerData property value. When TRUE, indicates that Intune must receive data from the Mobile Threat Defense partner prior to marking an Android device compliant. When FALSE, indicates that Intune may mark an Android device compliant before receiving data from the Mobile Threat Defense partner.

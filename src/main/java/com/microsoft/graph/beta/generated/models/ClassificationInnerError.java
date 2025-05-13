@@ -36,7 +36,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, BackedMod
         return new ClassificationInnerError();
     }
     /**
-     * Gets the activityId property value. The activityId property
+     * Gets the activityId property value. The activity ID associated with the request that generated the error.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
-     * Gets the clientRequestId property value. The clientRequestId property
+     * Gets the clientRequestId property value. The client request ID, if provided by the caller.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("clientRequestId");
     }
     /**
-     * Gets the code property value. The code property
+     * Gets the code property value. A more specific, potentially internal, error code string.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("code");
     }
     /**
-     * Gets the errorDateTime property value. The errorDateTime property
+     * Gets the errorDateTime property value. The date and time the inner error occurred.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class ClassificationInnerError implements AdditionalDataHolder, BackedMod
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the activityId property value. The activityId property
+     * Sets the activityId property value. The activity ID associated with the request that generated the error.
      * @param value Value to set for the activityId property.
      */
     public void setActivityId(@jakarta.annotation.Nullable final String value) {
@@ -146,21 +146,21 @@ public class ClassificationInnerError implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the clientRequestId property value. The clientRequestId property
+     * Sets the clientRequestId property value. The client request ID, if provided by the caller.
      * @param value Value to set for the clientRequestId property.
      */
     public void setClientRequestId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientRequestId", value);
     }
     /**
-     * Sets the code property value. The code property
+     * Sets the code property value. A more specific, potentially internal, error code string.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("code", value);
     }
     /**
-     * Sets the errorDateTime property value. The errorDateTime property
+     * Sets the errorDateTime property value. The date and time the inner error occurred.
      * @param value Value to set for the errorDateTime property.
      */
     public void setErrorDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

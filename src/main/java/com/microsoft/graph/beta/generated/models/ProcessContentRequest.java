@@ -64,7 +64,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the contentEntries property value. The contentEntries property
+     * Gets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Required.
      * @return a {@link java.util.List<ProcessContentMetadataBase>}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the contentEntries property value. The contentEntries property
+     * Sets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Required.
      * @param value Value to set for the contentEntries property.
      */
     public void setContentEntries(@jakarta.annotation.Nullable final java.util.List<ProcessContentMetadataBase> value) {

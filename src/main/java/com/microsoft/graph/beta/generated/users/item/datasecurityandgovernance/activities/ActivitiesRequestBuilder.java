@@ -64,7 +64,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get activities from users
+     * Container for activity logs (content processing and audit) related to this user. ContainsTarget: true.
      * @return a {@link ActivitiesContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get activities from users
+     * Container for activity logs (content processing and audit) related to this user. ContainsTarget: true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ActivitiesContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -130,7 +130,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get activities from users
+     * Container for activity logs (content processing and audit) related to this user. ContainsTarget: true.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get activities from users
+     * Container for activity logs (content processing and audit) related to this user. ContainsTarget: true.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -190,7 +190,7 @@ public class ActivitiesRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get activities from users
+     * Container for activity logs (content processing and audit) related to this user. ContainsTarget: true.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

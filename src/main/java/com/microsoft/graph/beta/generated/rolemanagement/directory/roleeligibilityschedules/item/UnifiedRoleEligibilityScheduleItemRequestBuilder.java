@@ -27,7 +27,10 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleScheduleBase entity.
      * @return a {@link AppScopeRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AppScopeRequestBuilder appScope() {
         return new AppScopeRequestBuilder(pathParameters, requestAdapter);
@@ -35,7 +38,10 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleScheduleBase entity.
      * @return a {@link DirectoryScopeRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DirectoryScopeRequestBuilder directoryScope() {
         return new DirectoryScopeRequestBuilder(pathParameters, requestAdapter);
@@ -43,7 +49,10 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Provides operations to manage the principal property of the microsoft.graph.unifiedRoleScheduleBase entity.
      * @return a {@link PrincipalRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PrincipalRequestBuilder principal() {
         return new PrincipalRequestBuilder(pathParameters, requestAdapter);
@@ -51,7 +60,10 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleScheduleBase entity.
      * @return a {@link RoleDefinitionRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
         return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);
@@ -75,7 +87,10 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Delete navigation property roleEligibilitySchedules for roleManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -83,7 +98,10 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * Delete navigation property roleEligibilitySchedules for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -94,9 +112,12 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
      * @return a {@link UnifiedRoleEligibilitySchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UnifiedRoleEligibilitySchedule get() {
         return get(null);
     }
@@ -105,9 +126,12 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilitySchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UnifiedRoleEligibilitySchedule get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -119,8 +143,11 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * @param body The request body
      * @return a {@link UnifiedRoleEligibilitySchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UnifiedRoleEligibilitySchedule patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body) {
         return patch(body, null);
     }
@@ -130,8 +157,11 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleEligibilitySchedule}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UnifiedRoleEligibilitySchedule patch(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -142,8 +172,11 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Delete navigation property roleEligibilitySchedules for roleManagement
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -151,8 +184,11 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * Delete navigation property roleEligibilitySchedules for roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -161,8 +197,11 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
     /**
      * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -170,8 +209,11 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * Read the properties and relationships of an unifiedRoleEligibilitySchedule object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -182,8 +224,11 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * Update the navigation property roleEligibilitySchedules in roleManagement
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body) {
         return toPatchRequestInformation(body, null);
     }
@@ -192,8 +237,11 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleEligibilitySchedule body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -206,8 +254,11 @@ public class UnifiedRoleEligibilityScheduleItemRequestBuilder extends BaseReques
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link UnifiedRoleEligibilityScheduleItemRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public UnifiedRoleEligibilityScheduleItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new UnifiedRoleEligibilityScheduleItemRequestBuilder(rawUrl, requestAdapter);

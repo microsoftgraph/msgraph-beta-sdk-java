@@ -65,7 +65,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore;
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. Represents the actual content, either as text (textContent) or binary data (binaryContent). Optional if metadata alone is sufficient for policy evaluation. Do not use for contentActivities.
      * @return a {@link ContentBase}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("content");
     }
     /**
-     * Gets the correlationId property value. The correlationId property
+     * Gets the correlationId property value. An GUID identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("correlationId");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Required. Timestamp indicating when the original content was created (for example, file creation time, message sent time).
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. Required. A unique identifier for this specific content entry within the context of the calling application or enforcement plane (for example, message ID, file path/URL).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("identifier");
     }
     /**
-     * Gets the isTruncated property value. The isTruncated property
+     * Gets the isTruncated property value. Required. Indicates if the provided content has been truncated from its original form (for example, due to size limits).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("isTruncated");
     }
     /**
-     * Gets the length property value. The length property
+     * Gets the length property value. The length of the original content in bytes.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("length");
     }
     /**
-     * Gets the modifiedDateTime property value. The modifiedDateTime property
+     * Gets the modifiedDateTime property value. Required. Timestamp indicating when the original content was last modified. For ephemeral content like messages, this might be the same as createdDateTime.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("modifiedDateTime");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Required. A descriptive name for the content (for example, file name, web page title, &apos;Chat Message&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sequenceNumber property value. The sequenceNumber property
+     * Gets the sequenceNumber property value. A sequence number indicating the order in which content was generated or should be processed, required when correlationId is used.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -197,56 +197,56 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Represents the actual content, either as text (textContent) or binary data (binaryContent). Optional if metadata alone is sufficient for policy evaluation. Do not use for contentActivities.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final ContentBase value) {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the correlationId property value. The correlationId property
+     * Sets the correlationId property value. An GUID identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation).
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("correlationId", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Required. Timestamp indicating when the original content was created (for example, file creation time, message sent time).
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. Required. A unique identifier for this specific content entry within the context of the calling application or enforcement plane (for example, message ID, file path/URL).
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identifier", value);
     }
     /**
-     * Sets the isTruncated property value. The isTruncated property
+     * Sets the isTruncated property value. Required. Indicates if the provided content has been truncated from its original form (for example, due to size limits).
      * @param value Value to set for the isTruncated property.
      */
     public void setIsTruncated(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isTruncated", value);
     }
     /**
-     * Sets the length property value. The length property
+     * Sets the length property value. The length of the original content in bytes.
      * @param value Value to set for the length property.
      */
     public void setLength(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("length", value);
     }
     /**
-     * Sets the modifiedDateTime property value. The modifiedDateTime property
+     * Sets the modifiedDateTime property value. Required. Timestamp indicating when the original content was last modified. For ephemeral content like messages, this might be the same as createdDateTime.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("modifiedDateTime", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Required. A descriptive name for the content (for example, file name, web page title, &apos;Chat Message&apos;).
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -260,7 +260,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sequenceNumber property value. The sequenceNumber property
+     * Sets the sequenceNumber property value. A sequence number indicating the order in which content was generated or should be processed, required when correlationId is used.
      * @param value Value to set for the sequenceNumber property.
      */
     public void setSequenceNumber(@jakarta.annotation.Nullable final Long value) {

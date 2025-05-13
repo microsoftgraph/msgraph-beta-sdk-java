@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.agentic.AgentSignIn;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -25,6 +26,14 @@ public class SignIn extends Entity implements Parsable {
     public static SignIn createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new SignIn();
+    }
+    /**
+     * Gets the agent property value. The agent property
+     * @return a {@link AgentSignIn}
+     */
+    @jakarta.annotation.Nullable
+    public AgentSignIn getAgent() {
+        return this.backingStore.get("agent");
     }
     /**
      * Gets the appDisplayName property value. The application name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
@@ -241,6 +250,7 @@ public class SignIn extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agent", (n) -> { this.setAgent(n.getObjectValue(AgentSignIn::createFromDiscriminatorValue)); });
         deserializerMap.put("appDisplayName", (n) -> { this.setAppDisplayName(n.getStringValue()); });
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
         deserializerMap.put("appliedConditionalAccessPolicies", (n) -> { this.setAppliedConditionalAccessPolicies(n.getCollectionOfObjectValues(AppliedConditionalAccessPolicy::createFromDiscriminatorValue)); });
@@ -708,6 +718,7 @@ public class SignIn extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("agent", this.getAgent());
         writer.writeStringValue("appDisplayName", this.getAppDisplayName());
         writer.writeStringValue("appId", this.getAppId());
         writer.writeCollectionOfObjectValues("appliedConditionalAccessPolicies", this.getAppliedConditionalAccessPolicies());
@@ -782,6 +793,13 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("userId", this.getUserId());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
         writer.writeEnumValue("userType", this.getUserType());
+    }
+    /**
+     * Sets the agent property value. The agent property
+     * @param value Value to set for the agent property.
+     */
+    public void setAgent(@jakarta.annotation.Nullable final AgentSignIn value) {
+        this.backingStore.set("agent", value);
     }
     /**
      * Sets the appDisplayName property value. The application name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).

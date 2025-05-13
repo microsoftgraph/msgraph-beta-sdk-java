@@ -34,6 +34,14 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         return this.backingStore.get("authenticationModeConfiguration");
     }
     /**
+     * Gets the certificateAuthorityScopes property value. Defines configuration to allow a group of users to use certificates from specific issuing certificate authorities to successfully authenticate.
+     * @return a {@link java.util.List<X509CertificateAuthorityScope>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<X509CertificateAuthorityScope> getCertificateAuthorityScopes() {
+        return this.backingStore.get("certificateAuthorityScopes");
+    }
+    /**
      * Gets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.
      * @return a {@link java.util.List<X509CertificateUserBinding>}
      */
@@ -49,6 +57,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationModeConfiguration", (n) -> { this.setAuthenticationModeConfiguration(n.getObjectValue(X509CertificateAuthenticationModeConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("certificateAuthorityScopes", (n) -> { this.setCertificateAuthorityScopes(n.getCollectionOfObjectValues(X509CertificateAuthorityScope::createFromDiscriminatorValue)); });
         deserializerMap.put("certificateUserBindings", (n) -> { this.setCertificateUserBindings(n.getCollectionOfObjectValues(X509CertificateUserBinding::createFromDiscriminatorValue)); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(AuthenticationMethodTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("issuerHintsConfiguration", (n) -> { this.setIssuerHintsConfiguration(n.getObjectValue(X509CertificateIssuerHintsConfiguration::createFromDiscriminatorValue)); });
@@ -78,6 +87,7 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("authenticationModeConfiguration", this.getAuthenticationModeConfiguration());
+        writer.writeCollectionOfObjectValues("certificateAuthorityScopes", this.getCertificateAuthorityScopes());
         writer.writeCollectionOfObjectValues("certificateUserBindings", this.getCertificateUserBindings());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
         writer.writeObjectValue("issuerHintsConfiguration", this.getIssuerHintsConfiguration());
@@ -88,6 +98,13 @@ public class X509CertificateAuthenticationMethodConfiguration extends Authentica
      */
     public void setAuthenticationModeConfiguration(@jakarta.annotation.Nullable final X509CertificateAuthenticationModeConfiguration value) {
         this.backingStore.set("authenticationModeConfiguration", value);
+    }
+    /**
+     * Sets the certificateAuthorityScopes property value. Defines configuration to allow a group of users to use certificates from specific issuing certificate authorities to successfully authenticate.
+     * @param value Value to set for the certificateAuthorityScopes property.
+     */
+    public void setCertificateAuthorityScopes(@jakarta.annotation.Nullable final java.util.List<X509CertificateAuthorityScope> value) {
+        this.backingStore.set("certificateAuthorityScopes", value);
     }
     /**
      * Sets the certificateUserBindings property value. Defines fields in the X.509 certificate that map to attributes of the Microsoft Entra user object in order to bind the certificate to the user. The priority of the object determines the order in which the binding is carried out. The first binding that matches will be used and the rest ignored.

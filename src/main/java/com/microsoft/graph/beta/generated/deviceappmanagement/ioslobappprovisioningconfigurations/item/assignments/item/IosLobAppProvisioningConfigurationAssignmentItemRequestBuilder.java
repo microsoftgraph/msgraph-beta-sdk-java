@@ -55,7 +55,7 @@ public class IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder exte
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The associated group assignments for IosLobAppProvisioningConfiguration, this determines which devices/users the IOS LOB app provisioning conifguration will be targeted to.
+     * The associated group assignments for IosLobAppProvisioningConfiguration.
      * @return a {@link IosLobAppProvisioningConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder exte
         return get(null);
     }
     /**
-     * The associated group assignments for IosLobAppProvisioningConfiguration, this determines which devices/users the IOS LOB app provisioning conifguration will be targeted to.
+     * The associated group assignments for IosLobAppProvisioningConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IosLobAppProvisioningConfigurationAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -121,7 +121,7 @@ public class IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder exte
         return requestInfo;
     }
     /**
-     * The associated group assignments for IosLobAppProvisioningConfiguration, this determines which devices/users the IOS LOB app provisioning conifguration will be targeted to.
+     * The associated group assignments for IosLobAppProvisioningConfiguration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder exte
         return toGetRequestInformation(null);
     }
     /**
-     * The associated group assignments for IosLobAppProvisioningConfiguration, this determines which devices/users the IOS LOB app provisioning conifguration will be targeted to.
+     * The associated group assignments for IosLobAppProvisioningConfiguration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +181,7 @@ public class IosLobAppProvisioningConfigurationAssignmentItemRequestBuilder exte
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The associated group assignments for IosLobAppProvisioningConfiguration, this determines which devices/users the IOS LOB app provisioning conifguration will be targeted to.
+     * The associated group assignments for IosLobAppProvisioningConfiguration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

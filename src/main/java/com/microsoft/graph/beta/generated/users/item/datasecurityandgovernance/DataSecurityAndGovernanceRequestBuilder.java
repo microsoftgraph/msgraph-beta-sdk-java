@@ -91,7 +91,7 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get dataSecurityAndGovernance from users
+     * The data security and governance settings for the user. Read-only. Nullable.
      * @return a {@link UserDataSecurityAndGovernance}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -100,7 +100,7 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Get dataSecurityAndGovernance from users
+     * The data security and governance settings for the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserDataSecurityAndGovernance}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -157,7 +157,7 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get dataSecurityAndGovernance from users
+     * The data security and governance settings for the user. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -165,7 +165,7 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get dataSecurityAndGovernance from users
+     * The data security and governance settings for the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -217,7 +217,7 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get dataSecurityAndGovernance from users
+     * The data security and governance settings for the user. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

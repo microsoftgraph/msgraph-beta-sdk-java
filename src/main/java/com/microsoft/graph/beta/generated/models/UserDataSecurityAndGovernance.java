@@ -26,7 +26,7 @@ public class UserDataSecurityAndGovernance extends DataSecurityAndGovernance imp
         return new UserDataSecurityAndGovernance();
     }
     /**
-     * Gets the activities property value. The activities property
+     * Gets the activities property value. Container for activity logs (content processing and audit) related to this user. ContainsTarget: true.
      * @return a {@link ActivitiesContainer}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class UserDataSecurityAndGovernance extends DataSecurityAndGovernance imp
         writer.writeObjectValue("protectionScopes", this.getProtectionScopes());
     }
     /**
-     * Sets the activities property value. The activities property
+     * Sets the activities property value. Container for activity logs (content processing and audit) related to this user. ContainsTarget: true.
      * @param value Value to set for the activities property.
      */
     public void setActivities(@jakarta.annotation.Nullable final ActivitiesContainer value) {

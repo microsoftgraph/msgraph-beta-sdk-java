@@ -75,7 +75,7 @@ public class IntegratedApplicationMetadata implements AdditionalDataHolder, Back
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the integrated application.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class IntegratedApplicationMetadata implements AdditionalDataHolder, Back
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. The version number of the integrated application.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class IntegratedApplicationMetadata implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the integrated application.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -139,7 +139,7 @@ public class IntegratedApplicationMetadata implements AdditionalDataHolder, Back
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. The version number of the integrated application.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

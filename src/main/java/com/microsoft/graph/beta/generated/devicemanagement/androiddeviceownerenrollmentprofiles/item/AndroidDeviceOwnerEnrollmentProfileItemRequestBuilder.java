@@ -1,7 +1,10 @@
 package com.microsoft.graph.beta.devicemanagement.androiddeviceownerenrollmentprofiles.item;
 
+import com.microsoft.graph.beta.devicemanagement.androiddeviceownerenrollmentprofiles.item.clearenrollmenttimedevicemembershiptarget.ClearEnrollmentTimeDeviceMembershipTargetRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androiddeviceownerenrollmentprofiles.item.createtoken.CreateTokenRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.androiddeviceownerenrollmentprofiles.item.retrieveenrollmenttimedevicemembershiptarget.RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androiddeviceownerenrollmentprofiles.item.revoketoken.RevokeTokenRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.androiddeviceownerenrollmentprofiles.item.setenrollmenttimedevicemembershiptarget.SetEnrollmentTimeDeviceMembershipTargetRequestBuilder;
 import com.microsoft.graph.beta.models.AndroidDeviceOwnerEnrollmentProfile;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,6 +26,14 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to call the clearEnrollmentTimeDeviceMembershipTarget method.
+     * @return a {@link ClearEnrollmentTimeDeviceMembershipTargetRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ClearEnrollmentTimeDeviceMembershipTargetRequestBuilder clearEnrollmentTimeDeviceMembershipTarget() {
+        return new ClearEnrollmentTimeDeviceMembershipTargetRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the createToken method.
      * @return a {@link CreateTokenRequestBuilder}
      */
@@ -31,12 +42,28 @@ public class AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder extends BaseR
         return new CreateTokenRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the retrieveEnrollmentTimeDeviceMembershipTarget method.
+     * @return a {@link RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder retrieveEnrollmentTimeDeviceMembershipTarget() {
+        return new RetrieveEnrollmentTimeDeviceMembershipTargetRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the revokeToken method.
      * @return a {@link RevokeTokenRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RevokeTokenRequestBuilder revokeToken() {
         return new RevokeTokenRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setEnrollmentTimeDeviceMembershipTarget method.
+     * @return a {@link SetEnrollmentTimeDeviceMembershipTargetRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SetEnrollmentTimeDeviceMembershipTargetRequestBuilder setEnrollmentTimeDeviceMembershipTarget() {
+        return new SetEnrollmentTimeDeviceMembershipTargetRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AndroidDeviceOwnerEnrollmentProfileItemRequestBuilder} and sets the default values.

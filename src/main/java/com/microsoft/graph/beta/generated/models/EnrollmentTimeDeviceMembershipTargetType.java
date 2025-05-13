@@ -8,8 +8,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EnrollmentTimeDeviceMembershipTargetType implements ValuedEnum {
-    /** Default value. Do not use. */
-    Unknown("unknown"),
     /** Indicates the device membership target specified refer to static Entra Security Groups. */
     StaticSecurityGroup("staticSecurityGroup"),
     /** Evolvable enumeration sentinel value. Do not use. */
@@ -24,7 +22,6 @@ public enum EnrollmentTimeDeviceMembershipTargetType implements ValuedEnum {
     public static EnrollmentTimeDeviceMembershipTargetType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "unknown": return Unknown;
             case "staticSecurityGroup": return StaticSecurityGroup;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

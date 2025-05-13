@@ -76,7 +76,7 @@ public class ConnectionSummary implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the totalCount property value. The totalCount property
+     * Gets the totalCount property value. Total number of connections for the specified traffic type.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class ConnectionSummary implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the totalCount property value. The totalCount property
+     * Sets the totalCount property value. Total number of connections for the specified traffic type.
      * @param value Value to set for the totalCount property.
      */
     public void setTotalCount(@jakarta.annotation.Nullable final Integer value) {
