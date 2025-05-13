@@ -64,19 +64,21 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get the meetingAttendanceReport for an onlineMeeting or a virtualEvent. When an online meeting ends, an attendance report is generated for that session.
      * @return a {@link MeetingAttendanceReport}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingAttendanceReport get() {
         return get(null);
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get the meetingAttendanceReport for an onlineMeeting or a virtualEvent. When an online meeting ends, an attendance report is generated for that session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MeetingAttendanceReport}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/meetingattendancereport-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MeetingAttendanceReport get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +132,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get the meetingAttendanceReport for an onlineMeeting or a virtualEvent. When an online meeting ends, an attendance report is generated for that session.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +140,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get the meetingAttendanceReport for an onlineMeeting or a virtualEvent. When an online meeting ends, an attendance report is generated for that session.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -190,7 +192,7 @@ public class MeetingAttendanceReportItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The attendance reports of an online meeting. Read-only.
+     * Get the meetingAttendanceReport for an onlineMeeting or a virtualEvent. When an online meeting ends, an attendance report is generated for that session.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

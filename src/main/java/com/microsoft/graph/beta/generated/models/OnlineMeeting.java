@@ -27,7 +27,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return new OnlineMeeting();
     }
     /**
-     * Gets the aiInsights property value. The aiInsights property
+     * Gets the aiInsights property value. The AI insights generated for an online meeting. Read-only.
      * @return a {@link java.util.List<CallAiInsight>}
      */
     @jakarta.annotation.Nullable
@@ -234,7 +234,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         writer.writeCollectionOfObjectValues("transcripts", this.getTranscripts());
     }
     /**
-     * Sets the aiInsights property value. The aiInsights property
+     * Sets the aiInsights property value. The AI insights generated for an online meeting. Read-only.
      * @param value Value to set for the aiInsights property.
      */
     public void setAiInsights(@jakarta.annotation.Nullable final java.util.List<CallAiInsight> value) {

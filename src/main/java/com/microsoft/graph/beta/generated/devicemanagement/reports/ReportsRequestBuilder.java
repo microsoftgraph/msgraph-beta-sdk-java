@@ -71,6 +71,7 @@ import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdate
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport.GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsummaryreport.GetWindowsUpdateAlertSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getzebrafotadeploymentreport.GetZebraFotaDeploymentReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.retrieveandroidworkprofiledevicemigrationstatuses.RetrieveAndroidWorkProfileDeviceMigrationStatusesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievecloudpkileafcertificatereport.RetrieveCloudPkiLeafCertificateReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievecloudpkileafcertificatesummaryreport.RetrieveCloudPkiLeafCertificateSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievedeviceappinstallationstatusreport.RetrieveDeviceAppInstallationStatusReportRequestBuilder;
@@ -663,6 +664,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport() {
         return new GetZebraFotaDeploymentReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveAndroidWorkProfileDeviceMigrationStatuses method.
+     * @return a {@link RetrieveAndroidWorkProfileDeviceMigrationStatusesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveAndroidWorkProfileDeviceMigrationStatusesRequestBuilder retrieveAndroidWorkProfileDeviceMigrationStatuses() {
+        return new RetrieveAndroidWorkProfileDeviceMigrationStatusesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveCloudPkiLeafCertificateReport method.

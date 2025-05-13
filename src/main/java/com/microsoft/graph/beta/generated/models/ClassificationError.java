@@ -32,7 +32,7 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
         return new ClassificationError();
     }
     /**
-     * Gets the details property value. The details property
+     * Gets the details property value. A collection of more specific errors that contribute to the overall error.
      * @return a {@link java.util.List<ClassifcationErrorBase>}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class ClassificationError extends ClassifcationErrorBase implements Parsa
         writer.writeCollectionOfObjectValues("details", this.getDetails());
     }
     /**
-     * Sets the details property value. The details property
+     * Sets the details property value. A collection of more specific errors that contribute to the overall error.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<ClassifcationErrorBase> value) {

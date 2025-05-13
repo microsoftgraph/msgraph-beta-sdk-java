@@ -29,6 +29,14 @@ public class WindowsQualityUpdatePolicy extends Entity implements Parsable {
         return new WindowsQualityUpdatePolicy();
     }
     /**
+     * Gets the approvalSettings property value. The list of approval settings for this policy. The maximun number of approval settings supported for one policy is 6. The expected number of approval settings for one policy from UX is 4.
+     * @return a {@link java.util.List<WindowsQualityUpdateApprovalSetting>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WindowsQualityUpdateApprovalSetting> getApprovalSettings() {
+        return this.backingStore.get("approvalSettings");
+    }
+    /**
      * Gets the assignments property value. List of the groups this profile is assgined to.
      * @return a {@link java.util.List<WindowsQualityUpdatePolicyAssignment>}
      */
@@ -67,6 +75,7 @@ public class WindowsQualityUpdatePolicy extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("approvalSettings", (n) -> { this.setApprovalSettings(n.getCollectionOfObjectValues(WindowsQualityUpdateApprovalSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(WindowsQualityUpdatePolicyAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -107,6 +116,7 @@ public class WindowsQualityUpdatePolicy extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("approvalSettings", this.getApprovalSettings());
         writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
@@ -114,6 +124,13 @@ public class WindowsQualityUpdatePolicy extends Entity implements Parsable {
         writer.writeBooleanValue("hotpatchEnabled", this.getHotpatchEnabled());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
+    }
+    /**
+     * Sets the approvalSettings property value. The list of approval settings for this policy. The maximun number of approval settings supported for one policy is 6. The expected number of approval settings for one policy from UX is 4.
+     * @param value Value to set for the approvalSettings property.
+     */
+    public void setApprovalSettings(@jakarta.annotation.Nullable final java.util.List<WindowsQualityUpdateApprovalSetting> value) {
+        this.backingStore.set("approvalSettings", value);
     }
     /**
      * Sets the assignments property value. List of the groups this profile is assgined to.

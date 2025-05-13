@@ -64,7 +64,7 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the code property value. The code property
+     * Gets the code property value. A service-defined error code string.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the innerError property value. The innerError property
+     * Gets the innerError property value. Contains more specific, potentially internal error details.
      * @return a {@link ClassificationInnerError}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("innerError");
     }
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. A human-readable representation of the error.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the target property value. The target property
+     * Gets the target property value. The target of the error (for example, the specific property or item causing the issue).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -146,21 +146,21 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the code property value. The code property
+     * Sets the code property value. A service-defined error code string.
      * @param value Value to set for the code property.
      */
     public void setCode(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("code", value);
     }
     /**
-     * Sets the innerError property value. The innerError property
+     * Sets the innerError property value. Contains more specific, potentially internal error details.
      * @param value Value to set for the innerError property.
      */
     public void setInnerError(@jakarta.annotation.Nullable final ClassificationInnerError value) {
         this.backingStore.set("innerError", value);
     }
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. A human-readable representation of the error.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
@@ -174,7 +174,7 @@ public class ClassifcationErrorBase implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the target property value. The target property
+     * Sets the target property value. The target of the error (for example, the specific property or item causing the issue).
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final String value) {

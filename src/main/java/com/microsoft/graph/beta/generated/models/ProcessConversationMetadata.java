@@ -26,7 +26,7 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         return new ProcessConversationMetadata();
     }
     /**
-     * Gets the accessedResources property value. The accessedResources property
+     * Gets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         return deserializerMap;
     }
     /**
-     * Gets the parentMessageId property value. The parentMessageId property
+     * Gets the parentMessageId property value. Identifier of the parent message in a threaded conversation, if applicable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         return this.backingStore.get("parentMessageId");
     }
     /**
-     * Gets the plugins property value. The plugins property
+     * Gets the plugins property value. List of plugins used during the generation of this message (relevant for AI/bot interactions).
      * @return a {@link java.util.List<AiInteractionPlugin>}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class ProcessConversationMetadata extends ProcessContentMetadataBase impl
         writer.writeCollectionOfObjectValues("plugins", this.getPlugins());
     }
     /**
-     * Sets the accessedResources property value. The accessedResources property
+     * Sets the accessedResources property value. List of resources (for example, file URLs, web URLs) accessed during the generation of this message (relevant for bot interactions).
      * @param value Value to set for the accessedResources property.
      */
     public void setAccessedResources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("accessedResources", value);
     }
     /**
-     * Sets the parentMessageId property value. The parentMessageId property
+     * Sets the parentMessageId property value. Identifier of the parent message in a threaded conversation, if applicable.
      * @param value Value to set for the parentMessageId property.
      */
     public void setParentMessageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("parentMessageId", value);
     }
     /**
-     * Sets the plugins property value. The plugins property
+     * Sets the plugins property value. List of plugins used during the generation of this message (relevant for AI/bot interactions).
      * @param value Value to set for the plugins property.
      */
     public void setPlugins(@jakarta.annotation.Nullable final java.util.List<AiInteractionPlugin> value) {

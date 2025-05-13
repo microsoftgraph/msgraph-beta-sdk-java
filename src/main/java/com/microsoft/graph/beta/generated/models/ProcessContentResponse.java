@@ -77,7 +77,7 @@ public class ProcessContentResponse implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the policyActions property value. The policyActions property
+     * Gets the policyActions property value. A collection of policy actions (like DLP actions) triggered by the processed content.
      * @return a {@link java.util.List<DlpActionInfo>}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ProcessContentResponse implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("policyActions");
     }
     /**
-     * Gets the processingErrors property value. The processingErrors property
+     * Gets the processingErrors property value. A collection of errors encountered during the content processing.
      * @return a {@link java.util.List<ProcessingError>}
      */
     @jakarta.annotation.Nullable
@@ -135,14 +135,14 @@ public class ProcessContentResponse implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the policyActions property value. The policyActions property
+     * Sets the policyActions property value. A collection of policy actions (like DLP actions) triggered by the processed content.
      * @param value Value to set for the policyActions property.
      */
     public void setPolicyActions(@jakarta.annotation.Nullable final java.util.List<DlpActionInfo> value) {
         this.backingStore.set("policyActions", value);
     }
     /**
-     * Sets the processingErrors property value. The processingErrors property
+     * Sets the processingErrors property value. A collection of errors encountered during the content processing.
      * @param value Value to set for the processingErrors property.
      */
     public void setProcessingErrors(@jakarta.annotation.Nullable final java.util.List<ProcessingError> value) {

@@ -39,7 +39,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
         return deserializerMap;
     }
     /**
-     * Gets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
+     * Gets the members property value. Indicates the list of role member security group Entra IDs. For example: {dec942f4-6777-4998-96b4-522e383b08e2}.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -47,7 +47,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
         return this.backingStore.get("members");
     }
     /**
-     * Gets the roleScopeTags property value. The set of Role Scope Tags defined on the Role Assignment.
+     * Gets the roleScopeTags property value. Indicates the set of scope tags for the role assignment. These scope tags will limit the visibility of any Intune resources to those that match any of the scope tags in this collection.
      * @return a {@link java.util.List<RoleScopeTag>}
      */
     @jakarta.annotation.Nullable
@@ -65,14 +65,14 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
         writer.writeCollectionOfObjectValues("roleScopeTags", this.getRoleScopeTags());
     }
     /**
-     * Sets the members property value. The list of ids of role member security groups. These are IDs from Azure Active Directory.
+     * Sets the members property value. Indicates the list of role member security group Entra IDs. For example: {dec942f4-6777-4998-96b4-522e383b08e2}.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("members", value);
     }
     /**
-     * Sets the roleScopeTags property value. The set of Role Scope Tags defined on the Role Assignment.
+     * Sets the roleScopeTags property value. Indicates the set of scope tags for the role assignment. These scope tags will limit the visibility of any Intune resources to those that match any of the scope tags in this collection.
      * @param value Value to set for the roleScopeTags property.
      */
     public void setRoleScopeTags(@jakarta.annotation.Nullable final java.util.List<RoleScopeTag> value) {

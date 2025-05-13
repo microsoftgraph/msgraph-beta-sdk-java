@@ -41,19 +41,21 @@ public class MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeW
         super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.getConnectionSummaries(startDateTime={startDateTime},endDateTime={endDateTime}){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function getConnectionSummaries
+     * An API part of Global Secure Access (GSA) product, reports of connections count per traffic type: Private/Internet/Microsoft.
      * @return a {@link GetConnectionSummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-getconnectionsummaries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetConnectionSummariesWithStartDateTimeWithEndDateTimeGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function getConnectionSummaries
+     * An API part of Global Secure Access (GSA) product, reports of connections count per traffic type: Private/Internet/Microsoft.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetConnectionSummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-getconnectionsummaries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetConnectionSummariesWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -63,7 +65,7 @@ public class MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeW
         return this.requestAdapter.send(requestInfo, errorMapping, GetConnectionSummariesWithStartDateTimeWithEndDateTimeGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getConnectionSummaries
+     * An API part of Global Secure Access (GSA) product, reports of connections count per traffic type: Private/Internet/Microsoft.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -71,7 +73,7 @@ public class MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeW
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getConnectionSummaries
+     * An API part of Global Secure Access (GSA) product, reports of connections count per traffic type: Private/Internet/Microsoft.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -93,7 +95,7 @@ public class MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeW
         return new MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function getConnectionSummaries
+     * An API part of Global Secure Access (GSA) product, reports of connections count per traffic type: Private/Internet/Microsoft.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

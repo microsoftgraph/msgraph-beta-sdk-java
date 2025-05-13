@@ -36,21 +36,23 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/dataSecurityAndGovernance/processContent", rawUrl);
     }
     /**
-     * Invoke action processContent
+     * Process content against data protection policies in the context of the current user. 
      * @param body The request body
      * @return a {@link ProcessContentResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userdatasecurityandgovernance-processcontent?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProcessContentResponse post(@jakarta.annotation.Nonnull final ProcessContentPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action processContent
+     * Process content against data protection policies in the context of the current user. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProcessContentResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userdatasecurityandgovernance-processcontent?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProcessContentResponse post(@jakarta.annotation.Nonnull final ProcessContentPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProcessContentResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action processContent
+     * Process content against data protection policies in the context of the current user. 
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action processContent
+     * Process content against data protection policies in the context of the current user. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

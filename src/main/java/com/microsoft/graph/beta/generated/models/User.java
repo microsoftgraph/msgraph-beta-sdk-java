@@ -317,7 +317,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("customSecurityAttributes");
     }
     /**
-     * Gets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
+     * Gets the dataSecurityAndGovernance property value. The data security and governance settings for the user. Read-only. Nullable.
      * @return a {@link UserDataSecurityAndGovernance}
      */
     @jakarta.annotation.Nullable
@@ -1888,7 +1888,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("customSecurityAttributes", value);
     }
     /**
-     * Sets the dataSecurityAndGovernance property value. The dataSecurityAndGovernance property
+     * Sets the dataSecurityAndGovernance property value. The data security and governance settings for the user. Read-only. Nullable.
      * @param value Value to set for the dataSecurityAndGovernance property.
      */
     public void setDataSecurityAndGovernance(@jakarta.annotation.Nullable final UserDataSecurityAndGovernance value) {

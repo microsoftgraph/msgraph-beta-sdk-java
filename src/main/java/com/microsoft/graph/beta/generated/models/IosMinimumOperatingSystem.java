@@ -64,7 +64,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("v10_0", (n) -> { this.setV100(n.getBooleanValue()); });
         deserializerMap.put("v11_0", (n) -> { this.setV110(n.getBooleanValue()); });
@@ -74,6 +74,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         deserializerMap.put("v15_0", (n) -> { this.setV150(n.getBooleanValue()); });
         deserializerMap.put("v16_0", (n) -> { this.setV160(n.getBooleanValue()); });
         deserializerMap.put("v17_0", (n) -> { this.setV170(n.getBooleanValue()); });
+        deserializerMap.put("v18_0", (n) -> { this.setV180(n.getBooleanValue()); });
         deserializerMap.put("v8_0", (n) -> { this.setV80(n.getBooleanValue()); });
         deserializerMap.put("v9_0", (n) -> { this.setV90(n.getBooleanValue()); });
         return deserializerMap;
@@ -87,7 +88,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v10_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 10.0 or later is required to install the app. If &apos;False&apos;, iOS Version 10.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +96,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("v100");
     }
     /**
-     * Gets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v11_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 11.0 or later is required to install the app. If &apos;False&apos;, iOS Version 11.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +104,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("v110");
     }
     /**
-     * Gets the v12_0 property value. When TRUE, only Version 12.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v12_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 12.0 or later is required to install the app. If &apos;False&apos;, iOS Version 12.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +112,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("v120");
     }
     /**
-     * Gets the v13_0 property value. When TRUE, only Version 13.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v13_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 13.0 or later is required to install the app. If &apos;False&apos;, iOS Version 13.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +120,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("v130");
     }
     /**
-     * Gets the v14_0 property value. When TRUE, only Version 14.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v14_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 14.0 or later is required to install the app. If &apos;False&apos;, iOS Version 14.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +128,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("v140");
     }
     /**
-     * Gets the v15_0 property value. When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v15_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 15.0 or later is required to install the app. If &apos;False&apos;, iOS Version 15.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +136,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("v150");
     }
     /**
-     * Gets the v16_0 property value. When TRUE, only Version 16.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v16_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 16.0 or later is required to install the app. If &apos;False&apos;, iOS Version 16.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -143,7 +144,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("v160");
     }
     /**
-     * Gets the v17_0 property value. When TRUE, only Version 17.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v17_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 17.0 or later is required to install the app. If &apos;False&apos;, iOS Version 17.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -151,7 +152,15 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("v170");
     }
     /**
-     * Gets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v18_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 18.0 or later is required to install the app. If &apos;False&apos;, iOS Version 18.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getV180() {
+        return this.backingStore.get("v180");
+    }
+    /**
+     * Gets the v8_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 8.0 or later is required to install the app. If &apos;False&apos;, iOS Version 8.0  is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +168,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("v80");
     }
     /**
-     * Gets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Gets the v9_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 9.0 or later is required to install the app. If &apos;False&apos;, iOS Version 9.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -181,6 +190,7 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         writer.writeBooleanValue("v15_0", this.getV150());
         writer.writeBooleanValue("v16_0", this.getV160());
         writer.writeBooleanValue("v17_0", this.getV170());
+        writer.writeBooleanValue("v18_0", this.getV180());
         writer.writeBooleanValue("v8_0", this.getV80());
         writer.writeBooleanValue("v9_0", this.getV90());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -208,70 +218,77 @@ public class IosMinimumOperatingSystem implements AdditionalDataHolder, BackedMo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the v10_0 property value. When TRUE, only Version 10.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v10_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 10.0 or later is required to install the app. If &apos;False&apos;, iOS Version 10.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v10_0 property.
      */
     public void setV100(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v100", value);
     }
     /**
-     * Sets the v11_0 property value. When TRUE, only Version 11.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v11_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 11.0 or later is required to install the app. If &apos;False&apos;, iOS Version 11.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v11_0 property.
      */
     public void setV110(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v110", value);
     }
     /**
-     * Sets the v12_0 property value. When TRUE, only Version 12.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v12_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 12.0 or later is required to install the app. If &apos;False&apos;, iOS Version 12.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v12_0 property.
      */
     public void setV120(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v120", value);
     }
     /**
-     * Sets the v13_0 property value. When TRUE, only Version 13.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v13_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 13.0 or later is required to install the app. If &apos;False&apos;, iOS Version 13.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v13_0 property.
      */
     public void setV130(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v130", value);
     }
     /**
-     * Sets the v14_0 property value. When TRUE, only Version 14.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v14_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 14.0 or later is required to install the app. If &apos;False&apos;, iOS Version 14.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v14_0 property.
      */
     public void setV140(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v140", value);
     }
     /**
-     * Sets the v15_0 property value. When TRUE, only Version 15.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v15_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 15.0 or later is required to install the app. If &apos;False&apos;, iOS Version 15.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v15_0 property.
      */
     public void setV150(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v150", value);
     }
     /**
-     * Sets the v16_0 property value. When TRUE, only Version 16.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v16_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 16.0 or later is required to install the app. If &apos;False&apos;, iOS Version 16.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v16_0 property.
      */
     public void setV160(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v160", value);
     }
     /**
-     * Sets the v17_0 property value. When TRUE, only Version 17.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v17_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 17.0 or later is required to install the app. If &apos;False&apos;, iOS Version 17.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v17_0 property.
      */
     public void setV170(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v170", value);
     }
     /**
-     * Sets the v8_0 property value. When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v18_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 18.0 or later is required to install the app. If &apos;False&apos;, iOS Version 18.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v18_0 property.
+     */
+    public void setV180(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("v180", value);
+    }
+    /**
+     * Sets the v8_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 8.0 or later is required to install the app. If &apos;False&apos;, iOS Version 8.0  is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v8_0 property.
      */
     public void setV80(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v80", value);
     }
     /**
-     * Sets the v9_0 property value. When TRUE, only Version 9.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+     * Sets the v9_0 property value. Indicates the minimum iOS version support required for the managed device. When &apos;True&apos;, iOS with OS Version 9.0 or later is required to install the app. If &apos;False&apos;, iOS Version 9.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
      * @param value Value to set for the v9_0 property.
      */
     public void setV90(@jakarta.annotation.Nullable final Boolean value) {

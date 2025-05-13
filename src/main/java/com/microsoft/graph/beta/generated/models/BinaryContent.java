@@ -26,7 +26,7 @@ public class BinaryContent extends ContentBase implements Parsable {
         return new BinaryContent();
     }
     /**
-     * Gets the data property value. The data property
+     * Gets the data property value. The binary content, encoded as a Base64 string. Inherited from contentBase.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class BinaryContent extends ContentBase implements Parsable {
         writer.writeByteArrayValue("data", this.getData());
     }
     /**
-     * Sets the data property value. The data property
+     * Sets the data property value. The binary content, encoded as a Base64 string. Inherited from contentBase.
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final byte[] value) {

@@ -8,8 +8,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum EnrollmentTimeDeviceMembershipTargetValidationErrorCode implements ValuedEnum {
-    /** Default. Indicates the status of device membership target is not specified. Do not use. */
-    Unknown("unknown"),
     /** Indicates device membership target cannot be found. */
     SecurityGroupNotFound("securityGroupNotFound"),
     /** Indicates device membership target is not a security group. */
@@ -32,7 +30,6 @@ public enum EnrollmentTimeDeviceMembershipTargetValidationErrorCode implements V
     public static EnrollmentTimeDeviceMembershipTargetValidationErrorCode forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "unknown": return Unknown;
             case "securityGroupNotFound": return SecurityGroupNotFound;
             case "notSecurityGroup": return NotSecurityGroup;
             case "notStaticSecurityGroup": return NotStaticSecurityGroup;

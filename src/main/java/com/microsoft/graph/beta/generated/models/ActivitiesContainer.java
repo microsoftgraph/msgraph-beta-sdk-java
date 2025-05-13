@@ -25,7 +25,7 @@ public class ActivitiesContainer extends Entity implements Parsable {
         return new ActivitiesContainer();
     }
     /**
-     * Gets the contentActivities property value. The contentActivities property
+     * Gets the contentActivities property value. Collection of activity logs related to content processing.
      * @return a {@link java.util.List<ContentActivity>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class ActivitiesContainer extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("contentActivities", this.getContentActivities());
     }
     /**
-     * Sets the contentActivities property value. The contentActivities property
+     * Sets the contentActivities property value. Collection of activity logs related to content processing.
      * @param value Value to set for the contentActivities property.
      */
     public void setContentActivities(@jakarta.annotation.Nullable final java.util.List<ContentActivity> value) {

@@ -201,7 +201,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         return this.backingStore.get("securityBlockDeviceAdministratorManagedDevices");
     }
     /**
-     * Gets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
+     * Gets the securityBlockJailbrokenDevices property value. Indicates the device should not be rooted. When TRUE, if the device is detected as rooted it will be reported non-compliant. When FALSE, the device is not reported as non-compliant regardless of device rooted state. Default is FALSE.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -435,7 +435,7 @@ public class AndroidCompliancePolicy extends DeviceCompliancePolicy implements P
         this.backingStore.set("securityBlockDeviceAdministratorManagedDevices", value);
     }
     /**
-     * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
+     * Sets the securityBlockJailbrokenDevices property value. Indicates the device should not be rooted. When TRUE, if the device is detected as rooted it will be reported non-compliant. When FALSE, the device is not reported as non-compliant regardless of device rooted state. Default is FALSE.
      * @param value Value to set for the securityBlockJailbrokenDevices property.
      */
     public void setSecurityBlockJailbrokenDevices(@jakarta.annotation.Nullable final Boolean value) {

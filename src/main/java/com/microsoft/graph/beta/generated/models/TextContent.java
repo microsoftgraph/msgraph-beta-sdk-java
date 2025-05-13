@@ -26,7 +26,7 @@ public class TextContent extends ContentBase implements Parsable {
         return new TextContent();
     }
     /**
-     * Gets the data property value. The data property
+     * Gets the data property value. The text content data. Inherits properties from contentBase.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class TextContent extends ContentBase implements Parsable {
         writer.writeStringValue("data", this.getData());
     }
     /**
-     * Sets the data property value. The data property
+     * Sets the data property value. The text content data. Inherits properties from contentBase.
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final String value) {

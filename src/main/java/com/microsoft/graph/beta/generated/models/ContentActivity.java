@@ -45,7 +45,7 @@ public class ContentActivity extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the scopeIdentifier property value. The scopeIdentifier property
+     * Gets the scopeIdentifier property value. The scope identified from computed protection scopes.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ContentActivity extends Entity implements Parsable {
         return this.backingStore.get("scopeIdentifier");
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. ID of the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -79,14 +79,14 @@ public class ContentActivity extends Entity implements Parsable {
         this.backingStore.set("contentMetadata", value);
     }
     /**
-     * Sets the scopeIdentifier property value. The scopeIdentifier property
+     * Sets the scopeIdentifier property value. The scope identified from computed protection scopes.
      * @param value Value to set for the scopeIdentifier property.
      */
     public void setScopeIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("scopeIdentifier", value);
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. ID of the user.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {

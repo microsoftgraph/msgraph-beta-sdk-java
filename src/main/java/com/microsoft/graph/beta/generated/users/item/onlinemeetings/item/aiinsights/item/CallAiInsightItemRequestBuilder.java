@@ -55,7 +55,7 @@ public class CallAiInsightItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get aiInsights from users
+     * The AI insights generated for an online meeting. Read-only.
      * @return a {@link CallAiInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class CallAiInsightItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get aiInsights from users
+     * The AI insights generated for an online meeting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CallAiInsight}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -121,7 +121,7 @@ public class CallAiInsightItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get aiInsights from users
+     * The AI insights generated for an online meeting. Read-only.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class CallAiInsightItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get aiInsights from users
+     * The AI insights generated for an online meeting. Read-only.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +181,7 @@ public class CallAiInsightItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get aiInsights from users
+     * The AI insights generated for an online meeting. Read-only.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

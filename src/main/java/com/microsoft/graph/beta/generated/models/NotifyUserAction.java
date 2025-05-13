@@ -26,7 +26,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
         return new NotifyUserAction();
     }
     /**
-     * Gets the actionLastModifiedDateTime property value. The actionLastModifiedDateTime property
+     * Gets the actionLastModifiedDateTime property value. Timestamp when the notification action configuration was last modified.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
         return this.backingStore.get("actionLastModifiedDateTime");
     }
     /**
-     * Gets the emailText property value. The emailText property
+     * Gets the emailText property value. The body text of the email notification sent to users.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the policyTip property value. The policyTip property
+     * Gets the policyTip property value. The text of the policy tip displayed to the user within the application (For example, Outlook, Word).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
         return this.backingStore.get("policyTip");
     }
     /**
-     * Gets the recipients property value. The recipients property
+     * Gets the recipients property value. List of email addresses or user identifiers designated to receive the notification email. Can include sender, owner, manager, etc.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
         writer.writeCollectionOfPrimitiveValues("recipients", this.getRecipients());
     }
     /**
-     * Sets the actionLastModifiedDateTime property value. The actionLastModifiedDateTime property
+     * Sets the actionLastModifiedDateTime property value. Timestamp when the notification action configuration was last modified.
      * @param value Value to set for the actionLastModifiedDateTime property.
      */
     public void setActionLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("actionLastModifiedDateTime", value);
     }
     /**
-     * Sets the emailText property value. The emailText property
+     * Sets the emailText property value. The body text of the email notification sent to users.
      * @param value Value to set for the emailText property.
      */
     public void setEmailText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emailText", value);
     }
     /**
-     * Sets the policyTip property value. The policyTip property
+     * Sets the policyTip property value. The text of the policy tip displayed to the user within the application (For example, Outlook, Word).
      * @param value Value to set for the policyTip property.
      */
     public void setPolicyTip(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyTip", value);
     }
     /**
-     * Sets the recipients property value. The recipients property
+     * Sets the recipients property value. List of email addresses or user identifiers designated to receive the notification email. Can include sender, owner, manager, etc.
      * @param value Value to set for the recipients property.
      */
     public void setRecipients(@jakarta.annotation.Nullable final java.util.List<String> value) {

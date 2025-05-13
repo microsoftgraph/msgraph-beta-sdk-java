@@ -27,7 +27,7 @@ public class Connection extends Entity implements Parsable {
         return new Connection();
     }
     /**
-     * Gets the agentVersion property value. The agentVersion property
+     * Gets the agentVersion property value. The version of the client that initiated the connection.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("agentVersion");
     }
     /**
-     * Gets the applicationSnapshot property value. The applicationSnapshot property
+     * Gets the applicationSnapshot property value. appId (or client ID) of the destination Microsoft Entra application.
      * @return a {@link ApplicationSnapshot}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("applicationSnapshot");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The time the connection was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the destinationFqdn property value. The destinationFqdn property
+     * Gets the destinationFqdn property value. The destination FQDN of the connection.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("destinationFqdn");
     }
     /**
-     * Gets the destinationIp property value. The destinationIp property
+     * Gets the destinationIp property value. The destination IP of the connection.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("destinationIp");
     }
     /**
-     * Gets the destinationPort property value. The destinationPort property
+     * Gets the destinationPort property value. The destination port of the connection.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("destinationPort");
     }
     /**
-     * Gets the deviceCategory property value. The deviceCategory property
+     * Gets the deviceCategory property value. The category of the device. The possible values are: client, branch, unknownFutureValue, remoteNetwork. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: remoteNetwork.
      * @return a {@link DeviceCategory}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("deviceCategory");
     }
     /**
-     * Gets the deviceId property value. The deviceId property
+     * Gets the deviceId property value. The DeviceID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("deviceId");
     }
     /**
-     * Gets the deviceOperatingSystem property value. The deviceOperatingSystem property
+     * Gets the deviceOperatingSystem property value. The device operating system type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("deviceOperatingSystem");
     }
     /**
-     * Gets the deviceOperatingSystemVersion property value. The deviceOperatingSystemVersion property
+     * Gets the deviceOperatingSystemVersion property value. The device operating system version.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("deviceOperatingSystemVersion");
     }
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. The time the connection was terminated.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class Connection extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the initiatingProcessName property value. The initiatingProcessName property
+     * Gets the initiatingProcessName property value. The process initiating the traffic connection.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("initiatingProcessName");
     }
     /**
-     * Gets the lastUpdateDateTime property value. The lastUpdateDateTime property
+     * Gets the lastUpdateDateTime property value. When the connection was last updated.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("lastUpdateDateTime");
     }
     /**
-     * Gets the networkProtocol property value. The networkProtocol property
+     * Gets the networkProtocol property value. The network protocol of the connection. The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue.
      * @return a {@link NetworkingProtocol}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("networkProtocol");
     }
     /**
-     * Gets the popProcessingRegion property value. The popProcessingRegion property
+     * Gets the popProcessingRegion property value. The Point-of-Presence processing region of the traffic.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("popProcessingRegion");
     }
     /**
-     * Gets the privateAccessDetails property value. The privateAccessDetails property
+     * Gets the privateAccessDetails property value. Private access details.
      * @return a {@link PrivateAccessDetails}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("privateAccessDetails");
     }
     /**
-     * Gets the receivedBytes property value. The receivedBytes property
+     * Gets the receivedBytes property value. Accumulative bytes received.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("receivedBytes");
     }
     /**
-     * Gets the sentBytes property value. The sentBytes property
+     * Gets the sentBytes property value. Accumulative bytes sent.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -208,7 +208,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("sentBytes");
     }
     /**
-     * Gets the sourceIp property value. The sourceIp property
+     * Gets the sourceIp property value. The source IP of the connection.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -216,7 +216,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("sourceIp");
     }
     /**
-     * Gets the sourcePort property value. The sourcePort property
+     * Gets the sourcePort property value. The source port of the connection.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -224,7 +224,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("sourcePort");
     }
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Status of the connection. The possible values are: open, active, closed, unknownFutureValue.
      * @return a {@link ConnectionStatus}
      */
     @jakarta.annotation.Nullable
@@ -232,7 +232,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The ID of the tenant where the connection was initiated.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -248,7 +248,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("trafficType");
     }
     /**
-     * Gets the transactionBlockCount property value. The transactionBlockCount property
+     * Gets the transactionBlockCount property value. The number of blocked transactions belonging to the connection.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("transactionBlockCount");
     }
     /**
-     * Gets the transactionCount property value. The transactionCount property
+     * Gets the transactionCount property value. The number of transactions belonging to the connection.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -264,7 +264,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("transactionCount");
     }
     /**
-     * Gets the transportProtocol property value. The transportProtocol property
+     * Gets the transportProtocol property value. The transport protocol of the connection. The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue.
      * @return a {@link NetworkingProtocol}
      */
     @jakarta.annotation.Nullable
@@ -272,7 +272,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("transportProtocol");
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. The user ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -280,7 +280,7 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. The userPrincipalName property
+     * Gets the userPrincipalName property value. The principal name of the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -324,154 +324,154 @@ public class Connection extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the agentVersion property value. The agentVersion property
+     * Sets the agentVersion property value. The version of the client that initiated the connection.
      * @param value Value to set for the agentVersion property.
      */
     public void setAgentVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentVersion", value);
     }
     /**
-     * Sets the applicationSnapshot property value. The applicationSnapshot property
+     * Sets the applicationSnapshot property value. appId (or client ID) of the destination Microsoft Entra application.
      * @param value Value to set for the applicationSnapshot property.
      */
     public void setApplicationSnapshot(@jakarta.annotation.Nullable final ApplicationSnapshot value) {
         this.backingStore.set("applicationSnapshot", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The time the connection was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the destinationFqdn property value. The destinationFqdn property
+     * Sets the destinationFqdn property value. The destination FQDN of the connection.
      * @param value Value to set for the destinationFqdn property.
      */
     public void setDestinationFqdn(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("destinationFqdn", value);
     }
     /**
-     * Sets the destinationIp property value. The destinationIp property
+     * Sets the destinationIp property value. The destination IP of the connection.
      * @param value Value to set for the destinationIp property.
      */
     public void setDestinationIp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("destinationIp", value);
     }
     /**
-     * Sets the destinationPort property value. The destinationPort property
+     * Sets the destinationPort property value. The destination port of the connection.
      * @param value Value to set for the destinationPort property.
      */
     public void setDestinationPort(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("destinationPort", value);
     }
     /**
-     * Sets the deviceCategory property value. The deviceCategory property
+     * Sets the deviceCategory property value. The category of the device. The possible values are: client, branch, unknownFutureValue, remoteNetwork. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: remoteNetwork.
      * @param value Value to set for the deviceCategory property.
      */
     public void setDeviceCategory(@jakarta.annotation.Nullable final DeviceCategory value) {
         this.backingStore.set("deviceCategory", value);
     }
     /**
-     * Sets the deviceId property value. The deviceId property
+     * Sets the deviceId property value. The DeviceID.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceId", value);
     }
     /**
-     * Sets the deviceOperatingSystem property value. The deviceOperatingSystem property
+     * Sets the deviceOperatingSystem property value. The device operating system type.
      * @param value Value to set for the deviceOperatingSystem property.
      */
     public void setDeviceOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceOperatingSystem", value);
     }
     /**
-     * Sets the deviceOperatingSystemVersion property value. The deviceOperatingSystemVersion property
+     * Sets the deviceOperatingSystemVersion property value. The device operating system version.
      * @param value Value to set for the deviceOperatingSystemVersion property.
      */
     public void setDeviceOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("deviceOperatingSystemVersion", value);
     }
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. The time the connection was terminated.
      * @param value Value to set for the endDateTime property.
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the initiatingProcessName property value. The initiatingProcessName property
+     * Sets the initiatingProcessName property value. The process initiating the traffic connection.
      * @param value Value to set for the initiatingProcessName property.
      */
     public void setInitiatingProcessName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("initiatingProcessName", value);
     }
     /**
-     * Sets the lastUpdateDateTime property value. The lastUpdateDateTime property
+     * Sets the lastUpdateDateTime property value. When the connection was last updated.
      * @param value Value to set for the lastUpdateDateTime property.
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastUpdateDateTime", value);
     }
     /**
-     * Sets the networkProtocol property value. The networkProtocol property
+     * Sets the networkProtocol property value. The network protocol of the connection. The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue.
      * @param value Value to set for the networkProtocol property.
      */
     public void setNetworkProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
         this.backingStore.set("networkProtocol", value);
     }
     /**
-     * Sets the popProcessingRegion property value. The popProcessingRegion property
+     * Sets the popProcessingRegion property value. The Point-of-Presence processing region of the traffic.
      * @param value Value to set for the popProcessingRegion property.
      */
     public void setPopProcessingRegion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("popProcessingRegion", value);
     }
     /**
-     * Sets the privateAccessDetails property value. The privateAccessDetails property
+     * Sets the privateAccessDetails property value. Private access details.
      * @param value Value to set for the privateAccessDetails property.
      */
     public void setPrivateAccessDetails(@jakarta.annotation.Nullable final PrivateAccessDetails value) {
         this.backingStore.set("privateAccessDetails", value);
     }
     /**
-     * Sets the receivedBytes property value. The receivedBytes property
+     * Sets the receivedBytes property value. Accumulative bytes received.
      * @param value Value to set for the receivedBytes property.
      */
     public void setReceivedBytes(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("receivedBytes", value);
     }
     /**
-     * Sets the sentBytes property value. The sentBytes property
+     * Sets the sentBytes property value. Accumulative bytes sent.
      * @param value Value to set for the sentBytes property.
      */
     public void setSentBytes(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("sentBytes", value);
     }
     /**
-     * Sets the sourceIp property value. The sourceIp property
+     * Sets the sourceIp property value. The source IP of the connection.
      * @param value Value to set for the sourceIp property.
      */
     public void setSourceIp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sourceIp", value);
     }
     /**
-     * Sets the sourcePort property value. The sourcePort property
+     * Sets the sourcePort property value. The source port of the connection.
      * @param value Value to set for the sourcePort property.
      */
     public void setSourcePort(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("sourcePort", value);
     }
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Status of the connection. The possible values are: open, active, closed, unknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ConnectionStatus value) {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The ID of the tenant where the connection was initiated.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
@@ -485,35 +485,35 @@ public class Connection extends Entity implements Parsable {
         this.backingStore.set("trafficType", value);
     }
     /**
-     * Sets the transactionBlockCount property value. The transactionBlockCount property
+     * Sets the transactionBlockCount property value. The number of blocked transactions belonging to the connection.
      * @param value Value to set for the transactionBlockCount property.
      */
     public void setTransactionBlockCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("transactionBlockCount", value);
     }
     /**
-     * Sets the transactionCount property value. The transactionCount property
+     * Sets the transactionCount property value. The number of transactions belonging to the connection.
      * @param value Value to set for the transactionCount property.
      */
     public void setTransactionCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("transactionCount", value);
     }
     /**
-     * Sets the transportProtocol property value. The transportProtocol property
+     * Sets the transportProtocol property value. The transport protocol of the connection. The possible values are: ip, icmp, igmp, ggp, ipv4, tcp, pup, udp, idp, ipv6, ipv6RoutingHeader, ipv6FragmentHeader, ipSecEncapsulatingSecurityPayload, ipSecAuthenticationHeader, icmpV6, ipv6NoNextHeader, ipv6DestinationOptions, nd, raw, ipx, spx, spxII, unknownFutureValue.
      * @param value Value to set for the transportProtocol property.
      */
     public void setTransportProtocol(@jakarta.annotation.Nullable final NetworkingProtocol value) {
         this.backingStore.set("transportProtocol", value);
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. The user ID.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. The userPrincipalName property
+     * Sets the userPrincipalName property value. The principal name of the user.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

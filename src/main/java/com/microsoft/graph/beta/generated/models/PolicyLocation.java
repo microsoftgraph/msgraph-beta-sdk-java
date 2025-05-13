@@ -84,7 +84,7 @@ public class PolicyLocation implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The actual value representing the location (for example, &apos;contoso.com&apos;, &apos;https://partner.contoso.com/upload&apos;, &apos;83ef198a-0396-4893-9d4f-d36efbffcaaa&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class PolicyLocation implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The actual value representing the location (for example, &apos;contoso.com&apos;, &apos;https://partner.contoso.com/upload&apos;, &apos;83ef198a-0396-4893-9d4f-d36efbffcaaa&apos;).
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
