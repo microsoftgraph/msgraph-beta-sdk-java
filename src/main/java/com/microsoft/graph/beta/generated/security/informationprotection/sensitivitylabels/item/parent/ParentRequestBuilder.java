@@ -55,7 +55,7 @@ public class ParentRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The parent label associated with a child label. Null if the label has no parent.
+     * Get parent from security
      * @return a {@link SensitivityLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class ParentRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * The parent label associated with a child label. Null if the label has no parent.
+     * Get parent from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SensitivityLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -121,7 +121,7 @@ public class ParentRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The parent label associated with a child label. Null if the label has no parent.
+     * Get parent from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +129,7 @@ public class ParentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The parent label associated with a child label. Null if the label has no parent.
+     * Get parent from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +181,7 @@ public class ParentRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The parent label associated with a child label. Null if the label has no parent.
+     * Get parent from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

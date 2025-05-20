@@ -34,6 +34,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("namePronunciation", (n) -> { this.setNamePronunciation(n.getObjectValue(NamePronunciationSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("profileCardProperties", (n) -> { this.setProfileCardProperties(n.getCollectionOfObjectValues(ProfileCardProperty::createFromDiscriminatorValue)); });
+        deserializerMap.put("profilePropertySettings", (n) -> { this.setProfilePropertySettings(n.getCollectionOfObjectValues(ProfilePropertySetting::createFromDiscriminatorValue)); });
         deserializerMap.put("pronouns", (n) -> { this.setPronouns(n.getObjectValue(PronounsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -62,6 +63,14 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         return this.backingStore.get("profileCardProperties");
     }
     /**
+     * Gets the profilePropertySettings property value. A collection of profile property configuration settings defined by an administrator for an organization.
+     * @return a {@link java.util.List<ProfilePropertySetting>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ProfilePropertySetting> getProfilePropertySettings() {
+        return this.backingStore.get("profilePropertySettings");
+    }
+    /**
      * Gets the pronouns property value. Administrator settings that manage the support of pronouns in an organization.
      * @return a {@link PronounsSettings}
      */
@@ -79,6 +88,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeObjectValue("namePronunciation", this.getNamePronunciation());
         writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
+        writer.writeCollectionOfObjectValues("profilePropertySettings", this.getProfilePropertySettings());
         writer.writeObjectValue("pronouns", this.getPronouns());
     }
     /**
@@ -101,6 +111,13 @@ public class PeopleAdminSettings extends Entity implements Parsable {
      */
     public void setProfileCardProperties(@jakarta.annotation.Nullable final java.util.List<ProfileCardProperty> value) {
         this.backingStore.set("profileCardProperties", value);
+    }
+    /**
+     * Sets the profilePropertySettings property value. A collection of profile property configuration settings defined by an administrator for an organization.
+     * @param value Value to set for the profilePropertySettings property.
+     */
+    public void setProfilePropertySettings(@jakarta.annotation.Nullable final java.util.List<ProfilePropertySetting> value) {
+        this.backingStore.set("profilePropertySettings", value);
     }
     /**
      * Sets the pronouns property value. Administrator settings that manage the support of pronouns in an organization.

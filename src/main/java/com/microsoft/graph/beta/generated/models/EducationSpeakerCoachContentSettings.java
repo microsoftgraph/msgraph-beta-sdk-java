@@ -68,7 +68,7 @@ public class EducationSpeakerCoachContentSettings implements AdditionalDataHolde
         return deserializerMap;
     }
     /**
-     * Gets the isInclusivenessEnabled property value. The isInclusivenessEnabled property
+     * Gets the isInclusivenessEnabled property value. Indicates whether the student should receive feedback on their inclusiveness from the Speaker Coach.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class EducationSpeakerCoachContentSettings implements AdditionalDataHolde
         return this.backingStore.get("isInclusivenessEnabled");
     }
     /**
-     * Gets the isRepetitiveLanguageEnabled property value. The isRepetitiveLanguageEnabled property
+     * Gets the isRepetitiveLanguageEnabled property value. Indicates whether the student should receive feedback on their repetitive language from the Speaker Coach.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class EducationSpeakerCoachContentSettings implements AdditionalDataHolde
         this.backingStore = value;
     }
     /**
-     * Sets the isInclusivenessEnabled property value. The isInclusivenessEnabled property
+     * Sets the isInclusivenessEnabled property value. Indicates whether the student should receive feedback on their inclusiveness from the Speaker Coach.
      * @param value Value to set for the isInclusivenessEnabled property.
      */
     public void setIsInclusivenessEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isInclusivenessEnabled", value);
     }
     /**
-     * Sets the isRepetitiveLanguageEnabled property value. The isRepetitiveLanguageEnabled property
+     * Sets the isRepetitiveLanguageEnabled property value. Indicates whether the student should receive feedback on their repetitive language from the Speaker Coach.
      * @param value Value to set for the isRepetitiveLanguageEnabled property.
      */
     public void setIsRepetitiveLanguageEnabled(@jakarta.annotation.Nullable final Boolean value) {

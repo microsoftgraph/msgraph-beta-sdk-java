@@ -25,7 +25,7 @@ public class CloudPcPolicyScheduledApplyActionDetail extends Entity implements P
         return new CloudPcPolicyScheduledApplyActionDetail();
     }
     /**
-     * Gets the cronScheduleExpression property value. An expression that specifies the cron schedule. (For example, &apos;0 0 0 20  &apos; means schedules a job to run at midnight on the 20th of every month) Administrators can set a cron expression to define the scheduling rules for automatic regular application. When auto-provision is disabled, cronScheduleExpression is set to null, stopping the automatic task scheduling. Read-Only.
+     * Gets the cronScheduleExpression property value. An expression that specifies the cron schedule. (For example, &apos;0 0 0 20  &apos; means schedules a job to run at midnight on the 20th of every month) Administrators can set a cron expression to define the scheduling rules for automatic regular application. When auto provision is disabled, cronScheduleExpression is set to null, stopping the automatic task scheduling. Read-Only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class CloudPcPolicyScheduledApplyActionDetail extends Entity implements P
         writer.writeIntegerValue("reservePercentage", this.getReservePercentage());
     }
     /**
-     * Sets the cronScheduleExpression property value. An expression that specifies the cron schedule. (For example, &apos;0 0 0 20  &apos; means schedules a job to run at midnight on the 20th of every month) Administrators can set a cron expression to define the scheduling rules for automatic regular application. When auto-provision is disabled, cronScheduleExpression is set to null, stopping the automatic task scheduling. Read-Only.
+     * Sets the cronScheduleExpression property value. An expression that specifies the cron schedule. (For example, &apos;0 0 0 20  &apos; means schedules a job to run at midnight on the 20th of every month) Administrators can set a cron expression to define the scheduling rules for automatic regular application. When auto provision is disabled, cronScheduleExpression is set to null, stopping the automatic task scheduling. Read-Only.
      * @param value Value to set for the cronScheduleExpression property.
      */
     public void setCronScheduleExpression(@jakarta.annotation.Nullable final String value) {

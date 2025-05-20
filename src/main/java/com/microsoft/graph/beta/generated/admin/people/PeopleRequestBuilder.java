@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.admin.people;
 import com.microsoft.graph.beta.admin.people.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.beta.admin.people.namepronunciation.NamePronunciationRequestBuilder;
 import com.microsoft.graph.beta.admin.people.profilecardproperties.ProfileCardPropertiesRequestBuilder;
+import com.microsoft.graph.beta.admin.people.profilepropertysettings.ProfilePropertySettingsRequestBuilder;
 import com.microsoft.graph.beta.admin.people.pronouns.PronounsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.PeopleAdminSettings;
@@ -47,6 +48,14 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProfileCardPropertiesRequestBuilder profileCardProperties() {
         return new ProfileCardPropertiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the profilePropertySettings property of the microsoft.graph.peopleAdminSettings entity.
+     * @return a {@link ProfilePropertySettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProfilePropertySettingsRequestBuilder profilePropertySettings() {
+        return new ProfilePropertySettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the pronouns property of the microsoft.graph.peopleAdminSettings entity.

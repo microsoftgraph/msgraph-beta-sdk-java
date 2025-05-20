@@ -28,7 +28,7 @@ public class SignIn extends Entity implements Parsable {
         return new SignIn();
     }
     /**
-     * Gets the agent property value. The agent property
+     * Gets the agent property value. Represents details about the agentic sign-in. Includes the type of agent as well as parentAppID in some cases
      * @return a {@link AgentSignIn}
      */
     @jakarta.annotation.Nullable
@@ -795,7 +795,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeEnumValue("userType", this.getUserType());
     }
     /**
-     * Sets the agent property value. The agent property
+     * Sets the agent property value. Represents details about the agentic sign-in. Includes the type of agent as well as parentAppID in some cases
      * @param value Value to set for the agent property.
      */
     public void setAgent(@jakarta.annotation.Nullable final AgentSignIn value) {

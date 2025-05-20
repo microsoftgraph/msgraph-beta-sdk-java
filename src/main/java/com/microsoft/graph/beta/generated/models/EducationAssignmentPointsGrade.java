@@ -36,7 +36,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
         return deserializerMap;
     }
     /**
-     * Gets the points property value. Number of points a teacher is giving this submission object.
+     * Gets the points property value. Number of points a teacher gives to this submission object.
      * @return a {@link Float}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
         writer.writeFloatValue("points", this.getPoints());
     }
     /**
-     * Sets the points property value. Number of points a teacher is giving this submission object.
+     * Sets the points property value. Number of points a teacher gives to this submission object.
      * @param value Value to set for the points property.
      */
     public void setPoints(@jakarta.annotation.Nullable final Float value) {

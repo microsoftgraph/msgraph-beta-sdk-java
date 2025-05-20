@@ -68,7 +68,7 @@ public class AutoLabeling implements AdditionalDataHolder, BackedModel, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. The message displayed to the user when the label is applied automatically.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class AutoLabeling implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sensitiveTypeIds property value. The sensitiveTypeIds property
+     * Gets the sensitiveTypeIds property value. The list of sensitive information type (SIT) IDs that trigger the automatic application of this label.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class AutoLabeling implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. The message displayed to the user when the label is applied automatically.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class AutoLabeling implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sensitiveTypeIds property value. The sensitiveTypeIds property
+     * Sets the sensitiveTypeIds property value. The list of sensitive information type (SIT) IDs that trigger the automatic application of this label.
      * @param value Value to set for the sensitiveTypeIds property.
      */
     public void setSensitiveTypeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

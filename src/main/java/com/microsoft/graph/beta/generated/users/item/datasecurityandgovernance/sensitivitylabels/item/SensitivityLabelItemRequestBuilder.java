@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.users.item.datasecurityandgovernance.sensitivit
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SensitivityLabel;
+import com.microsoft.graph.beta.users.item.datasecurityandgovernance.sensitivitylabels.item.rights.RightsRequestBuilder;
 import com.microsoft.graph.beta.users.item.datasecurityandgovernance.sensitivitylabels.item.sublabels.SublabelsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the rights property of the microsoft.graph.sensitivityLabel entity.
+     * @return a {@link RightsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RightsRequestBuilder rights() {
+        return new RightsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the sublabels property of the microsoft.graph.sensitivityLabel entity.
      * @return a {@link SublabelsRequestBuilder}
