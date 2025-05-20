@@ -50,7 +50,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         return this.backingStore.get("accessPackageId");
     }
     /**
-     * Gets the accessPackageNotificationSettings property value. The accessPackageNotificationSettings property
+     * Gets the accessPackageNotificationSettings property value. Represents the settings for email notifications for requests to an access package.
      * @return a {@link AccessPackageNotificationSettings}
      */
     @jakarta.annotation.Nullable
@@ -264,7 +264,7 @@ public class AccessPackageAssignmentPolicy extends Entity implements Parsable {
         this.backingStore.set("accessPackageId", value);
     }
     /**
-     * Sets the accessPackageNotificationSettings property value. The accessPackageNotificationSettings property
+     * Sets the accessPackageNotificationSettings property value. Represents the settings for email notifications for requests to an access package.
      * @param value Value to set for the accessPackageNotificationSettings property.
      */
     public void setAccessPackageNotificationSettings(@jakarta.annotation.Nullable final AccessPackageNotificationSettings value) {

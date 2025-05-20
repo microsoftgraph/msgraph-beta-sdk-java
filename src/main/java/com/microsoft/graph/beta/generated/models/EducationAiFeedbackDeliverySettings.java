@@ -48,7 +48,7 @@ public class EducationAiFeedbackDeliverySettings implements AdditionalDataHolder
         return value;
     }
     /**
-     * Gets the areRhetoricalTechniquesEnabled property value. The areRhetoricalTechniquesEnabled property
+     * Gets the areRhetoricalTechniquesEnabled property value. Indicates whether the student should receive feedback on their rhetorical techniques from the AI feedback.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class EducationAiFeedbackDeliverySettings implements AdditionalDataHolder
         return deserializerMap;
     }
     /**
-     * Gets the isLanguageUseEnabled property value. The isLanguageUseEnabled property
+     * Gets the isLanguageUseEnabled property value. Indicates whether the student should receive feedback on their language use from the AI feedback.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class EducationAiFeedbackDeliverySettings implements AdditionalDataHolder
         return this.backingStore.get("isLanguageUseEnabled");
     }
     /**
-     * Gets the isStyleEnabled property value. The isStyleEnabled property
+     * Gets the isStyleEnabled property value. Indicates whether the student should receive feedback on their style from the AI feedback.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class EducationAiFeedbackDeliverySettings implements AdditionalDataHolder
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the areRhetoricalTechniquesEnabled property value. The areRhetoricalTechniquesEnabled property
+     * Sets the areRhetoricalTechniquesEnabled property value. Indicates whether the student should receive feedback on their rhetorical techniques from the AI feedback.
      * @param value Value to set for the areRhetoricalTechniquesEnabled property.
      */
     public void setAreRhetoricalTechniquesEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -135,14 +135,14 @@ public class EducationAiFeedbackDeliverySettings implements AdditionalDataHolder
         this.backingStore = value;
     }
     /**
-     * Sets the isLanguageUseEnabled property value. The isLanguageUseEnabled property
+     * Sets the isLanguageUseEnabled property value. Indicates whether the student should receive feedback on their language use from the AI feedback.
      * @param value Value to set for the isLanguageUseEnabled property.
      */
     public void setIsLanguageUseEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isLanguageUseEnabled", value);
     }
     /**
-     * Sets the isStyleEnabled property value. The isStyleEnabled property
+     * Sets the isStyleEnabled property value. Indicates whether the student should receive feedback on their style from the AI feedback.
      * @param value Value to set for the isStyleEnabled property.
      */
     public void setIsStyleEnabled(@jakarta.annotation.Nullable final Boolean value) {

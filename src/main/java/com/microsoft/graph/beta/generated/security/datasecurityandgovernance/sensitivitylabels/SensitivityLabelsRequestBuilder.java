@@ -3,6 +3,8 @@ package com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivityl
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SensitivityLabel;
 import com.microsoft.graph.beta.models.SensitivityLabelCollectionResponse;
+import com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivitylabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
+import com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivitylabels.computerightsandinheritance.ComputeRightsAndInheritanceRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivitylabels.count.CountRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivitylabels.evaluate.EvaluateRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
@@ -24,6 +26,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the computeRightsAndInheritance method.
+     * @return a {@link ComputeRightsAndInheritanceRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ComputeRightsAndInheritanceRequestBuilder computeRightsAndInheritance() {
+        return new ComputeRightsAndInheritanceRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
@@ -53,6 +63,20 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return new SensitivityLabelItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
+     * Provides operations to call the computeInheritance method.
+     * @param contentFormats Usage: contentFormats={contentFormats}
+     * @param labelIds Usage: labelIds={labelIds}
+     * @param locale Usage: locale=&apos;{locale}&apos;
+     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
+        Objects.requireNonNull(contentFormats);
+        Objects.requireNonNull(labelIds);
+        Objects.requireNonNull(locale);
+        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder(pathParameters, requestAdapter, contentFormats, labelIds, locale);
+    }
+    /**
      * Instantiates a new {@link SensitivityLabelsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -69,19 +93,21 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/sensitivityLabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get sensitivityLabels from security
+     * List the sensitivity labels available to a specific user.
      * @return a {@link SensitivityLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userdatasecurityandgovernance-list-sensitivitylabels?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get sensitivityLabels from security
+     * List the sensitivity labels available to a specific user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SensitivityLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userdatasecurityandgovernance-list-sensitivitylabels?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -116,7 +142,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SensitivityLabel::createFromDiscriminatorValue);
     }
     /**
-     * Get sensitivityLabels from security
+     * List the sensitivity labels available to a specific user.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -124,7 +150,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sensitivityLabels from security
+     * List the sensitivity labels available to a specific user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -170,7 +196,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return new SensitivityLabelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sensitivityLabels from security
+     * List the sensitivity labels available to a specific user.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

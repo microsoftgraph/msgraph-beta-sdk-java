@@ -3,6 +3,8 @@ package com.microsoft.graph.beta.sites.item.informationprotection.sensitivitylab
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SensitivityLabel;
 import com.microsoft.graph.beta.models.SensitivityLabelCollectionResponse;
+import com.microsoft.graph.beta.sites.item.informationprotection.sensitivitylabels.item.sublabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
+import com.microsoft.graph.beta.sites.item.informationprotection.sensitivitylabels.item.sublabels.computerightsandinheritance.ComputeRightsAndInheritanceRequestBuilder;
 import com.microsoft.graph.beta.sites.item.informationprotection.sensitivitylabels.item.sublabels.count.CountRequestBuilder;
 import com.microsoft.graph.beta.sites.item.informationprotection.sensitivitylabels.item.sublabels.evaluate.EvaluateRequestBuilder;
 import com.microsoft.graph.beta.sites.item.informationprotection.sensitivitylabels.item.sublabels.item.SensitivityLabelItemRequestBuilder;
@@ -24,6 +26,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SublabelsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the computeRightsAndInheritance method.
+     * @return a {@link ComputeRightsAndInheritanceRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ComputeRightsAndInheritanceRequestBuilder computeRightsAndInheritance() {
+        return new ComputeRightsAndInheritanceRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
@@ -51,6 +61,20 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("sensitivityLabel%2Did1", sensitivityLabelId1);
         return new SensitivityLabelItemRequestBuilder(urlTplParams, requestAdapter);
+    }
+    /**
+     * Provides operations to call the computeInheritance method.
+     * @param contentFormats Usage: contentFormats={contentFormats}
+     * @param labelIds Usage: labelIds={labelIds}
+     * @param locale Usage: locale=&apos;{locale}&apos;
+     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
+        Objects.requireNonNull(contentFormats);
+        Objects.requireNonNull(labelIds);
+        Objects.requireNonNull(locale);
+        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder(pathParameters, requestAdapter, contentFormats, labelIds, locale);
     }
     /**
      * Instantiates a new {@link SublabelsRequestBuilder} and sets the default values.

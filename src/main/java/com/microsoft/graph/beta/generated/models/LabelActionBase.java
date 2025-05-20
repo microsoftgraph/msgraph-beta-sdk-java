@@ -83,7 +83,7 @@ public class LabelActionBase implements AdditionalDataHolder, BackedModel, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the action (for example, &apos;Encrypt&apos;, &apos;AddHeader&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class LabelActionBase implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the action (for example, &apos;Encrypt&apos;, &apos;AddHeader&apos;).
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

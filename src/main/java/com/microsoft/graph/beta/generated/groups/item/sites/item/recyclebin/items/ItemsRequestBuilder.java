@@ -1,7 +1,9 @@
 package com.microsoft.graph.beta.groups.item.sites.item.recyclebin.items;
 
 import com.microsoft.graph.beta.groups.item.sites.item.recyclebin.items.count.CountRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.recyclebin.items.delete.DeleteRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.recyclebin.items.item.RecycleBinItemItemRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.recyclebin.items.restore.RestoreRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.RecycleBinItem;
 import com.microsoft.graph.beta.models.RecycleBinItemCollectionResponse;
@@ -30,6 +32,22 @@ public class ItemsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the delete method.
+     * @return a {@link DeleteRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeleteRequestBuilder deletePath() {
+        return new DeleteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the items property of the microsoft.graph.recycleBin entity.

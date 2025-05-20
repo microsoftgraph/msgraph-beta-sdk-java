@@ -48,7 +48,7 @@ public class EducationAiFeedbackSettings implements AdditionalDataHolder, Backed
         return value;
     }
     /**
-     * Gets the audienceEngagementSettings property value. The audienceEngagementSettings property
+     * Gets the audienceEngagementSettings property value. The audience engagement related feedback types that students should receive from the AI feedback.
      * @return a {@link EducationAiFeedbackAudienceEngagementSettings}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class EducationAiFeedbackSettings implements AdditionalDataHolder, Backed
         return this.backingStore;
     }
     /**
-     * Gets the contentSettings property value. The contentSettings property
+     * Gets the contentSettings property value. The content related feedback types that students should receive from the AI feedback.
      * @return a {@link EducationAiFeedbackContentSettings}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class EducationAiFeedbackSettings implements AdditionalDataHolder, Backed
         return this.backingStore.get("contentSettings");
     }
     /**
-     * Gets the deliverySettings property value. The deliverySettings property
+     * Gets the deliverySettings property value. The delivery related feedback types that students should receive from the AI feedback.
      * @return a {@link EducationAiFeedbackDeliverySettings}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class EducationAiFeedbackSettings implements AdditionalDataHolder, Backed
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the audienceEngagementSettings property value. The audienceEngagementSettings property
+     * Sets the audienceEngagementSettings property value. The audience engagement related feedback types that students should receive from the AI feedback.
      * @param value Value to set for the audienceEngagementSettings property.
      */
     public void setAudienceEngagementSettings(@jakarta.annotation.Nullable final EducationAiFeedbackAudienceEngagementSettings value) {
@@ -135,14 +135,14 @@ public class EducationAiFeedbackSettings implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the contentSettings property value. The contentSettings property
+     * Sets the contentSettings property value. The content related feedback types that students should receive from the AI feedback.
      * @param value Value to set for the contentSettings property.
      */
     public void setContentSettings(@jakarta.annotation.Nullable final EducationAiFeedbackContentSettings value) {
         this.backingStore.set("contentSettings", value);
     }
     /**
-     * Sets the deliverySettings property value. The deliverySettings property
+     * Sets the deliverySettings property value. The delivery related feedback types that students should receive from the AI feedback.
      * @param value Value to set for the deliverySettings property.
      */
     public void setDeliverySettings(@jakarta.annotation.Nullable final EducationAiFeedbackDeliverySettings value) {

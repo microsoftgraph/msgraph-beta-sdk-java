@@ -67,7 +67,7 @@ public class EducationSpeakerCoachAudienceEngagementSettings implements Addition
         return deserializerMap;
     }
     /**
-     * Gets the isBodyLanguageEnabled property value. The isBodyLanguageEnabled property
+     * Gets the isBodyLanguageEnabled property value. Indicates whether the student should receive feedback on their body language from the Speaker Coach.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class EducationSpeakerCoachAudienceEngagementSettings implements Addition
         this.backingStore = value;
     }
     /**
-     * Sets the isBodyLanguageEnabled property value. The isBodyLanguageEnabled property
+     * Sets the isBodyLanguageEnabled property value. Indicates whether the student should receive feedback on their body language from the Speaker Coach.
      * @param value Value to set for the isBodyLanguageEnabled property.
      */
     public void setIsBodyLanguageEnabled(@jakarta.annotation.Nullable final Boolean value) {

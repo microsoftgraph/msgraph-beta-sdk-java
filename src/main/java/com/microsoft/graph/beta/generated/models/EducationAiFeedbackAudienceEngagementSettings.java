@@ -48,7 +48,7 @@ public class EducationAiFeedbackAudienceEngagementSettings implements Additional
         return value;
     }
     /**
-     * Gets the areEngagementStrategiesEnabled property value. The areEngagementStrategiesEnabled property
+     * Gets the areEngagementStrategiesEnabled property value. Indicates whether the student should receive feedback on their engagement strategies from the AI feedback.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class EducationAiFeedbackAudienceEngagementSettings implements Additional
         return deserializerMap;
     }
     /**
-     * Gets the isCallToActionEnabled property value. The isCallToActionEnabled property
+     * Gets the isCallToActionEnabled property value. Indicates whether the student should receive feedback on their call to action from the AI feedback.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class EducationAiFeedbackAudienceEngagementSettings implements Additional
         return this.backingStore.get("isCallToActionEnabled");
     }
     /**
-     * Gets the isEmotionalAndIntellectualAppealEnabled property value. The isEmotionalAndIntellectualAppealEnabled property
+     * Gets the isEmotionalAndIntellectualAppealEnabled property value. Indicates whether the student should receive feedback on their emotional and intellectual appeal from the AI feedback.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class EducationAiFeedbackAudienceEngagementSettings implements Additional
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the areEngagementStrategiesEnabled property value. The areEngagementStrategiesEnabled property
+     * Sets the areEngagementStrategiesEnabled property value. Indicates whether the student should receive feedback on their engagement strategies from the AI feedback.
      * @param value Value to set for the areEngagementStrategiesEnabled property.
      */
     public void setAreEngagementStrategiesEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -135,14 +135,14 @@ public class EducationAiFeedbackAudienceEngagementSettings implements Additional
         this.backingStore = value;
     }
     /**
-     * Sets the isCallToActionEnabled property value. The isCallToActionEnabled property
+     * Sets the isCallToActionEnabled property value. Indicates whether the student should receive feedback on their call to action from the AI feedback.
      * @param value Value to set for the isCallToActionEnabled property.
      */
     public void setIsCallToActionEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCallToActionEnabled", value);
     }
     /**
-     * Sets the isEmotionalAndIntellectualAppealEnabled property value. The isEmotionalAndIntellectualAppealEnabled property
+     * Sets the isEmotionalAndIntellectualAppealEnabled property value. Indicates whether the student should receive feedback on their emotional and intellectual appeal from the AI feedback.
      * @param value Value to set for the isEmotionalAndIntellectualAppealEnabled property.
      */
     public void setIsEmotionalAndIntellectualAppealEnabled(@jakarta.annotation.Nullable final Boolean value) {

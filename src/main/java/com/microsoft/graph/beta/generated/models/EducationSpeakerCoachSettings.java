@@ -48,7 +48,7 @@ public class EducationSpeakerCoachSettings implements AdditionalDataHolder, Back
         return value;
     }
     /**
-     * Gets the audienceEngagementSettings property value. The audienceEngagementSettings property
+     * Gets the audienceEngagementSettings property value. The audience engagement related feedback types that students should receive from the Speaker Coach.
      * @return a {@link EducationSpeakerCoachAudienceEngagementSettings}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class EducationSpeakerCoachSettings implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the contentSettings property value. The contentSettings property
+     * Gets the contentSettings property value. The content related feedback types that students should receive from the Speaker Coach.
      * @return a {@link EducationSpeakerCoachContentSettings}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class EducationSpeakerCoachSettings implements AdditionalDataHolder, Back
         return this.backingStore.get("contentSettings");
     }
     /**
-     * Gets the deliverySettings property value. The deliverySettings property
+     * Gets the deliverySettings property value. The delivery related feedback types that students should receive from the Speaker Coach.
      * @return a {@link EducationSpeakerCoachDeliverySettings}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class EducationSpeakerCoachSettings implements AdditionalDataHolder, Back
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the audienceEngagementSettings property value. The audienceEngagementSettings property
+     * Sets the audienceEngagementSettings property value. The audience engagement related feedback types that students should receive from the Speaker Coach.
      * @param value Value to set for the audienceEngagementSettings property.
      */
     public void setAudienceEngagementSettings(@jakarta.annotation.Nullable final EducationSpeakerCoachAudienceEngagementSettings value) {
@@ -135,14 +135,14 @@ public class EducationSpeakerCoachSettings implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the contentSettings property value. The contentSettings property
+     * Sets the contentSettings property value. The content related feedback types that students should receive from the Speaker Coach.
      * @param value Value to set for the contentSettings property.
      */
     public void setContentSettings(@jakarta.annotation.Nullable final EducationSpeakerCoachContentSettings value) {
         this.backingStore.set("contentSettings", value);
     }
     /**
-     * Sets the deliverySettings property value. The deliverySettings property
+     * Sets the deliverySettings property value. The delivery related feedback types that students should receive from the Speaker Coach.
      * @param value Value to set for the deliverySettings property.
      */
     public void setDeliverySettings(@jakarta.annotation.Nullable final EducationSpeakerCoachDeliverySettings value) {

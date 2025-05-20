@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivityl
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SensitivityLabel;
+import com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivitylabels.item.rights.RightsRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivitylabels.item.sublabels.SublabelsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the rights property of the microsoft.graph.sensitivityLabel entity.
+     * @return a {@link RightsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RightsRequestBuilder rights() {
+        return new RightsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the sublabels property of the microsoft.graph.sensitivityLabel entity.
      * @return a {@link SublabelsRequestBuilder}
@@ -64,19 +73,21 @@ public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get sensitivityLabels from security
+     * Get a sensitivity label available for the entire tenant.
      * @return a {@link SensitivityLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sensitivitylabel-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabel get() {
         return get(null);
     }
     /**
-     * Get sensitivityLabels from security
+     * Get a sensitivity label available for the entire tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SensitivityLabel}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sensitivitylabel-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabel get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,7 +141,7 @@ public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get sensitivityLabels from security
+     * Get a sensitivity label available for the entire tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +149,7 @@ public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sensitivityLabels from security
+     * Get a sensitivity label available for the entire tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -190,7 +201,7 @@ public class SensitivityLabelItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get sensitivityLabels from security
+     * Get a sensitivity label available for the entire tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

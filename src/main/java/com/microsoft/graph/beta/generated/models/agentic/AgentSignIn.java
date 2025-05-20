@@ -84,7 +84,7 @@ public class AgentSignIn implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the parentAppId property value. The parentAppId property
+     * Gets the parentAppId property value. The ID of the parent application for agentic instances.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class AgentSignIn implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the parentAppId property value. The parentAppId property
+     * Sets the parentAppId property value. The ID of the parent application for agentic instances.
      * @param value Value to set for the parentAppId property.
      */
     public void setParentAppId(@jakarta.annotation.Nullable final String value) {

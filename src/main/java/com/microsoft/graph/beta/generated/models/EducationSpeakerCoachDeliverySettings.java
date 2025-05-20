@@ -48,7 +48,7 @@ public class EducationSpeakerCoachDeliverySettings implements AdditionalDataHold
         return value;
     }
     /**
-     * Gets the areFillerWordsEnabled property value. The areFillerWordsEnabled property
+     * Gets the areFillerWordsEnabled property value. Indicates whether the student should receive feedback on their filler words from the Speaker Coach.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class EducationSpeakerCoachDeliverySettings implements AdditionalDataHold
         return deserializerMap;
     }
     /**
-     * Gets the isPaceEnabled property value. The isPaceEnabled property
+     * Gets the isPaceEnabled property value. Indicates whether the student should receive feedback on their pace from the Speaker Coach.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class EducationSpeakerCoachDeliverySettings implements AdditionalDataHold
         return this.backingStore.get("isPaceEnabled");
     }
     /**
-     * Gets the isPitchEnabled property value. The isPitchEnabled property
+     * Gets the isPitchEnabled property value. Indicates whether the student should receive feedback on their pitch from the Speaker Coach.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class EducationSpeakerCoachDeliverySettings implements AdditionalDataHold
         return this.backingStore.get("isPitchEnabled");
     }
     /**
-     * Gets the isPronunciationEnabled property value. The isPronunciationEnabled property
+     * Gets the isPronunciationEnabled property value. Indicates whether the student should receive feedback on their pronunciation from the Speaker Coach. This is automatically enabled if isAiFeedbackEnabled is set to true on the educationSpeakerProgressResource, or if spokenLanguageLocale is set to a value besides en-US on the educationSpeakerProgressResource.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class EducationSpeakerCoachDeliverySettings implements AdditionalDataHold
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the areFillerWordsEnabled property value. The areFillerWordsEnabled property
+     * Sets the areFillerWordsEnabled property value. Indicates whether the student should receive feedback on their filler words from the Speaker Coach.
      * @param value Value to set for the areFillerWordsEnabled property.
      */
     public void setAreFillerWordsEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -145,21 +145,21 @@ public class EducationSpeakerCoachDeliverySettings implements AdditionalDataHold
         this.backingStore = value;
     }
     /**
-     * Sets the isPaceEnabled property value. The isPaceEnabled property
+     * Sets the isPaceEnabled property value. Indicates whether the student should receive feedback on their pace from the Speaker Coach.
      * @param value Value to set for the isPaceEnabled property.
      */
     public void setIsPaceEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isPaceEnabled", value);
     }
     /**
-     * Sets the isPitchEnabled property value. The isPitchEnabled property
+     * Sets the isPitchEnabled property value. Indicates whether the student should receive feedback on their pitch from the Speaker Coach.
      * @param value Value to set for the isPitchEnabled property.
      */
     public void setIsPitchEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isPitchEnabled", value);
     }
     /**
-     * Sets the isPronunciationEnabled property value. The isPronunciationEnabled property
+     * Sets the isPronunciationEnabled property value. Indicates whether the student should receive feedback on their pronunciation from the Speaker Coach. This is automatically enabled if isAiFeedbackEnabled is set to true on the educationSpeakerProgressResource, or if spokenLanguageLocale is set to a value besides en-US on the educationSpeakerProgressResource.
      * @param value Value to set for the isPronunciationEnabled property.
      */
     public void setIsPronunciationEnabled(@jakarta.annotation.Nullable final Boolean value) {

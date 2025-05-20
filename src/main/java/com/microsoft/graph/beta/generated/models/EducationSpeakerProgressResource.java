@@ -26,7 +26,7 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         return new EducationSpeakerProgressResource();
     }
     /**
-     * Gets the aiFeedbackCriteria property value. The aiFeedbackCriteria property
+     * Gets the aiFeedbackCriteria property value. The feedback types that students should receive from AI feedback. This property should only be provided if isAiFeedbackEnabled is true.
      * @return a {@link EducationAiFeedbackCriteria}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         return deserializerMap;
     }
     /**
-     * Gets the isAiFeedbackEnabled property value. The isAiFeedbackEnabled property
+     * Gets the isAiFeedbackEnabled property value. Indicates whether AI feedback is enabled for the student submissions.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -60,7 +60,7 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         return this.backingStore.get("isAiFeedbackEnabled");
     }
     /**
-     * Gets the isVideoRequired property value. The isVideoRequired property
+     * Gets the isVideoRequired property value. Indicates whether video is required for the student recording.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         return this.backingStore.get("isVideoRequired");
     }
     /**
-     * Gets the maxRecordingAttempts property value. The maxRecordingAttempts property
+     * Gets the maxRecordingAttempts property value. The maximum number of recording attempts available to the student. Specify 0 to set unlimited recording attempts.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         return this.backingStore.get("maxRecordingAttempts");
     }
     /**
-     * Gets the presentationTitle property value. The presentationTitle property
+     * Gets the presentationTitle property value. The title of the speaker progress resource visible to students.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         return this.backingStore.get("presentationTitle");
     }
     /**
-     * Gets the recordingTimeLimitInMinutes property value. The recordingTimeLimitInMinutes property
+     * Gets the recordingTimeLimitInMinutes property value. The time limit is in minutes for the student recording.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         return this.backingStore.get("recordingTimeLimitInMinutes");
     }
     /**
-     * Gets the showRehearsalReportToStudentBeforeMediaUpload property value. The showRehearsalReportToStudentBeforeMediaUpload property
+     * Gets the showRehearsalReportToStudentBeforeMediaUpload property value. Allows students to view their rehearsal report before the assignment is graded.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         return this.backingStore.get("showRehearsalReportToStudentBeforeMediaUpload");
     }
     /**
-     * Gets the speakerCoachSettings property value. The speakerCoachSettings property
+     * Gets the speakerCoachSettings property value. The feedback types that students should receive from the Speaker Coach.
      * @return a {@link EducationSpeakerCoachSettings}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         return this.backingStore.get("speakerCoachSettings");
     }
     /**
-     * Gets the spokenLanguageLocale property value. The spokenLanguageLocale property
+     * Gets the spokenLanguageLocale property value. The spoken language for the student recording. For example, en-US.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,63 +133,63 @@ public class EducationSpeakerProgressResource extends EducationResource implemen
         writer.writeStringValue("spokenLanguageLocale", this.getSpokenLanguageLocale());
     }
     /**
-     * Sets the aiFeedbackCriteria property value. The aiFeedbackCriteria property
+     * Sets the aiFeedbackCriteria property value. The feedback types that students should receive from AI feedback. This property should only be provided if isAiFeedbackEnabled is true.
      * @param value Value to set for the aiFeedbackCriteria property.
      */
     public void setAiFeedbackCriteria(@jakarta.annotation.Nullable final EducationAiFeedbackCriteria value) {
         this.backingStore.set("aiFeedbackCriteria", value);
     }
     /**
-     * Sets the isAiFeedbackEnabled property value. The isAiFeedbackEnabled property
+     * Sets the isAiFeedbackEnabled property value. Indicates whether AI feedback is enabled for the student submissions.
      * @param value Value to set for the isAiFeedbackEnabled property.
      */
     public void setIsAiFeedbackEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isAiFeedbackEnabled", value);
     }
     /**
-     * Sets the isVideoRequired property value. The isVideoRequired property
+     * Sets the isVideoRequired property value. Indicates whether video is required for the student recording.
      * @param value Value to set for the isVideoRequired property.
      */
     public void setIsVideoRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isVideoRequired", value);
     }
     /**
-     * Sets the maxRecordingAttempts property value. The maxRecordingAttempts property
+     * Sets the maxRecordingAttempts property value. The maximum number of recording attempts available to the student. Specify 0 to set unlimited recording attempts.
      * @param value Value to set for the maxRecordingAttempts property.
      */
     public void setMaxRecordingAttempts(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("maxRecordingAttempts", value);
     }
     /**
-     * Sets the presentationTitle property value. The presentationTitle property
+     * Sets the presentationTitle property value. The title of the speaker progress resource visible to students.
      * @param value Value to set for the presentationTitle property.
      */
     public void setPresentationTitle(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("presentationTitle", value);
     }
     /**
-     * Sets the recordingTimeLimitInMinutes property value. The recordingTimeLimitInMinutes property
+     * Sets the recordingTimeLimitInMinutes property value. The time limit is in minutes for the student recording.
      * @param value Value to set for the recordingTimeLimitInMinutes property.
      */
     public void setRecordingTimeLimitInMinutes(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("recordingTimeLimitInMinutes", value);
     }
     /**
-     * Sets the showRehearsalReportToStudentBeforeMediaUpload property value. The showRehearsalReportToStudentBeforeMediaUpload property
+     * Sets the showRehearsalReportToStudentBeforeMediaUpload property value. Allows students to view their rehearsal report before the assignment is graded.
      * @param value Value to set for the showRehearsalReportToStudentBeforeMediaUpload property.
      */
     public void setShowRehearsalReportToStudentBeforeMediaUpload(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("showRehearsalReportToStudentBeforeMediaUpload", value);
     }
     /**
-     * Sets the speakerCoachSettings property value. The speakerCoachSettings property
+     * Sets the speakerCoachSettings property value. The feedback types that students should receive from the Speaker Coach.
      * @param value Value to set for the speakerCoachSettings property.
      */
     public void setSpeakerCoachSettings(@jakarta.annotation.Nullable final EducationSpeakerCoachSettings value) {
         this.backingStore.set("speakerCoachSettings", value);
     }
     /**
-     * Sets the spokenLanguageLocale property value. The spokenLanguageLocale property
+     * Sets the spokenLanguageLocale property value. The spoken language for the student recording. For example, en-US.
      * @param value Value to set for the spokenLanguageLocale property.
      */
     public void setSpokenLanguageLocale(@jakarta.annotation.Nullable final String value) {

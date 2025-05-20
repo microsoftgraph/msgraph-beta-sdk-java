@@ -69,7 +69,7 @@ public class EducationAiFeedbackContentSettings implements AdditionalDataHolder,
         return deserializerMap;
     }
     /**
-     * Gets the isMessageClarityEnabled property value. The isMessageClarityEnabled property
+     * Gets the isMessageClarityEnabled property value. Indicates whether the student should receive feedback on their message clarity from the AI feedback.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class EducationAiFeedbackContentSettings implements AdditionalDataHolder,
         return this.backingStore.get("isMessageClarityEnabled");
     }
     /**
-     * Gets the isQualityOfInformationEnabled property value. The isQualityOfInformationEnabled property
+     * Gets the isQualityOfInformationEnabled property value. Indicates whether the student should receive feedback on their quality of information from the AI feedback.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class EducationAiFeedbackContentSettings implements AdditionalDataHolder,
         return this.backingStore.get("isQualityOfInformationEnabled");
     }
     /**
-     * Gets the isSpeechOrganizationEnabled property value. The isSpeechOrganizationEnabled property
+     * Gets the isSpeechOrganizationEnabled property value. Indicates whether the student should receive feedback on their speech organization from the AI feedback.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -128,21 +128,21 @@ public class EducationAiFeedbackContentSettings implements AdditionalDataHolder,
         this.backingStore = value;
     }
     /**
-     * Sets the isMessageClarityEnabled property value. The isMessageClarityEnabled property
+     * Sets the isMessageClarityEnabled property value. Indicates whether the student should receive feedback on their message clarity from the AI feedback.
      * @param value Value to set for the isMessageClarityEnabled property.
      */
     public void setIsMessageClarityEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isMessageClarityEnabled", value);
     }
     /**
-     * Sets the isQualityOfInformationEnabled property value. The isQualityOfInformationEnabled property
+     * Sets the isQualityOfInformationEnabled property value. Indicates whether the student should receive feedback on their quality of information from the AI feedback.
      * @param value Value to set for the isQualityOfInformationEnabled property.
      */
     public void setIsQualityOfInformationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isQualityOfInformationEnabled", value);
     }
     /**
-     * Sets the isSpeechOrganizationEnabled property value. The isSpeechOrganizationEnabled property
+     * Sets the isSpeechOrganizationEnabled property value. Indicates whether the student should receive feedback on their speech organization from the AI feedback.
      * @param value Value to set for the isSpeechOrganizationEnabled property.
      */
     public void setIsSpeechOrganizationEnabled(@jakarta.annotation.Nullable final Boolean value) {

@@ -101,7 +101,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the parent property value. The parent label associated with a child label. Null if the label has no parent.
+     * Gets the parent property value. The parent property
      * @return a {@link SensitivityLabel}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the parent property value. The parent label associated with a child label. Null if the label has no parent.
+     * Sets the parent property value. The parent property
      * @param value Value to set for the parent property.
      */
     public void setParent(@jakarta.annotation.Nullable final SensitivityLabel value) {

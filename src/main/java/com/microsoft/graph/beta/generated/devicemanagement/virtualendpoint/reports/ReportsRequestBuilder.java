@@ -14,6 +14,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getreal
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.getremoteconnectionhistoricalreports.GetRemoteConnectionHistoricalReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.gettotalaggregatedremoteconnectionreports.GetTotalAggregatedRemoteConnectionReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievebulkactionstatusreport.RetrieveBulkActionStatusReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievecloudpcrecommendationreports.RetrieveCloudPcRecommendationReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievecloudpctenantmetricsreport.RetrieveCloudPcTenantMetricsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrievecloudpctroubleshootreports.RetrieveCloudPcTroubleshootReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.retrieveconnectionqualityreports.RetrieveConnectionQualityReportsRequestBuilder;
@@ -134,6 +135,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RetrieveBulkActionStatusReportRequestBuilder retrieveBulkActionStatusReport() {
         return new RetrieveBulkActionStatusReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCloudPcRecommendationReports method.
+     * @return a {@link RetrieveCloudPcRecommendationReportsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPcRecommendationReportsRequestBuilder retrieveCloudPcRecommendationReports() {
+        return new RetrieveCloudPcRecommendationReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveCloudPcTenantMetricsReport method.
