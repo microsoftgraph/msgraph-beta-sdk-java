@@ -80,7 +80,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("collapseProperties");
     }
     /**
-     * Gets the contentSources property value. Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
+     * Gets the contentSources property value. Contains the connection to be targeted. Respects the following format: /external/connections/connectionid where connectionid is the ConnectionId defined in the connectors administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
+     * Gets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft 365 Copilot connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is labeled as title, you can retrieve it using the following syntax : label_title.Optional.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -187,7 +187,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("resultTemplateOptions");
     }
     /**
-     * Gets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
+     * Gets the sharePointOneDriveOptions property value. Indicates the kind of content to be searched when a search is performed using application permissions. Optional.
      * @return a {@link SharePointOneDriveOptions}
      */
     @jakarta.annotation.Nullable
@@ -219,7 +219,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("storedFields");
     }
     /**
-     * Gets the trimDuplicates property value. Indicates whether to trim away the duplicate SharePoint files from search results. Default value is false. Optional.
+     * Gets the trimDuplicates property value. Indicates whether to trim away the duplicate SharePoint files from search results. The default value is false. Optional.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -289,7 +289,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("collapseProperties", value);
     }
     /**
-     * Sets the contentSources property value. Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
+     * Sets the contentSources property value. Contains the connection to be targeted. Respects the following format: /external/connections/connectionid where connectionid is the ConnectionId defined in the connectors administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.
      * @param value Value to set for the contentSources property.
      */
     public void setContentSources(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -310,7 +310,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("entityTypes", value);
     }
     /**
-     * Sets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.
+     * Sets the fields property value. Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft 365 Copilot connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is labeled as title, you can retrieve it using the following syntax : label_title.Optional.
      * @param value Value to set for the fields property.
      */
     public void setFields(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -359,7 +359,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("resultTemplateOptions", value);
     }
     /**
-     * Sets the sharePointOneDriveOptions property value. Indicates the kind of contents to be searched when a search is performed using application permissions. Optional.
+     * Sets the sharePointOneDriveOptions property value. Indicates the kind of content to be searched when a search is performed using application permissions. Optional.
      * @param value Value to set for the sharePointOneDriveOptions property.
      */
     public void setSharePointOneDriveOptions(@jakarta.annotation.Nullable final SharePointOneDriveOptions value) {
@@ -387,7 +387,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("storedFields", value);
     }
     /**
-     * Sets the trimDuplicates property value. Indicates whether to trim away the duplicate SharePoint files from search results. Default value is false. Optional.
+     * Sets the trimDuplicates property value. Indicates whether to trim away the duplicate SharePoint files from search results. The default value is false. Optional.
      * @param value Value to set for the trimDuplicates property.
      */
     public void setTrimDuplicates(@jakarta.annotation.Nullable final Boolean value) {

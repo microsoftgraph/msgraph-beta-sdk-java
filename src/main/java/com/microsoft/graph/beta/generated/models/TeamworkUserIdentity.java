@@ -33,6 +33,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("userIdentityType", (n) -> { this.setUserIdentityType(n.getEnumValue(TeamworkUserIdentityType::forValue)); });
+        deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -44,6 +45,14 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
         return this.backingStore.get("userIdentityType");
     }
     /**
+     * Gets the userPrincipalName property value. User principal name (UPN) of the user.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getUserPrincipalName() {
+        return this.backingStore.get("userPrincipalName");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -51,6 +60,7 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("userIdentityType", this.getUserIdentityType());
+        writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
      * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, emailUser and azureCommunicationServicesUser.
@@ -58,5 +68,12 @@ public class TeamworkUserIdentity extends Identity implements Parsable {
      */
     public void setUserIdentityType(@jakarta.annotation.Nullable final TeamworkUserIdentityType value) {
         this.backingStore.set("userIdentityType", value);
+    }
+    /**
+     * Sets the userPrincipalName property value. User principal name (UPN) of the user.
+     * @param value Value to set for the userPrincipalName property.
+     */
+    public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("userPrincipalName", value);
     }
 }

@@ -53,6 +53,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
     ResourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation("resourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation"),
     ResourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation("resourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation"),
     ResourceAvailabilityCheckDeploymentQuotaLimitReached("resourceAvailabilityCheckDeploymentQuotaLimitReached"),
+    ResourceAvailabilityCheckMissingRegistrationForLocation("resourceAvailabilityCheckMissingRegistrationForLocation"),
     ResourceAvailabilityCheckTransientServiceError("resourceAvailabilityCheckTransientServiceError"),
     ResourceAvailabilityCheckUnknownError("resourceAvailabilityCheckUnknownError"),
     PermissionCheckNoSubscriptionReaderRole("permissionCheckNoSubscriptionReaderRole"),
@@ -132,6 +133,7 @@ public enum CloudPcOnPremisesConnectionHealthCheckErrorType implements ValuedEnu
             case "resourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation": return ResourceAvailabilityCheckIntuneDefaultWindowsRestrictionViolation;
             case "resourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation": return ResourceAvailabilityCheckIntuneCustomWindowsRestrictionViolation;
             case "resourceAvailabilityCheckDeploymentQuotaLimitReached": return ResourceAvailabilityCheckDeploymentQuotaLimitReached;
+            case "resourceAvailabilityCheckMissingRegistrationForLocation": return ResourceAvailabilityCheckMissingRegistrationForLocation;
             case "resourceAvailabilityCheckTransientServiceError": return ResourceAvailabilityCheckTransientServiceError;
             case "resourceAvailabilityCheckUnknownError": return ResourceAvailabilityCheckUnknownError;
             case "permissionCheckNoSubscriptionReaderRole": return PermissionCheckNoSubscriptionReaderRole;

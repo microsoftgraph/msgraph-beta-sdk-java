@@ -56,7 +56,7 @@ public class AnalyzedEmailRecipientDetail implements AdditionalDataHolder, Backe
         return this.backingStore;
     }
     /**
-     * Gets the ccRecipients property value. The ccRecipients property
+     * Gets the ccRecipients property value. Recipient address in the cc field.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class AnalyzedEmailRecipientDetail implements AdditionalDataHolder, Backe
         return this.backingStore.get("ccRecipients");
     }
     /**
-     * Gets the domainName property value. The domainName property
+     * Gets the domainName property value. Domain name of the recipient.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class AnalyzedEmailRecipientDetail implements AdditionalDataHolder, Backe
         this.backingStore = value;
     }
     /**
-     * Sets the ccRecipients property value. The ccRecipients property
+     * Sets the ccRecipients property value. Recipient address in the cc field.
      * @param value Value to set for the ccRecipients property.
      */
     public void setCcRecipients(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("ccRecipients", value);
     }
     /**
-     * Sets the domainName property value. The domainName property
+     * Sets the domainName property value. Domain name of the recipient.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {

@@ -125,7 +125,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("apiConnectors", (n) -> { this.setApiConnectors(n.getCollectionOfObjectValues(IdentityApiConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationEventListeners", (n) -> { this.setAuthenticationEventListeners(n.getCollectionOfObjectValues(AuthenticationEventListener::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationEventsFlows", (n) -> { this.setAuthenticationEventsFlows(n.getCollectionOfObjectValues(AuthenticationEventsFlow::createFromDiscriminatorValue)); });
@@ -136,7 +136,6 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("customAuthenticationExtensions", (n) -> { this.setCustomAuthenticationExtensions(n.getCollectionOfObjectValues(CustomAuthenticationExtension::createFromDiscriminatorValue)); });
         deserializerMap.put("identityProviders", (n) -> { this.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("productChanges", (n) -> { this.setProductChanges(n.getCollectionOfObjectValues(ChangeItemBase::createFromDiscriminatorValue)); });
         deserializerMap.put("userFlowAttributes", (n) -> { this.setUserFlowAttributes(n.getCollectionOfObjectValues(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
         deserializerMap.put("userFlows", (n) -> { this.setUserFlows(n.getCollectionOfObjectValues(IdentityUserFlow::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -156,14 +155,6 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
-    }
-    /**
-     * Gets the productChanges property value. Represents entry point for Microsoft Entra product changes and planned new features.
-     * @return a {@link java.util.List<ChangeItemBase>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<ChangeItemBase> getProductChanges() {
-        return this.backingStore.get("productChanges");
     }
     /**
      * Gets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
@@ -197,7 +188,6 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         writer.writeCollectionOfObjectValues("customAuthenticationExtensions", this.getCustomAuthenticationExtensions());
         writer.writeCollectionOfObjectValues("identityProviders", this.getIdentityProviders());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeCollectionOfObjectValues("productChanges", this.getProductChanges());
         writer.writeCollectionOfObjectValues("userFlowAttributes", this.getUserFlowAttributes());
         writer.writeCollectionOfObjectValues("userFlows", this.getUserFlows());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -286,13 +276,6 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
-    }
-    /**
-     * Sets the productChanges property value. Represents entry point for Microsoft Entra product changes and planned new features.
-     * @param value Value to set for the productChanges property.
-     */
-    public void setProductChanges(@jakarta.annotation.Nullable final java.util.List<ChangeItemBase> value) {
-        this.backingStore.set("productChanges", value);
     }
     /**
      * Sets the userFlowAttributes property value. Represents entry point for identity userflow attributes.

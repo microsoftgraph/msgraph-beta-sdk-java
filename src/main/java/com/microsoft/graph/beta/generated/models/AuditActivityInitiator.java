@@ -48,7 +48,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
         return value;
     }
     /**
-     * Gets the app property value. If the actor initiating the activity is an app, this property indicates all its identification information including appId, displayName, servicePrincipalId, and servicePrincipalName.
+     * Gets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId and name.
      * @return a {@link AppIdentity}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the user property value. If the actor initiating the activity is a user, this property indicates their identification information including their id, displayName, and userPrincipalName.
+     * Gets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like user ID and userPrincipalName.
      * @return a {@link AuditUserIdentity}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the app property value. If the actor initiating the activity is an app, this property indicates all its identification information including appId, displayName, servicePrincipalId, and servicePrincipalName.
+     * Sets the app property value. If the resource initiating the activity is an app, this property indicates all the app related information like appId and name.
      * @param value Value to set for the app property.
      */
     public void setApp(@jakarta.annotation.Nullable final AppIdentity value) {
@@ -149,7 +149,7 @@ public class AuditActivityInitiator implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the user property value. If the actor initiating the activity is a user, this property indicates their identification information including their id, displayName, and userPrincipalName.
+     * Sets the user property value. If the resource initiating the activity is a user, this property Indicates all the user related information like user ID and userPrincipalName.
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final AuditUserIdentity value) {

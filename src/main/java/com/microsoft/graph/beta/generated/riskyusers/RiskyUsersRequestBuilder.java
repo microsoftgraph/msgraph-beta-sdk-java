@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.RiskyUser;
 import com.microsoft.graph.beta.models.RiskyUserCollectionResponse;
 import com.microsoft.graph.beta.riskyusers.confirmcompromised.ConfirmCompromisedRequestBuilder;
+import com.microsoft.graph.beta.riskyusers.confirmsafe.ConfirmSafeRequestBuilder;
 import com.microsoft.graph.beta.riskyusers.count.CountRequestBuilder;
 import com.microsoft.graph.beta.riskyusers.dismiss.DismissRequestBuilder;
 import com.microsoft.graph.beta.riskyusers.item.RiskyUserItemRequestBuilder;
@@ -32,6 +33,14 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ConfirmCompromisedRequestBuilder confirmCompromised() {
         return new ConfirmCompromisedRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the confirmSafe method.
+     * @return a {@link ConfirmSafeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConfirmSafeRequestBuilder confirmSafe() {
+        return new ConfirmSafeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to count the resources in the collection.

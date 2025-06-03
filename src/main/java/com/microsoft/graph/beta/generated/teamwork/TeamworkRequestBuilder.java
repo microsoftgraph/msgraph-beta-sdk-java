@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Teamwork;
 import com.microsoft.graph.beta.teamwork.deletedchats.DeletedChatsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.deletedteams.DeletedTeamsRequestBuilder;
+import com.microsoft.graph.beta.teamwork.determineifinteractionisallowed.DetermineIfInteractionIsAllowedRequestBuilder;
 import com.microsoft.graph.beta.teamwork.devices.DevicesRequestBuilder;
 import com.microsoft.graph.beta.teamwork.sendactivitynotificationtorecipients.SendActivityNotificationToRecipientsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamsappsettings.TeamsAppSettingsRequestBuilder;
@@ -42,6 +43,14 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeletedTeamsRequestBuilder deletedTeams() {
         return new DeletedTeamsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the determineIfInteractionIsAllowed method.
+     * @return a {@link DetermineIfInteractionIsAllowedRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DetermineIfInteractionIsAllowedRequestBuilder determineIfInteractionIsAllowed() {
+        return new DetermineIfInteractionIsAllowedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the devices property of the microsoft.graph.teamwork entity.

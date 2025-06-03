@@ -76,7 +76,7 @@ public class CompromiseIndicator implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Indicator.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class CompromiseIndicator implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("value");
     }
     /**
-     * Gets the verdict property value. The verdict property
+     * Gets the verdict property value. .The possible values are: none, malware, phish, siteUnavailable, spam, decryptionFailed, unsupportedUriScheme, unsupportedFileType, undefined, unknownFutureValue.
      * @return a {@link VerdictCategory}
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class CompromiseIndicator implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Indicator.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("value", value);
     }
     /**
-     * Sets the verdict property value. The verdict property
+     * Sets the verdict property value. .The possible values are: none, malware, phish, siteUnavailable, spam, decryptionFailed, unsupportedUriScheme, unsupportedFileType, undefined, unknownFutureValue.
      * @param value Value to set for the verdict property.
      */
     public void setVerdict(@jakarta.annotation.Nullable final VerdictCategory value) {

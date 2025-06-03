@@ -32,8 +32,17 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("grade", (n) -> { this.setGrade(n.getStringValue()); });
         deserializerMap.put("points", (n) -> { this.setPoints(n.getFloatValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the grade property value. The grade letter from the grading scheme that corresponds to the given number of points.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getGrade() {
+        return this.backingStore.get("grade");
     }
     /**
      * Gets the points property value. Number of points a teacher gives to this submission object.
@@ -50,7 +59,15 @@ public class EducationAssignmentPointsGrade extends EducationAssignmentGrade imp
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("grade", this.getGrade());
         writer.writeFloatValue("points", this.getPoints());
+    }
+    /**
+     * Sets the grade property value. The grade letter from the grading scheme that corresponds to the given number of points.
+     * @param value Value to set for the grade property.
+     */
+    public void setGrade(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("grade", value);
     }
     /**
      * Sets the points property value. Number of points a teacher gives to this submission object.

@@ -16,6 +16,7 @@ import com.microsoft.graph.beta.directory.onpremisessynchronization.OnPremisesSy
 import com.microsoft.graph.beta.directory.outboundshareduserprofiles.OutboundSharedUserProfilesRequestBuilder;
 import com.microsoft.graph.beta.directory.pendingexternaluserprofiles.PendingExternalUserProfilesRequestBuilder;
 import com.microsoft.graph.beta.directory.publickeyinfrastructure.PublicKeyInfrastructureRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendationconfiguration.RecommendationConfigurationRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.RecommendationsRequestBuilder;
 import com.microsoft.graph.beta.directory.sharedemaildomains.SharedEmailDomainsRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptions.SubscriptionsRequestBuilder;
@@ -169,6 +170,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PublicKeyInfrastructureRequestBuilder publicKeyInfrastructure() {
         return new PublicKeyInfrastructureRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the recommendationConfiguration property of the microsoft.graph.directory entity.
+     * @return a {@link RecommendationConfigurationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RecommendationConfigurationRequestBuilder recommendationConfiguration() {
+        return new RecommendationConfigurationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the recommendations property of the microsoft.graph.directory entity.

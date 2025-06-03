@@ -57,7 +57,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of sender from address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the domainCreationDateTime property value. The domainCreationDateTime property
+     * Gets the domainCreationDateTime property value. Date and time of creation of the sender domain.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("domainCreationDateTime");
     }
     /**
-     * Gets the domainName property value. The domainName property
+     * Gets the domainName property value. Registered name of the domain.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("domainName");
     }
     /**
-     * Gets the domainOwner property value. The domainOwner property
+     * Gets the domainOwner property value. Owner of the domain.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("ipv4");
     }
     /**
-     * Gets the location property value. The location property
+     * Gets the location property value. Location of the domain.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("mailFromAddress");
     }
     /**
-     * Gets the mailFromDomainName property value. The mailFromDomainName property
+     * Gets the mailFromDomainName property value. Domain name of sender mail from address.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -189,28 +189,28 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of sender from address.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the domainCreationDateTime property value. The domainCreationDateTime property
+     * Sets the domainCreationDateTime property value. Date and time of creation of the sender domain.
      * @param value Value to set for the domainCreationDateTime property.
      */
     public void setDomainCreationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("domainCreationDateTime", value);
     }
     /**
-     * Sets the domainName property value. The domainName property
+     * Sets the domainName property value. Registered name of the domain.
      * @param value Value to set for the domainName property.
      */
     public void setDomainName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("domainName", value);
     }
     /**
-     * Sets the domainOwner property value. The domainOwner property
+     * Sets the domainOwner property value. Owner of the domain.
      * @param value Value to set for the domainOwner property.
      */
     public void setDomainOwner(@jakarta.annotation.Nullable final String value) {
@@ -231,7 +231,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         this.backingStore.set("ipv4", value);
     }
     /**
-     * Sets the location property value. The location property
+     * Sets the location property value. Location of the domain.
      * @param value Value to set for the location property.
      */
     public void setLocation(@jakarta.annotation.Nullable final String value) {
@@ -245,7 +245,7 @@ public class AnalyzedEmailSenderDetail implements AdditionalDataHolder, BackedMo
         this.backingStore.set("mailFromAddress", value);
     }
     /**
-     * Sets the mailFromDomainName property value. The mailFromDomainName property
+     * Sets the mailFromDomainName property value. Domain name of sender mail from address.
      * @param value Value to set for the mailFromDomainName property.
      */
     public void setMailFromDomainName(@jakarta.annotation.Nullable final String value) {

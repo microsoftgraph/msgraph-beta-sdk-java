@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.employeeexperience.goals.GoalsRequestBuilder;
 import com.microsoft.graph.beta.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
 import com.microsoft.graph.beta.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
 import com.microsoft.graph.beta.employeeexperience.learningproviders.LearningProvidersRequestBuilder;
+import com.microsoft.graph.beta.employeeexperience.roles.RolesRequestBuilder;
 import com.microsoft.graph.beta.models.EmployeeExperience;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -67,6 +68,14 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
         return new LearningProvidersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the roles property of the microsoft.graph.employeeExperience entity.
+     * @return a {@link RolesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RolesRequestBuilder roles() {
+        return new RolesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new {@link EmployeeExperienceRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
@@ -116,7 +125,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update employeeExperience
-     * @param body Represents a container that exposes navigation properties for employee experience resources.
+     * @param body The request body
      * @return a {@link EmployeeExperience}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -126,7 +135,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update employeeExperience
-     * @param body Represents a container that exposes navigation properties for employee experience resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmployeeExperience}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -161,7 +170,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update employeeExperience
-     * @param body Represents a container that exposes navigation properties for employee experience resources.
+     * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -170,7 +179,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update employeeExperience
-     * @param body Represents a container that exposes navigation properties for employee experience resources.
+     * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
