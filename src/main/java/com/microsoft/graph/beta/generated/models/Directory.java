@@ -127,6 +127,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("outboundSharedUserProfiles", (n) -> { this.setOutboundSharedUserProfiles(n.getCollectionOfObjectValues(OutboundSharedUserProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("pendingExternalUserProfiles", (n) -> { this.setPendingExternalUserProfiles(n.getCollectionOfObjectValues(PendingExternalUserProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("publicKeyInfrastructure", (n) -> { this.setPublicKeyInfrastructure(n.getObjectValue(PublicKeyInfrastructureRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendationConfiguration", (n) -> { this.setRecommendationConfiguration(n.getObjectValue(RecommendationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("recommendations", (n) -> { this.setRecommendations(n.getCollectionOfObjectValues(Recommendation::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedEmailDomains", (n) -> { this.setSharedEmailDomains(n.getCollectionOfObjectValues(SharedEmailDomain::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
@@ -180,6 +181,14 @@ public class Directory extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public PublicKeyInfrastructureRoot getPublicKeyInfrastructure() {
         return this.backingStore.get("publicKeyInfrastructure");
+    }
+    /**
+     * Gets the recommendationConfiguration property value. The recommendationConfiguration property
+     * @return a {@link RecommendationConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public RecommendationConfiguration getRecommendationConfiguration() {
+        return this.backingStore.get("recommendationConfiguration");
     }
     /**
      * Gets the recommendations property value. List of recommended improvements to improve tenant posture.
@@ -236,6 +245,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("outboundSharedUserProfiles", this.getOutboundSharedUserProfiles());
         writer.writeCollectionOfObjectValues("pendingExternalUserProfiles", this.getPendingExternalUserProfiles());
         writer.writeObjectValue("publicKeyInfrastructure", this.getPublicKeyInfrastructure());
+        writer.writeObjectValue("recommendationConfiguration", this.getRecommendationConfiguration());
         writer.writeCollectionOfObjectValues("recommendations", this.getRecommendations());
         writer.writeCollectionOfObjectValues("sharedEmailDomains", this.getSharedEmailDomains());
         writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
@@ -352,6 +362,13 @@ public class Directory extends Entity implements Parsable {
      */
     public void setPublicKeyInfrastructure(@jakarta.annotation.Nullable final PublicKeyInfrastructureRoot value) {
         this.backingStore.set("publicKeyInfrastructure", value);
+    }
+    /**
+     * Sets the recommendationConfiguration property value. The recommendationConfiguration property
+     * @param value Value to set for the recommendationConfiguration property.
+     */
+    public void setRecommendationConfiguration(@jakarta.annotation.Nullable final RecommendationConfiguration value) {
+        this.backingStore.set("recommendationConfiguration", value);
     }
     /**
      * Sets the recommendations property value. List of recommended improvements to improve tenant posture.

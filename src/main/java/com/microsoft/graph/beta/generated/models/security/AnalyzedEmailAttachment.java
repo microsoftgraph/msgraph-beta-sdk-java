@@ -83,7 +83,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the fileExtension property value. The fileExtension property
+     * Gets the fileExtension property value. Extension of the file.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("fileName");
     }
     /**
-     * Gets the fileSize property value. The fileSize property
+     * Gets the fileSize property value. Size of the file.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("fileType");
     }
     /**
-     * Gets the malwareFamily property value. The malwareFamily property
+     * Gets the malwareFamily property value. The threat name associated with the threat type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("sha256");
     }
     /**
-     * Gets the tenantAllowBlockListDetailInfo property value. The tenantAllowBlockListDetailInfo property
+     * Gets the tenantAllowBlockListDetailInfo property value. Details of entries in tenant allow/block list configured by tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         this.backingStore.set("detonationDetails", value);
     }
     /**
-     * Sets the fileExtension property value. The fileExtension property
+     * Sets the fileExtension property value. Extension of the file.
      * @param value Value to set for the fileExtension property.
      */
     public void setFileExtension(@jakarta.annotation.Nullable final String value) {
@@ -209,7 +209,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         this.backingStore.set("fileName", value);
     }
     /**
-     * Sets the fileSize property value. The fileSize property
+     * Sets the fileSize property value. Size of the file.
      * @param value Value to set for the fileSize property.
      */
     public void setFileSize(@jakarta.annotation.Nullable final Integer value) {
@@ -223,7 +223,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         this.backingStore.set("fileType", value);
     }
     /**
-     * Sets the malwareFamily property value. The malwareFamily property
+     * Sets the malwareFamily property value. The threat name associated with the threat type.
      * @param value Value to set for the malwareFamily property.
      */
     public void setMalwareFamily(@jakarta.annotation.Nullable final String value) {
@@ -244,7 +244,7 @@ public class AnalyzedEmailAttachment implements AdditionalDataHolder, BackedMode
         this.backingStore.set("sha256", value);
     }
     /**
-     * Sets the tenantAllowBlockListDetailInfo property value. The tenantAllowBlockListDetailInfo property
+     * Sets the tenantAllowBlockListDetailInfo property value. Details of entries in tenant allow/block list configured by tenant.
      * @param value Value to set for the tenantAllowBlockListDetailInfo property.
      */
     public void setTenantAllowBlockListDetailInfo(@jakarta.annotation.Nullable final String value) {

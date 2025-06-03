@@ -12,6 +12,7 @@ public enum PlannerContainerType implements ValuedEnum {
     DriveItem("driveItem"),
     User("user"),
     TeamsChannel("teamsChannel"),
+    OnlineMeeting("onlineMeeting"),
     PlannerTask("plannerTask");
     public final String value;
     PlannerContainerType(final String value) {
@@ -30,6 +31,7 @@ public enum PlannerContainerType implements ValuedEnum {
             case "driveItem": return DriveItem;
             case "user": return User;
             case "teamsChannel": return TeamsChannel;
+            case "onlineMeeting": return OnlineMeeting;
             case "plannerTask": return PlannerTask;
             default: return null;
         }

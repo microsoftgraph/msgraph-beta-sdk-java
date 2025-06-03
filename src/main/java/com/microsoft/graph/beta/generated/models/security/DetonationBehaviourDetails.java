@@ -36,7 +36,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         return new DetonationBehaviourDetails();
     }
     /**
-     * Gets the actionStatus property value. The actionStatus property
+     * Gets the actionStatus property value. The status of the action performed during detonation (e.g., &apos;Successful&apos;, &apos;Failed&apos;, &apos;Blocked&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         return this.backingStore;
     }
     /**
-     * Gets the behaviourCapability property value. The behaviourCapability property
+     * Gets the behaviourCapability property value. Categorizes the capability or type of behavior observed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         return this.backingStore.get("behaviourCapability");
     }
     /**
-     * Gets the behaviourGroup property value. The behaviourGroup property
+     * Gets the behaviourGroup property value. Groups related behaviors together for classification purposes.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         return this.backingStore.get("behaviourGroup");
     }
     /**
-     * Gets the details property value. The details property
+     * Gets the details property value. More contextual information about the observed behavior or action.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         return this.backingStore.get("details");
     }
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. The date and time when the behavior or action was observed during detonation.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the operation property value. The operation property
+     * Gets the operation property value. The specific operation or action that was performed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         return this.backingStore.get("operation");
     }
     /**
-     * Gets the processId property value. The processId property
+     * Gets the processId property value. The unique identifier of the process involved in the behavior.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         return this.backingStore.get("processId");
     }
     /**
-     * Gets the processName property value. The processName property
+     * Gets the processName property value. The name of the process that performed or was involved in the behavior.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         return this.backingStore.get("processName");
     }
     /**
-     * Gets the target property value. The target property
+     * Gets the target property value. The target of the operation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actionStatus property value. The actionStatus property
+     * Sets the actionStatus property value. The status of the action performed during detonation (e.g., &apos;Successful&apos;, &apos;Failed&apos;, &apos;Blocked&apos;).
      * @param value Value to set for the actionStatus property.
      */
     public void setActionStatus(@jakarta.annotation.Nullable final String value) {
@@ -196,28 +196,28 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the behaviourCapability property value. The behaviourCapability property
+     * Sets the behaviourCapability property value. Categorizes the capability or type of behavior observed.
      * @param value Value to set for the behaviourCapability property.
      */
     public void setBehaviourCapability(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("behaviourCapability", value);
     }
     /**
-     * Sets the behaviourGroup property value. The behaviourGroup property
+     * Sets the behaviourGroup property value. Groups related behaviors together for classification purposes.
      * @param value Value to set for the behaviourGroup property.
      */
     public void setBehaviourGroup(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("behaviourGroup", value);
     }
     /**
-     * Sets the details property value. The details property
+     * Sets the details property value. More contextual information about the observed behavior or action.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("details", value);
     }
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. The date and time when the behavior or action was observed during detonation.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -231,28 +231,28 @@ public class DetonationBehaviourDetails implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the operation property value. The operation property
+     * Sets the operation property value. The specific operation or action that was performed.
      * @param value Value to set for the operation property.
      */
     public void setOperation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operation", value);
     }
     /**
-     * Sets the processId property value. The processId property
+     * Sets the processId property value. The unique identifier of the process involved in the behavior.
      * @param value Value to set for the processId property.
      */
     public void setProcessId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("processId", value);
     }
     /**
-     * Sets the processName property value. The processName property
+     * Sets the processName property value. The name of the process that performed or was involved in the behavior.
      * @param value Value to set for the processName property.
      */
     public void setProcessName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("processName", value);
     }
     /**
-     * Sets the target property value. The target property
+     * Sets the target property value. The target of the operation.
      * @param value Value to set for the target property.
      */
     public void setTarget(@jakarta.annotation.Nullable final String value) {

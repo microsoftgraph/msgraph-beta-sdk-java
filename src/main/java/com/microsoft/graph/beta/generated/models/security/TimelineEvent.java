@@ -57,7 +57,7 @@ public class TimelineEvent implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. The date and time when the event occurred.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class TimelineEvent implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("eventDateTime");
     }
     /**
-     * Gets the eventDetails property value. The eventDetails property
+     * Gets the eventDetails property value. Additional details or context about the event.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class TimelineEvent implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("eventDetails");
     }
     /**
-     * Gets the eventResult property value. The eventResult property
+     * Gets the eventResult property value. The outcome or result of the event, such as delivery location or action taken.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class TimelineEvent implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("eventResult");
     }
     /**
-     * Gets the eventSource property value. The eventSource property
+     * Gets the eventSource property value. The origin or actor that triggered the event. The possible values are: system, admin, user, unknownFutureValue.
      * @return a {@link EventSource}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class TimelineEvent implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("eventSource");
     }
     /**
-     * Gets the eventThreats property value. The eventThreats property
+     * Gets the eventThreats property value. Collection of threats identified or associated with this event.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class TimelineEvent implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("eventThreats");
     }
     /**
-     * Gets the eventType property value. The eventType property
+     * Gets the eventType property value. The type of event that occurred. The possible values are: originalDelivery, systemTimeTravel, dynamicDelivery, userUrlClick, reprocessed, zap, quarantineRelease, air, unknown, unknownFutureValue.
      * @return a {@link TimelineEventType}
      */
     @jakarta.annotation.Nullable
@@ -159,42 +159,42 @@ public class TimelineEvent implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. The date and time when the event occurred.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("eventDateTime", value);
     }
     /**
-     * Sets the eventDetails property value. The eventDetails property
+     * Sets the eventDetails property value. Additional details or context about the event.
      * @param value Value to set for the eventDetails property.
      */
     public void setEventDetails(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("eventDetails", value);
     }
     /**
-     * Sets the eventResult property value. The eventResult property
+     * Sets the eventResult property value. The outcome or result of the event, such as delivery location or action taken.
      * @param value Value to set for the eventResult property.
      */
     public void setEventResult(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("eventResult", value);
     }
     /**
-     * Sets the eventSource property value. The eventSource property
+     * Sets the eventSource property value. The origin or actor that triggered the event. The possible values are: system, admin, user, unknownFutureValue.
      * @param value Value to set for the eventSource property.
      */
     public void setEventSource(@jakarta.annotation.Nullable final EventSource value) {
         this.backingStore.set("eventSource", value);
     }
     /**
-     * Sets the eventThreats property value. The eventThreats property
+     * Sets the eventThreats property value. Collection of threats identified or associated with this event.
      * @param value Value to set for the eventThreats property.
      */
     public void setEventThreats(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("eventThreats", value);
     }
     /**
-     * Sets the eventType property value. The eventType property
+     * Sets the eventType property value. The type of event that occurred. The possible values are: originalDelivery, systemTimeTravel, dynamicDelivery, userUrlClick, reprocessed, zap, quarantineRelease, air, unknown, unknownFutureValue.
      * @param value Value to set for the eventType property.
      */
     public void setEventType(@jakarta.annotation.Nullable final TimelineEventType value) {

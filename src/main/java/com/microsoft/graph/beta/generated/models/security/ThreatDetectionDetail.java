@@ -56,7 +56,7 @@ public class ThreatDetectionDetail implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the confidenceLevel property value. The confidenceLevel property
+     * Gets the confidenceLevel property value. Indicates the confidence level in the threat detection.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ThreatDetectionDetail implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the priorityAccountProtection property value. The priorityAccountProtection property
+     * Gets the priorityAccountProtection property value. Indicates if the account has priority protection enabled.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ThreatDetectionDetail implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("priorityAccountProtection");
     }
     /**
-     * Gets the threats property value. The threats property
+     * Gets the threats property value. Lists the detected threats.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ThreatDetectionDetail implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the confidenceLevel property value. The confidenceLevel property
+     * Sets the confidenceLevel property value. Indicates the confidence level in the threat detection.
      * @param value Value to set for the confidenceLevel property.
      */
     public void setConfidenceLevel(@jakarta.annotation.Nullable final String value) {
@@ -142,14 +142,14 @@ public class ThreatDetectionDetail implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the priorityAccountProtection property value. The priorityAccountProtection property
+     * Sets the priorityAccountProtection property value. Indicates if the account has priority protection enabled.
      * @param value Value to set for the priorityAccountProtection property.
      */
     public void setPriorityAccountProtection(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("priorityAccountProtection", value);
     }
     /**
-     * Sets the threats property value. The threats property
+     * Sets the threats property value. Lists the detected threats.
      * @param value Value to set for the threats property.
      */
     public void setThreats(@jakarta.annotation.Nullable final String value) {

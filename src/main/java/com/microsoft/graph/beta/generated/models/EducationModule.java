@@ -69,6 +69,7 @@ public class EducationModule extends Entity implements Parsable {
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("isPinned", (n) -> { this.setIsPinned(n.getBooleanValue()); });
+        deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("resources", (n) -> { this.setResources(n.getCollectionOfObjectValues(EducationModuleResource::createFromDiscriminatorValue)); });
@@ -77,12 +78,20 @@ public class EducationModule extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isPinned property value. Indicates whether the module is pinned or not.
+     * Gets the isPinned property value. Indicates whether the module is pinned.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getIsPinned() {
         return this.backingStore.get("isPinned");
+    }
+    /**
+     * Gets the languageTag property value. Specifies the language in which UI notifications for the assignment are displayed. If languageTag isn&apos;t provided, the default language is en-US. Optional.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLanguageTag() {
+        return this.backingStore.get("languageTag");
     }
     /**
      * Gets the lastModifiedBy property value. The last user that modified the module.
@@ -134,6 +143,7 @@ public class EducationModule extends Entity implements Parsable {
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeBooleanValue("isPinned", this.getIsPinned());
+        writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
     }
     /**
@@ -165,11 +175,18 @@ public class EducationModule extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isPinned property value. Indicates whether the module is pinned or not.
+     * Sets the isPinned property value. Indicates whether the module is pinned.
      * @param value Value to set for the isPinned property.
      */
     public void setIsPinned(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isPinned", value);
+    }
+    /**
+     * Sets the languageTag property value. Specifies the language in which UI notifications for the assignment are displayed. If languageTag isn&apos;t provided, the default language is en-US. Optional.
+     * @param value Value to set for the languageTag property.
+     */
+    public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("languageTag", value);
     }
     /**
      * Sets the lastModifiedBy property value. The last user that modified the module.

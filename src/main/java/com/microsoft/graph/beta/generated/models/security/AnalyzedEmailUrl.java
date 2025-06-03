@@ -95,7 +95,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the tenantAllowBlockListDetailInfo property value. The tenantAllowBlockListDetailInfo property
+     * Gets the tenantAllowBlockListDetailInfo property value. Details of entries in tenant allow/block list configured by tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class AnalyzedEmailUrl implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the tenantAllowBlockListDetailInfo property value. The tenantAllowBlockListDetailInfo property
+     * Sets the tenantAllowBlockListDetailInfo property value. Details of entries in tenant allow/block list configured by tenant.
      * @param value Value to set for the tenantAllowBlockListDetailInfo property.
      */
     public void setTenantAllowBlockListDetailInfo(@jakarta.annotation.Nullable final String value) {

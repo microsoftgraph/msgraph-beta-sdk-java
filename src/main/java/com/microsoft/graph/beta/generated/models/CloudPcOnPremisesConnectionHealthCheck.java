@@ -97,7 +97,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         return this.backingStore.get("endDateTime");
     }
     /**
-     * Gets the errorType property value. The type of error that occurred during this health check.
+     * Gets the errorType property value. The type of error that occurred during this health check. For the list of possible values, see cloudPcOnPremisesConnectionHealthCheckErrorType.
      * @return a {@link CloudPcOnPremisesConnectionHealthCheckErrorType}
      */
     @jakarta.annotation.Nullable
@@ -224,7 +224,7 @@ public class CloudPcOnPremisesConnectionHealthCheck implements AdditionalDataHol
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the errorType property value. The type of error that occurred during this health check.
+     * Sets the errorType property value. The type of error that occurred during this health check. For the list of possible values, see cloudPcOnPremisesConnectionHealthCheckErrorType.
      * @param value Value to set for the errorType property.
      */
     public void setErrorType(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionHealthCheckErrorType value) {

@@ -78,7 +78,7 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         return deserializerMap;
     }
     /**
-     * Gets the latestThreats property value. The latestThreats property
+     * Gets the latestThreats property value. Latest known threat on the email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the originalThreats property value. The originalThreats property
+     * Gets the originalThreats property value. Threats identified at the time of delivery.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the latestThreats property value. The latestThreats property
+     * Sets the latestThreats property value. Latest known threat on the email.
      * @param value Value to set for the latestThreats property.
      */
     public void setLatestThreats(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class AnalyzedEmailDeliveryDetail implements AdditionalDataHolder, Backed
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the originalThreats property value. The originalThreats property
+     * Sets the originalThreats property value. Threats identified at the time of delivery.
      * @param value Value to set for the originalThreats property.
      */
     public void setOriginalThreats(@jakarta.annotation.Nullable final String value) {

@@ -664,7 +664,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("tokenProtectionStatusDetails");
     }
     /**
-     * Gets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they&apos;re redeemed at resource providers.
+     * Gets the uniqueTokenIdentifier property value. A unique base64-encoded request identifier used to track tokens issued by Microsoft Entra ID as they&apos;re redeemed at resource providers.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1278,7 +1278,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("tokenProtectionStatusDetails", value);
     }
     /**
-     * Sets the uniqueTokenIdentifier property value. A unique base64 encoded request identifier used to track tokens issued by Microsoft Entra ID as they&apos;re redeemed at resource providers.
+     * Sets the uniqueTokenIdentifier property value. A unique base64-encoded request identifier used to track tokens issued by Microsoft Entra ID as they&apos;re redeemed at resource providers.
      * @param value Value to set for the uniqueTokenIdentifier property.
      */
     public void setUniqueTokenIdentifier(@jakarta.annotation.Nullable final String value) {

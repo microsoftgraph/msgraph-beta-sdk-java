@@ -25,7 +25,7 @@ public class ProfileSource extends Entity implements Parsable {
         return new ProfileSource();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Name of the profile source intended to inform users about the profile source name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -41,12 +41,13 @@ public class ProfileSource extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("kind", (n) -> { this.setKind(n.getStringValue()); });
+        deserializerMap.put("localizations", (n) -> { this.setLocalizations(n.getCollectionOfObjectValues(ProfileSourceLocalization::createFromDiscriminatorValue)); });
         deserializerMap.put("sourceId", (n) -> { this.setSourceId(n.getStringValue()); });
         deserializerMap.put("webUrl", (n) -> { this.setWebUrl(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the kind property value. The kind property
+     * Gets the kind property value. Type of the profile source.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +55,15 @@ public class ProfileSource extends Entity implements Parsable {
         return this.backingStore.get("kind");
     }
     /**
-     * Gets the sourceId property value. The sourceId property
+     * Gets the localizations property value. Alternative localized labels specified by an administrator.
+     * @return a {@link java.util.List<ProfileSourceLocalization>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ProfileSourceLocalization> getLocalizations() {
+        return this.backingStore.get("localizations");
+    }
+    /**
+     * Gets the sourceId property value. Profile source identifier used as an alternate key.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +71,7 @@ public class ProfileSource extends Entity implements Parsable {
         return this.backingStore.get("sourceId");
     }
     /**
-     * Gets the webUrl property value. The webUrl property
+     * Gets the webUrl property value. Web URL of the profile source that directs users to the page view of profile data.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -78,32 +87,40 @@ public class ProfileSource extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("kind", this.getKind());
+        writer.writeCollectionOfObjectValues("localizations", this.getLocalizations());
         writer.writeStringValue("sourceId", this.getSourceId());
         writer.writeStringValue("webUrl", this.getWebUrl());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Name of the profile source intended to inform users about the profile source name.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the kind property value. The kind property
+     * Sets the kind property value. Type of the profile source.
      * @param value Value to set for the kind property.
      */
     public void setKind(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("kind", value);
     }
     /**
-     * Sets the sourceId property value. The sourceId property
+     * Sets the localizations property value. Alternative localized labels specified by an administrator.
+     * @param value Value to set for the localizations property.
+     */
+    public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<ProfileSourceLocalization> value) {
+        this.backingStore.set("localizations", value);
+    }
+    /**
+     * Sets the sourceId property value. Profile source identifier used as an alternate key.
      * @param value Value to set for the sourceId property.
      */
     public void setSourceId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sourceId", value);
     }
     /**
-     * Sets the webUrl property value. The webUrl property
+     * Sets the webUrl property value. Web URL of the profile source that directs users to the page view of profile data.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

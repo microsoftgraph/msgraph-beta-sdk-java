@@ -65,7 +65,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the compromiseIndicators property value. The compromiseIndicators property
+     * Gets the compromiseIndicators property value. Represents indicators and its associated verdict that suggests whether an email is compromised.
      * @return a {@link java.util.List<CompromiseIndicator>}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("compromiseIndicators");
     }
     /**
-     * Gets the detonationBehaviourDetails property value. The detonationBehaviourDetails property
+     * Gets the detonationBehaviourDetails property value. Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation
      * @return a {@link DetonationBehaviourDetails}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("detonationObservables");
     }
     /**
-     * Gets the detonationScreenshotUri property value. The detonationScreenshotUri property
+     * Gets the detonationScreenshotUri property value. Show any screenshots that were captured during detonation. No screenshots are captured if the URL opens into a link that directly downloads a file. However, you see the downloaded file in the detonation chain.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -186,14 +186,14 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the compromiseIndicators property value. The compromiseIndicators property
+     * Sets the compromiseIndicators property value. Represents indicators and its associated verdict that suggests whether an email is compromised.
      * @param value Value to set for the compromiseIndicators property.
      */
     public void setCompromiseIndicators(@jakarta.annotation.Nullable final java.util.List<CompromiseIndicator> value) {
         this.backingStore.set("compromiseIndicators", value);
     }
     /**
-     * Sets the detonationBehaviourDetails property value. The detonationBehaviourDetails property
+     * Sets the detonationBehaviourDetails property value. Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation
      * @param value Value to set for the detonationBehaviourDetails property.
      */
     public void setDetonationBehaviourDetails(@jakarta.annotation.Nullable final DetonationBehaviourDetails value) {
@@ -214,7 +214,7 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("detonationObservables", value);
     }
     /**
-     * Sets the detonationScreenshotUri property value. The detonationScreenshotUri property
+     * Sets the detonationScreenshotUri property value. Show any screenshots that were captured during detonation. No screenshots are captured if the URL opens into a link that directly downloads a file. However, you see the downloaded file in the detonation chain.
      * @param value Value to set for the detonationScreenshotUri property.
      */
     public void setDetonationScreenshotUri(@jakarta.annotation.Nullable final String value) {

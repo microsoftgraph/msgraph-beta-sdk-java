@@ -59,19 +59,21 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/reports/userInsights/monthly/summary{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Summary of all usage insights on apps registered in the tenant for a specified period.
+     * Get a list of monthly  insightSummary objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @return a {@link InsightSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/monthlyuserinsightmetricsroot-list-summary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InsightSummaryCollectionResponse get() {
         return get(null);
     }
     /**
-     * Summary of all usage insights on apps registered in the tenant for a specified period.
+     * Get a list of monthly  insightSummary objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InsightSummaryCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/monthlyuserinsightmetricsroot-list-summary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InsightSummaryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, InsightSummaryCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Summary of all usage insights on apps registered in the tenant for a specified period.
+     * Get a list of monthly  insightSummary objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Summary of all usage insights on apps registered in the tenant for a specified period.
+     * Get a list of monthly  insightSummary objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class SummaryRequestBuilder extends BaseRequestBuilder {
         return new SummaryRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Summary of all usage insights on apps registered in the tenant for a specified period.
+     * Get a list of monthly  insightSummary objects on apps registered in your tenant configured for Microsoft Entra External ID for customers.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

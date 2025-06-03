@@ -64,7 +64,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Required.
+     * Gets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. Required.
      * @return a {@link java.util.List<ProcessContentMetadataBase>}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the protectedAppMetadata property value. The protectedAppMetadata property
+     * Gets the protectedAppMetadata property value. Metadata about the protected application making the request. Required.
      * @return a {@link ProtectedApplicationMetadata}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Required.
+     * Sets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. Required.
      * @param value Value to set for the contentEntries property.
      */
     public void setContentEntries(@jakarta.annotation.Nullable final java.util.List<ProcessContentMetadataBase> value) {
@@ -166,7 +166,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the protectedAppMetadata property value. The protectedAppMetadata property
+     * Sets the protectedAppMetadata property value. Metadata about the protected application making the request. Required.
      * @param value Value to set for the protectedAppMetadata property.
      */
     public void setProtectedAppMetadata(@jakarta.annotation.Nullable final ProtectedApplicationMetadata value) {

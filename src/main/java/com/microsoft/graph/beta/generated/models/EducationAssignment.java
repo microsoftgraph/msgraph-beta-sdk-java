@@ -171,6 +171,7 @@ public class EducationAssignment extends Entity implements Parsable {
         deserializerMap.put("gradingCategory", (n) -> { this.setGradingCategory(n.getObjectValue(EducationGradingCategory::createFromDiscriminatorValue)); });
         deserializerMap.put("gradingScheme", (n) -> { this.setGradingScheme(n.getObjectValue(EducationGradingScheme::createFromDiscriminatorValue)); });
         deserializerMap.put("instructions", (n) -> { this.setInstructions(n.getObjectValue(EducationItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("languageTag", (n) -> { this.setLanguageTag(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("moduleUrl", (n) -> { this.setModuleUrl(n.getStringValue()); });
@@ -214,6 +215,14 @@ public class EducationAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public EducationItemBody getInstructions() {
         return this.backingStore.get("instructions");
+    }
+    /**
+     * Gets the languageTag property value. Specifies the language in which UI notifications for the assignment are displayed. If languageTag isn&apos;t provided, the default language is en-US. Optional.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLanguageTag() {
+        return this.backingStore.get("languageTag");
     }
     /**
      * Gets the lastModifiedBy property value. Who last modified the assignment.
@@ -316,6 +325,7 @@ public class EducationAssignment extends Entity implements Parsable {
         writer.writeObjectValue("gradingCategory", this.getGradingCategory());
         writer.writeObjectValue("gradingScheme", this.getGradingScheme());
         writer.writeObjectValue("instructions", this.getInstructions());
+        writer.writeStringValue("languageTag", this.getLanguageTag());
         writer.writeStringValue("moduleUrl", this.getModuleUrl());
         writer.writeStringValue("notificationChannelUrl", this.getNotificationChannelUrl());
         writer.writeCollectionOfObjectValues("resources", this.getResources());
@@ -454,6 +464,13 @@ public class EducationAssignment extends Entity implements Parsable {
      */
     public void setInstructions(@jakarta.annotation.Nullable final EducationItemBody value) {
         this.backingStore.set("instructions", value);
+    }
+    /**
+     * Sets the languageTag property value. Specifies the language in which UI notifications for the assignment are displayed. If languageTag isn&apos;t provided, the default language is en-US. Optional.
+     * @param value Value to set for the languageTag property.
+     */
+    public void setLanguageTag(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("languageTag", value);
     }
     /**
      * Sets the lastModifiedBy property value. Who last modified the assignment.

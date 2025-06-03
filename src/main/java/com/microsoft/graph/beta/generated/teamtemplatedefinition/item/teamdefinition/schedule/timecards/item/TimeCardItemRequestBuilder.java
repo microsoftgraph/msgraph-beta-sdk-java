@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TimeCard;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.schedule.timecards.item.clockout.ClockOutRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.schedule.timecards.item.confirm.ConfirmRequestBuilder;
+import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.schedule.timecards.item.confirmforuser.ConfirmForUserRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.schedule.timecards.item.endbreak.EndBreakRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.schedule.timecards.item.startbreak.StartBreakRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -39,6 +40,14 @@ public class TimeCardItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ConfirmRequestBuilder confirm() {
         return new ConfirmRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the confirmForUser method.
+     * @return a {@link ConfirmForUserRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConfirmForUserRequestBuilder confirmForUser() {
+        return new ConfirmForUserRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the endBreak method.

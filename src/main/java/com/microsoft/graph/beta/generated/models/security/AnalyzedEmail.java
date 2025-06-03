@@ -59,7 +59,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("bulkComplaintLevel");
     }
     /**
-     * Gets the clientType property value. The clientType property
+     * Gets the clientType property value. Shows the type of client that sent the message (for example, REST).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("distributionList");
     }
     /**
-     * Gets the dlpRules property value. The dlpRules property
+     * Gets the dlpRules property value. Data loss prevention rules configured in purview.
      * @return a {@link java.util.List<AnalyzedEmailDlpRuleInfo>}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the forwardingDetail property value. The forwardingDetail property
+     * Gets the forwardingDetail property value. Email smtp forwarding details.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("forwardingDetail");
     }
     /**
-     * Gets the inboundConnectorFormattedName property value. The inboundConnectorFormattedName property
+     * Gets the inboundConnectorFormattedName property value. Custom instructions name that defines organizational mail flow and how the email was routed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -265,7 +265,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("policyAction");
     }
     /**
-     * Gets the policyType property value. The policyType property
+     * Gets the policyType property value. Type of policy configured that defines the delivery action on email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -273,7 +273,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("policyType");
     }
     /**
-     * Gets the primaryOverrideSource property value. The primaryOverrideSource property
+     * Gets the primaryOverrideSource property value. Shows the organization or user setting that altered the intended delivery location of the message (allowed instead of blocked, or blocked instead of allowed).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -281,7 +281,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("primaryOverrideSource");
     }
     /**
-     * Gets the recipientDetail property value. The recipientDetail property
+     * Gets the recipientDetail property value. Details of the recipients.
      * @return a {@link AnalyzedEmailRecipientDetail}
      */
     @jakarta.annotation.Nullable
@@ -337,7 +337,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("subject");
     }
     /**
-     * Gets the threatDetectionDetails property value. The threatDetectionDetails property
+     * Gets the threatDetectionDetails property value. Information about threats detected in the email.
      * @return a {@link java.util.List<ThreatDetectionDetail>}
      */
     @jakarta.annotation.Nullable
@@ -353,7 +353,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         return this.backingStore.get("threatTypes");
     }
     /**
-     * Gets the timelineEvents property value. The timelineEvents property
+     * Gets the timelineEvents property value. Delivery and post-delivery events that happened to the email.
      * @return a {@link java.util.List<TimelineEvent>}
      */
     @jakarta.annotation.Nullable
@@ -442,7 +442,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("bulkComplaintLevel", value);
     }
     /**
-     * Sets the clientType property value. The clientType property
+     * Sets the clientType property value. Shows the type of client that sent the message (for example, REST).
      * @param value Value to set for the clientType property.
      */
     public void setClientType(@jakarta.annotation.Nullable final String value) {
@@ -477,7 +477,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("distributionList", value);
     }
     /**
-     * Sets the dlpRules property value. The dlpRules property
+     * Sets the dlpRules property value. Data loss prevention rules configured in purview.
      * @param value Value to set for the dlpRules property.
      */
     public void setDlpRules(@jakarta.annotation.Nullable final java.util.List<AnalyzedEmailDlpRuleInfo> value) {
@@ -498,14 +498,14 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("exchangeTransportRules", value);
     }
     /**
-     * Sets the forwardingDetail property value. The forwardingDetail property
+     * Sets the forwardingDetail property value. Email smtp forwarding details.
      * @param value Value to set for the forwardingDetail property.
      */
     public void setForwardingDetail(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("forwardingDetail", value);
     }
     /**
-     * Sets the inboundConnectorFormattedName property value. The inboundConnectorFormattedName property
+     * Sets the inboundConnectorFormattedName property value. Custom instructions name that defines organizational mail flow and how the email was routed.
      * @param value Value to set for the inboundConnectorFormattedName property.
      */
     public void setInboundConnectorFormattedName(@jakarta.annotation.Nullable final String value) {
@@ -582,21 +582,21 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("policyAction", value);
     }
     /**
-     * Sets the policyType property value. The policyType property
+     * Sets the policyType property value. Type of policy configured that defines the delivery action on email.
      * @param value Value to set for the policyType property.
      */
     public void setPolicyType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("policyType", value);
     }
     /**
-     * Sets the primaryOverrideSource property value. The primaryOverrideSource property
+     * Sets the primaryOverrideSource property value. Shows the organization or user setting that altered the intended delivery location of the message (allowed instead of blocked, or blocked instead of allowed).
      * @param value Value to set for the primaryOverrideSource property.
      */
     public void setPrimaryOverrideSource(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("primaryOverrideSource", value);
     }
     /**
-     * Sets the recipientDetail property value. The recipientDetail property
+     * Sets the recipientDetail property value. Details of the recipients.
      * @param value Value to set for the recipientDetail property.
      */
     public void setRecipientDetail(@jakarta.annotation.Nullable final AnalyzedEmailRecipientDetail value) {
@@ -645,7 +645,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("subject", value);
     }
     /**
-     * Sets the threatDetectionDetails property value. The threatDetectionDetails property
+     * Sets the threatDetectionDetails property value. Information about threats detected in the email.
      * @param value Value to set for the threatDetectionDetails property.
      */
     public void setThreatDetectionDetails(@jakarta.annotation.Nullable final java.util.List<ThreatDetectionDetail> value) {
@@ -659,7 +659,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         this.backingStore.set("threatTypes", value);
     }
     /**
-     * Sets the timelineEvents property value. The timelineEvents property
+     * Sets the timelineEvents property value. Delivery and post-delivery events that happened to the email.
      * @param value Value to set for the timelineEvents property.
      */
     public void setTimelineEvents(@jakarta.annotation.Nullable final java.util.List<TimelineEvent> value) {

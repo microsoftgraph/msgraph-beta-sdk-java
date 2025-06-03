@@ -26,7 +26,7 @@ public class ProtectedApplicationMetadata extends IntegratedApplicationMetadata 
         return new ProtectedApplicationMetadata();
     }
     /**
-     * Gets the applicationLocation property value. For internal use only. Don&apos;t use.
+     * Gets the applicationLocation property value. The Entra client (application) ID. Required.
      * @return a {@link PolicyLocation}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ProtectedApplicationMetadata extends IntegratedApplicationMetadata 
         writer.writeObjectValue("applicationLocation", this.getApplicationLocation());
     }
     /**
-     * Sets the applicationLocation property value. For internal use only. Don&apos;t use.
+     * Sets the applicationLocation property value. The Entra client (application) ID. Required.
      * @param value Value to set for the applicationLocation property.
      */
     public void setApplicationLocation(@jakarta.annotation.Nullable final PolicyLocation value) {

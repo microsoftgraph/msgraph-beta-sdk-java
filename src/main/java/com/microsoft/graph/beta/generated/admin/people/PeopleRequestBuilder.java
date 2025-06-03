@@ -4,6 +4,8 @@ import com.microsoft.graph.beta.admin.people.iteminsights.ItemInsightsRequestBui
 import com.microsoft.graph.beta.admin.people.namepronunciation.NamePronunciationRequestBuilder;
 import com.microsoft.graph.beta.admin.people.profilecardproperties.ProfileCardPropertiesRequestBuilder;
 import com.microsoft.graph.beta.admin.people.profilepropertysettings.ProfilePropertySettingsRequestBuilder;
+import com.microsoft.graph.beta.admin.people.profilesources.ProfileSourcesRequestBuilder;
+import com.microsoft.graph.beta.admin.people.profilesourceswithsourceid.ProfileSourcesWithSourceIdRequestBuilder;
 import com.microsoft.graph.beta.admin.people.pronouns.PronounsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.PeopleAdminSettings;
@@ -56,6 +58,14 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProfilePropertySettingsRequestBuilder profilePropertySettings() {
         return new ProfilePropertySettingsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the profileSources property of the microsoft.graph.peopleAdminSettings entity.
+     * @return a {@link ProfileSourcesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProfileSourcesRequestBuilder profileSources() {
+        return new ProfileSourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the pronouns property of the microsoft.graph.peopleAdminSettings entity.
@@ -147,6 +157,16 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, PeopleAdminSettings::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the profileSources property of the microsoft.graph.peopleAdminSettings entity.
+     * @param sourceId Alternate key of profileSource
+     * @return a {@link ProfileSourcesWithSourceIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProfileSourcesWithSourceIdRequestBuilder profileSourcesWithSourceId(@jakarta.annotation.Nonnull final String sourceId) {
+        Objects.requireNonNull(sourceId);
+        return new ProfileSourcesWithSourceIdRequestBuilder(pathParameters, requestAdapter, sourceId);
     }
     /**
      * Delete navigation property people for admin
