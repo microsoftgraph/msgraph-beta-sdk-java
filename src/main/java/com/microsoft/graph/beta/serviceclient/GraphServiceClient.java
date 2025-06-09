@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.serviceclient;
 import com.microsoft.graph.core.CoreConstants;
 import com.microsoft.graph.core.authentication.AzureIdentityAuthenticationProvider;
 import com.microsoft.graph.core.requests.BaseGraphRequestAdapter;
+import com.microsoft.graph.core.requests.BaseGraphRequestAdapter.Clouds;
 import com.microsoft.graph.core.requests.BatchRequestBuilder;
 import com.microsoft.graph.core.requests.options.GraphClientOption;
 import com.microsoft.graph.core.requests.IBaseClient;
@@ -64,6 +65,17 @@ public class GraphServiceClient extends com.microsoft.graph.beta.BaseGraphServic
      */
     public GraphServiceClient(@Nonnull OkHttpClient client) {
         this(new AnonymousAuthenticationProvider(), client);
+    }
+    /**
+     * Instantiate the GraphServiceClient using an AuthenticationProvider, Cloud and OkHttpClient.
+     * @param authenticationProvider The AuthenticationProvider for this GraphServiceClient.
+     * @param client The OkHttpClient for the GraphServiceClient.
+     * @param clouds The Clouds for the GraphServiceClient.
+     *
+     */
+    @SuppressWarnings("LambdaLast")
+    public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider, @Nonnull OkHttpClient client, @Nonnull Clouds clouds) {
+        this(new BaseGraphRequestAdapter(authenticationProvider, clouds, "v1.0", client));
     }
     /**
      * Instantiate the GraphServiceClient using a TokenCredential and Scopes.
