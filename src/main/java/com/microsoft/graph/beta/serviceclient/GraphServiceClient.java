@@ -66,15 +66,16 @@ public class GraphServiceClient extends com.microsoft.graph.beta.BaseGraphServic
     public GraphServiceClient(@Nonnull OkHttpClient client) {
         this(new AnonymousAuthenticationProvider(), client);
     }
-     /**
-     * Instantiate the GraphServiceClient using an AuthenticationProvider, baseUrl and OkHttpClient.
+    /**
+     * Instantiate the GraphServiceClient using an AuthenticationProvider, Cloud and OkHttpClient.
      * @param authenticationProvider The AuthenticationProvider for this GraphServiceClient.
      * @param client The OkHttpClient for the GraphServiceClient.
      * @param clouds The Clouds for the GraphServiceClient.
      *
      */
+    @SuppressWarnings("LambdaLast")
     public GraphServiceClient(@Nonnull AuthenticationProvider authenticationProvider, @Nonnull OkHttpClient client, @Nonnull Clouds clouds) {
-        this(new BaseGraphRequestAdapter(authenticationProvider, clouds, "v1.0", getGraphClientOptions()));
+        this(new BaseGraphRequestAdapter(authenticationProvider, clouds, "v1.0", client));
     }
     /**
      * Instantiate the GraphServiceClient using a TokenCredential and Scopes.
