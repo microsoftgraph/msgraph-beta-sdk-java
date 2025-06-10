@@ -19,8 +19,6 @@ import com.microsoft.graph.beta.users.item.manageddevices.item.disable.DisableRe
 import com.microsoft.graph.beta.users.item.manageddevices.item.disablelostmode.DisableLostModeRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.enablelostmode.EnableLostModeRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.enrollnowaction.EnrollNowActionRequestBuilder;
-import com.microsoft.graph.beta.users.item.manageddevices.item.getcloudpcremoteactionresults.GetCloudPcRemoteActionResultsRequestBuilder;
-import com.microsoft.graph.beta.users.item.manageddevices.item.getcloudpcreviewstatus.GetCloudPcReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.getfilevaultkey.GetFileVaultKeyRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.getnoncompliantsettings.GetNonCompliantSettingsRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.initiatedeviceattestation.InitiateDeviceAttestationRequestBuilder;
@@ -47,7 +45,6 @@ import com.microsoft.graph.beta.users.item.manageddevices.item.rotatefilevaultke
 import com.microsoft.graph.beta.users.item.manageddevices.item.rotatelocaladminpassword.RotateLocalAdminPasswordRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.securitybaselinestates.SecurityBaselineStatesRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.sendcustomnotificationtocompanyportal.SendCustomNotificationToCompanyPortalRequestBuilder;
-import com.microsoft.graph.beta.users.item.manageddevices.item.setcloudpcreviewstatus.SetCloudPcReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.setdevicename.SetDeviceNameRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.shutdown.ShutDownRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.syncdevice.SyncDeviceRequestBuilder;
@@ -211,22 +208,6 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public EnrollNowActionRequestBuilder enrollNowAction() {
         return new EnrollNowActionRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getCloudPcRemoteActionResults method.
-     * @return a {@link GetCloudPcRemoteActionResultsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetCloudPcRemoteActionResultsRequestBuilder getCloudPcRemoteActionResults() {
-        return new GetCloudPcRemoteActionResultsRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getCloudPcReviewStatus method.
-     * @return a {@link GetCloudPcReviewStatusRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetCloudPcReviewStatusRequestBuilder getCloudPcReviewStatus() {
-        return new GetCloudPcReviewStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getFileVaultKey method.
@@ -437,14 +418,6 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return new SendCustomNotificationToCompanyPortalRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to call the setCloudPcReviewStatus method.
-     * @return a {@link SetCloudPcReviewStatusRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public SetCloudPcReviewStatusRequestBuilder setCloudPcReviewStatus() {
-        return new SetCloudPcReviewStatusRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to call the setDeviceName method.
      * @return a {@link SetDeviceNameRequestBuilder}
      */
@@ -622,6 +595,7 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**

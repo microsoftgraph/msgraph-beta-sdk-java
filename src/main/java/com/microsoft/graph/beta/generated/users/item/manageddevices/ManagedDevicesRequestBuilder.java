@@ -4,9 +4,6 @@ import com.microsoft.graph.beta.models.ManagedDevice;
 import com.microsoft.graph.beta.models.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.manageddevices.appdiagnosticswithupn.AppDiagnosticsWithUpnRequestBuilder;
-import com.microsoft.graph.beta.users.item.manageddevices.bulkreprovisioncloudpc.BulkReprovisionCloudPcRequestBuilder;
-import com.microsoft.graph.beta.users.item.manageddevices.bulkrestorecloudpc.BulkRestoreCloudPcRequestBuilder;
-import com.microsoft.graph.beta.users.item.manageddevices.bulksetcloudpcreviewstatus.BulkSetCloudPcReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.downloadappdiagnostics.DownloadAppDiagnosticsRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.downloadpowerliftappdiagnostic.DownloadPowerliftAppDiagnosticRequestBuilder;
@@ -32,30 +29,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to call the bulkReprovisionCloudPc method.
-     * @return a {@link BulkReprovisionCloudPcRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public BulkReprovisionCloudPcRequestBuilder bulkReprovisionCloudPc() {
-        return new BulkReprovisionCloudPcRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the bulkRestoreCloudPc method.
-     * @return a {@link BulkRestoreCloudPcRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public BulkRestoreCloudPcRequestBuilder bulkRestoreCloudPc() {
-        return new BulkRestoreCloudPcRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the bulkSetCloudPcReviewStatus method.
-     * @return a {@link BulkSetCloudPcReviewStatusRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public BulkSetCloudPcReviewStatusRequestBuilder bulkSetCloudPcReviewStatus() {
-        return new BulkSetCloudPcReviewStatusRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}

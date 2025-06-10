@@ -48,7 +48,10 @@ public enum AppCategory implements ValuedEnum {
     WebsiteMonitoring("websiteMonitoring"),
     GenerativeAi("generativeAi"),
     Unknown("unknown"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    AiModelProvider("aiModelProvider"),
+    McpServer("mcpServer"),
+    ClientAiApp("clientAiApp");
     public final String value;
     AppCategory(final String value) {
         this.value = value;
@@ -103,6 +106,9 @@ public enum AppCategory implements ValuedEnum {
             case "generativeAi": return GenerativeAi;
             case "unknown": return Unknown;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "aiModelProvider": return AiModelProvider;
+            case "mcpServer": return McpServer;
+            case "clientAiApp": return ClientAiApp;
             default: return null;
         }
     }
