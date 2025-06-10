@@ -55,7 +55,7 @@ public class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      * @return a {@link MobileAppRelationship}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileAppRelationship}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -118,10 +118,11 @@ public class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder 
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -129,7 +130,7 @@ public class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -181,7 +182,7 @@ public class MobileAppRelationshipItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The set of direct relationships for this app.
+     * List of relationships for this mobile app.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

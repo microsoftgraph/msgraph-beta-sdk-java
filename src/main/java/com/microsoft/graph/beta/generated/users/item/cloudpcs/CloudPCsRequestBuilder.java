@@ -3,7 +3,6 @@ package com.microsoft.graph.beta.users.item.cloudpcs;
 import com.microsoft.graph.beta.models.CloudPC;
 import com.microsoft.graph.beta.models.CloudPCCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.users.item.cloudpcs.bulkresize.BulkResizeRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.getprovisionedcloudpcswithgroupidwithserviceplanid.GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.CloudPCItemRequestBuilder;
@@ -26,14 +25,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPCsRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to call the bulkResize method.
-     * @return a {@link BulkResizeRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public BulkResizeRequestBuilder bulkResize() {
-        return new BulkResizeRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}

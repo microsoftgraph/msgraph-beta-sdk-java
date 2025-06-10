@@ -1,9 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.comanageddevices;
 
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.appdiagnosticswithupn.AppDiagnosticsWithUpnRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.comanageddevices.bulkreprovisioncloudpc.BulkReprovisionCloudPcRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.comanageddevices.bulkrestorecloudpc.BulkRestoreCloudPcRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.comanageddevices.bulksetcloudpcreviewstatus.BulkSetCloudPcReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.count.CountRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.downloadappdiagnostics.DownloadAppDiagnosticsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.downloadpowerliftappdiagnostic.DownloadPowerliftAppDiagnosticRequestBuilder;
@@ -32,30 +29,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to call the bulkReprovisionCloudPc method.
-     * @return a {@link BulkReprovisionCloudPcRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public BulkReprovisionCloudPcRequestBuilder bulkReprovisionCloudPc() {
-        return new BulkReprovisionCloudPcRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the bulkRestoreCloudPc method.
-     * @return a {@link BulkRestoreCloudPcRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public BulkRestoreCloudPcRequestBuilder bulkRestoreCloudPc() {
-        return new BulkRestoreCloudPcRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the bulkSetCloudPcReviewStatus method.
-     * @return a {@link BulkSetCloudPcReviewStatusRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public BulkSetCloudPcReviewStatusRequestBuilder bulkSetCloudPcReviewStatus() {
-        return new BulkSetCloudPcReviewStatusRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
