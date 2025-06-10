@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [6.47.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.46.0...v6.47.0) (2025-06-10)
+
+
+### Features
+
+* added new constructor for GraphServiceClient ([#1177](https://github.com/microsoftgraph/msgraph-beta-sdk-java/issues/1177)) ([fc47452](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/fc474525188b802c97ec30c6ad702e5e41ec1326))
+* **generation:** update request builders and models ([bad1e07](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/bad1e078321f24bee5f2a7643595b00a16eab7d4))
+
 ## [6.46.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.45.0...v6.46.0) (2025-06-03)
 
 
