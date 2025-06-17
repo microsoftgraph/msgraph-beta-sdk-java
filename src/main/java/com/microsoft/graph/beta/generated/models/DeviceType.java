@@ -54,6 +54,10 @@ public enum DeviceType implements ValuedEnum {
     ChromeOS("chromeOS"),
     /** Linux device. */
     Linux("linux"),
+    /** Indicates managed device is running on visionOS operating system. */
+    VisionOS("visionOS"),
+    /** Indicates managed device is running on tvOS operating system. */
+    TvOS("tvOS"),
     /** Blackberry. */
     Blackberry("blackberry"),
     /** Palm. */
@@ -95,6 +99,8 @@ public enum DeviceType implements ValuedEnum {
             case "androidnGMS": return AndroidnGMS;
             case "chromeOS": return ChromeOS;
             case "linux": return Linux;
+            case "visionOS": return VisionOS;
+            case "tvOS": return TvOS;
             case "blackberry": return Blackberry;
             case "palm": return Palm;
             case "unknown": return Unknown;
