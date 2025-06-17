@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.devicemanagement.zebrafotaconnector.approvefotaa
 import com.microsoft.graph.beta.devicemanagement.zebrafotaconnector.connect.ConnectRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.zebrafotaconnector.disconnect.DisconnectRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.zebrafotaconnector.hasactivedeployments.HasActiveDeploymentsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.zebrafotaconnector.retrievezebrafotadevicemodels.RetrieveZebraFotaDeviceModelsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.ZebraFotaConnector;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -55,6 +56,14 @@ public class ZebraFotaConnectorRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HasActiveDeploymentsRequestBuilder hasActiveDeployments() {
         return new HasActiveDeploymentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveZebraFotaDeviceModels method.
+     * @return a {@link RetrieveZebraFotaDeviceModelsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveZebraFotaDeviceModelsRequestBuilder retrieveZebraFotaDeviceModels() {
+        return new RetrieveZebraFotaDeviceModelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ZebraFotaConnectorRequestBuilder} and sets the default values.

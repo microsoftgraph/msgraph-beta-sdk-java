@@ -25,12 +25,21 @@ public class RemoteDesktopSecurityConfiguration extends Entity implements Parsab
         return new RemoteDesktopSecurityConfiguration();
     }
     /**
+     * Gets the approvedClientApps property value. The approvedClientApps property
+     * @return a {@link java.util.List<ApprovedClientApp>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ApprovedClientApp> getApprovedClientApps() {
+        return this.backingStore.get("approvedClientApps");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("approvedClientApps", (n) -> { this.setApprovedClientApps(n.getCollectionOfObjectValues(ApprovedClientApp::createFromDiscriminatorValue)); });
         deserializerMap.put("isRemoteDesktopProtocolEnabled", (n) -> { this.setIsRemoteDesktopProtocolEnabled(n.getBooleanValue()); });
         deserializerMap.put("targetDeviceGroups", (n) -> { this.setTargetDeviceGroups(n.getCollectionOfObjectValues(TargetDeviceGroup::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -58,8 +67,16 @@ public class RemoteDesktopSecurityConfiguration extends Entity implements Parsab
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("approvedClientApps", this.getApprovedClientApps());
         writer.writeBooleanValue("isRemoteDesktopProtocolEnabled", this.getIsRemoteDesktopProtocolEnabled());
         writer.writeCollectionOfObjectValues("targetDeviceGroups", this.getTargetDeviceGroups());
+    }
+    /**
+     * Sets the approvedClientApps property value. The approvedClientApps property
+     * @param value Value to set for the approvedClientApps property.
+     */
+    public void setApprovedClientApps(@jakarta.annotation.Nullable final java.util.List<ApprovedClientApp> value) {
+        this.backingStore.set("approvedClientApps", value);
     }
     /**
      * Sets the isRemoteDesktopProtocolEnabled property value. Determines if Microsoft Entra ID RDS authentication protocol for RDP is enabled.

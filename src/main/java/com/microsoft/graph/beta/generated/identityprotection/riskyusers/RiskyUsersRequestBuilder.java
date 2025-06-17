@@ -87,21 +87,21 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityProtection/riskyUsers{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Retrieve the properties and relationships of a collection of riskyUser objects.
+     * Retrieve the properties and relationships of a riskyUser object.
      * @return a {@link RiskyUserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskyusers-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskyusers-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyUserCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve the properties and relationships of a collection of riskyUser objects.
+     * Retrieve the properties and relationships of a riskyUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RiskyUserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/riskyusers-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/riskyusers-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RiskyUserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -136,7 +136,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RiskyUser::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve the properties and relationships of a collection of riskyUser objects.
+     * Retrieve the properties and relationships of a riskyUser object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -144,7 +144,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve the properties and relationships of a collection of riskyUser objects.
+     * Retrieve the properties and relationships of a riskyUser object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -190,7 +190,7 @@ public class RiskyUsersRequestBuilder extends BaseRequestBuilder {
         return new RiskyUsersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve the properties and relationships of a collection of riskyUser objects.
+     * Retrieve the properties and relationships of a riskyUser object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

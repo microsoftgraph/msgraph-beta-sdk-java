@@ -27,7 +27,11 @@ public enum DeviceManagementConfigurationPlatforms implements ValuedEnum {
     /** Indicates that the settings contained in associated configuration applies to the android operating system corporate owned devices. */
     AndroidEnterprise("androidEnterprise"),
     /** Indicates that the settings contained in associated configuration applies to the android open source operating system. */
-    Aosp("aosp");
+    Aosp("aosp"),
+    /** Indicates that the settings contained in associated configuration applies to visionOS platform. */
+    VisionOS("visionOS"),
+    /** Indicates that the settings contained in associated configuration applies to the tvOS platform. */
+    TvOS("tvOS");
     public final String value;
     DeviceManagementConfigurationPlatforms(final String value) {
         this.value = value;
@@ -48,6 +52,8 @@ public enum DeviceManagementConfigurationPlatforms implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "androidEnterprise": return AndroidEnterprise;
             case "aosp": return Aosp;
+            case "visionOS": return VisionOS;
+            case "tvOS": return TvOS;
             default: return null;
         }
     }

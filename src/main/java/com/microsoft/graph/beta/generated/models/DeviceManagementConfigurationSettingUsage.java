@@ -14,6 +14,8 @@ public enum DeviceManagementConfigurationSettingUsage implements ValuedEnum {
     Configuration("configuration"),
     /** Compliance setting type. */
     Compliance("compliance"),
+    /** Reusable Setting */
+    ReusableSetting("reusableSetting"),
     /** Evolvable enumeration sentinel value. Do not use. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -29,6 +31,7 @@ public enum DeviceManagementConfigurationSettingUsage implements ValuedEnum {
             case "none": return None;
             case "configuration": return Configuration;
             case "compliance": return Compliance;
+            case "reusableSetting": return ReusableSetting;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

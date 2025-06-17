@@ -33,7 +33,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
         return this.backingStore.get("allowUserRequestsForAppAccess");
     }
     /**
-     * Gets the customAppSettings property value. The customAppSettings property
+     * Gets the customAppSettings property value. The settings for all custom apps in the tenant.
      * @return a {@link CustomAppSettings}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class TeamsAppSettings extends Entity implements Parsable {
         this.backingStore.set("allowUserRequestsForAppAccess", value);
     }
     /**
-     * Sets the customAppSettings property value. The customAppSettings property
+     * Sets the customAppSettings property value. The settings for all custom apps in the tenant.
      * @param value Value to set for the customAppSettings property.
      */
     public void setCustomAppSettings(@jakarta.annotation.Nullable final CustomAppSettings value) {

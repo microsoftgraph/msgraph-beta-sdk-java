@@ -35,6 +35,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("roleScopeTags", (n) -> { this.setRoleScopeTags(n.getCollectionOfObjectValues(RoleScopeTag::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -45,6 +46,14 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
     @jakarta.annotation.Nullable
     public java.util.List<String> getMembers() {
         return this.backingStore.get("members");
+    }
+    /**
+     * Gets the roleScopeTagIds property value. Indicates the set of role scope tag IDs for the role assignment. These scope tags will limit the visibility of any Intune resources to those that match any of the scope tags in this collection.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getRoleScopeTagIds() {
+        return this.backingStore.get("roleScopeTagIds");
     }
     /**
      * Gets the roleScopeTags property value. Indicates the set of scope tags for the role assignment. These scope tags will limit the visibility of any Intune resources to those that match any of the scope tags in this collection.
@@ -62,6 +71,7 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("members", this.getMembers());
+        writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
         writer.writeCollectionOfObjectValues("roleScopeTags", this.getRoleScopeTags());
     }
     /**
@@ -70,6 +80,13 @@ public class DeviceAndAppManagementRoleAssignment extends RoleAssignment impleme
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("members", value);
+    }
+    /**
+     * Sets the roleScopeTagIds property value. Indicates the set of role scope tag IDs for the role assignment. These scope tags will limit the visibility of any Intune resources to those that match any of the scope tags in this collection.
+     * @param value Value to set for the roleScopeTagIds property.
+     */
+    public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("roleScopeTagIds", value);
     }
     /**
      * Sets the roleScopeTags property value. Indicates the set of scope tags for the role assignment. These scope tags will limit the visibility of any Intune resources to those that match any of the scope tags in this collection.
