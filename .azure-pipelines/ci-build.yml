@@ -65,19 +65,19 @@ extends:
                   Copy-Item $(downloadLocalProperties.secureFilePath) local.properties -Verbose
                 displayName: Copy secring and 'local.properties'
 
-              - script: ./gradlew --no-daemon publishToMavenLocal -PmavenCentralPublishingEnabled=true -PmavenCentralSnapshotArtifactSuffix=""
+              - script: ./gradlew publishToMavenLocal -PmavenCentralPublishingEnabled=true -PmavenCentralSnapshotArtifactSuffix=""
                 displayName: Publish to local Maven for verification
                 condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
 
-              - script: ./gradlew --no-daemon publishToMavenLocal -PmavenCentralPublishingEnabled=true
+              - script: ./gradlew publishToMavenLocal -PmavenCentralPublishingEnabled=true
                 displayName: Publish to local Maven for verification
                 condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
 
-              - script: ./gradlew --no-daemon publishMavenPublicationToADORepository -PmavenCentralPublishingEnabled=true -PmavenCentralSnapshotArtifactSuffix=""
+              - script: ./gradlew publishMavenPublicationToADORepository -PmavenCentralPublishingEnabled=true -PmavenCentralSnapshotArtifactSuffix=""
                 displayName: Publish to local Maven ADO for ESRP
                 condition: contains(variables['build.sourceBranch'], 'refs/tags/v')
 
-              - script: ./gradlew --no-daemon publishMavenPublicationToADORepository -PmavenCentralPublishingEnabled=true
+              - script: ./gradlew publishMavenPublicationToADORepository -PmavenCentralPublishingEnabled=true
                 displayName: Publish to local Maven ADO for ESRP
                 condition: not(contains(variables['build.sourceBranch'], 'refs/tags/v'))
 
