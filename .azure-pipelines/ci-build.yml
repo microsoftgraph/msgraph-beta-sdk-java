@@ -37,7 +37,7 @@ extends:
         jobs:
           - job: build
             pool:
-              name: Azure-Pipelines-1ESPT-ExDShared
+              name: 1es-ubuntu-latest-m
               os: linux
               image: ubuntu-latest
             #TODO maybe missing template context with sdl baselines?
