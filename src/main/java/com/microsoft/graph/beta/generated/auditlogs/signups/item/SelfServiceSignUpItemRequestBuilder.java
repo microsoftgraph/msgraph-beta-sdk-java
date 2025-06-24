@@ -55,19 +55,21 @@ public class SelfServiceSignUpItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get signUps from auditLogs
+     * Retrieve a specific Microsoft Entra External ID user selfServiceSignUp event for your tenant.  
      * @return a {@link SelfServiceSignUp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/selfservicesignup-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SelfServiceSignUp get() {
         return get(null);
     }
     /**
-     * Get signUps from auditLogs
+     * Retrieve a specific Microsoft Entra External ID user selfServiceSignUp event for your tenant.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SelfServiceSignUp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/selfservicesignup-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SelfServiceSignUp get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class SelfServiceSignUpItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get signUps from auditLogs
+     * Retrieve a specific Microsoft Entra External ID user selfServiceSignUp event for your tenant.  
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class SelfServiceSignUpItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get signUps from auditLogs
+     * Retrieve a specific Microsoft Entra External ID user selfServiceSignUp event for your tenant.  
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class SelfServiceSignUpItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get signUps from auditLogs
+     * Retrieve a specific Microsoft Entra External ID user selfServiceSignUp event for your tenant.  
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.security.datasecurityandgovernance.protectionsc
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TenantProtectionScopeContainer;
+import com.microsoft.graph.beta.security.datasecurityandgovernance.protectionscopes.compute.ComputeRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProtectionScopesRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the compute method.
+     * @return a {@link ComputeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ComputeRequestBuilder compute() {
+        return new ComputeRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link ProtectionScopesRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

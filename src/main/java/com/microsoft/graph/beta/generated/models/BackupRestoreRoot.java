@@ -49,6 +49,14 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("driveProtectionUnitsBulkAdditionJobs");
     }
     /**
+     * Gets the emailNotificationsSetting property value. The email notification settings in the tenant.
+     * @return a {@link EmailNotificationsSetting}
+     */
+    @jakarta.annotation.Nullable
+    public EmailNotificationsSetting getEmailNotificationsSetting() {
+        return this.backingStore.get("emailNotificationsSetting");
+    }
+    /**
      * Gets the exchangeProtectionPolicies property value. The list of Exchange protection policies in the tenant.
      * @return a {@link java.util.List<ExchangeProtectionPolicy>}
      */
@@ -74,6 +82,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         deserializerMap.put("driveInclusionRules", (n) -> { this.setDriveInclusionRules(n.getCollectionOfObjectValues(DriveProtectionRule::createFromDiscriminatorValue)); });
         deserializerMap.put("driveProtectionUnits", (n) -> { this.setDriveProtectionUnits(n.getCollectionOfObjectValues(DriveProtectionUnit::createFromDiscriminatorValue)); });
         deserializerMap.put("driveProtectionUnitsBulkAdditionJobs", (n) -> { this.setDriveProtectionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(DriveProtectionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
+        deserializerMap.put("emailNotificationsSetting", (n) -> { this.setEmailNotificationsSetting(n.getObjectValue(EmailNotificationsSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeProtectionPolicies", (n) -> { this.setExchangeProtectionPolicies(n.getCollectionOfObjectValues(ExchangeProtectionPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("exchangeRestoreSessions", (n) -> { this.setExchangeRestoreSessions(n.getCollectionOfObjectValues(ExchangeRestoreSession::createFromDiscriminatorValue)); });
         deserializerMap.put("mailboxInclusionRules", (n) -> { this.setMailboxInclusionRules(n.getCollectionOfObjectValues(MailboxProtectionRule::createFromDiscriminatorValue)); });
@@ -232,6 +241,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("driveInclusionRules", this.getDriveInclusionRules());
         writer.writeCollectionOfObjectValues("driveProtectionUnits", this.getDriveProtectionUnits());
         writer.writeCollectionOfObjectValues("driveProtectionUnitsBulkAdditionJobs", this.getDriveProtectionUnitsBulkAdditionJobs());
+        writer.writeObjectValue("emailNotificationsSetting", this.getEmailNotificationsSetting());
         writer.writeCollectionOfObjectValues("exchangeProtectionPolicies", this.getExchangeProtectionPolicies());
         writer.writeCollectionOfObjectValues("exchangeRestoreSessions", this.getExchangeRestoreSessions());
         writer.writeCollectionOfObjectValues("mailboxInclusionRules", this.getMailboxInclusionRules());
@@ -271,6 +281,13 @@ public class BackupRestoreRoot extends Entity implements Parsable {
      */
     public void setDriveProtectionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<DriveProtectionUnitsBulkAdditionJob> value) {
         this.backingStore.set("driveProtectionUnitsBulkAdditionJobs", value);
+    }
+    /**
+     * Sets the emailNotificationsSetting property value. The email notification settings in the tenant.
+     * @param value Value to set for the emailNotificationsSetting property.
+     */
+    public void setEmailNotificationsSetting(@jakarta.annotation.Nullable final EmailNotificationsSetting value) {
+        this.backingStore.set("emailNotificationsSetting", value);
     }
     /**
      * Sets the exchangeProtectionPolicies property value. The list of Exchange protection policies in the tenant.
