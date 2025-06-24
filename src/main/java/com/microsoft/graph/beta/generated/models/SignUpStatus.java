@@ -48,7 +48,7 @@ public class SignUpStatus implements AdditionalDataHolder, BackedModel, Parsable
         return value;
     }
     /**
-     * Gets the additionalDetails property value. The additionalDetails property
+     * Gets the additionalDetails property value. Provides additional details on the sign-up activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class SignUpStatus implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore;
     }
     /**
-     * Gets the errorCode property value. The errorCode property
+     * Gets the errorCode property value. Provides the 5-6 digit error code that&apos;s generated during a sign-up failure.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class SignUpStatus implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("errorCode");
     }
     /**
-     * Gets the failureReason property value. The failureReason property
+     * Gets the failureReason property value. Provides the error message or the reason for failure for the corresponding sign-up activity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class SignUpStatus implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the additionalDetails property value. The additionalDetails property
+     * Sets the additionalDetails property value. Provides additional details on the sign-up activity.
      * @param value Value to set for the additionalDetails property.
      */
     public void setAdditionalDetails(@jakarta.annotation.Nullable final String value) {
@@ -135,14 +135,14 @@ public class SignUpStatus implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the errorCode property value. The errorCode property
+     * Sets the errorCode property value. Provides the 5-6 digit error code that&apos;s generated during a sign-up failure.
      * @param value Value to set for the errorCode property.
      */
     public void setErrorCode(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("errorCode", value);
     }
     /**
-     * Sets the failureReason property value. The failureReason property
+     * Sets the failureReason property value. Provides the error message or the reason for failure for the corresponding sign-up activity.
      * @param value Value to set for the failureReason property.
      */
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {

@@ -112,7 +112,7 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("provisioning");
     }
     /**
-     * Gets the signIns property value. The signIns property
+     * Gets the signIns property value. Represents Microsoft Entra sign-in events. Read-only. Nullable.
      * @return a {@link java.util.List<SignIn>}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("signIns");
     }
     /**
-     * Gets the signUps property value. The signUps property
+     * Gets the signUps property value. Represents sign up events in Microsoft Entra External ID. Read-only. Nullable.
      * @return a {@link java.util.List<SelfServiceSignUp>}
      */
     @jakarta.annotation.Nullable
@@ -193,14 +193,14 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("provisioning", value);
     }
     /**
-     * Sets the signIns property value. The signIns property
+     * Sets the signIns property value. Represents Microsoft Entra sign-in events. Read-only. Nullable.
      * @param value Value to set for the signIns property.
      */
     public void setSignIns(@jakarta.annotation.Nullable final java.util.List<SignIn> value) {
         this.backingStore.set("signIns", value);
     }
     /**
-     * Sets the signUps property value. The signUps property
+     * Sets the signUps property value. Represents sign up events in Microsoft Entra External ID. Read-only. Nullable.
      * @param value Value to set for the signUps property.
      */
     public void setSignUps(@jakarta.annotation.Nullable final java.util.List<SelfServiceSignUp> value) {

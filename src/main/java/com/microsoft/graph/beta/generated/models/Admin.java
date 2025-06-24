@@ -65,6 +65,14 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
+     * Gets the configurationManagement property value. The configurationManagement property
+     * @return a {@link ConfigurationManagement}
+     */
+    @jakarta.annotation.Nullable
+    public ConfigurationManagement getConfigurationManagement() {
+        return this.backingStore.get("configurationManagement");
+    }
+    /**
      * Gets the dynamics property value. The dynamics property
      * @return a {@link AdminDynamics}
      */
@@ -102,8 +110,9 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
         deserializerMap.put("appsAndServices", (n) -> { this.setAppsAndServices(n.getObjectValue(AdminAppsAndServices::createFromDiscriminatorValue)); });
+        deserializerMap.put("configurationManagement", (n) -> { this.setConfigurationManagement(n.getObjectValue(ConfigurationManagement::createFromDiscriminatorValue)); });
         deserializerMap.put("dynamics", (n) -> { this.setDynamics(n.getObjectValue(AdminDynamics::createFromDiscriminatorValue)); });
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
         deserializerMap.put("entra", (n) -> { this.setEntra(n.getObjectValue(Entra::createFromDiscriminatorValue)); });
@@ -207,6 +216,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("appsAndServices", this.getAppsAndServices());
+        writer.writeObjectValue("configurationManagement", this.getConfigurationManagement());
         writer.writeObjectValue("dynamics", this.getDynamics());
         writer.writeObjectValue("edge", this.getEdge());
         writer.writeObjectValue("entra", this.getEntra());
@@ -244,6 +254,13 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the configurationManagement property value. The configurationManagement property
+     * @param value Value to set for the configurationManagement property.
+     */
+    public void setConfigurationManagement(@jakarta.annotation.Nullable final ConfigurationManagement value) {
+        this.backingStore.set("configurationManagement", value);
     }
     /**
      * Sets the dynamics property value. The dynamics property

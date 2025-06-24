@@ -68,7 +68,7 @@ public class KeyValuePair implements AdditionalDataHolder, BackedModel, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the name property value. Name for this key-value pair
+     * Gets the name property value. Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class KeyValuePair implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the value property value. Value for this key-value pair
+     * Gets the value property value. Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class KeyValuePair implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. Name for this key-value pair
+     * Sets the name property value. Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -132,7 +132,7 @@ public class KeyValuePair implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the value property value. Value for this key-value pair
+     * Sets the value property value. Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

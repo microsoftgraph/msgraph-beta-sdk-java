@@ -76,7 +76,7 @@ public class SignUpIdentity implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the signUpIdentifier property value. The signUpIdentifier property
+     * Gets the signUpIdentifier property value. The identification that the user is trying to utilize to sign up.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class SignUpIdentity implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("signUpIdentifier");
     }
     /**
-     * Gets the signUpIdentifierType property value. The signUpIdentifierType property
+     * Gets the signUpIdentifierType property value. The type of sign-up the user initiated. Possible values include:  emailAddress, unknownFutureValue. Supports $filter (eq) on the emailAddress.
      * @return a {@link SignUpIdentifierType}
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class SignUpIdentity implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the signUpIdentifier property value. The signUpIdentifier property
+     * Sets the signUpIdentifier property value. The identification that the user is trying to utilize to sign up.
      * @param value Value to set for the signUpIdentifier property.
      */
     public void setSignUpIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("signUpIdentifier", value);
     }
     /**
-     * Sets the signUpIdentifierType property value. The signUpIdentifierType property
+     * Sets the signUpIdentifierType property value. The type of sign-up the user initiated. Possible values include:  emailAddress, unknownFutureValue. Supports $filter (eq) on the emailAddress.
      * @param value Value to set for the signUpIdentifierType property.
      */
     public void setSignUpIdentifierType(@jakarta.annotation.Nullable final SignUpIdentifierType value) {
