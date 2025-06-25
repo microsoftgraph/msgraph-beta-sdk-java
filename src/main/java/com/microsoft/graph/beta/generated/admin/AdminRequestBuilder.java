@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.admin;
 
 import com.microsoft.graph.beta.admin.appsandservices.AppsAndServicesRequestBuilder;
+import com.microsoft.graph.beta.admin.configurationmanagement.ConfigurationManagementRequestBuilder;
 import com.microsoft.graph.beta.admin.dynamics.DynamicsRequestBuilder;
 import com.microsoft.graph.beta.admin.edge.EdgeRequestBuilder;
 import com.microsoft.graph.beta.admin.entra.EntraRequestBuilder;
@@ -41,6 +42,14 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AppsAndServicesRequestBuilder appsAndServices() {
         return new AppsAndServicesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the configurationManagement property of the microsoft.graph.admin entity.
+     * @return a {@link ConfigurationManagementRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConfigurationManagementRequestBuilder configurationManagement() {
+        return new ConfigurationManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the dynamics property of the microsoft.graph.admin entity.

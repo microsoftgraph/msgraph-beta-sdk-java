@@ -72,14 +72,23 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("contentEntries");
     }
     /**
+     * Gets the deviceMetadata property value. The deviceMetadata property
+     * @return a {@link DeviceMetadata}
+     */
+    @jakarta.annotation.Nullable
+    public DeviceMetadata getDeviceMetadata() {
+        return this.backingStore.get("deviceMetadata");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("activityMetadata", (n) -> { this.setActivityMetadata(n.getObjectValue(ActivityMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("contentEntries", (n) -> { this.setContentEntries(n.getCollectionOfObjectValues(ProcessContentMetadataBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceMetadata", (n) -> { this.setDeviceMetadata(n.getObjectValue(DeviceMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("integratedAppMetadata", (n) -> { this.setIntegratedAppMetadata(n.getObjectValue(IntegratedApplicationMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("protectedAppMetadata", (n) -> { this.setProtectedAppMetadata(n.getObjectValue(ProtectedApplicationMetadata::createFromDiscriminatorValue)); });
@@ -117,6 +126,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         Objects.requireNonNull(writer);
         writer.writeObjectValue("activityMetadata", this.getActivityMetadata());
         writer.writeCollectionOfObjectValues("contentEntries", this.getContentEntries());
+        writer.writeObjectValue("deviceMetadata", this.getDeviceMetadata());
         writer.writeObjectValue("integratedAppMetadata", this.getIntegratedAppMetadata());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("protectedAppMetadata", this.getProtectedAppMetadata());
@@ -150,6 +160,13 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
      */
     public void setContentEntries(@jakarta.annotation.Nullable final java.util.List<ProcessContentMetadataBase> value) {
         this.backingStore.set("contentEntries", value);
+    }
+    /**
+     * Sets the deviceMetadata property value. The deviceMetadata property
+     * @param value Value to set for the deviceMetadata property.
+     */
+    public void setDeviceMetadata(@jakarta.annotation.Nullable final DeviceMetadata value) {
+        this.backingStore.set("deviceMetadata", value);
     }
     /**
      * Sets the integratedAppMetadata property value. The integratedAppMetadata property

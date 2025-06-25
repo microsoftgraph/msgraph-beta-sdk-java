@@ -40,6 +40,7 @@ public class Dictionary implements AdditionalDataHolder, BackedModel, Parsable {
                 case "#microsoft.graph.customAppScopeAttributesDictionary": return new CustomAppScopeAttributesDictionary();
                 case "#microsoft.graph.customMetadataDictionary": return new CustomMetadataDictionary();
                 case "#microsoft.graph.fileStorageContainerCustomPropertyDictionary": return new FileStorageContainerCustomPropertyDictionary();
+                case "#microsoft.graph.openComplexDictionaryType": return new OpenComplexDictionaryType();
                 case "#microsoft.graph.partner.security.additionalDataDictionary": return new AdditionalDataDictionary();
                 case "#microsoft.graph.plannerFormsDictionary": return new PlannerFormsDictionary();
                 case "#microsoft.graph.resultTemplateDictionary": return new ResultTemplateDictionary();
