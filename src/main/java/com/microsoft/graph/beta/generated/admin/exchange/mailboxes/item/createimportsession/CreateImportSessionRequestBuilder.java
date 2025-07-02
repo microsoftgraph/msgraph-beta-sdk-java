@@ -36,7 +36,7 @@ public class CreateImportSessionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/createImportSession", rawUrl);
     }
     /**
-     * Create a session to import an Exchange mailbox item using its FastTransfer stream (FTS) format.
+     * Create a session to import an Exchange mailbox item that was exported using the exportItems API.
      * @return a {@link MailboxItemImportSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -49,7 +49,7 @@ public class CreateImportSessionRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Create a session to import an Exchange mailbox item using its FastTransfer stream (FTS) format.
+     * Create a session to import an Exchange mailbox item that was exported using the exportItems API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxItemImportSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -66,7 +66,7 @@ public class CreateImportSessionRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxItemImportSession::createFromDiscriminatorValue);
     }
     /**
-     * Create a session to import an Exchange mailbox item using its FastTransfer stream (FTS) format.
+     * Create a session to import an Exchange mailbox item that was exported using the exportItems API.
      * @return a {@link RequestInformation}
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
@@ -77,7 +77,7 @@ public class CreateImportSessionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Create a session to import an Exchange mailbox item using its FastTransfer stream (FTS) format.
+     * Create a session to import an Exchange mailbox item that was exported using the exportItems API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated

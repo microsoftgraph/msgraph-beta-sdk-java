@@ -45,7 +45,7 @@ public class ProcessFileMetadata extends ProcessContentMetadataBase implements P
         return deserializerMap;
     }
     /**
-     * Gets the ownerId property value. The unique identifier (for example, Object ID or UPN) of the owner of the file.
+     * Gets the ownerId property value. The unique identifier (for example, Entra User ID or UPN) of the owner of the file.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class ProcessFileMetadata extends ProcessContentMetadataBase implements P
         this.backingStore.set("customProperties", value);
     }
     /**
-     * Sets the ownerId property value. The unique identifier (for example, Object ID or UPN) of the owner of the file.
+     * Sets the ownerId property value. The unique identifier (for example, Entra User ID or UPN) of the owner of the file.
      * @param value Value to set for the ownerId property.
      */
     public void setOwnerId(@jakarta.annotation.Nullable final String value) {

@@ -93,21 +93,21 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/sensitivityLabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List the sensitivity labels available to a specific user.
+     * List the sensitivity labels available for the entire tenant.
      * @return a {@link SensitivityLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userdatasecurityandgovernance-list-sensitivitylabels?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantdatasecurityandgovernance-list-sensitivitylabels?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelCollectionResponse get() {
         return get(null);
     }
     /**
-     * List the sensitivity labels available to a specific user.
+     * List the sensitivity labels available for the entire tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SensitivityLabelCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/userdatasecurityandgovernance-list-sensitivitylabels?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantdatasecurityandgovernance-list-sensitivitylabels?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SensitivityLabelCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -142,7 +142,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SensitivityLabel::createFromDiscriminatorValue);
     }
     /**
-     * List the sensitivity labels available to a specific user.
+     * List the sensitivity labels available for the entire tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -150,7 +150,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List the sensitivity labels available to a specific user.
+     * List the sensitivity labels available for the entire tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -196,7 +196,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
         return new SensitivityLabelsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List the sensitivity labels available to a specific user.
+     * List the sensitivity labels available for the entire tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

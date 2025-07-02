@@ -57,7 +57,7 @@ public class NotificationRecipients implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the customRecipients property value. A list of users or groups that receive notifications.
+     * Gets the customRecipients property value. A list of users or groups that receive notifications. Only specify this property when role is set to custom.
      * @return a {@link java.util.List<EmailIdentity>}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class NotificationRecipients implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the customRecipients property value. A list of users or groups that receive notifications.
+     * Sets the customRecipients property value. A list of users or groups that receive notifications. Only specify this property when role is set to custom.
      * @param value Value to set for the customRecipients property.
      */
     public void setCustomRecipients(@jakarta.annotation.Nullable final java.util.List<EmailIdentity> value) {

@@ -15,7 +15,8 @@ public enum UsageAuthMethod implements ValuedEnum {
     AlternateMobileCall("alternateMobileCall"),
     Fido("fido"),
     AppPassword("appPassword"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ExternalAuthMethod("externalAuthMethod");
     public final String value;
     UsageAuthMethod(final String value) {
         this.value = value;
@@ -37,6 +38,7 @@ public enum UsageAuthMethod implements ValuedEnum {
             case "fido": return Fido;
             case "appPassword": return AppPassword;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "externalAuthMethod": return ExternalAuthMethod;
             default: return null;
         }
     }

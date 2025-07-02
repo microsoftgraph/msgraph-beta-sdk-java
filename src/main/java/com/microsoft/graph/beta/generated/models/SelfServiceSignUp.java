@@ -81,7 +81,7 @@ public class SelfServiceSignUp extends Entity implements Parsable {
         deserializerMap.put("signUpIdentityProvider", (n) -> { this.setSignUpIdentityProvider(n.getStringValue()); });
         deserializerMap.put("signUpStage", (n) -> { this.setSignUpStage(n.getEnumValue(SignUpStage::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignUpStatus::createFromDiscriminatorValue)); });
-        deserializerMap.put("userSnapshot", (n) -> { this.setUserSnapshot(n.getObjectValue(CiamUserSnapshot::createFromDiscriminatorValue)); });
+        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -117,12 +117,12 @@ public class SelfServiceSignUp extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the userSnapshot property value. The userSnapshot property
-     * @return a {@link CiamUserSnapshot}
+     * Gets the userId property value. The identifier of the user object created during the sign-up.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public CiamUserSnapshot getUserSnapshot() {
-        return this.backingStore.get("userSnapshot");
+    public String getUserId() {
+        return this.backingStore.get("userId");
     }
     /**
      * Serializes information the current object
@@ -140,7 +140,7 @@ public class SelfServiceSignUp extends Entity implements Parsable {
         writer.writeStringValue("signUpIdentityProvider", this.getSignUpIdentityProvider());
         writer.writeEnumValue("signUpStage", this.getSignUpStage());
         writer.writeObjectValue("status", this.getStatus());
-        writer.writeObjectValue("userSnapshot", this.getUserSnapshot());
+        writer.writeStringValue("userId", this.getUserId());
     }
     /**
      * Sets the appDisplayName property value. App name displayed in the Microsoft Entra admin center.  Supports $filter (eq, startsWith).
@@ -206,10 +206,10 @@ public class SelfServiceSignUp extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the userSnapshot property value. The userSnapshot property
-     * @param value Value to set for the userSnapshot property.
+     * Sets the userId property value. The identifier of the user object created during the sign-up.
+     * @param value Value to set for the userId property.
      */
-    public void setUserSnapshot(@jakarta.annotation.Nullable final CiamUserSnapshot value) {
-        this.backingStore.set("userSnapshot", value);
+    public void setUserId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("userId", value);
     }
 }

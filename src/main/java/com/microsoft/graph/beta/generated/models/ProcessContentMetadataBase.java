@@ -73,7 +73,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         return this.backingStore.get("content");
     }
     /**
-     * Gets the correlationId property value. An GUID identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation).
+     * Gets the correlationId property value. An identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -204,7 +204,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the correlationId property value. An GUID identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation).
+     * Sets the correlationId property value. An identifier used to group multiple related content entries (for example, different parts of the same file upload, messages in a conversation).
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {

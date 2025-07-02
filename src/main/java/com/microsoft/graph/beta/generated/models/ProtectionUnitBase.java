@@ -71,6 +71,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("offboardRequestedDateTime", (n) -> { this.setOffboardRequestedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
         deserializerMap.put("protectionSources", (n) -> { this.setProtectionSources(n.getEnumSetValue(ProtectionSource::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProtectionUnitStatus::forValue)); });
@@ -91,6 +92,14 @@ public class ProtectionUnitBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the offboardRequestedDateTime property value. The time when protection unit offboard was requested.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getOffboardRequestedDateTime() {
+        return this.backingStore.get("offboardRequestedDateTime");
     }
     /**
      * Gets the policyId property value. The unique identifier of the protection policy based on which protection unit was created.
@@ -128,6 +137,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         writer.writeObjectValue("error", this.getError());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeOffsetDateTimeValue("offboardRequestedDateTime", this.getOffboardRequestedDateTime());
         writer.writeStringValue("policyId", this.getPolicyId());
         writer.writeEnumSetValue("protectionSources", this.getProtectionSources());
         writer.writeEnumValue("status", this.getStatus());
@@ -166,6 +176,13 @@ public class ProtectionUnitBase extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the offboardRequestedDateTime property value. The time when protection unit offboard was requested.
+     * @param value Value to set for the offboardRequestedDateTime property.
+     */
+    public void setOffboardRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("offboardRequestedDateTime", value);
     }
     /**
      * Sets the policyId property value. The unique identifier of the protection policy based on which protection unit was created.

@@ -69,10 +69,11 @@ public class DeviceMetadata implements AdditionalDataHolder, BackedModel, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("deviceType", (n) -> { this.setDeviceType(n.getStringValue()); });
         deserializerMap.put("ipAddress", (n) -> { this.setIpAddress(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("operatingSystemSpecifications", (n) -> { this.setOperatingSystemSpecifications(n.getObjectValue(OperatingSystemSpecifications::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -92,6 +93,14 @@ public class DeviceMetadata implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the operatingSystemSpecifications property value. Details about the operating system platform and version.
+     * @return a {@link OperatingSystemSpecifications}
+     */
+    @jakarta.annotation.Nullable
+    public OperatingSystemSpecifications getOperatingSystemSpecifications() {
+        return this.backingStore.get("operatingSystemSpecifications");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -100,6 +109,7 @@ public class DeviceMetadata implements AdditionalDataHolder, BackedModel, Parsab
         writer.writeStringValue("deviceType", this.getDeviceType());
         writer.writeStringValue("ipAddress", this.getIpAddress());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("operatingSystemSpecifications", this.getOperatingSystemSpecifications());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -137,5 +147,12 @@ public class DeviceMetadata implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the operatingSystemSpecifications property value. Details about the operating system platform and version.
+     * @param value Value to set for the operatingSystemSpecifications property.
+     */
+    public void setOperatingSystemSpecifications(@jakarta.annotation.Nullable final OperatingSystemSpecifications value) {
+        this.backingStore.set("operatingSystemSpecifications", value);
     }
 }

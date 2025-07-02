@@ -64,7 +64,7 @@ public class ExportItemResponse implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("changeKey");
     }
     /**
-     * Gets the data property value. Data that represents an item in a base64 encoded FastTransfer stream format.
+     * Gets the data property value. Data that represents an item in a base64 encoded opaque stream.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class ExportItemResponse implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("changeKey", value);
     }
     /**
-     * Sets the data property value. Data that represents an item in a base64 encoded FastTransfer stream format.
+     * Sets the data property value. Data that represents an item in a base64 encoded opaque stream.
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final byte[] value) {

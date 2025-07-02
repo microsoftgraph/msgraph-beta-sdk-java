@@ -36,7 +36,7 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/dataSecurityAndGovernance/processContent", rawUrl);
     }
     /**
-     * Process content against data protection policies in the context of the current user. 
+     * Process content against data protection policies in the context of the current, or specified, user.
      * @param body The request body
      * @return a {@link ProcessContentResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Process content against data protection policies in the context of the current user. 
+     * Process content against data protection policies in the context of the current, or specified, user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProcessContentResponse}
@@ -63,7 +63,7 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProcessContentResponse::createFromDiscriminatorValue);
     }
     /**
-     * Process content against data protection policies in the context of the current user. 
+     * Process content against data protection policies in the context of the current, or specified, user.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Process content against data protection policies in the context of the current user. 
+     * Process content against data protection policies in the context of the current, or specified, user.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

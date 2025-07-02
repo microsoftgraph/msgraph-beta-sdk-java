@@ -77,7 +77,7 @@ public class MailboxItemImportSession implements AdditionalDataHolder, BackedMod
         return deserializerMap;
     }
     /**
-     * Gets the importUrl property value. The URL endpoint that accepts POST requests for FastTransfer stream format of the item.
+     * Gets the importUrl property value. The URL endpoint that accepts POST requests for uploading a mailbox item exported using exportItems.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class MailboxItemImportSession implements AdditionalDataHolder, BackedMod
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the importUrl property value. The URL endpoint that accepts POST requests for FastTransfer stream format of the item.
+     * Sets the importUrl property value. The URL endpoint that accepts POST requests for uploading a mailbox item exported using exportItems.
      * @param value Value to set for the importUrl property.
      */
     public void setImportUrl(@jakarta.annotation.Nullable final String value) {
