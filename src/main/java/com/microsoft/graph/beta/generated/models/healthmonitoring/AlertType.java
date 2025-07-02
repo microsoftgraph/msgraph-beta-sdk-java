@@ -10,7 +10,8 @@ public enum AlertType implements ValuedEnum {
     ManagedDeviceSignInFailure("managedDeviceSignInFailure"),
     CompliantDeviceSignInFailure("compliantDeviceSignInFailure"),
     UnknownFutureValue("unknownFutureValue"),
-    ConditionalAccessBlockedSignIn("conditionalAccessBlockedSignIn");
+    ConditionalAccessBlockedSignIn("conditionalAccessBlockedSignIn"),
+    SamlSignInFailure("samlSignInFailure");
     public final String value;
     AlertType(final String value) {
         this.value = value;
@@ -27,6 +28,7 @@ public enum AlertType implements ValuedEnum {
             case "compliantDeviceSignInFailure": return CompliantDeviceSignInFailure;
             case "unknownFutureValue": return UnknownFutureValue;
             case "conditionalAccessBlockedSignIn": return ConditionalAccessBlockedSignIn;
+            case "samlSignInFailure": return SamlSignInFailure;
             default: return null;
         }
     }

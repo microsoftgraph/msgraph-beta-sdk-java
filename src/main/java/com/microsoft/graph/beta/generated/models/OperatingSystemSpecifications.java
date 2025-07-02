@@ -11,28 +11,28 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CiamUserSnapshot implements AdditionalDataHolder, BackedModel, Parsable {
+public class OperatingSystemSpecifications implements AdditionalDataHolder, BackedModel, Parsable {
     /**
      * Stores model information.
      */
     @jakarta.annotation.Nonnull
     protected BackingStore backingStore;
     /**
-     * Instantiates a new {@link CiamUserSnapshot} and sets the default values.
+     * Instantiates a new {@link OperatingSystemSpecifications} and sets the default values.
      */
-    public CiamUserSnapshot() {
+    public OperatingSystemSpecifications() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link CiamUserSnapshot}
+     * @return a {@link OperatingSystemSpecifications}
      */
     @jakarta.annotation.Nonnull
-    public static CiamUserSnapshot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static OperatingSystemSpecifications createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new CiamUserSnapshot();
+        return new OperatingSystemSpecifications();
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -61,9 +61,10 @@ public class CiamUserSnapshot implements AdditionalDataHolder, BackedModel, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
+        deserializerMap.put("operatingSystemPlatform", (n) -> { this.setOperatingSystemPlatform(n.getStringValue()); });
+        deserializerMap.put("operatingSystemVersion", (n) -> { this.setOperatingSystemVersion(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -75,12 +76,20 @@ public class CiamUserSnapshot implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the operatingSystemPlatform property value. The platform of the operating system (for example, &apos;Windows&apos;).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public String getUserId() {
-        return this.backingStore.get("userId");
+    public String getOperatingSystemPlatform() {
+        return this.backingStore.get("operatingSystemPlatform");
+    }
+    /**
+     * Gets the operatingSystemVersion property value. The version string of the operating system.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOperatingSystemVersion() {
+        return this.backingStore.get("operatingSystemVersion");
     }
     /**
      * Serializes information the current object
@@ -89,7 +98,8 @@ public class CiamUserSnapshot implements AdditionalDataHolder, BackedModel, Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeStringValue("userId", this.getUserId());
+        writer.writeStringValue("operatingSystemPlatform", this.getOperatingSystemPlatform());
+        writer.writeStringValue("operatingSystemVersion", this.getOperatingSystemVersion());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -115,10 +125,17 @@ public class CiamUserSnapshot implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the userId property value. The userId property
-     * @param value Value to set for the userId property.
+     * Sets the operatingSystemPlatform property value. The platform of the operating system (for example, &apos;Windows&apos;).
+     * @param value Value to set for the operatingSystemPlatform property.
      */
-    public void setUserId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("userId", value);
+    public void setOperatingSystemPlatform(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("operatingSystemPlatform", value);
+    }
+    /**
+     * Sets the operatingSystemVersion property value. The version string of the operating system.
+     * @param value Value to set for the operatingSystemVersion property.
+     */
+    public void setOperatingSystemVersion(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("operatingSystemVersion", value);
     }
 }

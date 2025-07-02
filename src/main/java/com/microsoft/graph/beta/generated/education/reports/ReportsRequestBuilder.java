@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.education.reports;
 
 import com.microsoft.graph.beta.education.reports.readingassignmentsubmissions.ReadingAssignmentSubmissionsRequestBuilder;
 import com.microsoft.graph.beta.education.reports.reflectcheckinresponses.ReflectCheckInResponsesRequestBuilder;
+import com.microsoft.graph.beta.education.reports.speakerassignmentsubmissions.SpeakerAssignmentSubmissionsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.ReportsRoot;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -37,6 +38,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ReflectCheckInResponsesRequestBuilder reflectCheckInResponses() {
         return new ReflectCheckInResponsesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the speakerAssignmentSubmissions property of the microsoft.graph.reportsRoot entity.
+     * @return a {@link SpeakerAssignmentSubmissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SpeakerAssignmentSubmissionsRequestBuilder speakerAssignmentSubmissions() {
+        return new SpeakerAssignmentSubmissionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.

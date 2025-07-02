@@ -77,7 +77,7 @@ public class ProcessContentResponse implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the policyActions property value. A collection of policy actions (like DLP actions) triggered by the processed content. NOTE: Currently, the only policyAction supported in processContentResponse is &apos;_restrictAccess&apos;
+     * Gets the policyActions property value. A collection of policy actions (like DLP actions) triggered by the processed content. NOTE: Currently, the only policy action supported in for this resource type is restrictAccess.
      * @return a {@link java.util.List<DlpActionInfo>}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class ProcessContentResponse implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the policyActions property value. A collection of policy actions (like DLP actions) triggered by the processed content. NOTE: Currently, the only policyAction supported in processContentResponse is &apos;_restrictAccess&apos;
+     * Sets the policyActions property value. A collection of policy actions (like DLP actions) triggered by the processed content. NOTE: Currently, the only policy action supported in for this resource type is restrictAccess.
      * @param value Value to set for the policyActions property.
      */
     public void setPolicyActions(@jakarta.annotation.Nullable final java.util.List<DlpActionInfo> value) {

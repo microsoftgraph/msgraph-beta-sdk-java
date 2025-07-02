@@ -38,9 +38,19 @@ public class DlpActionInfo implements AdditionalDataHolder, BackedModel, Parsabl
             switch (mappingValue) {
                 case "#microsoft.graph.blockAccessAction": return new BlockAccessAction();
                 case "#microsoft.graph.notifyUserAction": return new NotifyUserAction();
+                case "#microsoft.graph.restrictAccessAction": return new RestrictAccessAction();
+                case "#microsoft.graph.restrictAccessActionBase": return new RestrictAccessActionBase();
             }
         }
         return new DlpActionInfo();
+    }
+    /**
+     * Gets the action property value. The type of DLP action. Possible value is restrictAccessAction.
+     * @return a {@link DlpAction}
+     */
+    @jakarta.annotation.Nullable
+    public DlpAction getAction() {
+        return this.backingStore.get("action");
     }
     /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -69,7 +79,8 @@ public class DlpActionInfo implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(DlpAction::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -87,8 +98,16 @@ public class DlpActionInfo implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("action", this.getAction());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the action property value. The type of DLP action. Possible value is restrictAccessAction.
+     * @param value Value to set for the action property.
+     */
+    public void setAction(@jakarta.annotation.Nullable final DlpAction value) {
+        this.backingStore.set("action", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.

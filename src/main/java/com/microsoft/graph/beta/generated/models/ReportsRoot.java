@@ -33,6 +33,7 @@ public class ReportsRoot extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("readingAssignmentSubmissions", (n) -> { this.setReadingAssignmentSubmissions(n.getCollectionOfObjectValues(ReadingAssignmentSubmission::createFromDiscriminatorValue)); });
         deserializerMap.put("reflectCheckInResponses", (n) -> { this.setReflectCheckInResponses(n.getCollectionOfObjectValues(ReflectCheckInResponse::createFromDiscriminatorValue)); });
+        deserializerMap.put("speakerAssignmentSubmissions", (n) -> { this.setSpeakerAssignmentSubmissions(n.getCollectionOfObjectValues(SpeakerAssignmentSubmission::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -52,6 +53,14 @@ public class ReportsRoot extends Entity implements Parsable {
         return this.backingStore.get("reflectCheckInResponses");
     }
     /**
+     * Gets the speakerAssignmentSubmissions property value. Details of submitted speaker assignments.
+     * @return a {@link java.util.List<SpeakerAssignmentSubmission>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SpeakerAssignmentSubmission> getSpeakerAssignmentSubmissions() {
+        return this.backingStore.get("speakerAssignmentSubmissions");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -60,6 +69,7 @@ public class ReportsRoot extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("readingAssignmentSubmissions", this.getReadingAssignmentSubmissions());
         writer.writeCollectionOfObjectValues("reflectCheckInResponses", this.getReflectCheckInResponses());
+        writer.writeCollectionOfObjectValues("speakerAssignmentSubmissions", this.getSpeakerAssignmentSubmissions());
     }
     /**
      * Sets the readingAssignmentSubmissions property value. The readingAssignmentSubmissions property
@@ -74,5 +84,12 @@ public class ReportsRoot extends Entity implements Parsable {
      */
     public void setReflectCheckInResponses(@jakarta.annotation.Nullable final java.util.List<ReflectCheckInResponse> value) {
         this.backingStore.set("reflectCheckInResponses", value);
+    }
+    /**
+     * Sets the speakerAssignmentSubmissions property value. Details of submitted speaker assignments.
+     * @param value Value to set for the speakerAssignmentSubmissions property.
+     */
+    public void setSpeakerAssignmentSubmissions(@jakarta.annotation.Nullable final java.util.List<SpeakerAssignmentSubmission> value) {
+        this.backingStore.set("speakerAssignmentSubmissions", value);
     }
 }
