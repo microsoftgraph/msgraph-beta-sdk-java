@@ -26,7 +26,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
         return new EnrichedAuditLogs();
     }
     /**
-     * Gets the exchange property value. Exchange Online enriched audit logs settings.
+     * Gets the exchange property value. The exchange property
      * @return a {@link EnrichedAuditLogsSettings}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the sharepoint property value. SharePoint Online enriched audit logs settings.
+     * Gets the sharepoint property value. The sharepoint property
      * @return a {@link EnrichedAuditLogsSettings}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
         return this.backingStore.get("sharepoint");
     }
     /**
-     * Gets the teams property value. Teams enriched audit logs settings.
+     * Gets the teams property value. The teams property
      * @return a {@link EnrichedAuditLogsSettings}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class EnrichedAuditLogs extends Entity implements Parsable {
         writer.writeObjectValue("teams", this.getTeams());
     }
     /**
-     * Sets the exchange property value. Exchange Online enriched audit logs settings.
+     * Sets the exchange property value. The exchange property
      * @param value Value to set for the exchange property.
      */
     public void setExchange(@jakarta.annotation.Nullable final EnrichedAuditLogsSettings value) {
         this.backingStore.set("exchange", value);
     }
     /**
-     * Sets the sharepoint property value. SharePoint Online enriched audit logs settings.
+     * Sets the sharepoint property value. The sharepoint property
      * @param value Value to set for the sharepoint property.
      */
     public void setSharepoint(@jakarta.annotation.Nullable final EnrichedAuditLogsSettings value) {
         this.backingStore.set("sharepoint", value);
     }
     /**
-     * Sets the teams property value. Teams enriched audit logs settings.
+     * Sets the teams property value. The teams property
      * @param value Value to set for the teams property.
      */
     public void setTeams(@jakarta.annotation.Nullable final EnrichedAuditLogsSettings value) {

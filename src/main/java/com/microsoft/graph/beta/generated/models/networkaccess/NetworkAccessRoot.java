@@ -58,6 +58,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(Reports::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(Settings::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantStatus", (n) -> { this.setTenantStatus(n.getObjectValue(TenantStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("threatIntelligencePolicies", (n) -> { this.setThreatIntelligencePolicies(n.getCollectionOfObjectValues(ThreatIntelligencePolicy::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -125,6 +126,14 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("tenantStatus");
     }
     /**
+     * Gets the threatIntelligencePolicies property value. The threatIntelligencePolicies property
+     * @return a {@link java.util.List<ThreatIntelligencePolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ThreatIntelligencePolicy> getThreatIntelligencePolicies() {
+        return this.backingStore.get("threatIntelligencePolicies");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -141,6 +150,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         writer.writeObjectValue("reports", this.getReports());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeObjectValue("tenantStatus", this.getTenantStatus());
+        writer.writeCollectionOfObjectValues("threatIntelligencePolicies", this.getThreatIntelligencePolicies());
     }
     /**
      * Sets the alerts property value. The alerts property
@@ -211,5 +221,12 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      */
     public void setTenantStatus(@jakarta.annotation.Nullable final TenantStatus value) {
         this.backingStore.set("tenantStatus", value);
+    }
+    /**
+     * Sets the threatIntelligencePolicies property value. The threatIntelligencePolicies property
+     * @param value Value to set for the threatIntelligencePolicies property.
+     */
+    public void setThreatIntelligencePolicies(@jakarta.annotation.Nullable final java.util.List<ThreatIntelligencePolicy> value) {
+        this.backingStore.set("threatIntelligencePolicies", value);
     }
 }

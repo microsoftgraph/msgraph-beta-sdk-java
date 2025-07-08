@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.auditlogs.signins;
 import com.microsoft.graph.beta.auditlogs.signins.confirmcompromised.ConfirmCompromisedRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signins.confirmsafe.ConfirmSafeRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signins.count.CountRequestBuilder;
+import com.microsoft.graph.beta.auditlogs.signins.dismiss.DismissRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signins.item.SignInItemRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SignIn;
@@ -48,6 +49,14 @@ public class SignInsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the dismiss method.
+     * @return a {@link DismissRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DismissRequestBuilder dismiss() {
+        return new DismissRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.

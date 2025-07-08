@@ -29,6 +29,7 @@ public class Policy extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.networkaccess.filteringPolicy": return new FilteringPolicy();
                 case "#microsoft.graph.networkaccess.forwardingPolicy": return new ForwardingPolicy();
+                case "#microsoft.graph.networkaccess.threatIntelligencePolicy": return new ThreatIntelligencePolicy();
             }
         }
         return new Policy();

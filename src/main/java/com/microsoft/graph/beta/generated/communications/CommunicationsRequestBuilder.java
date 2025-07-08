@@ -2,7 +2,9 @@ package com.microsoft.graph.beta.communications;
 
 import com.microsoft.graph.beta.communications.callrecords.CallRecordsRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.CallsRequestBuilder;
+import com.microsoft.graph.beta.communications.getallonlinemeetingmessages.GetAllOnlineMeetingMessagesRequestBuilder;
 import com.microsoft.graph.beta.communications.getpresencesbyuserid.GetPresencesByUserIdRequestBuilder;
+import com.microsoft.graph.beta.communications.onlinemeetingconversations.OnlineMeetingConversationsRequestBuilder;
 import com.microsoft.graph.beta.communications.onlinemeetings.OnlineMeetingsRequestBuilder;
 import com.microsoft.graph.beta.communications.onlinemeetingswithjoinweburl.OnlineMeetingsWithJoinWebUrlRequestBuilder;
 import com.microsoft.graph.beta.communications.presences.PresencesRequestBuilder;
@@ -43,12 +45,28 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
         return new CallsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getAllOnlineMeetingMessages method.
+     * @return a {@link GetAllOnlineMeetingMessagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllOnlineMeetingMessagesRequestBuilder getAllOnlineMeetingMessages() {
+        return new GetAllOnlineMeetingMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the getPresencesByUserId method.
      * @return a {@link GetPresencesByUserIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public GetPresencesByUserIdRequestBuilder getPresencesByUserId() {
         return new GetPresencesByUserIdRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the onlineMeetingConversations property of the microsoft.graph.cloudCommunications entity.
+     * @return a {@link OnlineMeetingConversationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OnlineMeetingConversationsRequestBuilder onlineMeetingConversations() {
+        return new OnlineMeetingConversationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
@@ -116,7 +134,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update communications
-     * @param body The request body
+     * @param body Represents a container that exposes navigation properties for cloud communications resources.
      * @return a {@link CloudCommunications}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -126,7 +144,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update communications
-     * @param body The request body
+     * @param body Represents a container that exposes navigation properties for cloud communications resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudCommunications}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -161,7 +179,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update communications
-     * @param body The request body
+     * @param body Represents a container that exposes navigation properties for cloud communications resources.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -170,7 +188,7 @@ public class CommunicationsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Update communications
-     * @param body The request body
+     * @param body Represents a container that exposes navigation properties for cloud communications resources.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

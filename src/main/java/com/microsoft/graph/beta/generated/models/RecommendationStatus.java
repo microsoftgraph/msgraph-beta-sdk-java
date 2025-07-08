@@ -10,7 +10,11 @@ public enum RecommendationStatus implements ValuedEnum {
     CompletedByUser("completedByUser"),
     Dismissed("dismissed"),
     Postponed("postponed"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    RiskAccepted("riskAccepted"),
+    ThirdParty("thirdParty"),
+    Planned("planned"),
+    AlternateMitigation("alternateMitigation");
     public final String value;
     RecommendationStatus(final String value) {
         this.value = value;
@@ -27,6 +31,10 @@ public enum RecommendationStatus implements ValuedEnum {
             case "dismissed": return Dismissed;
             case "postponed": return Postponed;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "riskAccepted": return RiskAccepted;
+            case "thirdParty": return ThirdParty;
+            case "planned": return Planned;
+            case "alternateMitigation": return AlternateMitigation;
             default: return null;
         }
     }
