@@ -122,7 +122,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("scopeIds");
     }
     /**
-     * Gets the sizeInGB property value. The sizeInGB property
+     * Gets the sizeInGB property value. The size of the image in GB. For example, 64. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -247,7 +247,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("scopeIds", value);
     }
     /**
-     * Sets the sizeInGB property value. The sizeInGB property
+     * Sets the sizeInGB property value. The size of the image in GB. For example, 64. Read-only.
      * @param value Value to set for the sizeInGB property.
      */
     public void setSizeInGB(@jakarta.annotation.Nullable final Integer value) {

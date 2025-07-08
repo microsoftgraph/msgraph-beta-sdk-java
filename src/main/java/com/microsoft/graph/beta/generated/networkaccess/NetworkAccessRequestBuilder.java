@@ -13,6 +13,7 @@ import com.microsoft.graph.beta.networkaccess.microsoftgraphnetworkaccessonboard
 import com.microsoft.graph.beta.networkaccess.reports.ReportsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.tenantstatus.TenantStatusRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.threatintelligencepolicies.ThreatIntelligencePoliciesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -118,6 +119,14 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TenantStatusRequestBuilder tenantStatus() {
         return new TenantStatusRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the threatIntelligencePolicies property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link ThreatIntelligencePoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ThreatIntelligencePoliciesRequestBuilder threatIntelligencePolicies() {
+        return new ThreatIntelligencePoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link NetworkAccessRequestBuilder} and sets the default values.

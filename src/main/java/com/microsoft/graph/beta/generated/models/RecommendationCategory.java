@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum RecommendationCategory implements ValuedEnum {
     IdentityBestPractice("identityBestPractice"),
     IdentitySecureScore("identitySecureScore"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    MdiSecureScore("mdiSecureScore");
     public final String value;
     RecommendationCategory(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum RecommendationCategory implements ValuedEnum {
             case "identityBestPractice": return IdentityBestPractice;
             case "identitySecureScore": return IdentitySecureScore;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "mdiSecureScore": return MdiSecureScore;
             default: return null;
         }
     }

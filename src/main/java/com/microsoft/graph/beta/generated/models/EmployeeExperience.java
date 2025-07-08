@@ -1,8 +1,12 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -10,12 +14,18 @@ import java.util.Objects;
  * Represents a container that exposes navigation properties for employee experience resources.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class EmployeeExperience extends Entity implements Parsable {
+public class EmployeeExperience implements AdditionalDataHolder, BackedModel, Parsable {
+    /**
+     * Stores model information.
+     */
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
     /**
      * Instantiates a new {@link EmployeeExperience} and sets the default values.
      */
     public EmployeeExperience() {
-        super();
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        this.setAdditionalData(new HashMap<>());
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -26,6 +36,27 @@ public class EmployeeExperience extends Entity implements Parsable {
     public static EmployeeExperience createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new EmployeeExperience();
+    }
+    /**
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a {@link Map<String, Object>}
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a {@link BackingStore}
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
     }
     /**
      * Gets the communities property value. A collection of communities in Viva Engage.
@@ -49,12 +80,13 @@ public class EmployeeExperience extends Entity implements Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("communities", (n) -> { this.setCommunities(n.getCollectionOfObjectValues(Community::createFromDiscriminatorValue)); });
         deserializerMap.put("engagementAsyncOperations", (n) -> { this.setEngagementAsyncOperations(n.getCollectionOfObjectValues(EngagementAsyncOperation::createFromDiscriminatorValue)); });
         deserializerMap.put("goals", (n) -> { this.setGoals(n.getObjectValue(Goals::createFromDiscriminatorValue)); });
         deserializerMap.put("learningCourseActivities", (n) -> { this.setLearningCourseActivities(n.getCollectionOfObjectValues(LearningCourseActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("learningProviders", (n) -> { this.setLearningProviders(n.getCollectionOfObjectValues(LearningProvider::createFromDiscriminatorValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfObjectValues(EngagementRole::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -83,6 +115,14 @@ public class EmployeeExperience extends Entity implements Parsable {
         return this.backingStore.get("learningProviders");
     }
     /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOdataType() {
+        return this.backingStore.get("odataType");
+    }
+    /**
      * Gets the roles property value. A collection of roles in Viva Engage.
      * @return a {@link java.util.List<EngagementRole>}
      */
@@ -96,13 +136,29 @@ public class EmployeeExperience extends Entity implements Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        super.serialize(writer);
         writer.writeCollectionOfObjectValues("communities", this.getCommunities());
         writer.writeCollectionOfObjectValues("engagementAsyncOperations", this.getEngagementAsyncOperations());
         writer.writeObjectValue("goals", this.getGoals());
         writer.writeCollectionOfObjectValues("learningCourseActivities", this.getLearningCourseActivities());
         writer.writeCollectionOfObjectValues("learningProviders", this.getLearningProviders());
+        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("roles", this.getRoles());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     */
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
     }
     /**
      * Sets the communities property value. A collection of communities in Viva Engage.
@@ -138,6 +194,13 @@ public class EmployeeExperience extends Entity implements Parsable {
      */
     public void setLearningProviders(@jakarta.annotation.Nullable final java.util.List<LearningProvider> value) {
         this.backingStore.set("learningProviders", value);
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     */
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the roles property value. A collection of roles in Viva Engage.
