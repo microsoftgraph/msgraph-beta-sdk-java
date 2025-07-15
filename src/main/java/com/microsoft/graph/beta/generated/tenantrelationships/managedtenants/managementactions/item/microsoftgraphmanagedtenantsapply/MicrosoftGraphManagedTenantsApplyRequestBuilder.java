@@ -40,7 +40,6 @@ public class MicrosoftGraphManagedTenantsApplyRequestBuilder extends BaseRequest
      * @param body The request body
      * @return a {@link ManagementActionDeploymentStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementaction-apply?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagementActionDeploymentStatus post(@jakarta.annotation.Nonnull final ApplyPostRequestBody body) {
@@ -52,7 +51,6 @@ public class MicrosoftGraphManagedTenantsApplyRequestBuilder extends BaseRequest
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ManagementActionDeploymentStatus}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-managementaction-apply?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ManagementActionDeploymentStatus post(@jakarta.annotation.Nonnull final ApplyPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

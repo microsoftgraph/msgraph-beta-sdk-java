@@ -44,7 +44,6 @@ public class MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEn
      * Get the number of users, devices, and workloads per traffic type in a specified time period.
      * @return a {@link EntitiesSummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-entitiessummaries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EntitiesSummariesWithStartDateTimeWithEndDateTimeGetResponse get() {
@@ -55,7 +54,6 @@ public class MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEn
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EntitiesSummariesWithStartDateTimeWithEndDateTimeGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-entitiessummaries?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EntitiesSummariesWithStartDateTimeWithEndDateTimeGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,12 +116,12 @@ public class MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEn
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

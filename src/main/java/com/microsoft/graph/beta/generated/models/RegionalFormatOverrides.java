@@ -56,7 +56,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the calendar property value. The calendar to use, e.g., Gregorian Calendar.Returned by default.
+     * Gets the calendar property value. The calendar to use; for example, Gregorian Calendar.Returned by default.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the firstDayOfWeek property value. The first day of the week to use, e.g., Sunday.Returned by default.
+     * Gets the firstDayOfWeek property value. The first day of the week to use; for example, Sunday.Returned by default.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,14 +168,14 @@ public class RegionalFormatOverrides implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the calendar property value. The calendar to use, e.g., Gregorian Calendar.Returned by default.
+     * Sets the calendar property value. The calendar to use; for example, Gregorian Calendar.Returned by default.
      * @param value Value to set for the calendar property.
      */
     public void setCalendar(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("calendar", value);
     }
     /**
-     * Sets the firstDayOfWeek property value. The first day of the week to use, e.g., Sunday.Returned by default.
+     * Sets the firstDayOfWeek property value. The first day of the week to use; for example, Sunday.Returned by default.
      * @param value Value to set for the firstDayOfWeek property.
      */
     public void setFirstDayOfWeek(@jakarta.annotation.Nullable final String value) {

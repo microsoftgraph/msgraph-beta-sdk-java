@@ -38,7 +38,6 @@ public class ApplyConfigRequestBuilder extends BaseRequestBuilder {
      * Update the provisioning policy configuration for a set of Cloud PC devices by their IDs. This method supports retry and allows you to apply the configuration to a subset of Cloud PCs initially to test.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-applyconfig?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ApplyConfigPostRequestBody body) {
         post(body, null);
@@ -48,7 +47,6 @@ public class ApplyConfigRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-applyconfig?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ApplyConfigPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

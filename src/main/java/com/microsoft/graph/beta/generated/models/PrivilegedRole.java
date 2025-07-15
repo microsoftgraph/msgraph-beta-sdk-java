@@ -25,49 +25,13 @@ public class PrivilegedRole extends Entity implements Parsable {
         return new PrivilegedRole();
     }
     /**
-     * Gets the assignments property value. The assignments property
-     * @return a {@link java.util.List<PrivilegedRoleAssignment>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<PrivilegedRoleAssignment> getAssignments() {
-        return this.backingStore.get("assignments");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(PrivilegedRoleAssignment::createFromDiscriminatorValue)); });
-        deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
-        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(PrivilegedRoleSettings::createFromDiscriminatorValue)); });
-        deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(PrivilegedRoleSummary::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the name property value. The name property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getName() {
-        return this.backingStore.get("name");
-    }
-    /**
-     * Gets the settings property value. The settings property
-     * @return a {@link PrivilegedRoleSettings}
-     */
-    @jakarta.annotation.Nullable
-    public PrivilegedRoleSettings getSettings() {
-        return this.backingStore.get("settings");
-    }
-    /**
-     * Gets the summary property value. The summary property
-     * @return a {@link PrivilegedRoleSummary}
-     */
-    @jakarta.annotation.Nullable
-    public PrivilegedRoleSummary getSummary() {
-        return this.backingStore.get("summary");
     }
     /**
      * Serializes information the current object
@@ -76,37 +40,5 @@ public class PrivilegedRole extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
-        writer.writeStringValue("name", this.getName());
-        writer.writeObjectValue("settings", this.getSettings());
-        writer.writeObjectValue("summary", this.getSummary());
-    }
-    /**
-     * Sets the assignments property value. The assignments property
-     * @param value Value to set for the assignments property.
-     */
-    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<PrivilegedRoleAssignment> value) {
-        this.backingStore.set("assignments", value);
-    }
-    /**
-     * Sets the name property value. The name property
-     * @param value Value to set for the name property.
-     */
-    public void setName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("name", value);
-    }
-    /**
-     * Sets the settings property value. The settings property
-     * @param value Value to set for the settings property.
-     */
-    public void setSettings(@jakarta.annotation.Nullable final PrivilegedRoleSettings value) {
-        this.backingStore.set("settings", value);
-    }
-    /**
-     * Sets the summary property value. The summary property
-     * @param value Value to set for the summary property.
-     */
-    public void setSummary(@jakarta.annotation.Nullable final PrivilegedRoleSummary value) {
-        this.backingStore.set("summary", value);
     }
 }

@@ -7,7 +7,6 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
-import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -64,7 +63,7 @@ public class ApprovalItemViewPoint implements AdditionalDataHolder, BackedModel,
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfEnumValues(ApproverRole::forValue)); });
+        deserializerMap.put("roles", (n) -> { this.setRoles(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
@@ -77,10 +76,10 @@ public class ApprovalItemViewPoint implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the roles property value. Collection of roles associated with the requesting user for the approval item. If the owner of the approval item is making the request, the collection of roles includes the role owner. If the requesting user was assigned as an approver, the collection includes the role approver.
-     * @return a {@link java.util.List<ApproverRole>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<ApproverRole> getRoles() {
+    public java.util.List<String> getRoles() {
         return this.backingStore.get("roles");
     }
     /**
@@ -90,7 +89,7 @@ public class ApprovalItemViewPoint implements AdditionalDataHolder, BackedModel,
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeCollectionOfEnumValues("roles", this.getRoles());
+        writer.writeCollectionOfPrimitiveValues("roles", this.getRoles());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -119,7 +118,7 @@ public class ApprovalItemViewPoint implements AdditionalDataHolder, BackedModel,
      * Sets the roles property value. Collection of roles associated with the requesting user for the approval item. If the owner of the approval item is making the request, the collection of roles includes the role owner. If the requesting user was assigned as an approver, the collection includes the role approver.
      * @param value Value to set for the roles property.
      */
-    public void setRoles(@jakarta.annotation.Nullable final java.util.List<ApproverRole> value) {
+    public void setRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("roles", value);
     }
 }

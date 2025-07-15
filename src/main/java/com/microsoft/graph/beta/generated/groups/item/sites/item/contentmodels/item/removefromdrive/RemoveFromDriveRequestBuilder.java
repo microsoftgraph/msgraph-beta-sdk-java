@@ -38,7 +38,6 @@ public class RemoveFromDriveRequestBuilder extends BaseRequestBuilder {
      * Remove a contentModel from a SharePoint document library.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contentmodel-removefromdrive?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final RemoveFromDrivePostRequestBody body) {
         post(body, null);
@@ -48,7 +47,6 @@ public class RemoveFromDriveRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/contentmodel-removefromdrive?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final RemoveFromDrivePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

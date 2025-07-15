@@ -128,7 +128,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         return this.backingStore.get("registrationQuestionAnswers");
     }
     /**
-     * Gets the sessions property value. The sessions property
+     * Gets the sessions property value. Sessions for a registration.
      * @return a {@link java.util.List<VirtualEventSession>}
      */
     @jakarta.annotation.Nullable
@@ -243,7 +243,7 @@ public class VirtualEventRegistration extends Entity implements Parsable {
         this.backingStore.set("registrationQuestionAnswers", value);
     }
     /**
-     * Sets the sessions property value. The sessions property
+     * Sets the sessions property value. Sessions for a registration.
      * @param value Value to set for the sessions property.
      */
     public void setSessions(@jakarta.annotation.Nullable final java.util.List<VirtualEventSession> value) {

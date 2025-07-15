@@ -93,7 +93,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("firstSeenDateTime", (n) -> { this.setFirstSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("logonId", (n) -> { this.setLogonId(n.getStringValue()); });
-        deserializerMap.put("logonTypes", (n) -> { this.setLogonTypes(n.getCollectionOfEnumValues(LogonType::forValue)); });
+        deserializerMap.put("logonTypes", (n) -> { this.setLogonTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -123,10 +123,10 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
     }
     /**
      * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
-     * @return a {@link java.util.List<LogonType>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<LogonType> getLogonTypes() {
+    public java.util.List<String> getLogonTypes() {
         return this.backingStore.get("logonTypes");
     }
     /**
@@ -149,7 +149,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeOffsetDateTimeValue("firstSeenDateTime", this.getFirstSeenDateTime());
         writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
         writer.writeStringValue("logonId", this.getLogonId());
-        writer.writeCollectionOfEnumValues("logonTypes", this.getLogonTypes());
+        writer.writeCollectionOfPrimitiveValues("logonTypes", this.getLogonTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -214,7 +214,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
      * Sets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @param value Value to set for the logonTypes property.
      */
-    public void setLogonTypes(@jakarta.annotation.Nullable final java.util.List<LogonType> value) {
+    public void setLogonTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("logonTypes", value);
     }
     /**

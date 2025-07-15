@@ -854,7 +854,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("intents");
     }
     /**
-     * Gets the intuneAccountId property value. Intune Account ID for given tenant
+     * Gets the intuneAccountId property value. Intune Account Id for given tenant
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -958,7 +958,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("managedDeviceWindowsOSImages");
     }
     /**
-     * Gets the maximumDepTokens property value. Maximum number of DEP tokens allowed per-tenant.
+     * Gets the maximumDepTokens property value. Maximum number of dep tokens allowed per-tenant.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -2508,7 +2508,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("intents", value);
     }
     /**
-     * Sets the intuneAccountId property value. Intune Account ID for given tenant
+     * Sets the intuneAccountId property value. Intune Account Id for given tenant
      * @param value Value to set for the intuneAccountId property.
      */
     public void setIntuneAccountId(@jakarta.annotation.Nullable final UUID value) {
@@ -2599,7 +2599,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("managedDeviceWindowsOSImages", value);
     }
     /**
-     * Sets the maximumDepTokens property value. Maximum number of DEP tokens allowed per-tenant.
+     * Sets the maximumDepTokens property value. Maximum number of dep tokens allowed per-tenant.
      * @param value Value to set for the maximumDepTokens property.
      */
     public void setMaximumDepTokens(@jakarta.annotation.Nullable final Integer value) {

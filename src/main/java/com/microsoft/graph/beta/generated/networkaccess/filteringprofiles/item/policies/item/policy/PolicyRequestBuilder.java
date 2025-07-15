@@ -37,19 +37,21 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/policies/{policyLink%2Did}/policy{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Policy.
+     * Get a list of threatIntelligencePolicy objects associated with a threat intelligence policy link.
      * @return a {@link Policy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-list-policy?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Policy get() {
         return get(null);
     }
     /**
-     * Policy.
+     * Get a list of threatIntelligencePolicy objects associated with a threat intelligence policy link.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Policy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-list-policy?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Policy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Policy::createFromDiscriminatorValue);
     }
     /**
-     * Policy.
+     * Get a list of threatIntelligencePolicy objects associated with a threat intelligence policy link.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Policy.
+     * Get a list of threatIntelligencePolicy objects associated with a threat intelligence policy link.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
         return new PolicyRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Policy.
+     * Get a list of threatIntelligencePolicy objects associated with a threat intelligence policy link.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

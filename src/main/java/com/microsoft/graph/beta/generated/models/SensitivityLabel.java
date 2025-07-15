@@ -50,22 +50,6 @@ public class SensitivityLabel extends Entity implements Parsable {
         return this.backingStore.get("applicationMode");
     }
     /**
-     * Gets the assignedPolicies property value. The assignedPolicies property
-     * @return a {@link java.util.List<LabelPolicy>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<LabelPolicy> getAssignedPolicies() {
-        return this.backingStore.get("assignedPolicies");
-    }
-    /**
-     * Gets the autoLabeling property value. The autoLabeling property
-     * @return a {@link AutoLabeling}
-     */
-    @jakarta.annotation.Nullable
-    public AutoLabeling getAutoLabeling() {
-        return this.backingStore.get("autoLabeling");
-    }
-    /**
      * Gets the autoTooltip property value. The autoTooltip property
      * @return a {@link String}
      */
@@ -107,8 +91,6 @@ public class SensitivityLabel extends Entity implements Parsable {
         deserializerMap.put("actionSource", (n) -> { this.setActionSource(n.getEnumValue(LabelActionSource::forValue)); });
         deserializerMap.put("applicableTo", (n) -> { this.setApplicableTo(n.getEnumSetValue(SensitivityLabelTarget::forValue)); });
         deserializerMap.put("applicationMode", (n) -> { this.setApplicationMode(n.getEnumValue(ApplicationMode::forValue)); });
-        deserializerMap.put("assignedPolicies", (n) -> { this.setAssignedPolicies(n.getCollectionOfObjectValues(LabelPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("autoLabeling", (n) -> { this.setAutoLabeling(n.getObjectValue(AutoLabeling::createFromDiscriminatorValue)); });
         deserializerMap.put("autoTooltip", (n) -> { this.setAutoTooltip(n.getStringValue()); });
         deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -117,7 +99,6 @@ public class SensitivityLabel extends Entity implements Parsable {
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("isEndpointProtectionEnabled", (n) -> { this.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isScopedToUser", (n) -> { this.setIsScopedToUser(n.getBooleanValue()); });
-        deserializerMap.put("labelActions", (n) -> { this.setLabelActions(n.getCollectionOfObjectValues(LabelActionBase::createFromDiscriminatorValue)); });
         deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
@@ -157,14 +138,6 @@ public class SensitivityLabel extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsScopedToUser() {
         return this.backingStore.get("isScopedToUser");
-    }
-    /**
-     * Gets the labelActions property value. The labelActions property
-     * @return a {@link java.util.List<LabelActionBase>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<LabelActionBase> getLabelActions() {
-        return this.backingStore.get("labelActions");
     }
     /**
      * Gets the locale property value. The locale property
@@ -224,8 +197,6 @@ public class SensitivityLabel extends Entity implements Parsable {
         writer.writeEnumValue("actionSource", this.getActionSource());
         writer.writeEnumSetValue("applicableTo", this.getApplicableTo());
         writer.writeEnumValue("applicationMode", this.getApplicationMode());
-        writer.writeCollectionOfObjectValues("assignedPolicies", this.getAssignedPolicies());
-        writer.writeObjectValue("autoLabeling", this.getAutoLabeling());
         writer.writeStringValue("autoTooltip", this.getAutoTooltip());
         writer.writeStringValue("color", this.getColor());
         writer.writeStringValue("description", this.getDescription());
@@ -234,7 +205,6 @@ public class SensitivityLabel extends Entity implements Parsable {
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeBooleanValue("isEndpointProtectionEnabled", this.getIsEndpointProtectionEnabled());
         writer.writeBooleanValue("isScopedToUser", this.getIsScopedToUser());
-        writer.writeCollectionOfObjectValues("labelActions", this.getLabelActions());
         writer.writeStringValue("locale", this.getLocale());
         writer.writeStringValue("name", this.getName());
         writer.writeIntegerValue("priority", this.getPriority());
@@ -262,20 +232,6 @@ public class SensitivityLabel extends Entity implements Parsable {
      */
     public void setApplicationMode(@jakarta.annotation.Nullable final ApplicationMode value) {
         this.backingStore.set("applicationMode", value);
-    }
-    /**
-     * Sets the assignedPolicies property value. The assignedPolicies property
-     * @param value Value to set for the assignedPolicies property.
-     */
-    public void setAssignedPolicies(@jakarta.annotation.Nullable final java.util.List<LabelPolicy> value) {
-        this.backingStore.set("assignedPolicies", value);
-    }
-    /**
-     * Sets the autoLabeling property value. The autoLabeling property
-     * @param value Value to set for the autoLabeling property.
-     */
-    public void setAutoLabeling(@jakarta.annotation.Nullable final AutoLabeling value) {
-        this.backingStore.set("autoLabeling", value);
     }
     /**
      * Sets the autoTooltip property value. The autoTooltip property
@@ -332,13 +288,6 @@ public class SensitivityLabel extends Entity implements Parsable {
      */
     public void setIsScopedToUser(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isScopedToUser", value);
-    }
-    /**
-     * Sets the labelActions property value. The labelActions property
-     * @param value Value to set for the labelActions property.
-     */
-    public void setLabelActions(@jakarta.annotation.Nullable final java.util.List<LabelActionBase> value) {
-        this.backingStore.set("labelActions", value);
     }
     /**
      * Sets the locale property value. The locale property

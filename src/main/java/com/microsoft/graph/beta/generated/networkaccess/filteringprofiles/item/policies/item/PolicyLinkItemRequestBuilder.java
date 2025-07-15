@@ -46,16 +46,18 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/policies/{policyLink%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property policies for networkAccess
+     * Delete a tlsInspectionPolicyLink object. Used to unlink a tlsInspectionPolicy from a filtering profile.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tlsinspectionpolicylink-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property policies for networkAccess
+     * Delete a tlsInspectionPolicyLink object. Used to unlink a tlsInspectionPolicy from a filtering profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tlsinspectionpolicylink-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Read the properties and relationships of a threatIntelligencePolicyLink object.
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink get() {
         return get(null);
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Read the properties and relationships of a threatIntelligencePolicyLink object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLink::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property policies in networkAccess
+     * Update the properties of a threatIntelligencePolicyLink object.
      * @param body The request body
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink patch(@jakarta.annotation.Nonnull final PolicyLink body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property policies in networkAccess
+     * Update the properties of a threatIntelligencePolicyLink object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink patch(@jakarta.annotation.Nonnull final PolicyLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLink::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property policies for networkAccess
+     * Delete a tlsInspectionPolicyLink object. Used to unlink a tlsInspectionPolicy from a filtering profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property policies for networkAccess
+     * Delete a tlsInspectionPolicyLink object. Used to unlink a tlsInspectionPolicy from a filtering profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Read the properties and relationships of a threatIntelligencePolicyLink object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Read the properties and relationships of a threatIntelligencePolicyLink object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property policies in networkAccess
+     * Update the properties of a threatIntelligencePolicyLink object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property policies in networkAccess
+     * Update the properties of a threatIntelligencePolicyLink object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Read the properties and relationships of a threatIntelligencePolicyLink object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

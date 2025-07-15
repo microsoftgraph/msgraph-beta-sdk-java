@@ -41,7 +41,6 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
      * Retrieve applicationSigninSummary objects within either the last seven or 30 days.
      * @return a {@link GetAzureADApplicationSignInSummaryWithPeriodGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getazureadapplicationsigninsummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAzureADApplicationSignInSummaryWithPeriodGetResponse get() {
@@ -52,7 +51,6 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAzureADApplicationSignInSummaryWithPeriodGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getazureadapplicationsigninsummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAzureADApplicationSignInSummaryWithPeriodGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -130,12 +128,12 @@ public class GetAzureADApplicationSignInSummaryWithPeriodRequestBuilder extends 
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

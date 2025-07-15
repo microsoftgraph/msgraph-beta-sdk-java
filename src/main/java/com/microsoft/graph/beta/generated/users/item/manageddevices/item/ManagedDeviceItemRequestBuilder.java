@@ -39,6 +39,7 @@ import com.microsoft.graph.beta.users.item.manageddevices.item.removedevicefirmw
 import com.microsoft.graph.beta.users.item.manageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.retire.RetireRequestBuilder;
+import com.microsoft.graph.beta.users.item.manageddevices.item.retrievemacosmanageddevicelocaladminaccountdetail.RetrieveMacOSManagedDeviceLocalAdminAccountDetailRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.revokeapplevpplicenses.RevokeAppleVppLicensesRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.rotatebitlockerkeys.RotateBitLockerKeysRequestBuilder;
 import com.microsoft.graph.beta.users.item.manageddevices.item.rotatefilevaultkey.RotateFileVaultKeyRequestBuilder;
@@ -368,6 +369,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RetireRequestBuilder retire() {
         return new RetireRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveMacOSManagedDeviceLocalAdminAccountDetail method.
+     * @return a {@link RetrieveMacOSManagedDeviceLocalAdminAccountDetailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveMacOSManagedDeviceLocalAdminAccountDetailRequestBuilder retrieveMacOSManagedDeviceLocalAdminAccountDetail() {
+        return new RetrieveMacOSManagedDeviceLocalAdminAccountDetailRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the revokeAppleVppLicenses method.

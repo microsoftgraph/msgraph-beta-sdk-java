@@ -39,7 +39,6 @@ public class RetrievePolicyApplyActionResultRequestBuilder extends BaseRequestBu
      * Get the result of the latest apply operation of a provision policy. Frontline shared only. Administrators only.
      * @return a {@link CloudPcPolicyApplyActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-retrievepolicyapplyactionresult?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPolicyApplyActionResult get() {
@@ -50,7 +49,6 @@ public class RetrievePolicyApplyActionResultRequestBuilder extends BaseRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcPolicyApplyActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-retrievepolicyapplyactionresult?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPolicyApplyActionResult get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

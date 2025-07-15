@@ -25,21 +25,12 @@ public class ActivitiesContainer extends Entity implements Parsable {
         return new ActivitiesContainer();
     }
     /**
-     * Gets the contentActivities property value. Collection of activity logs related to content processing.
-     * @return a {@link java.util.List<ContentActivity>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<ContentActivity> getContentActivities() {
-        return this.backingStore.get("contentActivities");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("contentActivities", (n) -> { this.setContentActivities(n.getCollectionOfObjectValues(ContentActivity::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -49,13 +40,5 @@ public class ActivitiesContainer extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("contentActivities", this.getContentActivities());
-    }
-    /**
-     * Sets the contentActivities property value. Collection of activity logs related to content processing.
-     * @param value Value to set for the contentActivities property.
-     */
-    public void setContentActivities(@jakarta.annotation.Nullable final java.util.List<ContentActivity> value) {
-        this.backingStore.set("contentActivities", value);
     }
 }

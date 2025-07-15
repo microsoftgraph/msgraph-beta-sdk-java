@@ -82,10 +82,10 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the featureAreas property value. The directory feature that the recommendation is related to.
-     * @return a {@link java.util.List<RecommendationFeatureAreas>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<RecommendationFeatureAreas> getFeatureAreas() {
+    public java.util.List<String> getFeatureAreas() {
         return this.backingStore.get("featureAreas");
     }
     /**
@@ -101,7 +101,7 @@ public class RecommendationBase extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("currentScore", (n) -> { this.setCurrentScore(n.getDoubleValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("featureAreas", (n) -> { this.setFeatureAreas(n.getCollectionOfEnumValues(RecommendationFeatureAreas::forValue)); });
+        deserializerMap.put("featureAreas", (n) -> { this.setFeatureAreas(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("impactedResources", (n) -> { this.setImpactedResources(n.getCollectionOfObjectValues(ImpactedResource::createFromDiscriminatorValue)); });
         deserializerMap.put("impactStartDateTime", (n) -> { this.setImpactStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("impactType", (n) -> { this.setImpactType(n.getStringValue()); });
@@ -224,7 +224,7 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("remediationImpact");
     }
     /**
-     * Gets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue.
+     * Gets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue, aatp. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: aatp.
      * @return a {@link RequiredLicenses}
      */
     @jakarta.annotation.Nullable
@@ -252,7 +252,7 @@ public class RecommendationBase extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeDoubleValue("currentScore", this.getCurrentScore());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeCollectionOfEnumValues("featureAreas", this.getFeatureAreas());
+        writer.writeCollectionOfPrimitiveValues("featureAreas", this.getFeatureAreas());
         writer.writeCollectionOfObjectValues("impactedResources", this.getImpactedResources());
         writer.writeOffsetDateTimeValue("impactStartDateTime", this.getImpactStartDateTime());
         writer.writeStringValue("impactType", this.getImpactType());
@@ -315,7 +315,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Sets the featureAreas property value. The directory feature that the recommendation is related to.
      * @param value Value to set for the featureAreas property.
      */
-    public void setFeatureAreas(@jakarta.annotation.Nullable final java.util.List<RecommendationFeatureAreas> value) {
+    public void setFeatureAreas(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("featureAreas", value);
     }
     /**
@@ -410,7 +410,7 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("remediationImpact", value);
     }
     /**
-     * Sets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue.
+     * Sets the requiredLicenses property value. The required licenses to view the recommendation. The possible values are: notApplicable, microsoftEntraIdFree, microsoftEntraIdP1, microsoftEntraIdP2, microsoftEntraIdGovernance, microsoftEntraWorkloadId, unknownFutureValue, aatp. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: aatp.
      * @param value Value to set for the requiredLicenses property.
      */
     public void setRequiredLicenses(@jakarta.annotation.Nullable final RequiredLicenses value) {

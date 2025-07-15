@@ -38,7 +38,7 @@ public class ThreatIntelligencePolicy extends Policy implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the policy was last modified.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class ThreatIntelligencePolicy extends Policy implements Parsable {
         writer.writeObjectValue("settings", this.getSettings());
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the policy was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

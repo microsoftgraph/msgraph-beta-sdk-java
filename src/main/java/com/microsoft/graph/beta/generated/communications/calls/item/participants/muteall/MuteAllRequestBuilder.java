@@ -40,7 +40,6 @@ public class MuteAllRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link MuteParticipantsOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/participant-muteall?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MuteParticipantsOperation post(@jakarta.annotation.Nonnull final MuteAllPostRequestBody body) {
@@ -52,7 +51,6 @@ public class MuteAllRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MuteParticipantsOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/participant-muteall?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MuteParticipantsOperation post(@jakarta.annotation.Nonnull final MuteAllPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

@@ -36,10 +36,10 @@ public class ClassGroupConfiguration implements AdditionalDataHolder, BackedMode
     }
     /**
      * Gets the additionalAttributes property value. The different attributes to sync for the class groups. The possible values are: courseTitle, courseCode, courseSubject, courseGradeLevel, courseExternalId, academicSessionTitle, academicSessionExternalId, classCode, unknownFutureValue.
-     * @return a {@link java.util.List<AdditionalClassGroupAttributes>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<AdditionalClassGroupAttributes> getAdditionalAttributes() {
+    public java.util.List<String> getAdditionalAttributes() {
         return this.backingStore.get("additionalAttributes");
     }
     /**
@@ -86,7 +86,7 @@ public class ClassGroupConfiguration implements AdditionalDataHolder, BackedMode
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
-        deserializerMap.put("additionalAttributes", (n) -> { this.setAdditionalAttributes(n.getCollectionOfEnumValues(AdditionalClassGroupAttributes::forValue)); });
+        deserializerMap.put("additionalAttributes", (n) -> { this.setAdditionalAttributes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("additionalOptions", (n) -> { this.setAdditionalOptions(n.getObjectValue(AdditionalClassGroupOptions::createFromDiscriminatorValue)); });
         deserializerMap.put("enrollmentMappings", (n) -> { this.setEnrollmentMappings(n.getObjectValue(EnrollmentMappings::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -106,7 +106,7 @@ public class ClassGroupConfiguration implements AdditionalDataHolder, BackedMode
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfEnumValues("additionalAttributes", this.getAdditionalAttributes());
+        writer.writeCollectionOfPrimitiveValues("additionalAttributes", this.getAdditionalAttributes());
         writer.writeObjectValue("additionalOptions", this.getAdditionalOptions());
         writer.writeObjectValue("enrollmentMappings", this.getEnrollmentMappings());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -116,7 +116,7 @@ public class ClassGroupConfiguration implements AdditionalDataHolder, BackedMode
      * Sets the additionalAttributes property value. The different attributes to sync for the class groups. The possible values are: courseTitle, courseCode, courseSubject, courseGradeLevel, courseExternalId, academicSessionTitle, academicSessionExternalId, classCode, unknownFutureValue.
      * @param value Value to set for the additionalAttributes property.
      */
-    public void setAdditionalAttributes(@jakarta.annotation.Nullable final java.util.List<AdditionalClassGroupAttributes> value) {
+    public void setAdditionalAttributes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("additionalAttributes", value);
     }
     /**

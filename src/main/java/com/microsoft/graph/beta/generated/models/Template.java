@@ -25,21 +25,12 @@ public class Template extends Entity implements Parsable {
         return new Template();
     }
     /**
-     * Gets the deviceTemplates property value. Defines the templates that are common to a set of device objects, such as IoT devices.
-     * @return a {@link java.util.List<DeviceTemplate>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<DeviceTemplate> getDeviceTemplates() {
-        return this.backingStore.get("deviceTemplates");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("deviceTemplates", (n) -> { this.setDeviceTemplates(n.getCollectionOfObjectValues(DeviceTemplate::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -49,13 +40,5 @@ public class Template extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("deviceTemplates", this.getDeviceTemplates());
-    }
-    /**
-     * Sets the deviceTemplates property value. Defines the templates that are common to a set of device objects, such as IoT devices.
-     * @param value Value to set for the deviceTemplates property.
-     */
-    public void setDeviceTemplates(@jakarta.annotation.Nullable final java.util.List<DeviceTemplate> value) {
-        this.backingStore.set("deviceTemplates", value);
     }
 }

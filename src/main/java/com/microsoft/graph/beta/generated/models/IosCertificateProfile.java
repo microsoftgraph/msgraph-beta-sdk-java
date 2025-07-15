@@ -16,7 +16,6 @@ public class IosCertificateProfile extends DeviceConfiguration implements Parsab
      */
     public IosCertificateProfile() {
         super();
-        this.setOdataType("#microsoft.graph.iosCertificateProfile");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

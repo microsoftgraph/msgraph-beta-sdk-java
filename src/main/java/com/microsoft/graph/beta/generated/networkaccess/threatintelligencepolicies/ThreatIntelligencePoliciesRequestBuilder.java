@@ -60,19 +60,21 @@ public class ThreatIntelligencePoliciesRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/networkAccess/threatIntelligencePolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Get a list of the threatIntelligencePolicy objects and their properties.
      * @return a {@link ThreatIntelligencePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-networkaccessroot-list-threatintelligencepolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatIntelligencePolicyCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Get a list of the threatIntelligencePolicy objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ThreatIntelligencePolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-networkaccessroot-list-threatintelligencepolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatIntelligencePolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ThreatIntelligencePoliciesRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatIntelligencePolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to threatIntelligencePolicies for networkAccess
+     * Create a new threatIntelligencePolicy object.
      * @param body The request body
      * @return a {@link ThreatIntelligencePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-networkaccessroot-post-threatintelligencepolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatIntelligencePolicy post(@jakarta.annotation.Nonnull final ThreatIntelligencePolicy body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to threatIntelligencePolicies for networkAccess
+     * Create a new threatIntelligencePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ThreatIntelligencePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-networkaccessroot-post-threatintelligencepolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatIntelligencePolicy post(@jakarta.annotation.Nonnull final ThreatIntelligencePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ThreatIntelligencePoliciesRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatIntelligencePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Get a list of the threatIntelligencePolicy objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ThreatIntelligencePoliciesRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Get a list of the threatIntelligencePolicy objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ThreatIntelligencePoliciesRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Create new navigation property to threatIntelligencePolicies for networkAccess
+     * Create a new threatIntelligencePolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ThreatIntelligencePoliciesRequestBuilder extends BaseRequestBuilder
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to threatIntelligencePolicies for networkAccess
+     * Create a new threatIntelligencePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ThreatIntelligencePoliciesRequestBuilder extends BaseRequestBuilder
         return new ThreatIntelligencePoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Get a list of the threatIntelligencePolicy objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -199,12 +203,12 @@ public class ThreatIntelligencePoliciesRequestBuilder extends BaseRequestBuilder
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

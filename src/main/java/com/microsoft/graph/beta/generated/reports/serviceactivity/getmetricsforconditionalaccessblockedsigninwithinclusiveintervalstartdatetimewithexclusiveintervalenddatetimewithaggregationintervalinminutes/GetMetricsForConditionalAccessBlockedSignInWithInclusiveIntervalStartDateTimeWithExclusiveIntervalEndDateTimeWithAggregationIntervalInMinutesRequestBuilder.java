@@ -44,7 +44,6 @@ public class GetMetricsForConditionalAccessBlockedSignInWithInclusiveIntervalSta
      * Retrieve the number of user sign-in attempts that were blocked by a Conditional Access policy during a specific period.
      * @return a {@link GetMetricsForConditionalAccessBlockedSignInWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmetricsforconditionalaccessblockedsignin?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMetricsForConditionalAccessBlockedSignInWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
@@ -55,7 +54,6 @@ public class GetMetricsForConditionalAccessBlockedSignInWithInclusiveIntervalSta
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetMetricsForConditionalAccessBlockedSignInWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmetricsforconditionalaccessblockedsignin?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMetricsForConditionalAccessBlockedSignInWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,12 +121,12 @@ public class GetMetricsForConditionalAccessBlockedSignInWithInclusiveIntervalSta
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

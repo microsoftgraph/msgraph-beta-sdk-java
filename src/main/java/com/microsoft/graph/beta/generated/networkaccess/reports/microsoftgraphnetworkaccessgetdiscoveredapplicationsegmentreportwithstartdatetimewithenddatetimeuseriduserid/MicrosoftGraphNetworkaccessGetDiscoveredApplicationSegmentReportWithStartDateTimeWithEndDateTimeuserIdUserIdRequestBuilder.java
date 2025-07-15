@@ -44,7 +44,6 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
      * Returns a collection of discoveredApplicationSegmentReport based on aggregated traffic logs for a given period.
      * @return a {@link GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-getdiscoveredapplicationsegmentreport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdGetResponse get() {
@@ -55,7 +54,6 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-reports-getdiscoveredapplicationsegmentreport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -118,12 +116,12 @@ public class MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWit
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Usage: userId=&apos;@userId&apos;
          */

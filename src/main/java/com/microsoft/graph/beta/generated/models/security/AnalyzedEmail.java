@@ -163,7 +163,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         deserializerMap.put("spamConfidenceLevel", (n) -> { this.setSpamConfidenceLevel(n.getStringValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
         deserializerMap.put("threatDetectionDetails", (n) -> { this.setThreatDetectionDetails(n.getCollectionOfObjectValues(ThreatDetectionDetail::createFromDiscriminatorValue)); });
-        deserializerMap.put("threatTypes", (n) -> { this.setThreatTypes(n.getCollectionOfEnumValues(ThreatType::forValue)); });
+        deserializerMap.put("threatTypes", (n) -> { this.setThreatTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("timelineEvents", (n) -> { this.setTimelineEvents(n.getCollectionOfObjectValues(TimelineEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("urls", (n) -> { this.setUrls(n.getCollectionOfObjectValues(AnalyzedEmailUrl::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -346,10 +346,10 @@ public class AnalyzedEmail extends Entity implements Parsable {
     }
     /**
      * Gets the threatTypes property value. Indicates the threat types. The possible values are: unknown, spam, malware, phish, none, unknownFutureValue.
-     * @return a {@link java.util.List<ThreatType>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<ThreatType> getThreatTypes() {
+    public java.util.List<String> getThreatTypes() {
         return this.backingStore.get("threatTypes");
     }
     /**
@@ -409,7 +409,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
         writer.writeStringValue("spamConfidenceLevel", this.getSpamConfidenceLevel());
         writer.writeStringValue("subject", this.getSubject());
         writer.writeCollectionOfObjectValues("threatDetectionDetails", this.getThreatDetectionDetails());
-        writer.writeCollectionOfEnumValues("threatTypes", this.getThreatTypes());
+        writer.writeCollectionOfPrimitiveValues("threatTypes", this.getThreatTypes());
         writer.writeCollectionOfObjectValues("timelineEvents", this.getTimelineEvents());
         writer.writeCollectionOfObjectValues("urls", this.getUrls());
     }
@@ -655,7 +655,7 @@ public class AnalyzedEmail extends Entity implements Parsable {
      * Sets the threatTypes property value. Indicates the threat types. The possible values are: unknown, spam, malware, phish, none, unknownFutureValue.
      * @param value Value to set for the threatTypes property.
      */
-    public void setThreatTypes(@jakarta.annotation.Nullable final java.util.List<ThreatType> value) {
+    public void setThreatTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("threatTypes", value);
     }
     /**

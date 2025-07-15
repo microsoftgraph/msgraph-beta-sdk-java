@@ -38,7 +38,6 @@ public class MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder extends Bas
      * Remove members from an updatableAssetGroup. You can also use the method removeMembersById to remove members.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-removemembers?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final RemoveMembersPostRequestBody body) {
         post(body, null);
@@ -48,7 +47,6 @@ public class MicrosoftGraphWindowsUpdatesRemoveMembersRequestBuilder extends Bas
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-updatableassetgroup-removemembers?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final RemoveMembersPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

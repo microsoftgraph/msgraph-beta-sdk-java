@@ -43,10 +43,10 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
     }
     /**
      * Gets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
-     * @return a {@link java.util.List<AccessReviewHistoryDecisionFilter>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<AccessReviewHistoryDecisionFilter> getDecisions() {
+    public java.util.List<String> getDecisions() {
         return this.backingStore.get("decisions");
     }
     /**
@@ -74,7 +74,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfEnumValues(AccessReviewHistoryDecisionFilter::forValue)); });
+        deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("downloadUri", (n) -> { this.setDownloadUri(n.getStringValue()); });
         deserializerMap.put("fulfilledDateTime", (n) -> { this.setFulfilledDateTime(n.getOffsetDateTimeValue()); });
@@ -151,7 +151,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-        writer.writeCollectionOfEnumValues("decisions", this.getDecisions());
+        writer.writeCollectionOfPrimitiveValues("decisions", this.getDecisions());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("downloadUri", this.getDownloadUri());
         writer.writeOffsetDateTimeValue("fulfilledDateTime", this.getFulfilledDateTime());
@@ -180,7 +180,7 @@ public class AccessReviewHistoryDefinition extends Entity implements Parsable {
      * Sets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions are included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
      * @param value Value to set for the decisions property.
      */
-    public void setDecisions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDecisionFilter> value) {
+    public void setDecisions(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("decisions", value);
     }
     /**

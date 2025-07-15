@@ -41,7 +41,6 @@ public class CreateImportSessionRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
-     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-createimportsession?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -55,7 +54,6 @@ public class CreateImportSessionRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
-     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-createimportsession?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated

@@ -41,43 +41,7 @@ public class MobileAppCatalogPackage extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("productDisplayName", (n) -> { this.setProductDisplayName(n.getStringValue()); });
-        deserializerMap.put("productId", (n) -> { this.setProductId(n.getStringValue()); });
-        deserializerMap.put("publisherDisplayName", (n) -> { this.setPublisherDisplayName(n.getStringValue()); });
-        deserializerMap.put("versionDisplayName", (n) -> { this.setVersionDisplayName(n.getStringValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the productDisplayName property value. The name of the product (example: &quot;Fabrikam for Business&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getProductDisplayName() {
-        return this.backingStore.get("productDisplayName");
-    }
-    /**
-     * Gets the productId property value. The identifier of a specific product irrespective of version, or other attributes. Read-only. Returned by default. Supports: $filter, $select. This property is read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getProductId() {
-        return this.backingStore.get("productId");
-    }
-    /**
-     * Gets the publisherDisplayName property value. The name of the application catalog package publisher (example: &quot;Fabrikam&quot;). Returned by default. Read-only. Supports $filter, $search, $select. This property is read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getPublisherDisplayName() {
-        return this.backingStore.get("publisherDisplayName");
-    }
-    /**
-     * Gets the versionDisplayName property value. The name of the product version (example: &quot;1.2203.156&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getVersionDisplayName() {
-        return this.backingStore.get("versionDisplayName");
     }
     /**
      * Serializes information the current object
@@ -86,33 +50,5 @@ public class MobileAppCatalogPackage extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-    }
-    /**
-     * Sets the productDisplayName property value. The name of the product (example: &quot;Fabrikam for Business&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
-     * @param value Value to set for the productDisplayName property.
-     */
-    public void setProductDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("productDisplayName", value);
-    }
-    /**
-     * Sets the productId property value. The identifier of a specific product irrespective of version, or other attributes. Read-only. Returned by default. Supports: $filter, $select. This property is read-only.
-     * @param value Value to set for the productId property.
-     */
-    public void setProductId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("productId", value);
-    }
-    /**
-     * Sets the publisherDisplayName property value. The name of the application catalog package publisher (example: &quot;Fabrikam&quot;). Returned by default. Read-only. Supports $filter, $search, $select. This property is read-only.
-     * @param value Value to set for the publisherDisplayName property.
-     */
-    public void setPublisherDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("publisherDisplayName", value);
-    }
-    /**
-     * Sets the versionDisplayName property value. The name of the product version (example: &quot;1.2203.156&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
-     * @param value Value to set for the versionDisplayName property.
-     */
-    public void setVersionDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("versionDisplayName", value);
     }
 }

@@ -39,25 +39,7 @@ public class IdentityUserFlow extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("userFlowType", (n) -> { this.setUserFlowType(n.getEnumValue(UserFlowType::forValue)); });
-        deserializerMap.put("userFlowTypeVersion", (n) -> { this.setUserFlowTypeVersion(n.getFloatValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the userFlowType property value. The userFlowType property
-     * @return a {@link UserFlowType}
-     */
-    @jakarta.annotation.Nullable
-    public UserFlowType getUserFlowType() {
-        return this.backingStore.get("userFlowType");
-    }
-    /**
-     * Gets the userFlowTypeVersion property value. The userFlowTypeVersion property
-     * @return a {@link Float}
-     */
-    @jakarta.annotation.Nullable
-    public Float getUserFlowTypeVersion() {
-        return this.backingStore.get("userFlowTypeVersion");
     }
     /**
      * Serializes information the current object
@@ -66,21 +48,5 @@ public class IdentityUserFlow extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("userFlowType", this.getUserFlowType());
-        writer.writeFloatValue("userFlowTypeVersion", this.getUserFlowTypeVersion());
-    }
-    /**
-     * Sets the userFlowType property value. The userFlowType property
-     * @param value Value to set for the userFlowType property.
-     */
-    public void setUserFlowType(@jakarta.annotation.Nullable final UserFlowType value) {
-        this.backingStore.set("userFlowType", value);
-    }
-    /**
-     * Sets the userFlowTypeVersion property value. The userFlowTypeVersion property
-     * @param value Value to set for the userFlowTypeVersion property.
-     */
-    public void setUserFlowTypeVersion(@jakarta.annotation.Nullable final Float value) {
-        this.backingStore.set("userFlowTypeVersion", value);
     }
 }

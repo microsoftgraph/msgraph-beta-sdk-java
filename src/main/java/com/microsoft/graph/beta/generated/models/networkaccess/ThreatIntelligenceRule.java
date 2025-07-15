@@ -34,7 +34,7 @@ public class ThreatIntelligenceRule extends PolicyRule implements Parsable {
         return this.backingStore.get("action");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description of the threat intelligence rule. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class ThreatIntelligenceRule extends PolicyRule implements Parsable {
         return this.backingStore.get("matchingConditions");
     }
     /**
-     * Gets the priority property value. The priority property
+     * Gets the priority property value. The priority of the rule which determines the order of rule evaluation. Lower values indicate higher priority. Supports $filter (eq).
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class ThreatIntelligenceRule extends PolicyRule implements Parsable {
         this.backingStore.set("action", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description of the threat intelligence rule. Supports $filter (eq).
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -114,7 +114,7 @@ public class ThreatIntelligenceRule extends PolicyRule implements Parsable {
         this.backingStore.set("matchingConditions", value);
     }
     /**
-     * Sets the priority property value. The priority property
+     * Sets the priority property value. The priority of the rule which determines the order of rule evaluation. Lower values indicate higher priority. Supports $filter (eq).
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Long value) {
