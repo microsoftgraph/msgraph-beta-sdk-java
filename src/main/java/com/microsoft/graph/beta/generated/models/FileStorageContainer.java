@@ -126,6 +126,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         deserializerMap.put("isItemVersioningEnabled", (n) -> { this.setIsItemVersioningEnabled(n.getBooleanValue()); });
         deserializerMap.put("itemMajorVersionLimit", (n) -> { this.setItemMajorVersionLimit(n.getIntegerValue()); });
         deserializerMap.put("lockState", (n) -> { this.setLockState(n.getEnumValue(SiteLockState::forValue)); });
+        deserializerMap.put("migrationJobs", (n) -> { this.setMigrationJobs(n.getCollectionOfObjectValues(SharePointMigrationJob::createFromDiscriminatorValue)); });
         deserializerMap.put("owners", (n) -> { this.setOwners(n.getCollectionOfObjectValues(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("ownershipType", (n) -> { this.setOwnershipType(n.getEnumValue(FileStorageContainerOwnershipType::forValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
@@ -160,6 +161,14 @@ public class FileStorageContainer extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public SiteLockState getLockState() {
         return this.backingStore.get("lockState");
+    }
+    /**
+     * Gets the migrationJobs property value. The migrationJobs property
+     * @return a {@link java.util.List<SharePointMigrationJob>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SharePointMigrationJob> getMigrationJobs() {
+        return this.backingStore.get("migrationJobs");
     }
     /**
      * Gets the owners property value. List of users who own the fileStorageContainer. Read-only.
@@ -253,6 +262,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeBooleanValue("isItemVersioningEnabled", this.getIsItemVersioningEnabled());
         writer.writeIntegerValue("itemMajorVersionLimit", this.getItemMajorVersionLimit());
         writer.writeEnumValue("lockState", this.getLockState());
+        writer.writeCollectionOfObjectValues("migrationJobs", this.getMigrationJobs());
         writer.writeCollectionOfObjectValues("owners", this.getOwners());
         writer.writeEnumValue("ownershipType", this.getOwnershipType());
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
@@ -353,6 +363,13 @@ public class FileStorageContainer extends Entity implements Parsable {
      */
     public void setLockState(@jakarta.annotation.Nullable final SiteLockState value) {
         this.backingStore.set("lockState", value);
+    }
+    /**
+     * Sets the migrationJobs property value. The migrationJobs property
+     * @param value Value to set for the migrationJobs property.
+     */
+    public void setMigrationJobs(@jakarta.annotation.Nullable final java.util.List<SharePointMigrationJob> value) {
+        this.backingStore.set("migrationJobs", value);
     }
     /**
      * Sets the owners property value. List of users who own the fileStorageContainer. Read-only.

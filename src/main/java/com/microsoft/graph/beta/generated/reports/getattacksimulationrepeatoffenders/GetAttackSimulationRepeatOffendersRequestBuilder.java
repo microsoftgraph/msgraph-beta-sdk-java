@@ -41,7 +41,6 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getattacksimulationrepeatoffenders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -55,7 +54,6 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This report function api is deprecated and will stop returning data on August 20, 2022. Api is now moved to /reports/security. Please use the new API. as of 2022-05/Tasks_And_Plans on 2022-05-24 and will be removed 2022-08-20
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getattacksimulationrepeatoffenders?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -128,12 +126,12 @@ public class GetAttackSimulationRepeatOffendersRequestBuilder extends BaseReques
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

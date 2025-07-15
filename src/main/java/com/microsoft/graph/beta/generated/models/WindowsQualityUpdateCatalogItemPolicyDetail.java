@@ -69,10 +69,10 @@ public class WindowsQualityUpdateCatalogItemPolicyDetail implements AdditionalDa
     }
     /**
      * Gets the catalogItemId property value. Catalog item id for this approval intend
-     * @return a {@link UUID}
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public UUID getCatalogItemId() {
+    public String getCatalogItemId() {
         return this.backingStore.get("catalogItemId");
     }
     /**
@@ -83,7 +83,7 @@ public class WindowsQualityUpdateCatalogItemPolicyDetail implements AdditionalDa
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("approvalStatus", (n) -> { this.setApprovalStatus(n.getEnumValue(WindowsQualityUpdateApprovalStatus::forValue)); });
-        deserializerMap.put("catalogItemId", (n) -> { this.setCatalogItemId(n.getUUIDValue()); });
+        deserializerMap.put("catalogItemId", (n) -> { this.setCatalogItemId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getUUIDValue()); });
         return deserializerMap;
@@ -111,7 +111,7 @@ public class WindowsQualityUpdateCatalogItemPolicyDetail implements AdditionalDa
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("approvalStatus", this.getApprovalStatus());
-        writer.writeUUIDValue("catalogItemId", this.getCatalogItemId());
+        writer.writeStringValue("catalogItemId", this.getCatalogItemId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeUUIDValue("policyId", this.getPolicyId());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -142,7 +142,7 @@ public class WindowsQualityUpdateCatalogItemPolicyDetail implements AdditionalDa
      * Sets the catalogItemId property value. Catalog item id for this approval intend
      * @param value Value to set for the catalogItemId property.
      */
-    public void setCatalogItemId(@jakarta.annotation.Nullable final UUID value) {
+    public void setCatalogItemId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("catalogItemId", value);
     }
     /**

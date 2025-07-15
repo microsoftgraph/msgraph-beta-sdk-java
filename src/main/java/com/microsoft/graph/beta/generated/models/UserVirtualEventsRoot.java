@@ -31,16 +31,7 @@ public class UserVirtualEventsRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("webinars", (n) -> { this.setWebinars(n.getCollectionOfObjectValues(VirtualEventWebinar::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the webinars property value. The webinars property
-     * @return a {@link java.util.List<VirtualEventWebinar>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<VirtualEventWebinar> getWebinars() {
-        return this.backingStore.get("webinars");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class UserVirtualEventsRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("webinars", this.getWebinars());
-    }
-    /**
-     * Sets the webinars property value. The webinars property
-     * @param value Value to set for the webinars property.
-     */
-    public void setWebinars(@jakarta.annotation.Nullable final java.util.List<VirtualEventWebinar> value) {
-        this.backingStore.set("webinars", value);
     }
 }

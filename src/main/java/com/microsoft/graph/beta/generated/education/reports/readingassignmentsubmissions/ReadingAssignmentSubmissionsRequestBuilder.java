@@ -60,21 +60,21 @@ public class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/education/reports/readingAssignmentSubmissions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a readingAssignmentSubmission object.
+     * Get a list of reading assignments that were submitted by a student.
      * @return a {@link ReadingAssignmentSubmissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/readingassignmentsubmission-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/reportsroot-list-readingassignmentsubmissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ReadingAssignmentSubmissionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a readingAssignmentSubmission object.
+     * Get a list of reading assignments that were submitted by a student.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ReadingAssignmentSubmissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/readingassignmentsubmission-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/reportsroot-list-readingassignmentsubmissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ReadingAssignmentSubmissionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -109,7 +109,7 @@ public class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ReadingAssignmentSubmission::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a readingAssignmentSubmission object.
+     * Get a list of reading assignments that were submitted by a student.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a readingAssignmentSubmission object.
+     * Get a list of reading assignments that were submitted by a student.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +163,7 @@ public class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuild
         return new ReadingAssignmentSubmissionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a readingAssignmentSubmission object.
+     * Get a list of reading assignments that were submitted by a student.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -201,12 +201,12 @@ public class ReadingAssignmentSubmissionsRequestBuilder extends BaseRequestBuild
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

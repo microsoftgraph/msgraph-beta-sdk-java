@@ -32,16 +32,7 @@ public class KnowledgeBaseArticle extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the url property value. The URL of the knowledge base article. Read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getUrl() {
-        return this.backingStore.get("url");
     }
     /**
      * Serializes information the current object
@@ -50,13 +41,5 @@ public class KnowledgeBaseArticle extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("url", this.getUrl());
-    }
-    /**
-     * Sets the url property value. The URL of the knowledge base article. Read-only.
-     * @param value Value to set for the url property.
-     */
-    public void setUrl(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("url", value);
     }
 }

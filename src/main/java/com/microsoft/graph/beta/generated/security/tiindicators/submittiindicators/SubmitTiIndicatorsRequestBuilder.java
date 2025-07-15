@@ -41,7 +41,6 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
-     * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-submittiindicators?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -56,7 +55,6 @@ public class SubmitTiIndicatorsRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The legacy Graph Security API is deprecated and will stop returning data on January 31, 2025. Please use the new Graph Security API. as of 2024-01/Deprecation on 2024-04-10 and will be removed 2026-04-10
-     * @see <a href="https://learn.microsoft.com/graph/api/tiindicator-submittiindicators?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated

@@ -93,23 +93,23 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, BaseSitePageCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new newsLinkPage in the site pages list of a site.
+     * Create a new sitePage in the site pages list in a site.
      * @param body The request body
      * @return a {@link BaseSitePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/newslinkpage-create?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sitepage-create?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BaseSitePage post(@jakarta.annotation.Nonnull final BaseSitePage body) {
         return post(body, null);
     }
     /**
-     * Create a new newsLinkPage in the site pages list of a site.
+     * Create a new sitePage in the site pages list in a site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BaseSitePage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/newslinkpage-create?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/sitepage-create?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public BaseSitePage post(@jakarta.annotation.Nonnull final BaseSitePage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +140,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new newsLinkPage in the site pages list of a site.
+     * Create a new sitePage in the site pages list in a site.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -149,7 +149,7 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new newsLinkPage in the site pages list of a site.
+     * Create a new sitePage in the site pages list in a site.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -212,12 +212,12 @@ public class PagesRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

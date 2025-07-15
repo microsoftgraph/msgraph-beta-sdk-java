@@ -39,7 +39,6 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-cancel?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post() {
@@ -51,7 +50,6 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageassignmentrequest-cancel?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

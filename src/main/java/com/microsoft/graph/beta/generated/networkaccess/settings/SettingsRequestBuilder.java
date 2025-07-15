@@ -4,7 +4,6 @@ import com.microsoft.graph.beta.models.networkaccess.Settings;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.settings.conditionalaccess.ConditionalAccessRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.settings.crosstenantaccess.CrossTenantAccessRequestBuilder;
-import com.microsoft.graph.beta.networkaccess.settings.enrichedauditlogs.EnrichedAuditLogsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.settings.forwardingoptions.ForwardingOptionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -39,14 +38,6 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CrossTenantAccessRequestBuilder crossTenantAccess() {
         return new CrossTenantAccessRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the enrichedAuditLogs property of the microsoft.graph.networkaccess.settings entity.
-     * @return a {@link EnrichedAuditLogsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public EnrichedAuditLogsRequestBuilder enrichedAuditLogs() {
-        return new EnrichedAuditLogsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the forwardingOptions property of the microsoft.graph.networkaccess.settings entity.

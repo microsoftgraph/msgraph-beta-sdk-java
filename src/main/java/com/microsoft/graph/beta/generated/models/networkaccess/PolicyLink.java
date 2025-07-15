@@ -30,6 +30,7 @@ public class PolicyLink extends Entity implements Parsable {
                 case "#microsoft.graph.networkaccess.filteringPolicyLink": return new FilteringPolicyLink();
                 case "#microsoft.graph.networkaccess.forwardingPolicyLink": return new ForwardingPolicyLink();
                 case "#microsoft.graph.networkaccess.threatIntelligencePolicyLink": return new ThreatIntelligencePolicyLink();
+                case "#microsoft.graph.networkaccess.tlsInspectionPolicyLink": return new TlsInspectionPolicyLink();
             }
         }
         return new PolicyLink();

@@ -38,7 +38,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return new NetworkAccessTraffic();
     }
     /**
-     * Gets the action property value. Indicates the action taken based on filtering policies. The possible values are: block, allow, unknownFutureValue, bypass, alert. Use the Prefer: include-unknown-enum-members request header to get the following values from this {evolvable enum}(/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): bypass , alert.
+     * Gets the action property value. Indicates the action taken based on filtering policies. The possible values are: block, allow, unknownFutureValue, bypass, alert. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: bypass , alert.
      * @return a {@link FilteringPolicyAction}
      */
     @jakarta.annotation.Nullable
@@ -546,7 +546,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the action property value. Indicates the action taken based on filtering policies. The possible values are: block, allow, unknownFutureValue, bypass, alert. Use the Prefer: include-unknown-enum-members request header to get the following values from this {evolvable enum}(/graph/best-practices-concept#handling-future-members-in-evolvable-enumerations): bypass , alert.
+     * Sets the action property value. Indicates the action taken based on filtering policies. The possible values are: block, allow, unknownFutureValue, bypass, alert. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: bypass , alert.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final FilteringPolicyAction value) {

@@ -31,16 +31,7 @@ public class RecommendationConfiguration extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("isNotificationEnabled", (n) -> { this.setIsNotificationEnabled(n.getBooleanValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the isNotificationEnabled property value. Indicates whether notifications for recommendations are enabled.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getIsNotificationEnabled() {
-        return this.backingStore.get("isNotificationEnabled");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class RecommendationConfiguration extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeBooleanValue("isNotificationEnabled", this.getIsNotificationEnabled());
-    }
-    /**
-     * Sets the isNotificationEnabled property value. Indicates whether notifications for recommendations are enabled.
-     * @param value Value to set for the isNotificationEnabled property.
-     */
-    public void setIsNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("isNotificationEnabled", value);
     }
 }

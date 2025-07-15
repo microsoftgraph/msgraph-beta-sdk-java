@@ -14,6 +14,8 @@ import com.microsoft.graph.beta.networkaccess.reports.ReportsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.tenantstatus.TenantStatusRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.threatintelligencepolicies.ThreatIntelligencePoliciesRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.tls.TlsRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.tlsinspectionpolicies.TlsInspectionPoliciesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -127,6 +129,22 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ThreatIntelligencePoliciesRequestBuilder threatIntelligencePolicies() {
         return new ThreatIntelligencePoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tls property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link TlsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TlsRequestBuilder tls() {
+        return new TlsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tlsInspectionPolicies property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link TlsInspectionPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TlsInspectionPoliciesRequestBuilder tlsInspectionPolicies() {
+        return new TlsInspectionPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link NetworkAccessRequestBuilder} and sets the default values.

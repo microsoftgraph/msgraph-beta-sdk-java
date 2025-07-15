@@ -25,31 +25,13 @@ public class Schema extends Entity implements Parsable {
         return new Schema();
     }
     /**
-     * Gets the baseType property value. The baseType property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getBaseType() {
-        return this.backingStore.get("baseType");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("baseType", (n) -> { this.setBaseType(n.getStringValue()); });
-        deserializerMap.put("properties", (n) -> { this.setProperties(n.getCollectionOfObjectValues(Property::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the properties property value. The properties property
-     * @return a {@link java.util.List<Property>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<Property> getProperties() {
-        return this.backingStore.get("properties");
     }
     /**
      * Serializes information the current object
@@ -58,21 +40,5 @@ public class Schema extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("baseType", this.getBaseType());
-        writer.writeCollectionOfObjectValues("properties", this.getProperties());
-    }
-    /**
-     * Sets the baseType property value. The baseType property
-     * @param value Value to set for the baseType property.
-     */
-    public void setBaseType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("baseType", value);
-    }
-    /**
-     * Sets the properties property value. The properties property
-     * @param value Value to set for the properties property.
-     */
-    public void setProperties(@jakarta.annotation.Nullable final java.util.List<Property> value) {
-        this.backingStore.set("properties", value);
     }
 }

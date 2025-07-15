@@ -44,7 +44,6 @@ public class GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclus
      * Get the number of user authentication requests, during a specific time period, that satisfy a Conditional Access policy requiring devices to be managed. Managed devices are computers joined to and managed by your on-premises directory and hybrid devices joined to Microsoft Entra.
      * @return a {@link GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmetricsforconditionalaccessmanageddevicessigninsuccess?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
@@ -55,7 +54,6 @@ public class GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclus
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmetricsforconditionalaccessmanageddevicessigninsuccess?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,12 +121,12 @@ public class GetMetricsForConditionalAccessManagedDevicesSignInSuccessWithInclus
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

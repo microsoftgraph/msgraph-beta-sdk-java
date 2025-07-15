@@ -77,7 +77,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("apps");
     }
     /**
-     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
+     * Gets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -162,13 +162,16 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         deserializerMap.put("exemptedUniversalLinks", (n) -> { this.setExemptedUniversalLinks(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("faceIdBlocked", (n) -> { this.setFaceIdBlocked(n.getBooleanValue()); });
         deserializerMap.put("filterOpenInToOnlyManagedApps", (n) -> { this.setFilterOpenInToOnlyManagedApps(n.getBooleanValue()); });
+        deserializerMap.put("genmojiConfigurationState", (n) -> { this.setGenmojiConfigurationState(n.getEnumValue(GenmojiIosManagedAppConfigurationState::forValue)); });
         deserializerMap.put("managedUniversalLinks", (n) -> { this.setManagedUniversalLinks(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("messagingRedirectAppUrlScheme", (n) -> { this.setMessagingRedirectAppUrlScheme(n.getStringValue()); });
         deserializerMap.put("minimumRequiredSdkVersion", (n) -> { this.setMinimumRequiredSdkVersion(n.getStringValue()); });
         deserializerMap.put("minimumWarningSdkVersion", (n) -> { this.setMinimumWarningSdkVersion(n.getStringValue()); });
         deserializerMap.put("minimumWipeSdkVersion", (n) -> { this.setMinimumWipeSdkVersion(n.getStringValue()); });
         deserializerMap.put("protectInboundDataFromUnknownSources", (n) -> { this.setProtectInboundDataFromUnknownSources(n.getBooleanValue()); });
+        deserializerMap.put("screenCaptureConfigurationState", (n) -> { this.setScreenCaptureConfigurationState(n.getEnumValue(ScreenCaptureIosManagedAppConfigurationState::forValue)); });
         deserializerMap.put("thirdPartyKeyboardsBlocked", (n) -> { this.setThirdPartyKeyboardsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("writingToolsConfigurationState", (n) -> { this.setWritingToolsConfigurationState(n.getEnumValue(WritingToolsIosManagedAppConfigurationState::forValue)); });
         return deserializerMap;
     }
     /**
@@ -178,6 +181,14 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
     @jakarta.annotation.Nullable
     public Boolean getFilterOpenInToOnlyManagedApps() {
         return this.backingStore.get("filterOpenInToOnlyManagedApps");
+    }
+    /**
+     * Gets the genmojiConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence Genmoji setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * @return a {@link GenmojiIosManagedAppConfigurationState}
+     */
+    @jakarta.annotation.Nullable
+    public GenmojiIosManagedAppConfigurationState getGenmojiConfigurationState() {
+        return this.backingStore.get("genmojiConfigurationState");
     }
     /**
      * Gets the managedUniversalLinks property value. A list of custom urls that are allowed to invocate a managed app
@@ -228,12 +239,28 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("protectInboundDataFromUnknownSources");
     }
     /**
+     * Gets the screenCaptureConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence screen capture setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * @return a {@link ScreenCaptureIosManagedAppConfigurationState}
+     */
+    @jakarta.annotation.Nullable
+    public ScreenCaptureIosManagedAppConfigurationState getScreenCaptureConfigurationState() {
+        return this.backingStore.get("screenCaptureConfigurationState");
+    }
+    /**
      * Gets the thirdPartyKeyboardsBlocked property value. Defines if third party keyboards are allowed while accessing a managed app
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
     public Boolean getThirdPartyKeyboardsBlocked() {
         return this.backingStore.get("thirdPartyKeyboardsBlocked");
+    }
+    /**
+     * Gets the writingToolsConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence writing tools setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * @return a {@link WritingToolsIosManagedAppConfigurationState}
+     */
+    @jakarta.annotation.Nullable
+    public WritingToolsIosManagedAppConfigurationState getWritingToolsConfigurationState() {
+        return this.backingStore.get("writingToolsConfigurationState");
     }
     /**
      * Serializes information the current object
@@ -257,13 +284,16 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         writer.writeCollectionOfPrimitiveValues("exemptedUniversalLinks", this.getExemptedUniversalLinks());
         writer.writeBooleanValue("faceIdBlocked", this.getFaceIdBlocked());
         writer.writeBooleanValue("filterOpenInToOnlyManagedApps", this.getFilterOpenInToOnlyManagedApps());
+        writer.writeEnumValue("genmojiConfigurationState", this.getGenmojiConfigurationState());
         writer.writeCollectionOfPrimitiveValues("managedUniversalLinks", this.getManagedUniversalLinks());
         writer.writeStringValue("messagingRedirectAppUrlScheme", this.getMessagingRedirectAppUrlScheme());
         writer.writeStringValue("minimumRequiredSdkVersion", this.getMinimumRequiredSdkVersion());
         writer.writeStringValue("minimumWarningSdkVersion", this.getMinimumWarningSdkVersion());
         writer.writeStringValue("minimumWipeSdkVersion", this.getMinimumWipeSdkVersion());
         writer.writeBooleanValue("protectInboundDataFromUnknownSources", this.getProtectInboundDataFromUnknownSources());
+        writer.writeEnumValue("screenCaptureConfigurationState", this.getScreenCaptureConfigurationState());
         writer.writeBooleanValue("thirdPartyKeyboardsBlocked", this.getThirdPartyKeyboardsBlocked());
+        writer.writeEnumValue("writingToolsConfigurationState", this.getWritingToolsConfigurationState());
     }
     /**
      * Sets the allowedIosDeviceModels property value. Semicolon seperated list of device models allowed, as a string, for the managed app to work.
@@ -308,7 +338,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("apps", value);
     }
     /**
-     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS.
+     * Sets the customBrowserProtocol property value. A custom browser protocol to open weblink on iOS. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
      * @param value Value to set for the customBrowserProtocol property.
      */
     public void setCustomBrowserProtocol(@jakarta.annotation.Nullable final String value) {
@@ -371,6 +401,13 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("filterOpenInToOnlyManagedApps", value);
     }
     /**
+     * Sets the genmojiConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence Genmoji setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * @param value Value to set for the genmojiConfigurationState property.
+     */
+    public void setGenmojiConfigurationState(@jakarta.annotation.Nullable final GenmojiIosManagedAppConfigurationState value) {
+        this.backingStore.set("genmojiConfigurationState", value);
+    }
+    /**
      * Sets the managedUniversalLinks property value. A list of custom urls that are allowed to invocate a managed app
      * @param value Value to set for the managedUniversalLinks property.
      */
@@ -413,10 +450,24 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("protectInboundDataFromUnknownSources", value);
     }
     /**
+     * Sets the screenCaptureConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence screen capture setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * @param value Value to set for the screenCaptureConfigurationState property.
+     */
+    public void setScreenCaptureConfigurationState(@jakarta.annotation.Nullable final ScreenCaptureIosManagedAppConfigurationState value) {
+        this.backingStore.set("screenCaptureConfigurationState", value);
+    }
+    /**
      * Sets the thirdPartyKeyboardsBlocked property value. Defines if third party keyboards are allowed while accessing a managed app
      * @param value Value to set for the thirdPartyKeyboardsBlocked property.
      */
     public void setThirdPartyKeyboardsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("thirdPartyKeyboardsBlocked", value);
+    }
+    /**
+     * Sets the writingToolsConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence writing tools setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * @param value Value to set for the writingToolsConfigurationState property.
+     */
+    public void setWritingToolsConfigurationState(@jakarta.annotation.Nullable final WritingToolsIosManagedAppConfigurationState value) {
+        this.backingStore.set("writingToolsConfigurationState", value);
     }
 }

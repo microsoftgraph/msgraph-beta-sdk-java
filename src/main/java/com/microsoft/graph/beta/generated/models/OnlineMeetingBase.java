@@ -146,10 +146,10 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     }
     /**
      * Gets the anonymizeIdentityForRoles property value. Specifies whose identity is anonymized in the meeting. Possible values are: attendee. The attendee value can&apos;t be removed through a PATCH operation once added.
-     * @return a {@link java.util.List<OnlineMeetingRole>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<OnlineMeetingRole> getAnonymizeIdentityForRoles() {
+    public java.util.List<String> getAnonymizeIdentityForRoles() {
         return this.backingStore.get("anonymizeIdentityForRoles");
     }
     /**
@@ -205,7 +205,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("allowTeamworkReactions", (n) -> { this.setAllowTeamworkReactions(n.getBooleanValue()); });
         deserializerMap.put("allowTranscription", (n) -> { this.setAllowTranscription(n.getBooleanValue()); });
         deserializerMap.put("allowWhiteboard", (n) -> { this.setAllowWhiteboard(n.getBooleanValue()); });
-        deserializerMap.put("anonymizeIdentityForRoles", (n) -> { this.setAnonymizeIdentityForRoles(n.getCollectionOfEnumValues(OnlineMeetingRole::forValue)); });
+        deserializerMap.put("anonymizeIdentityForRoles", (n) -> { this.setAnonymizeIdentityForRoles(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("attendanceReports", (n) -> { this.setAttendanceReports(n.getCollectionOfObjectValues(MeetingAttendanceReport::createFromDiscriminatorValue)); });
         deserializerMap.put("audioConferencing", (n) -> { this.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
         deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
@@ -332,7 +332,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeBooleanValue("allowTeamworkReactions", this.getAllowTeamworkReactions());
         writer.writeBooleanValue("allowTranscription", this.getAllowTranscription());
         writer.writeBooleanValue("allowWhiteboard", this.getAllowWhiteboard());
-        writer.writeCollectionOfEnumValues("anonymizeIdentityForRoles", this.getAnonymizeIdentityForRoles());
+        writer.writeCollectionOfPrimitiveValues("anonymizeIdentityForRoles", this.getAnonymizeIdentityForRoles());
         writer.writeCollectionOfObjectValues("attendanceReports", this.getAttendanceReports());
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
@@ -451,7 +451,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      * Sets the anonymizeIdentityForRoles property value. Specifies whose identity is anonymized in the meeting. Possible values are: attendee. The attendee value can&apos;t be removed through a PATCH operation once added.
      * @param value Value to set for the anonymizeIdentityForRoles property.
      */
-    public void setAnonymizeIdentityForRoles(@jakarta.annotation.Nullable final java.util.List<OnlineMeetingRole> value) {
+    public void setAnonymizeIdentityForRoles(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("anonymizeIdentityForRoles", value);
     }
     /**

@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.education.reports;
 
 import com.microsoft.graph.beta.education.reports.readingassignmentsubmissions.ReadingAssignmentSubmissionsRequestBuilder;
+import com.microsoft.graph.beta.education.reports.readingcoachpassages.ReadingCoachPassagesRequestBuilder;
 import com.microsoft.graph.beta.education.reports.reflectcheckinresponses.ReflectCheckInResponsesRequestBuilder;
 import com.microsoft.graph.beta.education.reports.speakerassignmentsubmissions.SpeakerAssignmentSubmissionsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -30,6 +31,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ReadingAssignmentSubmissionsRequestBuilder readingAssignmentSubmissions() {
         return new ReadingAssignmentSubmissionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the readingCoachPassages property of the microsoft.graph.reportsRoot entity.
+     * @return a {@link ReadingCoachPassagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReadingCoachPassagesRequestBuilder readingCoachPassages() {
+        return new ReadingCoachPassagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the reflectCheckInResponses property of the microsoft.graph.reportsRoot entity.

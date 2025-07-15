@@ -43,7 +43,6 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedule-filterbycurrentuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -57,7 +56,6 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedroleassignmentschedule-filterbycurrentuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -145,12 +143,12 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

@@ -31,16 +31,7 @@ public class CloudClipboardRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(CloudClipboardItem::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the items property value. Represents a collection of Cloud Clipboard items.
-     * @return a {@link java.util.List<CloudClipboardItem>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<CloudClipboardItem> getItems() {
-        return this.backingStore.get("items");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class CloudClipboardRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("items", this.getItems());
-    }
-    /**
-     * Sets the items property value. Represents a collection of Cloud Clipboard items.
-     * @param value Value to set for the items property.
-     */
-    public void setItems(@jakarta.annotation.Nullable final java.util.List<CloudClipboardItem> value) {
-        this.backingStore.set("items", value);
     }
 }

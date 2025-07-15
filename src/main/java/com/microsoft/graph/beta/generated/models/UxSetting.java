@@ -31,16 +31,7 @@ public class UxSetting extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("restrictNonAdminAccess", (n) -> { this.setRestrictNonAdminAccess(n.getEnumValue(NonAdminSetting::forValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the restrictNonAdminAccess property value. The restrictNonAdminAccess property
-     * @return a {@link NonAdminSetting}
-     */
-    @jakarta.annotation.Nullable
-    public NonAdminSetting getRestrictNonAdminAccess() {
-        return this.backingStore.get("restrictNonAdminAccess");
     }
     /**
      * Serializes information the current object
@@ -49,13 +40,5 @@ public class UxSetting extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("restrictNonAdminAccess", this.getRestrictNonAdminAccess());
-    }
-    /**
-     * Sets the restrictNonAdminAccess property value. The restrictNonAdminAccess property
-     * @param value Value to set for the restrictNonAdminAccess property.
-     */
-    public void setRestrictNonAdminAccess(@jakarta.annotation.Nullable final NonAdminSetting value) {
-        this.backingStore.set("restrictNonAdminAccess", value);
     }
 }

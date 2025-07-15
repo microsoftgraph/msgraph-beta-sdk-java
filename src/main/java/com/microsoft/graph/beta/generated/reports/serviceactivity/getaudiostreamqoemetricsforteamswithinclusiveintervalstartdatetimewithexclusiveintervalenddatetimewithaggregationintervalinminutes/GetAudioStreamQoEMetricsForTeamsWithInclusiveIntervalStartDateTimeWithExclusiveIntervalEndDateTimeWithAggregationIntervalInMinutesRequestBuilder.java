@@ -44,7 +44,6 @@ public class GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeW
      * Get metrics based on the percentage of audio streams for which quality of experience (QoE) telemetry was received by the Teams service.
      * @return a {@link GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getaudiostreamqoemetricsforteams?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
@@ -55,7 +54,6 @@ public class GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeW
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getaudiostreamqoemetricsforteams?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,12 +121,12 @@ public class GetAudioStreamQoEMetricsForTeamsWithInclusiveIntervalStartDateTimeW
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

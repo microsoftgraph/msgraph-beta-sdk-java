@@ -32,31 +32,13 @@ public class AuthenticationMethodDevice extends Entity implements Parsable {
         return new AuthenticationMethodDevice();
     }
     /**
-     * Gets the displayName property value. Optional name given to the hardware OATH device.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getDisplayName() {
-        return this.backingStore.get("displayName");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("hardwareOathDevices", (n) -> { this.setHardwareOathDevices(n.getCollectionOfObjectValues(HardwareOathTokenAuthenticationMethodDevice::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the hardwareOathDevices property value. Exposes the hardware OATH method in the directory.
-     * @return a {@link java.util.List<HardwareOathTokenAuthenticationMethodDevice>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<HardwareOathTokenAuthenticationMethodDevice> getHardwareOathDevices() {
-        return this.backingStore.get("hardwareOathDevices");
     }
     /**
      * Serializes information the current object
@@ -65,21 +47,5 @@ public class AuthenticationMethodDevice extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeCollectionOfObjectValues("hardwareOathDevices", this.getHardwareOathDevices());
-    }
-    /**
-     * Sets the displayName property value. Optional name given to the hardware OATH device.
-     * @param value Value to set for the displayName property.
-     */
-    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("displayName", value);
-    }
-    /**
-     * Sets the hardwareOathDevices property value. Exposes the hardware OATH method in the directory.
-     * @param value Value to set for the hardwareOathDevices property.
-     */
-    public void setHardwareOathDevices(@jakarta.annotation.Nullable final java.util.List<HardwareOathTokenAuthenticationMethodDevice> value) {
-        this.backingStore.set("hardwareOathDevices", value);
     }
 }

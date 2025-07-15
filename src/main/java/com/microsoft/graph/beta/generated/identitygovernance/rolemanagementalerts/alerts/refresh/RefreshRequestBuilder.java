@@ -38,7 +38,6 @@ public class RefreshRequestBuilder extends BaseRequestBuilder {
      * Refresh incidents on all security alerts or on a single security alert in Privileged Identity Management (PIM) for Microsoft Entra roles. This task is a long-running operation and the unifiedRoleManagementAlert object will be updated only when the operation completes.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementalert-refresh?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final RefreshPostRequestBody body) {
         post(body, null);
@@ -48,7 +47,6 @@ public class RefreshRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/unifiedrolemanagementalert-refresh?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final RefreshPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

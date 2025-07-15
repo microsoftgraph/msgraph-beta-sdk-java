@@ -39,7 +39,6 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      * Typically, synchronizing calendars in a mailbox in a local store entails a round of multiple delta function calls. The initial call is a full synchronization, and every subsequent delta call in the same round gets the incremental changes (additions, deletions, or updates). Using deltas allows you to incrementally maintain and synchronize a local store of calendars in the specified mailbox.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-delta?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeltaGetResponse get() {
@@ -50,7 +49,6 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/calendar-delta?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeltaGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,12 +126,12 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

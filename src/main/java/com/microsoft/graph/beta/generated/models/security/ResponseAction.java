@@ -38,20 +38,35 @@ public class ResponseAction implements AdditionalDataHolder, BackedModel, Parsab
             switch (mappingValue) {
                 case "#microsoft.graph.security.allowFileResponseAction": return new AllowFileResponseAction();
                 case "#microsoft.graph.security.blockFileResponseAction": return new BlockFileResponseAction();
+                case "#microsoft.graph.security.collectInvestigationPackageIncidentTaskResponseAction": return new CollectInvestigationPackageIncidentTaskResponseAction();
                 case "#microsoft.graph.security.collectInvestigationPackageResponseAction": return new CollectInvestigationPackageResponseAction();
+                case "#microsoft.graph.security.disableUserIncidentTaskResponseAction": return new DisableUserIncidentTaskResponseAction();
                 case "#microsoft.graph.security.disableUserResponseAction": return new DisableUserResponseAction();
+                case "#microsoft.graph.security.enableUserIncidentTaskResponseAction": return new EnableUserIncidentTaskResponseAction();
+                case "#microsoft.graph.security.forceUserPasswordResetIncidentTaskResponseAction": return new ForceUserPasswordResetIncidentTaskResponseAction();
                 case "#microsoft.graph.security.forceUserPasswordResetResponseAction": return new ForceUserPasswordResetResponseAction();
+                case "#microsoft.graph.security.hardDeleteEmailIncidentTaskResponseAction": return new HardDeleteEmailIncidentTaskResponseAction();
                 case "#microsoft.graph.security.hardDeleteResponseAction": return new HardDeleteResponseAction();
+                case "#microsoft.graph.security.incidentTaskResponseAction": return new IncidentTaskResponseAction();
                 case "#microsoft.graph.security.initiateInvestigationResponseAction": return new InitiateInvestigationResponseAction();
+                case "#microsoft.graph.security.isolateDeviceIncidentTaskResponseAction": return new IsolateDeviceIncidentTaskResponseAction();
                 case "#microsoft.graph.security.isolateDeviceResponseAction": return new IsolateDeviceResponseAction();
+                case "#microsoft.graph.security.markUserAsCompromisedIncidentTaskResponseAction": return new MarkUserAsCompromisedIncidentTaskResponseAction();
                 case "#microsoft.graph.security.markUserAsCompromisedResponseAction": return new MarkUserAsCompromisedResponseAction();
                 case "#microsoft.graph.security.moveToDeletedItemsResponseAction": return new MoveToDeletedItemsResponseAction();
                 case "#microsoft.graph.security.moveToInboxResponseAction": return new MoveToInboxResponseAction();
                 case "#microsoft.graph.security.moveToJunkResponseAction": return new MoveToJunkResponseAction();
+                case "#microsoft.graph.security.requireSignInIncidentTaskResponseAction": return new RequireSignInIncidentTaskResponseAction();
+                case "#microsoft.graph.security.restrictAppExecutionIncidentTaskResponseAction": return new RestrictAppExecutionIncidentTaskResponseAction();
                 case "#microsoft.graph.security.restrictAppExecutionResponseAction": return new RestrictAppExecutionResponseAction();
+                case "#microsoft.graph.security.runAntivirusScanIncidentTaskResponseAction": return new RunAntivirusScanIncidentTaskResponseAction();
                 case "#microsoft.graph.security.runAntivirusScanResponseAction": return new RunAntivirusScanResponseAction();
+                case "#microsoft.graph.security.softDeleteIncidentTaskResponseAction": return new SoftDeleteIncidentTaskResponseAction();
                 case "#microsoft.graph.security.softDeleteResponseAction": return new SoftDeleteResponseAction();
+                case "#microsoft.graph.security.stopAndQuarantineFileIncidentTaskResponseAction": return new StopAndQuarantineFileIncidentTaskResponseAction();
                 case "#microsoft.graph.security.stopAndQuarantineFileResponseAction": return new StopAndQuarantineFileResponseAction();
+                case "#microsoft.graph.security.unIsolateDeviceIncidentTaskResponseAction": return new UnIsolateDeviceIncidentTaskResponseAction();
+                case "#microsoft.graph.security.unRestrictAppExecutionIncidentTaskResponseAction": return new UnRestrictAppExecutionIncidentTaskResponseAction();
             }
         }
         return new ResponseAction();

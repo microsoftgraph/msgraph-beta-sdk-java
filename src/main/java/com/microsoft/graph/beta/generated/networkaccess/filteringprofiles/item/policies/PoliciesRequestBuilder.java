@@ -60,19 +60,21 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/policies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Get a list of the tlsInspectionPolicyLink objects on a filtering profile.
      * @return a {@link PolicyLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tlsinspectionpolicylink-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLinkCollectionResponse get() {
         return get(null);
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Get a list of the tlsInspectionPolicyLink objects on a filtering profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tlsinspectionpolicylink-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLinkCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLinkCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to policies for networkAccess
+     * Create a new tlsInspectionPolicyLink to connect a filtering profile with a tlsInspectionPolicy. One 1 tlsInspectionPolicy is allowed for every filtering profile.
      * @param body The request body
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tlsinspectionpolicylink-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink post(@jakarta.annotation.Nonnull final PolicyLink body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to policies for networkAccess
+     * Create a new tlsInspectionPolicyLink to connect a filtering profile with a tlsInspectionPolicy. One 1 tlsInspectionPolicy is allowed for every filtering profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tlsinspectionpolicylink-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink post(@jakarta.annotation.Nonnull final PolicyLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLink::createFromDiscriminatorValue);
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Get a list of the tlsInspectionPolicyLink objects on a filtering profile.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Get a list of the tlsInspectionPolicyLink objects on a filtering profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to policies for networkAccess
+     * Create a new tlsInspectionPolicyLink to connect a filtering profile with a tlsInspectionPolicy. One 1 tlsInspectionPolicy is allowed for every filtering profile.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to policies for networkAccess
+     * Create a new tlsInspectionPolicyLink to connect a filtering profile with a tlsInspectionPolicy. One 1 tlsInspectionPolicy is allowed for every filtering profile.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return new PoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * The traffic forwarding policies associated with this profile.
+     * Get a list of the tlsInspectionPolicyLink objects on a filtering profile.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -199,12 +203,12 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

@@ -39,7 +39,6 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
      * Report the current state of how many users in your organization are registered for self-service password reset and multifactor authentication (MFA) capabilities.
      * @return a {@link GetCredentialUserRegistrationCountGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getcredentialuserregistrationcount?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCredentialUserRegistrationCountGetResponse get() {
@@ -50,7 +49,6 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetCredentialUserRegistrationCountGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getcredentialuserregistrationcount?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetCredentialUserRegistrationCountGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,12 +126,12 @@ public class GetCredentialUserRegistrationCountRequestBuilder extends BaseReques
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

@@ -36,7 +36,7 @@ public class ThreatIntelligenceFqdnDestination extends ThreatIntelligenceDestina
         return deserializerMap;
     }
     /**
-     * Gets the values property value. The values property
+     * Gets the values property value. A collection of fully qualified domain names (FQDNs) associated with potential security threats.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ThreatIntelligenceFqdnDestination extends ThreatIntelligenceDestina
         writer.writeCollectionOfPrimitiveValues("values", this.getValues());
     }
     /**
-     * Sets the values property value. The values property
+     * Sets the values property value. A collection of fully qualified domain names (FQDNs) associated with potential security threats.
      * @param value Value to set for the values property.
      */
     public void setValues(@jakarta.annotation.Nullable final java.util.List<String> value) {

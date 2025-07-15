@@ -34,25 +34,7 @@ public class EndpointPrivilegeManagementProvisioningStatus extends Entity implem
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("licenseType", (n) -> { this.setLicenseType(n.getEnumValue(LicenseType::forValue)); });
-        deserializerMap.put("onboardedToMicrosoftManagedPlatform", (n) -> { this.setOnboardedToMicrosoftManagedPlatform(n.getBooleanValue()); });
         return deserializerMap;
-    }
-    /**
-     * Gets the licenseType property value. Indicates whether tenant has a valid Intune Endpoint Privilege Management license. Possible value are : 0 - notPaid, 1 - paid, 2 - trial. See LicenseType enum for more details. Default notPaid .
-     * @return a {@link LicenseType}
-     */
-    @jakarta.annotation.Nullable
-    public LicenseType getLicenseType() {
-        return this.backingStore.get("licenseType");
-    }
-    /**
-     * Gets the onboardedToMicrosoftManagedPlatform property value. Indicates whether tenant is onboarded to Microsoft Managed Platform - Cloud (MMPC). When set to true, implies tenant is onboarded and when set to false, implies tenant is not onboarded. Default set to false.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getOnboardedToMicrosoftManagedPlatform() {
-        return this.backingStore.get("onboardedToMicrosoftManagedPlatform");
     }
     /**
      * Serializes information the current object
@@ -61,21 +43,5 @@ public class EndpointPrivilegeManagementProvisioningStatus extends Entity implem
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("licenseType", this.getLicenseType());
-        writer.writeBooleanValue("onboardedToMicrosoftManagedPlatform", this.getOnboardedToMicrosoftManagedPlatform());
-    }
-    /**
-     * Sets the licenseType property value. Indicates whether tenant has a valid Intune Endpoint Privilege Management license. Possible value are : 0 - notPaid, 1 - paid, 2 - trial. See LicenseType enum for more details. Default notPaid .
-     * @param value Value to set for the licenseType property.
-     */
-    public void setLicenseType(@jakarta.annotation.Nullable final LicenseType value) {
-        this.backingStore.set("licenseType", value);
-    }
-    /**
-     * Sets the onboardedToMicrosoftManagedPlatform property value. Indicates whether tenant is onboarded to Microsoft Managed Platform - Cloud (MMPC). When set to true, implies tenant is onboarded and when set to false, implies tenant is not onboarded. Default set to false.
-     * @param value Value to set for the onboardedToMicrosoftManagedPlatform property.
-     */
-    public void setOnboardedToMicrosoftManagedPlatform(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("onboardedToMicrosoftManagedPlatform", value);
     }
 }

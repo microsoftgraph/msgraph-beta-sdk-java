@@ -39,7 +39,6 @@ public class MicrosoftGraphEdiscoveryReleaseRequestBuilder extends BaseRequestBu
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-release?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post() {
@@ -51,7 +50,6 @@ public class MicrosoftGraphEdiscoveryReleaseRequestBuilder extends BaseRequestBu
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security. as of 2022-12/ediscoveryNamespace on 2022-12-05 and will be removed 2023-02-01
-     * @see <a href="https://learn.microsoft.com/graph/api/ediscovery-custodian-release?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

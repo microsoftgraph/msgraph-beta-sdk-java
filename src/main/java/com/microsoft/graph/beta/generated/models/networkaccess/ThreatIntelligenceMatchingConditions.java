@@ -56,7 +56,7 @@ public class ThreatIntelligenceMatchingConditions implements AdditionalDataHolde
         return this.backingStore;
     }
     /**
-     * Gets the destinations property value. The destinations property
+     * Gets the destinations property value. A collection of destinations that are considered potential threats for network access evaluation.
      * @return a {@link java.util.List<ThreatIntelligenceDestination>}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class ThreatIntelligenceMatchingConditions implements AdditionalDataHolde
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the severity property value. The severity property
+     * Gets the severity property value. The severity level of the threat associated with the destinations. Higher severity levels typically result in stricter security controls. The possible values are: low, medium, high, unknownFutureValue.
      * @return a {@link ThreatIntelligenceSeverity}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class ThreatIntelligenceMatchingConditions implements AdditionalDataHolde
         this.backingStore = value;
     }
     /**
-     * Sets the destinations property value. The destinations property
+     * Sets the destinations property value. A collection of destinations that are considered potential threats for network access evaluation.
      * @param value Value to set for the destinations property.
      */
     public void setDestinations(@jakarta.annotation.Nullable final java.util.List<ThreatIntelligenceDestination> value) {
@@ -132,7 +132,7 @@ public class ThreatIntelligenceMatchingConditions implements AdditionalDataHolde
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the severity property value. The severity property
+     * Sets the severity property value. The severity level of the threat associated with the destinations. Higher severity levels typically result in stricter security controls. The possible values are: low, medium, high, unknownFutureValue.
      * @param value Value to set for the severity property.
      */
     public void setSeverity(@jakarta.annotation.Nullable final ThreatIntelligenceSeverity value) {

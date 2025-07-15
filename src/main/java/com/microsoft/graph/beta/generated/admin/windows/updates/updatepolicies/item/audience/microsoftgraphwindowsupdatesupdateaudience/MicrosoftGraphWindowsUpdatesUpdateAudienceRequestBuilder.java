@@ -38,7 +38,6 @@ public class MicrosoftGraphWindowsUpdatesUpdateAudienceRequestBuilder extends Ba
      * Update the members and exclusions relationships of a deploymentAudience. Adding an azureADDevice to the members or exclusions collections of a deployment audience automatically creates a Microsoft Entra device object, if it doesn&apos;t already exist. If the same updatableAsset gets included in the exclusions and members collections of a deploymentAudience, the deployment doesn&apos;t apply to that asset. If all updatableAsset objects are the same type, you can also use the method updateAudienceById to update the deploymentAudience.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-updateaudience?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final UpdateAudiencePostRequestBody body) {
         post(body, null);
@@ -48,7 +47,6 @@ public class MicrosoftGraphWindowsUpdatesUpdateAudienceRequestBuilder extends Ba
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/windowsupdates-deploymentaudience-updateaudience?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final UpdateAudiencePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);

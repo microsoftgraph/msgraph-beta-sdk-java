@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.security.identities;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.IdentityContainer;
 import com.microsoft.graph.beta.security.identities.healthissues.HealthIssuesRequestBuilder;
+import com.microsoft.graph.beta.security.identities.identityaccounts.IdentityAccountsRequestBuilder;
 import com.microsoft.graph.beta.security.identities.sensors.SensorsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -29,6 +30,14 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HealthIssuesRequestBuilder healthIssues() {
         return new HealthIssuesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the identityAccounts property of the microsoft.graph.security.identityContainer entity.
+     * @return a {@link IdentityAccountsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IdentityAccountsRequestBuilder identityAccounts() {
+        return new IdentityAccountsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sensors property of the microsoft.graph.security.identityContainer entity.

@@ -59,6 +59,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(Settings::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantStatus", (n) -> { this.setTenantStatus(n.getObjectValue(TenantStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("threatIntelligencePolicies", (n) -> { this.setThreatIntelligencePolicies(n.getCollectionOfObjectValues(ThreatIntelligencePolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("tls", (n) -> { this.setTls(n.getObjectValue(TlsTermination::createFromDiscriminatorValue)); });
+        deserializerMap.put("tlsInspectionPolicies", (n) -> { this.setTlsInspectionPolicies(n.getCollectionOfObjectValues(TlsInspectionPolicy::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -78,7 +80,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("filteringProfiles");
     }
     /**
-     * Gets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It&apos;s then added to a forwarding profile.
+     * Gets the forwardingPolicies property value. The forwardingPolicies property
      * @return a {@link java.util.List<ForwardingPolicy>}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +88,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("forwardingPolicies");
     }
     /**
-     * Gets the forwardingProfiles property value. A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
+     * Gets the forwardingProfiles property value. The forwardingProfiles property
      * @return a {@link java.util.List<ForwardingProfile>}
      */
     @jakarta.annotation.Nullable
@@ -134,6 +136,22 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("threatIntelligencePolicies");
     }
     /**
+     * Gets the tls property value. A container for tenant-level TLS inspection settings for Global Secure Access.
+     * @return a {@link TlsTermination}
+     */
+    @jakarta.annotation.Nullable
+    public TlsTermination getTls() {
+        return this.backingStore.get("tls");
+    }
+    /**
+     * Gets the tlsInspectionPolicies property value. Allows you to configure TLS termination for your organization&apos;s network traffic through Global Secure Access.
+     * @return a {@link java.util.List<TlsInspectionPolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TlsInspectionPolicy> getTlsInspectionPolicies() {
+        return this.backingStore.get("tlsInspectionPolicies");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -151,6 +169,8 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeObjectValue("tenantStatus", this.getTenantStatus());
         writer.writeCollectionOfObjectValues("threatIntelligencePolicies", this.getThreatIntelligencePolicies());
+        writer.writeObjectValue("tls", this.getTls());
+        writer.writeCollectionOfObjectValues("tlsInspectionPolicies", this.getTlsInspectionPolicies());
     }
     /**
      * Sets the alerts property value. The alerts property
@@ -181,14 +201,14 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         this.backingStore.set("filteringProfiles", value);
     }
     /**
-     * Sets the forwardingPolicies property value. A forwarding policy defines the specific traffic that is routed through the Global Secure Access Service. It&apos;s then added to a forwarding profile.
+     * Sets the forwardingPolicies property value. The forwardingPolicies property
      * @param value Value to set for the forwardingPolicies property.
      */
     public void setForwardingPolicies(@jakarta.annotation.Nullable final java.util.List<ForwardingPolicy> value) {
         this.backingStore.set("forwardingPolicies", value);
     }
     /**
-     * Sets the forwardingProfiles property value. A forwarding profile determines which types of traffic are routed through the Global Secure Access services and which ones are skipped. The handling of specific traffic is determined by the forwarding policies that are added to the forwarding profile.
+     * Sets the forwardingProfiles property value. The forwardingProfiles property
      * @param value Value to set for the forwardingProfiles property.
      */
     public void setForwardingProfiles(@jakarta.annotation.Nullable final java.util.List<ForwardingProfile> value) {
@@ -228,5 +248,19 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      */
     public void setThreatIntelligencePolicies(@jakarta.annotation.Nullable final java.util.List<ThreatIntelligencePolicy> value) {
         this.backingStore.set("threatIntelligencePolicies", value);
+    }
+    /**
+     * Sets the tls property value. A container for tenant-level TLS inspection settings for Global Secure Access.
+     * @param value Value to set for the tls property.
+     */
+    public void setTls(@jakarta.annotation.Nullable final TlsTermination value) {
+        this.backingStore.set("tls", value);
+    }
+    /**
+     * Sets the tlsInspectionPolicies property value. Allows you to configure TLS termination for your organization&apos;s network traffic through Global Secure Access.
+     * @param value Value to set for the tlsInspectionPolicies property.
+     */
+    public void setTlsInspectionPolicies(@jakarta.annotation.Nullable final java.util.List<TlsInspectionPolicy> value) {
+        this.backingStore.set("tlsInspectionPolicies", value);
     }
 }

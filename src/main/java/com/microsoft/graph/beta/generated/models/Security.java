@@ -8,6 +8,7 @@ import com.microsoft.graph.beta.models.security.CollaborationRoot;
 import com.microsoft.graph.beta.models.security.DataDiscoveryRoot;
 import com.microsoft.graph.beta.models.security.IdentityContainer;
 import com.microsoft.graph.beta.models.security.Incident;
+import com.microsoft.graph.beta.models.security.IncidentTask;
 import com.microsoft.graph.beta.models.security.InformationProtection;
 import com.microsoft.graph.beta.models.security.LabelsRoot;
 import com.microsoft.graph.beta.models.security.RulesRoot;
@@ -156,7 +157,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(31);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(32);
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
@@ -171,6 +172,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("hostSecurityProfiles", (n) -> { this.setHostSecurityProfiles(n.getCollectionOfObjectValues(HostSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("identities", (n) -> { this.setIdentities(n.getObjectValue(IdentityContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("incidents", (n) -> { this.setIncidents(n.getCollectionOfObjectValues(Incident::createFromDiscriminatorValue)); });
+        deserializerMap.put("incidentTasks", (n) -> { this.setIncidentTasks(n.getCollectionOfObjectValues(IncidentTask::createFromDiscriminatorValue)); });
         deserializerMap.put("informationProtection", (n) -> { this.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("ipSecurityProfiles", (n) -> { this.setIpSecurityProfiles(n.getCollectionOfObjectValues(IpSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("labels", (n) -> { this.setLabels(n.getObjectValue(LabelsRoot::createFromDiscriminatorValue)); });
@@ -221,6 +223,14 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<Incident> getIncidents() {
         return this.backingStore.get("incidents");
+    }
+    /**
+     * Gets the incidentTasks property value. The incidentTasks property
+     * @return a {@link java.util.List<IncidentTask>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<IncidentTask> getIncidentTasks() {
+        return this.backingStore.get("incidentTasks");
     }
     /**
      * Gets the informationProtection property value. The informationProtection property
@@ -378,6 +388,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeCollectionOfObjectValues("hostSecurityProfiles", this.getHostSecurityProfiles());
         writer.writeObjectValue("identities", this.getIdentities());
         writer.writeCollectionOfObjectValues("incidents", this.getIncidents());
+        writer.writeCollectionOfObjectValues("incidentTasks", this.getIncidentTasks());
         writer.writeObjectValue("informationProtection", this.getInformationProtection());
         writer.writeCollectionOfObjectValues("ipSecurityProfiles", this.getIpSecurityProfiles());
         writer.writeObjectValue("labels", this.getLabels());
@@ -509,6 +520,13 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setIncidents(@jakarta.annotation.Nullable final java.util.List<Incident> value) {
         this.backingStore.set("incidents", value);
+    }
+    /**
+     * Sets the incidentTasks property value. The incidentTasks property
+     * @param value Value to set for the incidentTasks property.
+     */
+    public void setIncidentTasks(@jakarta.annotation.Nullable final java.util.List<IncidentTask> value) {
+        this.backingStore.set("incidentTasks", value);
     }
     /**
      * Sets the informationProtection property value. The informationProtection property

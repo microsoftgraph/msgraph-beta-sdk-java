@@ -46,16 +46,18 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/networkAccess/threatIntelligencePolicies/{threatIntelligencePolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property threatIntelligencePolicies for networkAccess
+     * Delete a threatIntelligencePolicy object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-networkaccessroot-delete-threatintelligencepolicies?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property threatIntelligencePolicies for networkAccess
+     * Delete a threatIntelligencePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-networkaccessroot-delete-threatintelligencepolicies?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Read the properties and relationships of a threatIntelligencePolicy object.
      * @return a {@link ThreatIntelligencePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatIntelligencePolicy get() {
         return get(null);
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Read the properties and relationships of a threatIntelligencePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ThreatIntelligencePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicy-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatIntelligencePolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatIntelligencePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property threatIntelligencePolicies in networkAccess
+     * Update the properties of a threatIntelligencePolicy object.
      * @param body The request body
      * @return a {@link ThreatIntelligencePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatIntelligencePolicy patch(@jakarta.annotation.Nonnull final ThreatIntelligencePolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property threatIntelligencePolicies in networkAccess
+     * Update the properties of a threatIntelligencePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ThreatIntelligencePolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ThreatIntelligencePolicy patch(@jakarta.annotation.Nonnull final ThreatIntelligencePolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ThreatIntelligencePolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property threatIntelligencePolicies for networkAccess
+     * Delete a threatIntelligencePolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property threatIntelligencePolicies for networkAccess
+     * Delete a threatIntelligencePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Read the properties and relationships of a threatIntelligencePolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Read the properties and relationships of a threatIntelligencePolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the navigation property threatIntelligencePolicies in networkAccess
+     * Update the properties of a threatIntelligencePolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property threatIntelligencePolicies in networkAccess
+     * Update the properties of a threatIntelligencePolicy object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get threatIntelligencePolicies from networkAccess
+     * Read the properties and relationships of a threatIntelligencePolicy object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

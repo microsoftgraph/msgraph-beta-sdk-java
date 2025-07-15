@@ -39,7 +39,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrations/{virtualEventRegistration%2Did}/sessions(joinWebUrl='{joinWebUrl}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get sessions from solutions
+     * Sessions for a registration.
      * @return a {@link VirtualEventSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -48,7 +48,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get sessions from solutions
+     * Sessions for a registration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -61,7 +61,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventSession::createFromDiscriminatorValue);
     }
     /**
-     * Get sessions from solutions
+     * Sessions for a registration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -69,7 +69,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sessions from solutions
+     * Sessions for a registration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -91,7 +91,7 @@ public class SessionsWithJoinWebUrlRequestBuilder extends BaseRequestBuilder {
         return new SessionsWithJoinWebUrlRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sessions from solutions
+     * Sessions for a registration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

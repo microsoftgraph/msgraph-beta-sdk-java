@@ -37,8 +37,12 @@ public class DeviceManagementConfigurationSettingApplicability implements Additi
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.deviceManagementConfigurationAndroidSettingApplicability": return new DeviceManagementConfigurationAndroidSettingApplicability();
                 case "#microsoft.graph.deviceManagementConfigurationApplicationSettingApplicability": return new DeviceManagementConfigurationApplicationSettingApplicability();
+                case "#microsoft.graph.deviceManagementConfigurationEdgeSettingApplicability": return new DeviceManagementConfigurationEdgeSettingApplicability();
                 case "#microsoft.graph.deviceManagementConfigurationExchangeOnlineSettingApplicability": return new DeviceManagementConfigurationExchangeOnlineSettingApplicability();
+                case "#microsoft.graph.deviceManagementConfigurationIosSettingApplicability": return new DeviceManagementConfigurationIosSettingApplicability();
+                case "#microsoft.graph.deviceManagementConfigurationLinuxSettingApplicability": return new DeviceManagementConfigurationLinuxSettingApplicability();
                 case "#microsoft.graph.deviceManagementConfigurationWindowsSettingApplicability": return new DeviceManagementConfigurationWindowsSettingApplicability();
             }
         }

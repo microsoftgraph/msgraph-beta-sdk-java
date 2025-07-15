@@ -32,8 +32,17 @@ public class TenantDataSecurityAndGovernance extends DataSecurityAndGovernance i
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("policyFiles", (n) -> { this.setPolicyFiles(n.getCollectionOfObjectValues(PolicyFile::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionScopes", (n) -> { this.setProtectionScopes(n.getObjectValue(TenantProtectionScopeContainer::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the policyFiles property value. The policyFiles property
+     * @return a {@link java.util.List<PolicyFile>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PolicyFile> getPolicyFiles() {
+        return this.backingStore.get("policyFiles");
     }
     /**
      * Gets the protectionScopes property value. The protectionScopes property
@@ -50,7 +59,15 @@ public class TenantDataSecurityAndGovernance extends DataSecurityAndGovernance i
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("policyFiles", this.getPolicyFiles());
         writer.writeObjectValue("protectionScopes", this.getProtectionScopes());
+    }
+    /**
+     * Sets the policyFiles property value. The policyFiles property
+     * @param value Value to set for the policyFiles property.
+     */
+    public void setPolicyFiles(@jakarta.annotation.Nullable final java.util.List<PolicyFile> value) {
+        this.backingStore.set("policyFiles", value);
     }
     /**
      * Sets the protectionScopes property value. The protectionScopes property

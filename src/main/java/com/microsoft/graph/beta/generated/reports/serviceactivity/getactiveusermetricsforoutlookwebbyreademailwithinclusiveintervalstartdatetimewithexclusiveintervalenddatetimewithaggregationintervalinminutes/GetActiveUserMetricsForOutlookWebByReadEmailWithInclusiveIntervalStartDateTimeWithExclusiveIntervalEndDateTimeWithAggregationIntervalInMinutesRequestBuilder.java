@@ -44,7 +44,6 @@ public class GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalSt
      * Get all the active usage based on the number of users who successfully read emails using Outlook for the web.
      * @return a {@link GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforoutlookwebbyreademail?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
@@ -55,7 +54,6 @@ public class GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalSt
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getactiveusermetricsforoutlookwebbyreademail?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -123,12 +121,12 @@ public class GetActiveUserMetricsForOutlookWebByReadEmailWithInclusiveIntervalSt
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

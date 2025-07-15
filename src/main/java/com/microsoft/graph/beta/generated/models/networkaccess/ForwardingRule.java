@@ -43,6 +43,14 @@ public class ForwardingRule extends PolicyRule implements Parsable {
         return this.backingStore.get("action");
     }
     /**
+     * Gets the clientFallbackAction property value. The clientFallbackAction property
+     * @return a {@link ClientFallbackAction}
+     */
+    @jakarta.annotation.Nullable
+    public ClientFallbackAction getClientFallbackAction() {
+        return this.backingStore.get("clientFallbackAction");
+    }
+    /**
      * Gets the destinations property value. Destinations maintain a list of potential destinations and destination types that the user may access within the context of a network filtering policy. This includes IP addresses and fully qualified domain names (FQDNs)/URLs.
      * @return a {@link java.util.List<RuleDestination>}
      */
@@ -58,6 +66,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(ForwardingRuleAction::forValue)); });
+        deserializerMap.put("clientFallbackAction", (n) -> { this.setClientFallbackAction(n.getEnumValue(ClientFallbackAction::forValue)); });
         deserializerMap.put("destinations", (n) -> { this.setDestinations(n.getCollectionOfObjectValues(RuleDestination::createFromDiscriminatorValue)); });
         deserializerMap.put("ruleType", (n) -> { this.setRuleType(n.getEnumValue(NetworkDestinationType::forValue)); });
         return deserializerMap;
@@ -78,6 +87,7 @@ public class ForwardingRule extends PolicyRule implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("action", this.getAction());
+        writer.writeEnumValue("clientFallbackAction", this.getClientFallbackAction());
         writer.writeCollectionOfObjectValues("destinations", this.getDestinations());
         writer.writeEnumValue("ruleType", this.getRuleType());
     }
@@ -87,6 +97,13 @@ public class ForwardingRule extends PolicyRule implements Parsable {
      */
     public void setAction(@jakarta.annotation.Nullable final ForwardingRuleAction value) {
         this.backingStore.set("action", value);
+    }
+    /**
+     * Sets the clientFallbackAction property value. The clientFallbackAction property
+     * @param value Value to set for the clientFallbackAction property.
+     */
+    public void setClientFallbackAction(@jakarta.annotation.Nullable final ClientFallbackAction value) {
+        this.backingStore.set("clientFallbackAction", value);
     }
     /**
      * Sets the destinations property value. Destinations maintain a list of potential destinations and destination types that the user may access within the context of a network filtering policy. This includes IP addresses and fully qualified domain names (FQDNs)/URLs.

@@ -39,7 +39,6 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      * Retrieves changes to objects that the user is subscribed to. This method allows your application to track changes to objects that the user can access from within Planner over time. The return value of this method might contain heterogeneous types of objects from Planner. For more information about tracking changes in Microsoft Graph data, see Use delta query to track changes in Microsoft Graph data.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planneruser-list-delta?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeltaGetResponse get() {
@@ -50,7 +49,6 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeltaGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/planneruser-list-delta?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DeltaGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -128,12 +126,12 @@ public class DeltaRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer skip;
+        public Long skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Integer top;
+        public Long top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

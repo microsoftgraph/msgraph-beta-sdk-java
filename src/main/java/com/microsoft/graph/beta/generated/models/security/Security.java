@@ -32,16 +32,7 @@ public class Security extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("informationProtection", (n) -> { this.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the informationProtection property value. The informationProtection property
-     * @return a {@link InformationProtection}
-     */
-    @jakarta.annotation.Nullable
-    public InformationProtection getInformationProtection() {
-        return this.backingStore.get("informationProtection");
     }
     /**
      * Serializes information the current object
@@ -50,13 +41,5 @@ public class Security extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("informationProtection", this.getInformationProtection());
-    }
-    /**
-     * Sets the informationProtection property value. The informationProtection property
-     * @param value Value to set for the informationProtection property.
-     */
-    public void setInformationProtection(@jakarta.annotation.Nullable final InformationProtection value) {
-        this.backingStore.set("informationProtection", value);
     }
 }

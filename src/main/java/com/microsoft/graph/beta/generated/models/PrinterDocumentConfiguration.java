@@ -125,7 +125,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
         deserializerMap.put("duplexMode", (n) -> { this.setDuplexMode(n.getEnumValue(PrintDuplexMode::forValue)); });
         deserializerMap.put("feedDirection", (n) -> { this.setFeedDirection(n.getEnumValue(PrinterFeedDirection::forValue)); });
         deserializerMap.put("feedOrientation", (n) -> { this.setFeedOrientation(n.getEnumValue(PrinterFeedOrientation::forValue)); });
-        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfEnumValues(PrintFinishing::forValue)); });
+        deserializerMap.put("finishings", (n) -> { this.setFinishings(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("fitPdfToPage", (n) -> { this.setFitPdfToPage(n.getBooleanValue()); });
         deserializerMap.put("inputBin", (n) -> { this.setInputBin(n.getStringValue()); });
         deserializerMap.put("margin", (n) -> { this.setMargin(n.getObjectValue(PrintMargin::createFromDiscriminatorValue)); });
@@ -143,10 +143,10 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
     }
     /**
      * Gets the finishings property value. The finishings property
-     * @return a {@link java.util.List<PrintFinishing>}
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<PrintFinishing> getFinishings() {
+    public java.util.List<String> getFinishings() {
         return this.backingStore.get("finishings");
     }
     /**
@@ -266,7 +266,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
         writer.writeEnumValue("duplexMode", this.getDuplexMode());
         writer.writeEnumValue("feedDirection", this.getFeedDirection());
         writer.writeEnumValue("feedOrientation", this.getFeedOrientation());
-        writer.writeCollectionOfEnumValues("finishings", this.getFinishings());
+        writer.writeCollectionOfPrimitiveValues("finishings", this.getFinishings());
         writer.writeBooleanValue("fitPdfToPage", this.getFitPdfToPage());
         writer.writeStringValue("inputBin", this.getInputBin());
         writer.writeObjectValue("margin", this.getMargin());
@@ -350,7 +350,7 @@ public class PrinterDocumentConfiguration implements AdditionalDataHolder, Backe
      * Sets the finishings property value. The finishings property
      * @param value Value to set for the finishings property.
      */
-    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {
+    public void setFinishings(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("finishings", value);
     }
     /**

@@ -16,6 +16,7 @@ import com.microsoft.graph.beta.security.filesecurityprofiles.FileSecurityProfil
 import com.microsoft.graph.beta.security.hostsecurityprofiles.HostSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.identities.IdentitiesRequestBuilder;
 import com.microsoft.graph.beta.security.incidents.IncidentsRequestBuilder;
+import com.microsoft.graph.beta.security.incidenttasks.IncidentTasksRequestBuilder;
 import com.microsoft.graph.beta.security.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.labels.LabelsRequestBuilder;
@@ -162,6 +163,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public IncidentsRequestBuilder incidents() {
         return new IncidentsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the incidentTasks property of the microsoft.graph.security entity.
+     * @return a {@link IncidentTasksRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IncidentTasksRequestBuilder incidentTasks() {
+        return new IncidentTasksRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the informationProtection property of the microsoft.graph.security entity.
