@@ -42,6 +42,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Starting from December 31, 2024, this API (&apos;getFrontlineReport&apos;) will be deprecated and no longer supported. Please use the retrieveFrontlineReports API. as of 2024-09/getFrontlineReport on 2024-08-22 and will be removed 2024-12-31
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -56,6 +57,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Starting from December 31, 2024, this API (&apos;getFrontlineReport&apos;) will be deprecated and no longer supported. Please use the retrieveFrontlineReports API. as of 2024-09/getFrontlineReport on 2024-08-22 and will be removed 2024-12-31
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated

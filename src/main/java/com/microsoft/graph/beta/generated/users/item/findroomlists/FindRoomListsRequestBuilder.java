@@ -39,6 +39,7 @@ public class FindRoomListsRequestBuilder extends BaseRequestBuilder {
      * Get the room lists defined in a tenant, as represented by their emailAddress objects. Tenants can organize meeting rooms into room lists. In this API, each meeting room and room list is represented by an emailAddress instance.You can get all the room lists in the tenant, get all the rooms in the tenant, or get all the rooms in a specific room list.
      * @return a {@link FindRoomListsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-findroomlists?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FindRoomListsGetResponse get() {
@@ -49,6 +50,7 @@ public class FindRoomListsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FindRoomListsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-findroomlists?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FindRoomListsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,12 +113,12 @@ public class FindRoomListsRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

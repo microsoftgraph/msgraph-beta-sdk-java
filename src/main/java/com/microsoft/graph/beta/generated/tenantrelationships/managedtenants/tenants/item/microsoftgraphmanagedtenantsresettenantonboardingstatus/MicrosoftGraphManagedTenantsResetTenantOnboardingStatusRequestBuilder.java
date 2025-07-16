@@ -39,6 +39,7 @@ public class MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuild
      * Carries out the appropriate procedures to reset the onboarding status for the managed tenant that was removed from the multitenant management platform using the offboardTenant action. By invoking this action the platform attempts to onboard the managed tenant for management.
      * @return a {@link Tenant}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-resettenantonboardingstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Tenant post() {
@@ -49,6 +50,7 @@ public class MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Tenant}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/managedtenants-tenant-resettenantonboardingstatus?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Tenant post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

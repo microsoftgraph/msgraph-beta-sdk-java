@@ -40,6 +40,7 @@ public class UpdateAllMessagesReadStateRequestBuilder extends BaseRequestBuilder
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
+     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-updateallmessagesreadstate?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final UpdateAllMessagesReadStatePostRequestBody body) {
@@ -52,6 +53,7 @@ public class UpdateAllMessagesReadStateRequestBuilder extends BaseRequestBuilder
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2024-04/PrivatePreview:updateAllMessagesReadStateAPI on 2024-04-29 and will be removed 2024-06-30
+     * @see <a href="https://learn.microsoft.com/graph/api/mailfolder-updateallmessagesreadstate?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final UpdateAllMessagesReadStatePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

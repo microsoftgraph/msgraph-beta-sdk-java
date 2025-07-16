@@ -31,7 +31,16 @@ public class UserSolutionRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("workingTimeSchedule", (n) -> { this.setWorkingTimeSchedule(n.getObjectValue(WorkingTimeSchedule::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the workingTimeSchedule property value. The working time schedule entity associated with the solution.
+     * @return a {@link WorkingTimeSchedule}
+     */
+    @jakarta.annotation.Nullable
+    public WorkingTimeSchedule getWorkingTimeSchedule() {
+        return this.backingStore.get("workingTimeSchedule");
     }
     /**
      * Serializes information the current object
@@ -40,5 +49,13 @@ public class UserSolutionRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("workingTimeSchedule", this.getWorkingTimeSchedule());
+    }
+    /**
+     * Sets the workingTimeSchedule property value. The working time schedule entity associated with the solution.
+     * @param value Value to set for the workingTimeSchedule property.
+     */
+    public void setWorkingTimeSchedule(@jakarta.annotation.Nullable final WorkingTimeSchedule value) {
+        this.backingStore.set("workingTimeSchedule", value);
     }
 }

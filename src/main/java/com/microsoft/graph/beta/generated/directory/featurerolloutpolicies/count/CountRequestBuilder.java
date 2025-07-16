@@ -37,31 +37,31 @@ public class CountRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get the number of the resource
-     * @return a {@link Long}
+     * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public Long get() {
+    public Integer get() {
         return get(null);
     }
     /**
      * Get the number of the resource
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link Long}
+     * @return a {@link Integer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies. as of 2021-01/DirectoryFeatureRolloutPolicies on 2021-03-05 and will be removed 2021-06-30
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public Long get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public Integer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Long.class);
+        return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Integer.class);
     }
     /**
      * Get the number of the resource

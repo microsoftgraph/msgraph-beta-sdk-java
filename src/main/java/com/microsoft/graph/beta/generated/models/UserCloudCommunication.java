@@ -25,12 +25,21 @@ public class UserCloudCommunication extends Entity implements Parsable {
         return new UserCloudCommunication();
     }
     /**
+     * Gets the callSettings property value. The call settings assigned to the user.
+     * @return a {@link CallSettings}
+     */
+    @jakarta.annotation.Nullable
+    public CallSettings getCallSettings() {
+        return this.backingStore.get("callSettings");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callSettings", (n) -> { this.setCallSettings(n.getObjectValue(CallSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -40,5 +49,13 @@ public class UserCloudCommunication extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("callSettings", this.getCallSettings());
+    }
+    /**
+     * Sets the callSettings property value. The call settings assigned to the user.
+     * @param value Value to set for the callSettings property.
+     */
+    public void setCallSettings(@jakarta.annotation.Nullable final CallSettings value) {
+        this.backingStore.set("callSettings", value);
     }
 }

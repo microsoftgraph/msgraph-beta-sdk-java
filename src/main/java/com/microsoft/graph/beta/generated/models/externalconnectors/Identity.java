@@ -32,7 +32,16 @@ public class Identity extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(IdentityType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the type property value. The type of identity. Possible values are: user or group for Microsoft Entra identities and externalgroup for groups in an external system.
+     * @return a {@link IdentityType}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityType getType() {
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -41,5 +50,13 @@ public class Identity extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("type", this.getType());
+    }
+    /**
+     * Sets the type property value. The type of identity. Possible values are: user or group for Microsoft Entra identities and externalgroup for groups in an external system.
+     * @param value Value to set for the type property.
+     */
+    public void setType(@jakarta.annotation.Nullable final IdentityType value) {
+        this.backingStore.set("type", value);
     }
 }

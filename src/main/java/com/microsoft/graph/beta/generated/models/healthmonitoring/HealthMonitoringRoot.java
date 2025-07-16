@@ -26,12 +26,30 @@ public class HealthMonitoringRoot extends Entity implements Parsable {
         return new HealthMonitoringRoot();
     }
     /**
+     * Gets the alertConfigurations property value. The configuration of an alert type, which defines behavior that occurs when an alert is created.
+     * @return a {@link java.util.List<AlertConfiguration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AlertConfiguration> getAlertConfigurations() {
+        return this.backingStore.get("alertConfigurations");
+    }
+    /**
+     * Gets the alerts property value. The collection of health monitoring system detected alerts for anomalous usage patterns found in a Microsoft Entra tenant.
+     * @return a {@link java.util.List<Alert>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Alert> getAlerts() {
+        return this.backingStore.get("alerts");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("alertConfigurations", (n) -> { this.setAlertConfigurations(n.getCollectionOfObjectValues(AlertConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -41,5 +59,21 @@ public class HealthMonitoringRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("alertConfigurations", this.getAlertConfigurations());
+        writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
+    }
+    /**
+     * Sets the alertConfigurations property value. The configuration of an alert type, which defines behavior that occurs when an alert is created.
+     * @param value Value to set for the alertConfigurations property.
+     */
+    public void setAlertConfigurations(@jakarta.annotation.Nullable final java.util.List<AlertConfiguration> value) {
+        this.backingStore.set("alertConfigurations", value);
+    }
+    /**
+     * Sets the alerts property value. The collection of health monitoring system detected alerts for anomalous usage patterns found in a Microsoft Entra tenant.
+     * @param value Value to set for the alerts property.
+     */
+    public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
+        this.backingStore.set("alerts", value);
     }
 }

@@ -82,10 +82,10 @@ public class RecommendationBase extends Entity implements Parsable {
     }
     /**
      * Gets the featureAreas property value. The directory feature that the recommendation is related to.
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<RecommendationFeatureAreas>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getFeatureAreas() {
+    public java.util.List<RecommendationFeatureAreas> getFeatureAreas() {
         return this.backingStore.get("featureAreas");
     }
     /**
@@ -101,7 +101,7 @@ public class RecommendationBase extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("currentScore", (n) -> { this.setCurrentScore(n.getDoubleValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("featureAreas", (n) -> { this.setFeatureAreas(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("featureAreas", (n) -> { this.setFeatureAreas(n.getCollectionOfEnumValues(RecommendationFeatureAreas::forValue)); });
         deserializerMap.put("impactedResources", (n) -> { this.setImpactedResources(n.getCollectionOfObjectValues(ImpactedResource::createFromDiscriminatorValue)); });
         deserializerMap.put("impactStartDateTime", (n) -> { this.setImpactStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("impactType", (n) -> { this.setImpactType(n.getStringValue()); });
@@ -252,7 +252,7 @@ public class RecommendationBase extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeDoubleValue("currentScore", this.getCurrentScore());
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeCollectionOfPrimitiveValues("featureAreas", this.getFeatureAreas());
+        writer.writeCollectionOfEnumValues("featureAreas", this.getFeatureAreas());
         writer.writeCollectionOfObjectValues("impactedResources", this.getImpactedResources());
         writer.writeOffsetDateTimeValue("impactStartDateTime", this.getImpactStartDateTime());
         writer.writeStringValue("impactType", this.getImpactType());
@@ -315,7 +315,7 @@ public class RecommendationBase extends Entity implements Parsable {
      * Sets the featureAreas property value. The directory feature that the recommendation is related to.
      * @param value Value to set for the featureAreas property.
      */
-    public void setFeatureAreas(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setFeatureAreas(@jakarta.annotation.Nullable final java.util.List<RecommendationFeatureAreas> value) {
         this.backingStore.set("featureAreas", value);
     }
     /**

@@ -65,10 +65,10 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the eventTypes property value. List of risk event types. Deprecated. Use riskEventType instead.
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<RiskEventType>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getEventTypes() {
+    public java.util.List<RiskEventType> getEventTypes() {
         return this.backingStore.get("eventTypes");
     }
     /**
@@ -79,7 +79,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("detail", (n) -> { this.setDetail(n.getEnumValue(RiskDetail::forValue)); });
-        deserializerMap.put("eventTypes", (n) -> { this.setEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("eventTypes", (n) -> { this.setEventTypes(n.getCollectionOfEnumValues(RiskEventType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("riskEventTypes", (n) -> { this.setRiskEventTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
@@ -107,7 +107,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("detail", this.getDetail());
-        writer.writeCollectionOfPrimitiveValues("eventTypes", this.getEventTypes());
+        writer.writeCollectionOfEnumValues("eventTypes", this.getEventTypes());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfPrimitiveValues("riskEventTypes", this.getRiskEventTypes());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -138,7 +138,7 @@ public class RiskUserActivity implements AdditionalDataHolder, BackedModel, Pars
      * Sets the eventTypes property value. List of risk event types. Deprecated. Use riskEventType instead.
      * @param value Value to set for the eventTypes property.
      */
-    public void setEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setEventTypes(@jakarta.annotation.Nullable final java.util.List<RiskEventType> value) {
         this.backingStore.set("eventTypes", value);
     }
     /**

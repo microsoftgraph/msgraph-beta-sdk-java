@@ -25,13 +25,40 @@ public class IdentityApiConnector extends Entity implements Parsable {
         return new IdentityApiConnector();
     }
     /**
+     * Gets the authenticationConfiguration property value. The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
+     * @return a {@link ApiAuthenticationConfigurationBase}
+     */
+    @jakarta.annotation.Nullable
+    public ApiAuthenticationConfigurationBase getAuthenticationConfiguration() {
+        return this.backingStore.get("authenticationConfiguration");
+    }
+    /**
+     * Gets the displayName property value. The name of the API connector.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDisplayName() {
+        return this.backingStore.get("displayName");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("authenticationConfiguration", (n) -> { this.setAuthenticationConfiguration(n.getObjectValue(ApiAuthenticationConfigurationBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("targetUrl", (n) -> { this.setTargetUrl(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the targetUrl property value. The URL of the API endpoint to call.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getTargetUrl() {
+        return this.backingStore.get("targetUrl");
     }
     /**
      * Serializes information the current object
@@ -40,5 +67,29 @@ public class IdentityApiConnector extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("authenticationConfiguration", this.getAuthenticationConfiguration());
+        writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("targetUrl", this.getTargetUrl());
+    }
+    /**
+     * Sets the authenticationConfiguration property value. The object which describes the authentication configuration details for calling the API. Basic and PKCS 12 client certificate are supported.
+     * @param value Value to set for the authenticationConfiguration property.
+     */
+    public void setAuthenticationConfiguration(@jakarta.annotation.Nullable final ApiAuthenticationConfigurationBase value) {
+        this.backingStore.set("authenticationConfiguration", value);
+    }
+    /**
+     * Sets the displayName property value. The name of the API connector.
+     * @param value Value to set for the displayName property.
+     */
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the targetUrl property value. The URL of the API endpoint to call.
+     * @param value Value to set for the targetUrl property.
+     */
+    public void setTargetUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("targetUrl", value);
     }
 }

@@ -76,7 +76,7 @@ public class AdditionalUserOptions implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the markAllStudentsAsMinors property value. Indicates whether all students should be marked as minors.
+     * Gets the markAllStudentsAsMinors property value. Indicates whether all students should be marked as minors. The markAllStudentsAsMinors property is deprecated and will stop returning data on October 15, 2025. Going forward, use the studentAgeGroup property.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class AdditionalUserOptions implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the markAllStudentsAsMinors property value. Indicates whether all students should be marked as minors.
+     * Sets the markAllStudentsAsMinors property value. Indicates whether all students should be marked as minors. The markAllStudentsAsMinors property is deprecated and will stop returning data on October 15, 2025. Going forward, use the studentAgeGroup property.
      * @param value Value to set for the markAllStudentsAsMinors property.
      */
     public void setMarkAllStudentsAsMinors(@jakarta.annotation.Nullable final Boolean value) {

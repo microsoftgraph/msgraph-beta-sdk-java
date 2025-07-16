@@ -31,7 +31,16 @@ public class InferenceClassification extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("overrides", (n) -> { this.setOverrides(n.getCollectionOfObjectValues(InferenceClassificationOverride::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the overrides property value. A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
+     * @return a {@link java.util.List<InferenceClassificationOverride>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<InferenceClassificationOverride> getOverrides() {
+        return this.backingStore.get("overrides");
     }
     /**
      * Serializes information the current object
@@ -40,5 +49,13 @@ public class InferenceClassification extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("overrides", this.getOverrides());
+    }
+    /**
+     * Sets the overrides property value. A set of overrides for a user to always classify messages from specific senders in certain ways: focused, or other. Read-only. Nullable.
+     * @param value Value to set for the overrides property.
+     */
+    public void setOverrides(@jakarta.annotation.Nullable final java.util.List<InferenceClassificationOverride> value) {
+        this.backingStore.set("overrides", value);
     }
 }

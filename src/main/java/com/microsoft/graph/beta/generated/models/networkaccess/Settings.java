@@ -26,13 +26,40 @@ public class Settings extends Entity implements Parsable {
         return new Settings();
     }
     /**
+     * Gets the conditionalAccess property value. The conditionalAccess property
+     * @return a {@link ConditionalAccessSettings}
+     */
+    @jakarta.annotation.Nullable
+    public ConditionalAccessSettings getConditionalAccess() {
+        return this.backingStore.get("conditionalAccess");
+    }
+    /**
+     * Gets the crossTenantAccess property value. The crossTenantAccess property
+     * @return a {@link CrossTenantAccessSettings}
+     */
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessSettings getCrossTenantAccess() {
+        return this.backingStore.get("crossTenantAccess");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("conditionalAccess", (n) -> { this.setConditionalAccess(n.getObjectValue(ConditionalAccessSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("crossTenantAccess", (n) -> { this.setCrossTenantAccess(n.getObjectValue(CrossTenantAccessSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("forwardingOptions", (n) -> { this.setForwardingOptions(n.getObjectValue(ForwardingOptions::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the forwardingOptions property value. The forwardingOptions property
+     * @return a {@link ForwardingOptions}
+     */
+    @jakarta.annotation.Nullable
+    public ForwardingOptions getForwardingOptions() {
+        return this.backingStore.get("forwardingOptions");
     }
     /**
      * Serializes information the current object
@@ -41,5 +68,29 @@ public class Settings extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("conditionalAccess", this.getConditionalAccess());
+        writer.writeObjectValue("crossTenantAccess", this.getCrossTenantAccess());
+        writer.writeObjectValue("forwardingOptions", this.getForwardingOptions());
+    }
+    /**
+     * Sets the conditionalAccess property value. The conditionalAccess property
+     * @param value Value to set for the conditionalAccess property.
+     */
+    public void setConditionalAccess(@jakarta.annotation.Nullable final ConditionalAccessSettings value) {
+        this.backingStore.set("conditionalAccess", value);
+    }
+    /**
+     * Sets the crossTenantAccess property value. The crossTenantAccess property
+     * @param value Value to set for the crossTenantAccess property.
+     */
+    public void setCrossTenantAccess(@jakarta.annotation.Nullable final CrossTenantAccessSettings value) {
+        this.backingStore.set("crossTenantAccess", value);
+    }
+    /**
+     * Sets the forwardingOptions property value. The forwardingOptions property
+     * @param value Value to set for the forwardingOptions property.
+     */
+    public void setForwardingOptions(@jakarta.annotation.Nullable final ForwardingOptions value) {
+        this.backingStore.set("forwardingOptions", value);
     }
 }

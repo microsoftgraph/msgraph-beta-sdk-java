@@ -39,6 +39,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
      * Reactivate an accidentally dismissed, completed, or postponed impactedResource object. This action updates the status of the resource to active. This method is relevant only if the status of the impactedResource object is dismissed, postponed, or completedByUser. 
      * @return a {@link ImpactedResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-reactivate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImpactedResource post() {
@@ -49,6 +50,7 @@ public class ReactivateRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ImpactedResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/impactedresource-reactivate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ImpactedResource post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

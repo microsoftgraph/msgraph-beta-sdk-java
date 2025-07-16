@@ -165,7 +165,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("connectToVpnOnLaunch");
     }
     /**
-     * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Gets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("customBrowserDisplayName");
     }
     /**
-     * Gets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Gets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -615,14 +615,14 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this.backingStore.set("connectToVpnOnLaunch", value);
     }
     /**
-     * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Sets the customBrowserDisplayName property value. Friendly name of the preferred custom browser to open weblink on Android.
      * @param value Value to set for the customBrowserDisplayName property.
      */
     public void setCustomBrowserDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("customBrowserDisplayName", value);
     }
     /**
-     * Sets the customBrowserPackageId property value. Unique identifier of the preferred custom browser to open weblink on Android. When this property is configured, ManagedBrowserToOpenLinksRequired should be true.
+     * Sets the customBrowserPackageId property value. Unique identifier of a custom browser to open weblink on Android.
      * @param value Value to set for the customBrowserPackageId property.
      */
     public void setCustomBrowserPackageId(@jakarta.annotation.Nullable final String value) {

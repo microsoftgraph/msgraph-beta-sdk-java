@@ -97,10 +97,10 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
     }
     /**
      * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<EntityType>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getEntityTypes() {
+    public java.util.List<EntityType> getEntityTypes() {
         return this.backingStore.get("entityTypes");
     }
     /**
@@ -115,7 +115,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         deserializerMap.put("collapseProperties", (n) -> { this.setCollapseProperties(n.getCollectionOfObjectValues(CollapseProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("contentSources", (n) -> { this.setContentSources(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("enableTopResults", (n) -> { this.setEnableTopResults(n.getBooleanValue()); });
-        deserializerMap.put("entityTypes", (n) -> { this.setEntityTypes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("entityTypes", (n) -> { this.setEntityTypes(n.getCollectionOfEnumValues(EntityType::forValue)); });
         deserializerMap.put("fields", (n) -> { this.setFields(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("from", (n) -> { this.setFrom(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -237,7 +237,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeCollectionOfObjectValues("collapseProperties", this.getCollapseProperties());
         writer.writeCollectionOfPrimitiveValues("contentSources", this.getContentSources());
         writer.writeBooleanValue("enableTopResults", this.getEnableTopResults());
-        writer.writeCollectionOfPrimitiveValues("entityTypes", this.getEntityTypes());
+        writer.writeCollectionOfEnumValues("entityTypes", this.getEntityTypes());
         writer.writeCollectionOfPrimitiveValues("fields", this.getFields());
         writer.writeIntegerValue("from", this.getFrom());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -306,7 +306,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
      * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
      * @param value Value to set for the entityTypes property.
      */
-    public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<EntityType> value) {
         this.backingStore.set("entityTypes", value);
     }
     /**

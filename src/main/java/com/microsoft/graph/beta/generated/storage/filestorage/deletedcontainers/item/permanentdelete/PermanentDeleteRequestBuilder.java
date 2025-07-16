@@ -37,6 +37,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
     /**
      * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn&apos;t sent to the deleted container collection. Therefore, it can&apos;t be restored later.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-permanentdelete?view=graph-rest-beta">Find more info here</a>
      */
     public void post() {
         post(null);
@@ -45,6 +46,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
      * Permanently delete a fileStorageContainer object. Deleting a file storage container with this method permanently removes it. It isn&apos;t sent to the deleted container collection. Therefore, it can&apos;t be restored later.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainer-permanentdelete?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);

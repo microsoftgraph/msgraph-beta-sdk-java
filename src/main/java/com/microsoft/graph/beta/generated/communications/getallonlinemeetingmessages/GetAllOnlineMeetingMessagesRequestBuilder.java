@@ -39,6 +39,7 @@ public class GetAllOnlineMeetingMessagesRequestBuilder extends BaseRequestBuilde
      * Get all Teams question and answer (Q&amp;A) conversation messages in a tenant. This function returns a snapshot of all Q&amp;A activity in JSON format. The export includes:- The original question or discussion text- The user who posted the message- All replies and responders- Vote counts- Moderation status (pending or dismissed)- Private replies- The meeting ID and organizer ID that are used for mapping to meeting metadata.
      * @return a {@link GetAllOnlineMeetingMessagesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudcommunications-getallonlinemeetingmessages?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAllOnlineMeetingMessagesGetResponse get() {
@@ -49,6 +50,7 @@ public class GetAllOnlineMeetingMessagesRequestBuilder extends BaseRequestBuilde
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetAllOnlineMeetingMessagesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudcommunications-getallonlinemeetingmessages?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetAllOnlineMeetingMessagesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -126,12 +128,12 @@ public class GetAllOnlineMeetingMessagesRequestBuilder extends BaseRequestBuilde
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

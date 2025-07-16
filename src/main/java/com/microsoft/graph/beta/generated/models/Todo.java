@@ -31,7 +31,16 @@ public class Todo extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lists", (n) -> { this.setLists(n.getCollectionOfObjectValues(TodoTaskList::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lists property value. The task lists in the users mailbox.
+     * @return a {@link java.util.List<TodoTaskList>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TodoTaskList> getLists() {
+        return this.backingStore.get("lists");
     }
     /**
      * Serializes information the current object
@@ -40,5 +49,13 @@ public class Todo extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("lists", this.getLists());
+    }
+    /**
+     * Sets the lists property value. The task lists in the users mailbox.
+     * @param value Value to set for the lists property.
+     */
+    public void setLists(@jakarta.annotation.Nullable final java.util.List<TodoTaskList> value) {
+        this.backingStore.set("lists", value);
     }
 }

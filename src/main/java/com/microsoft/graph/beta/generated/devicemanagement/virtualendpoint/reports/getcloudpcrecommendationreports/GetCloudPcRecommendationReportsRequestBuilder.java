@@ -42,6 +42,7 @@ public class GetCloudPcRecommendationReportsRequestBuilder extends BaseRequestBu
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Starting from July 01, 2025, this API (&apos;getCloudPcRecommendationReports&apos;) will be deprecated and no longer supported. Please use the retrieveCloudPcRecommendationReports API. as of 2025-02/getCloudPcRecommendationReports on 2025-02-27 and will be removed 2025-07-01
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getcloudpcrecommendationreports?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -56,6 +57,7 @@ public class GetCloudPcRecommendationReportsRequestBuilder extends BaseRequestBu
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Starting from July 01, 2025, this API (&apos;getCloudPcRecommendationReports&apos;) will be deprecated and no longer supported. Please use the retrieveCloudPcRecommendationReports API. as of 2025-02/getCloudPcRecommendationReports on 2025-02-27 and will be removed 2025-07-01
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getcloudpcrecommendationreports?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated

@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -44,13 +45,40 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
         return new GroupPolicyPresentation();
     }
     /**
+     * Gets the definition property value. The group policy definition associated with the presentation.
+     * @return a {@link GroupPolicyDefinition}
+     */
+    @jakarta.annotation.Nullable
+    public GroupPolicyDefinition getDefinition() {
+        return this.backingStore.get("definition");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("definition", (n) -> { this.setDefinition(n.getObjectValue(GroupPolicyDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the label property value. Localized text label for any presentation entity. The default value is empty.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLabel() {
+        return this.backingStore.get("label");
+    }
+    /**
+     * Gets the lastModifiedDateTime property value. The date and time the entity was last modified.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Serializes information the current object
@@ -59,5 +87,29 @@ public class GroupPolicyPresentation extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("definition", this.getDefinition());
+        writer.writeStringValue("label", this.getLabel());
+        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+    }
+    /**
+     * Sets the definition property value. The group policy definition associated with the presentation.
+     * @param value Value to set for the definition property.
+     */
+    public void setDefinition(@jakarta.annotation.Nullable final GroupPolicyDefinition value) {
+        this.backingStore.set("definition", value);
+    }
+    /**
+     * Sets the label property value. Localized text label for any presentation entity. The default value is empty.
+     * @param value Value to set for the label property.
+     */
+    public void setLabel(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("label", value);
+    }
+    /**
+     * Sets the lastModifiedDateTime property value. The date and time the entity was last modified.
+     * @param value Value to set for the lastModifiedDateTime property.
+     */
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastModifiedDateTime", value);
     }
 }
