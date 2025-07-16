@@ -57,10 +57,10 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
     }
     /**
      * Gets the applicationPermissions property value. The applicationPermissions property
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<FileStorageContainerTypeAppPermission>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getApplicationPermissions() {
+    public java.util.List<FileStorageContainerTypeAppPermission> getApplicationPermissions() {
         return this.backingStore.get("applicationPermissions");
     }
     /**
@@ -73,10 +73,10 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
     }
     /**
      * Gets the delegatedPermissions property value. The delegatedPermissions property
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<FileStorageContainerTypeAppPermission>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getDelegatedPermissions() {
+    public java.util.List<FileStorageContainerTypeAppPermission> getDelegatedPermissions() {
         return this.backingStore.get("delegatedPermissions");
     }
     /**
@@ -87,8 +87,8 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
-        deserializerMap.put("applicationPermissions", (n) -> { this.setApplicationPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("delegatedPermissions", (n) -> { this.setDelegatedPermissions(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("applicationPermissions", (n) -> { this.setApplicationPermissions(n.getCollectionOfEnumValues(FileStorageContainerTypeAppPermission::forValue)); });
+        deserializerMap.put("delegatedPermissions", (n) -> { this.setDelegatedPermissions(n.getCollectionOfEnumValues(FileStorageContainerTypeAppPermission::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -107,8 +107,8 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("appId", this.getAppId());
-        writer.writeCollectionOfPrimitiveValues("applicationPermissions", this.getApplicationPermissions());
-        writer.writeCollectionOfPrimitiveValues("delegatedPermissions", this.getDelegatedPermissions());
+        writer.writeCollectionOfEnumValues("applicationPermissions", this.getApplicationPermissions());
+        writer.writeCollectionOfEnumValues("delegatedPermissions", this.getDelegatedPermissions());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -130,7 +130,7 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
      * Sets the applicationPermissions property value. The applicationPermissions property
      * @param value Value to set for the applicationPermissions property.
      */
-    public void setApplicationPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setApplicationPermissions(@jakarta.annotation.Nullable final java.util.List<FileStorageContainerTypeAppPermission> value) {
         this.backingStore.set("applicationPermissions", value);
     }
     /**
@@ -145,7 +145,7 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
      * Sets the delegatedPermissions property value. The delegatedPermissions property
      * @param value Value to set for the delegatedPermissions property.
      */
-    public void setDelegatedPermissions(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setDelegatedPermissions(@jakarta.annotation.Nullable final java.util.List<FileStorageContainerTypeAppPermission> value) {
         this.backingStore.set("delegatedPermissions", value);
     }
     /**

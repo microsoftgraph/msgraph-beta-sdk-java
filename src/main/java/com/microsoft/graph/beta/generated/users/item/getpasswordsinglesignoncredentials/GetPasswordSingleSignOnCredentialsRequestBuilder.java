@@ -38,6 +38,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
      * Get the list of password-based single sign-on credentials for a given user. This API returns the encrypted passwords as null or empty strings.
      * @return a {@link GetPasswordSingleSignOnCredentialsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-getpasswordsinglesignoncredentials?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetPasswordSingleSignOnCredentialsPostResponse post() {
@@ -48,6 +49,7 @@ public class GetPasswordSingleSignOnCredentialsRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetPasswordSingleSignOnCredentialsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/user-getpasswordsinglesignoncredentials?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetPasswordSingleSignOnCredentialsPostResponse post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

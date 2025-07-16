@@ -39,6 +39,7 @@ public class MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder e
      * @param body The request body
      * @return a {@link EvaluateClassificationResultsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateclassificationresults?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EvaluateClassificationResultsPostResponse post(@jakarta.annotation.Nonnull final EvaluateClassificationResultsPostRequestBody body) {
@@ -50,6 +51,7 @@ public class MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder e
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EvaluateClassificationResultsPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensitivitylabel-evaluateclassificationresults?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EvaluateClassificationResultsPostResponse post(@jakarta.annotation.Nonnull final EvaluateClassificationResultsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

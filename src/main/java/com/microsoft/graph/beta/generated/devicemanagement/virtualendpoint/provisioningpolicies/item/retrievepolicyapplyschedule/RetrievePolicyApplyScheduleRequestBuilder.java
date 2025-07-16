@@ -39,6 +39,7 @@ public class RetrievePolicyApplyScheduleRequestBuilder extends BaseRequestBuilde
      * Get the scheduled apply rule set on the policy. Frontline shared only. Administrators only.
      * @return a {@link CloudPcPolicyScheduledApplyActionDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-retrievepolicyapplyschedule?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPolicyScheduledApplyActionDetail get() {
@@ -49,6 +50,7 @@ public class RetrievePolicyApplyScheduleRequestBuilder extends BaseRequestBuilde
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcPolicyScheduledApplyActionDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-retrievepolicyapplyschedule?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPolicyScheduledApplyActionDetail get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

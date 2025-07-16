@@ -13,6 +13,7 @@ public class AwsUser extends AwsIdentity implements Parsable {
      */
     public AwsUser() {
         super();
+        this.setOdataType("#microsoft.graph.awsUser");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -25,12 +26,21 @@ public class AwsUser extends AwsIdentity implements Parsable {
         return new AwsUser();
     }
     /**
+     * Gets the assumableRoles property value. Roles assumed by the user.
+     * @return a {@link java.util.List<AwsRole>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AwsRole> getAssumableRoles() {
+        return this.backingStore.get("assumableRoles");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("assumableRoles", (n) -> { this.setAssumableRoles(n.getCollectionOfObjectValues(AwsRole::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -40,5 +50,13 @@ public class AwsUser extends AwsIdentity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("assumableRoles", this.getAssumableRoles());
+    }
+    /**
+     * Sets the assumableRoles property value. Roles assumed by the user.
+     * @param value Value to set for the assumableRoles property.
+     */
+    public void setAssumableRoles(@jakarta.annotation.Nullable final java.util.List<AwsRole> value) {
+        this.backingStore.set("assumableRoles", value);
     }
 }

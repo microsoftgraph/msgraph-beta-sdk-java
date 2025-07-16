@@ -39,6 +39,7 @@ public class GetEffectivePermissionsRequestBuilder extends BaseRequestBuilder {
      * Get the effective permissions of the currently authenticated user, helping UX hide or disable content that the current user doesn&apos;t have access to.
      * @return a {@link GetEffectivePermissionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-geteffectivepermissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetEffectivePermissionsGetResponse get() {
@@ -49,6 +50,7 @@ public class GetEffectivePermissionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetEffectivePermissionsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-geteffectivepermissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetEffectivePermissionsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -111,12 +113,12 @@ public class GetEffectivePermissionsRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

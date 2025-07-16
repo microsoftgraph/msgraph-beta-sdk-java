@@ -84,23 +84,23 @@ public class DataConnectorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IndustryDataConnectorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new oneRosterApiDataConnector object.
+     * Create a new azureDataLakeConnector object.
      * @param body The request body
      * @return a {@link IndustryDataConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-onerosterapidataconnector-post?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector post(@jakarta.annotation.Nonnull final IndustryDataConnector body) {
         return post(body, null);
     }
     /**
-     * Create a new oneRosterApiDataConnector object.
+     * Create a new azureDataLakeConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IndustryDataConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-onerosterapidataconnector-post?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-azuredatalakeconnector-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IndustryDataConnector post(@jakarta.annotation.Nonnull final IndustryDataConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -131,7 +131,7 @@ public class DataConnectorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new oneRosterApiDataConnector object.
+     * Create a new azureDataLakeConnector object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class DataConnectorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new oneRosterApiDataConnector object.
+     * Create a new azureDataLakeConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -203,12 +203,12 @@ public class DataConnectorsRequestBuilder extends BaseRequestBuilder {
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

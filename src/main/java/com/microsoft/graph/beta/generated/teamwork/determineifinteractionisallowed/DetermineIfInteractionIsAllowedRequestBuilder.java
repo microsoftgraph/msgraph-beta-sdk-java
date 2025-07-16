@@ -39,6 +39,7 @@ public class DetermineIfInteractionIsAllowedRequestBuilder extends BaseRequestBu
      * @param body The request body
      * @return a {@link DetermineIfInteractionIsAllowedPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-determineifinteractionisallowed?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetermineIfInteractionIsAllowedPostResponse post(@jakarta.annotation.Nonnull final DetermineIfInteractionIsAllowedPostRequestBody body) {
@@ -50,6 +51,7 @@ public class DetermineIfInteractionIsAllowedRequestBuilder extends BaseRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DetermineIfInteractionIsAllowedPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamwork-determineifinteractionisallowed?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DetermineIfInteractionIsAllowedPostResponse post(@jakarta.annotation.Nonnull final DetermineIfInteractionIsAllowedPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

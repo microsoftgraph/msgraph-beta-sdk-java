@@ -71,10 +71,10 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
     }
     /**
      * Gets the capabilities property value. The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<MeetingCapabilities>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getCapabilities() {
+    public java.util.List<MeetingCapabilities> getCapabilities() {
         return this.backingStore.get("capabilities");
     }
     /**
@@ -113,7 +113,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         deserializerMap.put("attendeeReport", (n) -> { this.setAttendeeReport(n.getByteArrayValue()); });
         deserializerMap.put("broadcastRecording", (n) -> { this.setBroadcastRecording(n.getByteArrayValue()); });
         deserializerMap.put("broadcastSettings", (n) -> { this.setBroadcastSettings(n.getObjectValue(BroadcastMeetingSettings::createFromDiscriminatorValue)); });
-        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("capabilities", (n) -> { this.setCapabilities(n.getCollectionOfEnumValues(MeetingCapabilities::forValue)); });
         deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("externalId", (n) -> { this.setExternalId(n.getStringValue()); });
@@ -221,7 +221,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         writer.writeByteArrayValue("attendeeReport", this.getAttendeeReport());
         writer.writeByteArrayValue("broadcastRecording", this.getBroadcastRecording());
         writer.writeObjectValue("broadcastSettings", this.getBroadcastSettings());
-        writer.writeCollectionOfPrimitiveValues("capabilities", this.getCapabilities());
+        writer.writeCollectionOfEnumValues("capabilities", this.getCapabilities());
         writer.writeOffsetDateTimeValue("creationDateTime", this.getCreationDateTime());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
         writer.writeStringValue("externalId", this.getExternalId());
@@ -275,7 +275,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
      * Sets the capabilities property value. The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
      * @param value Value to set for the capabilities property.
      */
-    public void setCapabilities(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setCapabilities(@jakarta.annotation.Nullable final java.util.List<MeetingCapabilities> value) {
         this.backingStore.set("capabilities", value);
     }
     /**

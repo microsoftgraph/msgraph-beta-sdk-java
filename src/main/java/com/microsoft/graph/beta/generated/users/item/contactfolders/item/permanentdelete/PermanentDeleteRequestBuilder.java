@@ -37,6 +37,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
     /**
      * Permanently delete a contact folder and remove its items from the user&apos;s mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-permanentdelete?view=graph-rest-beta">Find more info here</a>
      */
     public void post() {
         post(null);
@@ -45,6 +46,7 @@ public class PermanentDeleteRequestBuilder extends BaseRequestBuilder {
      * Permanently delete a contact folder and remove its items from the user&apos;s mailbox. For more information about item retention, see Configure Deleted Item retention and Recoverable Items quotas.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/contactfolder-permanentdelete?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);

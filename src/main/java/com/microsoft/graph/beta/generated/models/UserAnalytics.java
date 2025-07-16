@@ -25,13 +25,31 @@ public class UserAnalytics extends Entity implements Parsable {
         return new UserAnalytics();
     }
     /**
+     * Gets the activityStatistics property value. The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
+     * @return a {@link java.util.List<ActivityStatistics>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ActivityStatistics> getActivityStatistics() {
+        return this.backingStore.get("activityStatistics");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityStatistics", (n) -> { this.setActivityStatistics(n.getCollectionOfObjectValues(ActivityStatistics::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(Settings::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the settings property value. The current settings for a user to use the analytics API.
+     * @return a {@link Settings}
+     */
+    @jakarta.annotation.Nullable
+    public Settings getSettings() {
+        return this.backingStore.get("settings");
     }
     /**
      * Serializes information the current object
@@ -40,5 +58,21 @@ public class UserAnalytics extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("activityStatistics", this.getActivityStatistics());
+        writer.writeObjectValue("settings", this.getSettings());
+    }
+    /**
+     * Sets the activityStatistics property value. The collection of work activities that a user spent time on during and outside of working hours. Read-only. Nullable.
+     * @param value Value to set for the activityStatistics property.
+     */
+    public void setActivityStatistics(@jakarta.annotation.Nullable final java.util.List<ActivityStatistics> value) {
+        this.backingStore.set("activityStatistics", value);
+    }
+    /**
+     * Sets the settings property value. The current settings for a user to use the analytics API.
+     * @param value Value to set for the settings property.
+     */
+    public void setSettings(@jakarta.annotation.Nullable final Settings value) {
+        this.backingStore.set("settings", value);
     }
 }

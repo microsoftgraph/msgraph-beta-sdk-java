@@ -36,10 +36,10 @@ public class UserManagementOptions implements AdditionalDataHolder, BackedModel,
     }
     /**
      * Gets the additionalAttributes property value. The different attribute choices for the users to be provisioned. The possible values are: userGradeLevel, userNumber, unknownFutureValue.
-     * @return a {@link java.util.List<String>}
+     * @return a {@link java.util.List<AdditionalUserAttributes>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<String> getAdditionalAttributes() {
+    public java.util.List<AdditionalUserAttributes> getAdditionalAttributes() {
         return this.backingStore.get("additionalAttributes");
     }
     /**
@@ -78,7 +78,7 @@ public class UserManagementOptions implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("additionalAttributes", (n) -> { this.setAdditionalAttributes(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("additionalAttributes", (n) -> { this.setAdditionalAttributes(n.getCollectionOfEnumValues(AdditionalUserAttributes::forValue)); });
         deserializerMap.put("additionalOptions", (n) -> { this.setAdditionalOptions(n.getObjectValue(AdditionalUserOptions::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -97,7 +97,7 @@ public class UserManagementOptions implements AdditionalDataHolder, BackedModel,
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfPrimitiveValues("additionalAttributes", this.getAdditionalAttributes());
+        writer.writeCollectionOfEnumValues("additionalAttributes", this.getAdditionalAttributes());
         writer.writeObjectValue("additionalOptions", this.getAdditionalOptions());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -106,7 +106,7 @@ public class UserManagementOptions implements AdditionalDataHolder, BackedModel,
      * Sets the additionalAttributes property value. The different attribute choices for the users to be provisioned. The possible values are: userGradeLevel, userNumber, unknownFutureValue.
      * @param value Value to set for the additionalAttributes property.
      */
-    public void setAdditionalAttributes(@jakarta.annotation.Nullable final java.util.List<String> value) {
+    public void setAdditionalAttributes(@jakarta.annotation.Nullable final java.util.List<AdditionalUserAttributes> value) {
         this.backingStore.set("additionalAttributes", value);
     }
     /**

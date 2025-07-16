@@ -40,6 +40,7 @@ public class CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder extends 
      * Retrieve creation options required to generate and register a Microsoft Entra ID-compatible passkey. Self-service operations aren&apos;t supported.  
      * @return a {@link WebauthnCredentialCreationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-creationoptions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebauthnCredentialCreationOptions get() {
@@ -50,6 +51,7 @@ public class CreationOptionsWithChallengeTimeoutInMinutesRequestBuilder extends 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WebauthnCredentialCreationOptions}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/fido2authenticationmethod-creationoptions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public WebauthnCredentialCreationOptions get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
