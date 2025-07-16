@@ -32,7 +32,25 @@ public class TenantStatus extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("onboardingErrorMessage", (n) -> { this.setOnboardingErrorMessage(n.getStringValue()); });
+        deserializerMap.put("onboardingStatus", (n) -> { this.setOnboardingStatus(n.getEnumValue(OnboardingStatus::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the onboardingErrorMessage property value. Reflects a message to the user if there&apos;s an error.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOnboardingErrorMessage() {
+        return this.backingStore.get("onboardingErrorMessage");
+    }
+    /**
+     * Gets the onboardingStatus property value. The onboardingStatus property
+     * @return a {@link OnboardingStatus}
+     */
+    @jakarta.annotation.Nullable
+    public OnboardingStatus getOnboardingStatus() {
+        return this.backingStore.get("onboardingStatus");
     }
     /**
      * Serializes information the current object
@@ -41,5 +59,21 @@ public class TenantStatus extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("onboardingErrorMessage", this.getOnboardingErrorMessage());
+        writer.writeEnumValue("onboardingStatus", this.getOnboardingStatus());
+    }
+    /**
+     * Sets the onboardingErrorMessage property value. Reflects a message to the user if there&apos;s an error.
+     * @param value Value to set for the onboardingErrorMessage property.
+     */
+    public void setOnboardingErrorMessage(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("onboardingErrorMessage", value);
+    }
+    /**
+     * Sets the onboardingStatus property value. The onboardingStatus property
+     * @param value Value to set for the onboardingStatus property.
+     */
+    public void setOnboardingStatus(@jakarta.annotation.Nullable final OnboardingStatus value) {
+        this.backingStore.set("onboardingStatus", value);
     }
 }

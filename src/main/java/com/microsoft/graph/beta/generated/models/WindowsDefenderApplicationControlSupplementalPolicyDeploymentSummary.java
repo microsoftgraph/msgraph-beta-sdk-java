@@ -28,12 +28,30 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
         return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary();
     }
     /**
+     * Gets the deployedDeviceCount property value. Number of Devices that have successfully deployed this WindowsDefenderApplicationControl supplemental policy.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getDeployedDeviceCount() {
+        return this.backingStore.get("deployedDeviceCount");
+    }
+    /**
+     * Gets the failedDeviceCount property value. Number of Devices that have failed to deploy this WindowsDefenderApplicationControl supplemental policy.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getFailedDeviceCount() {
+        return this.backingStore.get("failedDeviceCount");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deployedDeviceCount", (n) -> { this.setDeployedDeviceCount(n.getIntegerValue()); });
+        deserializerMap.put("failedDeviceCount", (n) -> { this.setFailedDeviceCount(n.getIntegerValue()); });
         return deserializerMap;
     }
     /**
@@ -43,5 +61,21 @@ public class WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummar
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeIntegerValue("deployedDeviceCount", this.getDeployedDeviceCount());
+        writer.writeIntegerValue("failedDeviceCount", this.getFailedDeviceCount());
+    }
+    /**
+     * Sets the deployedDeviceCount property value. Number of Devices that have successfully deployed this WindowsDefenderApplicationControl supplemental policy.
+     * @param value Value to set for the deployedDeviceCount property.
+     */
+    public void setDeployedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("deployedDeviceCount", value);
+    }
+    /**
+     * Sets the failedDeviceCount property value. Number of Devices that have failed to deploy this WindowsDefenderApplicationControl supplemental policy.
+     * @param value Value to set for the failedDeviceCount property.
+     */
+    public void setFailedDeviceCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("failedDeviceCount", value);
     }
 }

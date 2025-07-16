@@ -13,6 +13,7 @@ public class AwsAuthorizationSystemResource extends AuthorizationSystemResource 
      */
     public AwsAuthorizationSystemResource() {
         super();
+        this.setOdataType("#microsoft.graph.awsAuthorizationSystemResource");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -31,7 +32,16 @@ public class AwsAuthorizationSystemResource extends AuthorizationSystemResource 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("service", (n) -> { this.setService(n.getObjectValue(AuthorizationSystemTypeService::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the service property value. The service associated with the resource in an AWS authorization system. This is autoexpanded.
+     * @return a {@link AuthorizationSystemTypeService}
+     */
+    @jakarta.annotation.Nullable
+    public AuthorizationSystemTypeService getService() {
+        return this.backingStore.get("service");
     }
     /**
      * Serializes information the current object
@@ -40,5 +50,13 @@ public class AwsAuthorizationSystemResource extends AuthorizationSystemResource 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("service", this.getService());
+    }
+    /**
+     * Sets the service property value. The service associated with the resource in an AWS authorization system. This is autoexpanded.
+     * @param value Value to set for the service property.
+     */
+    public void setService(@jakarta.annotation.Nullable final AuthorizationSystemTypeService value) {
+        this.backingStore.set("service", value);
     }
 }

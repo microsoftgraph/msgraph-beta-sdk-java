@@ -40,6 +40,7 @@ public class GetDailyAggregatedRemoteConnectionReportsRequestBuilder extends Bas
      * @param body The request body
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getdailyaggregatedremoteconnectionreports?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetDailyAggregatedRemoteConnectionReportsPostRequestBody body) {
@@ -51,6 +52,7 @@ public class GetDailyAggregatedRemoteConnectionReportsRequestBuilder extends Bas
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getdailyaggregatedremoteconnectionreports?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream post(@jakarta.annotation.Nonnull final GetDailyAggregatedRemoteConnectionReportsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {

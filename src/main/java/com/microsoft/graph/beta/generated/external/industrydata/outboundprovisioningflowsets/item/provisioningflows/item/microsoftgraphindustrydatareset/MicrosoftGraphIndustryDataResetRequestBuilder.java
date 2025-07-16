@@ -37,6 +37,7 @@ public class MicrosoftGraphIndustryDataResetRequestBuilder extends BaseRequestBu
     /**
      * Reset a provisioningFlow. This action reprovisions all current data as if it were the initial run, and clears out the existing errors associated with the flow.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-provisioningflow-reset?view=graph-rest-beta">Find more info here</a>
      */
     public void post() {
         post(null);
@@ -45,6 +46,7 @@ public class MicrosoftGraphIndustryDataResetRequestBuilder extends BaseRequestBu
      * Reset a provisioningFlow. This action reprovisions all current data as if it were the initial run, and clears out the existing errors associated with the flow.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/industrydata-provisioningflow-reset?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);

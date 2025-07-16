@@ -41,6 +41,7 @@ public class EvaluateApplicationRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-evaluateapplication?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -55,6 +56,7 @@ public class EvaluateApplicationRequestBuilder extends BaseRequestBuilder {
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This API will no longer be accessible, please see microsoft.graph.security.informationProtection APIs. as of 2021-02/Beta_SensitivityLabels on 2021-02-15 and will be removed 2022-08-15
+     * @see <a href="https://learn.microsoft.com/graph/api/informationprotectionlabel-evaluateapplication?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated

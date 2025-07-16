@@ -44,6 +44,7 @@ public class GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWith
      * Get the number of times users fail to complete interactive MFA sign-ins using the Microsoft Entra MFA cloud service during a specified time period. Sign-in failures happen, for example, when users abandon or cancel MFA requests, or refresh MFA sessions without doing interactive MFA.
      * @return a {@link GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmetricsformfasigninfailure?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get() {
@@ -54,6 +55,7 @@ public class GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWith
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/serviceactivity-getmetricsformfasigninfailure?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWithExclusiveIntervalEndDateTimeWithAggregationIntervalInMinutesGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -121,12 +123,12 @@ public class GetMetricsForMfaSignInFailureWithInclusiveIntervalStartDateTimeWith
          * Skip the first n items
          */
         @jakarta.annotation.Nullable
-        public Long skip;
+        public Integer skip;
         /**
          * Show only the first n items
          */
         @jakarta.annotation.Nullable
-        public Long top;
+        public Integer top;
         /**
          * Extracts the query parameters into a map for the URI template parsing.
          * @return a {@link Map<String, Object>}

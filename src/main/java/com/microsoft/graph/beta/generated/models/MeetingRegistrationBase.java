@@ -33,13 +33,31 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
         return new MeetingRegistrationBase();
     }
     /**
+     * Gets the allowedRegistrant property value. Specifies who can register for the meeting.
+     * @return a {@link MeetingAudience}
+     */
+    @jakarta.annotation.Nullable
+    public MeetingAudience getAllowedRegistrant() {
+        return this.backingStore.get("allowedRegistrant");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allowedRegistrant", (n) -> { this.setAllowedRegistrant(n.getEnumValue(MeetingAudience::forValue)); });
+        deserializerMap.put("registrants", (n) -> { this.setRegistrants(n.getCollectionOfObjectValues(MeetingRegistrantBase::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the registrants property value. Registrants of the online meeting.
+     * @return a {@link java.util.List<MeetingRegistrantBase>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MeetingRegistrantBase> getRegistrants() {
+        return this.backingStore.get("registrants");
     }
     /**
      * Serializes information the current object
@@ -48,5 +66,21 @@ public class MeetingRegistrationBase extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("allowedRegistrant", this.getAllowedRegistrant());
+        writer.writeCollectionOfObjectValues("registrants", this.getRegistrants());
+    }
+    /**
+     * Sets the allowedRegistrant property value. Specifies who can register for the meeting.
+     * @param value Value to set for the allowedRegistrant property.
+     */
+    public void setAllowedRegistrant(@jakarta.annotation.Nullable final MeetingAudience value) {
+        this.backingStore.set("allowedRegistrant", value);
+    }
+    /**
+     * Sets the registrants property value. Registrants of the online meeting.
+     * @param value Value to set for the registrants property.
+     */
+    public void setRegistrants(@jakarta.annotation.Nullable final java.util.List<MeetingRegistrantBase> value) {
+        this.backingStore.set("registrants", value);
     }
 }
