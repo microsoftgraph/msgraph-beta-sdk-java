@@ -82,7 +82,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         return this.backingStore.get("lastRestoredDateTime");
     }
     /**
-     * Gets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
+     * Gets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual, unknownFutureValue, retention. Use the Prefer: include-unknown-enum-members request header to get the following value from this evolvable enum: retention. The default value is automatic.
      * @return a {@link CloudPcSnapshotType}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         this.backingStore.set("lastRestoredDateTime", value);
     }
     /**
-     * Sets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
+     * Sets the snapshotType property value. The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual, unknownFutureValue, retention. Use the Prefer: include-unknown-enum-members request header to get the following value from this evolvable enum: retention. The default value is automatic.
      * @param value Value to set for the snapshotType property.
      */
     public void setSnapshotType(@jakarta.annotation.Nullable final CloudPcSnapshotType value) {

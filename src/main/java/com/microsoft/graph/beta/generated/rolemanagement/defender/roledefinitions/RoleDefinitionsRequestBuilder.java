@@ -66,11 +66,12 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/roleManagement/defender/roleDefinitions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get roleDefinitions from roleManagement
+     * Get a list of unifiedRoleDefinition objects for an RBAC provider. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)- Defender (Microsoft Defender XDR)- directory (Microsoft Entra ID) - entitlement management (Microsoft Entra ID)- Exchange Online
      * @return a {@link UnifiedRoleDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,12 +79,13 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get roleDefinitions from roleManagement
+     * Get a list of unifiedRoleDefinition objects for an RBAC provider. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)- Defender (Microsoft Defender XDR)- directory (Microsoft Entra ID) - entitlement management (Microsoft Entra ID)- Exchange Online
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleDefinitionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -94,12 +96,13 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleDefinitionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to roleDefinitions for roleManagement
+     * Create a new unifiedRoleDefinition object for an RBAC provider. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- Defender (Microsoft Defender XDR)- directory (Microsoft Entra ID)
      * @param body The request body
      * @return a {@link UnifiedRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -107,13 +110,14 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create new navigation property to roleDefinitions for roleManagement
+     * Create a new unifiedRoleDefinition object for an RBAC provider. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- Defender (Microsoft Defender XDR)- directory (Microsoft Entra ID)
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
+     * @see <a href="https://learn.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -125,7 +129,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleDefinition::createFromDiscriminatorValue);
     }
     /**
-     * Get roleDefinitions from roleManagement
+     * Get a list of unifiedRoleDefinition objects for an RBAC provider. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)- Defender (Microsoft Defender XDR)- directory (Microsoft Entra ID) - entitlement management (Microsoft Entra ID)- Exchange Online
      * @return a {@link RequestInformation}
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
@@ -136,7 +140,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get roleDefinitions from roleManagement
+     * Get a list of unifiedRoleDefinition objects for an RBAC provider. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)- Defender (Microsoft Defender XDR)- directory (Microsoft Entra ID) - entitlement management (Microsoft Entra ID)- Exchange Online
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -151,7 +155,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to roleDefinitions for roleManagement
+     * Create a new unifiedRoleDefinition object for an RBAC provider. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- Defender (Microsoft Defender XDR)- directory (Microsoft Entra ID)
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -163,7 +167,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to roleDefinitions for roleManagement
+     * Create a new unifiedRoleDefinition object for an RBAC provider. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- Defender (Microsoft Defender XDR)- directory (Microsoft Entra ID)
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -194,7 +198,7 @@ public class RoleDefinitionsRequestBuilder extends BaseRequestBuilder {
         return new RoleDefinitionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get roleDefinitions from roleManagement
+     * Get a list of unifiedRoleDefinition objects for an RBAC provider. The following RBAC providers are currently supported:- Cloud PC - device management (Intune)- Defender (Microsoft Defender XDR)- directory (Microsoft Entra ID) - entitlement management (Microsoft Entra ID)- Exchange Online
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
