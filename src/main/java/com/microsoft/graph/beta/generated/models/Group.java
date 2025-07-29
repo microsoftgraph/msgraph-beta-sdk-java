@@ -272,6 +272,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("onPremisesProvisioningErrors", (n) -> { this.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSamAccountName", (n) -> { this.setOnPremisesSamAccountName(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
+        deserializerMap.put("onPremisesSyncBehavior", (n) -> { this.setOnPremisesSyncBehavior(n.getObjectValue(OnPremisesSyncBehavior::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("organizationId", (n) -> { this.setOrganizationId(n.getStringValue()); });
         deserializerMap.put("owners", (n) -> { this.setOwners(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -527,6 +528,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getOnPremisesSecurityIdentifier() {
         return this.backingStore.get("onPremisesSecurityIdentifier");
+    }
+    /**
+     * Gets the onPremisesSyncBehavior property value. Indicates the state of synchronization for a group between the cloud and on-premises Active Directory. Supports $filter only with advanced query capabilities. For example, $filter=onPremisesSyncBehavior/isCloudManaged eq true&amp;$count=true.
+     * @return a {@link OnPremisesSyncBehavior}
+     */
+    @jakarta.annotation.Nullable
+    public OnPremisesSyncBehavior getOnPremisesSyncBehavior() {
+        return this.backingStore.get("onPremisesSyncBehavior");
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Returned by default. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
@@ -826,6 +835,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("onPremisesProvisioningErrors", this.getOnPremisesProvisioningErrors());
         writer.writeStringValue("onPremisesSamAccountName", this.getOnPremisesSamAccountName());
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
+        writer.writeObjectValue("onPremisesSyncBehavior", this.getOnPremisesSyncBehavior());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
         writer.writeStringValue("organizationId", this.getOrganizationId());
         writer.writeCollectionOfObjectValues("owners", this.getOwners());
@@ -1213,6 +1223,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("onPremisesSecurityIdentifier", value);
+    }
+    /**
+     * Sets the onPremisesSyncBehavior property value. Indicates the state of synchronization for a group between the cloud and on-premises Active Directory. Supports $filter only with advanced query capabilities. For example, $filter=onPremisesSyncBehavior/isCloudManaged eq true&amp;$count=true.
+     * @param value Value to set for the onPremisesSyncBehavior property.
+     */
+    public void setOnPremisesSyncBehavior(@jakarta.annotation.Nullable final OnPremisesSyncBehavior value) {
+        this.backingStore.set("onPremisesSyncBehavior", value);
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this group is synced from an on-premises directory; false if this group was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Returned by default. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).

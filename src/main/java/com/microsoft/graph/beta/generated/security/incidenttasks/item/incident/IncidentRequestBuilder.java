@@ -37,7 +37,7 @@ public class IncidentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/incidentTasks/{incidentTask%2Did}/incident{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get incident from security
+     * Required. The incident that contains this task. Must contain a valid incident ID.
      * @return a {@link Incident}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class IncidentRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get incident from security
+     * Required. The incident that contains this task. Must contain a valid incident ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Incident}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class IncidentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Incident::createFromDiscriminatorValue);
     }
     /**
-     * Get incident from security
+     * Required. The incident that contains this task. Must contain a valid incident ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class IncidentRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get incident from security
+     * Required. The incident that contains this task. Must contain a valid incident ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class IncidentRequestBuilder extends BaseRequestBuilder {
         return new IncidentRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get incident from security
+     * Required. The incident that contains this task. Must contain a valid incident ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

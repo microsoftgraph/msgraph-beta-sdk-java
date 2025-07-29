@@ -225,7 +225,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("incidents");
     }
     /**
-     * Gets the incidentTasks property value. The incidentTasks property
+     * Gets the incidentTasks property value. A collection of tasks associated with security incidents.
      * @return a {@link java.util.List<IncidentTask>}
      */
     @jakarta.annotation.Nullable
@@ -522,7 +522,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("incidents", value);
     }
     /**
-     * Sets the incidentTasks property value. The incidentTasks property
+     * Sets the incidentTasks property value. A collection of tasks associated with security incidents.
      * @param value Value to set for the incidentTasks property.
      */
     public void setIncidentTasks(@jakarta.annotation.Nullable final java.util.List<IncidentTask> value) {

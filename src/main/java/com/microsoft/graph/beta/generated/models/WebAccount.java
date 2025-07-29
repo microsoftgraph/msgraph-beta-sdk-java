@@ -49,7 +49,7 @@ public class WebAccount extends ItemFacet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the service property value. The service property
+     * Gets the service property value. Contains basic detail about the service that is being associated.
      * @return a {@link ServiceInformation}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class WebAccount extends ItemFacet implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the service property value. The service property
+     * Sets the service property value. Contains basic detail about the service that is being associated.
      * @param value Value to set for the service property.
      */
     public void setService(@jakarta.annotation.Nullable final ServiceInformation value) {

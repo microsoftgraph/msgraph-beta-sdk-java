@@ -57,7 +57,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the institution property value. The institution property
+     * Gets the institution property value. Contains details of the institution studied at.
      * @return a {@link InstitutionData}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class EducationalActivity extends ItemFacet implements Parsable {
         return this.backingStore.get("institution");
     }
     /**
-     * Gets the program property value. The program property
+     * Gets the program property value. Contains extended information about the program or course.
      * @return a {@link EducationalActivityDetail}
      */
     @jakarta.annotation.Nullable
@@ -108,14 +108,14 @@ public class EducationalActivity extends ItemFacet implements Parsable {
         this.backingStore.set("endMonthYear", value);
     }
     /**
-     * Sets the institution property value. The institution property
+     * Sets the institution property value. Contains details of the institution studied at.
      * @param value Value to set for the institution property.
      */
     public void setInstitution(@jakarta.annotation.Nullable final InstitutionData value) {
         this.backingStore.set("institution", value);
     }
     /**
-     * Sets the program property value. The program property
+     * Sets the program property value. Contains extended information about the program or course.
      * @param value Value to set for the program property.
      */
     public void setProgram(@jakarta.annotation.Nullable final EducationalActivityDetail value) {

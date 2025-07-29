@@ -65,10 +65,10 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     }
     /**
      * Gets the defender property value. The defender property
-     * @return a {@link RbacApplicationMultiple}
+     * @return a {@link UnifiedRbacApplicationMultiple}
      */
     @jakarta.annotation.Nullable
-    public RbacApplicationMultiple getDefender() {
+    public UnifiedRbacApplicationMultiple getDefender() {
         return this.backingStore.get("defender");
     }
     /**
@@ -119,7 +119,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("cloudPC", (n) -> { this.setCloudPC(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
-        deserializerMap.put("defender", (n) -> { this.setDefender(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
+        deserializerMap.put("defender", (n) -> { this.setDefender(n.getObjectValue(UnifiedRbacApplicationMultiple::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceManagement", (n) -> { this.setDeviceManagement(n.getObjectValue(RbacApplicationMultiple::createFromDiscriminatorValue)); });
         deserializerMap.put("directory", (n) -> { this.setDirectory(n.getObjectValue(RbacApplication::createFromDiscriminatorValue)); });
         deserializerMap.put("enterpriseApps", (n) -> { this.setEnterpriseApps(n.getCollectionOfObjectValues(RbacApplication::createFromDiscriminatorValue)); });
@@ -178,7 +178,7 @@ public class RoleManagement implements AdditionalDataHolder, BackedModel, Parsab
      * Sets the defender property value. The defender property
      * @param value Value to set for the defender property.
      */
-    public void setDefender(@jakarta.annotation.Nullable final RbacApplicationMultiple value) {
+    public void setDefender(@jakarta.annotation.Nullable final UnifiedRbacApplicationMultiple value) {
         this.backingStore.set("defender", value);
     }
     /**

@@ -43,7 +43,7 @@ public class IncidentTask extends Entity implements Parsable {
         return this.backingStore.get("actionType");
     }
     /**
-     * Gets the createdByDisplayName property value. The createdByDisplayName property
+     * Gets the createdByDisplayName property value. Name of the entity that created the task. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class IncidentTask extends Entity implements Parsable {
         return this.backingStore.get("createdByDisplayName");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Creation time of the task. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class IncidentTask extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the remediation action.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class IncidentTask extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Title of the task.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class IncidentTask extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the incident property value. The incident property
+     * Gets the incident property value. Required. The incident that contains this task. Must contain a valid incident ID.
      * @return a {@link Incident}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class IncidentTask extends Entity implements Parsable {
         return this.backingStore.get("incident");
     }
     /**
-     * Gets the lastModifiedByDisplayName property value. The lastModifiedByDisplayName property
+     * Gets the lastModifiedByDisplayName property value. Name of the entity that last updated the task. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class IncidentTask extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedByDisplayName");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Last update time of the task. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class IncidentTask extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the responseAction property value. The responseAction property
+     * Gets the responseAction property value. The reponse action.
      * @return a {@link IncidentTaskResponseAction}
      */
     @jakarta.annotation.Nullable
@@ -178,56 +178,56 @@ public class IncidentTask extends Entity implements Parsable {
         this.backingStore.set("actionType", value);
     }
     /**
-     * Sets the createdByDisplayName property value. The createdByDisplayName property
+     * Sets the createdByDisplayName property value. Name of the entity that created the task. Read-only.
      * @param value Value to set for the createdByDisplayName property.
      */
     public void setCreatedByDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("createdByDisplayName", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Creation time of the task. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the remediation action.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Title of the task.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the incident property value. The incident property
+     * Sets the incident property value. Required. The incident that contains this task. Must contain a valid incident ID.
      * @param value Value to set for the incident property.
      */
     public void setIncident(@jakarta.annotation.Nullable final Incident value) {
         this.backingStore.set("incident", value);
     }
     /**
-     * Sets the lastModifiedByDisplayName property value. The lastModifiedByDisplayName property
+     * Sets the lastModifiedByDisplayName property value. Name of the entity that last updated the task. Read-only.
      * @param value Value to set for the lastModifiedByDisplayName property.
      */
     public void setLastModifiedByDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("lastModifiedByDisplayName", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Last update time of the task. Read-only.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the responseAction property value. The responseAction property
+     * Sets the responseAction property value. The reponse action.
      * @param value Value to set for the responseAction property.
      */
     public void setResponseAction(@jakarta.annotation.Nullable final IncidentTaskResponseAction value) {

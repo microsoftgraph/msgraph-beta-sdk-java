@@ -76,7 +76,7 @@ public class EventQuery implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the query property value. Represents unique identification for the  query. &apos;Asset ID&apos; for SharePoint Online and OneDrive for Business, &apos;keywords&apos; for Exchange Online.
+     * Gets the query property value. Represents unique identification for the  query. &apos;Asset ID&apos; for SharePoint in Microsoft 365 and OneDrive for work or school, &apos;keywords&apos; for Exchange Online.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class EventQuery implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("query");
     }
     /**
-     * Gets the queryType property value. Represents the type of query associated with an event. &apos;files&apos; for SPO and ODB and &apos;messages&apos; for EXO.The possible values are: files, messages, unknownFutureValue.
+     * Gets the queryType property value. Represents the type of query associated with an event. &apos;files&apos; for SharePoint in Microsoft 365 and OneDrive for work or school, and &apos;messages&apos; for Exchange Online. The possible values are: files, messages, unknownFutureValue.
      * @return a {@link QueryType}
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class EventQuery implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the query property value. Represents unique identification for the  query. &apos;Asset ID&apos; for SharePoint Online and OneDrive for Business, &apos;keywords&apos; for Exchange Online.
+     * Sets the query property value. Represents unique identification for the  query. &apos;Asset ID&apos; for SharePoint in Microsoft 365 and OneDrive for work or school, &apos;keywords&apos; for Exchange Online.
      * @param value Value to set for the query property.
      */
     public void setQuery(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("query", value);
     }
     /**
-     * Sets the queryType property value. Represents the type of query associated with an event. &apos;files&apos; for SPO and ODB and &apos;messages&apos; for EXO.The possible values are: files, messages, unknownFutureValue.
+     * Sets the queryType property value. Represents the type of query associated with an event. &apos;files&apos; for SharePoint in Microsoft 365 and OneDrive for work or school, and &apos;messages&apos; for Exchange Online. The possible values are: files, messages, unknownFutureValue.
      * @param value Value to set for the queryType property.
      */
     public void setQueryType(@jakarta.annotation.Nullable final QueryType value) {

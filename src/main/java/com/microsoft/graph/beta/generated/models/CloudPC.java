@@ -126,6 +126,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("partnerAgentInstallResults", (n) -> { this.setPartnerAgentInstallResults(n.getCollectionOfObjectValues(CloudPcPartnerAgentInstallResult::createFromDiscriminatorValue)); });
         deserializerMap.put("powerState", (n) -> { this.setPowerState(n.getEnumValue(CloudPcPowerState::forValue)); });
         deserializerMap.put("productType", (n) -> { this.setProductType(n.getEnumValue(CloudPcProductType::forValue)); });
+        deserializerMap.put("provisionedDateTime", (n) -> { this.setProvisionedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("provisioningPolicyId", (n) -> { this.setProvisioningPolicyId(n.getStringValue()); });
         deserializerMap.put("provisioningPolicyName", (n) -> { this.setProvisioningPolicyName(n.getStringValue()); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
@@ -133,6 +134,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("servicePlanId", (n) -> { this.setServicePlanId(n.getStringValue()); });
         deserializerMap.put("servicePlanName", (n) -> { this.setServicePlanName(n.getStringValue()); });
         deserializerMap.put("servicePlanType", (n) -> { this.setServicePlanType(n.getEnumValue(CloudPcServicePlanType::forValue)); });
+        deserializerMap.put("sharedDeviceDetail", (n) -> { this.setSharedDeviceDetail(n.getObjectValue(CloudPcFrontlineSharedDeviceDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CloudPcStatus::forValue)); });
         deserializerMap.put("statusDetail", (n) -> { this.setStatusDetail(n.getObjectValue(CloudPcStatusDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getObjectValue(CloudPcStatusDetails::createFromDiscriminatorValue)); });
@@ -245,6 +247,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("productType");
     }
     /**
+     * Gets the provisionedDateTime property value. The latest provisioned date and time, automatically generated and assigned during the initial provisioning or any subsequent reprovisioning of the Cloud PC. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getProvisionedDateTime() {
+        return this.backingStore.get("provisionedDateTime");
+    }
+    /**
      * Gets the provisioningPolicyId property value. The provisioning policy ID of the Cloud PC.
      * @return a {@link String}
      */
@@ -299,6 +309,14 @@ public class CloudPC extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public CloudPcServicePlanType getServicePlanType() {
         return this.backingStore.get("servicePlanType");
+    }
+    /**
+     * Gets the sharedDeviceDetail property value. Indicates the Cloud PC device details (for example, assignedToUserPrincipalName) associated with the frontline shared service plan.
+     * @return a {@link CloudPcFrontlineSharedDeviceDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcFrontlineSharedDeviceDetail getSharedDeviceDetail() {
+        return this.backingStore.get("sharedDeviceDetail");
     }
     /**
      * Gets the status property value. The status property
@@ -369,6 +387,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("partnerAgentInstallResults", this.getPartnerAgentInstallResults());
         writer.writeEnumValue("powerState", this.getPowerState());
         writer.writeEnumValue("productType", this.getProductType());
+        writer.writeOffsetDateTimeValue("provisionedDateTime", this.getProvisionedDateTime());
         writer.writeStringValue("provisioningPolicyId", this.getProvisioningPolicyId());
         writer.writeStringValue("provisioningPolicyName", this.getProvisioningPolicyName());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
@@ -376,6 +395,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeStringValue("servicePlanId", this.getServicePlanId());
         writer.writeStringValue("servicePlanName", this.getServicePlanName());
         writer.writeEnumValue("servicePlanType", this.getServicePlanType());
+        writer.writeObjectValue("sharedDeviceDetail", this.getSharedDeviceDetail());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeObjectValue("statusDetail", this.getStatusDetail());
         writer.writeObjectValue("statusDetails", this.getStatusDetails());
@@ -537,6 +557,13 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("productType", value);
     }
     /**
+     * Sets the provisionedDateTime property value. The latest provisioned date and time, automatically generated and assigned during the initial provisioning or any subsequent reprovisioning of the Cloud PC. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * @param value Value to set for the provisionedDateTime property.
+     */
+    public void setProvisionedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("provisionedDateTime", value);
+    }
+    /**
      * Sets the provisioningPolicyId property value. The provisioning policy ID of the Cloud PC.
      * @param value Value to set for the provisioningPolicyId property.
      */
@@ -584,6 +611,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setServicePlanType(@jakarta.annotation.Nullable final CloudPcServicePlanType value) {
         this.backingStore.set("servicePlanType", value);
+    }
+    /**
+     * Sets the sharedDeviceDetail property value. Indicates the Cloud PC device details (for example, assignedToUserPrincipalName) associated with the frontline shared service plan.
+     * @param value Value to set for the sharedDeviceDetail property.
+     */
+    public void setSharedDeviceDetail(@jakarta.annotation.Nullable final CloudPcFrontlineSharedDeviceDetail value) {
+        this.backingStore.set("sharedDeviceDetail", value);
     }
     /**
      * Sets the status property value. The status property

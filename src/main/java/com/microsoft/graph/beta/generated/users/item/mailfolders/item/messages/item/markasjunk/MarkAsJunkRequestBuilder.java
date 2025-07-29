@@ -40,9 +40,12 @@ public class MarkAsJunkRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Message}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The MarkAsJunk API is deprecated and will stop working from Dec 30, 2025. Please use the ReportMessage API. as of 2022-09/Mark_As_Junk on 2025-04-25 and will be removed 2025-12-30
      * @see <a href="https://learn.microsoft.com/graph/api/message-markasjunk?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Message post(@jakarta.annotation.Nonnull final MarkAsJunkPostRequestBody body) {
         return post(body, null);
     }
@@ -52,9 +55,12 @@ public class MarkAsJunkRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Message}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The MarkAsJunk API is deprecated and will stop working from Dec 30, 2025. Please use the ReportMessage API. as of 2022-09/Mark_As_Junk on 2025-04-25 and will be removed 2025-12-30
      * @see <a href="https://learn.microsoft.com/graph/api/message-markasjunk?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Message post(@jakarta.annotation.Nonnull final MarkAsJunkPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -66,8 +72,11 @@ public class MarkAsJunkRequestBuilder extends BaseRequestBuilder {
      * Mark a message as junk. This API adds the sender to the list of blocked senders and moves the message to the Junk Email folder, when moveToJunk is true.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The MarkAsJunk API is deprecated and will stop working from Dec 30, 2025. Please use the ReportMessage API. as of 2022-09/Mark_As_Junk on 2025-04-25 and will be removed 2025-12-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MarkAsJunkPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -76,8 +85,11 @@ public class MarkAsJunkRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The MarkAsJunk API is deprecated and will stop working from Dec 30, 2025. Please use the ReportMessage API. as of 2022-09/Mark_As_Junk on 2025-04-25 and will be removed 2025-12-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MarkAsJunkPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -90,8 +102,11 @@ public class MarkAsJunkRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MarkAsJunkRequestBuilder}
+     * @deprecated
+     * The MarkAsJunk API is deprecated and will stop working from Dec 30, 2025. Please use the ReportMessage API. as of 2022-09/Mark_As_Junk on 2025-04-25 and will be removed 2025-12-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public MarkAsJunkRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MarkAsJunkRequestBuilder(rawUrl, requestAdapter);

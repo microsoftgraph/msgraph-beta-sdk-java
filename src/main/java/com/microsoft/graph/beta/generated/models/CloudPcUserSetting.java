@@ -71,6 +71,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("localAdminEnabled", (n) -> { this.setLocalAdminEnabled(n.getBooleanValue()); });
         deserializerMap.put("notificationSetting", (n) -> { this.setNotificationSetting(n.getObjectValue(CloudPcNotificationSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("provisioningSourceType", (n) -> { this.setProvisioningSourceType(n.getEnumValue(CloudPcProvisioningSourceType::forValue)); });
         deserializerMap.put("resetEnabled", (n) -> { this.setResetEnabled(n.getBooleanValue()); });
         deserializerMap.put("restorePointSetting", (n) -> { this.setRestorePointSetting(n.getObjectValue(CloudPcRestorePointSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("selfServiceEnabled", (n) -> { this.setSelfServiceEnabled(n.getBooleanValue()); });
@@ -99,6 +100,14 @@ public class CloudPcUserSetting extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public CloudPcNotificationSetting getNotificationSetting() {
         return this.backingStore.get("notificationSetting");
+    }
+    /**
+     * Gets the provisioningSourceType property value. The provisioningSourceType property
+     * @return a {@link CloudPcProvisioningSourceType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcProvisioningSourceType getProvisioningSourceType() {
+        return this.backingStore.get("provisioningSourceType");
     }
     /**
      * Gets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset isn&apos;t allowed. The default value is false.
@@ -138,6 +147,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeBooleanValue("localAdminEnabled", this.getLocalAdminEnabled());
         writer.writeObjectValue("notificationSetting", this.getNotificationSetting());
+        writer.writeEnumValue("provisioningSourceType", this.getProvisioningSourceType());
         writer.writeBooleanValue("resetEnabled", this.getResetEnabled());
         writer.writeObjectValue("restorePointSetting", this.getRestorePointSetting());
         writer.writeBooleanValue("selfServiceEnabled", this.getSelfServiceEnabled());
@@ -190,6 +200,13 @@ public class CloudPcUserSetting extends Entity implements Parsable {
      */
     public void setNotificationSetting(@jakarta.annotation.Nullable final CloudPcNotificationSetting value) {
         this.backingStore.set("notificationSetting", value);
+    }
+    /**
+     * Sets the provisioningSourceType property value. The provisioningSourceType property
+     * @param value Value to set for the provisioningSourceType property.
+     */
+    public void setProvisioningSourceType(@jakarta.annotation.Nullable final CloudPcProvisioningSourceType value) {
+        this.backingStore.set("provisioningSourceType", value);
     }
     /**
      * Sets the resetEnabled property value. Indicates whether an end user is allowed to reset their Cloud PC. When true, the user is allowed to reset their Cloud PC. When false, end-user initiated reset isn&apos;t allowed. The default value is false.

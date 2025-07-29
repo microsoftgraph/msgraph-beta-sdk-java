@@ -55,7 +55,7 @@ public class UserAccountInformation extends ItemFacet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the preferredLanguageTag property value. The preferredLanguageTag property
+     * Gets the preferredLanguageTag property value. Contains the language the user has associated as preferred for the account.
      * @return a {@link LocaleInfo}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class UserAccountInformation extends ItemFacet implements Parsable {
         this.backingStore.set("countryCode", value);
     }
     /**
-     * Sets the preferredLanguageTag property value. The preferredLanguageTag property
+     * Sets the preferredLanguageTag property value. Contains the language the user has associated as preferred for the account.
      * @param value Value to set for the preferredLanguageTag property.
      */
     public void setPreferredLanguageTag(@jakarta.annotation.Nullable final LocaleInfo value) {

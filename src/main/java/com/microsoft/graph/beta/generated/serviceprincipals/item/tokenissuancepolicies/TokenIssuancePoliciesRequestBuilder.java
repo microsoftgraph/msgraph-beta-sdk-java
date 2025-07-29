@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TokenIssuancePolicyCollectionResponse;
 import com.microsoft.graph.beta.serviceprincipals.item.tokenissuancepolicies.count.CountRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.tokenissuancepolicies.item.TokenIssuancePolicyItemRequestBuilder;
+import com.microsoft.graph.beta.serviceprincipals.item.tokenissuancepolicies.ref.RefRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -31,7 +32,15 @@ public class TokenIssuancePoliciesRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity.
+     * Provides operations to manage the collection of servicePrincipal entities.
+     * @return a {@link RefRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RefRequestBuilder ref() {
+        return new RefRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Gets an item from the com.Microsoft.Graph.Beta.servicePrincipals.item.tokenIssuancePolicies.item collection
      * @param tokenIssuancePolicyId The unique identifier of tokenIssuancePolicy
      * @return a {@link TokenIssuancePolicyItemRequestBuilder}
      */

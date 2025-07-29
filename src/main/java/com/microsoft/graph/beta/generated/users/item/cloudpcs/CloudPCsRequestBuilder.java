@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.cloudpcs.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.getprovisionedcloudpcswithgroupidwithserviceplanid.GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.item.CloudPCItemRequestBuilder;
+import com.microsoft.graph.beta.users.item.cloudpcs.retrievecloudpccountbystatus.RetrieveCloudPcCountByStatusRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.validatebulkresize.ValidateBulkResizeRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -32,6 +33,14 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCloudPcCountByStatus method.
+     * @return a {@link RetrieveCloudPcCountByStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPcCountByStatusRequestBuilder retrieveCloudPcCountByStatus() {
+        return new RetrieveCloudPcCountByStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the validateBulkResize method.

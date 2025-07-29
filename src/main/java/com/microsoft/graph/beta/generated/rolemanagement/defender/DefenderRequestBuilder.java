@@ -1,7 +1,8 @@
 package com.microsoft.graph.beta.rolemanagement.defender;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.RbacApplicationMultiple;
+import com.microsoft.graph.beta.models.UnifiedRbacApplicationMultiple;
+import com.microsoft.graph.beta.rolemanagement.defender.customappscopes.CustomAppScopesRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.defender.resourcenamespaces.ResourceNamespacesRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.defender.roleassignments.RoleAssignmentsRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.defender.roledefinitions.RoleDefinitionsRequestBuilder;
@@ -23,6 +24,17 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DefenderRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the customAppScopes property of the microsoft.graph.unifiedRbacApplicationMultiple entity.
+     * @return a {@link CustomAppScopesRequestBuilder}
+     * @deprecated
+     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public CustomAppScopesRequestBuilder customAppScopes() {
+        return new CustomAppScopesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplicationMultiple entity.
      * @return a {@link ResourceNamespacesRequestBuilder}
@@ -98,62 +110,62 @@ public class DefenderRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Get defender from roleManagement
-     * @return a {@link RbacApplicationMultiple}
+     * @return a {@link UnifiedRbacApplicationMultiple}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public RbacApplicationMultiple get() {
+    public UnifiedRbacApplicationMultiple get() {
         return get(null);
     }
     /**
      * Get defender from roleManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RbacApplicationMultiple}
+     * @return a {@link UnifiedRbacApplicationMultiple}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public RbacApplicationMultiple get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public UnifiedRbacApplicationMultiple get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, RbacApplicationMultiple::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRbacApplicationMultiple::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property defender in roleManagement
      * @param body The request body
-     * @return a {@link RbacApplicationMultiple}
+     * @return a {@link UnifiedRbacApplicationMultiple}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public RbacApplicationMultiple patch(@jakarta.annotation.Nonnull final RbacApplicationMultiple body) {
+    public UnifiedRbacApplicationMultiple patch(@jakarta.annotation.Nonnull final UnifiedRbacApplicationMultiple body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property defender in roleManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link RbacApplicationMultiple}
+     * @return a {@link UnifiedRbacApplicationMultiple}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
     @Deprecated
-    public RbacApplicationMultiple patch(@jakarta.annotation.Nonnull final RbacApplicationMultiple body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public UnifiedRbacApplicationMultiple patch(@jakarta.annotation.Nonnull final UnifiedRbacApplicationMultiple body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, RbacApplicationMultiple::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRbacApplicationMultiple::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property defender for roleManagement
@@ -216,7 +228,7 @@ public class DefenderRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RbacApplicationMultiple body) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRbacApplicationMultiple body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -229,7 +241,7 @@ public class DefenderRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     @Deprecated
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final RbacApplicationMultiple body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRbacApplicationMultiple body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);

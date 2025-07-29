@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
@@ -74,6 +75,22 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("cloudPcNamingTemplate");
     }
     /**
+     * Gets the createdBy property value. The createdBy property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCreatedBy() {
+        return this.backingStore.get("createdBy");
+    }
+    /**
+     * Gets the createdDateTime property value. The createdDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCreatedDateTime() {
+        return this.backingStore.get("createdDateTime");
+    }
+    /**
      * Gets the description property value. The provisioning policy description. Supports $filter, $select, and $orderBy.
      * @return a {@link String}
      */
@@ -118,6 +135,8 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("autopilotConfiguration", (n) -> { this.setAutopilotConfiguration(n.getObjectValue(CloudPcAutopilotConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPcGroupDisplayName", (n) -> { this.setCloudPcGroupDisplayName(n.getStringValue()); });
         deserializerMap.put("cloudPcNamingTemplate", (n) -> { this.setCloudPcNamingTemplate(n.getStringValue()); });
+        deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getStringValue()); });
+        deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("domainJoinConfigurations", (n) -> { this.setDomainJoinConfigurations(n.getCollectionOfObjectValues(CloudPcDomainJoinConfiguration::createFromDiscriminatorValue)); });
@@ -126,6 +145,8 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("imageDisplayName", (n) -> { this.setImageDisplayName(n.getStringValue()); });
         deserializerMap.put("imageId", (n) -> { this.setImageId(n.getStringValue()); });
         deserializerMap.put("imageType", (n) -> { this.setImageType(n.getEnumValue(CloudPcProvisioningPolicyImageType::forValue)); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("localAdminEnabled", (n) -> { this.setLocalAdminEnabled(n.getBooleanValue()); });
         deserializerMap.put("managedBy", (n) -> { this.setManagedBy(n.getEnumSetValue(CloudPcManagementService::forValue)); });
         deserializerMap.put("microsoftManagedDesktop", (n) -> { this.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
@@ -166,6 +187,22 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public CloudPcProvisioningPolicyImageType getImageType() {
         return this.backingStore.get("imageType");
+    }
+    /**
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLastModifiedBy() {
+        return this.backingStore.get("lastModifiedBy");
+    }
+    /**
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the localAdminEnabled property value. When true, the local admin is enabled for Cloud PCs; false indicates that the local admin isn&apos;t enabled for Cloud PCs. The default value is false. Supports $filter, $select, and $orderBy.
@@ -236,6 +273,8 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeObjectValue("autopilotConfiguration", this.getAutopilotConfiguration());
         writer.writeStringValue("cloudPcGroupDisplayName", this.getCloudPcGroupDisplayName());
         writer.writeStringValue("cloudPcNamingTemplate", this.getCloudPcNamingTemplate());
+        writer.writeStringValue("createdBy", this.getCreatedBy());
+        writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfObjectValues("domainJoinConfigurations", this.getDomainJoinConfigurations());
@@ -244,6 +283,8 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
         writer.writeStringValue("imageId", this.getImageId());
         writer.writeEnumValue("imageType", this.getImageType());
+        writer.writeStringValue("lastModifiedBy", this.getLastModifiedBy());
+        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeBooleanValue("localAdminEnabled", this.getLocalAdminEnabled());
         writer.writeEnumSetValue("managedBy", this.getManagedBy());
         writer.writeObjectValue("microsoftManagedDesktop", this.getMicrosoftManagedDesktop());
@@ -293,6 +334,20 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setCloudPcNamingTemplate(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("cloudPcNamingTemplate", value);
+    }
+    /**
+     * Sets the createdBy property value. The createdBy property
+     * @param value Value to set for the createdBy property.
+     */
+    public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("createdBy", value);
+    }
+    /**
+     * Sets the createdDateTime property value. The createdDateTime property
+     * @param value Value to set for the createdDateTime property.
+     */
+    public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("createdDateTime", value);
     }
     /**
      * Sets the description property value. The provisioning policy description. Supports $filter, $select, and $orderBy.
@@ -349,6 +404,20 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setImageType(@jakarta.annotation.Nullable final CloudPcProvisioningPolicyImageType value) {
         this.backingStore.set("imageType", value);
+    }
+    /**
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * @param value Value to set for the lastModifiedBy property.
+     */
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("lastModifiedBy", value);
+    }
+    /**
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * @param value Value to set for the lastModifiedDateTime property.
+     */
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the localAdminEnabled property value. When true, the local admin is enabled for Cloud PCs; false indicates that the local admin isn&apos;t enabled for Cloud PCs. The default value is false. Supports $filter, $select, and $orderBy.

@@ -56,7 +56,7 @@ public class IncidentTaskResponseAction extends ResponseAction implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the identifierValue property value. The identifierValue property
+     * Gets the identifierValue property value. Required. The identifier value for the response action. This value is specific to the type of action being performed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class IncidentTaskResponseAction extends ResponseAction implements Parsab
         writer.writeStringValue("identifierValue", this.getIdentifierValue());
     }
     /**
-     * Sets the identifierValue property value. The identifierValue property
+     * Sets the identifierValue property value. Required. The identifier value for the response action. This value is specific to the type of action being performed.
      * @param value Value to set for the identifierValue property.
      */
     public void setIdentifierValue(@jakarta.annotation.Nullable final String value) {

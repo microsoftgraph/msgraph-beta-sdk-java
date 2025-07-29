@@ -16,6 +16,7 @@ import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.me
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messages.item.permanentdelete.PermanentDeleteRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messages.item.reply.ReplyRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messages.item.replyall.ReplyAllRequestBuilder;
+import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messages.item.reportmessage.ReportMessageRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messages.item.send.SendRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messages.item.unsubscribe.UnsubscribeRequestBuilder;
 import com.microsoft.graph.beta.users.item.mailfolders.item.childfolders.item.messages.item.value.ContentRequestBuilder;
@@ -156,6 +157,14 @@ public class MessageItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ReplyAllRequestBuilder replyAll() {
         return new ReplyAllRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the reportMessage method.
+     * @return a {@link ReportMessageRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReportMessageRequestBuilder reportMessage() {
+        return new ReportMessageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the send method.

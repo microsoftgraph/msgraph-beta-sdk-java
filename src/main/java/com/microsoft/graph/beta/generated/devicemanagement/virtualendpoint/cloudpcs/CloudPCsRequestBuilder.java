@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.count.CountRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.getprovisionedcloudpcswithgroupidwithserviceplanid.GetProvisionedCloudPCsWithGroupIdWithServicePlanIdRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.CloudPCItemRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.retrievecloudpccountbystatus.RetrieveCloudPcCountByStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.validatebulkresize.ValidateBulkResizeRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPC;
 import com.microsoft.graph.beta.models.CloudPCCollectionResponse;
@@ -32,6 +33,14 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveCloudPcCountByStatus method.
+     * @return a {@link RetrieveCloudPcCountByStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPcCountByStatusRequestBuilder retrieveCloudPcCountByStatus() {
+        return new RetrieveCloudPcCountByStatusRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the validateBulkResize method.
