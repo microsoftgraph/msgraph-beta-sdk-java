@@ -26,7 +26,7 @@ public class StopAndQuarantineFileIncidentTaskResponseAction extends IncidentTas
         return new StopAndQuarantineFileIncidentTaskResponseAction();
     }
     /**
-     * Gets the deviceId property value. The deviceId property
+     * Gets the deviceId property value. Optional. The identifier of the device where the file is located. This property allows targeting the action to a specific device when the same file exists on multiple devices.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class StopAndQuarantineFileIncidentTaskResponseAction extends IncidentTas
         writer.writeStringValue("deviceId", this.getDeviceId());
     }
     /**
-     * Sets the deviceId property value. The deviceId property
+     * Sets the deviceId property value. Optional. The identifier of the device where the file is located. This property allows targeting the action to a specific device when the same file exists on multiple devices.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {

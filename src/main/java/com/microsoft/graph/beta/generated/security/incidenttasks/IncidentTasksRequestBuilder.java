@@ -60,19 +60,21 @@ public class IncidentTasksRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/incidentTasks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get incidentTasks from security
+     * Get incident tasks that Microsoft Defender Experts for XDR identified for remediation.
      * @return a {@link IncidentTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-list-incidenttasks?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IncidentTaskCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get incidentTasks from security
+     * Get incident tasks that Microsoft Defender Experts for XDR identified for remediation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IncidentTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-list-incidenttasks?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public IncidentTaskCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class IncidentTasksRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, IncidentTask::createFromDiscriminatorValue);
     }
     /**
-     * Get incidentTasks from security
+     * Get incident tasks that Microsoft Defender Experts for XDR identified for remediation.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class IncidentTasksRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get incidentTasks from security
+     * Get incident tasks that Microsoft Defender Experts for XDR identified for remediation.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class IncidentTasksRequestBuilder extends BaseRequestBuilder {
         return new IncidentTasksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get incidentTasks from security
+     * Get incident tasks that Microsoft Defender Experts for XDR identified for remediation.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

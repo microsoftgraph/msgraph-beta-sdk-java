@@ -9,7 +9,8 @@ public enum CloudPcProvisioningType implements ValuedEnum {
     Shared("shared"),
     UnknownFutureValue("unknownFutureValue"),
     SharedByUser("sharedByUser"),
-    SharedByEntraGroup("sharedByEntraGroup");
+    SharedByEntraGroup("sharedByEntraGroup"),
+    Reserve("reserve");
     public final String value;
     CloudPcProvisioningType(final String value) {
         this.value = value;
@@ -25,6 +26,7 @@ public enum CloudPcProvisioningType implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "sharedByUser": return SharedByUser;
             case "sharedByEntraGroup": return SharedByEntraGroup;
+            case "reserve": return Reserve;
             default: return null;
         }
     }

@@ -26,7 +26,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
         return new ItemAddress();
     }
     /**
-     * Gets the detail property value. The detail property
+     * Gets the detail property value. Details about the address itself.
      * @return a {@link PhysicalAddress}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ItemAddress extends ItemFacet implements Parsable {
         writer.writeObjectValue("geoCoordinates", this.getGeoCoordinates());
     }
     /**
-     * Sets the detail property value. The detail property
+     * Sets the detail property value. Details about the address itself.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final PhysicalAddress value) {

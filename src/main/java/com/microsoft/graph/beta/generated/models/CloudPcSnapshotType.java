@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum CloudPcSnapshotType implements ValuedEnum {
     Automatic("automatic"),
     Manual("manual"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Retention("retention");
     public final String value;
     CloudPcSnapshotType(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum CloudPcSnapshotType implements ValuedEnum {
             case "automatic": return Automatic;
             case "manual": return Manual;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "retention": return Retention;
             default: return null;
         }
     }

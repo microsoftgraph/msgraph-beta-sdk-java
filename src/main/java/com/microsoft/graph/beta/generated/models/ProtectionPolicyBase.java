@@ -35,6 +35,14 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return new ProtectionPolicyBase();
     }
     /**
+     * Gets the billingPolicyId property value. The billingPolicyId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getBillingPolicyId() {
+        return this.backingStore.get("billingPolicyId");
+    }
+    /**
      * Gets the createdBy property value. The identity of person who created the policy.
      * @return a {@link IdentitySet}
      */
@@ -65,6 +73,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("billingPolicyId", (n) -> { this.setBillingPolicyId(n.getStringValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
@@ -113,6 +122,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("billingPolicyId", this.getBillingPolicyId());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
@@ -120,6 +130,13 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeCollectionOfObjectValues("retentionSettings", this.getRetentionSettings());
         writer.writeEnumValue("status", this.getStatus());
+    }
+    /**
+     * Sets the billingPolicyId property value. The billingPolicyId property
+     * @param value Value to set for the billingPolicyId property.
+     */
+    public void setBillingPolicyId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("billingPolicyId", value);
     }
     /**
      * Sets the createdBy property value. The identity of person who created the policy.

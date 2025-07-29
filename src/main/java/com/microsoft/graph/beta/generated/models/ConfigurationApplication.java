@@ -34,6 +34,14 @@ public class ConfigurationApplication extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
+     * Gets the appOwnerOrganizationId property value. The appOwnerOrganizationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAppOwnerOrganizationId() {
+        return this.backingStore.get("appOwnerOrganizationId");
+    }
+    /**
      * Gets the clientCredentials property value. The clientCredentials property
      * @return a {@link ClientCredentials}
      */
@@ -81,6 +89,7 @@ public class ConfigurationApplication extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("appOwnerOrganizationId", (n) -> { this.setAppOwnerOrganizationId(n.getStringValue()); });
         deserializerMap.put("clientCredentials", (n) -> { this.setClientCredentials(n.getObjectValue(ClientCredentials::createFromDiscriminatorValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -123,6 +132,7 @@ public class ConfigurationApplication extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("appId", this.getAppId());
+        writer.writeStringValue("appOwnerOrganizationId", this.getAppOwnerOrganizationId());
         writer.writeObjectValue("clientCredentials", this.getClientCredentials());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeStringValue("description", this.getDescription());
@@ -135,6 +145,13 @@ public class ConfigurationApplication extends Entity implements Parsable {
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
+    }
+    /**
+     * Sets the appOwnerOrganizationId property value. The appOwnerOrganizationId property
+     * @param value Value to set for the appOwnerOrganizationId property.
+     */
+    public void setAppOwnerOrganizationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("appOwnerOrganizationId", value);
     }
     /**
      * Sets the clientCredentials property value. The clientCredentials property

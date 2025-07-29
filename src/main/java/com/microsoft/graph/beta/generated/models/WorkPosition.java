@@ -42,7 +42,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
         return this.backingStore.get("colleagues");
     }
     /**
-     * Gets the detail property value. The detail property
+     * Gets the detail property value. Contains detailed information about the position.
      * @return a {@link PositionDetail}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class WorkPosition extends ItemFacet implements Parsable {
         this.backingStore.set("colleagues", value);
     }
     /**
-     * Sets the detail property value. The detail property
+     * Sets the detail property value. Contains detailed information about the position.
      * @param value Value to set for the detail property.
      */
     public void setDetail(@jakarta.annotation.Nullable final PositionDetail value) {

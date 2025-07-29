@@ -61,7 +61,7 @@ public class ItemFacet extends Entity implements Parsable {
         return this.backingStore.get("allowedAudiences");
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. Provides the identifier of the user and/or application that created the entity.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class ItemFacet extends Entity implements Parsable {
         return this.backingStore.get("isSearchable");
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Provides the identifier of the user and/or application that last modified the entity.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -167,7 +167,7 @@ public class ItemFacet extends Entity implements Parsable {
         this.backingStore.set("allowedAudiences", value);
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. Provides the identifier of the user and/or application that created the entity.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
@@ -195,7 +195,7 @@ public class ItemFacet extends Entity implements Parsable {
         this.backingStore.set("isSearchable", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Provides the identifier of the user and/or application that last modified the entity.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {

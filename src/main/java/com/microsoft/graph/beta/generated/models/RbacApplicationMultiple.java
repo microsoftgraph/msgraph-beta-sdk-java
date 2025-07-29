@@ -22,6 +22,13 @@ public class RbacApplicationMultiple extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public static RbacApplicationMultiple createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.unifiedRbacApplicationMultiple": return new UnifiedRbacApplicationMultiple();
+            }
+        }
         return new RbacApplicationMultiple();
     }
     /**

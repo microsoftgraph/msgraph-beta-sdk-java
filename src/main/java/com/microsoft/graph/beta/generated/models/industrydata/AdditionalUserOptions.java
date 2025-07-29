@@ -69,10 +69,11 @@ public class AdditionalUserOptions implements AdditionalDataHolder, BackedModel,
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("allowStudentContactAssociation", (n) -> { this.setAllowStudentContactAssociation(n.getBooleanValue()); });
         deserializerMap.put("markAllStudentsAsMinors", (n) -> { this.setMarkAllStudentsAsMinors(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("studentAgeGroup", (n) -> { this.setStudentAgeGroup(n.getEnumValue(StudentAgeGroup::forValue)); });
         return deserializerMap;
     }
     /**
@@ -92,6 +93,14 @@ public class AdditionalUserOptions implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the studentAgeGroup property value. Indicates the age group classification for students. Possible values are: minor, notAdult, adult, unknownFutureValue. Use null to disable age group enforcement.
+     * @return a {@link StudentAgeGroup}
+     */
+    @jakarta.annotation.Nullable
+    public StudentAgeGroup getStudentAgeGroup() {
+        return this.backingStore.get("studentAgeGroup");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -100,6 +109,7 @@ public class AdditionalUserOptions implements AdditionalDataHolder, BackedModel,
         writer.writeBooleanValue("allowStudentContactAssociation", this.getAllowStudentContactAssociation());
         writer.writeBooleanValue("markAllStudentsAsMinors", this.getMarkAllStudentsAsMinors());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeEnumValue("studentAgeGroup", this.getStudentAgeGroup());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -137,5 +147,12 @@ public class AdditionalUserOptions implements AdditionalDataHolder, BackedModel,
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the studentAgeGroup property value. Indicates the age group classification for students. Possible values are: minor, notAdult, adult, unknownFutureValue. Use null to disable age group enforcement.
+     * @param value Value to set for the studentAgeGroup property.
+     */
+    public void setStudentAgeGroup(@jakarta.annotation.Nullable final StudentAgeGroup value) {
+        this.backingStore.set("studentAgeGroup", value);
     }
 }
