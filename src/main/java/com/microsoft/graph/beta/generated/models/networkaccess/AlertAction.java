@@ -35,7 +35,7 @@ public class AlertAction implements AdditionalDataHolder, BackedModel, Parsable 
         return new AlertAction();
     }
     /**
-     * Gets the actionLink property value. The actionLink property
+     * Gets the actionLink property value. A link to more information or to perform the action (if applicable).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class AlertAction implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("actionLink");
     }
     /**
-     * Gets the actionText property value. The actionText property
+     * Gets the actionText property value. Text describing the action. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,14 +103,14 @@ public class AlertAction implements AdditionalDataHolder, BackedModel, Parsable 
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actionLink property value. The actionLink property
+     * Sets the actionLink property value. A link to more information or to perform the action (if applicable).
      * @param value Value to set for the actionLink property.
      */
     public void setActionLink(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("actionLink", value);
     }
     /**
-     * Sets the actionText property value. The actionText property
+     * Sets the actionText property value. Text describing the action. Required.
      * @param value Value to set for the actionText property.
      */
     public void setActionText(@jakarta.annotation.Nullable final String value) {

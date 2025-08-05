@@ -37,16 +37,18 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/externalAuthenticationMethods/{externalAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property externalAuthenticationMethods for users
+     * Delete an externalAuthenticationMethod object. This API doesn&apos;t support self-service operations.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-delete-externalauthenticationmethods?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property externalAuthenticationMethods for users
+     * Delete an externalAuthenticationMethod object. This API doesn&apos;t support self-service operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-delete-externalauthenticationmethods?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,7 +57,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      * @return a {@link ExternalAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +66,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return get(null);
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -102,7 +104,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property externalAuthenticationMethods for users
+     * Delete an externalAuthenticationMethod object. This API doesn&apos;t support self-service operations.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +112,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property externalAuthenticationMethods for users
+     * Delete an externalAuthenticationMethod object. This API doesn&apos;t support self-service operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +124,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return requestInfo;
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
         return toGetRequestInformation(null);
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class ExternalAuthenticationMethodItemRequestBuilder extends BaseRequestB
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

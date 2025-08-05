@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.admin.people;
 
 import com.microsoft.graph.beta.admin.people.iteminsights.ItemInsightsRequestBuilder;
 import com.microsoft.graph.beta.admin.people.namepronunciation.NamePronunciationRequestBuilder;
+import com.microsoft.graph.beta.admin.people.photoupdatesettings.PhotoUpdateSettingsRequestBuilder;
 import com.microsoft.graph.beta.admin.people.profilecardproperties.ProfileCardPropertiesRequestBuilder;
 import com.microsoft.graph.beta.admin.people.profilepropertysettings.ProfilePropertySettingsRequestBuilder;
 import com.microsoft.graph.beta.admin.people.profilesources.ProfileSourcesRequestBuilder;
@@ -42,6 +43,14 @@ public class PeopleRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public NamePronunciationRequestBuilder namePronunciation() {
         return new NamePronunciationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the photoUpdateSettings property of the microsoft.graph.peopleAdminSettings entity.
+     * @return a {@link PhotoUpdateSettingsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PhotoUpdateSettingsRequestBuilder photoUpdateSettings() {
+        return new PhotoUpdateSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the profileCardProperties property of the microsoft.graph.peopleAdminSettings entity.

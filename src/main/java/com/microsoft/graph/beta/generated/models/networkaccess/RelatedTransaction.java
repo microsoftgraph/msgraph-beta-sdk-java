@@ -36,7 +36,7 @@ public class RelatedTransaction extends RelatedResource implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the transactionId property value. The transactionId property
+     * Gets the transactionId property value. Unique identifier of the transaction. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RelatedTransaction extends RelatedResource implements Parsable {
         writer.writeStringValue("transactionId", this.getTransactionId());
     }
     /**
-     * Sets the transactionId property value. The transactionId property
+     * Sets the transactionId property value. Unique identifier of the transaction. Required.
      * @param value Value to set for the transactionId property.
      */
     public void setTransactionId(@jakarta.annotation.Nullable final String value) {

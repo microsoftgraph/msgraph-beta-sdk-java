@@ -37,7 +37,7 @@ public class RelatedUser extends RelatedResource implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. Unique identifier of the user. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class RelatedUser extends RelatedResource implements Parsable {
         return this.backingStore.get("userId");
     }
     /**
-     * Gets the userPrincipalName property value. The userPrincipalName property
+     * Gets the userPrincipalName property value. Principal name of the user. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class RelatedUser extends RelatedResource implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. Unique identifier of the user. Required.
      * @param value Value to set for the userId property.
      */
     public void setUserId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("userId", value);
     }
     /**
-     * Sets the userPrincipalName property value. The userPrincipalName property
+     * Sets the userPrincipalName property value. Principal name of the user. Required.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

@@ -26,7 +26,7 @@ public class RelatedFile extends RelatedResource implements Parsable {
         return new RelatedFile();
     }
     /**
-     * Gets the directory property value. The directory property
+     * Gets the directory property value. Directory path of the file. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class RelatedFile extends RelatedResource implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the file. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class RelatedFile extends RelatedResource implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the sizeInBytes property value. The sizeInBytes property
+     * Gets the sizeInBytes property value. Size of the file in bytes. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class RelatedFile extends RelatedResource implements Parsable {
         writer.writeLongValue("sizeInBytes", this.getSizeInBytes());
     }
     /**
-     * Sets the directory property value. The directory property
+     * Sets the directory property value. Directory path of the file. Required.
      * @param value Value to set for the directory property.
      */
     public void setDirectory(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("directory", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the file. Required.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the sizeInBytes property value. The sizeInBytes property
+     * Sets the sizeInBytes property value. Size of the file in bytes. Required.
      * @param value Value to set for the sizeInBytes property.
      */
     public void setSizeInBytes(@jakarta.annotation.Nullable final Long value) {

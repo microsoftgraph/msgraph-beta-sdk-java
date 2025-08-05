@@ -99,6 +99,14 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("drives");
     }
     /**
+     * Gets the extensions property value. The collection of open extensions defined for this site. Nullable.
+     * @return a {@link java.util.List<Extension>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Extension> getExtensions() {
+        return this.backingStore.get("extensions");
+    }
+    /**
      * Gets the externalColumns property value. The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.
      * @return a {@link java.util.List<ColumnDefinition>}
      */
@@ -122,6 +130,7 @@ public class Site extends BaseItem implements Parsable {
         deserializerMap.put("documentProcessingJobs", (n) -> { this.setDocumentProcessingJobs(n.getCollectionOfObjectValues(DocumentProcessingJob::createFromDiscriminatorValue)); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("externalColumns", (n) -> { this.setExternalColumns(n.getCollectionOfObjectValues(ColumnDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("informationProtection", (n) -> { this.setInformationProtection(n.getObjectValue(InformationProtection::createFromDiscriminatorValue)); });
         deserializerMap.put("isPersonalSite", (n) -> { this.setIsPersonalSite(n.getBooleanValue()); });
@@ -285,6 +294,7 @@ public class Site extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("documentProcessingJobs", this.getDocumentProcessingJobs());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
+        writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
         writer.writeCollectionOfObjectValues("externalColumns", this.getExternalColumns());
         writer.writeObjectValue("informationProtection", this.getInformationProtection());
         writer.writeBooleanValue("isPersonalSite", this.getIsPersonalSite());
@@ -365,6 +375,13 @@ public class Site extends BaseItem implements Parsable {
      */
     public void setDrives(@jakarta.annotation.Nullable final java.util.List<Drive> value) {
         this.backingStore.set("drives", value);
+    }
+    /**
+     * Sets the extensions property value. The collection of open extensions defined for this site. Nullable.
+     * @param value Value to set for the extensions property.
+     */
+    public void setExtensions(@jakarta.annotation.Nullable final java.util.List<Extension> value) {
+        this.backingStore.set("extensions", value);
     }
     /**
      * Sets the externalColumns property value. The collection of column definitions available in the site that is referenced from the sites in the parent hierarchy of the current site.

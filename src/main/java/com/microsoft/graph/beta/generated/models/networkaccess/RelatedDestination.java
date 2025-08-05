@@ -39,7 +39,7 @@ public class RelatedDestination extends RelatedResource implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fqdn property value. The fqdn property
+     * Gets the fqdn property value. Fully qualified domain name of the destination. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -47,7 +47,7 @@ public class RelatedDestination extends RelatedResource implements Parsable {
         return this.backingStore.get("fqdn");
     }
     /**
-     * Gets the ip property value. The ip property
+     * Gets the ip property value. IP address of the destination. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class RelatedDestination extends RelatedResource implements Parsable {
         return this.backingStore.get("networkingProtocol");
     }
     /**
-     * Gets the port property value. The port property
+     * Gets the port property value. Port number used to access the destination. Required.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -83,14 +83,14 @@ public class RelatedDestination extends RelatedResource implements Parsable {
         writer.writeIntegerValue("port", this.getPort());
     }
     /**
-     * Sets the fqdn property value. The fqdn property
+     * Sets the fqdn property value. Fully qualified domain name of the destination. Required.
      * @param value Value to set for the fqdn property.
      */
     public void setFqdn(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("fqdn", value);
     }
     /**
-     * Sets the ip property value. The ip property
+     * Sets the ip property value. IP address of the destination. Required.
      * @param value Value to set for the ip property.
      */
     public void setIp(@jakarta.annotation.Nullable final String value) {
@@ -104,7 +104,7 @@ public class RelatedDestination extends RelatedResource implements Parsable {
         this.backingStore.set("networkingProtocol", value);
     }
     /**
-     * Sets the port property value. The port property
+     * Sets the port property value. Port number used to access the destination. Required.
      * @param value Value to set for the port property.
      */
     public void setPort(@jakarta.annotation.Nullable final Integer value) {

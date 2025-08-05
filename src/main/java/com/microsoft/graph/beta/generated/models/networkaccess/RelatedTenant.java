@@ -36,7 +36,7 @@ public class RelatedTenant extends RelatedResource implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Unique identifier of the tenant. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RelatedTenant extends RelatedResource implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Unique identifier of the tenant. Required.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

@@ -36,7 +36,7 @@ public class RelatedWebCategory extends RelatedResource implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the webCategoryName property value. The webCategoryName property
+     * Gets the webCategoryName property value. Name of the web category. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RelatedWebCategory extends RelatedResource implements Parsable {
         writer.writeStringValue("webCategoryName", this.getWebCategoryName());
     }
     /**
-     * Sets the webCategoryName property value. The webCategoryName property
+     * Sets the webCategoryName property value. Name of the web category. Required.
      * @param value Value to set for the webCategoryName property.
      */
     public void setWebCategoryName(@jakarta.annotation.Nullable final String value) {

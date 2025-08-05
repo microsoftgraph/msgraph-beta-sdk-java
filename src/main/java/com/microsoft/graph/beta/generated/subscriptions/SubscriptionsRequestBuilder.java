@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.subscriptions;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Subscription;
 import com.microsoft.graph.beta.models.SubscriptionCollectionResponse;
+import com.microsoft.graph.beta.subscriptions.getvapidpublickey.GetVapidPublicKeyRequestBuilder;
 import com.microsoft.graph.beta.subscriptions.item.SubscriptionItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SubscriptionsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the getVapidPublicKey method.
+     * @return a {@link GetVapidPublicKeyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetVapidPublicKeyRequestBuilder getVapidPublicKey() {
+        return new GetVapidPublicKeyRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the collection of subscription entities.
      * @param subscriptionId The unique identifier of subscription

@@ -45,7 +45,7 @@ public class RelatedFileHash extends RelatedResource implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. The hash value. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class RelatedFileHash extends RelatedResource implements Parsable {
         this.backingStore.set("algorithm", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. The hash value. Required.
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

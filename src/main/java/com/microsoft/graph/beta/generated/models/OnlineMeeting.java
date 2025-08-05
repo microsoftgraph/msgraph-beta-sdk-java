@@ -94,7 +94,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("endDateTime");
     }
     /**
-     * Gets the externalId property value. The external ID. A custom ID. Optional.
+     * Gets the externalId property value. The external ID that is a custom identifier. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -293,7 +293,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("endDateTime", value);
     }
     /**
-     * Sets the externalId property value. The external ID. A custom ID. Optional.
+     * Sets the externalId property value. The external ID that is a custom identifier. Optional.
      * @param value Value to set for the externalId property.
      */
     public void setExternalId(@jakarta.annotation.Nullable final String value) {

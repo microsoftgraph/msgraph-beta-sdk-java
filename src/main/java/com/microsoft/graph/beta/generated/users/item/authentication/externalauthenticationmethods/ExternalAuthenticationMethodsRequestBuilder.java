@@ -60,7 +60,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/externalAuthenticationMethods{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      * @return a {@link ExternalAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -82,21 +82,23 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to externalAuthenticationMethods for users
+     * Create a new externalAuthenticationMethod object. This API doesn&apos;t support self-service operations.
      * @param body The request body
      * @return a {@link ExternalAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-externalauthenticationmethods?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalAuthenticationMethod post(@jakarta.annotation.Nonnull final ExternalAuthenticationMethod body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to externalAuthenticationMethods for users
+     * Create a new externalAuthenticationMethod object. This API doesn&apos;t support self-service operations.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalAuthenticationMethod}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/authentication-post-externalauthenticationmethods?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalAuthenticationMethod post(@jakarta.annotation.Nonnull final ExternalAuthenticationMethod body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +129,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Create new navigation property to externalAuthenticationMethods for users
+     * Create a new externalAuthenticationMethod object. This API doesn&apos;t support self-service operations.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to externalAuthenticationMethods for users
+     * Create a new externalAuthenticationMethod object. This API doesn&apos;t support self-service operations.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +163,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return new ExternalAuthenticationMethodsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get externalAuthenticationMethods from users
+     * Represents the external methods registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

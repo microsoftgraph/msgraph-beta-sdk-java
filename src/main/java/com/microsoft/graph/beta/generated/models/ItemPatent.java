@@ -75,7 +75,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
         return this.backingStore.get("issuedDate");
     }
     /**
-     * Gets the issuingAuthority property value. Authority which granted the patent.
+     * Gets the issuingAuthority property value. Authority that granted the patent.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -142,7 +142,7 @@ public class ItemPatent extends ItemFacet implements Parsable {
         this.backingStore.set("issuedDate", value);
     }
     /**
-     * Sets the issuingAuthority property value. Authority which granted the patent.
+     * Sets the issuingAuthority property value. Authority that granted the patent.
      * @param value Value to set for the issuingAuthority property.
      */
     public void setIssuingAuthority(@jakarta.annotation.Nullable final String value) {

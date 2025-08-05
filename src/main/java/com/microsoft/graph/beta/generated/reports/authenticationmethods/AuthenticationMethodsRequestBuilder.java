@@ -2,7 +2,12 @@ package com.microsoft.graph.beta.reports.authenticationmethods;
 
 import com.microsoft.graph.beta.models.AuthenticationMethodsRoot;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.reports.authenticationmethods.usereventssummary.UserEventsSummaryRequestBuilder;
+import com.microsoft.graph.beta.reports.authenticationmethods.usermfasigninsummary.UserMfaSignInSummaryRequestBuilder;
+import com.microsoft.graph.beta.reports.authenticationmethods.userpasswordresetsandchangessummary.UserPasswordResetsAndChangesSummaryRequestBuilder;
+import com.microsoft.graph.beta.reports.authenticationmethods.userregistrationactivitywithperiod.UserRegistrationActivityWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.authenticationmethods.userregistrationdetails.UserRegistrationDetailsRequestBuilder;
+import com.microsoft.graph.beta.reports.authenticationmethods.usersigninsbyauthmethodsummarywithperiod.UserSignInsByAuthMethodSummaryWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.authenticationmethods.usersregisteredbyfeature.UsersRegisteredByFeatureRequestBuilder;
 import com.microsoft.graph.beta.reports.authenticationmethods.usersregisteredbyfeaturewithincludedusertypeswithincludeduserroles.UsersRegisteredByFeatureWithIncludedUserTypesWithIncludedUserRolesRequestBuilder;
 import com.microsoft.graph.beta.reports.authenticationmethods.usersregisteredbymethod.UsersRegisteredByMethodRequestBuilder;
@@ -25,6 +30,30 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the userEventsSummary property of the microsoft.graph.authenticationMethodsRoot entity.
+     * @return a {@link UserEventsSummaryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserEventsSummaryRequestBuilder userEventsSummary() {
+        return new UserEventsSummaryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userMfaSignInSummary property of the microsoft.graph.authenticationMethodsRoot entity.
+     * @return a {@link UserMfaSignInSummaryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserMfaSignInSummaryRequestBuilder userMfaSignInSummary() {
+        return new UserMfaSignInSummaryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userPasswordResetsAndChangesSummary property of the microsoft.graph.authenticationMethodsRoot entity.
+     * @return a {@link UserPasswordResetsAndChangesSummaryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserPasswordResetsAndChangesSummaryRequestBuilder userPasswordResetsAndChangesSummary() {
+        return new UserPasswordResetsAndChangesSummaryRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the userRegistrationDetails property of the microsoft.graph.authenticationMethodsRoot entity.
      * @return a {@link UserRegistrationDetailsRequestBuilder}
@@ -193,6 +222,26 @@ public class AuthenticationMethodsRequestBuilder extends BaseRequestBuilder {
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
+    }
+    /**
+     * Provides operations to call the userRegistrationActivity method.
+     * @param period Usage: period=&apos;{period}&apos;
+     * @return a {@link UserRegistrationActivityWithPeriodRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserRegistrationActivityWithPeriodRequestBuilder userRegistrationActivityWithPeriod(@jakarta.annotation.Nonnull final String period) {
+        Objects.requireNonNull(period);
+        return new UserRegistrationActivityWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+    }
+    /**
+     * Provides operations to call the userSignInsByAuthMethodSummary method.
+     * @param period Usage: period=&apos;{period}&apos;
+     * @return a {@link UserSignInsByAuthMethodSummaryWithPeriodRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserSignInsByAuthMethodSummaryWithPeriodRequestBuilder userSignInsByAuthMethodSummaryWithPeriod(@jakarta.annotation.Nonnull final String period) {
+        Objects.requireNonNull(period);
+        return new UserSignInsByAuthMethodSummaryWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the usersRegisteredByFeature method.

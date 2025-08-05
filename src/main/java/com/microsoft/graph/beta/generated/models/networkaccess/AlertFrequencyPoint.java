@@ -72,7 +72,7 @@ public class AlertFrequencyPoint implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the highSeverityCount property value. The highSeverityCount property
+     * Gets the highSeverityCount property value. Total number of high alert severity. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class AlertFrequencyPoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("highSeverityCount");
     }
     /**
-     * Gets the informationalSeverityCount property value. The informationalSeverityCount property
+     * Gets the informationalSeverityCount property value. Total number of informational alert severity. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class AlertFrequencyPoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("informationalSeverityCount");
     }
     /**
-     * Gets the lowSeverityCount property value. The lowSeverityCount property
+     * Gets the lowSeverityCount property value. Total number of low alert severity. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class AlertFrequencyPoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("lowSeverityCount");
     }
     /**
-     * Gets the mediumSeverityCount property value. The mediumSeverityCount property
+     * Gets the mediumSeverityCount property value. Total number of medium alert severity. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class AlertFrequencyPoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the timeStampDateTime property value. The timeStampDateTime property
+     * Gets the timeStampDateTime property value. The time bucket for counting the alert severities. Required.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -149,28 +149,28 @@ public class AlertFrequencyPoint implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the highSeverityCount property value. The highSeverityCount property
+     * Sets the highSeverityCount property value. Total number of high alert severity. Required.
      * @param value Value to set for the highSeverityCount property.
      */
     public void setHighSeverityCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("highSeverityCount", value);
     }
     /**
-     * Sets the informationalSeverityCount property value. The informationalSeverityCount property
+     * Sets the informationalSeverityCount property value. Total number of informational alert severity. Required.
      * @param value Value to set for the informationalSeverityCount property.
      */
     public void setInformationalSeverityCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("informationalSeverityCount", value);
     }
     /**
-     * Sets the lowSeverityCount property value. The lowSeverityCount property
+     * Sets the lowSeverityCount property value. Total number of low alert severity. Required.
      * @param value Value to set for the lowSeverityCount property.
      */
     public void setLowSeverityCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("lowSeverityCount", value);
     }
     /**
-     * Sets the mediumSeverityCount property value. The mediumSeverityCount property
+     * Sets the mediumSeverityCount property value. Total number of medium alert severity. Required.
      * @param value Value to set for the mediumSeverityCount property.
      */
     public void setMediumSeverityCount(@jakarta.annotation.Nullable final Long value) {
@@ -184,7 +184,7 @@ public class AlertFrequencyPoint implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the timeStampDateTime property value. The timeStampDateTime property
+     * Sets the timeStampDateTime property value. The time bucket for counting the alert severities. Required.
      * @param value Value to set for the timeStampDateTime property.
      */
     public void setTimeStampDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

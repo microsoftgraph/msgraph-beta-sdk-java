@@ -41,7 +41,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * Retrieve a collection of appConsentRequest objects for which the current user is the reviewer and the status of the userConsentRequest for accessing the specified app is InProgress.
      * @return a {@link FilterByCurrentUserWithOnGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/appconsentrequest-filterByCurrentUser?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/appconsentrequest-filterbycurrentuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilterByCurrentUserWithOnGetResponse get() {
@@ -52,7 +52,7 @@ public class FilterByCurrentUserWithOnRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FilterByCurrentUserWithOnGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/appconsentrequest-filterByCurrentUser?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/appconsentrequest-filterbycurrentuser?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FilterByCurrentUserWithOnGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {

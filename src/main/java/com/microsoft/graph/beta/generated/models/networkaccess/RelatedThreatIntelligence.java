@@ -36,7 +36,7 @@ public class RelatedThreatIntelligence extends RelatedResource implements Parsab
         return deserializerMap;
     }
     /**
-     * Gets the threatCount property value. The threatCount property
+     * Gets the threatCount property value. Number of threats detected by threat intelligence. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RelatedThreatIntelligence extends RelatedResource implements Parsab
         writer.writeLongValue("threatCount", this.getThreatCount());
     }
     /**
-     * Sets the threatCount property value. The threatCount property
+     * Sets the threatCount property value. Number of threats detected by threat intelligence. Required.
      * @param value Value to set for the threatCount property.
      */
     public void setThreatCount(@jakarta.annotation.Nullable final Long value) {
