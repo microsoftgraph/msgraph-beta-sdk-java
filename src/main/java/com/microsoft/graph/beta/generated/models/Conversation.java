@@ -73,7 +73,7 @@ public class Conversation extends Entity implements Parsable {
         return this.backingStore.get("threads");
     }
     /**
-     * Gets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
+     * Gets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it can&apos;t be updated.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class Conversation extends Entity implements Parsable {
         this.backingStore.set("threads", value);
     }
     /**
-     * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
+     * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it can&apos;t be updated.
      * @param value Value to set for the topic property.
      */
     public void setTopic(@jakarta.annotation.Nullable final String value) {

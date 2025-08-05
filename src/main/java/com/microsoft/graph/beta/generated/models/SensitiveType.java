@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
@@ -50,6 +51,7 @@ public class SensitiveType extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classificationMethod", (n) -> { this.setClassificationMethod(n.getEnumValue(ClassificationMethod::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
         deserializerMap.put("rulePackageId", (n) -> { this.setRulePackageId(n.getStringValue()); });
@@ -58,6 +60,14 @@ public class SensitiveType extends Entity implements Parsable {
         deserializerMap.put("sensitiveTypeSource", (n) -> { this.setSensitiveTypeSource(n.getEnumValue(SensitiveTypeSource::forValue)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.backingStore.get("lastModifiedDateTime");
     }
     /**
      * Gets the name property value. The name property
@@ -124,6 +134,7 @@ public class SensitiveType extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeEnumValue("classificationMethod", this.getClassificationMethod());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeStringValue("publisherName", this.getPublisherName());
         writer.writeStringValue("rulePackageId", this.getRulePackageId());
@@ -145,6 +156,13 @@ public class SensitiveType extends Entity implements Parsable {
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
+    }
+    /**
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * @param value Value to set for the lastModifiedDateTime property.
+     */
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
      * Sets the name property value. The name property

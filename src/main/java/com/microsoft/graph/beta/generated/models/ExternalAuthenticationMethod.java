@@ -26,7 +26,7 @@ public class ExternalAuthenticationMethod extends AuthenticationMethod implement
         return new ExternalAuthenticationMethod();
     }
     /**
-     * Gets the configurationId property value. The configurationId property
+     * Gets the configurationId property value. A unique identifier used to manage the external auth method within Microsoft Entra ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class ExternalAuthenticationMethod extends AuthenticationMethod implement
         return this.backingStore.get("configurationId");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Custom name given to the registered external authentication method.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class ExternalAuthenticationMethod extends AuthenticationMethod implement
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the configurationId property value. The configurationId property
+     * Sets the configurationId property value. A unique identifier used to manage the external auth method within Microsoft Entra ID.
      * @param value Value to set for the configurationId property.
      */
     public void setConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("configurationId", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Custom name given to the registered external authentication method.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

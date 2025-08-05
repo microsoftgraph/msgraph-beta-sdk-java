@@ -33,6 +33,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("itemInsights", (n) -> { this.setItemInsights(n.getObjectValue(InsightsSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("namePronunciation", (n) -> { this.setNamePronunciation(n.getObjectValue(NamePronunciationSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("photoUpdateSettings", (n) -> { this.setPhotoUpdateSettings(n.getObjectValue(PhotoUpdateSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("profileCardProperties", (n) -> { this.setProfileCardProperties(n.getCollectionOfObjectValues(ProfileCardProperty::createFromDiscriminatorValue)); });
         deserializerMap.put("profilePropertySettings", (n) -> { this.setProfilePropertySettings(n.getCollectionOfObjectValues(ProfilePropertySetting::createFromDiscriminatorValue)); });
         deserializerMap.put("profileSources", (n) -> { this.setProfileSources(n.getCollectionOfObjectValues(ProfileSource::createFromDiscriminatorValue)); });
@@ -54,6 +55,14 @@ public class PeopleAdminSettings extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public NamePronunciationSettings getNamePronunciation() {
         return this.backingStore.get("namePronunciation");
+    }
+    /**
+     * Gets the photoUpdateSettings property value. Administrator settings that manage the support for item photo updates in an organization.
+     * @return a {@link PhotoUpdateSettings}
+     */
+    @jakarta.annotation.Nullable
+    public PhotoUpdateSettings getPhotoUpdateSettings() {
+        return this.backingStore.get("photoUpdateSettings");
     }
     /**
      * Gets the profileCardProperties property value. A collection of the properties an administrator defined as visible on the Microsoft 365 profile card.
@@ -96,6 +105,7 @@ public class PeopleAdminSettings extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("itemInsights", this.getItemInsights());
         writer.writeObjectValue("namePronunciation", this.getNamePronunciation());
+        writer.writeObjectValue("photoUpdateSettings", this.getPhotoUpdateSettings());
         writer.writeCollectionOfObjectValues("profileCardProperties", this.getProfileCardProperties());
         writer.writeCollectionOfObjectValues("profilePropertySettings", this.getProfilePropertySettings());
         writer.writeCollectionOfObjectValues("profileSources", this.getProfileSources());
@@ -114,6 +124,13 @@ public class PeopleAdminSettings extends Entity implements Parsable {
      */
     public void setNamePronunciation(@jakarta.annotation.Nullable final NamePronunciationSettings value) {
         this.backingStore.set("namePronunciation", value);
+    }
+    /**
+     * Sets the photoUpdateSettings property value. Administrator settings that manage the support for item photo updates in an organization.
+     * @param value Value to set for the photoUpdateSettings property.
+     */
+    public void setPhotoUpdateSettings(@jakarta.annotation.Nullable final PhotoUpdateSettings value) {
+        this.backingStore.set("photoUpdateSettings", value);
     }
     /**
      * Sets the profileCardProperties property value. A collection of the properties an administrator defined as visible on the Microsoft 365 profile card.

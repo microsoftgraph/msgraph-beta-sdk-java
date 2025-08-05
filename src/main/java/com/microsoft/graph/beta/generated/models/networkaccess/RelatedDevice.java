@@ -26,7 +26,7 @@ public class RelatedDevice extends RelatedResource implements Parsable {
         return new RelatedDevice();
     }
     /**
-     * Gets the deviceId property value. The deviceId property
+     * Gets the deviceId property value. Unique identifier of the device involved in the alert. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RelatedDevice extends RelatedResource implements Parsable {
         writer.writeStringValue("deviceId", this.getDeviceId());
     }
     /**
-     * Sets the deviceId property value. The deviceId property
+     * Sets the deviceId property value. Unique identifier of the device involved in the alert. Required.
      * @param value Value to set for the deviceId property.
      */
     public void setDeviceId(@jakarta.annotation.Nullable final String value) {

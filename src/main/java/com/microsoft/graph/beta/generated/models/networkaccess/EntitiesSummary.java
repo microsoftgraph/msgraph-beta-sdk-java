@@ -56,7 +56,7 @@ public class EntitiesSummary implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the deviceCount property value. The number of unique devices that were seen.
+     * Gets the deviceCount property value. The number of devices in the summary. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class EntitiesSummary implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("trafficType");
     }
     /**
-     * Gets the userCount property value. The number of unique Microsoft Entra ID users that were seen.
+     * Gets the userCount property value. The number of users in the summary. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class EntitiesSummary implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("userCount");
     }
     /**
-     * Gets the workloadCount property value. The number of unique target workloads/hosts that were seen.
+     * Gets the workloadCount property value. The number of workloads in the summary. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class EntitiesSummary implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the deviceCount property value. The number of unique devices that were seen.
+     * Sets the deviceCount property value. The number of devices in the summary. Required.
      * @param value Value to set for the deviceCount property.
      */
     public void setDeviceCount(@jakarta.annotation.Nullable final Long value) {
@@ -159,14 +159,14 @@ public class EntitiesSummary implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("trafficType", value);
     }
     /**
-     * Sets the userCount property value. The number of unique Microsoft Entra ID users that were seen.
+     * Sets the userCount property value. The number of users in the summary. Required.
      * @param value Value to set for the userCount property.
      */
     public void setUserCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("userCount", value);
     }
     /**
-     * Sets the workloadCount property value. The number of unique target workloads/hosts that were seen.
+     * Sets the workloadCount property value. The number of workloads in the summary. Required.
      * @param value Value to set for the workloadCount property.
      */
     public void setWorkloadCount(@jakarta.annotation.Nullable final Long value) {

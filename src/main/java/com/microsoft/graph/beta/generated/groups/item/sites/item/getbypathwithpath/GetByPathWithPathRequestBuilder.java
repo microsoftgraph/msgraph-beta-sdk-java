@@ -9,6 +9,7 @@ import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.created
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.documentprocessingjobs.DocumentProcessingJobsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.drive.DriveRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.drives.DrivesRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.extensions.ExtensionsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.externalcolumns.ExternalColumnsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.getactivitiesbyintervalwithstartdatetimewithenddatetimewithinterval.GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.getbypathwithpath.getapplicablecontenttypesforlistwithlistid.GetApplicableContentTypesForListWithListIdRequestBuilder;
@@ -115,6 +116,14 @@ public class GetByPathWithPathRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DrivesRequestBuilder drives() {
         return new DrivesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.site entity.
+     * @return a {@link ExtensionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExtensionsRequestBuilder extensions() {
+        return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the externalColumns property of the microsoft.graph.site entity.

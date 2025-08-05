@@ -33,7 +33,7 @@ public class Authentication extends Entity implements Parsable {
         return this.backingStore.get("emailMethods");
     }
     /**
-     * Gets the externalAuthenticationMethods property value. The externalAuthenticationMethods property
+     * Gets the externalAuthenticationMethods property value. Represents the external methods registered to a user for authentication.
      * @return a {@link java.util.List<ExternalAuthenticationMethod>}
      */
     @jakarta.annotation.Nullable
@@ -219,7 +219,7 @@ public class Authentication extends Entity implements Parsable {
         this.backingStore.set("emailMethods", value);
     }
     /**
-     * Sets the externalAuthenticationMethods property value. The externalAuthenticationMethods property
+     * Sets the externalAuthenticationMethods property value. Represents the external methods registered to a user for authentication.
      * @param value Value to set for the externalAuthenticationMethods property.
      */
     public void setExternalAuthenticationMethods(@jakarta.annotation.Nullable final java.util.List<ExternalAuthenticationMethod> value) {

@@ -64,7 +64,7 @@ public class AlertSummary implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore;
     }
     /**
-     * Gets the count property value. The count property
+     * Gets the count property value. Total number of alerts with this specific severity and type. Required.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class AlertSummary implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the count property value. The count property
+     * Sets the count property value. Total number of alerts with this specific severity and type. Required.
      * @param value Value to set for the count property.
      */
     public void setCount(@jakarta.annotation.Nullable final Long value) {

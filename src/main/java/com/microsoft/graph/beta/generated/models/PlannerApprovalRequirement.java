@@ -67,7 +67,7 @@ public class PlannerApprovalRequirement implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the isApprovalRequired property value. Specifies whether approval is required to complete the plannerTask. When this property is set to true, the task can only be marked complete if an approval is created for the task and approved.
+     * Gets the isApprovalRequired property value. Specifies whether approval is required to complete the plannerTask. If set to true, the task can only be marked as complete if an approval is created for the task and approved.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class PlannerApprovalRequirement implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the isApprovalRequired property value. Specifies whether approval is required to complete the plannerTask. When this property is set to true, the task can only be marked complete if an approval is created for the task and approved.
+     * Sets the isApprovalRequired property value. Specifies whether approval is required to complete the plannerTask. If set to true, the task can only be marked as complete if an approval is created for the task and approved.
      * @param value Value to set for the isApprovalRequired property.
      */
     public void setIsApprovalRequired(@jakarta.annotation.Nullable final Boolean value) {

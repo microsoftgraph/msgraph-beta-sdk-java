@@ -36,7 +36,7 @@ public class RelatedRemoteNetwork extends RelatedResource implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the remoteNetworkId property value. The remoteNetworkId property
+     * Gets the remoteNetworkId property value. Unique identifier of the remote network. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RelatedRemoteNetwork extends RelatedResource implements Parsable {
         writer.writeStringValue("remoteNetworkId", this.getRemoteNetworkId());
     }
     /**
-     * Sets the remoteNetworkId property value. The remoteNetworkId property
+     * Sets the remoteNetworkId property value. Unique identifier of the remote network. Required.
      * @param value Value to set for the remoteNetworkId property.
      */
     public void setRemoteNetworkId(@jakarta.annotation.Nullable final String value) {

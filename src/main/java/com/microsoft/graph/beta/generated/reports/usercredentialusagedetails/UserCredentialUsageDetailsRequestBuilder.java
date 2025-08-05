@@ -26,7 +26,10 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * Provides operations to manage the userCredentialUsageDetails property of the microsoft.graph.reportRoot entity.
      * @param userCredentialUsageDetailsId The unique identifier of userCredentialUsageDetails
      * @return a {@link UserCredentialUsageDetailsItemRequestBuilder}
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public UserCredentialUsageDetailsItemRequestBuilder byUserCredentialUsageDetailsId(@jakarta.annotation.Nonnull final String userCredentialUsageDetailsId) {
         Objects.requireNonNull(userCredentialUsageDetailsId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,9 +69,12 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure.
      * @return a {@link UserCredentialUsageDetailsCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-usercredentialusagedetails?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UserCredentialUsageDetailsCollectionResponse get() {
         return get(null);
     }
@@ -74,9 +83,12 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserCredentialUsageDetailsCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      * @see <a href="https://learn.microsoft.com/graph/api/reportroot-list-usercredentialusagedetails?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UserCredentialUsageDetailsCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -88,8 +100,11 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @return a {@link UserCredentialUsageDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UserCredentialUsageDetails post(@jakarta.annotation.Nonnull final UserCredentialUsageDetails body) {
         return post(body, null);
     }
@@ -99,8 +114,11 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserCredentialUsageDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public UserCredentialUsageDetails post(@jakarta.annotation.Nonnull final UserCredentialUsageDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -111,8 +129,11 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
     /**
      * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -120,8 +141,11 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * Get a list of userCredentialUsageDetails objects for a given tenant. Details include user information, status of the reset, and the reason for failure.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -132,8 +156,11 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * Create new navigation property to userCredentialUsageDetails for reports
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserCredentialUsageDetails body) {
         return toPostRequestInformation(body, null);
     }
@@ -142,8 +169,11 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserCredentialUsageDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -156,8 +186,11 @@ public class UserCredentialUsageDetailsRequestBuilder extends BaseRequestBuilder
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link UserCredentialUsageDetailsRequestBuilder}
+     * @deprecated
+     * The Reporting userCredentialUsageDetails API is deprecated and will stop returning data on June 30, 2025. Please use the new userEventsSummary API. as of 2023-06/credentialUserRegistrationDetails on 2023-06-21 and will be removed 2024-06-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public UserCredentialUsageDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new UserCredentialUsageDetailsRequestBuilder(rawUrl, requestAdapter);

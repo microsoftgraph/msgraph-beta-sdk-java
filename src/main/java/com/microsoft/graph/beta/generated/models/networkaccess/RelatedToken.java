@@ -36,7 +36,7 @@ public class RelatedToken extends RelatedResource implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the uniqueTokenIdentifier property value. The uniqueTokenIdentifier property
+     * Gets the uniqueTokenIdentifier property value. Unique identifier of the token. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RelatedToken extends RelatedResource implements Parsable {
         writer.writeStringValue("uniqueTokenIdentifier", this.getUniqueTokenIdentifier());
     }
     /**
-     * Sets the uniqueTokenIdentifier property value. The uniqueTokenIdentifier property
+     * Sets the uniqueTokenIdentifier property value. Unique identifier of the token. Required.
      * @param value Value to set for the uniqueTokenIdentifier property.
      */
     public void setUniqueTokenIdentifier(@jakarta.annotation.Nullable final String value) {

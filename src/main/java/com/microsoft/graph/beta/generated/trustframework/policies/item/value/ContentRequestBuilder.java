@@ -36,7 +36,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/trustFramework/policies/{trustFrameworkPolicy%2Did}/$value", rawUrl);
     }
     /**
-     * Delete an existing trustFrameworkPolicy.
+     * Delete an existing trustFrameworkPolicy object from an Microsoft Entra B2C tenant.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -44,7 +44,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete an existing trustFrameworkPolicy.
+     * Delete an existing trustFrameworkPolicy object from an Microsoft Entra B2C tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/trustframeworkpolicy-delete?view=graph-rest-beta">Find more info here</a>
@@ -105,7 +105,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Delete an existing trustFrameworkPolicy.
+     * Delete an existing trustFrameworkPolicy object from an Microsoft Entra B2C tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -113,7 +113,7 @@ public class ContentRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete an existing trustFrameworkPolicy.
+     * Delete an existing trustFrameworkPolicy object from an Microsoft Entra B2C tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

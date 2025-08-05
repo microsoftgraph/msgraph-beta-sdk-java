@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.networkaccess.ExtendedProperties;
 import com.microsoft.graph.beta.models.partner.security.AdditionalDataDictionary;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -40,6 +41,7 @@ public class Dictionary implements AdditionalDataHolder, BackedModel, Parsable {
                 case "#microsoft.graph.customAppScopeAttributesDictionary": return new CustomAppScopeAttributesDictionary();
                 case "#microsoft.graph.customMetadataDictionary": return new CustomMetadataDictionary();
                 case "#microsoft.graph.fileStorageContainerCustomPropertyDictionary": return new FileStorageContainerCustomPropertyDictionary();
+                case "#microsoft.graph.networkaccess.extendedProperties": return new ExtendedProperties();
                 case "#microsoft.graph.openComplexDictionaryType": return new OpenComplexDictionaryType();
                 case "#microsoft.graph.partner.security.additionalDataDictionary": return new AdditionalDataDictionary();
                 case "#microsoft.graph.plannerFormsDictionary": return new PlannerFormsDictionary();
