@@ -60,19 +60,21 @@ public class ApplicationPermissionGrantsRequestBuilder extends BaseRequestBuilde
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containerTypeRegistrations/{fileStorageContainerTypeRegistration%2Did}/applicationPermissionGrants{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * List all app permission grants in a fileStorageContainerTypeRegistration.
      * @return a {@link FileStorageContainerTypeAppPermissionGrantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-list-applicationpermissiongrants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeAppPermissionGrantCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * List all app permission grants in a fileStorageContainerTypeRegistration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerTypeAppPermissionGrantCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-list-applicationpermissiongrants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeAppPermissionGrantCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -107,7 +109,7 @@ public class ApplicationPermissionGrantsRequestBuilder extends BaseRequestBuilde
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerTypeAppPermissionGrant::createFromDiscriminatorValue);
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * List all app permission grants in a fileStorageContainerTypeRegistration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +117,7 @@ public class ApplicationPermissionGrantsRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * List all app permission grants in a fileStorageContainerTypeRegistration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +163,7 @@ public class ApplicationPermissionGrantsRequestBuilder extends BaseRequestBuilde
         return new ApplicationPermissionGrantsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * List all app permission grants in a fileStorageContainerTypeRegistration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

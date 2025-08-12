@@ -25,7 +25,7 @@ public class FileStorage extends Entity implements Parsable {
         return new FileStorage();
     }
     /**
-     * Gets the containers property value. The containers property
+     * Gets the containers property value. The collection of active fileStorageContainer resources.
      * @return a {@link java.util.List<FileStorageContainer>}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class FileStorage extends Entity implements Parsable {
         return this.backingStore.get("containers");
     }
     /**
-     * Gets the containerTypeRegistrations property value. The containerTypeRegistrations property
+     * Gets the containerTypeRegistrations property value. The collection of fileStorageContainerTypeRegistration resources.
      * @return a {@link java.util.List<FileStorageContainerTypeRegistration>}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class FileStorage extends Entity implements Parsable {
         return this.backingStore.get("containerTypeRegistrations");
     }
     /**
-     * Gets the containerTypes property value. The containerTypes property
+     * Gets the containerTypes property value. The collection of fileStorageContainerType resources.
      * @return a {@link java.util.List<FileStorageContainerType>}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class FileStorage extends Entity implements Parsable {
         return this.backingStore.get("containerTypes");
     }
     /**
-     * Gets the deletedContainers property value. The deletedContainers property
+     * Gets the deletedContainers property value. The collection of deleted fileStorageContainer resources.
      * @return a {@link java.util.List<FileStorageContainer>}
      */
     @jakarta.annotation.Nullable
@@ -82,28 +82,28 @@ public class FileStorage extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("deletedContainers", this.getDeletedContainers());
     }
     /**
-     * Sets the containers property value. The containers property
+     * Sets the containers property value. The collection of active fileStorageContainer resources.
      * @param value Value to set for the containers property.
      */
     public void setContainers(@jakarta.annotation.Nullable final java.util.List<FileStorageContainer> value) {
         this.backingStore.set("containers", value);
     }
     /**
-     * Sets the containerTypeRegistrations property value. The containerTypeRegistrations property
+     * Sets the containerTypeRegistrations property value. The collection of fileStorageContainerTypeRegistration resources.
      * @param value Value to set for the containerTypeRegistrations property.
      */
     public void setContainerTypeRegistrations(@jakarta.annotation.Nullable final java.util.List<FileStorageContainerTypeRegistration> value) {
         this.backingStore.set("containerTypeRegistrations", value);
     }
     /**
-     * Sets the containerTypes property value. The containerTypes property
+     * Sets the containerTypes property value. The collection of fileStorageContainerType resources.
      * @param value Value to set for the containerTypes property.
      */
     public void setContainerTypes(@jakarta.annotation.Nullable final java.util.List<FileStorageContainerType> value) {
         this.backingStore.set("containerTypes", value);
     }
     /**
-     * Sets the deletedContainers property value. The deletedContainers property
+     * Sets the deletedContainers property value. The collection of deleted fileStorageContainer resources.
      * @param value Value to set for the deletedContainers property.
      */
     public void setDeletedContainers(@jakarta.annotation.Nullable final java.util.List<FileStorageContainer> value) {

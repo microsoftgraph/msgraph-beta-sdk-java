@@ -231,7 +231,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         return this.backingStore.get("mobileAppConfigurations");
     }
     /**
-     * Gets the mobileAppRelationships property value. List mobileAppRelationship objects for mobile applications.
+     * Gets the mobileAppRelationships property value. The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
      * @return a {@link java.util.List<MobileAppRelationship>}
      */
     @jakarta.annotation.Nullable
@@ -507,7 +507,7 @@ public class DeviceAppManagement extends Entity implements Parsable {
         this.backingStore.set("mobileAppConfigurations", value);
     }
     /**
-     * Sets the mobileAppRelationships property value. List mobileAppRelationship objects for mobile applications.
+     * Sets the mobileAppRelationships property value. The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
      * @param value Value to set for the mobileAppRelationships property.
      */
     public void setMobileAppRelationships(@jakarta.annotation.Nullable final java.util.List<MobileAppRelationship> value) {

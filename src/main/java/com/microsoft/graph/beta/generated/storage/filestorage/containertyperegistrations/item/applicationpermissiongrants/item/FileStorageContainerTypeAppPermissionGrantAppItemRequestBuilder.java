@@ -37,16 +37,18 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containerTypeRegistrations/{fileStorageContainerTypeRegistration%2Did}/applicationPermissionGrants/{fileStorageContainerTypeAppPermissionGrant%2DappId}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property applicationPermissionGrants for storage
+     * Delete a fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-delete-applicationpermissiongrants?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property applicationPermissionGrants for storage
+     * Delete a fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-delete-applicationpermissiongrants?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * Read a specific app permission grant in a fileStorageContainerTypeRegistration.
      * @return a {@link FileStorageContainerTypeAppPermissionGrant}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertypeapppermissiongrant-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeAppPermissionGrant get() {
         return get(null);
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * Read a specific app permission grant in a fileStorageContainerTypeRegistration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerTypeAppPermissionGrant}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertypeapppermissiongrant-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeAppPermissionGrant get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerTypeAppPermissionGrant::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property applicationPermissionGrants in storage
+     * Create a new fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
      * @param body The request body
      * @return a {@link FileStorageContainerTypeAppPermissionGrant}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-post-applicationpermissiongrants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeAppPermissionGrant patch(@jakarta.annotation.Nonnull final FileStorageContainerTypeAppPermissionGrant body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property applicationPermissionGrants in storage
+     * Create a new fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerTypeAppPermissionGrant}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-post-applicationpermissiongrants?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeAppPermissionGrant patch(@jakarta.annotation.Nonnull final FileStorageContainerTypeAppPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerTypeAppPermissionGrant::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property applicationPermissionGrants for storage
+     * Delete a fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property applicationPermissionGrants for storage
+     * Delete a fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return requestInfo;
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * Read a specific app permission grant in a fileStorageContainerTypeRegistration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return toGetRequestInformation(null);
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * Read a specific app permission grant in a fileStorageContainerTypeRegistration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return requestInfo;
     }
     /**
-     * Update the navigation property applicationPermissionGrants in storage
+     * Create a new fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property applicationPermissionGrants in storage
+     * Create a new fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get applicationPermissionGrants from storage
+     * Read a specific app permission grant in a fileStorageContainerTypeRegistration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

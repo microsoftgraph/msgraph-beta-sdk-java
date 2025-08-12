@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Describes a relationship between two mobile apps.
+ * The MobileAppRelationship describes the relationship between two mobile applications by providing information that tells if an application is dependent on or superseded by another application.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MobileAppRelationship extends Entity implements Parsable {

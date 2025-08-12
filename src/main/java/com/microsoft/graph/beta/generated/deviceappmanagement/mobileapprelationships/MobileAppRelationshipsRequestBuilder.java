@@ -60,7 +60,7 @@ public class MobileAppRelationshipsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceAppManagement/mobileAppRelationships{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * List mobileAppRelationship objects for mobile applications.
+     * The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
      * @return a {@link MobileAppRelationshipCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class MobileAppRelationshipsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * List mobileAppRelationship objects for mobile applications.
+     * The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MobileAppRelationshipCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class MobileAppRelationshipsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MobileAppRelationship::createFromDiscriminatorValue);
     }
     /**
-     * List mobileAppRelationship objects for mobile applications.
+     * The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class MobileAppRelationshipsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * List mobileAppRelationship objects for mobile applications.
+     * The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class MobileAppRelationshipsRequestBuilder extends BaseRequestBuilder {
         return new MobileAppRelationshipsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * List mobileAppRelationship objects for mobile applications.
+     * The mobile app relationship represents the dependency or supersedence relationship between two Intune mobile LOB applications.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -27,7 +27,7 @@ public class FileStorageContainerTypeRegistration extends Entity implements Pars
         return new FileStorageContainerTypeRegistration();
     }
     /**
-     * Gets the applicationPermissionGrants property value. The applicationPermissionGrants property
+     * Gets the applicationPermissionGrants property value. Access privileges of applications on containers.
      * @return a {@link java.util.List<FileStorageContainerTypeAppPermissionGrant>}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class FileStorageContainerTypeRegistration extends Entity implements Pars
         return this.backingStore.get("billingStatus");
     }
     /**
-     * Gets the etag property value. The etag property
+     * Gets the etag property value. Used in update scenarios for optimistic concurrency control. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class FileStorageContainerTypeRegistration extends Entity implements Pars
         return this.backingStore.get("etag");
     }
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. The expiration date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class FileStorageContainerTypeRegistration extends Entity implements Pars
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the fileStorageContainerTypeRegistration. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class FileStorageContainerTypeRegistration extends Entity implements Pars
         return this.backingStore.get("name");
     }
     /**
-     * Gets the owningAppId property value. The owningAppId property
+     * Gets the owningAppId property value. ID of the application that owns the fileStorageContainerType. Read-only.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class FileStorageContainerTypeRegistration extends Entity implements Pars
         return this.backingStore.get("owningAppId");
     }
     /**
-     * Gets the registeredDateTime property value. The registeredDateTime property
+     * Gets the registeredDateTime property value. The registration date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class FileStorageContainerTypeRegistration extends Entity implements Pars
         writer.writeObjectValue("settings", this.getSettings());
     }
     /**
-     * Sets the applicationPermissionGrants property value. The applicationPermissionGrants property
+     * Sets the applicationPermissionGrants property value. Access privileges of applications on containers.
      * @param value Value to set for the applicationPermissionGrants property.
      */
     public void setApplicationPermissionGrants(@jakarta.annotation.Nullable final java.util.List<FileStorageContainerTypeAppPermissionGrant> value) {
@@ -155,35 +155,35 @@ public class FileStorageContainerTypeRegistration extends Entity implements Pars
         this.backingStore.set("billingStatus", value);
     }
     /**
-     * Sets the etag property value. The etag property
+     * Sets the etag property value. Used in update scenarios for optimistic concurrency control. Read-only.
      * @param value Value to set for the etag property.
      */
     public void setEtag(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("etag", value);
     }
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. The expiration date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the expirationDateTime property.
      */
     public void setExpirationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the fileStorageContainerTypeRegistration. Read-only.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the owningAppId property value. The owningAppId property
+     * Sets the owningAppId property value. ID of the application that owns the fileStorageContainerType. Read-only.
      * @param value Value to set for the owningAppId property.
      */
     public void setOwningAppId(@jakarta.annotation.Nullable final UUID value) {
         this.backingStore.set("owningAppId", value);
     }
     /**
-     * Sets the registeredDateTime property value. The registeredDateTime property
+     * Sets the registeredDateTime property value. The registration date. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the registeredDateTime property.
      */
     public void setRegisteredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

@@ -102,13 +102,14 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Backe
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
         deserializerMap.put("applyActions", (n) -> { this.setApplyActions(n.getCollectionOfObjectValues(AccessReviewApplyAction::createFromDiscriminatorValue)); });
         deserializerMap.put("autoApplyDecisionsEnabled", (n) -> { this.setAutoApplyDecisionsEnabled(n.getBooleanValue()); });
         deserializerMap.put("decisionHistoriesForReviewersEnabled", (n) -> { this.setDecisionHistoriesForReviewersEnabled(n.getBooleanValue()); });
         deserializerMap.put("defaultDecision", (n) -> { this.setDefaultDecision(n.getStringValue()); });
         deserializerMap.put("defaultDecisionEnabled", (n) -> { this.setDefaultDecisionEnabled(n.getBooleanValue()); });
         deserializerMap.put("instanceDurationInDays", (n) -> { this.setInstanceDurationInDays(n.getIntegerValue()); });
+        deserializerMap.put("isAgenticExperienceEnabled", (n) -> { this.setIsAgenticExperienceEnabled(n.getBooleanValue()); });
         deserializerMap.put("justificationRequiredOnApproval", (n) -> { this.setJustificationRequiredOnApproval(n.getBooleanValue()); });
         deserializerMap.put("mailNotificationsEnabled", (n) -> { this.setMailNotificationsEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -126,6 +127,14 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nullable
     public Integer getInstanceDurationInDays() {
         return this.backingStore.get("instanceDurationInDays");
+    }
+    /**
+     * Gets the isAgenticExperienceEnabled property value. The isAgenticExperienceEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsAgenticExperienceEnabled() {
+        return this.backingStore.get("isAgenticExperienceEnabled");
     }
     /**
      * Gets the justificationRequiredOnApproval property value. Indicates whether reviewers are required to provide justification with their decision. Default value is false.
@@ -203,6 +212,7 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Backe
         writer.writeStringValue("defaultDecision", this.getDefaultDecision());
         writer.writeBooleanValue("defaultDecisionEnabled", this.getDefaultDecisionEnabled());
         writer.writeIntegerValue("instanceDurationInDays", this.getInstanceDurationInDays());
+        writer.writeBooleanValue("isAgenticExperienceEnabled", this.getIsAgenticExperienceEnabled());
         writer.writeBooleanValue("justificationRequiredOnApproval", this.getJustificationRequiredOnApproval());
         writer.writeBooleanValue("mailNotificationsEnabled", this.getMailNotificationsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -269,6 +279,13 @@ public class AccessReviewScheduleSettings implements AdditionalDataHolder, Backe
      */
     public void setInstanceDurationInDays(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("instanceDurationInDays", value);
+    }
+    /**
+     * Sets the isAgenticExperienceEnabled property value. The isAgenticExperienceEnabled property
+     * @param value Value to set for the isAgenticExperienceEnabled property.
+     */
+    public void setIsAgenticExperienceEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isAgenticExperienceEnabled", value);
     }
     /**
      * Sets the justificationRequiredOnApproval property value. Indicates whether reviewers are required to provide justification with their decision. Default value is false.

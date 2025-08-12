@@ -48,7 +48,7 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
         return value;
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. Application ID to which to set permissions.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the applicationPermissions property value. The applicationPermissions property
+     * Gets the applicationPermissions property value. Allowed permissions when you use delegated tokens. The possible values are: none, readContent, writeContent, manageContent, create, delete, read, write, enumeratePermissions, addPermissions, updatePermissions, deletePermissions, deleteOwnPermission, managePermissions, full, unknownFutureValue.
      * @return a {@link java.util.List<FileStorageContainerTypeAppPermission>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
         return this.backingStore;
     }
     /**
-     * Gets the delegatedPermissions property value. The delegatedPermissions property
+     * Gets the delegatedPermissions property value. Allowed permissions when you use application tokens. The possible values are: none, readContent, writeContent, manageContent, create, delete, read, write, enumeratePermissions, addPermissions, updatePermissions, deletePermissions, deleteOwnPermission, managePermissions, full, unknownFutureValue.
      * @return a {@link java.util.List<FileStorageContainerTypeAppPermission>}
      */
     @jakarta.annotation.Nullable
@@ -120,14 +120,14 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. Application ID to which to set permissions.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the applicationPermissions property value. The applicationPermissions property
+     * Sets the applicationPermissions property value. Allowed permissions when you use delegated tokens. The possible values are: none, readContent, writeContent, manageContent, create, delete, read, write, enumeratePermissions, addPermissions, updatePermissions, deletePermissions, deleteOwnPermission, managePermissions, full, unknownFutureValue.
      * @param value Value to set for the applicationPermissions property.
      */
     public void setApplicationPermissions(@jakarta.annotation.Nullable final java.util.List<FileStorageContainerTypeAppPermission> value) {
@@ -142,7 +142,7 @@ public class FileStorageContainerTypeAppPermissionGrant implements AdditionalDat
         this.backingStore = value;
     }
     /**
-     * Sets the delegatedPermissions property value. The delegatedPermissions property
+     * Sets the delegatedPermissions property value. Allowed permissions when you use application tokens. The possible values are: none, readContent, writeContent, manageContent, create, delete, read, write, enumeratePermissions, addPermissions, updatePermissions, deletePermissions, deleteOwnPermission, managePermissions, full, unknownFutureValue.
      * @param value Value to set for the delegatedPermissions property.
      */
     public void setDelegatedPermissions(@jakarta.annotation.Nullable final java.util.List<FileStorageContainerTypeAppPermission> value) {
