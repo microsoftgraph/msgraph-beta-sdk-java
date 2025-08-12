@@ -36,7 +36,7 @@ public class AiUser extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the interactionHistory property value. The history of interactions between AI agents and users.
+     * Gets the interactionHistory property value. The interactionHistory property
      * @return a {@link AiInteractionHistory}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class AiUser extends Entity implements Parsable {
         return this.backingStore.get("interactionHistory");
     }
     /**
-     * Gets the onlineMeetings property value. Information about an online meeting, including AI insights.
+     * Gets the onlineMeetings property value. The onlineMeetings property
      * @return a {@link java.util.List<AiOnlineMeeting>}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class AiUser extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("onlineMeetings", this.getOnlineMeetings());
     }
     /**
-     * Sets the interactionHistory property value. The history of interactions between AI agents and users.
+     * Sets the interactionHistory property value. The interactionHistory property
      * @param value Value to set for the interactionHistory property.
      */
     public void setInteractionHistory(@jakarta.annotation.Nullable final AiInteractionHistory value) {
         this.backingStore.set("interactionHistory", value);
     }
     /**
-     * Sets the onlineMeetings property value. Information about an online meeting, including AI insights.
+     * Sets the onlineMeetings property value. The onlineMeetings property
      * @param value Value to set for the onlineMeetings property.
      */
     public void setOnlineMeetings(@jakarta.annotation.Nullable final java.util.List<AiOnlineMeeting> value) {

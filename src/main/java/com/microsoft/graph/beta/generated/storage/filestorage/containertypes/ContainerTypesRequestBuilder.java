@@ -60,19 +60,21 @@ public class ContainerTypesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containerTypes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get containerTypes from storage
+     * Get a list of the fileStorageContainerType objects and their properties for the current tenant.
      * @return a {@link FileStorageContainerTypeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestorage-list-containertypes?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get containerTypes from storage
+     * Get a list of the fileStorageContainerType objects and their properties for the current tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerTypeCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestorage-list-containertypes?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ContainerTypesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerTypeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to containerTypes for storage
+     * Create a new fileStorageContainerType in the owning tenant. The number of container types in a tenant is limited.
      * @param body The request body
      * @return a {@link FileStorageContainerType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestorage-post-containertypes?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerType post(@jakarta.annotation.Nonnull final FileStorageContainerType body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to containerTypes for storage
+     * Create a new fileStorageContainerType in the owning tenant. The number of container types in a tenant is limited.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestorage-post-containertypes?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerType post(@jakarta.annotation.Nonnull final FileStorageContainerType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ContainerTypesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerType::createFromDiscriminatorValue);
     }
     /**
-     * Get containerTypes from storage
+     * Get a list of the fileStorageContainerType objects and their properties for the current tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ContainerTypesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get containerTypes from storage
+     * Get a list of the fileStorageContainerType objects and their properties for the current tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ContainerTypesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to containerTypes for storage
+     * Create a new fileStorageContainerType in the owning tenant. The number of container types in a tenant is limited.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ContainerTypesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to containerTypes for storage
+     * Create a new fileStorageContainerType in the owning tenant. The number of container types in a tenant is limited.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ContainerTypesRequestBuilder extends BaseRequestBuilder {
         return new ContainerTypesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get containerTypes from storage
+     * Get a list of the fileStorageContainerType objects and their properties for the current tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

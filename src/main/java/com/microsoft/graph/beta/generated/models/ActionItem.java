@@ -77,7 +77,7 @@ public class ActionItem implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the ownerDisplayName property value. The display name of the owner of the action item.
+     * Gets the ownerDisplayName property value. The ownerDisplayName property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ActionItem implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("ownerDisplayName");
     }
     /**
-     * Gets the text property value. The text content of the action item.
+     * Gets the text property value. The text property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ActionItem implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("text");
     }
     /**
-     * Gets the title property value. The title of the action item.
+     * Gets the title property value. The title property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,21 +135,21 @@ public class ActionItem implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the ownerDisplayName property value. The display name of the owner of the action item.
+     * Sets the ownerDisplayName property value. The ownerDisplayName property
      * @param value Value to set for the ownerDisplayName property.
      */
     public void setOwnerDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ownerDisplayName", value);
     }
     /**
-     * Sets the text property value. The text content of the action item.
+     * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("text", value);
     }
     /**
-     * Sets the title property value. The title of the action item.
+     * Sets the title property value. The title property
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

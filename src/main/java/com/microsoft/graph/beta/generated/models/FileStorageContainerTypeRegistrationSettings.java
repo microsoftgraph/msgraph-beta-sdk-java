@@ -74,7 +74,7 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         return deserializerMap;
     }
     /**
-     * Gets the isDiscoverabilityEnabled property value. The isDiscoverabilityEnabled property
+     * Gets the isDiscoverabilityEnabled property value. Indicates whether items from containers are surfaced in experiences such as My Activity or Microsoft 365.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         return this.backingStore.get("isDiscoverabilityEnabled");
     }
     /**
-     * Gets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * Gets the isItemVersioningEnabled property value. Indicates whether item versioning is enabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         return this.backingStore.get("isItemVersioningEnabled");
     }
     /**
-     * Gets the isSearchEnabled property value. The isSearchEnabled property
+     * Gets the isSearchEnabled property value. Indicates whether search is enabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         return this.backingStore.get("isSearchEnabled");
     }
     /**
-     * Gets the isSharingRestricted property value. The isSharingRestricted property
+     * Gets the isSharingRestricted property value. Only the manager and owner can share files in the container if restricted sharing is enabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         return this.backingStore.get("isSharingRestricted");
     }
     /**
-     * Gets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * Gets the itemMajorVersionLimit property value. Maximum number of versions. Versioning must be enabled (&apos;isItemVersioningEnabled&apos;=true).
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         return this.backingStore.get("itemMajorVersionLimit");
     }
     /**
-     * Gets the maxStoragePerContainerInBytes property value. The maxStoragePerContainerInBytes property
+     * Gets the maxStoragePerContainerInBytes property value. Controls maximum storage in bytes.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sharingCapability property value. The sharingCapability property
+     * Gets the sharingCapability property value. Sharing capabilities permitted for containers. The possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly, unknownFutureValue. Can always be updated.
      * @return a {@link SharingCapabilities}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         return this.backingStore.get("sharingCapability");
     }
     /**
-     * Gets the urlTemplate property value. The urlTemplate property
+     * Gets the urlTemplate property value. Pattern used to redirect files.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -178,42 +178,42 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         this.backingStore = value;
     }
     /**
-     * Sets the isDiscoverabilityEnabled property value. The isDiscoverabilityEnabled property
+     * Sets the isDiscoverabilityEnabled property value. Indicates whether items from containers are surfaced in experiences such as My Activity or Microsoft 365.
      * @param value Value to set for the isDiscoverabilityEnabled property.
      */
     public void setIsDiscoverabilityEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isDiscoverabilityEnabled", value);
     }
     /**
-     * Sets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
+     * Sets the isItemVersioningEnabled property value. Indicates whether item versioning is enabled.
      * @param value Value to set for the isItemVersioningEnabled property.
      */
     public void setIsItemVersioningEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isItemVersioningEnabled", value);
     }
     /**
-     * Sets the isSearchEnabled property value. The isSearchEnabled property
+     * Sets the isSearchEnabled property value. Indicates whether search is enabled.
      * @param value Value to set for the isSearchEnabled property.
      */
     public void setIsSearchEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isSearchEnabled", value);
     }
     /**
-     * Sets the isSharingRestricted property value. The isSharingRestricted property
+     * Sets the isSharingRestricted property value. Only the manager and owner can share files in the container if restricted sharing is enabled.
      * @param value Value to set for the isSharingRestricted property.
      */
     public void setIsSharingRestricted(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isSharingRestricted", value);
     }
     /**
-     * Sets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
+     * Sets the itemMajorVersionLimit property value. Maximum number of versions. Versioning must be enabled (&apos;isItemVersioningEnabled&apos;=true).
      * @param value Value to set for the itemMajorVersionLimit property.
      */
     public void setItemMajorVersionLimit(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("itemMajorVersionLimit", value);
     }
     /**
-     * Sets the maxStoragePerContainerInBytes property value. The maxStoragePerContainerInBytes property
+     * Sets the maxStoragePerContainerInBytes property value. Controls maximum storage in bytes.
      * @param value Value to set for the maxStoragePerContainerInBytes property.
      */
     public void setMaxStoragePerContainerInBytes(@jakarta.annotation.Nullable final Long value) {
@@ -227,14 +227,14 @@ public class FileStorageContainerTypeRegistrationSettings implements AdditionalD
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sharingCapability property value. The sharingCapability property
+     * Sets the sharingCapability property value. Sharing capabilities permitted for containers. The possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly, unknownFutureValue. Can always be updated.
      * @param value Value to set for the sharingCapability property.
      */
     public void setSharingCapability(@jakarta.annotation.Nullable final SharingCapabilities value) {
         this.backingStore.set("sharingCapability", value);
     }
     /**
-     * Sets the urlTemplate property value. The urlTemplate property
+     * Sets the urlTemplate property value. Pattern used to redirect files.
      * @param value Value to set for the urlTemplate property.
      */
     public void setUrlTemplate(@jakarta.annotation.Nullable final String value) {

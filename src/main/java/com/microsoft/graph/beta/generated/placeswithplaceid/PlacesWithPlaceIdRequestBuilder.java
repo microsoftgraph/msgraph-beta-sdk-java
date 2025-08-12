@@ -38,16 +38,18 @@ public class PlacesWithPlaceIdRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places(placeId='{placeId}')", rawUrl);
     }
     /**
-     * Delete entity from places by placeId
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete entity from places by placeId
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -56,7 +58,7 @@ public class PlacesWithPlaceIdRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Update the properties of place object, which can be a room, workspace, or roomList. You can identify the room, workspace, or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param body The request body
      * @return a {@link Place}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -67,7 +69,7 @@ public class PlacesWithPlaceIdRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of place object, which can be a room, workspace, or roomList. You can identify the room, workspace, or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Place}
@@ -83,7 +85,7 @@ public class PlacesWithPlaceIdRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Place::createFromDiscriminatorValue);
     }
     /**
-     * Delete entity from places by placeId
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -91,7 +93,7 @@ public class PlacesWithPlaceIdRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete entity from places by placeId
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -103,7 +105,7 @@ public class PlacesWithPlaceIdRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of place object, which can be a room, workspace, or roomList. You can identify the room, workspace, or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -112,7 +114,7 @@ public class PlacesWithPlaceIdRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of place object, which can be a room, workspace, or roomList. You can identify the room, workspace, or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

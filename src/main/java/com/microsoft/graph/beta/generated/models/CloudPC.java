@@ -139,6 +139,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("statusDetail", (n) -> { this.setStatusDetail(n.getObjectValue(CloudPcStatusDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getObjectValue(CloudPcStatusDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPcUserAccountType::forValue)); });
+        deserializerMap.put("userExperienceType", (n) -> { this.setUserExperienceType(n.getEnumValue(CloudPcUserExperienceType::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -351,6 +352,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("userAccountType");
     }
     /**
+     * Gets the userExperienceType property value. The userExperienceType property
+     * @return a {@link CloudPcUserExperienceType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcUserExperienceType getUserExperienceType() {
+        return this.backingStore.get("userExperienceType");
+    }
+    /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the Cloud PC.
      * @return a {@link String}
      */
@@ -400,6 +409,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeObjectValue("statusDetail", this.getStatusDetail());
         writer.writeObjectValue("statusDetails", this.getStatusDetails());
         writer.writeEnumValue("userAccountType", this.getUserAccountType());
+        writer.writeEnumValue("userExperienceType", this.getUserExperienceType());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
@@ -646,6 +656,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcUserAccountType value) {
         this.backingStore.set("userAccountType", value);
+    }
+    /**
+     * Sets the userExperienceType property value. The userExperienceType property
+     * @param value Value to set for the userExperienceType property.
+     */
+    public void setUserExperienceType(@jakarta.annotation.Nullable final CloudPcUserExperienceType value) {
+        this.backingStore.set("userExperienceType", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the user assigned to the Cloud PC.

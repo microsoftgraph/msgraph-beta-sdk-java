@@ -14,8 +14,7 @@ public enum ExportOptions implements ValuedEnum {
     SplitSource("splitSource"),
     IncludeFolderAndPath("includeFolderAndPath"),
     FriendlyName("friendlyName"),
-    CondensePaths("condensePaths"),
-    OptimizedPartitionSize("optimizedPartitionSize");
+    CondensePaths("condensePaths");
     public final String value;
     ExportOptions(final String value) {
         this.value = value;
@@ -36,7 +35,6 @@ public enum ExportOptions implements ValuedEnum {
             case "includeFolderAndPath": return IncludeFolderAndPath;
             case "friendlyName": return FriendlyName;
             case "condensePaths": return CondensePaths;
-            case "optimizedPartitionSize": return OptimizedPartitionSize;
             default: return null;
         }
     }

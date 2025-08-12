@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.places.item;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Place;
+import com.microsoft.graph.beta.places.item.descendants.DescendantsRequestBuilder;
 import com.microsoft.graph.beta.places.item.graphroom.GraphRoomRequestBuilder;
 import com.microsoft.graph.beta.places.item.graphroomlist.GraphRoomListRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlaceItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the descendants method.
+     * @return a {@link DescendantsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DescendantsRequestBuilder descendants() {
+        return new DescendantsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Casts the previous resource to room.
      * @return a {@link GraphRoomRequestBuilder}
@@ -54,16 +63,18 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}", rawUrl);
     }
     /**
-     * Delete entity from places
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete entity from places
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -72,7 +83,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Update the properties of place object, which can be a room, workspace, or roomList. You can identify the room, workspace, or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param body The request body
      * @return a {@link Place}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -83,7 +94,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of place object, which can be a room, workspace, or roomList. You can identify the room, workspace, or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Place}
@@ -99,7 +110,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Place::createFromDiscriminatorValue);
     }
     /**
-     * Delete entity from places
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -107,7 +118,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete entity from places
+     * Delete a place object. You can also use this method to delete the following child object types: building, floor, section, or desk.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -119,7 +130,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of place object, which can be a room, workspace, or roomList. You can identify the room, workspace, or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -128,7 +139,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of place object, which can be a room, workspace, or roomList. You can identify the room, workspace, or roomList by specifying the id or emailAddress property.
+     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -76,7 +76,7 @@ public class MeetingNoteSubpoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the text property value. The text of the meeting note subpoint.
+     * Gets the text property value. The text property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class MeetingNoteSubpoint implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("text");
     }
     /**
-     * Gets the title property value. The title of the meeting note subpoint.
+     * Gets the title property value. The title property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class MeetingNoteSubpoint implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the text property value. The text of the meeting note subpoint.
+     * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("text", value);
     }
     /**
-     * Sets the title property value. The title of the meeting note subpoint.
+     * Sets the title property value. The title property
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

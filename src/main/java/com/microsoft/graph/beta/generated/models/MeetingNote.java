@@ -77,7 +77,7 @@ public class MeetingNote implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the subpoints property value. A collection of subpoints of the meeting note.
+     * Gets the subpoints property value. The subpoints property
      * @return a {@link java.util.List<MeetingNoteSubpoint>}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class MeetingNote implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("subpoints");
     }
     /**
-     * Gets the text property value. The text of the meeting note.
+     * Gets the text property value. The text property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class MeetingNote implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("text");
     }
     /**
-     * Gets the title property value. The title of the meeting note.
+     * Gets the title property value. The title property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,21 +135,21 @@ public class MeetingNote implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the subpoints property value. A collection of subpoints of the meeting note.
+     * Sets the subpoints property value. The subpoints property
      * @param value Value to set for the subpoints property.
      */
     public void setSubpoints(@jakarta.annotation.Nullable final java.util.List<MeetingNoteSubpoint> value) {
         this.backingStore.set("subpoints", value);
     }
     /**
-     * Sets the text property value. The text of the meeting note.
+     * Sets the text property value. The text property
      * @param value Value to set for the text property.
      */
     public void setText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("text", value);
     }
     /**
-     * Sets the title property value. The title of the meeting note.
+     * Sets the title property value. The title property
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

@@ -57,7 +57,7 @@ public class MentionEvent implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore;
     }
     /**
-     * Gets the eventDateTime property value. The date and time of the mention event. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the eventDateTime property value. The eventDateTime property
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class MentionEvent implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the speaker property value. The speaker who mentioned the user.
+     * Gets the speaker property value. The speaker property
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class MentionEvent implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("speaker");
     }
     /**
-     * Gets the transcriptUtterance property value. The utterance in the online meeting transcript that contains the mention event.
+     * Gets the transcriptUtterance property value. The transcriptUtterance property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class MentionEvent implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the eventDateTime property value. The date and time of the mention event. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the eventDateTime property value. The eventDateTime property
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -143,14 +143,14 @@ public class MentionEvent implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the speaker property value. The speaker who mentioned the user.
+     * Sets the speaker property value. The speaker property
      * @param value Value to set for the speaker property.
      */
     public void setSpeaker(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("speaker", value);
     }
     /**
-     * Sets the transcriptUtterance property value. The utterance in the online meeting transcript that contains the mention event.
+     * Sets the transcriptUtterance property value. The transcriptUtterance property
      * @param value Value to set for the transcriptUtterance property.
      */
     public void setTranscriptUtterance(@jakarta.annotation.Nullable final String value) {
