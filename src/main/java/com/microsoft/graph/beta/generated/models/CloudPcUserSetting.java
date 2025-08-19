@@ -102,7 +102,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("notificationSetting");
     }
     /**
-     * Gets the provisioningSourceType property value. The provisioningSourceType property
+     * Gets the provisioningSourceType property value. Indicates the provisioning source of the Cloud PC prepared for an end user. Possible values are: image, snapshot, unknownFutureValue. The default value is image. If this property isn&apos;t set or set to null, its functionality is the same as setting it to image.
      * @return a {@link CloudPcProvisioningSourceType}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("restorePointSetting");
     }
     /**
-     * Gets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. The selfServiceEnabled property is deprecated and will stop returning data on December 1, 2023.
+     * Gets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. The selfServiceEnabled property is deprecated and stopped returning data on December 1, 2023.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -202,7 +202,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("notificationSetting", value);
     }
     /**
-     * Sets the provisioningSourceType property value. The provisioningSourceType property
+     * Sets the provisioningSourceType property value. Indicates the provisioning source of the Cloud PC prepared for an end user. Possible values are: image, snapshot, unknownFutureValue. The default value is image. If this property isn&apos;t set or set to null, its functionality is the same as setting it to image.
      * @param value Value to set for the provisioningSourceType property.
      */
     public void setProvisioningSourceType(@jakarta.annotation.Nullable final CloudPcProvisioningSourceType value) {
@@ -223,7 +223,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("restorePointSetting", value);
     }
     /**
-     * Sets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. The selfServiceEnabled property is deprecated and will stop returning data on December 1, 2023.
+     * Sets the selfServiceEnabled property value. Indicates whether the self-service option is enabled. Default value is false. To enable the self-service option, change the setting to true.If the self-service option is enabled, the end user is allowed to perform some self-service operations, such as upgrading the Cloud PC through the end user portal. The selfServiceEnabled property is deprecated and stopped returning data on December 1, 2023.
      * @param value Value to set for the selfServiceEnabled property.
      */
     public void setSelfServiceEnabled(@jakarta.annotation.Nullable final Boolean value) {

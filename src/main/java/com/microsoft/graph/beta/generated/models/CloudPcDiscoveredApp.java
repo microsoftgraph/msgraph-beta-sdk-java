@@ -56,7 +56,7 @@ public class CloudPcDiscoveredApp implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("appDetail");
     }
     /**
-     * Gets the appName property value. The appName property
+     * Gets the appName property value. The name of the discovered app; for example, Paint. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class CloudPcDiscoveredApp implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the discoveredAppId property value. The discoveredAppId property
+     * Gets the discoveredAppId property value. The unique identifier of the discovered app. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class CloudPcDiscoveredApp implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sourceId property value. The sourceId property
+     * Gets the sourceId property value. The ID of the source of the discovered app. For example, if the source is a custom device image, the sourceId value is the ID of that image. For example, 3035e17f-c0f7-49c1-9502-5990afcaf86f. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class CloudPcDiscoveredApp implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("appDetail", value);
     }
     /**
-     * Sets the appName property value. The appName property
+     * Sets the appName property value. The name of the discovered app; for example, Paint. Read-only.
      * @param value Value to set for the appName property.
      */
     public void setAppName(@jakarta.annotation.Nullable final String value) {
@@ -152,7 +152,7 @@ public class CloudPcDiscoveredApp implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the discoveredAppId property value. The discoveredAppId property
+     * Sets the discoveredAppId property value. The unique identifier of the discovered app. Read-only.
      * @param value Value to set for the discoveredAppId property.
      */
     public void setDiscoveredAppId(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class CloudPcDiscoveredApp implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sourceId property value. The sourceId property
+     * Sets the sourceId property value. The ID of the source of the discovered app. For example, if the source is a custom device image, the sourceId value is the ID of that image. For example, 3035e17f-c0f7-49c1-9502-5990afcaf86f. Read-only.
      * @param value Value to set for the sourceId property.
      */
     public void setSourceId(@jakarta.annotation.Nullable final String value) {

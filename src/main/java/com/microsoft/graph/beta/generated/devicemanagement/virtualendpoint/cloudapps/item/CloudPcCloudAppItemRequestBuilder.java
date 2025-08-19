@@ -55,19 +55,21 @@ public class CloudPcCloudAppItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get cloudApps from deviceManagement
+     * Read the properties of a specific cloudPcCloudApp object.
      * @return a {@link CloudPcCloudApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccloudapp-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCloudApp get() {
         return get(null);
     }
     /**
-     * Get cloudApps from deviceManagement
+     * Read the properties of a specific cloudPcCloudApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcCloudApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccloudapp-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCloudApp get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class CloudPcCloudAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcCloudApp::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property cloudApps in deviceManagement
+     * Update the properties of a cloudPcCloudApp object, such as the display name or icon path.
      * @param body The request body
      * @return a {@link CloudPcCloudApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccloudapp-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCloudApp patch(@jakarta.annotation.Nonnull final CloudPcCloudApp body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property cloudApps in deviceManagement
+     * Update the properties of a cloudPcCloudApp object, such as the display name or icon path.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcCloudApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccloudapp-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCloudApp patch(@jakarta.annotation.Nonnull final CloudPcCloudApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class CloudPcCloudAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get cloudApps from deviceManagement
+     * Read the properties of a specific cloudPcCloudApp object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class CloudPcCloudAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get cloudApps from deviceManagement
+     * Read the properties of a specific cloudPcCloudApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class CloudPcCloudAppItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property cloudApps in deviceManagement
+     * Update the properties of a cloudPcCloudApp object, such as the display name or icon path.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class CloudPcCloudAppItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property cloudApps in deviceManagement
+     * Update the properties of a cloudPcCloudApp object, such as the display name or icon path.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class CloudPcCloudAppItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get cloudApps from deviceManagement
+     * Read the properties of a specific cloudPcCloudApp object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

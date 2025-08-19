@@ -38,19 +38,21 @@ public class RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningP
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudApps/retrieveDiscoveredApps(sourceId='{sourceId}',provisioningPolicyId='@provisioningPolicyId'){?%24count,%24filter,%24search,%24skip,%24top,provisioningPolicyId*}", rawUrl);
     }
     /**
-     * Invoke function retrieveDiscoveredApps
+     * Get a list of cloudPcDiscoveredApp objects whose appdetails can be used to map to a cloudPcCloudApp object.
      * @return a {@link RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccloudapp-retrievediscoveredapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function retrieveDiscoveredApps
+     * Get a list of cloudPcDiscoveredApp objects whose appdetails can be used to map to a cloudPcCloudApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccloudapp-retrievediscoveredapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningP
         return this.requestAdapter.send(requestInfo, errorMapping, RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function retrieveDiscoveredApps
+     * Get a list of cloudPcDiscoveredApp objects whose appdetails can be used to map to a cloudPcCloudApp object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningP
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function retrieveDiscoveredApps
+     * Get a list of cloudPcDiscoveredApp objects whose appdetails can be used to map to a cloudPcCloudApp object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -90,7 +92,7 @@ public class RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningP
         return new RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function retrieveDiscoveredApps
+     * Get a list of cloudPcDiscoveredApp objects whose appdetails can be used to map to a cloudPcCloudApp object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
