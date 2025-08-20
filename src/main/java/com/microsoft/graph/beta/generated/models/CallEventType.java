@@ -9,10 +9,8 @@ public enum CallEventType implements ValuedEnum {
     CallEnded("callEnded"),
     UnknownFutureValue("unknownFutureValue"),
     RosterUpdated("rosterUpdated"),
-    TranscriptionStarted("transcriptionStarted"),
-    TranscriptionStopped("transcriptionStopped"),
-    RecordingStarted("recordingStarted"),
-    RecordingStopped("recordingStopped");
+    TranscriptionStateUpdated("transcriptionStateUpdated"),
+    RecordingStateUpdated("recordingStateUpdated");
     public final String value;
     CallEventType(final String value) {
         this.value = value;
@@ -27,10 +25,8 @@ public enum CallEventType implements ValuedEnum {
             case "callEnded": return CallEnded;
             case "unknownFutureValue": return UnknownFutureValue;
             case "rosterUpdated": return RosterUpdated;
-            case "transcriptionStarted": return TranscriptionStarted;
-            case "transcriptionStopped": return TranscriptionStopped;
-            case "recordingStarted": return RecordingStarted;
-            case "recordingStopped": return RecordingStopped;
+            case "transcriptionStateUpdated": return TranscriptionStateUpdated;
+            case "recordingStateUpdated": return RecordingStateUpdated;
             default: return null;
         }
     }

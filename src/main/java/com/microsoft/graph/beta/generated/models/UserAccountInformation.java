@@ -50,17 +50,35 @@ public class UserAccountInformation extends ItemFacet implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("ageGroup", (n) -> { this.setAgeGroup(n.getStringValue()); });
         deserializerMap.put("countryCode", (n) -> { this.setCountryCode(n.getStringValue()); });
+        deserializerMap.put("originTenantInfo", (n) -> { this.setOriginTenantInfo(n.getObjectValue(OriginTenantInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("preferredLanguageTag", (n) -> { this.setPreferredLanguageTag(n.getObjectValue(LocaleInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("userPersona", (n) -> { this.setUserPersona(n.getEnumValue(UserPersona::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the preferredLanguageTag property value. Contains the language the user has associated as preferred for the account.
+     * Gets the originTenantInfo property value. Contains the identifiers of the user and the origin tenant that provisioned the user. This property is populated when the user is invited as a guest to the host tenant.
+     * @return a {@link OriginTenantInfo}
+     */
+    @jakarta.annotation.Nullable
+    public OriginTenantInfo getOriginTenantInfo() {
+        return this.backingStore.get("originTenantInfo");
+    }
+    /**
+     * Gets the preferredLanguageTag property value. Contains the language that the user associated as preferred for their account.
      * @return a {@link LocaleInfo}
      */
     @jakarta.annotation.Nullable
     public LocaleInfo getPreferredLanguageTag() {
         return this.backingStore.get("preferredLanguageTag");
+    }
+    /**
+     * Gets the userPersona property value. Represents the user&apos;s persona. The possible values are: unknown, externalMember, externalGuest, internalMember, internalGuest, unknownFutureValue.
+     * @return a {@link UserPersona}
+     */
+    @jakarta.annotation.Nullable
+    public UserPersona getUserPersona() {
+        return this.backingStore.get("userPersona");
     }
     /**
      * Gets the userPrincipalName property value. The user principal name (UPN) of the user associated with the account.
@@ -79,7 +97,9 @@ public class UserAccountInformation extends ItemFacet implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("ageGroup", this.getAgeGroup());
         writer.writeStringValue("countryCode", this.getCountryCode());
+        writer.writeObjectValue("originTenantInfo", this.getOriginTenantInfo());
         writer.writeObjectValue("preferredLanguageTag", this.getPreferredLanguageTag());
+        writer.writeEnumValue("userPersona", this.getUserPersona());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
@@ -97,11 +117,25 @@ public class UserAccountInformation extends ItemFacet implements Parsable {
         this.backingStore.set("countryCode", value);
     }
     /**
-     * Sets the preferredLanguageTag property value. Contains the language the user has associated as preferred for the account.
+     * Sets the originTenantInfo property value. Contains the identifiers of the user and the origin tenant that provisioned the user. This property is populated when the user is invited as a guest to the host tenant.
+     * @param value Value to set for the originTenantInfo property.
+     */
+    public void setOriginTenantInfo(@jakarta.annotation.Nullable final OriginTenantInfo value) {
+        this.backingStore.set("originTenantInfo", value);
+    }
+    /**
+     * Sets the preferredLanguageTag property value. Contains the language that the user associated as preferred for their account.
      * @param value Value to set for the preferredLanguageTag property.
      */
     public void setPreferredLanguageTag(@jakarta.annotation.Nullable final LocaleInfo value) {
         this.backingStore.set("preferredLanguageTag", value);
+    }
+    /**
+     * Sets the userPersona property value. Represents the user&apos;s persona. The possible values are: unknown, externalMember, externalGuest, internalMember, internalGuest, unknownFutureValue.
+     * @param value Value to set for the userPersona property.
+     */
+    public void setUserPersona(@jakarta.annotation.Nullable final UserPersona value) {
+        this.backingStore.set("userPersona", value);
     }
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the user associated with the account.

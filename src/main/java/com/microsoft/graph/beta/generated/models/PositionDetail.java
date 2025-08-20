@@ -73,6 +73,22 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore.get("description");
     }
     /**
+     * Gets the employeeId property value. The identifier assigned to the employee.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getEmployeeId() {
+        return this.backingStore.get("employeeId");
+    }
+    /**
+     * Gets the employeeType property value. The type of employment for the position.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getEmployeeType() {
+        return this.backingStore.get("employeeType");
+    }
+    /**
      * Gets the endMonthYear property value. The date when the position ended.
      * @return a {@link LocalDate}
      */
@@ -86,9 +102,11 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
         deserializerMap.put("company", (n) -> { this.setCompany(n.getObjectValue(CompanyDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("employeeId", (n) -> { this.setEmployeeId(n.getStringValue()); });
+        deserializerMap.put("employeeType", (n) -> { this.setEmployeeType(n.getStringValue()); });
         deserializerMap.put("endMonthYear", (n) -> { this.setEndMonthYear(n.getLocalDateValue()); });
         deserializerMap.put("jobTitle", (n) -> { this.setJobTitle(n.getStringValue()); });
         deserializerMap.put("layer", (n) -> { this.setLayer(n.getIntegerValue()); });
@@ -181,6 +199,8 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
         Objects.requireNonNull(writer);
         writer.writeObjectValue("company", this.getCompany());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeStringValue("employeeId", this.getEmployeeId());
+        writer.writeStringValue("employeeType", this.getEmployeeType());
         writer.writeLocalDateValue("endMonthYear", this.getEndMonthYear());
         writer.writeStringValue("jobTitle", this.getJobTitle());
         writer.writeIntegerValue("layer", this.getLayer());
@@ -221,6 +241,20 @@ public class PositionDetail implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
+    }
+    /**
+     * Sets the employeeId property value. The identifier assigned to the employee.
+     * @param value Value to set for the employeeId property.
+     */
+    public void setEmployeeId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("employeeId", value);
+    }
+    /**
+     * Sets the employeeType property value. The type of employment for the position.
+     * @param value Value to set for the employeeType property.
+     */
+    public void setEmployeeType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("employeeType", value);
     }
     /**
      * Sets the endMonthYear property value. The date when the position ended.

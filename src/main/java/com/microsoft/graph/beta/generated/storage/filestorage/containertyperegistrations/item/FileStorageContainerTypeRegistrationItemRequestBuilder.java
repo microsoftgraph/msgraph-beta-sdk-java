@@ -46,16 +46,18 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containerTypeRegistrations/{fileStorageContainerTypeRegistration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property containerTypeRegistrations for storage
+     * Delete a fileStorageContainerTypeRegistration object. A registration can only be deleted if it has neither containers nor deleted containers
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestorage-delete-containertyperegistrations?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property containerTypeRegistrations for storage
+     * Delete a fileStorageContainerTypeRegistration object. A registration can only be deleted if it has neither containers nor deleted containers
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestorage-delete-containertyperegistrations?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get containerTypeRegistrations from storage
+     * Read the properties and relationships of a fileStorageContainerTypeRegistration object.
      * @return a {@link FileStorageContainerTypeRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeRegistration get() {
         return get(null);
     }
     /**
-     * Get containerTypeRegistrations from storage
+     * Read the properties and relationships of a fileStorageContainerTypeRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerTypeRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeRegistration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerTypeRegistration::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property containerTypeRegistrations in storage
+     * Update the properties of a fileStorageContainerTypeRegistration object. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param body The request body
      * @return a {@link FileStorageContainerTypeRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeRegistration patch(@jakarta.annotation.Nonnull final FileStorageContainerTypeRegistration body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property containerTypeRegistrations in storage
+     * Update the properties of a fileStorageContainerTypeRegistration object. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerTypeRegistration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeRegistration patch(@jakarta.annotation.Nonnull final FileStorageContainerTypeRegistration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerTypeRegistration::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property containerTypeRegistrations for storage
+     * Delete a fileStorageContainerTypeRegistration object. A registration can only be deleted if it has neither containers nor deleted containers
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property containerTypeRegistrations for storage
+     * Delete a fileStorageContainerTypeRegistration object. A registration can only be deleted if it has neither containers nor deleted containers
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Get containerTypeRegistrations from storage
+     * Read the properties and relationships of a fileStorageContainerTypeRegistration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Get containerTypeRegistrations from storage
+     * Read the properties and relationships of a fileStorageContainerTypeRegistration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Update the navigation property containerTypeRegistrations in storage
+     * Update the properties of a fileStorageContainerTypeRegistration object. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property containerTypeRegistrations in storage
+     * Update the properties of a fileStorageContainerTypeRegistration object. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class FileStorageContainerTypeRegistrationItemRequestBuilder extends Base
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get containerTypeRegistrations from storage
+     * Read the properties and relationships of a fileStorageContainerTypeRegistration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

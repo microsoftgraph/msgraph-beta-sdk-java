@@ -58,6 +58,8 @@ public class CallEvent extends Entity implements Parsable {
         deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(CallEventType::forValue)); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
+        deserializerMap.put("recordingState", (n) -> { this.setRecordingState(n.getObjectValue(RecordingState::createFromDiscriminatorValue)); });
+        deserializerMap.put("transcriptionState", (n) -> { this.setTranscriptionState(n.getObjectValue(TranscriptionState::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -69,6 +71,22 @@ public class CallEvent extends Entity implements Parsable {
         return this.backingStore.get("participants");
     }
     /**
+     * Gets the recordingState property value. The recordingState property
+     * @return a {@link RecordingState}
+     */
+    @jakarta.annotation.Nullable
+    public RecordingState getRecordingState() {
+        return this.backingStore.get("recordingState");
+    }
+    /**
+     * Gets the transcriptionState property value. The transcriptionState property
+     * @return a {@link TranscriptionState}
+     */
+    @jakarta.annotation.Nullable
+    public TranscriptionState getTranscriptionState() {
+        return this.backingStore.get("transcriptionState");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -78,6 +96,8 @@ public class CallEvent extends Entity implements Parsable {
         writer.writeEnumValue("callEventType", this.getCallEventType());
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
+        writer.writeObjectValue("recordingState", this.getRecordingState());
+        writer.writeObjectValue("transcriptionState", this.getTranscriptionState());
     }
     /**
      * Sets the callEventType property value. The event type of the call. Possible values are: callStarted, callEnded, unknownFutureValue, rosterUpdated. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: rosterUpdated.
@@ -99,5 +119,19 @@ public class CallEvent extends Entity implements Parsable {
      */
     public void setParticipants(@jakarta.annotation.Nullable final java.util.List<Participant> value) {
         this.backingStore.set("participants", value);
+    }
+    /**
+     * Sets the recordingState property value. The recordingState property
+     * @param value Value to set for the recordingState property.
+     */
+    public void setRecordingState(@jakarta.annotation.Nullable final RecordingState value) {
+        this.backingStore.set("recordingState", value);
+    }
+    /**
+     * Sets the transcriptionState property value. The transcriptionState property
+     * @param value Value to set for the transcriptionState property.
+     */
+    public void setTranscriptionState(@jakarta.annotation.Nullable final TranscriptionState value) {
+        this.backingStore.set("transcriptionState", value);
     }
 }

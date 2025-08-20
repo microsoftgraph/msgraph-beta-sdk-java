@@ -72,6 +72,8 @@ import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsp
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsummaryreport.GetWindowsUpdateAlertSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getzebrafotadeploymentreport.GetZebraFotaDeploymentReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrieveandroidworkprofiledevicemigrationstatuses.RetrieveAndroidWorkProfileDeviceMigrationStatusesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.retrieveappledeviceosupdatestatus.RetrieveAppleDeviceOSUpdateStatusRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.retrieveappleosupdatefailures.RetrieveAppleOSUpdateFailuresRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievecloudpkileafcertificatereport.RetrieveCloudPkiLeafCertificateReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievecloudpkileafcertificatesummaryreport.RetrieveCloudPkiLeafCertificateSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievedeviceappinstallationstatusreport.RetrieveDeviceAppInstallationStatusReportRequestBuilder;
@@ -672,6 +674,22 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RetrieveAndroidWorkProfileDeviceMigrationStatusesRequestBuilder retrieveAndroidWorkProfileDeviceMigrationStatuses() {
         return new RetrieveAndroidWorkProfileDeviceMigrationStatusesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveAppleDeviceOSUpdateStatus method.
+     * @return a {@link RetrieveAppleDeviceOSUpdateStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveAppleDeviceOSUpdateStatusRequestBuilder retrieveAppleDeviceOSUpdateStatus() {
+        return new RetrieveAppleDeviceOSUpdateStatusRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveAppleOSUpdateFailures method.
+     * @return a {@link RetrieveAppleOSUpdateFailuresRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveAppleOSUpdateFailuresRequestBuilder retrieveAppleOSUpdateFailures() {
+        return new RetrieveAppleOSUpdateFailuresRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveCloudPkiLeafCertificateReport method.

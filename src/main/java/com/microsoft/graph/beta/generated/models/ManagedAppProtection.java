@@ -65,7 +65,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("allowedInboundDataTransferSources");
     }
     /**
-     * Gets the allowedOutboundClipboardSharingExceptionLength property value. Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of &apos;0&apos; means no exception is allowed.
+     * Gets the allowedOutboundClipboardSharingExceptionLength property value. Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of &apos;0&apos; means no exception is allowed. Valid values 0 to 65535
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -257,7 +257,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("maximumAllowedDeviceThreatLevel");
     }
     /**
-     * Gets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
+     * Gets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped. Valid values 1 to 65535
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -433,7 +433,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("pinRequiredInsteadOfBiometricTimeout");
     }
     /**
-     * Gets the previousPinBlockCount property value. Requires a pin to be unique from the number specified in this property.
+     * Gets the previousPinBlockCount property value. Requires a pin to be unique from the number specified in this property. Valid values 0 to 24
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -549,7 +549,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this.backingStore.set("allowedInboundDataTransferSources", value);
     }
     /**
-     * Sets the allowedOutboundClipboardSharingExceptionLength property value. Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of &apos;0&apos; means no exception is allowed.
+     * Sets the allowedOutboundClipboardSharingExceptionLength property value. Specify the number of characters that may be cut or copied from Org data and accounts to any application. This setting overrides the AllowedOutboundClipboardSharingLevel restriction. Default value of &apos;0&apos; means no exception is allowed. Valid values 0 to 65535
      * @param value Value to set for the allowedOutboundClipboardSharingExceptionLength property.
      */
     public void setAllowedOutboundClipboardSharingExceptionLength(@jakarta.annotation.Nullable final Integer value) {
@@ -668,7 +668,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this.backingStore.set("maximumAllowedDeviceThreatLevel", value);
     }
     /**
-     * Sets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped.
+     * Sets the maximumPinRetries property value. Maximum number of incorrect pin retry attempts before the managed app is either blocked or wiped. Valid values 1 to 65535
      * @param value Value to set for the maximumPinRetries property.
      */
     public void setMaximumPinRetries(@jakarta.annotation.Nullable final Integer value) {
@@ -822,7 +822,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         this.backingStore.set("pinRequiredInsteadOfBiometricTimeout", value);
     }
     /**
-     * Sets the previousPinBlockCount property value. Requires a pin to be unique from the number specified in this property.
+     * Sets the previousPinBlockCount property value. Requires a pin to be unique from the number specified in this property. Valid values 0 to 24
      * @param value Value to set for the previousPinBlockCount property.
      */
     public void setPreviousPinBlockCount(@jakarta.annotation.Nullable final Integer value) {

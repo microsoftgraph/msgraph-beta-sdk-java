@@ -41,6 +41,14 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("bulkActions");
     }
     /**
+     * Gets the cloudApps property value. The cloudApps property
+     * @return a {@link java.util.List<CloudPcCloudApp>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudPcCloudApp> getCloudApps() {
+        return this.backingStore.get("cloudApps");
+    }
+    /**
      * Gets the cloudPCs property value. Cloud managed virtual desktops.
      * @return a {@link java.util.List<CloudPC>}
      */
@@ -81,6 +89,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("auditEvents", (n) -> { this.setAuditEvents(n.getCollectionOfObjectValues(CloudPcAuditEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("bulkActions", (n) -> { this.setBulkActions(n.getCollectionOfObjectValues(CloudPcBulkAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudApps", (n) -> { this.setCloudApps(n.getCollectionOfObjectValues(CloudPcCloudApp::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
         deserializerMap.put("crossCloudGovernmentOrganizationMapping", (n) -> { this.setCrossCloudGovernmentOrganizationMapping(n.getObjectValue(CloudPcCrossCloudGovernmentOrganizationMapping::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceImages", (n) -> { this.setDeviceImages(n.getCollectionOfObjectValues(CloudPcDeviceImage::createFromDiscriminatorValue)); });
@@ -186,6 +195,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("auditEvents", this.getAuditEvents());
         writer.writeCollectionOfObjectValues("bulkActions", this.getBulkActions());
+        writer.writeCollectionOfObjectValues("cloudApps", this.getCloudApps());
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
         writer.writeObjectValue("crossCloudGovernmentOrganizationMapping", this.getCrossCloudGovernmentOrganizationMapping());
         writer.writeCollectionOfObjectValues("deviceImages", this.getDeviceImages());
@@ -214,6 +224,13 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     public void setBulkActions(@jakarta.annotation.Nullable final java.util.List<CloudPcBulkAction> value) {
         this.backingStore.set("bulkActions", value);
+    }
+    /**
+     * Sets the cloudApps property value. The cloudApps property
+     * @param value Value to set for the cloudApps property.
+     */
+    public void setCloudApps(@jakarta.annotation.Nullable final java.util.List<CloudPcCloudApp> value) {
+        this.backingStore.set("cloudApps", value);
     }
     /**
      * Sets the cloudPCs property value. Cloud managed virtual desktops.

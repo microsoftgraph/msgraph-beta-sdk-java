@@ -19,7 +19,6 @@ public enum AdditionalOptions implements ValuedEnum {
     CondensePaths("condensePaths"),
     FriendlyName("friendlyName"),
     SplitSource("splitSource"),
-    OptimizedPartitionSize("optimizedPartitionSize"),
     IncludeReport("includeReport");
     public final String value;
     AdditionalOptions(final String value) {
@@ -45,7 +44,6 @@ public enum AdditionalOptions implements ValuedEnum {
             case "condensePaths": return CondensePaths;
             case "friendlyName": return FriendlyName;
             case "splitSource": return SplitSource;
-            case "optimizedPartitionSize": return OptimizedPartitionSize;
             case "includeReport": return IncludeReport;
             default: return null;
         }

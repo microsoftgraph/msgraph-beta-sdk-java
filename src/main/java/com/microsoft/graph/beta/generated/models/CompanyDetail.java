@@ -72,6 +72,14 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("companyCode");
     }
     /**
+     * Gets the costCenter property value. The cost center associated with the company or department.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCostCenter() {
+        return this.backingStore.get("costCenter");
+    }
+    /**
      * Gets the department property value. Department Name within a company.
      * @return a {@link String}
      */
@@ -88,16 +96,26 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the division property value. The division within the company.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDivision() {
+        return this.backingStore.get("division");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("companyCode", (n) -> { this.setCompanyCode(n.getStringValue()); });
+        deserializerMap.put("costCenter", (n) -> { this.setCostCenter(n.getStringValue()); });
         deserializerMap.put("department", (n) -> { this.setDepartment(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("division", (n) -> { this.setDivision(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("officeLocation", (n) -> { this.setOfficeLocation(n.getStringValue()); });
         deserializerMap.put("pronunciation", (n) -> { this.setPronunciation(n.getStringValue()); });
@@ -153,8 +171,10 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
         Objects.requireNonNull(writer);
         writer.writeObjectValue("address", this.getAddress());
         writer.writeStringValue("companyCode", this.getCompanyCode());
+        writer.writeStringValue("costCenter", this.getCostCenter());
         writer.writeStringValue("department", this.getDepartment());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("division", this.getDivision());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("officeLocation", this.getOfficeLocation());
         writer.writeStringValue("pronunciation", this.getPronunciation());
@@ -192,6 +212,13 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("companyCode", value);
     }
     /**
+     * Sets the costCenter property value. The cost center associated with the company or department.
+     * @param value Value to set for the costCenter property.
+     */
+    public void setCostCenter(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("costCenter", value);
+    }
+    /**
      * Sets the department property value. Department Name within a company.
      * @param value Value to set for the department property.
      */
@@ -204,6 +231,13 @@ public class CompanyDetail implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the division property value. The division within the company.
+     * @param value Value to set for the division property.
+     */
+    public void setDivision(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("division", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

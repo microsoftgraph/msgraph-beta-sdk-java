@@ -37,16 +37,18 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containerTypes/{fileStorageContainerType%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property containerTypes for storage
+     * Delete a fileStorageContainerType object from the tenant. A fileStorageContainerType can only be deleted if no registrations are associated with it in any tenant.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestorage-delete-containertypes?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property containerTypes for storage
+     * Delete a fileStorageContainerType object from the tenant. A fileStorageContainerType can only be deleted if no registrations are associated with it in any tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestorage-delete-containertypes?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get containerTypes from storage
+     * Get a fileStorageContainerType using its ID.
      * @return a {@link FileStorageContainerType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertype-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerType get() {
         return get(null);
     }
     /**
-     * Get containerTypes from storage
+     * Get a fileStorageContainerType using its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertype-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerType get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +81,23 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerType::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property containerTypes in storage
+     * Update the properties of a fileStorageContainerType object. The properties updated are reflected in each registered fileStorageContainerTypeRegistration in a maximum of 24 hours. Settings overridden in a tenant aren&apos;t updated. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param body The request body
      * @return a {@link FileStorageContainerType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertype-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerType patch(@jakarta.annotation.Nonnull final FileStorageContainerType body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property containerTypes in storage
+     * Update the properties of a fileStorageContainerType object. The properties updated are reflected in each registered fileStorageContainerTypeRegistration in a maximum of 24 hours. Settings overridden in a tenant aren&apos;t updated. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerType}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertype-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerType patch(@jakarta.annotation.Nonnull final FileStorageContainerType body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +108,7 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerType::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property containerTypes for storage
+     * Delete a fileStorageContainerType object from the tenant. A fileStorageContainerType can only be deleted if no registrations are associated with it in any tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +116,7 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property containerTypes for storage
+     * Delete a fileStorageContainerType object from the tenant. A fileStorageContainerType can only be deleted if no registrations are associated with it in any tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +128,7 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get containerTypes from storage
+     * Get a fileStorageContainerType using its ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +136,7 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get containerTypes from storage
+     * Get a fileStorageContainerType using its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +148,7 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the navigation property containerTypes in storage
+     * Update the properties of a fileStorageContainerType object. The properties updated are reflected in each registered fileStorageContainerTypeRegistration in a maximum of 24 hours. Settings overridden in a tenant aren&apos;t updated. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property containerTypes in storage
+     * Update the properties of a fileStorageContainerType object. The properties updated are reflected in each registered fileStorageContainerTypeRegistration in a maximum of 24 hours. Settings overridden in a tenant aren&apos;t updated. ETag is used for optimistic concurrency control. It must match the value from Create, Get or the previous Update.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +188,7 @@ public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get containerTypes from storage
+     * Get a fileStorageContainerType using its ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

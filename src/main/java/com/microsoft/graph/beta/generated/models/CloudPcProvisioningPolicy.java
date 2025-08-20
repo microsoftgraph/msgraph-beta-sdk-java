@@ -152,6 +152,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("microsoftManagedDesktop", (n) -> { this.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
         deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("userExperienceType", (n) -> { this.setUserExperienceType(n.getEnumValue(CloudPcUserExperienceType::forValue)); });
         deserializerMap.put("windowsSetting", (n) -> { this.setWindowsSetting(n.getObjectValue(CloudPcWindowsSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsSettings", (n) -> { this.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -245,6 +246,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("scopeIds");
     }
     /**
+     * Gets the userExperienceType property value. The userExperienceType property
+     * @return a {@link CloudPcUserExperienceType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcUserExperienceType getUserExperienceType() {
+        return this.backingStore.get("userExperienceType");
+    }
+    /**
      * Gets the windowsSetting property value. Indicates a specific Windows setting to configure during the creation of Cloud PCs for this provisioning policy. Supports $select.
      * @return a {@link CloudPcWindowsSetting}
      */
@@ -290,6 +299,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeObjectValue("microsoftManagedDesktop", this.getMicrosoftManagedDesktop());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
+        writer.writeEnumValue("userExperienceType", this.getUserExperienceType());
         writer.writeObjectValue("windowsSetting", this.getWindowsSetting());
         writer.writeObjectValue("windowsSettings", this.getWindowsSettings());
     }
@@ -453,6 +463,13 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("scopeIds", value);
+    }
+    /**
+     * Sets the userExperienceType property value. The userExperienceType property
+     * @param value Value to set for the userExperienceType property.
+     */
+    public void setUserExperienceType(@jakarta.annotation.Nullable final CloudPcUserExperienceType value) {
+        this.backingStore.set("userExperienceType", value);
     }
     /**
      * Sets the windowsSetting property value. Indicates a specific Windows setting to configure during the creation of Cloud PCs for this provisioning policy. Supports $select.
