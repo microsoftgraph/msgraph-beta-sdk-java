@@ -35,18 +35,20 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudApps/publish", rawUrl);
     }
     /**
-     * Invoke action publish
+     * Publish a cloudPcCloudApp object to make it available to end users through their portal, such as the Windows App. 
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccloudapp-publish?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final PublishPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action publish
+     * Publish a cloudPcCloudApp object to make it available to end users through their portal, such as the Windows App. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpccloudapp-publish?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final PublishPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -56,7 +58,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action publish
+     * Publish a cloudPcCloudApp object to make it available to end users through their portal, such as the Windows App. 
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +67,7 @@ public class PublishRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action publish
+     * Publish a cloudPcCloudApp object to make it available to end users through their portal, such as the Windows App. 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -352,7 +352,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("userAccountType");
     }
     /**
-     * Gets the userExperienceType property value. The userExperienceType property
+     * Gets the userExperienceType property value. Specifies the type of cloud object the end user can access. The possible values are: cloudPc, cloudApp, unknownFutureValue. When set to cloudPc, it indicates that the end user can access the entire desktop. When set to cloudApp, it indicates that the end user can only access cloud apps published under the associated provisioning policy. Since the cloud app experience also creates Cloud PC devices that appear in the Cloud PC device list, this property helps differentiate them. The default value is cloudPc. This property is defined in the provisioning policy.
      * @return a {@link CloudPcUserExperienceType}
      */
     @jakarta.annotation.Nullable
@@ -658,7 +658,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("userAccountType", value);
     }
     /**
-     * Sets the userExperienceType property value. The userExperienceType property
+     * Sets the userExperienceType property value. Specifies the type of cloud object the end user can access. The possible values are: cloudPc, cloudApp, unknownFutureValue. When set to cloudPc, it indicates that the end user can access the entire desktop. When set to cloudApp, it indicates that the end user can only access cloud apps published under the associated provisioning policy. Since the cloud app experience also creates Cloud PC devices that appear in the Cloud PC device list, this property helps differentiate them. The default value is cloudPc. This property is defined in the provisioning policy.
      * @param value Value to set for the userExperienceType property.
      */
     public void setUserExperienceType(@jakarta.annotation.Nullable final CloudPcUserExperienceType value) {

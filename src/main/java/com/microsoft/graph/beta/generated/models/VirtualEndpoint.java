@@ -41,7 +41,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("bulkActions");
     }
     /**
-     * Gets the cloudApps property value. The cloudApps property
+     * Gets the cloudApps property value. A collection of cloud apps that are built on frontline shared options and provide Windows 365 end users with access to app-only sessions instead of a full desktop experience.
      * @return a {@link java.util.List<CloudPcCloudApp>}
      */
     @jakarta.annotation.Nullable
@@ -226,7 +226,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.backingStore.set("bulkActions", value);
     }
     /**
-     * Sets the cloudApps property value. The cloudApps property
+     * Sets the cloudApps property value. A collection of cloud apps that are built on frontline shared options and provide Windows 365 end users with access to app-only sessions instead of a full desktop experience.
      * @param value Value to set for the cloudApps property.
      */
     public void setCloudApps(@jakarta.annotation.Nullable final java.util.List<CloudPcCloudApp> value) {
