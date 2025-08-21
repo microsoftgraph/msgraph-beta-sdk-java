@@ -46,7 +46,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("healthIssues");
     }
     /**
-     * Gets the identityAccounts property value. The identityAccounts property
+     * Gets the identityAccounts property value. Represents an identity&apos;s details in the context of Microsoft Defender for Identity.
      * @return a {@link java.util.List<IdentityAccounts>}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class IdentityContainer extends Entity implements Parsable {
         this.backingStore.set("healthIssues", value);
     }
     /**
-     * Sets the identityAccounts property value. The identityAccounts property
+     * Sets the identityAccounts property value. Represents an identity&apos;s details in the context of Microsoft Defender for Identity.
      * @param value Value to set for the identityAccounts property.
      */
     public void setIdentityAccounts(@jakarta.annotation.Nullable final java.util.List<IdentityAccounts> value) {

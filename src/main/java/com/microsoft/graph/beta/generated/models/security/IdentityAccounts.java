@@ -33,7 +33,7 @@ public class IdentityAccounts extends Entity implements Parsable {
         return new IdentityAccounts();
     }
     /**
-     * Gets the accounts property value. The accounts property
+     * Gets the accounts property value. Collection of accounts of the identity in different identity providers.
      * @return a {@link java.util.List<Account>}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class IdentityAccounts extends Entity implements Parsable {
         return this.backingStore.get("accounts");
     }
     /**
-     * Gets the cloudSecurityIdentifier property value. The cloudSecurityIdentifier property
+     * Gets the cloudSecurityIdentifier property value. The cloud security identifier of the identityAccount.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class IdentityAccounts extends Entity implements Parsable {
         return this.backingStore.get("cloudSecurityIdentifier");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The  Active Directory display name of the identityAccount.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class IdentityAccounts extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the domain property value. The domain property
+     * Gets the domain property value. The Active Directory domain name of the identityAccount.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class IdentityAccounts extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Boolean indicating if the identityAccounts is enabled.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class IdentityAccounts extends Entity implements Parsable {
         return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * Gets the onPremisesSecurityIdentifier property value. The on-premises security identifier of the identityAccount.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,42 +110,42 @@ public class IdentityAccounts extends Entity implements Parsable {
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
     }
     /**
-     * Sets the accounts property value. The accounts property
+     * Sets the accounts property value. Collection of accounts of the identity in different identity providers.
      * @param value Value to set for the accounts property.
      */
     public void setAccounts(@jakarta.annotation.Nullable final java.util.List<Account> value) {
         this.backingStore.set("accounts", value);
     }
     /**
-     * Sets the cloudSecurityIdentifier property value. The cloudSecurityIdentifier property
+     * Sets the cloudSecurityIdentifier property value. The cloud security identifier of the identityAccount.
      * @param value Value to set for the cloudSecurityIdentifier property.
      */
     public void setCloudSecurityIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("cloudSecurityIdentifier", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The  Active Directory display name of the identityAccount.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the domain property value. The domain property
+     * Sets the domain property value. The Active Directory domain name of the identityAccount.
      * @param value Value to set for the domain property.
      */
     public void setDomain(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("domain", value);
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Boolean indicating if the identityAccounts is enabled.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the onPremisesSecurityIdentifier property value. The onPremisesSecurityIdentifier property
+     * Sets the onPremisesSecurityIdentifier property value. The on-premises security identifier of the identityAccount.
      * @param value Value to set for the onPremisesSecurityIdentifier property.
      */
     public void setOnPremisesSecurityIdentifier(@jakarta.annotation.Nullable final String value) {

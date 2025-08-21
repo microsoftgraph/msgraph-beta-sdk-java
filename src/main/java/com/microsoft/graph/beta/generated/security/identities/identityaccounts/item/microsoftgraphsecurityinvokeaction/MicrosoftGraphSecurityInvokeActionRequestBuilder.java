@@ -36,21 +36,23 @@ public class MicrosoftGraphSecurityInvokeActionRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/security/identities/identityAccounts/{identityAccounts%2Did}/microsoft.graph.security.invokeAction", rawUrl);
     }
     /**
-     * Invoke action invokeAction
+     * Perform actions such as revoking accounts and forcing password reset for identity accounts that are observed in Microsoft Defender for Identity. This action allows reading and performing identity security actions on behalf of the signed-in identity.
      * @param body The request body
      * @return a {@link InvokeActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-identityaccounts-invokeaction?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InvokeActionResult post(@jakarta.annotation.Nonnull final InvokeActionPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action invokeAction
+     * Perform actions such as revoking accounts and forcing password reset for identity accounts that are observed in Microsoft Defender for Identity. This action allows reading and performing identity security actions on behalf of the signed-in identity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InvokeActionResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-identityaccounts-invokeaction?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InvokeActionResult post(@jakarta.annotation.Nonnull final InvokeActionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class MicrosoftGraphSecurityInvokeActionRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, InvokeActionResult::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action invokeAction
+     * Perform actions such as revoking accounts and forcing password reset for identity accounts that are observed in Microsoft Defender for Identity. This action allows reading and performing identity security actions on behalf of the signed-in identity.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class MicrosoftGraphSecurityInvokeActionRequestBuilder extends BaseReques
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action invokeAction
+     * Perform actions such as revoking accounts and forcing password reset for identity accounts that are observed in Microsoft Defender for Identity. This action allows reading and performing identity security actions on behalf of the signed-in identity.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -35,7 +35,7 @@ public class InvokeActionResult implements AdditionalDataHolder, BackedModel, Pa
         return new InvokeActionResult();
     }
     /**
-     * Gets the accountId property value. The accountId property
+     * Gets the accountId property value. The account ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class InvokeActionResult implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
-     * Gets the correlationId property value. The correlationId property
+     * Gets the correlationId property value. The unique identifier for tracking the request.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class InvokeActionResult implements AdditionalDataHolder, BackedModel, Pa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the accountId property value. The accountId property
+     * Sets the accountId property value. The account ID.
      * @param value Value to set for the accountId property.
      */
     public void setAccountId(@jakarta.annotation.Nullable final String value) {
@@ -152,7 +152,7 @@ public class InvokeActionResult implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the correlationId property value. The correlationId property
+     * Sets the correlationId property value. The unique identifier for tracking the request.
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {

@@ -35,7 +35,7 @@ public class Account implements AdditionalDataHolder, BackedModel, Parsable {
         return new Account();
     }
     /**
-     * Gets the actions property value. The actions property
+     * Gets the actions property value. List of the type of action. The possible values are: disable, enable, forcePasswordReset, revokeAllSessions, requireUserToSignInAgain, markUserAsCompromised.
      * @return a {@link java.util.List<Action>}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class Account implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identifier property value. The identifier property
+     * Gets the identifier property value. The account ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class Account implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actions property value. The actions property
+     * Sets the actions property value. List of the type of action. The possible values are: disable, enable, forcePasswordReset, revokeAllSessions, requireUserToSignInAgain, markUserAsCompromised.
      * @param value Value to set for the actions property.
      */
     public void setActions(@jakarta.annotation.Nullable final java.util.List<Action> value) {
@@ -135,7 +135,7 @@ public class Account implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the identifier property value. The identifier property
+     * Sets the identifier property value. The account ID.
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
