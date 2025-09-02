@@ -27,6 +27,14 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
         return new IpApplicationSegment();
     }
     /**
+     * Gets the action property value. The action property
+     * @return a {@link ActionType}
+     */
+    @jakarta.annotation.Nullable
+    public ActionType getAction() {
+        return this.backingStore.get("action");
+    }
+    /**
      * Gets the application property value. The on-premises nonweb application published through Microsoft Entra application proxy. Expanded by default and supports $expand.
      * @return a {@link Application}
      */
@@ -57,6 +65,7 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(ActionType::forValue)); });
         deserializerMap.put("application", (n) -> { this.setApplication(n.getObjectValue(Application::createFromDiscriminatorValue)); });
         deserializerMap.put("destinationHost", (n) -> { this.setDestinationHost(n.getStringValue()); });
         deserializerMap.put("destinationType", (n) -> { this.setDestinationType(n.getEnumValue(PrivateNetworkDestinationType::forValue)); });
@@ -96,12 +105,20 @@ public class IpApplicationSegment extends ApplicationSegment implements Parsable
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("action", this.getAction());
         writer.writeObjectValue("application", this.getApplication());
         writer.writeStringValue("destinationHost", this.getDestinationHost());
         writer.writeEnumValue("destinationType", this.getDestinationType());
         writer.writeIntegerValue("port", this.getPort());
         writer.writeCollectionOfPrimitiveValues("ports", this.getPorts());
         writer.writeEnumSetValue("protocol", this.getProtocol());
+    }
+    /**
+     * Sets the action property value. The action property
+     * @param value Value to set for the action property.
+     */
+    public void setAction(@jakarta.annotation.Nullable final ActionType value) {
+        this.backingStore.set("action", value);
     }
     /**
      * Sets the application property value. The on-premises nonweb application published through Microsoft Entra application proxy. Expanded by default and supports $expand.

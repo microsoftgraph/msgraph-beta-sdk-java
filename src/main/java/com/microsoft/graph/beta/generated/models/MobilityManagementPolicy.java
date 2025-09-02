@@ -22,6 +22,14 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public static MobilityManagementPolicy createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.mobileAppManagementPolicy": return new MobileAppManagementPolicy();
+                case "#microsoft.graph.mobileDeviceManagementPolicy": return new MobileDeviceManagementPolicy();
+            }
+        }
         return new MobilityManagementPolicy();
     }
     /**

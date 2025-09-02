@@ -99,7 +99,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the onlineMeetingConversations property value. A collection of structured question-and-answer (Q&amp;A) thread in Teams directly associated with online meetings.
+     * Gets the onlineMeetingConversations property value. A collection of structured question-and-answer (Q&amp;A) threads in Teams directly associated with online meetings.
      * @return a {@link java.util.List<OnlineMeetingEngagementConversation>}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class CloudCommunications implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the onlineMeetingConversations property value. A collection of structured question-and-answer (Q&amp;A) thread in Teams directly associated with online meetings.
+     * Sets the onlineMeetingConversations property value. A collection of structured question-and-answer (Q&amp;A) threads in Teams directly associated with online meetings.
      * @param value Value to set for the onlineMeetingConversations property.
      */
     public void setOnlineMeetingConversations(@jakarta.annotation.Nullable final java.util.List<OnlineMeetingEngagementConversation> value) {

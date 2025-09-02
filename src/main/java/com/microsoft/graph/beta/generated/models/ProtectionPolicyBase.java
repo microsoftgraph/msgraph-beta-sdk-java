@@ -51,7 +51,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The time of creation of the policy.
+     * Gets the createdDateTime property value. The date and time when the policy was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -77,11 +77,21 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("protectionPolicyArtifactCount", (n) -> { this.setProtectionPolicyArtifactCount(n.getObjectValue(ProtectionPolicyArtifactCount::createFromDiscriminatorValue)); });
         deserializerMap.put("retentionSettings", (n) -> { this.setRetentionSettings(n.getCollectionOfObjectValues(RetentionSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProtectionPolicyStatus::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isEnabled property value. Indicates whether the policy is enabled.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsEnabled() {
+        return this.backingStore.get("isEnabled");
     }
     /**
      * Gets the lastModifiedBy property value. The identity of the person who last modified the policy.
@@ -92,12 +102,20 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The timestamp of the last modification of the policy.
+     * Gets the lastModifiedDateTime property value. The date and time when the policy was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Returned only on $select.
+     * @return a {@link ProtectionPolicyArtifactCount}
+     */
+    @jakarta.annotation.Nullable
+    public ProtectionPolicyArtifactCount getProtectionPolicyArtifactCount() {
+        return this.backingStore.get("protectionPolicyArtifactCount");
     }
     /**
      * Gets the retentionSettings property value. Contains the retention setting details for the policy.
@@ -126,8 +144,10 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeObjectValue("protectionPolicyArtifactCount", this.getProtectionPolicyArtifactCount());
         writer.writeCollectionOfObjectValues("retentionSettings", this.getRetentionSettings());
         writer.writeEnumValue("status", this.getStatus());
     }
@@ -146,7 +166,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The time of creation of the policy.
+     * Sets the createdDateTime property value. The date and time when the policy was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -160,6 +180,13 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the isEnabled property value. Indicates whether the policy is enabled.
+     * @param value Value to set for the isEnabled property.
+     */
+    public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isEnabled", value);
+    }
+    /**
      * Sets the lastModifiedBy property value. The identity of the person who last modified the policy.
      * @param value Value to set for the lastModifiedBy property.
      */
@@ -167,11 +194,18 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The timestamp of the last modification of the policy.
+     * Sets the lastModifiedDateTime property value. The date and time when the policy was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Returned only on $select.
+     * @param value Value to set for the protectionPolicyArtifactCount property.
+     */
+    public void setProtectionPolicyArtifactCount(@jakarta.annotation.Nullable final ProtectionPolicyArtifactCount value) {
+        this.backingStore.set("protectionPolicyArtifactCount", value);
     }
     /**
      * Sets the retentionSettings property value. Contains the retention setting details for the policy.

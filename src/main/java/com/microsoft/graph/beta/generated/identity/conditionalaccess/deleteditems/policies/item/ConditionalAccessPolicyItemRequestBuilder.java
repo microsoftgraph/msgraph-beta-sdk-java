@@ -1,8 +1,8 @@
-package com.microsoft.graph.beta.policies.mobileappmanagementpolicies.item;
+package com.microsoft.graph.beta.identity.conditionalaccess.deleteditems.policies.item;
 
-import com.microsoft.graph.beta.models.MobilityManagementPolicy;
+import com.microsoft.graph.beta.identity.conditionalaccess.deleteditems.policies.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.beta.models.ConditionalAccessPolicy;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.policies.mobileappmanagementpolicies.item.includedgroups.IncludedGroupsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -17,47 +17,45 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the mobileAppManagementPolicies property of the microsoft.graph.policyRoot entity.
+ * Provides operations to manage the policies property of the microsoft.graph.caPoliciesDeletableRoot entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
+public class ConditionalAccessPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the includedGroups property of the microsoft.graph.mobilityManagementPolicy entity.
-     * @return a {@link IncludedGroupsRequestBuilder}
+     * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public IncludedGroupsRequestBuilder includedGroups() {
-        return new IncludedGroupsRequestBuilder(pathParameters, requestAdapter);
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Instantiates a new {@link MobilityManagementPolicyItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ConditionalAccessPolicyItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public MobilityManagementPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/mobileAppManagementPolicies/{mobilityManagementPolicy%2Did}{?%24expand,%24select}", pathParameters);
+    public ConditionalAccessPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/identity/conditionalAccess/deletedItems/policies/{conditionalAccessPolicy%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new {@link MobilityManagementPolicyItemRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ConditionalAccessPolicyItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public MobilityManagementPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/mobileAppManagementPolicies/{mobilityManagementPolicy%2Did}{?%24expand,%24select}", rawUrl);
+    public ConditionalAccessPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/identity/conditionalAccess/deletedItems/policies/{conditionalAccessPolicy%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a mobilityManagementPolicy object.
+     * Delete navigation property policies for identity
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a mobilityManagementPolicy object.
+     * Delete navigation property policies for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,58 +64,54 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
-     * @return a {@link MobilityManagementPolicy}
+     * Get policies from identity
+     * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public MobilityManagementPolicy get() {
+    public ConditionalAccessPolicy get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
+     * Get policies from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link MobilityManagementPolicy}
+     * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public MobilityManagementPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public ConditionalAccessPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, MobilityManagementPolicy::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object.
+     * Update the navigation property policies in identity
      * @param body The request body
-     * @return a {@link MobilityManagementPolicy}
+     * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public MobilityManagementPolicy patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
+    public ConditionalAccessPolicy patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object.
+     * Update the navigation property policies in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link MobilityManagementPolicy}
+     * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public MobilityManagementPolicy patch(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public ConditionalAccessPolicy patch(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, MobilityManagementPolicy::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Delete a mobilityManagementPolicy object.
+     * Delete navigation property policies for identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +119,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a mobilityManagementPolicy object.
+     * Delete navigation property policies for identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +131,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
+     * Get policies from identity
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +139,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
+     * Get policies from identity
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,22 +151,22 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object.
+     * Update the navigation property policies in identity
      * @param body The request body
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body) {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a mobilityManagementPolicy object.
+     * Update the navigation property policies in identity
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ConditionalAccessPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
@@ -183,12 +177,12 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link MobilityManagementPolicyItemRequestBuilder}
+     * @return a {@link ConditionalAccessPolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MobilityManagementPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public ConditionalAccessPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new MobilityManagementPolicyItemRequestBuilder(rawUrl, requestAdapter);
+        return new ConditionalAccessPolicyItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
@@ -197,7 +191,7 @@ public class MobilityManagementPolicyItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a mobilityManagementPolicy object.
+     * Get policies from identity
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

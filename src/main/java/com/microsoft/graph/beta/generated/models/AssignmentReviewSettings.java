@@ -78,10 +78,11 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("accessReviewTimeoutBehavior", (n) -> { this.setAccessReviewTimeoutBehavior(n.getEnumValue(AccessReviewTimeoutBehavior::forValue)); });
         deserializerMap.put("durationInDays", (n) -> { this.setDurationInDays(n.getIntegerValue()); });
         deserializerMap.put("isAccessRecommendationEnabled", (n) -> { this.setIsAccessRecommendationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isAgenticExperienceEnabled", (n) -> { this.setIsAgenticExperienceEnabled(n.getBooleanValue()); });
         deserializerMap.put("isApprovalJustificationRequired", (n) -> { this.setIsApprovalJustificationRequired(n.getBooleanValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -98,6 +99,14 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
     @jakarta.annotation.Nullable
     public Boolean getIsAccessRecommendationEnabled() {
         return this.backingStore.get("isAccessRecommendationEnabled");
+    }
+    /**
+     * Gets the isAgenticExperienceEnabled property value. The isAgenticExperienceEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsAgenticExperienceEnabled() {
+        return this.backingStore.get("isAgenticExperienceEnabled");
     }
     /**
      * Gets the isApprovalJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
@@ -164,6 +173,7 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
         writer.writeEnumValue("accessReviewTimeoutBehavior", this.getAccessReviewTimeoutBehavior());
         writer.writeIntegerValue("durationInDays", this.getDurationInDays());
         writer.writeBooleanValue("isAccessRecommendationEnabled", this.getIsAccessRecommendationEnabled());
+        writer.writeBooleanValue("isAgenticExperienceEnabled", this.getIsAgenticExperienceEnabled());
         writer.writeBooleanValue("isApprovalJustificationRequired", this.getIsApprovalJustificationRequired());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -208,6 +218,13 @@ public class AssignmentReviewSettings implements AdditionalDataHolder, BackedMod
      */
     public void setIsAccessRecommendationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isAccessRecommendationEnabled", value);
+    }
+    /**
+     * Sets the isAgenticExperienceEnabled property value. The isAgenticExperienceEnabled property
+     * @param value Value to set for the isAgenticExperienceEnabled property.
+     */
+    public void setIsAgenticExperienceEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isAgenticExperienceEnabled", value);
     }
     /**
      * Sets the isApprovalJustificationRequired property value. Specifies whether the reviewer must provide justification for the approval. The default value is true.
