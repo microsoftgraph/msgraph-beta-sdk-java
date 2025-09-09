@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.communications;
 
+import com.microsoft.graph.beta.communications.adhoccalls.AdhocCallsRequestBuilder;
 import com.microsoft.graph.beta.communications.callrecords.CallRecordsRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.CallsRequestBuilder;
 import com.microsoft.graph.beta.communications.getallonlinemeetingmessages.GetAllOnlineMeetingMessagesRequestBuilder;
@@ -28,6 +29,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CommunicationsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the adhocCalls property of the microsoft.graph.cloudCommunications entity.
+     * @return a {@link AdhocCallsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AdhocCallsRequestBuilder adhocCalls() {
+        return new AdhocCallsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
      * @return a {@link CallRecordsRequestBuilder}

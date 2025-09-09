@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -51,6 +52,7 @@ public class HardwareOathTokenAuthenticationMethodDevice extends AuthenticationM
         deserializerMap.put("assignedTo", (n) -> { this.setAssignedTo(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("assignTo", (n) -> { this.setAssignTo(n.getObjectValue(User::createFromDiscriminatorValue)); });
         deserializerMap.put("hashFunction", (n) -> { this.setHashFunction(n.getEnumValue(HardwareOathTokenHashFunction::forValue)); });
+        deserializerMap.put("lastUsedDateTime", (n) -> { this.setLastUsedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("manufacturer", (n) -> { this.setManufacturer(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
         deserializerMap.put("secretKey", (n) -> { this.setSecretKey(n.getStringValue()); });
@@ -66,6 +68,14 @@ public class HardwareOathTokenAuthenticationMethodDevice extends AuthenticationM
     @jakarta.annotation.Nullable
     public HardwareOathTokenHashFunction getHashFunction() {
         return this.backingStore.get("hashFunction");
+    }
+    /**
+     * Gets the lastUsedDateTime property value. The lastUsedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUsedDateTime() {
+        return this.backingStore.get("lastUsedDateTime");
     }
     /**
      * Gets the manufacturer property value. Manufacturer name of the hardware token. Supports $filter (eq).
@@ -125,6 +135,7 @@ public class HardwareOathTokenAuthenticationMethodDevice extends AuthenticationM
         writer.writeObjectValue("assignedTo", this.getAssignedTo());
         writer.writeObjectValue("assignTo", this.getAssignTo());
         writer.writeEnumValue("hashFunction", this.getHashFunction());
+        writer.writeOffsetDateTimeValue("lastUsedDateTime", this.getLastUsedDateTime());
         writer.writeStringValue("manufacturer", this.getManufacturer());
         writer.writeStringValue("model", this.getModel());
         writer.writeStringValue("secretKey", this.getSecretKey());
@@ -152,6 +163,13 @@ public class HardwareOathTokenAuthenticationMethodDevice extends AuthenticationM
      */
     public void setHashFunction(@jakarta.annotation.Nullable final HardwareOathTokenHashFunction value) {
         this.backingStore.set("hashFunction", value);
+    }
+    /**
+     * Sets the lastUsedDateTime property value. The lastUsedDateTime property
+     * @param value Value to set for the lastUsedDateTime property.
+     */
+    public void setLastUsedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUsedDateTime", value);
     }
     /**
      * Sets the manufacturer property value. Manufacturer name of the hardware token. Supports $filter (eq).

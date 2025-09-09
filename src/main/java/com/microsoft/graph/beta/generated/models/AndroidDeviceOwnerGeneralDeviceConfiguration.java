@@ -263,6 +263,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("kioskModeIconSize", (n) -> { this.setKioskModeIconSize(n.getEnumValue(AndroidDeviceOwnerKioskModeIconSize::forValue)); });
         deserializerMap.put("kioskModeLockHomeScreen", (n) -> { this.setKioskModeLockHomeScreen(n.getBooleanValue()); });
         deserializerMap.put("kioskModeManagedFolders", (n) -> { this.setKioskModeManagedFolders(n.getCollectionOfObjectValues(AndroidDeviceOwnerKioskModeManagedFolder::createFromDiscriminatorValue)); });
+        deserializerMap.put("kioskModeManagedHomeScreenAppSettings", (n) -> { this.setKioskModeManagedHomeScreenAppSettings(n.getCollectionOfObjectValues(AndroidDeviceOwnerKioskModeApp::createFromDiscriminatorValue)); });
         deserializerMap.put("kioskModeManagedHomeScreenAutoSignout", (n) -> { this.setKioskModeManagedHomeScreenAutoSignout(n.getBooleanValue()); });
         deserializerMap.put("kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds", (n) -> { this.setKioskModeManagedHomeScreenInactiveSignOutDelayInSeconds(n.getIntegerValue()); });
         deserializerMap.put("kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds", (n) -> { this.setKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds(n.getIntegerValue()); });
@@ -527,6 +528,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @jakarta.annotation.Nullable
     public java.util.List<AndroidDeviceOwnerKioskModeManagedFolder> getKioskModeManagedFolders() {
         return this.backingStore.get("kioskModeManagedFolders");
+    }
+    /**
+     * Gets the kioskModeManagedHomeScreenAppSettings property value. Indicates the list of managed applications and associated settings, which will be applied when android device is run on kiosk mode with Managed Home Screen. This collection can contain a maximum of 500 elements.
+     * @return a {@link java.util.List<AndroidDeviceOwnerKioskModeApp>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AndroidDeviceOwnerKioskModeApp> getKioskModeManagedHomeScreenAppSettings() {
+        return this.backingStore.get("kioskModeManagedHomeScreenAppSettings");
     }
     /**
      * Gets the kioskModeManagedHomeScreenAutoSignout property value. Whether or not to automatically sign-out of MHS and Shared device mode applications after inactive for Managed Home Screen.
@@ -1339,6 +1348,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         writer.writeEnumValue("kioskModeIconSize", this.getKioskModeIconSize());
         writer.writeBooleanValue("kioskModeLockHomeScreen", this.getKioskModeLockHomeScreen());
         writer.writeCollectionOfObjectValues("kioskModeManagedFolders", this.getKioskModeManagedFolders());
+        writer.writeCollectionOfObjectValues("kioskModeManagedHomeScreenAppSettings", this.getKioskModeManagedHomeScreenAppSettings());
         writer.writeBooleanValue("kioskModeManagedHomeScreenAutoSignout", this.getKioskModeManagedHomeScreenAutoSignout());
         writer.writeIntegerValue("kioskModeManagedHomeScreenInactiveSignOutDelayInSeconds", this.getKioskModeManagedHomeScreenInactiveSignOutDelayInSeconds());
         writer.writeIntegerValue("kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds", this.getKioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds());
@@ -1742,6 +1752,13 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      */
     public void setKioskModeManagedFolders(@jakarta.annotation.Nullable final java.util.List<AndroidDeviceOwnerKioskModeManagedFolder> value) {
         this.backingStore.set("kioskModeManagedFolders", value);
+    }
+    /**
+     * Sets the kioskModeManagedHomeScreenAppSettings property value. Indicates the list of managed applications and associated settings, which will be applied when android device is run on kiosk mode with Managed Home Screen. This collection can contain a maximum of 500 elements.
+     * @param value Value to set for the kioskModeManagedHomeScreenAppSettings property.
+     */
+    public void setKioskModeManagedHomeScreenAppSettings(@jakarta.annotation.Nullable final java.util.List<AndroidDeviceOwnerKioskModeApp> value) {
+        this.backingStore.set("kioskModeManagedHomeScreenAppSettings", value);
     }
     /**
      * Sets the kioskModeManagedHomeScreenAutoSignout property value. Whether or not to automatically sign-out of MHS and Shared device mode applications after inactive for Managed Home Screen.

@@ -53,6 +53,14 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         return this.backingStore.get("description");
     }
     /**
+     * Gets the disableEntraGroupPolicyAssignment property value. Indicates whether assignments to Entra security groups is disabled
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getDisableEntraGroupPolicyAssignment() {
+        return this.backingStore.get("disableEntraGroupPolicyAssignment");
+    }
+    /**
      * Gets the displayName property value. Template display name
      * @return a {@link String}
      */
@@ -78,6 +86,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         deserializerMap.put("allowUnmanagedSettings", (n) -> { this.setAllowUnmanagedSettings(n.getBooleanValue()); });
         deserializerMap.put("baseId", (n) -> { this.setBaseId(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("disableEntraGroupPolicyAssignment", (n) -> { this.setDisableEntraGroupPolicyAssignment(n.getBooleanValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("displayVersion", (n) -> { this.setDisplayVersion(n.getStringValue()); });
         deserializerMap.put("lifecycleState", (n) -> { this.setLifecycleState(n.getEnumValue(DeviceManagementTemplateLifecycleState::forValue)); });
@@ -155,6 +164,7 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
         writer.writeBooleanValue("allowUnmanagedSettings", this.getAllowUnmanagedSettings());
         writer.writeStringValue("baseId", this.getBaseId());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeBooleanValue("disableEntraGroupPolicyAssignment", this.getDisableEntraGroupPolicyAssignment());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("displayVersion", this.getDisplayVersion());
         writer.writeEnumValue("lifecycleState", this.getLifecycleState());
@@ -183,6 +193,13 @@ public class DeviceManagementConfigurationPolicyTemplate extends Entity implemen
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
+    }
+    /**
+     * Sets the disableEntraGroupPolicyAssignment property value. Indicates whether assignments to Entra security groups is disabled
+     * @param value Value to set for the disableEntraGroupPolicyAssignment property.
+     */
+    public void setDisableEntraGroupPolicyAssignment(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("disableEntraGroupPolicyAssignment", value);
     }
     /**
      * Sets the displayName property value. Template display name

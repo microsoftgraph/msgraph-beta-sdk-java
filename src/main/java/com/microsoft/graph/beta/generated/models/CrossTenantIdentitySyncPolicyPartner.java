@@ -1,28 +1,19 @@
 package com.microsoft.graph.beta.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import com.microsoft.kiota.store.BackedModel;
-import com.microsoft.kiota.store.BackingStore;
-import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, BackedModel, Parsable {
-    /**
-     * Stores model information.
-     */
-    @jakarta.annotation.Nonnull
-    protected BackingStore backingStore;
+public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem implements Parsable {
     /**
      * Instantiates a new {@link CrossTenantIdentitySyncPolicyPartner} and sets the default values.
      */
     public CrossTenantIdentitySyncPolicyPartner() {
-        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
-        this.setAdditionalData(new HashMap<>());
+        super();
+        this.setOdataType("#microsoft.graph.crossTenantIdentitySyncPolicyPartner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,27 +24,6 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
     public static CrossTenantIdentitySyncPolicyPartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CrossTenantIdentitySyncPolicyPartner();
-    }
-    /**
-     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a {@link Map<String, Object>}
-     */
-    @jakarta.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        Map<String, Object> value = this.backingStore.get("additionalData");
-        if(value == null) {
-            value = new HashMap<>();
-            this.setAdditionalData(value);
-        }
-        return value;
-    }
-    /**
-     * Gets the backingStore property value. Stores model information.
-     * @return a {@link BackingStore}
-     */
-    @jakarta.annotation.Nonnull
-    public BackingStore getBackingStore() {
-        return this.backingStore;
     }
     /**
      * Gets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
@@ -77,21 +47,12 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("externalCloudAuthorizedApplicationId", (n) -> { this.setExternalCloudAuthorizedApplicationId(n.getStringValue()); });
-        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("userSyncInbound", (n) -> { this.setUserSyncInbound(n.getObjectValue(CrossTenantUserSyncInbound::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getOdataType() {
-        return this.backingStore.get("odataType");
     }
     /**
      * Gets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Read-only.
@@ -115,27 +76,11 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("externalCloudAuthorizedApplicationId", this.getExternalCloudAuthorizedApplicationId());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeObjectValue("userSyncInbound", this.getUserSyncInbound());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     */
-    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.backingStore.set("additionalData", value);
-    }
-    /**
-     * Sets the backingStore property value. Stores model information.
-     * @param value Value to set for the backingStore property.
-     */
-    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
-        Objects.requireNonNull(value);
-        this.backingStore = value;
     }
     /**
      * Sets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
@@ -150,13 +95,6 @@ public class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolde
      */
     public void setExternalCloudAuthorizedApplicationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("externalCloudAuthorizedApplicationId", value);
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the @odata.type property.
-     */
-    public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Read-only.

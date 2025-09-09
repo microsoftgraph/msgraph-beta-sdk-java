@@ -82,7 +82,7 @@ public class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseR
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A collection of structured question-and-answer (Q&amp;A) thread in Teams directly associated with online meetings.
+     * A collection of structured question-and-answer (Q&amp;A) threads in Teams directly associated with online meetings.
      * @return a {@link OnlineMeetingEngagementConversation}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -91,7 +91,7 @@ public class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseR
         return get(null);
     }
     /**
-     * A collection of structured question-and-answer (Q&amp;A) thread in Teams directly associated with online meetings.
+     * A collection of structured question-and-answer (Q&amp;A) threads in Teams directly associated with online meetings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OnlineMeetingEngagementConversation}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -149,7 +149,7 @@ public class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseR
         return requestInfo;
     }
     /**
-     * A collection of structured question-and-answer (Q&amp;A) thread in Teams directly associated with online meetings.
+     * A collection of structured question-and-answer (Q&amp;A) threads in Teams directly associated with online meetings.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -157,7 +157,7 @@ public class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseR
         return toGetRequestInformation(null);
     }
     /**
-     * A collection of structured question-and-answer (Q&amp;A) thread in Teams directly associated with online meetings.
+     * A collection of structured question-and-answer (Q&amp;A) threads in Teams directly associated with online meetings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -209,7 +209,7 @@ public class OnlineMeetingEngagementConversationItemRequestBuilder extends BaseR
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A collection of structured question-and-answer (Q&amp;A) thread in Teams directly associated with online meetings.
+     * A collection of structured question-and-answer (Q&amp;A) threads in Teams directly associated with online meetings.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

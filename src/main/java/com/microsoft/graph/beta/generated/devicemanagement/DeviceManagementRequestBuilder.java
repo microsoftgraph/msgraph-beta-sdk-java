@@ -123,7 +123,6 @@ import com.microsoft.graph.beta.devicemanagement.sendcustomnotificationtocompany
 import com.microsoft.graph.beta.devicemanagement.servicenowconnections.ServiceNowConnectionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.settingdefinitions.SettingDefinitionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.softwareupdatestatussummary.SoftwareUpdateStatusSummaryRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.telecomexpensemanagementpartners.TelecomExpenseManagementPartnersRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.templateinsights.TemplateInsightsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.templates.TemplatesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.templatesettings.TemplateSettingsRequestBuilder;
@@ -1148,14 +1147,6 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SoftwareUpdateStatusSummaryRequestBuilder softwareUpdateStatusSummary() {
         return new SoftwareUpdateStatusSummaryRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link TelecomExpenseManagementPartnersRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public TelecomExpenseManagementPartnersRequestBuilder telecomExpenseManagementPartners() {
-        return new TelecomExpenseManagementPartnersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the templateInsights property of the microsoft.graph.deviceManagement entity.

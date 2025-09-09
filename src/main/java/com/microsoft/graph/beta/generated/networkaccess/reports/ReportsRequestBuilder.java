@@ -6,11 +6,14 @@ import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkacces
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessdestinationreportwithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessdevicereportwithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessentitiessummarieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetapplicationusageanalyticswithstartdatetimewithenddatetimewithaggregatedby.MicrosoftGraphNetworkaccessGetApplicationUsageAnalyticsWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetcloudapplicationreportwithstartdatetimewithenddatetimeuseriduserid.MicrosoftGraphNetworkaccessGetCloudApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetconnectionsummarieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessGetConnectionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetcrosstenantsummarywithstartdatetimewithenddatetimewithdiscoverypivotdatetime.MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWithEndDateTimeWithDiscoveryPivotDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetdestinationsummarieswithstartdatetimewithenddatetimewithaggregatedby.MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetdeviceusagesummarywithstartdatetimewithenddatetimewithactivitypivotdatetime.MicrosoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWithEndDateTimeWithActivityPivotDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetdiscoveredapplicationsegmentreportwithstartdatetimewithenddatetimeuseriduserid.MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetenterpriseapplicationreportwithstartdatetimewithenddatetimeuseriduserid.MicrosoftGraphNetworkaccessGetEnterpriseApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccesstransactionsummarieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessTransactionSummariesWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessusageprofilingwithstartdatetimewithenddatetimewithaggregatedbydiscoveredapplicationsegmentiddiscoveredapplicationsegmentidapplicationidapplicationid.MicrosoftGraphNetworkaccessUsageProfilingWithStartDateTimeWithEndDateTimeWithAggregatedBydiscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessuserreportwithstartdatetimewithenddatetimediscoveredapplicationsegmentiddiscoveredapplicationsegmentidapplicationidapplicationid.MicrosoftGraphNetworkaccessUserReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdApplicationIdApplicationIdRequestBuilder;
@@ -139,6 +142,32 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
+     * Provides operations to call the getApplicationUsageAnalytics method.
+     * @param aggregatedBy Usage: aggregatedBy=&apos;{aggregatedBy}&apos;
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
+     * @return a {@link MicrosoftGraphNetworkaccessGetApplicationUsageAnalyticsWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphNetworkaccessGetApplicationUsageAnalyticsWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder microsoftGraphNetworkaccessGetApplicationUsageAnalyticsWithStartDateTimeWithEndDateTimeWithAggregatedBy(@jakarta.annotation.Nonnull final String aggregatedBy, @jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+        Objects.requireNonNull(aggregatedBy);
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(startDateTime);
+        return new MicrosoftGraphNetworkaccessGetApplicationUsageAnalyticsWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder(pathParameters, requestAdapter, aggregatedBy, endDateTime, startDateTime);
+    }
+    /**
+     * Provides operations to call the getCloudApplicationReport method.
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
+     * @return a {@link MicrosoftGraphNetworkaccessGetCloudApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphNetworkaccessGetCloudApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder microsoftGraphNetworkaccessGetCloudApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserId(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(startDateTime);
+        return new MicrosoftGraphNetworkaccessGetCloudApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
+    }
+    /**
      * Provides operations to call the getConnectionSummaries method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
@@ -203,6 +232,18 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
         return new MicrosoftGraphNetworkaccessGetDiscoveredApplicationSegmentReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
+    }
+    /**
+     * Provides operations to call the getEnterpriseApplicationReport method.
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
+     * @return a {@link MicrosoftGraphNetworkaccessGetEnterpriseApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphNetworkaccessGetEnterpriseApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder microsoftGraphNetworkaccessGetEnterpriseApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserId(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(startDateTime);
+        return new MicrosoftGraphNetworkaccessGetEnterpriseApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Provides operations to call the transactionSummaries method.

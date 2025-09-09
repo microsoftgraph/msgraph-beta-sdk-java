@@ -36,7 +36,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
         return deserializerMap;
     }
     /**
-     * Gets the maximumCount property value. Maximum number of setting group count in the collection
+     * Gets the maximumCount property value. Maximum number of setting group count in the collection. Valid values 1 to 100
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
         return this.backingStore.get("maximumCount");
     }
     /**
-     * Gets the minimumCount property value. Minimum number of setting group count in the collection
+     * Gets the minimumCount property value. Minimum number of setting group count in the collection. Valid values 1 to 100
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class DeviceManagementConfigurationSettingGroupCollectionDefinition exten
         writer.writeIntegerValue("minimumCount", this.getMinimumCount());
     }
     /**
-     * Sets the maximumCount property value. Maximum number of setting group count in the collection
+     * Sets the maximumCount property value. Maximum number of setting group count in the collection. Valid values 1 to 100
      * @param value Value to set for the maximumCount property.
      */
     public void setMaximumCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("maximumCount", value);
     }
     /**
-     * Sets the minimumCount property value. Minimum number of setting group count in the collection
+     * Sets the minimumCount property value. Minimum number of setting group count in the collection. Valid values 1 to 100
      * @param value Value to set for the minimumCount property.
      */
     public void setMinimumCount(@jakarta.annotation.Nullable final Integer value) {
