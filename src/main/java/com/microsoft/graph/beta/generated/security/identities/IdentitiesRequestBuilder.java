@@ -4,6 +4,8 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.IdentityContainer;
 import com.microsoft.graph.beta.security.identities.healthissues.HealthIssuesRequestBuilder;
 import com.microsoft.graph.beta.security.identities.identityaccounts.IdentityAccountsRequestBuilder;
+import com.microsoft.graph.beta.security.identities.sensorcandidateactivationconfiguration.SensorCandidateActivationConfigurationRequestBuilder;
+import com.microsoft.graph.beta.security.identities.sensorcandidates.SensorCandidatesRequestBuilder;
 import com.microsoft.graph.beta.security.identities.sensors.SensorsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -38,6 +40,22 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public IdentityAccountsRequestBuilder identityAccounts() {
         return new IdentityAccountsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sensorCandidateActivationConfiguration property of the microsoft.graph.security.identityContainer entity.
+     * @return a {@link SensorCandidateActivationConfigurationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SensorCandidateActivationConfigurationRequestBuilder sensorCandidateActivationConfiguration() {
+        return new SensorCandidateActivationConfigurationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sensorCandidates property of the microsoft.graph.security.identityContainer entity.
+     * @return a {@link SensorCandidatesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SensorCandidatesRequestBuilder sensorCandidates() {
+        return new SensorCandidatesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sensors property of the microsoft.graph.security.identityContainer entity.

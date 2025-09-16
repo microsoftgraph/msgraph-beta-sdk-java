@@ -101,7 +101,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(27);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(28);
         deserializerMap.put("alternateUrl", (n) -> { this.setAlternateUrl(n.getStringValue()); });
         deserializerMap.put("applicationServerTimeout", (n) -> { this.setApplicationServerTimeout(n.getStringValue()); });
         deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getStringValue()); });
@@ -110,6 +110,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("internalUrl", (n) -> { this.setInternalUrl(n.getStringValue()); });
         deserializerMap.put("isAccessibleViaZTNAClient", (n) -> { this.setIsAccessibleViaZTNAClient(n.getBooleanValue()); });
         deserializerMap.put("isBackendCertificateValidationEnabled", (n) -> { this.setIsBackendCertificateValidationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isContinuousAccessEvaluationEnabled", (n) -> { this.setIsContinuousAccessEvaluationEnabled(n.getBooleanValue()); });
         deserializerMap.put("isDnsResolutionEnabled", (n) -> { this.setIsDnsResolutionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isHttpOnlyCookieEnabled", (n) -> { this.setIsHttpOnlyCookieEnabled(n.getBooleanValue()); });
         deserializerMap.put("isOnPremPublishingEnabled", (n) -> { this.setIsOnPremPublishingEnabled(n.getBooleanValue()); });
@@ -154,6 +155,14 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nullable
     public Boolean getIsBackendCertificateValidationEnabled() {
         return this.backingStore.get("isBackendCertificateValidationEnabled");
+    }
+    /**
+     * Gets the isContinuousAccessEvaluationEnabled property value. Indicates whether continuous access evaluation is enabled for Application Proxy application. For all Application Proxy apps, the property is set to true by default.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsContinuousAccessEvaluationEnabled() {
+        return this.backingStore.get("isContinuousAccessEvaluationEnabled");
     }
     /**
      * Gets the isDnsResolutionEnabled property value. Indicates Microsoft Entra Private Access should handle DNS resolution. false by default.
@@ -321,6 +330,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         writer.writeStringValue("internalUrl", this.getInternalUrl());
         writer.writeBooleanValue("isAccessibleViaZTNAClient", this.getIsAccessibleViaZTNAClient());
         writer.writeBooleanValue("isBackendCertificateValidationEnabled", this.getIsBackendCertificateValidationEnabled());
+        writer.writeBooleanValue("isContinuousAccessEvaluationEnabled", this.getIsContinuousAccessEvaluationEnabled());
         writer.writeBooleanValue("isDnsResolutionEnabled", this.getIsDnsResolutionEnabled());
         writer.writeBooleanValue("isHttpOnlyCookieEnabled", this.getIsHttpOnlyCookieEnabled());
         writer.writeBooleanValue("isOnPremPublishingEnabled", this.getIsOnPremPublishingEnabled());
@@ -412,6 +422,13 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
      */
     public void setIsBackendCertificateValidationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isBackendCertificateValidationEnabled", value);
+    }
+    /**
+     * Sets the isContinuousAccessEvaluationEnabled property value. Indicates whether continuous access evaluation is enabled for Application Proxy application. For all Application Proxy apps, the property is set to true by default.
+     * @param value Value to set for the isContinuousAccessEvaluationEnabled property.
+     */
+    public void setIsContinuousAccessEvaluationEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isContinuousAccessEvaluationEnabled", value);
     }
     /**
      * Sets the isDnsResolutionEnabled property value. Indicates Microsoft Entra Private Access should handle DNS resolution. false by default.

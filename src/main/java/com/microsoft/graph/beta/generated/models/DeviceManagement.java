@@ -676,7 +676,6 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("softwareUpdateStatusSummary", (n) -> { this.setSoftwareUpdateStatusSummary(n.getObjectValue(SoftwareUpdateStatusSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getEnumSetValue(DeviceManagementSubscriptions::forValue)); });
         deserializerMap.put("subscriptionState", (n) -> { this.setSubscriptionState(n.getEnumValue(DeviceManagementSubscriptionState::forValue)); });
-        deserializerMap.put("telecomExpenseManagementPartners", (n) -> { this.setTelecomExpenseManagementPartners(n.getCollectionOfObjectValues(TelecomExpenseManagementPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("templateInsights", (n) -> { this.setTemplateInsights(n.getCollectionOfObjectValues(DeviceManagementTemplateInsightsDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("templates", (n) -> { this.setTemplates(n.getCollectionOfObjectValues(DeviceManagementTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("templateSettings", (n) -> { this.setTemplateSettings(n.getCollectionOfObjectValues(DeviceManagementConfigurationSettingTemplate::createFromDiscriminatorValue)); });
@@ -1196,14 +1195,6 @@ public class DeviceManagement extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public DeviceManagementSubscriptionState getSubscriptionState() {
         return this.backingStore.get("subscriptionState");
-    }
-    /**
-     * Gets the telecomExpenseManagementPartners property value. The telecom expense management partners.
-     * @return a {@link java.util.List<TelecomExpenseManagementPartner>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<TelecomExpenseManagementPartner> getTelecomExpenseManagementPartners() {
-        return this.backingStore.get("telecomExpenseManagementPartners");
     }
     /**
      * Gets the templateInsights property value. List of setting insights in a template
@@ -1890,7 +1881,6 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeObjectValue("softwareUpdateStatusSummary", this.getSoftwareUpdateStatusSummary());
         writer.writeEnumSetValue("subscriptions", this.getSubscriptions());
         writer.writeEnumValue("subscriptionState", this.getSubscriptionState());
-        writer.writeCollectionOfObjectValues("telecomExpenseManagementPartners", this.getTelecomExpenseManagementPartners());
         writer.writeCollectionOfObjectValues("templateInsights", this.getTemplateInsights());
         writer.writeCollectionOfObjectValues("templates", this.getTemplates());
         writer.writeCollectionOfObjectValues("templateSettings", this.getTemplateSettings());
@@ -2807,13 +2797,6 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setSubscriptionState(@jakarta.annotation.Nullable final DeviceManagementSubscriptionState value) {
         this.backingStore.set("subscriptionState", value);
-    }
-    /**
-     * Sets the telecomExpenseManagementPartners property value. The telecom expense management partners.
-     * @param value Value to set for the telecomExpenseManagementPartners property.
-     */
-    public void setTelecomExpenseManagementPartners(@jakarta.annotation.Nullable final java.util.List<TelecomExpenseManagementPartner> value) {
-        this.backingStore.set("telecomExpenseManagementPartners", value);
     }
     /**
      * Sets the templateInsights property value. List of setting insights in a template

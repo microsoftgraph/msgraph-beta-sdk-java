@@ -186,7 +186,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("sharepoint");
     }
     /**
-     * Gets the teams property value. Represents a collection of user configurations.
+     * Gets the teams property value. A container for all Teams telephone number management functionalities and user configurations.
      * @return a {@link TeamsAdminRoot}
      */
     @jakarta.annotation.Nullable
@@ -340,7 +340,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("sharepoint", value);
     }
     /**
-     * Sets the teams property value. Represents a collection of user configurations.
+     * Sets the teams property value. A container for all Teams telephone number management functionalities and user configurations.
      * @param value Value to set for the teams property.
      */
     public void setTeams(@jakarta.annotation.Nullable final TeamsAdminRoot value) {

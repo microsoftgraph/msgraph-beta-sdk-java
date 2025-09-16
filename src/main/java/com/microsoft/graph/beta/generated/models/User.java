@@ -53,6 +53,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("activities");
     }
     /**
+     * Gets the adhocCalls property value. Ad hoc calls associated with the user. Read-only. Nullable.
+     * @return a {@link java.util.List<AdhocCall>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AdhocCall> getAdhocCalls() {
+        return this.backingStore.get("adhocCalls");
+    }
+    /**
      * Gets the ageGroup property value. Sets the age group of the user. Allowed values: null, Minor, NotAdult, and Adult. For more information, see legal age group property definitions. Supports $filter (eq, ne, not, and in).
      * @return a {@link String}
      */
@@ -502,6 +510,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("aboutMe", (n) -> { this.setAboutMe(n.getStringValue()); });
         deserializerMap.put("accountEnabled", (n) -> { this.setAccountEnabled(n.getBooleanValue()); });
         deserializerMap.put("activities", (n) -> { this.setActivities(n.getCollectionOfObjectValues(UserActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("adhocCalls", (n) -> { this.setAdhocCalls(n.getCollectionOfObjectValues(AdhocCall::createFromDiscriminatorValue)); });
         deserializerMap.put("ageGroup", (n) -> { this.setAgeGroup(n.getStringValue()); });
         deserializerMap.put("agreementAcceptances", (n) -> { this.setAgreementAcceptances(n.getCollectionOfObjectValues(AgreementAcceptance::createFromDiscriminatorValue)); });
         deserializerMap.put("analytics", (n) -> { this.setAnalytics(n.getObjectValue(UserAnalytics::createFromDiscriminatorValue)); });
@@ -1478,6 +1487,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("aboutMe", this.getAboutMe());
         writer.writeBooleanValue("accountEnabled", this.getAccountEnabled());
         writer.writeCollectionOfObjectValues("activities", this.getActivities());
+        writer.writeCollectionOfObjectValues("adhocCalls", this.getAdhocCalls());
         writer.writeStringValue("ageGroup", this.getAgeGroup());
         writer.writeCollectionOfObjectValues("agreementAcceptances", this.getAgreementAcceptances());
         writer.writeObjectValue("analytics", this.getAnalytics());
@@ -1655,6 +1665,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setActivities(@jakarta.annotation.Nullable final java.util.List<UserActivity> value) {
         this.backingStore.set("activities", value);
+    }
+    /**
+     * Sets the adhocCalls property value. Ad hoc calls associated with the user. Read-only. Nullable.
+     * @param value Value to set for the adhocCalls property.
+     */
+    public void setAdhocCalls(@jakarta.annotation.Nullable final java.util.List<AdhocCall> value) {
+        this.backingStore.set("adhocCalls", value);
     }
     /**
      * Sets the ageGroup property value. Sets the age group of the user. Allowed values: null, Minor, NotAdult, and Adult. For more information, see legal age group property definitions. Supports $filter (eq, ne, not, and in).

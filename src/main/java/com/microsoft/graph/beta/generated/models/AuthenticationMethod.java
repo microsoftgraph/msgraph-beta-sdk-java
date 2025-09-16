@@ -60,7 +60,16 @@ public class AuthenticationMethod extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("lastUsedDateTime", (n) -> { this.setLastUsedDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lastUsedDateTime property value. The lastUsedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastUsedDateTime() {
+        return this.backingStore.get("lastUsedDateTime");
     }
     /**
      * Serializes information the current object
@@ -70,6 +79,7 @@ public class AuthenticationMethod extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeOffsetDateTimeValue("lastUsedDateTime", this.getLastUsedDateTime());
     }
     /**
      * Sets the createdDateTime property value. The date and time the authentication method was registered to the user. Read-only. Optional. This optional value is null if the authentication method doesn&apos;t populate it. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
@@ -77,5 +87,12 @@ public class AuthenticationMethod extends Entity implements Parsable {
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the lastUsedDateTime property value. The lastUsedDateTime property
+     * @param value Value to set for the lastUsedDateTime property.
+     */
+    public void setLastUsedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastUsedDateTime", value);
     }
 }
