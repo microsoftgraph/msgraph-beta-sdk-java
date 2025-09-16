@@ -44,8 +44,18 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("className", (n) -> { this.setClassName(n.getStringValue()); });
+        deserializerMap.put("offlineAppAccessEnabled", (n) -> { this.setOfflineAppAccessEnabled(n.getBooleanValue()); });
         deserializerMap.put("package", (n) -> { this.setPackage(n.getStringValue()); });
+        deserializerMap.put("preSignInAppAccessEnabled", (n) -> { this.setPreSignInAppAccessEnabled(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the offlineAppAccessEnabled property value. Indicates whether the application can be used when sign in fails due to network issues in Managed Home Screen. When TRUE, indicates the application can be used when sign in fails due to network issues in Managed Home Screen. When FALSE, indicates the application cannot be used when sign in fails due to network issues in Managed Home Screen. Default value is FALSE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getOfflineAppAccessEnabled() {
+        return this.backingStore.get("offlineAppAccessEnabled");
     }
     /**
      * Gets the package property value. Package name of application
@@ -56,6 +66,14 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
         return this.backingStore.get("package");
     }
     /**
+     * Gets the preSignInAppAccessEnabled property value. Indicates whether the application can be used prior to signing in to the Managed Home Screen. When TRUE, indicates the app can be used prior to sign in for Managed Home Screen. When FALSE, indicates the app cannot be used prior to sign in for Managed Home Screen. Default value is FALSE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getPreSignInAppAccessEnabled() {
+        return this.backingStore.get("preSignInAppAccessEnabled");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -63,7 +81,9 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("className", this.getClassName());
+        writer.writeBooleanValue("offlineAppAccessEnabled", this.getOfflineAppAccessEnabled());
         writer.writeStringValue("package", this.getPackage());
+        writer.writeBooleanValue("preSignInAppAccessEnabled", this.getPreSignInAppAccessEnabled());
     }
     /**
      * Sets the className property value. Class name of application
@@ -73,10 +93,24 @@ public class AndroidDeviceOwnerKioskModeApp extends AndroidDeviceOwnerKioskModeF
         this.backingStore.set("className", value);
     }
     /**
+     * Sets the offlineAppAccessEnabled property value. Indicates whether the application can be used when sign in fails due to network issues in Managed Home Screen. When TRUE, indicates the application can be used when sign in fails due to network issues in Managed Home Screen. When FALSE, indicates the application cannot be used when sign in fails due to network issues in Managed Home Screen. Default value is FALSE.
+     * @param value Value to set for the offlineAppAccessEnabled property.
+     */
+    public void setOfflineAppAccessEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("offlineAppAccessEnabled", value);
+    }
+    /**
      * Sets the package property value. Package name of application
      * @param value Value to set for the package property.
      */
     public void setPackage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("package", value);
+    }
+    /**
+     * Sets the preSignInAppAccessEnabled property value. Indicates whether the application can be used prior to signing in to the Managed Home Screen. When TRUE, indicates the app can be used prior to sign in for Managed Home Screen. When FALSE, indicates the app cannot be used prior to sign in for Managed Home Screen. Default value is FALSE.
+     * @param value Value to set for the preSignInAppAccessEnabled property.
+     */
+    public void setPreSignInAppAccessEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("preSignInAppAccessEnabled", value);
     }
 }

@@ -56,7 +56,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the blockAzureADGraphAccess property value. If false, allows the app to have extended access to Azure AD Graph until June 30, 2025 when Azure AD Graph is fully retired. For more information on Azure AD retirement updates, see June 2024 update on Azure AD Graph API retirement.
+     * Gets the blockAzureADGraphAccess property value. If false, allows the app to have extended access to Azure AD Graph until August 31, 2025 when Azure AD Graph is fully retired. For more information on Azure AD retirement updates, see June 2024 update on Azure AD Graph API retirement.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class AuthenticationBehaviors implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the blockAzureADGraphAccess property value. If false, allows the app to have extended access to Azure AD Graph until June 30, 2025 when Azure AD Graph is fully retired. For more information on Azure AD retirement updates, see June 2024 update on Azure AD Graph API retirement.
+     * Sets the blockAzureADGraphAccess property value. If false, allows the app to have extended access to Azure AD Graph until August 31, 2025 when Azure AD Graph is fully retired. For more information on Azure AD retirement updates, see June 2024 update on Azure AD Graph API retirement.
      * @param value Value to set for the blockAzureADGraphAccess property.
      */
     public void setBlockAzureADGraphAccess(@jakarta.annotation.Nullable final Boolean value) {

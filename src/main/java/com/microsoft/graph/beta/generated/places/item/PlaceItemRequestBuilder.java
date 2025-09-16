@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.places.item;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Place;
+import com.microsoft.graph.beta.places.item.checkins.CheckInsRequestBuilder;
 import com.microsoft.graph.beta.places.item.descendants.DescendantsRequestBuilder;
 import com.microsoft.graph.beta.places.item.graphroom.GraphRoomRequestBuilder;
 import com.microsoft.graph.beta.places.item.graphroomlist.GraphRoomListRequestBuilder;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlaceItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the checkIns property of the microsoft.graph.place entity.
+     * @return a {@link CheckInsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CheckInsRequestBuilder checkIns() {
+        return new CheckInsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the descendants method.
      * @return a {@link DescendantsRequestBuilder}

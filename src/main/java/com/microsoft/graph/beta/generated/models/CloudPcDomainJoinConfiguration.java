@@ -69,14 +69,23 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("domainJoinType", (n) -> { this.setDomainJoinType(n.getEnumValue(CloudPcDomainJoinType::forValue)); });
+        deserializerMap.put("geographicLocationType", (n) -> { this.setGeographicLocationType(n.getEnumValue(CloudPcGeographicLocationType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("onPremisesConnectionId", (n) -> { this.setOnPremisesConnectionId(n.getStringValue()); });
         deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcRegionGroup::forValue)); });
         deserializerMap.put("regionName", (n) -> { this.setRegionName(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CloudPcDomainJoinType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the geographicLocationType property value. The geographic location where the region is located. Possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * @return a {@link CloudPcGeographicLocationType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcGeographicLocationType getGeographicLocationType() {
+        return this.backingStore.get("geographicLocationType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -125,6 +134,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("domainJoinType", this.getDomainJoinType());
+        writer.writeEnumValue("geographicLocationType", this.getGeographicLocationType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("onPremisesConnectionId", this.getOnPremisesConnectionId());
         writer.writeEnumValue("regionGroup", this.getRegionGroup());
@@ -153,6 +163,13 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
      */
     public void setDomainJoinType(@jakarta.annotation.Nullable final CloudPcDomainJoinType value) {
         this.backingStore.set("domainJoinType", value);
+    }
+    /**
+     * Sets the geographicLocationType property value. The geographic location where the region is located. Possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * @param value Value to set for the geographicLocationType property.
+     */
+    public void setGeographicLocationType(@jakarta.annotation.Nullable final CloudPcGeographicLocationType value) {
+        this.backingStore.set("geographicLocationType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

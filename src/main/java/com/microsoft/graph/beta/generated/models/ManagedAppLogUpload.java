@@ -64,21 +64,12 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
-        deserializerMap.put("managedAppComponent", (n) -> { this.setManagedAppComponent(n.getStringValue()); });
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("managedAppComponentDescription", (n) -> { this.setManagedAppComponentDescription(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("referenceId", (n) -> { this.setReferenceId(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ManagedAppLogUploadState::forValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the managedAppComponent property value. The Mobile Application Management (MAM) Logs Uploading Component. Such components can be the application itself, the MAM SDK, and other on-device components that are capable of uploading diagnostic logs. Read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getManagedAppComponent() {
-        return this.backingStore.get("managedAppComponent");
     }
     /**
      * Gets the managedAppComponentDescription property value. The Mobile Application Management (MAM) Logs Uploading Component. Such components can be the application itself, the MAM SDK, and other on-device components that are capable of uploading diagnostic logs. Read-only.
@@ -118,7 +109,6 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("managedAppComponent", this.getManagedAppComponent());
         writer.writeStringValue("managedAppComponentDescription", this.getManagedAppComponentDescription());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("referenceId", this.getReferenceId());
@@ -139,13 +129,6 @@ public class ManagedAppLogUpload implements AdditionalDataHolder, BackedModel, P
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
-    }
-    /**
-     * Sets the managedAppComponent property value. The Mobile Application Management (MAM) Logs Uploading Component. Such components can be the application itself, the MAM SDK, and other on-device components that are capable of uploading diagnostic logs. Read-only.
-     * @param value Value to set for the managedAppComponent property.
-     */
-    public void setManagedAppComponent(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("managedAppComponent", value);
     }
     /**
      * Sets the managedAppComponentDescription property value. The Mobile Application Management (MAM) Logs Uploading Component. Such components can be the application itself, the MAM SDK, and other on-device components that are capable of uploading diagnostic logs. Read-only.

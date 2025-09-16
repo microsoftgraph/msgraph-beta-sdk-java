@@ -83,6 +83,14 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
+     * Gets the cloudApplicationMetadata property value. Contains metadata about the cloud application involved in the network transaction, such as application name, category, and risk level. Supports $filter (eq) and $orderby.
+     * @return a {@link CloudApplicationMetadata}
+     */
+    @jakarta.annotation.Nullable
+    public CloudApplicationMetadata getCloudApplicationMetadata() {
+        return this.backingStore.get("cloudApplicationMetadata");
+    }
+    /**
      * Gets the connectionId property value. Represents a unique identifier assigned to a connection. Supports $filter (eq) and $orderby.
      * @return a {@link String}
      */
@@ -192,10 +200,11 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(47);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(48);
         deserializerMap.put("action", (n) -> { this.setAction(n.getEnumValue(FilteringPolicyAction::forValue)); });
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
         deserializerMap.put("applicationSnapshot", (n) -> { this.setApplicationSnapshot(n.getObjectValue(ApplicationSnapshot::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudApplicationMetadata", (n) -> { this.setCloudApplicationMetadata(n.getObjectValue(CloudApplicationMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("connectionId", (n) -> { this.setConnectionId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -499,6 +508,7 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
         writer.writeEnumValue("action", this.getAction());
         writer.writeStringValue("agentVersion", this.getAgentVersion());
         writer.writeObjectValue("applicationSnapshot", this.getApplicationSnapshot());
+        writer.writeObjectValue("cloudApplicationMetadata", this.getCloudApplicationMetadata());
         writer.writeStringValue("connectionId", this.getConnectionId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("description", this.getDescription());
@@ -580,6 +590,13 @@ public class NetworkAccessTraffic implements AdditionalDataHolder, BackedModel, 
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the cloudApplicationMetadata property value. Contains metadata about the cloud application involved in the network transaction, such as application name, category, and risk level. Supports $filter (eq) and $orderby.
+     * @param value Value to set for the cloudApplicationMetadata property.
+     */
+    public void setCloudApplicationMetadata(@jakarta.annotation.Nullable final CloudApplicationMetadata value) {
+        this.backingStore.set("cloudApplicationMetadata", value);
     }
     /**
      * Sets the connectionId property value. Represents a unique identifier assigned to a connection. Supports $filter (eq) and $orderby.

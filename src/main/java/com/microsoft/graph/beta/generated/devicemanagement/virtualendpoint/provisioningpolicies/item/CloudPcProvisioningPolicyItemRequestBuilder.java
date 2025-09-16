@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpol
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.retrievepolicyapplyactionresult.RetrievePolicyApplyActionResultRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.retrievepolicyapplyschedule.RetrievePolicyApplyScheduleRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.retry.RetryRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.schedulepolicyapplytask.SchedulePolicyApplyTaskRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcProvisioningPolicy;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -65,6 +66,14 @@ public class CloudPcProvisioningPolicyItemRequestBuilder extends BaseRequestBuil
     @jakarta.annotation.Nonnull
     public RetrievePolicyApplyScheduleRequestBuilder retrievePolicyApplySchedule() {
         return new RetrievePolicyApplyScheduleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retry method.
+     * @return a {@link RetryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetryRequestBuilder retry() {
+        return new RetryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the schedulePolicyApplyTask method.

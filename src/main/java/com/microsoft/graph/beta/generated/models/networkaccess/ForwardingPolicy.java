@@ -32,8 +32,17 @@ public class ForwardingPolicy extends Policy implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("privateAccessAppId", (n) -> { this.setPrivateAccessAppId(n.getStringValue()); });
         deserializerMap.put("trafficForwardingType", (n) -> { this.setTrafficForwardingType(n.getEnumValue(TrafficForwardingType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the privateAccessAppId property value. The privateAccessAppId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPrivateAccessAppId() {
+        return this.backingStore.get("privateAccessAppId");
     }
     /**
      * Gets the trafficForwardingType property value. The trafficForwardingType property
@@ -50,7 +59,15 @@ public class ForwardingPolicy extends Policy implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("privateAccessAppId", this.getPrivateAccessAppId());
         writer.writeEnumValue("trafficForwardingType", this.getTrafficForwardingType());
+    }
+    /**
+     * Sets the privateAccessAppId property value. The privateAccessAppId property
+     * @param value Value to set for the privateAccessAppId property.
+     */
+    public void setPrivateAccessAppId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("privateAccessAppId", value);
     }
     /**
      * Sets the trafficForwardingType property value. The trafficForwardingType property

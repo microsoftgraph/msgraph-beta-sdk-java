@@ -77,6 +77,7 @@ import com.microsoft.graph.beta.devicemanagement.reports.retrieveappleosupdatefa
 import com.microsoft.graph.beta.devicemanagement.reports.retrievecloudpkileafcertificatereport.RetrieveCloudPkiLeafCertificateReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievecloudpkileafcertificatesummaryreport.RetrieveCloudPkiLeafCertificateSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievedeviceappinstallationstatusreport.RetrieveDeviceAppInstallationStatusReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.retrieveenrollmenttimegroupingfailurereport.RetrieveEnrollmentTimeGroupingFailureReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievesecuritytaskappsreport.RetrieveSecurityTaskAppsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrievewin32catalogappsupdatereport.RetrieveWin32CatalogAppsUpdateReportRequestBuilder;
 import com.microsoft.graph.beta.models.DeviceManagementReports;
@@ -714,6 +715,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RetrieveDeviceAppInstallationStatusReportRequestBuilder retrieveDeviceAppInstallationStatusReport() {
         return new RetrieveDeviceAppInstallationStatusReportRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveEnrollmentTimeGroupingFailureReport method.
+     * @return a {@link RetrieveEnrollmentTimeGroupingFailureReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveEnrollmentTimeGroupingFailureReportRequestBuilder retrieveEnrollmentTimeGroupingFailureReport() {
+        return new RetrieveEnrollmentTimeGroupingFailureReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveSecurityTaskAppsReport method.

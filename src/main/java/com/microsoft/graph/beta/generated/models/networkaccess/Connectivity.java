@@ -54,7 +54,7 @@ public class Connectivity extends Entity implements Parsable {
         return this.backingStore.get("remoteNetworks");
     }
     /**
-     * Gets the webCategories property value. The webCategories property
+     * Gets the webCategories property value. The URL category.
      * @return a {@link java.util.List<WebCategory>}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class Connectivity extends Entity implements Parsable {
         this.backingStore.set("remoteNetworks", value);
     }
     /**
-     * Sets the webCategories property value. The webCategories property
+     * Sets the webCategories property value. The URL category.
      * @param value Value to set for the webCategories property.
      */
     public void setWebCategories(@jakarta.annotation.Nullable final java.util.List<WebCategory> value) {

@@ -83,7 +83,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         return this.backingStore.get("offer");
     }
     /**
-     * Gets the offerDisplayName property value. The official display offer name of this gallery image. For example, Windows 10 Enterprise + OS Optimizations. The offerDisplayName property is deprecated and will stop returning data on January 31, 2024.
+     * Gets the offerDisplayName property value. The official display offer name of this gallery image. For example, Windows 11 Enterprise. The offerDisplayName property is deprecated and will stop returning data on January 31, 2024.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -231,7 +231,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         this.backingStore.set("offer", value);
     }
     /**
-     * Sets the offerDisplayName property value. The official display offer name of this gallery image. For example, Windows 10 Enterprise + OS Optimizations. The offerDisplayName property is deprecated and will stop returning data on January 31, 2024.
+     * Sets the offerDisplayName property value. The official display offer name of this gallery image. For example, Windows 11 Enterprise. The offerDisplayName property is deprecated and will stop returning data on January 31, 2024.
      * @param value Value to set for the offerDisplayName property.
      */
     public void setOfferDisplayName(@jakarta.annotation.Nullable final String value) {
