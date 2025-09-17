@@ -15,6 +15,12 @@ parameters:
   - name: previewBranch
     type: string
     default: "refs/heads/main"
+  - name: deployToGitHub
+    type: boolean
+    default: false
+  - name: deployToMaven
+    type: boolean
+    default: false    
 
 resources:
   repositories:
@@ -112,11 +118,12 @@ extends:
                   targetPath: "$(PACKAGE_PATH)"
 
       - stage: deploy
-        condition: and(or(contains(variables['build.sourceBranch'], 'refs/tags/v'), eq(variables['build.sourceBranch'], '${{ parameters.previewBranch }}')), succeeded())
+        # Allow deployment when: 1. build trigger by tag, 2. source branch matches preview branch or 3. manually triggered pipeline. All with succeeded build stage.
+        condition: and(or(contains(variables['build.sourceBranch'], 'refs/tags/v'), eq(variables['build.sourceBranch'], '${{ parameters.previewBranch }}'),eq(variables['Build.Reason'], 'Manual')), succeeded())
         dependsOn: build
         jobs:
           - deployment: deploy_github
-            condition: and(contains(variables['build.sourceBranch'], 'refs/tags/v'), succeeded())
+            condition: or(and(contains(variables['build.sourceBranch'], 'refs/tags/v'), succeeded()), and(eq('${{ parameters.deployToGitHub }}', 'true'), succeeded()))
             pool:
               name: Azure-Pipelines-1ESPT-ExDShared
               os: linux
@@ -192,7 +199,7 @@ extends:
             
           - deployment: deploy_maven
             # snapshots are not supported by ESRP release for now, but they are planning to add support. When it happens, simply remove the condition
-            condition: and(contains(variables['build.sourceBranch'], 'refs/tags/v'), succeeded())
+            condition: or(and(contains(variables['build.sourceBranch'], 'refs/tags/v'), succeeded()), and(eq('${{ parameters.deployToMaven }}', 'true'), succeeded()))
             pool:
               name: Azure-Pipelines-1ESPT-ExDShared
               os: linux
