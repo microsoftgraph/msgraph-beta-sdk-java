@@ -105,6 +105,14 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.backingStore.get("claimsMappingPolicies");
     }
     /**
+     * Gets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
+     * @return a {@link java.util.List<ConditionalAccessPolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConditionalAccessPolicy> getConditionalAccessPolicies() {
+        return this.backingStore.get("conditionalAccessPolicies");
+    }
+    /**
      * Gets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      * @return a {@link CrossTenantAccessPolicy}
      */
@@ -119,6 +127,14 @@ public class PolicyRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public TenantAppManagementPolicy getDefaultAppManagementPolicy() {
         return this.backingStore.get("defaultAppManagementPolicy");
+    }
+    /**
+     * Gets the deletedItems property value. Policies that support soft-delete functionality and can be restored within 30 days.
+     * @return a {@link PolicyDeletableRoot}
+     */
+    @jakarta.annotation.Nullable
+    public PolicyDeletableRoot getDeletedItems() {
+        return this.backingStore.get("deletedItems");
     }
     /**
      * Gets the deviceRegistrationPolicy property value. Represents the policy scope that controls quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
@@ -177,8 +193,10 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("authorizationPolicy", (n) -> { this.setAuthorizationPolicy(n.getCollectionOfObjectValues(AuthorizationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("b2cAuthenticationMethodsPolicy", (n) -> { this.setB2cAuthenticationMethodsPolicy(n.getObjectValue(B2cAuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("conditionalAccessPolicies", (n) -> { this.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("crossTenantAccessPolicy", (n) -> { this.setCrossTenantAccessPolicy(n.getObjectValue(CrossTenantAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("defaultAppManagementPolicy", (n) -> { this.setDefaultAppManagementPolicy(n.getObjectValue(TenantAppManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getObjectValue(PolicyDeletableRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceRegistrationPolicy", (n) -> { this.setDeviceRegistrationPolicy(n.getObjectValue(DeviceRegistrationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("directoryRoleAccessReviewPolicy", (n) -> { this.setDirectoryRoleAccessReviewPolicy(n.getObjectValue(DirectoryRoleAccessReviewPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("externalIdentitiesPolicy", (n) -> { this.setExternalIdentitiesPolicy(n.getObjectValue(ExternalIdentitiesPolicy::createFromDiscriminatorValue)); });
@@ -186,8 +204,8 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("federatedTokenValidationPolicy", (n) -> { this.setFederatedTokenValidationPolicy(n.getObjectValue(FederatedTokenValidationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { this.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("mobileAppManagementPolicies", (n) -> { this.setMobileAppManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("mobileDeviceManagementPolicies", (n) -> { this.setMobileDeviceManagementPolicies(n.getCollectionOfObjectValues(MobilityManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileAppManagementPolicies", (n) -> { this.setMobileAppManagementPolicies(n.getCollectionOfObjectValues(MobileAppManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("mobileDeviceManagementPolicies", (n) -> { this.setMobileDeviceManagementPolicies(n.getCollectionOfObjectValues(MobileDeviceManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("permissionGrantPolicies", (n) -> { this.setPermissionGrantPolicies(n.getCollectionOfObjectValues(PermissionGrantPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("permissionGrantPreApprovalPolicies", (n) -> { this.setPermissionGrantPreApprovalPolicies(n.getCollectionOfObjectValues(PermissionGrantPreApprovalPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("roleManagementPolicies", (n) -> { this.setRoleManagementPolicies(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
@@ -215,18 +233,18 @@ public class PolicyRoot extends Entity implements Parsable {
     }
     /**
      * Gets the mobileAppManagementPolicies property value. The policy that defines autoenrollment configuration for a mobility management (MDM or MAM) application.
-     * @return a {@link java.util.List<MobilityManagementPolicy>}
+     * @return a {@link java.util.List<MobileAppManagementPolicy>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<MobilityManagementPolicy> getMobileAppManagementPolicies() {
+    public java.util.List<MobileAppManagementPolicy> getMobileAppManagementPolicies() {
         return this.backingStore.get("mobileAppManagementPolicies");
     }
     /**
      * Gets the mobileDeviceManagementPolicies property value. The mobileDeviceManagementPolicies property
-     * @return a {@link java.util.List<MobilityManagementPolicy>}
+     * @return a {@link java.util.List<MobileDeviceManagementPolicy>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<MobilityManagementPolicy> getMobileDeviceManagementPolicies() {
+    public java.util.List<MobileDeviceManagementPolicy> getMobileDeviceManagementPolicies() {
         return this.backingStore.get("mobileDeviceManagementPolicies");
     }
     /**
@@ -302,8 +320,10 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("authorizationPolicy", this.getAuthorizationPolicy());
         writer.writeObjectValue("b2cAuthenticationMethodsPolicy", this.getB2cAuthenticationMethodsPolicy());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
+        writer.writeCollectionOfObjectValues("conditionalAccessPolicies", this.getConditionalAccessPolicies());
         writer.writeObjectValue("crossTenantAccessPolicy", this.getCrossTenantAccessPolicy());
         writer.writeObjectValue("defaultAppManagementPolicy", this.getDefaultAppManagementPolicy());
+        writer.writeObjectValue("deletedItems", this.getDeletedItems());
         writer.writeObjectValue("deviceRegistrationPolicy", this.getDeviceRegistrationPolicy());
         writer.writeObjectValue("directoryRoleAccessReviewPolicy", this.getDirectoryRoleAccessReviewPolicy());
         writer.writeObjectValue("externalIdentitiesPolicy", this.getExternalIdentitiesPolicy());
@@ -392,6 +412,13 @@ public class PolicyRoot extends Entity implements Parsable {
         this.backingStore.set("claimsMappingPolicies", value);
     }
     /**
+     * Sets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
+     * @param value Value to set for the conditionalAccessPolicies property.
+     */
+    public void setConditionalAccessPolicies(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
+        this.backingStore.set("conditionalAccessPolicies", value);
+    }
+    /**
      * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Microsoft Entra tenants.
      * @param value Value to set for the crossTenantAccessPolicy property.
      */
@@ -404,6 +431,13 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setDefaultAppManagementPolicy(@jakarta.annotation.Nullable final TenantAppManagementPolicy value) {
         this.backingStore.set("defaultAppManagementPolicy", value);
+    }
+    /**
+     * Sets the deletedItems property value. Policies that support soft-delete functionality and can be restored within 30 days.
+     * @param value Value to set for the deletedItems property.
+     */
+    public void setDeletedItems(@jakarta.annotation.Nullable final PolicyDeletableRoot value) {
+        this.backingStore.set("deletedItems", value);
     }
     /**
      * Sets the deviceRegistrationPolicy property value. Represents the policy scope that controls quota restrictions, additional authentication, and authorization policies to register device identities to your organization.
@@ -458,14 +492,14 @@ public class PolicyRoot extends Entity implements Parsable {
      * Sets the mobileAppManagementPolicies property value. The policy that defines autoenrollment configuration for a mobility management (MDM or MAM) application.
      * @param value Value to set for the mobileAppManagementPolicies property.
      */
-    public void setMobileAppManagementPolicies(@jakarta.annotation.Nullable final java.util.List<MobilityManagementPolicy> value) {
+    public void setMobileAppManagementPolicies(@jakarta.annotation.Nullable final java.util.List<MobileAppManagementPolicy> value) {
         this.backingStore.set("mobileAppManagementPolicies", value);
     }
     /**
      * Sets the mobileDeviceManagementPolicies property value. The mobileDeviceManagementPolicies property
      * @param value Value to set for the mobileDeviceManagementPolicies property.
      */
-    public void setMobileDeviceManagementPolicies(@jakarta.annotation.Nullable final java.util.List<MobilityManagementPolicy> value) {
+    public void setMobileDeviceManagementPolicies(@jakarta.annotation.Nullable final java.util.List<MobileDeviceManagementPolicy> value) {
         this.backingStore.set("mobileDeviceManagementPolicies", value);
     }
     /**

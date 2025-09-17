@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.policies.crosstenantaccesspolicy.partners.item;
 import com.microsoft.graph.beta.models.CrossTenantAccessPolicyConfigurationPartner;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.policies.crosstenantaccesspolicy.partners.item.identitysynchronization.IdentitySynchronizationRequestBuilder;
+import com.microsoft.graph.beta.policies.crosstenantaccesspolicy.partners.item.restore.RestoreRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
     @jakarta.annotation.Nonnull
     public IdentitySynchronizationRequestBuilder identitySynchronization() {
         return new IdentitySynchronizationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the restore method.
+     * @return a {@link RestoreRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RestoreRequestBuilder restore() {
+        return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder} and sets the default values.

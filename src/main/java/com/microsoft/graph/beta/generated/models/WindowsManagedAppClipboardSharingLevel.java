@@ -11,7 +11,9 @@ public enum WindowsManagedAppClipboardSharingLevel implements ValuedEnum {
     /** Org users can paste data from and cut/copy data to any account, document, location or application. */
     AnyDestinationAnySource("anyDestinationAnySource"),
     /** Org users cannot cut, copy or paste data to or from external accounts, documents, locations or applications from or into the org context. */
-    None("none");
+    None("none"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsManagedAppClipboardSharingLevel(final String value) {
         this.value = value;
@@ -24,6 +26,7 @@ public enum WindowsManagedAppClipboardSharingLevel implements ValuedEnum {
         switch(searchValue) {
             case "anyDestinationAnySource": return AnyDestinationAnySource;
             case "none": return None;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

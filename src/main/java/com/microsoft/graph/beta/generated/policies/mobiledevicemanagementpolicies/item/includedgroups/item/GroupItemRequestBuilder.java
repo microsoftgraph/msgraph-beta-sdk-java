@@ -7,7 +7,7 @@ import com.microsoft.kiota.RequestAdapter;
 import java.util.HashMap;
 import java.util.Objects;
 /**
- * Builds and executes requests for operations under /policies/mobileDeviceManagementPolicies/{mobilityManagementPolicy-id}/includedGroups/{group-id}
+ * Builds and executes requests for operations under /policies/mobileDeviceManagementPolicies/{mobileDeviceManagementPolicy-id}/includedGroups/{group-id}
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GroupItemRequestBuilder extends BaseRequestBuilder {
@@ -33,7 +33,7 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobilityManagementPolicy%2Did}/includedGroups/{group%2Did}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobileDeviceManagementPolicy%2Did}/includedGroups/{group%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link GroupItemRequestBuilder} and sets the default values.
@@ -41,6 +41,6 @@ public class GroupItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobilityManagementPolicy%2Did}/includedGroups/{group%2Did}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobileDeviceManagementPolicy%2Did}/includedGroups/{group%2Did}", rawUrl);
     }
 }

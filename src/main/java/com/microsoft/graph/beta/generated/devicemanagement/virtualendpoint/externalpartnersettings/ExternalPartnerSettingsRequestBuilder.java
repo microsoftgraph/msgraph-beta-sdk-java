@@ -26,7 +26,10 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the externalPartnerSettings property of the microsoft.graph.virtualEndpoint entity.
      * @param cloudPcExternalPartnerSettingId The unique identifier of cloudPcExternalPartnerSetting
      * @return a {@link CloudPcExternalPartnerSettingItemRequestBuilder}
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CloudPcExternalPartnerSettingItemRequestBuilder byCloudPcExternalPartnerSettingId(@jakarta.annotation.Nonnull final String cloudPcExternalPartnerSettingId) {
         Objects.requireNonNull(cloudPcExternalPartnerSettingId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,9 +69,12 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the cloudPcExternalPartnerSetting objects and their properties.
      * @return a {@link CloudPcExternalPartnerSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-externalpartnersettings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcExternalPartnerSettingCollectionResponse get() {
         return get(null);
     }
@@ -74,9 +83,12 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcExternalPartnerSettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-externalpartnersettings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcExternalPartnerSettingCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -88,9 +100,12 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link CloudPcExternalPartnerSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-externalpartnersettings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcExternalPartnerSetting post(@jakarta.annotation.Nonnull final CloudPcExternalPartnerSetting body) {
         return post(body, null);
     }
@@ -100,9 +115,12 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcExternalPartnerSetting}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-externalpartnersettings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcExternalPartnerSetting post(@jakarta.annotation.Nonnull final CloudPcExternalPartnerSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -113,8 +131,11 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the cloudPcExternalPartnerSetting objects and their properties.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -122,8 +143,11 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the cloudPcExternalPartnerSetting objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -134,8 +158,11 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * Create a new cloudPcExternalPartnerSetting object.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CloudPcExternalPartnerSetting body) {
         return toPostRequestInformation(body, null);
     }
@@ -144,8 +171,11 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final CloudPcExternalPartnerSetting body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -158,8 +188,11 @@ public class ExternalPartnerSettingsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ExternalPartnerSettingsRequestBuilder}
+     * @deprecated
+     * The cloudPcExternalPartnerSetting is deprecated and will not be supported starting March 31, 2026. This entity will not be included in the API response. Please use externalPartners instead. as of 2025-02/cloudPcExternalPartnerSetting on 2025-02-18 and will be removed 2026-03-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ExternalPartnerSettingsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ExternalPartnerSettingsRequestBuilder(rawUrl, requestAdapter);

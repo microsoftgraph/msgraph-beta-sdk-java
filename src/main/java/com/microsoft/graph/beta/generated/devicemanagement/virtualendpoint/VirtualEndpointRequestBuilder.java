@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudapps.Cloud
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.CloudPCsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.crosscloudgovernmentorganizationmapping.CrossCloudGovernmentOrganizationMappingRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.deviceimages.DeviceImagesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.ExternalPartnersRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartnersettings.ExternalPartnerSettingsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.frontlineserviceplans.FrontLineServicePlansRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.galleryimages.GalleryImagesRequestBuilder;
@@ -87,6 +88,14 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeviceImagesRequestBuilder deviceImages() {
         return new DeviceImagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the externalPartners property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ExternalPartnersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExternalPartnersRequestBuilder externalPartners() {
+        return new ExternalPartnersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the externalPartnerSettings property of the microsoft.graph.virtualEndpoint entity.
