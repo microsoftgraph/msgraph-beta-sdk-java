@@ -1,28 +1,19 @@
 package com.microsoft.graph.beta.models;
 
-import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
-import com.microsoft.kiota.store.BackedModel;
-import com.microsoft.kiota.store.BackingStore;
-import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolder, BackedModel, Parsable {
-    /**
-     * Stores model information.
-     */
-    @jakarta.annotation.Nonnull
-    protected BackingStore backingStore;
+public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletableItem implements Parsable {
     /**
      * Instantiates a new {@link CrossTenantAccessPolicyConfigurationPartner} and sets the default values.
      */
     public CrossTenantAccessPolicyConfigurationPartner() {
-        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
-        this.setAdditionalData(new HashMap<>());
+        super();
+        this.setOdataType("#microsoft.graph.crossTenantAccessPolicyConfigurationPartner");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -33,19 +24,6 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
     public static CrossTenantAccessPolicyConfigurationPartner createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
         return new CrossTenantAccessPolicyConfigurationPartner();
-    }
-    /**
-     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return a {@link Map<String, Object>}
-     */
-    @jakarta.annotation.Nonnull
-    public Map<String, Object> getAdditionalData() {
-        Map<String, Object> value = this.backingStore.get("additionalData");
-        if(value == null) {
-            value = new HashMap<>();
-            this.setAdditionalData(value);
-        }
-        return value;
     }
     /**
      * Gets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
@@ -88,20 +66,12 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.backingStore.get("b2bDirectConnectOutbound");
     }
     /**
-     * Gets the backingStore property value. Stores model information.
-     * @return a {@link BackingStore}
-     */
-    @jakarta.annotation.Nonnull
-    public BackingStore getBackingStore() {
-        return this.backingStore;
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -111,7 +81,6 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
         deserializerMap.put("isInMultiTenantOrganization", (n) -> { this.setIsInMultiTenantOrganization(n.getBooleanValue()); });
         deserializerMap.put("isServiceProvider", (n) -> { this.setIsServiceProvider(n.getBooleanValue()); });
-        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("tenantRestrictions", (n) -> { this.setTenantRestrictions(n.getObjectValue(CrossTenantAccessPolicyTenantRestrictions::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -149,14 +118,6 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         return this.backingStore.get("isServiceProvider");
     }
     /**
-     * Gets the @odata.type property value. The OdataType property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getOdataType() {
-        return this.backingStore.get("odataType");
-    }
-    /**
      * Gets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @return a {@link String}
      */
@@ -178,6 +139,7 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        super.serialize(writer);
         writer.writeObjectValue("automaticUserConsentSettings", this.getAutomaticUserConsentSettings());
         writer.writeObjectValue("b2bCollaborationInbound", this.getB2bCollaborationInbound());
         writer.writeObjectValue("b2bCollaborationOutbound", this.getB2bCollaborationOutbound());
@@ -187,17 +149,8 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeBooleanValue("isInMultiTenantOrganization", this.getIsInMultiTenantOrganization());
         writer.writeBooleanValue("isServiceProvider", this.getIsServiceProvider());
-        writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
-        writer.writeAdditionalData(this.getAdditionalData());
-    }
-    /**
-     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param value Value to set for the AdditionalData property.
-     */
-    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
-        this.backingStore.set("additionalData", value);
     }
     /**
      * Sets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
@@ -235,14 +188,6 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
         this.backingStore.set("b2bDirectConnectOutbound", value);
     }
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param value Value to set for the backingStore property.
-     */
-    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
-        Objects.requireNonNull(value);
-        this.backingStore = value;
-    }
-    /**
      * Sets the identitySynchronization property value. Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multitenant organization by automating the creation, update, and deletion of users from one tenant to another.
      * @param value Value to set for the identitySynchronization property.
      */
@@ -269,13 +214,6 @@ public class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDa
      */
     public void setIsServiceProvider(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isServiceProvider", value);
-    }
-    /**
-     * Sets the @odata.type property value. The OdataType property
-     * @param value Value to set for the @odata.type property.
-     */
-    public void setOdataType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("odataType", value);
     }
     /**
      * Sets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.

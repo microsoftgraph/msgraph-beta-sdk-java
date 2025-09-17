@@ -26,7 +26,7 @@ public class User extends IdentityAccounts implements Parsable {
         return new User();
     }
     /**
-     * Gets the emailAddress property value. The emailAddress property
+     * Gets the emailAddress property value. Email address of the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class User extends IdentityAccounts implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the userPrincipalName property value. The userPrincipalName property
+     * Gets the userPrincipalName property value. The user principal name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class User extends IdentityAccounts implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the emailAddress property value. The emailAddress property
+     * Sets the emailAddress property value. Email address of the user.
      * @param value Value to set for the emailAddress property.
      */
     public void setEmailAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emailAddress", value);
     }
     /**
-     * Sets the userPrincipalName property value. The userPrincipalName property
+     * Sets the userPrincipalName property value. The user principal name.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

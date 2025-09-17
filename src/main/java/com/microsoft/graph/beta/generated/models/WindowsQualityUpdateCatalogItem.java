@@ -37,6 +37,14 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         return this.backingStore.get("classification");
     }
     /**
+     * Gets the cveSeverityInformation property value. CVE information for catalog items
+     * @return a {@link WindowsQualityUpdateCveSeverityInformation}
+     */
+    @jakarta.annotation.Nullable
+    public WindowsQualityUpdateCveSeverityInformation getCveSeverityInformation() {
+        return this.backingStore.get("cveSeverityInformation");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -44,6 +52,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("classification", (n) -> { this.setClassification(n.getEnumValue(WindowsQualityUpdateCategory::forValue)); });
+        deserializerMap.put("cveSeverityInformation", (n) -> { this.setCveSeverityInformation(n.getObjectValue(WindowsQualityUpdateCveSeverityInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("isExpeditable", (n) -> { this.setIsExpeditable(n.getBooleanValue()); });
         deserializerMap.put("kbArticleId", (n) -> { this.setKbArticleId(n.getStringValue()); });
         deserializerMap.put("productRevisions", (n) -> { this.setProductRevisions(n.getCollectionOfObjectValues(WindowsQualityUpdateCatalogProductRevision::createFromDiscriminatorValue)); });
@@ -90,6 +99,7 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("classification", this.getClassification());
+        writer.writeObjectValue("cveSeverityInformation", this.getCveSeverityInformation());
         writer.writeBooleanValue("isExpeditable", this.getIsExpeditable());
         writer.writeStringValue("kbArticleId", this.getKbArticleId());
         writer.writeCollectionOfObjectValues("productRevisions", this.getProductRevisions());
@@ -101,6 +111,13 @@ public class WindowsQualityUpdateCatalogItem extends WindowsUpdateCatalogItem im
      */
     public void setClassification(@jakarta.annotation.Nullable final WindowsQualityUpdateCategory value) {
         this.backingStore.set("classification", value);
+    }
+    /**
+     * Sets the cveSeverityInformation property value. CVE information for catalog items
+     * @param value Value to set for the cveSeverityInformation property.
+     */
+    public void setCveSeverityInformation(@jakarta.annotation.Nullable final WindowsQualityUpdateCveSeverityInformation value) {
+        this.backingStore.set("cveSeverityInformation", value);
     }
     /**
      * Sets the isExpeditable property value. When TRUE, indicates that the quality updates qualify for expedition. When FALSE, indicates the quality updates do not quality for expedition. Default value is FALSE. Read-only

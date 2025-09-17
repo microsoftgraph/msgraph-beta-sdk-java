@@ -1,10 +1,10 @@
 package com.microsoft.graph.beta.policies.mobileappmanagementpolicies;
 
-import com.microsoft.graph.beta.models.MobilityManagementPolicy;
-import com.microsoft.graph.beta.models.MobilityManagementPolicyCollectionResponse;
+import com.microsoft.graph.beta.models.MobileAppManagementPolicy;
+import com.microsoft.graph.beta.models.MobileAppManagementPolicyCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.policies.mobileappmanagementpolicies.count.CountRequestBuilder;
-import com.microsoft.graph.beta.policies.mobileappmanagementpolicies.item.MobilityManagementPolicyItemRequestBuilder;
+import com.microsoft.graph.beta.policies.mobileappmanagementpolicies.item.MobileAppManagementPolicyItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -33,15 +33,15 @@ public class MobileAppManagementPoliciesRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Provides operations to manage the mobileAppManagementPolicies property of the microsoft.graph.policyRoot entity.
-     * @param mobilityManagementPolicyId The unique identifier of mobilityManagementPolicy
-     * @return a {@link MobilityManagementPolicyItemRequestBuilder}
+     * @param mobileAppManagementPolicyId The unique identifier of mobileAppManagementPolicy
+     * @return a {@link MobileAppManagementPolicyItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MobilityManagementPolicyItemRequestBuilder byMobilityManagementPolicyId(@jakarta.annotation.Nonnull final String mobilityManagementPolicyId) {
-        Objects.requireNonNull(mobilityManagementPolicyId);
+    public MobileAppManagementPolicyItemRequestBuilder byMobileAppManagementPolicyId(@jakarta.annotation.Nonnull final String mobileAppManagementPolicyId) {
+        Objects.requireNonNull(mobileAppManagementPolicyId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("mobilityManagementPolicy%2Did", mobilityManagementPolicyId);
-        return new MobilityManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
+        urlTplParams.put("mobileAppManagementPolicy%2Did", mobileAppManagementPolicyId);
+        return new MobileAppManagementPolicyItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link MobileAppManagementPoliciesRequestBuilder} and sets the default values.
@@ -61,52 +61,52 @@ public class MobileAppManagementPoliciesRequestBuilder extends BaseRequestBuilde
     }
     /**
      * Get a list of the mobilityManagementPolicy objects and their properties.
-     * @return a {@link MobilityManagementPolicyCollectionResponse}
+     * @return a {@link MobileAppManagementPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public MobilityManagementPolicyCollectionResponse get() {
+    public MobileAppManagementPolicyCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the mobilityManagementPolicy objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link MobilityManagementPolicyCollectionResponse}
+     * @return a {@link MobileAppManagementPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/mobileappmanagementpolicies-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public MobilityManagementPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public MobileAppManagementPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, MobilityManagementPolicyCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, MobileAppManagementPolicyCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to mobileAppManagementPolicies for policies
      * @param body The request body
-     * @return a {@link MobilityManagementPolicy}
+     * @return a {@link MobileAppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public MobilityManagementPolicy post(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
+    public MobileAppManagementPolicy post(@jakarta.annotation.Nonnull final MobileAppManagementPolicy body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to mobileAppManagementPolicies for policies
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link MobilityManagementPolicy}
+     * @return a {@link MobileAppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public MobilityManagementPolicy post(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public MobileAppManagementPolicy post(@jakarta.annotation.Nonnull final MobileAppManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, MobilityManagementPolicy::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, MobileAppManagementPolicy::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the mobilityManagementPolicy objects and their properties.
@@ -134,7 +134,7 @@ public class MobileAppManagementPoliciesRequestBuilder extends BaseRequestBuilde
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobilityManagementPolicy body) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobileAppManagementPolicy body) {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -144,7 +144,7 @@ public class MobileAppManagementPoliciesRequestBuilder extends BaseRequestBuilde
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobilityManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final MobileAppManagementPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);

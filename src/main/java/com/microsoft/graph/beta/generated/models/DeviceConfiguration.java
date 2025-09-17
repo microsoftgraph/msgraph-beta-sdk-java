@@ -108,6 +108,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
                 case "#microsoft.graph.iosUpdateConfiguration": return new IosUpdateConfiguration();
                 case "#microsoft.graph.iosVpnConfiguration": return new IosVpnConfiguration();
                 case "#microsoft.graph.iosWiFiConfiguration": return new IosWiFiConfiguration();
+                case "#microsoft.graph.iosWiredNetworkConfiguration": return new IosWiredNetworkConfiguration();
                 case "#microsoft.graph.macOSCertificateProfileBase": return new MacOSCertificateProfileBase();
                 case "#microsoft.graph.macOSCustomAppConfiguration": return new MacOSCustomAppConfiguration();
                 case "#microsoft.graph.macOSCustomConfiguration": return new MacOSCustomConfiguration();

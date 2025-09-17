@@ -8,7 +8,9 @@ public enum CloudPcManagementService implements ValuedEnum {
     Windows365("windows365"),
     DevBox("devBox"),
     UnknownFutureValue("unknownFutureValue"),
-    RpaBox("rpaBox");
+    RpaBox("rpaBox"),
+    Microsoft365Opal("microsoft365Opal"),
+    Microsoft365BizChat("microsoft365BizChat");
     public final String value;
     CloudPcManagementService(final String value) {
         this.value = value;
@@ -23,6 +25,8 @@ public enum CloudPcManagementService implements ValuedEnum {
             case "devBox": return DevBox;
             case "unknownFutureValue": return UnknownFutureValue;
             case "rpaBox": return RpaBox;
+            case "microsoft365Opal": return Microsoft365Opal;
+            case "microsoft365BizChat": return Microsoft365BizChat;
             default: return null;
         }
     }

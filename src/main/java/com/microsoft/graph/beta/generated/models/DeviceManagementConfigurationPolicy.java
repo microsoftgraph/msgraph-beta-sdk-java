@@ -62,6 +62,14 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
         return this.backingStore.get("description");
     }
     /**
+     * Gets the disableEntraGroupPolicyAssignment property value. Indicates whether Entra Group policy assignment is disabled
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getDisableEntraGroupPolicyAssignment() {
+        return this.backingStore.get("disableEntraGroupPolicyAssignment");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -72,6 +80,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("creationSource", (n) -> { this.setCreationSource(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("disableEntraGroupPolicyAssignment", (n) -> { this.setDisableEntraGroupPolicyAssignment(n.getBooleanValue()); });
         deserializerMap.put("isAssigned", (n) -> { this.setIsAssigned(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
@@ -175,6 +184,7 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeStringValue("creationSource", this.getCreationSource());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeBooleanValue("disableEntraGroupPolicyAssignment", this.getDisableEntraGroupPolicyAssignment());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeEnumSetValue("platforms", this.getPlatforms());
@@ -212,6 +222,13 @@ public class DeviceManagementConfigurationPolicy extends Entity implements Parsa
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
+    }
+    /**
+     * Sets the disableEntraGroupPolicyAssignment property value. Indicates whether Entra Group policy assignment is disabled
+     * @param value Value to set for the disableEntraGroupPolicyAssignment property.
+     */
+    public void setDisableEntraGroupPolicyAssignment(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("disableEntraGroupPolicyAssignment", value);
     }
     /**
      * Sets the isAssigned property value. Policy assignment status. This property is read-only.

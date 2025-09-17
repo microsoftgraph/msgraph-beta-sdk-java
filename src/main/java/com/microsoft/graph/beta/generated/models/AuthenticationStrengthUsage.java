@@ -61,9 +61,27 @@ public class AuthenticationStrengthUsage implements AdditionalDataHolder, Backed
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("mfa", (n) -> { this.setMfa(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("none", (n) -> { this.setNone(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the mfa property value. The mfa property
+     * @return a {@link java.util.List<ConditionalAccessPolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConditionalAccessPolicy> getMfa() {
+        return this.backingStore.get("mfa");
+    }
+    /**
+     * Gets the none property value. The none property
+     * @return a {@link java.util.List<ConditionalAccessPolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConditionalAccessPolicy> getNone() {
+        return this.backingStore.get("none");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -79,6 +97,8 @@ public class AuthenticationStrengthUsage implements AdditionalDataHolder, Backed
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("mfa", this.getMfa());
+        writer.writeCollectionOfObjectValues("none", this.getNone());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -96,6 +116,20 @@ public class AuthenticationStrengthUsage implements AdditionalDataHolder, Backed
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the mfa property value. The mfa property
+     * @param value Value to set for the mfa property.
+     */
+    public void setMfa(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
+        this.backingStore.set("mfa", value);
+    }
+    /**
+     * Sets the none property value. The none property
+     * @param value Value to set for the none property.
+     */
+    public void setNone(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {
+        this.backingStore.set("none", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

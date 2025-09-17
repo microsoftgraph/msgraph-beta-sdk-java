@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Builds and executes requests for operations under /policies/mobileDeviceManagementPolicies/{mobilityManagementPolicy-id}/includedGroups/{group-id}/serviceProvisioningErrors
+ * Builds and executes requests for operations under /policies/mobileDeviceManagementPolicies/{mobileDeviceManagementPolicy-id}/includedGroups/{group-id}/serviceProvisioningErrors
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder {
@@ -35,7 +35,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ServiceProvisioningErrorsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobilityManagementPolicy%2Did}/includedGroups/{group%2Did}/serviceProvisioningErrors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobileDeviceManagementPolicy%2Did}/includedGroups/{group%2Did}/serviceProvisioningErrors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link ServiceProvisioningErrorsRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class ServiceProvisioningErrorsRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ServiceProvisioningErrorsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobilityManagementPolicy%2Did}/includedGroups/{group%2Did}/serviceProvisioningErrors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/mobileDeviceManagementPolicies/{mobileDeviceManagementPolicy%2Did}/includedGroups/{group%2Did}/serviceProvisioningErrors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
      * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object.

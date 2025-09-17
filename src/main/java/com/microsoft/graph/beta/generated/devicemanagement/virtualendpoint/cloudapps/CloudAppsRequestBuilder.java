@@ -88,19 +88,21 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get cloudApps from deviceManagement
+     * List all the cloudPcCloudApp objects filtered by a provision policy ID.
      * @return a {@link CloudPcCloudAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCloudAppCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get cloudApps from deviceManagement
+     * List all the cloudPcCloudApp objects filtered by a provision policy ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcCloudAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCloudAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -145,7 +147,7 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
         return new RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdRequestBuilder(pathParameters, requestAdapter, sourceId);
     }
     /**
-     * Get cloudApps from deviceManagement
+     * List all the cloudPcCloudApp objects filtered by a provision policy ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -153,7 +155,7 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get cloudApps from deviceManagement
+     * List all the cloudPcCloudApp objects filtered by a provision policy ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -199,7 +201,7 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
         return new CloudAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get cloudApps from deviceManagement
+     * List all the cloudPcCloudApp objects filtered by a provision policy ID.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

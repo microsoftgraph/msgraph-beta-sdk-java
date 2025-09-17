@@ -29,7 +29,26 @@ public enum CloudPcRegionGroup implements ValuedEnum {
     MiddleEast("middleEast"),
     Mexico("mexico"),
     Australasia("australasia"),
-    Europe("europe");
+    Europe("europe"),
+    Singapore("singapore"),
+    HongKong("hongKong"),
+    Ireland("ireland"),
+    Sweden("sweden"),
+    Poland("poland"),
+    Italy("italy"),
+    Spain("spain"),
+    Netherlands("netherlands"),
+    Brazil("brazil"),
+    Israel("israel"),
+    Automatic("automatic"),
+    Indonesia("indonesia"),
+    Taiwan("taiwan"),
+    Malaysia("malaysia"),
+    NewZealand("newZealand"),
+    Austria("austria"),
+    Denmark("denmark"),
+    Belgium("belgium"),
+    Kenya("kenya");
     public final String value;
     CloudPcRegionGroup(final String value) {
         this.value = value;
@@ -65,6 +84,25 @@ public enum CloudPcRegionGroup implements ValuedEnum {
             case "mexico": return Mexico;
             case "australasia": return Australasia;
             case "europe": return Europe;
+            case "singapore": return Singapore;
+            case "hongKong": return HongKong;
+            case "ireland": return Ireland;
+            case "sweden": return Sweden;
+            case "poland": return Poland;
+            case "italy": return Italy;
+            case "spain": return Spain;
+            case "netherlands": return Netherlands;
+            case "brazil": return Brazil;
+            case "israel": return Israel;
+            case "automatic": return Automatic;
+            case "indonesia": return Indonesia;
+            case "taiwan": return Taiwan;
+            case "malaysia": return Malaysia;
+            case "newZealand": return NewZealand;
+            case "austria": return Austria;
+            case "denmark": return Denmark;
+            case "belgium": return Belgium;
+            case "kenya": return Kenya;
             default: return null;
         }
     }

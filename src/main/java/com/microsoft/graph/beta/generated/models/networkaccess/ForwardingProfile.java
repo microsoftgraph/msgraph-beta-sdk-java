@@ -42,10 +42,19 @@ public class ForwardingProfile extends Profile implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("associations", (n) -> { this.setAssociations(n.getCollectionOfObjectValues(Association::createFromDiscriminatorValue)); });
+        deserializerMap.put("isCustomProfile", (n) -> { this.setIsCustomProfile(n.getBooleanValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
         deserializerMap.put("servicePrincipal", (n) -> { this.setServicePrincipal(n.getObjectValue(ServicePrincipal::createFromDiscriminatorValue)); });
         deserializerMap.put("trafficForwardingType", (n) -> { this.setTrafficForwardingType(n.getEnumValue(TrafficForwardingType::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isCustomProfile property value. The isCustomProfile property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsCustomProfile() {
+        return this.backingStore.get("isCustomProfile");
     }
     /**
      * Gets the priority property value. Profile priority.
@@ -79,6 +88,7 @@ public class ForwardingProfile extends Profile implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("associations", this.getAssociations());
+        writer.writeBooleanValue("isCustomProfile", this.getIsCustomProfile());
         writer.writeIntegerValue("priority", this.getPriority());
         writer.writeObjectValue("servicePrincipal", this.getServicePrincipal());
         writer.writeEnumValue("trafficForwardingType", this.getTrafficForwardingType());
@@ -89,6 +99,13 @@ public class ForwardingProfile extends Profile implements Parsable {
      */
     public void setAssociations(@jakarta.annotation.Nullable final java.util.List<Association> value) {
         this.backingStore.set("associations", value);
+    }
+    /**
+     * Sets the isCustomProfile property value. The isCustomProfile property
+     * @param value Value to set for the isCustomProfile property.
+     */
+    public void setIsCustomProfile(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isCustomProfile", value);
     }
     /**
      * Sets the priority property value. Profile priority.

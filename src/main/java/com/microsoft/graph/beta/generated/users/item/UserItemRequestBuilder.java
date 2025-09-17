@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.users.item;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.User;
 import com.microsoft.graph.beta.users.item.activities.ActivitiesRequestBuilder;
+import com.microsoft.graph.beta.users.item.adhoccalls.AdhocCallsRequestBuilder;
 import com.microsoft.graph.beta.users.item.agreementacceptances.AgreementAcceptancesRequestBuilder;
 import com.microsoft.graph.beta.users.item.analytics.AnalyticsRequestBuilder;
 import com.microsoft.graph.beta.users.item.appconsentrequestsforapproval.AppConsentRequestsForApprovalRequestBuilder;
@@ -145,6 +146,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ActivitiesRequestBuilder activities() {
         return new ActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the adhocCalls property of the microsoft.graph.user entity.
+     * @return a {@link AdhocCallsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AdhocCallsRequestBuilder adhocCalls() {
+        return new AdhocCallsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the agreementAcceptances property of the microsoft.graph.user entity.

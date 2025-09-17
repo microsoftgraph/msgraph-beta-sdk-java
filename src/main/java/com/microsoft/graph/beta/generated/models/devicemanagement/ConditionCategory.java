@@ -15,7 +15,10 @@ public enum ConditionCategory implements ValuedEnum {
     CloudPcZoneOutage("cloudPcZoneOutage"),
     UnknownFutureValue("unknownFutureValue"),
     FrontlineBufferUsageDuration("frontlineBufferUsageDuration"),
-    FrontlineBufferUsageThreshold("frontlineBufferUsageThreshold");
+    FrontlineBufferUsageThreshold("frontlineBufferUsageThreshold"),
+    CloudPcUserSettingsPersistenceUsageThreshold("cloudPcUserSettingsPersistenceUsageThreshold"),
+    CloudPcDeprovisionedThreshold("cloudPcDeprovisionedThreshold"),
+    CloudPcReserveDeprovisionFailedThreshold("cloudPcReserveDeprovisionFailedThreshold");
     public final String value;
     ConditionCategory(final String value) {
         this.value = value;
@@ -37,6 +40,9 @@ public enum ConditionCategory implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "frontlineBufferUsageDuration": return FrontlineBufferUsageDuration;
             case "frontlineBufferUsageThreshold": return FrontlineBufferUsageThreshold;
+            case "cloudPcUserSettingsPersistenceUsageThreshold": return CloudPcUserSettingsPersistenceUsageThreshold;
+            case "cloudPcDeprovisionedThreshold": return CloudPcDeprovisionedThreshold;
+            case "cloudPcReserveDeprovisionFailedThreshold": return CloudPcReserveDeprovisionFailedThreshold;
             default: return null;
         }
     }

@@ -41,7 +41,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("bulkActions");
     }
     /**
-     * Gets the cloudApps property value. The cloudApps property
+     * Gets the cloudApps property value. A collection of cloud apps that are built on frontline shared options and provide Windows 365 end users with access to app-only sessions instead of a full desktop experience.
      * @return a {@link java.util.List<CloudPcCloudApp>}
      */
     @jakarta.annotation.Nullable
@@ -73,6 +73,14 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("deviceImages");
     }
     /**
+     * Gets the externalPartners property value. The externalPartners property
+     * @return a {@link java.util.List<CloudPcExternalPartner>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudPcExternalPartner> getExternalPartners() {
+        return this.backingStore.get("externalPartners");
+    }
+    /**
      * Gets the externalPartnerSettings property value. The external partner settings on a Cloud PC.
      * @return a {@link java.util.List<CloudPcExternalPartnerSetting>}
      */
@@ -93,6 +101,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
         deserializerMap.put("crossCloudGovernmentOrganizationMapping", (n) -> { this.setCrossCloudGovernmentOrganizationMapping(n.getObjectValue(CloudPcCrossCloudGovernmentOrganizationMapping::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceImages", (n) -> { this.setDeviceImages(n.getCollectionOfObjectValues(CloudPcDeviceImage::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalPartners", (n) -> { this.setExternalPartners(n.getCollectionOfObjectValues(CloudPcExternalPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("externalPartnerSettings", (n) -> { this.setExternalPartnerSettings(n.getCollectionOfObjectValues(CloudPcExternalPartnerSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("frontLineServicePlans", (n) -> { this.setFrontLineServicePlans(n.getCollectionOfObjectValues(CloudPcFrontLineServicePlan::createFromDiscriminatorValue)); });
         deserializerMap.put("galleryImages", (n) -> { this.setGalleryImages(n.getCollectionOfObjectValues(CloudPcGalleryImage::createFromDiscriminatorValue)); });
@@ -199,6 +208,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
         writer.writeObjectValue("crossCloudGovernmentOrganizationMapping", this.getCrossCloudGovernmentOrganizationMapping());
         writer.writeCollectionOfObjectValues("deviceImages", this.getDeviceImages());
+        writer.writeCollectionOfObjectValues("externalPartners", this.getExternalPartners());
         writer.writeCollectionOfObjectValues("externalPartnerSettings", this.getExternalPartnerSettings());
         writer.writeCollectionOfObjectValues("frontLineServicePlans", this.getFrontLineServicePlans());
         writer.writeCollectionOfObjectValues("galleryImages", this.getGalleryImages());
@@ -226,7 +236,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.backingStore.set("bulkActions", value);
     }
     /**
-     * Sets the cloudApps property value. The cloudApps property
+     * Sets the cloudApps property value. A collection of cloud apps that are built on frontline shared options and provide Windows 365 end users with access to app-only sessions instead of a full desktop experience.
      * @param value Value to set for the cloudApps property.
      */
     public void setCloudApps(@jakarta.annotation.Nullable final java.util.List<CloudPcCloudApp> value) {
@@ -252,6 +262,13 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     public void setDeviceImages(@jakarta.annotation.Nullable final java.util.List<CloudPcDeviceImage> value) {
         this.backingStore.set("deviceImages", value);
+    }
+    /**
+     * Sets the externalPartners property value. The externalPartners property
+     * @param value Value to set for the externalPartners property.
+     */
+    public void setExternalPartners(@jakarta.annotation.Nullable final java.util.List<CloudPcExternalPartner> value) {
+        this.backingStore.set("externalPartners", value);
     }
     /**
      * Sets the externalPartnerSettings property value. The external partner settings on a Cloud PC.
