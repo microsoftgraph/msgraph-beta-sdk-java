@@ -47,7 +47,7 @@ public class TlsInspectionRule extends PolicyRule implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the matchingConditions property value. The matchingConditions property
+     * Gets the matchingConditions property value. The conditions that determine when this rule should be applied to traffic.
      * @return a {@link TlsInspectionMatchingConditions}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class TlsInspectionRule extends PolicyRule implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the matchingConditions property value. The matchingConditions property
+     * Sets the matchingConditions property value. The conditions that determine when this rule should be applied to traffic.
      * @param value Value to set for the matchingConditions property.
      */
     public void setMatchingConditions(@jakarta.annotation.Nullable final TlsInspectionMatchingConditions value) {

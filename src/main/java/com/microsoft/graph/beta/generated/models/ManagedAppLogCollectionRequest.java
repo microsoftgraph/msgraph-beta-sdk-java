@@ -45,10 +45,8 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("completedDateTime", (n) -> { this.setCompletedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("managedAppRegistrationId", (n) -> { this.setManagedAppRegistrationId(n.getStringValue()); });
-        deserializerMap.put("requestedBy", (n) -> { this.setRequestedBy(n.getStringValue()); });
         deserializerMap.put("requestedByUserPrincipalName", (n) -> { this.setRequestedByUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("requestedDateTime", (n) -> { this.setRequestedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
         deserializerMap.put("uploadedLogs", (n) -> { this.setUploadedLogs(n.getCollectionOfObjectValues(ManagedAppLogUpload::createFromDiscriminatorValue)); });
         deserializerMap.put("userLogUploadConsent", (n) -> { this.setUserLogUploadConsent(n.getEnumValue(ManagedAppLogUploadConsent::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
@@ -61,14 +59,6 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getManagedAppRegistrationId() {
         return this.backingStore.get("managedAppRegistrationId");
-    }
-    /**
-     * Gets the requestedBy property value. The user principal name associated with the request for the managed application log collection. Read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getRequestedBy() {
-        return this.backingStore.get("requestedBy");
     }
     /**
      * Gets the requestedByUserPrincipalName property value. The user principal name associated with the request for the managed application log collection. Read-only.
@@ -85,14 +75,6 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getRequestedDateTime() {
         return this.backingStore.get("requestedDateTime");
-    }
-    /**
-     * Gets the status property value. Indicates the status for the app log collection request - pending, completed or failed. Default is pending.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getStatus() {
-        return this.backingStore.get("status");
     }
     /**
      * Gets the uploadedLogs property value. The collection of log upload results as reported by each component on the device. Such components can be the application itself, the Mobile Application Management (MAM) SDK, and other on-device components that are requested to upload diagnostic logs. Read-only.
@@ -127,10 +109,8 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("completedDateTime", this.getCompletedDateTime());
         writer.writeStringValue("managedAppRegistrationId", this.getManagedAppRegistrationId());
-        writer.writeStringValue("requestedBy", this.getRequestedBy());
         writer.writeStringValue("requestedByUserPrincipalName", this.getRequestedByUserPrincipalName());
         writer.writeOffsetDateTimeValue("requestedDateTime", this.getRequestedDateTime());
-        writer.writeStringValue("status", this.getStatus());
         writer.writeCollectionOfObjectValues("uploadedLogs", this.getUploadedLogs());
         writer.writeEnumValue("userLogUploadConsent", this.getUserLogUploadConsent());
         writer.writeStringValue("version", this.getVersion());
@@ -150,13 +130,6 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
         this.backingStore.set("managedAppRegistrationId", value);
     }
     /**
-     * Sets the requestedBy property value. The user principal name associated with the request for the managed application log collection. Read-only.
-     * @param value Value to set for the requestedBy property.
-     */
-    public void setRequestedBy(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("requestedBy", value);
-    }
-    /**
      * Sets the requestedByUserPrincipalName property value. The user principal name associated with the request for the managed application log collection. Read-only.
      * @param value Value to set for the requestedByUserPrincipalName property.
      */
@@ -169,13 +142,6 @@ public class ManagedAppLogCollectionRequest extends Entity implements Parsable {
      */
     public void setRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("requestedDateTime", value);
-    }
-    /**
-     * Sets the status property value. Indicates the status for the app log collection request - pending, completed or failed. Default is pending.
-     * @param value Value to set for the status property.
-     */
-    public void setStatus(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("status", value);
     }
     /**
      * Sets the uploadedLogs property value. The collection of log upload results as reported by each component on the device. Such components can be the application itself, the Mobile Application Management (MAM) SDK, and other on-device components that are requested to upload diagnostic logs. Read-only.

@@ -84,23 +84,23 @@ public class HardwareOathDevicesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, HardwareOathTokenAuthenticationMethodDeviceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new hardwareOathTokenAuthenticationMethodDevice object. This API supports two scenarios:- Create the new hardware token without assigning to a user. You can then assign to a user.- Create and assign a hardware token to a user in the same request. 
+     * Create one or more hardwareOathTokenAuthenticationMethodDevice objects. This API supports two scenarios:- Create the new hardware tokens without assigning to users. You can then assign to a user.- Create and assign any individual hardware tokens to users in the same request.
      * @param body The request body
      * @return a {@link HardwareOathTokenAuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethoddevice-post-hardwareoathdevices?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethoddevice-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HardwareOathTokenAuthenticationMethodDevice post(@jakarta.annotation.Nonnull final HardwareOathTokenAuthenticationMethodDevice body) {
         return post(body, null);
     }
     /**
-     * Create a new hardwareOathTokenAuthenticationMethodDevice object. This API supports two scenarios:- Create the new hardware token without assigning to a user. You can then assign to a user.- Create and assign a hardware token to a user in the same request. 
+     * Create one or more hardwareOathTokenAuthenticationMethodDevice objects. This API supports two scenarios:- Create the new hardware tokens without assigning to users. You can then assign to a user.- Create and assign any individual hardware tokens to users in the same request.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link HardwareOathTokenAuthenticationMethodDevice}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethoddevice-post-hardwareoathdevices?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/authenticationmethoddevice-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public HardwareOathTokenAuthenticationMethodDevice post(@jakarta.annotation.Nonnull final HardwareOathTokenAuthenticationMethodDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -131,7 +131,7 @@ public class HardwareOathDevicesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new hardwareOathTokenAuthenticationMethodDevice object. This API supports two scenarios:- Create the new hardware token without assigning to a user. You can then assign to a user.- Create and assign a hardware token to a user in the same request. 
+     * Create one or more hardwareOathTokenAuthenticationMethodDevice objects. This API supports two scenarios:- Create the new hardware tokens without assigning to users. You can then assign to a user.- Create and assign any individual hardware tokens to users in the same request.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class HardwareOathDevicesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new hardwareOathTokenAuthenticationMethodDevice object. This API supports two scenarios:- Create the new hardware token without assigning to a user. You can then assign to a user.- Create and assign a hardware token to a user in the same request. 
+     * Create one or more hardwareOathTokenAuthenticationMethodDevice objects. This API supports two scenarios:- Create the new hardware tokens without assigning to users. You can then assign to a user.- Create and assign any individual hardware tokens to users in the same request.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

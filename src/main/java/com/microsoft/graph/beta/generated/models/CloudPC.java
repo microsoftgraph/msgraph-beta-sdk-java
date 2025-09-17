@@ -115,6 +115,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("frontlineCloudPcAvailability", (n) -> { this.setFrontlineCloudPcAvailability(n.getEnumValue(FrontlineCloudPcAvailability::forValue)); });
         deserializerMap.put("gracePeriodEndDateTime", (n) -> { this.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("groupDetail", (n) -> { this.setGroupDetail(n.getObjectValue(CloudPcEntraGroupDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("imageDisplayName", (n) -> { this.setImageDisplayName(n.getStringValue()); });
         deserializerMap.put("lastLoginResult", (n) -> { this.setLastLoginResult(n.getObjectValue(CloudPcLoginResult::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
@@ -139,6 +140,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("statusDetail", (n) -> { this.setStatusDetail(n.getObjectValue(CloudPcStatusDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("statusDetails", (n) -> { this.setStatusDetails(n.getObjectValue(CloudPcStatusDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("userAccountType", (n) -> { this.setUserAccountType(n.getEnumValue(CloudPcUserAccountType::forValue)); });
+        deserializerMap.put("userDetail", (n) -> { this.setUserDetail(n.getObjectValue(CloudPcEntraUserDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("userExperienceType", (n) -> { this.setUserExperienceType(n.getEnumValue(CloudPcUserExperienceType::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
@@ -158,6 +160,14 @@ public class CloudPC extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getGracePeriodEndDateTime() {
         return this.backingStore.get("gracePeriodEndDateTime");
+    }
+    /**
+     * Gets the groupDetail property value. The Microsoft Entra group details (for example, ID and display name) for the Entra ID group associated with the user&apos;s Reserve Cloud PC assignment. Read-only.
+     * @return a {@link CloudPcEntraGroupDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcEntraGroupDetail getGroupDetail() {
+        return this.backingStore.get("groupDetail");
     }
     /**
      * Gets the imageDisplayName property value. Name of the OS image that&apos;s on the Cloud PC.
@@ -352,6 +362,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("userAccountType");
     }
     /**
+     * Gets the userDetail property value. The user details (for example, ID and display name) for the user associated with a Reserve Cloud PC assignment. Read-only.
+     * @return a {@link CloudPcEntraUserDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcEntraUserDetail getUserDetail() {
+        return this.backingStore.get("userDetail");
+    }
+    /**
      * Gets the userExperienceType property value. Specifies the type of cloud object the end user can access. The possible values are: cloudPc, cloudApp, unknownFutureValue. When set to cloudPc, it indicates that the end user can access the entire desktop. When set to cloudApp, it indicates that the end user can only access cloud apps published under the associated provisioning policy. Since the cloud app experience also creates Cloud PC devices that appear in the Cloud PC device list, this property helps differentiate them. The default value is cloudPc. This property is defined in the provisioning policy.
      * @return a {@link CloudPcUserExperienceType}
      */
@@ -385,6 +403,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeEnumValue("frontlineCloudPcAvailability", this.getFrontlineCloudPcAvailability());
         writer.writeOffsetDateTimeValue("gracePeriodEndDateTime", this.getGracePeriodEndDateTime());
+        writer.writeObjectValue("groupDetail", this.getGroupDetail());
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
         writer.writeObjectValue("lastLoginResult", this.getLastLoginResult());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
@@ -409,6 +428,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeObjectValue("statusDetail", this.getStatusDetail());
         writer.writeObjectValue("statusDetails", this.getStatusDetails());
         writer.writeEnumValue("userAccountType", this.getUserAccountType());
+        writer.writeObjectValue("userDetail", this.getUserDetail());
         writer.writeEnumValue("userExperienceType", this.getUserExperienceType());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
@@ -488,6 +508,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setGracePeriodEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("gracePeriodEndDateTime", value);
+    }
+    /**
+     * Sets the groupDetail property value. The Microsoft Entra group details (for example, ID and display name) for the Entra ID group associated with the user&apos;s Reserve Cloud PC assignment. Read-only.
+     * @param value Value to set for the groupDetail property.
+     */
+    public void setGroupDetail(@jakarta.annotation.Nullable final CloudPcEntraGroupDetail value) {
+        this.backingStore.set("groupDetail", value);
     }
     /**
      * Sets the imageDisplayName property value. Name of the OS image that&apos;s on the Cloud PC.
@@ -656,6 +683,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcUserAccountType value) {
         this.backingStore.set("userAccountType", value);
+    }
+    /**
+     * Sets the userDetail property value. The user details (for example, ID and display name) for the user associated with a Reserve Cloud PC assignment. Read-only.
+     * @param value Value to set for the userDetail property.
+     */
+    public void setUserDetail(@jakarta.annotation.Nullable final CloudPcEntraUserDetail value) {
+        this.backingStore.set("userDetail", value);
     }
     /**
      * Sets the userExperienceType property value. Specifies the type of cloud object the end user can access. The possible values are: cloudPc, cloudApp, unknownFutureValue. When set to cloudPc, it indicates that the end user can access the entire desktop. When set to cloudApp, it indicates that the end user can only access cloud apps published under the associated provisioning policy. Since the cloud app experience also creates Cloud PC devices that appear in the Cloud PC device list, this property helps differentiate them. The default value is cloudPc. This property is defined in the provisioning policy.

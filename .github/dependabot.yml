@@ -5,7 +5,7 @@ updates:
   - "/"
   - "/java-8"
   schedule:
-    interval: daily
+    interval: weekly
     time: "09:00" # 9am UTC
   open-pull-requests-limit: 10
   groups:
@@ -18,10 +18,11 @@ updates:
     open-telemetry:
       patterns:
         - "*opentelemetry*"
+    
 - package-ecosystem: gradle
   directory: "/android"
   schedule:
-    interval: daily
+    interval: weekly
     time: "10:00" # 10am UTC. Scheduled after core java dependencies to prevent duplicate PRs
   open-pull-requests-limit: 10
   groups:
@@ -37,7 +38,7 @@ updates:
 - package-ecosystem: maven
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   open-pull-requests-limit: 10
   groups:
     kiota-dependencies:
@@ -52,5 +53,10 @@ updates:
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   open-pull-requests-limit: 10
+  groups:
+    github-actions-dependencies:
+      patterns:
+        - "actions/*"
+

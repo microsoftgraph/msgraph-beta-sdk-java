@@ -46,6 +46,14 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("address");
     }
     /**
+     * Gets the checkIns property value. A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
+     * @return a {@link java.util.List<CheckInClaim>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CheckInClaim> getCheckIns() {
+        return this.backingStore.get("checkIns");
+    }
+    /**
      * Gets the displayName property value. The name that is associated with the place.
      * @return a {@link String}
      */
@@ -61,6 +69,7 @@ public class Place extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
+        deserializerMap.put("checkIns", (n) -> { this.setCheckIns(n.getCollectionOfObjectValues(CheckInClaim::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("geoCoordinates", (n) -> { this.setGeoCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
         deserializerMap.put("isWheelChairAccessible", (n) -> { this.setIsWheelChairAccessible(n.getBooleanValue()); });
@@ -135,6 +144,7 @@ public class Place extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("address", this.getAddress());
+        writer.writeCollectionOfObjectValues("checkIns", this.getCheckIns());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("geoCoordinates", this.getGeoCoordinates());
         writer.writeBooleanValue("isWheelChairAccessible", this.getIsWheelChairAccessible());
@@ -150,6 +160,13 @@ public class Place extends Entity implements Parsable {
      */
     public void setAddress(@jakarta.annotation.Nullable final PhysicalAddress value) {
         this.backingStore.set("address", value);
+    }
+    /**
+     * Sets the checkIns property value. A subresource of a place object that indicates the check-in status of an Outlook calendar event booked at the place.
+     * @param value Value to set for the checkIns property.
+     */
+    public void setCheckIns(@jakarta.annotation.Nullable final java.util.List<CheckInClaim> value) {
+        this.backingStore.set("checkIns", value);
     }
     /**
      * Sets the displayName property value. The name that is associated with the place.

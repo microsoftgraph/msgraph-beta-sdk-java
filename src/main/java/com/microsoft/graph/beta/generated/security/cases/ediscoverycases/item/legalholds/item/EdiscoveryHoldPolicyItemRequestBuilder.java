@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.EdiscoveryHoldPolicy;
+import com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.item.microsoftgraphsecurityretrypolicy.MicrosoftGraphSecurityRetryPolicyRequestBuilder;
 import com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.item.sitesources.SiteSourcesRequestBuilder;
 import com.microsoft.graph.beta.security.cases.ediscoverycases.item.legalholds.item.usersources.UserSourcesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class EdiscoveryHoldPolicyItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the retryPolicy method.
+     * @return a {@link MicrosoftGraphSecurityRetryPolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityRetryPolicyRequestBuilder microsoftGraphSecurityRetryPolicy() {
+        return new MicrosoftGraphSecurityRetryPolicyRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the siteSources property of the microsoft.graph.security.ediscoveryHoldPolicy entity.
      * @return a {@link SiteSourcesRequestBuilder}

@@ -41,11 +41,20 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("geographicLocationType", (n) -> { this.setGeographicLocationType(n.getEnumValue(CloudPcGeographicLocationType::forValue)); });
         deserializerMap.put("regionGroup", (n) -> { this.setRegionGroup(n.getEnumValue(CloudPcRegionGroup::forValue)); });
         deserializerMap.put("regionRestrictionDetail", (n) -> { this.setRegionRestrictionDetail(n.getObjectValue(CloudPcSupportedRegionRestrictionDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("regionStatus", (n) -> { this.setRegionStatus(n.getEnumValue(CloudPcSupportedRegionStatus::forValue)); });
         deserializerMap.put("supportedSolution", (n) -> { this.setSupportedSolution(n.getEnumSetValue(CloudPcManagementService::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the geographicLocationType property value. The geographic location where the region is located. Possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * @return a {@link CloudPcGeographicLocationType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcGeographicLocationType getGeographicLocationType() {
+        return this.backingStore.get("geographicLocationType");
     }
     /**
      * Gets the regionGroup property value. The regionGroup property
@@ -87,6 +96,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeEnumValue("geographicLocationType", this.getGeographicLocationType());
         writer.writeEnumValue("regionGroup", this.getRegionGroup());
         writer.writeObjectValue("regionRestrictionDetail", this.getRegionRestrictionDetail());
         writer.writeEnumValue("regionStatus", this.getRegionStatus());
@@ -98,6 +108,13 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the geographicLocationType property value. The geographic location where the region is located. Possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * @param value Value to set for the geographicLocationType property.
+     */
+    public void setGeographicLocationType(@jakarta.annotation.Nullable final CloudPcGeographicLocationType value) {
+        this.backingStore.set("geographicLocationType", value);
     }
     /**
      * Sets the regionGroup property value. The regionGroup property
