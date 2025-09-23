@@ -82,23 +82,23 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationGradingSchemeCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new educationGradingScheme object.
+     * Create a new educationGradingScheme on an educationClass. Only teachers can perform this operation.
      * @param body The request body
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingscheme-post?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-post-gradingschemes?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationGradingScheme post(@jakarta.annotation.Nonnull final EducationGradingScheme body) {
         return post(body, null);
     }
     /**
-     * Create a new educationGradingScheme object.
+     * Create a new educationGradingScheme on an educationClass. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/educationgradingscheme-post?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/educationassignmentsettings-post-gradingschemes?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public EducationGradingScheme post(@jakarta.annotation.Nonnull final EducationGradingScheme body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -129,7 +129,7 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new educationGradingScheme object.
+     * Create a new educationGradingScheme on an educationClass. Only teachers can perform this operation.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +138,7 @@ public class GradingSchemesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new educationGradingScheme object.
+     * Create a new educationGradingScheme on an educationClass. Only teachers can perform this operation.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

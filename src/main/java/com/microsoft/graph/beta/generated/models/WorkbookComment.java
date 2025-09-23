@@ -25,7 +25,7 @@ public class WorkbookComment extends Entity implements Parsable {
         return new WorkbookComment();
     }
     /**
-     * Gets the content property value. The content of the comment.
+     * Gets the content property value. The content of the comment that is the String displayed to end-users.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class WorkbookComment extends Entity implements Parsable {
         return this.backingStore.get("content");
     }
     /**
-     * Gets the contentType property value. The content type of the comment.
+     * Gets the contentType property value. The content type of the comment. Supported values are: plain, mention.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -82,14 +82,14 @@ public class WorkbookComment extends Entity implements Parsable {
         writer.writeObjectValue("task", this.getTask());
     }
     /**
-     * Sets the content property value. The content of the comment.
+     * Sets the content property value. The content of the comment that is the String displayed to end-users.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the contentType property value. The content type of the comment.
+     * Sets the contentType property value. The content type of the comment. Supported values are: plain, mention.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {

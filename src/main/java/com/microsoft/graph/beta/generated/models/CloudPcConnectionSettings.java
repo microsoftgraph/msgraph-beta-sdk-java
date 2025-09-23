@@ -56,7 +56,7 @@ public class CloudPcConnectionSettings implements AdditionalDataHolder, BackedMo
         return this.backingStore;
     }
     /**
-     * Gets the enableSingleSignOn property value. The enableSingleSignOn property
+     * Gets the enableSingleSignOn property value. Indicates whether single sign-on is enabled. The default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class CloudPcConnectionSettings implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the enableSingleSignOn property value. The enableSingleSignOn property
+     * Sets the enableSingleSignOn property value. Indicates whether single sign-on is enabled. The default value is false.
      * @param value Value to set for the enableSingleSignOn property.
      */
     public void setEnableSingleSignOn(@jakarta.annotation.Nullable final Boolean value) {

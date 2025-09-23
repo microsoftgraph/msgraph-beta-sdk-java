@@ -35,7 +35,7 @@ public class OnPremisesSyncBehavior extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isCloudManaged property value. Indicates the state of synchronization for an object between the cloud and on-premises Active Directory. If true, updates from on-premises Active Directory are blocked in the cloud; if false, updates from on-premises Active Directory are allowed in the cloud and the object can be taken over by on-premises Active Directory.
+     * Gets the isCloudManaged property value. Indicates the state of synchronization for an object between the cloud and on-premises Active Directory. If true, updates from on-premises Active Directory are blocked in the cloud; if false, updates from on-premises Active Directory are allowed in the cloud and the on-premises Active Directory can take over the object.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class OnPremisesSyncBehavior extends Entity implements Parsable {
         writer.writeBooleanValue("isCloudManaged", this.getIsCloudManaged());
     }
     /**
-     * Sets the isCloudManaged property value. Indicates the state of synchronization for an object between the cloud and on-premises Active Directory. If true, updates from on-premises Active Directory are blocked in the cloud; if false, updates from on-premises Active Directory are allowed in the cloud and the object can be taken over by on-premises Active Directory.
+     * Sets the isCloudManaged property value. Indicates the state of synchronization for an object between the cloud and on-premises Active Directory. If true, updates from on-premises Active Directory are blocked in the cloud; if false, updates from on-premises Active Directory are allowed in the cloud and the on-premises Active Directory can take over the object.
      * @param value Value to set for the isCloudManaged property.
      */
     public void setIsCloudManaged(@jakarta.annotation.Nullable final Boolean value) {

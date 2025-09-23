@@ -37,7 +37,7 @@ public class DefaultGradingSchemeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignmentSettings/defaultGradingScheme{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get defaultGradingScheme from education
+     * The default grading scheme for assignments created in this class.
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class DefaultGradingSchemeRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get defaultGradingScheme from education
+     * The default grading scheme for assignments created in this class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class DefaultGradingSchemeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationGradingScheme::createFromDiscriminatorValue);
     }
     /**
-     * Get defaultGradingScheme from education
+     * The default grading scheme for assignments created in this class.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class DefaultGradingSchemeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get defaultGradingScheme from education
+     * The default grading scheme for assignments created in this class.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class DefaultGradingSchemeRequestBuilder extends BaseRequestBuilder {
         return new DefaultGradingSchemeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get defaultGradingScheme from education
+     * The default grading scheme for assignments created in this class.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
