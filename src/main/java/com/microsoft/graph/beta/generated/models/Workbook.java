@@ -33,7 +33,7 @@ public class Workbook extends Entity implements Parsable {
         return this.backingStore.get("application");
     }
     /**
-     * Gets the comments property value. The comments property
+     * Gets the comments property value. Represents a collection of comments in a workbook.
      * @return a {@link java.util.List<WorkbookComment>}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class Workbook extends Entity implements Parsable {
         this.backingStore.set("application", value);
     }
     /**
-     * Sets the comments property value. The comments property
+     * Sets the comments property value. Represents a collection of comments in a workbook.
      * @param value Value to set for the comments property.
      */
     public void setComments(@jakarta.annotation.Nullable final java.util.List<WorkbookComment> value) {

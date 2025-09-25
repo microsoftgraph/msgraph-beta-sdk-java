@@ -50,7 +50,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("connectionSetting");
     }
     /**
-     * Gets the connectionSettings property value. The connectionSettings property
+     * Gets the connectionSettings property value. The connection settings of the Cloud PC. Possible values: enableSingleSignOn. Read-only. This property is deprecated and stopped retuning data on August 31, 2024. Going forward, use the connectionSetting property.
      * @return a {@link CloudPcConnectionSettings}
      */
     @jakarta.annotation.Nullable
@@ -282,7 +282,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisioningPolicyName");
     }
     /**
-     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue,sharedByUser, sharedByEntraGroup. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The default value is dedicated. CAUTION: The shared member is deprecated and will stop returning on April 30, 2027 in the future, use the sharedByUser member.
+     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The default value is dedicated. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
      * @return a {@link CloudPcProvisioningType}
      */
     @jakarta.annotation.Nullable
@@ -454,7 +454,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("connectionSetting", value);
     }
     /**
-     * Sets the connectionSettings property value. The connectionSettings property
+     * Sets the connectionSettings property value. The connection settings of the Cloud PC. Possible values: enableSingleSignOn. Read-only. This property is deprecated and stopped retuning data on August 31, 2024. Going forward, use the connectionSetting property.
      * @param value Value to set for the connectionSettings property.
      */
     public void setConnectionSettings(@jakarta.annotation.Nullable final CloudPcConnectionSettings value) {
@@ -615,7 +615,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("provisioningPolicyName", value);
     }
     /**
-     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue,sharedByUser, sharedByEntraGroup. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup. The default value is dedicated. CAUTION: The shared member is deprecated and will stop returning on April 30, 2027 in the future, use the sharedByUser member.
+     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The default value is dedicated. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
      * @param value Value to set for the provisioningType property.
      */
     public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {

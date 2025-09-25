@@ -80,7 +80,7 @@ public class UserProcessingResult extends Entity implements Parsable {
         return this.backingStore.get("scheduledDateTime");
     }
     /**
-     * Gets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution has not started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Gets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution hasn&apos;t started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class UserProcessingResult extends Entity implements Parsable {
         this.backingStore.set("scheduledDateTime", value);
     }
     /**
-     * Sets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution has not started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
+     * Sets the startedDateTime property value. The date time that the workflow execution started. Value is null if the workflow execution hasn&apos;t started.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

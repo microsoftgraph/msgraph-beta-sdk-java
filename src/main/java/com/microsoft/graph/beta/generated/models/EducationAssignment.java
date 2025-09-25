@@ -201,7 +201,7 @@ public class EducationAssignment extends Entity implements Parsable {
         return this.backingStore.get("gradingCategory");
     }
     /**
-     * Gets the gradingScheme property value. The gradingScheme property
+     * Gets the gradingScheme property value. When set, enables users to configure custom string grades based on the percentage of total points earned on this assignment.
      * @return a {@link EducationGradingScheme}
      */
     @jakarta.annotation.Nullable
@@ -452,7 +452,7 @@ public class EducationAssignment extends Entity implements Parsable {
         this.backingStore.set("gradingCategory", value);
     }
     /**
-     * Sets the gradingScheme property value. The gradingScheme property
+     * Sets the gradingScheme property value. When set, enables users to configure custom string grades based on the percentage of total points earned on this assignment.
      * @param value Value to set for the gradingScheme property.
      */
     public void setGradingScheme(@jakarta.annotation.Nullable final EducationGradingScheme value) {

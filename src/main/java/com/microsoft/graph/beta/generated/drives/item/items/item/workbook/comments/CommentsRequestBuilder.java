@@ -60,7 +60,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/comments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      * @return a {@link WorkbookCommentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link WorkbookCommentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, WorkbookComment::createFromDiscriminatorValue);
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class CommentsRequestBuilder extends BaseRequestBuilder {
         return new CommentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get comments from drives
+     * Represents a collection of comments in a workbook.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

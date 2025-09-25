@@ -37,7 +37,7 @@ public class GradingSchemeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/gradingScheme{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get gradingScheme from education
+     * When set, enables users to configure custom string grades based on the percentage of total points earned on this assignment.
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class GradingSchemeRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get gradingScheme from education
+     * When set, enables users to configure custom string grades based on the percentage of total points earned on this assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationGradingScheme}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class GradingSchemeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationGradingScheme::createFromDiscriminatorValue);
     }
     /**
-     * Get gradingScheme from education
+     * When set, enables users to configure custom string grades based on the percentage of total points earned on this assignment.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class GradingSchemeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get gradingScheme from education
+     * When set, enables users to configure custom string grades based on the percentage of total points earned on this assignment.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class GradingSchemeRequestBuilder extends BaseRequestBuilder {
         return new GradingSchemeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get gradingScheme from education
+     * When set, enables users to configure custom string grades based on the percentage of total points earned on this assignment.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

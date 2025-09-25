@@ -36,7 +36,7 @@ public class UserInactivityTrigger extends WorkflowExecutionTrigger implements P
         return deserializerMap;
     }
     /**
-     * Gets the inactivityPeriodInDays property value. The inactivityPeriodInDays property
+     * Gets the inactivityPeriodInDays property value. The number of days a user must be inactive before triggering workflow execution.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class UserInactivityTrigger extends WorkflowExecutionTrigger implements P
         writer.writeIntegerValue("inactivityPeriodInDays", this.getInactivityPeriodInDays());
     }
     /**
-     * Sets the inactivityPeriodInDays property value. The inactivityPeriodInDays property
+     * Sets the inactivityPeriodInDays property value. The number of days a user must be inactive before triggering workflow execution.
      * @param value Value to set for the inactivityPeriodInDays property.
      */
     public void setInactivityPeriodInDays(@jakarta.annotation.Nullable final Integer value) {

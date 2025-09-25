@@ -25,7 +25,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
         return new EducationAssignmentSettings();
     }
     /**
-     * Gets the defaultGradingScheme property value. The defaultGradingScheme property
+     * Gets the defaultGradingScheme property value. The default grading scheme for assignments created in this class.
      * @return a {@link EducationGradingScheme}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
         return this.backingStore.get("gradingCategories");
     }
     /**
-     * Gets the gradingSchemes property value. The gradingSchemes property
+     * Gets the gradingSchemes property value. The grading schemes that can be attached to assignments created in this class.
      * @return a {@link java.util.List<EducationGradingScheme>}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
         writer.writeBooleanValue("submissionAnimationDisabled", this.getSubmissionAnimationDisabled());
     }
     /**
-     * Sets the defaultGradingScheme property value. The defaultGradingScheme property
+     * Sets the defaultGradingScheme property value. The default grading scheme for assignments created in this class.
      * @param value Value to set for the defaultGradingScheme property.
      */
     public void setDefaultGradingScheme(@jakarta.annotation.Nullable final EducationGradingScheme value) {
@@ -96,7 +96,7 @@ public class EducationAssignmentSettings extends Entity implements Parsable {
         this.backingStore.set("gradingCategories", value);
     }
     /**
-     * Sets the gradingSchemes property value. The gradingSchemes property
+     * Sets the gradingSchemes property value. The grading schemes that can be attached to assignments created in this class.
      * @param value Value to set for the gradingSchemes property.
      */
     public void setGradingSchemes(@jakarta.annotation.Nullable final java.util.List<EducationGradingScheme> value) {
