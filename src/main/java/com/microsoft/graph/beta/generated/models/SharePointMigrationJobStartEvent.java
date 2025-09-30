@@ -36,7 +36,7 @@ public class SharePointMigrationJobStartEvent extends SharePointMigrationEvent i
         return deserializerMap;
     }
     /**
-     * Gets the isRestarted property value. The isRestarted property
+     * Gets the isRestarted property value. True if the job is restarted. False if it&apos;s the initial start. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class SharePointMigrationJobStartEvent extends SharePointMigrationEvent i
         return this.backingStore.get("isRestarted");
     }
     /**
-     * Gets the totalRetryCount property value. The totalRetryCount property
+     * Gets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class SharePointMigrationJobStartEvent extends SharePointMigrationEvent i
         writer.writeIntegerValue("totalRetryCount", this.getTotalRetryCount());
     }
     /**
-     * Sets the isRestarted property value. The isRestarted property
+     * Sets the isRestarted property value. True if the job is restarted. False if it&apos;s the initial start. Read-only.
      * @param value Value to set for the isRestarted property.
      */
     public void setIsRestarted(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isRestarted", value);
     }
     /**
-     * Sets the totalRetryCount property value. The totalRetryCount property
+     * Sets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @param value Value to set for the totalRetryCount property.
      */
     public void setTotalRetryCount(@jakarta.annotation.Nullable final Integer value) {

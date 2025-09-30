@@ -56,7 +56,7 @@ public class SharePointMigrationJobErrorEvent extends SharePointMigrationEvent i
         return deserializerMap;
     }
     /**
-     * Gets the objectId property value. The objectId property
+     * Gets the objectId property value. The object ID. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class SharePointMigrationJobErrorEvent extends SharePointMigrationEvent i
         return this.backingStore.get("objectType");
     }
     /**
-     * Gets the objectUrl property value. The objectUrl property
+     * Gets the objectUrl property value. The object URL. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class SharePointMigrationJobErrorEvent extends SharePointMigrationEvent i
         return this.backingStore.get("objectUrl");
     }
     /**
-     * Gets the totalRetryCount property value. The totalRetryCount property
+     * Gets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class SharePointMigrationJobErrorEvent extends SharePointMigrationEvent i
         this.backingStore.set("errorLevel", value);
     }
     /**
-     * Sets the objectId property value. The objectId property
+     * Sets the objectId property value. The object ID. Read-only.
      * @param value Value to set for the objectId property.
      */
     public void setObjectId(@jakarta.annotation.Nullable final String value) {
@@ -130,14 +130,14 @@ public class SharePointMigrationJobErrorEvent extends SharePointMigrationEvent i
         this.backingStore.set("objectType", value);
     }
     /**
-     * Sets the objectUrl property value. The objectUrl property
+     * Sets the objectUrl property value. The object URL. Read-only.
      * @param value Value to set for the objectUrl property.
      */
     public void setObjectUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("objectUrl", value);
     }
     /**
-     * Sets the totalRetryCount property value. The totalRetryCount property
+     * Sets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @param value Value to set for the totalRetryCount property.
      */
     public void setTotalRetryCount(@jakarta.annotation.Nullable final Integer value) {

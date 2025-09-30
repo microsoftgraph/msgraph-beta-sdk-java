@@ -60,7 +60,7 @@ public class MigrationJobsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containers/{fileStorageContainer%2Did}/migrationJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @return a {@link SharePointMigrationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class MigrationJobsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class MigrationJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SharePointMigrationJob::createFromDiscriminatorValue);
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class MigrationJobsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class MigrationJobsRequestBuilder extends BaseRequestBuilder {
         return new MigrationJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -64,7 +64,7 @@ public class SharePointMigrationJobItemRequestBuilder extends BaseRequestBuilder
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @return a {@link SharePointMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class SharePointMigrationJobItemRequestBuilder extends BaseRequestBuilder
         return get(null);
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class SharePointMigrationJobItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class SharePointMigrationJobItemRequestBuilder extends BaseRequestBuilder
         return toGetRequestInformation(null);
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class SharePointMigrationJobItemRequestBuilder extends BaseRequestBuilder
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get migrationJobs from storage
+     * The collection of sharePointMigrationJob objects local to the container. Read-write.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

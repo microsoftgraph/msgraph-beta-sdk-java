@@ -73,7 +73,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A container for all Teams telephone number management functionalities and user configurations.
+     * A container for Teams administration functionalities, such as user configurations, telephone number management, and policy assignments.
      * @return a {@link TeamsAdminRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A container for all Teams telephone number management functionalities and user configurations.
+     * A container for Teams administration functionalities, such as user configurations, telephone number management, and policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAdminRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A container for all Teams telephone number management functionalities and user configurations.
+     * A container for Teams administration functionalities, such as user configurations, telephone number management, and policy assignments.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A container for all Teams telephone number management functionalities and user configurations.
+     * A container for Teams administration functionalities, such as user configurations, telephone number management, and policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A container for all Teams telephone number management functionalities and user configurations.
+     * A container for Teams administration functionalities, such as user configurations, telephone number management, and policy assignments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

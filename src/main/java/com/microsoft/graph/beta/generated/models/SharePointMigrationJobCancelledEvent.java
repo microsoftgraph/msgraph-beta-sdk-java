@@ -36,7 +36,7 @@ public class SharePointMigrationJobCancelledEvent extends SharePointMigrationEve
         return deserializerMap;
     }
     /**
-     * Gets the isCancelledByUser property value. The isCancelledByUser property
+     * Gets the isCancelledByUser property value. True when a user cancels the job; otherwise, false. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class SharePointMigrationJobCancelledEvent extends SharePointMigrationEve
         return this.backingStore.get("isCancelledByUser");
     }
     /**
-     * Gets the totalRetryCount property value. The totalRetryCount property
+     * Gets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class SharePointMigrationJobCancelledEvent extends SharePointMigrationEve
         writer.writeIntegerValue("totalRetryCount", this.getTotalRetryCount());
     }
     /**
-     * Sets the isCancelledByUser property value. The isCancelledByUser property
+     * Sets the isCancelledByUser property value. True when a user cancels the job; otherwise, false. Read-only.
      * @param value Value to set for the isCancelledByUser property.
      */
     public void setIsCancelledByUser(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCancelledByUser", value);
     }
     /**
-     * Sets the totalRetryCount property value. The totalRetryCount property
+     * Sets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @param value Value to set for the totalRetryCount property.
      */
     public void setTotalRetryCount(@jakarta.annotation.Nullable final Integer value) {

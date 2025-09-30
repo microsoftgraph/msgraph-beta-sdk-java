@@ -55,7 +55,7 @@ public class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      * @return a {@link SharePointMigrationEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuild
         return get(null);
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class SharePointMigrationEventItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

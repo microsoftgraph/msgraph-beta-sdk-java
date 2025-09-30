@@ -56,7 +56,7 @@ public class SharePointMigrationContainerInfo implements AdditionalDataHolder, B
         return this.backingStore;
     }
     /**
-     * Gets the dataContainerUri property value. The dataContainerUri property
+     * Gets the dataContainerUri property value. A valid URL with a SAS token for accessing the Azure blob storage container that contains the file content. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class SharePointMigrationContainerInfo implements AdditionalDataHolder, B
         return this.backingStore.get("dataContainerUri");
     }
     /**
-     * Gets the encryptionKey property value. The encryptionKey property
+     * Gets the encryptionKey property value. Provides the AES-256-CBC encryption key if files stored in Azure blob containers are encrypted. The key is Base64-encoded. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class SharePointMigrationContainerInfo implements AdditionalDataHolder, B
         return deserializerMap;
     }
     /**
-     * Gets the metadataContainerUri property value. The metadataContainerUri property
+     * Gets the metadataContainerUri property value. A valid URL with a SAS token for accessing the Azure blob storage container that contains the file metadata. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,21 +128,21 @@ public class SharePointMigrationContainerInfo implements AdditionalDataHolder, B
         this.backingStore = value;
     }
     /**
-     * Sets the dataContainerUri property value. The dataContainerUri property
+     * Sets the dataContainerUri property value. A valid URL with a SAS token for accessing the Azure blob storage container that contains the file content. Read-only.
      * @param value Value to set for the dataContainerUri property.
      */
     public void setDataContainerUri(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("dataContainerUri", value);
     }
     /**
-     * Sets the encryptionKey property value. The encryptionKey property
+     * Sets the encryptionKey property value. Provides the AES-256-CBC encryption key if files stored in Azure blob containers are encrypted. The key is Base64-encoded. Read-only.
      * @param value Value to set for the encryptionKey property.
      */
     public void setEncryptionKey(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("encryptionKey", value);
     }
     /**
-     * Sets the metadataContainerUri property value. The metadataContainerUri property
+     * Sets the metadataContainerUri property value. A valid URL with a SAS token for accessing the Azure blob storage container that contains the file metadata. Read-only.
      * @param value Value to set for the metadataContainerUri property.
      */
     public void setMetadataContainerUri(@jakarta.annotation.Nullable final String value) {

@@ -36,7 +36,7 @@ public class CaPoliciesDeletableRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the namedLocations property value. The namedLocations property
+     * Gets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.
      * @return a {@link java.util.List<NamedLocation>}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class CaPoliciesDeletableRoot extends Entity implements Parsable {
         return this.backingStore.get("namedLocations");
     }
     /**
-     * Gets the policies property value. The policies property
+     * Gets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
      * @return a {@link java.util.List<ConditionalAccessPolicy>}
      */
     @jakarta.annotation.Nullable
@@ -62,14 +62,14 @@ public class CaPoliciesDeletableRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("policies", this.getPolicies());
     }
     /**
-     * Sets the namedLocations property value. The namedLocations property
+     * Sets the namedLocations property value. Read-only. Nullable. Returns a collection of the specified named locations.
      * @param value Value to set for the namedLocations property.
      */
     public void setNamedLocations(@jakarta.annotation.Nullable final java.util.List<NamedLocation> value) {
         this.backingStore.set("namedLocations", value);
     }
     /**
-     * Sets the policies property value. The policies property
+     * Sets the policies property value. Read-only. Nullable. Returns a collection of the specified Conditional Access policies.
      * @param value Value to set for the policies property.
      */
     public void setPolicies(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessPolicy> value) {

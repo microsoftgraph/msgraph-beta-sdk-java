@@ -35,7 +35,7 @@ public class SharePointMigrationFinishManifestFileUploadEvent extends SharePoint
         return deserializerMap;
     }
     /**
-     * Gets the manifestFileName property value. The manifestFileName property
+     * Gets the manifestFileName property value. The exported manifest file name. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class SharePointMigrationFinishManifestFileUploadEvent extends SharePoint
         writer.writeStringValue("manifestFileName", this.getManifestFileName());
     }
     /**
-     * Sets the manifestFileName property value. The manifestFileName property
+     * Sets the manifestFileName property value. The exported manifest file name. Read-only.
      * @param value Value to set for the manifestFileName property.
      */
     public void setManifestFileName(@jakarta.annotation.Nullable final String value) {

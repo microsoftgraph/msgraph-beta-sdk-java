@@ -55,7 +55,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get policy from admin
+     * Represents a navigation property to the Teams policy assignment object.
      * @return a {@link TeamsPolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get policy from admin
+     * Represents a navigation property to the Teams policy assignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsPolicyAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get policy from admin
+     * Represents a navigation property to the Teams policy assignment object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get policy from admin
+     * Represents a navigation property to the Teams policy assignment object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get policy from admin
+     * Represents a navigation property to the Teams policy assignment object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
