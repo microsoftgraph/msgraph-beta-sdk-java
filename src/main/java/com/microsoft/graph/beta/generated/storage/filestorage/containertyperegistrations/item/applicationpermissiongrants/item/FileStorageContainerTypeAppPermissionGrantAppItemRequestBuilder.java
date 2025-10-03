@@ -81,23 +81,23 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerTypeAppPermissionGrant::createFromDiscriminatorValue);
     }
     /**
-     * Create a new fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
+     * Update the properties of a fileStorageContainerTypeAppPermissionGrant object.
      * @param body The request body
      * @return a {@link FileStorageContainerTypeAppPermissionGrant}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-post-applicationpermissiongrants?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertypeapppermissiongrant-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeAppPermissionGrant patch(@jakarta.annotation.Nonnull final FileStorageContainerTypeAppPermissionGrant body) {
         return patch(body, null);
     }
     /**
-     * Create a new fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
+     * Update the properties of a fileStorageContainerTypeAppPermissionGrant object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FileStorageContainerTypeAppPermissionGrant}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertyperegistration-post-applicationpermissiongrants?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertypeapppermissiongrant-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public FileStorageContainerTypeAppPermissionGrant patch(@jakarta.annotation.Nonnull final FileStorageContainerTypeAppPermissionGrant body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -148,7 +148,7 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return requestInfo;
     }
     /**
-     * Create a new fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
+     * Update the properties of a fileStorageContainerTypeAppPermissionGrant object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class FileStorageContainerTypeAppPermissionGrantAppItemRequestBuilder ext
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new fileStorageContainerTypeAppPermissionGrant object in a fileStorageContainerTypeRegistration.
+     * Update the properties of a fileStorageContainerTypeAppPermissionGrant object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

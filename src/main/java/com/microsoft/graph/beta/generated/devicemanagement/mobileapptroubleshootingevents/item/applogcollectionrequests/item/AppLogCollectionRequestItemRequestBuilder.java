@@ -64,7 +64,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * The collection property of AppLogUploadRequest.
+     * Indicates collection of App Log Upload Request.
      * @return a {@link AppLogCollectionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return get(null);
     }
     /**
-     * The collection property of AppLogUploadRequest.
+     * Indicates collection of App Log Upload Request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppLogCollectionRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * The collection property of AppLogUploadRequest.
+     * Indicates collection of App Log Upload Request.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * The collection property of AppLogUploadRequest.
+     * Indicates collection of App Log Upload Request.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class AppLogCollectionRequestItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * The collection property of AppLogUploadRequest.
+     * Indicates collection of App Log Upload Request.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

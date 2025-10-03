@@ -55,7 +55,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get dependentResources from education
+     * A collection of assignment resources that depend on the parent educationAssignmentResource.
      * @return a {@link EducationAssignmentResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get dependentResources from education
+     * A collection of assignment resources that depend on the parent educationAssignmentResource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationAssignmentResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get dependentResources from education
+     * A collection of assignment resources that depend on the parent educationAssignmentResource.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get dependentResources from education
+     * A collection of assignment resources that depend on the parent educationAssignmentResource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class EducationAssignmentResourceItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get dependentResources from education
+     * A collection of assignment resources that depend on the parent educationAssignmentResource.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

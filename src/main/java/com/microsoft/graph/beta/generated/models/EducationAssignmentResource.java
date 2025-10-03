@@ -25,7 +25,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
         return new EducationAssignmentResource();
     }
     /**
-     * Gets the dependentResources property value. The dependentResources property
+     * Gets the dependentResources property value. A collection of assignment resources that depend on the parent educationAssignmentResource.
      * @return a {@link java.util.List<EducationAssignmentResource>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class EducationAssignmentResource extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the dependentResources property value. The dependentResources property
+     * Sets the dependentResources property value. A collection of assignment resources that depend on the parent educationAssignmentResource.
      * @param value Value to set for the dependentResources property.
      */
     public void setDependentResources(@jakarta.annotation.Nullable final java.util.List<EducationAssignmentResource> value) {
