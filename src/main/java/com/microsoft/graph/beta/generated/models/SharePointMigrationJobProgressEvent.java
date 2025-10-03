@@ -25,7 +25,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return new SharePointMigrationJobProgressEvent();
     }
     /**
-     * Gets the bytesProcessed property value. The bytesProcessed property
+     * Gets the bytesProcessed property value. The number of bytes processed. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("bytesProcessed");
     }
     /**
-     * Gets the bytesProcessedOnlyCurrentVersion property value. The bytesProcessedOnlyCurrentVersion property
+     * Gets the bytesProcessedOnlyCurrentVersion property value. The number of bytes processed with version history excluded. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("bytesProcessedOnlyCurrentVersion");
     }
     /**
-     * Gets the cpuDurationMs property value. The cpuDurationMs property
+     * Gets the cpuDurationMs property value. CPU duration in milliseconds. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -75,7 +75,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return deserializerMap;
     }
     /**
-     * Gets the filesProcessed property value. The filesProcessed property
+     * Gets the filesProcessed property value. The number of files processed. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("filesProcessed");
     }
     /**
-     * Gets the filesProcessedOnlyCurrentVersion property value. The filesProcessedOnlyCurrentVersion property
+     * Gets the filesProcessedOnlyCurrentVersion property value. The number of files processed with version history excluded. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("filesProcessedOnlyCurrentVersion");
     }
     /**
-     * Gets the isCompleted property value. The isCompleted property
+     * Gets the isCompleted property value. True if the job status is End. False if the job is In progress. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("isCompleted");
     }
     /**
-     * Gets the lastProcessedObjectId property value. The lastProcessedObjectId property
+     * Gets the lastProcessedObjectId property value. The unique identifier of the last object processed. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("lastProcessedObjectId");
     }
     /**
-     * Gets the objectsProcessed property value. The objectsProcessed property
+     * Gets the objectsProcessed property value. The number of objects processed. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("objectsProcessed");
     }
     /**
-     * Gets the sqlDurationMs property value. The sqlDurationMs property
+     * Gets the sqlDurationMs property value. SQL duration in milliseconds. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("sqlDurationMs");
     }
     /**
-     * Gets the sqlQueryCount property value. The sqlQueryCount property
+     * Gets the sqlQueryCount property value. SQL query count. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("sqlQueryCount");
     }
     /**
-     * Gets the totalDurationMs property value. The totalDurationMs property
+     * Gets the totalDurationMs property value. Total duration time in milliseconds. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("totalDurationMs");
     }
     /**
-     * Gets the totalErrors property value. The totalErrors property
+     * Gets the totalErrors property value. Total errors. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("totalErrors");
     }
     /**
-     * Gets the totalExpectedBytes property value. The totalExpectedBytes property
+     * Gets the totalExpectedBytes property value. Total bytes to be processed. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("totalExpectedBytes");
     }
     /**
-     * Gets the totalExpectedObjects property value. The totalExpectedObjects property
+     * Gets the totalExpectedObjects property value. The number of objects to process. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("totalExpectedObjects");
     }
     /**
-     * Gets the totalRetryCount property value. The totalRetryCount property
+     * Gets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("totalRetryCount");
     }
     /**
-     * Gets the totalWarnings property value. The totalWarnings property
+     * Gets the totalWarnings property value. Total warnings. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -179,7 +179,7 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         return this.backingStore.get("totalWarnings");
     }
     /**
-     * Gets the waitTimeOnSqlThrottlingMs property value. The waitTimeOnSqlThrottlingMs property
+     * Gets the waitTimeOnSqlThrottlingMs property value. Waiting time due to SQL throttling, in milliseconds. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -212,119 +212,119 @@ public class SharePointMigrationJobProgressEvent extends SharePointMigrationEven
         writer.writeLongValue("waitTimeOnSqlThrottlingMs", this.getWaitTimeOnSqlThrottlingMs());
     }
     /**
-     * Sets the bytesProcessed property value. The bytesProcessed property
+     * Sets the bytesProcessed property value. The number of bytes processed. Read-only.
      * @param value Value to set for the bytesProcessed property.
      */
     public void setBytesProcessed(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("bytesProcessed", value);
     }
     /**
-     * Sets the bytesProcessedOnlyCurrentVersion property value. The bytesProcessedOnlyCurrentVersion property
+     * Sets the bytesProcessedOnlyCurrentVersion property value. The number of bytes processed with version history excluded. Read-only.
      * @param value Value to set for the bytesProcessedOnlyCurrentVersion property.
      */
     public void setBytesProcessedOnlyCurrentVersion(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("bytesProcessedOnlyCurrentVersion", value);
     }
     /**
-     * Sets the cpuDurationMs property value. The cpuDurationMs property
+     * Sets the cpuDurationMs property value. CPU duration in milliseconds. Read-only.
      * @param value Value to set for the cpuDurationMs property.
      */
     public void setCpuDurationMs(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("cpuDurationMs", value);
     }
     /**
-     * Sets the filesProcessed property value. The filesProcessed property
+     * Sets the filesProcessed property value. The number of files processed. Read-only.
      * @param value Value to set for the filesProcessed property.
      */
     public void setFilesProcessed(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("filesProcessed", value);
     }
     /**
-     * Sets the filesProcessedOnlyCurrentVersion property value. The filesProcessedOnlyCurrentVersion property
+     * Sets the filesProcessedOnlyCurrentVersion property value. The number of files processed with version history excluded. Read-only.
      * @param value Value to set for the filesProcessedOnlyCurrentVersion property.
      */
     public void setFilesProcessedOnlyCurrentVersion(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("filesProcessedOnlyCurrentVersion", value);
     }
     /**
-     * Sets the isCompleted property value. The isCompleted property
+     * Sets the isCompleted property value. True if the job status is End. False if the job is In progress. Read-only.
      * @param value Value to set for the isCompleted property.
      */
     public void setIsCompleted(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCompleted", value);
     }
     /**
-     * Sets the lastProcessedObjectId property value. The lastProcessedObjectId property
+     * Sets the lastProcessedObjectId property value. The unique identifier of the last object processed. Read-only.
      * @param value Value to set for the lastProcessedObjectId property.
      */
     public void setLastProcessedObjectId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("lastProcessedObjectId", value);
     }
     /**
-     * Sets the objectsProcessed property value. The objectsProcessed property
+     * Sets the objectsProcessed property value. The number of objects processed. Read-only.
      * @param value Value to set for the objectsProcessed property.
      */
     public void setObjectsProcessed(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("objectsProcessed", value);
     }
     /**
-     * Sets the sqlDurationMs property value. The sqlDurationMs property
+     * Sets the sqlDurationMs property value. SQL duration in milliseconds. Read-only.
      * @param value Value to set for the sqlDurationMs property.
      */
     public void setSqlDurationMs(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("sqlDurationMs", value);
     }
     /**
-     * Sets the sqlQueryCount property value. The sqlQueryCount property
+     * Sets the sqlQueryCount property value. SQL query count. Read-only.
      * @param value Value to set for the sqlQueryCount property.
      */
     public void setSqlQueryCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("sqlQueryCount", value);
     }
     /**
-     * Sets the totalDurationMs property value. The totalDurationMs property
+     * Sets the totalDurationMs property value. Total duration time in milliseconds. Read-only.
      * @param value Value to set for the totalDurationMs property.
      */
     public void setTotalDurationMs(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalDurationMs", value);
     }
     /**
-     * Sets the totalErrors property value. The totalErrors property
+     * Sets the totalErrors property value. Total errors. Read-only.
      * @param value Value to set for the totalErrors property.
      */
     public void setTotalErrors(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalErrors", value);
     }
     /**
-     * Sets the totalExpectedBytes property value. The totalExpectedBytes property
+     * Sets the totalExpectedBytes property value. Total bytes to be processed. Read-only.
      * @param value Value to set for the totalExpectedBytes property.
      */
     public void setTotalExpectedBytes(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalExpectedBytes", value);
     }
     /**
-     * Sets the totalExpectedObjects property value. The totalExpectedObjects property
+     * Sets the totalExpectedObjects property value. The number of objects to process. Read-only.
      * @param value Value to set for the totalExpectedObjects property.
      */
     public void setTotalExpectedObjects(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalExpectedObjects", value);
     }
     /**
-     * Sets the totalRetryCount property value. The totalRetryCount property
+     * Sets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @param value Value to set for the totalRetryCount property.
      */
     public void setTotalRetryCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("totalRetryCount", value);
     }
     /**
-     * Sets the totalWarnings property value. The totalWarnings property
+     * Sets the totalWarnings property value. Total warnings. Read-only.
      * @param value Value to set for the totalWarnings property.
      */
     public void setTotalWarnings(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("totalWarnings", value);
     }
     /**
-     * Sets the waitTimeOnSqlThrottlingMs property value. The waitTimeOnSqlThrottlingMs property
+     * Sets the waitTimeOnSqlThrottlingMs property value. Waiting time due to SQL throttling, in milliseconds. Read-only.
      * @param value Value to set for the waitTimeOnSqlThrottlingMs property.
      */
     public void setWaitTimeOnSqlThrottlingMs(@jakarta.annotation.Nullable final Long value) {

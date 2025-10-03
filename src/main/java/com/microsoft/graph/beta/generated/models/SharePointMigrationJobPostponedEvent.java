@@ -39,7 +39,7 @@ public class SharePointMigrationJobPostponedEvent extends SharePointMigrationEve
         return deserializerMap;
     }
     /**
-     * Gets the jobsInQueue property value. The jobsInQueue property
+     * Gets the jobsInQueue property value. The number of migration jobs in the queue of the current database. Read-only.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -47,7 +47,7 @@ public class SharePointMigrationJobPostponedEvent extends SharePointMigrationEve
         return this.backingStore.get("jobsInQueue");
     }
     /**
-     * Gets the nextPickupDateTime property value. The nextPickupDateTime property
+     * Gets the nextPickupDateTime property value. The date and time that indicate when this job is picked up next. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class SharePointMigrationJobPostponedEvent extends SharePointMigrationEve
         return this.backingStore.get("nextPickupDateTime");
     }
     /**
-     * Gets the reason property value. The reason property
+     * Gets the reason property value. The reason for the postponement. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class SharePointMigrationJobPostponedEvent extends SharePointMigrationEve
         return this.backingStore.get("reason");
     }
     /**
-     * Gets the totalRetryCount property value. The totalRetryCount property
+     * Gets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class SharePointMigrationJobPostponedEvent extends SharePointMigrationEve
         writer.writeIntegerValue("totalRetryCount", this.getTotalRetryCount());
     }
     /**
-     * Sets the jobsInQueue property value. The jobsInQueue property
+     * Sets the jobsInQueue property value. The number of migration jobs in the queue of the current database. Read-only.
      * @param value Value to set for the jobsInQueue property.
      */
     public void setJobsInQueue(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("jobsInQueue", value);
     }
     /**
-     * Sets the nextPickupDateTime property value. The nextPickupDateTime property
+     * Sets the nextPickupDateTime property value. The date and time that indicate when this job is picked up next. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the nextPickupDateTime property.
      */
     public void setNextPickupDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("nextPickupDateTime", value);
     }
     /**
-     * Sets the reason property value. The reason property
+     * Sets the reason property value. The reason for the postponement. Read-only.
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("reason", value);
     }
     /**
-     * Sets the totalRetryCount property value. The totalRetryCount property
+     * Sets the totalRetryCount property value. The current retry count of the job. Read-only.
      * @param value Value to set for the totalRetryCount property.
      */
     public void setTotalRetryCount(@jakarta.annotation.Nullable final Integer value) {

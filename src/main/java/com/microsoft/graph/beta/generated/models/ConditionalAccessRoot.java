@@ -49,7 +49,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("authenticationStrengths");
     }
     /**
-     * Gets the deletedItems property value. The deletedItems property
+     * Gets the deletedItems property value. Read-only. Nullable. Returns a collection of the deleted Conditional Access objects.
      * @return a {@link CaPoliciesDeletableRoot}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class ConditionalAccessRoot extends Entity implements Parsable {
         this.backingStore.set("authenticationStrengths", value);
     }
     /**
-     * Sets the deletedItems property value. The deletedItems property
+     * Sets the deletedItems property value. Read-only. Nullable. Returns a collection of the deleted Conditional Access objects.
      * @param value Value to set for the deletedItems property.
      */
     public void setDeletedItems(@jakarta.annotation.Nullable final CaPoliciesDeletableRoot value) {

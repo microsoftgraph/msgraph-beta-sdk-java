@@ -92,7 +92,7 @@ public class ConditionalAccessPolicy extends PolicyDeletableItem implements Pars
         return this.backingStore.get("grantControls");
     }
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. Specifies the identifier of a conditionalAccessPolicy object. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -176,7 +176,7 @@ public class ConditionalAccessPolicy extends PolicyDeletableItem implements Pars
         this.backingStore.set("grantControls", value);
     }
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. Specifies the identifier of a conditionalAccessPolicy object. Read-only.
      * @param value Value to set for the id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {

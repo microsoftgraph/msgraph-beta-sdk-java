@@ -37,7 +37,7 @@ public class TeamsAdminRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the policy property value. The policy property
+     * Gets the policy property value. Represents a navigation property to the Teams policy assignment object.
      * @return a {@link TeamsPolicyAssignment}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class TeamsAdminRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("userConfigurations", this.getUserConfigurations());
     }
     /**
-     * Sets the policy property value. The policy property
+     * Sets the policy property value. Represents a navigation property to the Teams policy assignment object.
      * @param value Value to set for the policy property.
      */
     public void setPolicy(@jakarta.annotation.Nullable final TeamsPolicyAssignment value) {

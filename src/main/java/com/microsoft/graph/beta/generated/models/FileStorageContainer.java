@@ -163,7 +163,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return this.backingStore.get("lockState");
     }
     /**
-     * Gets the migrationJobs property value. The migrationJobs property
+     * Gets the migrationJobs property value. The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @return a {@link java.util.List<SharePointMigrationJob>}
      */
     @jakarta.annotation.Nullable
@@ -365,7 +365,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         this.backingStore.set("lockState", value);
     }
     /**
-     * Sets the migrationJobs property value. The migrationJobs property
+     * Sets the migrationJobs property value. The collection of sharePointMigrationJob objects local to the container. Read-write.
      * @param value Value to set for the migrationJobs property.
      */
     public void setMigrationJobs(@jakarta.annotation.Nullable final java.util.List<SharePointMigrationJob> value) {

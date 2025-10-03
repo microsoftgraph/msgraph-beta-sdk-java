@@ -44,7 +44,7 @@ public class SharePointMigrationJob extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the progressEvents property value. The progressEvents property
+     * Gets the progressEvents property value. A collection of migration events that reflects the job status changes.
      * @return a {@link java.util.List<SharePointMigrationEvent>}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class SharePointMigrationJob extends Entity implements Parsable {
         this.backingStore.set("containerInfo", value);
     }
     /**
-     * Sets the progressEvents property value. The progressEvents property
+     * Sets the progressEvents property value. A collection of migration events that reflects the job status changes.
      * @param value Value to set for the progressEvents property.
      */
     public void setProgressEvents(@jakarta.annotation.Nullable final java.util.List<SharePointMigrationEvent> value) {

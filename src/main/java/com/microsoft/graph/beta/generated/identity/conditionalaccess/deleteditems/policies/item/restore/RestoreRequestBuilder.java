@@ -36,19 +36,21 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identity/conditionalAccess/deletedItems/policies/{conditionalAccessPolicy%2Did}/restore", rawUrl);
     }
     /**
-     * Invoke action restore
+     * Restore a deleted conditionalAccessPolicy object.
      * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-restore?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicy post() {
         return post(null);
     }
     /**
-     * Invoke action restore
+     * Restore a deleted conditionalAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConditionalAccessPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/conditionalaccesspolicy-restore?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConditionalAccessPolicy post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConditionalAccessPolicy::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action restore
+     * Restore a deleted conditionalAccessPolicy object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action restore
+     * Restore a deleted conditionalAccessPolicy object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

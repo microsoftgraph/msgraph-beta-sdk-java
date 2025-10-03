@@ -40,7 +40,7 @@ public class SharePointMigrationEvent extends Entity implements Parsable {
         return new SharePointMigrationEvent();
     }
     /**
-     * Gets the correlationId property value. The correlationId property
+     * Gets the correlationId property value. The correlation ID of a migration job. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class SharePointMigrationEvent extends Entity implements Parsable {
         return this.backingStore.get("correlationId");
     }
     /**
-     * Gets the eventDateTime property value. The eventDateTime property
+     * Gets the eventDateTime property value. The date and time when the job status changes. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class SharePointMigrationEvent extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the jobId property value. The jobId property
+     * Gets the jobId property value. The unique identifier of a migration job. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,21 +87,21 @@ public class SharePointMigrationEvent extends Entity implements Parsable {
         writer.writeStringValue("jobId", this.getJobId());
     }
     /**
-     * Sets the correlationId property value. The correlationId property
+     * Sets the correlationId property value. The correlation ID of a migration job. Read-only.
      * @param value Value to set for the correlationId property.
      */
     public void setCorrelationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("correlationId", value);
     }
     /**
-     * Sets the eventDateTime property value. The eventDateTime property
+     * Sets the eventDateTime property value. The date and time when the job status changes. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the eventDateTime property.
      */
     public void setEventDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("eventDateTime", value);
     }
     /**
-     * Sets the jobId property value. The jobId property
+     * Sets the jobId property value. The unique identifier of a migration job. Read-only.
      * @param value Value to set for the jobId property.
      */
     public void setJobId(@jakarta.annotation.Nullable final String value) {

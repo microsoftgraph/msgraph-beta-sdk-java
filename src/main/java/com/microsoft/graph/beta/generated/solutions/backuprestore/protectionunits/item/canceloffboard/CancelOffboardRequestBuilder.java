@@ -36,7 +36,7 @@ public class CancelOffboardRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/protectionUnits/{protectionUnitBase%2Did}/cancelOffboard", rawUrl);
     }
     /**
-     * Cancel offboard for a protectionUnitBase.
+     * Cancel the offboarding of a protectionUnitBase.
      * @return a {@link ProtectionUnitBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/protectionunitbase-canceloffboard?view=graph-rest-beta">Find more info here</a>
@@ -46,7 +46,7 @@ public class CancelOffboardRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Cancel offboard for a protectionUnitBase.
+     * Cancel the offboarding of a protectionUnitBase.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProtectionUnitBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class CancelOffboardRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProtectionUnitBase::createFromDiscriminatorValue);
     }
     /**
-     * Cancel offboard for a protectionUnitBase.
+     * Cancel the offboarding of a protectionUnitBase.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class CancelOffboardRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Cancel offboard for a protectionUnitBase.
+     * Cancel the offboarding of a protectionUnitBase.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

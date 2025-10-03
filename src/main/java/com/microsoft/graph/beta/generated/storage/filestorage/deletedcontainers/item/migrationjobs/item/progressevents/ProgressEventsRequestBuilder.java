@@ -60,7 +60,7 @@ public class ProgressEventsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/deletedContainers/{fileStorageContainer%2Did}/migrationJobs/{sharePointMigrationJob%2Did}/progressEvents{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      * @return a {@link SharePointMigrationEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class ProgressEventsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationEventCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class ProgressEventsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SharePointMigrationEvent::createFromDiscriminatorValue);
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class ProgressEventsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class ProgressEventsRequestBuilder extends BaseRequestBuilder {
         return new ProgressEventsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get progressEvents from storage
+     * A collection of migration events that reflects the job status changes.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

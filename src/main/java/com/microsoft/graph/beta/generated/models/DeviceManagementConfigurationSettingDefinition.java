@@ -47,7 +47,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.backingStore.get("accessTypes");
     }
     /**
-     * Gets the applicability property value. Details which device setting is applicable on. Supports: $filters.
+     * Gets the applicability property value. Details which device setting is applicable on
      * @return a {@link DeviceManagementConfigurationSettingApplicability}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.backingStore.get("baseUri");
     }
     /**
-     * Gets the categoryId property value. Specify category in which the setting is under. Support $filters.
+     * Gets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -71,7 +71,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.backingStore.get("categoryId");
     }
     /**
-     * Gets the description property value. Description of the setting.
+     * Gets the description property value. Description of the item
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. Name of the setting. For example: Allow Toast.
+     * Gets the displayName property value. Display name of the item
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return deserializerMap;
     }
     /**
-     * Gets the helpText property value. Help text of the setting. Give more details of the setting.
+     * Gets the helpText property value. Help text of the item
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.backingStore.get("helpText");
     }
     /**
-     * Gets the infoUrls property value. List of links more info for the setting can be found at.
+     * Gets the infoUrls property value. List of links more info for the setting can be found at
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -179,7 +179,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         return this.backingStore.get("riskLevel");
     }
     /**
-     * Gets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
+     * Gets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -253,7 +253,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.backingStore.set("accessTypes", value);
     }
     /**
-     * Sets the applicability property value. Details which device setting is applicable on. Supports: $filters.
+     * Sets the applicability property value. Details which device setting is applicable on
      * @param value Value to set for the applicability property.
      */
     public void setApplicability(@jakarta.annotation.Nullable final DeviceManagementConfigurationSettingApplicability value) {
@@ -267,35 +267,35 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.backingStore.set("baseUri", value);
     }
     /**
-     * Sets the categoryId property value. Specify category in which the setting is under. Support $filters.
+     * Sets the categoryId property value. Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
      * @param value Value to set for the categoryId property.
      */
     public void setCategoryId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("categoryId", value);
     }
     /**
-     * Sets the description property value. Description of the setting.
+     * Sets the description property value. Description of the item
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. Name of the setting. For example: Allow Toast.
+     * Sets the displayName property value. Display name of the item
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the helpText property value. Help text of the setting. Give more details of the setting.
+     * Sets the helpText property value. Help text of the item
      * @param value Value to set for the helpText property.
      */
     public void setHelpText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("helpText", value);
     }
     /**
-     * Sets the infoUrls property value. List of links more info for the setting can be found at.
+     * Sets the infoUrls property value. List of links more info for the setting can be found at
      * @param value Value to set for the infoUrls property.
      */
     public void setInfoUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -344,7 +344,7 @@ public class DeviceManagementConfigurationSettingDefinition extends Entity imple
         this.backingStore.set("riskLevel", value);
     }
     /**
-     * Sets the rootDefinitionId property value. Root setting definition id if the setting is a child setting.
+     * Sets the rootDefinitionId property value. Root setting definition if the setting is a child setting.
      * @param value Value to set for the rootDefinitionId property.
      */
     public void setRootDefinitionId(@jakarta.annotation.Nullable final String value) {
