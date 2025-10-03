@@ -60,7 +60,7 @@ public class DependentResourcesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}/submittedResources/{educationSubmissionResource%2Did}/dependentResources{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      * @return a {@link EducationSubmissionResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class DependentResourcesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSubmissionResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class DependentResourcesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, EducationSubmissionResource::createFromDiscriminatorValue);
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class DependentResourcesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class DependentResourcesRequestBuilder extends BaseRequestBuilder {
         return new DependentResourcesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

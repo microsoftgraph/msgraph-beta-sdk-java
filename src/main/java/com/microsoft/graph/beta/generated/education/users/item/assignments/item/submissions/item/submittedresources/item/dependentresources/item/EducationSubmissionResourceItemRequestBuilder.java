@@ -55,7 +55,7 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      * @return a {@link EducationSubmissionResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EducationSubmissionResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBu
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get dependentResources from education
+     * A collection of submission resources that depend on the parent educationSubmissionResource.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
