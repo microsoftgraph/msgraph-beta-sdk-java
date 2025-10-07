@@ -82,6 +82,7 @@ import com.microsoft.graph.beta.users.item.oauth2permissiongrants.Oauth2Permissi
 import com.microsoft.graph.beta.users.item.onenote.OnenoteRequestBuilder;
 import com.microsoft.graph.beta.users.item.onlinemeetings.OnlineMeetingsRequestBuilder;
 import com.microsoft.graph.beta.users.item.onlinemeetingswithjoinweburl.OnlineMeetingsWithJoinWebUrlRequestBuilder;
+import com.microsoft.graph.beta.users.item.onpremisessyncbehavior.OnPremisesSyncBehaviorRequestBuilder;
 import com.microsoft.graph.beta.users.item.outlook.OutlookRequestBuilder;
 import com.microsoft.graph.beta.users.item.owneddevices.OwnedDevicesRequestBuilder;
 import com.microsoft.graph.beta.users.item.ownedobjects.OwnedObjectsRequestBuilder;
@@ -738,6 +739,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OnlineMeetingsRequestBuilder onlineMeetings() {
         return new OnlineMeetingsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the onPremisesSyncBehavior property of the microsoft.graph.user entity.
+     * @return a {@link OnPremisesSyncBehaviorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OnPremisesSyncBehaviorRequestBuilder onPremisesSyncBehavior() {
+        return new OnPremisesSyncBehaviorRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the outlook property of the microsoft.graph.user entity.

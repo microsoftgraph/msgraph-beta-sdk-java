@@ -70,10 +70,9 @@ public class TranscriptPayload implements AdditionalDataHolder, BackedModel, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("audioCaptureDateTime", (n) -> { this.setAudioCaptureDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("sequenceId", (n) -> { this.setSequenceId(n.getIntegerValue()); });
         deserializerMap.put("speaker", (n) -> { this.setSpeaker(n.getObjectValue(TranscriptSpeaker::createFromDiscriminatorValue)); });
         deserializerMap.put("spokenLanguage", (n) -> { this.setSpokenLanguage(n.getStringValue()); });
         deserializerMap.put("text", (n) -> { this.setText(n.getStringValue()); });
@@ -86,14 +85,6 @@ public class TranscriptPayload implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
-    }
-    /**
-     * Gets the sequenceId property value. The sequenceId property
-     * @return a {@link Integer}
-     */
-    @jakarta.annotation.Nullable
-    public Integer getSequenceId() {
-        return this.backingStore.get("sequenceId");
     }
     /**
      * Gets the speaker property value. The speaker property
@@ -127,7 +118,6 @@ public class TranscriptPayload implements AdditionalDataHolder, BackedModel, Par
         Objects.requireNonNull(writer);
         writer.writeOffsetDateTimeValue("audioCaptureDateTime", this.getAudioCaptureDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeIntegerValue("sequenceId", this.getSequenceId());
         writer.writeObjectValue("speaker", this.getSpeaker());
         writer.writeStringValue("spokenLanguage", this.getSpokenLanguage());
         writer.writeStringValue("text", this.getText());
@@ -161,13 +151,6 @@ public class TranscriptPayload implements AdditionalDataHolder, BackedModel, Par
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
-    }
-    /**
-     * Sets the sequenceId property value. The sequenceId property
-     * @param value Value to set for the sequenceId property.
-     */
-    public void setSequenceId(@jakarta.annotation.Nullable final Integer value) {
-        this.backingStore.set("sequenceId", value);
     }
     /**
      * Sets the speaker property value. The speaker property

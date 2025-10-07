@@ -85,6 +85,14 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
         return this.backingStore.get("chooseYourLockScreenDisabled");
     }
     /**
+     * Gets the depProfileAdminAccountPasswordRotationSetting property value. Settings for local admin account password automatic rotation.
+     * @return a {@link DepProfileAdminAccountPasswordRotationSetting}
+     */
+    @jakarta.annotation.Nullable
+    public DepProfileAdminAccountPasswordRotationSetting getDepProfileAdminAccountPasswordRotationSetting() {
+        return this.backingStore.get("depProfileAdminAccountPasswordRotationSetting");
+    }
+    /**
      * Gets the dontAutoPopulatePrimaryAccountInfo property value. Indicates whether Setup Assistant will auto populate the primary account information
      * @return a {@link Boolean}
      */
@@ -114,6 +122,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
         deserializerMap.put("autoAdvanceSetupEnabled", (n) -> { this.setAutoAdvanceSetupEnabled(n.getBooleanValue()); });
         deserializerMap.put("autoUnlockWithWatchDisabled", (n) -> { this.setAutoUnlockWithWatchDisabled(n.getBooleanValue()); });
         deserializerMap.put("chooseYourLockScreenDisabled", (n) -> { this.setChooseYourLockScreenDisabled(n.getBooleanValue()); });
+        deserializerMap.put("depProfileAdminAccountPasswordRotationSetting", (n) -> { this.setDepProfileAdminAccountPasswordRotationSetting(n.getObjectValue(DepProfileAdminAccountPasswordRotationSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("dontAutoPopulatePrimaryAccountInfo", (n) -> { this.setDontAutoPopulatePrimaryAccountInfo(n.getBooleanValue()); });
         deserializerMap.put("enableRestrictEditing", (n) -> { this.setEnableRestrictEditing(n.getBooleanValue()); });
         deserializerMap.put("fileVaultDisabled", (n) -> { this.setFileVaultDisabled(n.getBooleanValue()); });
@@ -240,6 +249,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
         writer.writeBooleanValue("autoAdvanceSetupEnabled", this.getAutoAdvanceSetupEnabled());
         writer.writeBooleanValue("autoUnlockWithWatchDisabled", this.getAutoUnlockWithWatchDisabled());
         writer.writeBooleanValue("chooseYourLockScreenDisabled", this.getChooseYourLockScreenDisabled());
+        writer.writeObjectValue("depProfileAdminAccountPasswordRotationSetting", this.getDepProfileAdminAccountPasswordRotationSetting());
         writer.writeBooleanValue("dontAutoPopulatePrimaryAccountInfo", this.getDontAutoPopulatePrimaryAccountInfo());
         writer.writeBooleanValue("enableRestrictEditing", this.getEnableRestrictEditing());
         writer.writeBooleanValue("fileVaultDisabled", this.getFileVaultDisabled());
@@ -303,6 +313,13 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      */
     public void setChooseYourLockScreenDisabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("chooseYourLockScreenDisabled", value);
+    }
+    /**
+     * Sets the depProfileAdminAccountPasswordRotationSetting property value. Settings for local admin account password automatic rotation.
+     * @param value Value to set for the depProfileAdminAccountPasswordRotationSetting property.
+     */
+    public void setDepProfileAdminAccountPasswordRotationSetting(@jakarta.annotation.Nullable final DepProfileAdminAccountPasswordRotationSetting value) {
+        this.backingStore.set("depProfileAdminAccountPasswordRotationSetting", value);
     }
     /**
      * Sets the dontAutoPopulatePrimaryAccountInfo property value. Indicates whether Setup Assistant will auto populate the primary account information

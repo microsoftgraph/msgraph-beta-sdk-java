@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.networkaccess.Settings;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.settings.conditionalaccess.ConditionalAccessRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.settings.crosstenantaccess.CrossTenantAccessRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.settings.customblockpage.CustomBlockPageRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.settings.forwardingoptions.ForwardingOptionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -38,6 +39,14 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CrossTenantAccessRequestBuilder crossTenantAccess() {
         return new CrossTenantAccessRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the customBlockPage property of the microsoft.graph.networkaccess.settings entity.
+     * @return a {@link CustomBlockPageRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CustomBlockPageRequestBuilder customBlockPage() {
+        return new CustomBlockPageRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the forwardingOptions property of the microsoft.graph.networkaccess.settings entity.

@@ -64,7 +64,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("v10_10", (n) -> { this.setV1010(n.getBooleanValue()); });
         deserializerMap.put("v10_11", (n) -> { this.setV1011(n.getBooleanValue()); });
@@ -80,6 +80,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         deserializerMap.put("v13_0", (n) -> { this.setV130(n.getBooleanValue()); });
         deserializerMap.put("v14_0", (n) -> { this.setV140(n.getBooleanValue()); });
         deserializerMap.put("v15_0", (n) -> { this.setV150(n.getBooleanValue()); });
+        deserializerMap.put("v26_0", (n) -> { this.setV260(n.getBooleanValue()); });
         return deserializerMap;
     }
     /**
@@ -203,6 +204,14 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         return this.backingStore.get("v150");
     }
     /**
+     * Gets the v26_0 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 26.0 or later is required to install the app. If &apos;False&apos;, OS X Version 26.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getV260() {
+        return this.backingStore.get("v260");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -223,6 +232,7 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
         writer.writeBooleanValue("v13_0", this.getV130());
         writer.writeBooleanValue("v14_0", this.getV140());
         writer.writeBooleanValue("v15_0", this.getV150());
+        writer.writeBooleanValue("v26_0", this.getV260());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -344,5 +354,12 @@ public class MacOSMinimumOperatingSystem implements AdditionalDataHolder, Backed
      */
     public void setV150(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("v150", value);
+    }
+    /**
+     * Sets the v26_0 property value. Indicates the minimum OS X version support required for the managed device. When &apos;True&apos;, macOS with OS X 26.0 or later is required to install the app. If &apos;False&apos;, OS X Version 26.0 is not the minimum version. Default value is False. Exactly one of the minimum operating system boolean values will be TRUE.
+     * @param value Value to set for the v26_0 property.
+     */
+    public void setV260(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("v260", value);
     }
 }

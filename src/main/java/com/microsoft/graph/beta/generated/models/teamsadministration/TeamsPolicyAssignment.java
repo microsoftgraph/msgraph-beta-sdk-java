@@ -32,7 +32,16 @@ public class TeamsPolicyAssignment extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("userAssignments", (n) -> { this.setUserAssignments(n.getCollectionOfObjectValues(TeamsPolicyUserAssignment::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the userAssignments property value. Navigation property to the collection of user policy assignments.
+     * @return a {@link java.util.List<TeamsPolicyUserAssignment>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TeamsPolicyUserAssignment> getUserAssignments() {
+        return this.backingStore.get("userAssignments");
     }
     /**
      * Serializes information the current object
@@ -41,5 +50,13 @@ public class TeamsPolicyAssignment extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("userAssignments", this.getUserAssignments());
+    }
+    /**
+     * Sets the userAssignments property value. Navigation property to the collection of user policy assignments.
+     * @param value Value to set for the userAssignments property.
+     */
+    public void setUserAssignments(@jakarta.annotation.Nullable final java.util.List<TeamsPolicyUserAssignment> value) {
+        this.backingStore.set("userAssignments", value);
     }
 }

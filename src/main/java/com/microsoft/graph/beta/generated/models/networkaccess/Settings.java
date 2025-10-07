@@ -42,6 +42,14 @@ public class Settings extends Entity implements Parsable {
         return this.backingStore.get("crossTenantAccess");
     }
     /**
+     * Gets the customBlockPage property value. The customBlockPage property
+     * @return a {@link CustomBlockPage}
+     */
+    @jakarta.annotation.Nullable
+    public CustomBlockPage getCustomBlockPage() {
+        return this.backingStore.get("customBlockPage");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -50,6 +58,7 @@ public class Settings extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("conditionalAccess", (n) -> { this.setConditionalAccess(n.getObjectValue(ConditionalAccessSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("crossTenantAccess", (n) -> { this.setCrossTenantAccess(n.getObjectValue(CrossTenantAccessSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("customBlockPage", (n) -> { this.setCustomBlockPage(n.getObjectValue(CustomBlockPage::createFromDiscriminatorValue)); });
         deserializerMap.put("forwardingOptions", (n) -> { this.setForwardingOptions(n.getObjectValue(ForwardingOptions::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -70,6 +79,7 @@ public class Settings extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("conditionalAccess", this.getConditionalAccess());
         writer.writeObjectValue("crossTenantAccess", this.getCrossTenantAccess());
+        writer.writeObjectValue("customBlockPage", this.getCustomBlockPage());
         writer.writeObjectValue("forwardingOptions", this.getForwardingOptions());
     }
     /**
@@ -85,6 +95,13 @@ public class Settings extends Entity implements Parsable {
      */
     public void setCrossTenantAccess(@jakarta.annotation.Nullable final CrossTenantAccessSettings value) {
         this.backingStore.set("crossTenantAccess", value);
+    }
+    /**
+     * Sets the customBlockPage property value. The customBlockPage property
+     * @param value Value to set for the customBlockPage property.
+     */
+    public void setCustomBlockPage(@jakarta.annotation.Nullable final CustomBlockPage value) {
+        this.backingStore.set("customBlockPage", value);
     }
     /**
      * Sets the forwardingOptions property value. The forwardingOptions property

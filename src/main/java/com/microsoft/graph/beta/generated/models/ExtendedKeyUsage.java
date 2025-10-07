@@ -71,7 +71,7 @@ public class ExtendedKeyUsage implements AdditionalDataHolder, BackedModel, Pars
         return deserializerMap;
     }
     /**
-     * Gets the name property value. Extended Key Usage Name
+     * Gets the name property value. The extended key usage (EKU) name that provides a user-friendly way to identify an EKU.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class ExtendedKeyUsage implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("name");
     }
     /**
-     * Gets the objectIdentifier property value. Extended Key Usage Object Identifier
+     * Gets the objectIdentifier property value. The object identifier (OID) of an extended key usage of a certificate. For example, &apos;1.3.6.1.5.5.7.3.2&apos; for client authentication.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -121,14 +121,14 @@ public class ExtendedKeyUsage implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. Extended Key Usage Name
+     * Sets the name property value. The extended key usage (EKU) name that provides a user-friendly way to identify an EKU.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the objectIdentifier property value. Extended Key Usage Object Identifier
+     * Sets the objectIdentifier property value. The object identifier (OID) of an extended key usage of a certificate. For example, &apos;1.3.6.1.5.5.7.3.2&apos; for client authentication.
      * @param value Value to set for the objectIdentifier property.
      */
     public void setObjectIdentifier(@jakarta.annotation.Nullable final String value) {

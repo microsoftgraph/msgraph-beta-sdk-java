@@ -86,6 +86,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("onPremisesProvisioningErrors", (n) -> { this.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesSyncBehavior", (n) -> { this.setOnPremisesSyncBehavior(n.getObjectValue(OnPremisesSyncBehavior::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("phones", (n) -> { this.setPhones(n.getCollectionOfObjectValues(Phone::createFromDiscriminatorValue)); });
         deserializerMap.put("proxyAddresses", (n) -> { this.setProxyAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -158,6 +159,14 @@ public class OrgContact extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<OnPremisesProvisioningError> getOnPremisesProvisioningErrors() {
         return this.backingStore.get("onPremisesProvisioningErrors");
+    }
+    /**
+     * Gets the onPremisesSyncBehavior property value. Indicates the state of synchronization for an orgContact between the cloud and on-premises Active Directory. Supports $filter only with advanced query capabilities, for example, $filter=onPremisesSyncBehavior/isCloudManaged eq true&amp;$count=true.
+     * @return a {@link OnPremisesSyncBehavior}
+     */
+    @jakarta.annotation.Nullable
+    public OnPremisesSyncBehavior getOnPremisesSyncBehavior() {
+        return this.backingStore.get("onPremisesSyncBehavior");
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq for null values).
@@ -235,6 +244,7 @@ public class OrgContact extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("memberOf", this.getMemberOf());
         writer.writeOffsetDateTimeValue("onPremisesLastSyncDateTime", this.getOnPremisesLastSyncDateTime());
         writer.writeCollectionOfObjectValues("onPremisesProvisioningErrors", this.getOnPremisesProvisioningErrors());
+        writer.writeObjectValue("onPremisesSyncBehavior", this.getOnPremisesSyncBehavior());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
         writer.writeCollectionOfObjectValues("phones", this.getPhones());
         writer.writeCollectionOfPrimitiveValues("proxyAddresses", this.getProxyAddresses());
@@ -333,6 +343,13 @@ public class OrgContact extends DirectoryObject implements Parsable {
      */
     public void setOnPremisesProvisioningErrors(@jakarta.annotation.Nullable final java.util.List<OnPremisesProvisioningError> value) {
         this.backingStore.set("onPremisesProvisioningErrors", value);
+    }
+    /**
+     * Sets the onPremisesSyncBehavior property value. Indicates the state of synchronization for an orgContact between the cloud and on-premises Active Directory. Supports $filter only with advanced query capabilities, for example, $filter=onPremisesSyncBehavior/isCloudManaged eq true&amp;$count=true.
+     * @param value Value to set for the onPremisesSyncBehavior property.
+     */
+    public void setOnPremisesSyncBehavior(@jakarta.annotation.Nullable final OnPremisesSyncBehavior value) {
+        this.backingStore.set("onPremisesSyncBehavior", value);
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq for null values).

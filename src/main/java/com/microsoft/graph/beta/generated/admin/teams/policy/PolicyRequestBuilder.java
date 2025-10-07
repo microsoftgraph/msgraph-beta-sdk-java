@@ -1,5 +1,7 @@
 package com.microsoft.graph.beta.admin.teams.policy;
 
+import com.microsoft.graph.beta.admin.teams.policy.microsoftgraphteamsadministrationgetpolicyidwithtypewithname.MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder;
+import com.microsoft.graph.beta.admin.teams.policy.userassignments.UserAssignmentsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.teamsadministration.TeamsPolicyAssignment;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PolicyRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the userAssignments property of the microsoft.graph.teamsAdministration.teamsPolicyAssignment entity.
+     * @return a {@link UserAssignmentsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserAssignmentsRequestBuilder userAssignments() {
+        return new UserAssignmentsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link PolicyRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -75,6 +85,18 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsPolicyAssignment::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the getPolicyId method.
+     * @param name Usage: name=&apos;{name}&apos;
+     * @param type Usage: type=&apos;{type}&apos;
+     * @return a {@link MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder microsoftGraphTeamsAdministrationGetPolicyIdWithTypeWithName(@jakarta.annotation.Nonnull final String name, @jakarta.annotation.Nonnull final String type) {
+        Objects.requireNonNull(name);
+        Objects.requireNonNull(type);
+        return new MicrosoftGraphTeamsAdministrationGetPolicyIdWithTypeWithNameRequestBuilder(pathParameters, requestAdapter, name, type);
     }
     /**
      * Update the navigation property policy in admin

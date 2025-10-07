@@ -33,7 +33,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
         return this.backingStore.get("assignmentResourceUrl");
     }
     /**
-     * Gets the dependentResources property value. The dependentResources property
+     * Gets the dependentResources property value. A collection of submission resources that depend on the parent educationSubmissionResource.
      * @return a {@link java.util.List<EducationSubmissionResource>}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class EducationSubmissionResource extends Entity implements Parsable {
         this.backingStore.set("assignmentResourceUrl", value);
     }
     /**
-     * Sets the dependentResources property value. The dependentResources property
+     * Sets the dependentResources property value. A collection of submission resources that depend on the parent educationSubmissionResource.
      * @param value Value to set for the dependentResources property.
      */
     public void setDependentResources(@jakarta.annotation.Nullable final java.util.List<EducationSubmissionResource> value) {

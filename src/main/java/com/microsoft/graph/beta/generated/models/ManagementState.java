@@ -31,7 +31,9 @@ public enum ManagementState implements ValuedEnum {
     /** A retire command for this device has been canceled */
     RetireCanceled("retireCanceled"),
     /** The device is discovered but not fully enrolled. */
-    Discovered("discovered");
+    Discovered("discovered"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     ManagementState(final String value) {
         this.value = value;
@@ -54,6 +56,7 @@ public enum ManagementState implements ValuedEnum {
             case "wipeCanceled": return WipeCanceled;
             case "retireCanceled": return RetireCanceled;
             case "discovered": return Discovered;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }
