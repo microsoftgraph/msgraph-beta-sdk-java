@@ -25,6 +25,14 @@ public class WorkbookComment extends Entity implements Parsable {
         return new WorkbookComment();
     }
     /**
+     * Gets the cellAddress property value. The cell where the comment is located. The address value is in A1-style, which contains the sheet reference (for example, Sheet1!A1). Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCellAddress() {
+        return this.backingStore.get("cellAddress");
+    }
+    /**
      * Gets the content property value. The content of the comment that is the String displayed to end-users.
      * @return a {@link String}
      */
@@ -47,11 +55,22 @@ public class WorkbookComment extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("cellAddress", (n) -> { this.setCellAddress(n.getStringValue()); });
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
+        deserializerMap.put("mentions", (n) -> { this.setMentions(n.getCollectionOfObjectValues(WorkbookCommentMention::createFromDiscriminatorValue)); });
         deserializerMap.put("replies", (n) -> { this.setReplies(n.getCollectionOfObjectValues(WorkbookCommentReply::createFromDiscriminatorValue)); });
+        deserializerMap.put("richContent", (n) -> { this.setRichContent(n.getStringValue()); });
         deserializerMap.put("task", (n) -> { this.setTask(n.getObjectValue(WorkbookDocumentTask::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the mentions property value. A collection that contains all the people mentioned within the comment. When contentType is plain, this property is an empty array. Read-only.
+     * @return a {@link java.util.List<WorkbookCommentMention>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WorkbookCommentMention> getMentions() {
+        return this.backingStore.get("mentions");
     }
     /**
      * Gets the replies property value. The list of replies to the comment. Read-only. Nullable.
@@ -60,6 +79,14 @@ public class WorkbookComment extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<WorkbookCommentReply> getReplies() {
         return this.backingStore.get("replies");
+    }
+    /**
+     * Gets the richContent property value. The rich content of the comment (for example, comment content with mentions, where the first mentioned entity has an ID attribute of 0 and the second has an ID attribute of 1). When contentType is plain, this property is empty. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRichContent() {
+        return this.backingStore.get("richContent");
     }
     /**
      * Gets the task property value. The task associated with the comment. Read-only. Nullable.
@@ -76,10 +103,20 @@ public class WorkbookComment extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("cellAddress", this.getCellAddress());
         writer.writeStringValue("content", this.getContent());
         writer.writeStringValue("contentType", this.getContentType());
+        writer.writeCollectionOfObjectValues("mentions", this.getMentions());
         writer.writeCollectionOfObjectValues("replies", this.getReplies());
+        writer.writeStringValue("richContent", this.getRichContent());
         writer.writeObjectValue("task", this.getTask());
+    }
+    /**
+     * Sets the cellAddress property value. The cell where the comment is located. The address value is in A1-style, which contains the sheet reference (for example, Sheet1!A1). Read-only.
+     * @param value Value to set for the cellAddress property.
+     */
+    public void setCellAddress(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("cellAddress", value);
     }
     /**
      * Sets the content property value. The content of the comment that is the String displayed to end-users.
@@ -96,11 +133,25 @@ public class WorkbookComment extends Entity implements Parsable {
         this.backingStore.set("contentType", value);
     }
     /**
+     * Sets the mentions property value. A collection that contains all the people mentioned within the comment. When contentType is plain, this property is an empty array. Read-only.
+     * @param value Value to set for the mentions property.
+     */
+    public void setMentions(@jakarta.annotation.Nullable final java.util.List<WorkbookCommentMention> value) {
+        this.backingStore.set("mentions", value);
+    }
+    /**
      * Sets the replies property value. The list of replies to the comment. Read-only. Nullable.
      * @param value Value to set for the replies property.
      */
     public void setReplies(@jakarta.annotation.Nullable final java.util.List<WorkbookCommentReply> value) {
         this.backingStore.set("replies", value);
+    }
+    /**
+     * Sets the richContent property value. The rich content of the comment (for example, comment content with mentions, where the first mentioned entity has an ID attribute of 0 and the second has an ID attribute of 1). When contentType is plain, this property is empty. Read-only.
+     * @param value Value to set for the richContent property.
+     */
+    public void setRichContent(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("richContent", value);
     }
     /**
      * Sets the task property value. The task associated with the comment. Read-only. Nullable.

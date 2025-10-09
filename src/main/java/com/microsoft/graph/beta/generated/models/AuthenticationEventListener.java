@@ -31,6 +31,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
                 case "#microsoft.graph.onAttributeCollectionSubmitListener": return new OnAttributeCollectionSubmitListener();
                 case "#microsoft.graph.onAuthenticationMethodLoadStartListener": return new OnAuthenticationMethodLoadStartListener();
                 case "#microsoft.graph.onEmailOtpSendListener": return new OnEmailOtpSendListener();
+                case "#microsoft.graph.onFraudProtectionLoadStartListener": return new OnFraudProtectionLoadStartListener();
                 case "#microsoft.graph.onInteractiveAuthFlowStartListener": return new OnInteractiveAuthFlowStartListener();
                 case "#microsoft.graph.onPhoneMethodLoadStartListener": return new OnPhoneMethodLoadStartListener();
                 case "#microsoft.graph.onTokenIssuanceStartListener": return new OnTokenIssuanceStartListener();
@@ -56,6 +57,14 @@ public class AuthenticationEventListener extends Entity implements Parsable {
         return this.backingStore.get("conditions");
     }
     /**
+     * Gets the displayName property value. The displayName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDisplayName() {
+        return this.backingStore.get("displayName");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -64,6 +73,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("authenticationEventsFlowId", (n) -> { this.setAuthenticationEventsFlowId(n.getStringValue()); });
         deserializerMap.put("conditions", (n) -> { this.setConditions(n.getObjectValue(AuthenticationConditions::createFromDiscriminatorValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getIntegerValue()); });
         return deserializerMap;
     }
@@ -84,6 +94,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("authenticationEventsFlowId", this.getAuthenticationEventsFlowId());
         writer.writeObjectValue("conditions", this.getConditions());
+        writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeIntegerValue("priority", this.getPriority());
     }
     /**
@@ -99,6 +110,13 @@ public class AuthenticationEventListener extends Entity implements Parsable {
      */
     public void setConditions(@jakarta.annotation.Nullable final AuthenticationConditions value) {
         this.backingStore.set("conditions", value);
+    }
+    /**
+     * Sets the displayName property value. The displayName property
+     * @param value Value to set for the displayName property.
+     */
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("displayName", value);
     }
     /**
      * Sets the priority property value. The priority of this handler. Between 0 (lower priority) and 1000 (higher priority).

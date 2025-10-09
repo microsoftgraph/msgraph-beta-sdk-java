@@ -48,6 +48,14 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
         return value;
     }
     /**
+     * Gets the auditActivityTypes property value. Represents an audit activity type which includes the associated service and category for a specific activity.
+     * @return a {@link java.util.List<AuditActivityType>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AuditActivityType> getAuditActivityTypes() {
+        return this.backingStore.get("auditActivityTypes");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -85,12 +93,15 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        deserializerMap.put("auditActivityTypes", (n) -> { this.setAuditActivityTypes(n.getCollectionOfObjectValues(AuditActivityType::createFromDiscriminatorValue)); });
         deserializerMap.put("customSecurityAttributeAudits", (n) -> { this.setCustomSecurityAttributeAudits(n.getCollectionOfObjectValues(CustomSecurityAttributeAudit::createFromDiscriminatorValue)); });
         deserializerMap.put("directoryAudits", (n) -> { this.setDirectoryAudits(n.getCollectionOfObjectValues(DirectoryAudit::createFromDiscriminatorValue)); });
         deserializerMap.put("directoryProvisioning", (n) -> { this.setDirectoryProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("provisioning", (n) -> { this.setProvisioning(n.getCollectionOfObjectValues(ProvisioningObjectSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInEventsAppSummary", (n) -> { this.setSignInEventsAppSummary(n.getCollectionOfObjectValues(SignInEventsAppActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInEventsSummary", (n) -> { this.setSignInEventsSummary(n.getCollectionOfObjectValues(SignInEventsActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("signIns", (n) -> { this.setSignIns(n.getCollectionOfObjectValues(SignIn::createFromDiscriminatorValue)); });
         deserializerMap.put("signUps", (n) -> { this.setSignUps(n.getCollectionOfObjectValues(SelfServiceSignUp::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -110,6 +121,22 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
     @jakarta.annotation.Nullable
     public java.util.List<ProvisioningObjectSummary> getProvisioning() {
         return this.backingStore.get("provisioning");
+    }
+    /**
+     * Gets the signInEventsAppSummary property value. Represents the number of sign-in events for a specific application.
+     * @return a {@link java.util.List<SignInEventsAppActivity>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SignInEventsAppActivity> getSignInEventsAppSummary() {
+        return this.backingStore.get("signInEventsAppSummary");
+    }
+    /**
+     * Gets the signInEventsSummary property value. Represents the total number of sign-in events for a specific day.
+     * @return a {@link java.util.List<SignInEventsActivity>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SignInEventsActivity> getSignInEventsSummary() {
+        return this.backingStore.get("signInEventsSummary");
     }
     /**
      * Gets the signIns property value. Represents Microsoft Entra sign-in events. Read-only. Nullable.
@@ -133,11 +160,14 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("auditActivityTypes", this.getAuditActivityTypes());
         writer.writeCollectionOfObjectValues("customSecurityAttributeAudits", this.getCustomSecurityAttributeAudits());
         writer.writeCollectionOfObjectValues("directoryAudits", this.getDirectoryAudits());
         writer.writeCollectionOfObjectValues("directoryProvisioning", this.getDirectoryProvisioning());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("provisioning", this.getProvisioning());
+        writer.writeCollectionOfObjectValues("signInEventsAppSummary", this.getSignInEventsAppSummary());
+        writer.writeCollectionOfObjectValues("signInEventsSummary", this.getSignInEventsSummary());
         writer.writeCollectionOfObjectValues("signIns", this.getSignIns());
         writer.writeCollectionOfObjectValues("signUps", this.getSignUps());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -148,6 +178,13 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the auditActivityTypes property value. Represents an audit activity type which includes the associated service and category for a specific activity.
+     * @param value Value to set for the auditActivityTypes property.
+     */
+    public void setAuditActivityTypes(@jakarta.annotation.Nullable final java.util.List<AuditActivityType> value) {
+        this.backingStore.set("auditActivityTypes", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.
@@ -191,6 +228,20 @@ public class AuditLogRoot implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void setProvisioning(@jakarta.annotation.Nullable final java.util.List<ProvisioningObjectSummary> value) {
         this.backingStore.set("provisioning", value);
+    }
+    /**
+     * Sets the signInEventsAppSummary property value. Represents the number of sign-in events for a specific application.
+     * @param value Value to set for the signInEventsAppSummary property.
+     */
+    public void setSignInEventsAppSummary(@jakarta.annotation.Nullable final java.util.List<SignInEventsAppActivity> value) {
+        this.backingStore.set("signInEventsAppSummary", value);
+    }
+    /**
+     * Sets the signInEventsSummary property value. Represents the total number of sign-in events for a specific day.
+     * @param value Value to set for the signInEventsSummary property.
+     */
+    public void setSignInEventsSummary(@jakarta.annotation.Nullable final java.util.List<SignInEventsActivity> value) {
+        this.backingStore.set("signInEventsSummary", value);
     }
     /**
      * Sets the signIns property value. Represents Microsoft Entra sign-in events. Read-only. Nullable.

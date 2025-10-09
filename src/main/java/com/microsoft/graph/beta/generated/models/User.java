@@ -615,6 +615,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("onPremisesSamAccountName", (n) -> { this.setOnPremisesSamAccountName(n.getStringValue()); });
         deserializerMap.put("onPremisesSecurityIdentifier", (n) -> { this.setOnPremisesSecurityIdentifier(n.getStringValue()); });
         deserializerMap.put("onPremisesSipInfo", (n) -> { this.setOnPremisesSipInfo(n.getObjectValue(OnPremisesSipInfo::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremisesSyncBehavior", (n) -> { this.setOnPremisesSyncBehavior(n.getObjectValue(OnPremisesSyncBehavior::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesSyncEnabled", (n) -> { this.setOnPremisesSyncEnabled(n.getBooleanValue()); });
         deserializerMap.put("onPremisesUserPrincipalName", (n) -> { this.setOnPremisesUserPrincipalName(n.getStringValue()); });
         deserializerMap.put("otherMails", (n) -> { this.setOtherMails(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -1060,6 +1061,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public OnPremisesSipInfo getOnPremisesSipInfo() {
         return this.backingStore.get("onPremisesSipInfo");
+    }
+    /**
+     * Gets the onPremisesSyncBehavior property value. Indicates the state of synchronization for a user between the cloud and on-premises Active Directory. Supports $filter only with advanced query capabilities, for example, $filter=onPremisesSyncBehavior/isCloudManaged eq true&amp;$count=true.
+     * @return a {@link OnPremisesSyncBehavior}
+     */
+    @jakarta.annotation.Nullable
+    public OnPremisesSyncBehavior getOnPremisesSyncBehavior() {
+        return this.backingStore.get("onPremisesSyncBehavior");
     }
     /**
      * Gets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise, the user isn&apos;t being synced and can be managed in Microsoft Entra ID. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).
@@ -1592,6 +1601,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("onPremisesSamAccountName", this.getOnPremisesSamAccountName());
         writer.writeStringValue("onPremisesSecurityIdentifier", this.getOnPremisesSecurityIdentifier());
         writer.writeObjectValue("onPremisesSipInfo", this.getOnPremisesSipInfo());
+        writer.writeObjectValue("onPremisesSyncBehavior", this.getOnPremisesSyncBehavior());
         writer.writeBooleanValue("onPremisesSyncEnabled", this.getOnPremisesSyncEnabled());
         writer.writeStringValue("onPremisesUserPrincipalName", this.getOnPremisesUserPrincipalName());
         writer.writeCollectionOfPrimitiveValues("otherMails", this.getOtherMails());
@@ -2400,6 +2410,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setOnPremisesSipInfo(@jakarta.annotation.Nullable final OnPremisesSipInfo value) {
         this.backingStore.set("onPremisesSipInfo", value);
+    }
+    /**
+     * Sets the onPremisesSyncBehavior property value. Indicates the state of synchronization for a user between the cloud and on-premises Active Directory. Supports $filter only with advanced query capabilities, for example, $filter=onPremisesSyncBehavior/isCloudManaged eq true&amp;$count=true.
+     * @param value Value to set for the onPremisesSyncBehavior property.
+     */
+    public void setOnPremisesSyncBehavior(@jakarta.annotation.Nullable final OnPremisesSyncBehavior value) {
+        this.backingStore.set("onPremisesSyncBehavior", value);
     }
     /**
      * Sets the onPremisesSyncEnabled property value. true if this user object is currently being synced from an on-premises Active Directory (AD); otherwise, the user isn&apos;t being synced and can be managed in Microsoft Entra ID. Read-only. Supports $filter (eq, ne, not, in, and eq on null values).

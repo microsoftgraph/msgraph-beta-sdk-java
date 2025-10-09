@@ -80,6 +80,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         deserializerMap.put("initiatedBy", (n) -> { this.setInitiatedBy(n.getObjectValue(AuditActivityInitiator::createFromDiscriminatorValue)); });
         deserializerMap.put("loggedByService", (n) -> { this.setLoggedByService(n.getStringValue()); });
         deserializerMap.put("operationType", (n) -> { this.setOperationType(n.getStringValue()); });
+        deserializerMap.put("performedBy", (n) -> { this.setPerformedBy(n.getObjectValue(AuditActivityPerformer::createFromDiscriminatorValue)); });
         deserializerMap.put("result", (n) -> { this.setResult(n.getEnumValue(OperationResult::forValue)); });
         deserializerMap.put("resultReason", (n) -> { this.setResultReason(n.getStringValue()); });
         deserializerMap.put("targetResources", (n) -> { this.setTargetResources(n.getCollectionOfObjectValues(TargetResource::createFromDiscriminatorValue)); });
@@ -109,6 +110,14 @@ public class DirectoryAudit extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getOperationType() {
         return this.backingStore.get("operationType");
+    }
+    /**
+     * Gets the performedBy property value. The performedBy property
+     * @return a {@link AuditActivityPerformer}
+     */
+    @jakarta.annotation.Nullable
+    public AuditActivityPerformer getPerformedBy() {
+        return this.backingStore.get("performedBy");
     }
     /**
      * Gets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
@@ -157,6 +166,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         writer.writeObjectValue("initiatedBy", this.getInitiatedBy());
         writer.writeStringValue("loggedByService", this.getLoggedByService());
         writer.writeStringValue("operationType", this.getOperationType());
+        writer.writeObjectValue("performedBy", this.getPerformedBy());
         writer.writeEnumValue("result", this.getResult());
         writer.writeStringValue("resultReason", this.getResultReason());
         writer.writeCollectionOfObjectValues("targetResources", this.getTargetResources());
@@ -217,6 +227,13 @@ public class DirectoryAudit extends Entity implements Parsable {
      */
     public void setOperationType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operationType", value);
+    }
+    /**
+     * Sets the performedBy property value. The performedBy property
+     * @param value Value to set for the performedBy property.
+     */
+    public void setPerformedBy(@jakarta.annotation.Nullable final AuditActivityPerformer value) {
+        this.backingStore.set("performedBy", value);
     }
     /**
      * Sets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.

@@ -1,9 +1,15 @@
 package com.microsoft.graph.beta.auditlogs;
 
+import com.microsoft.graph.beta.auditlogs.auditactivitytypes.AuditActivityTypesRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.customsecurityattributeaudits.CustomSecurityAttributeAuditsRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.directoryaudits.DirectoryAuditsRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.directoryprovisioning.DirectoryProvisioningRequestBuilder;
+import com.microsoft.graph.beta.auditlogs.getsummarizedmsisigninswithaggregationwindow.GetSummarizedMSISignInsWithAggregationWindowRequestBuilder;
+import com.microsoft.graph.beta.auditlogs.getsummarizednoninteractivesigninswithaggregationwindow.GetSummarizedNonInteractiveSignInsWithAggregationWindowRequestBuilder;
+import com.microsoft.graph.beta.auditlogs.getsummarizedserviceprincipalsigninswithaggregationwindow.GetSummarizedServicePrincipalSignInsWithAggregationWindowRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.provisioning.ProvisioningRequestBuilder;
+import com.microsoft.graph.beta.auditlogs.signineventsappsummary.SignInEventsAppSummaryRequestBuilder;
+import com.microsoft.graph.beta.auditlogs.signineventssummary.SignInEventsSummaryRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signins.SignInsRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signups.SignUpsRequestBuilder;
 import com.microsoft.graph.beta.models.AuditLogRoot;
@@ -26,6 +32,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditLogsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the auditActivityTypes property of the microsoft.graph.auditLogRoot entity.
+     * @return a {@link AuditActivityTypesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AuditActivityTypesRequestBuilder auditActivityTypes() {
+        return new AuditActivityTypesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the customSecurityAttributeAudits property of the microsoft.graph.auditLogRoot entity.
      * @return a {@link CustomSecurityAttributeAuditsRequestBuilder}
@@ -57,6 +71,22 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProvisioningRequestBuilder provisioning() {
         return new ProvisioningRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the signInEventsAppSummary property of the microsoft.graph.auditLogRoot entity.
+     * @return a {@link SignInEventsAppSummaryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SignInEventsAppSummaryRequestBuilder signInEventsAppSummary() {
+        return new SignInEventsAppSummaryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the signInEventsSummary property of the microsoft.graph.auditLogRoot entity.
+     * @return a {@link SignInEventsSummaryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SignInEventsSummaryRequestBuilder signInEventsSummary() {
+        return new SignInEventsSummaryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the signIns property of the microsoft.graph.auditLogRoot entity.
@@ -111,6 +141,36 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, AuditLogRoot::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the getSummarizedMSISignIns method.
+     * @param aggregationWindow Usage: aggregationWindow=&apos;{aggregationWindow}&apos;
+     * @return a {@link GetSummarizedMSISignInsWithAggregationWindowRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetSummarizedMSISignInsWithAggregationWindowRequestBuilder getSummarizedMSISignInsWithAggregationWindow(@jakarta.annotation.Nonnull final String aggregationWindow) {
+        Objects.requireNonNull(aggregationWindow);
+        return new GetSummarizedMSISignInsWithAggregationWindowRequestBuilder(pathParameters, requestAdapter, aggregationWindow);
+    }
+    /**
+     * Provides operations to call the getSummarizedNonInteractiveSignIns method.
+     * @param aggregationWindow Usage: aggregationWindow=&apos;{aggregationWindow}&apos;
+     * @return a {@link GetSummarizedNonInteractiveSignInsWithAggregationWindowRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetSummarizedNonInteractiveSignInsWithAggregationWindowRequestBuilder getSummarizedNonInteractiveSignInsWithAggregationWindow(@jakarta.annotation.Nonnull final String aggregationWindow) {
+        Objects.requireNonNull(aggregationWindow);
+        return new GetSummarizedNonInteractiveSignInsWithAggregationWindowRequestBuilder(pathParameters, requestAdapter, aggregationWindow);
+    }
+    /**
+     * Provides operations to call the getSummarizedServicePrincipalSignIns method.
+     * @param aggregationWindow Usage: aggregationWindow=&apos;{aggregationWindow}&apos;
+     * @return a {@link GetSummarizedServicePrincipalSignInsWithAggregationWindowRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetSummarizedServicePrincipalSignInsWithAggregationWindowRequestBuilder getSummarizedServicePrincipalSignInsWithAggregationWindow(@jakarta.annotation.Nonnull final String aggregationWindow) {
+        Objects.requireNonNull(aggregationWindow);
+        return new GetSummarizedServicePrincipalSignInsWithAggregationWindowRequestBuilder(pathParameters, requestAdapter, aggregationWindow);
     }
     /**
      * Update auditLogs

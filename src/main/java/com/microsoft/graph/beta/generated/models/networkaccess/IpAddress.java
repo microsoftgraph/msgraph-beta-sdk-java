@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class IpAddress extends RuleDestination implements Parsable {
+public class IpAddress extends IpDestination implements Parsable {
     /**
      * Instantiates a new {@link IpAddress} and sets the default values.
      */

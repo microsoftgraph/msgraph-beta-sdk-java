@@ -49,6 +49,14 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
         return value;
     }
     /**
+     * Gets the agent property value. Contains agent-related settings. Optional
+     * @return a {@link FileStorageContainerTypeAgentSettings}
+     */
+    @jakarta.annotation.Nullable
+    public FileStorageContainerTypeAgentSettings getAgent() {
+        return this.backingStore.get("agent");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -70,7 +78,8 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        deserializerMap.put("agent", (n) -> { this.setAgent(n.getObjectValue(FileStorageContainerTypeAgentSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("consumingTenantOverridables", (n) -> { this.setConsumingTenantOverridables(n.getEnumSetValue(FileStorageContainerTypeSettingsOverride::forValue)); });
         deserializerMap.put("isDiscoverabilityEnabled", (n) -> { this.setIsDiscoverabilityEnabled(n.getBooleanValue()); });
         deserializerMap.put("isItemVersioningEnabled", (n) -> { this.setIsItemVersioningEnabled(n.getBooleanValue()); });
@@ -161,6 +170,7 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("agent", this.getAgent());
         writer.writeEnumSetValue("consumingTenantOverridables", this.getConsumingTenantOverridables());
         writer.writeBooleanValue("isDiscoverabilityEnabled", this.getIsDiscoverabilityEnabled());
         writer.writeBooleanValue("isItemVersioningEnabled", this.getIsItemVersioningEnabled());
@@ -179,6 +189,13 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the agent property value. Contains agent-related settings. Optional
+     * @param value Value to set for the agent property.
+     */
+    public void setAgent(@jakarta.annotation.Nullable final FileStorageContainerTypeAgentSettings value) {
+        this.backingStore.set("agent", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

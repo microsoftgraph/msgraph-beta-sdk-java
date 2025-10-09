@@ -49,8 +49,26 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("content", (n) -> { this.setContent(n.getStringValue()); });
         deserializerMap.put("contentType", (n) -> { this.setContentType(n.getStringValue()); });
+        deserializerMap.put("mentions", (n) -> { this.setMentions(n.getCollectionOfObjectValues(WorkbookCommentMention::createFromDiscriminatorValue)); });
+        deserializerMap.put("richContent", (n) -> { this.setRichContent(n.getStringValue()); });
         deserializerMap.put("task", (n) -> { this.setTask(n.getObjectValue(WorkbookDocumentTask::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the mentions property value. A collection that contains all the people mentioned within the reply. When contentType is plain, this property is an empty array. Read-only.
+     * @return a {@link java.util.List<WorkbookCommentMention>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WorkbookCommentMention> getMentions() {
+        return this.backingStore.get("mentions");
+    }
+    /**
+     * Gets the richContent property value. The rich content of the reply (for example, reply content with mentions, where the first mentioned entity has an ID attribute of 0 and the second has an ID attribute of 1). When contentType is plain, this property is empty. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRichContent() {
+        return this.backingStore.get("richContent");
     }
     /**
      * Gets the task property value. The task associated with the comment thread.
@@ -69,6 +87,8 @@ public class WorkbookCommentReply extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("content", this.getContent());
         writer.writeStringValue("contentType", this.getContentType());
+        writer.writeCollectionOfObjectValues("mentions", this.getMentions());
+        writer.writeStringValue("richContent", this.getRichContent());
         writer.writeObjectValue("task", this.getTask());
     }
     /**
@@ -84,6 +104,20 @@ public class WorkbookCommentReply extends Entity implements Parsable {
      */
     public void setContentType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("contentType", value);
+    }
+    /**
+     * Sets the mentions property value. A collection that contains all the people mentioned within the reply. When contentType is plain, this property is an empty array. Read-only.
+     * @param value Value to set for the mentions property.
+     */
+    public void setMentions(@jakarta.annotation.Nullable final java.util.List<WorkbookCommentMention> value) {
+        this.backingStore.set("mentions", value);
+    }
+    /**
+     * Sets the richContent property value. The rich content of the reply (for example, reply content with mentions, where the first mentioned entity has an ID attribute of 0 and the second has an ID attribute of 1). When contentType is plain, this property is empty. Read-only.
+     * @param value Value to set for the richContent property.
+     */
+    public void setRichContent(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("richContent", value);
     }
     /**
      * Sets the task property value. The task associated with the comment thread.

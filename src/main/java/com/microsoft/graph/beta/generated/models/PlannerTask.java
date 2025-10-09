@@ -194,6 +194,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         deserializerMap.put("creationSource", (n) -> { this.setCreationSource(n.getObjectValue(PlannerTaskCreation::createFromDiscriminatorValue)); });
         deserializerMap.put("details", (n) -> { this.setDetails(n.getObjectValue(PlannerTaskDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("dueDateTime", (n) -> { this.setDueDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("hasChat", (n) -> { this.setHasChat(n.getBooleanValue()); });
         deserializerMap.put("hasDescription", (n) -> { this.setHasDescription(n.getBooleanValue()); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isOnMyDay", (n) -> { this.setIsOnMyDay(n.getBooleanValue()); });
@@ -212,6 +213,14 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         deserializerMap.put("startDateTime", (n) -> { this.setStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the hasChat property value. The hasChat property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getHasChat() {
+        return this.backingStore.get("hasChat");
     }
     /**
      * Gets the hasDescription property value. Read-only. This value is true if the details object of the task has a nonempty description. Otherwise,false.
@@ -373,6 +382,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         writer.writeObjectValue("creationSource", this.getCreationSource());
         writer.writeObjectValue("details", this.getDetails());
         writer.writeOffsetDateTimeValue("dueDateTime", this.getDueDateTime());
+        writer.writeBooleanValue("hasChat", this.getHasChat());
         writer.writeBooleanValue("hasDescription", this.getHasDescription());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isOnMyDay", this.getIsOnMyDay());
@@ -509,6 +519,13 @@ public class PlannerTask extends PlannerDelta implements Parsable {
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("dueDateTime", value);
+    }
+    /**
+     * Sets the hasChat property value. The hasChat property
+     * @param value Value to set for the hasChat property.
+     */
+    public void setHasChat(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("hasChat", value);
     }
     /**
      * Sets the hasDescription property value. Read-only. This value is true if the details object of the task has a nonempty description. Otherwise,false.
