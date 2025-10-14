@@ -67,7 +67,7 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the fraudProtectionProviders property value. The fraudProtectionProviders property
+     * Gets the fraudProtectionProviders property value. Represents entry point for fraud protection provider configurations for Microsoft Entra External ID tenants.
      * @return a {@link java.util.List<FraudProtectionProvider>}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the fraudProtectionProviders property value. The fraudProtectionProviders property
+     * Sets the fraudProtectionProviders property value. Represents entry point for fraud protection provider configurations for Microsoft Entra External ID tenants.
      * @param value Value to set for the fraudProtectionProviders property.
      */
     public void setFraudProtectionProviders(@jakarta.annotation.Nullable final java.util.List<FraudProtectionProvider> value) {

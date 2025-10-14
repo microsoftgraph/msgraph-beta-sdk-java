@@ -158,7 +158,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the riskPrevention property value. The riskPrevention property
+     * Gets the riskPrevention property value. Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
      * @return a {@link RiskPreventionContainer}
      */
     @jakarta.annotation.Nullable
@@ -288,7 +288,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the riskPrevention property value. The riskPrevention property
+     * Sets the riskPrevention property value. Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
      * @param value Value to set for the riskPrevention property.
      */
     public void setRiskPrevention(@jakarta.annotation.Nullable final RiskPreventionContainer value) {

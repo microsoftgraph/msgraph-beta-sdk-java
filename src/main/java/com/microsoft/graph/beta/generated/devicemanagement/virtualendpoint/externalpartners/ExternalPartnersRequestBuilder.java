@@ -60,19 +60,21 @@ public class ExternalPartnersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/externalPartners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get externalPartners from deviceManagement
+     * Get a list of the cloudPcExternalPartner objects and their properties.
      * @return a {@link CloudPcExternalPartnerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-externalpartners?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartnerCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get externalPartners from deviceManagement
+     * Get a list of the cloudPcExternalPartner objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcExternalPartnerCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-externalpartners?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartnerCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ExternalPartnersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcExternalPartnerCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to externalPartners for deviceManagement
+     * Create a new cloudPcExternalPartner object.
      * @param body The request body
      * @return a {@link CloudPcExternalPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-externalpartners?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartner post(@jakarta.annotation.Nonnull final CloudPcExternalPartner body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to externalPartners for deviceManagement
+     * Create a new cloudPcExternalPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcExternalPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-externalpartners?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcExternalPartner post(@jakarta.annotation.Nonnull final CloudPcExternalPartner body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ExternalPartnersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcExternalPartner::createFromDiscriminatorValue);
     }
     /**
-     * Get externalPartners from deviceManagement
+     * Get a list of the cloudPcExternalPartner objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ExternalPartnersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get externalPartners from deviceManagement
+     * Get a list of the cloudPcExternalPartner objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ExternalPartnersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to externalPartners for deviceManagement
+     * Create a new cloudPcExternalPartner object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ExternalPartnersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to externalPartners for deviceManagement
+     * Create a new cloudPcExternalPartner object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ExternalPartnersRequestBuilder extends BaseRequestBuilder {
         return new ExternalPartnersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get externalPartners from deviceManagement
+     * Get a list of the cloudPcExternalPartner objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

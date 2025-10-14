@@ -64,7 +64,7 @@ public class RiskPreventionRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get riskPrevention from identity
+     * Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
      * @return a {@link RiskPreventionContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class RiskPreventionRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get riskPrevention from identity
+     * Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RiskPreventionContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class RiskPreventionRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get riskPrevention from identity
+     * Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class RiskPreventionRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get riskPrevention from identity
+     * Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class RiskPreventionRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get riskPrevention from identity
+     * Represents the entry point for fraud and risk prevention configurations in Microsoft Entra External ID, including third-party provider settings.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
