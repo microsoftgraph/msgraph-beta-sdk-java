@@ -13,6 +13,7 @@ public class OpenComplexDictionaryType extends Dictionary implements Parsable {
      */
     public OpenComplexDictionaryType() {
         super();
+        this.setOdataType("#microsoft.graph.openComplexDictionaryType");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

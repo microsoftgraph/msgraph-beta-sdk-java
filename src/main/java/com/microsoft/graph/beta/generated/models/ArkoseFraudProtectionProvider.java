@@ -26,7 +26,7 @@ public class ArkoseFraudProtectionProvider extends FraudProtectionProvider imple
         return new ArkoseFraudProtectionProvider();
     }
     /**
-     * Gets the clientSubDomain property value. The clientSubDomain property
+     * Gets the clientSubDomain property value. Used to invoke the Arkose service from the client application. Request from your Arkose Customer Success Manager or use the default client-api value.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -47,7 +47,7 @@ public class ArkoseFraudProtectionProvider extends FraudProtectionProvider imple
         return deserializerMap;
     }
     /**
-     * Gets the privateKey property value. The privateKey property
+     * Gets the privateKey property value. The private key available on the Arkose Portal. Contact your Arkose Customer Success Manager for assistance with your keys.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -55,7 +55,7 @@ public class ArkoseFraudProtectionProvider extends FraudProtectionProvider imple
         return this.backingStore.get("privateKey");
     }
     /**
-     * Gets the publicKey property value. The publicKey property
+     * Gets the publicKey property value. The public key available on the Arkose Portal. Contact your Arkose Customer Success Manager for assistance with your keys.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class ArkoseFraudProtectionProvider extends FraudProtectionProvider imple
         return this.backingStore.get("publicKey");
     }
     /**
-     * Gets the verifySubDomain property value. The verifySubDomain property
+     * Gets the verifySubDomain property value. Used to invoke the Arkose service from the Microsoft authentication server. Request from your Arkose Customer Success Manager or use the default verify-api value.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,28 +83,28 @@ public class ArkoseFraudProtectionProvider extends FraudProtectionProvider imple
         writer.writeStringValue("verifySubDomain", this.getVerifySubDomain());
     }
     /**
-     * Sets the clientSubDomain property value. The clientSubDomain property
+     * Sets the clientSubDomain property value. Used to invoke the Arkose service from the client application. Request from your Arkose Customer Success Manager or use the default client-api value.
      * @param value Value to set for the clientSubDomain property.
      */
     public void setClientSubDomain(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientSubDomain", value);
     }
     /**
-     * Sets the privateKey property value. The privateKey property
+     * Sets the privateKey property value. The private key available on the Arkose Portal. Contact your Arkose Customer Success Manager for assistance with your keys.
      * @param value Value to set for the privateKey property.
      */
     public void setPrivateKey(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("privateKey", value);
     }
     /**
-     * Sets the publicKey property value. The publicKey property
+     * Sets the publicKey property value. The public key available on the Arkose Portal. Contact your Arkose Customer Success Manager for assistance with your keys.
      * @param value Value to set for the publicKey property.
      */
     public void setPublicKey(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publicKey", value);
     }
     /**
-     * Sets the verifySubDomain property value. The verifySubDomain property
+     * Sets the verifySubDomain property value. Used to invoke the Arkose service from the Microsoft authentication server. Request from your Arkose Customer Success Manager or use the default verify-api value.
      * @param value Value to set for the verifySubDomain property.
      */
     public void setVerifySubDomain(@jakarta.annotation.Nullable final String value) {

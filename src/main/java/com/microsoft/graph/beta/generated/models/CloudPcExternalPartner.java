@@ -34,7 +34,7 @@ public class CloudPcExternalPartner extends Entity implements Parsable {
         return this.backingStore.get("connectionStatus");
     }
     /**
-     * Gets the enableConnection property value. The enableConnection property
+     * Gets the enableConnection property value. Enable or disable the connection to an external partner. If true, an external partner API accepts incoming calls from external partners. Required. Supports $filter (eq).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class CloudPcExternalPartner extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastSyncDateTime property value. The lastSyncDateTime property
+     * Gets the lastSyncDateTime property value. Last data sync time for this external partner. The timeStamp type represents date and time information in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this: &apos;2014-01-01T00:00:00Z&apos;.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class CloudPcExternalPartner extends Entity implements Parsable {
         return this.backingStore.get("lastSyncDateTime");
     }
     /**
-     * Gets the partnerId property value. The partnerId property
+     * Gets the partnerId property value. The partner identifier used to identify the external partner. When the Cloud PC service is ready to integrate with a new external partner, it generates a GUID to represent this partner. The Cloud PC service provides this partner ID to the partner, which can then use it to call this Microsoft Graph API and external partner APIs. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class CloudPcExternalPartner extends Entity implements Parsable {
         return this.backingStore.get("partnerId");
     }
     /**
-     * Gets the statusDetails property value. The statusDetails property
+     * Gets the statusDetails property value. Status details message. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -100,28 +100,28 @@ public class CloudPcExternalPartner extends Entity implements Parsable {
         this.backingStore.set("connectionStatus", value);
     }
     /**
-     * Sets the enableConnection property value. The enableConnection property
+     * Sets the enableConnection property value. Enable or disable the connection to an external partner. If true, an external partner API accepts incoming calls from external partners. Required. Supports $filter (eq).
      * @param value Value to set for the enableConnection property.
      */
     public void setEnableConnection(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("enableConnection", value);
     }
     /**
-     * Sets the lastSyncDateTime property value. The lastSyncDateTime property
+     * Sets the lastSyncDateTime property value. Last data sync time for this external partner. The timeStamp type represents date and time information in ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 looks like this: &apos;2014-01-01T00:00:00Z&apos;.
      * @param value Value to set for the lastSyncDateTime property.
      */
     public void setLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastSyncDateTime", value);
     }
     /**
-     * Sets the partnerId property value. The partnerId property
+     * Sets the partnerId property value. The partner identifier used to identify the external partner. When the Cloud PC service is ready to integrate with a new external partner, it generates a GUID to represent this partner. The Cloud PC service provides this partner ID to the partner, which can then use it to call this Microsoft Graph API and external partner APIs. Read-only.
      * @param value Value to set for the partnerId property.
      */
     public void setPartnerId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("partnerId", value);
     }
     /**
-     * Sets the statusDetails property value. The statusDetails property
+     * Sets the statusDetails property value. Status details message. Read-only.
      * @param value Value to set for the statusDetails property.
      */
     public void setStatusDetails(@jakarta.annotation.Nullable final String value) {

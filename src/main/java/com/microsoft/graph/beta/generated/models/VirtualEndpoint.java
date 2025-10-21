@@ -73,7 +73,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("deviceImages");
     }
     /**
-     * Gets the externalPartners property value. The externalPartners property
+     * Gets the externalPartners property value. The external partners on a Cloud PC.
      * @return a {@link java.util.List<CloudPcExternalPartner>}
      */
     @jakarta.annotation.Nullable
@@ -264,7 +264,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.backingStore.set("deviceImages", value);
     }
     /**
-     * Sets the externalPartners property value. The externalPartners property
+     * Sets the externalPartners property value. The external partners on a Cloud PC.
      * @param value Value to set for the externalPartners property.
      */
     public void setExternalPartners(@jakarta.annotation.Nullable final java.util.List<CloudPcExternalPartner> value) {

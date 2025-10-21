@@ -57,7 +57,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
         return this.backingStore.get("conditions");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the listener.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class AuthenticationEventListener extends Entity implements Parsable {
         this.backingStore.set("conditions", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the listener.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

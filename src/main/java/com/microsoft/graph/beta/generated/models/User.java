@@ -229,7 +229,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("cloudLicensing");
     }
     /**
-     * Gets the cloudPCs property value. The cloudPCs property
+     * Gets the cloudPCs property value. The user&apos;s Cloud PCs. Read-only. Nullable.
      * @return a {@link java.util.List<CloudPC>}
      */
     @jakarta.annotation.Nullable
@@ -1831,7 +1831,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("cloudLicensing", value);
     }
     /**
-     * Sets the cloudPCs property value. The cloudPCs property
+     * Sets the cloudPCs property value. The user&apos;s Cloud PCs. Read-only. Nullable.
      * @param value Value to set for the cloudPCs property.
      */
     public void setCloudPCs(@jakarta.annotation.Nullable final java.util.List<CloudPC> value) {

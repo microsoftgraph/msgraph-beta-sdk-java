@@ -13,6 +13,7 @@ public class CustomMetadataDictionary extends Dictionary implements Parsable {
      */
     public CustomMetadataDictionary() {
         super();
+        this.setOdataType("#microsoft.graph.customMetadataDictionary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

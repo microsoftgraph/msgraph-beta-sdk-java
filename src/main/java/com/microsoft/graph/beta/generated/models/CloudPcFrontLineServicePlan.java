@@ -33,7 +33,7 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
         return this.backingStore.get("allotmentLicensesCount");
     }
     /**
-     * Gets the displayName property value. The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
+     * Gets the displayName property value. The display name of the frontline service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the totalCount property value. The total number of front-line service plans purchased by the customer.
+     * Gets the totalCount property value. The total number of frontline service plans purchased by the customer.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -89,14 +89,14 @@ public class CloudPcFrontLineServicePlan extends Entity implements Parsable {
         this.backingStore.set("allotmentLicensesCount", value);
     }
     /**
-     * Sets the displayName property value. The display name of the front-line service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
+     * Sets the displayName property value. The display name of the frontline service plan. For example, 2vCPU/8GB/128GB Front-line or 4vCPU/16GB/256GB Front-line.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the totalCount property value. The total number of front-line service plans purchased by the customer.
+     * Sets the totalCount property value. The total number of frontline service plans purchased by the customer.
      * @param value Value to set for the totalCount property.
      */
     public void setTotalCount(@jakarta.annotation.Nullable final Integer value) {

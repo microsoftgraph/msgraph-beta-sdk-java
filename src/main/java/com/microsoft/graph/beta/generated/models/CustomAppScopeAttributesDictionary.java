@@ -13,6 +13,7 @@ public class CustomAppScopeAttributesDictionary extends Dictionary implements Pa
      */
     public CustomAppScopeAttributesDictionary() {
         super();
+        this.setOdataType("#microsoft.graph.customAppScopeAttributesDictionary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

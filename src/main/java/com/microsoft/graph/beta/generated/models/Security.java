@@ -157,7 +157,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(32);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(33);
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
@@ -183,6 +183,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("secureScoreControlProfiles", (n) -> { this.setSecureScoreControlProfiles(n.getCollectionOfObjectValues(SecureScoreControlProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("secureScores", (n) -> { this.setSecureScores(n.getCollectionOfObjectValues(SecureScore::createFromDiscriminatorValue)); });
         deserializerMap.put("securityActions", (n) -> { this.setSecurityActions(n.getCollectionOfObjectValues(SecurityAction::createFromDiscriminatorValue)); });
+        deserializerMap.put("securityCopilot", (n) -> { this.setSecurityCopilot(n.getObjectValue(SecurityCopilot::createFromDiscriminatorValue)); });
         deserializerMap.put("subjectRightsRequests", (n) -> { this.setSubjectRightsRequests(n.getCollectionOfObjectValues(SubjectRightsRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("threatIntelligence", (n) -> { this.setThreatIntelligence(n.getObjectValue(ThreatIntelligence::createFromDiscriminatorValue)); });
         deserializerMap.put("threatSubmission", (n) -> { this.setThreatSubmission(n.getObjectValue(ThreatSubmissionRoot::createFromDiscriminatorValue)); });
@@ -313,6 +314,14 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("securityActions");
     }
     /**
+     * Gets the securityCopilot property value. The securityCopilot property
+     * @return a {@link SecurityCopilot}
+     */
+    @jakarta.annotation.Nullable
+    public SecurityCopilot getSecurityCopilot() {
+        return this.backingStore.get("securityCopilot");
+    }
+    /**
      * Gets the subjectRightsRequests property value. The subjectRightsRequests property
      * @return a {@link java.util.List<SubjectRightsRequest>}
      */
@@ -399,6 +408,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeCollectionOfObjectValues("secureScoreControlProfiles", this.getSecureScoreControlProfiles());
         writer.writeCollectionOfObjectValues("secureScores", this.getSecureScores());
         writer.writeCollectionOfObjectValues("securityActions", this.getSecurityActions());
+        writer.writeObjectValue("securityCopilot", this.getSecurityCopilot());
         writer.writeCollectionOfObjectValues("subjectRightsRequests", this.getSubjectRightsRequests());
         writer.writeObjectValue("threatIntelligence", this.getThreatIntelligence());
         writer.writeObjectValue("threatSubmission", this.getThreatSubmission());
@@ -597,6 +607,13 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setSecurityActions(@jakarta.annotation.Nullable final java.util.List<SecurityAction> value) {
         this.backingStore.set("securityActions", value);
+    }
+    /**
+     * Sets the securityCopilot property value. The securityCopilot property
+     * @param value Value to set for the securityCopilot property.
+     */
+    public void setSecurityCopilot(@jakarta.annotation.Nullable final SecurityCopilot value) {
+        this.backingStore.set("securityCopilot", value);
     }
     /**
      * Sets the subjectRightsRequests property value. The subjectRightsRequests property

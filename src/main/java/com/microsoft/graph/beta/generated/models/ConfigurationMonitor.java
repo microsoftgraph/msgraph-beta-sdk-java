@@ -77,14 +77,33 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("inactivationReason", (n) -> { this.setInactivationReason(n.getStringValue()); });
+        deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(MonitorMode::forValue)); });
         deserializerMap.put("monitorRunFrequencyInHours", (n) -> { this.setMonitorRunFrequencyInHours(n.getIntegerValue()); });
         deserializerMap.put("parameters", (n) -> { this.setParameters(n.getObjectValue(OpenComplexDictionaryType::createFromDiscriminatorValue)); });
+        deserializerMap.put("runAsUTCMServicePrincipal", (n) -> { this.setRunAsUTCMServicePrincipal(n.getBooleanValue()); });
         deserializerMap.put("runningOnBehalfOf", (n) -> { this.setRunningOnBehalfOf(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MonitorStatus::forValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the inactivationReason property value. The inactivationReason property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getInactivationReason() {
+        return this.backingStore.get("inactivationReason");
+    }
+    /**
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * @return a {@link IdentitySet}
+     */
+    @jakarta.annotation.Nullable
+    public IdentitySet getLastModifiedBy() {
+        return this.backingStore.get("lastModifiedBy");
     }
     /**
      * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
@@ -117,6 +136,14 @@ public class ConfigurationMonitor extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OpenComplexDictionaryType getParameters() {
         return this.backingStore.get("parameters");
+    }
+    /**
+     * Gets the runAsUTCMServicePrincipal property value. The runAsUTCMServicePrincipal property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getRunAsUTCMServicePrincipal() {
+        return this.backingStore.get("runAsUTCMServicePrincipal");
     }
     /**
      * Gets the runningOnBehalfOf property value. The runningOnBehalfOf property
@@ -153,8 +180,11 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeEnumValue("mode", this.getMode());
+        writer.writeIntegerValue("monitorRunFrequencyInHours", this.getMonitorRunFrequencyInHours());
         writer.writeObjectValue("parameters", this.getParameters());
+        writer.writeBooleanValue("runAsUTCMServicePrincipal", this.getRunAsUTCMServicePrincipal());
         writer.writeObjectValue("runningOnBehalfOf", this.getRunningOnBehalfOf());
         writer.writeEnumValue("status", this.getStatus());
     }
@@ -194,6 +224,20 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the inactivationReason property value. The inactivationReason property
+     * @param value Value to set for the inactivationReason property.
+     */
+    public void setInactivationReason(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("inactivationReason", value);
+    }
+    /**
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * @param value Value to set for the lastModifiedBy property.
+     */
+    public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
+        this.backingStore.set("lastModifiedBy", value);
+    }
+    /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param value Value to set for the lastModifiedDateTime property.
      */
@@ -220,6 +264,13 @@ public class ConfigurationMonitor extends Entity implements Parsable {
      */
     public void setParameters(@jakarta.annotation.Nullable final OpenComplexDictionaryType value) {
         this.backingStore.set("parameters", value);
+    }
+    /**
+     * Sets the runAsUTCMServicePrincipal property value. The runAsUTCMServicePrincipal property
+     * @param value Value to set for the runAsUTCMServicePrincipal property.
+     */
+    public void setRunAsUTCMServicePrincipal(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("runAsUTCMServicePrincipal", value);
     }
     /**
      * Sets the runningOnBehalfOf property value. The runningOnBehalfOf property

@@ -14,6 +14,7 @@ public class AdditionalDataDictionary extends Dictionary implements Parsable {
      */
     public AdditionalDataDictionary() {
         super();
+        this.setOdataType("#microsoft.graph.partner.security.additionalDataDictionary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -7,7 +7,6 @@ import java.util.Objects;
 public enum MonitorStatus implements ValuedEnum {
     Active("active"),
     Inactive("inactive"),
-    InactivatedBySystem("inactivatedBySystem"),
     /** A marker value for members added after the release of this API. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -22,7 +21,6 @@ public enum MonitorStatus implements ValuedEnum {
         switch(searchValue) {
             case "active": return Active;
             case "inactive": return Inactive;
-            case "inactivatedBySystem": return InactivatedBySystem;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

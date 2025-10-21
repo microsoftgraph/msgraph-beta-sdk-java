@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.admin.teams;
 
 import com.microsoft.graph.beta.admin.teams.policy.PolicyRequestBuilder;
+import com.microsoft.graph.beta.admin.teams.telephonenumbermanagement.TelephoneNumberManagementRequestBuilder;
 import com.microsoft.graph.beta.admin.teams.userconfigurations.UserConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.teamsadministration.TeamsAdminRoot;
@@ -29,6 +30,14 @@ public class TeamsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PolicyRequestBuilder policy() {
         return new PolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the telephoneNumberManagement property of the microsoft.graph.teamsAdministration.teamsAdminRoot entity.
+     * @return a {@link TelephoneNumberManagementRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TelephoneNumberManagementRequestBuilder telephoneNumberManagement() {
+        return new TelephoneNumberManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userConfigurations property of the microsoft.graph.teamsAdministration.teamsAdminRoot entity.

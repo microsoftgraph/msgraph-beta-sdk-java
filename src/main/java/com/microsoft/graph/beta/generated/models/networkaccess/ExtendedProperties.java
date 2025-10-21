@@ -14,6 +14,7 @@ public class ExtendedProperties extends Dictionary implements Parsable {
      */
     public ExtendedProperties() {
         super();
+        this.setOdataType("#microsoft.graph.networkaccess.extendedProperties");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

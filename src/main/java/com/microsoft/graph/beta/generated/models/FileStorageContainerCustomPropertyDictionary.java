@@ -13,6 +13,7 @@ public class FileStorageContainerCustomPropertyDictionary extends Dictionary imp
      */
     public FileStorageContainerCustomPropertyDictionary() {
         super();
+        this.setOdataType("#microsoft.graph.fileStorageContainerCustomPropertyDictionary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
