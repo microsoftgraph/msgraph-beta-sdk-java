@@ -29,6 +29,7 @@ public class DirectoryObject extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.activityBasedTimeoutPolicy": return new ActivityBasedTimeoutPolicy();
                 case "#microsoft.graph.administrativeUnit": return new AdministrativeUnit();
+                case "#microsoft.graph.agentIdentity": return new AgentIdentity();
                 case "#microsoft.graph.application": return new Application();
                 case "#microsoft.graph.appManagementPolicy": return new AppManagementPolicy();
                 case "#microsoft.graph.appRoleAssignment": return new AppRoleAssignment();

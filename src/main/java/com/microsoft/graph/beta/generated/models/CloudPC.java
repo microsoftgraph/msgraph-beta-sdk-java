@@ -322,7 +322,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("servicePlanType");
     }
     /**
-     * Gets the sharedDeviceDetail property value. Indicates the Cloud PC device details (for example, assignedToUserPrincipalName) associated with the frontline shared service plan.
+     * Gets the sharedDeviceDetail property value. Indicates the Cloud PC device details associated with the frontline shared service plan, including the user&apos;s UPN and the session start date and time.
      * @return a {@link CloudPcFrontlineSharedDeviceDetail}
      */
     @jakarta.annotation.Nullable
@@ -650,7 +650,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("servicePlanType", value);
     }
     /**
-     * Sets the sharedDeviceDetail property value. Indicates the Cloud PC device details (for example, assignedToUserPrincipalName) associated with the frontline shared service plan.
+     * Sets the sharedDeviceDetail property value. Indicates the Cloud PC device details associated with the frontline shared service plan, including the user&apos;s UPN and the session start date and time.
      * @param value Value to set for the sharedDeviceDetail property.
      */
     public void setSharedDeviceDetail(@jakarta.annotation.Nullable final CloudPcFrontlineSharedDeviceDetail value) {

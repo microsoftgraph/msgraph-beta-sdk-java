@@ -79,7 +79,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPCs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get cloudPCs from users
+     * The user&apos;s Cloud PCs. Read-only. Nullable.
      * @return a {@link CloudPCCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -88,7 +88,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get cloudPCs from users
+     * The user&apos;s Cloud PCs. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPCCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -138,7 +138,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPC::createFromDiscriminatorValue);
     }
     /**
-     * Get cloudPCs from users
+     * The user&apos;s Cloud PCs. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -146,7 +146,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get cloudPCs from users
+     * The user&apos;s Cloud PCs. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -192,7 +192,7 @@ public class CloudPCsRequestBuilder extends BaseRequestBuilder {
         return new CloudPCsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get cloudPCs from users
+     * The user&apos;s Cloud PCs. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

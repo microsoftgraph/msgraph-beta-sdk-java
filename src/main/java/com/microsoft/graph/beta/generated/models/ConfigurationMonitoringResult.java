@@ -34,6 +34,14 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         return this.backingStore.get("driftsCount");
     }
     /**
+     * Gets the driftsFixed property value. The driftsFixed property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getDriftsFixed() {
+        return this.backingStore.get("driftsFixed");
+    }
+    /**
      * Gets the errorDetails property value. The errorDetails property
      * @return a {@link java.util.List<ErrorDetail>}
      */
@@ -49,11 +57,13 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("driftsCount", (n) -> { this.setDriftsCount(n.getIntegerValue()); });
+        deserializerMap.put("driftsFixed", (n) -> { this.setDriftsFixed(n.getIntegerValue()); });
         deserializerMap.put("errorDetails", (n) -> { this.setErrorDetails(n.getCollectionOfObjectValues(ErrorDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("monitorId", (n) -> { this.setMonitorId(n.getStringValue()); });
         deserializerMap.put("runCompletionDateTime", (n) -> { this.setRunCompletionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("runInitiationDateTime", (n) -> { this.setRunInitiationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("runStatus", (n) -> { this.setRunStatus(n.getEnumValue(MonitorRunStatus::forValue)); });
+        deserializerMap.put("runType", (n) -> { this.setRunType(n.getEnumValue(MonitorRunType::forValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -90,6 +100,14 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         return this.backingStore.get("runStatus");
     }
     /**
+     * Gets the runType property value. The runType property
+     * @return a {@link MonitorRunType}
+     */
+    @jakarta.annotation.Nullable
+    public MonitorRunType getRunType() {
+        return this.backingStore.get("runType");
+    }
+    /**
      * Gets the tenantId property value. The tenantId property
      * @return a {@link String}
      */
@@ -105,6 +123,7 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("runStatus", this.getRunStatus());
+        writer.writeEnumValue("runType", this.getRunType());
     }
     /**
      * Sets the driftsCount property value. The driftsCount property
@@ -112,6 +131,13 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
      */
     public void setDriftsCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("driftsCount", value);
+    }
+    /**
+     * Sets the driftsFixed property value. The driftsFixed property
+     * @param value Value to set for the driftsFixed property.
+     */
+    public void setDriftsFixed(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("driftsFixed", value);
     }
     /**
      * Sets the errorDetails property value. The errorDetails property
@@ -147,6 +173,13 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
      */
     public void setRunStatus(@jakarta.annotation.Nullable final MonitorRunStatus value) {
         this.backingStore.set("runStatus", value);
+    }
+    /**
+     * Sets the runType property value. The runType property
+     * @param value Value to set for the runType property.
+     */
+    public void setRunType(@jakarta.annotation.Nullable final MonitorRunType value) {
+        this.backingStore.set("runType", value);
     }
     /**
      * Sets the tenantId property value. The tenantId property

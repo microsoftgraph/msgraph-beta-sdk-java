@@ -13,6 +13,7 @@ public class PlannerFormsDictionary extends Dictionary implements Parsable {
      */
     public PlannerFormsDictionary() {
         super();
+        this.setOdataType("#microsoft.graph.plannerFormsDictionary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

@@ -53,7 +53,7 @@ public class EmergencyCallEvent extends CallEvent implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the policyName property value. The policy name for emergency call event.
+     * Gets the policyName property value. The policy name for the emergency call event.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class EmergencyCallEvent extends CallEvent implements Parsable {
         this.backingStore.set("emergencyNumberDialed", value);
     }
     /**
-     * Sets the policyName property value. The policy name for emergency call event.
+     * Sets the policyName property value. The policy name for the emergency call event.
      * @param value Value to set for the policyName property.
      */
     public void setPolicyName(@jakarta.annotation.Nullable final String value) {

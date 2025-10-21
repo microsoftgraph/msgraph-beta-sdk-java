@@ -36,7 +36,7 @@ public class OnFraudProtectionLoadStartExternalUsersAuthHandler extends OnFraudP
         return deserializerMap;
     }
     /**
-     * Gets the signUp property value. The signUp property
+     * Gets the signUp property value. Specifies the configuration of the fraud protection configuration for sign-up events.
      * @return a {@link FraudProtectionConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class OnFraudProtectionLoadStartExternalUsersAuthHandler extends OnFraudP
         writer.writeObjectValue("signUp", this.getSignUp());
     }
     /**
-     * Sets the signUp property value. The signUp property
+     * Sets the signUp property value. Specifies the configuration of the fraud protection configuration for sign-up events.
      * @param value Value to set for the signUp property.
      */
     public void setSignUp(@jakarta.annotation.Nullable final FraudProtectionConfiguration value) {

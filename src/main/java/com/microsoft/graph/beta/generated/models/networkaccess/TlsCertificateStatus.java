@@ -10,7 +10,9 @@ public enum TlsCertificateStatus implements ValuedEnum {
     Active("active"),
     UnknownFutureValue("unknownFutureValue"),
     Expiring("expiring"),
-    Expired("expired");
+    Expired("expired"),
+    Enabled("enabled"),
+    Disabled("disabled");
     public final String value;
     TlsCertificateStatus(final String value) {
         this.value = value;
@@ -27,6 +29,8 @@ public enum TlsCertificateStatus implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "expiring": return Expiring;
             case "expired": return Expired;
+            case "enabled": return Enabled;
+            case "disabled": return Disabled;
             default: return null;
         }
     }

@@ -13,6 +13,7 @@ public class WafAllowedHeadersDictionary extends Dictionary implements Parsable 
      */
     public WafAllowedHeadersDictionary() {
         super();
+        this.setOdataType("#microsoft.graph.wafAllowedHeadersDictionary");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

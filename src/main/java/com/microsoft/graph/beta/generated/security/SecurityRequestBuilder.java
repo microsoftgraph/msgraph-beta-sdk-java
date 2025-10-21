@@ -27,6 +27,7 @@ import com.microsoft.graph.beta.security.rules.RulesRequestBuilder;
 import com.microsoft.graph.beta.security.securescorecontrolprofiles.SecureScoreControlProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.securescores.SecureScoresRequestBuilder;
 import com.microsoft.graph.beta.security.securityactions.SecurityActionsRequestBuilder;
+import com.microsoft.graph.beta.security.securitycopilot.SecurityCopilotRequestBuilder;
 import com.microsoft.graph.beta.security.subjectrightsrequests.SubjectRightsRequestsRequestBuilder;
 import com.microsoft.graph.beta.security.threatintelligence.ThreatIntelligenceRequestBuilder;
 import com.microsoft.graph.beta.security.threatsubmission.ThreatSubmissionRequestBuilder;
@@ -251,6 +252,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SecurityActionsRequestBuilder securityActions() {
         return new SecurityActionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the securityCopilot property of the microsoft.graph.security entity.
+     * @return a {@link SecurityCopilotRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SecurityCopilotRequestBuilder securityCopilot() {
+        return new SecurityCopilotRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.security entity.

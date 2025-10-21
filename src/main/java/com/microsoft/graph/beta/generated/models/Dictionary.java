@@ -46,6 +46,7 @@ public class Dictionary implements AdditionalDataHolder, BackedModel, Parsable {
                 case "#microsoft.graph.partner.security.additionalDataDictionary": return new AdditionalDataDictionary();
                 case "#microsoft.graph.plannerFormsDictionary": return new PlannerFormsDictionary();
                 case "#microsoft.graph.resultTemplateDictionary": return new ResultTemplateDictionary();
+                case "#microsoft.graph.stringDictionary": return new StringDictionary();
                 case "#microsoft.graph.wafAllowedHeadersDictionary": return new WafAllowedHeadersDictionary();
             }
         }

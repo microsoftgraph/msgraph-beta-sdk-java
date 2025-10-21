@@ -26,7 +26,7 @@ public class HumanSecurityFraudProtectionProvider extends FraudProtectionProvide
         return new HumanSecurityFraudProtectionProvider();
     }
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. Unique identifier for an individual application. You can retrieve this from the HUMAN Security admin console or request it from your HUMAN Security Customer Success Manager.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class HumanSecurityFraudProtectionProvider extends FraudProtectionProvide
         return deserializerMap;
     }
     /**
-     * Gets the serverToken property value. The serverToken property
+     * Gets the serverToken property value. Unique identifier used to authenticate API calls between the Server side integration and the HUMAN platform. You can retrieve this from the HUMAN Security admin console or request it from your HUMAN Security Customer Success Manager.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class HumanSecurityFraudProtectionProvider extends FraudProtectionProvide
         writer.writeStringValue("serverToken", this.getServerToken());
     }
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. Unique identifier for an individual application. You can retrieve this from the HUMAN Security admin console or request it from your HUMAN Security Customer Success Manager.
      * @param value Value to set for the appId property.
      */
     public void setAppId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the serverToken property value. The serverToken property
+     * Sets the serverToken property value. Unique identifier used to authenticate API calls between the Server side integration and the HUMAN platform. You can retrieve this from the HUMAN Security admin console or request it from your HUMAN Security Customer Success Manager.
      * @param value Value to set for the serverToken property.
      */
     public void setServerToken(@jakarta.annotation.Nullable final String value) {
