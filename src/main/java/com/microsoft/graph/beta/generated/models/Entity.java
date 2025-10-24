@@ -18,7 +18,6 @@ import com.microsoft.graph.beta.models.ediscovery.CaseIndexOperation;
 import com.microsoft.graph.beta.models.ediscovery.CaseSettings;
 import com.microsoft.graph.beta.models.ediscovery.Custodian;
 import com.microsoft.graph.beta.models.ediscovery.DataSource;
-import com.microsoft.graph.beta.models.ediscovery.DataSourceContainer;
 import com.microsoft.graph.beta.models.ediscovery.Ediscoveryroot;
 import com.microsoft.graph.beta.models.ediscovery.EstimateStatisticsOperation;
 import com.microsoft.graph.beta.models.ediscovery.LegalHold;
@@ -27,9 +26,7 @@ import com.microsoft.graph.beta.models.ediscovery.PurgeDataOperation;
 import com.microsoft.graph.beta.models.ediscovery.ReviewSet;
 import com.microsoft.graph.beta.models.ediscovery.ReviewSetQuery;
 import com.microsoft.graph.beta.models.ediscovery.SourceCollection;
-import com.microsoft.graph.beta.models.ediscovery.Tag;
 import com.microsoft.graph.beta.models.ediscovery.TagOperation;
-import com.microsoft.graph.beta.models.ediscovery.UnifiedGroupSource;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionOperation;
 import com.microsoft.graph.beta.models.externalconnectors.ConnectionQuota;
 import com.microsoft.graph.beta.models.externalconnectors.ExternalActivity;
@@ -39,7 +36,6 @@ import com.microsoft.graph.beta.models.externalconnectors.ExternalGroup;
 import com.microsoft.graph.beta.models.externalconnectors.ExternalItem;
 import com.microsoft.graph.beta.models.externalconnectors.Identity;
 import com.microsoft.graph.beta.models.externalconnectors.Schema;
-import com.microsoft.graph.beta.models.healthmonitoring.Alert;
 import com.microsoft.graph.beta.models.healthmonitoring.AlertConfiguration;
 import com.microsoft.graph.beta.models.healthmonitoring.HealthMonitoringRoot;
 import com.microsoft.graph.beta.models.identitygovernance.CustomTaskExtension;
@@ -184,6 +180,7 @@ import com.microsoft.graph.beta.models.search.Acronym;
 import com.microsoft.graph.beta.models.search.Bookmark;
 import com.microsoft.graph.beta.models.search.Qna;
 import com.microsoft.graph.beta.models.search.SearchAnswer;
+import com.microsoft.graph.beta.models.security.Alert;
 import com.microsoft.graph.beta.models.security.AnalyzedEmail;
 import com.microsoft.graph.beta.models.security.Article;
 import com.microsoft.graph.beta.models.security.ArticleIndicator;
@@ -202,6 +199,7 @@ import com.microsoft.graph.beta.models.security.CollaborationRoot;
 import com.microsoft.graph.beta.models.security.DataDiscoveryReport;
 import com.microsoft.graph.beta.models.security.DataDiscoveryRoot;
 import com.microsoft.graph.beta.models.security.DataSet;
+import com.microsoft.graph.beta.models.security.DataSourceContainer;
 import com.microsoft.graph.beta.models.security.DepartmentTemplate;
 import com.microsoft.graph.beta.models.security.DetectionRule;
 import com.microsoft.graph.beta.models.security.DiscoveredCloudAppDetail;
@@ -282,12 +280,14 @@ import com.microsoft.graph.beta.models.security.SiteSource;
 import com.microsoft.graph.beta.models.security.SslCertificate;
 import com.microsoft.graph.beta.models.security.SubcategoryTemplate;
 import com.microsoft.graph.beta.models.security.Subdomain;
+import com.microsoft.graph.beta.models.security.Tag;
 import com.microsoft.graph.beta.models.security.ThreatIntelligence;
 import com.microsoft.graph.beta.models.security.ThreatSubmission;
 import com.microsoft.graph.beta.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.beta.models.security.TriggersRoot;
 import com.microsoft.graph.beta.models.security.TriggerTypesRoot;
 import com.microsoft.graph.beta.models.security.UnclassifiedArtifact;
+import com.microsoft.graph.beta.models.security.UnifiedGroupSource;
 import com.microsoft.graph.beta.models.security.UrlThreatSubmission;
 import com.microsoft.graph.beta.models.security.User;
 import com.microsoft.graph.beta.models.security.UserSource;
@@ -454,6 +454,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.aiInteractionHistory": return new AiInteractionHistory();
             case "#microsoft.graph.aiOnlineMeeting": return new AiOnlineMeeting();
             case "#microsoft.graph.aiUser": return new AiUser();
+            case "#microsoft.graph.akamaiWebApplicationFirewallProvider": return new AkamaiWebApplicationFirewallProvider();
             case "#microsoft.graph.alert": return new Alert();
             case "#microsoft.graph.allowedDataLocation": return new AllowedDataLocation();
             case "#microsoft.graph.allowedValue": return new AllowedValue();
@@ -714,6 +715,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.cloudCertificationAuthorityLeafCertificate": return new CloudCertificationAuthorityLeafCertificate();
             case "#microsoft.graph.cloudClipboardItem": return new CloudClipboardItem();
             case "#microsoft.graph.cloudClipboardRoot": return new CloudClipboardRoot();
+            case "#microsoft.graph.cloudFlareWebApplicationFirewallProvider": return new CloudFlareWebApplicationFirewallProvider();
             case "#microsoft.graph.cloudLicensing.usageRight": return new UsageRight();
             case "#microsoft.graph.cloudPC": return new CloudPC();
             case "#microsoft.graph.cloudPcAuditEvent": return new CloudPcAuditEvent();
@@ -742,6 +744,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.cloudPcExternalPartnerSetting": return new CloudPcExternalPartnerSetting();
             case "#microsoft.graph.cloudPcFrontLineServicePlan": return new CloudPcFrontLineServicePlan();
             case "#microsoft.graph.cloudPcGalleryImage": return new CloudPcGalleryImage();
+            case "#microsoft.graph.cloudPcManagedLicense": return new CloudPcManagedLicense();
             case "#microsoft.graph.cloudPcOnPremisesConnection": return new CloudPcOnPremisesConnection();
             case "#microsoft.graph.cloudPcOrganizationSettings": return new CloudPcOrganizationSettings();
             case "#microsoft.graph.cloudPcProvisioningPolicy": return new CloudPcProvisioningPolicy();
@@ -803,6 +806,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.customAuthenticationExtension": return new CustomAuthenticationExtension();
             case "#microsoft.graph.customCalloutExtension": return new CustomCalloutExtension();
             case "#microsoft.graph.customClaimsPolicy": return new CustomClaimsPolicy();
+            case "#microsoft.graph.customDataProvidedResourceUploadSession": return new CustomDataProvidedResourceUploadSession();
             case "#microsoft.graph.customExtensionHandler": return new CustomExtensionHandler();
             case "#microsoft.graph.customExtensionStageSetting": return new CustomExtensionStageSetting();
             case "#microsoft.graph.customSecurityAttributeAudit": return new CustomSecurityAttributeAudit();
@@ -892,10 +896,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.deviceHealthScriptDeviceState": return new DeviceHealthScriptDeviceState();
             case "#microsoft.graph.deviceHealthScriptRunSummary": return new DeviceHealthScriptRunSummary();
             case "#microsoft.graph.deviceInstallState": return new DeviceInstallState();
-            case "#microsoft.graph.deviceLocalCredentialInfo": return new DeviceLocalCredentialInfo();
-            case "#microsoft.graph.deviceLogCollectionResponse": return new DeviceLogCollectionResponse();
-            case "#microsoft.graph.deviceManagement": return new DeviceManagement();
-            case "#microsoft.graph.deviceManagement.alertRecord": return new AlertRecord();
         }
         return null;
     }
@@ -907,6 +907,10 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_1(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.deviceLocalCredentialInfo": return new DeviceLocalCredentialInfo();
+            case "#microsoft.graph.deviceLogCollectionResponse": return new DeviceLogCollectionResponse();
+            case "#microsoft.graph.deviceManagement": return new DeviceManagement();
+            case "#microsoft.graph.deviceManagement.alertRecord": return new AlertRecord();
             case "#microsoft.graph.deviceManagement.alertRule": return new AlertRule();
             case "#microsoft.graph.deviceManagement.monitoring": return new Monitoring();
             case "#microsoft.graph.deviceManagementAbstractComplexSettingDefinition": return new DeviceManagementAbstractComplexSettingDefinition();
@@ -1403,10 +1407,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.macOSVpnConfiguration": return new MacOSVpnConfiguration();
             case "#microsoft.graph.macOsVppApp": return new MacOsVppApp();
             case "#microsoft.graph.macOsVppAppAssignedLicense": return new MacOsVppAppAssignedLicense();
-            case "#microsoft.graph.macOSWebClip": return new MacOSWebClip();
-            case "#microsoft.graph.macOSWiFiConfiguration": return new MacOSWiFiConfiguration();
-            case "#microsoft.graph.macOSWiredNetworkConfiguration": return new MacOSWiredNetworkConfiguration();
-            case "#microsoft.graph.mailAssessmentRequest": return new MailAssessmentRequest();
         }
         return null;
     }
@@ -1418,6 +1418,10 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_2(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.macOSWebClip": return new MacOSWebClip();
+            case "#microsoft.graph.macOSWiFiConfiguration": return new MacOSWiFiConfiguration();
+            case "#microsoft.graph.macOSWiredNetworkConfiguration": return new MacOSWiredNetworkConfiguration();
+            case "#microsoft.graph.mailAssessmentRequest": return new MailAssessmentRequest();
             case "#microsoft.graph.mailbox": return new Mailbox();
             case "#microsoft.graph.mailboxFolder": return new MailboxFolder();
             case "#microsoft.graph.mailboxItem": return new MailboxItem();
@@ -1803,6 +1807,7 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.printUsage": return new PrintUsage();
             case "#microsoft.graph.printUsageByPrinter": return new PrintUsageByPrinter();
             case "#microsoft.graph.printUsageByUser": return new PrintUsageByUser();
+            case "#microsoft.graph.privateAccessSensor": return new PrivateAccessSensor();
             case "#microsoft.graph.privilegedAccess": return new PrivilegedAccess();
             case "#microsoft.graph.privilegedAccessGroup": return new PrivilegedAccessGroup();
             case "#microsoft.graph.privilegedAccessGroupAssignmentSchedule": return new PrivilegedAccessGroupAssignmentSchedule();
@@ -1913,11 +1918,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.scheduleChangeRequest": return new ScheduleChangeRequest();
             case "#microsoft.graph.scheduledPermissionsRequest": return new ScheduledPermissionsRequest();
             case "#microsoft.graph.schedulingGroup": return new SchedulingGroup();
-            case "#microsoft.graph.schema": return new Schema();
-            case "#microsoft.graph.schemaExtension": return new SchemaExtension();
-            case "#microsoft.graph.scopedRoleMembership": return new ScopedRoleMembership();
-            case "#microsoft.graph.search.acronym": return new Acronym();
-            case "#microsoft.graph.search.bookmark": return new Bookmark();
         }
         return null;
     }
@@ -1929,6 +1929,11 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_3(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.schema": return new Schema();
+            case "#microsoft.graph.schemaExtension": return new SchemaExtension();
+            case "#microsoft.graph.scopedRoleMembership": return new ScopedRoleMembership();
+            case "#microsoft.graph.search.acronym": return new Acronym();
+            case "#microsoft.graph.search.bookmark": return new Bookmark();
             case "#microsoft.graph.search.qna": return new Qna();
             case "#microsoft.graph.search.searchAnswer": return new SearchAnswer();
             case "#microsoft.graph.searchEntity": return new SearchEntity();
@@ -2404,6 +2409,8 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.vulnerableManagedDevice": return new VulnerableManagedDevice();
             case "#microsoft.graph.webAccount": return new WebAccount();
             case "#microsoft.graph.webApp": return new WebApp();
+            case "#microsoft.graph.webApplicationFirewallProvider": return new WebApplicationFirewallProvider();
+            case "#microsoft.graph.webApplicationFirewallVerificationModel": return new WebApplicationFirewallVerificationModel();
             case "#microsoft.graph.webApplicationSegment": return new WebApplicationSegment();
             case "#microsoft.graph.webPart": return new WebPart();
             case "#microsoft.graph.win32CatalogApp": return new Win32CatalogApp();
@@ -2422,13 +2429,6 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
             case "#microsoft.graph.windows10EnrollmentCompletionPageConfigurationPolicySetItem": return new Windows10EnrollmentCompletionPageConfigurationPolicySetItem();
             case "#microsoft.graph.windows10EnterpriseModernAppManagementConfiguration": return new Windows10EnterpriseModernAppManagementConfiguration();
             case "#microsoft.graph.windows10GeneralConfiguration": return new Windows10GeneralConfiguration();
-            case "#microsoft.graph.windows10ImportedPFXCertificateProfile": return new Windows10ImportedPFXCertificateProfile();
-            case "#microsoft.graph.windows10MobileCompliancePolicy": return new Windows10MobileCompliancePolicy();
-            case "#microsoft.graph.windows10NetworkBoundaryConfiguration": return new Windows10NetworkBoundaryConfiguration();
-            case "#microsoft.graph.windows10PFXImportCertificateProfile": return new Windows10PFXImportCertificateProfile();
-            case "#microsoft.graph.windows10PkcsCertificateProfile": return new Windows10PkcsCertificateProfile();
-            case "#microsoft.graph.windows10SecureAssessmentConfiguration": return new Windows10SecureAssessmentConfiguration();
-            case "#microsoft.graph.windows10TeamGeneralConfiguration": return new Windows10TeamGeneralConfiguration();
         }
         return null;
     }
@@ -2440,6 +2440,13 @@ public class Entity implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     private static Entity createFromDiscriminatorValue_4(@jakarta.annotation.Nonnull final String discriminatorValue) {
         switch (discriminatorValue) {
+            case "#microsoft.graph.windows10ImportedPFXCertificateProfile": return new Windows10ImportedPFXCertificateProfile();
+            case "#microsoft.graph.windows10MobileCompliancePolicy": return new Windows10MobileCompliancePolicy();
+            case "#microsoft.graph.windows10NetworkBoundaryConfiguration": return new Windows10NetworkBoundaryConfiguration();
+            case "#microsoft.graph.windows10PFXImportCertificateProfile": return new Windows10PFXImportCertificateProfile();
+            case "#microsoft.graph.windows10PkcsCertificateProfile": return new Windows10PkcsCertificateProfile();
+            case "#microsoft.graph.windows10SecureAssessmentConfiguration": return new Windows10SecureAssessmentConfiguration();
+            case "#microsoft.graph.windows10TeamGeneralConfiguration": return new Windows10TeamGeneralConfiguration();
             case "#microsoft.graph.windows10VpnConfiguration": return new Windows10VpnConfiguration();
             case "#microsoft.graph.windows10XCertificateProfile": return new Windows10XCertificateProfile();
             case "#microsoft.graph.windows10XSCEPCertificateProfile": return new Windows10XSCEPCertificateProfile();

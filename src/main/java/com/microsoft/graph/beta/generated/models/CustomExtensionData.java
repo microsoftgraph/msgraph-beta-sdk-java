@@ -39,6 +39,8 @@ public class CustomExtensionData implements AdditionalDataHolder, BackedModel, P
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.accessPackageAssignmentRequestCallbackData": return new AccessPackageAssignmentRequestCallbackData();
+                case "#microsoft.graph.accessReviewDataUploadRequestCalloutData": return new AccessReviewDataUploadRequestCalloutData();
+                case "#microsoft.graph.accessReviewDataUploadTriggerCallbackData": return new AccessReviewDataUploadTriggerCallbackData();
                 case "#microsoft.graph.assignmentRequestApprovalStageCallbackData": return new AssignmentRequestApprovalStageCallbackData();
                 case "#microsoft.graph.identityGovernance.customTaskExtensionCallbackData": return new CustomTaskExtensionCallbackData();
                 case "#microsoft.graph.identityGovernance.customTaskExtensionCalloutData": return new CustomTaskExtensionCalloutData();

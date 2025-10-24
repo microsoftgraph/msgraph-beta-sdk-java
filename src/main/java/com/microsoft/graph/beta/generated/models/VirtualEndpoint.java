@@ -105,6 +105,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         deserializerMap.put("externalPartnerSettings", (n) -> { this.setExternalPartnerSettings(n.getCollectionOfObjectValues(CloudPcExternalPartnerSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("frontLineServicePlans", (n) -> { this.setFrontLineServicePlans(n.getCollectionOfObjectValues(CloudPcFrontLineServicePlan::createFromDiscriminatorValue)); });
         deserializerMap.put("galleryImages", (n) -> { this.setGalleryImages(n.getCollectionOfObjectValues(CloudPcGalleryImage::createFromDiscriminatorValue)); });
+        deserializerMap.put("managedLicenses", (n) -> { this.setManagedLicenses(n.getCollectionOfObjectValues(CloudPcManagedLicense::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesConnections", (n) -> { this.setOnPremisesConnections(n.getCollectionOfObjectValues(CloudPcOnPremisesConnection::createFromDiscriminatorValue)); });
         deserializerMap.put("organizationSettings", (n) -> { this.setOrganizationSettings(n.getObjectValue(CloudPcOrganizationSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("provisioningPolicies", (n) -> { this.setProvisioningPolicies(n.getCollectionOfObjectValues(CloudPcProvisioningPolicy::createFromDiscriminatorValue)); });
@@ -130,6 +131,14 @@ public class VirtualEndpoint extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<CloudPcGalleryImage> getGalleryImages() {
         return this.backingStore.get("galleryImages");
+    }
+    /**
+     * Gets the managedLicenses property value. The managed licenses for Cloud PCs in the organization.
+     * @return a {@link java.util.List<CloudPcManagedLicense>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudPcManagedLicense> getManagedLicenses() {
+        return this.backingStore.get("managedLicenses");
     }
     /**
      * Gets the onPremisesConnections property value. A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.
@@ -212,6 +221,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("externalPartnerSettings", this.getExternalPartnerSettings());
         writer.writeCollectionOfObjectValues("frontLineServicePlans", this.getFrontLineServicePlans());
         writer.writeCollectionOfObjectValues("galleryImages", this.getGalleryImages());
+        writer.writeCollectionOfObjectValues("managedLicenses", this.getManagedLicenses());
         writer.writeCollectionOfObjectValues("onPremisesConnections", this.getOnPremisesConnections());
         writer.writeObjectValue("organizationSettings", this.getOrganizationSettings());
         writer.writeCollectionOfObjectValues("provisioningPolicies", this.getProvisioningPolicies());
@@ -290,6 +300,13 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     public void setGalleryImages(@jakarta.annotation.Nullable final java.util.List<CloudPcGalleryImage> value) {
         this.backingStore.set("galleryImages", value);
+    }
+    /**
+     * Sets the managedLicenses property value. The managed licenses for Cloud PCs in the organization.
+     * @param value Value to set for the managedLicenses property.
+     */
+    public void setManagedLicenses(@jakarta.annotation.Nullable final java.util.List<CloudPcManagedLicense> value) {
+        this.backingStore.set("managedLicenses", value);
     }
     /**
      * Sets the onPremisesConnections property value. A defined collection of Azure resource information that can be used to establish on-premises network connectivity for Cloud PCs.

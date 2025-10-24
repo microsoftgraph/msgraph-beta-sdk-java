@@ -61,9 +61,11 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("fraudProtectionProviders", (n) -> { this.setFraudProtectionProviders(n.getCollectionOfObjectValues(FraudProtectionProvider::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("webApplicationFirewallProviders", (n) -> { this.setWebApplicationFirewallProviders(n.getCollectionOfObjectValues(WebApplicationFirewallProvider::createFromDiscriminatorValue)); });
+        deserializerMap.put("webApplicationFirewallVerifications", (n) -> { this.setWebApplicationFirewallVerifications(n.getCollectionOfObjectValues(WebApplicationFirewallVerificationModel::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -83,6 +85,22 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the webApplicationFirewallProviders property value. The webApplicationFirewallProviders property
+     * @return a {@link java.util.List<WebApplicationFirewallProvider>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WebApplicationFirewallProvider> getWebApplicationFirewallProviders() {
+        return this.backingStore.get("webApplicationFirewallProviders");
+    }
+    /**
+     * Gets the webApplicationFirewallVerifications property value. The webApplicationFirewallVerifications property
+     * @return a {@link java.util.List<WebApplicationFirewallVerificationModel>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<WebApplicationFirewallVerificationModel> getWebApplicationFirewallVerifications() {
+        return this.backingStore.get("webApplicationFirewallVerifications");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -90,6 +108,8 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         Objects.requireNonNull(writer);
         writer.writeCollectionOfObjectValues("fraudProtectionProviders", this.getFraudProtectionProviders());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeCollectionOfObjectValues("webApplicationFirewallProviders", this.getWebApplicationFirewallProviders());
+        writer.writeCollectionOfObjectValues("webApplicationFirewallVerifications", this.getWebApplicationFirewallVerifications());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,5 +140,19 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the webApplicationFirewallProviders property value. The webApplicationFirewallProviders property
+     * @param value Value to set for the webApplicationFirewallProviders property.
+     */
+    public void setWebApplicationFirewallProviders(@jakarta.annotation.Nullable final java.util.List<WebApplicationFirewallProvider> value) {
+        this.backingStore.set("webApplicationFirewallProviders", value);
+    }
+    /**
+     * Sets the webApplicationFirewallVerifications property value. The webApplicationFirewallVerifications property
+     * @param value Value to set for the webApplicationFirewallVerifications property.
+     */
+    public void setWebApplicationFirewallVerifications(@jakarta.annotation.Nullable final java.util.List<WebApplicationFirewallVerificationModel> value) {
+        this.backingStore.set("webApplicationFirewallVerifications", value);
     }
 }
