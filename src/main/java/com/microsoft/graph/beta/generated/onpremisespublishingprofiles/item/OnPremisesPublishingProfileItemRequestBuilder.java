@@ -8,6 +8,7 @@ import com.microsoft.graph.beta.onpremisespublishingprofiles.item.applicationseg
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectorgroups.ConnectorGroupsRequestBuilder;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.connectors.ConnectorsRequestBuilder;
 import com.microsoft.graph.beta.onpremisespublishingprofiles.item.publishedresources.PublishedResourcesRequestBuilder;
+import com.microsoft.graph.beta.onpremisespublishingprofiles.item.sensors.SensorsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -73,6 +74,14 @@ public class OnPremisesPublishingProfileItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public PublishedResourcesRequestBuilder publishedResources() {
         return new PublishedResourcesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sensors property of the microsoft.graph.onPremisesPublishingProfile entity.
+     * @return a {@link SensorsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SensorsRequestBuilder sensors() {
+        return new SensorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link OnPremisesPublishingProfileItemRequestBuilder} and sets the default values.

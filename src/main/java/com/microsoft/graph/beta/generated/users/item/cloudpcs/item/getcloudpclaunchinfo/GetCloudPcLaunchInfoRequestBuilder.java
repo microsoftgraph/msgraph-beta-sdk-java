@@ -39,9 +39,12 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
      * Get the cloudPCLaunchInfo for a specific cloudPC that belongs to the current signed-in user.
      * @return a {@link CloudPcLaunchInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from Oct 30, 2026, this API: getCloudPcLaunchInfo will be deprecated and no longer be supported. Please use the new API:retrieveCloudPcLaunchDetail to retrieve same details. as of 2025-09/cloudPcLaunchInfo on 2025-09-30 and will be removed 2026-10-30
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getcloudpclaunchinfo?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcLaunchInfo get() {
         return get(null);
     }
@@ -50,9 +53,12 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcLaunchInfo}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from Oct 30, 2026, this API: getCloudPcLaunchInfo will be deprecated and no longer be supported. Please use the new API:retrieveCloudPcLaunchDetail to retrieve same details. as of 2025-09/cloudPcLaunchInfo on 2025-09-30 and will be removed 2026-10-30
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-getcloudpclaunchinfo?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcLaunchInfo get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -62,8 +68,11 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the cloudPCLaunchInfo for a specific cloudPC that belongs to the current signed-in user.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from Oct 30, 2026, this API: getCloudPcLaunchInfo will be deprecated and no longer be supported. Please use the new API:retrieveCloudPcLaunchDetail to retrieve same details. as of 2025-09/cloudPcLaunchInfo on 2025-09-30 and will be removed 2026-10-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -71,8 +80,11 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
      * Get the cloudPCLaunchInfo for a specific cloudPC that belongs to the current signed-in user.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from Oct 30, 2026, this API: getCloudPcLaunchInfo will be deprecated and no longer be supported. Please use the new API:retrieveCloudPcLaunchDetail to retrieve same details. as of 2025-09/cloudPcLaunchInfo on 2025-09-30 and will be removed 2026-10-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new);
@@ -83,8 +95,11 @@ public class GetCloudPcLaunchInfoRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link GetCloudPcLaunchInfoRequestBuilder}
+     * @deprecated
+     * Starting from Oct 30, 2026, this API: getCloudPcLaunchInfo will be deprecated and no longer be supported. Please use the new API:retrieveCloudPcLaunchDetail to retrieve same details. as of 2025-09/cloudPcLaunchInfo on 2025-09-30 and will be removed 2026-10-30
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GetCloudPcLaunchInfoRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new GetCloudPcLaunchInfoRequestBuilder(rawUrl, requestAdapter);

@@ -108,6 +108,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         deserializerMap.put("originId", (n) -> { this.setOriginId(n.getStringValue()); });
         deserializerMap.put("originSystem", (n) -> { this.setOriginSystem(n.getStringValue()); });
         deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getStringValue()); });
+        deserializerMap.put("uploadSessions", (n) -> { this.setUploadSessions(n.getCollectionOfObjectValues(CustomDataProvidedResourceUploadSession::createFromDiscriminatorValue)); });
         deserializerMap.put("url", (n) -> { this.setUrl(n.getStringValue()); });
         return deserializerMap;
     }
@@ -144,6 +145,14 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("resourceType");
     }
     /**
+     * Gets the uploadSessions property value. The uploadSessions property
+     * @return a {@link java.util.List<CustomDataProvidedResourceUploadSession>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CustomDataProvidedResourceUploadSession> getUploadSessions() {
+        return this.backingStore.get("uploadSessions");
+    }
+    /**
      * Gets the url property value. A unique resource locator for the resource, such as the URL for signing a user into an application.
      * @return a {@link String}
      */
@@ -170,6 +179,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         writer.writeStringValue("originId", this.getOriginId());
         writer.writeStringValue("originSystem", this.getOriginSystem());
         writer.writeStringValue("resourceType", this.getResourceType());
+        writer.writeCollectionOfObjectValues("uploadSessions", this.getUploadSessions());
         writer.writeStringValue("url", this.getUrl());
     }
     /**
@@ -255,6 +265,13 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceType", value);
+    }
+    /**
+     * Sets the uploadSessions property value. The uploadSessions property
+     * @param value Value to set for the uploadSessions property.
+     */
+    public void setUploadSessions(@jakarta.annotation.Nullable final java.util.List<CustomDataProvidedResourceUploadSession> value) {
+        this.backingStore.set("uploadSessions", value);
     }
     /**
      * Sets the url property value. A unique resource locator for the resource, such as the URL for signing a user into an application.

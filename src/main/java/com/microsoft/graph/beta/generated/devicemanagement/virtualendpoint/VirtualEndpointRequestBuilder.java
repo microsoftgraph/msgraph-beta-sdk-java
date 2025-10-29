@@ -11,6 +11,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartner
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.frontlineserviceplans.FrontLineServicePlansRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.galleryimages.GalleryImagesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.geteffectivepermissions.GetEffectivePermissionsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.managedlicenses.ManagedLicensesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.onpremisesconnections.OnPremisesConnectionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.organizationsettings.OrganizationSettingsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.ProvisioningPoliciesRequestBuilder;
@@ -128,6 +129,14 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetEffectivePermissionsRequestBuilder getEffectivePermissions() {
         return new GetEffectivePermissionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the managedLicenses property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ManagedLicensesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ManagedLicensesRequestBuilder managedLicenses() {
+        return new ManagedLicensesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the onPremisesConnections property of the microsoft.graph.virtualEndpoint entity.

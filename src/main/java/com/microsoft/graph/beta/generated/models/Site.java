@@ -136,17 +136,22 @@ public class Site extends BaseItem implements Parsable {
         deserializerMap.put("isPersonalSite", (n) -> { this.setIsPersonalSite(n.getBooleanValue()); });
         deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(BaseItem::createFromDiscriminatorValue)); });
         deserializerMap.put("lists", (n) -> { this.setLists(n.getCollectionOfObjectValues(List::createFromDiscriminatorValue)); });
+        deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
+        deserializerMap.put("lockState", (n) -> { this.setLockState(n.getEnumValue(SiteLockState::forValue)); });
         deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("ownerIdentityToResolve", (n) -> { this.setOwnerIdentityToResolve(n.getObjectValue(IdentityInput::createFromDiscriminatorValue)); });
         deserializerMap.put("pages", (n) -> { this.setPages(n.getCollectionOfObjectValues(BaseSitePage::createFromDiscriminatorValue)); });
         deserializerMap.put("pageTemplates", (n) -> { this.setPageTemplates(n.getCollectionOfObjectValues(PageTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("recycleBin", (n) -> { this.setRecycleBin(n.getObjectValue(RecycleBin::createFromDiscriminatorValue)); });
         deserializerMap.put("root", (n) -> { this.setRoot(n.getObjectValue(Root::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(SiteSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("shareByEmailEnabled", (n) -> { this.setShareByEmailEnabled(n.getBooleanValue()); });
         deserializerMap.put("sharepointIds", (n) -> { this.setSharepointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
         deserializerMap.put("siteCollection", (n) -> { this.setSiteCollection(n.getObjectValue(SiteCollection::createFromDiscriminatorValue)); });
         deserializerMap.put("sites", (n) -> { this.setSites(n.getCollectionOfObjectValues(Site::createFromDiscriminatorValue)); });
+        deserializerMap.put("template", (n) -> { this.setTemplate(n.getEnumValue(SiteTemplateType::forValue)); });
         deserializerMap.put("termStore", (n) -> { this.setTermStore(n.getObjectValue(Store::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -183,6 +188,22 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("lists");
     }
     /**
+     * Gets the locale property value. The language settings of the site.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getLocale() {
+        return this.backingStore.get("locale");
+    }
+    /**
+     * Gets the lockState property value. The state of the site. The possible values are: unlocked, lockedReadOnly, lockedNoAccess, lockedNoAdditions, unknownFutureValue
+     * @return a {@link SiteLockState}
+     */
+    @jakarta.annotation.Nullable
+    public SiteLockState getLockState() {
+        return this.backingStore.get("lockState");
+    }
+    /**
      * Gets the onenote property value. The onenote property
      * @return a {@link Onenote}
      */
@@ -197,6 +218,14 @@ public class Site extends BaseItem implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<RichLongRunningOperation> getOperations() {
         return this.backingStore.get("operations");
+    }
+    /**
+     * Gets the ownerIdentityToResolve property value. The site owner to be provided at the time of site creation only.
+     * @return a {@link IdentityInput}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityInput getOwnerIdentityToResolve() {
+        return this.backingStore.get("ownerIdentityToResolve");
     }
     /**
      * Gets the pages property value. The collection of pages in the baseSitePages list on this site.
@@ -247,6 +276,14 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("settings");
     }
     /**
+     * Gets the shareByEmailEnabled property value. Determines whether the site and its content can be shared via email.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getShareByEmailEnabled() {
+        return this.backingStore.get("shareByEmailEnabled");
+    }
+    /**
      * Gets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @return a {@link SharepointIds}
      */
@@ -269,6 +306,14 @@ public class Site extends BaseItem implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<Site> getSites() {
         return this.backingStore.get("sites");
+    }
+    /**
+     * Gets the template property value. Specifies the template applied to the site. The possible values are: sitepagepublishing, group, sts, unknownFutureValue.
+     * @return a {@link SiteTemplateType}
+     */
+    @jakarta.annotation.Nullable
+    public SiteTemplateType getTemplate() {
+        return this.backingStore.get("template");
     }
     /**
      * Gets the termStore property value. The termStore under this site.
@@ -300,17 +345,22 @@ public class Site extends BaseItem implements Parsable {
         writer.writeBooleanValue("isPersonalSite", this.getIsPersonalSite());
         writer.writeCollectionOfObjectValues("items", this.getItems());
         writer.writeCollectionOfObjectValues("lists", this.getLists());
+        writer.writeStringValue("locale", this.getLocale());
+        writer.writeEnumValue("lockState", this.getLockState());
         writer.writeObjectValue("onenote", this.getOnenote());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
+        writer.writeObjectValue("ownerIdentityToResolve", this.getOwnerIdentityToResolve());
         writer.writeCollectionOfObjectValues("pages", this.getPages());
         writer.writeCollectionOfObjectValues("pageTemplates", this.getPageTemplates());
         writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
         writer.writeObjectValue("recycleBin", this.getRecycleBin());
         writer.writeObjectValue("root", this.getRoot());
         writer.writeObjectValue("settings", this.getSettings());
+        writer.writeBooleanValue("shareByEmailEnabled", this.getShareByEmailEnabled());
         writer.writeObjectValue("sharepointIds", this.getSharepointIds());
         writer.writeObjectValue("siteCollection", this.getSiteCollection());
         writer.writeCollectionOfObjectValues("sites", this.getSites());
+        writer.writeEnumValue("template", this.getTemplate());
         writer.writeObjectValue("termStore", this.getTermStore());
     }
     /**
@@ -419,6 +469,20 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("lists", value);
     }
     /**
+     * Sets the locale property value. The language settings of the site.
+     * @param value Value to set for the locale property.
+     */
+    public void setLocale(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("locale", value);
+    }
+    /**
+     * Sets the lockState property value. The state of the site. The possible values are: unlocked, lockedReadOnly, lockedNoAccess, lockedNoAdditions, unknownFutureValue
+     * @param value Value to set for the lockState property.
+     */
+    public void setLockState(@jakarta.annotation.Nullable final SiteLockState value) {
+        this.backingStore.set("lockState", value);
+    }
+    /**
      * Sets the onenote property value. The onenote property
      * @param value Value to set for the onenote property.
      */
@@ -431,6 +495,13 @@ public class Site extends BaseItem implements Parsable {
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<RichLongRunningOperation> value) {
         this.backingStore.set("operations", value);
+    }
+    /**
+     * Sets the ownerIdentityToResolve property value. The site owner to be provided at the time of site creation only.
+     * @param value Value to set for the ownerIdentityToResolve property.
+     */
+    public void setOwnerIdentityToResolve(@jakarta.annotation.Nullable final IdentityInput value) {
+        this.backingStore.set("ownerIdentityToResolve", value);
     }
     /**
      * Sets the pages property value. The collection of pages in the baseSitePages list on this site.
@@ -475,6 +546,13 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("settings", value);
     }
     /**
+     * Sets the shareByEmailEnabled property value. Determines whether the site and its content can be shared via email.
+     * @param value Value to set for the shareByEmailEnabled property.
+     */
+    public void setShareByEmailEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("shareByEmailEnabled", value);
+    }
+    /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
      * @param value Value to set for the sharepointIds property.
      */
@@ -494,6 +572,13 @@ public class Site extends BaseItem implements Parsable {
      */
     public void setSites(@jakarta.annotation.Nullable final java.util.List<Site> value) {
         this.backingStore.set("sites", value);
+    }
+    /**
+     * Sets the template property value. Specifies the template applied to the site. The possible values are: sitepagepublishing, group, sts, unknownFutureValue.
+     * @param value Value to set for the template property.
+     */
+    public void setTemplate(@jakarta.annotation.Nullable final SiteTemplateType value) {
+        this.backingStore.set("template", value);
     }
     /**
      * Sets the termStore property value. The termStore under this site.

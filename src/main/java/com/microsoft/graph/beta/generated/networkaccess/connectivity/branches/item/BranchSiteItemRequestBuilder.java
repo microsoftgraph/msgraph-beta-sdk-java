@@ -4,7 +4,6 @@ import com.microsoft.graph.beta.models.networkaccess.BranchSite;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.connectivity.branches.item.connectivityconfiguration.ConnectivityConfigurationRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.connectivity.branches.item.devicelinks.DeviceLinksRequestBuilder;
-import com.microsoft.graph.beta.networkaccess.connectivity.branches.item.forwardingprofiles.ForwardingProfilesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -44,17 +43,6 @@ public class BranchSiteItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DeviceLinksRequestBuilder deviceLinks() {
         return new DeviceLinksRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the forwardingProfiles property of the microsoft.graph.networkaccess.branchSite entity.
-     * @return a {@link ForwardingProfilesRequestBuilder}
-     * @deprecated
-     * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20
-     */
-    @Deprecated
-    @jakarta.annotation.Nonnull
-    public ForwardingProfilesRequestBuilder forwardingProfiles() {
-        return new ForwardingProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link BranchSiteItemRequestBuilder} and sets the default values.

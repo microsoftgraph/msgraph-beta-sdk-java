@@ -41,17 +41,8 @@ public class Connectivity extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("branches", (n) -> { this.setBranches(n.getCollectionOfObjectValues(BranchSite::createFromDiscriminatorValue)); });
-        deserializerMap.put("remoteNetworks", (n) -> { this.setRemoteNetworks(n.getCollectionOfObjectValues(RemoteNetwork::createFromDiscriminatorValue)); });
         deserializerMap.put("webCategories", (n) -> { this.setWebCategories(n.getCollectionOfObjectValues(WebCategory::createFromDiscriminatorValue)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the remoteNetworks property value. The locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
-     * @return a {@link java.util.List<RemoteNetwork>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<RemoteNetwork> getRemoteNetworks() {
-        return this.backingStore.get("remoteNetworks");
     }
     /**
      * Gets the webCategories property value. The URL category.
@@ -69,7 +60,6 @@ public class Connectivity extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("branches", this.getBranches());
-        writer.writeCollectionOfObjectValues("remoteNetworks", this.getRemoteNetworks());
         writer.writeCollectionOfObjectValues("webCategories", this.getWebCategories());
     }
     /**
@@ -78,13 +68,6 @@ public class Connectivity extends Entity implements Parsable {
      */
     public void setBranches(@jakarta.annotation.Nullable final java.util.List<BranchSite> value) {
         this.backingStore.set("branches", value);
-    }
-    /**
-     * Sets the remoteNetworks property value. The locations, such as branches, that are connected to Global Secure Access services through an IPsec tunnel.
-     * @param value Value to set for the remoteNetworks property.
-     */
-    public void setRemoteNetworks(@jakarta.annotation.Nullable final java.util.List<RemoteNetwork> value) {
-        this.backingStore.set("remoteNetworks", value);
     }
     /**
      * Sets the webCategories property value. The URL category.

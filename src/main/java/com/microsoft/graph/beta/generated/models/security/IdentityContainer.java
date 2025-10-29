@@ -81,7 +81,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("sensors");
     }
     /**
-     * Gets the settings property value. The settings property
+     * Gets the settings property value. Represents a container for security identities settings APIs.
      * @return a {@link SettingsContainer}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class IdentityContainer extends Entity implements Parsable {
         this.backingStore.set("sensors", value);
     }
     /**
-     * Sets the settings property value. The settings property
+     * Sets the settings property value. Represents a container for security identities settings APIs.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final SettingsContainer value) {

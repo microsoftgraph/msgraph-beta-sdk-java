@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.groups.item.sites.add.AddRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.count.CountRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.delta.DeltaRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.getallsites.GetAllSitesRequestBuilder;
+import com.microsoft.graph.beta.groups.item.sites.getoperationstatuswithoperationid.GetOperationStatusWithOperationIdRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.beta.groups.item.sites.remove.RemoveRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -115,6 +116,16 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, SiteCollectionResponse::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the getOperationStatus method.
+     * @param operationId Usage: operationId=&apos;{operationId}&apos;
+     * @return a {@link GetOperationStatusWithOperationIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetOperationStatusWithOperationIdRequestBuilder getOperationStatusWithOperationId(@jakarta.annotation.Nonnull final String operationId) {
+        Objects.requireNonNull(operationId);
+        return new GetOperationStatusWithOperationIdRequestBuilder(pathParameters, requestAdapter, operationId);
     }
     /**
      * The list of SharePoint sites in this group. Access the default site with /sites/root.

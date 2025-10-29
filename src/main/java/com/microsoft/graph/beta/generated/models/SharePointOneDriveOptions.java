@@ -62,8 +62,9 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, BackedMo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("includeContent", (n) -> { this.setIncludeContent(n.getEnumSetValue(SearchContent::forValue)); });
+        deserializerMap.put("includeHiddenContent", (n) -> { this.setIncludeHiddenContent(n.getBooleanValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -74,6 +75,14 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nullable
     public EnumSet<SearchContent> getIncludeContent() {
         return this.backingStore.get("includeContent");
+    }
+    /**
+     * Gets the includeHiddenContent property value. Indicates whether the search results include content that is normally hidden, such as archived content and SharePoint Embedded (RaaS). The default value is false, which prevents hidden content from being returned. You can also optionally include KQL to scope your query for hidden content to specific content types. For more information, see Search hidden content.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIncludeHiddenContent() {
+        return this.backingStore.get("includeHiddenContent");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -90,6 +99,7 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, BackedMo
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeEnumSetValue("includeContent", this.getIncludeContent());
+        writer.writeBooleanValue("includeHiddenContent", this.getIncludeHiddenContent());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -114,6 +124,13 @@ public class SharePointOneDriveOptions implements AdditionalDataHolder, BackedMo
      */
     public void setIncludeContent(@jakarta.annotation.Nullable final EnumSet<SearchContent> value) {
         this.backingStore.set("includeContent", value);
+    }
+    /**
+     * Sets the includeHiddenContent property value. Indicates whether the search results include content that is normally hidden, such as archived content and SharePoint Embedded (RaaS). The default value is false, which prevents hidden content from being returned. You can also optionally include KQL to scope your query for hidden content to specific content types. For more information, see Search hidden content.
+     * @param value Value to set for the includeHiddenContent property.
+     */
+    public void setIncludeHiddenContent(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("includeHiddenContent", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

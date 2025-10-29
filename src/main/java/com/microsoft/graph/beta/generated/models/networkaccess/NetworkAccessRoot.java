@@ -51,9 +51,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("connectivity", (n) -> { this.setConnectivity(n.getObjectValue(Connectivity::createFromDiscriminatorValue)); });
         deserializerMap.put("filteringPolicies", (n) -> { this.setFilteringPolicies(n.getCollectionOfObjectValues(FilteringPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("filteringProfiles", (n) -> { this.setFilteringProfiles(n.getCollectionOfObjectValues(FilteringProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("forwardingPolicies", (n) -> { this.setForwardingPolicies(n.getCollectionOfObjectValues(ForwardingPolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("forwardingProfiles", (n) -> { this.setForwardingProfiles(n.getCollectionOfObjectValues(ForwardingProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("logs", (n) -> { this.setLogs(n.getObjectValue(Logs::createFromDiscriminatorValue)); });
         deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(Reports::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(Settings::createFromDiscriminatorValue)); });
@@ -72,28 +70,12 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("filteringPolicies");
     }
     /**
-     * Gets the filteringProfiles property value. A filtering profile associates network access policies with Microsoft Entra ID Conditional Access policies, so that access policies can be applied to users and groups.
-     * @return a {@link java.util.List<FilteringProfile>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<FilteringProfile> getFilteringProfiles() {
-        return this.backingStore.get("filteringProfiles");
-    }
-    /**
      * Gets the forwardingPolicies property value. The forwardingPolicies property
      * @return a {@link java.util.List<ForwardingPolicy>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ForwardingPolicy> getForwardingPolicies() {
         return this.backingStore.get("forwardingPolicies");
-    }
-    /**
-     * Gets the forwardingProfiles property value. The forwardingProfiles property
-     * @return a {@link java.util.List<ForwardingProfile>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<ForwardingProfile> getForwardingProfiles() {
-        return this.backingStore.get("forwardingProfiles");
     }
     /**
      * Gets the logs property value. Represents network connections that are routed through Global Secure Access.
@@ -161,9 +143,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
         writer.writeObjectValue("connectivity", this.getConnectivity());
         writer.writeCollectionOfObjectValues("filteringPolicies", this.getFilteringPolicies());
-        writer.writeCollectionOfObjectValues("filteringProfiles", this.getFilteringProfiles());
         writer.writeCollectionOfObjectValues("forwardingPolicies", this.getForwardingPolicies());
-        writer.writeCollectionOfObjectValues("forwardingProfiles", this.getForwardingProfiles());
         writer.writeObjectValue("logs", this.getLogs());
         writer.writeObjectValue("reports", this.getReports());
         writer.writeObjectValue("settings", this.getSettings());
@@ -194,25 +174,11 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         this.backingStore.set("filteringPolicies", value);
     }
     /**
-     * Sets the filteringProfiles property value. A filtering profile associates network access policies with Microsoft Entra ID Conditional Access policies, so that access policies can be applied to users and groups.
-     * @param value Value to set for the filteringProfiles property.
-     */
-    public void setFilteringProfiles(@jakarta.annotation.Nullable final java.util.List<FilteringProfile> value) {
-        this.backingStore.set("filteringProfiles", value);
-    }
-    /**
      * Sets the forwardingPolicies property value. The forwardingPolicies property
      * @param value Value to set for the forwardingPolicies property.
      */
     public void setForwardingPolicies(@jakarta.annotation.Nullable final java.util.List<ForwardingPolicy> value) {
         this.backingStore.set("forwardingPolicies", value);
-    }
-    /**
-     * Sets the forwardingProfiles property value. The forwardingProfiles property
-     * @param value Value to set for the forwardingProfiles property.
-     */
-    public void setForwardingProfiles(@jakarta.annotation.Nullable final java.util.List<ForwardingProfile> value) {
-        this.backingStore.set("forwardingProfiles", value);
     }
     /**
      * Sets the logs property value. Represents network connections that are routed through Global Secure Access.
