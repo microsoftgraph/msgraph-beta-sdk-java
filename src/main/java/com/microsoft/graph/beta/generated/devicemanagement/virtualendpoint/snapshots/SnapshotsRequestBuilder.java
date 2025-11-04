@@ -3,7 +3,10 @@ package com.microsoft.graph.beta.devicemanagement.virtualendpoint.snapshots;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.snapshots.count.CountRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.snapshots.getstorageaccountswithsubscriptionid.GetStorageAccountsWithSubscriptionIdRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.snapshots.getsubscriptions.GetSubscriptionsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.snapshots.importsnapshot.ImportSnapshotRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.snapshots.item.CloudPcSnapshotItemRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.snapshots.purgeimportedsnapshot.PurgeImportedSnapshotRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.snapshots.retrievesnapshotimportresultswithsnapshotid.RetrieveSnapshotImportResultsWithSnapshotIdRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcSnapshot;
 import com.microsoft.graph.beta.models.CloudPcSnapshotCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -40,6 +43,22 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetSubscriptionsRequestBuilder getSubscriptions() {
         return new GetSubscriptionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the importSnapshot method.
+     * @return a {@link ImportSnapshotRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ImportSnapshotRequestBuilder importSnapshot() {
+        return new ImportSnapshotRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the purgeImportedSnapshot method.
+     * @return a {@link PurgeImportedSnapshotRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PurgeImportedSnapshotRequestBuilder purgeImportedSnapshot() {
+        return new PurgeImportedSnapshotRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the snapshots property of the microsoft.graph.virtualEndpoint entity.
@@ -125,6 +144,16 @@ public class SnapshotsRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcSnapshot::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the retrieveSnapshotImportResults method.
+     * @param snapshotId Usage: snapshotId=&apos;{snapshotId}&apos;
+     * @return a {@link RetrieveSnapshotImportResultsWithSnapshotIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveSnapshotImportResultsWithSnapshotIdRequestBuilder retrieveSnapshotImportResultsWithSnapshotId(@jakarta.annotation.Nonnull final String snapshotId) {
+        Objects.requireNonNull(snapshotId);
+        return new RetrieveSnapshotImportResultsWithSnapshotIdRequestBuilder(pathParameters, requestAdapter, snapshotId);
     }
     /**
      * Cloud PC snapshots.

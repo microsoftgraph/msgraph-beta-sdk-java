@@ -64,7 +64,7 @@ public class EducationGradingSchemeGrade implements AdditionalDataHolder, Backed
         return this.backingStore.get("defaultPercentage");
     }
     /**
-     * Gets the displayName property value. The name of the grading scheme.
+     * Gets the displayName property value. The name of this individual grade.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class EducationGradingSchemeGrade implements AdditionalDataHolder, Backed
         this.backingStore.set("defaultPercentage", value);
     }
     /**
-     * Sets the displayName property value. The name of the grading scheme.
+     * Sets the displayName property value. The name of this individual grade.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

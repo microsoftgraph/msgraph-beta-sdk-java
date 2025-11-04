@@ -4,8 +4,11 @@ import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenter
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.approveapps.ApproveAppsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.completesignup.CompleteSignupRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.creategoogleplaywebtoken.CreateGooglePlayWebTokenRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.requestenterpriseupgradeurl.RequestEnterpriseUpgradeUrlRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.requestsignupurl.RequestSignupUrlRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.retrievestorelayout.RetrieveStoreLayoutRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.setandroiddeviceownerfullymanagedenrollmentstate.SetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.setstorelayout.SetStoreLayoutRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.syncapps.SyncAppsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidmanagedstoreaccountenterprisesettings.unbind.UnbindRequestBuilder;
 import com.microsoft.graph.beta.models.AndroidManagedStoreAccountEnterpriseSettings;
@@ -61,6 +64,14 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
         return new CreateGooglePlayWebTokenRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the requestEnterpriseUpgradeUrl method.
+     * @return a {@link RequestEnterpriseUpgradeUrlRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestEnterpriseUpgradeUrlRequestBuilder requestEnterpriseUpgradeUrl() {
+        return new RequestEnterpriseUpgradeUrlRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the requestSignupUrl method.
      * @return a {@link RequestSignupUrlRequestBuilder}
      */
@@ -69,12 +80,28 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
         return new RequestSignupUrlRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the retrieveStoreLayout method.
+     * @return a {@link RetrieveStoreLayoutRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveStoreLayoutRequestBuilder retrieveStoreLayout() {
+        return new RetrieveStoreLayoutRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the setAndroidDeviceOwnerFullyManagedEnrollmentState method.
      * @return a {@link SetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public SetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder setAndroidDeviceOwnerFullyManagedEnrollmentState() {
         return new SetAndroidDeviceOwnerFullyManagedEnrollmentStateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the setStoreLayout method.
+     * @return a {@link SetStoreLayoutRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SetStoreLayoutRequestBuilder setStoreLayout() {
+        return new SetStoreLayoutRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the syncApps method.

@@ -1,11 +1,13 @@
 package com.microsoft.graph.beta.sites;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.models.Site;
 import com.microsoft.graph.beta.models.SiteCollectionResponse;
 import com.microsoft.graph.beta.sites.add.AddRequestBuilder;
 import com.microsoft.graph.beta.sites.count.CountRequestBuilder;
 import com.microsoft.graph.beta.sites.delta.DeltaRequestBuilder;
 import com.microsoft.graph.beta.sites.getallsites.GetAllSitesRequestBuilder;
+import com.microsoft.graph.beta.sites.getoperationstatuswithoperationid.GetOperationStatusWithOperationIdRequestBuilder;
 import com.microsoft.graph.beta.sites.item.SiteItemRequestBuilder;
 import com.microsoft.graph.beta.sites.remove.RemoveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -119,6 +121,43 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteCollectionResponse::createFromDiscriminatorValue);
     }
     /**
+     * Provides operations to call the getOperationStatus method.
+     * @param operationId Usage: operationId=&apos;{operationId}&apos;
+     * @return a {@link GetOperationStatusWithOperationIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetOperationStatusWithOperationIdRequestBuilder getOperationStatusWithOperationId(@jakarta.annotation.Nonnull final String operationId) {
+        Objects.requireNonNull(operationId);
+        return new GetOperationStatusWithOperationIdRequestBuilder(pathParameters, requestAdapter, operationId);
+    }
+    /**
+     * Create a new SharePoint site.
+     * @param body The request body
+     * @return a {@link Site}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-sites?view=graph-rest-beta">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    public Site post(@jakarta.annotation.Nonnull final Site body) {
+        return post(body, null);
+    }
+    /**
+     * Create a new SharePoint site.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link Site}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/site-post-sites?view=graph-rest-beta">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    public Site post(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, Site::createFromDiscriminatorValue);
+    }
+    /**
      * List all available sites in an organization. Specific filter criteria and query options are also supported and described below: In addition, you can use a $search query against the /sites collection to find sites matching given keywords.If you want to list all sites across all geographies, refer to getAllSites. For more guidance about building applications that use site discovery for scanning purposes, see Best practices for discovering files and detecting changes at scale.
      * @return a {@link RequestInformation}
      */
@@ -136,6 +175,30 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
+        return requestInfo;
+    }
+    /**
+     * Create a new SharePoint site.
+     * @param body The request body
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Site body) {
+        return toPostRequestInformation(body, null);
+    }
+    /**
+     * Create a new SharePoint site.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     */
+    @jakarta.annotation.Nonnull
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Site body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
     }
     /**
@@ -221,5 +284,11 @@ public class SitesRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class PostRequestConfiguration extends BaseRequestConfiguration {
     }
 }

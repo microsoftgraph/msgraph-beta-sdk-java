@@ -10,7 +10,8 @@ public enum PrivateNetworkDestinationType implements ValuedEnum {
     IpRangeCidr("ipRangeCidr"),
     Fqdn("fqdn"),
     DnsSuffix("dnsSuffix"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    ServicePrincipalName("servicePrincipalName");
     public final String value;
     PrivateNetworkDestinationType(final String value) {
         this.value = value;
@@ -27,6 +28,7 @@ public enum PrivateNetworkDestinationType implements ValuedEnum {
             case "fqdn": return Fqdn;
             case "dnsSuffix": return DnsSuffix;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "servicePrincipalName": return ServicePrincipalName;
             default: return null;
         }
     }

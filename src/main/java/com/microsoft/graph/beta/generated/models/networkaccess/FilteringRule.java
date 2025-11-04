@@ -28,6 +28,7 @@ public class FilteringRule extends PolicyRule implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.networkaccess.fqdnFilteringRule": return new FqdnFilteringRule();
+                case "#microsoft.graph.networkaccess.urlDestinationFilteringRule": return new UrlDestinationFilteringRule();
                 case "#microsoft.graph.networkaccess.webCategoryFilteringRule": return new WebCategoryFilteringRule();
             }
         }

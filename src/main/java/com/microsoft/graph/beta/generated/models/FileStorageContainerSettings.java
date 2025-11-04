@@ -61,9 +61,10 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("isItemVersioningEnabled", (n) -> { this.setIsItemVersioningEnabled(n.getBooleanValue()); });
         deserializerMap.put("isOcrEnabled", (n) -> { this.setIsOcrEnabled(n.getBooleanValue()); });
+        deserializerMap.put("itemDefaultSensitivityLabelId", (n) -> { this.setItemDefaultSensitivityLabelId(n.getStringValue()); });
         deserializerMap.put("itemMajorVersionLimit", (n) -> { this.setItemMajorVersionLimit(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
@@ -83,6 +84,14 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
     @jakarta.annotation.Nullable
     public Boolean getIsOcrEnabled() {
         return this.backingStore.get("isOcrEnabled");
+    }
+    /**
+     * Gets the itemDefaultSensitivityLabelId property value. The ID of the default sensitivity label for items in the container. Optional. Read-write.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getItemDefaultSensitivityLabelId() {
+        return this.backingStore.get("itemDefaultSensitivityLabelId");
     }
     /**
      * Gets the itemMajorVersionLimit property value. The maximum major versions allowed for items in the container. Optional. Read-write.
@@ -108,6 +117,7 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isItemVersioningEnabled", this.getIsItemVersioningEnabled());
         writer.writeBooleanValue("isOcrEnabled", this.getIsOcrEnabled());
+        writer.writeStringValue("itemDefaultSensitivityLabelId", this.getItemDefaultSensitivityLabelId());
         writer.writeIntegerValue("itemMajorVersionLimit", this.getItemMajorVersionLimit());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -140,6 +150,13 @@ public class FileStorageContainerSettings implements AdditionalDataHolder, Backe
      */
     public void setIsOcrEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isOcrEnabled", value);
+    }
+    /**
+     * Sets the itemDefaultSensitivityLabelId property value. The ID of the default sensitivity label for items in the container. Optional. Read-write.
+     * @param value Value to set for the itemDefaultSensitivityLabelId property.
+     */
+    public void setItemDefaultSensitivityLabelId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("itemDefaultSensitivityLabelId", value);
     }
     /**
      * Sets the itemMajorVersionLimit property value. The maximum major versions allowed for items in the container. Optional. Read-write.

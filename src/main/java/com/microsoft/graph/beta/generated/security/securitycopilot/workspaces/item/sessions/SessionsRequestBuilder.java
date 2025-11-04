@@ -60,7 +60,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/securityCopilot/workspaces/{workspace%2Did}/sessions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get sessions from security
+     * Represents sessions in Security Copilot.
      * @return a {@link SessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get sessions from security
+     * Represents sessions in Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Session::createFromDiscriminatorValue);
     }
     /**
-     * Get sessions from security
+     * Represents sessions in Security Copilot.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get sessions from security
+     * Represents sessions in Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class SessionsRequestBuilder extends BaseRequestBuilder {
         return new SessionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get sessions from security
+     * Represents sessions in Security Copilot.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

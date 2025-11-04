@@ -27,7 +27,7 @@ public class Session extends Entity implements Parsable {
         return new Session();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Created time of the session (UTC).
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class Session extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name for the session.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class Session extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Last modified time of the session (UTC). Updated when displayName changes.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class Session extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the prompts property value. The prompts property
+     * Gets the prompts property value. The collection of prompts in the session.
      * @return a {@link java.util.List<Prompt>}
      */
     @jakarta.annotation.Nullable
@@ -84,28 +84,28 @@ public class Session extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("prompts", this.getPrompts());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Created time of the session (UTC).
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name for the session.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Last modified time of the session (UTC). Updated when displayName changes.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the prompts property value. The prompts property
+     * Sets the prompts property value. The collection of prompts in the session.
      * @param value Value to set for the prompts property.
      */
     public void setPrompts(@jakarta.annotation.Nullable final java.util.List<Prompt> value) {

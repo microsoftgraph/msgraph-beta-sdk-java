@@ -47,7 +47,7 @@ public class EngagementRole extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the members property value. Users who have been assigned this role.
+     * Gets the members property value. Users that have this role assigned.
      * @return a {@link java.util.List<EngagementRoleMember>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class EngagementRole extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the members property value. Users who have been assigned this role.
+     * Sets the members property value. Users that have this role assigned.
      * @param value Value to set for the members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<EngagementRoleMember> value) {

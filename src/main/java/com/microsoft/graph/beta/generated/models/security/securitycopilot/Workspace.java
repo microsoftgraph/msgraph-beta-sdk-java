@@ -26,7 +26,7 @@ public class Workspace extends Entity implements Parsable {
         return new Workspace();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Name of the Security Copilot workspace.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class Workspace extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the plugins property value. The plugins property
+     * Gets the plugins property value. Represents plugins in Security Copilot.
      * @return a {@link java.util.List<Plugin>}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class Workspace extends Entity implements Parsable {
         return this.backingStore.get("plugins");
     }
     /**
-     * Gets the sessions property value. The sessions property
+     * Gets the sessions property value. Represents sessions in Security Copilot.
      * @return a {@link java.util.List<Session>}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class Workspace extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Name of the Security Copilot workspace.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the plugins property value. The plugins property
+     * Sets the plugins property value. Represents plugins in Security Copilot.
      * @param value Value to set for the plugins property.
      */
     public void setPlugins(@jakarta.annotation.Nullable final java.util.List<Plugin> value) {
         this.backingStore.set("plugins", value);
     }
     /**
-     * Sets the sessions property value. The sessions property
+     * Sets the sessions property value. Represents sessions in Security Copilot.
      * @param value Value to set for the sessions property.
      */
     public void setSessions(@jakarta.annotation.Nullable final java.util.List<Session> value) {

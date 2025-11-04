@@ -55,19 +55,21 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get autoAuditingConfiguration from security
+     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
      * @return a {@link AutoAuditingConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-autoauditingconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AutoAuditingConfiguration get() {
         return get(null);
     }
     /**
-     * Get autoAuditingConfiguration from security
+     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AutoAuditingConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-autoauditingconfiguration-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AutoAuditingConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get autoAuditingConfiguration from security
+     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get autoAuditingConfiguration from security
+     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get autoAuditingConfiguration from security
+     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

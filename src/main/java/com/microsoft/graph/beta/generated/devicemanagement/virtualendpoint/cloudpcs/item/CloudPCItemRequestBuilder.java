@@ -14,7 +14,9 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.r
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.reprovision.ReprovisionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.resize.ResizeRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.restore.RestoreRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievecloudpclaunchdetail.RetrieveCloudPcLaunchDetailRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievecloudpcremoteactionresults.RetrieveCloudPCRemoteActionResultsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievefrontlinecloudpcdetail.RetrieveFrontlineCloudPcDetailRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievereviewstatus.RetrieveReviewStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrievesnapshots.RetrieveSnapshotsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.item.retrypartneragentinstallation.RetryPartnerAgentInstallationRequestBuilder;
@@ -155,12 +157,28 @@ public class CloudPCItemRequestBuilder extends BaseRequestBuilder {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the retrieveCloudPcLaunchDetail method.
+     * @return a {@link RetrieveCloudPcLaunchDetailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPcLaunchDetailRequestBuilder retrieveCloudPcLaunchDetail() {
+        return new RetrieveCloudPcLaunchDetailRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the retrieveCloudPCRemoteActionResults method.
      * @return a {@link RetrieveCloudPCRemoteActionResultsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetrieveCloudPCRemoteActionResultsRequestBuilder retrieveCloudPCRemoteActionResults() {
         return new RetrieveCloudPCRemoteActionResultsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveFrontlineCloudPcDetail method.
+     * @return a {@link RetrieveFrontlineCloudPcDetailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveFrontlineCloudPcDetailRequestBuilder retrieveFrontlineCloudPcDetail() {
+        return new RetrieveFrontlineCloudPcDetailRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveReviewStatus method.

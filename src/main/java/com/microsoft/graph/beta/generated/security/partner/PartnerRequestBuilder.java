@@ -73,7 +73,7 @@ public class PartnerRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners customers, including alerts, scores, and all aspects of security.
+     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners&apos; customers, including alerts, scores, and all aspects of security.
      * @return a {@link PartnerSecurity}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class PartnerRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners customers, including alerts, scores, and all aspects of security.
+     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners&apos; customers, including alerts, scores, and all aspects of security.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PartnerSecurity}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class PartnerRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners customers, including alerts, scores, and all aspects of security.
+     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners&apos; customers, including alerts, scores, and all aspects of security.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class PartnerRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners customers, including alerts, scores, and all aspects of security.
+     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners&apos; customers, including alerts, scores, and all aspects of security.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class PartnerRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners customers, including alerts, scores, and all aspects of security.
+     * A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners&apos; customers, including alerts, scores, and all aspects of security.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

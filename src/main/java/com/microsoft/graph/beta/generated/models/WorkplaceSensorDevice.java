@@ -108,7 +108,7 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         return this.backingStore.get("placeId");
     }
     /**
-     * Gets the sensors property value. A list of sensors associated with the device that collect and report data about physical or environmental conditions, such as occupancy, people count, inferred occupancy, temperature, and more.
+     * Gets the sensors property value. A list of sensors associated with the device that collect and report data about physical or environmental conditions, such as occupancy, people count, inferred occupancy, temperature, Wi-Fi, and more.
      * @return a {@link java.util.List<WorkplaceSensor>}
      */
     @jakarta.annotation.Nullable
@@ -198,7 +198,7 @@ public class WorkplaceSensorDevice extends Entity implements Parsable {
         this.backingStore.set("placeId", value);
     }
     /**
-     * Sets the sensors property value. A list of sensors associated with the device that collect and report data about physical or environmental conditions, such as occupancy, people count, inferred occupancy, temperature, and more.
+     * Sets the sensors property value. A list of sensors associated with the device that collect and report data about physical or environmental conditions, such as occupancy, people count, inferred occupancy, temperature, Wi-Fi, and more.
      * @param value Value to set for the sensors property.
      */
     public void setSensors(@jakarta.annotation.Nullable final java.util.List<WorkplaceSensor> value) {

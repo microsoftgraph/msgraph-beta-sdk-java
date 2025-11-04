@@ -66,7 +66,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthCheckStatus property value. Indicates the health check status of the Cloud PC snapshot. Possible values are, unknown, healthy, unhealthy, unknownFutureValue. The default value is unknown. Read-only. Nullable.
+     * Gets the healthCheckStatus property value. Indicates the health check status of the Cloud PC snapshot. The possible values are: unknown, healthy, unhealthy, unknownFutureValue. The default value is unknown. Read-only. Nullable.
      * @return a {@link CloudPcSnapshotHealthCheckStatus}
      */
     @jakarta.annotation.Nullable
@@ -134,7 +134,7 @@ public class CloudPcSnapshot extends Entity implements Parsable {
         this.backingStore.set("expirationDateTime", value);
     }
     /**
-     * Sets the healthCheckStatus property value. Indicates the health check status of the Cloud PC snapshot. Possible values are, unknown, healthy, unhealthy, unknownFutureValue. The default value is unknown. Read-only. Nullable.
+     * Sets the healthCheckStatus property value. Indicates the health check status of the Cloud PC snapshot. The possible values are: unknown, healthy, unhealthy, unknownFutureValue. The default value is unknown. Read-only. Nullable.
      * @param value Value to set for the healthCheckStatus property.
      */
     public void setHealthCheckStatus(@jakarta.annotation.Nullable final CloudPcSnapshotHealthCheckStatus value) {

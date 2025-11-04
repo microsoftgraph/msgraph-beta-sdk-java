@@ -30,6 +30,14 @@ public class IosLobApp extends MobileLobApp implements Parsable {
         return new IosLobApp();
     }
     /**
+     * Gets the appleDeviceAppDeliveryProtocolType property value. Enum of the supported types of Apple delivery protocols, representing the available protocols to deliver payloads to Apple devices
+     * @return a {@link AppleDeviceDeliveryProtocol}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeviceDeliveryProtocol getAppleDeviceAppDeliveryProtocolType() {
+        return this.backingStore.get("appleDeviceAppDeliveryProtocolType");
+    }
+    /**
      * Gets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.
      * @return a {@link IosDeviceType}
      */
@@ -68,6 +76,7 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleDeviceAppDeliveryProtocolType", (n) -> { this.setAppleDeviceAppDeliveryProtocolType(n.getEnumValue(AppleDeviceDeliveryProtocol::forValue)); });
         deserializerMap.put("applicableDeviceType", (n) -> { this.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
         deserializerMap.put("buildNumber", (n) -> { this.setBuildNumber(n.getStringValue()); });
         deserializerMap.put("bundleId", (n) -> { this.setBundleId(n.getStringValue()); });
@@ -99,12 +108,20 @@ public class IosLobApp extends MobileLobApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("appleDeviceAppDeliveryProtocolType", this.getAppleDeviceAppDeliveryProtocolType());
         writer.writeObjectValue("applicableDeviceType", this.getApplicableDeviceType());
         writer.writeStringValue("buildNumber", this.getBuildNumber());
         writer.writeStringValue("bundleId", this.getBundleId());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeObjectValue("minimumSupportedOperatingSystem", this.getMinimumSupportedOperatingSystem());
         writer.writeStringValue("versionNumber", this.getVersionNumber());
+    }
+    /**
+     * Sets the appleDeviceAppDeliveryProtocolType property value. Enum of the supported types of Apple delivery protocols, representing the available protocols to deliver payloads to Apple devices
+     * @param value Value to set for the appleDeviceAppDeliveryProtocolType property.
+     */
+    public void setAppleDeviceAppDeliveryProtocolType(@jakarta.annotation.Nullable final AppleDeviceDeliveryProtocol value) {
+        this.backingStore.set("appleDeviceAppDeliveryProtocolType", value);
     }
     /**
      * Sets the applicableDeviceType property value. Contains properties of the possible iOS device types the mobile app can run on.

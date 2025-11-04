@@ -33,6 +33,14 @@ public class CallEvent extends Entity implements Parsable {
         return new CallEvent();
     }
     /**
+     * Gets the callConversationId property value. The callConversationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCallConversationId() {
+        return this.backingStore.get("callConversationId");
+    }
+    /**
      * Gets the callEventType property value. The event type of the call. Possible values are: callStarted, callEnded, unknownFutureValue, rosterUpdated. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: rosterUpdated.
      * @return a {@link CallEventType}
      */
@@ -55,6 +63,7 @@ public class CallEvent extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callConversationId", (n) -> { this.setCallConversationId(n.getStringValue()); });
         deserializerMap.put("callEventType", (n) -> { this.setCallEventType(n.getEnumValue(CallEventType::forValue)); });
         deserializerMap.put("eventDateTime", (n) -> { this.setEventDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(Participant::createFromDiscriminatorValue)); });
@@ -93,11 +102,19 @@ public class CallEvent extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("callConversationId", this.getCallConversationId());
         writer.writeEnumValue("callEventType", this.getCallEventType());
         writer.writeOffsetDateTimeValue("eventDateTime", this.getEventDateTime());
         writer.writeCollectionOfObjectValues("participants", this.getParticipants());
         writer.writeObjectValue("recordingState", this.getRecordingState());
         writer.writeObjectValue("transcriptionState", this.getTranscriptionState());
+    }
+    /**
+     * Sets the callConversationId property value. The callConversationId property
+     * @param value Value to set for the callConversationId property.
+     */
+    public void setCallConversationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("callConversationId", value);
     }
     /**
      * Sets the callEventType property value. The event type of the call. Possible values are: callStarted, callEnded, unknownFutureValue, rosterUpdated. You must use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: rosterUpdated.

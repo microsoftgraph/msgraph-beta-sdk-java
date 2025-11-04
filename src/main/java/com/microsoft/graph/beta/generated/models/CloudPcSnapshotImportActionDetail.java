@@ -1,0 +1,175 @@
+package com.microsoft.graph.beta.models;
+
+import com.microsoft.kiota.serialization.AdditionalDataHolder;
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import com.microsoft.kiota.store.BackedModel;
+import com.microsoft.kiota.store.BackingStore;
+import com.microsoft.kiota.store.BackingStoreFactorySingleton;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+@jakarta.annotation.Generated("com.microsoft.kiota")
+public class CloudPcSnapshotImportActionDetail implements AdditionalDataHolder, BackedModel, Parsable {
+    /**
+     * Stores model information.
+     */
+    @jakarta.annotation.Nonnull
+    protected BackingStore backingStore;
+    /**
+     * Instantiates a new {@link CloudPcSnapshotImportActionDetail} and sets the default values.
+     */
+    public CloudPcSnapshotImportActionDetail() {
+        this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        this.setAdditionalData(new HashMap<>());
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a {@link CloudPcSnapshotImportActionDetail}
+     */
+    @jakarta.annotation.Nonnull
+    public static CloudPcSnapshotImportActionDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new CloudPcSnapshotImportActionDetail();
+    }
+    /**
+     * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return a {@link Map<String, Object>}
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, Object> getAdditionalData() {
+        Map<String, Object> value = this.backingStore.get("additionalData");
+        if(value == null) {
+            value = new HashMap<>();
+            this.setAdditionalData(value);
+        }
+        return value;
+    }
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return a {@link BackingStore}
+     */
+    @jakarta.annotation.Nonnull
+    public BackingStore getBackingStore() {
+        return this.backingStore;
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("fileType", (n) -> { this.setFileType(n.getEnumValue(CloudPcSnapshotImportFileType::forValue)); });
+        deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sasUrl", (n) -> { this.setSasUrl(n.getStringValue()); });
+        deserializerMap.put("sourceType", (n) -> { this.setSourceType(n.getEnumValue(CloudPcSnapshotImportSourceType::forValue)); });
+        deserializerMap.put("storageBlobInfo", (n) -> { this.setStorageBlobInfo(n.getObjectValue(CloudPcStorageBlobDetail::createFromDiscriminatorValue)); });
+        return deserializerMap;
+    }
+    /**
+     * Gets the fileType property value. The fileType property
+     * @return a {@link CloudPcSnapshotImportFileType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcSnapshotImportFileType getFileType() {
+        return this.backingStore.get("fileType");
+    }
+    /**
+     * Gets the @odata.type property value. The OdataType property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOdataType() {
+        return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the sasUrl property value. The shared access signature URL of the snapshot import action.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSasUrl() {
+        return this.backingStore.get("sasUrl");
+    }
+    /**
+     * Gets the sourceType property value. The sourceType property
+     * @return a {@link CloudPcSnapshotImportSourceType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcSnapshotImportSourceType getSourceType() {
+        return this.backingStore.get("sourceType");
+    }
+    /**
+     * Gets the storageBlobInfo property value. The storage account information of the snapshot import action.
+     * @return a {@link CloudPcStorageBlobDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcStorageBlobDetail getStorageBlobInfo() {
+        return this.backingStore.get("storageBlobInfo");
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     */
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        writer.writeEnumValue("fileType", this.getFileType());
+        writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("sasUrl", this.getSasUrl());
+        writer.writeEnumValue("sourceType", this.getSourceType());
+        writer.writeObjectValue("storageBlobInfo", this.getStorageBlobInfo());
+        writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param value Value to set for the AdditionalData property.
+     */
+    public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
+        this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param value Value to set for the backingStore property.
+     */
+    public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
+        Objects.requireNonNull(value);
+        this.backingStore = value;
+    }
+    /**
+     * Sets the fileType property value. The fileType property
+     * @param value Value to set for the fileType property.
+     */
+    public void setFileType(@jakarta.annotation.Nullable final CloudPcSnapshotImportFileType value) {
+        this.backingStore.set("fileType", value);
+    }
+    /**
+     * Sets the @odata.type property value. The OdataType property
+     * @param value Value to set for the @odata.type property.
+     */
+    public void setOdataType(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the sasUrl property value. The shared access signature URL of the snapshot import action.
+     * @param value Value to set for the sasUrl property.
+     */
+    public void setSasUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("sasUrl", value);
+    }
+    /**
+     * Sets the sourceType property value. The sourceType property
+     * @param value Value to set for the sourceType property.
+     */
+    public void setSourceType(@jakarta.annotation.Nullable final CloudPcSnapshotImportSourceType value) {
+        this.backingStore.set("sourceType", value);
+    }
+    /**
+     * Sets the storageBlobInfo property value. The storage account information of the snapshot import action.
+     * @param value Value to set for the storageBlobInfo property.
+     */
+    public void setStorageBlobInfo(@jakarta.annotation.Nullable final CloudPcStorageBlobDetail value) {
+        this.backingStore.set("storageBlobInfo", value);
+    }
+}

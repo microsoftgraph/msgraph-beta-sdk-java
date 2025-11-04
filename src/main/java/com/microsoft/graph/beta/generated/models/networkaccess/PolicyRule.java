@@ -35,6 +35,7 @@ public class PolicyRule extends Entity implements Parsable {
                 case "#microsoft.graph.networkaccess.privateAccessForwardingRule": return new PrivateAccessForwardingRule();
                 case "#microsoft.graph.networkaccess.threatIntelligenceRule": return new ThreatIntelligenceRule();
                 case "#microsoft.graph.networkaccess.tlsInspectionRule": return new TlsInspectionRule();
+                case "#microsoft.graph.networkaccess.urlDestinationFilteringRule": return new UrlDestinationFilteringRule();
                 case "#microsoft.graph.networkaccess.webCategoryFilteringRule": return new WebCategoryFilteringRule();
             }
         }

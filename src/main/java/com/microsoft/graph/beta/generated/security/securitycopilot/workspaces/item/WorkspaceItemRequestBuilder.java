@@ -73,7 +73,7 @@ public class WorkspaceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get workspaces from security
+     * References a workspace in Security Copilot.
      * @return a {@link Workspace}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +82,7 @@ public class WorkspaceItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get workspaces from security
+     * References a workspace in Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Workspace}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -140,7 +140,7 @@ public class WorkspaceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get workspaces from security
+     * References a workspace in Security Copilot.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +148,7 @@ public class WorkspaceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get workspaces from security
+     * References a workspace in Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +200,7 @@ public class WorkspaceItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get workspaces from security
+     * References a workspace in Security Copilot.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

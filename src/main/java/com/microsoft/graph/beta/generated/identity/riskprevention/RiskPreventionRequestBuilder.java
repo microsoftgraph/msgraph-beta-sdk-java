@@ -1,6 +1,8 @@
 package com.microsoft.graph.beta.identity.riskprevention;
 
 import com.microsoft.graph.beta.identity.riskprevention.fraudprotectionproviders.FraudProtectionProvidersRequestBuilder;
+import com.microsoft.graph.beta.identity.riskprevention.webapplicationfirewallproviders.WebApplicationFirewallProvidersRequestBuilder;
+import com.microsoft.graph.beta.identity.riskprevention.webapplicationfirewallverifications.WebApplicationFirewallVerificationsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.RiskPreventionContainer;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -28,6 +30,22 @@ public class RiskPreventionRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FraudProtectionProvidersRequestBuilder fraudProtectionProviders() {
         return new FraudProtectionProvidersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the webApplicationFirewallProviders property of the microsoft.graph.riskPreventionContainer entity.
+     * @return a {@link WebApplicationFirewallProvidersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WebApplicationFirewallProvidersRequestBuilder webApplicationFirewallProviders() {
+        return new WebApplicationFirewallProvidersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the webApplicationFirewallVerifications property of the microsoft.graph.riskPreventionContainer entity.
+     * @return a {@link WebApplicationFirewallVerificationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public WebApplicationFirewallVerificationsRequestBuilder webApplicationFirewallVerifications() {
+        return new WebApplicationFirewallVerificationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link RiskPreventionRequestBuilder} and sets the default values.

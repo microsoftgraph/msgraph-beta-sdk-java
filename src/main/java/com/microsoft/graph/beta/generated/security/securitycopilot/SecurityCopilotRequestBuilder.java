@@ -64,7 +64,7 @@ public class SecurityCopilotRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get securityCopilot from security
+     * Represents the resources related to Microsoft Security Copilot.
      * @return a {@link SecurityCopilot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class SecurityCopilotRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get securityCopilot from security
+     * Represents the resources related to Microsoft Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SecurityCopilot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class SecurityCopilotRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get securityCopilot from security
+     * Represents the resources related to Microsoft Security Copilot.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class SecurityCopilotRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get securityCopilot from security
+     * Represents the resources related to Microsoft Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class SecurityCopilotRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get securityCopilot from security
+     * Represents the resources related to Microsoft Security Copilot.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

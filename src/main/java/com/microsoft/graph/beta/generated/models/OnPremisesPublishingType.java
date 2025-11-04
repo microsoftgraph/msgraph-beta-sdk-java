@@ -11,7 +11,8 @@ public enum OnPremisesPublishingType implements ValuedEnum {
     Provisioning("provisioning"),
     IntunePfx("intunePfx"),
     OflineDomainJoin("oflineDomainJoin"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    PrivateAccess("privateAccess");
     public final String value;
     OnPremisesPublishingType(final String value) {
         this.value = value;
@@ -29,6 +30,7 @@ public enum OnPremisesPublishingType implements ValuedEnum {
             case "intunePfx": return IntunePfx;
             case "oflineDomainJoin": return OflineDomainJoin;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "privateAccess": return PrivateAccess;
             default: return null;
         }
     }

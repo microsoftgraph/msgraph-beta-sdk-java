@@ -35,7 +35,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         return new PluginSetting();
     }
     /**
-     * Gets the acceptableValues property value. The acceptableValues property
+     * Gets the acceptableValues property value. Acceptable values for plugin type
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the defaultValue property value. The defaultValue property
+     * Gets the defaultValue property value. Default value available for the plugin if not configured
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("defaultValue");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the value requested
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         return deserializerMap;
     }
     /**
-     * Gets the hintText property value. The hintText property
+     * Gets the hintText property value. Hint for the plugin
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("hintText");
     }
     /**
-     * Gets the isRequired property value. The isRequired property
+     * Gets the isRequired property value. Setting whether the value is required
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("isRequired");
     }
     /**
-     * Gets the label property value. The label property
+     * Gets the label property value. Label for the setting
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("label");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the setting
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("settingValue");
     }
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. Value
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the acceptableValues property value. The acceptableValues property
+     * Sets the acceptableValues property value. Acceptable values for plugin type
      * @param value Value to set for the acceptableValues property.
      */
     public void setAcceptableValues(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -205,14 +205,14 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the defaultValue property value. The defaultValue property
+     * Sets the defaultValue property value. Default value available for the plugin if not configured
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("defaultValue", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the value requested
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -226,28 +226,28 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("displayType", value);
     }
     /**
-     * Sets the hintText property value. The hintText property
+     * Sets the hintText property value. Hint for the plugin
      * @param value Value to set for the hintText property.
      */
     public void setHintText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("hintText", value);
     }
     /**
-     * Sets the isRequired property value. The isRequired property
+     * Sets the isRequired property value. Setting whether the value is required
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isRequired", value);
     }
     /**
-     * Sets the label property value. The label property
+     * Sets the label property value. Label for the setting
      * @param value Value to set for the label property.
      */
     public void setLabel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("label", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the setting
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -268,7 +268,7 @@ public class PluginSetting implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("settingValue", value);
     }
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. Value
      * @param value Value to set for the value property.
      */
     public void setValue(@jakarta.annotation.Nullable final String value) {

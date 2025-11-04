@@ -28,7 +28,7 @@ public class Prompt extends Entity implements Parsable {
         return new Prompt();
     }
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. Input content to the prompt.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -36,7 +36,7 @@ public class Prompt extends Entity implements Parsable {
         return this.backingStore.get("content");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Created time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class Prompt extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the evaluations property value. The evaluations property
+     * Gets the evaluations property value. Collection of evaluations
      * @return a {@link java.util.List<Evaluation>}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class Prompt extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the inputs property value. The inputs property
+     * Gets the inputs property value. Not implemented.
      * @return a {@link Dictionary}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class Prompt extends Entity implements Parsable {
         return this.backingStore.get("inputs");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Last modified time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class Prompt extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the skillInputDescriptors property value. The skillInputDescriptors property
+     * Gets the skillInputDescriptors property value. Skill Input descriptor.
      * @return a {@link java.util.List<SkillInputDescriptor>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class Prompt extends Entity implements Parsable {
         return this.backingStore.get("skillInputDescriptors");
     }
     /**
-     * Gets the skillName property value. The skillName property
+     * Gets the skillName property value. Skill name.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,49 +125,49 @@ public class Prompt extends Entity implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Input content to the prompt.
      * @param value Value to set for the content property.
      */
     public void setContent(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Created time.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the evaluations property value. The evaluations property
+     * Sets the evaluations property value. Collection of evaluations
      * @param value Value to set for the evaluations property.
      */
     public void setEvaluations(@jakarta.annotation.Nullable final java.util.List<Evaluation> value) {
         this.backingStore.set("evaluations", value);
     }
     /**
-     * Sets the inputs property value. The inputs property
+     * Sets the inputs property value. Not implemented.
      * @param value Value to set for the inputs property.
      */
     public void setInputs(@jakarta.annotation.Nullable final Dictionary value) {
         this.backingStore.set("inputs", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Last modified time.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the skillInputDescriptors property value. The skillInputDescriptors property
+     * Sets the skillInputDescriptors property value. Skill Input descriptor.
      * @param value Value to set for the skillInputDescriptors property.
      */
     public void setSkillInputDescriptors(@jakarta.annotation.Nullable final java.util.List<SkillInputDescriptor> value) {
         this.backingStore.set("skillInputDescriptors", value);
     }
     /**
-     * Sets the skillName property value. The skillName property
+     * Sets the skillName property value. Skill name.
      * @param value Value to set for the skillName property.
      */
     public void setSkillName(@jakarta.annotation.Nullable final String value) {
