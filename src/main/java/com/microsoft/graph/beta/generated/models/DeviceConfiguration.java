@@ -168,6 +168,7 @@ public class DeviceConfiguration extends Entity implements Parsable {
                 case "#microsoft.graph.windowsWifiConfiguration": return new WindowsWifiConfiguration();
                 case "#microsoft.graph.windowsWifiEnterpriseEAPConfiguration": return new WindowsWifiEnterpriseEAPConfiguration();
                 case "#microsoft.graph.windowsWiredNetworkConfiguration": return new WindowsWiredNetworkConfiguration();
+                case "#microsoft.graph.windowsZtdnsConfiguration": return new WindowsZtdnsConfiguration();
             }
         }
         return new DeviceConfiguration();

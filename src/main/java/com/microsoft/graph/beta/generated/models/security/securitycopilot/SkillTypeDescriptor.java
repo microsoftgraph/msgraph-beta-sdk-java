@@ -67,7 +67,7 @@ public class SkillTypeDescriptor implements AdditionalDataHolder, BackedModel, P
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Unsupported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class SkillTypeDescriptor implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Unsupported.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

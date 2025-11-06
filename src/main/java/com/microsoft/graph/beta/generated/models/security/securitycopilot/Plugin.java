@@ -48,7 +48,7 @@ public class Plugin implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
-     * Gets the authorization property value. The authorization property
+     * Gets the authorization property value. Authorization for the plugin.
      * @return a {@link PluginAuth}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class Plugin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("category");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Brief description of the plugin.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class Plugin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name of the plugin.   Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -116,7 +116,7 @@ public class Plugin implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Displays whether the plugin is enabled for use within the catalogScope.   Supports $filter (eq).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class Plugin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("isEnabled");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Represents the name of the plugin. Primary key.   Supports $filter (eq, contains).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class Plugin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("previewState");
     }
     /**
-     * Gets the settings property value. The settings property
+     * Gets the settings property value. Settings for the plugin.
      * @return a {@link java.util.List<PluginSetting>}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class Plugin implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the authorization property value. The authorization property
+     * Sets the authorization property value. Authorization for the plugin.
      * @param value Value to set for the authorization property.
      */
     public void setAuthorization(@jakarta.annotation.Nullable final PluginAuth value) {
@@ -219,28 +219,28 @@ public class Plugin implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("category", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Brief description of the plugin.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name of the plugin.   Supports $filter (eq).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Displays whether the plugin is enabled for use within the catalogScope.   Supports $filter (eq).
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isEnabled", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Represents the name of the plugin. Primary key.   Supports $filter (eq, contains).
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -261,7 +261,7 @@ public class Plugin implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("previewState", value);
     }
     /**
-     * Sets the settings property value. The settings property
+     * Sets the settings property value. Settings for the plugin.
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final java.util.List<PluginSetting> value) {

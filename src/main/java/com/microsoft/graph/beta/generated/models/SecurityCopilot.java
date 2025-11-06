@@ -36,7 +36,7 @@ public class SecurityCopilot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the workspaces property value. The workspaces property
+     * Gets the workspaces property value. References a workspace in Security Copilot.
      * @return a {@link java.util.List<Workspace>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class SecurityCopilot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("workspaces", this.getWorkspaces());
     }
     /**
-     * Sets the workspaces property value. The workspaces property
+     * Sets the workspaces property value. References a workspace in Security Copilot.
      * @param value Value to set for the workspaces property.
      */
     public void setWorkspaces(@jakarta.annotation.Nullable final java.util.List<Workspace> value) {

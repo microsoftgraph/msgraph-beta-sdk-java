@@ -83,6 +83,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
         deserializerMap.put("lastAppSyncDateTime", (n) -> { this.setLastAppSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastAppSyncStatus", (n) -> { this.setLastAppSyncStatus(n.getEnumValue(AndroidManagedStoreAccountAppSyncStatus::forValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("managedGooglePlayEnterpriseType", (n) -> { this.setManagedGooglePlayEnterpriseType(n.getEnumValue(ManagedGooglePlayEnterpriseType::forValue)); });
         deserializerMap.put("managedGooglePlayInitialScopeTagIds", (n) -> { this.setManagedGooglePlayInitialScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("ownerOrganizationName", (n) -> { this.setOwnerOrganizationName(n.getStringValue()); });
         deserializerMap.put("ownerUserPrincipalName", (n) -> { this.setOwnerUserPrincipalName(n.getStringValue()); });
@@ -112,6 +113,14 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the managedGooglePlayEnterpriseType property value. Bind Type of the tenant with the Google EMM API
+     * @return a {@link ManagedGooglePlayEnterpriseType}
+     */
+    @jakarta.annotation.Nullable
+    public ManagedGooglePlayEnterpriseType getManagedGooglePlayEnterpriseType() {
+        return this.backingStore.get("managedGooglePlayEnterpriseType");
     }
     /**
      * Gets the managedGooglePlayInitialScopeTagIds property value. Initial scope tags for MGP apps
@@ -160,6 +169,7 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
         writer.writeOffsetDateTimeValue("lastAppSyncDateTime", this.getLastAppSyncDateTime());
         writer.writeEnumValue("lastAppSyncStatus", this.getLastAppSyncStatus());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeEnumValue("managedGooglePlayEnterpriseType", this.getManagedGooglePlayEnterpriseType());
         writer.writeCollectionOfPrimitiveValues("managedGooglePlayInitialScopeTagIds", this.getManagedGooglePlayInitialScopeTagIds());
         writer.writeStringValue("ownerOrganizationName", this.getOwnerOrganizationName());
         writer.writeStringValue("ownerUserPrincipalName", this.getOwnerUserPrincipalName());
@@ -220,6 +230,13 @@ public class AndroidManagedStoreAccountEnterpriseSettings extends Entity impleme
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the managedGooglePlayEnterpriseType property value. Bind Type of the tenant with the Google EMM API
+     * @param value Value to set for the managedGooglePlayEnterpriseType property.
+     */
+    public void setManagedGooglePlayEnterpriseType(@jakarta.annotation.Nullable final ManagedGooglePlayEnterpriseType value) {
+        this.backingStore.set("managedGooglePlayEnterpriseType", value);
     }
     /**
      * Sets the managedGooglePlayInitialScopeTagIds property value. Initial scope tags for MGP apps

@@ -80,6 +80,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         deserializerMap.put("isDefaultAccessEnabled", (n) -> { this.setIsDefaultAccessEnabled(n.getBooleanValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("publishedResources", (n) -> { this.setPublishedResources(n.getCollectionOfObjectValues(PublishedResource::createFromDiscriminatorValue)); });
+        deserializerMap.put("sensors", (n) -> { this.setSensors(n.getCollectionOfObjectValues(PrivateAccessSensor::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -115,6 +116,14 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         return this.backingStore.get("publishedResources");
     }
     /**
+     * Gets the sensors property value. The sensors property
+     * @return a {@link java.util.List<PrivateAccessSensor>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PrivateAccessSensor> getSensors() {
+        return this.backingStore.get("sensors");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -130,6 +139,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         writer.writeBooleanValue("isDefaultAccessEnabled", this.getIsDefaultAccessEnabled());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeCollectionOfObjectValues("publishedResources", this.getPublishedResources());
+        writer.writeCollectionOfObjectValues("sensors", this.getSensors());
     }
     /**
      * Sets the agentGroups property value. List of existing onPremisesAgentGroup objects. Read-only. Nullable.
@@ -193,5 +203,12 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
      */
     public void setPublishedResources(@jakarta.annotation.Nullable final java.util.List<PublishedResource> value) {
         this.backingStore.set("publishedResources", value);
+    }
+    /**
+     * Sets the sensors property value. The sensors property
+     * @param value Value to set for the sensors property.
+     */
+    public void setSensors(@jakarta.annotation.Nullable final java.util.List<PrivateAccessSensor> value) {
+        this.backingStore.set("sensors", value);
     }
 }

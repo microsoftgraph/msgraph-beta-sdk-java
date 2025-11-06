@@ -36,7 +36,7 @@ public class AutoAuditingConfiguration extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isAutomatic property value. The isAutomatic property
+     * Gets the isAutomatic property value. Indicates whether automatic auditing is enabled for Defender for Identity monitoring.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class AutoAuditingConfiguration extends Entity implements Parsable {
         writer.writeBooleanValue("isAutomatic", this.getIsAutomatic());
     }
     /**
-     * Sets the isAutomatic property value. The isAutomatic property
+     * Sets the isAutomatic property value. Indicates whether automatic auditing is enabled for Defender for Identity monitoring.
      * @param value Value to set for the isAutomatic property.
      */
     public void setIsAutomatic(@jakarta.annotation.Nullable final Boolean value) {

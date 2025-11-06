@@ -29,7 +29,7 @@ public class EngagementRoleMember extends Entity implements Parsable {
         return new EngagementRoleMember();
     }
     /**
-     * Gets the createdDateTime property value. The timestamp when the role was assigned to the user.
+     * Gets the createdDateTime property value. The date and time when the role was assigned to the user. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class EngagementRoleMember extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the user property value. User entity of the member who has been assigned the role.
+     * Gets the user property value. The user who has this role assigned.
      * @return a {@link User}
      */
     @jakarta.annotation.Nullable
@@ -74,14 +74,14 @@ public class EngagementRoleMember extends Entity implements Parsable {
         writer.writeObjectValue("user", this.getUser());
     }
     /**
-     * Sets the createdDateTime property value. The timestamp when the role was assigned to the user.
+     * Sets the createdDateTime property value. The date and time when the role was assigned to the user. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the user property value. User entity of the member who has been assigned the role.
+     * Sets the user property value. The user who has this role assigned.
      * @param value Value to set for the user property.
      */
     public void setUser(@jakarta.annotation.Nullable final User value) {

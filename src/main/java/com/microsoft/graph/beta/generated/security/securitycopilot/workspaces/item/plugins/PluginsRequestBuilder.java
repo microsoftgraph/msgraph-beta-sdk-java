@@ -60,7 +60,7 @@ public class PluginsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/securityCopilot/workspaces/{workspace%2Did}/plugins{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      * @return a {@link PluginCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class PluginsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PluginCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class PluginsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Plugin::createFromDiscriminatorValue);
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class PluginsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class PluginsRequestBuilder extends BaseRequestBuilder {
         return new PluginsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

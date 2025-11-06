@@ -55,7 +55,7 @@ public class PluginNameItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      * @return a {@link Plugin}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class PluginNameItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Plugin}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class PluginNameItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class PluginNameItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class PluginNameItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get plugins from security
+     * Represents plugins in Security Copilot.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

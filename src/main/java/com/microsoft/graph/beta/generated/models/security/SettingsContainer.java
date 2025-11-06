@@ -26,7 +26,7 @@ public class SettingsContainer extends Entity implements Parsable {
         return new SettingsContainer();
     }
     /**
-     * Gets the autoAuditingConfiguration property value. The autoAuditingConfiguration property
+     * Gets the autoAuditingConfiguration property value. Represents automatic configuration for collection of Windows event logs as needed for Defender for Identity sensors.
      * @return a {@link AutoAuditingConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class SettingsContainer extends Entity implements Parsable {
         writer.writeObjectValue("autoAuditingConfiguration", this.getAutoAuditingConfiguration());
     }
     /**
-     * Sets the autoAuditingConfiguration property value. The autoAuditingConfiguration property
+     * Sets the autoAuditingConfiguration property value. Represents automatic configuration for collection of Windows event logs as needed for Defender for Identity sensors.
      * @param value Value to set for the autoAuditingConfiguration property.
      */
     public void setAutoAuditingConfiguration(@jakarta.annotation.Nullable final AutoAuditingConfiguration value) {

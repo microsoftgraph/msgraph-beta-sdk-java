@@ -27,7 +27,7 @@ public class Evaluation extends Entity implements Parsable {
         return new Evaluation();
     }
     /**
-     * Gets the completedDateTime property value. The completedDateTime property
+     * Gets the completedDateTime property value. Evaluation completion time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class Evaluation extends Entity implements Parsable {
         return this.backingStore.get("completedDateTime");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Evaluation created time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class Evaluation extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the executionCount property value. The executionCount property
+     * Gets the executionCount property value. Evaluation execution count.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class Evaluation extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isCancelled property value. The isCancelled property
+     * Gets the isCancelled property value. Evaluation cancellation status.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class Evaluation extends Entity implements Parsable {
         return this.backingStore.get("isCancelled");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Evaluation modified time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class Evaluation extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the result property value. The result property
+     * Gets the result property value. Evaluation results collection.
      * @return a {@link EvaluationResult}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class Evaluation extends Entity implements Parsable {
         return this.backingStore.get("result");
     }
     /**
-     * Gets the runStartDateTime property value. The runStartDateTime property
+     * Gets the runStartDateTime property value. Evaluation Run start time.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -124,49 +124,49 @@ public class Evaluation extends Entity implements Parsable {
         writer.writeEnumValue("state", this.getState());
     }
     /**
-     * Sets the completedDateTime property value. The completedDateTime property
+     * Sets the completedDateTime property value. Evaluation completion time.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("completedDateTime", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Evaluation created time.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the executionCount property value. The executionCount property
+     * Sets the executionCount property value. Evaluation execution count.
      * @param value Value to set for the executionCount property.
      */
     public void setExecutionCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("executionCount", value);
     }
     /**
-     * Sets the isCancelled property value. The isCancelled property
+     * Sets the isCancelled property value. Evaluation cancellation status.
      * @param value Value to set for the isCancelled property.
      */
     public void setIsCancelled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isCancelled", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Evaluation modified time.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the result property value. The result property
+     * Sets the result property value. Evaluation results collection.
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final EvaluationResult value) {
         this.backingStore.set("result", value);
     }
     /**
-     * Sets the runStartDateTime property value. The runStartDateTime property
+     * Sets the runStartDateTime property value. Evaluation Run start time.
      * @param value Value to set for the runStartDateTime property.
      */
     public void setRunStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

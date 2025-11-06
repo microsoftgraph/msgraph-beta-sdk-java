@@ -55,7 +55,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/employeeExperience/roles/{engagementRole%2Did}/members/{engagementRoleMember%2Did}/user{?%24expand,%24select}", rawUrl);
     }
     /**
-     * User entity of the member who has been assigned the role.
+     * The user who has this role assigned.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * User entity of the member who has been assigned the role.
+     * The user who has this role assigned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -77,7 +77,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
-     * User entity of the member who has been assigned the role.
+     * The user who has this role assigned.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -85,7 +85,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * User entity of the member who has been assigned the role.
+     * The user who has this role assigned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -107,7 +107,7 @@ public class UserRequestBuilder extends BaseRequestBuilder {
         return new UserRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * User entity of the member who has been assigned the role.
+     * The user who has this role assigned.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

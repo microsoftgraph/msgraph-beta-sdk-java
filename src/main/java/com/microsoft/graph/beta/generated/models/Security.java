@@ -64,7 +64,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
-     * Gets the alerts property value. Notifications for suspicious or potential security issues in a customers tenant.
+     * Gets the alerts property value. Notifications for suspicious or potential security issues in a customer&apos;s tenant.
      * @return a {@link java.util.List<Alert>}
      */
     @jakarta.annotation.Nullable
@@ -266,7 +266,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the partner property value. A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners customers, including alerts, scores, and all aspects of security.
+     * Gets the partner property value. A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners&apos; customers, including alerts, scores, and all aspects of security.
      * @return a {@link PartnerSecurity}
      */
     @jakarta.annotation.Nullable
@@ -298,7 +298,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("secureScoreControlProfiles");
     }
     /**
-     * Gets the secureScores property value. Measurements of tenants security posture to help protect them from threats.
+     * Gets the secureScores property value. Measurements of tenants&apos; security posture to help protect them from threats.
      * @return a {@link java.util.List<SecureScore>}
      */
     @jakarta.annotation.Nullable
@@ -314,7 +314,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("securityActions");
     }
     /**
-     * Gets the securityCopilot property value. The securityCopilot property
+     * Gets the securityCopilot property value. Represents the resources related to Microsoft Security Copilot.
      * @return a {@link SecurityCopilot}
      */
     @jakarta.annotation.Nullable
@@ -426,7 +426,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the alerts property value. Notifications for suspicious or potential security issues in a customers tenant.
+     * Sets the alerts property value. Notifications for suspicious or potential security issues in a customer&apos;s tenant.
      * @param value Value to set for the alerts property.
      */
     public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
@@ -567,7 +567,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the partner property value. A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners customers, including alerts, scores, and all aspects of security.
+     * Sets the partner property value. A container that safeguards the Microsoft Azure resources of Microsoft Cloud Solution Provider (CSP) partners&apos; customers, including alerts, scores, and all aspects of security.
      * @param value Value to set for the partner property.
      */
     public void setPartner(@jakarta.annotation.Nullable final PartnerSecurity value) {
@@ -595,7 +595,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("secureScoreControlProfiles", value);
     }
     /**
-     * Sets the secureScores property value. Measurements of tenants security posture to help protect them from threats.
+     * Sets the secureScores property value. Measurements of tenants&apos; security posture to help protect them from threats.
      * @param value Value to set for the secureScores property.
      */
     public void setSecureScores(@jakarta.annotation.Nullable final java.util.List<SecureScore> value) {
@@ -609,7 +609,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("securityActions", value);
     }
     /**
-     * Sets the securityCopilot property value. The securityCopilot property
+     * Sets the securityCopilot property value. Represents the resources related to Microsoft Security Copilot.
      * @param value Value to set for the securityCopilot property.
      */
     public void setSecurityCopilot(@jakarta.annotation.Nullable final SecurityCopilot value) {

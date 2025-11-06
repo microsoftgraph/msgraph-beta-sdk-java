@@ -60,7 +60,7 @@ public class EvaluationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/securityCopilot/workspaces/{workspace%2Did}/sessions/{session%2Did}/prompts/{prompt%2Did}/evaluations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get evaluations from security
+     * Collection of evaluations
      * @return a {@link EvaluationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class EvaluationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get evaluations from security
+     * Collection of evaluations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EvaluationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class EvaluationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Evaluation::createFromDiscriminatorValue);
     }
     /**
-     * Get evaluations from security
+     * Collection of evaluations
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class EvaluationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get evaluations from security
+     * Collection of evaluations
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class EvaluationsRequestBuilder extends BaseRequestBuilder {
         return new EvaluationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get evaluations from security
+     * Collection of evaluations
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

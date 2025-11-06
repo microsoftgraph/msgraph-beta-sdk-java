@@ -69,7 +69,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
         deserializerMap.put("contentSource", (n) -> { this.setContentSource(n.getStringValue()); });
         deserializerMap.put("hitId", (n) -> { this.setHitId(n.getStringValue()); });
         deserializerMap.put("_id", (n) -> { this.setId(n.getStringValue()); });
@@ -79,6 +79,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("resource", (n) -> { this.setResource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
         deserializerMap.put("resultTemplateId", (n) -> { this.setResultTemplateId(n.getStringValue()); });
         deserializerMap.put("_score", (n) -> { this.setScore(n.getIntegerValue()); });
+        deserializerMap.put("_summary", (n) -> { this.setSearchHitSummary(n.getStringValue()); });
         deserializerMap.put("_source", (n) -> { this.setSource(n.getObjectValue(Entity::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getStringValue()); });
         return deserializerMap;
@@ -92,7 +93,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("hitId");
     }
     /**
-     * Gets the _id property value. The _id property
+     * Gets the _id property value. The id property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +141,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("resultTemplateId");
     }
     /**
-     * Gets the _score property value. The _score property
+     * Gets the _score property value. The score property
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +149,15 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("score");
     }
     /**
-     * Gets the _source property value. The _source property
+     * Gets the _summary property value. The summary property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSearchHitSummary() {
+        return this.backingStore.get("searchHitSummary");
+    }
+    /**
+     * Gets the _source property value. The source property
      * @return a {@link Entity}
      */
     @jakarta.annotation.Nullable
@@ -178,6 +187,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("resource", this.getResource());
         writer.writeStringValue("resultTemplateId", this.getResultTemplateId());
         writer.writeIntegerValue("_score", this.getScore());
+        writer.writeStringValue("_summary", this.getSearchHitSummary());
         writer.writeObjectValue("_source", this.getSource());
         writer.writeStringValue("summary", this.getSummary());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -212,7 +222,7 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("hitId", value);
     }
     /**
-     * Sets the _id property value. The _id property
+     * Sets the _id property value. The id property
      * @param value Value to set for the _id property.
      */
     public void setId(@jakarta.annotation.Nullable final String value) {
@@ -254,14 +264,21 @@ public class SearchHit implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("resultTemplateId", value);
     }
     /**
-     * Sets the _score property value. The _score property
+     * Sets the _score property value. The score property
      * @param value Value to set for the _score property.
      */
     public void setScore(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("score", value);
     }
     /**
-     * Sets the _source property value. The _source property
+     * Sets the _summary property value. The summary property
+     * @param value Value to set for the _summary property.
+     */
+    public void setSearchHitSummary(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("searchHitSummary", value);
+    }
+    /**
+     * Sets the _source property value. The source property
      * @param value Value to set for the _source property.
      */
     public void setSource(@jakarta.annotation.Nullable final Entity value) {

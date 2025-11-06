@@ -192,7 +192,7 @@ public class TodoTask extends Entity implements Parsable {
         return this.backingStore.get("reminderDateTime");
     }
     /**
-     * Gets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Gets the singleValueExtendedProperties property value. A collection of custom fields linked to the task.
      * @return a {@link java.util.List<SingleValueExtendedProperty>}
      */
     @jakarta.annotation.Nullable
@@ -372,7 +372,7 @@ public class TodoTask extends Entity implements Parsable {
         this.backingStore.set("reminderDateTime", value);
     }
     /**
-     * Sets the singleValueExtendedProperties property value. The singleValueExtendedProperties property
+     * Sets the singleValueExtendedProperties property value. A collection of custom fields linked to the task.
      * @param value Value to set for the singleValueExtendedProperties property.
      */
     public void setSingleValueExtendedProperties(@jakarta.annotation.Nullable final java.util.List<SingleValueExtendedProperty> value) {

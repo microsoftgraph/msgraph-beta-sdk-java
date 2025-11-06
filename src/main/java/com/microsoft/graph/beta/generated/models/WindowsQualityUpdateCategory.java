@@ -13,7 +13,11 @@ public enum WindowsQualityUpdateCategory implements ValuedEnum {
     /** Security only update type */
     Security("security"),
     /** Non security only update type */
-    NonSecurity("nonSecurity");
+    NonSecurity("nonSecurity"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue"),
+    /** Quick machine recovery update type */
+    QuickMachineRecovery("quickMachineRecovery");
     public final String value;
     WindowsQualityUpdateCategory(final String value) {
         this.value = value;
@@ -27,6 +31,8 @@ public enum WindowsQualityUpdateCategory implements ValuedEnum {
             case "all": return All;
             case "security": return Security;
             case "nonSecurity": return NonSecurity;
+            case "unknownFutureValue": return UnknownFutureValue;
+            case "quickMachineRecovery": return QuickMachineRecovery;
             default: return null;
         }
     }

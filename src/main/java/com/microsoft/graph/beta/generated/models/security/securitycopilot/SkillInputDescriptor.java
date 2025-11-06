@@ -25,7 +25,7 @@ public class SkillInputDescriptor extends SkillVariableDescriptor implements Par
         return new SkillInputDescriptor();
     }
     /**
-     * Gets the defaultValue property value. The defaultValue property
+     * Gets the defaultValue property value. Unsupported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class SkillInputDescriptor extends SkillVariableDescriptor implements Par
         return deserializerMap;
     }
     /**
-     * Gets the isRequired property value. The isRequired property
+     * Gets the isRequired property value. Unsupported.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class SkillInputDescriptor extends SkillVariableDescriptor implements Par
         return this.backingStore.get("isRequired");
     }
     /**
-     * Gets the placeholderValue property value. The placeholderValue property
+     * Gets the placeholderValue property value. Unsupported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,21 +72,21 @@ public class SkillInputDescriptor extends SkillVariableDescriptor implements Par
         writer.writeStringValue("placeholderValue", this.getPlaceholderValue());
     }
     /**
-     * Sets the defaultValue property value. The defaultValue property
+     * Sets the defaultValue property value. Unsupported.
      * @param value Value to set for the defaultValue property.
      */
     public void setDefaultValue(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("defaultValue", value);
     }
     /**
-     * Sets the isRequired property value. The isRequired property
+     * Sets the isRequired property value. Unsupported.
      * @param value Value to set for the isRequired property.
      */
     public void setIsRequired(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isRequired", value);
     }
     /**
-     * Sets the placeholderValue property value. The placeholderValue property
+     * Sets the placeholderValue property value. Unsupported.
      * @param value Value to set for the placeholderValue property.
      */
     public void setPlaceholderValue(@jakarta.annotation.Nullable final String value) {

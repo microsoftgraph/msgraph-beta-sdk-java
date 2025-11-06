@@ -62,6 +62,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         deserializerMap.put("offer", (n) -> { this.setOffer(n.getStringValue()); });
         deserializerMap.put("offerDisplayName", (n) -> { this.setOfferDisplayName(n.getStringValue()); });
         deserializerMap.put("offerName", (n) -> { this.setOfferName(n.getStringValue()); });
+        deserializerMap.put("osArchitecture", (n) -> { this.setOsArchitecture(n.getEnumValue(CloudPcImageOsArchitectureType::forValue)); });
         deserializerMap.put("osVersionNumber", (n) -> { this.setOsVersionNumber(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
         deserializerMap.put("publisherName", (n) -> { this.setPublisherName(n.getStringValue()); });
@@ -97,6 +98,14 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getOfferName() {
         return this.backingStore.get("offerName");
+    }
+    /**
+     * Gets the osArchitecture property value. The osArchitecture property
+     * @return a {@link CloudPcImageOsArchitectureType}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcImageOsArchitectureType getOsArchitecture() {
+        return this.backingStore.get("osArchitecture");
     }
     /**
      * Gets the osVersionNumber property value. The operating system version of this gallery image. For example, 10.0.22000.296. Read-only.
@@ -191,6 +200,7 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
         writer.writeStringValue("offer", this.getOffer());
         writer.writeStringValue("offerDisplayName", this.getOfferDisplayName());
         writer.writeStringValue("offerName", this.getOfferName());
+        writer.writeEnumValue("osArchitecture", this.getOsArchitecture());
         writer.writeStringValue("osVersionNumber", this.getOsVersionNumber());
         writer.writeStringValue("publisher", this.getPublisher());
         writer.writeStringValue("publisherName", this.getPublisherName());
@@ -243,6 +253,13 @@ public class CloudPcGalleryImage extends Entity implements Parsable {
      */
     public void setOfferName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("offerName", value);
+    }
+    /**
+     * Sets the osArchitecture property value. The osArchitecture property
+     * @param value Value to set for the osArchitecture property.
+     */
+    public void setOsArchitecture(@jakarta.annotation.Nullable final CloudPcImageOsArchitectureType value) {
+        this.backingStore.set("osArchitecture", value);
     }
     /**
      * Sets the osVersionNumber property value. The operating system version of this gallery image. For example, 10.0.22000.296. Read-only.

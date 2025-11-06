@@ -66,7 +66,7 @@ public class EngagementRoleMemberItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Users who have been assigned this role.
+     * Users that have this role assigned.
      * @return a {@link EngagementRoleMember}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -75,7 +75,7 @@ public class EngagementRoleMemberItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Users who have been assigned this role.
+     * Users that have this role assigned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EngagementRoleMember}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -133,7 +133,7 @@ public class EngagementRoleMemberItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Users who have been assigned this role.
+     * Users that have this role assigned.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -141,7 +141,7 @@ public class EngagementRoleMemberItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Users who have been assigned this role.
+     * Users that have this role assigned.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -193,7 +193,7 @@ public class EngagementRoleMemberItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Users who have been assigned this role.
+     * Users that have this role assigned.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
