@@ -9,9 +9,6 @@ trigger:
   tags:
     include:
       - "v*"
-  branches:
-    include:
-      - main
 
 parameters:
   - name: previewBranch
@@ -232,7 +229,7 @@ extends:
                         contentsource: "Folder"
                         folderlocation: "$(Pipeline.Workspace)"
                         waitforreleasecompletion: true
-                        owners: vibiret@microsoft.com
+                        owners: mmainer@microsoft.com,gavinbarron@microsoft.com
                         approvers: mmainer@microsoft.com
                         serviceendpointurl: "https://api.esrp.microsoft.com"
                         mainpublisher: "ESRPRELPACMAN"
