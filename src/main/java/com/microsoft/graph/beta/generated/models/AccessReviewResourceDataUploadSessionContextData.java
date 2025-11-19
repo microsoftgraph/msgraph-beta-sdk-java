@@ -26,7 +26,7 @@ public class AccessReviewResourceDataUploadSessionContextData extends CustomExte
         return new AccessReviewResourceDataUploadSessionContextData();
     }
     /**
-     * Gets the accessReviewId property value. The accessReviewId property
+     * Gets the accessReviewId property value. The access review definition id.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class AccessReviewResourceDataUploadSessionContextData extends CustomExte
         return this.backingStore.get("accessReviewId");
     }
     /**
-     * Gets the accessReviewInstanceId property value. The accessReviewInstanceId property
+     * Gets the accessReviewInstanceId property value. The access review instance id.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class AccessReviewResourceDataUploadSessionContextData extends CustomExte
         writer.writeStringValue("accessReviewInstanceId", this.getAccessReviewInstanceId());
     }
     /**
-     * Sets the accessReviewId property value. The accessReviewId property
+     * Sets the accessReviewId property value. The access review definition id.
      * @param value Value to set for the accessReviewId property.
      */
     public void setAccessReviewId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("accessReviewId", value);
     }
     /**
-     * Sets the accessReviewInstanceId property value. The accessReviewInstanceId property
+     * Sets the accessReviewInstanceId property value. The access review instance id.
      * @param value Value to set for the accessReviewInstanceId property.
      */
     public void setAccessReviewInstanceId(@jakarta.annotation.Nullable final String value) {

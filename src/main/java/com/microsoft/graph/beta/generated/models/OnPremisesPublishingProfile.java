@@ -116,7 +116,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         return this.backingStore.get("publishedResources");
     }
     /**
-     * Gets the sensors property value. The sensors property
+     * Gets the sensors property value. A lightweight agent installed on domain controllers that helps secure access and enforce MFA to on-premise resources.
      * @return a {@link java.util.List<PrivateAccessSensor>}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class OnPremisesPublishingProfile extends Entity implements Parsable {
         this.backingStore.set("publishedResources", value);
     }
     /**
-     * Sets the sensors property value. The sensors property
+     * Sets the sensors property value. A lightweight agent installed on domain controllers that helps secure access and enforce MFA to on-premise resources.
      * @param value Value to set for the sensors property.
      */
     public void setSensors(@jakarta.annotation.Nullable final java.util.List<PrivateAccessSensor> value) {

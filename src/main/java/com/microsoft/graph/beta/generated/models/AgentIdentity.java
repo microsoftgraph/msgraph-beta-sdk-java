@@ -35,7 +35,7 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
         return this.backingStore.get("agentAppId");
     }
     /**
-     * Gets the agentIdentityBlueprintId property value. The agentIdentityBlueprintId property
+     * Gets the agentIdentityBlueprintId property value. The appId of the agent identity blueprint that defines the configuration for this agent identity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
         return this.backingStore.get("agentIdentityBlueprintId");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time the agent identity was created. Read-only. Inherited from servicePrincipal.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -81,14 +81,14 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
         this.backingStore.set("agentAppId", value);
     }
     /**
-     * Sets the agentIdentityBlueprintId property value. The agentIdentityBlueprintId property
+     * Sets the agentIdentityBlueprintId property value. The appId of the agent identity blueprint that defines the configuration for this agent identity.
      * @param value Value to set for the agentIdentityBlueprintId property.
      */
     public void setAgentIdentityBlueprintId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentIdentityBlueprintId", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time the agent identity was created. Read-only. Inherited from servicePrincipal.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

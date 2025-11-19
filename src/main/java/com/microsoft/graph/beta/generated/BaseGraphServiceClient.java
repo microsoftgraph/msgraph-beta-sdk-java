@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.accessreviews.AccessReviewsRequestBuilder;
 import com.microsoft.graph.beta.activitystatistics.ActivitystatisticsRequestBuilder;
 import com.microsoft.graph.beta.admin.AdminRequestBuilder;
 import com.microsoft.graph.beta.administrativeunits.AdministrativeUnitsRequestBuilder;
+import com.microsoft.graph.beta.agents.AgentsRequestBuilder;
 import com.microsoft.graph.beta.agreementacceptances.AgreementAcceptancesRequestBuilder;
 import com.microsoft.graph.beta.agreements.AgreementsRequestBuilder;
 import com.microsoft.graph.beta.alloweddatalocations.AllowedDataLocationsRequestBuilder;
@@ -185,6 +186,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder administrativeUnits() {
         return new AdministrativeUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the collection of agent entities.
+     * @return a {@link AgentsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AgentsRequestBuilder agents() {
+        return new AgentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of agreementAcceptance entities.

@@ -125,7 +125,7 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(13);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
         deserializerMap.put("apiConnectors", (n) -> { this.setApiConnectors(n.getCollectionOfObjectValues(IdentityApiConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationEventListeners", (n) -> { this.setAuthenticationEventListeners(n.getCollectionOfObjectValues(AuthenticationEventListener::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationEventsFlows", (n) -> { this.setAuthenticationEventsFlows(n.getCollectionOfObjectValues(AuthenticationEventsFlow::createFromDiscriminatorValue)); });
@@ -137,8 +137,10 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         deserializerMap.put("identityProviders", (n) -> { this.setIdentityProviders(n.getCollectionOfObjectValues(IdentityProviderBase::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("riskPrevention", (n) -> { this.setRiskPrevention(n.getObjectValue(RiskPreventionContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("signInIdentifiers", (n) -> { this.setSignInIdentifiers(n.getCollectionOfObjectValues(SignInIdentifierBase::createFromDiscriminatorValue)); });
         deserializerMap.put("userFlowAttributes", (n) -> { this.setUserFlowAttributes(n.getCollectionOfObjectValues(IdentityUserFlowAttribute::createFromDiscriminatorValue)); });
         deserializerMap.put("userFlows", (n) -> { this.setUserFlows(n.getCollectionOfObjectValues(IdentityUserFlow::createFromDiscriminatorValue)); });
+        deserializerMap.put("verifiedId", (n) -> { this.setVerifiedId(n.getObjectValue(IdentityVerifiedIdRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -166,6 +168,14 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("riskPrevention");
     }
     /**
+     * Gets the signInIdentifiers property value. The signInIdentifiers property
+     * @return a {@link java.util.List<SignInIdentifierBase>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SignInIdentifierBase> getSignInIdentifiers() {
+        return this.backingStore.get("signInIdentifiers");
+    }
+    /**
      * Gets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
      * @return a {@link java.util.List<IdentityUserFlowAttribute>}
      */
@@ -180,6 +190,14 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
     @jakarta.annotation.Nullable
     public java.util.List<IdentityUserFlow> getUserFlows() {
         return this.backingStore.get("userFlows");
+    }
+    /**
+     * Gets the verifiedId property value. The verifiedId property
+     * @return a {@link IdentityVerifiedIdRoot}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityVerifiedIdRoot getVerifiedId() {
+        return this.backingStore.get("verifiedId");
     }
     /**
      * Serializes information the current object
@@ -198,8 +216,10 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         writer.writeCollectionOfObjectValues("identityProviders", this.getIdentityProviders());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("riskPrevention", this.getRiskPrevention());
+        writer.writeCollectionOfObjectValues("signInIdentifiers", this.getSignInIdentifiers());
         writer.writeCollectionOfObjectValues("userFlowAttributes", this.getUserFlowAttributes());
         writer.writeCollectionOfObjectValues("userFlows", this.getUserFlows());
+        writer.writeObjectValue("verifiedId", this.getVerifiedId());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -295,6 +315,13 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("riskPrevention", value);
     }
     /**
+     * Sets the signInIdentifiers property value. The signInIdentifiers property
+     * @param value Value to set for the signInIdentifiers property.
+     */
+    public void setSignInIdentifiers(@jakarta.annotation.Nullable final java.util.List<SignInIdentifierBase> value) {
+        this.backingStore.set("signInIdentifiers", value);
+    }
+    /**
      * Sets the userFlowAttributes property value. Represents entry point for identity userflow attributes.
      * @param value Value to set for the userFlowAttributes property.
      */
@@ -307,5 +334,12 @@ public class IdentityContainer implements AdditionalDataHolder, BackedModel, Par
      */
     public void setUserFlows(@jakarta.annotation.Nullable final java.util.List<IdentityUserFlow> value) {
         this.backingStore.set("userFlows", value);
+    }
+    /**
+     * Sets the verifiedId property value. The verifiedId property
+     * @param value Value to set for the verifiedId property.
+     */
+    public void setVerifiedId(@jakarta.annotation.Nullable final IdentityVerifiedIdRoot value) {
+        this.backingStore.set("verifiedId", value);
     }
 }

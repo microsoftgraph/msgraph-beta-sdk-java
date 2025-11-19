@@ -48,6 +48,14 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
         return value;
     }
     /**
+     * Gets the agentRiskDetections property value. The agentRiskDetections property
+     * @return a {@link java.util.List<AgentRiskDetection>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AgentRiskDetection> getAgentRiskDetections() {
+        return this.backingStore.get("agentRiskDetections");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -61,9 +69,11 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("agentRiskDetections", (n) -> { this.setAgentRiskDetections(n.getCollectionOfObjectValues(AgentRiskDetection::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("riskDetections", (n) -> { this.setRiskDetections(n.getCollectionOfObjectValues(RiskDetection::createFromDiscriminatorValue)); });
+        deserializerMap.put("riskyAgents", (n) -> { this.setRiskyAgents(n.getCollectionOfObjectValues(RiskyAgent::createFromDiscriminatorValue)); });
         deserializerMap.put("riskyServicePrincipals", (n) -> { this.setRiskyServicePrincipals(n.getCollectionOfObjectValues(RiskyServicePrincipal::createFromDiscriminatorValue)); });
         deserializerMap.put("riskyUsers", (n) -> { this.setRiskyUsers(n.getCollectionOfObjectValues(RiskyUser::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePrincipalRiskDetections", (n) -> { this.setServicePrincipalRiskDetections(n.getCollectionOfObjectValues(ServicePrincipalRiskDetection::createFromDiscriminatorValue)); });
@@ -84,6 +94,14 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nullable
     public java.util.List<RiskDetection> getRiskDetections() {
         return this.backingStore.get("riskDetections");
+    }
+    /**
+     * Gets the riskyAgents property value. The riskyAgents property
+     * @return a {@link java.util.List<RiskyAgent>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RiskyAgent> getRiskyAgents() {
+        return this.backingStore.get("riskyAgents");
     }
     /**
      * Gets the riskyServicePrincipals property value. Microsoft Entra service principals that are at risk.
@@ -115,8 +133,10 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("agentRiskDetections", this.getAgentRiskDetections());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("riskDetections", this.getRiskDetections());
+        writer.writeCollectionOfObjectValues("riskyAgents", this.getRiskyAgents());
         writer.writeCollectionOfObjectValues("riskyServicePrincipals", this.getRiskyServicePrincipals());
         writer.writeCollectionOfObjectValues("riskyUsers", this.getRiskyUsers());
         writer.writeCollectionOfObjectValues("servicePrincipalRiskDetections", this.getServicePrincipalRiskDetections());
@@ -128,6 +148,13 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the agentRiskDetections property value. The agentRiskDetections property
+     * @param value Value to set for the agentRiskDetections property.
+     */
+    public void setAgentRiskDetections(@jakarta.annotation.Nullable final java.util.List<AgentRiskDetection> value) {
+        this.backingStore.set("agentRiskDetections", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.
@@ -150,6 +177,13 @@ public class IdentityProtectionRoot implements AdditionalDataHolder, BackedModel
      */
     public void setRiskDetections(@jakarta.annotation.Nullable final java.util.List<RiskDetection> value) {
         this.backingStore.set("riskDetections", value);
+    }
+    /**
+     * Sets the riskyAgents property value. The riskyAgents property
+     * @param value Value to set for the riskyAgents property.
+     */
+    public void setRiskyAgents(@jakarta.annotation.Nullable final java.util.List<RiskyAgent> value) {
+        this.backingStore.set("riskyAgents", value);
     }
     /**
      * Sets the riskyServicePrincipals property value. Microsoft Entra service principals that are at risk.

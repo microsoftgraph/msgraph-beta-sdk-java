@@ -37,7 +37,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("aboutMe");
     }
     /**
-     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter (eq, ne, not, and in).
+     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when creating the object. Supports $filter (eq, ne, not, and in).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1663,7 +1663,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("aboutMe", value);
     }
     /**
-     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter (eq, ne, not, and in).
+     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when creating the object. Supports $filter (eq, ne, not, and in).
      * @param value Value to set for the accountEnabled property.
      */
     public void setAccountEnabled(@jakarta.annotation.Nullable final Boolean value) {

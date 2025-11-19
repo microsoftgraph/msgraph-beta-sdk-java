@@ -1,6 +1,8 @@
 package com.microsoft.graph.beta.identityprotection;
 
+import com.microsoft.graph.beta.identityprotection.agentriskdetections.AgentRiskDetectionsRequestBuilder;
 import com.microsoft.graph.beta.identityprotection.riskdetections.RiskDetectionsRequestBuilder;
+import com.microsoft.graph.beta.identityprotection.riskyagents.RiskyAgentsRequestBuilder;
 import com.microsoft.graph.beta.identityprotection.riskyserviceprincipals.RiskyServicePrincipalsRequestBuilder;
 import com.microsoft.graph.beta.identityprotection.riskyusers.RiskyUsersRequestBuilder;
 import com.microsoft.graph.beta.identityprotection.serviceprincipalriskdetections.ServicePrincipalRiskDetectionsRequestBuilder;
@@ -25,12 +27,28 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class IdentityProtectionRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the agentRiskDetections property of the microsoft.graph.identityProtectionRoot entity.
+     * @return a {@link AgentRiskDetectionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AgentRiskDetectionsRequestBuilder agentRiskDetections() {
+        return new AgentRiskDetectionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the riskDetections property of the microsoft.graph.identityProtectionRoot entity.
      * @return a {@link RiskDetectionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RiskDetectionsRequestBuilder riskDetections() {
         return new RiskDetectionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the riskyAgents property of the microsoft.graph.identityProtectionRoot entity.
+     * @return a {@link RiskyAgentsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RiskyAgentsRequestBuilder riskyAgents() {
+        return new RiskyAgentsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the riskyServicePrincipals property of the microsoft.graph.identityProtectionRoot entity.

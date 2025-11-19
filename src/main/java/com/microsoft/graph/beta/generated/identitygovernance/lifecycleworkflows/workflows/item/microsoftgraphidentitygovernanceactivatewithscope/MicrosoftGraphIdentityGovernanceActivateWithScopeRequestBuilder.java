@@ -38,11 +38,8 @@ public class MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder ext
      * Run a workflow object on-demand with a specific scope. You can run any workflow on-demand, including scheduled workflows. Workflows created from the &apos;Real-time employee termination&apos; template are run on-demand only. When you run a workflow on demand, the tasks are executed regardless of whether the user state matches the scope and trigger execution conditions.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-03-14 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-activatewithscope?view=graph-rest-beta">Find more info here</a>
      */
-    @Deprecated
     public void post(@jakarta.annotation.Nonnull final ActivateWithScopePostRequestBody body) {
         post(body, null);
     }
@@ -51,11 +48,8 @@ public class MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder ext
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-03-14 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-activatewithscope?view=graph-rest-beta">Find more info here</a>
      */
-    @Deprecated
     public void post(@jakarta.annotation.Nonnull final ActivateWithScopePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -67,11 +61,8 @@ public class MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder ext
      * Run a workflow object on-demand with a specific scope. You can run any workflow on-demand, including scheduled workflows. Workflows created from the &apos;Real-time employee termination&apos; template are run on-demand only. When you run a workflow on demand, the tasks are executed regardless of whether the user state matches the scope and trigger execution conditions.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-03-14 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ActivateWithScopePostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -80,11 +71,8 @@ public class MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder ext
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-03-14 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ActivateWithScopePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -97,11 +85,8 @@ public class MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder ext
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder}
-     * @deprecated
-     *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-03-14 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder(rawUrl, requestAdapter);

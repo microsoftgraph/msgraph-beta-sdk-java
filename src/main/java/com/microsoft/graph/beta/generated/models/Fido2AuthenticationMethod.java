@@ -69,6 +69,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         deserializerMap.put("attestationLevel", (n) -> { this.setAttestationLevel(n.getEnumValue(AttestationLevel::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("model", (n) -> { this.setModel(n.getStringValue()); });
+        deserializerMap.put("passkeyType", (n) -> { this.setPasskeyType(n.getEnumValue(PasskeyType::forValue)); });
         deserializerMap.put("publicKeyCredential", (n) -> { this.setPublicKeyCredential(n.getObjectValue(WebauthnPublicKeyCredential::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -79,6 +80,14 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
     @jakarta.annotation.Nullable
     public String getModel() {
         return this.backingStore.get("model");
+    }
+    /**
+     * Gets the passkeyType property value. The type of passkey allowed in the passkey profile. The possible values are: deviceBound, synced, unknownFutureValue.
+     * @return a {@link PasskeyType}
+     */
+    @jakarta.annotation.Nullable
+    public PasskeyType getPasskeyType() {
+        return this.backingStore.get("passkeyType");
     }
     /**
      * Gets the publicKeyCredential property value. Contains the WebAuthn public key credential information being registered. Only used for write requests. This property isn&apos;t returned on read operations.
@@ -100,6 +109,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         writer.writeEnumValue("attestationLevel", this.getAttestationLevel());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("model", this.getModel());
+        writer.writeEnumValue("passkeyType", this.getPasskeyType());
         writer.writeObjectValue("publicKeyCredential", this.getPublicKeyCredential());
     }
     /**
@@ -136,6 +146,13 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
      */
     public void setModel(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("model", value);
+    }
+    /**
+     * Sets the passkeyType property value. The type of passkey allowed in the passkey profile. The possible values are: deviceBound, synced, unknownFutureValue.
+     * @param value Value to set for the passkeyType property.
+     */
+    public void setPasskeyType(@jakarta.annotation.Nullable final PasskeyType value) {
+        this.backingStore.set("passkeyType", value);
     }
     /**
      * Sets the publicKeyCredential property value. Contains the WebAuthn public key credential information being registered. Only used for write requests. This property isn&apos;t returned on read operations.

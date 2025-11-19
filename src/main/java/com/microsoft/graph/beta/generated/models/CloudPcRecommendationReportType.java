@@ -5,8 +5,9 @@ import java.util.Objects;
 
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CloudPcRecommendationReportType implements ValuedEnum {
-    CloudPcUsageCategoryReports("cloudPcUsageCategoryReports"),
-    UnknownFutureValue("unknownFutureValue");
+    CloudPcUsageCategoryReport("cloudPcUsageCategoryReport"),
+    UnknownFutureValue("unknownFutureValue"),
+    CloudPcUsageCategoryReports("cloudPcUsageCategoryReports");
     public final String value;
     CloudPcRecommendationReportType(final String value) {
         this.value = value;
@@ -17,8 +18,9 @@ public enum CloudPcRecommendationReportType implements ValuedEnum {
     public static CloudPcRecommendationReportType forValue(@jakarta.annotation.Nonnull final String searchValue) {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
-            case "cloudPcUsageCategoryReports": return CloudPcUsageCategoryReports;
+            case "cloudPcUsageCategoryReport": return CloudPcUsageCategoryReport;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "cloudPcUsageCategoryReports": return CloudPcUsageCategoryReports;
             default: return null;
         }
     }

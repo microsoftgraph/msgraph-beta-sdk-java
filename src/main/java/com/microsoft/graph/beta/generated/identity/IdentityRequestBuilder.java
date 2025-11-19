@@ -10,8 +10,10 @@ import com.microsoft.graph.beta.identity.continuousaccessevaluationpolicy.Contin
 import com.microsoft.graph.beta.identity.customauthenticationextensions.CustomAuthenticationExtensionsRequestBuilder;
 import com.microsoft.graph.beta.identity.identityproviders.IdentityProvidersRequestBuilder;
 import com.microsoft.graph.beta.identity.riskprevention.RiskPreventionRequestBuilder;
+import com.microsoft.graph.beta.identity.signinidentifiers.SignInIdentifiersRequestBuilder;
 import com.microsoft.graph.beta.identity.userflowattributes.UserFlowAttributesRequestBuilder;
 import com.microsoft.graph.beta.identity.userflows.UserFlowsRequestBuilder;
+import com.microsoft.graph.beta.identity.verifiedid.VerifiedIdRequestBuilder;
 import com.microsoft.graph.beta.models.IdentityContainer;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -113,6 +115,14 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
         return new RiskPreventionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the signInIdentifiers property of the microsoft.graph.identityContainer entity.
+     * @return a {@link SignInIdentifiersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SignInIdentifiersRequestBuilder signInIdentifiers() {
+        return new SignInIdentifiersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
      * @return a {@link UserFlowAttributesRequestBuilder}
      */
@@ -127,6 +137,14 @@ public class IdentityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public UserFlowsRequestBuilder userFlows() {
         return new UserFlowsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the verifiedId property of the microsoft.graph.identityContainer entity.
+     * @return a {@link VerifiedIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public VerifiedIdRequestBuilder verifiedId() {
+        return new VerifiedIdRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link IdentityRequestBuilder} and sets the default values.

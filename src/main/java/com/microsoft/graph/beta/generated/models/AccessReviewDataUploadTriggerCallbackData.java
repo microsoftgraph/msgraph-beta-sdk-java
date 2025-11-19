@@ -45,7 +45,7 @@ public class AccessReviewDataUploadTriggerCallbackData extends CustomExtensionDa
         return deserializerMap;
     }
     /**
-     * Gets the permissionDescription property value. The permissionDescription property
+     * Gets the permissionDescription property value. A description for the permission.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class AccessReviewDataUploadTriggerCallbackData extends CustomExtensionDa
         return this.backingStore.get("permissionDescription");
     }
     /**
-     * Gets the permissionId property value. The permissionId property
+     * Gets the permissionId property value. The id of the permission assigned to this principal.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class AccessReviewDataUploadTriggerCallbackData extends CustomExtensionDa
         return this.backingStore.get("permissionId");
     }
     /**
-     * Gets the permissionName property value. The permissionName property
+     * Gets the permissionName property value. The name of the permission assigned to this principal.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class AccessReviewDataUploadTriggerCallbackData extends CustomExtensionDa
         return this.backingStore.get("permissionName");
     }
     /**
-     * Gets the permissionType property value. The permissionType property
+     * Gets the permissionType property value. The type of the permission assigned to this principal.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -143,28 +143,28 @@ public class AccessReviewDataUploadTriggerCallbackData extends CustomExtensionDa
         writer.writeStringValue("resourceType", this.getResourceType());
     }
     /**
-     * Sets the permissionDescription property value. The permissionDescription property
+     * Sets the permissionDescription property value. A description for the permission.
      * @param value Value to set for the permissionDescription property.
      */
     public void setPermissionDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("permissionDescription", value);
     }
     /**
-     * Sets the permissionId property value. The permissionId property
+     * Sets the permissionId property value. The id of the permission assigned to this principal.
      * @param value Value to set for the permissionId property.
      */
     public void setPermissionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("permissionId", value);
     }
     /**
-     * Sets the permissionName property value. The permissionName property
+     * Sets the permissionName property value. The name of the permission assigned to this principal.
      * @param value Value to set for the permissionName property.
      */
     public void setPermissionName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("permissionName", value);
     }
     /**
-     * Sets the permissionType property value. The permissionType property
+     * Sets the permissionType property value. The type of the permission assigned to this principal.
      * @param value Value to set for the permissionType property.
      */
     public void setPermissionType(@jakarta.annotation.Nullable final String value) {

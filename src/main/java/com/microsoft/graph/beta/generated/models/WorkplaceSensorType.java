@@ -16,7 +16,9 @@ public enum WorkplaceSensorType implements ValuedEnum {
     /** The badge swipe sensor type. */
     Badge("badge"),
     /** The unknown feature value. */
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    /** The Wifi sensor type. */
+    Wifi("wifi");
     public final String value;
     WorkplaceSensorType(final String value) {
         this.value = value;
@@ -33,6 +35,7 @@ public enum WorkplaceSensorType implements ValuedEnum {
             case "heartbeat": return Heartbeat;
             case "badge": return Badge;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "wifi": return Wifi;
             default: return null;
         }
     }

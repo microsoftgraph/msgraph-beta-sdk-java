@@ -80,6 +80,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("protectionMode", (n) -> { this.setProtectionMode(n.getEnumValue(BackupPolicyProtectionMode::forValue)); });
         deserializerMap.put("protectionPolicyArtifactCount", (n) -> { this.setProtectionPolicyArtifactCount(n.getObjectValue(ProtectionPolicyArtifactCount::createFromDiscriminatorValue)); });
         deserializerMap.put("retentionSettings", (n) -> { this.setRetentionSettings(n.getCollectionOfObjectValues(RetentionSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProtectionPolicyStatus::forValue)); });
@@ -108,6 +109,14 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the protectionMode property value. The protectionMode property
+     * @return a {@link BackupPolicyProtectionMode}
+     */
+    @jakarta.annotation.Nullable
+    public BackupPolicyProtectionMode getProtectionMode() {
+        return this.backingStore.get("protectionMode");
     }
     /**
      * Gets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Returned only on $select.
@@ -147,6 +156,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeEnumValue("protectionMode", this.getProtectionMode());
         writer.writeObjectValue("protectionPolicyArtifactCount", this.getProtectionPolicyArtifactCount());
         writer.writeCollectionOfObjectValues("retentionSettings", this.getRetentionSettings());
         writer.writeEnumValue("status", this.getStatus());
@@ -199,6 +209,13 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the protectionMode property value. The protectionMode property
+     * @param value Value to set for the protectionMode property.
+     */
+    public void setProtectionMode(@jakarta.annotation.Nullable final BackupPolicyProtectionMode value) {
+        this.backingStore.set("protectionMode", value);
     }
     /**
      * Sets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Returned only on $select.

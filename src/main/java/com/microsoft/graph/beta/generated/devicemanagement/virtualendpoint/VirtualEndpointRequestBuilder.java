@@ -15,6 +15,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.managedlicenses
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.onpremisesconnections.OnPremisesConnectionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.organizationsettings.OrganizationSettingsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.ProvisioningPoliciesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.report.ReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.ReportsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.retrievescopedpermissions.RetrieveScopedPermissionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.retrievetenantencryptionsetting.RetrieveTenantEncryptionSettingRequestBuilder;
@@ -161,6 +162,14 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProvisioningPoliciesRequestBuilder provisioningPolicies() {
         return new ProvisioningPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the report property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link ReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReportRequestBuilder report() {
+        return new ReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the reports property of the microsoft.graph.virtualEndpoint entity.

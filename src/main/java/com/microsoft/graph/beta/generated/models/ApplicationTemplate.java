@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -57,6 +58,14 @@ public class ApplicationTemplate extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the endpoints property value. A collection of string URLs representing various domains that are used by this application.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getEndpoints() {
+        return this.backingStore.get("endpoints");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -67,10 +76,14 @@ public class ApplicationTemplate extends Entity implements Parsable {
         deserializerMap.put("configurationUris", (n) -> { this.setConfigurationUris(n.getCollectionOfObjectValues(ConfigurationUri::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("endpoints", (n) -> { this.setEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("homePageUrl", (n) -> { this.setHomePageUrl(n.getStringValue()); });
         deserializerMap.put("informationalUrls", (n) -> { this.setInformationalUrls(n.getObjectValue(InformationalUrls::createFromDiscriminatorValue)); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("logoUrl", (n) -> { this.setLogoUrl(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
+        deserializerMap.put("riskFactors", (n) -> { this.setRiskFactors(n.getObjectValue(ApplicationRiskFactors::createFromDiscriminatorValue)); });
+        deserializerMap.put("riskScore", (n) -> { this.setRiskScore(n.getObjectValue(ApplicationRiskScore::createFromDiscriminatorValue)); });
         deserializerMap.put("supportedClaimConfiguration", (n) -> { this.setSupportedClaimConfiguration(n.getObjectValue(SupportedClaimConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("supportedProvisioningTypes", (n) -> { this.setSupportedProvisioningTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("supportedSingleSignOnModes", (n) -> { this.setSupportedSingleSignOnModes(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -93,6 +106,14 @@ public class ApplicationTemplate extends Entity implements Parsable {
         return this.backingStore.get("informationalUrls");
     }
     /**
+     * Gets the lastModifiedDateTime property value. The date and time when the data for the application was last updated, represented using ISO 8601 format and always in UTC time.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastModifiedDateTime() {
+        return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
      * Gets the logoUrl property value. The URL to get the logo for this application.
      * @return a {@link String}
      */
@@ -107,6 +128,22 @@ public class ApplicationTemplate extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getPublisher() {
         return this.backingStore.get("publisher");
+    }
+    /**
+     * Gets the riskFactors property value. General business and operational information about the application provider. Returned only when $select is used.
+     * @return a {@link ApplicationRiskFactors}
+     */
+    @jakarta.annotation.Nullable
+    public ApplicationRiskFactors getRiskFactors() {
+        return this.backingStore.get("riskFactors");
+    }
+    /**
+     * Gets the riskScore property value. Represents the Microsoft-generated numerical risk score assessment for the application. Supported $orderby on total (for example, $orderBy=riskScore/total desc). Returned only when $select is used.
+     * @return a {@link ApplicationRiskScore}
+     */
+    @jakarta.annotation.Nullable
+    public ApplicationRiskScore getRiskScore() {
+        return this.backingStore.get("riskScore");
     }
     /**
      * Gets the supportedClaimConfiguration property value. The supportedClaimConfiguration property
@@ -143,10 +180,14 @@ public class ApplicationTemplate extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("configurationUris", this.getConfigurationUris());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeCollectionOfPrimitiveValues("endpoints", this.getEndpoints());
         writer.writeStringValue("homePageUrl", this.getHomePageUrl());
         writer.writeObjectValue("informationalUrls", this.getInformationalUrls());
+        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("logoUrl", this.getLogoUrl());
         writer.writeStringValue("publisher", this.getPublisher());
+        writer.writeObjectValue("riskFactors", this.getRiskFactors());
+        writer.writeObjectValue("riskScore", this.getRiskScore());
         writer.writeObjectValue("supportedClaimConfiguration", this.getSupportedClaimConfiguration());
         writer.writeCollectionOfPrimitiveValues("supportedProvisioningTypes", this.getSupportedProvisioningTypes());
         writer.writeCollectionOfPrimitiveValues("supportedSingleSignOnModes", this.getSupportedSingleSignOnModes());
@@ -180,6 +221,13 @@ public class ApplicationTemplate extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the endpoints property value. A collection of string URLs representing various domains that are used by this application.
+     * @param value Value to set for the endpoints property.
+     */
+    public void setEndpoints(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("endpoints", value);
+    }
+    /**
      * Sets the homePageUrl property value. The home page URL of the application.
      * @param value Value to set for the homePageUrl property.
      */
@@ -194,6 +242,13 @@ public class ApplicationTemplate extends Entity implements Parsable {
         this.backingStore.set("informationalUrls", value);
     }
     /**
+     * Sets the lastModifiedDateTime property value. The date and time when the data for the application was last updated, represented using ISO 8601 format and always in UTC time.
+     * @param value Value to set for the lastModifiedDateTime property.
+     */
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
      * Sets the logoUrl property value. The URL to get the logo for this application.
      * @param value Value to set for the logoUrl property.
      */
@@ -206,6 +261,20 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     public void setPublisher(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publisher", value);
+    }
+    /**
+     * Sets the riskFactors property value. General business and operational information about the application provider. Returned only when $select is used.
+     * @param value Value to set for the riskFactors property.
+     */
+    public void setRiskFactors(@jakarta.annotation.Nullable final ApplicationRiskFactors value) {
+        this.backingStore.set("riskFactors", value);
+    }
+    /**
+     * Sets the riskScore property value. Represents the Microsoft-generated numerical risk score assessment for the application. Supported $orderby on total (for example, $orderBy=riskScore/total desc). Returned only when $select is used.
+     * @param value Value to set for the riskScore property.
+     */
+    public void setRiskScore(@jakarta.annotation.Nullable final ApplicationRiskScore value) {
+        this.backingStore.set("riskScore", value);
     }
     /**
      * Sets the supportedClaimConfiguration property value. The supportedClaimConfiguration property

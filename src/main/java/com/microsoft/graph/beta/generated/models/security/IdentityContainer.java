@@ -65,7 +65,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("sensorCandidateActivationConfiguration");
     }
     /**
-     * Gets the sensorCandidates property value. The sensorCandidates property
+     * Gets the sensorCandidates property value. Represents Microsoft Defender for Identity sensors that are ready to be activated.
      * @return a {@link java.util.List<SensorCandidate>}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class IdentityContainer extends Entity implements Parsable {
         this.backingStore.set("sensorCandidateActivationConfiguration", value);
     }
     /**
-     * Sets the sensorCandidates property value. The sensorCandidates property
+     * Sets the sensorCandidates property value. Represents Microsoft Defender for Identity sensors that are ready to be activated.
      * @param value Value to set for the sensorCandidates property.
      */
     public void setSensorCandidates(@jakarta.annotation.Nullable final java.util.List<SensorCandidate> value) {

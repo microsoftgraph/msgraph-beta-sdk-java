@@ -4,7 +4,6 @@ import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accessp
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackageassignmentresourceroles.item.accesspackageresourcerole.accesspackageresource.accesspackageresourceroles.AccessPackageResourceRolesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackageassignmentresourceroles.item.accesspackageresourcerole.accesspackageresource.accesspackageresourcescopes.AccessPackageResourceScopesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackageassignmentresourceroles.item.accesspackageresourcerole.accesspackageresource.refresh.RefreshRequestBuilder;
-import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageassignments.item.accesspackageassignmentresourceroles.item.accesspackageresourcerole.accesspackageresource.uploadsessions.UploadSessionsRequestBuilder;
 import com.microsoft.graph.beta.models.AccessPackageResource;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -56,14 +55,6 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RefreshRequestBuilder refresh() {
         return new RefreshRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the uploadSessions property of the microsoft.graph.accessPackageResource entity.
-     * @return a {@link UploadSessionsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public UploadSessionsRequestBuilder uploadSessions() {
-        return new UploadSessionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AccessPackageResourceRequestBuilder} and sets the default values.
