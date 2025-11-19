@@ -114,21 +114,21 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24top}", rawUrl);
     }
     /**
-     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
+     * Get a list of the agentUser objects and their properties.
      * @return a {@link UserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCollectionResponse get() {
         return get(null);
     }
     /**
-     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
+     * Get a list of the agentUser objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -138,7 +138,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
+     * Create a new user. If you specify an @odata.type property with a value of #microsoft.graph.agentUser with the required properties, this API creates an agentUser object. At a minimum, you must specify the required properties. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user and agentUser. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -149,7 +149,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
+     * Create a new user. If you specify an @odata.type property with a value of #microsoft.graph.agentUser with the required properties, this API creates an agentUser object. At a minimum, you must specify the required properties. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user and agentUser. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
@@ -165,7 +165,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
-     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
+     * Get a list of the agentUser objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -173,7 +173,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
+     * Get a list of the agentUser objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -185,7 +185,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
+     * Create a new user. If you specify an @odata.type property with a value of #microsoft.graph.agentUser with the required properties, this API creates an agentUser object. At a minimum, you must specify the required properties. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user and agentUser. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -194,7 +194,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new user.The request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
+     * Create a new user. If you specify an @odata.type property with a value of #microsoft.graph.agentUser with the required properties, this API creates an agentUser object. At a minimum, you must specify the required properties. You can optionally specify any other writable properties. This operation returns by default only a subset of the properties for each user and agentUser. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -219,7 +219,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return new UsersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation for the user and specify the properties in a $select OData query option.
+     * Get a list of the agentUser objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

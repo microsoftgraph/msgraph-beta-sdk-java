@@ -41,7 +41,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Starting from December 31, 2024, this API (&apos;getFrontlineReport&apos;) will be deprecated and no longer supported. Please use the retrieveFrontlineReports API. as of 2024-09/getFrontlineReport on 2024-08-22 and will be removed 2024-12-31
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Starting from December 31, 2024, this API (&apos;getFrontlineReport&apos;) will be deprecated and no longer supported. Please use the retrieveFrontlineReports API. as of 2024-09/getFrontlineReport on 2024-08-22 and will be removed 2024-12-31
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcreports-getfrontlinereport?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * Starting from December 31, 2024, this API (&apos;getFrontlineReport&apos;) will be deprecated and no longer supported. Please use the retrieveFrontlineReports API. as of 2024-09/getFrontlineReport on 2024-08-22 and will be removed 2024-12-31
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -86,7 +86,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Starting from December 31, 2024, this API (&apos;getFrontlineReport&apos;) will be deprecated and no longer supported. Please use the retrieveFrontlineReports API. as of 2024-09/getFrontlineReport on 2024-08-22 and will be removed 2024-12-31
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -103,7 +103,7 @@ public class GetFrontlineReportRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link GetFrontlineReportRequestBuilder}
      * @deprecated
-     * Starting from December 31, 2024, this API (&apos;getFrontlineReport&apos;) will be deprecated and no longer supported. Please use the retrieveFrontlineReports API. as of 2024-09/getFrontlineReport on 2024-08-22 and will be removed 2024-12-31
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

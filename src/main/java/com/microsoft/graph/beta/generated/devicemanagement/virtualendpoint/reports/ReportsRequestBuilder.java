@@ -43,7 +43,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the exportJobs property of the microsoft.graph.cloudPcReports entity.
      * @return a {@link ExportJobsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExportJobsRequestBuilder exportJobs() {
         return new ExportJobsRequestBuilder(pathParameters, requestAdapter);
@@ -51,7 +54,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getActionStatusReports method.
      * @return a {@link GetActionStatusReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetActionStatusReportsRequestBuilder getActionStatusReports() {
         return new GetActionStatusReportsRequestBuilder(pathParameters, requestAdapter);
@@ -59,7 +65,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCloudPcPerformanceReport method.
      * @return a {@link GetCloudPcPerformanceReportRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCloudPcPerformanceReportRequestBuilder getCloudPcPerformanceReport() {
         return new GetCloudPcPerformanceReportRequestBuilder(pathParameters, requestAdapter);
@@ -67,7 +76,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getCloudPcRecommendationReports method.
      * @return a {@link GetCloudPcRecommendationReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetCloudPcRecommendationReportsRequestBuilder getCloudPcRecommendationReports() {
         return new GetCloudPcRecommendationReportsRequestBuilder(pathParameters, requestAdapter);
@@ -75,7 +87,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getConnectionQualityReports method.
      * @return a {@link GetConnectionQualityReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetConnectionQualityReportsRequestBuilder getConnectionQualityReports() {
         return new GetConnectionQualityReportsRequestBuilder(pathParameters, requestAdapter);
@@ -83,7 +98,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getDailyAggregatedRemoteConnectionReports method.
      * @return a {@link GetDailyAggregatedRemoteConnectionReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetDailyAggregatedRemoteConnectionReportsRequestBuilder getDailyAggregatedRemoteConnectionReports() {
         return new GetDailyAggregatedRemoteConnectionReportsRequestBuilder(pathParameters, requestAdapter);
@@ -91,7 +109,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getFrontlineReport method.
      * @return a {@link GetFrontlineReportRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetFrontlineReportRequestBuilder getFrontlineReport() {
         return new GetFrontlineReportRequestBuilder(pathParameters, requestAdapter);
@@ -99,7 +120,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getInaccessibleCloudPcReports method.
      * @return a {@link GetInaccessibleCloudPcReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetInaccessibleCloudPcReportsRequestBuilder getInaccessibleCloudPcReports() {
         return new GetInaccessibleCloudPcReportsRequestBuilder(pathParameters, requestAdapter);
@@ -107,7 +131,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getRawRemoteConnectionReports method.
      * @return a {@link GetRawRemoteConnectionReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetRawRemoteConnectionReportsRequestBuilder getRawRemoteConnectionReports() {
         return new GetRawRemoteConnectionReportsRequestBuilder(pathParameters, requestAdapter);
@@ -115,7 +142,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getRemoteConnectionHistoricalReports method.
      * @return a {@link GetRemoteConnectionHistoricalReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetRemoteConnectionHistoricalReportsRequestBuilder getRemoteConnectionHistoricalReports() {
         return new GetRemoteConnectionHistoricalReportsRequestBuilder(pathParameters, requestAdapter);
@@ -123,7 +153,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTotalAggregatedRemoteConnectionReports method.
      * @return a {@link GetTotalAggregatedRemoteConnectionReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetTotalAggregatedRemoteConnectionReportsRequestBuilder getTotalAggregatedRemoteConnectionReports() {
         return new GetTotalAggregatedRemoteConnectionReportsRequestBuilder(pathParameters, requestAdapter);
@@ -131,7 +164,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveBulkActionStatusReport method.
      * @return a {@link RetrieveBulkActionStatusReportRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveBulkActionStatusReportRequestBuilder retrieveBulkActionStatusReport() {
         return new RetrieveBulkActionStatusReportRequestBuilder(pathParameters, requestAdapter);
@@ -139,7 +175,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveCloudPcRecommendationReports method.
      * @return a {@link RetrieveCloudPcRecommendationReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveCloudPcRecommendationReportsRequestBuilder retrieveCloudPcRecommendationReports() {
         return new RetrieveCloudPcRecommendationReportsRequestBuilder(pathParameters, requestAdapter);
@@ -147,7 +186,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveCloudPcTenantMetricsReport method.
      * @return a {@link RetrieveCloudPcTenantMetricsReportRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveCloudPcTenantMetricsReportRequestBuilder retrieveCloudPcTenantMetricsReport() {
         return new RetrieveCloudPcTenantMetricsReportRequestBuilder(pathParameters, requestAdapter);
@@ -155,7 +197,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveCloudPcTroubleshootReports method.
      * @return a {@link RetrieveCloudPcTroubleshootReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveCloudPcTroubleshootReportsRequestBuilder retrieveCloudPcTroubleshootReports() {
         return new RetrieveCloudPcTroubleshootReportsRequestBuilder(pathParameters, requestAdapter);
@@ -163,7 +208,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveConnectionQualityReports method.
      * @return a {@link RetrieveConnectionQualityReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveConnectionQualityReportsRequestBuilder retrieveConnectionQualityReports() {
         return new RetrieveConnectionQualityReportsRequestBuilder(pathParameters, requestAdapter);
@@ -171,7 +219,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveCrossRegionDisasterRecoveryReport method.
      * @return a {@link RetrieveCrossRegionDisasterRecoveryReportRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveCrossRegionDisasterRecoveryReportRequestBuilder retrieveCrossRegionDisasterRecoveryReport() {
         return new RetrieveCrossRegionDisasterRecoveryReportRequestBuilder(pathParameters, requestAdapter);
@@ -179,7 +230,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveFrontlineReports method.
      * @return a {@link RetrieveFrontlineReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RetrieveFrontlineReportsRequestBuilder retrieveFrontlineReports() {
         return new RetrieveFrontlineReportsRequestBuilder(pathParameters, requestAdapter);
@@ -203,7 +257,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property reports for deviceManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -211,7 +268,10 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property reports for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -219,21 +279,27 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Cloud PC related reports.
+     * Cloud PC-related reports.
      * @return a {@link CloudPcReports}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcReports get() {
         return get(null);
     }
     /**
-     * Cloud PC related reports.
+     * Cloud PC-related reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcReports}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcReports get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -244,8 +310,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getRealTimeRemoteConnectionLatency method.
      * @param cloudPcId Usage: cloudPcId=&apos;{cloudPcId}&apos;
      * @return a {@link GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder getRealTimeRemoteConnectionLatencyWithCloudPcId(@jakarta.annotation.Nonnull final String cloudPcId) {
         Objects.requireNonNull(cloudPcId);
         return new GetRealTimeRemoteConnectionLatencyWithCloudPcIdRequestBuilder(pathParameters, requestAdapter, cloudPcId);
@@ -254,8 +323,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getRealTimeRemoteConnectionStatus method.
      * @param cloudPcId Usage: cloudPcId=&apos;{cloudPcId}&apos;
      * @return a {@link GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder getRealTimeRemoteConnectionStatusWithCloudPcId(@jakarta.annotation.Nonnull final String cloudPcId) {
         Objects.requireNonNull(cloudPcId);
         return new GetRealTimeRemoteConnectionStatusWithCloudPcIdRequestBuilder(pathParameters, requestAdapter, cloudPcId);
@@ -265,8 +337,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link CloudPcReports}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcReports patch(@jakarta.annotation.Nonnull final CloudPcReports body) {
         return patch(body, null);
     }
@@ -276,8 +351,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcReports}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcReports patch(@jakarta.annotation.Nonnull final CloudPcReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -288,8 +366,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property reports for deviceManagement
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -297,8 +378,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property reports for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -306,19 +390,25 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Cloud PC related reports.
+     * Cloud PC-related reports.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Cloud PC related reports.
+     * Cloud PC-related reports.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -329,8 +419,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property reports in deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPcReports body) {
         return toPatchRequestInformation(body, null);
     }
@@ -339,8 +432,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPcReports body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -353,8 +449,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ReportsRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ReportsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ReportsRequestBuilder(rawUrl, requestAdapter);
@@ -366,7 +465,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Cloud PC related reports.
+     * Cloud PC-related reports.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

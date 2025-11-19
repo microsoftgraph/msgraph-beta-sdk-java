@@ -109,6 +109,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         deserializerMap.put("onPremisesConnections", (n) -> { this.setOnPremisesConnections(n.getCollectionOfObjectValues(CloudPcOnPremisesConnection::createFromDiscriminatorValue)); });
         deserializerMap.put("organizationSettings", (n) -> { this.setOrganizationSettings(n.getObjectValue(CloudPcOrganizationSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("provisioningPolicies", (n) -> { this.setProvisioningPolicies(n.getCollectionOfObjectValues(CloudPcProvisioningPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("report", (n) -> { this.setReport(n.getObjectValue(CloudPcReport::createFromDiscriminatorValue)); });
         deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(CloudPcReports::createFromDiscriminatorValue)); });
         deserializerMap.put("servicePlans", (n) -> { this.setServicePlans(n.getCollectionOfObjectValues(CloudPcServicePlan::createFromDiscriminatorValue)); });
         deserializerMap.put("snapshots", (n) -> { this.setSnapshots(n.getCollectionOfObjectValues(CloudPcSnapshot::createFromDiscriminatorValue)); });
@@ -165,7 +166,15 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("provisioningPolicies");
     }
     /**
-     * Gets the reports property value. Cloud PC related reports.
+     * Gets the report property value. Cloud PC-related reports. Read-only.
+     * @return a {@link CloudPcReport}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcReport getReport() {
+        return this.backingStore.get("report");
+    }
+    /**
+     * Gets the reports property value. Cloud PC-related reports.
      * @return a {@link CloudPcReports}
      */
     @jakarta.annotation.Nullable
@@ -225,6 +234,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("onPremisesConnections", this.getOnPremisesConnections());
         writer.writeObjectValue("organizationSettings", this.getOrganizationSettings());
         writer.writeCollectionOfObjectValues("provisioningPolicies", this.getProvisioningPolicies());
+        writer.writeObjectValue("report", this.getReport());
         writer.writeObjectValue("reports", this.getReports());
         writer.writeCollectionOfObjectValues("servicePlans", this.getServicePlans());
         writer.writeCollectionOfObjectValues("snapshots", this.getSnapshots());
@@ -330,7 +340,14 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.backingStore.set("provisioningPolicies", value);
     }
     /**
-     * Sets the reports property value. Cloud PC related reports.
+     * Sets the report property value. Cloud PC-related reports. Read-only.
+     * @param value Value to set for the report property.
+     */
+    public void setReport(@jakarta.annotation.Nullable final CloudPcReport value) {
+        this.backingStore.set("report", value);
+    }
+    /**
+     * Sets the reports property value. Cloud PC-related reports.
      * @param value Value to set for the reports property.
      */
     public void setReports(@jakarta.annotation.Nullable final CloudPcReports value) {

@@ -50,9 +50,18 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("externalCloudAuthorizedApplicationId", (n) -> { this.setExternalCloudAuthorizedApplicationId(n.getStringValue()); });
+        deserializerMap.put("groupSyncInbound", (n) -> { this.setGroupSyncInbound(n.getObjectValue(CrossTenantGroupSyncInbound::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("userSyncInbound", (n) -> { this.setUserSyncInbound(n.getObjectValue(CrossTenantUserSyncInbound::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the groupSyncInbound property value. The groupSyncInbound property
+     * @return a {@link CrossTenantGroupSyncInbound}
+     */
+    @jakarta.annotation.Nullable
+    public CrossTenantGroupSyncInbound getGroupSyncInbound() {
+        return this.backingStore.get("groupSyncInbound");
     }
     /**
      * Gets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Read-only.
@@ -79,6 +88,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("externalCloudAuthorizedApplicationId", this.getExternalCloudAuthorizedApplicationId());
+        writer.writeObjectValue("groupSyncInbound", this.getGroupSyncInbound());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeObjectValue("userSyncInbound", this.getUserSyncInbound());
     }
@@ -95,6 +105,13 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
      */
     public void setExternalCloudAuthorizedApplicationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("externalCloudAuthorizedApplicationId", value);
+    }
+    /**
+     * Sets the groupSyncInbound property value. The groupSyncInbound property
+     * @param value Value to set for the groupSyncInbound property.
+     */
+    public void setGroupSyncInbound(@jakarta.annotation.Nullable final CrossTenantGroupSyncInbound value) {
+        this.backingStore.set("groupSyncInbound", value);
     }
     /**
      * Sets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Read-only.

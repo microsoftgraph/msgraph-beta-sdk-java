@@ -50,6 +50,14 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         return this.backingStore.get("container");
     }
     /**
+     * Gets the contentSensitivityLabelAssignment property value. The sensitivity label assignment for the plan. Used to classify and protect the plan content based on organizational policies. This property is null if no sensitivity label is assigned. Optional.
+     * @return a {@link ContentSensitivityLabelAssignment}
+     */
+    @jakarta.annotation.Nullable
+    public ContentSensitivityLabelAssignment getContentSensitivityLabelAssignment() {
+        return this.backingStore.get("contentSensitivityLabelAssignment");
+    }
+    /**
      * Gets the contexts property value. Read-only. Other user experiences in which this plan is used, represented as plannerPlanContext entries.
      * @return a {@link PlannerPlanContextCollection}
      */
@@ -99,6 +107,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         deserializerMap.put("archivalInfo", (n) -> { this.setArchivalInfo(n.getObjectValue(PlannerArchivalInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("buckets", (n) -> { this.setBuckets(n.getCollectionOfObjectValues(PlannerBucket::createFromDiscriminatorValue)); });
         deserializerMap.put("container", (n) -> { this.setContainer(n.getObjectValue(PlannerPlanContainer::createFromDiscriminatorValue)); });
+        deserializerMap.put("contentSensitivityLabelAssignment", (n) -> { this.setContentSensitivityLabelAssignment(n.getObjectValue(ContentSensitivityLabelAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("contexts", (n) -> { this.setContexts(n.getObjectValue(PlannerPlanContextCollection::createFromDiscriminatorValue)); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -161,6 +170,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         writer.writeObjectValue("archivalInfo", this.getArchivalInfo());
         writer.writeCollectionOfObjectValues("buckets", this.getBuckets());
         writer.writeObjectValue("container", this.getContainer());
+        writer.writeObjectValue("contentSensitivityLabelAssignment", this.getContentSensitivityLabelAssignment());
         writer.writeObjectValue("contexts", this.getContexts());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
@@ -192,6 +202,13 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
      */
     public void setContainer(@jakarta.annotation.Nullable final PlannerPlanContainer value) {
         this.backingStore.set("container", value);
+    }
+    /**
+     * Sets the contentSensitivityLabelAssignment property value. The sensitivity label assignment for the plan. Used to classify and protect the plan content based on organizational policies. This property is null if no sensitivity label is assigned. Optional.
+     * @param value Value to set for the contentSensitivityLabelAssignment property.
+     */
+    public void setContentSensitivityLabelAssignment(@jakarta.annotation.Nullable final ContentSensitivityLabelAssignment value) {
+        this.backingStore.set("contentSensitivityLabelAssignment", value);
     }
     /**
      * Sets the contexts property value. Read-only. Other user experiences in which this plan is used, represented as plannerPlanContext entries.

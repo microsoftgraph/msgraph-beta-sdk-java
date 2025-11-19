@@ -153,6 +153,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
         deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("userExperienceType", (n) -> { this.setUserExperienceType(n.getEnumValue(CloudPcUserExperienceType::forValue)); });
+        deserializerMap.put("userSettingsPersistenceConfiguration", (n) -> { this.setUserSettingsPersistenceConfiguration(n.getObjectValue(CloudPcUserSettingsPersistenceConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsSetting", (n) -> { this.setWindowsSetting(n.getObjectValue(CloudPcWindowsSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsSettings", (n) -> { this.setWindowsSettings(n.getObjectValue(CloudPcWindowsSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -254,6 +255,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("userExperienceType");
     }
     /**
+     * Gets the userSettingsPersistenceConfiguration property value. Indicates specific settings that enable the persistence of user application settings between Cloud PC sessions. The default value is null. This feature is only available for Cloud PC provisioning policies of type sharedByEntraGroup. Supports $select.
+     * @return a {@link CloudPcUserSettingsPersistenceConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcUserSettingsPersistenceConfiguration getUserSettingsPersistenceConfiguration() {
+        return this.backingStore.get("userSettingsPersistenceConfiguration");
+    }
+    /**
      * Gets the windowsSetting property value. Indicates a specific Windows setting to configure during the creation of Cloud PCs for this provisioning policy. Supports $select.
      * @return a {@link CloudPcWindowsSetting}
      */
@@ -300,6 +309,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
         writer.writeEnumValue("userExperienceType", this.getUserExperienceType());
+        writer.writeObjectValue("userSettingsPersistenceConfiguration", this.getUserSettingsPersistenceConfiguration());
         writer.writeObjectValue("windowsSetting", this.getWindowsSetting());
         writer.writeObjectValue("windowsSettings", this.getWindowsSettings());
     }
@@ -470,6 +480,13 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
      */
     public void setUserExperienceType(@jakarta.annotation.Nullable final CloudPcUserExperienceType value) {
         this.backingStore.set("userExperienceType", value);
+    }
+    /**
+     * Sets the userSettingsPersistenceConfiguration property value. Indicates specific settings that enable the persistence of user application settings between Cloud PC sessions. The default value is null. This feature is only available for Cloud PC provisioning policies of type sharedByEntraGroup. Supports $select.
+     * @param value Value to set for the userSettingsPersistenceConfiguration property.
+     */
+    public void setUserSettingsPersistenceConfiguration(@jakarta.annotation.Nullable final CloudPcUserSettingsPersistenceConfiguration value) {
+        this.backingStore.set("userSettingsPersistenceConfiguration", value);
     }
     /**
      * Sets the windowsSetting property value. Indicates a specific Windows setting to configure during the creation of Cloud PCs for this provisioning policy. Supports $select.

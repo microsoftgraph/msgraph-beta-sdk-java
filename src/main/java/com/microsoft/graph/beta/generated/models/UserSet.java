@@ -36,6 +36,7 @@ public class UserSet implements AdditionalDataHolder, BackedModel, Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.attributeRuleMembers": return new AttributeRuleMembers();
                 case "#microsoft.graph.connectedOrganizationMembers": return new ConnectedOrganizationMembers();
                 case "#microsoft.graph.externalSponsors": return new ExternalSponsors();
                 case "#microsoft.graph.groupMembers": return new GroupMembers();

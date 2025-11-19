@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.PlannerPlan;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.buckets.BucketsRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.details.DetailsRequestBuilder;
+import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.getusagerights.GetUsageRightsRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.movetocontainer.MoveToContainerRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.tasks.TasksRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.unarchive.UnarchiveRequestBuilder;
@@ -49,6 +50,14 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DetailsRequestBuilder details() {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getUsageRights method.
+     * @return a {@link GetUsageRightsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetUsageRightsRequestBuilder getUsageRights() {
+        return new GetUsageRightsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the moveToContainer method.

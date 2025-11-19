@@ -55,7 +55,7 @@ public class SensorCandidate extends Entity implements Parsable {
         return this.backingStore.get("lastSeenDateTime");
     }
     /**
-     * Gets the senseClientVersion property value. The version of the Defender for Identity sensor client.
+     * Gets the senseClientVersion property value. The version of the Defender for Identity sensor client.  Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class SensorCandidate extends Entity implements Parsable {
         this.backingStore.set("lastSeenDateTime", value);
     }
     /**
-     * Sets the senseClientVersion property value. The version of the Defender for Identity sensor client.
+     * Sets the senseClientVersion property value. The version of the Defender for Identity sensor client.  Supports $filter (eq).
      * @param value Value to set for the senseClientVersion property.
      */
     public void setSenseClientVersion(@jakarta.annotation.Nullable final String value) {

@@ -97,21 +97,23 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, AccessReviewInstanceDecisionItem::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property decisions in identityGovernance
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
      * @param body The request body
      * @return a {@link AccessReviewInstanceDecisionItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItem patch(@jakarta.annotation.Nonnull final AccessReviewInstanceDecisionItem body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property decisions in identityGovernance
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewInstanceDecisionItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstancedecisionitem-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public AccessReviewInstanceDecisionItem patch(@jakarta.annotation.Nonnull final AccessReviewInstanceDecisionItem body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -162,7 +164,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Update the navigation property decisions in identityGovernance
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -171,7 +173,7 @@ public class AccessReviewInstanceDecisionItemItemRequestBuilder extends BaseRequ
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property decisions in identityGovernance
+     * Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -39,7 +39,10 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property exportJobs for deviceManagement
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -47,7 +50,10 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property exportJobs for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -58,9 +64,12 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a cloudPcExportJob object. You can download a report by first creating a new cloudPcExportJob resource to initiate downloading. Use this GET operation to verify the exportJobStatus property of the cloudPcExportJob resource. The property becomes completed when the report finishes downloading in the location specified by the exportUrl property.
      * @return a {@link CloudPcExportJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexportjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcExportJob get() {
         return get(null);
     }
@@ -69,9 +78,12 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcExportJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcexportjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcExportJob get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -83,8 +95,11 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link CloudPcExportJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcExportJob patch(@jakarta.annotation.Nonnull final CloudPcExportJob body) {
         return patch(body, null);
     }
@@ -94,8 +109,11 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcExportJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public CloudPcExportJob patch(@jakarta.annotation.Nonnull final CloudPcExportJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -106,8 +124,11 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property exportJobs for deviceManagement
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -115,8 +136,11 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property exportJobs for deviceManagement
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -126,8 +150,11 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a cloudPcExportJob object. You can download a report by first creating a new cloudPcExportJob resource to initiate downloading. Use this GET operation to verify the exportJobStatus property of the cloudPcExportJob resource. The property becomes completed when the report finishes downloading in the location specified by the exportUrl property.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -135,8 +162,11 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a cloudPcExportJob object. You can download a report by first creating a new cloudPcExportJob resource to initiate downloading. Use this GET operation to verify the exportJobStatus property of the cloudPcExportJob resource. The property becomes completed when the report finishes downloading in the location specified by the exportUrl property.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -147,8 +177,11 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property exportJobs in deviceManagement
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPcExportJob body) {
         return toPatchRequestInformation(body, null);
     }
@@ -157,8 +190,11 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final CloudPcExportJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -171,8 +207,11 @@ public class CloudPcExportJobItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CloudPcExportJobItemRequestBuilder}
+     * @deprecated
+     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CloudPcExportJobItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CloudPcExportJobItemRequestBuilder(rawUrl, requestAdapter);

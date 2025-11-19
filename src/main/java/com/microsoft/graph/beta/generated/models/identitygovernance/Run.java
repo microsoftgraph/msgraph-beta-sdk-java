@@ -27,7 +27,7 @@ public class Run extends Entity implements Parsable {
         return new Run();
     }
     /**
-     * Gets the activatedOnScope property value. The scope for which users the workflow runs. The possible values are: allUsers, failedUsers, unknownFutureValue.
+     * Gets the activatedOnScope property value. The scope for which the workflow runs.
      * @return a {@link ActivationScope}
      */
     @jakarta.annotation.Nullable
@@ -204,7 +204,7 @@ public class Run extends Entity implements Parsable {
         writer.writeEnumValue("workflowExecutionType", this.getWorkflowExecutionType());
     }
     /**
-     * Sets the activatedOnScope property value. The scope for which users the workflow runs. The possible values are: allUsers, failedUsers, unknownFutureValue.
+     * Sets the activatedOnScope property value. The scope for which the workflow runs.
      * @param value Value to set for the activatedOnScope property.
      */
     public void setActivatedOnScope(@jakarta.annotation.Nullable final ActivationScope value) {

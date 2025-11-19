@@ -31,7 +31,8 @@ public enum CloudPcReportName implements ValuedEnum {
     TroubleshootRegionalReport("troubleshootRegionalReport"),
     TroubleshootIssueCountReport("troubleshootIssueCountReport"),
     CloudPcInsightReport("cloudPcInsightReport"),
-    RegionalInaccessibleCloudPcTrendReport("regionalInaccessibleCloudPcTrendReport");
+    RegionalInaccessibleCloudPcTrendReport("regionalInaccessibleCloudPcTrendReport"),
+    CloudPcUsageCategoryReport("cloudPcUsageCategoryReport");
     public final String value;
     CloudPcReportName(final String value) {
         this.value = value;
@@ -69,6 +70,7 @@ public enum CloudPcReportName implements ValuedEnum {
             case "troubleshootIssueCountReport": return TroubleshootIssueCountReport;
             case "cloudPcInsightReport": return CloudPcInsightReport;
             case "regionalInaccessibleCloudPcTrendReport": return RegionalInaccessibleCloudPcTrendReport;
+            case "cloudPcUsageCategoryReport": return CloudPcUsageCategoryReport;
             default: return null;
         }
     }

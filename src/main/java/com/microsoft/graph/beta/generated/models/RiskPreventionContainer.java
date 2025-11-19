@@ -85,7 +85,7 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the webApplicationFirewallProviders property value. The webApplicationFirewallProviders property
+     * Gets the webApplicationFirewallProviders property value. Collection of WAF provider configurations registered in the External ID tenant.
      * @return a {@link java.util.List<WebApplicationFirewallProvider>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("webApplicationFirewallProviders");
     }
     /**
-     * Gets the webApplicationFirewallVerifications property value. The webApplicationFirewallVerifications property
+     * Gets the webApplicationFirewallVerifications property value. Collection of verification operations performed for domains or hosts with WAF providers registered in the External ID tenant.
      * @return a {@link java.util.List<WebApplicationFirewallVerificationModel>}
      */
     @jakarta.annotation.Nullable
@@ -142,14 +142,14 @@ public class RiskPreventionContainer implements AdditionalDataHolder, BackedMode
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the webApplicationFirewallProviders property value. The webApplicationFirewallProviders property
+     * Sets the webApplicationFirewallProviders property value. Collection of WAF provider configurations registered in the External ID tenant.
      * @param value Value to set for the webApplicationFirewallProviders property.
      */
     public void setWebApplicationFirewallProviders(@jakarta.annotation.Nullable final java.util.List<WebApplicationFirewallProvider> value) {
         this.backingStore.set("webApplicationFirewallProviders", value);
     }
     /**
-     * Sets the webApplicationFirewallVerifications property value. The webApplicationFirewallVerifications property
+     * Sets the webApplicationFirewallVerifications property value. Collection of verification operations performed for domains or hosts with WAF providers registered in the External ID tenant.
      * @param value Value to set for the webApplicationFirewallVerifications property.
      */
     public void setWebApplicationFirewallVerifications(@jakarta.annotation.Nullable final java.util.List<WebApplicationFirewallVerificationModel> value) {

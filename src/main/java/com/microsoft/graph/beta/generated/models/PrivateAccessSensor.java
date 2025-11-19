@@ -25,7 +25,7 @@ public class PrivateAccessSensor extends Entity implements Parsable {
         return new PrivateAccessSensor();
     }
     /**
-     * Gets the externalIp property value. The externalIp property
+     * Gets the externalIp property value. External IP of sensor.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class PrivateAccessSensor extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isAuditMode property value. The isAuditMode property
+     * Gets the isAuditMode property value. Not Implementated.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class PrivateAccessSensor extends Entity implements Parsable {
         return this.backingStore.get("isAuditMode");
     }
     /**
-     * Gets the isBreakglassEnabled property value. The isBreakglassEnabled property
+     * Gets the isBreakglassEnabled property value. Not Implemented.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class PrivateAccessSensor extends Entity implements Parsable {
         return this.backingStore.get("isBreakglassEnabled");
     }
     /**
-     * Gets the machineName property value. The machineName property
+     * Gets the machineName property value. Machine name of sensor.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class PrivateAccessSensor extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the version property value. The version property
+     * Gets the version property value. Version of sensor.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,28 +102,28 @@ public class PrivateAccessSensor extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the externalIp property value. The externalIp property
+     * Sets the externalIp property value. External IP of sensor.
      * @param value Value to set for the externalIp property.
      */
     public void setExternalIp(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("externalIp", value);
     }
     /**
-     * Sets the isAuditMode property value. The isAuditMode property
+     * Sets the isAuditMode property value. Not Implementated.
      * @param value Value to set for the isAuditMode property.
      */
     public void setIsAuditMode(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isAuditMode", value);
     }
     /**
-     * Sets the isBreakglassEnabled property value. The isBreakglassEnabled property
+     * Sets the isBreakglassEnabled property value. Not Implemented.
      * @param value Value to set for the isBreakglassEnabled property.
      */
     public void setIsBreakglassEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isBreakglassEnabled", value);
     }
     /**
-     * Sets the machineName property value. The machineName property
+     * Sets the machineName property value. Machine name of sensor.
      * @param value Value to set for the machineName property.
      */
     public void setMachineName(@jakarta.annotation.Nullable final String value) {
@@ -137,7 +137,7 @@ public class PrivateAccessSensor extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the version property value. The version property
+     * Sets the version property value. Version of sensor.
      * @param value Value to set for the version property.
      */
     public void setVersion(@jakarta.annotation.Nullable final String value) {

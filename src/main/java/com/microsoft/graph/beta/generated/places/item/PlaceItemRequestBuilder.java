@@ -4,8 +4,13 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Place;
 import com.microsoft.graph.beta.places.item.checkins.CheckInsRequestBuilder;
 import com.microsoft.graph.beta.places.item.descendants.DescendantsRequestBuilder;
+import com.microsoft.graph.beta.places.item.graphbuilding.GraphBuildingRequestBuilder;
+import com.microsoft.graph.beta.places.item.graphdesk.GraphDeskRequestBuilder;
+import com.microsoft.graph.beta.places.item.graphfloor.GraphFloorRequestBuilder;
 import com.microsoft.graph.beta.places.item.graphroom.GraphRoomRequestBuilder;
 import com.microsoft.graph.beta.places.item.graphroomlist.GraphRoomListRequestBuilder;
+import com.microsoft.graph.beta.places.item.graphsection.GraphSectionRequestBuilder;
+import com.microsoft.graph.beta.places.item.graphworkspace.GraphWorkspaceRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -40,6 +45,30 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return new DescendantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Casts the previous resource to building.
+     * @return a {@link GraphBuildingRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphBuildingRequestBuilder graphBuilding() {
+        return new GraphBuildingRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to desk.
+     * @return a {@link GraphDeskRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphDeskRequestBuilder graphDesk() {
+        return new GraphDeskRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to floor.
+     * @return a {@link GraphFloorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphFloorRequestBuilder graphFloor() {
+        return new GraphFloorRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Casts the previous resource to room.
      * @return a {@link GraphRoomRequestBuilder}
      */
@@ -54,6 +83,22 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GraphRoomListRequestBuilder graphRoomList() {
         return new GraphRoomListRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to section.
+     * @return a {@link GraphSectionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphSectionRequestBuilder graphSection() {
+        return new GraphSectionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Casts the previous resource to workspace.
+     * @return a {@link GraphWorkspaceRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GraphWorkspaceRequestBuilder graphWorkspace() {
+        return new GraphWorkspaceRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link PlaceItemRequestBuilder} and sets the default values.

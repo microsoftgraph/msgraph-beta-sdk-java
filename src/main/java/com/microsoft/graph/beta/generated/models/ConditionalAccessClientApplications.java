@@ -77,7 +77,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         return deserializerMap;
     }
     /**
-     * Gets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
+     * Gets the includeServicePrincipals property value. Service principal IDs included in the policy scope or ServicePrincipalsInMyTenant.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         this.backingStore.set("excludeServicePrincipals", value);
     }
     /**
-     * Sets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
+     * Sets the includeServicePrincipals property value. Service principal IDs included in the policy scope or ServicePrincipalsInMyTenant.
      * @param value Value to set for the includeServicePrincipals property.
      */
     public void setIncludeServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {

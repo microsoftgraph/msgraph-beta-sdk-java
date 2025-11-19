@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -185,6 +186,14 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("chatRestrictions");
     }
     /**
+     * Gets the expiryDateTime property value. The expiryDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getExpiryDateTime() {
+        return this.backingStore.get("expiryDateTime");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -210,6 +219,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("audioConferencing", (n) -> { this.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
         deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("chatRestrictions", (n) -> { this.setChatRestrictions(n.getObjectValue(ChatRestrictions::createFromDiscriminatorValue)); });
+        deserializerMap.put("expiryDateTime", (n) -> { this.setExpiryDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("isEndToEndEncryptionEnabled", (n) -> { this.setIsEndToEndEncryptionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isEntryExitAnnounced", (n) -> { this.setIsEntryExitAnnounced(n.getBooleanValue()); });
         deserializerMap.put("joinInformation", (n) -> { this.setJoinInformation(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
@@ -337,6 +347,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
         writer.writeObjectValue("chatRestrictions", this.getChatRestrictions());
+        writer.writeOffsetDateTimeValue("expiryDateTime", this.getExpiryDateTime());
         writer.writeBooleanValue("isEndToEndEncryptionEnabled", this.getIsEndToEndEncryptionEnabled());
         writer.writeBooleanValue("isEntryExitAnnounced", this.getIsEntryExitAnnounced());
         writer.writeObjectValue("joinInformation", this.getJoinInformation());
@@ -481,6 +492,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      */
     public void setChatRestrictions(@jakarta.annotation.Nullable final ChatRestrictions value) {
         this.backingStore.set("chatRestrictions", value);
+    }
+    /**
+     * Sets the expiryDateTime property value. The expiryDateTime property
+     * @param value Value to set for the expiryDateTime property.
+     */
+    public void setExpiryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("expiryDateTime", value);
     }
     /**
      * Sets the isEndToEndEncryptionEnabled property value. Indicates whether end-to-end encryption (E2EE) is enabled for the online meeting.
