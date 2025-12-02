@@ -25,12 +25,21 @@ public class RiskyAgentIdentityBlueprintPrincipal extends RiskyAgent implements 
         return new RiskyAgentIdentityBlueprintPrincipal();
     }
     /**
+     * Gets the agentIdentityBlueprintPrincipal property value. The agentIdentityBlueprintPrincipal property
+     * @return a {@link AgentIdentityBlueprintPrincipal}
+     */
+    @jakarta.annotation.Nullable
+    public AgentIdentityBlueprintPrincipal getAgentIdentityBlueprintPrincipal() {
+        return this.backingStore.get("agentIdentityBlueprintPrincipal");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agentIdentityBlueprintPrincipal", (n) -> { this.setAgentIdentityBlueprintPrincipal(n.getObjectValue(AgentIdentityBlueprintPrincipal::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -40,5 +49,13 @@ public class RiskyAgentIdentityBlueprintPrincipal extends RiskyAgent implements 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("agentIdentityBlueprintPrincipal", this.getAgentIdentityBlueprintPrincipal());
+    }
+    /**
+     * Sets the agentIdentityBlueprintPrincipal property value. The agentIdentityBlueprintPrincipal property
+     * @param value Value to set for the agentIdentityBlueprintPrincipal property.
+     */
+    public void setAgentIdentityBlueprintPrincipal(@jakarta.annotation.Nullable final AgentIdentityBlueprintPrincipal value) {
+        this.backingStore.set("agentIdentityBlueprintPrincipal", value);
     }
 }

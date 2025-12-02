@@ -80,7 +80,7 @@ public class Presence extends Entity implements Parsable {
         return this.backingStore.get("statusMessage");
     }
     /**
-     * Gets the workLocation property value. The workLocation property
+     * Gets the workLocation property value. Represents the users aggregated work location state.
      * @return a {@link UserWorkLocation}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class Presence extends Entity implements Parsable {
         this.backingStore.set("statusMessage", value);
     }
     /**
-     * Sets the workLocation property value. The workLocation property
+     * Sets the workLocation property value. Represents the users aggregated work location state.
      * @param value Value to set for the workLocation property.
      */
     public void setWorkLocation(@jakarta.annotation.Nullable final UserWorkLocation value) {

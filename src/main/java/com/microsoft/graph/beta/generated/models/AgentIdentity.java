@@ -27,14 +27,6 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
         return new AgentIdentity();
     }
     /**
-     * Gets the agentAppId property value. The agentAppId property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getAgentAppId() {
-        return this.backingStore.get("agentAppId");
-    }
-    /**
      * Gets the agentIdentityBlueprintId property value. The appId of the agent identity blueprint that defines the configuration for this agent identity.
      * @return a {@link String}
      */
@@ -57,10 +49,18 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("agentAppId", (n) -> { this.setAgentAppId(n.getStringValue()); });
         deserializerMap.put("agentIdentityBlueprintId", (n) -> { this.setAgentIdentityBlueprintId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the sponsors property value. The sponsors for this agent identity.
+     * @return a {@link java.util.List<DirectoryObject>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DirectoryObject> getSponsors() {
+        return this.backingStore.get("sponsors");
     }
     /**
      * Serializes information the current object
@@ -69,16 +69,9 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeStringValue("agentAppId", this.getAgentAppId());
         writer.writeStringValue("agentIdentityBlueprintId", this.getAgentIdentityBlueprintId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
-    }
-    /**
-     * Sets the agentAppId property value. The agentAppId property
-     * @param value Value to set for the agentAppId property.
-     */
-    public void setAgentAppId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("agentAppId", value);
+        writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
     }
     /**
      * Sets the agentIdentityBlueprintId property value. The appId of the agent identity blueprint that defines the configuration for this agent identity.
@@ -93,5 +86,12 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the sponsors property value. The sponsors for this agent identity.
+     * @param value Value to set for the sponsors property.
+     */
+    public void setSponsors(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
+        this.backingStore.set("sponsors", value);
     }
 }

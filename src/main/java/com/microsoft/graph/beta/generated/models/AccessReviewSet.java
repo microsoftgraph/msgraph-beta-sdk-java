@@ -50,6 +50,7 @@ public class AccessReviewSet extends Entity implements Parsable {
         deserializerMap.put("decisions", (n) -> { this.setDecisions(n.getCollectionOfObjectValues(AccessReviewInstanceDecisionItem::createFromDiscriminatorValue)); });
         deserializerMap.put("definitions", (n) -> { this.setDefinitions(n.getCollectionOfObjectValues(AccessReviewScheduleDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("historyDefinitions", (n) -> { this.setHistoryDefinitions(n.getCollectionOfObjectValues(AccessReviewHistoryDefinition::createFromDiscriminatorValue)); });
+        deserializerMap.put("instances", (n) -> { this.setInstances(n.getCollectionOfObjectValues(AccessReviewInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("policy", (n) -> { this.setPolicy(n.getObjectValue(AccessReviewPolicy::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -60,6 +61,14 @@ public class AccessReviewSet extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<AccessReviewHistoryDefinition> getHistoryDefinitions() {
         return this.backingStore.get("historyDefinitions");
+    }
+    /**
+     * Gets the instances property value. Represents the instance of a review.
+     * @return a {@link java.util.List<AccessReviewInstance>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AccessReviewInstance> getInstances() {
+        return this.backingStore.get("instances");
     }
     /**
      * Gets the policy property value. Resource that enables administrators to manage directory-level access review policies in their tenant.
@@ -79,6 +88,7 @@ public class AccessReviewSet extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("decisions", this.getDecisions());
         writer.writeCollectionOfObjectValues("definitions", this.getDefinitions());
         writer.writeCollectionOfObjectValues("historyDefinitions", this.getHistoryDefinitions());
+        writer.writeCollectionOfObjectValues("instances", this.getInstances());
         writer.writeObjectValue("policy", this.getPolicy());
     }
     /**
@@ -101,6 +111,13 @@ public class AccessReviewSet extends Entity implements Parsable {
      */
     public void setHistoryDefinitions(@jakarta.annotation.Nullable final java.util.List<AccessReviewHistoryDefinition> value) {
         this.backingStore.set("historyDefinitions", value);
+    }
+    /**
+     * Sets the instances property value. Represents the instance of a review.
+     * @param value Value to set for the instances property.
+     */
+    public void setInstances(@jakarta.annotation.Nullable final java.util.List<AccessReviewInstance> value) {
+        this.backingStore.set("instances", value);
     }
     /**
      * Sets the policy property value. Resource that enables administrators to manage directory-level access review policies in their tenant.

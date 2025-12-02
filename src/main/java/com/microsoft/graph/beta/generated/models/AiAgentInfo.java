@@ -25,7 +25,7 @@ public class AiAgentInfo extends AiInteractionEntity implements Parsable {
         return new AiAgentInfo();
     }
     /**
-     * Gets the blueprintId property value. The blueprintId property
+     * Gets the blueprintId property value. Identifier of the parent agent blueprint that defines the identity and configuration of the agent.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class AiAgentInfo extends AiInteractionEntity implements Parsable {
         writer.writeStringValue("blueprintId", this.getBlueprintId());
     }
     /**
-     * Sets the blueprintId property value. The blueprintId property
+     * Sets the blueprintId property value. Identifier of the parent agent blueprint that defines the identity and configuration of the agent.
      * @param value Value to set for the blueprintId property.
      */
     public void setBlueprintId(@jakarta.annotation.Nullable final String value) {

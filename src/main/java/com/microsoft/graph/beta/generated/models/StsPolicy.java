@@ -28,8 +28,10 @@ public class StsPolicy extends PolicyBase implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.activityBasedTimeoutPolicy": return new ActivityBasedTimeoutPolicy();
+                case "#microsoft.graph.b2bManagementPolicy": return new B2bManagementPolicy();
                 case "#microsoft.graph.claimsMappingPolicy": return new ClaimsMappingPolicy();
                 case "#microsoft.graph.homeRealmDiscoveryPolicy": return new HomeRealmDiscoveryPolicy();
+                case "#microsoft.graph.onPremAuthenticationPolicy": return new OnPremAuthenticationPolicy();
                 case "#microsoft.graph.tokenIssuancePolicy": return new TokenIssuancePolicy();
                 case "#microsoft.graph.tokenLifetimePolicy": return new TokenLifetimePolicy();
             }

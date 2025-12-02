@@ -8,6 +8,8 @@ import com.microsoft.graph.beta.solutions.bookingbusinesses.BookingBusinessesReq
 import com.microsoft.graph.beta.solutions.bookingcurrencies.BookingCurrenciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.businessscenarios.BusinessScenariosRequestBuilder;
 import com.microsoft.graph.beta.solutions.businessscenarioswithuniquename.BusinessScenariosWithUniqueNameRequestBuilder;
+import com.microsoft.graph.beta.solutions.migrations.MigrationsRequestBuilder;
+import com.microsoft.graph.beta.solutions.sharepoint.SharePointRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.VirtualEventsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -66,6 +68,22 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BusinessScenariosRequestBuilder businessScenarios() {
         return new BusinessScenariosRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the migrations property of the microsoft.graph.solutionsRoot entity.
+     * @return a {@link MigrationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MigrationsRequestBuilder migrations() {
+        return new MigrationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sharePoint property of the microsoft.graph.solutionsRoot entity.
+     * @return a {@link SharePointRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SharePointRequestBuilder sharePoint() {
+        return new SharePointRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the virtualEvents property of the microsoft.graph.solutionsRoot entity.

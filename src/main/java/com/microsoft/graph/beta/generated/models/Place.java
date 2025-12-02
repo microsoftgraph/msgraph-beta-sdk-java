@@ -54,6 +54,14 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("checkIns");
     }
     /**
+     * Gets the children property value. The children property
+     * @return a {@link java.util.List<Place>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Place> getChildren() {
+        return this.backingStore.get("children");
+    }
+    /**
      * Gets the displayName property value. The name that is associated with the place.
      * @return a {@link String}
      */
@@ -70,13 +78,13 @@ public class Place extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("address", (n) -> { this.setAddress(n.getObjectValue(PhysicalAddress::createFromDiscriminatorValue)); });
         deserializerMap.put("checkIns", (n) -> { this.setCheckIns(n.getCollectionOfObjectValues(CheckInClaim::createFromDiscriminatorValue)); });
+        deserializerMap.put("children", (n) -> { this.setChildren(n.getCollectionOfObjectValues(Place::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("geoCoordinates", (n) -> { this.setGeoCoordinates(n.getObjectValue(OutlookGeoCoordinates::createFromDiscriminatorValue)); });
         deserializerMap.put("isWheelChairAccessible", (n) -> { this.setIsWheelChairAccessible(n.getBooleanValue()); });
         deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
         deserializerMap.put("parentId", (n) -> { this.setParentId(n.getStringValue()); });
         deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
-        deserializerMap.put("placeId", (n) -> { this.setPlaceId(n.getStringValue()); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
@@ -121,14 +129,6 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("phone");
     }
     /**
-     * Gets the placeId property value. An alternate immutable unique identifier of the place. Read-only.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getPlaceId() {
-        return this.backingStore.get("placeId");
-    }
-    /**
      * Gets the tags property value. Custom tags that are associated with the place for categorization or filtering.
      * @return a {@link java.util.List<String>}
      */
@@ -145,13 +145,13 @@ public class Place extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeObjectValue("address", this.getAddress());
         writer.writeCollectionOfObjectValues("checkIns", this.getCheckIns());
+        writer.writeCollectionOfObjectValues("children", this.getChildren());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("geoCoordinates", this.getGeoCoordinates());
         writer.writeBooleanValue("isWheelChairAccessible", this.getIsWheelChairAccessible());
         writer.writeStringValue("label", this.getLabel());
         writer.writeStringValue("parentId", this.getParentId());
         writer.writeStringValue("phone", this.getPhone());
-        writer.writeStringValue("placeId", this.getPlaceId());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
     }
     /**
@@ -167,6 +167,13 @@ public class Place extends Entity implements Parsable {
      */
     public void setCheckIns(@jakarta.annotation.Nullable final java.util.List<CheckInClaim> value) {
         this.backingStore.set("checkIns", value);
+    }
+    /**
+     * Sets the children property value. The children property
+     * @param value Value to set for the children property.
+     */
+    public void setChildren(@jakarta.annotation.Nullable final java.util.List<Place> value) {
+        this.backingStore.set("children", value);
     }
     /**
      * Sets the displayName property value. The name that is associated with the place.
@@ -209,13 +216,6 @@ public class Place extends Entity implements Parsable {
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("phone", value);
-    }
-    /**
-     * Sets the placeId property value. An alternate immutable unique identifier of the place. Read-only.
-     * @param value Value to set for the placeId property.
-     */
-    public void setPlaceId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("placeId", value);
     }
     /**
      * Sets the tags property value. Custom tags that are associated with the place for categorization or filtering.

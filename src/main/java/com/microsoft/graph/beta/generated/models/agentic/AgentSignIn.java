@@ -48,6 +48,22 @@ public class AgentSignIn implements AdditionalDataHolder, BackedModel, Parsable 
         return value;
     }
     /**
+     * Gets the agentSubjectParentId property value. The subject&apos;s parent object ID. This is either the id of the agentIdentity or agentIdentityBlueprint.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAgentSubjectParentId() {
+        return this.backingStore.get("agentSubjectParentId");
+    }
+    /**
+     * Gets the agentSubjectType property value. The agentSubjectType property
+     * @return a {@link AgentType}
+     */
+    @jakarta.annotation.Nullable
+    public AgentType getAgentSubjectType() {
+        return this.backingStore.get("agentSubjectType");
+    }
+    /**
      * Gets the agentType property value. The agentType property
      * @return a {@link AgentType}
      */
@@ -69,7 +85,9 @@ public class AgentSignIn implements AdditionalDataHolder, BackedModel, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("agentSubjectParentId", (n) -> { this.setAgentSubjectParentId(n.getStringValue()); });
+        deserializerMap.put("agentSubjectType", (n) -> { this.setAgentSubjectType(n.getEnumValue(AgentType::forValue)); });
         deserializerMap.put("agentType", (n) -> { this.setAgentType(n.getEnumValue(AgentType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("parentAppId", (n) -> { this.setParentAppId(n.getStringValue()); });
@@ -97,6 +115,8 @@ public class AgentSignIn implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("agentSubjectParentId", this.getAgentSubjectParentId());
+        writer.writeEnumValue("agentSubjectType", this.getAgentSubjectType());
         writer.writeEnumValue("agentType", this.getAgentType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("parentAppId", this.getParentAppId());
@@ -108,6 +128,20 @@ public class AgentSignIn implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the agentSubjectParentId property value. The subject&apos;s parent object ID. This is either the id of the agentIdentity or agentIdentityBlueprint.
+     * @param value Value to set for the agentSubjectParentId property.
+     */
+    public void setAgentSubjectParentId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("agentSubjectParentId", value);
+    }
+    /**
+     * Sets the agentSubjectType property value. The agentSubjectType property
+     * @param value Value to set for the agentSubjectType property.
+     */
+    public void setAgentSubjectType(@jakarta.annotation.Nullable final AgentType value) {
+        this.backingStore.set("agentSubjectType", value);
     }
     /**
      * Sets the agentType property value. The agentType property

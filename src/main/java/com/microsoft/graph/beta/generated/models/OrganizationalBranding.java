@@ -33,6 +33,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("localizations", (n) -> { this.setLocalizations(n.getCollectionOfObjectValues(OrganizationalBrandingLocalization::createFromDiscriminatorValue)); });
+        deserializerMap.put("themes", (n) -> { this.setThemes(n.getCollectionOfObjectValues(OrganizationalBrandingTheme::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -44,6 +45,14 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
         return this.backingStore.get("localizations");
     }
     /**
+     * Gets the themes property value. Collection of branding themes for the tenant.
+     * @return a {@link java.util.List<OrganizationalBrandingTheme>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<OrganizationalBrandingTheme> getThemes() {
+        return this.backingStore.get("themes");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -51,6 +60,7 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("localizations", this.getLocalizations());
+        writer.writeCollectionOfObjectValues("themes", this.getThemes());
     }
     /**
      * Sets the localizations property value. Add different branding based on a locale.
@@ -58,5 +68,12 @@ public class OrganizationalBranding extends OrganizationalBrandingProperties imp
      */
     public void setLocalizations(@jakarta.annotation.Nullable final java.util.List<OrganizationalBrandingLocalization> value) {
         this.backingStore.set("localizations", value);
+    }
+    /**
+     * Sets the themes property value. Collection of branding themes for the tenant.
+     * @param value Value to set for the themes property.
+     */
+    public void setThemes(@jakarta.annotation.Nullable final java.util.List<OrganizationalBrandingTheme> value) {
+        this.backingStore.set("themes", value);
     }
 }

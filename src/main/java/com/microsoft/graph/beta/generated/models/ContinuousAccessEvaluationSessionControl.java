@@ -67,7 +67,7 @@ public class ContinuousAccessEvaluationSessionControl implements AdditionalDataH
         return deserializerMap;
     }
     /**
-     * Gets the mode property value. Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue, strictLocation. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: strictLocation.
+     * Gets the mode property value. Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue, strictLocation. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: strictLocation.
      * @return a {@link ContinuousAccessEvaluationMode}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class ContinuousAccessEvaluationSessionControl implements AdditionalDataH
         this.backingStore = value;
     }
     /**
-     * Sets the mode property value. Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue, strictLocation. Use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: strictLocation.
+     * Sets the mode property value. Specifies continuous access evaluation settings. The possible values are: strictEnforcement, disabled, unknownFutureValue, strictLocation. Use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: strictLocation.
      * @param value Value to set for the mode property.
      */
     public void setMode(@jakarta.annotation.Nullable final ContinuousAccessEvaluationMode value) {

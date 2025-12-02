@@ -57,12 +57,12 @@ public class CloudApplicationReport implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the category property value. The category property
-     * @return a {@link CloudApplicationCategory}
+     * Gets the categories property value. The list of categories for the application. Supported values are: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.
+     * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
-    public CloudApplicationCategory getCategory() {
-        return this.backingStore.get("category");
+    public java.util.List<String> getCategories() {
+        return this.backingStore.get("categories");
     }
     /**
      * Gets the cloudApplicationCatalogId property value. The ID of the application in the SaaS application catalog.
@@ -95,7 +95,7 @@ public class CloudApplicationReport implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
-        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(CloudApplicationCategory::forValue)); });
+        deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("cloudApplicationCatalogId", (n) -> { this.setCloudApplicationCatalogId(n.getStringValue()); });
         deserializerMap.put("complianceScore", (n) -> { this.setComplianceScore(n.getIntegerValue()); });
         deserializerMap.put("deviceCount", (n) -> { this.setDeviceCount(n.getIntegerValue()); });
@@ -224,7 +224,7 @@ public class CloudApplicationReport implements AdditionalDataHolder, BackedModel
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeEnumValue("category", this.getCategory());
+        writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
         writer.writeStringValue("cloudApplicationCatalogId", this.getCloudApplicationCatalogId());
         writer.writeIntegerValue("complianceScore", this.getComplianceScore());
         writer.writeIntegerValue("deviceCount", this.getDeviceCount());
@@ -259,11 +259,11 @@ public class CloudApplicationReport implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the category property value. The category property
-     * @param value Value to set for the category property.
+     * Sets the categories property value. The list of categories for the application. Supported values are: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design &amp; hosting.
+     * @param value Value to set for the categories property.
      */
-    public void setCategory(@jakarta.annotation.Nullable final CloudApplicationCategory value) {
-        this.backingStore.set("category", value);
+    public void setCategories(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("categories", value);
     }
     /**
      * Sets the cloudApplicationCatalogId property value. The ID of the application in the SaaS application catalog.

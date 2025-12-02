@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpo
 
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.assignedusers.AssignedUsersRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.assigneduserswithuserprincipalname.AssignedUsersWithUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.UserSettingsPersistenceDetailRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcProvisioningPolicyAssignment;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -29,6 +30,14 @@ public class CloudPcProvisioningPolicyAssignmentItemRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public AssignedUsersRequestBuilder assignedUsers() {
         return new AssignedUsersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the userSettingsPersistenceDetail property of the microsoft.graph.cloudPcProvisioningPolicyAssignment entity.
+     * @return a {@link UserSettingsPersistenceDetailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UserSettingsPersistenceDetailRequestBuilder userSettingsPersistenceDetail() {
+        return new UserSettingsPersistenceDetailRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the assignedUsers property of the microsoft.graph.cloudPcProvisioningPolicyAssignment entity.

@@ -6,9 +6,10 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AgentType implements ValuedEnum {
     NotAgentic("notAgentic"),
-    AgenticAppBuilder("agenticAppBuilder"),
     AgenticApp("agenticApp"),
     AgenticAppInstance("agenticAppInstance"),
+    AgentIdentityBlueprintPrincipal("agentIdentityBlueprintPrincipal"),
+    AgentIDuser("agentIDuser"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AgentType(final String value) {
@@ -21,9 +22,10 @@ public enum AgentType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "notAgentic": return NotAgentic;
-            case "agenticAppBuilder": return AgenticAppBuilder;
             case "agenticApp": return AgenticApp;
             case "agenticAppInstance": return AgenticAppInstance;
+            case "agentIdentityBlueprintPrincipal": return AgentIdentityBlueprintPrincipal;
+            case "agentIDuser": return AgentIDuser;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

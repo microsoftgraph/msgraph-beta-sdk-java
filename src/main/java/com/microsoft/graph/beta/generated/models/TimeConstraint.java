@@ -69,9 +69,10 @@ public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("activityDomain", (n) -> { this.setActivityDomain(n.getEnumValue(ActivityDomain::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("recurrence", (n) -> { this.setRecurrence(n.getObjectValue(PatternedRecurrence::createFromDiscriminatorValue)); });
         deserializerMap.put("timeSlots", (n) -> { this.setTimeSlots(n.getCollectionOfObjectValues(TimeSlot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -82,6 +83,14 @@ public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsab
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the recurrence property value. The recurrence property
+     * @return a {@link PatternedRecurrence}
+     */
+    @jakarta.annotation.Nullable
+    public PatternedRecurrence getRecurrence() {
+        return this.backingStore.get("recurrence");
     }
     /**
      * Gets the timeSlots property value. The timeSlots property
@@ -99,6 +108,7 @@ public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsab
         Objects.requireNonNull(writer);
         writer.writeEnumValue("activityDomain", this.getActivityDomain());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("recurrence", this.getRecurrence());
         writer.writeCollectionOfObjectValues("timeSlots", this.getTimeSlots());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -130,6 +140,13 @@ public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the recurrence property value. The recurrence property
+     * @param value Value to set for the recurrence property.
+     */
+    public void setRecurrence(@jakarta.annotation.Nullable final PatternedRecurrence value) {
+        this.backingStore.set("recurrence", value);
     }
     /**
      * Sets the timeSlots property value. The timeSlots property

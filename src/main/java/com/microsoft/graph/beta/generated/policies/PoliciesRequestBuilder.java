@@ -10,6 +10,7 @@ import com.microsoft.graph.beta.policies.authenticationflowspolicy.Authenticatio
 import com.microsoft.graph.beta.policies.authenticationmethodspolicy.AuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.beta.policies.authenticationstrengthpolicies.AuthenticationStrengthPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.authorizationpolicy.AuthorizationPolicyRequestBuilder;
+import com.microsoft.graph.beta.policies.b2bmanagementpolicies.B2bManagementPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.b2cauthenticationmethodspolicy.B2cAuthenticationMethodsPolicyRequestBuilder;
 import com.microsoft.graph.beta.policies.claimsmappingpolicies.ClaimsMappingPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.conditionalaccesspolicies.ConditionalAccessPoliciesRequestBuilder;
@@ -25,6 +26,7 @@ import com.microsoft.graph.beta.policies.homerealmdiscoverypolicies.HomeRealmDis
 import com.microsoft.graph.beta.policies.identitysecuritydefaultsenforcementpolicy.IdentitySecurityDefaultsEnforcementPolicyRequestBuilder;
 import com.microsoft.graph.beta.policies.mobileappmanagementpolicies.MobileAppManagementPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.mobiledevicemanagementpolicies.MobileDeviceManagementPoliciesRequestBuilder;
+import com.microsoft.graph.beta.policies.onpremauthenticationpolicies.OnPremAuthenticationPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.permissiongrantpolicies.PermissionGrantPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.permissiongrantpreapprovalpolicies.PermissionGrantPreApprovalPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.rolemanagementpolicies.RoleManagementPoliciesRequestBuilder;
@@ -113,6 +115,14 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AuthorizationPolicyRequestBuilder authorizationPolicy() {
         return new AuthorizationPolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the b2bManagementPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link B2bManagementPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public B2bManagementPoliciesRequestBuilder b2bManagementPolicies() {
+        return new B2bManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the b2cAuthenticationMethodsPolicy property of the microsoft.graph.policyRoot entity.
@@ -233,6 +243,14 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MobileDeviceManagementPoliciesRequestBuilder mobileDeviceManagementPolicies() {
         return new MobileDeviceManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the onPremAuthenticationPolicies property of the microsoft.graph.policyRoot entity.
+     * @return a {@link OnPremAuthenticationPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OnPremAuthenticationPoliciesRequestBuilder onPremAuthenticationPolicies() {
+        return new OnPremAuthenticationPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity.

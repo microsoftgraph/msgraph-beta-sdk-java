@@ -27,7 +27,10 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the linkedEligibleRoleAssignment property of the microsoft.graph.governanceRoleAssignment entity.
      * @return a {@link LinkedEligibleRoleAssignmentRequestBuilder}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public LinkedEligibleRoleAssignmentRequestBuilder linkedEligibleRoleAssignment() {
         return new LinkedEligibleRoleAssignmentRequestBuilder(pathParameters, requestAdapter);
@@ -35,7 +38,10 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the resource property of the microsoft.graph.governanceRoleAssignment entity.
      * @return a {@link ResourceRequestBuilder}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ResourceRequestBuilder resource() {
         return new ResourceRequestBuilder(pathParameters, requestAdapter);
@@ -43,7 +49,10 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the roleDefinition property of the microsoft.graph.governanceRoleAssignment entity.
      * @return a {@link RoleDefinitionRequestBuilder}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleDefinitionRequestBuilder roleDefinition() {
         return new RoleDefinitionRequestBuilder(pathParameters, requestAdapter);
@@ -51,7 +60,10 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the subject property of the microsoft.graph.governanceRoleAssignment entity.
      * @return a {@link SubjectRequestBuilder}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SubjectRequestBuilder subject() {
         return new SubjectRequestBuilder(pathParameters, requestAdapter);
@@ -75,7 +87,10 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * Delete navigation property roleAssignments for privilegedAccess
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -83,7 +98,10 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * Delete navigation property roleAssignments for privilegedAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -94,8 +112,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * The collection of role assignments for the resource.
      * @return a {@link GovernanceRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public GovernanceRoleAssignment get() {
         return get(null);
     }
@@ -104,8 +125,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GovernanceRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public GovernanceRoleAssignment get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -117,8 +141,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @return a {@link GovernanceRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public GovernanceRoleAssignment patch(@jakarta.annotation.Nonnull final GovernanceRoleAssignment body) {
         return patch(body, null);
     }
@@ -128,8 +155,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GovernanceRoleAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public GovernanceRoleAssignment patch(@jakarta.annotation.Nonnull final GovernanceRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -140,8 +170,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * Delete navigation property roleAssignments for privilegedAccess
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -149,8 +182,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * Delete navigation property roleAssignments for privilegedAccess
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -160,8 +196,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
     /**
      * The collection of role assignments for the resource.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -169,8 +208,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * The collection of role assignments for the resource.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -181,8 +223,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * Update the navigation property roleAssignments in privilegedAccess
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GovernanceRoleAssignment body) {
         return toPatchRequestInformation(body, null);
     }
@@ -191,8 +236,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final GovernanceRoleAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -205,8 +253,11 @@ public class GovernanceRoleAssignmentItemRequestBuilder extends BaseRequestBuild
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link GovernanceRoleAssignmentItemRequestBuilder}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GovernanceRoleAssignmentItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new GovernanceRoleAssignmentItemRequestBuilder(rawUrl, requestAdapter);

@@ -49,6 +49,14 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
         return value;
     }
     /**
+     * Gets the agentIdRiskLevels property value. Agent identity risk levels included in the policy. Possible values are: low, medium, high, unknownFutureValue. This enumeration is multivalued.
+     * @return a {@link EnumSet<ConditionalAccessAgentIdRiskLevels>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<ConditionalAccessAgentIdRiskLevels> getAgentIdRiskLevels() {
+        return this.backingStore.get("agentIdRiskLevels");
+    }
+    /**
      * Gets the applications property value. Applications and user actions included in and excluded from the policy. Required.
      * @return a {@link ConditionalAccessApplications}
      */
@@ -110,7 +118,8 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(15);
+        deserializerMap.put("agentIdRiskLevels", (n) -> { this.setAgentIdRiskLevels(n.getEnumSetValue(ConditionalAccessAgentIdRiskLevels::forValue)); });
         deserializerMap.put("applications", (n) -> { this.setApplications(n.getObjectValue(ConditionalAccessApplications::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationFlows", (n) -> { this.setAuthenticationFlows(n.getObjectValue(ConditionalAccessAuthenticationFlows::createFromDiscriminatorValue)); });
         deserializerMap.put("clientApplications", (n) -> { this.setClientApplications(n.getObjectValue(ConditionalAccessClientApplications::createFromDiscriminatorValue)); });
@@ -197,6 +206,7 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumSetValue("agentIdRiskLevels", this.getAgentIdRiskLevels());
         writer.writeObjectValue("applications", this.getApplications());
         writer.writeObjectValue("authenticationFlows", this.getAuthenticationFlows());
         writer.writeObjectValue("clientApplications", this.getClientApplications());
@@ -219,6 +229,13 @@ public class ConditionalAccessConditionSet implements AdditionalDataHolder, Back
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the agentIdRiskLevels property value. Agent identity risk levels included in the policy. Possible values are: low, medium, high, unknownFutureValue. This enumeration is multivalued.
+     * @param value Value to set for the agentIdRiskLevels property.
+     */
+    public void setAgentIdRiskLevels(@jakarta.annotation.Nullable final EnumSet<ConditionalAccessAgentIdRiskLevels> value) {
+        this.backingStore.set("agentIdRiskLevels", value);
     }
     /**
      * Sets the applications property value. Applications and user actions included in and excluded from the policy. Required.

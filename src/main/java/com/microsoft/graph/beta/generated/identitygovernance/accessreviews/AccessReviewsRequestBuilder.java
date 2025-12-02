@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.identitygovernance.accessreviews;
 import com.microsoft.graph.beta.identitygovernance.accessreviews.decisions.DecisionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.accessreviews.definitions.DefinitionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.accessreviews.historydefinitions.HistoryDefinitionsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.accessreviews.instances.InstancesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.accessreviews.policy.PolicyRequestBuilder;
 import com.microsoft.graph.beta.models.AccessReviewSet;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -47,6 +48,14 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HistoryDefinitionsRequestBuilder historyDefinitions() {
         return new HistoryDefinitionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the instances property of the microsoft.graph.accessReviewSet entity.
+     * @return a {@link InstancesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public InstancesRequestBuilder instances() {
+        return new InstancesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the policy property of the microsoft.graph.accessReviewSet entity.

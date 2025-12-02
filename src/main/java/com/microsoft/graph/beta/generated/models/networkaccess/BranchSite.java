@@ -78,11 +78,20 @@ public class BranchSite extends Entity implements Parsable {
         deserializerMap.put("connectivityState", (n) -> { this.setConnectivityState(n.getEnumValue(ConnectivityState::forValue)); });
         deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
         deserializerMap.put("deviceLinks", (n) -> { this.setDeviceLinks(n.getCollectionOfObjectValues(DeviceLink::createFromDiscriminatorValue)); });
+        deserializerMap.put("forwardingProfiles", (n) -> { this.setForwardingProfiles(n.getCollectionOfObjectValues(ForwardingProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("region", (n) -> { this.setRegion(n.getEnumValue(Region::forValue)); });
         deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the forwardingProfiles property value. Each forwarding profile associated with a branch site is specified. Supports $expand.
+     * @return a {@link java.util.List<ForwardingProfile>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ForwardingProfile> getForwardingProfiles() {
+        return this.backingStore.get("forwardingProfiles");
     }
     /**
      * Gets the lastModifiedDateTime property value. last modified time.
@@ -128,6 +137,7 @@ public class BranchSite extends Entity implements Parsable {
         writer.writeEnumValue("connectivityState", this.getConnectivityState());
         writer.writeStringValue("country", this.getCountry());
         writer.writeCollectionOfObjectValues("deviceLinks", this.getDeviceLinks());
+        writer.writeCollectionOfObjectValues("forwardingProfiles", this.getForwardingProfiles());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeEnumValue("region", this.getRegion());
@@ -167,6 +177,13 @@ public class BranchSite extends Entity implements Parsable {
      */
     public void setDeviceLinks(@jakarta.annotation.Nullable final java.util.List<DeviceLink> value) {
         this.backingStore.set("deviceLinks", value);
+    }
+    /**
+     * Sets the forwardingProfiles property value. Each forwarding profile associated with a branch site is specified. Supports $expand.
+     * @param value Value to set for the forwardingProfiles property.
+     */
+    public void setForwardingProfiles(@jakarta.annotation.Nullable final java.util.List<ForwardingProfile> value) {
+        this.backingStore.set("forwardingProfiles", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. last modified time.

@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.places.item.graphworkspace;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Workspace;
 import com.microsoft.graph.beta.places.item.graphworkspace.checkins.CheckInsRequestBuilder;
+import com.microsoft.graph.beta.places.item.graphworkspace.children.ChildrenRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class GraphWorkspaceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CheckInsRequestBuilder checkIns() {
         return new CheckInsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the children property of the microsoft.graph.place entity.
+     * @return a {@link ChildrenRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ChildrenRequestBuilder children() {
+        return new ChildrenRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link GraphWorkspaceRequestBuilder} and sets the default values.

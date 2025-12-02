@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.places;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Place;
 import com.microsoft.graph.beta.places.count.CountRequestBuilder;
+import com.microsoft.graph.beta.places.getoperationwithid.GetOperationWithIdRequestBuilder;
 import com.microsoft.graph.beta.places.graphbuilding.GraphBuildingRequestBuilder;
 import com.microsoft.graph.beta.places.graphdesk.GraphDeskRequestBuilder;
 import com.microsoft.graph.beta.places.graphfloor.GraphFloorRequestBuilder;
@@ -11,6 +12,7 @@ import com.microsoft.graph.beta.places.graphroomlist.GraphRoomListRequestBuilder
 import com.microsoft.graph.beta.places.graphsection.GraphSectionRequestBuilder;
 import com.microsoft.graph.beta.places.graphworkspace.GraphWorkspaceRequestBuilder;
 import com.microsoft.graph.beta.places.item.PlaceItemRequestBuilder;
+import com.microsoft.graph.beta.places.listoperations.ListOperationsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -93,6 +95,14 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
         return new GraphWorkspaceRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the listOperations method.
+     * @return a {@link ListOperationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ListOperationsRequestBuilder listOperations() {
+        return new ListOperationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the collection of place entities.
      * @param placeId The unique identifier of place
      * @return a {@link PlaceItemRequestBuilder}
@@ -119,6 +129,16 @@ public class PlacesRequestBuilder extends BaseRequestBuilder {
      */
     public PlacesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
         super(requestAdapter, "{+baseurl}/places", rawUrl);
+    }
+    /**
+     * Provides operations to call the getOperation method.
+     * @param id Usage: id=&apos;{id}&apos;
+     * @return a {@link GetOperationWithIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetOperationWithIdRequestBuilder getOperationWithId(@jakarta.annotation.Nonnull final String id) {
+        Objects.requireNonNull(id);
+        return new GetOperationWithIdRequestBuilder(pathParameters, requestAdapter, id);
     }
     /**
      * Create a new place object. You can also use this method to create the following child object types: building, floor, section, room, workspace, or desk.

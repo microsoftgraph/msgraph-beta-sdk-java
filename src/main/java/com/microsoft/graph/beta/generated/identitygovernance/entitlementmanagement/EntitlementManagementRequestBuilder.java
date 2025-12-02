@@ -12,8 +12,10 @@ import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accessp
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageresourcerolescopes.AccessPackageResourceRoleScopesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageresources.AccessPackageResourcesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackages.AccessPackagesRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackagesuggestions.AccessPackageSuggestionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackageswithuniquename.AccessPackagesWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.assignmentrequests.AssignmentRequestsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.availableaccesspackages.AvailableAccessPackagesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.subjects.SubjectsRequestBuilder;
@@ -127,12 +129,28 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
         return new AccessPackagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the accessPackageSuggestions property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link AccessPackageSuggestionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AccessPackageSuggestionsRequestBuilder accessPackageSuggestions() {
+        return new AccessPackageSuggestionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the assignmentRequests property of the microsoft.graph.entitlementManagement entity.
      * @return a {@link AssignmentRequestsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public AssignmentRequestsRequestBuilder assignmentRequests() {
         return new AssignmentRequestsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the availableAccessPackages property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link AvailableAccessPackagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AvailableAccessPackagesRequestBuilder availableAccessPackages() {
+        return new AvailableAccessPackagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.

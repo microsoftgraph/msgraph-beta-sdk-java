@@ -43,6 +43,7 @@ import com.microsoft.graph.beta.users.item.exportdeviceandappmanagementdata.Expo
 import com.microsoft.graph.beta.users.item.exportdeviceandappmanagementdatawithskipwithtop.ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder;
 import com.microsoft.graph.beta.users.item.exportpersonaldata.ExportPersonalDataRequestBuilder;
 import com.microsoft.graph.beta.users.item.extensions.ExtensionsRequestBuilder;
+import com.microsoft.graph.beta.users.item.findmeetinglocations.FindMeetingLocationsRequestBuilder;
 import com.microsoft.graph.beta.users.item.findmeetingtimes.FindMeetingTimesRequestBuilder;
 import com.microsoft.graph.beta.users.item.findroomlists.FindRoomListsRequestBuilder;
 import com.microsoft.graph.beta.users.item.findrooms.FindRoomsRequestBuilder;
@@ -443,6 +444,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ExtensionsRequestBuilder extensions() {
         return new ExtensionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the findMeetingLocations method.
+     * @return a {@link FindMeetingLocationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public FindMeetingLocationsRequestBuilder findMeetingLocations() {
+        return new FindMeetingLocationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the findMeetingTimes method.

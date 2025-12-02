@@ -36,12 +36,8 @@ public class AccessReviewDataUploadTriggerCallbackData extends CustomExtensionDa
         deserializerMap.put("permissionId", (n) -> { this.setPermissionId(n.getStringValue()); });
         deserializerMap.put("permissionName", (n) -> { this.setPermissionName(n.getStringValue()); });
         deserializerMap.put("permissionType", (n) -> { this.setPermissionType(n.getStringValue()); });
-        deserializerMap.put("principalAADId", (n) -> { this.setPrincipalAADId(n.getStringValue()); });
-        deserializerMap.put("resourceDescription", (n) -> { this.setResourceDescription(n.getStringValue()); });
-        deserializerMap.put("resourceId", (n) -> { this.setResourceId(n.getStringValue()); });
-        deserializerMap.put("resourceName", (n) -> { this.setResourceName(n.getStringValue()); });
-        deserializerMap.put("resourceOwners", (n) -> { this.setResourceOwners(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getStringValue()); });
+        deserializerMap.put("principalId", (n) -> { this.setPrincipalId(n.getStringValue()); });
+        deserializerMap.put("principalType", (n) -> { this.setPrincipalType(n.getEnumValue(PrincipalType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -77,52 +73,20 @@ public class AccessReviewDataUploadTriggerCallbackData extends CustomExtensionDa
         return this.backingStore.get("permissionType");
     }
     /**
-     * Gets the principalAADId property value. The principalAADId property
+     * Gets the principalId property value. The id of the principal who has permissions on the custom data provided resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public String getPrincipalAADId() {
-        return this.backingStore.get("principalAADId");
+    public String getPrincipalId() {
+        return this.backingStore.get("principalId");
     }
     /**
-     * Gets the resourceDescription property value. The resourceDescription property
-     * @return a {@link String}
+     * Gets the principalType property value. The principalType property
+     * @return a {@link PrincipalType}
      */
     @jakarta.annotation.Nullable
-    public String getResourceDescription() {
-        return this.backingStore.get("resourceDescription");
-    }
-    /**
-     * Gets the resourceId property value. The resourceId property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getResourceId() {
-        return this.backingStore.get("resourceId");
-    }
-    /**
-     * Gets the resourceName property value. The resourceName property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getResourceName() {
-        return this.backingStore.get("resourceName");
-    }
-    /**
-     * Gets the resourceOwners property value. The resourceOwners property
-     * @return a {@link java.util.List<String>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<String> getResourceOwners() {
-        return this.backingStore.get("resourceOwners");
-    }
-    /**
-     * Gets the resourceType property value. The resourceType property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getResourceType() {
-        return this.backingStore.get("resourceType");
+    public PrincipalType getPrincipalType() {
+        return this.backingStore.get("principalType");
     }
     /**
      * Serializes information the current object
@@ -135,12 +99,8 @@ public class AccessReviewDataUploadTriggerCallbackData extends CustomExtensionDa
         writer.writeStringValue("permissionId", this.getPermissionId());
         writer.writeStringValue("permissionName", this.getPermissionName());
         writer.writeStringValue("permissionType", this.getPermissionType());
-        writer.writeStringValue("principalAADId", this.getPrincipalAADId());
-        writer.writeStringValue("resourceDescription", this.getResourceDescription());
-        writer.writeStringValue("resourceId", this.getResourceId());
-        writer.writeStringValue("resourceName", this.getResourceName());
-        writer.writeCollectionOfPrimitiveValues("resourceOwners", this.getResourceOwners());
-        writer.writeStringValue("resourceType", this.getResourceType());
+        writer.writeStringValue("principalId", this.getPrincipalId());
+        writer.writeEnumValue("principalType", this.getPrincipalType());
     }
     /**
      * Sets the permissionDescription property value. A description for the permission.
@@ -171,45 +131,17 @@ public class AccessReviewDataUploadTriggerCallbackData extends CustomExtensionDa
         this.backingStore.set("permissionType", value);
     }
     /**
-     * Sets the principalAADId property value. The principalAADId property
-     * @param value Value to set for the principalAADId property.
+     * Sets the principalId property value. The id of the principal who has permissions on the custom data provided resource.
+     * @param value Value to set for the principalId property.
      */
-    public void setPrincipalAADId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("principalAADId", value);
+    public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("principalId", value);
     }
     /**
-     * Sets the resourceDescription property value. The resourceDescription property
-     * @param value Value to set for the resourceDescription property.
+     * Sets the principalType property value. The principalType property
+     * @param value Value to set for the principalType property.
      */
-    public void setResourceDescription(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("resourceDescription", value);
-    }
-    /**
-     * Sets the resourceId property value. The resourceId property
-     * @param value Value to set for the resourceId property.
-     */
-    public void setResourceId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("resourceId", value);
-    }
-    /**
-     * Sets the resourceName property value. The resourceName property
-     * @param value Value to set for the resourceName property.
-     */
-    public void setResourceName(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("resourceName", value);
-    }
-    /**
-     * Sets the resourceOwners property value. The resourceOwners property
-     * @param value Value to set for the resourceOwners property.
-     */
-    public void setResourceOwners(@jakarta.annotation.Nullable final java.util.List<String> value) {
-        this.backingStore.set("resourceOwners", value);
-    }
-    /**
-     * Sets the resourceType property value. The resourceType property
-     * @param value Value to set for the resourceType property.
-     */
-    public void setResourceType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("resourceType", value);
+    public void setPrincipalType(@jakarta.annotation.Nullable final PrincipalType value) {
+        this.backingStore.set("principalType", value);
     }
 }

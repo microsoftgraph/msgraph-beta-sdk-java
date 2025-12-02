@@ -35,16 +35,18 @@ public class ClearLocationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/presences/{presence%2Did}/clearLocation", rawUrl);
     }
     /**
-     * Invoke action clearLocation
+     * Clear the work location signals for a user, including both the manual and automatic layers for the current date.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/presence-clearlocation?view=graph-rest-beta">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Invoke action clearLocation
+     * Clear the work location signals for a user, including both the manual and automatic layers for the current date.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/presence-clearlocation?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
@@ -53,7 +55,7 @@ public class ClearLocationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action clearLocation
+     * Clear the work location signals for a user, including both the manual and automatic layers for the current date.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +63,7 @@ public class ClearLocationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action clearLocation
+     * Clear the work location signals for a user, including both the manual and automatic layers for the current date.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
