@@ -31,7 +31,16 @@ public class MobileDeviceManagementPolicy extends MobilityManagementPolicy imple
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("isMdmEnrollmentDuringRegistrationDisabled", (n) -> { this.setIsMdmEnrollmentDuringRegistrationDisabled(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isMdmEnrollmentDuringRegistrationDisabled property value. Controls the option if users in an automatic enrollment configuration on Microsoft Entra registered devices are prompted to MDM enroll their device in the Entra account registration flow.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsMdmEnrollmentDuringRegistrationDisabled() {
+        return this.backingStore.get("isMdmEnrollmentDuringRegistrationDisabled");
     }
     /**
      * Serializes information the current object
@@ -40,5 +49,13 @@ public class MobileDeviceManagementPolicy extends MobilityManagementPolicy imple
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeBooleanValue("isMdmEnrollmentDuringRegistrationDisabled", this.getIsMdmEnrollmentDuringRegistrationDisabled());
+    }
+    /**
+     * Sets the isMdmEnrollmentDuringRegistrationDisabled property value. Controls the option if users in an automatic enrollment configuration on Microsoft Entra registered devices are prompted to MDM enroll their device in the Entra account registration flow.
+     * @param value Value to set for the isMdmEnrollmentDuringRegistrationDisabled property.
+     */
+    public void setIsMdmEnrollmentDuringRegistrationDisabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isMdmEnrollmentDuringRegistrationDisabled", value);
     }
 }

@@ -25,7 +25,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
         return new CertificateBasedAuthConfiguration();
     }
     /**
-     * Gets the certificateAuthorities property value. Collection of certificate authorities which creates a trusted certificate chain.
+     * Gets the certificateAuthorities property value. Collection of certificate authorities that creates a trusted certificate chain.
      * @return a {@link java.util.List<CertificateAuthority>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class CertificateBasedAuthConfiguration extends Entity implements Parsabl
         writer.writeCollectionOfObjectValues("certificateAuthorities", this.getCertificateAuthorities());
     }
     /**
-     * Sets the certificateAuthorities property value. Collection of certificate authorities which creates a trusted certificate chain.
+     * Sets the certificateAuthorities property value. Collection of certificate authorities that creates a trusted certificate chain.
      * @param value Value to set for the certificateAuthorities property.
      */
     public void setCertificateAuthorities(@jakarta.annotation.Nullable final java.util.List<CertificateAuthority> value) {

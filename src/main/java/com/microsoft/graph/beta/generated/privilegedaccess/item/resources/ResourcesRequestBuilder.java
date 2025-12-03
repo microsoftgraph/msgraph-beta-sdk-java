@@ -27,7 +27,10 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,7 +38,10 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the register method.
      * @return a {@link RegisterRequestBuilder}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RegisterRequestBuilder register() {
         return new RegisterRequestBuilder(pathParameters, requestAdapter);
@@ -44,8 +50,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the resources property of the microsoft.graph.privilegedAccess entity.
      * @param governanceResourceId The unique identifier of governanceResource
      * @return a {@link GovernanceResourceItemRequestBuilder}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GovernanceResourceItemRequestBuilder byGovernanceResourceId(@jakarta.annotation.Nonnull final String governanceResourceId) {
         Objects.requireNonNull(governanceResourceId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -72,8 +81,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * A collection of resources for the provider.
      * @return a {@link GovernanceResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public GovernanceResourceCollectionResponse get() {
         return get(null);
     }
@@ -82,8 +94,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GovernanceResourceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public GovernanceResourceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -95,8 +110,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link GovernanceResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public GovernanceResource post(@jakarta.annotation.Nonnull final GovernanceResource body) {
         return post(body, null);
     }
@@ -106,8 +124,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GovernanceResource}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public GovernanceResource post(@jakarta.annotation.Nonnull final GovernanceResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -118,8 +139,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of resources for the provider.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -127,8 +151,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * A collection of resources for the provider.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -139,8 +166,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to resources for privilegedAccess
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GovernanceResource body) {
         return toPostRequestInformation(body, null);
     }
@@ -149,8 +179,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GovernanceResource body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -163,8 +196,11 @@ public class ResourcesRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ResourcesRequestBuilder}
+     * @deprecated
+     * The PIM Iteration 2 beta API is deprecated and will be removed on October 28, 2026. Please migrate to PIM Iteration 3 API. as of 2025-10/PIM_Iteration2_Deprecation on 2025-10-27 and will be removed 2026-10-28
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ResourcesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ResourcesRequestBuilder(rawUrl, requestAdapter);

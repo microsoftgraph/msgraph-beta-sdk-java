@@ -123,6 +123,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("externalGroupId", (n) -> { this.setExternalGroupId(n.getUUIDValue()); });
+        deserializerMap.put("informationBarrier", (n) -> { this.setInformationBarrier(n.getObjectValue(InformationBarrier::createFromDiscriminatorValue)); });
         deserializerMap.put("isItemVersioningEnabled", (n) -> { this.setIsItemVersioningEnabled(n.getBooleanValue()); });
         deserializerMap.put("itemMajorVersionLimit", (n) -> { this.setItemMajorVersionLimit(n.getIntegerValue()); });
         deserializerMap.put("lockState", (n) -> { this.setLockState(n.getEnumValue(SiteLockState::forValue)); });
@@ -137,6 +138,14 @@ public class FileStorageContainer extends Entity implements Parsable {
         deserializerMap.put("storageUsedInBytes", (n) -> { this.setStorageUsedInBytes(n.getLongValue()); });
         deserializerMap.put("viewpoint", (n) -> { this.setViewpoint(n.getObjectValue(FileStorageContainerViewpoint::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the informationBarrier property value. Information barrier of a fileStorageContainer. Read-write.
+     * @return a {@link InformationBarrier}
+     */
+    @jakarta.annotation.Nullable
+    public InformationBarrier getInformationBarrier() {
+        return this.backingStore.get("informationBarrier");
     }
     /**
      * Gets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
@@ -259,6 +268,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeUUIDValue("externalGroupId", this.getExternalGroupId());
+        writer.writeObjectValue("informationBarrier", this.getInformationBarrier());
         writer.writeBooleanValue("isItemVersioningEnabled", this.getIsItemVersioningEnabled());
         writer.writeIntegerValue("itemMajorVersionLimit", this.getItemMajorVersionLimit());
         writer.writeEnumValue("lockState", this.getLockState());
@@ -342,6 +352,13 @@ public class FileStorageContainer extends Entity implements Parsable {
      */
     public void setExternalGroupId(@jakarta.annotation.Nullable final UUID value) {
         this.backingStore.set("externalGroupId", value);
+    }
+    /**
+     * Sets the informationBarrier property value. Information barrier of a fileStorageContainer. Read-write.
+     * @param value Value to set for the informationBarrier property.
+     */
+    public void setInformationBarrier(@jakarta.annotation.Nullable final InformationBarrier value) {
+        this.backingStore.set("informationBarrier", value);
     }
     /**
      * Sets the isItemVersioningEnabled property value. The isItemVersioningEnabled property

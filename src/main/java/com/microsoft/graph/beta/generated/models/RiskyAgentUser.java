@@ -25,12 +25,21 @@ public class RiskyAgentUser extends RiskyAgent implements Parsable {
         return new RiskyAgentUser();
     }
     /**
+     * Gets the agentUser property value. The agentUser property
+     * @return a {@link AgentUser}
+     */
+    @jakarta.annotation.Nullable
+    public AgentUser getAgentUser() {
+        return this.backingStore.get("agentUser");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agentUser", (n) -> { this.setAgentUser(n.getObjectValue(AgentUser::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -40,5 +49,13 @@ public class RiskyAgentUser extends RiskyAgent implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("agentUser", this.getAgentUser());
+    }
+    /**
+     * Sets the agentUser property value. The agentUser property
+     * @param value Value to set for the agentUser property.
+     */
+    public void setAgentUser(@jakarta.annotation.Nullable final AgentUser value) {
+        this.backingStore.set("agentUser", value);
     }
 }

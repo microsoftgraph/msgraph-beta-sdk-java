@@ -43,7 +43,7 @@ public class MicrosoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWi
         super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.getDeviceUsageSummary(startDateTime={startDateTime},endDateTime={endDateTime},activityPivotDateTime={activityPivotDateTime})", rawUrl);
     }
     /**
-     * Get a summary of device onboarding and offboarding within a specified timeframe. This summary includes the total number of devices, active devices, and inactive devices.
+     * Get a summary of device onboarding and offboarding within a specified timeframe as logged in Global Secure Access. This summary includes the total number of devices, active devices, and inactive devices.
      * @return a {@link DeviceUsageSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -52,7 +52,7 @@ public class MicrosoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWi
         return get(null);
     }
     /**
-     * Get a summary of device onboarding and offboarding within a specified timeframe. This summary includes the total number of devices, active devices, and inactive devices.
+     * Get a summary of device onboarding and offboarding within a specified timeframe as logged in Global Secure Access. This summary includes the total number of devices, active devices, and inactive devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceUsageSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -65,7 +65,7 @@ public class MicrosoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWi
         return this.requestAdapter.send(requestInfo, errorMapping, DeviceUsageSummary::createFromDiscriminatorValue);
     }
     /**
-     * Get a summary of device onboarding and offboarding within a specified timeframe. This summary includes the total number of devices, active devices, and inactive devices.
+     * Get a summary of device onboarding and offboarding within a specified timeframe as logged in Global Secure Access. This summary includes the total number of devices, active devices, and inactive devices.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class MicrosoftGraphNetworkaccessGetDeviceUsageSummaryWithStartDateTimeWi
         return toGetRequestInformation(null);
     }
     /**
-     * Get a summary of device onboarding and offboarding within a specified timeframe. This summary includes the total number of devices, active devices, and inactive devices.
+     * Get a summary of device onboarding and offboarding within a specified timeframe as logged in Global Secure Access. This summary includes the total number of devices, active devices, and inactive devices.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -35,6 +35,8 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
         deserializerMap.put("query", (n) -> { this.setQuery(n.getStringValue()); });
         deserializerMap.put("queryRoot", (n) -> { this.setQueryRoot(n.getStringValue()); });
         deserializerMap.put("queryType", (n) -> { this.setQueryType(n.getStringValue()); });
+        deserializerMap.put("reviewerId", (n) -> { this.setReviewerId(n.getStringValue()); });
+        deserializerMap.put("scopeType", (n) -> { this.setScopeType(n.getEnumValue(AccessReviewReviewerScopeType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -62,6 +64,22 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
         return this.backingStore.get("queryType");
     }
     /**
+     * Gets the reviewerId property value. The reviewerId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getReviewerId() {
+        return this.backingStore.get("reviewerId");
+    }
+    /**
+     * Gets the scopeType property value. The scopeType property
+     * @return a {@link AccessReviewReviewerScopeType}
+     */
+    @jakarta.annotation.Nullable
+    public AccessReviewReviewerScopeType getScopeType() {
+        return this.backingStore.get("scopeType");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -71,6 +89,8 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
         writer.writeStringValue("query", this.getQuery());
         writer.writeStringValue("queryRoot", this.getQueryRoot());
         writer.writeStringValue("queryType", this.getQueryType());
+        writer.writeStringValue("reviewerId", this.getReviewerId());
+        writer.writeEnumValue("scopeType", this.getScopeType());
     }
     /**
      * Sets the query property value. The query specifying who will be the reviewer.
@@ -92,5 +112,19 @@ public class AccessReviewReviewerScope extends AccessReviewScope implements Pars
      */
     public void setQueryType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("queryType", value);
+    }
+    /**
+     * Sets the reviewerId property value. The reviewerId property
+     * @param value Value to set for the reviewerId property.
+     */
+    public void setReviewerId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("reviewerId", value);
+    }
+    /**
+     * Sets the scopeType property value. The scopeType property
+     * @param value Value to set for the scopeType property.
+     */
+    public void setScopeType(@jakarta.annotation.Nullable final AccessReviewReviewerScopeType value) {
+        this.backingStore.set("scopeType", value);
     }
 }

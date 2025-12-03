@@ -186,7 +186,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("chatRestrictions");
     }
     /**
-     * Gets the expiryDateTime property value. The expiryDateTime property
+     * Gets the expiryDateTime property value. Indicates the date and time when the meeting resource expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -226,6 +226,8 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("joinMeetingIdSettings", (n) -> { this.setJoinMeetingIdSettings(n.getObjectValue(JoinMeetingIdSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("joinWebUrl", (n) -> { this.setJoinWebUrl(n.getStringValue()); });
         deserializerMap.put("lobbyBypassSettings", (n) -> { this.setLobbyBypassSettings(n.getObjectValue(LobbyBypassSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("meetingOptionsWebUrl", (n) -> { this.setMeetingOptionsWebUrl(n.getStringValue()); });
+        deserializerMap.put("meetingSpokenLanguageTag", (n) -> { this.setMeetingSpokenLanguageTag(n.getStringValue()); });
         deserializerMap.put("recordAutomatically", (n) -> { this.setRecordAutomatically(n.getBooleanValue()); });
         deserializerMap.put("shareMeetingChatHistoryDefault", (n) -> { this.setShareMeetingChatHistoryDefault(n.getEnumValue(MeetingChatHistoryDefaultMode::forValue)); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getStringValue()); });
@@ -280,6 +282,22 @@ public class OnlineMeetingBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public LobbyBypassSettings getLobbyBypassSettings() {
         return this.backingStore.get("lobbyBypassSettings");
+    }
+    /**
+     * Gets the meetingOptionsWebUrl property value. Provides the URL to the Teams meeting options page for the specified meeting. This link allows only the organizer to configure meeting settings.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMeetingOptionsWebUrl() {
+        return this.backingStore.get("meetingOptionsWebUrl");
+    }
+    /**
+     * Gets the meetingSpokenLanguageTag property value. Specifies the spoken language used during the meeting for recording and transcription purposes.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMeetingSpokenLanguageTag() {
+        return this.backingStore.get("meetingSpokenLanguageTag");
     }
     /**
      * Gets the recordAutomatically property value. Indicates whether to record the meeting automatically.
@@ -354,6 +372,8 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeObjectValue("joinMeetingIdSettings", this.getJoinMeetingIdSettings());
         writer.writeStringValue("joinWebUrl", this.getJoinWebUrl());
         writer.writeObjectValue("lobbyBypassSettings", this.getLobbyBypassSettings());
+        writer.writeStringValue("meetingOptionsWebUrl", this.getMeetingOptionsWebUrl());
+        writer.writeStringValue("meetingSpokenLanguageTag", this.getMeetingSpokenLanguageTag());
         writer.writeBooleanValue("recordAutomatically", this.getRecordAutomatically());
         writer.writeEnumValue("shareMeetingChatHistoryDefault", this.getShareMeetingChatHistoryDefault());
         writer.writeStringValue("subject", this.getSubject());
@@ -494,7 +514,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         this.backingStore.set("chatRestrictions", value);
     }
     /**
-     * Sets the expiryDateTime property value. The expiryDateTime property
+     * Sets the expiryDateTime property value. Indicates the date and time when the meeting resource expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the expiryDateTime property.
      */
     public void setExpiryDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -541,6 +561,20 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      */
     public void setLobbyBypassSettings(@jakarta.annotation.Nullable final LobbyBypassSettings value) {
         this.backingStore.set("lobbyBypassSettings", value);
+    }
+    /**
+     * Sets the meetingOptionsWebUrl property value. Provides the URL to the Teams meeting options page for the specified meeting. This link allows only the organizer to configure meeting settings.
+     * @param value Value to set for the meetingOptionsWebUrl property.
+     */
+    public void setMeetingOptionsWebUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("meetingOptionsWebUrl", value);
+    }
+    /**
+     * Sets the meetingSpokenLanguageTag property value. Specifies the spoken language used during the meeting for recording and transcription purposes.
+     * @param value Value to set for the meetingSpokenLanguageTag property.
+     */
+    public void setMeetingSpokenLanguageTag(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("meetingSpokenLanguageTag", value);
     }
     /**
      * Sets the recordAutomatically property value. Indicates whether to record the meeting automatically.

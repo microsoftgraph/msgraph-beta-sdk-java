@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.places.item;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Place;
 import com.microsoft.graph.beta.places.item.checkins.CheckInsRequestBuilder;
+import com.microsoft.graph.beta.places.item.children.ChildrenRequestBuilder;
 import com.microsoft.graph.beta.places.item.descendants.DescendantsRequestBuilder;
 import com.microsoft.graph.beta.places.item.graphbuilding.GraphBuildingRequestBuilder;
 import com.microsoft.graph.beta.places.item.graphdesk.GraphDeskRequestBuilder;
@@ -35,6 +36,14 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CheckInsRequestBuilder checkIns() {
         return new CheckInsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the children property of the microsoft.graph.place entity.
+     * @return a {@link ChildrenRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ChildrenRequestBuilder children() {
+        return new ChildrenRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the descendants method.

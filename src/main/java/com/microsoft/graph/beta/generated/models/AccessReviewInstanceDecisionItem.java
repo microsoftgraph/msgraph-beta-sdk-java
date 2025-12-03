@@ -50,6 +50,14 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         return this.backingStore.get("appliedDateTime");
     }
     /**
+     * Gets the applyDescription property value. The description of the apply result.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getApplyDescription() {
+        return this.backingStore.get("applyDescription");
+    }
+    /**
      * Gets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound, and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
      * @return a {@link String}
      */
@@ -75,11 +83,13 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         deserializerMap.put("accessReviewId", (n) -> { this.setAccessReviewId(n.getStringValue()); });
         deserializerMap.put("appliedBy", (n) -> { this.setAppliedBy(n.getObjectValue(UserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("appliedDateTime", (n) -> { this.setAppliedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("applyDescription", (n) -> { this.setApplyDescription(n.getStringValue()); });
         deserializerMap.put("applyResult", (n) -> { this.setApplyResult(n.getStringValue()); });
         deserializerMap.put("decision", (n) -> { this.setDecision(n.getStringValue()); });
         deserializerMap.put("insights", (n) -> { this.setInsights(n.getCollectionOfObjectValues(GovernanceInsight::createFromDiscriminatorValue)); });
         deserializerMap.put("instance", (n) -> { this.setInstance(n.getObjectValue(AccessReviewInstance::createFromDiscriminatorValue)); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("permission", (n) -> { this.setPermission(n.getObjectValue(AccessReviewInstanceDecisionItemPermission::createFromDiscriminatorValue)); });
         deserializerMap.put("principal", (n) -> { this.setPrincipal(n.getObjectValue(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("principalLink", (n) -> { this.setPrincipalLink(n.getStringValue()); });
         deserializerMap.put("principalResourceMembership", (n) -> { this.setPrincipalResourceMembership(n.getObjectValue(DecisionItemPrincipalResourceMembership::createFromDiscriminatorValue)); });
@@ -114,6 +124,14 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
     @jakarta.annotation.Nullable
     public String getJustification() {
         return this.backingStore.get("justification");
+    }
+    /**
+     * Gets the permission property value. The permission that grants the principal access to a resource.
+     * @return a {@link AccessReviewInstanceDecisionItemPermission}
+     */
+    @jakarta.annotation.Nullable
+    public AccessReviewInstanceDecisionItemPermission getPermission() {
+        return this.backingStore.get("permission");
     }
     /**
      * Gets the principal property value. Every decision item in an access review represents a principal&apos;s access to a resource. This property represents details of the principal. For example, if a decision item represents access of User &apos;Bob&apos; to Group &apos;Sales&apos; - The principal is &apos;Bob&apos; and the resource is &apos;Sales&apos;. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
@@ -197,11 +215,13 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
         writer.writeStringValue("accessReviewId", this.getAccessReviewId());
         writer.writeObjectValue("appliedBy", this.getAppliedBy());
         writer.writeOffsetDateTimeValue("appliedDateTime", this.getAppliedDateTime());
+        writer.writeStringValue("applyDescription", this.getApplyDescription());
         writer.writeStringValue("applyResult", this.getApplyResult());
         writer.writeStringValue("decision", this.getDecision());
         writer.writeCollectionOfObjectValues("insights", this.getInsights());
         writer.writeObjectValue("instance", this.getInstance());
         writer.writeStringValue("justification", this.getJustification());
+        writer.writeObjectValue("permission", this.getPermission());
         writer.writeObjectValue("principal", this.getPrincipal());
         writer.writeStringValue("principalLink", this.getPrincipalLink());
         writer.writeObjectValue("principalResourceMembership", this.getPrincipalResourceMembership());
@@ -232,6 +252,13 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     public void setAppliedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("appliedDateTime", value);
+    }
+    /**
+     * Sets the applyDescription property value. The description of the apply result.
+     * @param value Value to set for the applyDescription property.
+     */
+    public void setApplyDescription(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("applyDescription", value);
     }
     /**
      * Sets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound, and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
@@ -267,6 +294,13 @@ public class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("justification", value);
+    }
+    /**
+     * Sets the permission property value. The permission that grants the principal access to a resource.
+     * @param value Value to set for the permission property.
+     */
+    public void setPermission(@jakarta.annotation.Nullable final AccessReviewInstanceDecisionItemPermission value) {
+        this.backingStore.set("permission", value);
     }
     /**
      * Sets the principal property value. Every decision item in an access review represents a principal&apos;s access to a resource. This property represents details of the principal. For example, if a decision item represents access of User &apos;Bob&apos; to Group &apos;Sales&apos; - The principal is &apos;Bob&apos; and the resource is &apos;Sales&apos;. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.

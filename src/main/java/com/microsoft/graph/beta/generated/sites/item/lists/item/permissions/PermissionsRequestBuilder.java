@@ -82,21 +82,23 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to permissions for sites
+     * Create a new permission object on a list.
      * @param body The request body
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/list-post-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final Permission body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to permissions for sites
+     * Create a new permission object on a list.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/list-post-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final Permission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -127,7 +129,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to permissions for sites
+     * Create a new permission object on a list.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +138,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to permissions for sites
+     * Create a new permission object on a list.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

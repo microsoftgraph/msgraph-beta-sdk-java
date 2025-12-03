@@ -48,6 +48,14 @@ public class SignInConditions implements AdditionalDataHolder, BackedModel, Pars
         return value;
     }
     /**
+     * Gets the agentIdRiskLevel property value. Agent identity risk levels included in the policy. Possible values are: none, low, medium, high, unknownFutureValue. This enumeration is multivalued.
+     * @return a {@link AgentIdRiskLevel}
+     */
+    @jakarta.annotation.Nullable
+    public AgentIdRiskLevel getAgentIdRiskLevel() {
+        return this.backingStore.get("agentIdRiskLevel");
+    }
+    /**
      * Gets the authenticationFlow property value. Type of authentication flow. The possible value is: deviceCodeFlow or authenticationTransfer. Default value is none.
      * @return a {@link AuthenticationFlow}
      */
@@ -101,7 +109,8 @@ public class SignInConditions implements AdditionalDataHolder, BackedModel, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        deserializerMap.put("agentIdRiskLevel", (n) -> { this.setAgentIdRiskLevel(n.getEnumValue(AgentIdRiskLevel::forValue)); });
         deserializerMap.put("authenticationFlow", (n) -> { this.setAuthenticationFlow(n.getObjectValue(AuthenticationFlow::createFromDiscriminatorValue)); });
         deserializerMap.put("clientAppType", (n) -> { this.setClientAppType(n.getEnumValue(ConditionalAccessClientApp::forValue)); });
         deserializerMap.put("country", (n) -> { this.setCountry(n.getStringValue()); });
@@ -169,6 +178,7 @@ public class SignInConditions implements AdditionalDataHolder, BackedModel, Pars
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("agentIdRiskLevel", this.getAgentIdRiskLevel());
         writer.writeObjectValue("authenticationFlow", this.getAuthenticationFlow());
         writer.writeEnumValue("clientAppType", this.getClientAppType());
         writer.writeStringValue("country", this.getCountry());
@@ -188,6 +198,13 @@ public class SignInConditions implements AdditionalDataHolder, BackedModel, Pars
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the agentIdRiskLevel property value. Agent identity risk levels included in the policy. Possible values are: none, low, medium, high, unknownFutureValue. This enumeration is multivalued.
+     * @param value Value to set for the agentIdRiskLevel property.
+     */
+    public void setAgentIdRiskLevel(@jakarta.annotation.Nullable final AgentIdRiskLevel value) {
+        this.backingStore.set("agentIdRiskLevel", value);
     }
     /**
      * Sets the authenticationFlow property value. Type of authentication flow. The possible value is: deviceCodeFlow or authenticationTransfer. Default value is none.

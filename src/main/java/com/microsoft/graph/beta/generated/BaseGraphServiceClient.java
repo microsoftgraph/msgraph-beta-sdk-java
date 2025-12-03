@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.accessreviews.AccessReviewsRequestBuilder;
 import com.microsoft.graph.beta.activitystatistics.ActivitystatisticsRequestBuilder;
 import com.microsoft.graph.beta.admin.AdminRequestBuilder;
 import com.microsoft.graph.beta.administrativeunits.AdministrativeUnitsRequestBuilder;
+import com.microsoft.graph.beta.agentregistry.AgentRegistryRequestBuilder;
 import com.microsoft.graph.beta.agents.AgentsRequestBuilder;
 import com.microsoft.graph.beta.agreementacceptances.AgreementAcceptancesRequestBuilder;
 import com.microsoft.graph.beta.agreements.AgreementsRequestBuilder;
@@ -82,7 +83,6 @@ import com.microsoft.graph.beta.organization.OrganizationRequestBuilder;
 import com.microsoft.graph.beta.payloadresponse.PayloadResponseRequestBuilder;
 import com.microsoft.graph.beta.permissiongrants.PermissionGrantsRequestBuilder;
 import com.microsoft.graph.beta.places.PlacesRequestBuilder;
-import com.microsoft.graph.beta.placeswithplaceid.PlacesWithPlaceIdRequestBuilder;
 import com.microsoft.graph.beta.planner.PlannerRequestBuilder;
 import com.microsoft.graph.beta.policies.PoliciesRequestBuilder;
 import com.microsoft.graph.beta.print.PrintRequestBuilder;
@@ -186,6 +186,14 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AdministrativeUnitsRequestBuilder administrativeUnits() {
         return new AdministrativeUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the agentRegistry singleton.
+     * @return a {@link AgentRegistryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AgentRegistryRequestBuilder agentRegistry() {
+        return new AgentRegistryRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the collection of agent entities.
@@ -1161,16 +1169,6 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
     public GroupsWithUniqueNameRequestBuilder groupsWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
         Objects.requireNonNull(uniqueName);
         return new GroupsWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
-    }
-    /**
-     * Provides operations to manage the collection of place entities.
-     * @param placeId Alternate key of place
-     * @return a {@link PlacesWithPlaceIdRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public PlacesWithPlaceIdRequestBuilder placesWithPlaceId(@jakarta.annotation.Nonnull final String placeId) {
-        Objects.requireNonNull(placeId);
-        return new PlacesWithPlaceIdRequestBuilder(pathParameters, requestAdapter, placeId);
     }
     /**
      * Provides operations to manage the collection of servicePrincipal entities.

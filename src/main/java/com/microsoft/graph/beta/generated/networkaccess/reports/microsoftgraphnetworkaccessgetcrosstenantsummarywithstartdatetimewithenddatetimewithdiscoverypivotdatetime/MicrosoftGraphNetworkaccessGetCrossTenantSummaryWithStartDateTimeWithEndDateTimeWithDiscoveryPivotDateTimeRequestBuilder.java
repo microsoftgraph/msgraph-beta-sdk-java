@@ -43,7 +43,7 @@ public class MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWi
         super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.getCrossTenantSummary(startDateTime={startDateTime},endDateTime={endDateTime},discoveryPivotDateTime={discoveryPivotDateTime})", rawUrl);
     }
     /**
-     * Get a summary of the cross-tenant access patterns.
+     * Get a summary of the cross-tenant access patterns as logged in Global Secure Access.
      * @return a {@link CrossTenantSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -52,7 +52,7 @@ public class MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWi
         return get(null);
     }
     /**
-     * Get a summary of the cross-tenant access patterns.
+     * Get a summary of the cross-tenant access patterns as logged in Global Secure Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantSummary}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -65,7 +65,7 @@ public class MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWi
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantSummary::createFromDiscriminatorValue);
     }
     /**
-     * Get a summary of the cross-tenant access patterns.
+     * Get a summary of the cross-tenant access patterns as logged in Global Secure Access.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class MicrosoftGraphNetworkaccessGetCrossTenantSummaryWithStartDateTimeWi
         return toGetRequestInformation(null);
     }
     /**
-     * Get a summary of the cross-tenant access patterns.
+     * Get a summary of the cross-tenant access patterns as logged in Global Secure Access.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

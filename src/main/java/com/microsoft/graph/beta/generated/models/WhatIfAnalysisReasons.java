@@ -25,7 +25,9 @@ public enum WhatIfAnalysisReasons implements ValuedEnum {
     Time("time"),
     InsiderRisk("insiderRisk"),
     AuthenticationFlow("authenticationFlow"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    AgentIdRisk("agentIdRisk"),
+    AgentIdentities("agentIdentities");
     public final String value;
     WhatIfAnalysisReasons(final String value) {
         this.value = value;
@@ -57,6 +59,8 @@ public enum WhatIfAnalysisReasons implements ValuedEnum {
             case "insiderRisk": return InsiderRisk;
             case "authenticationFlow": return AuthenticationFlow;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "agentIdRisk": return AgentIdRisk;
+            case "agentIdentities": return AgentIdentities;
             default: return null;
         }
     }

@@ -77,7 +77,7 @@ public class UserWorkLocation implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the placeId property value. The placeId property
+     * Gets the placeId property value. Identifier of the place (when applicable).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class UserWorkLocation implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the placeId property value. The placeId property
+     * Sets the placeId property value. Identifier of the place (when applicable).
      * @param value Value to set for the placeId property.
      */
     public void setPlaceId(@jakarta.annotation.Nullable final String value) {

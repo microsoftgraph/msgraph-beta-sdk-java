@@ -30,11 +30,13 @@ public class PolicyBase extends DirectoryObject implements Parsable {
                 case "#microsoft.graph.activityBasedTimeoutPolicy": return new ActivityBasedTimeoutPolicy();
                 case "#microsoft.graph.appManagementPolicy": return new AppManagementPolicy();
                 case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
+                case "#microsoft.graph.b2bManagementPolicy": return new B2bManagementPolicy();
                 case "#microsoft.graph.claimsMappingPolicy": return new ClaimsMappingPolicy();
                 case "#microsoft.graph.crossTenantAccessPolicy": return new CrossTenantAccessPolicy();
                 case "#microsoft.graph.externalIdentitiesPolicy": return new ExternalIdentitiesPolicy();
                 case "#microsoft.graph.homeRealmDiscoveryPolicy": return new HomeRealmDiscoveryPolicy();
                 case "#microsoft.graph.identitySecurityDefaultsEnforcementPolicy": return new IdentitySecurityDefaultsEnforcementPolicy();
+                case "#microsoft.graph.onPremAuthenticationPolicy": return new OnPremAuthenticationPolicy();
                 case "#microsoft.graph.permissionGrantPolicy": return new PermissionGrantPolicy();
                 case "#microsoft.graph.servicePrincipalCreationPolicy": return new ServicePrincipalCreationPolicy();
                 case "#microsoft.graph.stsPolicy": return new StsPolicy();

@@ -59,6 +59,14 @@ public class ExternalConnection extends Entity implements Parsable {
         return this.backingStore.get("connectorId");
     }
     /**
+     * Gets the contentCategory property value. The contentCategory property
+     * @return a {@link ContentCategory}
+     */
+    @jakarta.annotation.Nullable
+    public ContentCategory getContentCategory() {
+        return this.backingStore.get("contentCategory");
+    }
+    /**
      * Gets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.
      * @return a {@link String}
      */
@@ -85,6 +93,7 @@ public class ExternalConnection extends Entity implements Parsable {
         deserializerMap.put("complianceSettings", (n) -> { this.setComplianceSettings(n.getObjectValue(ComplianceSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("configuration", (n) -> { this.setConfiguration(n.getObjectValue(Configuration::createFromDiscriminatorValue)); });
         deserializerMap.put("connectorId", (n) -> { this.setConnectorId(n.getStringValue()); });
+        deserializerMap.put("contentCategory", (n) -> { this.setContentCategory(n.getEnumValue(ContentCategory::forValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("enabledContentExperiences", (n) -> { this.setEnabledContentExperiences(n.getEnumSetValue(ContentExperienceType::forValue)); });
         deserializerMap.put("groups", (n) -> { this.setGroups(n.getCollectionOfObjectValues(ExternalGroup::createFromDiscriminatorValue)); });
@@ -181,6 +190,7 @@ public class ExternalConnection extends Entity implements Parsable {
         writer.writeObjectValue("complianceSettings", this.getComplianceSettings());
         writer.writeObjectValue("configuration", this.getConfiguration());
         writer.writeStringValue("connectorId", this.getConnectorId());
+        writer.writeEnumValue("contentCategory", this.getContentCategory());
         writer.writeStringValue("description", this.getDescription());
         writer.writeEnumSetValue("enabledContentExperiences", this.getEnabledContentExperiences());
         writer.writeCollectionOfObjectValues("groups", this.getGroups());
@@ -219,6 +229,13 @@ public class ExternalConnection extends Entity implements Parsable {
      */
     public void setConnectorId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("connectorId", value);
+    }
+    /**
+     * Sets the contentCategory property value. The contentCategory property
+     * @param value Value to set for the contentCategory property.
+     */
+    public void setContentCategory(@jakarta.annotation.Nullable final ContentCategory value) {
+        this.backingStore.set("contentCategory", value);
     }
     /**
      * Sets the description property value. Description of the connection displayed in the Microsoft 365 admin center. Optional.

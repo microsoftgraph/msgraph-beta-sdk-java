@@ -36,6 +36,7 @@ public class SignInIdentity implements AdditionalDataHolder, BackedModel, Parsab
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.agentSignIn": return new AgentSignIn();
                 case "#microsoft.graph.servicePrincipalSignIn": return new ServicePrincipalSignIn();
                 case "#microsoft.graph.userSignIn": return new UserSignIn();
             }

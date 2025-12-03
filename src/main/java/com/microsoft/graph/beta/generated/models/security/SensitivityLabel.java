@@ -69,7 +69,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hasProtection property value. Indicates whether the label has protection actions configured.
+     * Gets the hasProtection property value. Indicates whether the label has protection actions (such as encryption or do not forward) configured.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the hasProtection property value. Indicates whether the label has protection actions configured.
+     * Sets the hasProtection property value. Indicates whether the label has protection actions (such as encryption or do not forward) configured.
      * @param value Value to set for the hasProtection property.
      */
     public void setHasProtection(@jakarta.annotation.Nullable final Boolean value) {

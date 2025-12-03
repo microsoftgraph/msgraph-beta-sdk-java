@@ -30,10 +30,14 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.activityBasedTimeoutPolicy": return new ActivityBasedTimeoutPolicy();
                 case "#microsoft.graph.administrativeUnit": return new AdministrativeUnit();
                 case "#microsoft.graph.agentIdentity": return new AgentIdentity();
+                case "#microsoft.graph.agentIdentityBlueprint": return new AgentIdentityBlueprint();
+                case "#microsoft.graph.agentIdentityBlueprintPrincipal": return new AgentIdentityBlueprintPrincipal();
+                case "#microsoft.graph.agentUser": return new AgentUser();
                 case "#microsoft.graph.application": return new Application();
                 case "#microsoft.graph.appManagementPolicy": return new AppManagementPolicy();
                 case "#microsoft.graph.appRoleAssignment": return new AppRoleAssignment();
                 case "#microsoft.graph.authorizationPolicy": return new AuthorizationPolicy();
+                case "#microsoft.graph.b2bManagementPolicy": return new B2bManagementPolicy();
                 case "#microsoft.graph.certificateAuthorityDetail": return new CertificateAuthorityDetail();
                 case "#microsoft.graph.certificateBasedApplicationConfiguration": return new CertificateBasedApplicationConfiguration();
                 case "#microsoft.graph.certificateBasedAuthPki": return new CertificateBasedAuthPki();
@@ -53,11 +57,13 @@ public class DirectoryObject extends Entity implements Parsable {
                 case "#microsoft.graph.externalUserProfile": return new ExternalUserProfile();
                 case "#microsoft.graph.federatedTokenValidationPolicy": return new FederatedTokenValidationPolicy();
                 case "#microsoft.graph.group": return new Group();
+                case "#microsoft.graph.groupResource": return new GroupResource();
                 case "#microsoft.graph.homeRealmDiscoveryPolicy": return new HomeRealmDiscoveryPolicy();
                 case "#microsoft.graph.identitySecurityDefaultsEnforcementPolicy": return new IdentitySecurityDefaultsEnforcementPolicy();
                 case "#microsoft.graph.mailbox": return new Mailbox();
                 case "#microsoft.graph.multiTenantOrganizationMember": return new MultiTenantOrganizationMember();
                 case "#microsoft.graph.mutualTlsOauthConfiguration": return new MutualTlsOauthConfiguration();
+                case "#microsoft.graph.onPremAuthenticationPolicy": return new OnPremAuthenticationPolicy();
                 case "#microsoft.graph.organization": return new Organization();
                 case "#microsoft.graph.orgContact": return new OrgContact();
                 case "#microsoft.graph.pendingExternalUserProfile": return new PendingExternalUserProfile();

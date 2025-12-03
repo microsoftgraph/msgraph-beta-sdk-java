@@ -2,6 +2,8 @@ package com.microsoft.graph.beta.identitygovernance;
 
 import com.microsoft.graph.beta.identitygovernance.accessreviews.AccessReviewsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.appconsent.AppConsentRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.catalogs.CatalogsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.catalogswithuniquename.CatalogsWithUniqueNameRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.EntitlementManagementRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.LifecycleWorkflowsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.permissionsanalytics.PermissionsAnalyticsRequestBuilder;
@@ -44,6 +46,14 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AppConsentRequestBuilder appConsent() {
         return new AppConsentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the catalogs property of the microsoft.graph.identityGovernance entity.
+     * @return a {@link CatalogsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CatalogsRequestBuilder catalogs() {
+        return new CatalogsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity.
@@ -100,6 +110,19 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TermsOfUseRequestBuilder termsOfUse() {
         return new TermsOfUseRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the catalogs property of the microsoft.graph.identityGovernance entity.
+     * @param uniqueName Alternate key of accessPackageCatalog
+     * @return a {@link CatalogsWithUniqueNameRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public CatalogsWithUniqueNameRequestBuilder catalogsWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
+        Objects.requireNonNull(uniqueName);
+        return new CatalogsWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
     }
     /**
      * Instantiates a new {@link IdentityGovernanceRequestBuilder} and sets the default values.

@@ -17,7 +17,24 @@ public enum Label implements ValuedEnum {
     UnknownFutureValue("unknownFutureValue"),
     ContainerName("containerName"),
     ContainerUrl("containerUrl"),
-    IconUrl("iconUrl");
+    IconUrl("iconUrl"),
+    AssignedToPeople("assignedToPeople"),
+    ClosedBy("closedBy"),
+    ClosedDate("closedDate"),
+    Priority("priority"),
+    SprintName("sprintName"),
+    Tags("tags"),
+    Severity("severity"),
+    State("state"),
+    DueDate("dueDate"),
+    ItemParentId("itemParentId"),
+    ItemPath("itemPath"),
+    ItemType("itemType"),
+    NumberOfReactions("numberOfReactions"),
+    ParentUrl("parentUrl"),
+    PriorityNormalized("priorityNormalized"),
+    ReportedBy("reportedBy"),
+    SecondaryId("secondaryId");
     public final String value;
     Label(final String value) {
         this.value = value;
@@ -41,6 +58,23 @@ public enum Label implements ValuedEnum {
             case "containerName": return ContainerName;
             case "containerUrl": return ContainerUrl;
             case "iconUrl": return IconUrl;
+            case "assignedToPeople": return AssignedToPeople;
+            case "closedBy": return ClosedBy;
+            case "closedDate": return ClosedDate;
+            case "priority": return Priority;
+            case "sprintName": return SprintName;
+            case "tags": return Tags;
+            case "severity": return Severity;
+            case "state": return State;
+            case "dueDate": return DueDate;
+            case "itemParentId": return ItemParentId;
+            case "itemPath": return ItemPath;
+            case "itemType": return ItemType;
+            case "numberOfReactions": return NumberOfReactions;
+            case "parentUrl": return ParentUrl;
+            case "priorityNormalized": return PriorityNormalized;
+            case "reportedBy": return ReportedBy;
+            case "secondaryId": return SecondaryId;
             default: return null;
         }
     }

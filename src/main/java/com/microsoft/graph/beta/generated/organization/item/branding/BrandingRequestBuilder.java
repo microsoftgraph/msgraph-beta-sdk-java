@@ -10,6 +10,7 @@ import com.microsoft.graph.beta.organization.item.branding.headerlogo.HeaderLogo
 import com.microsoft.graph.beta.organization.item.branding.localizations.LocalizationsRequestBuilder;
 import com.microsoft.graph.beta.organization.item.branding.squarelogo.SquareLogoRequestBuilder;
 import com.microsoft.graph.beta.organization.item.branding.squarelogodark.SquareLogoDarkRequestBuilder;
+import com.microsoft.graph.beta.organization.item.branding.themes.ThemesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -91,6 +92,14 @@ public class BrandingRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SquareLogoDarkRequestBuilder squareLogoDark() {
         return new SquareLogoDarkRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the themes property of the microsoft.graph.organizationalBranding entity.
+     * @return a {@link ThemesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ThemesRequestBuilder themes() {
+        return new ThemesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link BrandingRequestBuilder} and sets the default values.

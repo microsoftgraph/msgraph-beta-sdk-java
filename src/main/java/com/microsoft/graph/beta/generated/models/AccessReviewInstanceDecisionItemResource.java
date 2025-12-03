@@ -38,6 +38,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
             switch (mappingValue) {
                 case "#microsoft.graph.accessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource": return new AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource();
                 case "#microsoft.graph.accessReviewInstanceDecisionItemAzureRoleResource": return new AccessReviewInstanceDecisionItemAzureRoleResource();
+                case "#microsoft.graph.accessReviewInstanceDecisionItemCustomDataProvidedResource": return new AccessReviewInstanceDecisionItemCustomDataProvidedResource();
                 case "#microsoft.graph.accessReviewInstanceDecisionItemServicePrincipalResource": return new AccessReviewInstanceDecisionItemServicePrincipalResource();
             }
         }
@@ -65,6 +66,14 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
         return this.backingStore;
     }
     /**
+     * Gets the description property value. Description of the resource
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDescription() {
+        return this.backingStore.get("description");
+    }
+    /**
      * Gets the displayName property value. Display name of the resource
      * @return a {@link String}
      */
@@ -78,7 +87,8 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -115,6 +125,7 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -135,6 +146,13 @@ public class AccessReviewInstanceDecisionItemResource implements AdditionalDataH
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the description property value. Description of the resource
+     * @param value Value to set for the description property.
+     */
+    public void setDescription(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("description", value);
     }
     /**
      * Sets the displayName property value. Display name of the resource

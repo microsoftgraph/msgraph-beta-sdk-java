@@ -41,6 +41,7 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedUsers", (n) -> { this.setAssignedUsers(n.getCollectionOfObjectValues(User::createFromDiscriminatorValue)); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getObjectValue(CloudPcManagementAssignmentTarget::createFromDiscriminatorValue)); });
+        deserializerMap.put("userSettingsPersistenceDetail", (n) -> { this.setUserSettingsPersistenceDetail(n.getObjectValue(CloudPCUserSettingsPersistenceDetail::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -52,6 +53,14 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
         return this.backingStore.get("target");
     }
     /**
+     * Gets the userSettingsPersistenceDetail property value. The assignment targeted user settings persistence for the provisioning policy. It allows user application data and Windows settings to be saved and applied between sessions.
+     * @return a {@link CloudPCUserSettingsPersistenceDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPCUserSettingsPersistenceDetail getUserSettingsPersistenceDetail() {
+        return this.backingStore.get("userSettingsPersistenceDetail");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -60,6 +69,7 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignedUsers", this.getAssignedUsers());
         writer.writeObjectValue("target", this.getTarget());
+        writer.writeObjectValue("userSettingsPersistenceDetail", this.getUserSettingsPersistenceDetail());
     }
     /**
      * Sets the assignedUsers property value. The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. This property is read-only. Supports$expand.
@@ -74,5 +84,12 @@ public class CloudPcProvisioningPolicyAssignment extends Entity implements Parsa
      */
     public void setTarget(@jakarta.annotation.Nullable final CloudPcManagementAssignmentTarget value) {
         this.backingStore.set("target", value);
+    }
+    /**
+     * Sets the userSettingsPersistenceDetail property value. The assignment targeted user settings persistence for the provisioning policy. It allows user application data and Windows settings to be saved and applied between sessions.
+     * @param value Value to set for the userSettingsPersistenceDetail property.
+     */
+    public void setUserSettingsPersistenceDetail(@jakarta.annotation.Nullable final CloudPCUserSettingsPersistenceDetail value) {
+        this.backingStore.set("userSettingsPersistenceDetail", value);
     }
 }

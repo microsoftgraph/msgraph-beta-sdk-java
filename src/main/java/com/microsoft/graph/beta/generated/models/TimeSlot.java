@@ -32,6 +32,13 @@ public class TimeSlot implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nonnull
     public static TimeSlot createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.timeSlotAvailability": return new TimeSlotAvailability();
+            }
+        }
         return new TimeSlot();
     }
     /**

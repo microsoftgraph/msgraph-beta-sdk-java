@@ -89,6 +89,14 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.backingStore.get("authorizationPolicy");
     }
     /**
+     * Gets the b2bManagementPolicies property value. The policy to manage Microsoft Entra B2B features in Microsoft Entra External ID for workforce tenants.
+     * @return a {@link java.util.List<B2bManagementPolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<B2bManagementPolicy> getB2bManagementPolicies() {
+        return this.backingStore.get("b2bManagementPolicies");
+    }
+    /**
      * Gets the b2cAuthenticationMethodsPolicy property value. The Azure AD B2C policies that define how end users register via local accounts.
      * @return a {@link B2cAuthenticationMethodsPolicy}
      */
@@ -191,6 +199,7 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("authenticationMethodsPolicy", (n) -> { this.setAuthenticationMethodsPolicy(n.getObjectValue(AuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationStrengthPolicies", (n) -> { this.setAuthenticationStrengthPolicies(n.getCollectionOfObjectValues(AuthenticationStrengthPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("authorizationPolicy", (n) -> { this.setAuthorizationPolicy(n.getCollectionOfObjectValues(AuthorizationPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("b2bManagementPolicies", (n) -> { this.setB2bManagementPolicies(n.getCollectionOfObjectValues(B2bManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("b2cAuthenticationMethodsPolicy", (n) -> { this.setB2cAuthenticationMethodsPolicy(n.getObjectValue(B2cAuthenticationMethodsPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("conditionalAccessPolicies", (n) -> { this.setConditionalAccessPolicies(n.getCollectionOfObjectValues(ConditionalAccessPolicy::createFromDiscriminatorValue)); });
@@ -206,6 +215,7 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("identitySecurityDefaultsEnforcementPolicy", (n) -> { this.setIdentitySecurityDefaultsEnforcementPolicy(n.getObjectValue(IdentitySecurityDefaultsEnforcementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileAppManagementPolicies", (n) -> { this.setMobileAppManagementPolicies(n.getCollectionOfObjectValues(MobileAppManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileDeviceManagementPolicies", (n) -> { this.setMobileDeviceManagementPolicies(n.getCollectionOfObjectValues(MobileDeviceManagementPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("onPremAuthenticationPolicies", (n) -> { this.setOnPremAuthenticationPolicies(n.getCollectionOfObjectValues(OnPremAuthenticationPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("permissionGrantPolicies", (n) -> { this.setPermissionGrantPolicies(n.getCollectionOfObjectValues(PermissionGrantPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("permissionGrantPreApprovalPolicies", (n) -> { this.setPermissionGrantPreApprovalPolicies(n.getCollectionOfObjectValues(PermissionGrantPreApprovalPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("roleManagementPolicies", (n) -> { this.setRoleManagementPolicies(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
@@ -246,6 +256,14 @@ public class PolicyRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<MobileDeviceManagementPolicy> getMobileDeviceManagementPolicies() {
         return this.backingStore.get("mobileDeviceManagementPolicies");
+    }
+    /**
+     * Gets the onPremAuthenticationPolicies property value. The policy that controls how authentication requests from on-premises environments are managed.
+     * @return a {@link java.util.List<OnPremAuthenticationPolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<OnPremAuthenticationPolicy> getOnPremAuthenticationPolicies() {
+        return this.backingStore.get("onPremAuthenticationPolicies");
     }
     /**
      * Gets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
@@ -318,6 +336,7 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeObjectValue("authenticationMethodsPolicy", this.getAuthenticationMethodsPolicy());
         writer.writeCollectionOfObjectValues("authenticationStrengthPolicies", this.getAuthenticationStrengthPolicies());
         writer.writeCollectionOfObjectValues("authorizationPolicy", this.getAuthorizationPolicy());
+        writer.writeCollectionOfObjectValues("b2bManagementPolicies", this.getB2bManagementPolicies());
         writer.writeObjectValue("b2cAuthenticationMethodsPolicy", this.getB2cAuthenticationMethodsPolicy());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
         writer.writeCollectionOfObjectValues("conditionalAccessPolicies", this.getConditionalAccessPolicies());
@@ -333,6 +352,7 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeObjectValue("identitySecurityDefaultsEnforcementPolicy", this.getIdentitySecurityDefaultsEnforcementPolicy());
         writer.writeCollectionOfObjectValues("mobileAppManagementPolicies", this.getMobileAppManagementPolicies());
         writer.writeCollectionOfObjectValues("mobileDeviceManagementPolicies", this.getMobileDeviceManagementPolicies());
+        writer.writeCollectionOfObjectValues("onPremAuthenticationPolicies", this.getOnPremAuthenticationPolicies());
         writer.writeCollectionOfObjectValues("permissionGrantPolicies", this.getPermissionGrantPolicies());
         writer.writeCollectionOfObjectValues("permissionGrantPreApprovalPolicies", this.getPermissionGrantPreApprovalPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicies", this.getRoleManagementPolicies());
@@ -396,6 +416,13 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setAuthorizationPolicy(@jakarta.annotation.Nullable final java.util.List<AuthorizationPolicy> value) {
         this.backingStore.set("authorizationPolicy", value);
+    }
+    /**
+     * Sets the b2bManagementPolicies property value. The policy to manage Microsoft Entra B2B features in Microsoft Entra External ID for workforce tenants.
+     * @param value Value to set for the b2bManagementPolicies property.
+     */
+    public void setB2bManagementPolicies(@jakarta.annotation.Nullable final java.util.List<B2bManagementPolicy> value) {
+        this.backingStore.set("b2bManagementPolicies", value);
     }
     /**
      * Sets the b2cAuthenticationMethodsPolicy property value. The Azure AD B2C policies that define how end users register via local accounts.
@@ -501,6 +528,13 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setMobileDeviceManagementPolicies(@jakarta.annotation.Nullable final java.util.List<MobileDeviceManagementPolicy> value) {
         this.backingStore.set("mobileDeviceManagementPolicies", value);
+    }
+    /**
+     * Sets the onPremAuthenticationPolicies property value. The policy that controls how authentication requests from on-premises environments are managed.
+     * @param value Value to set for the onPremAuthenticationPolicies property.
+     */
+    public void setOnPremAuthenticationPolicies(@jakarta.annotation.Nullable final java.util.List<OnPremAuthenticationPolicy> value) {
+        this.backingStore.set("onPremAuthenticationPolicies", value);
     }
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.

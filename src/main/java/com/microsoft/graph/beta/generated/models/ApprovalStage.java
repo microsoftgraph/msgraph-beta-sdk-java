@@ -63,6 +63,14 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("approvalStageTimeOutInDays");
     }
     /**
+     * Gets the approverInformationVisibility property value. The approverInformationVisibility property
+     * @return a {@link ApproverInformationVisibility}
+     */
+    @jakarta.annotation.Nullable
+    public ApproverInformationVisibility getApproverInformationVisibility() {
+        return this.backingStore.get("approverInformationVisibility");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -92,8 +100,9 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("approvalStageTimeOutInDays", (n) -> { this.setApprovalStageTimeOutInDays(n.getIntegerValue()); });
+        deserializerMap.put("approverInformationVisibility", (n) -> { this.setApproverInformationVisibility(n.getEnumValue(ApproverInformationVisibility::forValue)); });
         deserializerMap.put("escalationApprovers", (n) -> { this.setEscalationApprovers(n.getCollectionOfObjectValues(UserSet::createFromDiscriminatorValue)); });
         deserializerMap.put("escalationTimeInMinutes", (n) -> { this.setEscalationTimeInMinutes(n.getIntegerValue()); });
         deserializerMap.put("isApproverJustificationRequired", (n) -> { this.setIsApproverJustificationRequired(n.getBooleanValue()); });
@@ -141,6 +150,7 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("approvalStageTimeOutInDays", this.getApprovalStageTimeOutInDays());
+        writer.writeEnumValue("approverInformationVisibility", this.getApproverInformationVisibility());
         writer.writeCollectionOfObjectValues("escalationApprovers", this.getEscalationApprovers());
         writer.writeIntegerValue("escalationTimeInMinutes", this.getEscalationTimeInMinutes());
         writer.writeBooleanValue("isApproverJustificationRequired", this.getIsApproverJustificationRequired());
@@ -162,6 +172,13 @@ public class ApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setApprovalStageTimeOutInDays(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("approvalStageTimeOutInDays", value);
+    }
+    /**
+     * Sets the approverInformationVisibility property value. The approverInformationVisibility property
+     * @param value Value to set for the approverInformationVisibility property.
+     */
+    public void setApproverInformationVisibility(@jakarta.annotation.Nullable final ApproverInformationVisibility value) {
+        this.backingStore.set("approverInformationVisibility", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

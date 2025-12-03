@@ -73,6 +73,14 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
+     * Gets the catalogs property value. The catalogs property
+     * @return a {@link java.util.List<AccessPackageCatalog>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AccessPackageCatalog> getCatalogs() {
+        return this.backingStore.get("catalogs");
+    }
+    /**
      * Gets the entitlementManagement property value. The entitlementManagement property
      * @return a {@link EntitlementManagement}
      */
@@ -86,9 +94,10 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("accessReviews", (n) -> { this.setAccessReviews(n.getObjectValue(AccessReviewSet::createFromDiscriminatorValue)); });
         deserializerMap.put("appConsent", (n) -> { this.setAppConsent(n.getObjectValue(AppConsentApprovalRoute::createFromDiscriminatorValue)); });
+        deserializerMap.put("catalogs", (n) -> { this.setCatalogs(n.getCollectionOfObjectValues(AccessPackageCatalog::createFromDiscriminatorValue)); });
         deserializerMap.put("entitlementManagement", (n) -> { this.setEntitlementManagement(n.getObjectValue(EntitlementManagement::createFromDiscriminatorValue)); });
         deserializerMap.put("lifecycleWorkflows", (n) -> { this.setLifecycleWorkflows(n.getObjectValue(LifecycleWorkflowsContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -163,6 +172,7 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
         Objects.requireNonNull(writer);
         writer.writeObjectValue("accessReviews", this.getAccessReviews());
         writer.writeObjectValue("appConsent", this.getAppConsent());
+        writer.writeCollectionOfObjectValues("catalogs", this.getCatalogs());
         writer.writeObjectValue("entitlementManagement", this.getEntitlementManagement());
         writer.writeObjectValue("lifecycleWorkflows", this.getLifecycleWorkflows());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -201,6 +211,13 @@ public class IdentityGovernance implements AdditionalDataHolder, BackedModel, Pa
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the catalogs property value. The catalogs property
+     * @param value Value to set for the catalogs property.
+     */
+    public void setCatalogs(@jakarta.annotation.Nullable final java.util.List<AccessPackageCatalog> value) {
+        this.backingStore.set("catalogs", value);
     }
     /**
      * Sets the entitlementManagement property value. The entitlementManagement property

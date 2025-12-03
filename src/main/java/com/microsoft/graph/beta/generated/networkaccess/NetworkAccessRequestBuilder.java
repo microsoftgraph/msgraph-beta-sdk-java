@@ -5,7 +5,9 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.connectivity.ConnectivityRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.filteringpolicies.FilteringPoliciesRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.filteringprofiles.FilteringProfilesRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.forwardingpolicies.ForwardingPoliciesRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.forwardingprofiles.ForwardingProfilesRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.logs.LogsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.microsoftgraphnetworkaccessonboard.MicrosoftGraphNetworkaccessOnboardRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.ReportsRequestBuilder;
@@ -57,12 +59,28 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
         return new FilteringPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the filteringProfiles property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link FilteringProfilesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public FilteringProfilesRequestBuilder filteringProfiles() {
+        return new FilteringProfilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the forwardingPolicies property of the microsoft.graph.networkaccess.networkAccessRoot entity.
      * @return a {@link ForwardingPoliciesRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public ForwardingPoliciesRequestBuilder forwardingPolicies() {
         return new ForwardingPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the forwardingProfiles property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link ForwardingProfilesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ForwardingProfilesRequestBuilder forwardingProfiles() {
+        return new ForwardingProfilesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the logs property of the microsoft.graph.networkaccess.networkAccessRoot entity.

@@ -48,12 +48,28 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         return value;
     }
     /**
+     * Gets the agentIdServicePrincipalFilter property value. Filter that defines rules based on custom security attribute tags to include/exclude agent identities in the policy.
+     * @return a {@link ConditionalAccessFilter}
+     */
+    @jakarta.annotation.Nullable
+    public ConditionalAccessFilter getAgentIdServicePrincipalFilter() {
+        return this.backingStore.get("agentIdServicePrincipalFilter");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
     @jakarta.annotation.Nonnull
     public BackingStore getBackingStore() {
         return this.backingStore;
+    }
+    /**
+     * Gets the excludeAgentIdServicePrincipals property value. Agent identity object IDs excluded from the policy.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getExcludeAgentIdServicePrincipals() {
+        return this.backingStore.get("excludeAgentIdServicePrincipals");
     }
     /**
      * Gets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
@@ -69,12 +85,23 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("agentIdServicePrincipalFilter", (n) -> { this.setAgentIdServicePrincipalFilter(n.getObjectValue(ConditionalAccessFilter::createFromDiscriminatorValue)); });
+        deserializerMap.put("excludeAgentIdServicePrincipals", (n) -> { this.setExcludeAgentIdServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("excludeServicePrincipals", (n) -> { this.setExcludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("includeAgentIdServicePrincipals", (n) -> { this.setIncludeAgentIdServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("includeServicePrincipals", (n) -> { this.setIncludeServicePrincipals(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("servicePrincipalFilter", (n) -> { this.setServicePrincipalFilter(n.getObjectValue(ConditionalAccessFilter::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the includeAgentIdServicePrincipals property value. Agent identity object IDs included in the policy.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getIncludeAgentIdServicePrincipals() {
+        return this.backingStore.get("includeAgentIdServicePrincipals");
     }
     /**
      * Gets the includeServicePrincipals property value. Service principal IDs included in the policy scope or ServicePrincipalsInMyTenant.
@@ -106,7 +133,10 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("agentIdServicePrincipalFilter", this.getAgentIdServicePrincipalFilter());
+        writer.writeCollectionOfPrimitiveValues("excludeAgentIdServicePrincipals", this.getExcludeAgentIdServicePrincipals());
         writer.writeCollectionOfPrimitiveValues("excludeServicePrincipals", this.getExcludeServicePrincipals());
+        writer.writeCollectionOfPrimitiveValues("includeAgentIdServicePrincipals", this.getIncludeAgentIdServicePrincipals());
         writer.writeCollectionOfPrimitiveValues("includeServicePrincipals", this.getIncludeServicePrincipals());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("servicePrincipalFilter", this.getServicePrincipalFilter());
@@ -120,6 +150,13 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         this.backingStore.set("additionalData", value);
     }
     /**
+     * Sets the agentIdServicePrincipalFilter property value. Filter that defines rules based on custom security attribute tags to include/exclude agent identities in the policy.
+     * @param value Value to set for the agentIdServicePrincipalFilter property.
+     */
+    public void setAgentIdServicePrincipalFilter(@jakarta.annotation.Nullable final ConditionalAccessFilter value) {
+        this.backingStore.set("agentIdServicePrincipalFilter", value);
+    }
+    /**
      * Sets the backingStore property value. Stores model information.
      * @param value Value to set for the backingStore property.
      */
@@ -128,11 +165,25 @@ public class ConditionalAccessClientApplications implements AdditionalDataHolder
         this.backingStore = value;
     }
     /**
+     * Sets the excludeAgentIdServicePrincipals property value. Agent identity object IDs excluded from the policy.
+     * @param value Value to set for the excludeAgentIdServicePrincipals property.
+     */
+    public void setExcludeAgentIdServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("excludeAgentIdServicePrincipals", value);
+    }
+    /**
      * Sets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
      * @param value Value to set for the excludeServicePrincipals property.
      */
     public void setExcludeServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("excludeServicePrincipals", value);
+    }
+    /**
+     * Sets the includeAgentIdServicePrincipals property value. Agent identity object IDs included in the policy.
+     * @param value Value to set for the includeAgentIdServicePrincipals property.
+     */
+    public void setIncludeAgentIdServicePrincipals(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("includeAgentIdServicePrincipals", value);
     }
     /**
      * Sets the includeServicePrincipals property value. Service principal IDs included in the policy scope or ServicePrincipalsInMyTenant.

@@ -30,6 +30,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.agentIdentity": return new AgentIdentity();
+                case "#microsoft.graph.agentIdentityBlueprintPrincipal": return new AgentIdentityBlueprintPrincipal();
             }
         }
         return new ServicePrincipal();
@@ -155,6 +156,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("claimsPolicy");
     }
     /**
+     * Gets the createdByAppId property value. The appId (called Application (client) ID on the Microsoft Entra admin center) of the application used to create the service principal. Set internally by Microsoft Entra ID. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCreatedByAppId() {
+        return this.backingStore.get("createdByAppId");
+    }
+    /**
      * Gets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.
      * @return a {@link java.util.List<DirectoryObject>}
      */
@@ -248,6 +257,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("appRoles", (n) -> { this.setAppRoles(n.getCollectionOfObjectValues(AppRole::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsMappingPolicies", (n) -> { this.setClaimsMappingPolicies(n.getCollectionOfObjectValues(ClaimsMappingPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("claimsPolicy", (n) -> { this.setClaimsPolicy(n.getObjectValue(CustomClaimsPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("createdByAppId", (n) -> { this.setCreatedByAppId(n.getStringValue()); });
         deserializerMap.put("createdObjects", (n) -> { this.setCreatedObjects(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("customSecurityAttributes", (n) -> { this.setCustomSecurityAttributes(n.getObjectValue(CustomSecurityAttributeValue::createFromDiscriminatorValue)); });
         deserializerMap.put("delegatedPermissionClassifications", (n) -> { this.setDelegatedPermissionClassifications(n.getCollectionOfObjectValues(DelegatedPermissionClassification::createFromDiscriminatorValue)); });
@@ -596,6 +606,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("appRoles", this.getAppRoles());
         writer.writeCollectionOfObjectValues("claimsMappingPolicies", this.getClaimsMappingPolicies());
         writer.writeObjectValue("claimsPolicy", this.getClaimsPolicy());
+        writer.writeStringValue("createdByAppId", this.getCreatedByAppId());
         writer.writeCollectionOfObjectValues("createdObjects", this.getCreatedObjects());
         writer.writeObjectValue("customSecurityAttributes", this.getCustomSecurityAttributes());
         writer.writeCollectionOfObjectValues("delegatedPermissionClassifications", this.getDelegatedPermissionClassifications());
@@ -745,6 +756,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setClaimsPolicy(@jakarta.annotation.Nullable final CustomClaimsPolicy value) {
         this.backingStore.set("claimsPolicy", value);
+    }
+    /**
+     * Sets the createdByAppId property value. The appId (called Application (client) ID on the Microsoft Entra admin center) of the application used to create the service principal. Set internally by Microsoft Entra ID. Read-only.
+     * @param value Value to set for the createdByAppId property.
+     */
+    public void setCreatedByAppId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("createdByAppId", value);
     }
     /**
      * Sets the createdObjects property value. Directory objects created by this service principal. Read-only. Nullable.

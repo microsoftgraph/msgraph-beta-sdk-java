@@ -101,15 +101,25 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
         deserializerMap.put("approval", (n) -> { this.setApproval(n.getObjectValue(ApprovalSolution::createFromDiscriminatorValue)); });
         deserializerMap.put("backupRestore", (n) -> { this.setBackupRestore(n.getObjectValue(BackupRestoreRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("bookingBusinesses", (n) -> { this.setBookingBusinesses(n.getCollectionOfObjectValues(BookingBusiness::createFromDiscriminatorValue)); });
         deserializerMap.put("bookingCurrencies", (n) -> { this.setBookingCurrencies(n.getCollectionOfObjectValues(BookingCurrency::createFromDiscriminatorValue)); });
         deserializerMap.put("businessScenarios", (n) -> { this.setBusinessScenarios(n.getCollectionOfObjectValues(BusinessScenario::createFromDiscriminatorValue)); });
+        deserializerMap.put("migrations", (n) -> { this.setMigrations(n.getObjectValue(MigrationsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("sharePoint", (n) -> { this.setSharePoint(n.getObjectValue(SharePointRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("virtualEvents", (n) -> { this.setVirtualEvents(n.getObjectValue(VirtualEventsRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the migrations property value. The migrations property
+     * @return a {@link MigrationsRoot}
+     */
+    @jakarta.annotation.Nullable
+    public MigrationsRoot getMigrations() {
+        return this.backingStore.get("migrations");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -118,6 +128,14 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the sharePoint property value. Container for SharePoint resources that include cross-organization migration operations.
+     * @return a {@link SharePointRoot}
+     */
+    @jakarta.annotation.Nullable
+    public SharePointRoot getSharePoint() {
+        return this.backingStore.get("sharePoint");
     }
     /**
      * Gets the virtualEvents property value. A collection of virtual events.
@@ -138,7 +156,9 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeCollectionOfObjectValues("bookingBusinesses", this.getBookingBusinesses());
         writer.writeCollectionOfObjectValues("bookingCurrencies", this.getBookingCurrencies());
         writer.writeCollectionOfObjectValues("businessScenarios", this.getBusinessScenarios());
+        writer.writeObjectValue("migrations", this.getMigrations());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("sharePoint", this.getSharePoint());
         writer.writeObjectValue("virtualEvents", this.getVirtualEvents());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -193,11 +213,25 @@ public class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("businessScenarios", value);
     }
     /**
+     * Sets the migrations property value. The migrations property
+     * @param value Value to set for the migrations property.
+     */
+    public void setMigrations(@jakarta.annotation.Nullable final MigrationsRoot value) {
+        this.backingStore.set("migrations", value);
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the sharePoint property value. Container for SharePoint resources that include cross-organization migration operations.
+     * @param value Value to set for the sharePoint property.
+     */
+    public void setSharePoint(@jakarta.annotation.Nullable final SharePointRoot value) {
+        this.backingStore.set("sharePoint", value);
     }
     /**
      * Sets the virtualEvents property value. A collection of virtual events.

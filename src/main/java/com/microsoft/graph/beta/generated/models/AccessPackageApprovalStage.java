@@ -49,6 +49,14 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         return value;
     }
     /**
+     * Gets the approverInformationVisibility property value. The approverInformationVisibility property
+     * @return a {@link ApproverInformationVisibility}
+     */
+    @jakarta.annotation.Nullable
+    public ApproverInformationVisibility getApproverInformationVisibility() {
+        return this.backingStore.get("approverInformationVisibility");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -102,7 +110,8 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(10);
+        deserializerMap.put("approverInformationVisibility", (n) -> { this.setApproverInformationVisibility(n.getEnumValue(ApproverInformationVisibility::forValue)); });
         deserializerMap.put("durationBeforeAutomaticDenial", (n) -> { this.setDurationBeforeAutomaticDenial(n.getPeriodAndDurationValue()); });
         deserializerMap.put("durationBeforeEscalation", (n) -> { this.setDurationBeforeEscalation(n.getPeriodAndDurationValue()); });
         deserializerMap.put("escalationApprovers", (n) -> { this.setEscalationApprovers(n.getCollectionOfObjectValues(SubjectSet::createFromDiscriminatorValue)); });
@@ -152,6 +161,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("approverInformationVisibility", this.getApproverInformationVisibility());
         writer.writePeriodAndDurationValue("durationBeforeAutomaticDenial", this.getDurationBeforeAutomaticDenial());
         writer.writePeriodAndDurationValue("durationBeforeEscalation", this.getDurationBeforeEscalation());
         writer.writeCollectionOfObjectValues("escalationApprovers", this.getEscalationApprovers());
@@ -169,6 +179,13 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the approverInformationVisibility property value. The approverInformationVisibility property
+     * @param value Value to set for the approverInformationVisibility property.
+     */
+    public void setApproverInformationVisibility(@jakarta.annotation.Nullable final ApproverInformationVisibility value) {
+        this.backingStore.set("approverInformationVisibility", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

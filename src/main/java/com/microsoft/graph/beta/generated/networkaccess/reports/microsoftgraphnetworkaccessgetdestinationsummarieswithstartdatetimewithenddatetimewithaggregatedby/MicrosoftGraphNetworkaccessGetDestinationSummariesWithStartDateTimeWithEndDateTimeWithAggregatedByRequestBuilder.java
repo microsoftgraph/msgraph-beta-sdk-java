@@ -43,7 +43,7 @@ public class MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTime
         super(requestAdapter, "{+baseurl}/networkAccess/reports/microsoft.graph.networkaccess.getDestinationSummaries(startDateTime={startDateTime},endDateTime={endDateTime},aggregatedBy='{aggregatedBy}'){?%24count,%24filter,%24search,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get counts of the visits to the top destination aggregations.
+     * Get counts of the visits to the top destination aggregations as logged in Global Secure Access
      * @return a {@link GetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -52,7 +52,7 @@ public class MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTime
         return get(null);
     }
     /**
-     * Get counts of the visits to the top destination aggregations.
+     * Get counts of the visits to the top destination aggregations as logged in Global Secure Access
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link GetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -65,7 +65,7 @@ public class MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTime
         return this.requestAdapter.send(requestInfo, errorMapping, GetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get counts of the visits to the top destination aggregations.
+     * Get counts of the visits to the top destination aggregations as logged in Global Secure Access
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -73,7 +73,7 @@ public class MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTime
         return toGetRequestInformation(null);
     }
     /**
-     * Get counts of the visits to the top destination aggregations.
+     * Get counts of the visits to the top destination aggregations as logged in Global Secure Access
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -95,7 +95,7 @@ public class MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTime
         return new MicrosoftGraphNetworkaccessGetDestinationSummariesWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get counts of the visits to the top destination aggregations.
+     * Get counts of the visits to the top destination aggregations as logged in Global Secure Access
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
