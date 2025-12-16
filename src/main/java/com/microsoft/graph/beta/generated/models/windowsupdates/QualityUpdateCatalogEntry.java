@@ -74,7 +74,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         return this.backingStore.get("productRevisions");
     }
     /**
-     * Gets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
+     * Gets the qualityUpdateCadence property value. The publishing cadence of the quality update. The possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
      * @return a {@link QualityUpdateCadence}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class QualityUpdateCatalogEntry extends SoftwareUpdateCatalogEntry implem
         this.backingStore.set("productRevisions", value);
     }
     /**
-     * Sets the qualityUpdateCadence property value. The publishing cadence of the quality update. Possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
+     * Sets the qualityUpdateCadence property value. The publishing cadence of the quality update. The possible values are: monthly, outOfBand, unknownFutureValue. Read-only.
      * @param value Value to set for the qualityUpdateCadence property.
      */
     public void setQualityUpdateCadence(@jakarta.annotation.Nullable final QualityUpdateCadence value) {

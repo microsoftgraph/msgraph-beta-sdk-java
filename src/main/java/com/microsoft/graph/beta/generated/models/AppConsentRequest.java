@@ -41,7 +41,7 @@ public class AppConsentRequest extends Entity implements Parsable {
         return this.backingStore.get("appId");
     }
     /**
-     * Gets the consentType property value. The consent type of the request. Possible values are: StaticandDynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
+     * Gets the consentType property value. The consent type of the request. The possible values are: StaticandDynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class AppConsentRequest extends Entity implements Parsable {
         this.backingStore.set("appId", value);
     }
     /**
-     * Sets the consentType property value. The consent type of the request. Possible values are: StaticandDynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
+     * Sets the consentType property value. The consent type of the request. The possible values are: StaticandDynamic. These represent static and dynamic permissions, respectively, requested in the consent workflow. Supports $filter (eq only) and $orderby. Required.
      * @param value Value to set for the consentType property.
      */
     public void setConsentType(@jakarta.annotation.Nullable final String value) {

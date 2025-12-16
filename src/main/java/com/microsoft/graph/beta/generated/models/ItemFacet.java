@@ -53,7 +53,7 @@ public class ItemFacet extends Entity implements Parsable {
         return new ItemFacet();
     }
     /**
-     * Gets the allowedAudiences property value. The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
+     * Gets the allowedAudiences property value. The audiences that are able to see the values contained within the associated entity. The possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
      * @return a {@link EnumSet<AllowedAudiences>}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class ItemFacet extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("sources", this.getSources());
     }
     /**
-     * Sets the allowedAudiences property value. The audiences that are able to see the values contained within the associated entity. Possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
+     * Sets the allowedAudiences property value. The audiences that are able to see the values contained within the associated entity. The possible values are: me, family, contacts, groupMembers, organization, federatedOrganizations, everyone, unknownFutureValue.
      * @param value Value to set for the allowedAudiences property.
      */
     public void setAllowedAudiences(@jakarta.annotation.Nullable final EnumSet<AllowedAudiences> value) {

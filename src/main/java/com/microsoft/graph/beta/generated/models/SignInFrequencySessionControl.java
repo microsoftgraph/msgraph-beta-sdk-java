@@ -55,7 +55,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         return this.backingStore.get("frequencyInterval");
     }
     /**
-     * Gets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
+     * Gets the type property value. The possible values are: days, hours, or null if frequencyInterval is everyTime .
      * @return a {@link SigninFrequencyType}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class SignInFrequencySessionControl extends ConditionalAccessSessionContr
         this.backingStore.set("frequencyInterval", value);
     }
     /**
-     * Sets the type property value. Possible values are: days, hours, or null if frequencyInterval is everyTime .
+     * Sets the type property value. The possible values are: days, hours, or null if frequencyInterval is everyTime .
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final SigninFrequencyType value) {

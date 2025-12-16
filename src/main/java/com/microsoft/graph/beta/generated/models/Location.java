@@ -113,7 +113,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("locationEmailAddress");
     }
     /**
-     * Gets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     * Gets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      * @return a {@link LocationType}
      */
     @jakarta.annotation.Nullable
@@ -213,7 +213,7 @@ public class Location implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("locationEmailAddress", value);
     }
     /**
-     * Sets the locationType property value. The type of location. Possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
+     * Sets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
      * @param value Value to set for the locationType property.
      */
     public void setLocationType(@jakarta.annotation.Nullable final LocationType value) {

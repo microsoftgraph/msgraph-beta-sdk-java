@@ -84,7 +84,7 @@ public class ProductRevision extends Entity implements Parsable {
         return this.backingStore.get("osBuild");
     }
     /**
-     * Gets the product property value. The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
+     * Gets the product property value. The product of the revision. The possible values are: Windows 10, Windows 11. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class ProductRevision extends Entity implements Parsable {
         this.backingStore.set("osBuild", value);
     }
     /**
-     * Sets the product property value. The product of the revision. Possible values are: Windows 10, Windows 11. Read-only.
+     * Sets the product property value. The product of the revision. The possible values are: Windows 10, Windows 11. Read-only.
      * @param value Value to set for the product property.
      */
     public void setProduct(@jakarta.annotation.Nullable final String value) {

@@ -129,7 +129,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("street");
     }
     /**
-     * Gets the type property value. The type of address. Possible values are: unknown, home, business, other.
+     * Gets the type property value. The type of address. The possible values are: unknown, home, business, other.
      * @return a {@link PhysicalAddressType}
      */
     @jakarta.annotation.Nullable
@@ -217,7 +217,7 @@ public class PhysicalAddress implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("street", value);
     }
     /**
-     * Sets the type property value. The type of address. Possible values are: unknown, home, business, other.
+     * Sets the type property value. The type of address. The possible values are: unknown, home, business, other.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final PhysicalAddressType value) {

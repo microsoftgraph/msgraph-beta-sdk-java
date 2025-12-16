@@ -274,7 +274,7 @@ public class MobileApp extends Entity implements Parsable {
         return this.backingStore.get("supersedingAppCount");
     }
     /**
-     * Gets the uploadState property value. The upload state. Possible values are: 0 - Not Ready, 1 - Ready, 2 - Processing. This property is read-only.
+     * Gets the uploadState property value. The upload state. The possible values are: 0 - Not Ready, 1 - Ready, 2 - Processing. This property is read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -452,7 +452,7 @@ public class MobileApp extends Entity implements Parsable {
         this.backingStore.set("supersedingAppCount", value);
     }
     /**
-     * Sets the uploadState property value. The upload state. Possible values are: 0 - Not Ready, 1 - Ready, 2 - Processing. This property is read-only.
+     * Sets the uploadState property value. The upload state. The possible values are: 0 - Not Ready, 1 - Ready, 2 - Processing. This property is read-only.
      * @param value Value to set for the uploadState property.
      */
     public void setUploadState(@jakarta.annotation.Nullable final Integer value) {

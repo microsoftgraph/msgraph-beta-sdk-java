@@ -65,7 +65,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the proficiency property value. Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
+     * Gets the proficiency property value. Detail of the users proficiency with this skill. The possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
      * @return a {@link SkillProficiencyLevel}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class SkillProficiency extends ItemFacet implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the proficiency property value. Detail of the users proficiency with this skill. Possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
+     * Sets the proficiency property value. Detail of the users proficiency with this skill. The possible values are: elementary, limitedWorking, generalProfessional, advancedProfessional, expert, unknownFutureValue.
      * @param value Value to set for the proficiency property.
      */
     public void setProficiency(@jakarta.annotation.Nullable final SkillProficiencyLevel value) {

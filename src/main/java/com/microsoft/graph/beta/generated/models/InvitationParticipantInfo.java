@@ -56,7 +56,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
         return this.backingStore;
     }
     /**
-     * Gets the endpointType property value. The type of endpoint. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
+     * Gets the endpointType property value. The type of endpoint. The possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      * @return a {@link EndpointType}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class InvitationParticipantInfo implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the endpointType property value. The type of endpoint. Possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
+     * Sets the endpointType property value. The type of endpoint. The possible values are: default, voicemail, skypeForBusiness, skypeForBusinessVoipPhone and unknownFutureValue.
      * @param value Value to set for the endpointType property.
      */
     public void setEndpointType(@jakarta.annotation.Nullable final EndpointType value) {

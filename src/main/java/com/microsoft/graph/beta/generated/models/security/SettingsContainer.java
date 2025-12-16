@@ -26,21 +26,12 @@ public class SettingsContainer extends Entity implements Parsable {
         return new SettingsContainer();
     }
     /**
-     * Gets the autoAuditingConfiguration property value. Represents automatic configuration for collection of Windows event logs as needed for Defender for Identity sensors.
-     * @return a {@link AutoAuditingConfiguration}
-     */
-    @jakarta.annotation.Nullable
-    public AutoAuditingConfiguration getAutoAuditingConfiguration() {
-        return this.backingStore.get("autoAuditingConfiguration");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("autoAuditingConfiguration", (n) -> { this.setAutoAuditingConfiguration(n.getObjectValue(AutoAuditingConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -50,13 +41,5 @@ public class SettingsContainer extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeObjectValue("autoAuditingConfiguration", this.getAutoAuditingConfiguration());
-    }
-    /**
-     * Sets the autoAuditingConfiguration property value. Represents automatic configuration for collection of Windows event logs as needed for Defender for Identity sensors.
-     * @param value Value to set for the autoAuditingConfiguration property.
-     */
-    public void setAutoAuditingConfiguration(@jakarta.annotation.Nullable final AutoAuditingConfiguration value) {
-        this.backingStore.set("autoAuditingConfiguration", value);
     }
 }

@@ -56,7 +56,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("attendee");
     }
     /**
-     * Gets the availability property value. The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Gets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @return a {@link FreeBusyStatus}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class AttendeeAvailability implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("attendee", value);
     }
     /**
-     * Sets the availability property value. The availability status of the attendee. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Sets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the availability property.
      */
     public void setAvailability(@jakarta.annotation.Nullable final FreeBusyStatus value) {

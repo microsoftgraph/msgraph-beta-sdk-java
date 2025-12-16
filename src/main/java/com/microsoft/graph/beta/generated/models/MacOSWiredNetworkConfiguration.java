@@ -29,7 +29,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         return new MacOSWiredNetworkConfiguration();
     }
     /**
-     * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. The possible values are: certificate, usernameAndPassword, derivedCredential.
      * @return a {@link WiFiAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
@@ -37,7 +37,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         return this.backingStore.get("authenticationMethod");
     }
     /**
-     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. The possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @return a {@link AppleDeploymentChannel}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         return this.backingStore.get("deploymentChannel");
     }
     /**
-     * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+     * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. The possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @return a {@link EapFastConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         return this.backingStore.get("networkName");
     }
     /**
-     * Gets the nonEapAuthenticationMethodForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Gets the nonEapAuthenticationMethodForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a {@link NonEapAuthenticationMethodForEapTtlsType}
      */
     @jakarta.annotation.Nullable
@@ -156,21 +156,21 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         writer.writeCollectionOfPrimitiveValues("trustedServerCertificateNames", this.getTrustedServerCertificateNames());
     }
     /**
-     * Sets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Sets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. The possible values are: certificate, usernameAndPassword, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
         this.backingStore.set("authenticationMethod", value);
     }
     /**
-     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. The possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @param value Value to set for the deploymentChannel property.
      */
     public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
         this.backingStore.set("deploymentChannel", value);
     }
     /**
-     * Sets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+     * Sets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. The possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @param value Value to set for the eapFastConfiguration property.
      */
     public void setEapFastConfiguration(@jakarta.annotation.Nullable final EapFastConfiguration value) {
@@ -212,7 +212,7 @@ public class MacOSWiredNetworkConfiguration extends DeviceConfiguration implemen
         this.backingStore.set("networkName", value);
     }
     /**
-     * Sets the nonEapAuthenticationMethodForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Sets the nonEapAuthenticationMethodForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the nonEapAuthenticationMethodForEapTtls property.
      */
     public void setNonEapAuthenticationMethodForEapTtls(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {

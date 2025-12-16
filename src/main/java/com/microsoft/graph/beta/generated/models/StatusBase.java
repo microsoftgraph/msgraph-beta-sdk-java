@@ -82,7 +82,7 @@ public class StatusBase implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
+     * Gets the status property value. The possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
      * @return a {@link ProvisioningResult}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class StatusBase implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the status property value. Possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
+     * Sets the status property value. The possible values are: success, warning, failure, skipped, unknownFutureValue. Supports $filter (eq, contains).
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ProvisioningResult value) {

@@ -27,7 +27,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
         return new ManagedDeviceCompliance();
     }
     /**
-     * Gets the complianceStatus property value. Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only.
+     * Gets the complianceStatus property value. Compliance state of the device. This property is read-only. The possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
         return this.backingStore.get("complianceStatus");
     }
     /**
-     * Gets the deviceType property value. Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
+     * Gets the deviceType property value. Platform of the device. This property is read-only. The possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -184,14 +184,14 @@ public class ManagedDeviceCompliance extends Entity implements Parsable {
         writer.writeStringValue("tenantId", this.getTenantId());
     }
     /**
-     * Sets the complianceStatus property value. Compliance state of the device. This property is read-only. Possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only.
+     * Sets the complianceStatus property value. Compliance state of the device. This property is read-only. The possible values are: unknown, compliant, noncompliant, conflict, error, inGracePeriod, configManager. Optional. Read-only.
      * @param value Value to set for the complianceStatus property.
      */
     public void setComplianceStatus(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("complianceStatus", value);
     }
     /**
-     * Sets the deviceType property value. Platform of the device. This property is read-only. Possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
+     * Sets the deviceType property value. Platform of the device. This property is read-only. The possible values are: desktop, windowsRT, winMO6, nokia, windowsPhone, mac, winCE, winEmbedded, iPhone, iPad, iPod, android, iSocConsumer, unix, macMDM, holoLens, surfaceHub, androidForWork, androidEnterprise, windows10x, androidnGMS, chromeOS, linux, blackberry, palm, unknown, cloudPC.  Optional. Read-only.
      * @param value Value to set for the deviceType property.
      */
     public void setDeviceType(@jakarta.annotation.Nullable final String value) {

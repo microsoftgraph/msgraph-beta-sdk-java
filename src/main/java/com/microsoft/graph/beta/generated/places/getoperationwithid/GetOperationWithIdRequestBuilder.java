@@ -38,19 +38,21 @@ public class GetOperationWithIdRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/getOperation(id='{id}')", rawUrl);
     }
     /**
-     * Invoke function getOperation
+     * Get a placeOperation by ID.
      * @return a {@link PlaceOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-getoperation?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlaceOperation get() {
         return get(null);
     }
     /**
-     * Invoke function getOperation
+     * Get a placeOperation by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlaceOperation}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-getoperation?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PlaceOperation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetOperationWithIdRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlaceOperation::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getOperation
+     * Get a placeOperation by ID.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetOperationWithIdRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getOperation
+     * Get a placeOperation by ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

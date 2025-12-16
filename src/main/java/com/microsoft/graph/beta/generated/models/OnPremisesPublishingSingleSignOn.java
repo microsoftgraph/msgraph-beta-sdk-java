@@ -84,7 +84,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the singleSignOnMode property value. The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased, oAuthToken.
+     * Gets the singleSignOnMode property value. The preferred single-sign on mode for the application. The possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased, oAuthToken.
      * @return a {@link SingleSignOnMode}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class OnPremisesPublishingSingleSignOn implements AdditionalDataHolder, B
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the singleSignOnMode property value. The preferred single-sign on mode for the application. Possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased, oAuthToken.
+     * Sets the singleSignOnMode property value. The preferred single-sign on mode for the application. The possible values are: none, onPremisesKerberos, aadHeaderBased,pingHeaderBased, oAuthToken.
      * @param value Value to set for the singleSignOnMode property.
      */
     public void setSingleSignOnMode(@jakarta.annotation.Nullable final SingleSignOnMode value) {

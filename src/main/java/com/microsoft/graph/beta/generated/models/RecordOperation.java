@@ -25,7 +25,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
         return new RecordOperation();
     }
     /**
-     * Gets the completionReason property value. Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
+     * Gets the completionReason property value. The possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
      * @return a {@link RecordCompletionReason}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class RecordOperation extends CommsOperation implements Parsable {
         writer.writeStringValue("recordingLocation", this.getRecordingLocation());
     }
     /**
-     * Sets the completionReason property value. Possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
+     * Sets the completionReason property value. The possible values are: operationCanceled, stopToneDetected, maxRecordDurationReached, initialSilenceTimeout, maxSilenceTimeout, playPromptFailed, playBeepFailed, mediaReceiveTimeout, unspecifiedError, none.
      * @param value Value to set for the completionReason property.
      */
     public void setCompletionReason(@jakarta.annotation.Nullable final RecordCompletionReason value) {

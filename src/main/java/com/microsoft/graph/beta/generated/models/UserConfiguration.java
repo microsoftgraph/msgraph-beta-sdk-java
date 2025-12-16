@@ -25,7 +25,7 @@ public class UserConfiguration extends Entity implements Parsable {
         return new UserConfiguration();
     }
     /**
-     * Gets the binaryData property value. The binaryData property
+     * Gets the binaryData property value. Arbitrary binary data.
      * @return a {@link byte[]}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class UserConfiguration extends Entity implements Parsable {
         writer.writeByteArrayValue("binaryData", this.getBinaryData());
     }
     /**
-     * Sets the binaryData property value. The binaryData property
+     * Sets the binaryData property value. Arbitrary binary data.
      * @param value Value to set for the binaryData property.
      */
     public void setBinaryData(@jakarta.annotation.Nullable final byte[] value) {

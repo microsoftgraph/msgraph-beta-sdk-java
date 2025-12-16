@@ -27,7 +27,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         return new CloudPcDevice();
     }
     /**
-     * Gets the cloudPcStatus property value. The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
+     * Gets the cloudPcStatus property value. The status of the cloud PC. The possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class CloudPcDevice extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the cloudPcStatus property value. The status of the cloud PC. Possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
+     * Sets the cloudPcStatus property value. The status of the cloud PC. The possible values are: notProvisioned, provisioning, provisioned, upgrading, inGracePeriod, deprovisioning, failed. Required. Read-only.
      * @param value Value to set for the cloudPcStatus property.
      */
     public void setCloudPcStatus(@jakarta.annotation.Nullable final String value) {

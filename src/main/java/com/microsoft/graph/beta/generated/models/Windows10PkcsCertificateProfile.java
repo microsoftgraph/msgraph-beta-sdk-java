@@ -29,7 +29,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
         return new Windows10PkcsCertificateProfile();
     }
     /**
-     * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
+     * Gets the certificateStore property value. Target store certificate. The possible values are: user, machine.
      * @return a {@link CertificateStore}
      */
     @jakarta.annotation.Nullable
@@ -136,7 +136,7 @@ public class Windows10PkcsCertificateProfile extends Windows10CertificateProfile
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
     }
     /**
-     * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
+     * Sets the certificateStore property value. Target store certificate. The possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {

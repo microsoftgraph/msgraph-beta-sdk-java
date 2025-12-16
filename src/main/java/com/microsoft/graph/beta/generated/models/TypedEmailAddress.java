@@ -45,7 +45,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
         return this.backingStore.get("otherLabel");
     }
     /**
-     * Gets the type property value. The type of email address. Possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
+     * Gets the type property value. The type of email address. The possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
      * @return a {@link EmailType}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class TypedEmailAddress extends EmailAddress implements Parsable {
         this.backingStore.set("otherLabel", value);
     }
     /**
-     * Sets the type property value. The type of email address. Possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
+     * Sets the type property value. The type of email address. The possible values are: unknown, work, personal, main, other. The default value is unknown, which means address has not been set as a specific type.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final EmailType value) {

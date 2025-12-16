@@ -42,7 +42,7 @@ public class CaseOperation extends Entity implements Parsable {
         return new CaseOperation();
     }
     /**
-     * Gets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
+     * Gets the action property value. The type of action the operation represents. The possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
      * @return a {@link CaseAction}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class CaseOperation extends Entity implements Parsable {
         return this.backingStore.get("resultInfo");
     }
     /**
-     * Gets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
+     * Gets the status property value. The status of the case operation. The possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
      * @return a {@link CaseOperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class CaseOperation extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the action property value. The type of action the operation represents. Possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
+     * Sets the action property value. The type of action the operation represents. The possible values are: addToReviewSet,applyTags,contentExport,convertToPdf,estimateStatistics, purgeData
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final CaseAction value) {
@@ -171,7 +171,7 @@ public class CaseOperation extends Entity implements Parsable {
         this.backingStore.set("resultInfo", value);
     }
     /**
-     * Sets the status property value. The status of the case operation. Possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
+     * Sets the status property value. The status of the case operation. The possible values are: notStarted, submissionFailed, running, succeeded, partiallySucceeded, failed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final CaseOperationStatus value) {

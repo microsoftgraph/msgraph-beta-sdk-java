@@ -49,7 +49,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
         return this.backingStore.get("isFolder");
     }
     /**
-     * Gets the permission property value. Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
+     * Gets the permission property value. Specifies the permissions granted for the attachment by the type of provider in providerType. The possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
      * @return a {@link ReferenceAttachmentPermission}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
         return this.backingStore.get("previewUrl");
     }
     /**
-     * Gets the providerType property value. The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
+     * Gets the providerType property value. The type of provider that supports an attachment of this contentType. The possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
      * @return a {@link ReferenceAttachmentProvider}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
         this.backingStore.set("isFolder", value);
     }
     /**
-     * Sets the permission property value. Specifies the permissions granted for the attachment by the type of provider in providerType. Possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
+     * Sets the permission property value. Specifies the permissions granted for the attachment by the type of provider in providerType. The possible values are: other, view, edit, anonymousView, anonymousEdit, organizationView, organizationEdit. Optional.
      * @param value Value to set for the permission property.
      */
     public void setPermission(@jakarta.annotation.Nullable final ReferenceAttachmentPermission value) {
@@ -124,7 +124,7 @@ public class ReferenceAttachment extends Attachment implements Parsable {
         this.backingStore.set("previewUrl", value);
     }
     /**
-     * Sets the providerType property value. The type of provider that supports an attachment of this contentType. Possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
+     * Sets the providerType property value. The type of provider that supports an attachment of this contentType. The possible values are: other, oneDriveBusiness, oneDriveConsumer, dropbox. Optional.
      * @param value Value to set for the providerType property.
      */
     public void setProviderType(@jakarta.annotation.Nullable final ReferenceAttachmentProvider value) {

@@ -72,7 +72,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("color");
     }
     /**
-     * Gets the dataOption property value. Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
+     * Gets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sortOn property value. Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
+     * Gets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -172,7 +172,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("color", value);
     }
     /**
-     * Sets the dataOption property value. Represents additional sorting options for this field. Possible values are: Normal, TextAsNumber.
+     * Sets the dataOption property value. Represents additional sorting options for this field. The possible values are: Normal, TextAsNumber.
      * @param value Value to set for the dataOption property.
      */
     public void setDataOption(@jakarta.annotation.Nullable final String value) {
@@ -200,7 +200,7 @@ public class WorkbookSortField implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sortOn property value. Represents the type of sorting of this condition. Possible values are: Value, CellColor, FontColor, Icon.
+     * Sets the sortOn property value. Represents the type of sorting of this condition. The possible values are: Value, CellColor, FontColor, Icon.
      * @param value Value to set for the sortOn property.
      */
     public void setSortOn(@jakarta.annotation.Nullable final String value) {

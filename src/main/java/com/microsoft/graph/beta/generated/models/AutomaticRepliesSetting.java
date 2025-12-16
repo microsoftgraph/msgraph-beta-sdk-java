@@ -56,7 +56,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the externalAudience property value. The set of audience external to the signed-in user&apos;s organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
+     * Gets the externalAudience property value. The set of audience external to the signed-in user&apos;s organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      * @return a {@link ExternalAudienceScope}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("scheduledStartDateTime");
     }
     /**
-     * Gets the status property value. Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
+     * Gets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      * @return a {@link AutomaticRepliesStatus}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the externalAudience property value. The set of audience external to the signed-in user&apos;s organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. Possible values are: none, contactsOnly, all.
+     * Sets the externalAudience property value. The set of audience external to the signed-in user&apos;s organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
      * @param value Value to set for the externalAudience property.
      */
     public void setExternalAudience(@jakarta.annotation.Nullable final ExternalAudienceScope value) {
@@ -200,7 +200,7 @@ public class AutomaticRepliesSetting implements AdditionalDataHolder, BackedMode
         this.backingStore.set("scheduledStartDateTime", value);
     }
     /**
-     * Sets the status property value. Configurations status for automatic replies. Possible values are: disabled, alwaysEnabled, scheduled.
+     * Sets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AutomaticRepliesStatus value) {

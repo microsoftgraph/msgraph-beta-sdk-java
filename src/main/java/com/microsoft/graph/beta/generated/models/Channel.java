@@ -127,7 +127,7 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("isFavoriteByDefault");
     }
     /**
-     * Gets the layoutType property value. The layoutType property
+     * Gets the layoutType property value. The layout type of the channel. Can be set during creation and can be updated. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with post layout use traditional post-reply conversation format, while channels with chat layout provide a chat-like threading experience similar to group chats.
      * @return a {@link ChannelLayoutType}
      */
     @jakarta.annotation.Nullable
@@ -306,7 +306,7 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("isFavoriteByDefault", value);
     }
     /**
-     * Sets the layoutType property value. The layoutType property
+     * Sets the layoutType property value. The layout type of the channel. Can be set during creation and can be updated. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with post layout use traditional post-reply conversation format, while channels with chat layout provide a chat-like threading experience similar to group chats.
      * @param value Value to set for the layoutType property.
      */
     public void setLayoutType(@jakarta.annotation.Nullable final ChannelLayoutType value) {

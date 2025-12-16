@@ -137,7 +137,7 @@ public class SecurityAction extends Entity implements Parsable {
         return this.backingStore.get("states");
     }
     /**
-     * Gets the status property value. Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
+     * Gets the status property value. Status of the action. The possible values are: NotStarted, Running, Completed, Failed.
      * @return a {@link OperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -260,7 +260,7 @@ public class SecurityAction extends Entity implements Parsable {
         this.backingStore.set("states", value);
     }
     /**
-     * Sets the status property value. Status of the action. Possible values are: NotStarted, Running, Completed, Failed.
+     * Sets the status property value. Status of the action. The possible values are: NotStarted, Running, Completed, Failed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {

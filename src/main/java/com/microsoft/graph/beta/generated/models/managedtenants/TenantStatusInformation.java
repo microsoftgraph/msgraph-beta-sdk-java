@@ -57,7 +57,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
-     * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
+     * Gets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. The possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
      * @return a {@link DelegatedPrivilegeStatus}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("onboardedDateTime");
     }
     /**
-     * Gets the onboardingStatus property value. The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
+     * Gets the onboardingStatus property value. The onboarding status for the managed tenant.. The possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
      * @return a {@link TenantOnboardingStatus}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("onboardingStatus");
     }
     /**
-     * Gets the tenantOnboardingEligibilityReason property value. Organization&apos;s onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
+     * Gets the tenantOnboardingEligibilityReason property value. Organization&apos;s onboarding eligibility reason in Microsoft 365 Lighthouse.. The possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
      * @return a {@link TenantOnboardingEligibilityReason}
      */
     @jakarta.annotation.Nullable
@@ -189,7 +189,7 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. Possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
+     * Sets the delegatedPrivilegeStatus property value. The status of the delegated admin privilege relationship between the managing entity and the managed tenant. The possible values are: none, delegatedAdminPrivileges, unknownFutureValue, granularDelegatedAdminPrivileges, delegatedAndGranularDelegetedAdminPrivileges. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: granularDelegatedAdminPrivileges , delegatedAndGranularDelegetedAdminPrivileges. Optional. Read-only.
      * @param value Value to set for the delegatedPrivilegeStatus property.
      */
     public void setDelegatedPrivilegeStatus(@jakarta.annotation.Nullable final DelegatedPrivilegeStatus value) {
@@ -238,14 +238,14 @@ public class TenantStatusInformation implements AdditionalDataHolder, BackedMode
         this.backingStore.set("onboardedDateTime", value);
     }
     /**
-     * Sets the onboardingStatus property value. The onboarding status for the managed tenant.. Possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
+     * Sets the onboardingStatus property value. The onboarding status for the managed tenant.. The possible values are: ineligible, inProcess, active, inactive, unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the onboardingStatus property.
      */
     public void setOnboardingStatus(@jakarta.annotation.Nullable final TenantOnboardingStatus value) {
         this.backingStore.set("onboardingStatus", value);
     }
     /**
-     * Sets the tenantOnboardingEligibilityReason property value. Organization&apos;s onboarding eligibility reason in Microsoft 365 Lighthouse.. Possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
+     * Sets the tenantOnboardingEligibilityReason property value. Organization&apos;s onboarding eligibility reason in Microsoft 365 Lighthouse.. The possible values are: none, contractType, delegatedAdminPrivileges,usersCount,license and unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the tenantOnboardingEligibilityReason property.
      */
     public void setTenantOnboardingEligibilityReason(@jakarta.annotation.Nullable final TenantOnboardingEligibilityReason value) {

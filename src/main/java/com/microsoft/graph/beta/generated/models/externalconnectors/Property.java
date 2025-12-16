@@ -48,7 +48,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
-     * Gets the aliases property value. A set of aliases or friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^. Optional.
+     * Gets the aliases property value. A set of aliases or friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following special characters: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^. Optional.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the description property value. Specifies a human-readable description that explains the purpose, usage, or guidance related to the property. This property enhances semantic understanding by helping Copilot interpret queries and accurately map them to properties that results in more relevant and precise responses. Optional but we recommend that you use this property for queryable properties. The maximum supported length is 200 characters.
+     * Gets the description property value. The description property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("isSearchable");
     }
     /**
-     * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (for example, better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, containerName, containerUrl, iconUrl, assignedTo, dueDate, closedDate, closedBy, reportedBy, sprintName, severity, state, priority, secondaryId, itemParentId, parentUrl, tags, itemType, itemPath, numReactions. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: containerName, containerUrl, iconUrl, assignedTo, dueDate, closedDate, closedBy, reportedBy, sprintName, severity, state, priority, secondaryId, itemParentId, parentUrl, tags, itemType, itemPath, numReactions.
+     * Gets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (for example, better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, containerName, containerUrl, iconUrl. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: containerName, containerUrl, iconUrl, personEmails, personAddresses, personAnniversaries, personName, personNote, personPhones, personCurrentPosition, personWebAccounts, personWebSite, personSkills, personProjects, personAccount, personAwards, personCertifications, personAssistants, personColleagues, personManager, personAlternateContacts, personEmergencyContacts.
      * @return a {@link java.util.List<Label>}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("labels");
     }
     /**
-     * Gets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^.  Required.
+     * Gets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following special characters: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^.  Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the aliases property value. A set of aliases or friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^. Optional.
+     * Sets the aliases property value. A set of aliases or friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string might not contain control characters, whitespace, or any of the following special characters: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^. Optional.
      * @param value Value to set for the aliases property.
      */
     public void setAliases(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -215,7 +215,7 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the description property value. Specifies a human-readable description that explains the purpose, usage, or guidance related to the property. This property enhances semantic understanding by helping Copilot interpret queries and accurately map them to properties that results in more relevant and precise responses. Optional but we recommend that you use this property for queryable properties. The maximum supported length is 200 characters.
+     * Sets the description property value. The description property
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
@@ -257,14 +257,14 @@ public class Property implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("isSearchable", value);
     }
     /**
-     * Sets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (for example, better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, containerName, containerUrl, iconUrl, assignedTo, dueDate, closedDate, closedBy, reportedBy, sprintName, severity, state, priority, secondaryId, itemParentId, parentUrl, tags, itemType, itemPath, numReactions. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: containerName, containerUrl, iconUrl, assignedTo, dueDate, closedDate, closedBy, reportedBy, sprintName, severity, state, priority, secondaryId, itemParentId, parentUrl, tags, itemType, itemPath, numReactions.
+     * Sets the labels property value. Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (for example, better relevance). Optional.The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue, containerName, containerUrl, iconUrl. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: containerName, containerUrl, iconUrl, personEmails, personAddresses, personAnniversaries, personName, personNote, personPhones, personCurrentPosition, personWebAccounts, personWebSite, personSkills, personProjects, personAccount, personAwards, personCertifications, personAssistants, personColleagues, personManager, personAlternateContacts, personEmergencyContacts.
      * @param value Value to set for the labels property.
      */
     public void setLabels(@jakarta.annotation.Nullable final java.util.List<Label> value) {
         this.backingStore.set("labels", value);
     }
     /**
-     * Sets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^.  Required.
+     * Sets the name property value. The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, the property name may not contain control characters, whitespace, or any of the following special characters: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &amp;, ?, @, #, /, ~, &apos;, &apos;, &lt;, &gt;, `, ^.  Required.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

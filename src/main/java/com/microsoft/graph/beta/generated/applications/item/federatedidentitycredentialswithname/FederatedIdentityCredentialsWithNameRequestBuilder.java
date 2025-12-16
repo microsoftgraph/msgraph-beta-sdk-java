@@ -39,7 +39,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/applications/{application%2Did}/federatedIdentityCredentials(name='{name}'){?%24expand,%24select}", rawUrl);
     }
     /**
-     * Deletes a federatedIdentityCredential object from an application.
+     * Delete a federatedIdentityCredential object from an application or an agentIdentityBlueprint.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -47,7 +47,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         delete(null);
     }
     /**
-     * Deletes a federatedIdentityCredential object from an application.
+     * Delete a federatedIdentityCredential object from an application or an agentIdentityBlueprint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-delete?view=graph-rest-beta">Find more info here</a>
@@ -59,7 +59,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application or an agentIdentityBlueprint.
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/federatedidentitycredential-get?view=graph-rest-beta">Find more info here</a>
@@ -69,7 +69,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return get(null);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application or an agentIdentityBlueprint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -83,7 +83,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application if it doesn&apos;t exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create a new federatedIdentityCredential object for an application or an agentIdentityBlueprint if it doesn&apos;t exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration or agentIdentityBlueprint and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application or agentIdentityBlueprint.
      * @param body The request body
      * @return a {@link FederatedIdentityCredential}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -94,7 +94,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return patch(body, null);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application if it doesn&apos;t exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create a new federatedIdentityCredential object for an application or an agentIdentityBlueprint if it doesn&apos;t exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration or agentIdentityBlueprint and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application or agentIdentityBlueprint.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link FederatedIdentityCredential}
@@ -110,7 +110,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, FederatedIdentityCredential::createFromDiscriminatorValue);
     }
     /**
-     * Deletes a federatedIdentityCredential object from an application.
+     * Delete a federatedIdentityCredential object from an application or an agentIdentityBlueprint.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -118,7 +118,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return toDeleteRequestInformation(null);
     }
     /**
-     * Deletes a federatedIdentityCredential object from an application.
+     * Delete a federatedIdentityCredential object from an application or an agentIdentityBlueprint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -130,7 +130,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application or an agentIdentityBlueprint.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -138,7 +138,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application or an agentIdentityBlueprint.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -150,7 +150,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return requestInfo;
     }
     /**
-     * Create a new federatedIdentityCredential object for an application if it doesn&apos;t exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create a new federatedIdentityCredential object for an application or an agentIdentityBlueprint if it doesn&apos;t exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration or agentIdentityBlueprint and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application or agentIdentityBlueprint.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -159,7 +159,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Create a new federatedIdentityCredential object for an application if it doesn&apos;t exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
+     * Create a new federatedIdentityCredential object for an application or an agentIdentityBlueprint if it doesn&apos;t exist, or update the properties of an existing federatedIdentityCredential object. By configuring a trust relationship between your Microsoft Entra application registration or agentIdentityBlueprint and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application or agentIdentityBlueprint.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -190,7 +190,7 @@ public class FederatedIdentityCredentialsWithNameRequestBuilder extends BaseRequ
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a federatedIdentityCredential object.
+     * Read the properties and relationships of a federatedIdentityCredential object assigned to an application or an agentIdentityBlueprint.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -76,7 +76,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("networkNames");
     }
     /**
-     * Gets the networkType property value. Provides the type of network used when signing in. Possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
+     * Gets the networkType property value. Provides the type of network used when signing in. The possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
      * @return a {@link NetworkType}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class NetworkLocationDetail implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("networkNames", value);
     }
     /**
-     * Sets the networkType property value. Provides the type of network used when signing in. Possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
+     * Sets the networkType property value. Provides the type of network used when signing in. The possible values are: intranet, extranet, namedNetwork, trusted, unknownFutureValue.
      * @param value Value to set for the networkType property.
      */
     public void setNetworkType(@jakarta.annotation.Nullable final NetworkType value) {

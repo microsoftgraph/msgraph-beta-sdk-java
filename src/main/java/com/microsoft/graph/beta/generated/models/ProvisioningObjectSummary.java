@@ -117,7 +117,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         return this.backingStore.get("modifiedProperties");
     }
     /**
-     * Gets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
+     * Gets the provisioningAction property value. Indicates the activity name or the operation name. The possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      * @return a {@link ProvisioningAction}
      */
     @jakarta.annotation.Nullable
@@ -279,7 +279,7 @@ public class ProvisioningObjectSummary extends Entity implements Parsable {
         this.backingStore.set("modifiedProperties", value);
     }
     /**
-     * Sets the provisioningAction property value. Indicates the activity name or the operation name. Possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
+     * Sets the provisioningAction property value. Indicates the activity name or the operation name. The possible values are: create, update, delete, stageddelete, disable, other and unknownFutureValue. For a list of activities logged, refer to Microsoft Entra activity list. Supports $filter (eq, contains).
      * @param value Value to set for the provisioningAction property.
      */
     public void setProvisioningAction(@jakarta.annotation.Nullable final ProvisioningAction value) {

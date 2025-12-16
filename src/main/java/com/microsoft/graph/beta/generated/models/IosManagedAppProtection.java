@@ -45,7 +45,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("allowWidgetContentSync");
     }
     /**
-     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("filterOpenInToOnlyManagedApps");
     }
     /**
-     * Gets the genmojiConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence Genmoji setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * Gets the genmojiConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence Genmoji setting. The possible values are: notBlocked, blocked, unknownFutureValue.
      * @return a {@link GenmojiIosManagedAppConfigurationState}
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("protectInboundDataFromUnknownSources");
     }
     /**
-     * Gets the screenCaptureConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence screen capture setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * Gets the screenCaptureConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence screen capture setting. The possible values are: notBlocked, blocked, unknownFutureValue.
      * @return a {@link ScreenCaptureIosManagedAppConfigurationState}
      */
     @jakarta.annotation.Nullable
@@ -255,7 +255,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         return this.backingStore.get("thirdPartyKeyboardsBlocked");
     }
     /**
-     * Gets the writingToolsConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence writing tools setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * Gets the writingToolsConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence writing tools setting. The possible values are: notBlocked, blocked, unknownFutureValue.
      * @return a {@link WritingToolsIosManagedAppConfigurationState}
      */
     @jakarta.annotation.Nullable
@@ -310,7 +310,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("allowWidgetContentSync", value);
     }
     /**
-     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @param value Value to set for the appActionIfAccountIsClockedOut property.
      */
     public void setAppActionIfAccountIsClockedOut(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
@@ -401,7 +401,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("filterOpenInToOnlyManagedApps", value);
     }
     /**
-     * Sets the genmojiConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence Genmoji setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * Sets the genmojiConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence Genmoji setting. The possible values are: notBlocked, blocked, unknownFutureValue.
      * @param value Value to set for the genmojiConfigurationState property.
      */
     public void setGenmojiConfigurationState(@jakarta.annotation.Nullable final GenmojiIosManagedAppConfigurationState value) {
@@ -450,7 +450,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("protectInboundDataFromUnknownSources", value);
     }
     /**
-     * Sets the screenCaptureConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence screen capture setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * Sets the screenCaptureConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence screen capture setting. The possible values are: notBlocked, blocked, unknownFutureValue.
      * @param value Value to set for the screenCaptureConfigurationState property.
      */
     public void setScreenCaptureConfigurationState(@jakarta.annotation.Nullable final ScreenCaptureIosManagedAppConfigurationState value) {
@@ -464,7 +464,7 @@ public class IosManagedAppProtection extends TargetedManagedAppProtection implem
         this.backingStore.set("thirdPartyKeyboardsBlocked", value);
     }
     /**
-     * Sets the writingToolsConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence writing tools setting. Possible values are: notBlocked, blocked, unknownFutureValue.
+     * Sets the writingToolsConfigurationState property value. Configuration state (blocked or not blocked) for Apple Intelligence writing tools setting. The possible values are: notBlocked, blocked, unknownFutureValue.
      * @param value Value to set for the writingToolsConfigurationState property.
      */
     public void setWritingToolsConfigurationState(@jakarta.annotation.Nullable final WritingToolsIosManagedAppConfigurationState value) {

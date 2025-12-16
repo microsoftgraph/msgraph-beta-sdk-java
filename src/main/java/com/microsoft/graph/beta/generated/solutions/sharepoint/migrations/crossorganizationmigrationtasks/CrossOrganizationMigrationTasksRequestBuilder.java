@@ -63,7 +63,7 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations/crossOrganizationMigrationTasks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link SharePointMigrationTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -72,7 +72,7 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -115,21 +115,23 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
         return new GetBySourceUserPrincipalNameWithSourcePrincipalNameRequestBuilder(pathParameters, requestAdapter, sourcePrincipalName);
     }
     /**
-     * Create new navigation property to crossOrganizationMigrationTasks for solutions
+     * Create or update a sharePointMigrationTask to migrate a resource from the source organization to the target organization, using the sharePointMigrationTaskParameters. The resource can be a user, a group, or a site. When an existing sharePointMigrationTask is retrieved, it might contain not only the specifics of the source and target organizations and resources, but also the status of the migration and errors encountered during the migration operation. The API calls occur on the source site and only add list items to the my site root web, for example, contoso-my.sharepoint.com. Then, it triggers a multi-geo site move job in the backend to enqueue and orchestrate several tenant workflow jobs, such as backup, restore, and cleanup, supported by TJ infrastructure. The OData type of sharePointResourceMigrationParameters differentiates user migration from site migration, rather than using different subpaths. For a user&apos;s OneDrive migration, specify sharePointUserMigrationParameters. If this migration task is a regular SharePoint site migration, specify sharePointSiteMigrationParameters. If this migration task is a group-connected site migration, specify sharePointGroupMigrationParameters.
      * @param body The request body
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointMigrationTask post(@jakarta.annotation.Nonnull final SharePointMigrationTask body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to crossOrganizationMigrationTasks for solutions
+     * Create or update a sharePointMigrationTask to migrate a resource from the source organization to the target organization, using the sharePointMigrationTaskParameters. The resource can be a user, a group, or a site. When an existing sharePointMigrationTask is retrieved, it might contain not only the specifics of the source and target organizations and resources, but also the status of the migration and errors encountered during the migration operation. The API calls occur on the source site and only add list items to the my site root web, for example, contoso-my.sharepoint.com. Then, it triggers a multi-geo site move job in the backend to enqueue and orchestrate several tenant workflow jobs, such as backup, restore, and cleanup, supported by TJ infrastructure. The OData type of sharePointResourceMigrationParameters differentiates user migration from site migration, rather than using different subpaths. For a user&apos;s OneDrive migration, specify sharePointUserMigrationParameters. If this migration task is a regular SharePoint site migration, specify sharePointSiteMigrationParameters. If this migration task is a group-connected site migration, specify sharePointGroupMigrationParameters.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointMigrationTask post(@jakarta.annotation.Nonnull final SharePointMigrationTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -140,7 +142,7 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, SharePointMigrationTask::createFromDiscriminatorValue);
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +150,7 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -160,7 +162,7 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
         return requestInfo;
     }
     /**
-     * Create new navigation property to crossOrganizationMigrationTasks for solutions
+     * Create or update a sharePointMigrationTask to migrate a resource from the source organization to the target organization, using the sharePointMigrationTaskParameters. The resource can be a user, a group, or a site. When an existing sharePointMigrationTask is retrieved, it might contain not only the specifics of the source and target organizations and resources, but also the status of the migration and errors encountered during the migration operation. The API calls occur on the source site and only add list items to the my site root web, for example, contoso-my.sharepoint.com. Then, it triggers a multi-geo site move job in the backend to enqueue and orchestrate several tenant workflow jobs, such as backup, restore, and cleanup, supported by TJ infrastructure. The OData type of sharePointResourceMigrationParameters differentiates user migration from site migration, rather than using different subpaths. For a user&apos;s OneDrive migration, specify sharePointUserMigrationParameters. If this migration task is a regular SharePoint site migration, specify sharePointSiteMigrationParameters. If this migration task is a group-connected site migration, specify sharePointGroupMigrationParameters.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -169,7 +171,7 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to crossOrganizationMigrationTasks for solutions
+     * Create or update a sharePointMigrationTask to migrate a resource from the source organization to the target organization, using the sharePointMigrationTaskParameters. The resource can be a user, a group, or a site. When an existing sharePointMigrationTask is retrieved, it might contain not only the specifics of the source and target organizations and resources, but also the status of the migration and errors encountered during the migration operation. The API calls occur on the source site and only add list items to the my site root web, for example, contoso-my.sharepoint.com. Then, it triggers a multi-geo site move job in the backend to enqueue and orchestrate several tenant workflow jobs, such as backup, restore, and cleanup, supported by TJ infrastructure. The OData type of sharePointResourceMigrationParameters differentiates user migration from site migration, rather than using different subpaths. For a user&apos;s OneDrive migration, specify sharePointUserMigrationParameters. If this migration task is a regular SharePoint site migration, specify sharePointSiteMigrationParameters. If this migration task is a group-connected site migration, specify sharePointGroupMigrationParameters.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -194,7 +196,7 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
         return new CrossOrganizationMigrationTasksRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

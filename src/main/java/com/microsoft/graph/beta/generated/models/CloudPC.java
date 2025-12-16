@@ -226,7 +226,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("onPremisesConnectionName");
     }
     /**
-     * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, unknownFutureValue.
+     * Gets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
      * @return a {@link CloudPcOperatingSystem}
      */
     @jakarta.annotation.Nullable
@@ -282,7 +282,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisioningPolicyName");
     }
     /**
-     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The default value is dedicated. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
+     * Gets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. The possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The default value is dedicated. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
      * @return a {@link CloudPcProvisioningType}
      */
     @jakarta.annotation.Nullable
@@ -354,7 +354,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("statusDetails");
     }
     /**
-     * Gets the userAccountType property value. The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, unknownFutureValue.
+     * Gets the userAccountType property value. The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
      * @return a {@link CloudPcUserAccountType}
      */
     @jakarta.annotation.Nullable
@@ -566,7 +566,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("onPremisesConnectionName", value);
     }
     /**
-     * Sets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. Possible values are: windows10, windows11, unknownFutureValue.
+     * Sets the osVersion property value. The version of the operating system (OS) to provision on Cloud PCs. The possible values are: windows10, windows11, unknownFutureValue.
      * @param value Value to set for the osVersion property.
      */
     public void setOsVersion(@jakarta.annotation.Nullable final CloudPcOperatingSystem value) {
@@ -615,7 +615,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("provisioningPolicyName", value);
     }
     /**
-     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The default value is dedicated. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
+     * Sets the provisioningType property value. The type of licenses to be used when provisioning Cloud PCs using this policy. The possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The default value is dedicated. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
      * @param value Value to set for the provisioningType property.
      */
     public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {
@@ -678,7 +678,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("statusDetails", value);
     }
     /**
-     * Sets the userAccountType property value. The account type of the user on provisioned Cloud PCs. Possible values are: standardUser, administrator, unknownFutureValue.
+     * Sets the userAccountType property value. The account type of the user on provisioned Cloud PCs. The possible values are: standardUser, administrator, unknownFutureValue.
      * @param value Value to set for the userAccountType property.
      */
     public void setUserAccountType(@jakarta.annotation.Nullable final CloudPcUserAccountType value) {

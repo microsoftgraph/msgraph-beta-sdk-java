@@ -35,7 +35,7 @@ public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsab
         return new TimeConstraint();
     }
     /**
-     * Gets the activityDomain property value. The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
+     * Gets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
      * @return a {@link ActivityDomain}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsab
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the activityDomain property value. The nature of the activity, optional. Possible values are: work, personal, unrestricted, or unknown.
+     * Sets the activityDomain property value. The nature of the activity, optional. The possible values are: work, personal, unrestricted, or unknown.
      * @param value Value to set for the activityDomain property.
      */
     public void setActivityDomain(@jakarta.annotation.Nullable final ActivityDomain value) {

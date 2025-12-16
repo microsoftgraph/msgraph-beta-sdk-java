@@ -59,7 +59,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.desk/children{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      * @return a {@link PlaceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlaceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlaceCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class ChildrenRequestBuilder extends BaseRequestBuilder {
         return new ChildrenRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

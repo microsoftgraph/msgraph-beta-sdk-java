@@ -27,7 +27,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
         return new ConditionalAccessPolicyCoverage();
     }
     /**
-     * Gets the conditionalAccessPolicyState property value. The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only.
+     * Gets the conditionalAccessPolicyState property value. The state for the conditional access policy. The possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class ConditionalAccessPolicyCoverage extends Entity implements Parsable 
         writer.writeStringValue("tenantDisplayName", this.getTenantDisplayName());
     }
     /**
-     * Sets the conditionalAccessPolicyState property value. The state for the conditional access policy. Possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only.
+     * Sets the conditionalAccessPolicyState property value. The state for the conditional access policy. The possible values are: enabled, disabled, enabledForReportingButNotEnforced. Required. Read-only.
      * @param value Value to set for the conditionalAccessPolicyState property.
      */
     public void setConditionalAccessPolicyState(@jakarta.annotation.Nullable final String value) {

@@ -49,7 +49,7 @@ public class CloudPcConnection extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the healthCheckStatus property value. The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
+     * Gets the healthCheckStatus property value. The health status of the cloud PC connection. The possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class CloudPcConnection extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the healthCheckStatus property value. The health status of the cloud PC connection. Possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
+     * Sets the healthCheckStatus property value. The health status of the cloud PC connection. The possible values are: pending, running, passed, failed, unknownFutureValue.  Required. Read-only.
      * @param value Value to set for the healthCheckStatus property.
      */
     public void setHealthCheckStatus(@jakarta.annotation.Nullable final String value) {

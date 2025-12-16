@@ -97,7 +97,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
         return this.backingStore.get("securityDiffieHellmanGroup");
     }
     /**
-     * Gets the securityEncryptionAlgorithm property value. Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
+     * Gets the securityEncryptionAlgorithm property value. Encryption algorithm. The possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      * @return a {@link VpnEncryptionAlgorithmType}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
         return this.backingStore.get("securityEncryptionAlgorithm");
     }
     /**
-     * Gets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
+     * Gets the securityIntegrityAlgorithm property value. Integrity algorithm. The possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @return a {@link VpnIntegrityAlgorithmType}
      */
     @jakarta.annotation.Nullable
@@ -162,14 +162,14 @@ public class IosVpnSecurityAssociationParameters implements AdditionalDataHolder
         this.backingStore.set("securityDiffieHellmanGroup", value);
     }
     /**
-     * Sets the securityEncryptionAlgorithm property value. Encryption algorithm. Possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
+     * Sets the securityEncryptionAlgorithm property value. Encryption algorithm. The possible values are: aes256, des, tripleDes, aes128, aes128Gcm, aes256Gcm, aes192, aes192Gcm, chaCha20Poly1305.
      * @param value Value to set for the securityEncryptionAlgorithm property.
      */
     public void setSecurityEncryptionAlgorithm(@jakarta.annotation.Nullable final VpnEncryptionAlgorithmType value) {
         this.backingStore.set("securityEncryptionAlgorithm", value);
     }
     /**
-     * Sets the securityIntegrityAlgorithm property value. Integrity algorithm. Possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
+     * Sets the securityIntegrityAlgorithm property value. Integrity algorithm. The possible values are: sha2256, sha196, sha1160, sha2384, sha2_512, md5.
      * @param value Value to set for the securityIntegrityAlgorithm property.
      */
     public void setSecurityIntegrityAlgorithm(@jakarta.annotation.Nullable final VpnIntegrityAlgorithmType value) {

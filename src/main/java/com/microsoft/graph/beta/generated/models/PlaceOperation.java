@@ -25,7 +25,7 @@ public class PlaceOperation extends Entity implements Parsable {
         return new PlaceOperation();
     }
     /**
-     * Gets the details property value. The details property
+     * Gets the details property value. The detailed result of the operation, including errors and successful places.
      * @return a {@link java.util.List<PlaceExecutionResult>}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class PlaceOperation extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the progress property value. The progress property
+     * Gets the progress property value. The progress of the operation.
      * @return a {@link PlaceOperationProgress}
      */
     @jakarta.annotation.Nullable
@@ -72,14 +72,14 @@ public class PlaceOperation extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the details property value. The details property
+     * Sets the details property value. The detailed result of the operation, including errors and successful places.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final java.util.List<PlaceExecutionResult> value) {
         this.backingStore.set("details", value);
     }
     /**
-     * Sets the progress property value. The progress property
+     * Sets the progress property value. The progress of the operation.
      * @param value Value to set for the progress property.
      */
     public void setProgress(@jakarta.annotation.Nullable final PlaceOperationProgress value) {

@@ -43,7 +43,7 @@ public class AttendeeBase extends Recipient implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the type property value. The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+     * Gets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      * @return a {@link AttendeeType}
      */
     @jakarta.annotation.Nullable
@@ -60,7 +60,7 @@ public class AttendeeBase extends Recipient implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the type property value. The type of attendee. Possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
+     * Sets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final AttendeeType value) {

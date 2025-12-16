@@ -38,19 +38,21 @@ public class GetBySourceSiteUrlWithSourceSiteUrlRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations/crossOrganizationMigrationTasks/getBySourceSiteUrl(sourceSiteUrl='{sourceSiteUrl}')", rawUrl);
     }
     /**
-     * Invoke function getBySourceSiteUrl
+     * Get a sharePointMigrationTask that was previously created for a regular site, using the source site URL. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-getbysourcesiteurl?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointMigrationTask get() {
         return get(null);
     }
     /**
-     * Invoke function getBySourceSiteUrl
+     * Get a sharePointMigrationTask that was previously created for a regular site, using the source site URL. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-getbysourcesiteurl?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointMigrationTask get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetBySourceSiteUrlWithSourceSiteUrlRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, SharePointMigrationTask::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getBySourceSiteUrl
+     * Get a sharePointMigrationTask that was previously created for a regular site, using the source site URL. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetBySourceSiteUrlWithSourceSiteUrlRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getBySourceSiteUrl
+     * Get a sharePointMigrationTask that was previously created for a regular site, using the source site URL. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

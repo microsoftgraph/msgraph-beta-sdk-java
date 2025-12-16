@@ -70,7 +70,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         return this.backingStore.get("broadcastSettings");
     }
     /**
-     * Gets the capabilities property value. The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
+     * Gets the capabilities property value. The list of meeting capabilities. The possible values are: questionAndAnswer,unknownFutureValue.
      * @return a {@link java.util.List<MeetingCapabilities>}
      */
     @jakarta.annotation.Nullable
@@ -272,7 +272,7 @@ public class OnlineMeeting extends OnlineMeetingBase implements Parsable {
         this.backingStore.set("broadcastSettings", value);
     }
     /**
-     * Sets the capabilities property value. The list of meeting capabilities. Possible values are: questionAndAnswer,unknownFutureValue.
+     * Sets the capabilities property value. The list of meeting capabilities. The possible values are: questionAndAnswer,unknownFutureValue.
      * @param value Value to set for the capabilities property.
      */
     public void setCapabilities(@jakarta.annotation.Nullable final java.util.List<MeetingCapabilities> value) {

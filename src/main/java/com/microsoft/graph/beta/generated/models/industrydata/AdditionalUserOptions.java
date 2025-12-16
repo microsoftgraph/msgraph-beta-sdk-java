@@ -93,7 +93,7 @@ public class AdditionalUserOptions implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the studentAgeGroup property value. Indicates the age group classification for students. Possible values are: minor, notAdult, adult, unknownFutureValue. Use null to disable age group enforcement.
+     * Gets the studentAgeGroup property value. Indicates the age group classification for students. The possible values are: minor, notAdult, adult, unknownFutureValue. Use null to disable age group enforcement.
      * @return a {@link StudentAgeGroup}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class AdditionalUserOptions implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the studentAgeGroup property value. Indicates the age group classification for students. Possible values are: minor, notAdult, adult, unknownFutureValue. Use null to disable age group enforcement.
+     * Sets the studentAgeGroup property value. Indicates the age group classification for students. The possible values are: minor, notAdult, adult, unknownFutureValue. Use null to disable age group enforcement.
      * @param value Value to set for the studentAgeGroup property.
      */
     public void setStudentAgeGroup(@jakarta.annotation.Nullable final StudentAgeGroup value) {

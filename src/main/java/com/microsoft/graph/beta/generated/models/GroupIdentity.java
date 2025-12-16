@@ -36,7 +36,7 @@ public class GroupIdentity extends Identity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mailNickname property value. The mailNickname property
+     * Gets the mailNickname property value. The mail nick name, also known as group alias of the group-connected site.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class GroupIdentity extends Identity implements Parsable {
         writer.writeStringValue("mailNickname", this.getMailNickname());
     }
     /**
-     * Sets the mailNickname property value. The mailNickname property
+     * Sets the mailNickname property value. The mail nick name, also known as group alias of the group-connected site.
      * @param value Value to set for the mailNickname property.
      */
     public void setMailNickname(@jakarta.annotation.Nullable final String value) {

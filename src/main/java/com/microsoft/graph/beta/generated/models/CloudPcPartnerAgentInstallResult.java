@@ -79,7 +79,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         return deserializerMap;
     }
     /**
-     * Gets the installStatus property value. The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
+     * Gets the installStatus property value. The status of a partner agent installation. The possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
      * @return a {@link CloudPcPartnerAgentInstallStatus}
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class CloudPcPartnerAgentInstallResult implements AdditionalDataHolder, B
         this.backingStore.set("errorMessage", value);
     }
     /**
-     * Sets the installStatus property value. The status of a partner agent installation. Possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
+     * Sets the installStatus property value. The status of a partner agent installation. The possible values are: installed, installFailed, installing, uninstalling, uninstallFailed and licensed. Read-Only.
      * @param value Value to set for the installStatus property.
      */
     public void setInstallStatus(@jakarta.annotation.Nullable final CloudPcPartnerAgentInstallStatus value) {

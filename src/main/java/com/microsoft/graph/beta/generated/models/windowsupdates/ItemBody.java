@@ -64,7 +64,7 @@ public class ItemBody implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("content");
     }
     /**
-     * Gets the contentType property value. The type of the content indicated by the enum value of bodyType. Possible values are: text, html, unknownFutureValue.
+     * Gets the contentType property value. The type of the content indicated by the enum value of bodyType. The possible values are: text, html, unknownFutureValue.
      * @return a {@link BodyType}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class ItemBody implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the contentType property value. The type of the content indicated by the enum value of bodyType. Possible values are: text, html, unknownFutureValue.
+     * Sets the contentType property value. The type of the content indicated by the enum value of bodyType. The possible values are: text, html, unknownFutureValue.
      * @param value Value to set for the contentType property.
      */
     public void setContentType(@jakarta.annotation.Nullable final BodyType value) {

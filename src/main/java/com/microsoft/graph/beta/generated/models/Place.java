@@ -54,7 +54,7 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("checkIns");
     }
     /**
-     * Gets the children property value. The children property
+     * Gets the children property value. A collection of children places that is only used in the Upsert places API.
      * @return a {@link java.util.List<Place>}
      */
     @jakarta.annotation.Nullable
@@ -169,7 +169,7 @@ public class Place extends Entity implements Parsable {
         this.backingStore.set("checkIns", value);
     }
     /**
-     * Sets the children property value. The children property
+     * Sets the children property value. A collection of children places that is only used in the Upsert places API.
      * @param value Value to set for the children property.
      */
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<Place> value) {

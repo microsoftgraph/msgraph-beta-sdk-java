@@ -17,6 +17,7 @@ import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accessp
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.assignmentrequests.AssignmentRequestsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.availableaccesspackages.AvailableAccessPackagesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.controlconfigurations.ControlConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.subjects.SubjectsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.subjectswithobjectid.SubjectsWithObjectIdRequestBuilder;
@@ -159,6 +160,14 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ConnectedOrganizationsRequestBuilder connectedOrganizations() {
         return new ConnectedOrganizationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the controlConfigurations property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link ControlConfigurationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ControlConfigurationsRequestBuilder controlConfigurations() {
+        return new ControlConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.entitlementManagement entity.

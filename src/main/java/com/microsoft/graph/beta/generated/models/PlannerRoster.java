@@ -25,7 +25,7 @@ public class PlannerRoster extends Entity implements Parsable {
         return new PlannerRoster();
     }
     /**
-     * Gets the assignedSensitivityLabel property value. The sensitivity label applied to the roster. If mandatory labeling is enabled for the user and no label is specified, the user can&apos;t create the roster. Also, if labels are mandatory for the user, the user can&apos;t change the label of the roster to null. Possible values are: standard, privileged, auto, unknownFutureValue.
+     * Gets the assignedSensitivityLabel property value. The sensitivity label applied to the roster. If mandatory labeling is enabled for the user and no label is specified, the user can&apos;t create the roster. Also, if labels are mandatory for the user, the user can&apos;t change the label of the roster to null. The possible values are: standard, privileged, auto, unknownFutureValue.
      * @return a {@link SensitivityLabelAssignment}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class PlannerRoster extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("plans", this.getPlans());
     }
     /**
-     * Sets the assignedSensitivityLabel property value. The sensitivity label applied to the roster. If mandatory labeling is enabled for the user and no label is specified, the user can&apos;t create the roster. Also, if labels are mandatory for the user, the user can&apos;t change the label of the roster to null. Possible values are: standard, privileged, auto, unknownFutureValue.
+     * Sets the assignedSensitivityLabel property value. The sensitivity label applied to the roster. If mandatory labeling is enabled for the user and no label is specified, the user can&apos;t create the roster. Also, if labels are mandatory for the user, the user can&apos;t change the label of the roster to null. The possible values are: standard, privileged, auto, unknownFutureValue.
      * @param value Value to set for the assignedSensitivityLabel property.
      */
     public void setAssignedSensitivityLabel(@jakarta.annotation.Nullable final SensitivityLabelAssignment value) {

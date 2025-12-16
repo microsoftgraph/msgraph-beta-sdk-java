@@ -38,7 +38,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         return this.backingStore.get("accountName");
     }
     /**
-     * Gets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
+     * Gets the authenticationMethod property value. Authentication method for this Email profile. The possible values are: usernameAndPassword, certificate, derivedCredential.
      * @return a {@link EasAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         return this.backingStore.get("durationOfEmailToSync");
     }
     /**
-     * Gets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
+     * Gets the easServices property value. Exchange data to sync. The possible values are: none, calendars, contacts, email, notes, reminders.
      * @return a {@link EnumSet<EasServices>}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         return this.backingStore.get("emailAddressSource");
     }
     /**
-     * Gets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+     * Gets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. The possible values are: none, certificate, derivedCredential.
      * @return a {@link EmailCertificateType}
      */
     @jakarta.annotation.Nullable
@@ -194,7 +194,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         return this.backingStore.get("requireSsl");
     }
     /**
-     * Gets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+     * Gets the signingCertificateType property value. Signing Certificate type for this Email profile. The possible values are: none, certificate, derivedCredential.
      * @return a {@link EmailCertificateType}
      */
     @jakarta.annotation.Nullable
@@ -324,7 +324,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         this.backingStore.set("accountName", value);
     }
     /**
-     * Sets the authenticationMethod property value. Authentication method for this Email profile. Possible values are: usernameAndPassword, certificate, derivedCredential.
+     * Sets the authenticationMethod property value. Authentication method for this Email profile. The possible values are: usernameAndPassword, certificate, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final EasAuthenticationMethod value) {
@@ -366,7 +366,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         this.backingStore.set("durationOfEmailToSync", value);
     }
     /**
-     * Sets the easServices property value. Exchange data to sync. Possible values are: none, calendars, contacts, email, notes, reminders.
+     * Sets the easServices property value. Exchange data to sync. The possible values are: none, calendars, contacts, email, notes, reminders.
      * @param value Value to set for the easServices property.
      */
     public void setEasServices(@jakarta.annotation.Nullable final EnumSet<EasServices> value) {
@@ -387,7 +387,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         this.backingStore.set("emailAddressSource", value);
     }
     /**
-     * Sets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+     * Sets the encryptionCertificateType property value. Encryption Certificate type for this Email profile. The possible values are: none, certificate, derivedCredential.
      * @param value Value to set for the encryptionCertificateType property.
      */
     public void setEncryptionCertificateType(@jakarta.annotation.Nullable final EmailCertificateType value) {
@@ -429,7 +429,7 @@ public class IosEasEmailProfileConfiguration extends EasEmailProfileConfiguratio
         this.backingStore.set("requireSsl", value);
     }
     /**
-     * Sets the signingCertificateType property value. Signing Certificate type for this Email profile. Possible values are: none, certificate, derivedCredential.
+     * Sets the signingCertificateType property value. Signing Certificate type for this Email profile. The possible values are: none, certificate, derivedCredential.
      * @param value Value to set for the signingCertificateType property.
      */
     public void setSigningCertificateType(@jakarta.annotation.Nullable final EmailCertificateType value) {

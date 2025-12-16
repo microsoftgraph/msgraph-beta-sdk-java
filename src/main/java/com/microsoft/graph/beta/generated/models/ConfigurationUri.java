@@ -48,7 +48,7 @@ public class ConfigurationUri implements AdditionalDataHolder, BackedModel, Pars
         return value;
     }
     /**
-     * Gets the appliesToSingleSignOnMode property value. The single sign-on mode that the URI is configured for. Possible values are: saml, password.
+     * Gets the appliesToSingleSignOnMode property value. The single sign-on mode that the URI is configured for. The possible values are: saml, password.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -140,7 +140,7 @@ public class ConfigurationUri implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appliesToSingleSignOnMode property value. The single sign-on mode that the URI is configured for. Possible values are: saml, password.
+     * Sets the appliesToSingleSignOnMode property value. The single sign-on mode that the URI is configured for. The possible values are: saml, password.
      * @param value Value to set for the appliesToSingleSignOnMode property.
      */
     public void setAppliesToSingleSignOnMode(@jakarta.annotation.Nullable final String value) {

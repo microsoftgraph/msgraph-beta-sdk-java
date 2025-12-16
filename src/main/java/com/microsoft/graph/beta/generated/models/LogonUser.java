@@ -52,7 +52,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("accountName");
     }
     /**
-     * Gets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
+     * Gets the accountType property value. User Account type, per Windows definition. The possible values are: unknown, standard, power, administrator.
      * @return a {@link UserAccountSecurityType}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("logonId");
     }
     /**
-     * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
+     * Gets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. The possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @return a {@link java.util.List<LogonType>}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("accountName", value);
     }
     /**
-     * Sets the accountType property value. User Account type, per Windows definition. Possible values are: unknown, standard, power, administrator.
+     * Sets the accountType property value. User Account type, per Windows definition. The possible values are: unknown, standard, power, administrator.
      * @param value Value to set for the accountType property.
      */
     public void setAccountType(@jakarta.annotation.Nullable final UserAccountSecurityType value) {
@@ -211,7 +211,7 @@ public class LogonUser implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("logonId", value);
     }
     /**
-     * Sets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. Possible values are: unknown, interactive, remoteInteractive, network, batch, service.
+     * Sets the logonTypes property value. Collection of the logon types observed for the logged on user from when first to last seen. The possible values are: unknown, interactive, remoteInteractive, network, batch, service.
      * @param value Value to set for the logonTypes property.
      */
     public void setLogonTypes(@jakarta.annotation.Nullable final java.util.List<LogonType> value) {

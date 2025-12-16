@@ -64,7 +64,7 @@ public class WorkloadAction implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore;
     }
     /**
-     * Gets the category property value. The category for the workload action. Possible values are: automated, manual, unknownFutureValue. Optional. Read-only.
+     * Gets the category property value. The category for the workload action. The possible values are: automated, manual, unknownFutureValue. Optional. Read-only.
      * @return a {@link WorkloadActionCategory}
      */
     @jakarta.annotation.Nullable
@@ -175,7 +175,7 @@ public class WorkloadAction implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the category property value. The category for the workload action. Possible values are: automated, manual, unknownFutureValue. Optional. Read-only.
+     * Sets the category property value. The category for the workload action. The possible values are: automated, manual, unknownFutureValue. Optional. Read-only.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final WorkloadActionCategory value) {

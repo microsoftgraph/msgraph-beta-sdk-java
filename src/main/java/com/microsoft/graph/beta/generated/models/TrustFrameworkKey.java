@@ -203,7 +203,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("status");
     }
     /**
-     * Gets the use property value. The use (public key use) parameter identifies the intended use of the public key. The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption).
+     * Gets the use property value. The use (public key use) parameter identifies the intended use of the public key. The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. The possible values are: sig (signature), enc (encryption).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -373,7 +373,7 @@ public class TrustFrameworkKey implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the use property value. The use (public key use) parameter identifies the intended use of the public key. The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Possible values are: sig (signature), enc (encryption).
+     * Sets the use property value. The use (public key use) parameter identifies the intended use of the public key. The use parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. The possible values are: sig (signature), enc (encryption).
      * @param value Value to set for the use property.
      */
     public void setUse(@jakarta.annotation.Nullable final String value) {

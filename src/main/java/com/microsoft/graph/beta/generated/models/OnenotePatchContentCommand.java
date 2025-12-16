@@ -94,7 +94,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the position property value. The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
+     * Gets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      * @return a {@link OnenotePatchInsertPosition}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class OnenotePatchContentCommand implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the position property value. The location to add the supplied content, relative to the target element. Possible values are: after (default) or before.
+     * Sets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
      * @param value Value to set for the position property.
      */
     public void setPosition(@jakarta.annotation.Nullable final OnenotePatchInsertPosition value) {

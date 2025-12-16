@@ -85,7 +85,7 @@ public class CloudPcTenantEncryptionSetting implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the tenantDiskEncryptionType property value. Indicates the Cloud PC disk encryption type for a tenant. It is a tenant-level setting that applies globally to all Cloud PCs in the tenant. Possible values are: platformManagedKey, customerManagedKey, unknownFutureValue. Read-only.
+     * Gets the tenantDiskEncryptionType property value. Indicates the Cloud PC disk encryption type for a tenant. It is a tenant-level setting that applies globally to all Cloud PCs in the tenant. The possible values are: platformManagedKey, customerManagedKey, unknownFutureValue. Read-only.
      * @return a {@link CloudPcDiskEncryptionType}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class CloudPcTenantEncryptionSetting implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the tenantDiskEncryptionType property value. Indicates the Cloud PC disk encryption type for a tenant. It is a tenant-level setting that applies globally to all Cloud PCs in the tenant. Possible values are: platformManagedKey, customerManagedKey, unknownFutureValue. Read-only.
+     * Sets the tenantDiskEncryptionType property value. Indicates the Cloud PC disk encryption type for a tenant. It is a tenant-level setting that applies globally to all Cloud PCs in the tenant. The possible values are: platformManagedKey, customerManagedKey, unknownFutureValue. Read-only.
      * @param value Value to set for the tenantDiskEncryptionType property.
      */
     public void setTenantDiskEncryptionType(@jakarta.annotation.Nullable final CloudPcDiskEncryptionType value) {

@@ -94,7 +94,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the replyRestriction property value. Indicates who is allowed to reply to the teams channel. Possible values are: everyone, authorAndModerators, unknownFutureValue.
+     * Gets the replyRestriction property value. Indicates who is allowed to reply to the teams channel. The possible values are: everyone, authorAndModerators, unknownFutureValue.
      * @return a {@link ReplyRestriction}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class ChannelModerationSettings implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("replyRestriction");
     }
     /**
-     * Gets the userNewMessageRestriction property value. Indicates who is allowed to post messages to teams channel. Possible values are: everyone, everyoneExceptGuests, moderators, unknownFutureValue.
+     * Gets the userNewMessageRestriction property value. Indicates who is allowed to post messages to teams channel. The possible values are: everyone, everyoneExceptGuests, moderators, unknownFutureValue.
      * @return a {@link UserNewMessageRestriction}
      */
     @jakarta.annotation.Nullable
@@ -159,14 +159,14 @@ public class ChannelModerationSettings implements AdditionalDataHolder, BackedMo
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the replyRestriction property value. Indicates who is allowed to reply to the teams channel. Possible values are: everyone, authorAndModerators, unknownFutureValue.
+     * Sets the replyRestriction property value. Indicates who is allowed to reply to the teams channel. The possible values are: everyone, authorAndModerators, unknownFutureValue.
      * @param value Value to set for the replyRestriction property.
      */
     public void setReplyRestriction(@jakarta.annotation.Nullable final ReplyRestriction value) {
         this.backingStore.set("replyRestriction", value);
     }
     /**
-     * Sets the userNewMessageRestriction property value. Indicates who is allowed to post messages to teams channel. Possible values are: everyone, everyoneExceptGuests, moderators, unknownFutureValue.
+     * Sets the userNewMessageRestriction property value. Indicates who is allowed to post messages to teams channel. The possible values are: everyone, everyoneExceptGuests, moderators, unknownFutureValue.
      * @param value Value to set for the userNewMessageRestriction property.
      */
     public void setUserNewMessageRestriction(@jakarta.annotation.Nullable final UserNewMessageRestriction value) {

@@ -58,7 +58,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
         return this.backingStore.get("proficiency");
     }
     /**
-     * Gets the reading property value. Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
+     * Gets the reading property value. Represents the users reading comprehension for the language represented by the object. The possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @return a {@link LanguageProficiencyLevel}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
         return this.backingStore.get("reading");
     }
     /**
-     * Gets the spoken property value. Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
+     * Gets the spoken property value. Represents the users spoken proficiency for the language represented by the object. The possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @return a {@link LanguageProficiencyLevel}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
         return this.backingStore.get("thumbnailUrl");
     }
     /**
-     * Gets the written property value. Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
+     * Gets the written property value. Represents the users written proficiency for the language represented by the object. The possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @return a {@link LanguageProficiencyLevel}
      */
     @jakarta.annotation.Nullable
@@ -127,14 +127,14 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
         this.backingStore.set("proficiency", value);
     }
     /**
-     * Sets the reading property value. Represents the users reading comprehension for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
+     * Sets the reading property value. Represents the users reading comprehension for the language represented by the object. The possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @param value Value to set for the reading property.
      */
     public void setReading(@jakarta.annotation.Nullable final LanguageProficiencyLevel value) {
         this.backingStore.set("reading", value);
     }
     /**
-     * Sets the spoken property value. Represents the users spoken proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
+     * Sets the spoken property value. Represents the users spoken proficiency for the language represented by the object. The possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @param value Value to set for the spoken property.
      */
     public void setSpoken(@jakarta.annotation.Nullable final LanguageProficiencyLevel value) {
@@ -155,7 +155,7 @@ public class LanguageProficiency extends ItemFacet implements Parsable {
         this.backingStore.set("thumbnailUrl", value);
     }
     /**
-     * Sets the written property value. Represents the users written proficiency for the language represented by the object. Possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
+     * Sets the written property value. Represents the users written proficiency for the language represented by the object. The possible values are: elementary, conversational, limitedWorking, professionalWorking, fullProfessional, nativeOrBilingual, unknownFutureValue.
      * @param value Value to set for the written property.
      */
     public void setWritten(@jakarta.annotation.Nullable final LanguageProficiencyLevel value) {

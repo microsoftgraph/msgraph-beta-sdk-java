@@ -51,7 +51,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
+     * Gets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. The possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
      * @return a {@link CloudPcProvisioningType}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
         return this.backingStore.get("supportedSolution");
     }
     /**
-     * Gets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
+     * Gets the type property value. The type of the service plan. The possible values are: enterprise, business, unknownFutureValue. Read-only.
      * @return a {@link CloudPcServicePlanType}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
+     * Sets the provisioningType property value. Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. The possible values are: dedicated, shared, unknownFutureValue, sharedByUser, sharedByEntraGroup, reserve. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: sharedByUser, sharedByEntraGroup, reserve. The shared member is deprecated and will stop returning on April 30, 2027; going forward, use the sharedByUser member.
      * @param value Value to set for the provisioningType property.
      */
     public void setProvisioningType(@jakarta.annotation.Nullable final CloudPcProvisioningType value) {
@@ -158,7 +158,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
         this.backingStore.set("supportedSolution", value);
     }
     /**
-     * Sets the type property value. The type of the service plan. Possible values are: enterprise, business, unknownFutureValue. Read-only.
+     * Sets the type property value. The type of the service plan. The possible values are: enterprise, business, unknownFutureValue. Read-only.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final CloudPcServicePlanType value) {

@@ -93,7 +93,7 @@ public class Website implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. Possible values are: other, home, work, blog, profile.
+     * Gets the type property value. The possible values are: other, home, work, blog, profile.
      * @return a {@link WebsiteType}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class Website implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. Possible values are: other, home, work, blog, profile.
+     * Sets the type property value. The possible values are: other, home, work, blog, profile.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final WebsiteType value) {

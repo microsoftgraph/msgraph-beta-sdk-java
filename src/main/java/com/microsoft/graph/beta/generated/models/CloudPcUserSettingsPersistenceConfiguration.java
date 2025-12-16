@@ -84,7 +84,7 @@ public class CloudPcUserSettingsPersistenceConfiguration implements AdditionalDa
         return this.backingStore.get("userSettingsPersistenceEnabled");
     }
     /**
-     * Gets the userSettingsPersistenceStorageSizeCategory property value. Indicates the storage size for persisting user application settings. Possible values are: fourGB, eightGB, sixteenGB, thirtyTwoGB, sixtyFourGB, unknownFutureValue. The default value is fourGB.
+     * Gets the userSettingsPersistenceStorageSizeCategory property value. Indicates the storage size for persisting user application settings. The possible values are: fourGB, eightGB, sixteenGB, thirtyTwoGB, sixtyFourGB, unknownFutureValue. The default value is fourGB.
      * @return a {@link CloudPcUserSettingsPersistenceStorageSizeCategory}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class CloudPcUserSettingsPersistenceConfiguration implements AdditionalDa
         this.backingStore.set("userSettingsPersistenceEnabled", value);
     }
     /**
-     * Sets the userSettingsPersistenceStorageSizeCategory property value. Indicates the storage size for persisting user application settings. Possible values are: fourGB, eightGB, sixteenGB, thirtyTwoGB, sixtyFourGB, unknownFutureValue. The default value is fourGB.
+     * Sets the userSettingsPersistenceStorageSizeCategory property value. Indicates the storage size for persisting user application settings. The possible values are: fourGB, eightGB, sixteenGB, thirtyTwoGB, sixtyFourGB, unknownFutureValue. The default value is fourGB.
      * @param value Value to set for the userSettingsPersistenceStorageSizeCategory property.
      */
     public void setUserSettingsPersistenceStorageSizeCategory(@jakarta.annotation.Nullable final CloudPcUserSettingsPersistenceStorageSizeCategory value) {

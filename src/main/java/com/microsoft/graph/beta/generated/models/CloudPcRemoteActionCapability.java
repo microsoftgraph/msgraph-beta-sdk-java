@@ -35,7 +35,7 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Back
         return new CloudPcRemoteActionCapability();
     }
     /**
-     * Gets the actionCapability property value. Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: enabled, disabled. Default value is enabled.
+     * Gets the actionCapability property value. Indicates the state of the supported action capability to perform a Cloud PC remote action. The possible values are: enabled, disabled. Default value is enabled.
      * @return a {@link ActionCapability}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Back
         return this.backingStore.get("actionCapability");
     }
     /**
-     * Gets the actionName property value. The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
+     * Gets the actionName property value. The name of the supported Cloud PC remote action. The possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
      * @return a {@link CloudPcRemoteActionName}
      */
     @jakarta.annotation.Nullable
@@ -103,14 +103,14 @@ public class CloudPcRemoteActionCapability implements AdditionalDataHolder, Back
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the actionCapability property value. Indicates the state of the supported action capability to perform a Cloud PC remote action. Possible values are: enabled, disabled. Default value is enabled.
+     * Sets the actionCapability property value. Indicates the state of the supported action capability to perform a Cloud PC remote action. The possible values are: enabled, disabled. Default value is enabled.
      * @param value Value to set for the actionCapability property.
      */
     public void setActionCapability(@jakarta.annotation.Nullable final ActionCapability value) {
         this.backingStore.set("actionCapability", value);
     }
     /**
-     * Sets the actionName property value. The name of the supported Cloud PC remote action. Possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
+     * Sets the actionName property value. The name of the supported Cloud PC remote action. The possible values are: unknown, restart, rename, restore, resize, reprovision, troubleShoot, changeUserAccountType, placeUnderReview. Default value is unknown.
      * @param value Value to set for the actionName property.
      */
     public void setActionName(@jakarta.annotation.Nullable final CloudPcRemoteActionName value) {

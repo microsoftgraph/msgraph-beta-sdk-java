@@ -133,7 +133,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the finishings property value. Finishing processes to use when printing.
+     * Gets the finishings property value. Finishing processes to use when printing. Possible values are: none, staple, punch, cover, bind, saddleStitch, stitchEdge, stapleTopLeft, stapleBottomLeft, stapleTopRight, stapleBottomRight, stitchLeftEdge, stitchTopEdge, stitchRightEdge, stitchBottomEdge, stapleDualLeft, stapleDualTop, stapleDualRight, stapleDualBottom, unknownFutureValue. You must use the Prefer: include-unknown-enum-members request header to get the following values in this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerottom,bindLeft,bindTop,bindRight,bindBottom,foldAccordion,foldDoubleGate,foldGate,foldHalf,foldHalfZ,foldLeftGate,foldLetter,foldParallel,foldPoster,foldRightGate,foldZ,foldEngineeringZ,punchTopLeft,punchBottomLeft,punchTopRight,punchBottomRight,punchDualLeft,punchDualTop,punchDualRight,punchDualBottom,punchTripleLeft,punchTripleTop,punchTripleRight,punchTripleBottom,punchQuadLeft,punchQuadTop,punchQuadRight,punchQuadBottom,fold,trim,bale,bookletMaker,coat,laminate,trimAfterPages,trimAfterDocuments,trimAfterCopies,trimAfterJob`.
      * @return a {@link java.util.List<PrintFinishing>}
      */
     @jakarta.annotation.Nullable
@@ -330,7 +330,7 @@ public class PrintJobConfiguration implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("feedOrientation", value);
     }
     /**
-     * Sets the finishings property value. Finishing processes to use when printing.
+     * Sets the finishings property value. Finishing processes to use when printing. Possible values are: none, staple, punch, cover, bind, saddleStitch, stitchEdge, stapleTopLeft, stapleBottomLeft, stapleTopRight, stapleBottomRight, stitchLeftEdge, stitchTopEdge, stitchRightEdge, stitchBottomEdge, stapleDualLeft, stapleDualTop, stapleDualRight, stapleDualBottom, unknownFutureValue. You must use the Prefer: include-unknown-enum-members request header to get the following values in this [evolvable enum](/graph/best-practices-concept#handling-future-members-in-evolvable-enumerottom,bindLeft,bindTop,bindRight,bindBottom,foldAccordion,foldDoubleGate,foldGate,foldHalf,foldHalfZ,foldLeftGate,foldLetter,foldParallel,foldPoster,foldRightGate,foldZ,foldEngineeringZ,punchTopLeft,punchBottomLeft,punchTopRight,punchBottomRight,punchDualLeft,punchDualTop,punchDualRight,punchDualBottom,punchTripleLeft,punchTripleTop,punchTripleRight,punchTripleBottom,punchQuadLeft,punchQuadTop,punchQuadRight,punchQuadBottom,fold,trim,bale,bookletMaker,coat,laminate,trimAfterPages,trimAfterDocuments,trimAfterCopies,trimAfterJob`.
      * @param value Value to set for the finishings property.
      */
     public void setFinishings(@jakarta.annotation.Nullable final java.util.List<PrintFinishing> value) {

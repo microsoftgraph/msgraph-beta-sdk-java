@@ -35,16 +35,18 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations/crossOrganizationMigrationTasks/{sharePointMigrationTask%2Did}/cancel", rawUrl);
     }
     /**
-     * Invoke action cancel
+     * Cancel a sharePointMigrationTask that moves a specific object from a source organization to a target organization. Only cancel the sharePointMigrationTask before it starts and when reverting doesn&apos;t cause system instability.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-cancel?view=graph-rest-beta">Find more info here</a>
      */
     public void post() {
         post(null);
     }
     /**
-     * Invoke action cancel
+     * Cancel a sharePointMigrationTask that moves a specific object from a source organization to a target organization. Only cancel the sharePointMigrationTask before it starts and when reverting doesn&apos;t cause system instability.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-cancel?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
@@ -53,7 +55,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action cancel
+     * Cancel a sharePointMigrationTask that moves a specific object from a source organization to a target organization. Only cancel the sharePointMigrationTask before it starts and when reverting doesn&apos;t cause system instability.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -61,7 +63,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action cancel
+     * Cancel a sharePointMigrationTask that moves a specific object from a source organization to a target organization. Only cancel the sharePointMigrationTask before it starts and when reverting doesn&apos;t cause system instability.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

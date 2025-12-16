@@ -176,7 +176,7 @@ public class Message extends OutlookItem implements Parsable {
         return this.backingStore.get("importance");
     }
     /**
-     * Gets the inferenceClassification property value. The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused, other.
+     * Gets the inferenceClassification property value. The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. The possible values are: focused, other.
      * @return a {@link InferenceClassificationType}
      */
     @jakarta.annotation.Nullable
@@ -478,7 +478,7 @@ public class Message extends OutlookItem implements Parsable {
         this.backingStore.set("importance", value);
     }
     /**
-     * Sets the inferenceClassification property value. The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. Possible values are: focused, other.
+     * Sets the inferenceClassification property value. The classification of the message for the user, based on inferred relevance or importance, or on an explicit override. The possible values are: focused, other.
      * @param value Value to set for the inferenceClassification property.
      */
     public void setInferenceClassification(@jakarta.annotation.Nullable final InferenceClassificationType value) {

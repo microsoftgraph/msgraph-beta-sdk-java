@@ -33,7 +33,7 @@ public class SharePointMigrationsRoot extends Entity implements Parsable {
         return this.backingStore.get("crossOrganizationGroupMappings");
     }
     /**
-     * Gets the crossOrganizationMigrationTasks property value. The crossOrganizationMigrationTasks property
+     * Gets the crossOrganizationMigrationTasks property value. A collection of sharePointMigrationTask resources that represent cross-organization migration tasks.
      * @return a {@link java.util.List<SharePointMigrationTask>}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +79,7 @@ public class SharePointMigrationsRoot extends Entity implements Parsable {
         this.backingStore.set("crossOrganizationGroupMappings", value);
     }
     /**
-     * Sets the crossOrganizationMigrationTasks property value. The crossOrganizationMigrationTasks property
+     * Sets the crossOrganizationMigrationTasks property value. A collection of sharePointMigrationTask resources that represent cross-organization migration tasks.
      * @param value Value to set for the crossOrganizationMigrationTasks property.
      */
     public void setCrossOrganizationMigrationTasks(@jakarta.annotation.Nullable final java.util.List<SharePointMigrationTask> value) {

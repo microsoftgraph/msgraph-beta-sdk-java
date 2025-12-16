@@ -37,7 +37,7 @@ public class SharePointUserMigrationTaskParameters extends SharePointMigrationTa
         return deserializerMap;
     }
     /**
-     * Gets the sourceUserIdentity property value. The sourceUserIdentity property
+     * Gets the sourceUserIdentity property value. The source user in the source tenant, including the user object ID and the user principal name.
      * @return a {@link UserIdentity}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class SharePointUserMigrationTaskParameters extends SharePointMigrationTa
         return this.backingStore.get("sourceUserIdentity");
     }
     /**
-     * Gets the targetUserIdentity property value. The targetUserIdentity property
+     * Gets the targetUserIdentity property value. The target user in the target tenant, including the user object ID and the user principal name.
      * @return a {@link UserIdentity}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class SharePointUserMigrationTaskParameters extends SharePointMigrationTa
         writer.writeObjectValue("targetUserIdentity", this.getTargetUserIdentity());
     }
     /**
-     * Sets the sourceUserIdentity property value. The sourceUserIdentity property
+     * Sets the sourceUserIdentity property value. The source user in the source tenant, including the user object ID and the user principal name.
      * @param value Value to set for the sourceUserIdentity property.
      */
     public void setSourceUserIdentity(@jakarta.annotation.Nullable final UserIdentity value) {
         this.backingStore.set("sourceUserIdentity", value);
     }
     /**
-     * Sets the targetUserIdentity property value. The targetUserIdentity property
+     * Sets the targetUserIdentity property value. The target user in the target tenant, including the user object ID and the user principal name.
      * @param value Value to set for the targetUserIdentity property.
      */
     public void setTargetUserIdentity(@jakarta.annotation.Nullable final UserIdentity value) {

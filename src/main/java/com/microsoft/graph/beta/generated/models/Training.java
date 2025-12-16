@@ -26,7 +26,7 @@ public class Training extends Entity implements Parsable {
         return new Training();
     }
     /**
-     * Gets the availabilityStatus property value. The training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
+     * Gets the availabilityStatus property value. The training availability status. The possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      * @return a {@link TrainingAvailabilityStatus}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class Training extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the source property value. The source of the training content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Gets the source property value. The source of the training content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @return a {@link SimulationContentSource}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class Training extends Entity implements Parsable {
         return this.backingStore.get("tags");
     }
     /**
-     * Gets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
+     * Gets the type property value. The type of training. The possible values are: unknown, phishing, unknownFutureValue.
      * @return a {@link TrainingType}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class Training extends Entity implements Parsable {
         writer.writeEnumValue("type", this.getType());
     }
     /**
-     * Sets the availabilityStatus property value. The training availability status. Possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
+     * Sets the availabilityStatus property value. The training availability status. The possible values are: unknown, notAvailable, available, archive, delete, unknownFutureValue.
      * @param value Value to set for the availabilityStatus property.
      */
     public void setAvailabilityStatus(@jakarta.annotation.Nullable final TrainingAvailabilityStatus value) {
@@ -270,7 +270,7 @@ public class Training extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the source property value. The source of the training content. Possible values are: unknown, global, tenant, unknownFutureValue.
+     * Sets the source property value. The source of the training content. The possible values are: unknown, global, tenant, unknownFutureValue.
      * @param value Value to set for the source property.
      */
     public void setSource(@jakarta.annotation.Nullable final SimulationContentSource value) {
@@ -291,7 +291,7 @@ public class Training extends Entity implements Parsable {
         this.backingStore.set("tags", value);
     }
     /**
-     * Sets the type property value. The type of training. Possible values are: unknown, phishing, unknownFutureValue.
+     * Sets the type property value. The type of training. The possible values are: unknown, phishing, unknownFutureValue.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final TrainingType value) {

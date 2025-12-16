@@ -76,7 +76,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
         return this.backingStore.get("renewalThresholdPercentage");
     }
     /**
-     * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name type. The possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @return a {@link EnumSet<SubjectAlternativeNameType>}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class IosCertificateProfileBase extends IosCertificateProfile implements 
         this.backingStore.set("renewalThresholdPercentage", value);
     }
     /**
-     * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name type. The possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
      */
     public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {
