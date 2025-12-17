@@ -25,7 +25,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
         return new PlayPromptOperation();
     }
     /**
-     * Gets the completionReason property value. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
+     * Gets the completionReason property value. The possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
      * @return a {@link PlayPromptCompletionReason}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class PlayPromptOperation extends CommsOperation implements Parsable {
         writer.writeEnumValue("completionReason", this.getCompletionReason());
     }
     /**
-     * Sets the completionReason property value. Possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
+     * Sets the completionReason property value. The possible values are: unknown, completedSuccessfully, mediaOperationCanceled.
      * @param value Value to set for the completionReason property.
      */
     public void setCompletionReason(@jakarta.annotation.Nullable final PlayPromptCompletionReason value) {

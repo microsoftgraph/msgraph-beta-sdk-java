@@ -81,7 +81,7 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("comments");
     }
     /**
-     * Gets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
+     * Gets the feedback property value. Analyst feedback on the alert in this update. The possible values are: unknown, truePositive, falsePositive, benignPositive.
      * @return a {@link AlertFeedback}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
+     * Gets the status property value. Alert status value (if updated). The possible values are: unknown, newAlert, inProgress, resolved, dismissed.
      * @return a {@link AlertStatus}
      */
     @jakarta.annotation.Nullable
@@ -190,7 +190,7 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("comments", value);
     }
     /**
-     * Sets the feedback property value. Analyst feedback on the alert in this update. Possible values are: unknown, truePositive, falsePositive, benignPositive.
+     * Sets the feedback property value. Analyst feedback on the alert in this update. The possible values are: unknown, truePositive, falsePositive, benignPositive.
      * @param value Value to set for the feedback property.
      */
     public void setFeedback(@jakarta.annotation.Nullable final AlertFeedback value) {
@@ -204,7 +204,7 @@ public class AlertHistoryState implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the status property value. Alert status value (if updated). Possible values are: unknown, newAlert, inProgress, resolved, dismissed.
+     * Sets the status property value. Alert status value (if updated). The possible values are: unknown, newAlert, inProgress, resolved, dismissed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final AlertStatus value) {

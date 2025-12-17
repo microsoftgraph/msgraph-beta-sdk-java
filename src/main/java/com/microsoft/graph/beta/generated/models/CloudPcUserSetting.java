@@ -102,7 +102,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("notificationSetting");
     }
     /**
-     * Gets the provisioningSourceType property value. Indicates the provisioning source of the Cloud PC prepared for an end user. Possible values are: image, snapshot, unknownFutureValue. The default value is image. If this property isn&apos;t set or set to null, its functionality is the same as setting it to image.
+     * Gets the provisioningSourceType property value. Indicates the provisioning source of the Cloud PC prepared for an end user. The possible values are: image, snapshot, unknownFutureValue. The default value is image. If this property isn&apos;t set or set to null, its functionality is the same as setting it to image.
      * @return a {@link CloudPcProvisioningSourceType}
      */
     @jakarta.annotation.Nullable
@@ -202,7 +202,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("notificationSetting", value);
     }
     /**
-     * Sets the provisioningSourceType property value. Indicates the provisioning source of the Cloud PC prepared for an end user. Possible values are: image, snapshot, unknownFutureValue. The default value is image. If this property isn&apos;t set or set to null, its functionality is the same as setting it to image.
+     * Sets the provisioningSourceType property value. Indicates the provisioning source of the Cloud PC prepared for an end user. The possible values are: image, snapshot, unknownFutureValue. The default value is image. If this property isn&apos;t set or set to null, its functionality is the same as setting it to image.
      * @param value Value to set for the provisioningSourceType property.
      */
     public void setProvisioningSourceType(@jakarta.annotation.Nullable final CloudPcProvisioningSourceType value) {

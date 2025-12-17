@@ -33,7 +33,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
         return new MobilityManagementPolicy();
     }
     /**
-     * Gets the appliesTo property value. Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
+     * Gets the appliesTo property value. Indicates the user scope of the mobility management policy. The possible values are: none, all, selected.
      * @return a {@link PolicyScope}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class MobilityManagementPolicy extends Entity implements Parsable {
         writer.writeStringValue("termsOfUseUrl", this.getTermsOfUseUrl());
     }
     /**
-     * Sets the appliesTo property value. Indicates the user scope of the mobility management policy. Possible values are: none, all, selected.
+     * Sets the appliesTo property value. Indicates the user scope of the mobility management policy. The possible values are: none, all, selected.
      * @param value Value to set for the appliesTo property.
      */
     public void setAppliesTo(@jakarta.annotation.Nullable final PolicyScope value) {

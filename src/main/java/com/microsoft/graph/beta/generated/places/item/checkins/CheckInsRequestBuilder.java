@@ -82,7 +82,7 @@ public class CheckInsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CheckInClaimCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk, room, or workspace, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
+     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk or a room, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
      * @param body The request body
      * @return a {@link CheckInClaim}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -93,7 +93,7 @@ public class CheckInsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk, room, or workspace, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
+     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk or a room, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CheckInClaim}
@@ -129,7 +129,7 @@ public class CheckInsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk, room, or workspace, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
+     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk or a room, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -138,7 +138,7 @@ public class CheckInsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk, room, or workspace, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
+     * Create a new checkInClaim object to record the check-in status for a specific place, such as a desk or a room, associated with a specific calendar reservation. This check-in confirms that the reserved space is in use and prevents automatic release if auto-release policies are configured for that place.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

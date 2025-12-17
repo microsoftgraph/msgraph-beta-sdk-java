@@ -34,7 +34,7 @@ public class Room extends Place implements Parsable {
         return this.backingStore.get("audioDeviceName");
     }
     /**
-     * Gets the bookingType property value. Specifies how the room can be booked. Possible values are:unknown - Unspecified booking behavior. We don&apos;t recommend that you use this value.standard - Available for general booking.reserved - Reserved for specific users or purposes.
+     * Gets the bookingType property value. Specifies how the room can be booked. The possible values are:unknown - Unspecified booking behavior. We don&apos;t recommend that you use this value.standard - Available for general booking.reserved - Reserved for specific users or purposes.
      * @return a {@link BookingType}
      */
     @jakarta.annotation.Nullable
@@ -180,7 +180,7 @@ public class Room extends Place implements Parsable {
         this.backingStore.set("audioDeviceName", value);
     }
     /**
-     * Sets the bookingType property value. Specifies how the room can be booked. Possible values are:unknown - Unspecified booking behavior. We don&apos;t recommend that you use this value.standard - Available for general booking.reserved - Reserved for specific users or purposes.
+     * Sets the bookingType property value. Specifies how the room can be booked. The possible values are:unknown - Unspecified booking behavior. We don&apos;t recommend that you use this value.standard - Available for general booking.reserved - Reserved for specific users or purposes.
      * @param value Value to set for the bookingType property.
      */
     public void setBookingType(@jakarta.annotation.Nullable final BookingType value) {

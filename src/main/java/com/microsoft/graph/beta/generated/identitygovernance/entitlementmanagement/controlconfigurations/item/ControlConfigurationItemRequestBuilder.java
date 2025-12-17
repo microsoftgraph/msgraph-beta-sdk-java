@@ -1,7 +1,7 @@
-package com.microsoft.graph.beta.security.identities.settings.autoauditingconfiguration;
+package com.microsoft.graph.beta.identitygovernance.entitlementmanagement.controlconfigurations.item;
 
+import com.microsoft.graph.beta.models.ControlConfiguration;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.security.AutoAuditingConfiguration;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,38 +16,44 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the autoAuditingConfiguration property of the microsoft.graph.security.settingsContainer entity.
+ * Provides operations to manage the controlConfigurations property of the microsoft.graph.entitlementManagement entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder {
+public class ControlConfigurationItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link AutoAuditingConfigurationRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ControlConfigurationItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public AutoAuditingConfigurationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/identities/settings/autoAuditingConfiguration{?%24expand,%24select}", pathParameters);
+    public ControlConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/controlConfigurations/{controlConfiguration%2Did}{?%24expand,%24select}", pathParameters);
     }
     /**
-     * Instantiates a new {@link AutoAuditingConfigurationRequestBuilder} and sets the default values.
+     * Instantiates a new {@link ControlConfigurationItemRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public AutoAuditingConfigurationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/identities/settings/autoAuditingConfiguration{?%24expand,%24select}", rawUrl);
+    public ControlConfigurationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/controlConfigurations/{controlConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property autoAuditingConfiguration for security
+     * Delete navigation property controlConfigurations for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property autoAuditingConfiguration for security
+     * Delete navigation property controlConfigurations for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -55,68 +61,84 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
-     * @return a {@link AutoAuditingConfiguration}
+     * Represents the policies that control lifecycle and access to access packages across the organization.
+     * @return a {@link ControlConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-autoauditingconfiguration-get?view=graph-rest-beta">Find more info here</a>
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nullable
-    public AutoAuditingConfiguration get() {
+    @Deprecated
+    public ControlConfiguration get() {
         return get(null);
     }
     /**
-     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
+     * Represents the policies that control lifecycle and access to access packages across the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link AutoAuditingConfiguration}
+     * @return a {@link ControlConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/security-autoauditingconfiguration-get?view=graph-rest-beta">Find more info here</a>
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nullable
-    public AutoAuditingConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    @Deprecated
+    public ControlConfiguration get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, AutoAuditingConfiguration::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ControlConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property autoAuditingConfiguration in security
+     * Update the navigation property controlConfigurations in identityGovernance
      * @param body The request body
-     * @return a {@link AutoAuditingConfiguration}
+     * @return a {@link ControlConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nullable
-    public AutoAuditingConfiguration patch(@jakarta.annotation.Nonnull final AutoAuditingConfiguration body) {
-        return patch(body, null);
+    @Deprecated
+    public ControlConfiguration put(@jakarta.annotation.Nonnull final ControlConfiguration body) {
+        return put(body, null);
     }
     /**
-     * Update the navigation property autoAuditingConfiguration in security
+     * Update the navigation property controlConfigurations in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link AutoAuditingConfiguration}
+     * @return a {@link ControlConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nullable
-    public AutoAuditingConfiguration patch(@jakarta.annotation.Nonnull final AutoAuditingConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @Deprecated
+    public ControlConfiguration put(@jakarta.annotation.Nonnull final ControlConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, AutoAuditingConfiguration::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, ControlConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property autoAuditingConfiguration for security
+     * Delete navigation property controlConfigurations for identityGovernance
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property autoAuditingConfiguration for security
+     * Delete navigation property controlConfigurations for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -124,19 +146,25 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
+     * Represents the policies that control lifecycle and access to access packages across the organization.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
+     * Represents the policies that control lifecycle and access to access packages across the organization.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -144,25 +172,31 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Update the navigation property autoAuditingConfiguration in security
+     * Update the navigation property controlConfigurations in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AutoAuditingConfiguration body) {
-        return toPatchRequestInformation(body, null);
+    @Deprecated
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ControlConfiguration body) {
+        return toPutRequestInformation(body, null);
     }
     /**
-     * Update the navigation property autoAuditingConfiguration in security
+     * Update the navigation property controlConfigurations in identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AutoAuditingConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    @Deprecated
+    public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final ControlConfiguration body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
-        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PutRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
         return requestInfo;
@@ -170,12 +204,15 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link AutoAuditingConfigurationRequestBuilder}
+     * @return a {@link ControlConfigurationItemRequestBuilder}
+     * @deprecated
+     * Controls configurations preview. as of PrivatePreview:ControlConfigurations on 2024-09-27 and will be removed 2025-09-27
      */
     @jakarta.annotation.Nonnull
-    public AutoAuditingConfigurationRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    @Deprecated
+    public ControlConfigurationItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new AutoAuditingConfigurationRequestBuilder(rawUrl, requestAdapter);
+        return new ControlConfigurationItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.
@@ -184,7 +221,7 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the properties and relationships of an microsoft.graph.security.autoAuditingConfiguration object.
+     * Represents the policies that control lifecycle and access to access packages across the organization.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
@@ -225,6 +262,6 @@ public class AutoAuditingConfigurationRequestBuilder extends BaseRequestBuilder 
      * Configuration for the request such as headers, query parameters, and middleware options.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
-    public class PatchRequestConfiguration extends BaseRequestConfiguration {
+    public class PutRequestConfiguration extends BaseRequestConfiguration {
     }
 }

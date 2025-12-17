@@ -135,7 +135,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         return this.backingStore.get("values");
     }
     /**
-     * Gets the valueTypes property value. The type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     * Gets the valueTypes property value. The type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -240,7 +240,7 @@ public class WorkbookRangeView extends Entity implements Parsable {
         this.backingStore.set("values", value);
     }
     /**
-     * Sets the valueTypes property value. The type of data of each cell. Read-only. Possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
+     * Sets the valueTypes property value. The type of data of each cell. Read-only. The possible values are: Unknown, Empty, String, Integer, Double, Boolean, Error.
      * @param value Value to set for the valueTypes property.
      */
     public void setValueTypes(@jakarta.annotation.Nullable final UntypedNode value) {

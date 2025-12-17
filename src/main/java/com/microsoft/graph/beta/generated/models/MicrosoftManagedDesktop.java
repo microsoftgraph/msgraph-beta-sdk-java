@@ -69,7 +69,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         return deserializerMap;
     }
     /**
-     * Gets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default value is notManaged.
+     * Gets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. The possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default value is notManaged.
      * @return a {@link MicrosoftManagedDesktopType}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         return this.backingStore.get("profile");
     }
     /**
-     * Gets the type property value. Indicates whether the provisioning policy enables Microsoft Managed Desktop and, if enabled, specifies the type of plan managing the device. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The type property is deprecated and will stop returning data on January 31, 2024. Going forward, use the managedType property.
+     * Gets the type property value. Indicates whether the provisioning policy enables Microsoft Managed Desktop and, if enabled, specifies the type of plan managing the device. The possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The type property is deprecated and will stop returning data on January 31, 2024. Going forward, use the managedType property.
      * @return a {@link MicrosoftManagedDesktopType}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         this.backingStore = value;
     }
     /**
-     * Sets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default value is notManaged.
+     * Sets the managedType property value. Indicates the provisioning policy associated with Microsoft Managed Desktop settings. The possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The default value is notManaged.
      * @param value Value to set for the managedType property.
      */
     public void setManagedType(@jakarta.annotation.Nullable final MicrosoftManagedDesktopType value) {
@@ -149,7 +149,7 @@ public class MicrosoftManagedDesktop implements AdditionalDataHolder, BackedMode
         this.backingStore.set("profile", value);
     }
     /**
-     * Sets the type property value. Indicates whether the provisioning policy enables Microsoft Managed Desktop and, if enabled, specifies the type of plan managing the device. Possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The type property is deprecated and will stop returning data on January 31, 2024. Going forward, use the managedType property.
+     * Sets the type property value. Indicates whether the provisioning policy enables Microsoft Managed Desktop and, if enabled, specifies the type of plan managing the device. The possible values are: notManaged, premiumManaged, standardManaged, starterManaged, unknownFutureValue. The type property is deprecated and will stop returning data on January 31, 2024. Going forward, use the managedType property.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final MicrosoftManagedDesktopType value) {

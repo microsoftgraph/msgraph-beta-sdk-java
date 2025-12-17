@@ -37,7 +37,7 @@ public class SharePointGroupMigrationTaskParameters extends SharePointMigrationT
         return deserializerMap;
     }
     /**
-     * Gets the sourceGroupIdentity property value. The sourceGroupIdentity property
+     * Gets the sourceGroupIdentity property value. The identity of the source group in the source tenant, including its mail nickname.
      * @return a {@link GroupIdentity}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class SharePointGroupMigrationTaskParameters extends SharePointMigrationT
         return this.backingStore.get("sourceGroupIdentity");
     }
     /**
-     * Gets the targetGroupIdentity property value. The targetGroupIdentity property
+     * Gets the targetGroupIdentity property value. The identity of the target group in the target tenant, including its mail nickname.
      * @return a {@link GroupIdentity}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class SharePointGroupMigrationTaskParameters extends SharePointMigrationT
         writer.writeObjectValue("targetGroupIdentity", this.getTargetGroupIdentity());
     }
     /**
-     * Sets the sourceGroupIdentity property value. The sourceGroupIdentity property
+     * Sets the sourceGroupIdentity property value. The identity of the source group in the source tenant, including its mail nickname.
      * @param value Value to set for the sourceGroupIdentity property.
      */
     public void setSourceGroupIdentity(@jakarta.annotation.Nullable final GroupIdentity value) {
         this.backingStore.set("sourceGroupIdentity", value);
     }
     /**
-     * Sets the targetGroupIdentity property value. The targetGroupIdentity property
+     * Sets the targetGroupIdentity property value. The identity of the target group in the target tenant, including its mail nickname.
      * @param value Value to set for the targetGroupIdentity property.
      */
     public void setTargetGroupIdentity(@jakarta.annotation.Nullable final GroupIdentity value) {

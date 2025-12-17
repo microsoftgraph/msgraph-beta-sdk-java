@@ -36,7 +36,7 @@ public class AgentIdentityBlueprint extends Application implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the sponsors property value. The sponsors for this agent identity blueprint. Sponsors are users or groups who can authorize and manage the lifecycle of agent identity instances.
+     * Gets the sponsors property value. The sponsors for this agent identity blueprint. Sponsors are users or groups who can authorize and manage the lifecycle of agent identity instances. Required during the create operation.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class AgentIdentityBlueprint extends Application implements Parsable {
         writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
     }
     /**
-     * Sets the sponsors property value. The sponsors for this agent identity blueprint. Sponsors are users or groups who can authorize and manage the lifecycle of agent identity instances.
+     * Sets the sponsors property value. The sponsors for this agent identity blueprint. Sponsors are users or groups who can authorize and manage the lifecycle of agent identity instances. Required during the create operation.
      * @param value Value to set for the sponsors property.
      */
     public void setSponsors(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {

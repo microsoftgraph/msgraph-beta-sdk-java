@@ -48,7 +48,7 @@ public class SiteCollection implements AdditionalDataHolder, BackedModel, Parsab
         return value;
     }
     /**
-     * Gets the archivalDetails property value. Represents whether the site collection is recently archived, fully archived, or reactivating. Possible values are: recentlyArchived, fullyArchived, reactivating, unknownFutureValue. To update this property, use the site: archive or site: unarchive APIs.
+     * Gets the archivalDetails property value. Represents whether the site collection is recently archived, fully archived, or reactivating. The possible values are: recentlyArchived, fullyArchived, reactivating, unknownFutureValue. To update this property, use the site: archive or site: unarchive APIs.
      * @return a {@link SiteArchivalDetails}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class SiteCollection implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the archivalDetails property value. Represents whether the site collection is recently archived, fully archived, or reactivating. Possible values are: recentlyArchived, fullyArchived, reactivating, unknownFutureValue. To update this property, use the site: archive or site: unarchive APIs.
+     * Sets the archivalDetails property value. Represents whether the site collection is recently archived, fully archived, or reactivating. The possible values are: recentlyArchived, fullyArchived, reactivating, unknownFutureValue. To update this property, use the site: archive or site: unarchive APIs.
      * @param value Value to set for the archivalDetails property.
      */
     public void setArchivalDetails(@jakarta.annotation.Nullable final SiteArchivalDetails value) {

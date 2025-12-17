@@ -151,7 +151,7 @@ public class MailFolder extends Entity implements Parsable {
         return this.backingStore.get("unreadItemCount");
     }
     /**
-     * Gets the userConfigurations property value. The userConfigurations property
+     * Gets the userConfigurations property value. The user configuration objects associated to the mailFolder.
      * @return a {@link java.util.List<UserConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -273,7 +273,7 @@ public class MailFolder extends Entity implements Parsable {
         this.backingStore.set("unreadItemCount", value);
     }
     /**
-     * Sets the userConfigurations property value. The userConfigurations property
+     * Sets the userConfigurations property value. The user configuration objects associated to the mailFolder.
      * @param value Value to set for the userConfigurations property.
      */
     public void setUserConfigurations(@jakarta.annotation.Nullable final java.util.List<UserConfiguration> value) {

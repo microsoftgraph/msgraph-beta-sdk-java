@@ -49,7 +49,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the geographicLocationType property value. The geographic location where the region is located. Possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * Gets the geographicLocationType property value. The geographic location where the region is located. The possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
      * @return a {@link CloudPcGeographicLocationType}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         return this.backingStore.get("regionRestrictionDetail");
     }
     /**
-     * Gets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
+     * Gets the regionStatus property value. The status of the supported region. The possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
      * @return a {@link CloudPcSupportedRegionStatus}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the geographicLocationType property value. The geographic location where the region is located. Possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * Sets the geographicLocationType property value. The geographic location where the region is located. The possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
      * @param value Value to set for the geographicLocationType property.
      */
     public void setGeographicLocationType(@jakarta.annotation.Nullable final CloudPcGeographicLocationType value) {
@@ -131,7 +131,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         this.backingStore.set("regionRestrictionDetail", value);
     }
     /**
-     * Sets the regionStatus property value. The status of the supported region. Possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
+     * Sets the regionStatus property value. The status of the supported region. The possible values are: available, restricted, unavailable, unknownFutureValue. Read-only.
      * @param value Value to set for the regionStatus property.
      */
     public void setRegionStatus(@jakarta.annotation.Nullable final CloudPcSupportedRegionStatus value) {

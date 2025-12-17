@@ -27,7 +27,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return new TeamsAppDefinition();
     }
     /**
-     * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team&apos;s data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat&apos;s data. personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user&apos;s data.
+     * Gets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. The possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team&apos;s data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat&apos;s data. personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user&apos;s data.
      * @return a {@link EnumSet<TeamsAppInstallationScopes>}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         return this.backingStore.get("outlineIcon");
     }
     /**
-     * Gets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. published - The request to publish the specific version of the Teams app has been approved by the admin and the app is published. rejected - The request to publish the specific version of the Teams app was rejected by the admin.
+     * Gets the publishingState property value. The published status of a specific version of a Teams app. The possible values are:submittedThe specific version of the Teams app has been submitted and is under review. published - The request to publish the specific version of the Teams app has been approved by the admin and the app is published. rejected - The request to publish the specific version of the Teams app was rejected by the admin.
      * @return a {@link TeamsAppPublishingState}
      */
     @jakarta.annotation.Nullable
@@ -194,7 +194,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         writer.writeStringValue("version", this.getVersion());
     }
     /**
-     * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. Possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team&apos;s data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat&apos;s data. personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user&apos;s data.
+     * Sets the allowedInstallationScopes property value. A collection of scopes where the Teams app can be installed. The possible values are:teamIndicates that the Teams app can be installed within a team and is authorized to access that team&apos;s data. groupChatIndicates that the Teams app can be installed within a group chat and is authorized to access that group chat&apos;s data. personalIndicates that the Teams app can be installed in the personal scope of a user and is authorized to access that user&apos;s data.
      * @param value Value to set for the allowedInstallationScopes property.
      */
     public void setAllowedInstallationScopes(@jakarta.annotation.Nullable final EnumSet<TeamsAppInstallationScopes> value) {
@@ -271,7 +271,7 @@ public class TeamsAppDefinition extends Entity implements Parsable {
         this.backingStore.set("outlineIcon", value);
     }
     /**
-     * Sets the publishingState property value. The published status of a specific version of a Teams app. Possible values are:submittedThe specific version of the Teams app has been submitted and is under review. published - The request to publish the specific version of the Teams app has been approved by the admin and the app is published. rejected - The request to publish the specific version of the Teams app was rejected by the admin.
+     * Sets the publishingState property value. The published status of a specific version of a Teams app. The possible values are:submittedThe specific version of the Teams app has been submitted and is under review. published - The request to publish the specific version of the Teams app has been approved by the admin and the app is published. rejected - The request to publish the specific version of the Teams app was rejected by the admin.
      * @param value Value to set for the publishingState property.
      */
     public void setPublishingState(@jakarta.annotation.Nullable final TeamsAppPublishingState value) {

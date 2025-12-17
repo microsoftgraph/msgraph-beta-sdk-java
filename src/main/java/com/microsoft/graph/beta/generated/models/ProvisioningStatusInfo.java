@@ -84,7 +84,7 @@ public class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the status property value. Possible values are: success, failure, skipped, warning, unknownFutureValue. Supports $filter (eq, contains).
+     * Gets the status property value. The possible values are: success, failure, skipped, warning, unknownFutureValue. Supports $filter (eq, contains).
      * @return a {@link ProvisioningResult}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the status property value. Possible values are: success, failure, skipped, warning, unknownFutureValue. Supports $filter (eq, contains).
+     * Sets the status property value. The possible values are: success, failure, skipped, warning, unknownFutureValue. Supports $filter (eq, contains).
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ProvisioningResult value) {

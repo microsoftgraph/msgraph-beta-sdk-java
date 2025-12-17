@@ -59,7 +59,7 @@ public class UserConfigurationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}/userConfigurations{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      * @return a {@link UserConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class UserConfigurationsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserConfigurationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class UserConfigurationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserConfigurationCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class UserConfigurationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class UserConfigurationsRequestBuilder extends BaseRequestBuilder {
         return new UserConfigurationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

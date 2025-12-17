@@ -56,7 +56,7 @@ public class PlannerTaskRoleBasedRule implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
-     * Gets the defaultRule property value. Default rule that applies when a property or action-specific rule is not provided. Possible values are: Allow, Block
+     * Gets the defaultRule property value. Default rule that applies when a property or action-specific rule is not provided. The possible values are: Allow, Block
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class PlannerTaskRoleBasedRule implements AdditionalDataHolder, BackedMod
         this.backingStore = value;
     }
     /**
-     * Sets the defaultRule property value. Default rule that applies when a property or action-specific rule is not provided. Possible values are: Allow, Block
+     * Sets the defaultRule property value. Default rule that applies when a property or action-specific rule is not provided. The possible values are: Allow, Block
      * @param value Value to set for the defaultRule property.
      */
     public void setDefaultRule(@jakarta.annotation.Nullable final String value) {

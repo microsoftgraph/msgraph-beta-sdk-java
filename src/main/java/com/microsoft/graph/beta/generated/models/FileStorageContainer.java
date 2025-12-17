@@ -124,8 +124,6 @@ public class FileStorageContainer extends Entity implements Parsable {
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("externalGroupId", (n) -> { this.setExternalGroupId(n.getUUIDValue()); });
         deserializerMap.put("informationBarrier", (n) -> { this.setInformationBarrier(n.getObjectValue(InformationBarrier::createFromDiscriminatorValue)); });
-        deserializerMap.put("isItemVersioningEnabled", (n) -> { this.setIsItemVersioningEnabled(n.getBooleanValue()); });
-        deserializerMap.put("itemMajorVersionLimit", (n) -> { this.setItemMajorVersionLimit(n.getIntegerValue()); });
         deserializerMap.put("lockState", (n) -> { this.setLockState(n.getEnumValue(SiteLockState::forValue)); });
         deserializerMap.put("migrationJobs", (n) -> { this.setMigrationJobs(n.getCollectionOfObjectValues(SharePointMigrationJob::createFromDiscriminatorValue)); });
         deserializerMap.put("owners", (n) -> { this.setOwners(n.getCollectionOfObjectValues(UserIdentity::createFromDiscriminatorValue)); });
@@ -146,22 +144,6 @@ public class FileStorageContainer extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public InformationBarrier getInformationBarrier() {
         return this.backingStore.get("informationBarrier");
-    }
-    /**
-     * Gets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getIsItemVersioningEnabled() {
-        return this.backingStore.get("isItemVersioningEnabled");
-    }
-    /**
-     * Gets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
-     * @return a {@link Integer}
-     */
-    @jakarta.annotation.Nullable
-    public Integer getItemMajorVersionLimit() {
-        return this.backingStore.get("itemMajorVersionLimit");
     }
     /**
      * Gets the lockState property value. Indicates the lock state of the fileStorageContainer. The possible values are unlocked and lockedReadOnly. Read-only.
@@ -269,8 +251,6 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeUUIDValue("externalGroupId", this.getExternalGroupId());
         writer.writeObjectValue("informationBarrier", this.getInformationBarrier());
-        writer.writeBooleanValue("isItemVersioningEnabled", this.getIsItemVersioningEnabled());
-        writer.writeIntegerValue("itemMajorVersionLimit", this.getItemMajorVersionLimit());
         writer.writeEnumValue("lockState", this.getLockState());
         writer.writeCollectionOfObjectValues("migrationJobs", this.getMigrationJobs());
         writer.writeCollectionOfObjectValues("owners", this.getOwners());
@@ -359,20 +339,6 @@ public class FileStorageContainer extends Entity implements Parsable {
      */
     public void setInformationBarrier(@jakarta.annotation.Nullable final InformationBarrier value) {
         this.backingStore.set("informationBarrier", value);
-    }
-    /**
-     * Sets the isItemVersioningEnabled property value. The isItemVersioningEnabled property
-     * @param value Value to set for the isItemVersioningEnabled property.
-     */
-    public void setIsItemVersioningEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("isItemVersioningEnabled", value);
-    }
-    /**
-     * Sets the itemMajorVersionLimit property value. The itemMajorVersionLimit property
-     * @param value Value to set for the itemMajorVersionLimit property.
-     */
-    public void setItemMajorVersionLimit(@jakarta.annotation.Nullable final Integer value) {
-        this.backingStore.set("itemMajorVersionLimit", value);
     }
     /**
      * Sets the lockState property value. Indicates the lock state of the fileStorageContainer. The possible values are unlocked and lockedReadOnly. Read-only.

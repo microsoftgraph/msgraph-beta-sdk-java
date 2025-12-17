@@ -93,7 +93,7 @@ public class SharePointMigrationTaskParameters implements AdditionalDataHolder, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the preferredLatestStartDateTime property value. The preferredLatestStartDateTime property
+     * Gets the preferredLatestStartDateTime property value. The preferred latest start date and time. The system cancels the sharePointMigrationTask if it doesn&apos;t start by this time. The value must be greater than the preferredStartDateTime, if present. Optional. Only on OneDrive and SharePoint.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class SharePointMigrationTaskParameters implements AdditionalDataHolder, 
         return this.backingStore.get("preferredLatestStartDateTime");
     }
     /**
-     * Gets the preferredStartDateTime property value. The preferredStartDateTime property
+     * Gets the preferredStartDateTime property value. The preferred start date and time that allows the sharePointMigrationTask to start at a future time instead of as soon as possible (default). Optional. Only on OneDrive and SharePoint.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class SharePointMigrationTaskParameters implements AdditionalDataHolder, 
         return this.backingStore.get("preferredStartDateTime");
     }
     /**
-     * Gets the sourceSiteUrl property value. The sourceSiteUrl property
+     * Gets the sourceSiteUrl property value. The SharePoint URL of the source site. Optional. Exactly one of sourceSiteId or sourceUrl must be specified. If both or neither are specified, it&apos;s an error. Only on OneDrive and SharePoint.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class SharePointMigrationTaskParameters implements AdditionalDataHolder, 
         return this.backingStore.get("sourceSiteUrl");
     }
     /**
-     * Gets the targetDataLocationCode property value. The targetDataLocationCode property
+     * Gets the targetDataLocationCode property value. In Microsoft Entra, this value represents the geographic location (for example, JPN, NAM) of the target organization where the resource must be migrated to ensure data residency and compliance. This property isn&apos;t required for single-geo target organizations or when the migration is to the default GEO of a multi-geo target organization. Optional. Only on OneDrive and SharePoint.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class SharePointMigrationTaskParameters implements AdditionalDataHolder, 
         return this.backingStore.get("targetDataLocationCode");
     }
     /**
-     * Gets the targetOrganizationHost property value. The targetOrganizationHost property
+     * Gets the targetOrganizationHost property value. The root, admin, or my site host of the specific multi-geo instance of the target organization where the resource must be migrated to ensure data residency and compliance. This property isn&apos;t required for single-geo target organizations or when the migration is to the default GEO of a multi-geo target organization. Optional. Only on OneDrive and SharePoint.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class SharePointMigrationTaskParameters implements AdditionalDataHolder, 
         return this.backingStore.get("targetOrganizationHost");
     }
     /**
-     * Gets the targetOrganizationId property value. The targetOrganizationId property
+     * Gets the targetOrganizationId property value. The unique Microsoft Entra company ID of the target organization to which the source resource must be migrated. Only on OneDrive and SharePoint.
      * @return a {@link UUID}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class SharePointMigrationTaskParameters implements AdditionalDataHolder, 
         return this.backingStore.get("targetOrganizationId");
     }
     /**
-     * Gets the targetSiteUrl property value. The targetSiteUrl property
+     * Gets the targetSiteUrl property value. The SharePoint URL of the target site. Only on OneDrive and SharePoint.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class SharePointMigrationTaskParameters implements AdditionalDataHolder, 
         return this.backingStore.get("targetSiteUrl");
     }
     /**
-     * Gets the validateOnly property value. The validateOnly property
+     * Gets the validateOnly property value. Indicates whether this task is an actual migration or only a validation. If the parameter is missing, the system treats it as false. The default behavior is a real migration. Optional. Only on OneDrive and SharePoint.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -196,56 +196,56 @@ public class SharePointMigrationTaskParameters implements AdditionalDataHolder, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the preferredLatestStartDateTime property value. The preferredLatestStartDateTime property
+     * Sets the preferredLatestStartDateTime property value. The preferred latest start date and time. The system cancels the sharePointMigrationTask if it doesn&apos;t start by this time. The value must be greater than the preferredStartDateTime, if present. Optional. Only on OneDrive and SharePoint.
      * @param value Value to set for the preferredLatestStartDateTime property.
      */
     public void setPreferredLatestStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("preferredLatestStartDateTime", value);
     }
     /**
-     * Sets the preferredStartDateTime property value. The preferredStartDateTime property
+     * Sets the preferredStartDateTime property value. The preferred start date and time that allows the sharePointMigrationTask to start at a future time instead of as soon as possible (default). Optional. Only on OneDrive and SharePoint.
      * @param value Value to set for the preferredStartDateTime property.
      */
     public void setPreferredStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("preferredStartDateTime", value);
     }
     /**
-     * Sets the sourceSiteUrl property value. The sourceSiteUrl property
+     * Sets the sourceSiteUrl property value. The SharePoint URL of the source site. Optional. Exactly one of sourceSiteId or sourceUrl must be specified. If both or neither are specified, it&apos;s an error. Only on OneDrive and SharePoint.
      * @param value Value to set for the sourceSiteUrl property.
      */
     public void setSourceSiteUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sourceSiteUrl", value);
     }
     /**
-     * Sets the targetDataLocationCode property value. The targetDataLocationCode property
+     * Sets the targetDataLocationCode property value. In Microsoft Entra, this value represents the geographic location (for example, JPN, NAM) of the target organization where the resource must be migrated to ensure data residency and compliance. This property isn&apos;t required for single-geo target organizations or when the migration is to the default GEO of a multi-geo target organization. Optional. Only on OneDrive and SharePoint.
      * @param value Value to set for the targetDataLocationCode property.
      */
     public void setTargetDataLocationCode(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetDataLocationCode", value);
     }
     /**
-     * Sets the targetOrganizationHost property value. The targetOrganizationHost property
+     * Sets the targetOrganizationHost property value. The root, admin, or my site host of the specific multi-geo instance of the target organization where the resource must be migrated to ensure data residency and compliance. This property isn&apos;t required for single-geo target organizations or when the migration is to the default GEO of a multi-geo target organization. Optional. Only on OneDrive and SharePoint.
      * @param value Value to set for the targetOrganizationHost property.
      */
     public void setTargetOrganizationHost(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetOrganizationHost", value);
     }
     /**
-     * Sets the targetOrganizationId property value. The targetOrganizationId property
+     * Sets the targetOrganizationId property value. The unique Microsoft Entra company ID of the target organization to which the source resource must be migrated. Only on OneDrive and SharePoint.
      * @param value Value to set for the targetOrganizationId property.
      */
     public void setTargetOrganizationId(@jakarta.annotation.Nullable final UUID value) {
         this.backingStore.set("targetOrganizationId", value);
     }
     /**
-     * Sets the targetSiteUrl property value. The targetSiteUrl property
+     * Sets the targetSiteUrl property value. The SharePoint URL of the target site. Only on OneDrive and SharePoint.
      * @param value Value to set for the targetSiteUrl property.
      */
     public void setTargetSiteUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetSiteUrl", value);
     }
     /**
-     * Sets the validateOnly property value. The validateOnly property
+     * Sets the validateOnly property value. Indicates whether this task is an actual migration or only a validation. If the parameter is missing, the system treats it as false. The default behavior is a real migration. Optional. Only on OneDrive and SharePoint.
      * @param value Value to set for the validateOnly property.
      */
     public void setValidateOnly(@jakarta.annotation.Nullable final Boolean value) {

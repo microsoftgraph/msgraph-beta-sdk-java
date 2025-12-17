@@ -50,7 +50,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
+     * Gets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. The possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
      * @return a {@link EnumSet<ExportOptions>}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
         return this.backingStore.get("exportOptions");
     }
     /**
-     * Gets the exportStructure property value. The options provided specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
+     * Gets the exportStructure property value. The options provided specify the structure of the export. For more information, see reviewSet: export. The possible values are: none, directory, pst.
      * @return a {@link ExportFileStructure}
      */
     @jakarta.annotation.Nullable
@@ -144,14 +144,14 @@ public class CaseExportOperation extends CaseOperation implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
+     * Sets the exportOptions property value. The options provided for the export. For more information, see reviewSet: export. The possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.
      * @param value Value to set for the exportOptions property.
      */
     public void setExportOptions(@jakarta.annotation.Nullable final EnumSet<ExportOptions> value) {
         this.backingStore.set("exportOptions", value);
     }
     /**
-     * Sets the exportStructure property value. The options provided specify the structure of the export. For more information, see reviewSet: export. Possible values are: none, directory, pst.
+     * Sets the exportStructure property value. The options provided specify the structure of the export. For more information, see reviewSet: export. The possible values are: none, directory, pst.
      * @param value Value to set for the exportStructure property.
      */
     public void setExportStructure(@jakarta.annotation.Nullable final ExportFileStructure value) {

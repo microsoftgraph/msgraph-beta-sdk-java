@@ -89,7 +89,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
         return deserializerMap;
     }
     /**
-     * Gets the gender property value. Possible values are: female, male, other.
+     * Gets the gender property value. The possible values are: female, male, other.
      * @return a {@link EducationGender}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class EducationStudent implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("externalId", value);
     }
     /**
-     * Sets the gender property value. Possible values are: female, male, other.
+     * Sets the gender property value. The possible values are: female, male, other.
      * @param value Value to set for the gender property.
      */
     public void setGender(@jakarta.annotation.Nullable final EducationGender value) {

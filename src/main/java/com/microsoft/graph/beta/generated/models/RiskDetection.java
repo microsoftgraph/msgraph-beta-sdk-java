@@ -26,7 +26,7 @@ public class RiskDetection extends Entity implements Parsable {
         return new RiskDetection();
     }
     /**
-     * Gets the activity property value. Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
+     * Gets the activity property value. Indicates the activity type the detected risk is linked to.
      * @return a {@link ActivityType}
      */
     @jakarta.annotation.Nullable
@@ -253,7 +253,7 @@ public class RiskDetection extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the activity property value. Indicates the activity type the detected risk is linked to. The possible values are signin, user, unknownFutureValue.
+     * Sets the activity property value. Indicates the activity type the detected risk is linked to.
      * @param value Value to set for the activity property.
      */
     public void setActivity(@jakarta.annotation.Nullable final ActivityType value) {

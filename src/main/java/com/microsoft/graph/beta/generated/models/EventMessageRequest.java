@@ -49,7 +49,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the meetingRequestType property value. The type of meeting request. Possible values are: none, newMeetingRequest, fullUpdate, informationalUpdate, silentUpdate, outdated, and principalWantsCopy.
+     * Gets the meetingRequestType property value. The type of meeting request. The possible values are: none, newMeetingRequest, fullUpdate, informationalUpdate, silentUpdate, outdated, and principalWantsCopy.
      * @return a {@link MeetingRequestType}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class EventMessageRequest extends EventMessage implements Parsable {
         this.backingStore.set("allowNewTimeProposals", value);
     }
     /**
-     * Sets the meetingRequestType property value. The type of meeting request. Possible values are: none, newMeetingRequest, fullUpdate, informationalUpdate, silentUpdate, outdated, and principalWantsCopy.
+     * Sets the meetingRequestType property value. The type of meeting request. The possible values are: none, newMeetingRequest, fullUpdate, informationalUpdate, silentUpdate, outdated, and principalWantsCopy.
      * @param value Value to set for the meetingRequestType property.
      */
     public void setMeetingRequestType(@jakarta.annotation.Nullable final MeetingRequestType value) {

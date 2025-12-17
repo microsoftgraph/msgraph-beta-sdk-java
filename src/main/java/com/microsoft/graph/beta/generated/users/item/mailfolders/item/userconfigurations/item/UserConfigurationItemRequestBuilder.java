@@ -37,7 +37,7 @@ public class UserConfigurationItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/mailFolders/{mailFolder%2Did}/userConfigurations/{userConfiguration%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      * @return a {@link UserConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class UserConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserConfiguration}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class UserConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, UserConfiguration::createFromDiscriminatorValue);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class UserConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class UserConfigurationItemRequestBuilder extends BaseRequestBuilder {
         return new UserConfigurationItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get userConfigurations from users
+     * The user configuration objects associated to the mailFolder.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

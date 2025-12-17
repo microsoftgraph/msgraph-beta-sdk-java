@@ -96,7 +96,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("enableTopResults");
     }
     /**
-     * Gets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
+     * Gets the entityTypes property value. One or more types of resources expected in the response. The possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
      * @return a {@link java.util.List<EntityType>}
      */
     @jakarta.annotation.Nullable
@@ -303,7 +303,7 @@ public class SearchRequest implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("enableTopResults", value);
     }
     /**
-     * Sets the entityTypes property value. One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
+     * Sets the entityTypes property value. One or more types of resources expected in the response. The possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem, acronym, bookmark, chatMessage. For details about combinations of two or more entity types that are supported in the same search request, see known limitations. Required.
      * @param value Value to set for the entityTypes property.
      */
     public void setEntityTypes(@jakarta.annotation.Nullable final java.util.List<EntityType> value) {

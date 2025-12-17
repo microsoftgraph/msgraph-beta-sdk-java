@@ -2,7 +2,6 @@ package com.microsoft.graph.beta.security.identities.settings;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.SettingsContainer;
-import com.microsoft.graph.beta.security.identities.settings.autoauditingconfiguration.AutoAuditingConfigurationRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -21,14 +20,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SettingsRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to manage the autoAuditingConfiguration property of the microsoft.graph.security.settingsContainer entity.
-     * @return a {@link AutoAuditingConfigurationRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public AutoAuditingConfigurationRequestBuilder autoAuditingConfiguration() {
-        return new AutoAuditingConfigurationRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Instantiates a new {@link SettingsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

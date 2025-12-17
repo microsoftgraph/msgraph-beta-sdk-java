@@ -59,7 +59,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
         return this.backingStore;
     }
     /**
-     * Gets the encryptionMethod property value. Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+     * Gets the encryptionMethod property value. Select the encryption method for fixed drives. The possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @return a {@link BitLockerEncryptionMethod}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class BitLockerFixedDrivePolicy implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the encryptionMethod property value. Select the encryption method for fixed drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+     * Sets the encryptionMethod property value. Select the encryption method for fixed drives. The possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param value Value to set for the encryptionMethod property.
      */
     public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerEncryptionMethod value) {

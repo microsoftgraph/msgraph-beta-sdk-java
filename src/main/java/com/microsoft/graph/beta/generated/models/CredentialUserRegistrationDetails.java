@@ -25,7 +25,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
         return new CredentialUserRegistrationDetails();
     }
     /**
-     * Gets the authMethods property value. Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
+     * Gets the authMethods property value. Represents the authentication method that the user has registered. The possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
      * @return a {@link java.util.List<RegistrationAuthMethod>}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class CredentialUserRegistrationDetails extends Entity implements Parsabl
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the authMethods property value. Represents the authentication method that the user has registered. Possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
+     * Sets the authMethods property value. Represents the authentication method that the user has registered. The possible values are: email, mobilePhone, officePhone,  securityQuestion (only used for self-service password reset), appNotification,  appCode, alternateMobilePhone (supported only in registration),  fido,  appPassword,  unknownFutureValue.
      * @param value Value to set for the authMethods property.
      */
     public void setAuthMethods(@jakarta.annotation.Nullable final java.util.List<RegistrationAuthMethod> value) {

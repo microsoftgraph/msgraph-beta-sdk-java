@@ -64,7 +64,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the conditionCategory property value. The property that the rule condition monitors. Possible values are: provisionFailures, imageUploadFailures, azureNetworkConnectionCheckFailures, cloudPcInGracePeriod, frontlineInsufficientLicenses, cloudPcConnectionErrors, cloudPcHostHealthCheckFailures, cloudPcZoneOutage, unknownFutureValue, frontlineBufferUsageDuration, frontlineBufferUsageThreshold, cloudPcUserSettingsPersistenceUsageThreshold, cloudPcDeprovisionedThreshold, cloudPcReserveDeprovisionFailedThreshold. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: frontlineBufferUsageDuration, frontlineBufferUsageThreshold, cloudPcUserSettingsPersistenceUsageThreshold, cloudPcDeprovisionedThreshold, cloudPcReserveDeprovisionFailedThreshold.
+     * Gets the conditionCategory property value. The property that the rule condition monitors. The possible values are: provisionFailures, imageUploadFailures, azureNetworkConnectionCheckFailures, cloudPcInGracePeriod, frontlineInsufficientLicenses, cloudPcConnectionErrors, cloudPcHostHealthCheckFailures, cloudPcZoneOutage, unknownFutureValue, frontlineBufferUsageDuration, frontlineBufferUsageThreshold, cloudPcUserSettingsPersistenceUsageThreshold, cloudPcDeprovisionedThreshold, cloudPcReserveDeprovisionFailedThreshold. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: frontlineBufferUsageDuration, frontlineBufferUsageThreshold, cloudPcUserSettingsPersistenceUsageThreshold, cloudPcDeprovisionedThreshold, cloudPcReserveDeprovisionFailedThreshold.
      * @return a {@link ConditionCategory}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("operator");
     }
     /**
-     * Gets the relationshipType property value. The relationship type.  Possible values are: and, or.
+     * Gets the relationshipType property value. The relationship type.  The possible values are: and, or.
      * @return a {@link RelationshipType}
      */
     @jakarta.annotation.Nullable
@@ -155,7 +155,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the conditionCategory property value. The property that the rule condition monitors. Possible values are: provisionFailures, imageUploadFailures, azureNetworkConnectionCheckFailures, cloudPcInGracePeriod, frontlineInsufficientLicenses, cloudPcConnectionErrors, cloudPcHostHealthCheckFailures, cloudPcZoneOutage, unknownFutureValue, frontlineBufferUsageDuration, frontlineBufferUsageThreshold, cloudPcUserSettingsPersistenceUsageThreshold, cloudPcDeprovisionedThreshold, cloudPcReserveDeprovisionFailedThreshold. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: frontlineBufferUsageDuration, frontlineBufferUsageThreshold, cloudPcUserSettingsPersistenceUsageThreshold, cloudPcDeprovisionedThreshold, cloudPcReserveDeprovisionFailedThreshold.
+     * Sets the conditionCategory property value. The property that the rule condition monitors. The possible values are: provisionFailures, imageUploadFailures, azureNetworkConnectionCheckFailures, cloudPcInGracePeriod, frontlineInsufficientLicenses, cloudPcConnectionErrors, cloudPcHostHealthCheckFailures, cloudPcZoneOutage, unknownFutureValue, frontlineBufferUsageDuration, frontlineBufferUsageThreshold, cloudPcUserSettingsPersistenceUsageThreshold, cloudPcDeprovisionedThreshold, cloudPcReserveDeprovisionFailedThreshold. Use the Prefer: include-unknown-enum-members request header to get the following values from this evolvable enum: frontlineBufferUsageDuration, frontlineBufferUsageThreshold, cloudPcUserSettingsPersistenceUsageThreshold, cloudPcDeprovisionedThreshold, cloudPcReserveDeprovisionFailedThreshold.
      * @param value Value to set for the conditionCategory property.
      */
     public void setConditionCategory(@jakarta.annotation.Nullable final ConditionCategory value) {
@@ -176,7 +176,7 @@ public class RuleCondition implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("operator", value);
     }
     /**
-     * Sets the relationshipType property value. The relationship type.  Possible values are: and, or.
+     * Sets the relationshipType property value. The relationship type.  The possible values are: and, or.
      * @param value Value to set for the relationshipType property.
      */
     public void setRelationshipType(@jakarta.annotation.Nullable final RelationshipType value) {

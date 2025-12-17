@@ -112,7 +112,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         return this.backingStore.get("recordedDateTime");
     }
     /**
-     * Gets the state property value. Possible values are: accepted, declined. Supports $filter (eq).
+     * Gets the state property value. The possible values are: accepted, declined. Supports $filter (eq).
      * @return a {@link AgreementAcceptanceState}
      */
     @jakarta.annotation.Nullable
@@ -229,7 +229,7 @@ public class AgreementAcceptance extends Entity implements Parsable {
         this.backingStore.set("recordedDateTime", value);
     }
     /**
-     * Sets the state property value. Possible values are: accepted, declined. Supports $filter (eq).
+     * Sets the state property value. The possible values are: accepted, declined. Supports $filter (eq).
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final AgreementAcceptanceState value) {

@@ -114,21 +114,21 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24top}", rawUrl);
     }
     /**
-     * Get a list of the agentUser objects and their properties.
+     * Retrieve a list of user objects. This API also returns agentUser objects. This operation returns by default only a subset of the more commonly used properties for each user and agentUser. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @return a {@link UserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the agentUser objects and their properties.
+     * Retrieve a list of user objects. This API also returns agentUser objects. This operation returns by default only a subset of the more commonly used properties for each user and agentUser. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UserCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/agentuser-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/user-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public UserCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -165,7 +165,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, User::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the agentUser objects and their properties.
+     * Retrieve a list of user objects. This API also returns agentUser objects. This operation returns by default only a subset of the more commonly used properties for each user and agentUser. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -173,7 +173,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the agentUser objects and their properties.
+     * Retrieve a list of user objects. This API also returns agentUser objects. This operation returns by default only a subset of the more commonly used properties for each user and agentUser. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -219,7 +219,7 @@ public class UsersRequestBuilder extends BaseRequestBuilder {
         return new UsersRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the agentUser objects and their properties.
+     * Retrieve a list of user objects. This API also returns agentUser objects. This operation returns by default only a subset of the more commonly used properties for each user and agentUser. These default properties are noted in the Properties section. To get properties that are not returned by default, do a GET operation and specify the properties in a $select OData query option.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

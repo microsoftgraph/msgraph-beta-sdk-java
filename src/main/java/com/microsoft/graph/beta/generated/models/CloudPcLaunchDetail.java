@@ -94,7 +94,7 @@ public class CloudPcLaunchDetail implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the windows365SwitchCompatibilityFailureReasonType property value. Indicates the reason the Cloud PC isn&apos;t compatible with Windows 365 Switch. Possible values are: osVersionNotSupported, hardwareNotSupported, unknownFutureValue. osVersionNotSupported indicates that the user needs to update their Cloud PC operating system version. hardwareNotSupported indicates that the Cloud PC needs more CPUs or RAM to support the functionality.
+     * Gets the windows365SwitchCompatibilityFailureReasonType property value. Indicates the reason the Cloud PC isn&apos;t compatible with Windows 365 Switch. The possible values are: osVersionNotSupported, hardwareNotSupported, unknownFutureValue. osVersionNotSupported indicates that the user needs to update their Cloud PC operating system version. hardwareNotSupported indicates that the Cloud PC needs more CPUs or RAM to support the functionality.
      * @return a {@link Windows365SwitchCompatibilityFailureReasonType}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class CloudPcLaunchDetail implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the windows365SwitchCompatibilityFailureReasonType property value. Indicates the reason the Cloud PC isn&apos;t compatible with Windows 365 Switch. Possible values are: osVersionNotSupported, hardwareNotSupported, unknownFutureValue. osVersionNotSupported indicates that the user needs to update their Cloud PC operating system version. hardwareNotSupported indicates that the Cloud PC needs more CPUs or RAM to support the functionality.
+     * Sets the windows365SwitchCompatibilityFailureReasonType property value. Indicates the reason the Cloud PC isn&apos;t compatible with Windows 365 Switch. The possible values are: osVersionNotSupported, hardwareNotSupported, unknownFutureValue. osVersionNotSupported indicates that the user needs to update their Cloud PC operating system version. hardwareNotSupported indicates that the Cloud PC needs more CPUs or RAM to support the functionality.
      * @param value Value to set for the windows365SwitchCompatibilityFailureReasonType property.
      */
     public void setWindows365SwitchCompatibilityFailureReasonType(@jakarta.annotation.Nullable final Windows365SwitchCompatibilityFailureReasonType value) {

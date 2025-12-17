@@ -146,23 +146,23 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
+     * Upsert one or more place objects in async mode. This API allows you to create and update multiple places efficiently in a single request. For more information on how to use this API, including scenarios, best practices, and concurrency limits, see Working with the upsert Places API in Microsoft Graph.
      * @param body The request body
      * @return a {@link Place}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/place-update?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/place-patch-places?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Place patch(@jakarta.annotation.Nonnull final Place body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
+     * Upsert one or more place objects in async mode. This API allows you to create and update multiple places efficiently in a single request. For more information on how to use this API, including scenarios, best practices, and concurrency limits, see Working with the upsert Places API in Microsoft Graph.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Place}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/place-update?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/place-patch-places?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Place patch(@jakarta.annotation.Nonnull final Place body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -193,7 +193,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
+     * Upsert one or more place objects in async mode. This API allows you to create and update multiple places efficiently in a single request. For more information on how to use this API, including scenarios, best practices, and concurrency limits, see Working with the upsert Places API in Microsoft Graph.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -202,7 +202,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of place object that can be a building, floor, section, desk, room, workspace, or roomList. You can identify the place by specifying the id property.
+     * Upsert one or more place objects in async mode. This API allows you to create and update multiple places efficiently in a single request. For more information on how to use this API, including scenarios, best practices, and concurrency limits, see Working with the upsert Places API in Microsoft Graph.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

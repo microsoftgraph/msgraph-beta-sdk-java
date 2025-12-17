@@ -86,7 +86,7 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the relationship property value. Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
+     * Gets the relationship property value. The possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
      * @return a {@link PersonRelationship}
      */
     @jakarta.annotation.Nullable
@@ -152,7 +152,7 @@ public class RelatedPerson implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the relationship property value. Possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
+     * Sets the relationship property value. The possible values are: manager, colleague, directReport, dotLineReport, assistant, dotLineManager, alternateContact, friend, spouse, sibling, child, parent, sponsor, emergencyContact, other, unknownFutureValue.
      * @param value Value to set for the relationship property.
      */
     public void setRelationship(@jakarta.annotation.Nullable final PersonRelationship value) {

@@ -42,7 +42,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         return this.backingStore.get("attestationCertificates");
     }
     /**
-     * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
+     * Gets the attestationLevel property value. The attestation level of this FIDO2 security key. The possible values are: attested, notAttested, unknownFutureValue.
      * @return a {@link AttestationLevel}
      */
     @jakarta.annotation.Nullable
@@ -127,7 +127,7 @@ public class Fido2AuthenticationMethod extends AuthenticationMethod implements P
         this.backingStore.set("attestationCertificates", value);
     }
     /**
-     * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. Possible values are: attested, notAttested, unknownFutureValue.
+     * Sets the attestationLevel property value. The attestation level of this FIDO2 security key. The possible values are: attested, notAttested, unknownFutureValue.
      * @param value Value to set for the attestationLevel property.
      */
     public void setAttestationLevel(@jakarta.annotation.Nullable final AttestationLevel value) {

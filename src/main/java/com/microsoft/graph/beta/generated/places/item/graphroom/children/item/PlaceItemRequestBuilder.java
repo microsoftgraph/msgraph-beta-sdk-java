@@ -37,7 +37,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/{place%2Did}/graph.room/children/{place%2Did1}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      * @return a {@link Place}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Place}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Place::createFromDiscriminatorValue);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class PlaceItemRequestBuilder extends BaseRequestBuilder {
         return new PlaceItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get children from places
+     * A collection of children places that is only used in the Upsert places API.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

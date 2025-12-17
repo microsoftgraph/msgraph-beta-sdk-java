@@ -112,7 +112,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("startDate");
     }
     /**
-     * Gets the type property value. The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+     * Gets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
      * @return a {@link RecurrenceRangeType}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class RecurrenceRange implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("startDate", value);
     }
     /**
-     * Sets the type property value. The recurrence range. Possible values are: endDate, noEnd, numbered. Required.
+     * Sets the type property value. The recurrence range. The possible values are: endDate, noEnd, numbered. Required.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final RecurrenceRangeType value) {

@@ -49,7 +49,7 @@ public class SharePointMigrationTask extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the finishedDateTime property value. The finishedDateTime property
+     * Gets the finishedDateTime property value. Date and time when the sharePointMigrationTask ended, if available. The task might complete successfully or fail, but it ends at that time. Read-only. Only on OneDrive and SharePoint. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class SharePointMigrationTask extends Entity implements Parsable {
         return this.backingStore.get("finishedDateTime");
     }
     /**
-     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Gets the lastUpdatedDateTime property value. Date and time when the sharePointMigrationTask was last updated or processed, if available. Use this property to find tasks that stopped processing for a long time. Read-only. Optional. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class SharePointMigrationTask extends Entity implements Parsable {
         return this.backingStore.get("parameters");
     }
     /**
-     * Gets the startedDateTime property value. The startedDateTime property
+     * Gets the startedDateTime property value. Date and time when the sharePointMigrationTask started, if available. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -110,14 +110,14 @@ public class SharePointMigrationTask extends Entity implements Parsable {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the finishedDateTime property value. The finishedDateTime property
+     * Sets the finishedDateTime property value. Date and time when the sharePointMigrationTask ended, if available. The task might complete successfully or fail, but it ends at that time. Read-only. Only on OneDrive and SharePoint. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the finishedDateTime property.
      */
     public void setFinishedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("finishedDateTime", value);
     }
     /**
-     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Sets the lastUpdatedDateTime property value. Date and time when the sharePointMigrationTask was last updated or processed, if available. Use this property to find tasks that stopped processing for a long time. Read-only. Optional. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -131,7 +131,7 @@ public class SharePointMigrationTask extends Entity implements Parsable {
         this.backingStore.set("parameters", value);
     }
     /**
-     * Sets the startedDateTime property value. The startedDateTime property
+     * Sets the startedDateTime property value. Date and time when the sharePointMigrationTask started, if available. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the startedDateTime property.
      */
     public void setStartedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

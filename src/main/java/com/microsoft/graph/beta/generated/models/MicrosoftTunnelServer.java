@@ -37,7 +37,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         return this.backingStore.get("agentImageDigest");
     }
     /**
-     * Gets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only. Possible values are: standaloneRootful, standaloneRootless, podRootful, podRootless, unknownFutureValue.
+     * Gets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only. The possible values are: standaloneRootful, standaloneRootless, podRootful, podRootless, unknownFutureValue.
      * @return a {@link MicrosoftTunnelDeploymentMode}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class MicrosoftTunnelServer extends Entity implements Parsable {
         this.backingStore.set("agentImageDigest", value);
     }
     /**
-     * Sets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only. Possible values are: standaloneRootful, standaloneRootless, podRootful, podRootless, unknownFutureValue.
+     * Sets the deploymentMode property value. Microsoft Tunnel server deployment mode. The value is set when the server is registered. Possible values are standaloneRootful, standaloneRootless, podRootful, podRootless. Default value: standaloneRootful. Supports: $filter, $select, $top, $skip, $orderby. $search is not supported. Read-only. The possible values are: standaloneRootful, standaloneRootless, podRootful, podRootless, unknownFutureValue.
      * @param value Value to set for the deploymentMode property.
      */
     public void setDeploymentMode(@jakarta.annotation.Nullable final MicrosoftTunnelDeploymentMode value) {

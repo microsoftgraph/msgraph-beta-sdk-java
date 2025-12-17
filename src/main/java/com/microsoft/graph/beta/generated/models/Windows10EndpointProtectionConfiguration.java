@@ -366,7 +366,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("defenderCheckForSignaturesBeforeRunningScan");
     }
     /**
-     * Gets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the &apos;Join Microsoft MAPS&apos; setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Gets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the &apos;Join Microsoft MAPS&apos; setting enabled in order to function. The possible values are: notConfigured, high, highPlus, zeroTolerance.
      * @return a {@link DefenderCloudBlockLevelType}
      */
     @jakarta.annotation.Nullable
@@ -662,7 +662,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("defenderOfficeMacroCodeAllowWin32ImportsType");
     }
     /**
-     * Gets the defenderPotentiallyUnwantedAppAction property value. Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Gets the defenderPotentiallyUnwantedAppAction property value. Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. The possible values are: userDefined, enable, auditMode, warn, notConfigured.
      * @return a {@link DefenderProtectionType}
      */
     @jakarta.annotation.Nullable
@@ -702,7 +702,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("defenderProcessesToExclude");
     }
     /**
-     * Gets the defenderScanDirection property value. Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     * Gets the defenderScanDirection property value. Controls which sets of files should be monitored. The possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
      * @return a {@link DefenderRealtimeScanDirection}
      */
     @jakarta.annotation.Nullable
@@ -718,7 +718,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("defenderScanMaxCpuPercentage");
     }
     /**
-     * Gets the defenderScanType property value. Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
+     * Gets the defenderScanType property value. Selects whether to perform a quick scan or full scan. The possible values are: userDefined, disabled, quick, full.
      * @return a {@link DefenderScanType}
      */
     @jakarta.annotation.Nullable
@@ -734,7 +734,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("defenderScheduledQuickScanTime");
     }
     /**
-     * Gets the defenderScheduledScanDay property value. Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     * Gets the defenderScheduledScanDay property value. Selects the day that the Windows Defender scan should run. The possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
      * @return a {@link WeeklySchedule}
      */
     @jakarta.annotation.Nullable
@@ -950,7 +950,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         return this.backingStore.get("defenderSignatureUpdateIntervalInHours");
     }
     /**
-     * Gets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
+     * Gets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. The possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
      * @return a {@link DefenderSubmitSamplesConsentType}
      */
     @jakarta.annotation.Nullable
@@ -2601,7 +2601,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("defenderCheckForSignaturesBeforeRunningScan", value);
     }
     /**
-     * Sets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the &apos;Join Microsoft MAPS&apos; setting enabled in order to function. Possible values are: notConfigured, high, highPlus, zeroTolerance.
+     * Sets the defenderCloudBlockLevel property value. Added in Windows 10, version 1709. This policy setting determines how aggressive Windows Defender Antivirus will be in blocking and scanning suspicious files. Value type is integer. This feature requires the &apos;Join Microsoft MAPS&apos; setting enabled in order to function. The possible values are: notConfigured, high, highPlus, zeroTolerance.
      * @param value Value to set for the defenderCloudBlockLevel property.
      */
     public void setDefenderCloudBlockLevel(@jakarta.annotation.Nullable final DefenderCloudBlockLevelType value) {
@@ -2860,7 +2860,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("defenderOfficeMacroCodeAllowWin32ImportsType", value);
     }
     /**
-     * Sets the defenderPotentiallyUnwantedAppAction property value. Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. Possible values are: userDefined, enable, auditMode, warn, notConfigured.
+     * Sets the defenderPotentiallyUnwantedAppAction property value. Added in Windows 10, version 1607. Specifies the level of detection for potentially unwanted applications (PUAs). Windows Defender alerts you when potentially unwanted software is being downloaded or attempts to install itself on your computer. The possible values are: userDefined, enable, auditMode, warn, notConfigured.
      * @param value Value to set for the defenderPotentiallyUnwantedAppAction property.
      */
     public void setDefenderPotentiallyUnwantedAppAction(@jakarta.annotation.Nullable final DefenderProtectionType value) {
@@ -2895,7 +2895,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("defenderProcessesToExclude", value);
     }
     /**
-     * Sets the defenderScanDirection property value. Controls which sets of files should be monitored. Possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
+     * Sets the defenderScanDirection property value. Controls which sets of files should be monitored. The possible values are: monitorAllFiles, monitorIncomingFilesOnly, monitorOutgoingFilesOnly.
      * @param value Value to set for the defenderScanDirection property.
      */
     public void setDefenderScanDirection(@jakarta.annotation.Nullable final DefenderRealtimeScanDirection value) {
@@ -2909,7 +2909,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("defenderScanMaxCpuPercentage", value);
     }
     /**
-     * Sets the defenderScanType property value. Selects whether to perform a quick scan or full scan. Possible values are: userDefined, disabled, quick, full.
+     * Sets the defenderScanType property value. Selects whether to perform a quick scan or full scan. The possible values are: userDefined, disabled, quick, full.
      * @param value Value to set for the defenderScanType property.
      */
     public void setDefenderScanType(@jakarta.annotation.Nullable final DefenderScanType value) {
@@ -2923,7 +2923,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("defenderScheduledQuickScanTime", value);
     }
     /**
-     * Sets the defenderScheduledScanDay property value. Selects the day that the Windows Defender scan should run. Possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
+     * Sets the defenderScheduledScanDay property value. Selects the day that the Windows Defender scan should run. The possible values are: userDefined, everyday, sunday, monday, tuesday, wednesday, thursday, friday, saturday, noScheduledScan.
      * @param value Value to set for the defenderScheduledScanDay property.
      */
     public void setDefenderScheduledScanDay(@jakarta.annotation.Nullable final WeeklySchedule value) {
@@ -3112,7 +3112,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         this.backingStore.set("defenderSignatureUpdateIntervalInHours", value);
     }
     /**
-     * Sets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
+     * Sets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. The possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
      * @param value Value to set for the defenderSubmitSamplesConsentType property.
      */
     public void setDefenderSubmitSamplesConsentType(@jakarta.annotation.Nullable final DefenderSubmitSamplesConsentType value) {

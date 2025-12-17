@@ -56,7 +56,7 @@ public class PlaceOperationProgress implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the failedPlaceCount property value. The failedPlaceCount property
+     * Gets the failedPlaceCount property value. The count of places failed to upsert.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class PlaceOperationProgress implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the succeededPlaceCount property value. The succeededPlaceCount property
+     * Gets the succeededPlaceCount property value. The count of places succeeded to upsert.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class PlaceOperationProgress implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("succeededPlaceCount");
     }
     /**
-     * Gets the totalPlaceCount property value. The totalPlaceCount property
+     * Gets the totalPlaceCount property value. The total count of places in the request.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class PlaceOperationProgress implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the failedPlaceCount property value. The failedPlaceCount property
+     * Sets the failedPlaceCount property value. The count of places failed to upsert.
      * @param value Value to set for the failedPlaceCount property.
      */
     public void setFailedPlaceCount(@jakarta.annotation.Nullable final Integer value) {
@@ -142,14 +142,14 @@ public class PlaceOperationProgress implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the succeededPlaceCount property value. The succeededPlaceCount property
+     * Sets the succeededPlaceCount property value. The count of places succeeded to upsert.
      * @param value Value to set for the succeededPlaceCount property.
      */
     public void setSucceededPlaceCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("succeededPlaceCount", value);
     }
     /**
-     * Sets the totalPlaceCount property value. The totalPlaceCount property
+     * Sets the totalPlaceCount property value. The total count of places in the request.
      * @param value Value to set for the totalPlaceCount property.
      */
     public void setTotalPlaceCount(@jakarta.annotation.Nullable final Integer value) {

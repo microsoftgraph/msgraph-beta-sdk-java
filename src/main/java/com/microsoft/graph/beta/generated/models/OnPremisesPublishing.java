@@ -80,7 +80,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn&apos;t require authentication. Possible values are: passthru, aadPreAuthentication.
+     * Gets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn&apos;t require authentication. The possible values are: passthru, aadPreAuthentication.
      * @return a {@link ExternalAuthenticationType}
      */
     @jakarta.annotation.Nullable
@@ -389,7 +389,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn&apos;t require authentication. Possible values are: passthru, aadPreAuthentication.
+     * Sets the externalAuthenticationType property value. Details the pre-authentication setting for the application. Pre-authentication enforces that users must authenticate before accessing the app. Pass through doesn&apos;t require authentication. The possible values are: passthru, aadPreAuthentication.
      * @param value Value to set for the externalAuthenticationType property.
      */
     public void setExternalAuthenticationType(@jakarta.annotation.Nullable final ExternalAuthenticationType value) {

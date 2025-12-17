@@ -51,7 +51,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
         return value;
     }
     /**
-     * Gets the airPrintExceptionAction property value. Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+     * Gets the airPrintExceptionAction property value. Determine whether AirPrint service will be exempt from the always-on VPN connection. The possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @return a {@link VpnServiceExceptionAction}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the cellularExceptionAction property value. Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+     * Gets the cellularExceptionAction property value. Determine whether Cellular service will be exempt from the always-on VPN connection. The possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @return a {@link VpnServiceExceptionAction}
      */
     @jakarta.annotation.Nullable
@@ -159,7 +159,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
         return this.backingStore.get("userToggleEnabled");
     }
     /**
-     * Gets the voicemailExceptionAction property value. Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+     * Gets the voicemailExceptionAction property value. Determine whether voicemail service will be exempt from the always-on VPN connection. The possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @return a {@link VpnServiceExceptionAction}
      */
     @jakarta.annotation.Nullable
@@ -193,7 +193,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the airPrintExceptionAction property value. Determine whether AirPrint service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+     * Sets the airPrintExceptionAction property value. Determine whether AirPrint service will be exempt from the always-on VPN connection. The possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @param value Value to set for the airPrintExceptionAction property.
      */
     public void setAirPrintExceptionAction(@jakarta.annotation.Nullable final VpnServiceExceptionAction value) {
@@ -229,7 +229,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the cellularExceptionAction property value. Determine whether Cellular service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+     * Sets the cellularExceptionAction property value. Determine whether Cellular service will be exempt from the always-on VPN connection. The possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @param value Value to set for the cellularExceptionAction property.
      */
     public void setCellularExceptionAction(@jakarta.annotation.Nullable final VpnServiceExceptionAction value) {
@@ -271,7 +271,7 @@ public class AppleVpnAlwaysOnConfiguration implements AdditionalDataHolder, Back
         this.backingStore.set("userToggleEnabled", value);
     }
     /**
-     * Sets the voicemailExceptionAction property value. Determine whether voicemail service will be exempt from the always-on VPN connection. Possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
+     * Sets the voicemailExceptionAction property value. Determine whether voicemail service will be exempt from the always-on VPN connection. The possible values are: forceTrafficViaVPN, allowTrafficOutside, dropTraffic.
      * @param value Value to set for the voicemailExceptionAction property.
      */
     public void setVoicemailExceptionAction(@jakarta.annotation.Nullable final VpnServiceExceptionAction value) {

@@ -38,19 +38,21 @@ public class GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuild
         super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations/crossOrganizationMigrationTasks/getBySourceGroupMailNickname(sourceGroupMailNickname='{sourceGroupMailNickname}')", rawUrl);
     }
     /**
-     * Invoke function getBySourceGroupMailNickname
+     * Get a sharePointMigrationTask that was previously created for a group, using the source group mail nickname. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-getbysourcegroupmailnickname?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointMigrationTask get() {
         return get(null);
     }
     /**
-     * Invoke function getBySourceGroupMailNickname
+     * Get a sharePointMigrationTask that was previously created for a group, using the source group mail nickname. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-getbysourcegroupmailnickname?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointMigrationTask get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, SharePointMigrationTask::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function getBySourceGroupMailNickname
+     * Get a sharePointMigrationTask that was previously created for a group, using the source group mail nickname. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function getBySourceGroupMailNickname
+     * Get a sharePointMigrationTask that was previously created for a group, using the source group mail nickname. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

@@ -101,7 +101,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("hasAttachments");
     }
     /**
-     * Gets the importance property value. The importance of the event. Possible values are: low, normal, high.
+     * Gets the importance property value. The importance of the event. The possible values are: low, normal, high.
      * @return a {@link Importance}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("reminderDateTime");
     }
     /**
-     * Gets the sensitivity property value. Indicates the level of privacy for the task. Possible values are: normal, personal, private, confidential.
+     * Gets the sensitivity property value. Indicates the level of privacy for the task. The possible values are: normal, personal, private, confidential.
      * @return a {@link Sensitivity}
      */
     @jakarta.annotation.Nullable
@@ -181,7 +181,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
+     * Gets the status property value. Indicates the state or progress of the task. The possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
      * @return a {@link TaskStatus}
      */
     @jakarta.annotation.Nullable
@@ -265,7 +265,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         this.backingStore.set("hasAttachments", value);
     }
     /**
-     * Sets the importance property value. The importance of the event. Possible values are: low, normal, high.
+     * Sets the importance property value. The importance of the event. The possible values are: low, normal, high.
      * @param value Value to set for the importance property.
      */
     public void setImportance(@jakarta.annotation.Nullable final Importance value) {
@@ -314,7 +314,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         this.backingStore.set("reminderDateTime", value);
     }
     /**
-     * Sets the sensitivity property value. Indicates the level of privacy for the task. Possible values are: normal, personal, private, confidential.
+     * Sets the sensitivity property value. Indicates the level of privacy for the task. The possible values are: normal, personal, private, confidential.
      * @param value Value to set for the sensitivity property.
      */
     public void setSensitivity(@jakarta.annotation.Nullable final Sensitivity value) {
@@ -335,7 +335,7 @@ public class OutlookTask extends OutlookItem implements Parsable {
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the status property value. Indicates the state or progress of the task. Possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
+     * Sets the status property value. Indicates the state or progress of the task. The possible values are: notStarted, inProgress, completed, waitingOnOthers, deferred.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final TaskStatus value) {

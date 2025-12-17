@@ -130,7 +130,7 @@ public class LegalHold extends Entity implements Parsable {
         return this.backingStore.get("siteSources");
     }
     /**
-     * Gets the status property value. The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
+     * Gets the status property value. The status of the legal hold. The possible values are: Pending, Error, Success, UnknownFutureValue.
      * @return a {@link LegalHoldStatus}
      */
     @jakarta.annotation.Nullable
@@ -245,7 +245,7 @@ public class LegalHold extends Entity implements Parsable {
         this.backingStore.set("siteSources", value);
     }
     /**
-     * Sets the status property value. The status of the legal hold. Possible values are: Pending, Error, Success, UnknownFutureValue.
+     * Sets the status property value. The status of the legal hold. The possible values are: Pending, Error, Success, UnknownFutureValue.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final LegalHoldStatus value) {

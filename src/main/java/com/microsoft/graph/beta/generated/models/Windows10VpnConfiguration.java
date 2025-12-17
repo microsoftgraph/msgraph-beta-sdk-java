@@ -191,7 +191,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
         return this.backingStore.get("onlyAssociatedAppsCanUseConnection");
     }
     /**
-     * Gets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
+     * Gets the profileTarget property value. Profile target type. The possible values are: user, device, autoPilotDevice.
      * @return a {@link Windows10VpnProfileTarget}
      */
     @jakarta.annotation.Nullable
@@ -408,7 +408,7 @@ public class Windows10VpnConfiguration extends WindowsVpnConfiguration implement
         this.backingStore.set("onlyAssociatedAppsCanUseConnection", value);
     }
     /**
-     * Sets the profileTarget property value. Profile target type. Possible values are: user, device, autoPilotDevice.
+     * Sets the profileTarget property value. Profile target type. The possible values are: user, device, autoPilotDevice.
      * @param value Value to set for the profileTarget property.
      */
     public void setProfileTarget(@jakarta.annotation.Nullable final Windows10VpnProfileTarget value) {

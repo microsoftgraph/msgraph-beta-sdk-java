@@ -36,19 +36,21 @@ public class ListOperationsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/places/listOperations(){?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Invoke function listOperations
+     * List all existing placeOperation objects. This API doesn&apos;t return operation details.
      * @return a {@link ListOperationsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-listoperations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ListOperationsGetResponse get() {
         return get(null);
     }
     /**
-     * Invoke function listOperations
+     * List all existing placeOperation objects. This API doesn&apos;t return operation details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ListOperationsGetResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/place-listoperations?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ListOperationsGetResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -58,7 +60,7 @@ public class ListOperationsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ListOperationsGetResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function listOperations
+     * List all existing placeOperation objects. This API doesn&apos;t return operation details.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -66,7 +68,7 @@ public class ListOperationsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function listOperations
+     * List all existing placeOperation objects. This API doesn&apos;t return operation details.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -88,7 +90,7 @@ public class ListOperationsRequestBuilder extends BaseRequestBuilder {
         return new ListOperationsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Invoke function listOperations
+     * List all existing placeOperation objects. This API doesn&apos;t return operation details.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

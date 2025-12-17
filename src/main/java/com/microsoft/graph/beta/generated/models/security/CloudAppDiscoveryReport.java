@@ -113,7 +113,7 @@ public class CloudAppDiscoveryReport extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the logDataProvider property value. The applicable log data provider. Possible values are: barracuda, bluecoat, checkpoint, ciscoAsa, ciscoIronportProxy, fortigate, paloAlto, squid, zscaler, mcafeeSwg, ciscoScanSafe, juniperSrx, sophosSg, websenseV75, websenseSiemCef, machineZoneMeraki, squidNative, ciscoFwsm, microsoftIsaW3C, sonicwall, sophosCyberoam, clavister, customParser, juniperSsg, zscalerQradar, juniperSrxSd, juniperSrxWelf, microsoftConditionalAppAccess, ciscoAsaFirepower, genericCef, genericLeef, genericW3C, iFilter, checkpointXml, checkpointSmartViewTracker, barracudaNextGenFw, barracudaNextGenFwWeblog, microsoftDefenderForEndpoint, zscalerCef, sophosXg, iboss, forcepoint, fortios, ciscoIronportWsaIi, paloAltoLeef, forcepointLeef, stormshield, contentkeeper, ciscoIronportWsaIii, checkpointCef, corrata, ciscoFirepowerV6, menloSecurityCef, watchguardXtm, openSystemsSecureWebGateway, wandera, unknownFutureValue.
+     * Gets the logDataProvider property value. The applicable log data provider. The possible values are: barracuda, bluecoat, checkpoint, ciscoAsa, ciscoIronportProxy, fortigate, paloAlto, squid, zscaler, mcafeeSwg, ciscoScanSafe, juniperSrx, sophosSg, websenseV75, websenseSiemCef, machineZoneMeraki, squidNative, ciscoFwsm, microsoftIsaW3C, sonicwall, sophosCyberoam, clavister, customParser, juniperSsg, zscalerQradar, juniperSrxSd, juniperSrxWelf, microsoftConditionalAppAccess, ciscoAsaFirepower, genericCef, genericLeef, genericW3C, iFilter, checkpointXml, checkpointSmartViewTracker, barracudaNextGenFw, barracudaNextGenFwWeblog, microsoftDefenderForEndpoint, zscalerCef, sophosXg, iboss, forcepoint, fortios, ciscoIronportWsaIi, paloAltoLeef, forcepointLeef, stormshield, contentkeeper, ciscoIronportWsaIii, checkpointCef, corrata, ciscoFirepowerV6, menloSecurityCef, watchguardXtm, openSystemsSecureWebGateway, wandera, unknownFutureValue.
      * @return a {@link LogDataProvider}
      */
     @jakarta.annotation.Nullable
@@ -129,7 +129,7 @@ public class CloudAppDiscoveryReport extends Entity implements Parsable {
         return this.backingStore.get("logFileCount");
     }
     /**
-     * Gets the receiverProtocol property value. The applicable receiver protocol. Possible values are: ftp, ftps, syslogUdp, syslogTcp, syslogTls, unknownFutureValue.
+     * Gets the receiverProtocol property value. The applicable receiver protocol. The possible values are: ftp, ftps, syslogUdp, syslogTcp, syslogTls, unknownFutureValue.
      * @return a {@link ReceiverProtocol}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class CloudAppDiscoveryReport extends Entity implements Parsable {
         return this.backingStore.get("receiverProtocol");
     }
     /**
-     * Gets the supportedEntityTypes property value. The supported entity type. Possible values are: userName, ipAddress, machineName, other, unknown, unknownFutureValue.
+     * Gets the supportedEntityTypes property value. The supported entity type. The possible values are: userName, ipAddress, machineName, other, unknown, unknownFutureValue.
      * @return a {@link java.util.List<EntityType>}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class CloudAppDiscoveryReport extends Entity implements Parsable {
         return this.backingStore.get("supportedEntityTypes");
     }
     /**
-     * Gets the supportedTrafficTypes property value. The supported traffic type. Possible values are: downloadedBytes, uploadedBytes, unknown, unknownFutureValue.
+     * Gets the supportedTrafficTypes property value. The supported traffic type. The possible values are: downloadedBytes, uploadedBytes, unknown, unknownFutureValue.
      * @return a {@link java.util.List<TrafficType>}
      */
     @jakarta.annotation.Nullable
@@ -230,7 +230,7 @@ public class CloudAppDiscoveryReport extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the logDataProvider property value. The applicable log data provider. Possible values are: barracuda, bluecoat, checkpoint, ciscoAsa, ciscoIronportProxy, fortigate, paloAlto, squid, zscaler, mcafeeSwg, ciscoScanSafe, juniperSrx, sophosSg, websenseV75, websenseSiemCef, machineZoneMeraki, squidNative, ciscoFwsm, microsoftIsaW3C, sonicwall, sophosCyberoam, clavister, customParser, juniperSsg, zscalerQradar, juniperSrxSd, juniperSrxWelf, microsoftConditionalAppAccess, ciscoAsaFirepower, genericCef, genericLeef, genericW3C, iFilter, checkpointXml, checkpointSmartViewTracker, barracudaNextGenFw, barracudaNextGenFwWeblog, microsoftDefenderForEndpoint, zscalerCef, sophosXg, iboss, forcepoint, fortios, ciscoIronportWsaIi, paloAltoLeef, forcepointLeef, stormshield, contentkeeper, ciscoIronportWsaIii, checkpointCef, corrata, ciscoFirepowerV6, menloSecurityCef, watchguardXtm, openSystemsSecureWebGateway, wandera, unknownFutureValue.
+     * Sets the logDataProvider property value. The applicable log data provider. The possible values are: barracuda, bluecoat, checkpoint, ciscoAsa, ciscoIronportProxy, fortigate, paloAlto, squid, zscaler, mcafeeSwg, ciscoScanSafe, juniperSrx, sophosSg, websenseV75, websenseSiemCef, machineZoneMeraki, squidNative, ciscoFwsm, microsoftIsaW3C, sonicwall, sophosCyberoam, clavister, customParser, juniperSsg, zscalerQradar, juniperSrxSd, juniperSrxWelf, microsoftConditionalAppAccess, ciscoAsaFirepower, genericCef, genericLeef, genericW3C, iFilter, checkpointXml, checkpointSmartViewTracker, barracudaNextGenFw, barracudaNextGenFwWeblog, microsoftDefenderForEndpoint, zscalerCef, sophosXg, iboss, forcepoint, fortios, ciscoIronportWsaIi, paloAltoLeef, forcepointLeef, stormshield, contentkeeper, ciscoIronportWsaIii, checkpointCef, corrata, ciscoFirepowerV6, menloSecurityCef, watchguardXtm, openSystemsSecureWebGateway, wandera, unknownFutureValue.
      * @param value Value to set for the logDataProvider property.
      */
     public void setLogDataProvider(@jakarta.annotation.Nullable final LogDataProvider value) {
@@ -244,21 +244,21 @@ public class CloudAppDiscoveryReport extends Entity implements Parsable {
         this.backingStore.set("logFileCount", value);
     }
     /**
-     * Sets the receiverProtocol property value. The applicable receiver protocol. Possible values are: ftp, ftps, syslogUdp, syslogTcp, syslogTls, unknownFutureValue.
+     * Sets the receiverProtocol property value. The applicable receiver protocol. The possible values are: ftp, ftps, syslogUdp, syslogTcp, syslogTls, unknownFutureValue.
      * @param value Value to set for the receiverProtocol property.
      */
     public void setReceiverProtocol(@jakarta.annotation.Nullable final ReceiverProtocol value) {
         this.backingStore.set("receiverProtocol", value);
     }
     /**
-     * Sets the supportedEntityTypes property value. The supported entity type. Possible values are: userName, ipAddress, machineName, other, unknown, unknownFutureValue.
+     * Sets the supportedEntityTypes property value. The supported entity type. The possible values are: userName, ipAddress, machineName, other, unknown, unknownFutureValue.
      * @param value Value to set for the supportedEntityTypes property.
      */
     public void setSupportedEntityTypes(@jakarta.annotation.Nullable final java.util.List<EntityType> value) {
         this.backingStore.set("supportedEntityTypes", value);
     }
     /**
-     * Sets the supportedTrafficTypes property value. The supported traffic type. Possible values are: downloadedBytes, uploadedBytes, unknown, unknownFutureValue.
+     * Sets the supportedTrafficTypes property value. The supported traffic type. The possible values are: downloadedBytes, uploadedBytes, unknown, unknownFutureValue.
      * @param value Value to set for the supportedTrafficTypes property.
      */
     public void setSupportedTrafficTypes(@jakarta.annotation.Nullable final java.util.List<TrafficType> value) {

@@ -117,7 +117,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         return this.backingStore.get("modifiedDateTime");
     }
     /**
-     * Gets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+     * Gets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. The possible values are: configured, proposed.
      * @return a {@link ConnectedOrganizationState}
      */
     @jakarta.annotation.Nullable
@@ -206,7 +206,7 @@ public class ConnectedOrganization extends Entity implements Parsable {
         this.backingStore.set("modifiedDateTime", value);
     }
     /**
-     * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. Possible values are: configured, proposed.
+     * Sets the state property value. The state of a connected organization defines whether assignment policies with requestor scope type AllConfiguredConnectedOrganizationSubjects are applicable or not. The possible values are: configured, proposed.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final ConnectedOrganizationState value) {

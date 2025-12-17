@@ -56,7 +56,7 @@ public class PlaceExecutionResult implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the children property value. The children property
+     * Gets the children property value. The upsert results of children places of the place.
      * @return a {@link java.util.List<PlaceExecutionResult>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class PlaceExecutionResult implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("children");
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. The error that occurred during the upsert of the place.
      * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class PlaceExecutionResult implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the children property value. The children property
+     * Sets the children property value. The upsert results of children places of the place.
      * @param value Value to set for the children property.
      */
     public void setChildren(@jakarta.annotation.Nullable final java.util.List<PlaceExecutionResult> value) {
         this.backingStore.set("children", value);
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. The error that occurred during the upsert of the place.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {

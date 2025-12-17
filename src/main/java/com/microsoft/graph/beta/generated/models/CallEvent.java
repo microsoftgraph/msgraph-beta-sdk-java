@@ -41,7 +41,7 @@ public class CallEvent extends Entity implements Parsable {
         return this.backingStore.get("callConversationId");
     }
     /**
-     * Gets the callEventType property value. The event type of the call. Possible values are: callStarted, callEnded, unknownFutureValue, rosterUpdated. You must use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: rosterUpdated.
+     * Gets the callEventType property value. The event type of the call. The possible values are: callStarted, callEnded, unknownFutureValue, rosterUpdated. You must use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: rosterUpdated.
      * @return a {@link CallEventType}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class CallEvent extends Entity implements Parsable {
         this.backingStore.set("callConversationId", value);
     }
     /**
-     * Sets the callEventType property value. The event type of the call. Possible values are: callStarted, callEnded, unknownFutureValue, rosterUpdated. You must use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: rosterUpdated.
+     * Sets the callEventType property value. The event type of the call. The possible values are: callStarted, callEnded, unknownFutureValue, rosterUpdated. You must use the Prefer: include-unknown-enum-members request header to get the following members in this evolvable enum: rosterUpdated.
      * @param value Value to set for the callEventType property.
      */
     public void setCallEventType(@jakarta.annotation.Nullable final CallEventType value) {

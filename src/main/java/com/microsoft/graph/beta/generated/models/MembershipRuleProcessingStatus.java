@@ -94,7 +94,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the status property value. Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
+     * Gets the status property value. Current status of a dynamic group processing. The possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
      * @return a {@link MembershipRuleProcessingStatusDetails}
      */
     @jakarta.annotation.Nullable
@@ -150,7 +150,7 @@ public class MembershipRuleProcessingStatus implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the status property value. Current status of a dynamic group processing. Possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
+     * Sets the status property value. Current status of a dynamic group processing. The possible values are: NotStarted, Running, Succeeded, Failed, and UnknownFutureValue.  Required. Read-only.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final MembershipRuleProcessingStatusDetails value) {

@@ -52,7 +52,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         return this.backingStore.get("fileTypes");
     }
     /**
-     * Gets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
+     * Gets the format property value. Pre-defined format of the string. The possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      * @return a {@link DeviceManagementConfigurationStringFormat}
      */
     @jakarta.annotation.Nullable
@@ -113,7 +113,7 @@ public class DeviceManagementConfigurationStringSettingValueDefinition extends D
         this.backingStore.set("fileTypes", value);
     }
     /**
-     * Sets the format property value. Pre-defined format of the string. Possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
+     * Sets the format property value. Pre-defined format of the string. The possible values are: none, email, guid, ip, base64, url, version, xml, date, time, binary, regEx, json, dateTime, surfaceHub, bashScript, unknownFutureValue.
      * @param value Value to set for the format property.
      */
     public void setFormat(@jakarta.annotation.Nullable final DeviceManagementConfigurationStringFormat value) {

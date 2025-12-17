@@ -175,7 +175,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         return this.backingStore.get("syncTasks");
     }
     /**
-     * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
+     * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. The possible values are: fullDomainName, netBiosDomainName.
      * @return a {@link DomainNameSource}
      */
     @jakarta.annotation.Nullable
@@ -321,7 +321,7 @@ public class AndroidEasEmailProfileConfiguration extends DeviceConfiguration imp
         this.backingStore.set("syncTasks", value);
     }
     /**
-     * Sets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
+     * Sets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. The possible values are: fullDomainName, netBiosDomainName.
      * @param value Value to set for the userDomainNameSource property.
      */
     public void setUserDomainNameSource(@jakarta.annotation.Nullable final DomainNameSource value) {

@@ -38,7 +38,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         return this.backingStore.get("allowAllAppsAccess");
     }
     /**
-     * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
+     * Gets the certificateStore property value. Target store certificate. The possible values are: user, machine.
      * @return a {@link CertificateStore}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         return this.backingStore.get("customSubjectAlternativeNames");
     }
     /**
-     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. The possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @return a {@link AppleDeploymentChannel}
      */
     @jakarta.annotation.Nullable
@@ -92,7 +92,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         return deserializerMap;
     }
     /**
-     * Gets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
+     * Gets the hashAlgorithm property value. SCEP Hash Algorithm. The possible values are: sha1, sha2.
      * @return a {@link EnumSet<HashAlgorithms>}
      */
     @jakarta.annotation.Nullable
@@ -184,7 +184,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         this.backingStore.set("allowAllAppsAccess", value);
     }
     /**
-     * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
+     * Sets the certificateStore property value. Target store certificate. The possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
@@ -198,7 +198,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         this.backingStore.set("customSubjectAlternativeNames", value);
     }
     /**
-     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. The possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @param value Value to set for the deploymentChannel property.
      */
     public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
@@ -212,7 +212,7 @@ public class MacOSScepCertificateProfile extends MacOSCertificateProfileBase imp
         this.backingStore.set("extendedKeyUsages", value);
     }
     /**
-     * Sets the hashAlgorithm property value. SCEP Hash Algorithm. Possible values are: sha1, sha2.
+     * Sets the hashAlgorithm property value. SCEP Hash Algorithm. The possible values are: sha1, sha2.
      * @param value Value to set for the hashAlgorithm property.
      */
     public void setHashAlgorithm(@jakarta.annotation.Nullable final EnumSet<HashAlgorithms> value) {

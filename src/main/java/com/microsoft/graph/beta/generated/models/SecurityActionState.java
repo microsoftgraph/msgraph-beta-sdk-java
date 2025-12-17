@@ -87,7 +87,7 @@ public class SecurityActionState implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the status property value. Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed.
+     * Gets the status property value. Status of the securityAction in this update. The possible values are: NotStarted, Running, Completed, Failed.
      * @return a {@link OperationStatus}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class SecurityActionState implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the status property value. Status of the securityAction in this update. Possible values are: NotStarted, Running, Completed, Failed.
+     * Sets the status property value. Status of the securityAction in this update. The possible values are: NotStarted, Running, Completed, Failed.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final OperationStatus value) {

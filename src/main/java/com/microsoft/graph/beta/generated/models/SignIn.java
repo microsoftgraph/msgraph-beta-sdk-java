@@ -220,7 +220,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: passthrough. If the sign in didn&apos;t cross tenant boundaries, the value is none.
+     * Gets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. The possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: passthrough. If the sign in didn&apos;t cross tenant boundaries, the value is none.
      * @return a {@link EnumSet<SignInAccessType>}
      */
     @jakarta.annotation.Nullable
@@ -600,7 +600,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("sessionLifetimePolicies");
     }
     /**
-     * Gets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&amp;$filter=signInEventTypes/any(t: t eq &apos;nonInteractiveUser&apos;).
+     * Gets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. The possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&amp;$filter=signInEventTypes/any(t: t eq &apos;nonInteractiveUser&apos;).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -616,7 +616,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("signInIdentifier");
     }
     /**
-     * Gets the signInIdentifierType property value. The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
+     * Gets the signInIdentifierType property value. The type of sign in identifier. The possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
      * @return a {@link SignInIdentifierType}
      */
     @jakarta.annotation.Nullable
@@ -704,7 +704,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("userPrincipalName");
     }
     /**
-     * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue.
+     * Gets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
      * @return a {@link SignInUserType}
      */
     @jakarta.annotation.Nullable
@@ -963,7 +963,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. Possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: passthrough. If the sign in didn&apos;t cross tenant boundaries, the value is none.
+     * Sets the crossTenantAccessType property value. Describes the type of cross-tenant access used by the actor to access the resource. The possible values are: none, b2bCollaboration, b2bDirectConnect, microsoftSupport, serviceProvider, unknownFutureValue, passthrough. Use the Prefer: include-unknown-enum-members request header to get the following value or values in this evolvable enum: passthrough. If the sign in didn&apos;t cross tenant boundaries, the value is none.
      * @param value Value to set for the crossTenantAccessType property.
      */
     public void setCrossTenantAccessType(@jakarta.annotation.Nullable final EnumSet<SignInAccessType> value) {
@@ -1222,7 +1222,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("sessionLifetimePolicies", value);
     }
     /**
-     * Sets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. Possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&amp;$filter=signInEventTypes/any(t: t eq &apos;nonInteractiveUser&apos;).
+     * Sets the signInEventTypes property value. Indicates the category of sign in that the event represents. For user sign ins, the category can be interactiveUser or nonInteractiveUser and corresponds to the value for the isInteractive property on the signin resource. For managed identity sign ins, the category is managedIdentity. For service principal sign-ins, the category is servicePrincipal. The possible values are: interactiveUser, nonInteractiveUser, servicePrincipal, managedIdentity, unknownFutureValue.  Supports $filter (eq, ne). NOTE: Only interactive sign-ins are returned unless you set an explicit filter. For example, the filter for getting non-interactive sign-ins is https://graph.microsoft.com/beta/auditLogs/signIns?&amp;$filter=signInEventTypes/any(t: t eq &apos;nonInteractiveUser&apos;).
      * @param value Value to set for the signInEventTypes property.
      */
     public void setSignInEventTypes(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -1236,7 +1236,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("signInIdentifier", value);
     }
     /**
-     * Sets the signInIdentifierType property value. The type of sign in identifier. Possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
+     * Sets the signInIdentifierType property value. The type of sign in identifier. The possible values are: userPrincipalName, phoneNumber, proxyAddress, qrCode, onPremisesUserPrincipalName, unknownFutureValue.
      * @param value Value to set for the signInIdentifierType property.
      */
     public void setSignInIdentifierType(@jakarta.annotation.Nullable final SignInIdentifierType value) {
@@ -1313,7 +1313,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("userPrincipalName", value);
     }
     /**
-     * Sets the userType property value. Identifies whether the user is a member or guest in the tenant. Possible values are: member, guest, unknownFutureValue.
+     * Sets the userType property value. Identifies whether the user is a member or guest in the tenant. The possible values are: member, guest, unknownFutureValue.
      * @param value Value to set for the userType property.
      */
     public void setUserType(@jakarta.annotation.Nullable final SignInUserType value) {

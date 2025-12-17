@@ -43,7 +43,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
         return this.backingStore.get("compliancePolicyName");
     }
     /**
-     * Gets the compliancePolicyPlatform property value. Platform for the device compliance policy. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only.
+     * Gets the compliancePolicyPlatform property value. Platform for the device compliance policy. The possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -168,7 +168,7 @@ public class AggregatedPolicyCompliance extends Entity implements Parsable {
         this.backingStore.set("compliancePolicyName", value);
     }
     /**
-     * Sets the compliancePolicyPlatform property value. Platform for the device compliance policy. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only.
+     * Sets the compliancePolicyPlatform property value. Platform for the device compliance policy. The possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, androidAOSP, all. Optional. Read-only.
      * @param value Value to set for the compliancePolicyPlatform property.
      */
     public void setCompliancePolicyPlatform(@jakarta.annotation.Nullable final String value) {

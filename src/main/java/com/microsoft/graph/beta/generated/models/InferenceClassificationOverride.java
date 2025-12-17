@@ -25,7 +25,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
         return new InferenceClassificationOverride();
     }
     /**
-     * Gets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. Possible values are: focused, other.
+     * Gets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
      * @return a {@link InferenceClassificationType}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class InferenceClassificationOverride extends Entity implements Parsable 
         writer.writeObjectValue("senderEmailAddress", this.getSenderEmailAddress());
     }
     /**
-     * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. Possible values are: focused, other.
+     * Sets the classifyAs property value. Specifies how incoming messages from a specific sender should always be classified as. The possible values are: focused, other.
      * @param value Value to set for the classifyAs property.
      */
     public void setClassifyAs(@jakarta.annotation.Nullable final InferenceClassificationType value) {

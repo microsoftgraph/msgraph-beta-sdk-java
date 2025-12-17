@@ -44,7 +44,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("actionName");
     }
     /**
-     * Gets the actionState property value. State of the action. Possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
+     * Gets the actionState property value. State of the action. The possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
      * @return a {@link ActionState}
      */
     @jakarta.annotation.Nullable
@@ -171,7 +171,7 @@ public class CloudPcRemoteActionResult implements AdditionalDataHolder, BackedMo
         this.backingStore.set("actionName", value);
     }
     /**
-     * Sets the actionState property value. State of the action. Possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
+     * Sets the actionState property value. State of the action. The possible values are: None, pending, canceled, active, done, failed, notSupported. Read-only.
      * @param value Value to set for the actionState property.
      */
     public void setActionState(@jakarta.annotation.Nullable final ActionState value) {

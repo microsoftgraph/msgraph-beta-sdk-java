@@ -25,7 +25,7 @@ public class Call extends Entity implements Parsable {
         return new Call();
     }
     /**
-     * Gets the activeModalities property value. The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
+     * Gets the activeModalities property value. The list of active modalities. The possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
      * @return a {@link java.util.List<Modality>}
      */
     @jakarta.annotation.Nullable
@@ -208,7 +208,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("participants");
     }
     /**
-     * Gets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
+     * Gets the requestedModalities property value. The list of requested modalities. The possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @return a {@link java.util.List<Modality>}
      */
     @jakarta.annotation.Nullable
@@ -232,7 +232,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("ringingTimeoutInSeconds");
     }
     /**
-     * Gets the routingPolicies property value. This property is applicable for peer to peer calls only. Possible values are: none, noMissedCall, disableForwardingExceptPhone, disableForwarding, preferSkypeForBusiness, unknownFutureValue.
+     * Gets the routingPolicies property value. This property is applicable for peer to peer calls only. The possible values are: none, noMissedCall, disableForwardingExceptPhone, disableForwarding, preferSkypeForBusiness, unknownFutureValue.
      * @return a {@link java.util.List<RoutingPolicy>}
      */
     @jakarta.annotation.Nullable
@@ -248,7 +248,7 @@ public class Call extends Entity implements Parsable {
         return this.backingStore.get("source");
     }
     /**
-     * Gets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
+     * Gets the state property value. The call state. The possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      * @return a {@link CallState}
      */
     @jakarta.annotation.Nullable
@@ -342,7 +342,7 @@ public class Call extends Entity implements Parsable {
         writer.writeObjectValue("transcription", this.getTranscription());
     }
     /**
-     * Sets the activeModalities property value. The list of active modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
+     * Sets the activeModalities property value. The list of active modalities. The possible values are: unknown, audio, video, videoBasedScreenSharing, data. Read-only.
      * @param value Value to set for the activeModalities property.
      */
     public void setActiveModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
@@ -468,7 +468,7 @@ public class Call extends Entity implements Parsable {
         this.backingStore.set("participants", value);
     }
     /**
-     * Sets the requestedModalities property value. The list of requested modalities. Possible values are: unknown, audio, video, videoBasedScreenSharing, data.
+     * Sets the requestedModalities property value. The list of requested modalities. The possible values are: unknown, audio, video, videoBasedScreenSharing, data.
      * @param value Value to set for the requestedModalities property.
      */
     public void setRequestedModalities(@jakarta.annotation.Nullable final java.util.List<Modality> value) {
@@ -489,7 +489,7 @@ public class Call extends Entity implements Parsable {
         this.backingStore.set("ringingTimeoutInSeconds", value);
     }
     /**
-     * Sets the routingPolicies property value. This property is applicable for peer to peer calls only. Possible values are: none, noMissedCall, disableForwardingExceptPhone, disableForwarding, preferSkypeForBusiness, unknownFutureValue.
+     * Sets the routingPolicies property value. This property is applicable for peer to peer calls only. The possible values are: none, noMissedCall, disableForwardingExceptPhone, disableForwarding, preferSkypeForBusiness, unknownFutureValue.
      * @param value Value to set for the routingPolicies property.
      */
     public void setRoutingPolicies(@jakarta.annotation.Nullable final java.util.List<RoutingPolicy> value) {
@@ -503,7 +503,7 @@ public class Call extends Entity implements Parsable {
         this.backingStore.set("source", value);
     }
     /**
-     * Sets the state property value. The call state. Possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
+     * Sets the state property value. The call state. The possible values are: incoming, establishing, ringing, established, hold, transferring, transferAccepted, redirecting, terminating, terminated. Read-only.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final CallState value) {

@@ -28,7 +28,7 @@ public class ManagementTemplate extends Entity implements Parsable {
         return new ManagementTemplate();
     }
     /**
-     * Gets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
+     * Gets the category property value. The management category for the management template. The possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
      * @return a {@link ManagementCategory}
      */
     @jakarta.annotation.Nullable
@@ -205,7 +205,7 @@ public class ManagementTemplate extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("workloadActions", this.getWorkloadActions());
     }
     /**
-     * Sets the category property value. The management category for the management template. Possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
+     * Sets the category property value. The management category for the management template. The possible values are: custom, devices, identity, unknownFutureValue. Required. Read-only.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final ManagementCategory value) {

@@ -37,7 +37,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         return this.backingStore.get("authenticationBlockPeriodInMinutes");
     }
     /**
-     * Gets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
+     * Gets the authenticationMethod property value. Specify the authentication method. The possible values are: certificate, usernameAndPassword, derivedCredential. The possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @return a {@link WiredNetworkAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         return this.backingStore.get("authenticationRetryDelayPeriodInSeconds");
     }
     /**
-     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you&apos;re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
+     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you&apos;re using certificate authentication, make sure the certificate type matches the authentication type. The possible values are: none, user, machine, machineOrUser, guest. The possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
      * @return a {@link WiredNetworkAuthenticationType}
      */
     @jakarta.annotation.Nullable
@@ -158,7 +158,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         return this.backingStore.get("identityCertificateForClientAuthentication");
     }
     /**
-     * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a {@link NonEapAuthenticationMethodForEapTtlsType}
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         return this.backingStore.get("rootCertificatesForServerValidation");
     }
     /**
-     * Gets the secondaryAuthenticationMethod property value. Specify the secondary authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
+     * Gets the secondaryAuthenticationMethod property value. Specify the secondary authentication method. The possible values are: certificate, usernameAndPassword, derivedCredential. The possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @return a {@link WiredNetworkAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
@@ -293,7 +293,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         this.backingStore.set("authenticationBlockPeriodInMinutes", value);
     }
     /**
-     * Sets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
+     * Sets the authenticationMethod property value. Specify the authentication method. The possible values are: certificate, usernameAndPassword, derivedCredential. The possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiredNetworkAuthenticationMethod value) {
@@ -314,7 +314,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         this.backingStore.set("authenticationRetryDelayPeriodInSeconds", value);
     }
     /**
-     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you&apos;re using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest. Possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
+     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If you&apos;re using certificate authentication, make sure the certificate type matches the authentication type. The possible values are: none, user, machine, machineOrUser, guest. The possible values are: none, user, machine, machineOrUser, guest, unknownFutureValue.
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final WiredNetworkAuthenticationType value) {
@@ -370,7 +370,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         this.backingStore.set("identityCertificateForClientAuthentication", value);
     }
     /**
-     * Sets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Sets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEAPTTLS property.
      */
     public void setInnerAuthenticationProtocolForEAPTTLS(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
@@ -426,7 +426,7 @@ public class WindowsWiredNetworkConfiguration extends DeviceConfiguration implem
         this.backingStore.set("rootCertificatesForServerValidation", value);
     }
     /**
-     * Sets the secondaryAuthenticationMethod property value. Specify the secondary authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential. Possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
+     * Sets the secondaryAuthenticationMethod property value. Specify the secondary authentication method. The possible values are: certificate, usernameAndPassword, derivedCredential. The possible values are: certificate, usernameAndPassword, derivedCredential, unknownFutureValue.
      * @param value Value to set for the secondaryAuthenticationMethod property.
      */
     public void setSecondaryAuthenticationMethod(@jakarta.annotation.Nullable final WiredNetworkAuthenticationMethod value) {

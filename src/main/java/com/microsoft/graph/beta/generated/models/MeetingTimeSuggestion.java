@@ -121,7 +121,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("order");
     }
     /**
-     * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Gets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @return a {@link FreeBusyStatus}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class MeetingTimeSuggestion implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("order", value);
     }
     /**
-     * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. Possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
+     * Sets the organizerAvailability property value. Availability of the meeting organizer for this meeting suggestion. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
      * @param value Value to set for the organizerAvailability property.
      */
     public void setOrganizerAvailability(@jakarta.annotation.Nullable final FreeBusyStatus value) {

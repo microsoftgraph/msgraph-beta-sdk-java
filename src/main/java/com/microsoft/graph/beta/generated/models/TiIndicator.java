@@ -26,7 +26,7 @@ public class TiIndicator extends Entity implements Parsable {
         return new TiIndicator();
     }
     /**
-     * Gets the action property value. The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
+     * Gets the action property value. The action to apply if the indicator is matched from within the targetProduct security tool. The possible values are: unknown, allow, block, alert. Required.
      * @return a {@link TiAction}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the diamondModel property value. The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
+     * Gets the diamondModel property value. The area of the Diamond Model in which this indicator exists. The possible values are: unknown, adversary, capability, infrastructure, victim.
      * @return a {@link DiamondModel}
      */
     @jakarta.annotation.Nullable
@@ -525,7 +525,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this.backingStore.get("targetProduct");
     }
     /**
-     * Gets the threatType property value. Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
+     * Gets the threatType property value. Each indicator must have a valid Indicator Threat Type. The possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -533,7 +533,7 @@ public class TiIndicator extends Entity implements Parsable {
         return this.backingStore.get("threatType");
     }
     /**
-     * Gets the tlpLevel property value. Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
+     * Gets the tlpLevel property value. Traffic Light Protocol value for the indicator. The possible values are: unknown, white, green, amber, red. Required.
      * @return a {@link TlpLevel}
      */
     @jakarta.annotation.Nullable
@@ -623,7 +623,7 @@ public class TiIndicator extends Entity implements Parsable {
         writer.writeStringValue("userAgent", this.getUserAgent());
     }
     /**
-     * Sets the action property value. The action to apply if the indicator is matched from within the targetProduct security tool. Possible values are: unknown, allow, block, alert. Required.
+     * Sets the action property value. The action to apply if the indicator is matched from within the targetProduct security tool. The possible values are: unknown, allow, block, alert. Required.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final TiAction value) {
@@ -665,7 +665,7 @@ public class TiIndicator extends Entity implements Parsable {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the diamondModel property value. The area of the Diamond Model in which this indicator exists. Possible values are: unknown, adversary, capability, infrastructure, victim.
+     * Sets the diamondModel property value. The area of the Diamond Model in which this indicator exists. The possible values are: unknown, adversary, capability, infrastructure, victim.
      * @param value Value to set for the diamondModel property.
      */
     public void setDiamondModel(@jakarta.annotation.Nullable final DiamondModel value) {
@@ -1001,14 +1001,14 @@ public class TiIndicator extends Entity implements Parsable {
         this.backingStore.set("targetProduct", value);
     }
     /**
-     * Sets the threatType property value. Each indicator must have a valid Indicator Threat Type. Possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
+     * Sets the threatType property value. Each indicator must have a valid Indicator Threat Type. The possible values are: Botnet, C2, CryptoMining, Darknet, DDoS, MaliciousUrl, Malware, Phishing, Proxy, PUA, WatchList. Required.
      * @param value Value to set for the threatType property.
      */
     public void setThreatType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("threatType", value);
     }
     /**
-     * Sets the tlpLevel property value. Traffic Light Protocol value for the indicator. Possible values are: unknown, white, green, amber, red. Required.
+     * Sets the tlpLevel property value. Traffic Light Protocol value for the indicator. The possible values are: unknown, white, green, amber, red. Required.
      * @param value Value to set for the tlpLevel property.
      */
     public void setTlpLevel(@jakarta.annotation.Nullable final TlpLevel value) {

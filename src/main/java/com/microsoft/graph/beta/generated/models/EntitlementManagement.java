@@ -145,6 +145,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("connectedOrganizations");
     }
     /**
+     * Gets the controlConfigurations property value. Represents the policies that control lifecycle and access to access packages across the organization.
+     * @return a {@link java.util.List<ControlConfiguration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ControlConfiguration> getControlConfigurations() {
+        return this.backingStore.get("controlConfigurations");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -166,6 +174,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         deserializerMap.put("assignmentRequests", (n) -> { this.setAssignmentRequests(n.getCollectionOfObjectValues(AccessPackageAssignmentRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("availableAccessPackages", (n) -> { this.setAvailableAccessPackages(n.getCollectionOfObjectValues(AvailableAccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("connectedOrganizations", (n) -> { this.setConnectedOrganizations(n.getCollectionOfObjectValues(ConnectedOrganization::createFromDiscriminatorValue)); });
+        deserializerMap.put("controlConfigurations", (n) -> { this.setControlConfigurations(n.getCollectionOfObjectValues(ControlConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(EntitlementManagementSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("subjects", (n) -> { this.setSubjects(n.getCollectionOfObjectValues(AccessPackageSubject::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -208,6 +217,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("assignmentRequests", this.getAssignmentRequests());
         writer.writeCollectionOfObjectValues("availableAccessPackages", this.getAvailableAccessPackages());
         writer.writeCollectionOfObjectValues("connectedOrganizations", this.getConnectedOrganizations());
+        writer.writeCollectionOfObjectValues("controlConfigurations", this.getControlConfigurations());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeCollectionOfObjectValues("subjects", this.getSubjects());
     }
@@ -315,6 +325,13 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     public void setConnectedOrganizations(@jakarta.annotation.Nullable final java.util.List<ConnectedOrganization> value) {
         this.backingStore.set("connectedOrganizations", value);
+    }
+    /**
+     * Sets the controlConfigurations property value. Represents the policies that control lifecycle and access to access packages across the organization.
+     * @param value Value to set for the controlConfigurations property.
+     */
+    public void setControlConfigurations(@jakarta.annotation.Nullable final java.util.List<ControlConfiguration> value) {
+        this.backingStore.set("controlConfigurations", value);
     }
     /**
      * Sets the settings property value. Represents the settings that control the behavior of Microsoft Entra entitlement management.

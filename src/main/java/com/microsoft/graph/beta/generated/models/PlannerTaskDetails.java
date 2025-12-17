@@ -90,7 +90,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         return this.backingStore.get("notes");
     }
     /**
-     * Gets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * Gets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @return a {@link PlannerPreviewType}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class PlannerTaskDetails extends PlannerDelta implements Parsable {
         this.backingStore.set("notes", value);
     }
     /**
-     * Sets the previewType property value. This sets the type of preview that shows up on the task. Possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
+     * Sets the previewType property value. This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. When set to automatic the displayed preview is chosen by the app viewing the task.
      * @param value Value to set for the previewType property.
      */
     public void setPreviewType(@jakarta.annotation.Nullable final PlannerPreviewType value) {

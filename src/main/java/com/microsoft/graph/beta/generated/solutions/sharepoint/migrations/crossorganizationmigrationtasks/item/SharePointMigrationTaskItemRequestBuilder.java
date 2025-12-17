@@ -64,19 +64,21 @@ public class SharePointMigrationTaskItemRequestBuilder extends BaseRequestBuilde
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointMigrationTask get() {
         return get(null);
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SharePointMigrationTask get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -131,7 +133,7 @@ public class SharePointMigrationTaskItemRequestBuilder extends BaseRequestBuilde
         return requestInfo;
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class SharePointMigrationTaskItemRequestBuilder extends BaseRequestBuilde
         return toGetRequestInformation(null);
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class SharePointMigrationTaskItemRequestBuilder extends BaseRequestBuilde
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get crossOrganizationMigrationTasks from solutions
+     * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

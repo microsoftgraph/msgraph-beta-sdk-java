@@ -48,7 +48,7 @@ public class SignInConditions implements AdditionalDataHolder, BackedModel, Pars
         return value;
     }
     /**
-     * Gets the agentIdRiskLevel property value. Agent identity risk levels included in the policy. Possible values are: none, low, medium, high, unknownFutureValue. This enumeration is multivalued.
+     * Gets the agentIdRiskLevel property value. Agent identity risk levels included in the policy. The possible values are: none, low, medium, high, unknownFutureValue. This enumeration is multivalued.
      * @return a {@link AgentIdRiskLevel}
      */
     @jakarta.annotation.Nullable
@@ -200,7 +200,7 @@ public class SignInConditions implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the agentIdRiskLevel property value. Agent identity risk levels included in the policy. Possible values are: none, low, medium, high, unknownFutureValue. This enumeration is multivalued.
+     * Sets the agentIdRiskLevel property value. Agent identity risk levels included in the policy. The possible values are: none, low, medium, high, unknownFutureValue. This enumeration is multivalued.
      * @param value Value to set for the agentIdRiskLevel property.
      */
     public void setAgentIdRiskLevel(@jakarta.annotation.Nullable final AgentIdRiskLevel value) {

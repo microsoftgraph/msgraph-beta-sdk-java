@@ -63,7 +63,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         return this.backingStore.get("key");
     }
     /**
-     * Gets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
+     * Gets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
      * @return a {@link VolumeType}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class BitlockerRecoveryKey extends Entity implements Parsable {
         this.backingStore.set("key", value);
     }
     /**
-     * Sets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. Possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
+     * Sets the volumeType property value. Indicates the type of volume the BitLocker key is associated with. The possible values are: operatingSystemVolume, fixedDataVolume, removableDataVolume, unknownFutureValue.
      * @param value Value to set for the volumeType property.
      */
     public void setVolumeType(@jakarta.annotation.Nullable final VolumeType value) {

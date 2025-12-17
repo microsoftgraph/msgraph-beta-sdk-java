@@ -104,7 +104,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
         return this.backingStore.get("groupId");
     }
     /**
-     * Gets the groupType property value. The group type. Possible values are: Public or Private.
+     * Gets the groupType property value. The group type. The possible values are: Public or Private.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -295,7 +295,7 @@ public class Office365GroupsActivityDetail extends Entity implements Parsable {
         this.backingStore.set("groupId", value);
     }
     /**
-     * Sets the groupType property value. The group type. Possible values are: Public or Private.
+     * Sets the groupType property value. The group type. The possible values are: Public or Private.
      * @param value Value to set for the groupType property.
      */
     public void setGroupType(@jakarta.annotation.Nullable final String value) {

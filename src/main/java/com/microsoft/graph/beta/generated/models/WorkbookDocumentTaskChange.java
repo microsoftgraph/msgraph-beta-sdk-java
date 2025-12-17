@@ -118,7 +118,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         return this.backingStore.get("title");
     }
     /**
-     * Gets the type property value. The type of the change history. Possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
+     * Gets the type property value. The type of the change history. The possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -216,7 +216,7 @@ public class WorkbookDocumentTaskChange extends Entity implements Parsable {
         this.backingStore.set("title", value);
     }
     /**
-     * Sets the type property value. The type of the change history. Possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
+     * Sets the type property value. The type of the change history. The possible values are: create, assign, unassign, unassignAll, setPriority, setTitle, setPercentComplete, setSchedule, remove, restore, undo.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

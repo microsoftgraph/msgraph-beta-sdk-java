@@ -92,7 +92,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
         return this.backingStore.get("originalEntry");
     }
     /**
-     * Gets the state property value. The current state of the timeCard during its life cycle.Possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
+     * Gets the state property value. The current state of the timeCard during its life cycle. The possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
      * @return a {@link TimeCardState}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class TimeCard extends ChangeTrackedEntity implements Parsable {
         this.backingStore.set("originalEntry", value);
     }
     /**
-     * Sets the state property value. The current state of the timeCard during its life cycle.Possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
+     * Sets the state property value. The current state of the timeCard during its life cycle. The possible values are: clockedIn, onBreak, clockedOut, unknownFutureValue.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final TimeCardState value) {

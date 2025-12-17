@@ -56,7 +56,7 @@ public class ContentInfo implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore;
     }
     /**
-     * Gets the contentFormat property value. The format of the content to be labeled. Possible values are: file, email.
+     * Gets the contentFormat property value. The format of the content to be labeled. The possible values are: file, email.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class ContentInfo implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore = value;
     }
     /**
-     * Sets the contentFormat property value. The format of the content to be labeled. Possible values are: file, email.
+     * Sets the contentFormat property value. The format of the content to be labeled. The possible values are: file, email.
      * @param value Value to set for the contentFormat property.
      */
     public void setContentFormat(@jakarta.annotation.Nullable final String value) {

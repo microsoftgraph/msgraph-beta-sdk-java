@@ -53,7 +53,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("appsAllowInstallFromUnknownSources");
     }
     /**
-     * Gets the appsAutoUpdatePolicy property value. Indicates the value of the app auto update policy. Possible values are: notConfigured, userChoice, never, wiFiOnly, always.
+     * Gets the appsAutoUpdatePolicy property value. Indicates the value of the app auto update policy. The possible values are: notConfigured, userChoice, never, wiFiOnly, always.
      * @return a {@link AndroidDeviceOwnerAppAutoUpdatePolicyType}
      */
     @jakarta.annotation.Nullable
@@ -61,7 +61,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("appsAutoUpdatePolicy");
     }
     /**
-     * Gets the appsDefaultPermissionPolicy property value. Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+     * Gets the appsDefaultPermissionPolicy property value. Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically. The possible values are: deviceDefault, prompt, autoGrant, autoDeny.
      * @return a {@link AndroidDeviceOwnerDefaultAppPermissionPolicyType}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("crossProfilePoliciesAllowCopyPaste");
     }
     /**
-     * Gets the crossProfilePoliciesAllowDataSharing property value. Indicates whether data from one profile (personal or work) can be shared with apps in the other profile. Possible values are: notConfigured, crossProfileDataSharingBlocked, dataSharingFromWorkToPersonalBlocked, crossProfileDataSharingAllowed, unkownFutureValue.
+     * Gets the crossProfilePoliciesAllowDataSharing property value. Indicates whether data from one profile (personal or work) can be shared with apps in the other profile. The possible values are: notConfigured, crossProfileDataSharingBlocked, dataSharingFromWorkToPersonalBlocked, crossProfileDataSharingAllowed, unkownFutureValue.
      * @return a {@link AndroidDeviceOwnerCrossProfileDataSharing}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("detailedHelpText");
     }
     /**
-     * Gets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE). Possible values are: notConfigured, disabled, unknownFutureValue.
+     * Gets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE). The possible values are: notConfigured, disabled, unknownFutureValue.
      * @return a {@link AndroidDeviceOwnerLocationMode}
      */
     @jakarta.annotation.Nullable
@@ -394,7 +394,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("kioskCustomizationPowerButtonActionsBlocked");
     }
     /**
-     * Gets the kioskCustomizationStatusBar property value. Indicates whether system info and notifications are disabled in Kiosk Mode. Possible values are: notConfigured, notificationsAndSystemInfoEnabled, systemInfoOnly.
+     * Gets the kioskCustomizationStatusBar property value. Indicates whether system info and notifications are disabled in Kiosk Mode. The possible values are: notConfigured, notificationsAndSystemInfoEnabled, systemInfoOnly.
      * @return a {@link AndroidDeviceOwnerKioskCustomizationStatusBar}
      */
     @jakarta.annotation.Nullable
@@ -410,7 +410,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("kioskCustomizationSystemErrorWarnings");
     }
     /**
-     * Gets the kioskCustomizationSystemNavigation property value. Indicates which navigation features are enabled in Kiosk Mode. Possible values are: notConfigured, navigationEnabled, homeButtonOnly.
+     * Gets the kioskCustomizationSystemNavigation property value. Indicates which navigation features are enabled in Kiosk Mode. The possible values are: notConfigured, navigationEnabled, homeButtonOnly.
      * @return a {@link AndroidDeviceOwnerKioskCustomizationSystemNavigation}
      */
     @jakarta.annotation.Nullable
@@ -482,7 +482,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("kioskModeFlashlightConfigurationEnabled");
     }
     /**
-     * Gets the kioskModeFolderIcon property value. Folder icon configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, darkSquare, darkCircle, lightSquare, lightCircle.
+     * Gets the kioskModeFolderIcon property value. Folder icon configuration for managed home screen in Kiosk Mode. The possible values are: notConfigured, darkSquare, darkCircle, lightSquare, lightCircle.
      * @return a {@link AndroidDeviceOwnerKioskModeFolderIcon}
      */
     @jakarta.annotation.Nullable
@@ -506,7 +506,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("kioskModeGridWidth");
     }
     /**
-     * Gets the kioskModeIconSize property value. Icon size configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, smallest, small, regular, large, largest.
+     * Gets the kioskModeIconSize property value. Icon size configuration for managed home screen in Kiosk Mode. The possible values are: notConfigured, smallest, small, regular, large, largest.
      * @return a {@link AndroidDeviceOwnerKioskModeIconSize}
      */
     @jakarta.annotation.Nullable
@@ -562,7 +562,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds");
     }
     /**
-     * Gets the kioskModeManagedHomeScreenPinComplexity property value. Complexity of PIN for sign-in session for Managed Home Screen. Possible values are: notConfigured, simple, complex.
+     * Gets the kioskModeManagedHomeScreenPinComplexity property value. Complexity of PIN for sign-in session for Managed Home Screen. The possible values are: notConfigured, simple, complex.
      * @return a {@link KioskModeManagedHomeScreenPinComplexity}
      */
     @jakarta.annotation.Nullable
@@ -626,7 +626,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("kioskModeMediaVolumeConfigurationEnabled");
     }
     /**
-     * Gets the kioskModeScreenOrientation property value. Screen orientation configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, portrait, landscape, autoRotate.
+     * Gets the kioskModeScreenOrientation property value. Screen orientation configuration for managed home screen in Kiosk Mode. The possible values are: notConfigured, portrait, landscape, autoRotate.
      * @return a {@link AndroidDeviceOwnerKioskModeScreenOrientation}
      */
     @jakarta.annotation.Nullable
@@ -690,7 +690,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("kioskModeShowDeviceInfo");
     }
     /**
-     * Gets the kioskModeUseManagedHomeScreenApp property value. Whether or not to use single app kiosk mode or multi-app kiosk mode. Possible values are: notConfigured, singleAppMode, multiAppMode.
+     * Gets the kioskModeUseManagedHomeScreenApp property value. Whether or not to use single app kiosk mode or multi-app kiosk mode. The possible values are: notConfigured, singleAppMode, multiAppMode.
      * @return a {@link KioskModeType}
      */
     @jakarta.annotation.Nullable
@@ -706,7 +706,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("kioskModeVirtualHomeButtonEnabled");
     }
     /**
-     * Gets the kioskModeVirtualHomeButtonType property value. Indicates whether the virtual home button is a swipe up home button or a floating home button. Possible values are: notConfigured, swipeUp, floating.
+     * Gets the kioskModeVirtualHomeButtonType property value. Indicates whether the virtual home button is a swipe up home button or a floating home button. The possible values are: notConfigured, swipeUp, floating.
      * @return a {@link AndroidDeviceOwnerVirtualHomeButtonType}
      */
     @jakarta.annotation.Nullable
@@ -802,7 +802,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("microsoftLauncherDockPresenceAllowUserModification");
     }
     /**
-     * Gets the microsoftLauncherDockPresenceConfiguration property value. Indicates whether or not you want to configure the device dock. Possible values are: notConfigured, show, hide, disabled.
+     * Gets the microsoftLauncherDockPresenceConfiguration property value. Indicates whether or not you want to configure the device dock. The possible values are: notConfigured, show, hide, disabled.
      * @return a {@link MicrosoftLauncherDockPresence}
      */
     @jakarta.annotation.Nullable
@@ -826,7 +826,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("microsoftLauncherFeedEnabled");
     }
     /**
-     * Gets the microsoftLauncherSearchBarPlacementConfiguration property value. Indicates the search bar placement configuration on the device. Possible values are: notConfigured, top, bottom, hide.
+     * Gets the microsoftLauncherSearchBarPlacementConfiguration property value. Indicates the search bar placement configuration on the device. The possible values are: notConfigured, top, bottom, hide.
      * @return a {@link MicrosoftLauncherSearchBarPlacement}
      */
     @jakarta.annotation.Nullable
@@ -946,7 +946,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("passwordPreviousPasswordCountToBlock");
     }
     /**
-     * Gets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Gets the passwordRequiredType property value. Indicates the minimum password quality required on the device. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @return a {@link AndroidDeviceOwnerRequiredPasswordType}
      */
     @jakarta.annotation.Nullable
@@ -954,7 +954,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("passwordRequiredType");
     }
     /**
-     * Gets the passwordRequireUnlock property value. Indicates the timeout period after which a device must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
+     * Gets the passwordRequireUnlock property value. Indicates the timeout period after which a device must be unlocked using a form of strong authentication. The possible values are: deviceDefault, daily, unkownFutureValue.
      * @return a {@link AndroidDeviceOwnerRequiredPasswordUnlock}
      */
     @jakarta.annotation.Nullable
@@ -994,7 +994,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("personalProfilePersonalApplications");
     }
     /**
-     * Gets the personalProfilePlayStoreMode property value. Used together with PersonalProfilePersonalApplications to control how apps in the personal profile are allowed or blocked. Possible values are: notConfigured, blockedApps, allowedApps.
+     * Gets the personalProfilePlayStoreMode property value. Used together with PersonalProfilePersonalApplications to control how apps in the personal profile are allowed or blocked. The possible values are: notConfigured, blockedApps, allowedApps.
      * @return a {@link PersonalProfilePersonalPlayStoreMode}
      */
     @jakarta.annotation.Nullable
@@ -1010,7 +1010,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("personalProfileScreenCaptureBlocked");
     }
     /**
-     * Gets the playStoreMode property value. Indicates the Play Store mode of the device. Possible values are: notConfigured, allowList, blockList.
+     * Gets the playStoreMode property value. Indicates the Play Store mode of the device. The possible values are: notConfigured, allowList, blockList.
      * @return a {@link AndroidDeviceOwnerPlayStoreMode}
      */
     @jakarta.annotation.Nullable
@@ -1114,7 +1114,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("systemUpdateFreezePeriods");
     }
     /**
-     * Gets the systemUpdateInstallType property value. The type of system update configuration. Possible values are: deviceDefault, postpone, windowed, automatic.
+     * Gets the systemUpdateInstallType property value. The type of system update configuration. The possible values are: deviceDefault, postpone, windowed, automatic.
      * @return a {@link AndroidDeviceOwnerSystemUpdateInstallType}
      */
     @jakarta.annotation.Nullable
@@ -1274,7 +1274,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("workProfilePasswordPreviousPasswordCountToBlock");
     }
     /**
-     * Gets the workProfilePasswordRequiredType property value. Indicates the minimum password quality required on the work profile password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Gets the workProfilePasswordRequiredType property value. Indicates the minimum password quality required on the work profile password. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @return a {@link AndroidDeviceOwnerRequiredPasswordType}
      */
     @jakarta.annotation.Nullable
@@ -1282,7 +1282,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         return this.backingStore.get("workProfilePasswordRequiredType");
     }
     /**
-     * Gets the workProfilePasswordRequireUnlock property value. Indicates the timeout period after which a work profile must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
+     * Gets the workProfilePasswordRequireUnlock property value. Indicates the timeout period after which a work profile must be unlocked using a form of strong authentication. The possible values are: deviceDefault, daily, unkownFutureValue.
      * @return a {@link AndroidDeviceOwnerRequiredPasswordUnlock}
      */
     @jakarta.annotation.Nullable
@@ -1467,14 +1467,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("appsAllowInstallFromUnknownSources", value);
     }
     /**
-     * Sets the appsAutoUpdatePolicy property value. Indicates the value of the app auto update policy. Possible values are: notConfigured, userChoice, never, wiFiOnly, always.
+     * Sets the appsAutoUpdatePolicy property value. Indicates the value of the app auto update policy. The possible values are: notConfigured, userChoice, never, wiFiOnly, always.
      * @param value Value to set for the appsAutoUpdatePolicy property.
      */
     public void setAppsAutoUpdatePolicy(@jakarta.annotation.Nullable final AndroidDeviceOwnerAppAutoUpdatePolicyType value) {
         this.backingStore.set("appsAutoUpdatePolicy", value);
     }
     /**
-     * Sets the appsDefaultPermissionPolicy property value. Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically. Possible values are: deviceDefault, prompt, autoGrant, autoDeny.
+     * Sets the appsDefaultPermissionPolicy property value. Indicates the permission policy for requests for runtime permissions if one is not defined for the app specifically. The possible values are: deviceDefault, prompt, autoGrant, autoDeny.
      * @param value Value to set for the appsDefaultPermissionPolicy property.
      */
     public void setAppsDefaultPermissionPolicy(@jakarta.annotation.Nullable final AndroidDeviceOwnerDefaultAppPermissionPolicyType value) {
@@ -1537,7 +1537,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("crossProfilePoliciesAllowCopyPaste", value);
     }
     /**
-     * Sets the crossProfilePoliciesAllowDataSharing property value. Indicates whether data from one profile (personal or work) can be shared with apps in the other profile. Possible values are: notConfigured, crossProfileDataSharingBlocked, dataSharingFromWorkToPersonalBlocked, crossProfileDataSharingAllowed, unkownFutureValue.
+     * Sets the crossProfilePoliciesAllowDataSharing property value. Indicates whether data from one profile (personal or work) can be shared with apps in the other profile. The possible values are: notConfigured, crossProfileDataSharingBlocked, dataSharingFromWorkToPersonalBlocked, crossProfileDataSharingAllowed, unkownFutureValue.
      * @param value Value to set for the crossProfilePoliciesAllowDataSharing property.
      */
     public void setCrossProfilePoliciesAllowDataSharing(@jakarta.annotation.Nullable final AndroidDeviceOwnerCrossProfileDataSharing value) {
@@ -1572,7 +1572,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("detailedHelpText", value);
     }
     /**
-     * Sets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE). Possible values are: notConfigured, disabled, unknownFutureValue.
+     * Sets the deviceLocationMode property value. Indicates the location setting configuration for fully managed devices (COBO) and corporate owned devices with a work profile (COPE). The possible values are: notConfigured, disabled, unknownFutureValue.
      * @param value Value to set for the deviceLocationMode property.
      */
     public void setDeviceLocationMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerLocationMode value) {
@@ -1635,7 +1635,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("kioskCustomizationPowerButtonActionsBlocked", value);
     }
     /**
-     * Sets the kioskCustomizationStatusBar property value. Indicates whether system info and notifications are disabled in Kiosk Mode. Possible values are: notConfigured, notificationsAndSystemInfoEnabled, systemInfoOnly.
+     * Sets the kioskCustomizationStatusBar property value. Indicates whether system info and notifications are disabled in Kiosk Mode. The possible values are: notConfigured, notificationsAndSystemInfoEnabled, systemInfoOnly.
      * @param value Value to set for the kioskCustomizationStatusBar property.
      */
     public void setKioskCustomizationStatusBar(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskCustomizationStatusBar value) {
@@ -1649,7 +1649,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("kioskCustomizationSystemErrorWarnings", value);
     }
     /**
-     * Sets the kioskCustomizationSystemNavigation property value. Indicates which navigation features are enabled in Kiosk Mode. Possible values are: notConfigured, navigationEnabled, homeButtonOnly.
+     * Sets the kioskCustomizationSystemNavigation property value. Indicates which navigation features are enabled in Kiosk Mode. The possible values are: notConfigured, navigationEnabled, homeButtonOnly.
      * @param value Value to set for the kioskCustomizationSystemNavigation property.
      */
     public void setKioskCustomizationSystemNavigation(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskCustomizationSystemNavigation value) {
@@ -1712,7 +1712,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("kioskModeFlashlightConfigurationEnabled", value);
     }
     /**
-     * Sets the kioskModeFolderIcon property value. Folder icon configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, darkSquare, darkCircle, lightSquare, lightCircle.
+     * Sets the kioskModeFolderIcon property value. Folder icon configuration for managed home screen in Kiosk Mode. The possible values are: notConfigured, darkSquare, darkCircle, lightSquare, lightCircle.
      * @param value Value to set for the kioskModeFolderIcon property.
      */
     public void setKioskModeFolderIcon(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskModeFolderIcon value) {
@@ -1733,7 +1733,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("kioskModeGridWidth", value);
     }
     /**
-     * Sets the kioskModeIconSize property value. Icon size configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, smallest, small, regular, large, largest.
+     * Sets the kioskModeIconSize property value. Icon size configuration for managed home screen in Kiosk Mode. The possible values are: notConfigured, smallest, small, regular, large, largest.
      * @param value Value to set for the kioskModeIconSize property.
      */
     public void setKioskModeIconSize(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskModeIconSize value) {
@@ -1782,7 +1782,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("kioskModeManagedHomeScreenInactiveSignOutNoticeInSeconds", value);
     }
     /**
-     * Sets the kioskModeManagedHomeScreenPinComplexity property value. Complexity of PIN for sign-in session for Managed Home Screen. Possible values are: notConfigured, simple, complex.
+     * Sets the kioskModeManagedHomeScreenPinComplexity property value. Complexity of PIN for sign-in session for Managed Home Screen. The possible values are: notConfigured, simple, complex.
      * @param value Value to set for the kioskModeManagedHomeScreenPinComplexity property.
      */
     public void setKioskModeManagedHomeScreenPinComplexity(@jakarta.annotation.Nullable final KioskModeManagedHomeScreenPinComplexity value) {
@@ -1838,7 +1838,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("kioskModeMediaVolumeConfigurationEnabled", value);
     }
     /**
-     * Sets the kioskModeScreenOrientation property value. Screen orientation configuration for managed home screen in Kiosk Mode. Possible values are: notConfigured, portrait, landscape, autoRotate.
+     * Sets the kioskModeScreenOrientation property value. Screen orientation configuration for managed home screen in Kiosk Mode. The possible values are: notConfigured, portrait, landscape, autoRotate.
      * @param value Value to set for the kioskModeScreenOrientation property.
      */
     public void setKioskModeScreenOrientation(@jakarta.annotation.Nullable final AndroidDeviceOwnerKioskModeScreenOrientation value) {
@@ -1894,7 +1894,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("kioskModeShowDeviceInfo", value);
     }
     /**
-     * Sets the kioskModeUseManagedHomeScreenApp property value. Whether or not to use single app kiosk mode or multi-app kiosk mode. Possible values are: notConfigured, singleAppMode, multiAppMode.
+     * Sets the kioskModeUseManagedHomeScreenApp property value. Whether or not to use single app kiosk mode or multi-app kiosk mode. The possible values are: notConfigured, singleAppMode, multiAppMode.
      * @param value Value to set for the kioskModeUseManagedHomeScreenApp property.
      */
     public void setKioskModeUseManagedHomeScreenApp(@jakarta.annotation.Nullable final KioskModeType value) {
@@ -1908,7 +1908,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("kioskModeVirtualHomeButtonEnabled", value);
     }
     /**
-     * Sets the kioskModeVirtualHomeButtonType property value. Indicates whether the virtual home button is a swipe up home button or a floating home button. Possible values are: notConfigured, swipeUp, floating.
+     * Sets the kioskModeVirtualHomeButtonType property value. Indicates whether the virtual home button is a swipe up home button or a floating home button. The possible values are: notConfigured, swipeUp, floating.
      * @param value Value to set for the kioskModeVirtualHomeButtonType property.
      */
     public void setKioskModeVirtualHomeButtonType(@jakarta.annotation.Nullable final AndroidDeviceOwnerVirtualHomeButtonType value) {
@@ -1992,7 +1992,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("microsoftLauncherDockPresenceAllowUserModification", value);
     }
     /**
-     * Sets the microsoftLauncherDockPresenceConfiguration property value. Indicates whether or not you want to configure the device dock. Possible values are: notConfigured, show, hide, disabled.
+     * Sets the microsoftLauncherDockPresenceConfiguration property value. Indicates whether or not you want to configure the device dock. The possible values are: notConfigured, show, hide, disabled.
      * @param value Value to set for the microsoftLauncherDockPresenceConfiguration property.
      */
     public void setMicrosoftLauncherDockPresenceConfiguration(@jakarta.annotation.Nullable final MicrosoftLauncherDockPresence value) {
@@ -2013,7 +2013,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("microsoftLauncherFeedEnabled", value);
     }
     /**
-     * Sets the microsoftLauncherSearchBarPlacementConfiguration property value. Indicates the search bar placement configuration on the device. Possible values are: notConfigured, top, bottom, hide.
+     * Sets the microsoftLauncherSearchBarPlacementConfiguration property value. Indicates the search bar placement configuration on the device. The possible values are: notConfigured, top, bottom, hide.
      * @param value Value to set for the microsoftLauncherSearchBarPlacementConfiguration property.
      */
     public void setMicrosoftLauncherSearchBarPlacementConfiguration(@jakarta.annotation.Nullable final MicrosoftLauncherSearchBarPlacement value) {
@@ -2118,14 +2118,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("passwordPreviousPasswordCountToBlock", value);
     }
     /**
-     * Sets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Sets the passwordRequiredType property value. Indicates the minimum password quality required on the device. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this.backingStore.set("passwordRequiredType", value);
     }
     /**
-     * Sets the passwordRequireUnlock property value. Indicates the timeout period after which a device must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
+     * Sets the passwordRequireUnlock property value. Indicates the timeout period after which a device must be unlocked using a form of strong authentication. The possible values are: deviceDefault, daily, unkownFutureValue.
      * @param value Value to set for the passwordRequireUnlock property.
      */
     public void setPasswordRequireUnlock(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordUnlock value) {
@@ -2160,7 +2160,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("personalProfilePersonalApplications", value);
     }
     /**
-     * Sets the personalProfilePlayStoreMode property value. Used together with PersonalProfilePersonalApplications to control how apps in the personal profile are allowed or blocked. Possible values are: notConfigured, blockedApps, allowedApps.
+     * Sets the personalProfilePlayStoreMode property value. Used together with PersonalProfilePersonalApplications to control how apps in the personal profile are allowed or blocked. The possible values are: notConfigured, blockedApps, allowedApps.
      * @param value Value to set for the personalProfilePlayStoreMode property.
      */
     public void setPersonalProfilePlayStoreMode(@jakarta.annotation.Nullable final PersonalProfilePersonalPlayStoreMode value) {
@@ -2174,7 +2174,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("personalProfileScreenCaptureBlocked", value);
     }
     /**
-     * Sets the playStoreMode property value. Indicates the Play Store mode of the device. Possible values are: notConfigured, allowList, blockList.
+     * Sets the playStoreMode property value. Indicates the Play Store mode of the device. The possible values are: notConfigured, allowList, blockList.
      * @param value Value to set for the playStoreMode property.
      */
     public void setPlayStoreMode(@jakarta.annotation.Nullable final AndroidDeviceOwnerPlayStoreMode value) {
@@ -2265,7 +2265,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("systemUpdateFreezePeriods", value);
     }
     /**
-     * Sets the systemUpdateInstallType property value. The type of system update configuration. Possible values are: deviceDefault, postpone, windowed, automatic.
+     * Sets the systemUpdateInstallType property value. The type of system update configuration. The possible values are: deviceDefault, postpone, windowed, automatic.
      * @param value Value to set for the systemUpdateInstallType property.
      */
     public void setSystemUpdateInstallType(@jakarta.annotation.Nullable final AndroidDeviceOwnerSystemUpdateInstallType value) {
@@ -2405,14 +2405,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         this.backingStore.set("workProfilePasswordPreviousPasswordCountToBlock", value);
     }
     /**
-     * Sets the workProfilePasswordRequiredType property value. Indicates the minimum password quality required on the work profile password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Sets the workProfilePasswordRequiredType property value. Indicates the minimum password quality required on the work profile password. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the workProfilePasswordRequiredType property.
      */
     public void setWorkProfilePasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
         this.backingStore.set("workProfilePasswordRequiredType", value);
     }
     /**
-     * Sets the workProfilePasswordRequireUnlock property value. Indicates the timeout period after which a work profile must be unlocked using a form of strong authentication. Possible values are: deviceDefault, daily, unkownFutureValue.
+     * Sets the workProfilePasswordRequireUnlock property value. Indicates the timeout period after which a work profile must be unlocked using a form of strong authentication. The possible values are: deviceDefault, daily, unkownFutureValue.
      * @param value Value to set for the workProfilePasswordRequireUnlock property.
      */
     public void setWorkProfilePasswordRequireUnlock(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordUnlock value) {

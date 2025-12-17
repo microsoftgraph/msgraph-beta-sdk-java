@@ -26,7 +26,7 @@ public class CloudPcCloudApp extends Entity implements Parsable {
         return new CloudPcCloudApp();
     }
     /**
-     * Gets the actionFailedErrorCode property value. The error code if publishing, unpublishing, or resetting a cloud app fails. Possible values are: cloudAppQuotaExceeded, cloudPcLicenseNotFound, internalServerError, appDiscoveryFailed, unknownFutureValue. The default value is null. Supports $filter, $select, $orderBy. Read-only.
+     * Gets the actionFailedErrorCode property value. The error code if publishing, unpublishing, or resetting a cloud app fails. The possible values are: cloudAppQuotaExceeded, cloudPcLicenseNotFound, internalServerError, appDiscoveryFailed, unknownFutureValue. The default value is null. Supports $filter, $select, $orderBy. Read-only.
      * @return a {@link CloudPcCloudAppActionFailedErrorCode}
      */
     @jakarta.annotation.Nullable
@@ -163,7 +163,7 @@ public class CloudPcCloudApp extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
     }
     /**
-     * Sets the actionFailedErrorCode property value. The error code if publishing, unpublishing, or resetting a cloud app fails. Possible values are: cloudAppQuotaExceeded, cloudPcLicenseNotFound, internalServerError, appDiscoveryFailed, unknownFutureValue. The default value is null. Supports $filter, $select, $orderBy. Read-only.
+     * Sets the actionFailedErrorCode property value. The error code if publishing, unpublishing, or resetting a cloud app fails. The possible values are: cloudAppQuotaExceeded, cloudPcLicenseNotFound, internalServerError, appDiscoveryFailed, unknownFutureValue. The default value is null. Supports $filter, $select, $orderBy. Read-only.
      * @param value Value to set for the actionFailedErrorCode property.
      */
     public void setActionFailedErrorCode(@jakarta.annotation.Nullable final CloudPcCloudAppActionFailedErrorCode value) {

@@ -90,7 +90,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         return this.backingStore.get("forceFIPSCompliance");
     }
     /**
-     * Gets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
+     * Gets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. The possible values are: unrestricted, fixed, variable.
      * @return a {@link MeteredConnectionLimitType}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         return this.backingStore.get("proxyManualPort");
     }
     /**
-     * Gets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic, unknownFutureValue.
+     * Gets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. The possible values are: none, manual, automatic, unknownFutureValue.
      * @return a {@link WiFiProxySetting}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         return this.backingStore.get("ssid");
     }
     /**
-     * Gets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
+     * Gets the wifiSecurityType property value. Specify the Wifi Security Type. The possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
      * @return a {@link WiFiSecurityType}
      */
     @jakarta.annotation.Nullable
@@ -211,7 +211,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         this.backingStore.set("forceFIPSCompliance", value);
     }
     /**
-     * Sets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. Possible values are: unrestricted, fixed, variable.
+     * Sets the meteredConnectionLimit property value. Specify the metered connection limit type for the wifi connection. The possible values are: unrestricted, fixed, variable.
      * @param value Value to set for the meteredConnectionLimit property.
      */
     public void setMeteredConnectionLimit(@jakarta.annotation.Nullable final MeteredConnectionLimitType value) {
@@ -253,7 +253,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         this.backingStore.set("proxyManualPort", value);
     }
     /**
-     * Sets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. Possible values are: none, manual, automatic, unknownFutureValue.
+     * Sets the proxySetting property value. Specify the proxy setting for Wi-Fi configuration. The possible values are: none, manual, automatic, unknownFutureValue.
      * @param value Value to set for the proxySetting property.
      */
     public void setProxySetting(@jakarta.annotation.Nullable final WiFiProxySetting value) {
@@ -267,7 +267,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         this.backingStore.set("ssid", value);
     }
     /**
-     * Sets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
+     * Sets the wifiSecurityType property value. Specify the Wifi Security Type. The possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
      * @param value Value to set for the wifiSecurityType property.
      */
     public void setWifiSecurityType(@jakarta.annotation.Nullable final WiFiSecurityType value) {

@@ -120,7 +120,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         return this.backingStore.get("performedBy");
     }
     /**
-     * Gets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
+     * Gets the result property value. Indicates the result of the activity. The possible values are: success, failure, timeout, unknownFutureValue.
      * @return a {@link OperationResult}
      */
     @jakarta.annotation.Nullable
@@ -236,7 +236,7 @@ public class DirectoryAudit extends Entity implements Parsable {
         this.backingStore.set("performedBy", value);
     }
     /**
-     * Sets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
+     * Sets the result property value. Indicates the result of the activity. The possible values are: success, failure, timeout, unknownFutureValue.
      * @param value Value to set for the result property.
      */
     public void setResult(@jakarta.annotation.Nullable final OperationResult value) {
