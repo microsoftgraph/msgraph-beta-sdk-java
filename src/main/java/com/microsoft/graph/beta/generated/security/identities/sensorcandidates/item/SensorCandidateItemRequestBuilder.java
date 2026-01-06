@@ -55,7 +55,7 @@ public class SensorCandidateItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Represents Microsoft Defender for Identity sensors that are ready to be activated.
+     * Get sensorCandidates from security
      * @return a {@link SensorCandidate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class SensorCandidateItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Represents Microsoft Defender for Identity sensors that are ready to be activated.
+     * Get sensorCandidates from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SensorCandidate}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class SensorCandidateItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Represents Microsoft Defender for Identity sensors that are ready to be activated.
+     * Get sensorCandidates from security
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class SensorCandidateItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Represents Microsoft Defender for Identity sensors that are ready to be activated.
+     * Get sensorCandidates from security
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class SensorCandidateItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Represents Microsoft Defender for Identity sensors that are ready to be activated.
+     * Get sensorCandidates from security
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

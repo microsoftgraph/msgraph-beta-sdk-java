@@ -1,6 +1,8 @@
 package com.microsoft.graph.beta.communications.adhoccalls;
 
 import com.microsoft.graph.beta.communications.adhoccalls.count.CountRequestBuilder;
+import com.microsoft.graph.beta.communications.adhoccalls.getallrecordingsuseriduseridwithstartdatetimewithenddatetime.GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.communications.adhoccalls.getalltranscriptsuseriduseridwithstartdatetimewithenddatetime.GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.communications.adhoccalls.item.AdhocCallItemRequestBuilder;
 import com.microsoft.graph.beta.models.AdhocCall;
 import com.microsoft.graph.beta.models.AdhocCallCollectionResponse;
@@ -30,6 +32,22 @@ public class AdhocCallsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getAllRecordings method.
+     * @return a {@link GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllRecordingsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getAllTranscripts method.
+     * @return a {@link GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTime() {
+        return new GetAllTranscriptsuserIdUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the adhocCalls property of the microsoft.graph.cloudCommunications entity.

@@ -49,10 +49,10 @@ public class AudiencesConfiguration implements AdditionalDataHolder, BackedModel
     }
     /**
      * Gets the azureAdMultipleOrgs property value. Setting to allow or disallow creation of apps with multitenant signInAudience.
-     * @return a {@link AudienceRestriction}
+     * @return a {@link AzureAdMultipleOrgsAudienceRestriction}
      */
     @jakarta.annotation.Nullable
-    public AudienceRestriction getAzureAdMultipleOrgs() {
+    public AzureAdMultipleOrgsAudienceRestriction getAzureAdMultipleOrgs() {
         return this.backingStore.get("azureAdMultipleOrgs");
     }
     /**
@@ -70,7 +70,7 @@ public class AudiencesConfiguration implements AdditionalDataHolder, BackedModel
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("azureAdMultipleOrgs", (n) -> { this.setAzureAdMultipleOrgs(n.getObjectValue(AudienceRestriction::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureAdMultipleOrgs", (n) -> { this.setAzureAdMultipleOrgs(n.getObjectValue(AzureAdMultipleOrgsAudienceRestriction::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("personalMicrosoftAccount", (n) -> { this.setPersonalMicrosoftAccount(n.getObjectValue(AudienceRestriction::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -113,7 +113,7 @@ public class AudiencesConfiguration implements AdditionalDataHolder, BackedModel
      * Sets the azureAdMultipleOrgs property value. Setting to allow or disallow creation of apps with multitenant signInAudience.
      * @param value Value to set for the azureAdMultipleOrgs property.
      */
-    public void setAzureAdMultipleOrgs(@jakarta.annotation.Nullable final AudienceRestriction value) {
+    public void setAzureAdMultipleOrgs(@jakarta.annotation.Nullable final AzureAdMultipleOrgsAudienceRestriction value) {
         this.backingStore.set("azureAdMultipleOrgs", value);
     }
     /**

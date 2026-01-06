@@ -55,19 +55,21 @@ public class CustomBlockPageRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get customBlockPage from networkAccess
+     * Read the properties and relationships of microsoft.graph.networkaccess.customBlockPage object.
      * @return a {@link CustomBlockPage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-customblockpage-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomBlockPage get() {
         return get(null);
     }
     /**
-     * Get customBlockPage from networkAccess
+     * Read the properties and relationships of microsoft.graph.networkaccess.customBlockPage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomBlockPage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-customblockpage-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomBlockPage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -77,21 +79,23 @@ public class CustomBlockPageRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomBlockPage::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property customBlockPage in networkAccess
+     * Update the properties of a customBlockPage object.
      * @param body The request body
      * @return a {@link CustomBlockPage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-customblockpage-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomBlockPage patch(@jakarta.annotation.Nonnull final CustomBlockPage body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property customBlockPage in networkAccess
+     * Update the properties of a customBlockPage object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomBlockPage}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-customblockpage-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomBlockPage patch(@jakarta.annotation.Nonnull final CustomBlockPage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -122,7 +126,7 @@ public class CustomBlockPageRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get customBlockPage from networkAccess
+     * Read the properties and relationships of microsoft.graph.networkaccess.customBlockPage object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class CustomBlockPageRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get customBlockPage from networkAccess
+     * Read the properties and relationships of microsoft.graph.networkaccess.customBlockPage object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class CustomBlockPageRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property customBlockPage in networkAccess
+     * Update the properties of a customBlockPage object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class CustomBlockPageRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customBlockPage in networkAccess
+     * Update the properties of a customBlockPage object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class CustomBlockPageRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get customBlockPage from networkAccess
+     * Read the properties and relationships of microsoft.graph.networkaccess.customBlockPage object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

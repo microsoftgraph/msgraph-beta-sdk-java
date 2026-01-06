@@ -33,6 +33,7 @@ public class ExchangeAdmin extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("mailboxes", (n) -> { this.setMailboxes(n.getCollectionOfObjectValues(Mailbox::createFromDiscriminatorValue)); });
         deserializerMap.put("messageTraces", (n) -> { this.setMessageTraces(n.getCollectionOfObjectValues(MessageTrace::createFromDiscriminatorValue)); });
+        deserializerMap.put("tracing", (n) -> { this.setTracing(n.getObjectValue(MessageTracingRoot::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -52,6 +53,14 @@ public class ExchangeAdmin extends Entity implements Parsable {
         return this.backingStore.get("messageTraces");
     }
     /**
+     * Gets the tracing property value. The tracing property
+     * @return a {@link MessageTracingRoot}
+     */
+    @jakarta.annotation.Nullable
+    public MessageTracingRoot getTracing() {
+        return this.backingStore.get("tracing");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -60,6 +69,7 @@ public class ExchangeAdmin extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("mailboxes", this.getMailboxes());
         writer.writeCollectionOfObjectValues("messageTraces", this.getMessageTraces());
+        writer.writeObjectValue("tracing", this.getTracing());
     }
     /**
      * Sets the mailboxes property value. Represents a user&apos;s mailboxes.
@@ -74,5 +84,12 @@ public class ExchangeAdmin extends Entity implements Parsable {
      */
     public void setMessageTraces(@jakarta.annotation.Nullable final java.util.List<MessageTrace> value) {
         this.backingStore.set("messageTraces", value);
+    }
+    /**
+     * Sets the tracing property value. The tracing property
+     * @param value Value to set for the tracing property.
+     */
+    public void setTracing(@jakarta.annotation.Nullable final MessageTracingRoot value) {
+        this.backingStore.set("tracing", value);
     }
 }

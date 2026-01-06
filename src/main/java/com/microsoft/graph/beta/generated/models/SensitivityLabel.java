@@ -95,6 +95,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         deserializerMap.put("color", (n) -> { this.setColor(n.getStringValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("hasProtection", (n) -> { this.setHasProtection(n.getBooleanValue()); });
         deserializerMap.put("isDefault", (n) -> { this.setIsDefault(n.getBooleanValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("isEndpointProtectionEnabled", (n) -> { this.setIsEndpointProtectionEnabled(n.getBooleanValue()); });
@@ -106,6 +107,14 @@ public class SensitivityLabel extends Entity implements Parsable {
         deserializerMap.put("sublabels", (n) -> { this.setSublabels(n.getCollectionOfObjectValues(SensitivityLabel::createFromDiscriminatorValue)); });
         deserializerMap.put("toolTip", (n) -> { this.setToolTip(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the hasProtection property value. The hasProtection property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getHasProtection() {
+        return this.backingStore.get("hasProtection");
     }
     /**
      * Gets the isDefault property value. The isDefault property
@@ -201,6 +210,7 @@ public class SensitivityLabel extends Entity implements Parsable {
         writer.writeStringValue("color", this.getColor());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeBooleanValue("hasProtection", this.getHasProtection());
         writer.writeBooleanValue("isDefault", this.getIsDefault());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeBooleanValue("isEndpointProtectionEnabled", this.getIsEndpointProtectionEnabled());
@@ -260,6 +270,13 @@ public class SensitivityLabel extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the hasProtection property value. The hasProtection property
+     * @param value Value to set for the hasProtection property.
+     */
+    public void setHasProtection(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("hasProtection", value);
     }
     /**
      * Sets the isDefault property value. The isDefault property

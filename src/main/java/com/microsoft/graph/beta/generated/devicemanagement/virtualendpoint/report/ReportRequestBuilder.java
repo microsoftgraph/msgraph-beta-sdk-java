@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.report;
 
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.report.retrievecloudpcclientappusagereport.RetrieveCloudPcClientAppUsageReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.report.retrievecloudpcrecommendationreports.RetrieveCloudPcRecommendationReportsRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcReport;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReportRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the retrieveCloudPcClientAppUsageReport method.
+     * @return a {@link RetrieveCloudPcClientAppUsageReportRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveCloudPcClientAppUsageReportRequestBuilder retrieveCloudPcClientAppUsageReport() {
+        return new RetrieveCloudPcClientAppUsageReportRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the retrieveCloudPcRecommendationReports method.
      * @return a {@link RetrieveCloudPcRecommendationReportsRequestBuilder}

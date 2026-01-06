@@ -72,6 +72,7 @@ public class UserSettings extends Entity implements Parsable {
         deserializerMap.put("shiftPreferences", (n) -> { this.setShiftPreferences(n.getObjectValue(ShiftPreferences::createFromDiscriminatorValue)); });
         deserializerMap.put("storage", (n) -> { this.setStorage(n.getObjectValue(UserStorage::createFromDiscriminatorValue)); });
         deserializerMap.put("windows", (n) -> { this.setWindows(n.getCollectionOfObjectValues(WindowsSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("workHoursAndLocations", (n) -> { this.setWorkHoursAndLocations(n.getObjectValue(WorkHoursAndLocationsSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -115,6 +116,14 @@ public class UserSettings extends Entity implements Parsable {
         return this.backingStore.get("windows");
     }
     /**
+     * Gets the workHoursAndLocations property value. The user&apos;s settings for work hours and location preferences for scheduling and availability management.
+     * @return a {@link WorkHoursAndLocationsSetting}
+     */
+    @jakarta.annotation.Nullable
+    public WorkHoursAndLocationsSetting getWorkHoursAndLocations() {
+        return this.backingStore.get("workHoursAndLocations");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -130,6 +139,7 @@ public class UserSettings extends Entity implements Parsable {
         writer.writeObjectValue("shiftPreferences", this.getShiftPreferences());
         writer.writeObjectValue("storage", this.getStorage());
         writer.writeCollectionOfObjectValues("windows", this.getWindows());
+        writer.writeObjectValue("workHoursAndLocations", this.getWorkHoursAndLocations());
     }
     /**
      * Sets the contactMergeSuggestions property value. The user&apos;s settings for the visibility of merge suggestion for the duplicate contacts in the user&apos;s contact list.
@@ -193,5 +203,12 @@ public class UserSettings extends Entity implements Parsable {
      */
     public void setWindows(@jakarta.annotation.Nullable final java.util.List<WindowsSetting> value) {
         this.backingStore.set("windows", value);
+    }
+    /**
+     * Sets the workHoursAndLocations property value. The user&apos;s settings for work hours and location preferences for scheduling and availability management.
+     * @param value Value to set for the workHoursAndLocations property.
+     */
+    public void setWorkHoursAndLocations(@jakarta.annotation.Nullable final WorkHoursAndLocationsSetting value) {
+        this.backingStore.set("workHoursAndLocations", value);
     }
 }

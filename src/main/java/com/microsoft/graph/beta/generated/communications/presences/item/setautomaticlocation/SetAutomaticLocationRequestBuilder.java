@@ -35,7 +35,7 @@ public class SetAutomaticLocationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/presences/{presence%2Did}/setAutomaticLocation", rawUrl);
     }
     /**
-     * Update the automatic work location for a user. The automatic layer participates in the standard precedence model: Use this operation from clients or services that automatically detect location (for example, Teams, network/location agents, or OEM docking apps). It doesn&apos;t clear manual or scheduled signals.
+     * Update the automatic work location for a user. The automatic layer participates in the standard precedence model: Use this operation from clients or services that automatically detect location (for example, Teams, network and location agents, or OEM docking apps). It doesn&apos;t clear manual or scheduled signals.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/presence-setautomaticlocation?view=graph-rest-beta">Find more info here</a>
@@ -44,7 +44,7 @@ public class SetAutomaticLocationRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Update the automatic work location for a user. The automatic layer participates in the standard precedence model: Use this operation from clients or services that automatically detect location (for example, Teams, network/location agents, or OEM docking apps). It doesn&apos;t clear manual or scheduled signals.
+     * Update the automatic work location for a user. The automatic layer participates in the standard precedence model: Use this operation from clients or services that automatically detect location (for example, Teams, network and location agents, or OEM docking apps). It doesn&apos;t clear manual or scheduled signals.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class SetAutomaticLocationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Update the automatic work location for a user. The automatic layer participates in the standard precedence model: Use this operation from clients or services that automatically detect location (for example, Teams, network/location agents, or OEM docking apps). It doesn&apos;t clear manual or scheduled signals.
+     * Update the automatic work location for a user. The automatic layer participates in the standard precedence model: Use this operation from clients or services that automatically detect location (for example, Teams, network and location agents, or OEM docking apps). It doesn&apos;t clear manual or scheduled signals.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class SetAutomaticLocationRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update the automatic work location for a user. The automatic layer participates in the standard precedence model: Use this operation from clients or services that automatically detect location (for example, Teams, network/location agents, or OEM docking apps). It doesn&apos;t clear manual or scheduled signals.
+     * Update the automatic work location for a user. The automatic layer participates in the standard precedence model: Use this operation from clients or services that automatically detect location (for example, Teams, network and location agents, or OEM docking apps). It doesn&apos;t clear manual or scheduled signals.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

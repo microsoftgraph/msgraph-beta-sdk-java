@@ -25,7 +25,8 @@ public enum RiskDetail implements ValuedEnum {
     AdminConfirmedAccountSafe("adminConfirmedAccountSafe"),
     AdminConfirmedAgentSafe("adminConfirmedAgentSafe"),
     AdminConfirmedAgentCompromised("adminConfirmedAgentCompromised"),
-    AdminDismissedRiskForAgent("adminDismissedRiskForAgent");
+    AdminDismissedRiskForAgent("adminDismissedRiskForAgent"),
+    MicrosoftRevokedSessions("microsoftRevokedSessions");
     public final String value;
     RiskDetail(final String value) {
         this.value = value;
@@ -57,6 +58,7 @@ public enum RiskDetail implements ValuedEnum {
             case "adminConfirmedAgentSafe": return AdminConfirmedAgentSafe;
             case "adminConfirmedAgentCompromised": return AdminConfirmedAgentCompromised;
             case "adminDismissedRiskForAgent": return AdminDismissedRiskForAgent;
+            case "microsoftRevokedSessions": return MicrosoftRevokedSessions;
             default: return null;
         }
     }

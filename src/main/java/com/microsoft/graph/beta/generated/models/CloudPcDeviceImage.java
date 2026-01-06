@@ -62,7 +62,6 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         deserializerMap.put("expirationDate", (n) -> { this.setExpirationDate(n.getLocalDateValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("operatingSystem", (n) -> { this.setOperatingSystem(n.getStringValue()); });
-        deserializerMap.put("osArchitecture", (n) -> { this.setOsArchitecture(n.getEnumValue(CloudPcImageOsArchitectureType::forValue)); });
         deserializerMap.put("osBuildNumber", (n) -> { this.setOsBuildNumber(n.getStringValue()); });
         deserializerMap.put("osStatus", (n) -> { this.setOsStatus(n.getEnumValue(CloudPcDeviceImageOsStatus::forValue)); });
         deserializerMap.put("osVersionNumber", (n) -> { this.setOsVersionNumber(n.getStringValue()); });
@@ -89,14 +88,6 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getOperatingSystem() {
         return this.backingStore.get("operatingSystem");
-    }
-    /**
-     * Gets the osArchitecture property value. The osArchitecture property
-     * @return a {@link CloudPcImageOsArchitectureType}
-     */
-    @jakarta.annotation.Nullable
-    public CloudPcImageOsArchitectureType getOsArchitecture() {
-        return this.backingStore.get("osArchitecture");
     }
     /**
      * Gets the osBuildNumber property value. The OS build version of the image. For example, 1909. Read-only.
@@ -182,7 +173,6 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         writer.writeLocalDateValue("expirationDate", this.getExpirationDate());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("operatingSystem", this.getOperatingSystem());
-        writer.writeEnumValue("osArchitecture", this.getOsArchitecture());
         writer.writeStringValue("osBuildNumber", this.getOsBuildNumber());
         writer.writeEnumValue("osStatus", this.getOsStatus());
         writer.writeStringValue("osVersionNumber", this.getOsVersionNumber());
@@ -227,13 +217,6 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
      */
     public void setOperatingSystem(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("operatingSystem", value);
-    }
-    /**
-     * Sets the osArchitecture property value. The osArchitecture property
-     * @param value Value to set for the osArchitecture property.
-     */
-    public void setOsArchitecture(@jakarta.annotation.Nullable final CloudPcImageOsArchitectureType value) {
-        this.backingStore.set("osArchitecture", value);
     }
     /**
      * Sets the osBuildNumber property value. The OS build version of the image. For example, 1909. Read-only.

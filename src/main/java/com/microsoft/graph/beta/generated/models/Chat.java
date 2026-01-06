@@ -65,8 +65,10 @@ public class Chat extends Entity implements Parsable {
         deserializerMap.put("lastUpdatedDateTime", (n) -> { this.setLastUpdatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
+        deserializerMap.put("migrationMode", (n) -> { this.setMigrationMode(n.getEnumValue(MigrationMode::forValue)); });
         deserializerMap.put("onlineMeetingInfo", (n) -> { this.setOnlineMeetingInfo(n.getObjectValue(TeamworkOnlineMeetingInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(TeamsAsyncOperation::createFromDiscriminatorValue)); });
+        deserializerMap.put("originalCreatedDateTime", (n) -> { this.setOriginalCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("permissionGrants", (n) -> { this.setPermissionGrants(n.getCollectionOfObjectValues(ResourceSpecificPermissionGrant::createFromDiscriminatorValue)); });
         deserializerMap.put("pinnedMessages", (n) -> { this.setPinnedMessages(n.getCollectionOfObjectValues(PinnedChatMessageInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("tabs", (n) -> { this.setTabs(n.getCollectionOfObjectValues(TeamsTab::createFromDiscriminatorValue)); });
@@ -125,6 +127,14 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("messages");
     }
     /**
+     * Gets the migrationMode property value. Indicates whether a chat is in migration mode. This value is null for chats that never entered migration mode. The possible values are: inProgress, completed, unknownFutureValue.
+     * @return a {@link MigrationMode}
+     */
+    @jakarta.annotation.Nullable
+    public MigrationMode getMigrationMode() {
+        return this.backingStore.get("migrationMode");
+    }
+    /**
      * Gets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn&apos;t associated with an online meeting, the property is empty. Read-only.
      * @return a {@link TeamworkOnlineMeetingInfo}
      */
@@ -139,6 +149,14 @@ public class Chat extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<TeamsAsyncOperation> getOperations() {
         return this.backingStore.get("operations");
+    }
+    /**
+     * Gets the originalCreatedDateTime property value. Timestamp of the original creation time for the chat. The value is null if the chat never entered migration mode.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getOriginalCreatedDateTime() {
+        return this.backingStore.get("originalCreatedDateTime");
     }
     /**
      * Gets the permissionGrants property value. A collection of permissions granted to apps for the chat.
@@ -212,8 +230,10 @@ public class Chat extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastUpdatedDateTime", this.getLastUpdatedDateTime());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
+        writer.writeEnumValue("migrationMode", this.getMigrationMode());
         writer.writeObjectValue("onlineMeetingInfo", this.getOnlineMeetingInfo());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
+        writer.writeOffsetDateTimeValue("originalCreatedDateTime", this.getOriginalCreatedDateTime());
         writer.writeCollectionOfObjectValues("permissionGrants", this.getPermissionGrants());
         writer.writeCollectionOfObjectValues("pinnedMessages", this.getPinnedMessages());
         writer.writeCollectionOfObjectValues("tabs", this.getTabs());
@@ -286,6 +306,13 @@ public class Chat extends Entity implements Parsable {
         this.backingStore.set("messages", value);
     }
     /**
+     * Sets the migrationMode property value. Indicates whether a chat is in migration mode. This value is null for chats that never entered migration mode. The possible values are: inProgress, completed, unknownFutureValue.
+     * @param value Value to set for the migrationMode property.
+     */
+    public void setMigrationMode(@jakarta.annotation.Nullable final MigrationMode value) {
+        this.backingStore.set("migrationMode", value);
+    }
+    /**
      * Sets the onlineMeetingInfo property value. Represents details about an online meeting. If the chat isn&apos;t associated with an online meeting, the property is empty. Read-only.
      * @param value Value to set for the onlineMeetingInfo property.
      */
@@ -298,6 +325,13 @@ public class Chat extends Entity implements Parsable {
      */
     public void setOperations(@jakarta.annotation.Nullable final java.util.List<TeamsAsyncOperation> value) {
         this.backingStore.set("operations", value);
+    }
+    /**
+     * Sets the originalCreatedDateTime property value. Timestamp of the original creation time for the chat. The value is null if the chat never entered migration mode.
+     * @param value Value to set for the originalCreatedDateTime property.
+     */
+    public void setOriginalCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("originalCreatedDateTime", value);
     }
     /**
      * Sets the permissionGrants property value. A collection of permissions granted to apps for the chat.

@@ -32,8 +32,17 @@ public class AgentIdentityBlueprint extends Application implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("inheritablePermissions", (n) -> { this.setInheritablePermissions(n.getCollectionOfObjectValues(InheritablePermission::createFromDiscriminatorValue)); });
         deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the inheritablePermissions property value. Defines scopes of a resource application that may be automatically granted to agent identities without additional consent.
+     * @return a {@link java.util.List<InheritablePermission>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<InheritablePermission> getInheritablePermissions() {
+        return this.backingStore.get("inheritablePermissions");
     }
     /**
      * Gets the sponsors property value. The sponsors for this agent identity blueprint. Sponsors are users or groups who can authorize and manage the lifecycle of agent identity instances. Required during the create operation.
@@ -50,7 +59,15 @@ public class AgentIdentityBlueprint extends Application implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("inheritablePermissions", this.getInheritablePermissions());
         writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
+    }
+    /**
+     * Sets the inheritablePermissions property value. Defines scopes of a resource application that may be automatically granted to agent identities without additional consent.
+     * @param value Value to set for the inheritablePermissions property.
+     */
+    public void setInheritablePermissions(@jakarta.annotation.Nullable final java.util.List<InheritablePermission> value) {
+        this.backingStore.set("inheritablePermissions", value);
     }
     /**
      * Sets the sponsors property value. The sponsors for this agent identity blueprint. Sponsors are users or groups who can authorize and manage the lifecycle of agent identity instances. Required during the create operation.

@@ -191,6 +191,7 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("identifierUris", (n) -> { this.setIdentifierUris(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
         deserializerMap.put("isDeviceOnlyAuthSupported", (n) -> { this.setIsDeviceOnlyAuthSupported(n.getBooleanValue()); });
+        deserializerMap.put("isDisabled", (n) -> { this.setIsDisabled(n.getBooleanValue()); });
         deserializerMap.put("isFallbackPublicClient", (n) -> { this.setIsFallbackPublicClient(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("logo", (n) -> { this.setLogo(n.getByteArrayValue()); });
@@ -209,6 +210,7 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("serviceManagementReference", (n) -> { this.setServiceManagementReference(n.getStringValue()); });
         deserializerMap.put("servicePrincipalLockConfiguration", (n) -> { this.setServicePrincipalLockConfiguration(n.getObjectValue(ServicePrincipalLockConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("signInAudience", (n) -> { this.setSignInAudience(n.getStringValue()); });
+        deserializerMap.put("signInAudienceRestrictions", (n) -> { this.setSignInAudienceRestrictions(n.getObjectValue(SignInAudienceRestrictionsBase::createFromDiscriminatorValue)); });
         deserializerMap.put("spa", (n) -> { this.setSpa(n.getObjectValue(SpaApplication::createFromDiscriminatorValue)); });
         deserializerMap.put("synchronization", (n) -> { this.setSynchronization(n.getObjectValue(Synchronization::createFromDiscriminatorValue)); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -260,6 +262,14 @@ public class Application extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsDeviceOnlyAuthSupported() {
         return this.backingStore.get("isDeviceOnlyAuthSupported");
+    }
+    /**
+     * Gets the isDisabled property value. Specifies whether the service principal of the app in a tenant or across tenants for multi-tenant apps can obtain new access tokens or access protected resources. When set to true, existing tokens remain valid until they expire based on their configured lifetimes, and the app stays visible in the Enterprise apps list but users cannot sign in.true if the application is deactivated (disabled); otherwise false.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDisabled() {
+        return this.backingStore.get("isDisabled");
     }
     /**
      * Gets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false, which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID can&apos;t determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
@@ -406,6 +416,14 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("signInAudience");
     }
     /**
+     * Gets the signInAudienceRestrictions property value. The signInAudienceRestrictions property
+     * @return a {@link SignInAudienceRestrictionsBase}
+     */
+    @jakarta.annotation.Nullable
+    public SignInAudienceRestrictionsBase getSignInAudienceRestrictions() {
+        return this.backingStore.get("signInAudienceRestrictions");
+    }
+    /**
      * Gets the spa property value. Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
      * @return a {@link SpaApplication}
      */
@@ -513,6 +531,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeCollectionOfPrimitiveValues("identifierUris", this.getIdentifierUris());
         writer.writeObjectValue("info", this.getInfo());
         writer.writeBooleanValue("isDeviceOnlyAuthSupported", this.getIsDeviceOnlyAuthSupported());
+        writer.writeBooleanValue("isDisabled", this.getIsDisabled());
         writer.writeBooleanValue("isFallbackPublicClient", this.getIsFallbackPublicClient());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeByteArrayValue("logo", this.getLogo());
@@ -531,6 +550,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeStringValue("serviceManagementReference", this.getServiceManagementReference());
         writer.writeObjectValue("servicePrincipalLockConfiguration", this.getServicePrincipalLockConfiguration());
         writer.writeStringValue("signInAudience", this.getSignInAudience());
+        writer.writeObjectValue("signInAudienceRestrictions", this.getSignInAudienceRestrictions());
         writer.writeObjectValue("spa", this.getSpa());
         writer.writeObjectValue("synchronization", this.getSynchronization());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
@@ -690,6 +710,13 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("isDeviceOnlyAuthSupported", value);
     }
     /**
+     * Sets the isDisabled property value. Specifies whether the service principal of the app in a tenant or across tenants for multi-tenant apps can obtain new access tokens or access protected resources. When set to true, existing tokens remain valid until they expire based on their configured lifetimes, and the app stays visible in the Enterprise apps list but users cannot sign in.true if the application is deactivated (disabled); otherwise false.
+     * @param value Value to set for the isDisabled property.
+     */
+    public void setIsDisabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isDisabled", value);
+    }
+    /**
      * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false, which means the fallback application type is confidential client such as a web app. There are certain scenarios where Microsoft Entra ID can&apos;t determine the client application type. For example, the ROPC flow where the application is configured without specifying a redirect URI. In those cases Microsoft Entra ID interprets the application type based on the value of this property.
      * @param value Value to set for the isFallbackPublicClient property.
      */
@@ -814,6 +841,13 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setSignInAudience(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("signInAudience", value);
+    }
+    /**
+     * Sets the signInAudienceRestrictions property value. The signInAudienceRestrictions property
+     * @param value Value to set for the signInAudienceRestrictions property.
+     */
+    public void setSignInAudienceRestrictions(@jakarta.annotation.Nullable final SignInAudienceRestrictionsBase value) {
+        this.backingStore.set("signInAudienceRestrictions", value);
     }
     /**
      * Sets the spa property value. Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.

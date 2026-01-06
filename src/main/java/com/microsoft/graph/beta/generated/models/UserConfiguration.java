@@ -40,7 +40,25 @@ public class UserConfiguration extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("binaryData", (n) -> { this.setBinaryData(n.getByteArrayValue()); });
+        deserializerMap.put("structuredData", (n) -> { this.setStructuredData(n.getCollectionOfObjectValues(StructuredDataEntry::createFromDiscriminatorValue)); });
+        deserializerMap.put("xmlData", (n) -> { this.setXmlData(n.getByteArrayValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the structuredData property value. Key-value pairs of supported data types.
+     * @return a {@link java.util.List<StructuredDataEntry>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<StructuredDataEntry> getStructuredData() {
+        return this.backingStore.get("structuredData");
+    }
+    /**
+     * Gets the xmlData property value. Binary data for storing serialized XML.
+     * @return a {@link byte[]}
+     */
+    @jakarta.annotation.Nullable
+    public byte[] getXmlData() {
+        return this.backingStore.get("xmlData");
     }
     /**
      * Serializes information the current object
@@ -50,6 +68,8 @@ public class UserConfiguration extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeByteArrayValue("binaryData", this.getBinaryData());
+        writer.writeCollectionOfObjectValues("structuredData", this.getStructuredData());
+        writer.writeByteArrayValue("xmlData", this.getXmlData());
     }
     /**
      * Sets the binaryData property value. Arbitrary binary data.
@@ -57,5 +77,19 @@ public class UserConfiguration extends Entity implements Parsable {
      */
     public void setBinaryData(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("binaryData", value);
+    }
+    /**
+     * Sets the structuredData property value. Key-value pairs of supported data types.
+     * @param value Value to set for the structuredData property.
+     */
+    public void setStructuredData(@jakarta.annotation.Nullable final java.util.List<StructuredDataEntry> value) {
+        this.backingStore.set("structuredData", value);
+    }
+    /**
+     * Sets the xmlData property value. Binary data for storing serialized XML.
+     * @param value Value to set for the xmlData property.
+     */
+    public void setXmlData(@jakarta.annotation.Nullable final byte[] value) {
+        this.backingStore.set("xmlData", value);
     }
 }

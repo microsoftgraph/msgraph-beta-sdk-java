@@ -30,7 +30,9 @@ public enum ProtocolType implements ValuedEnum {
     PrtBrokerBased("prtBrokerBased"),
     PrtNonBrokerBased("prtNonBrokerBased"),
     OnBehalfOf("onBehalfOf"),
-    SamlOnBehalfOf("samlOnBehalfOf");
+    SamlOnBehalfOf("samlOnBehalfOf"),
+    OfficeS2S("officeS2S"),
+    WsTrust("wsTrust");
     public final String value;
     ProtocolType(final String value) {
         this.value = value;
@@ -67,6 +69,8 @@ public enum ProtocolType implements ValuedEnum {
             case "prtNonBrokerBased": return PrtNonBrokerBased;
             case "onBehalfOf": return OnBehalfOf;
             case "samlOnBehalfOf": return SamlOnBehalfOf;
+            case "officeS2S": return OfficeS2S;
+            case "wsTrust": return WsTrust;
             default: return null;
         }
     }

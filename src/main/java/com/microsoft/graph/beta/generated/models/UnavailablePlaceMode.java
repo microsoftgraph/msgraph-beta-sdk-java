@@ -36,7 +36,7 @@ public class UnavailablePlaceMode extends PlaceMode implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the reason property value. Reason for marking a place unavailable.
+     * Gets the reason property value. The reason a place is marked unavailable.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class UnavailablePlaceMode extends PlaceMode implements Parsable {
         writer.writeStringValue("reason", this.getReason());
     }
     /**
-     * Sets the reason property value. Reason for marking a place unavailable.
+     * Sets the reason property value. The reason a place is marked unavailable.
      * @param value Value to set for the reason property.
      */
     public void setReason(@jakarta.annotation.Nullable final String value) {

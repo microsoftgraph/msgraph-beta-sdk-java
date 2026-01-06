@@ -270,6 +270,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("homepage", (n) -> { this.setHomepage(n.getStringValue()); });
         deserializerMap.put("homeRealmDiscoveryPolicies", (n) -> { this.setHomeRealmDiscoveryPolicies(n.getCollectionOfObjectValues(HomeRealmDiscoveryPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("info", (n) -> { this.setInfo(n.getObjectValue(InformationalUrl::createFromDiscriminatorValue)); });
+        deserializerMap.put("isDisabled", (n) -> { this.setIsDisabled(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("licenseDetails", (n) -> { this.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("loginUrl", (n) -> { this.setLoginUrl(n.getStringValue()); });
@@ -327,6 +328,14 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public InformationalUrl getInfo() {
         return this.backingStore.get("info");
+    }
+    /**
+     * Gets the isDisabled property value. Specifies whether the service principal of the app in a tenant or across tenants for multi-tenant apps can obtain new access tokens or access protected resources. When set to true, existing tokens remain valid until they expire based on their configured lifetimes, and the app stays visible in the Enterprise apps list but users cannot sign in.true if the application is deactivated (disabled); otherwise false.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDisabled() {
+        return this.backingStore.get("isDisabled");
     }
     /**
      * Gets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
@@ -619,6 +628,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeStringValue("homepage", this.getHomepage());
         writer.writeCollectionOfObjectValues("homeRealmDiscoveryPolicies", this.getHomeRealmDiscoveryPolicies());
         writer.writeObjectValue("info", this.getInfo());
+        writer.writeBooleanValue("isDisabled", this.getIsDisabled());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeCollectionOfObjectValues("licenseDetails", this.getLicenseDetails());
         writer.writeStringValue("loginUrl", this.getLoginUrl());
@@ -847,6 +857,13 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setInfo(@jakarta.annotation.Nullable final InformationalUrl value) {
         this.backingStore.set("info", value);
+    }
+    /**
+     * Sets the isDisabled property value. Specifies whether the service principal of the app in a tenant or across tenants for multi-tenant apps can obtain new access tokens or access protected resources. When set to true, existing tokens remain valid until they expire based on their configured lifetimes, and the app stays visible in the Enterprise apps list but users cannot sign in.true if the application is deactivated (disabled); otherwise false.
+     * @param value Value to set for the isDisabled property.
+     */
+    public void setIsDisabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isDisabled", value);
     }
     /**
      * Sets the keyCredentials property value. The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).
