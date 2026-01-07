@@ -34,7 +34,26 @@ public enum Label implements ValuedEnum {
     ParentUrl("parentUrl"),
     PriorityNormalized("priorityNormalized"),
     ReportedBy("reportedBy"),
-    SecondaryId("secondaryId");
+    SecondaryId("secondaryId"),
+    PersonEmails("personEmails"),
+    PersonAddresses("personAddresses"),
+    PersonAnniversaries("personAnniversaries"),
+    PersonName("personName"),
+    PersonNote("personNote"),
+    PersonPhones("personPhones"),
+    PersonCurrentPosition("personCurrentPosition"),
+    PersonWebAccounts("personWebAccounts"),
+    PersonWebSite("personWebSite"),
+    PersonSkills("personSkills"),
+    PersonProjects("personProjects"),
+    PersonAccount("personAccount"),
+    PersonAwards("personAwards"),
+    PersonCertifications("personCertifications"),
+    PersonAssistants("personAssistants"),
+    PersonColleagues("personColleagues"),
+    PersonManager("personManager"),
+    PersonAlternateContacts("personAlternateContacts"),
+    PersonEmergencyContacts("personEmergencyContacts");
     public final String value;
     Label(final String value) {
         this.value = value;
@@ -75,6 +94,25 @@ public enum Label implements ValuedEnum {
             case "priorityNormalized": return PriorityNormalized;
             case "reportedBy": return ReportedBy;
             case "secondaryId": return SecondaryId;
+            case "personEmails": return PersonEmails;
+            case "personAddresses": return PersonAddresses;
+            case "personAnniversaries": return PersonAnniversaries;
+            case "personName": return PersonName;
+            case "personNote": return PersonNote;
+            case "personPhones": return PersonPhones;
+            case "personCurrentPosition": return PersonCurrentPosition;
+            case "personWebAccounts": return PersonWebAccounts;
+            case "personWebSite": return PersonWebSite;
+            case "personSkills": return PersonSkills;
+            case "personProjects": return PersonProjects;
+            case "personAccount": return PersonAccount;
+            case "personAwards": return PersonAwards;
+            case "personCertifications": return PersonCertifications;
+            case "personAssistants": return PersonAssistants;
+            case "personColleagues": return PersonColleagues;
+            case "personManager": return PersonManager;
+            case "personAlternateContacts": return PersonAlternateContacts;
+            case "personEmergencyContacts": return PersonEmergencyContacts;
             default: return null;
         }
     }

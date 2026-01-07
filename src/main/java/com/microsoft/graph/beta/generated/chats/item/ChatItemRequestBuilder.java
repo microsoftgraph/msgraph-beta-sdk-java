@@ -13,6 +13,7 @@ import com.microsoft.graph.beta.chats.item.permissiongrants.PermissionGrantsRequ
 import com.microsoft.graph.beta.chats.item.pinnedmessages.PinnedMessagesRequestBuilder;
 import com.microsoft.graph.beta.chats.item.removeallaccessforuser.RemoveAllAccessForUserRequestBuilder;
 import com.microsoft.graph.beta.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
+import com.microsoft.graph.beta.chats.item.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.beta.chats.item.tabs.TabsRequestBuilder;
 import com.microsoft.graph.beta.chats.item.unhideforuser.UnhideForUserRequestBuilder;
 import com.microsoft.graph.beta.models.Chat;
@@ -138,6 +139,14 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SendActivityNotificationRequestBuilder sendActivityNotification() {
         return new SendActivityNotificationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the startMigration method.
+     * @return a {@link StartMigrationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StartMigrationRequestBuilder startMigration() {
+        return new StartMigrationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tabs property of the microsoft.graph.chat entity.

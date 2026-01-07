@@ -93,7 +93,9 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType::forValue)); });
         deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(ChatMessage::createFromDiscriminatorValue)); });
+        deserializerMap.put("migrationMode", (n) -> { this.setMigrationMode(n.getEnumValue(MigrationMode::forValue)); });
         deserializerMap.put("moderationSettings", (n) -> { this.setModerationSettings(n.getObjectValue(ChannelModerationSettings::createFromDiscriminatorValue)); });
+        deserializerMap.put("originalCreatedDateTime", (n) -> { this.setOriginalCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("planner", (n) -> { this.setPlanner(n.getObjectValue(TeamsChannelPlanner::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedWithTeams", (n) -> { this.setSharedWithTeams(n.getCollectionOfObjectValues(SharedWithChannelTeamInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("summary", (n) -> { this.setSummary(n.getObjectValue(ChannelSummary::createFromDiscriminatorValue)); });
@@ -159,12 +161,28 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("messages");
     }
     /**
+     * Gets the migrationMode property value. Indicates whether a channel is in migration mode. This value is null for channels that never entered migration mode. The possible values are: inProgress, completed, unknownFutureValue.
+     * @return a {@link MigrationMode}
+     */
+    @jakarta.annotation.Nullable
+    public MigrationMode getMigrationMode() {
+        return this.backingStore.get("migrationMode");
+    }
+    /**
      * Gets the moderationSettings property value. Settings to configure channel moderation to control who can start new posts and reply to posts in that channel.
      * @return a {@link ChannelModerationSettings}
      */
     @jakarta.annotation.Nullable
     public ChannelModerationSettings getModerationSettings() {
         return this.backingStore.get("moderationSettings");
+    }
+    /**
+     * Gets the originalCreatedDateTime property value. Timestamp of the original creation time for the channel. The value is null if the channel never entered migration mode.
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getOriginalCreatedDateTime() {
+        return this.backingStore.get("originalCreatedDateTime");
     }
     /**
      * Gets the planner property value. Selective Planner services available to this channel. Currently, only shared channels are supported. Read-only. Nullable.
@@ -234,7 +252,9 @@ public class Channel extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeEnumValue("membershipType", this.getMembershipType());
         writer.writeCollectionOfObjectValues("messages", this.getMessages());
+        writer.writeEnumValue("migrationMode", this.getMigrationMode());
         writer.writeObjectValue("moderationSettings", this.getModerationSettings());
+        writer.writeOffsetDateTimeValue("originalCreatedDateTime", this.getOriginalCreatedDateTime());
         writer.writeObjectValue("planner", this.getPlanner());
         writer.writeCollectionOfObjectValues("sharedWithTeams", this.getSharedWithTeams());
         writer.writeObjectValue("summary", this.getSummary());
@@ -334,11 +354,25 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("messages", value);
     }
     /**
+     * Sets the migrationMode property value. Indicates whether a channel is in migration mode. This value is null for channels that never entered migration mode. The possible values are: inProgress, completed, unknownFutureValue.
+     * @param value Value to set for the migrationMode property.
+     */
+    public void setMigrationMode(@jakarta.annotation.Nullable final MigrationMode value) {
+        this.backingStore.set("migrationMode", value);
+    }
+    /**
      * Sets the moderationSettings property value. Settings to configure channel moderation to control who can start new posts and reply to posts in that channel.
      * @param value Value to set for the moderationSettings property.
      */
     public void setModerationSettings(@jakarta.annotation.Nullable final ChannelModerationSettings value) {
         this.backingStore.set("moderationSettings", value);
+    }
+    /**
+     * Sets the originalCreatedDateTime property value. Timestamp of the original creation time for the channel. The value is null if the channel never entered migration mode.
+     * @param value Value to set for the originalCreatedDateTime property.
+     */
+    public void setOriginalCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("originalCreatedDateTime", value);
     }
     /**
      * Sets the planner property value. Selective Planner services available to this channel. Currently, only shared channels are supported. Read-only. Nullable.

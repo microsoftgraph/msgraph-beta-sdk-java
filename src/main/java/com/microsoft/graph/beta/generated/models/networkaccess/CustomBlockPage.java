@@ -26,7 +26,7 @@ public class CustomBlockPage extends Entity implements Parsable {
         return new CustomBlockPage();
     }
     /**
-     * Gets the configuration property value. The configuration property
+     * Gets the configuration property value. The current configuration of the customized message. The body can be input in limited markdown language, supporting links via the format: link.
      * @return a {@link BlockPageConfigurationBase}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class CustomBlockPage extends Entity implements Parsable {
         writer.writeEnumValue("state", this.getState());
     }
     /**
-     * Sets the configuration property value. The configuration property
+     * Sets the configuration property value. The current configuration of the customized message. The body can be input in limited markdown language, supporting links via the format: link.
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final BlockPageConfigurationBase value) {

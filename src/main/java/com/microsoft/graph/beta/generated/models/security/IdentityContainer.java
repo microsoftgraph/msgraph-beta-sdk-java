@@ -65,7 +65,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("sensorCandidateActivationConfiguration");
     }
     /**
-     * Gets the sensorCandidates property value. Represents Microsoft Defender for Identity sensors that are ready to be activated.
+     * Gets the sensorCandidates property value. The sensorCandidates property
      * @return a {@link java.util.List<SensorCandidate>}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("sensors");
     }
     /**
-     * Gets the settings property value. Represents a container for security identities settings APIs.
+     * Gets the settings property value. The settings property
      * @return a {@link SettingsContainer}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class IdentityContainer extends Entity implements Parsable {
         this.backingStore.set("sensorCandidateActivationConfiguration", value);
     }
     /**
-     * Sets the sensorCandidates property value. Represents Microsoft Defender for Identity sensors that are ready to be activated.
+     * Sets the sensorCandidates property value. The sensorCandidates property
      * @param value Value to set for the sensorCandidates property.
      */
     public void setSensorCandidates(@jakarta.annotation.Nullable final java.util.List<SensorCandidate> value) {
@@ -138,7 +138,7 @@ public class IdentityContainer extends Entity implements Parsable {
         this.backingStore.set("sensors", value);
     }
     /**
-     * Sets the settings property value. Represents a container for security identities settings APIs.
+     * Sets the settings property value. The settings property
      * @param value Value to set for the settings property.
      */
     public void setSettings(@jakarta.annotation.Nullable final SettingsContainer value) {

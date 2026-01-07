@@ -14,6 +14,7 @@ import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.tea
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.provisionemail.ProvisionEmailRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.removeemail.RemoveEmailRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.sharedwithteams.SharedWithTeamsRequestBuilder;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.tabs.TabsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.channels.item.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -129,6 +130,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SharedWithTeamsRequestBuilder sharedWithTeams() {
         return new SharedWithTeamsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the startMigration method.
+     * @return a {@link StartMigrationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StartMigrationRequestBuilder startMigration() {
+        return new StartMigrationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tabs property of the microsoft.graph.channel entity.

@@ -302,6 +302,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("unseenCount", (n) -> { this.setUnseenCount(n.getIntegerValue()); });
         deserializerMap.put("unseenMessagesCount", (n) -> { this.setUnseenMessagesCount(n.getIntegerValue()); });
         deserializerMap.put("visibility", (n) -> { this.setVisibility(n.getStringValue()); });
+        deserializerMap.put("welcomeMessageEnabled", (n) -> { this.setWelcomeMessageEnabled(n.getBooleanValue()); });
         deserializerMap.put("writebackConfiguration", (n) -> { this.setWritebackConfiguration(n.getObjectValue(GroupWritebackConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -770,6 +771,14 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("visibility");
     }
     /**
+     * Gets the welcomeMessageEnabled property value. The welcomeMessageEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getWelcomeMessageEnabled() {
+        return this.backingStore.get("welcomeMessageEnabled");
+    }
+    /**
      * Gets the writebackConfiguration property value. Specifies whether or not a group is configured to write back group object properties to on-premises Active Directory. These properties are used when group writeback is configured in the Microsoft Entra Connect sync client.
      * @return a {@link GroupWritebackConfiguration}
      */
@@ -865,6 +874,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeIntegerValue("unseenCount", this.getUnseenCount());
         writer.writeIntegerValue("unseenMessagesCount", this.getUnseenMessagesCount());
         writer.writeStringValue("visibility", this.getVisibility());
+        writer.writeBooleanValue("welcomeMessageEnabled", this.getWelcomeMessageEnabled());
         writer.writeObjectValue("writebackConfiguration", this.getWritebackConfiguration());
     }
     /**
@@ -1433,6 +1443,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setVisibility(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("visibility", value);
+    }
+    /**
+     * Sets the welcomeMessageEnabled property value. The welcomeMessageEnabled property
+     * @param value Value to set for the welcomeMessageEnabled property.
+     */
+    public void setWelcomeMessageEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("welcomeMessageEnabled", value);
     }
     /**
      * Sets the writebackConfiguration property value. Specifies whether or not a group is configured to write back group object properties to on-premises Active Directory. These properties are used when group writeback is configured in the Microsoft Entra Connect sync client.

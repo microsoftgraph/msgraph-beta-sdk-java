@@ -34,12 +34,21 @@ public class SharePointIdentityMapping extends Entity implements Parsable {
         return new SharePointIdentityMapping();
     }
     /**
+     * Gets the deleted property value. Indicates that an identity mapping was deleted successfully.
+     * @return a {@link Deleted}
+     */
+    @jakarta.annotation.Nullable
+    public Deleted getDeleted() {
+        return this.backingStore.get("deleted");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("deleted", (n) -> { this.setDeleted(n.getObjectValue(Deleted::createFromDiscriminatorValue)); });
         deserializerMap.put("sourceOrganizationId", (n) -> { this.setSourceOrganizationId(n.getUUIDValue()); });
         return deserializerMap;
     }
@@ -58,7 +67,15 @@ public class SharePointIdentityMapping extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("deleted", this.getDeleted());
         writer.writeUUIDValue("sourceOrganizationId", this.getSourceOrganizationId());
+    }
+    /**
+     * Sets the deleted property value. Indicates that an identity mapping was deleted successfully.
+     * @param value Value to set for the deleted property.
+     */
+    public void setDeleted(@jakarta.annotation.Nullable final Deleted value) {
+        this.backingStore.set("deleted", value);
     }
     /**
      * Sets the sourceOrganizationId property value. The unique identifier of the source organization in the migration.

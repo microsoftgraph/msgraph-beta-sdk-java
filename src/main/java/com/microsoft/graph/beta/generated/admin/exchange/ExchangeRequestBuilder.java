@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.admin.exchange;
 
 import com.microsoft.graph.beta.admin.exchange.mailboxes.MailboxesRequestBuilder;
 import com.microsoft.graph.beta.admin.exchange.messagetraces.MessageTracesRequestBuilder;
+import com.microsoft.graph.beta.admin.exchange.tracing.TracingRequestBuilder;
 import com.microsoft.graph.beta.models.ExchangeAdmin;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -43,6 +44,17 @@ public class ExchangeRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public MessageTracesRequestBuilder messageTraces() {
         return new MessageTracesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tracing property of the microsoft.graph.exchangeAdmin entity.
+     * @return a {@link TracingRequestBuilder}
+     * @deprecated
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public TracingRequestBuilder tracing() {
+        return new TracingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ExchangeRequestBuilder} and sets the default values.

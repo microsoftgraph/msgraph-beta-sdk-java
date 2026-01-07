@@ -28,7 +28,7 @@ public class TeamsUserConfiguration extends Entity implements Parsable {
         return new TeamsUserConfiguration();
     }
     /**
-     * Gets the accountType property value. The type of the account in the Teams context. The possible values are: user, resourceAccount, guest, sfbOnPremUser, unknown, unknownFutureValue, ineligibleUser. Use the Prefer: include-unknown-enum-members request header to get the following value from this enum evolvable enum: ineligibleUser.
+     * Gets the accountType property value. The accountType property
      * @return a {@link AccountType}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class TeamsUserConfiguration extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the accountType property value. The type of the account in the Teams context. The possible values are: user, resourceAccount, guest, sfbOnPremUser, unknown, unknownFutureValue, ineligibleUser. Use the Prefer: include-unknown-enum-members request header to get the following value from this enum evolvable enum: ineligibleUser.
+     * Sets the accountType property value. The accountType property
      * @param value Value to set for the accountType property.
      */
     public void setAccountType(@jakarta.annotation.Nullable final AccountType value) {

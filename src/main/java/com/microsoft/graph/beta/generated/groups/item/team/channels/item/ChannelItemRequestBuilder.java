@@ -12,6 +12,7 @@ import com.microsoft.graph.beta.groups.item.team.channels.item.planner.PlannerRe
 import com.microsoft.graph.beta.groups.item.team.channels.item.provisionemail.ProvisionEmailRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.removeemail.RemoveEmailRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.sharedwithteams.SharedWithTeamsRequestBuilder;
+import com.microsoft.graph.beta.groups.item.team.channels.item.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.tabs.TabsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.channels.item.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.beta.models.Channel;
@@ -129,6 +130,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SharedWithTeamsRequestBuilder sharedWithTeams() {
         return new SharedWithTeamsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the startMigration method.
+     * @return a {@link StartMigrationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StartMigrationRequestBuilder startMigration() {
+        return new StartMigrationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
