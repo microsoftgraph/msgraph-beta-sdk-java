@@ -35,7 +35,7 @@ public class MessageTracingRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the messageTraces property value. The messageTraces property
+     * Gets the messageTraces property value. Represents the trace information of messages that pass-through Exchange Online organizations.
      * @return a {@link java.util.List<ExchangeMessageTrace>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class MessageTracingRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("messageTraces", this.getMessageTraces());
     }
     /**
-     * Sets the messageTraces property value. The messageTraces property
+     * Sets the messageTraces property value. Represents the trace information of messages that pass-through Exchange Online organizations.
      * @param value Value to set for the messageTraces property.
      */
     public void setMessageTraces(@jakarta.annotation.Nullable final java.util.List<ExchangeMessageTrace> value) {

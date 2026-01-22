@@ -29,7 +29,7 @@ public class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiF
         return new AndroidForWorkEnterpriseWiFiConfiguration();
     }
     /**
-     * Gets the authenticationMethod property value. Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. The possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Gets the authenticationMethod property value. Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @return a {@link WiFiAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiF
         return this.backingStore.get("identityCertificateForClientAuthentication");
     }
     /**
-     * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a {@link NonEapAuthenticationMethodForEapTtlsType}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiF
         return this.backingStore.get("innerAuthenticationProtocolForEapTtls");
     }
     /**
-     * Gets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. The possible values are: none, microsoftChapVersionTwo.
+     * Gets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
      * @return a {@link NonEapAuthenticationMethodForPeap}
      */
     @jakarta.annotation.Nullable
@@ -126,7 +126,7 @@ public class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiF
         writer.writeCollectionOfPrimitiveValues("trustedServerCertificateNames", this.getTrustedServerCertificateNames());
     }
     /**
-     * Sets the authenticationMethod property value. Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. The possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Sets the authenticationMethod property value. Indicates the Authentication Method the client (device) needs to use when the EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
@@ -147,14 +147,14 @@ public class AndroidForWorkEnterpriseWiFiConfiguration extends AndroidForWorkWiF
         this.backingStore.set("identityCertificateForClientAuthentication", value);
     }
     /**
-     * Sets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Sets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      */
     public void setInnerAuthenticationProtocolForEapTtls(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
         this.backingStore.set("innerAuthenticationProtocolForEapTtls", value);
     }
     /**
-     * Sets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. The possible values are: none, microsoftChapVersionTwo.
+     * Sets the innerAuthenticationProtocolForPeap property value. Non-EAP Method for Authentication (Inner Identity) when EAP Type is PEAP and Authenticationmethod is Username and Password. Possible values are: none, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForPeap property.
      */
     public void setInnerAuthenticationProtocolForPeap(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForPeap value) {

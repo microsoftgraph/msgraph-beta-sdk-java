@@ -59,7 +59,7 @@ public class EnabledAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel/enabledApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      * @return a {@link TeamsAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -68,7 +68,7 @@ public class EnabledAppsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -81,7 +81,7 @@ public class EnabledAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsAppCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +89,7 @@ public class EnabledAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +111,7 @@ public class EnabledAppsRequestBuilder extends BaseRequestBuilder {
         return new EnabledAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

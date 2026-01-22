@@ -95,7 +95,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         return this.backingStore.get("maxUserDeferralsCount");
     }
     /**
-     * Gets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. The possible values are: low, high, unknownFutureValue.
+     * Gets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
      * @return a {@link MacOSPriority}
      */
     @jakarta.annotation.Nullable
@@ -178,7 +178,7 @@ public class MacOSSoftwareUpdateConfiguration extends DeviceConfiguration implem
         this.backingStore.set("maxUserDeferralsCount", value);
     }
     /**
-     * Sets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. The possible values are: low, high, unknownFutureValue.
+     * Sets the priority property value. The scheduling priority for downloading and preparing the requested update. Default: Low. Possible values: Null, Low, High. Possible values are: low, high, unknownFutureValue.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final MacOSPriority value) {

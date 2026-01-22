@@ -69,7 +69,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         return this.backingStore.get("deviceName");
     }
     /**
-     * Gets the devicePlatform property value. The platform of the device for which the certificate was created. The possible values are: Android, AndroidForWork, iOS, MacOS, WindowsPhone81, Windows81AndLater, Windows10AndLater, AndroidWorkProfile, Unknown, AndroidAOSP, AndroidMobileApplicationManagement, iOSMobileApplicationManagement. Default value: Unknown. Read-only. Supports $select.
+     * Gets the devicePlatform property value. The platform of the device for which the certificate was created. Possible values are: Android, AndroidForWork, iOS, MacOS, WindowsPhone81, Windows81AndLater, Windows10AndLater, AndroidWorkProfile, Unknown, AndroidAOSP, AndroidMobileApplicationManagement, iOSMobileApplicationManagement. Default value: Unknown. Read-only. Supports $select.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -271,7 +271,7 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         this.backingStore.set("deviceName", value);
     }
     /**
-     * Sets the devicePlatform property value. The platform of the device for which the certificate was created. The possible values are: Android, AndroidForWork, iOS, MacOS, WindowsPhone81, Windows81AndLater, Windows10AndLater, AndroidWorkProfile, Unknown, AndroidAOSP, AndroidMobileApplicationManagement, iOSMobileApplicationManagement. Default value: Unknown. Read-only. Supports $select.
+     * Sets the devicePlatform property value. The platform of the device for which the certificate was created. Possible values are: Android, AndroidForWork, iOS, MacOS, WindowsPhone81, Windows81AndLater, Windows10AndLater, AndroidWorkProfile, Unknown, AndroidAOSP, AndroidMobileApplicationManagement, iOSMobileApplicationManagement. Default value: Unknown. Read-only. Supports $select.
      * @param value Value to set for the devicePlatform property.
      */
     public void setDevicePlatform(@jakarta.annotation.Nullable final String value) {

@@ -37,7 +37,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/teamwork/deletedTeams/{deletedTeam%2Did}/channels/{channel%2Did}/enabledApps/{teamsApp%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      * @return a {@link TeamsApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsApp::createFromDiscriminatorValue);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class TeamsAppItemRequestBuilder extends BaseRequestBuilder {
         return new TeamsAppItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get enabledApps from teamwork
+     * A collection of enabled apps in the channel.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

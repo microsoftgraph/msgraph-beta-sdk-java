@@ -26,7 +26,7 @@ public class ExchangeMessageTraceDetail extends Entity implements Parsable {
         return new ExchangeMessageTraceDetail();
     }
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. The action taken on the message during the event.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class ExchangeMessageTraceDetail extends Entity implements Parsable {
         return this.backingStore.get("action");
     }
     /**
-     * Gets the data property value. The data property
+     * Gets the data property value. Additional data associated with the event, containing supplementary information specific to the event.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class ExchangeMessageTraceDetail extends Entity implements Parsable {
         return this.backingStore.get("data");
     }
     /**
-     * Gets the dateTime property value. The dateTime property
+     * Gets the dateTime property value. The date and time when the event occurred. The timestamp is in UTC format.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class ExchangeMessageTraceDetail extends Entity implements Parsable {
         return this.backingStore.get("dateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A detailed description that provides context about what happened during message processing.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class ExchangeMessageTraceDetail extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the event property value. The event property
+     * Gets the event property value. The event that occurred during message processing.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class ExchangeMessageTraceDetail extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the messageId property value. The messageId property
+     * Gets the messageId property value. The Message-ID header field of the message. The format depends on the messaging server that sent the message.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,42 +103,42 @@ public class ExchangeMessageTraceDetail extends Entity implements Parsable {
         writer.writeStringValue("messageId", this.getMessageId());
     }
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. The action taken on the message during the event.
      * @param value Value to set for the action property.
      */
     public void setAction(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("action", value);
     }
     /**
-     * Sets the data property value. The data property
+     * Sets the data property value. Additional data associated with the event, containing supplementary information specific to the event.
      * @param value Value to set for the data property.
      */
     public void setData(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("data", value);
     }
     /**
-     * Sets the dateTime property value. The dateTime property
+     * Sets the dateTime property value. The date and time when the event occurred. The timestamp is in UTC format.
      * @param value Value to set for the dateTime property.
      */
     public void setDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("dateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A detailed description that provides context about what happened during message processing.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the event property value. The event property
+     * Sets the event property value. The event that occurred during message processing.
      * @param value Value to set for the event property.
      */
     public void setEvent(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("event", value);
     }
     /**
-     * Sets the messageId property value. The messageId property
+     * Sets the messageId property value. The Message-ID header field of the message. The format depends on the messaging server that sent the message.
      * @param value Value to set for the messageId property.
      */
     public void setMessageId(@jakarta.annotation.Nullable final String value) {

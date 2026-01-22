@@ -45,7 +45,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("allowedAndroidDeviceModels");
     }
     /**
-     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Gets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfDeviceLockNotSet");
     }
     /**
-     * Gets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action. The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Gets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanHigh");
     }
     /**
-     * Gets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action. The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Gets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanLow");
     }
     /**
-     * Gets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action. The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Gets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         return this.backingStore.get("appActionIfDevicePasscodeComplexityLessThanMedium");
     }
     /**
-     * Gets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block &amp; wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Gets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block &amp; wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @return a {@link ManagedAppRemediationAction}
      */
     @jakarta.annotation.Nullable
@@ -510,7 +510,7 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this.backingStore.set("allowedAndroidDeviceModels", value);
     }
     /**
-     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Sets the appActionIfAccountIsClockedOut property value. Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @param value Value to set for the appActionIfAccountIsClockedOut property.
      */
     public void setAppActionIfAccountIsClockedOut(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
@@ -552,28 +552,28 @@ public class AndroidManagedAppProtection extends TargetedManagedAppProtection im
         this.backingStore.set("appActionIfDeviceLockNotSet", value);
     }
     /**
-     * Sets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action. The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Sets the appActionIfDevicePasscodeComplexityLessThanHigh property value. If the device does not have a passcode of high complexity or higher, trigger the stored action. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanHigh property.
      */
     public void setAppActionIfDevicePasscodeComplexityLessThanHigh(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanHigh", value);
     }
     /**
-     * Sets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action. The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Sets the appActionIfDevicePasscodeComplexityLessThanLow property value. If the device does not have a passcode of low complexity or higher, trigger the stored action. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanLow property.
      */
     public void setAppActionIfDevicePasscodeComplexityLessThanLow(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanLow", value);
     }
     /**
-     * Sets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action. The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Sets the appActionIfDevicePasscodeComplexityLessThanMedium property value. If the device does not have a passcode of medium complexity or higher, trigger the stored action. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @param value Value to set for the appActionIfDevicePasscodeComplexityLessThanMedium property.
      */
     public void setAppActionIfDevicePasscodeComplexityLessThanMedium(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
         this.backingStore.set("appActionIfDevicePasscodeComplexityLessThanMedium", value);
     }
     /**
-     * Sets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block &amp; wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. The possible values are: block, wipe, warn, blockWhenSettingIsSupported.
+     * Sets the appActionIfSamsungKnoxAttestationRequired property value. Defines the behavior of a managed app when Samsung Knox Attestation is required. Possible values are null, warn, block &amp; wipe. If the admin does not set this action, the default is null, which indicates this setting is not configured. Possible values are: block, wipe, warn, blockWhenSettingIsSupported.
      * @param value Value to set for the appActionIfSamsungKnoxAttestationRequired property.
      */
     public void setAppActionIfSamsungKnoxAttestationRequired(@jakarta.annotation.Nullable final ManagedAppRemediationAction value) {
