@@ -53,7 +53,7 @@ public class ExchangeAdmin extends Entity implements Parsable {
         return this.backingStore.get("messageTraces");
     }
     /**
-     * Gets the tracing property value. The tracing property
+     * Gets the tracing property value. Represents a container for administrative resources to trace messages.
      * @return a {@link MessageTracingRoot}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class ExchangeAdmin extends Entity implements Parsable {
         this.backingStore.set("messageTraces", value);
     }
     /**
-     * Sets the tracing property value. The tracing property
+     * Sets the tracing property value. Represents a container for administrative resources to trace messages.
      * @param value Value to set for the tracing property.
      */
     public void setTracing(@jakarta.annotation.Nullable final MessageTracingRoot value) {

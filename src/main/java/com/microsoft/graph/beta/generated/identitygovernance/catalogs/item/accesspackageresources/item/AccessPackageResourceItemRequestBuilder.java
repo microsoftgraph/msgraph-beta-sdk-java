@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackager
 import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.accesspackageresourceenvironment.AccessPackageResourceEnvironmentRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.accesspackageresourceroles.AccessPackageResourceRolesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.accesspackageresourcescopes.AccessPackageResourceScopesRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.externaloriginresourceconnector.ExternalOriginResourceConnectorRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.refresh.RefreshRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.uploadsessions.UploadSessionsRequestBuilder;
 import com.microsoft.graph.beta.models.AccessPackageResource;
@@ -57,6 +58,17 @@ public class AccessPackageResourceItemRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public AccessPackageResourceScopesRequestBuilder accessPackageResourceScopes() {
         return new AccessPackageResourceScopesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the externalOriginResourceConnector property of the microsoft.graph.accessPackageResource entity.
+     * @return a {@link ExternalOriginResourceConnectorRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public ExternalOriginResourceConnectorRequestBuilder externalOriginResourceConnector() {
+        return new ExternalOriginResourceConnectorRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the refresh method.

@@ -29,7 +29,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         return new ManagedDeviceEncryptionState();
     }
     /**
-     * Gets the advancedBitLockerStates property value. Advanced BitLocker State. The possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
+     * Gets the advancedBitLockerStates property value. Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
      * @return a {@link EnumSet<AdvancedBitLockerState>}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +97,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fileVaultStates property value. FileVault State. The possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
+     * Gets the fileVaultStates property value. FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
      * @return a {@link EnumSet<FileVaultState>}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
-     * Sets the advancedBitLockerStates property value. Advanced BitLocker State. The possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
+     * Sets the advancedBitLockerStates property value. Advanced BitLocker State. Possible values are: success, noUserConsent, osVolumeUnprotected, osVolumeTpmRequired, osVolumeTpmOnlyRequired, osVolumeTpmPinRequired, osVolumeTpmStartupKeyRequired, osVolumeTpmPinStartupKeyRequired, osVolumeEncryptionMethodMismatch, recoveryKeyBackupFailed, fixedDriveNotEncrypted, fixedDriveEncryptionMethodMismatch, loggedOnUserNonAdmin, windowsRecoveryEnvironmentNotConfigured, tpmNotAvailable, tpmNotReady, networkError.
      * @param value Value to set for the advancedBitLockerStates property.
      */
     public void setAdvancedBitLockerStates(@jakarta.annotation.Nullable final EnumSet<AdvancedBitLockerState> value) {
@@ -198,7 +198,7 @@ public class ManagedDeviceEncryptionState extends Entity implements Parsable {
         this.backingStore.set("encryptionState", value);
     }
     /**
-     * Sets the fileVaultStates property value. FileVault State. The possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
+     * Sets the fileVaultStates property value. FileVault State. Possible values are: success, driveEncryptedByUser, userDeferredEncryption, escrowNotEnabled.
      * @param value Value to set for the fileVaultStates property.
      */
     public void setFileVaultStates(@jakarta.annotation.Nullable final EnumSet<FileVaultState> value) {

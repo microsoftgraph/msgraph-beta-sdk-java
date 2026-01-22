@@ -563,7 +563,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         return this.backingStore.get("touchIdTimeoutInHours");
     }
     /**
-     * Gets the updateDelayPolicy property value. Determines whether to delay OS and/or app updates for macOS. The possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
+     * Gets the updateDelayPolicy property value. Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
      * @return a {@link EnumSet<MacOSSoftwareUpdateDelayPolicy>}
      */
     @jakarta.annotation.Nullable
@@ -1053,7 +1053,7 @@ public class MacOSGeneralDeviceConfiguration extends DeviceConfiguration impleme
         this.backingStore.set("touchIdTimeoutInHours", value);
     }
     /**
-     * Sets the updateDelayPolicy property value. Determines whether to delay OS and/or app updates for macOS. The possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
+     * Sets the updateDelayPolicy property value. Determines whether to delay OS and/or app updates for macOS. Possible values are: none, delayOSUpdateVisibility, delayAppUpdateVisibility, unknownFutureValue, delayMajorOsUpdateVisibility.
      * @param value Value to set for the updateDelayPolicy property.
      */
     public void setUpdateDelayPolicy(@jakarta.annotation.Nullable final EnumSet<MacOSSoftwareUpdateDelayPolicy> value) {

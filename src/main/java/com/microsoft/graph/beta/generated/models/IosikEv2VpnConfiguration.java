@@ -69,7 +69,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         return this.backingStore.get("clientAuthenticationType");
     }
     /**
-     * Gets the deadPeerDetectionRate property value. Determine how often to check if a peer connection is still active. . The possible values are: medium, none, low, high.
+     * Gets the deadPeerDetectionRate property value. Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
      * @return a {@link VpnDeadPeerDetectionRate}
      */
     @jakarta.annotation.Nullable
@@ -213,7 +213,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         return this.backingStore.get("serverCertificateIssuerCommonName");
     }
     /**
-     * Gets the serverCertificateType property value. The type of certificate the VPN server will present to the VPN client for authentication. The possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
+     * Gets the serverCertificateType property value. The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
      * @return a {@link VpnServerCertificateType}
      */
     @jakarta.annotation.Nullable
@@ -311,7 +311,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         this.backingStore.set("clientAuthenticationType", value);
     }
     /**
-     * Sets the deadPeerDetectionRate property value. Determine how often to check if a peer connection is still active. . The possible values are: medium, none, low, high.
+     * Sets the deadPeerDetectionRate property value. Determine how often to check if a peer connection is still active. . Possible values are: medium, none, low, high.
      * @param value Value to set for the deadPeerDetectionRate property.
      */
     public void setDeadPeerDetectionRate(@jakarta.annotation.Nullable final VpnDeadPeerDetectionRate value) {
@@ -409,7 +409,7 @@ public class IosikEv2VpnConfiguration extends IosVpnConfiguration implements Par
         this.backingStore.set("serverCertificateIssuerCommonName", value);
     }
     /**
-     * Sets the serverCertificateType property value. The type of certificate the VPN server will present to the VPN client for authentication. The possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
+     * Sets the serverCertificateType property value. The type of certificate the VPN server will present to the VPN client for authentication. Possible values are: rsa, ecdsa256, ecdsa384, ecdsa521.
      * @param value Value to set for the serverCertificateType property.
      */
     public void setServerCertificateType(@jakarta.annotation.Nullable final VpnServerCertificateType value) {

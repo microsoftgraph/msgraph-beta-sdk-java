@@ -197,7 +197,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         return this.backingStore.get("optInToDeviceIdSharing");
     }
     /**
-     * Gets the providerType property value. Provider type for per-app VPN. The possible values are: notConfigured, appProxy, packetTunnel.
+     * Gets the providerType property value. Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
      * @return a {@link VpnProviderType}
      */
     @jakarta.annotation.Nullable
@@ -387,7 +387,7 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         this.backingStore.set("optInToDeviceIdSharing", value);
     }
     /**
-     * Sets the providerType property value. Provider type for per-app VPN. The possible values are: notConfigured, appProxy, packetTunnel.
+     * Sets the providerType property value. Provider type for per-app VPN. Possible values are: notConfigured, appProxy, packetTunnel.
      * @param value Value to set for the providerType property.
      */
     public void setProviderType(@jakarta.annotation.Nullable final VpnProviderType value) {

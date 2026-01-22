@@ -59,7 +59,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
         return this.backingStore;
     }
     /**
-     * Gets the encryptionMethod property value. Select the encryption method for operating system drives. The possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+     * Gets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @return a {@link BitLockerEncryptionMethod}
      */
     @jakarta.annotation.Nullable
@@ -221,7 +221,7 @@ public class BitLockerSystemDrivePolicy implements AdditionalDataHolder, BackedM
         this.backingStore = value;
     }
     /**
-     * Sets the encryptionMethod property value. Select the encryption method for operating system drives. The possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
+     * Sets the encryptionMethod property value. Select the encryption method for operating system drives. Possible values are: aesCbc128, aesCbc256, xtsAes128, xtsAes256.
      * @param value Value to set for the encryptionMethod property.
      */
     public void setEncryptionMethod(@jakarta.annotation.Nullable final BitLockerEncryptionMethod value) {

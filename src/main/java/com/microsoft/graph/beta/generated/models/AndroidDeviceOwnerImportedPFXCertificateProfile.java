@@ -29,7 +29,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
         return new AndroidDeviceOwnerImportedPFXCertificateProfile();
     }
     /**
-     * Gets the certificateAccessType property value. Certificate access type. The possible values are: userApproval, specificApps, unknownFutureValue.
+     * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
      * @return a {@link AndroidDeviceOwnerCertificateAccessType}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class AndroidDeviceOwnerImportedPFXCertificateProfile extends AndroidDevi
         writer.writeCollectionOfObjectValues("silentCertificateAccessDetails", this.getSilentCertificateAccessDetails());
     }
     /**
-     * Sets the certificateAccessType property value. Certificate access type. The possible values are: userApproval, specificApps, unknownFutureValue.
+     * Sets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
      * @param value Value to set for the certificateAccessType property.
      */
     public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {

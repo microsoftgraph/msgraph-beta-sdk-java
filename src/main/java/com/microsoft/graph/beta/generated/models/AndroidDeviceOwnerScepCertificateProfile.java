@@ -30,7 +30,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
         return new AndroidDeviceOwnerScepCertificateProfile();
     }
     /**
-     * Gets the certificateAccessType property value. Certificate access type. The possible values are: userApproval, specificApps, unknownFutureValue.
+     * Gets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
      * @return a {@link AndroidDeviceOwnerCertificateAccessType}
      */
     @jakarta.annotation.Nullable
@@ -38,7 +38,7 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
         return this.backingStore.get("certificateAccessType");
     }
     /**
-     * Gets the certificateStore property value. Target store certificate. The possible values are: user, machine.
+     * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @return a {@link CertificateStore}
      */
     @jakarta.annotation.Nullable
@@ -157,14 +157,14 @@ public class AndroidDeviceOwnerScepCertificateProfile extends AndroidDeviceOwner
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
     }
     /**
-     * Sets the certificateAccessType property value. Certificate access type. The possible values are: userApproval, specificApps, unknownFutureValue.
+     * Sets the certificateAccessType property value. Certificate access type. Possible values are: userApproval, specificApps, unknownFutureValue.
      * @param value Value to set for the certificateAccessType property.
      */
     public void setCertificateAccessType(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateAccessType value) {
         this.backingStore.set("certificateAccessType", value);
     }
     /**
-     * Sets the certificateStore property value. Target store certificate. The possible values are: user, machine.
+     * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {

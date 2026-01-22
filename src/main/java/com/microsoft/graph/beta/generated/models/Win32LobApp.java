@@ -61,7 +61,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("allowAvailableUninstall");
     }
     /**
-     * Gets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. The possible values are: null, x86, x64, arm64. The possible values are: none, x86, x64, arm, neutral, arm64.
+     * Gets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. Possible values are: null, x86, x64, arm64. Possible values are: none, x86, x64, arm, neutral, arm64.
      * @return a {@link EnumSet<WindowsArchitecture>}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("msiInformation");
     }
     /**
-     * Gets the requirementRules property value. Indicates the requirement rules to detect Win32 Line of Business (LoB) app. The possible values are: Win32LobAppFileSystemRequirement, Win32LobAppPowerShellScriptRequirement, Win32LobAppRegistryRequirement.
+     * Gets the requirementRules property value. Indicates the requirement rules to detect Win32 Line of Business (LoB) app. Possible values are: Win32LobAppFileSystemRequirement, Win32LobAppPowerShellScriptRequirement, Win32LobAppRegistryRequirement.
      * @return a {@link java.util.List<Win32LobAppRequirement>}
      */
     @jakarta.annotation.Nullable
@@ -211,7 +211,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         return this.backingStore.get("returnCodes");
     }
     /**
-     * Gets the rules property value. Indicates the detection and requirement rules for this app. The possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
+     * Gets the rules property value. Indicates the detection and requirement rules for this app. Possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
      * @return a {@link java.util.List<Win32LobAppRule>}
      */
     @jakarta.annotation.Nullable
@@ -285,7 +285,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         this.backingStore.set("allowAvailableUninstall", value);
     }
     /**
-     * Sets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. The possible values are: null, x86, x64, arm64. The possible values are: none, x86, x64, arm, neutral, arm64.
+     * Sets the allowedArchitectures property value. Indicates the Windows architecture(s) this app should be installed on. The app will be treated as not applicable for devices with architectures not matching the selected value. When a non-null value is provided for the allowedArchitectures property, the value of the applicableArchitectures property is set to none. Possible values are: null, x86, x64, arm64. Possible values are: none, x86, x64, arm, neutral, arm64.
      * @param value Value to set for the allowedArchitectures property.
      */
     public void setAllowedArchitectures(@jakarta.annotation.Nullable final EnumSet<WindowsArchitecture> value) {
@@ -376,7 +376,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         this.backingStore.set("msiInformation", value);
     }
     /**
-     * Sets the requirementRules property value. Indicates the requirement rules to detect Win32 Line of Business (LoB) app. The possible values are: Win32LobAppFileSystemRequirement, Win32LobAppPowerShellScriptRequirement, Win32LobAppRegistryRequirement.
+     * Sets the requirementRules property value. Indicates the requirement rules to detect Win32 Line of Business (LoB) app. Possible values are: Win32LobAppFileSystemRequirement, Win32LobAppPowerShellScriptRequirement, Win32LobAppRegistryRequirement.
      * @param value Value to set for the requirementRules property.
      */
     public void setRequirementRules(@jakarta.annotation.Nullable final java.util.List<Win32LobAppRequirement> value) {
@@ -390,7 +390,7 @@ public class Win32LobApp extends MobileLobApp implements Parsable {
         this.backingStore.set("returnCodes", value);
     }
     /**
-     * Sets the rules property value. Indicates the detection and requirement rules for this app. The possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
+     * Sets the rules property value. Indicates the detection and requirement rules for this app. Possible values are: Win32LobAppFileSystemRule, Win32LobAppPowerShellScriptRule, Win32LobAppProductCodeRule, Win32LobAppRegistryRule.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final java.util.List<Win32LobAppRule> value) {

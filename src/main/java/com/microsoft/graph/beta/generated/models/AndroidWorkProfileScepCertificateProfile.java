@@ -30,7 +30,7 @@ public class AndroidWorkProfileScepCertificateProfile extends AndroidWorkProfile
         return new AndroidWorkProfileScepCertificateProfile();
     }
     /**
-     * Gets the certificateStore property value. Target store certificate. The possible values are: user, machine.
+     * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @return a {@link CertificateStore}
      */
     @jakarta.annotation.Nullable
@@ -137,7 +137,7 @@ public class AndroidWorkProfileScepCertificateProfile extends AndroidWorkProfile
         writer.writeStringValue("subjectNameFormatString", this.getSubjectNameFormatString());
     }
     /**
-     * Sets the certificateStore property value. Target store certificate. The possible values are: user, machine.
+     * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {

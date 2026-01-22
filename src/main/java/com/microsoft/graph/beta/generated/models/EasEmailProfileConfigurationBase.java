@@ -59,7 +59,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
         return deserializerMap;
     }
     /**
-     * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. The possible values are: fullDomainName, netBiosDomainName.
+     * Gets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
      * @return a {@link DomainNameSource}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
         return this.backingStore.get("userDomainNameSource");
     }
     /**
-     * Gets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. The possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
+     * Gets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
      * @return a {@link UsernameSource}
      */
     @jakarta.annotation.Nullable
@@ -102,14 +102,14 @@ public class EasEmailProfileConfigurationBase extends DeviceConfiguration implem
         this.backingStore.set("customDomainName", value);
     }
     /**
-     * Sets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. The possible values are: fullDomainName, netBiosDomainName.
+     * Sets the userDomainNameSource property value. UserDomainname attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: fullDomainName, netBiosDomainName.
      * @param value Value to set for the userDomainNameSource property.
      */
     public void setUserDomainNameSource(@jakarta.annotation.Nullable final DomainNameSource value) {
         this.backingStore.set("userDomainNameSource", value);
     }
     /**
-     * Sets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. The possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
+     * Sets the usernameAADSource property value. Name of the AAD field, that will be used to retrieve UserName for email profile. Possible values are: userPrincipalName, primarySmtpAddress, samAccountName.
      * @param value Value to set for the usernameAADSource property.
      */
     public void setUsernameAADSource(@jakarta.annotation.Nullable final UsernameSource value) {
