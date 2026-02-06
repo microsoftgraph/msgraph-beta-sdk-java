@@ -49,7 +49,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the geographicLocationType property value. The geographic location where the region is located. The possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * Gets the geographicLocationType property value. The geographic location where the region is located. The possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue, mexico. Use the Prefer: include-unknown-enum-members request header to get the following value from this evolvable enum: mexico. The default value is default. Read-only.
      * @return a {@link CloudPcGeographicLocationType}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the geographicLocationType property value. The geographic location where the region is located. The possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * Sets the geographicLocationType property value. The geographic location where the region is located. The possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue, mexico. Use the Prefer: include-unknown-enum-members request header to get the following value from this evolvable enum: mexico. The default value is default. Read-only.
      * @param value Value to set for the geographicLocationType property.
      */
     public void setGeographicLocationType(@jakarta.annotation.Nullable final CloudPcGeographicLocationType value) {

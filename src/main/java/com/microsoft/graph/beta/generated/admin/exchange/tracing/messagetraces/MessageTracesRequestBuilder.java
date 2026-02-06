@@ -66,11 +66,12 @@ public class MessageTracesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/tracing/messageTraces{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get messageTraces from admin
+     * Get a list of exchangeMessageTrace objects.
      * @return a {@link ExchangeMessageTraceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     * @see <a href="https://learn.microsoft.com/graph/api/messagetracingroot-list-messagetraces?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -78,12 +79,13 @@ public class MessageTracesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get messageTraces from admin
+     * Get a list of exchangeMessageTrace objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExchangeMessageTraceCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     * @see <a href="https://learn.microsoft.com/graph/api/messagetracingroot-list-messagetraces?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -125,7 +127,7 @@ public class MessageTracesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ExchangeMessageTrace::createFromDiscriminatorValue);
     }
     /**
-     * Get messageTraces from admin
+     * Get a list of exchangeMessageTrace objects.
      * @return a {@link RequestInformation}
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
@@ -136,7 +138,7 @@ public class MessageTracesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get messageTraces from admin
+     * Get a list of exchangeMessageTrace objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -194,7 +196,7 @@ public class MessageTracesRequestBuilder extends BaseRequestBuilder {
         return new MessageTracesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get messageTraces from admin
+     * Get a list of exchangeMessageTrace objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

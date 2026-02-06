@@ -73,7 +73,7 @@ public class TracingRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get tracing from admin
+     * Represents a container for administrative resources to trace messages.
      * @return a {@link MessageTracingRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -85,7 +85,7 @@ public class TracingRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get tracing from admin
+     * Represents a container for administrative resources to trace messages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MessageTracingRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -158,7 +158,7 @@ public class TracingRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get tracing from admin
+     * Represents a container for administrative resources to trace messages.
      * @return a {@link RequestInformation}
      * @deprecated
      * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
@@ -169,7 +169,7 @@ public class TracingRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get tracing from admin
+     * Represents a container for administrative resources to trace messages.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -233,7 +233,7 @@ public class TracingRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get tracing from admin
+     * Represents a container for administrative resources to trace messages.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

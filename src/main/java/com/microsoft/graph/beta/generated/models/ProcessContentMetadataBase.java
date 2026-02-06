@@ -37,6 +37,7 @@ public class ProcessContentMetadataBase implements AdditionalDataHolder, BackedM
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.contentActivityMetadata": return new ContentActivityMetadata();
                 case "#microsoft.graph.processConversationMetadata": return new ProcessConversationMetadata();
                 case "#microsoft.graph.processFileMetadata": return new ProcessFileMetadata();
             }

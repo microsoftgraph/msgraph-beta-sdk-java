@@ -95,7 +95,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
         return this.backingStore.get("passwordRequired");
     }
     /**
-     * Gets the passwordRequiredType property value. Type of characters in password. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Gets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @return a {@link AndroidDeviceOwnerRequiredPasswordType}
      */
     @jakarta.annotation.Nullable
@@ -178,7 +178,7 @@ public class AospDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy impl
         this.backingStore.set("passwordRequired", value);
     }
     /**
-     * Sets the passwordRequiredType property value. Type of characters in password. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Sets the passwordRequiredType property value. Type of characters in password. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {

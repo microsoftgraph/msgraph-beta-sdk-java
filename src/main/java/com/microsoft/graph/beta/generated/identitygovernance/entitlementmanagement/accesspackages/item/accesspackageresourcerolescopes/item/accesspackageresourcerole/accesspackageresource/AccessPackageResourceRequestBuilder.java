@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.identitygovernance.entitlementmanagement.access
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole.accesspackageresource.accesspackageresourceenvironment.AccessPackageResourceEnvironmentRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole.accesspackageresource.accesspackageresourceroles.AccessPackageResourceRolesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole.accesspackageresource.accesspackageresourcescopes.AccessPackageResourceScopesRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole.accesspackageresource.externaloriginresourceconnector.ExternalOriginResourceConnectorRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole.accesspackageresource.refresh.RefreshRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.accesspackages.item.accesspackageresourcerolescopes.item.accesspackageresourcerole.accesspackageresource.uploadsessions.UploadSessionsRequestBuilder;
 import com.microsoft.graph.beta.models.AccessPackageResource;
@@ -48,6 +49,14 @@ public class AccessPackageResourceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AccessPackageResourceScopesRequestBuilder accessPackageResourceScopes() {
         return new AccessPackageResourceScopesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the externalOriginResourceConnector property of the microsoft.graph.accessPackageResource entity.
+     * @return a {@link ExternalOriginResourceConnectorRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExternalOriginResourceConnectorRequestBuilder externalOriginResourceConnector() {
+        return new ExternalOriginResourceConnectorRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the refresh method.

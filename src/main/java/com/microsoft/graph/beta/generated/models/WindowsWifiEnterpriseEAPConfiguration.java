@@ -29,7 +29,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         return new WindowsWifiEnterpriseEAPConfiguration();
     }
     /**
-     * Gets the authenticationMethod property value. Specify the authentication method. The possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Gets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @return a {@link WiFiAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         return this.backingStore.get("authenticationRetryDelayPeriodInSeconds");
     }
     /**
-     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. The possible values are: none, user, machine, machineOrUser, guest.
+     * Gets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      * @return a {@link WifiAuthenticationType}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         return this.backingStore.get("identityCertificateForClientAuthentication");
     }
     /**
-     * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Gets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a {@link NonEapAuthenticationMethodForEapTtlsType}
      */
     @jakarta.annotation.Nullable
@@ -209,7 +209,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         return this.backingStore.get("maximumPreAuthenticationAttempts");
     }
     /**
-     * Gets the networkSingleSignOn property value. Specify the network single sign on type. The possible values are: disabled, prelogon, postlogon.
+     * Gets the networkSingleSignOn property value. Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
      * @return a {@link NetworkSingleSignOnType}
      */
     @jakarta.annotation.Nullable
@@ -316,7 +316,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         writer.writeBooleanValue("userBasedVirtualLan", this.getUserBasedVirtualLan());
     }
     /**
-     * Sets the authenticationMethod property value. Specify the authentication method. The possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Sets the authenticationMethod property value. Specify the authentication method. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
@@ -337,7 +337,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         this.backingStore.set("authenticationRetryDelayPeriodInSeconds", value);
     }
     /**
-     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. The possible values are: none, user, machine, machineOrUser, guest.
+     * Sets the authenticationType property value. Specify whether to authenticate the user, the device, either, or to use guest authentication (none). If youre using certificate authentication, make sure the certificate type matches the authentication type. Possible values are: none, user, machine, machineOrUser, guest.
      * @param value Value to set for the authenticationType property.
      */
     public void setAuthenticationType(@jakarta.annotation.Nullable final WifiAuthenticationType value) {
@@ -393,7 +393,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         this.backingStore.set("identityCertificateForClientAuthentication", value);
     }
     /**
-     * Sets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Sets the innerAuthenticationProtocolForEAPTTLS property value. Specify inner authentication protocol for EAP TTLS. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEAPTTLS property.
      */
     public void setInnerAuthenticationProtocolForEAPTTLS(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {
@@ -442,7 +442,7 @@ public class WindowsWifiEnterpriseEAPConfiguration extends WindowsWifiConfigurat
         this.backingStore.set("maximumPreAuthenticationAttempts", value);
     }
     /**
-     * Sets the networkSingleSignOn property value. Specify the network single sign on type. The possible values are: disabled, prelogon, postlogon.
+     * Sets the networkSingleSignOn property value. Specify the network single sign on type. Possible values are: disabled, prelogon, postlogon.
      * @param value Value to set for the networkSingleSignOn property.
      */
     public void setNetworkSingleSignOn(@jakarta.annotation.Nullable final NetworkSingleSignOnType value) {

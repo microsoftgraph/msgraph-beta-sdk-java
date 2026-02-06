@@ -41,7 +41,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the intent property value. The admin intent to apply or remove the profile. The possible values are: apply, remove.
+     * Gets the intent property value. The admin intent to apply or remove the profile. Possible values are: apply, remove.
      * @return a {@link DeviceConfigAssignmentIntent}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class DeviceConfigurationAssignment extends Entity implements Parsable {
         writer.writeObjectValue("target", this.getTarget());
     }
     /**
-     * Sets the intent property value. The admin intent to apply or remove the profile. The possible values are: apply, remove.
+     * Sets the intent property value. The admin intent to apply or remove the profile. Possible values are: apply, remove.
      * @param value Value to set for the intent property.
      */
     public void setIntent(@jakarta.annotation.Nullable final DeviceConfigAssignmentIntent value) {

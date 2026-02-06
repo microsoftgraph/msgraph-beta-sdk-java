@@ -89,7 +89,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         return this.backingStore.get("renewalThresholdPercentage");
     }
     /**
-     * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. The possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @return a {@link EnumSet<SubjectAlternativeNameType>}
      */
     @jakarta.annotation.Nullable
@@ -147,7 +147,7 @@ public class WindowsCertificateProfileBase extends DeviceConfiguration implement
         this.backingStore.set("renewalThresholdPercentage", value);
     }
     /**
-     * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. The possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
      */
     public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {

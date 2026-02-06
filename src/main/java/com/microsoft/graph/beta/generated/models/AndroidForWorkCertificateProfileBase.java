@@ -94,7 +94,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
         return this.backingStore.get("rootCertificate");
     }
     /**
-     * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. The possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Gets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @return a {@link EnumSet<SubjectAlternativeNameType>}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class AndroidForWorkCertificateProfileBase extends DeviceConfiguration im
         this.backingStore.set("rootCertificate", value);
     }
     /**
-     * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. The possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
+     * Sets the subjectAlternativeNameType property value. Certificate Subject Alternative Name Type. Possible values are: none, emailAddress, userPrincipalName, customAzureADAttribute, domainNameService, universalResourceIdentifier.
      * @param value Value to set for the subjectAlternativeNameType property.
      */
     public void setSubjectAlternativeNameType(@jakarta.annotation.Nullable final EnumSet<SubjectAlternativeNameType> value) {

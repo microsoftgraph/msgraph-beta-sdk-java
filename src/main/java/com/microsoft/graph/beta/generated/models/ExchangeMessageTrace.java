@@ -44,7 +44,7 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the fromIP property value. The fromIP property
+     * Gets the fromIP property value. The source IP address. For incoming messages, this value is the public IP address of the SMTP email server that sent the message.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         return this.backingStore.get("fromIP");
     }
     /**
-     * Gets the messageId property value. The messageId property
+     * Gets the messageId property value. The Message-ID header field of the message. The format of the Message-ID depends on the messaging server that sent the message.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -60,7 +60,7 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         return this.backingStore.get("messageId");
     }
     /**
-     * Gets the receivedDateTime property value. The receivedDateTime property
+     * Gets the receivedDateTime property value. The date and time when the message was received by Exchange Online. The timestamp is in UTC format.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -68,7 +68,7 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         return this.backingStore.get("receivedDateTime");
     }
     /**
-     * Gets the recipientAddress property value. The recipientAddress property
+     * Gets the recipientAddress property value. The SMTP email address of the user that the message was addressed to.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +76,7 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         return this.backingStore.get("recipientAddress");
     }
     /**
-     * Gets the senderAddress property value. The senderAddress property
+     * Gets the senderAddress property value. The SMTP email address of the user the message was purportedly from.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         return this.backingStore.get("senderAddress");
     }
     /**
-     * Gets the size property value. The size property
+     * Gets the size property value. The size of the message in bytes.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. The subject line of the message.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         return this.backingStore.get("subject");
     }
     /**
-     * Gets the toIP property value. The toIP property
+     * Gets the toIP property value. The destination IP address. For outgoing messages, this value is the public IP address in the resolved MX record for the destination domain. For incoming messages to Exchange Online, this value is blank.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,42 +133,42 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         writer.writeStringValue("toIP", this.getToIP());
     }
     /**
-     * Sets the fromIP property value. The fromIP property
+     * Sets the fromIP property value. The source IP address. For incoming messages, this value is the public IP address of the SMTP email server that sent the message.
      * @param value Value to set for the fromIP property.
      */
     public void setFromIP(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("fromIP", value);
     }
     /**
-     * Sets the messageId property value. The messageId property
+     * Sets the messageId property value. The Message-ID header field of the message. The format of the Message-ID depends on the messaging server that sent the message.
      * @param value Value to set for the messageId property.
      */
     public void setMessageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("messageId", value);
     }
     /**
-     * Sets the receivedDateTime property value. The receivedDateTime property
+     * Sets the receivedDateTime property value. The date and time when the message was received by Exchange Online. The timestamp is in UTC format.
      * @param value Value to set for the receivedDateTime property.
      */
     public void setReceivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("receivedDateTime", value);
     }
     /**
-     * Sets the recipientAddress property value. The recipientAddress property
+     * Sets the recipientAddress property value. The SMTP email address of the user that the message was addressed to.
      * @param value Value to set for the recipientAddress property.
      */
     public void setRecipientAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("recipientAddress", value);
     }
     /**
-     * Sets the senderAddress property value. The senderAddress property
+     * Sets the senderAddress property value. The SMTP email address of the user the message was purportedly from.
      * @param value Value to set for the senderAddress property.
      */
     public void setSenderAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("senderAddress", value);
     }
     /**
-     * Sets the size property value. The size property
+     * Sets the size property value. The size of the message in bytes.
      * @param value Value to set for the size property.
      */
     public void setSize(@jakarta.annotation.Nullable final Integer value) {
@@ -182,14 +182,14 @@ public class ExchangeMessageTrace extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. The subject line of the message.
      * @param value Value to set for the subject property.
      */
     public void setSubject(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subject", value);
     }
     /**
-     * Sets the toIP property value. The toIP property
+     * Sets the toIP property value. The destination IP address. For outgoing messages, this value is the public IP address in the resolved MX record for the destination domain. For incoming messages to Exchange Online, this value is blank.
      * @param value Value to set for the toIP property.
      */
     public void setToIP(@jakarta.annotation.Nullable final String value) {
