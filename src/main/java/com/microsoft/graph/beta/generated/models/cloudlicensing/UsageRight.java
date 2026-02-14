@@ -27,12 +27,30 @@ public class UsageRight extends Entity implements Parsable {
         return new UsageRight();
     }
     /**
+     * Gets the allotments property value. The set of allotments associated with the assignments that combine to form this usageRight.
+     * @return a {@link java.util.List<Allotment>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Allotment> getAllotments() {
+        return this.backingStore.get("allotments");
+    }
+    /**
+     * Gets the assignments property value. The set of assignments that combine to form this usageRight, including both direct assignments and assignments inherited through group membership.
+     * @return a {@link java.util.List<Assignment>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Assignment> getAssignments() {
+        return this.backingStore.get("assignments");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("allotments", (n) -> { this.setAllotments(n.getCollectionOfObjectValues(Allotment::createFromDiscriminatorValue)); });
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(Assignment::createFromDiscriminatorValue)); });
         deserializerMap.put("services", (n) -> { this.setServices(n.getCollectionOfObjectValues(Service::createFromDiscriminatorValue)); });
         deserializerMap.put("skuId", (n) -> { this.setSkuId(n.getUUIDValue()); });
         deserializerMap.put("skuPartNumber", (n) -> { this.setSkuPartNumber(n.getStringValue()); });
@@ -69,9 +87,25 @@ public class UsageRight extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("allotments", this.getAllotments());
+        writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeCollectionOfObjectValues("services", this.getServices());
         writer.writeUUIDValue("skuId", this.getSkuId());
         writer.writeStringValue("skuPartNumber", this.getSkuPartNumber());
+    }
+    /**
+     * Sets the allotments property value. The set of allotments associated with the assignments that combine to form this usageRight.
+     * @param value Value to set for the allotments property.
+     */
+    public void setAllotments(@jakarta.annotation.Nullable final java.util.List<Allotment> value) {
+        this.backingStore.set("allotments", value);
+    }
+    /**
+     * Sets the assignments property value. The set of assignments that combine to form this usageRight, including both direct assignments and assignments inherited through group membership.
+     * @param value Value to set for the assignments property.
+     */
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<Assignment> value) {
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the services property value. Information about the services associated with the usageRight. Not nullable. Read-only. Supports $filter on the planId property.

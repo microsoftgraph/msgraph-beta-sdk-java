@@ -4,7 +4,7 @@ import com.microsoft.graph.beta.models.networkaccess.Reports;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccesscrosstenantaccessreportwithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessCrossTenantAccessReportWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessdestinationreportwithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessDestinationReportWithStartDateTimeWithEndDateTimeRequestBuilder;
-import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessdevicereportwithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessdevicereportwithstartdatetimewithenddatetimediscoveredapplicationsegmentiddiscoveredapplicationsegmentid.MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessentitiessummarieswithstartdatetimewithenddatetime.MicrosoftGraphNetworkaccessEntitiesSummariesWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetapplicationusageanalyticswithstartdatetimewithenddatetimewithaggregatedby.MicrosoftGraphNetworkaccessGetApplicationUsageAnalyticsWithStartDateTimeWithEndDateTimeWithAggregatedByRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.reports.microsoftgraphnetworkaccessgetcloudapplicationreportwithstartdatetimewithenddatetimeuseriduserid.MicrosoftGraphNetworkaccessGetCloudApplicationReportWithStartDateTimeWithEndDateTimeuserIdUserIdRequestBuilder;
@@ -121,13 +121,13 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the deviceReport method.
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a {@link MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+    public MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdRequestBuilder microsoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentId(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
-        return new MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
+        return new MicrosoftGraphNetworkaccessDeviceReportWithStartDateTimeWithEndDateTimediscoveredApplicationSegmentIdDiscoveredApplicationSegmentIdRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
     }
     /**
      * Provides operations to call the entitiesSummaries method.

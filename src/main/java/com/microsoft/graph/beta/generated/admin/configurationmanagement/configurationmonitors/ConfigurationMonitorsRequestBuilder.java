@@ -60,19 +60,21 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/configurationManagement/configurationMonitors{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get configurationMonitors from admin
+     * Get a list of the configurationMonitor objects and their properties.
      * @return a {@link ConfigurationMonitorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmanagement-list-configurationmonitors?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitorCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get configurationMonitors from admin
+     * Get a list of the configurationMonitor objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationMonitorCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmanagement-list-configurationmonitors?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitorCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationMonitorCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to configurationMonitors for admin
+     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency.
      * @param body The request body
      * @return a {@link ConfigurationMonitor}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmanagement-post-configurationmonitors?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitor post(@jakarta.annotation.Nonnull final ConfigurationMonitor body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to configurationMonitors for admin
+     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationMonitor}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmanagement-post-configurationmonitors?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitor post(@jakarta.annotation.Nonnull final ConfigurationMonitor body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationMonitor::createFromDiscriminatorValue);
     }
     /**
-     * Get configurationMonitors from admin
+     * Get a list of the configurationMonitor objects and their properties.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get configurationMonitors from admin
+     * Get a list of the configurationMonitor objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to configurationMonitors for admin
+     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to configurationMonitors for admin
+     * Create a new configurationMonitor object that runs periodically in the background at a scheduled frequency.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ConfigurationMonitorsRequestBuilder extends BaseRequestBuilder {
         return new ConfigurationMonitorsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get configurationMonitors from admin
+     * Get a list of the configurationMonitor objects and their properties.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

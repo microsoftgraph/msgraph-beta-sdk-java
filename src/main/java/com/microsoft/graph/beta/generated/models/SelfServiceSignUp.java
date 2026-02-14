@@ -77,12 +77,21 @@ public class SelfServiceSignUp extends Entity implements Parsable {
         deserializerMap.put("appliedEventListeners", (n) -> { this.setAppliedEventListeners(n.getCollectionOfObjectValues(AppliedAuthenticationEventListener::createFromDiscriminatorValue)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("fraudProtectionDetails", (n) -> { this.setFraudProtectionDetails(n.getObjectValue(FraudProtectionDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("signUpIdentity", (n) -> { this.setSignUpIdentity(n.getObjectValue(SignUpIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("signUpIdentityProvider", (n) -> { this.setSignUpIdentityProvider(n.getStringValue()); });
         deserializerMap.put("signUpStage", (n) -> { this.setSignUpStage(n.getEnumValue(SignUpStage::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignUpStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the fraudProtectionDetails property value. The fraudProtectionDetails property
+     * @return a {@link FraudProtectionDetails}
+     */
+    @jakarta.annotation.Nullable
+    public FraudProtectionDetails getFraudProtectionDetails() {
+        return this.backingStore.get("fraudProtectionDetails");
     }
     /**
      * Gets the signUpIdentity property value. Unique identifier for self-service sign-up user. Supports $filter (eq) on the signUpIdentifierType.
@@ -136,6 +145,7 @@ public class SelfServiceSignUp extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("appliedEventListeners", this.getAppliedEventListeners());
         writer.writeStringValue("correlationId", this.getCorrelationId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeObjectValue("fraudProtectionDetails", this.getFraudProtectionDetails());
         writer.writeObjectValue("signUpIdentity", this.getSignUpIdentity());
         writer.writeStringValue("signUpIdentityProvider", this.getSignUpIdentityProvider());
         writer.writeEnumValue("signUpStage", this.getSignUpStage());
@@ -176,6 +186,13 @@ public class SelfServiceSignUp extends Entity implements Parsable {
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the fraudProtectionDetails property value. The fraudProtectionDetails property
+     * @param value Value to set for the fraudProtectionDetails property.
+     */
+    public void setFraudProtectionDetails(@jakarta.annotation.Nullable final FraudProtectionDetails value) {
+        this.backingStore.set("fraudProtectionDetails", value);
     }
     /**
      * Sets the signUpIdentity property value. Unique identifier for self-service sign-up user. Supports $filter (eq) on the signUpIdentifierType.

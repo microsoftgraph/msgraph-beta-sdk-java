@@ -10,7 +10,8 @@ public enum RemediationAction implements ValuedEnum {
     HardDelete("hardDelete"),
     SoftDelete("softDelete"),
     MoveToDeletedItems("moveToDeletedItems"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    MoveToQuarantine("moveToQuarantine");
     public final String value;
     RemediationAction(final String value) {
         this.value = value;
@@ -27,6 +28,7 @@ public enum RemediationAction implements ValuedEnum {
             case "softDelete": return SoftDelete;
             case "moveToDeletedItems": return MoveToDeletedItems;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "moveToQuarantine": return MoveToQuarantine;
             default: return null;
         }
     }

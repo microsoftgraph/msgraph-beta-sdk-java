@@ -55,19 +55,21 @@ public class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequest
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get configurationMonitoringResults from admin
+     * Read the properties and relationships of a configurationMonitoringResult object.
      * @return a {@link ConfigurationMonitoringResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmonitoringresult-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitoringResult get() {
         return get(null);
     }
     /**
-     * Get configurationMonitoringResults from admin
+     * Read the properties and relationships of a configurationMonitoringResult object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationMonitoringResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmonitoringresult-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitoringResult get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Get configurationMonitoringResults from admin
+     * Read the properties and relationships of a configurationMonitoringResult object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequest
         return toGetRequestInformation(null);
     }
     /**
-     * Get configurationMonitoringResults from admin
+     * Read the properties and relationships of a configurationMonitoringResult object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class ConfigurationMonitoringResultItemRequestBuilder extends BaseRequest
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get configurationMonitoringResults from admin
+     * Read the properties and relationships of a configurationMonitoringResult object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

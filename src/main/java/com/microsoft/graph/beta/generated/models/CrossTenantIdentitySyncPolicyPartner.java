@@ -56,7 +56,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         return deserializerMap;
     }
     /**
-     * Gets the groupSyncInbound property value. The groupSyncInbound property
+     * Gets the groupSyncInbound property value. Defines whether groups can be synchronized from a partner tenant. Key.
      * @return a {@link CrossTenantGroupSyncInbound}
      */
     @jakarta.annotation.Nullable
@@ -107,7 +107,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         this.backingStore.set("externalCloudAuthorizedApplicationId", value);
     }
     /**
-     * Sets the groupSyncInbound property value. The groupSyncInbound property
+     * Sets the groupSyncInbound property value. Defines whether groups can be synchronized from a partner tenant. Key.
      * @param value Value to set for the groupSyncInbound property.
      */
     public void setGroupSyncInbound(@jakarta.annotation.Nullable final CrossTenantGroupSyncInbound value) {

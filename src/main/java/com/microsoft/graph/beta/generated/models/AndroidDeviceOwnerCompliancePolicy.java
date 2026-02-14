@@ -29,7 +29,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         return new AndroidDeviceOwnerCompliancePolicy();
     }
     /**
-     * Gets the advancedThreatProtectionRequiredSecurityLevel property value. Indicates the Microsoft Defender for Endpoint (also referred to Microsoft Defender Advanced Threat Protection (MDATP)) minimum risk level to report noncompliance. The possible values are: unavailable, secured, low, medium, high, notSet. The possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the advancedThreatProtectionRequiredSecurityLevel property value. Indicates the Microsoft Defender for Endpoint (also referred to Microsoft Defender Advanced Threat Protection (MDATP)) minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. Possible values are: unavailable, secured, low, medium, high, notSet.
      * @return a {@link DeviceThreatProtectionLevel}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         return this.backingStore.get("deviceThreatProtectionEnabled");
     }
     /**
-     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Indicates the minimum mobile threat protection risk level to that results in Intune reporting device noncompliance. The possible values are: unavailable, secured, low, medium, high, notSet. The possible values are: unavailable, secured, low, medium, high, notSet.
+     * Gets the deviceThreatProtectionRequiredSecurityLevel property value. Indicates the minimum mobile threat protection risk level to that results in Intune reporting device noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. Possible values are: unavailable, secured, low, medium, high, notSet.
      * @return a {@link DeviceThreatProtectionLevel}
      */
     @jakarta.annotation.Nullable
@@ -199,7 +199,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         return this.backingStore.get("passwordRequired");
     }
     /**
-     * Gets the passwordRequiredType property value. Indicates the password complexity requirement for the device to be marked compliant. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Gets the passwordRequiredType property value. Indicates the password complexity requirement for the device to be marked compliant. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @return a {@link AndroidDeviceOwnerRequiredPasswordType}
      */
     @jakarta.annotation.Nullable
@@ -223,7 +223,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         return this.backingStore.get("securityBlockJailbrokenDevices");
     }
     /**
-     * Gets the securityRequiredAndroidSafetyNetEvaluationType property value. Indicates the types of measurements and reference data used to evaluate the device SafetyNet evaluation. Evaluation is completed on the device to assess device integrity based on checks defined by Android and built into the device hardware, for example, compromised OS version or root detection. The possible values are: basic, hardwareBacked, with default value of basic. The possible values are: basic, hardwareBacked.
+     * Gets the securityRequiredAndroidSafetyNetEvaluationType property value. Indicates the types of measurements and reference data used to evaluate the device SafetyNet evaluation. Evaluation is completed on the device to assess device integrity based on checks defined by Android and built into the device hardware, for example, compromised OS version or root detection. Possible values are: basic, hardwareBacked, with default value of basic. Possible values are: basic, hardwareBacked.
      * @return a {@link AndroidSafetyNetEvaluationType}
      */
     @jakarta.annotation.Nullable
@@ -296,7 +296,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         writer.writeBooleanValue("storageRequireEncryption", this.getStorageRequireEncryption());
     }
     /**
-     * Sets the advancedThreatProtectionRequiredSecurityLevel property value. Indicates the Microsoft Defender for Endpoint (also referred to Microsoft Defender Advanced Threat Protection (MDATP)) minimum risk level to report noncompliance. The possible values are: unavailable, secured, low, medium, high, notSet. The possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the advancedThreatProtectionRequiredSecurityLevel property value. Indicates the Microsoft Defender for Endpoint (also referred to Microsoft Defender Advanced Threat Protection (MDATP)) minimum risk level to report noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. Possible values are: unavailable, secured, low, medium, high, notSet.
      * @param value Value to set for the advancedThreatProtectionRequiredSecurityLevel property.
      */
     public void setAdvancedThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
@@ -310,7 +310,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         this.backingStore.set("deviceThreatProtectionEnabled", value);
     }
     /**
-     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Indicates the minimum mobile threat protection risk level to that results in Intune reporting device noncompliance. The possible values are: unavailable, secured, low, medium, high, notSet. The possible values are: unavailable, secured, low, medium, high, notSet.
+     * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Indicates the minimum mobile threat protection risk level to that results in Intune reporting device noncompliance. Possible values are: unavailable, secured, low, medium, high, notSet. Possible values are: unavailable, secured, low, medium, high, notSet.
      * @param value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
      */
     public void setDeviceThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
@@ -415,7 +415,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         this.backingStore.set("passwordRequired", value);
     }
     /**
-     * Sets the passwordRequiredType property value. Indicates the password complexity requirement for the device to be marked compliant. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Sets the passwordRequiredType property value. Indicates the password complexity requirement for the device to be marked compliant. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {
@@ -436,7 +436,7 @@ public class AndroidDeviceOwnerCompliancePolicy extends DeviceCompliancePolicy i
         this.backingStore.set("securityBlockJailbrokenDevices", value);
     }
     /**
-     * Sets the securityRequiredAndroidSafetyNetEvaluationType property value. Indicates the types of measurements and reference data used to evaluate the device SafetyNet evaluation. Evaluation is completed on the device to assess device integrity based on checks defined by Android and built into the device hardware, for example, compromised OS version or root detection. The possible values are: basic, hardwareBacked, with default value of basic. The possible values are: basic, hardwareBacked.
+     * Sets the securityRequiredAndroidSafetyNetEvaluationType property value. Indicates the types of measurements and reference data used to evaluate the device SafetyNet evaluation. Evaluation is completed on the device to assess device integrity based on checks defined by Android and built into the device hardware, for example, compromised OS version or root detection. Possible values are: basic, hardwareBacked, with default value of basic. Possible values are: basic, hardwareBacked.
      * @param value Value to set for the securityRequiredAndroidSafetyNetEvaluationType property.
      */
     public void setSecurityRequiredAndroidSafetyNetEvaluationType(@jakarta.annotation.Nullable final AndroidSafetyNetEvaluationType value) {

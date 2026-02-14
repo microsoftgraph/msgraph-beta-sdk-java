@@ -78,7 +78,7 @@ public class UserAssignmentsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/teams/policy/userAssignments{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      * @return a {@link TeamsPolicyUserAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -87,7 +87,7 @@ public class UserAssignmentsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsPolicyUserAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -125,7 +125,7 @@ public class UserAssignmentsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamsPolicyUserAssignment::createFromDiscriminatorValue);
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -133,7 +133,7 @@ public class UserAssignmentsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -179,7 +179,7 @@ public class UserAssignmentsRequestBuilder extends BaseRequestBuilder {
         return new UserAssignmentsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

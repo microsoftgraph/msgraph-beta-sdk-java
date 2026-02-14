@@ -64,7 +64,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Bac
         return this.backingStore;
     }
     /**
-     * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
+     * Gets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue, riskRemediation. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: riskRemediation.
      * @return a {@link java.util.List<ConditionalAccessGrantControl>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Bac
         return this.backingStore.get("builtInControls");
     }
     /**
-     * Gets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
+     * Gets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -155,14 +155,14 @@ public class ConditionalAccessGrantControls implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
-     * Sets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue.
+     * Sets the builtInControls property value. List of values of built-in controls required by the policy. Possible values: block, mfa, compliantDevice, domainJoinedDevice, approvedApplication, compliantApplication, passwordChange, unknownFutureValue, riskRemediation. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: riskRemediation.
      * @param value Value to set for the builtInControls property.
      */
     public void setBuiltInControls(@jakarta.annotation.Nullable final java.util.List<ConditionalAccessGrantControl> value) {
         this.backingStore.set("builtInControls", value);
     }
     /**
-     * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. To learn more about custom control, see Custom controls (preview).
+     * Sets the customAuthenticationFactors property value. List of custom controls IDs required by the policy. For more information, see Custom controls.
      * @param value Value to set for the customAuthenticationFactors property.
      */
     public void setCustomAuthenticationFactors(@jakarta.annotation.Nullable final java.util.List<String> value) {

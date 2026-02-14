@@ -26,7 +26,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return new ConfigurationDrift();
     }
     /**
-     * Gets the baselineResourceDisplayName property value. The baselineResourceDisplayName property
+     * Gets the baselineResourceDisplayName property value. Resource instance for which the drift is detected.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return this.backingStore.get("baselineResourceDisplayName");
     }
     /**
-     * Gets the driftedProperties property value. The driftedProperties property
+     * Gets the driftedProperties property value. Properties within one or more resource instances in which drift is detected.
      * @return a {@link java.util.List<DriftedProperty>}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstReportedDateTime property value. The firstReportedDateTime property
+     * Gets the firstReportedDateTime property value. The date and time at which drift is first detected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return this.backingStore.get("firstReportedDateTime");
     }
     /**
-     * Gets the monitorId property value. The monitorId property
+     * Gets the monitorId property value. Globally unique identifier (GUID) of the monitor. System-generated.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return this.backingStore.get("resourceInstanceIdentifier");
     }
     /**
-     * Gets the resourceType property value. The resourceType property
+     * Gets the resourceType property value. Resource for which the drift is detected.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -117,28 +117,28 @@ public class ConfigurationDrift extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the baselineResourceDisplayName property value. The baselineResourceDisplayName property
+     * Sets the baselineResourceDisplayName property value. Resource instance for which the drift is detected.
      * @param value Value to set for the baselineResourceDisplayName property.
      */
     public void setBaselineResourceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("baselineResourceDisplayName", value);
     }
     /**
-     * Sets the driftedProperties property value. The driftedProperties property
+     * Sets the driftedProperties property value. Properties within one or more resource instances in which drift is detected.
      * @param value Value to set for the driftedProperties property.
      */
     public void setDriftedProperties(@jakarta.annotation.Nullable final java.util.List<DriftedProperty> value) {
         this.backingStore.set("driftedProperties", value);
     }
     /**
-     * Sets the firstReportedDateTime property value. The firstReportedDateTime property
+     * Sets the firstReportedDateTime property value. The date and time at which drift is first detected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the firstReportedDateTime property.
      */
     public void setFirstReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("firstReportedDateTime", value);
     }
     /**
-     * Sets the monitorId property value. The monitorId property
+     * Sets the monitorId property value. Globally unique identifier (GUID) of the monitor. System-generated.
      * @param value Value to set for the monitorId property.
      */
     public void setMonitorId(@jakarta.annotation.Nullable final String value) {
@@ -152,7 +152,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         this.backingStore.set("resourceInstanceIdentifier", value);
     }
     /**
-     * Sets the resourceType property value. The resourceType property
+     * Sets the resourceType property value. Resource for which the drift is detected.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

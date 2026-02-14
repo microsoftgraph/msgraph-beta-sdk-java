@@ -18,6 +18,7 @@ import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.assignm
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.availableaccesspackages.AvailableAccessPackagesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.connectedorganizations.ConnectedOrganizationsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.controlconfigurations.ControlConfigurationsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.externaloriginresourceconnectors.ExternalOriginResourceConnectorsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.subjects.SubjectsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.entitlementmanagement.subjectswithobjectid.SubjectsWithObjectIdRequestBuilder;
@@ -168,6 +169,14 @@ public class EntitlementManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ControlConfigurationsRequestBuilder controlConfigurations() {
         return new ControlConfigurationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the externalOriginResourceConnectors property of the microsoft.graph.entitlementManagement entity.
+     * @return a {@link ExternalOriginResourceConnectorsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExternalOriginResourceConnectorsRequestBuilder externalOriginResourceConnectors() {
+        return new ExternalOriginResourceConnectorsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the settings property of the microsoft.graph.entitlementManagement entity.

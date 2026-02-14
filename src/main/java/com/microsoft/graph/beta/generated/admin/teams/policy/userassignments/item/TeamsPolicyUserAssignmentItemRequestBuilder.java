@@ -55,7 +55,7 @@ public class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuil
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      * @return a {@link TeamsPolicyUserAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamsPolicyUserAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuil
         return requestInfo;
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class TeamsPolicyUserAssignmentItemRequestBuilder extends BaseRequestBuil
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Navigation property to the collection of user policy assignments.
+     * The collection of user policy assignments.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

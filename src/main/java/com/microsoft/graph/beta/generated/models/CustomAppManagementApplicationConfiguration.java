@@ -69,10 +69,11 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("audiences", (n) -> { this.setAudiences(n.getObjectValue(AudiencesConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("identifierUris", (n) -> { this.setIdentifierUris(n.getObjectValue(IdentifierUriConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("redirectUris", (n) -> { this.setRedirectUris(n.getObjectValue(RedirectUriConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -92,6 +93,14 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the redirectUris property value. The redirectUris property
+     * @return a {@link RedirectUriConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public RedirectUriConfiguration getRedirectUris() {
+        return this.backingStore.get("redirectUris");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -100,6 +109,7 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
         writer.writeObjectValue("audiences", this.getAudiences());
         writer.writeObjectValue("identifierUris", this.getIdentifierUris());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeObjectValue("redirectUris", this.getRedirectUris());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -137,5 +147,12 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the redirectUris property value. The redirectUris property
+     * @param value Value to set for the redirectUris property.
+     */
+    public void setRedirectUris(@jakarta.annotation.Nullable final RedirectUriConfiguration value) {
+        this.backingStore.set("redirectUris", value);
     }
 }

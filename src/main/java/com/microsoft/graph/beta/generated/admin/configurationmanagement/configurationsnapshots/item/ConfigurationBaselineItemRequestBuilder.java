@@ -55,7 +55,7 @@ public class ConfigurationBaselineItemRequestBuilder extends BaseRequestBuilder 
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get configurationSnapshots from admin
+     * A container for configuration snapshot baselines.
      * @return a {@link ConfigurationBaseline}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class ConfigurationBaselineItemRequestBuilder extends BaseRequestBuilder 
         return get(null);
     }
     /**
-     * Get configurationSnapshots from admin
+     * A container for configuration snapshot baselines.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationBaseline}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class ConfigurationBaselineItemRequestBuilder extends BaseRequestBuilder 
         return requestInfo;
     }
     /**
-     * Get configurationSnapshots from admin
+     * A container for configuration snapshot baselines.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class ConfigurationBaselineItemRequestBuilder extends BaseRequestBuilder 
         return toGetRequestInformation(null);
     }
     /**
-     * Get configurationSnapshots from admin
+     * A container for configuration snapshot baselines.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class ConfigurationBaselineItemRequestBuilder extends BaseRequestBuilder 
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get configurationSnapshots from admin
+     * A container for configuration snapshot baselines.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

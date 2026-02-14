@@ -17,7 +17,9 @@ public enum CloudPcDeviceImageErrorCode implements ValuedEnum {
     SourceImageSizeExceedsLimitation("sourceImageSizeExceedsLimitation"),
     SourceImageWithDataDiskNotSupported("sourceImageWithDataDiskNotSupported"),
     SourceImageWithDiskEncryptionSetNotSupported("sourceImageWithDiskEncryptionSetNotSupported"),
-    SourceImageWithAzureDiskEncryptionNotSupported("sourceImageWithAzureDiskEncryptionNotSupported");
+    SourceImageWithAzureDiskEncryptionNotSupported("sourceImageWithAzureDiskEncryptionNotSupported"),
+    FSLogixInstalledSourceImageNotSupported("fSLogixInstalledSourceImageNotSupported"),
+    StartMenuAppLimitExceeded("startMenuAppLimitExceeded");
     public final String value;
     CloudPcDeviceImageErrorCode(final String value) {
         this.value = value;
@@ -41,6 +43,8 @@ public enum CloudPcDeviceImageErrorCode implements ValuedEnum {
             case "sourceImageWithDataDiskNotSupported": return SourceImageWithDataDiskNotSupported;
             case "sourceImageWithDiskEncryptionSetNotSupported": return SourceImageWithDiskEncryptionSetNotSupported;
             case "sourceImageWithAzureDiskEncryptionNotSupported": return SourceImageWithAzureDiskEncryptionNotSupported;
+            case "fSLogixInstalledSourceImageNotSupported": return FSLogixInstalledSourceImageNotSupported;
+            case "startMenuAppLimitExceeded": return StartMenuAppLimitExceeded;
             default: return null;
         }
     }

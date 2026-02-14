@@ -36,7 +36,7 @@ public class TeamsPolicyAssignment extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the userAssignments property value. Navigation property to the collection of user policy assignments.
+     * Gets the userAssignments property value. The collection of user policy assignments.
      * @return a {@link java.util.List<TeamsPolicyUserAssignment>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class TeamsPolicyAssignment extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("userAssignments", this.getUserAssignments());
     }
     /**
-     * Sets the userAssignments property value. Navigation property to the collection of user policy assignments.
+     * Sets the userAssignments property value. The collection of user policy assignments.
      * @param value Value to set for the userAssignments property.
      */
     public void setUserAssignments(@jakarta.annotation.Nullable final java.util.List<TeamsPolicyUserAssignment> value) {

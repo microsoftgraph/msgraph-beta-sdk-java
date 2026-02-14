@@ -56,7 +56,7 @@ public class ErrorDetail implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore;
     }
     /**
-     * Gets the errorMessage property value. The errorMessage property
+     * Gets the errorMessage property value. The message that describes the error to help the admin take action.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class ErrorDetail implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the resourceInstanceName property value. The resourceInstanceName property
+     * Gets the resourceInstanceName property value. The resource type identifier.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ErrorDetail implements AdditionalDataHolder, BackedModel, Parsable 
         return this.backingStore.get("resourceInstanceName");
     }
     /**
-     * Gets the resourceType property value. The resourceType property
+     * Gets the resourceType property value. Name of the resource type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class ErrorDetail implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore = value;
     }
     /**
-     * Sets the errorMessage property value. The errorMessage property
+     * Sets the errorMessage property value. The message that describes the error to help the admin take action.
      * @param value Value to set for the errorMessage property.
      */
     public void setErrorMessage(@jakarta.annotation.Nullable final String value) {
@@ -139,14 +139,14 @@ public class ErrorDetail implements AdditionalDataHolder, BackedModel, Parsable 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the resourceInstanceName property value. The resourceInstanceName property
+     * Sets the resourceInstanceName property value. The resource type identifier.
      * @param value Value to set for the resourceInstanceName property.
      */
     public void setResourceInstanceName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceInstanceName", value);
     }
     /**
-     * Sets the resourceType property value. The resourceType property
+     * Sets the resourceType property value. Name of the resource type.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {

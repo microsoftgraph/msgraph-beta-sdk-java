@@ -53,7 +53,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
         return this.backingStore.get("durationOfEmailToSync");
     }
     /**
-     * Gets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. The possible values are: userPrincipalName, primarySmtpAddress.
+     * Gets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
      * @return a {@link UserEmailSource}
      */
     @jakarta.annotation.Nullable
@@ -166,7 +166,7 @@ public class WindowsPhoneEASEmailProfileConfiguration extends EasEmailProfileCon
         this.backingStore.set("durationOfEmailToSync", value);
     }
     /**
-     * Sets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. The possible values are: userPrincipalName, primarySmtpAddress.
+     * Sets the emailAddressSource property value. Email attribute that is picked from AAD and injected into this profile before installing on the device. Possible values are: userPrincipalName, primarySmtpAddress.
      * @param value Value to set for the emailAddressSource property.
      */
     public void setEmailAddressSource(@jakarta.annotation.Nullable final UserEmailSource value) {

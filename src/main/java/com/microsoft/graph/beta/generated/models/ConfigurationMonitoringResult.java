@@ -26,7 +26,7 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         return new ConfigurationMonitoringResult();
     }
     /**
-     * Gets the driftsCount property value. The driftsCount property
+     * Gets the driftsCount property value. Number of drifts observed during a monitor run.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -34,15 +34,7 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         return this.backingStore.get("driftsCount");
     }
     /**
-     * Gets the driftsFixed property value. The driftsFixed property
-     * @return a {@link Integer}
-     */
-    @jakarta.annotation.Nullable
-    public Integer getDriftsFixed() {
-        return this.backingStore.get("driftsFixed");
-    }
-    /**
-     * Gets the errorDetails property value. The errorDetails property
+     * Gets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity.
      * @return a {@link java.util.List<ErrorDetail>}
      */
     @jakarta.annotation.Nullable
@@ -57,18 +49,16 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("driftsCount", (n) -> { this.setDriftsCount(n.getIntegerValue()); });
-        deserializerMap.put("driftsFixed", (n) -> { this.setDriftsFixed(n.getIntegerValue()); });
         deserializerMap.put("errorDetails", (n) -> { this.setErrorDetails(n.getCollectionOfObjectValues(ErrorDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("monitorId", (n) -> { this.setMonitorId(n.getStringValue()); });
         deserializerMap.put("runCompletionDateTime", (n) -> { this.setRunCompletionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("runInitiationDateTime", (n) -> { this.setRunInitiationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("runStatus", (n) -> { this.setRunStatus(n.getEnumValue(MonitorRunStatus::forValue)); });
-        deserializerMap.put("runType", (n) -> { this.setRunType(n.getEnumValue(MonitorRunType::forValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the monitorId property value. The monitorId property
+     * Gets the monitorId property value. Globally unique identifier (GUID) of the monitor. System-generated.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,7 +66,7 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         return this.backingStore.get("monitorId");
     }
     /**
-     * Gets the runCompletionDateTime property value. The runCompletionDateTime property
+     * Gets the runCompletionDateTime property value. Date and time at which the monitor run completed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +74,7 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         return this.backingStore.get("runCompletionDateTime");
     }
     /**
-     * Gets the runInitiationDateTime property value. The runInitiationDateTime property
+     * Gets the runInitiationDateTime property value. Date and time at which the monitor run initiated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -100,15 +90,7 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         return this.backingStore.get("runStatus");
     }
     /**
-     * Gets the runType property value. The runType property
-     * @return a {@link MonitorRunType}
-     */
-    @jakarta.annotation.Nullable
-    public MonitorRunType getRunType() {
-        return this.backingStore.get("runType");
-    }
-    /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -123,45 +105,37 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("runStatus", this.getRunStatus());
-        writer.writeEnumValue("runType", this.getRunType());
     }
     /**
-     * Sets the driftsCount property value. The driftsCount property
+     * Sets the driftsCount property value. Number of drifts observed during a monitor run.
      * @param value Value to set for the driftsCount property.
      */
     public void setDriftsCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("driftsCount", value);
     }
     /**
-     * Sets the driftsFixed property value. The driftsFixed property
-     * @param value Value to set for the driftsFixed property.
-     */
-    public void setDriftsFixed(@jakarta.annotation.Nullable final Integer value) {
-        this.backingStore.set("driftsFixed", value);
-    }
-    /**
-     * Sets the errorDetails property value. The errorDetails property
+     * Sets the errorDetails property value. All the error details that prevent the monitor from running successfully. The error details are a contained entity.
      * @param value Value to set for the errorDetails property.
      */
     public void setErrorDetails(@jakarta.annotation.Nullable final java.util.List<ErrorDetail> value) {
         this.backingStore.set("errorDetails", value);
     }
     /**
-     * Sets the monitorId property value. The monitorId property
+     * Sets the monitorId property value. Globally unique identifier (GUID) of the monitor. System-generated.
      * @param value Value to set for the monitorId property.
      */
     public void setMonitorId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("monitorId", value);
     }
     /**
-     * Sets the runCompletionDateTime property value. The runCompletionDateTime property
+     * Sets the runCompletionDateTime property value. Date and time at which the monitor run completed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the runCompletionDateTime property.
      */
     public void setRunCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("runCompletionDateTime", value);
     }
     /**
-     * Sets the runInitiationDateTime property value. The runInitiationDateTime property
+     * Sets the runInitiationDateTime property value. Date and time at which the monitor run initiated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the runInitiationDateTime property.
      */
     public void setRunInitiationDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -175,14 +149,7 @@ public class ConfigurationMonitoringResult extends Entity implements Parsable {
         this.backingStore.set("runStatus", value);
     }
     /**
-     * Sets the runType property value. The runType property
-     * @param value Value to set for the runType property.
-     */
-    public void setRunType(@jakarta.annotation.Nullable final MonitorRunType value) {
-        this.backingStore.set("runType", value);
-    }
-    /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

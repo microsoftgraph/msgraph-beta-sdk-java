@@ -52,7 +52,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this.backingStore.get("connectWhenNetworkNameIsHidden");
     }
     /**
-     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. The possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @return a {@link AppleDeploymentChannel}
      */
     @jakarta.annotation.Nullable
@@ -177,7 +177,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         this.backingStore.set("connectWhenNetworkNameIsHidden", value);
     }
     /**
-     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. The possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @param value Value to set for the deploymentChannel property.
      */
     public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {

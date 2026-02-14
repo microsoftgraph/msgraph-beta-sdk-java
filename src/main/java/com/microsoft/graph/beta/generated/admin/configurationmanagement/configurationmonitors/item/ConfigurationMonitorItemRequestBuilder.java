@@ -46,16 +46,18 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/configurationManagement/configurationMonitors/{configurationMonitor%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property configurationMonitors for admin
+     * Delete a configurationMonitor object permanently. When deleted, the configurationMonitor data can&apos;t be restored.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmonitor-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property configurationMonitors for admin
+     * Delete a configurationMonitor object permanently. When deleted, the configurationMonitor data can&apos;t be restored.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmonitor-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,19 +66,21 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get configurationMonitors from admin
+     * Get the properties and relationships of a configurationMonitor object.
      * @return a {@link ConfigurationMonitor}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmonitor-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitor get() {
         return get(null);
     }
     /**
-     * Get configurationMonitors from admin
+     * Get the properties and relationships of a configurationMonitor object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationMonitor}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmonitor-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitor get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -86,21 +90,23 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationMonitor::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property configurationMonitors in admin
+     * Update the properties of a configurationMonitor object, including the monitor name, description, and baseline. You must provide the full monitor body when you call this API.
      * @param body The request body
      * @return a {@link ConfigurationMonitor}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmonitor-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitor patch(@jakarta.annotation.Nonnull final ConfigurationMonitor body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property configurationMonitors in admin
+     * Update the properties of a configurationMonitor object, including the monitor name, description, and baseline. You must provide the full monitor body when you call this API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationMonitor}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationmonitor-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationMonitor patch(@jakarta.annotation.Nonnull final ConfigurationMonitor body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -111,7 +117,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationMonitor::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property configurationMonitors for admin
+     * Delete a configurationMonitor object permanently. When deleted, the configurationMonitor data can&apos;t be restored.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +125,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property configurationMonitors for admin
+     * Delete a configurationMonitor object permanently. When deleted, the configurationMonitor data can&apos;t be restored.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +137,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get configurationMonitors from admin
+     * Get the properties and relationships of a configurationMonitor object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +145,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get configurationMonitors from admin
+     * Get the properties and relationships of a configurationMonitor object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -151,7 +157,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the navigation property configurationMonitors in admin
+     * Update the properties of a configurationMonitor object, including the monitor name, description, and baseline. You must provide the full monitor body when you call this API.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -160,7 +166,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property configurationMonitors in admin
+     * Update the properties of a configurationMonitor object, including the monitor name, description, and baseline. You must provide the full monitor body when you call this API.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -191,7 +197,7 @@ public class ConfigurationMonitorItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get configurationMonitors from admin
+     * Get the properties and relationships of a configurationMonitor object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

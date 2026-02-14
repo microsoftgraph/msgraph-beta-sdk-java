@@ -56,7 +56,7 @@ public class BaselineResource implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore;
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Unique name of the resource.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class BaselineResource implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("properties");
     }
     /**
-     * Gets the resourceType property value. The resourceType property
+     * Gets the resourceType property value. Name of the resource type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class BaselineResource implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Unique name of the resource.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -149,7 +149,7 @@ public class BaselineResource implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("properties", value);
     }
     /**
-     * Sets the resourceType property value. The resourceType property
+     * Sets the resourceType property value. Name of the resource type.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {

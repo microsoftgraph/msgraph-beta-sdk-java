@@ -771,7 +771,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("visibility");
     }
     /**
-     * Gets the welcomeMessageEnabled property value. The welcomeMessageEnabled property
+     * Gets the welcomeMessageEnabled property value. Indicates whether a welcome message is sent to new members when they are added to the group. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1445,7 +1445,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("visibility", value);
     }
     /**
-     * Sets the welcomeMessageEnabled property value. The welcomeMessageEnabled property
+     * Sets the welcomeMessageEnabled property value. Indicates whether a welcome message is sent to new members when they are added to the group. The default value is true. Returned only on $select. Supported only on the Get group API (GET /groups/{ID}).
      * @param value Value to set for the welcomeMessageEnabled property.
      */
     public void setWelcomeMessageEnabled(@jakarta.annotation.Nullable final Boolean value) {

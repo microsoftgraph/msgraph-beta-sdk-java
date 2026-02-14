@@ -56,6 +56,14 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
         return this.backingStore;
     }
     /**
+     * Gets the category property value. The category property
+     * @return a {@link CloudPcSourceImageCategory}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcSourceImageCategory getCategory() {
+        return this.backingStore.get("category");
+    }
+    /**
      * Gets the displayName property value. The display name for the source image. Read-only.
      * @return a {@link String}
      */
@@ -69,7 +77,8 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(CloudPcSourceImageCategory::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -124,6 +133,7 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("category", this.getCategory());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("id", this.getId());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -146,6 +156,13 @@ public class CloudPcSourceDeviceImage implements AdditionalDataHolder, BackedMod
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the category property value. The category property
+     * @param value Value to set for the category property.
+     */
+    public void setCategory(@jakarta.annotation.Nullable final CloudPcSourceImageCategory value) {
+        this.backingStore.set("category", value);
     }
     /**
      * Sets the displayName property value. The display name for the source image. Read-only.

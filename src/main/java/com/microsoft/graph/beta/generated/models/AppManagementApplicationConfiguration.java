@@ -42,6 +42,7 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audiences", (n) -> { this.setAudiences(n.getObjectValue(AudiencesConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("identifierUris", (n) -> { this.setIdentifierUris(n.getObjectValue(IdentifierUriConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("redirectUris", (n) -> { this.setRedirectUris(n.getObjectValue(RedirectUriConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -53,6 +54,14 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
         return this.backingStore.get("identifierUris");
     }
     /**
+     * Gets the redirectUris property value. The redirectUris property
+     * @return a {@link RedirectUriConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public RedirectUriConfiguration getRedirectUris() {
+        return this.backingStore.get("redirectUris");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -61,6 +70,7 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
         super.serialize(writer);
         writer.writeObjectValue("audiences", this.getAudiences());
         writer.writeObjectValue("identifierUris", this.getIdentifierUris());
+        writer.writeObjectValue("redirectUris", this.getRedirectUris());
     }
     /**
      * Sets the audiences property value. Property to restrict creation or update of apps based on their target signInAudience types.
@@ -75,5 +85,12 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
      */
     public void setIdentifierUris(@jakarta.annotation.Nullable final IdentifierUriConfiguration value) {
         this.backingStore.set("identifierUris", value);
+    }
+    /**
+     * Sets the redirectUris property value. The redirectUris property
+     * @param value Value to set for the redirectUris property.
+     */
+    public void setRedirectUris(@jakarta.annotation.Nullable final RedirectUriConfiguration value) {
+        this.backingStore.set("redirectUris", value);
     }
 }

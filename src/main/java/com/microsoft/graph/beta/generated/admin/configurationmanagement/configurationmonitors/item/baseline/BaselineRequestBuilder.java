@@ -55,19 +55,21 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get baseline from admin
+     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
      * @return a {@link ConfigurationBaseline}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationbaseline-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationBaseline get() {
         return get(null);
     }
     /**
-     * Get baseline from admin
+     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationBaseline}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationbaseline-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationBaseline get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -122,7 +124,7 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get baseline from admin
+     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +132,7 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get baseline from admin
+     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +184,7 @@ public class BaselineRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get baseline from admin
+     * Read the properties and relationships of a configurationBaseline object that is attached to a specific monitor.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

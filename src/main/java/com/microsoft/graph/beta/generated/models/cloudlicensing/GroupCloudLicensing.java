@@ -48,6 +48,14 @@ public class GroupCloudLicensing implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
+     * Gets the assignments property value. The assignments property
+     * @return a {@link java.util.List<Assignment>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Assignment> getAssignments() {
+        return this.backingStore.get("assignments");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -61,7 +69,8 @@ public class GroupCloudLicensing implements AdditionalDataHolder, BackedModel, P
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        deserializerMap.put("assignments", (n) -> { this.setAssignments(n.getCollectionOfObjectValues(Assignment::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("usageRights", (n) -> { this.setUsageRights(n.getCollectionOfObjectValues(UsageRight::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -88,6 +97,7 @@ public class GroupCloudLicensing implements AdditionalDataHolder, BackedModel, P
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeCollectionOfObjectValues("assignments", this.getAssignments());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("usageRights", this.getUsageRights());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -98,6 +108,13 @@ public class GroupCloudLicensing implements AdditionalDataHolder, BackedModel, P
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the assignments property value. The assignments property
+     * @param value Value to set for the assignments property.
+     */
+    public void setAssignments(@jakarta.annotation.Nullable final java.util.List<Assignment> value) {
+        this.backingStore.set("assignments", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

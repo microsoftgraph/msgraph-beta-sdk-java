@@ -10,7 +10,9 @@ public enum ProtectionPolicyStatus implements ValuedEnum {
     Updating("updating"),
     Active("active"),
     UnknownFutureValue("unknownFutureValue"),
-    Dormant("dormant");
+    Dormant("dormant"),
+    OffboardRequested("offboardRequested"),
+    Offboarded("offboarded");
     public final String value;
     ProtectionPolicyStatus(final String value) {
         this.value = value;
@@ -27,6 +29,8 @@ public enum ProtectionPolicyStatus implements ValuedEnum {
             case "active": return Active;
             case "unknownFutureValue": return UnknownFutureValue;
             case "dormant": return Dormant;
+            case "offboardRequested": return OffboardRequested;
+            case "offboarded": return Offboarded;
             default: return null;
         }
     }

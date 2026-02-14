@@ -35,6 +35,7 @@ import com.microsoft.graph.beta.security.tiindicators.TiIndicatorsRequestBuilder
 import com.microsoft.graph.beta.security.triggers.TriggersRequestBuilder;
 import com.microsoft.graph.beta.security.triggertypes.TriggerTypesRequestBuilder;
 import com.microsoft.graph.beta.security.usersecurityprofiles.UserSecurityProfilesRequestBuilder;
+import com.microsoft.graph.beta.security.zones.ZonesRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -316,6 +317,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public UserSecurityProfilesRequestBuilder userSecurityProfiles() {
         return new UserSecurityProfilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the zones property of the microsoft.graph.security entity.
+     * @return a {@link ZonesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ZonesRequestBuilder zones() {
+        return new ZonesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SecurityRequestBuilder} and sets the default values.

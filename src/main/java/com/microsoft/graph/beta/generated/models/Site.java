@@ -308,7 +308,7 @@ public class Site extends BaseItem implements Parsable {
         return this.backingStore.get("sites");
     }
     /**
-     * Gets the template property value. Specifies the template applied to the site. The possible values are: sitepagepublishing, group, sts, unknownFutureValue.
+     * Gets the template property value. Specifies the template applied to the site. The possible values are: sitepagepublishing, sts, unknownFutureValue.
      * @return a {@link SiteTemplateType}
      */
     @jakarta.annotation.Nullable
@@ -574,7 +574,7 @@ public class Site extends BaseItem implements Parsable {
         this.backingStore.set("sites", value);
     }
     /**
-     * Sets the template property value. Specifies the template applied to the site. The possible values are: sitepagepublishing, group, sts, unknownFutureValue.
+     * Sets the template property value. Specifies the template applied to the site. The possible values are: sitepagepublishing, sts, unknownFutureValue.
      * @param value Value to set for the template property.
      */
     public void setTemplate(@jakarta.annotation.Nullable final SiteTemplateType value) {

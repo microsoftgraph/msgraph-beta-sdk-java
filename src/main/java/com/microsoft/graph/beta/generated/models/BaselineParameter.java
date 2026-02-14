@@ -56,7 +56,7 @@ public class BaselineParameter implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. User-friendly description of the parameter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class BaselineParameter implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Parameter names such as FQDN and Tenant ID.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class BaselineParameter implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. User-friendly description of the parameter.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Parameter names such as FQDN and Tenant ID.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
