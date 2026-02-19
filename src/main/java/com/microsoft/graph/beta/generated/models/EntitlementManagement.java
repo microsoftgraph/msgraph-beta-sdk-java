@@ -153,6 +153,14 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("controlConfigurations");
     }
     /**
+     * Gets the externalOriginResourceConnectors property value. The externalOriginResourceConnectors property
+     * @return a {@link java.util.List<ExternalOriginResourceConnector>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ExternalOriginResourceConnector> getExternalOriginResourceConnectors() {
+        return this.backingStore.get("externalOriginResourceConnectors");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -175,6 +183,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         deserializerMap.put("availableAccessPackages", (n) -> { this.setAvailableAccessPackages(n.getCollectionOfObjectValues(AvailableAccessPackage::createFromDiscriminatorValue)); });
         deserializerMap.put("connectedOrganizations", (n) -> { this.setConnectedOrganizations(n.getCollectionOfObjectValues(ConnectedOrganization::createFromDiscriminatorValue)); });
         deserializerMap.put("controlConfigurations", (n) -> { this.setControlConfigurations(n.getCollectionOfObjectValues(ControlConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("externalOriginResourceConnectors", (n) -> { this.setExternalOriginResourceConnectors(n.getCollectionOfObjectValues(ExternalOriginResourceConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(EntitlementManagementSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("subjects", (n) -> { this.setSubjects(n.getCollectionOfObjectValues(AccessPackageSubject::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -218,6 +227,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("availableAccessPackages", this.getAvailableAccessPackages());
         writer.writeCollectionOfObjectValues("connectedOrganizations", this.getConnectedOrganizations());
         writer.writeCollectionOfObjectValues("controlConfigurations", this.getControlConfigurations());
+        writer.writeCollectionOfObjectValues("externalOriginResourceConnectors", this.getExternalOriginResourceConnectors());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeCollectionOfObjectValues("subjects", this.getSubjects());
     }
@@ -332,6 +342,13 @@ public class EntitlementManagement extends Entity implements Parsable {
      */
     public void setControlConfigurations(@jakarta.annotation.Nullable final java.util.List<ControlConfiguration> value) {
         this.backingStore.set("controlConfigurations", value);
+    }
+    /**
+     * Sets the externalOriginResourceConnectors property value. The externalOriginResourceConnectors property
+     * @param value Value to set for the externalOriginResourceConnectors property.
+     */
+    public void setExternalOriginResourceConnectors(@jakarta.annotation.Nullable final java.util.List<ExternalOriginResourceConnector> value) {
+        this.backingStore.set("externalOriginResourceConnectors", value);
     }
     /**
      * Sets the settings property value. Represents the settings that control the behavior of Microsoft Entra entitlement management.

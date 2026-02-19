@@ -37,16 +37,18 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
         super(requestAdapter, "{+baseurl}/admin/configurationManagement/configurationSnapshotJobs/{configurationSnapshotJob%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property configurationSnapshotJobs for admin
+     * Delete a configurationSnapshotJob object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationsnapshotjob-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property configurationSnapshotJobs for admin
+     * Delete a configurationSnapshotJob object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationsnapshotjob-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,19 +57,21 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get configurationSnapshotJobs from admin
+     * Read the properties and relationships of a configurationSnapshotJob object.
      * @return a {@link ConfigurationSnapshotJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationsnapshotjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationSnapshotJob get() {
         return get(null);
     }
     /**
-     * Get configurationSnapshotJobs from admin
+     * Read the properties and relationships of a configurationSnapshotJob object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ConfigurationSnapshotJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/configurationsnapshotjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ConfigurationSnapshotJob get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
         return this.requestAdapter.send(requestInfo, errorMapping, ConfigurationSnapshotJob::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property configurationSnapshotJobs for admin
+     * Delete a configurationSnapshotJob object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property configurationSnapshotJobs for admin
+     * Delete a configurationSnapshotJob object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
         return requestInfo;
     }
     /**
-     * Get configurationSnapshotJobs from admin
+     * Read the properties and relationships of a configurationSnapshotJob object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
         return toGetRequestInformation(null);
     }
     /**
-     * Get configurationSnapshotJobs from admin
+     * Read the properties and relationships of a configurationSnapshotJob object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +186,7 @@ public class ConfigurationSnapshotJobItemRequestBuilder extends BaseRequestBuild
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get configurationSnapshotJobs from admin
+     * Read the properties and relationships of a configurationSnapshotJob object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

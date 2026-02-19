@@ -6,7 +6,6 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SiteTemplateType implements ValuedEnum {
     Sitepagepublishing("sitepagepublishing"),
-    Group("group"),
     Sts("sts"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
@@ -20,7 +19,6 @@ public enum SiteTemplateType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "sitepagepublishing": return Sitepagepublishing;
-            case "group": return Group;
             case "sts": return Sts;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;

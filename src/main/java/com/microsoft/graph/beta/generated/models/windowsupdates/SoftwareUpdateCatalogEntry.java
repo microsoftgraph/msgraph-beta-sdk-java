@@ -30,6 +30,7 @@ public class SoftwareUpdateCatalogEntry extends CatalogEntry implements Parsable
                 case "#microsoft.graph.windowsUpdates.driverUpdateCatalogEntry": return new DriverUpdateCatalogEntry();
                 case "#microsoft.graph.windowsUpdates.featureUpdateCatalogEntry": return new FeatureUpdateCatalogEntry();
                 case "#microsoft.graph.windowsUpdates.qualityUpdateCatalogEntry": return new QualityUpdateCatalogEntry();
+                case "#microsoft.graph.windowsUpdates.recoveryUpdateCatalogEntry": return new RecoveryUpdateCatalogEntry();
             }
         }
         return new SoftwareUpdateCatalogEntry();

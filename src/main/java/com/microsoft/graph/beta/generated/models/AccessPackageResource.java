@@ -97,6 +97,14 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the externalOriginResourceConnector property value. The externalOriginResourceConnector property
+     * @return a {@link ExternalOriginResourceConnector}
+     */
+    @jakarta.annotation.Nullable
+    public ExternalOriginResourceConnector getExternalOriginResourceConnector() {
+        return this.backingStore.get("externalOriginResourceConnector");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -111,6 +119,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         deserializerMap.put("attributes", (n) -> { this.setAttributes(n.getCollectionOfObjectValues(AccessPackageResourceAttribute::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("externalOriginResourceConnector", (n) -> { this.setExternalOriginResourceConnector(n.getObjectValue(ExternalOriginResourceConnector::createFromDiscriminatorValue)); });
         deserializerMap.put("isPendingOnboarding", (n) -> { this.setIsPendingOnboarding(n.getBooleanValue()); });
         deserializerMap.put("originId", (n) -> { this.setOriginId(n.getStringValue()); });
         deserializerMap.put("originSystem", (n) -> { this.setOriginSystem(n.getStringValue()); });
@@ -182,6 +191,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("attributes", this.getAttributes());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeObjectValue("externalOriginResourceConnector", this.getExternalOriginResourceConnector());
         writer.writeBooleanValue("isPendingOnboarding", this.getIsPendingOnboarding());
         writer.writeStringValue("originId", this.getOriginId());
         writer.writeStringValue("originSystem", this.getOriginSystem());
@@ -244,6 +254,13 @@ public class AccessPackageResource extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the externalOriginResourceConnector property value. The externalOriginResourceConnector property
+     * @param value Value to set for the externalOriginResourceConnector property.
+     */
+    public void setExternalOriginResourceConnector(@jakarta.annotation.Nullable final ExternalOriginResourceConnector value) {
+        this.backingStore.set("externalOriginResourceConnector", value);
     }
     /**
      * Sets the isPendingOnboarding property value. True if the resource is not yet available for assignment. Read-only.

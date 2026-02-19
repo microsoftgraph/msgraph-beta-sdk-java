@@ -34,7 +34,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("accessPackage");
     }
     /**
-     * Gets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, an access package assignment requested to be created. For a requestType of UserRemove, AdminRemove, or SystemRemove, this property has the id property of an existing assignment to be removed. Supports $expand.
+     * Gets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, an access package assignment requested to be created. For a requestType of UserRemove, AdminRemove, ApproverRemove, or SystemRemove, this property has the id property of an existing assignment to be removed. Supports $expand.
      * @return a {@link AccessPackageAssignment}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         return this.backingStore.get("requestStatus");
     }
     /**
-     * Gets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove, or SystemRemove. A request from the user has a requestType of UserAdd, UserUpdate, or UserRemove. Read-only.
+     * Gets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove, ApproverRemove, or SystemRemove. A request from the user has a requestType of UserAdd, UserUpdate, or UserRemove. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -220,7 +220,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("accessPackage", value);
     }
     /**
-     * Sets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, an access package assignment requested to be created. For a requestType of UserRemove, AdminRemove, or SystemRemove, this property has the id property of an existing assignment to be removed. Supports $expand.
+     * Sets the accessPackageAssignment property value. For a requestType of UserAdd or AdminAdd, an access package assignment requested to be created. For a requestType of UserRemove, AdminRemove, ApproverRemove, or SystemRemove, this property has the id property of an existing assignment to be removed. Supports $expand.
      * @param value Value to set for the accessPackageAssignment property.
      */
     public void setAccessPackageAssignment(@jakarta.annotation.Nullable final AccessPackageAssignment value) {
@@ -311,7 +311,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         this.backingStore.set("requestStatus", value);
     }
     /**
-     * Sets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove, or SystemRemove. A request from the user has a requestType of UserAdd, UserUpdate, or UserRemove. Read-only.
+     * Sets the requestType property value. One of UserAdd, UserExtend, UserUpdate, UserRemove, AdminAdd, AdminRemove, ApproverRemove, or SystemRemove. A request from the user has a requestType of UserAdd, UserUpdate, or UserRemove. Read-only.
      * @param value Value to set for the requestType property.
      */
     public void setRequestType(@jakarta.annotation.Nullable final String value) {

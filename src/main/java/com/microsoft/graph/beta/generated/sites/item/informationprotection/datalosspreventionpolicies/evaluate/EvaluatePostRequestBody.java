@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.sites.item.informationprotection.datalosspreven
 
 import com.microsoft.graph.beta.models.DlpEvaluationInput;
 import com.microsoft.graph.beta.models.DlpNotification;
+import com.microsoft.graph.beta.models.TextClassificationRequest;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -58,6 +59,14 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, BackedMode
         return this.backingStore;
     }
     /**
+     * Gets the classifyText property value. The classifyText property
+     * @return a {@link TextClassificationRequest}
+     */
+    @jakarta.annotation.Nullable
+    public TextClassificationRequest getClassifyText() {
+        return this.backingStore.get("classifyText");
+    }
+    /**
      * Gets the evaluationInput property value. The evaluationInput property
      * @return a {@link DlpEvaluationInput}
      */
@@ -71,7 +80,8 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, BackedMode
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("classifyText", (n) -> { this.setClassifyText(n.getObjectValue(TextClassificationRequest::createFromDiscriminatorValue)); });
         deserializerMap.put("evaluationInput", (n) -> { this.setEvaluationInput(n.getObjectValue(DlpEvaluationInput::createFromDiscriminatorValue)); });
         deserializerMap.put("notificationInfo", (n) -> { this.setNotificationInfo(n.getObjectValue(DlpNotification::createFromDiscriminatorValue)); });
         deserializerMap.put("target", (n) -> { this.setTarget(n.getStringValue()); });
@@ -99,6 +109,7 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, BackedMode
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("classifyText", this.getClassifyText());
         writer.writeObjectValue("evaluationInput", this.getEvaluationInput());
         writer.writeObjectValue("notificationInfo", this.getNotificationInfo());
         writer.writeStringValue("target", this.getTarget());
@@ -118,6 +129,13 @@ public class EvaluatePostRequestBody implements AdditionalDataHolder, BackedMode
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the classifyText property value. The classifyText property
+     * @param value Value to set for the classifyText property.
+     */
+    public void setClassifyText(@jakarta.annotation.Nullable final TextClassificationRequest value) {
+        this.backingStore.set("classifyText", value);
     }
     /**
      * Sets the evaluationInput property value. The evaluationInput property

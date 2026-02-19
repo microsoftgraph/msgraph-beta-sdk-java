@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.security.identities.settings;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.SettingsContainer;
+import com.microsoft.graph.beta.security.identities.settings.autoauditingconfiguration.AutoAuditingConfigurationRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SettingsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the autoAuditingConfiguration property of the microsoft.graph.security.settingsContainer entity.
+     * @return a {@link AutoAuditingConfigurationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AutoAuditingConfigurationRequestBuilder autoAuditingConfiguration() {
+        return new AutoAuditingConfigurationRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link SettingsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
@@ -55,7 +64,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get settings from security
+     * Represents a container for security identities settings APIs.
      * @return a {@link SettingsContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +73,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get settings from security
+     * Represents a container for security identities settings APIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SettingsContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +131,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get settings from security
+     * Represents a container for security identities settings APIs.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +139,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get settings from security
+     * Represents a container for security identities settings APIs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +191,7 @@ public class SettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get settings from security
+     * Represents a container for security identities settings APIs.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

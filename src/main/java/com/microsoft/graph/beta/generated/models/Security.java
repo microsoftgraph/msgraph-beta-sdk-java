@@ -16,6 +16,7 @@ import com.microsoft.graph.beta.models.security.ThreatIntelligence;
 import com.microsoft.graph.beta.models.security.ThreatSubmissionRoot;
 import com.microsoft.graph.beta.models.security.TriggersRoot;
 import com.microsoft.graph.beta.models.security.TriggerTypesRoot;
+import com.microsoft.graph.beta.models.security.Zone;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -157,7 +158,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(33);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(34);
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
@@ -191,6 +192,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         deserializerMap.put("triggers", (n) -> { this.setTriggers(n.getObjectValue(TriggersRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("triggerTypes", (n) -> { this.setTriggerTypes(n.getObjectValue(TriggerTypesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("userSecurityProfiles", (n) -> { this.setUserSecurityProfiles(n.getCollectionOfObjectValues(UserSecurityProfile::createFromDiscriminatorValue)); });
+        deserializerMap.put("zones", (n) -> { this.setZones(n.getCollectionOfObjectValues(Zone::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -378,6 +380,14 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("userSecurityProfiles");
     }
     /**
+     * Gets the zones property value. A collection of cloud zones in Microsoft Defender for Cloud that group and manage cloud environments across multiple cloud providers.
+     * @return a {@link java.util.List<Zone>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Zone> getZones() {
+        return this.backingStore.get("zones");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -416,6 +426,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeObjectValue("triggers", this.getTriggers());
         writer.writeObjectValue("triggerTypes", this.getTriggerTypes());
         writer.writeCollectionOfObjectValues("userSecurityProfiles", this.getUserSecurityProfiles());
+        writer.writeCollectionOfObjectValues("zones", this.getZones());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -663,5 +674,12 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setUserSecurityProfiles(@jakarta.annotation.Nullable final java.util.List<UserSecurityProfile> value) {
         this.backingStore.set("userSecurityProfiles", value);
+    }
+    /**
+     * Sets the zones property value. A collection of cloud zones in Microsoft Defender for Cloud that group and manage cloud environments across multiple cloud providers.
+     * @param value Value to set for the zones property.
+     */
+    public void setZones(@jakarta.annotation.Nullable final java.util.List<Zone> value) {
+        this.backingStore.set("zones", value);
     }
 }

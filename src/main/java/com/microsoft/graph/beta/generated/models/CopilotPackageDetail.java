@@ -13,6 +13,7 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
      */
     public CopilotPackageDetail() {
         super();
+        this.setOdataType("#microsoft.graph.copilotPackageDetail");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

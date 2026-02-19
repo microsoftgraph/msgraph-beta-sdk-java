@@ -25,15 +25,7 @@ public class ConfigurationManagement extends Entity implements Parsable {
         return new ConfigurationManagement();
     }
     /**
-     * Gets the configurationApplications property value. The configurationApplications property
-     * @return a {@link java.util.List<ConfigurationApplication>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<ConfigurationApplication> getConfigurationApplications() {
-        return this.backingStore.get("configurationApplications");
-    }
-    /**
-     * Gets the configurationDrifts property value. The configurationDrifts property
+     * Gets the configurationDrifts property value. A container for configuration drift resources.
      * @return a {@link java.util.List<ConfigurationDrift>}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +33,7 @@ public class ConfigurationManagement extends Entity implements Parsable {
         return this.backingStore.get("configurationDrifts");
     }
     /**
-     * Gets the configurationMonitoringResults property value. The configurationMonitoringResults property
+     * Gets the configurationMonitoringResults property value. A container for configuration monitoring results resources.
      * @return a {@link java.util.List<ConfigurationMonitoringResult>}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +41,7 @@ public class ConfigurationManagement extends Entity implements Parsable {
         return this.backingStore.get("configurationMonitoringResults");
     }
     /**
-     * Gets the configurationMonitors property value. The configurationMonitors property
+     * Gets the configurationMonitors property value. A container for configuration monitor resources.
      * @return a {@link java.util.List<ConfigurationMonitor>}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +49,7 @@ public class ConfigurationManagement extends Entity implements Parsable {
         return this.backingStore.get("configurationMonitors");
     }
     /**
-     * Gets the configurationSnapshotJobs property value. The configurationSnapshotJobs property
+     * Gets the configurationSnapshotJobs property value. A container for snapshot job resources.
      * @return a {@link java.util.List<ConfigurationSnapshotJob>}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +57,7 @@ public class ConfigurationManagement extends Entity implements Parsable {
         return this.backingStore.get("configurationSnapshotJobs");
     }
     /**
-     * Gets the configurationSnapshots property value. The configurationSnapshots property
+     * Gets the configurationSnapshots property value. A container for configuration snapshot baselines.
      * @return a {@link java.util.List<ConfigurationBaseline>}
      */
     @jakarta.annotation.Nullable
@@ -79,7 +71,6 @@ public class ConfigurationManagement extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("configurationApplications", (n) -> { this.setConfigurationApplications(n.getCollectionOfObjectValues(ConfigurationApplication::createFromDiscriminatorValue)); });
         deserializerMap.put("configurationDrifts", (n) -> { this.setConfigurationDrifts(n.getCollectionOfObjectValues(ConfigurationDrift::createFromDiscriminatorValue)); });
         deserializerMap.put("configurationMonitoringResults", (n) -> { this.setConfigurationMonitoringResults(n.getCollectionOfObjectValues(ConfigurationMonitoringResult::createFromDiscriminatorValue)); });
         deserializerMap.put("configurationMonitors", (n) -> { this.setConfigurationMonitors(n.getCollectionOfObjectValues(ConfigurationMonitor::createFromDiscriminatorValue)); });
@@ -94,7 +85,6 @@ public class ConfigurationManagement extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("configurationApplications", this.getConfigurationApplications());
         writer.writeCollectionOfObjectValues("configurationDrifts", this.getConfigurationDrifts());
         writer.writeCollectionOfObjectValues("configurationMonitoringResults", this.getConfigurationMonitoringResults());
         writer.writeCollectionOfObjectValues("configurationMonitors", this.getConfigurationMonitors());
@@ -102,42 +92,35 @@ public class ConfigurationManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("configurationSnapshots", this.getConfigurationSnapshots());
     }
     /**
-     * Sets the configurationApplications property value. The configurationApplications property
-     * @param value Value to set for the configurationApplications property.
-     */
-    public void setConfigurationApplications(@jakarta.annotation.Nullable final java.util.List<ConfigurationApplication> value) {
-        this.backingStore.set("configurationApplications", value);
-    }
-    /**
-     * Sets the configurationDrifts property value. The configurationDrifts property
+     * Sets the configurationDrifts property value. A container for configuration drift resources.
      * @param value Value to set for the configurationDrifts property.
      */
     public void setConfigurationDrifts(@jakarta.annotation.Nullable final java.util.List<ConfigurationDrift> value) {
         this.backingStore.set("configurationDrifts", value);
     }
     /**
-     * Sets the configurationMonitoringResults property value. The configurationMonitoringResults property
+     * Sets the configurationMonitoringResults property value. A container for configuration monitoring results resources.
      * @param value Value to set for the configurationMonitoringResults property.
      */
     public void setConfigurationMonitoringResults(@jakarta.annotation.Nullable final java.util.List<ConfigurationMonitoringResult> value) {
         this.backingStore.set("configurationMonitoringResults", value);
     }
     /**
-     * Sets the configurationMonitors property value. The configurationMonitors property
+     * Sets the configurationMonitors property value. A container for configuration monitor resources.
      * @param value Value to set for the configurationMonitors property.
      */
     public void setConfigurationMonitors(@jakarta.annotation.Nullable final java.util.List<ConfigurationMonitor> value) {
         this.backingStore.set("configurationMonitors", value);
     }
     /**
-     * Sets the configurationSnapshotJobs property value. The configurationSnapshotJobs property
+     * Sets the configurationSnapshotJobs property value. A container for snapshot job resources.
      * @param value Value to set for the configurationSnapshotJobs property.
      */
     public void setConfigurationSnapshotJobs(@jakarta.annotation.Nullable final java.util.List<ConfigurationSnapshotJob> value) {
         this.backingStore.set("configurationSnapshotJobs", value);
     }
     /**
-     * Sets the configurationSnapshots property value. The configurationSnapshots property
+     * Sets the configurationSnapshots property value. A container for configuration snapshot baselines.
      * @param value Value to set for the configurationSnapshots property.
      */
     public void setConfigurationSnapshots(@jakarta.annotation.Nullable final java.util.List<ConfigurationBaseline> value) {

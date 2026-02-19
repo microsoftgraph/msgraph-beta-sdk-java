@@ -86,6 +86,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         deserializerMap.put("agentId", (n) -> { this.setAgentId(n.getStringValue()); });
         deserializerMap.put("detectedDateTime", (n) -> { this.setDetectedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType::forValue)); });
+        deserializerMap.put("identityType", (n) -> { this.setIdentityType(n.getEnumValue(AgentIdentityType::forValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
         deserializerMap.put("riskEventType", (n) -> { this.setRiskEventType(n.getStringValue()); });
@@ -93,6 +94,14 @@ public class AgentRiskDetection extends Entity implements Parsable {
         deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
         deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identityType property value. The identityType property
+     * @return a {@link AgentIdentityType}
+     */
+    @jakarta.annotation.Nullable
+    public AgentIdentityType getIdentityType() {
+        return this.backingStore.get("identityType");
     }
     /**
      * Gets the lastModifiedDateTime property value. Date and time that the risk detection was last updated.  Supports $filter (eq, le, and ge).
@@ -155,6 +164,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         writer.writeStringValue("agentId", this.getAgentId());
         writer.writeOffsetDateTimeValue("detectedDateTime", this.getDetectedDateTime());
         writer.writeEnumValue("detectionTimingType", this.getDetectionTimingType());
+        writer.writeEnumValue("identityType", this.getIdentityType());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeEnumValue("riskDetail", this.getRiskDetail());
         writer.writeStringValue("riskEventType", this.getRiskEventType());
@@ -203,6 +213,13 @@ public class AgentRiskDetection extends Entity implements Parsable {
      */
     public void setDetectionTimingType(@jakarta.annotation.Nullable final RiskDetectionTimingType value) {
         this.backingStore.set("detectionTimingType", value);
+    }
+    /**
+     * Sets the identityType property value. The identityType property
+     * @param value Value to set for the identityType property.
+     */
+    public void setIdentityType(@jakarta.annotation.Nullable final AgentIdentityType value) {
+        this.backingStore.set("identityType", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. Date and time that the risk detection was last updated.  Supports $filter (eq, le, and ge).

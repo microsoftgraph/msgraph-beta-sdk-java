@@ -50,6 +50,7 @@ public class RiskyAgent extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agentDisplayName", (n) -> { this.setAgentDisplayName(n.getStringValue()); });
+        deserializerMap.put("identityType", (n) -> { this.setIdentityType(n.getEnumValue(AgentIdentityType::forValue)); });
         deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("isProcessing", (n) -> { this.setIsProcessing(n.getBooleanValue()); });
@@ -58,6 +59,14 @@ public class RiskyAgent extends Entity implements Parsable {
         deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
         deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identityType property value. The identityType property
+     * @return a {@link AgentIdentityType}
+     */
+    @jakarta.annotation.Nullable
+    public AgentIdentityType getIdentityType() {
+        return this.backingStore.get("identityType");
     }
     /**
      * Gets the isDeleted property value. Indicates whether the agent is deleted.
@@ -123,6 +132,7 @@ public class RiskyAgent extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("agentDisplayName", this.getAgentDisplayName());
+        writer.writeEnumValue("identityType", this.getIdentityType());
         writer.writeBooleanValue("isDeleted", this.getIsDeleted());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeBooleanValue("isProcessing", this.getIsProcessing());
@@ -137,6 +147,13 @@ public class RiskyAgent extends Entity implements Parsable {
      */
     public void setAgentDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentDisplayName", value);
+    }
+    /**
+     * Sets the identityType property value. The identityType property
+     * @param value Value to set for the identityType property.
+     */
+    public void setIdentityType(@jakarta.annotation.Nullable final AgentIdentityType value) {
+        this.backingStore.set("identityType", value);
     }
     /**
      * Sets the isDeleted property value. Indicates whether the agent is deleted.

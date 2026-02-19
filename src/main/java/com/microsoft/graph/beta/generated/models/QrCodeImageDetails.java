@@ -64,7 +64,7 @@ public class QrCodeImageDetails implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("binaryValue");
     }
     /**
-     * Gets the errorCorrectionLevel property value. Specifies how much of the QRCode can be corrupted while still maintaining its readable. The possible values are: l  (Low), m (Medium), q (Quartile), h ( High), unknownFutureValue.
+     * Gets the errorCorrectionLevel property value. Specifies how much of the QR code can be corrupted while still maintaining its readable. The possible values are: l  (Low), m (Medium), q (Quartile), h ( High), unknownFutureValue.
      * @return a {@link ErrorCorrectionLevel}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class QrCodeImageDetails implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("binaryValue", value);
     }
     /**
-     * Sets the errorCorrectionLevel property value. Specifies how much of the QRCode can be corrupted while still maintaining its readable. The possible values are: l  (Low), m (Medium), q (Quartile), h ( High), unknownFutureValue.
+     * Sets the errorCorrectionLevel property value. Specifies how much of the QR code can be corrupted while still maintaining its readable. The possible values are: l  (Low), m (Medium), q (Quartile), h ( High), unknownFutureValue.
      * @param value Value to set for the errorCorrectionLevel property.
      */
     public void setErrorCorrectionLevel(@jakarta.annotation.Nullable final ErrorCorrectionLevel value) {

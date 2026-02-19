@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.admin.configurationmanagement;
 
-import com.microsoft.graph.beta.admin.configurationmanagement.configurationapplications.ConfigurationApplicationsRequestBuilder;
 import com.microsoft.graph.beta.admin.configurationmanagement.configurationdrifts.ConfigurationDriftsRequestBuilder;
 import com.microsoft.graph.beta.admin.configurationmanagement.configurationmonitoringresults.ConfigurationMonitoringResultsRequestBuilder;
 import com.microsoft.graph.beta.admin.configurationmanagement.configurationmonitors.ConfigurationMonitorsRequestBuilder;
@@ -26,14 +25,6 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ConfigurationManagementRequestBuilder extends BaseRequestBuilder {
-    /**
-     * Provides operations to manage the configurationApplications property of the microsoft.graph.configurationManagement entity.
-     * @return a {@link ConfigurationApplicationsRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public ConfigurationApplicationsRequestBuilder configurationApplications() {
-        return new ConfigurationApplicationsRequestBuilder(pathParameters, requestAdapter);
-    }
     /**
      * Provides operations to manage the configurationDrifts property of the microsoft.graph.configurationManagement entity.
      * @return a {@link ConfigurationDriftsRequestBuilder}

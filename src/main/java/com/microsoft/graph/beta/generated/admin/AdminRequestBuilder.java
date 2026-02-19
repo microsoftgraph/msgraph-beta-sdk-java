@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.admin;
 
 import com.microsoft.graph.beta.admin.appsandservices.AppsAndServicesRequestBuilder;
+import com.microsoft.graph.beta.admin.cloudlicensing.CloudLicensingRequestBuilder;
 import com.microsoft.graph.beta.admin.configurationmanagement.ConfigurationManagementRequestBuilder;
 import com.microsoft.graph.beta.admin.dynamics.DynamicsRequestBuilder;
 import com.microsoft.graph.beta.admin.edge.EdgeRequestBuilder;
@@ -42,6 +43,14 @@ public class AdminRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AppsAndServicesRequestBuilder appsAndServices() {
         return new AppsAndServicesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the cloudLicensing property of the microsoft.graph.admin entity.
+     * @return a {@link CloudLicensingRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CloudLicensingRequestBuilder cloudLicensing() {
+        return new CloudLicensingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the configurationManagement property of the microsoft.graph.admin entity.

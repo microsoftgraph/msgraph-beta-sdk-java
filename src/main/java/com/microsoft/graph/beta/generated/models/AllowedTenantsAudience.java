@@ -26,7 +26,7 @@ public class AllowedTenantsAudience extends SignInAudienceRestrictionsBase imple
         return new AllowedTenantsAudience();
     }
     /**
-     * Gets the allowedTenantIds property value. The list of Entra tenant IDs where the application can be used as either a client application or a resource application (API). Must contain at least one value. The tenant ID where the application is registered may be included, but is not required (see isHomeTenantAllowed). Required.
+     * Gets the allowedTenantIds property value. The list of Entra tenant IDs where the application can be used as either a client application or a resource application (API). This property must contain at least one value and can&apos;t include more than 20 values. The tenant ID where the application is registered may be included, but is not required (see isHomeTenantAllowed). Required.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class AllowedTenantsAudience extends SignInAudienceRestrictionsBase imple
         writer.writeBooleanValue("isHomeTenantAllowed", this.getIsHomeTenantAllowed());
     }
     /**
-     * Sets the allowedTenantIds property value. The list of Entra tenant IDs where the application can be used as either a client application or a resource application (API). Must contain at least one value. The tenant ID where the application is registered may be included, but is not required (see isHomeTenantAllowed). Required.
+     * Sets the allowedTenantIds property value. The list of Entra tenant IDs where the application can be used as either a client application or a resource application (API). This property must contain at least one value and can&apos;t include more than 20 values. The tenant ID where the application is registered may be included, but is not required (see isHomeTenantAllowed). Required.
      * @param value Value to set for the allowedTenantIds property.
      */
     public void setAllowedTenantIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

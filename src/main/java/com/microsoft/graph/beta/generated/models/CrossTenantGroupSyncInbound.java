@@ -67,7 +67,7 @@ public class CrossTenantGroupSyncInbound implements AdditionalDataHolder, Backed
         return deserializerMap;
     }
     /**
-     * Gets the isSyncAllowed property value. The isSyncAllowed property
+     * Gets the isSyncAllowed property value. Defines whether group objects should be synchronized from the partner tenant. false stops any current group synchronization from the source tenant to the target tenant. This property has no impact on existing groups that were synchronized.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class CrossTenantGroupSyncInbound implements AdditionalDataHolder, Backed
         this.backingStore = value;
     }
     /**
-     * Sets the isSyncAllowed property value. The isSyncAllowed property
+     * Sets the isSyncAllowed property value. Defines whether group objects should be synchronized from the partner tenant. false stops any current group synchronization from the source tenant to the target tenant. This property has no impact on existing groups that were synchronized.
      * @param value Value to set for the isSyncAllowed property.
      */
     public void setIsSyncAllowed(@jakarta.annotation.Nullable final Boolean value) {

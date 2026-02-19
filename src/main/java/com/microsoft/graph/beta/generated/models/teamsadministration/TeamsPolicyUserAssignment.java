@@ -46,7 +46,7 @@ public class TeamsPolicyUserAssignment extends Entity implements Parsable {
         return this.backingStore.get("policyId");
     }
     /**
-     * Gets the policyType property value. The type of Teams policy assigned or unassigned, such as TeamsMeetingBroadcastPolicy.
+     * Gets the policyType property value. The type of Teams policy assigned or unassigned, such as teamsMeetingBroadcastPolicy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class TeamsPolicyUserAssignment extends Entity implements Parsable {
         this.backingStore.set("policyId", value);
     }
     /**
-     * Sets the policyType property value. The type of Teams policy assigned or unassigned, such as TeamsMeetingBroadcastPolicy.
+     * Sets the policyType property value. The type of Teams policy assigned or unassigned, such as teamsMeetingBroadcastPolicy.
      * @param value Value to set for the policyType property.
      */
     public void setPolicyType(@jakarta.annotation.Nullable final String value) {

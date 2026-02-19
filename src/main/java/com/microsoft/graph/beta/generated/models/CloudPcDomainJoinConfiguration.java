@@ -80,7 +80,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         return deserializerMap;
     }
     /**
-     * Gets the geographicLocationType property value. The geographic location where the region is located. The possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * Gets the geographicLocationType property value. The geographic location where the region is located. Read-only.
      * @return a {@link CloudPcGeographicLocationType}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore.get("onPremisesConnectionId");
     }
     /**
-     * Gets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when they provision a Cloud PC, and the Cloud PC is put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. The possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, southKorea, middleEast, mexico, australasia, europe. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: norway, switzerland, southKorea, middleEast, mexico, australasia, europe. Read-only.
+     * Gets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when they provision a Cloud PC, and the Cloud PC is put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Read-only.
      * @return a {@link CloudPcRegionGroup}
      */
     @jakarta.annotation.Nullable
@@ -165,7 +165,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         this.backingStore.set("domainJoinType", value);
     }
     /**
-     * Sets the geographicLocationType property value. The geographic location where the region is located. The possible values are: default, asia, australasia, canada, europe, india, africa, usCentral, usEast, usWest, southAmerica, middleEast, centralAmerica, usGovernment, unknownFutureValue. Default value is default. Read-only.
+     * Sets the geographicLocationType property value. The geographic location where the region is located. Read-only.
      * @param value Value to set for the geographicLocationType property.
      */
     public void setGeographicLocationType(@jakarta.annotation.Nullable final CloudPcGeographicLocationType value) {
@@ -186,7 +186,7 @@ public class CloudPcDomainJoinConfiguration implements AdditionalDataHolder, Bac
         this.backingStore.set("onPremisesConnectionId", value);
     }
     /**
-     * Sets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when they provision a Cloud PC, and the Cloud PC is put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. The possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, southKorea, middleEast, mexico, australasia, europe. Use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: norway, switzerland, southKorea, middleEast, mexico, australasia, europe. Read-only.
+     * Sets the regionGroup property value. The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when they provision a Cloud PC, and the Cloud PC is put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Read-only.
      * @param value Value to set for the regionGroup property.
      */
     public void setRegionGroup(@jakarta.annotation.Nullable final CloudPcRegionGroup value) {

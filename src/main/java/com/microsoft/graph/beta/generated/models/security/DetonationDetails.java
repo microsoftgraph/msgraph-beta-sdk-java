@@ -73,12 +73,20 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("compromiseIndicators");
     }
     /**
-     * Gets the detonationBehaviourDetails property value. Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation
+     * Gets the detonationBehaviourDetails property value. Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation. This property is deprecated and still stop returning data in March 2026. Use the detonationBehaviourDetailsV2 property instead.
      * @return a {@link DetonationBehaviourDetails}
      */
     @jakarta.annotation.Nullable
     public DetonationBehaviourDetails getDetonationBehaviourDetails() {
         return this.backingStore.get("detonationBehaviourDetails");
+    }
+    /**
+     * Gets the detonationBehaviourDetailsV2 property value. Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation in a JSON format.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDetonationBehaviourDetailsV2() {
+        return this.backingStore.get("detonationBehaviourDetailsV2");
     }
     /**
      * Gets the detonationChain property value. The chain of detonation.
@@ -121,22 +129,43 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("detonationVerdictReason");
     }
     /**
+     * Gets the entityMetadata property value. Additional metadata about the entity in JSON format.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getEntityMetadata() {
+        return this.backingStore.get("entityMetadata");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(9);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(14);
         deserializerMap.put("analysisDateTime", (n) -> { this.setAnalysisDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("compromiseIndicators", (n) -> { this.setCompromiseIndicators(n.getCollectionOfObjectValues(CompromiseIndicator::createFromDiscriminatorValue)); });
         deserializerMap.put("detonationBehaviourDetails", (n) -> { this.setDetonationBehaviourDetails(n.getObjectValue(DetonationBehaviourDetails::createFromDiscriminatorValue)); });
+        deserializerMap.put("detonationBehaviourDetailsV2", (n) -> { this.setDetonationBehaviourDetailsV2(n.getStringValue()); });
         deserializerMap.put("detonationChain", (n) -> { this.setDetonationChain(n.getObjectValue(DetonationChain::createFromDiscriminatorValue)); });
         deserializerMap.put("detonationObservables", (n) -> { this.setDetonationObservables(n.getObjectValue(DetonationObservables::createFromDiscriminatorValue)); });
         deserializerMap.put("detonationScreenshotUri", (n) -> { this.setDetonationScreenshotUri(n.getStringValue()); });
         deserializerMap.put("detonationVerdict", (n) -> { this.setDetonationVerdict(n.getStringValue()); });
         deserializerMap.put("detonationVerdictReason", (n) -> { this.setDetonationVerdictReason(n.getStringValue()); });
+        deserializerMap.put("entityMetadata", (n) -> { this.setEntityMetadata(n.getStringValue()); });
+        deserializerMap.put("mitreTechniques", (n) -> { this.setMitreTechniques(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("staticAnalysis", (n) -> { this.setStaticAnalysis(n.getStringValue()); });
+        deserializerMap.put("submissionSource", (n) -> { this.setSubmissionSource(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the mitreTechniques property value. The attack techniques, as aligned with the MITRE ATT&amp;CK framework.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMitreTechniques() {
+        return this.backingStore.get("mitreTechniques");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -147,6 +176,22 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the staticAnalysis property value. The results of static analysis performed on the file or URL.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getStaticAnalysis() {
+        return this.backingStore.get("staticAnalysis");
+    }
+    /**
+     * Gets the submissionSource property value. The source of the submission.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSubmissionSource() {
+        return this.backingStore.get("submissionSource");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -155,12 +200,17 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         writer.writeOffsetDateTimeValue("analysisDateTime", this.getAnalysisDateTime());
         writer.writeCollectionOfObjectValues("compromiseIndicators", this.getCompromiseIndicators());
         writer.writeObjectValue("detonationBehaviourDetails", this.getDetonationBehaviourDetails());
+        writer.writeStringValue("detonationBehaviourDetailsV2", this.getDetonationBehaviourDetailsV2());
         writer.writeObjectValue("detonationChain", this.getDetonationChain());
         writer.writeObjectValue("detonationObservables", this.getDetonationObservables());
         writer.writeStringValue("detonationScreenshotUri", this.getDetonationScreenshotUri());
         writer.writeStringValue("detonationVerdict", this.getDetonationVerdict());
         writer.writeStringValue("detonationVerdictReason", this.getDetonationVerdictReason());
+        writer.writeStringValue("entityMetadata", this.getEntityMetadata());
+        writer.writeStringValue("mitreTechniques", this.getMitreTechniques());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("staticAnalysis", this.getStaticAnalysis());
+        writer.writeStringValue("submissionSource", this.getSubmissionSource());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -193,11 +243,18 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("compromiseIndicators", value);
     }
     /**
-     * Sets the detonationBehaviourDetails property value. Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation
+     * Sets the detonationBehaviourDetails property value. Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation. This property is deprecated and still stop returning data in March 2026. Use the detonationBehaviourDetailsV2 property instead.
      * @param value Value to set for the detonationBehaviourDetails property.
      */
     public void setDetonationBehaviourDetails(@jakarta.annotation.Nullable final DetonationBehaviourDetails value) {
         this.backingStore.set("detonationBehaviourDetails", value);
+    }
+    /**
+     * Sets the detonationBehaviourDetailsV2 property value. Shows the exact events that took place during detonation, and problematic or benign observations that contain URLs, IPs, domains, and files that were found during detonation in a JSON format.
+     * @param value Value to set for the detonationBehaviourDetailsV2 property.
+     */
+    public void setDetonationBehaviourDetailsV2(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("detonationBehaviourDetailsV2", value);
     }
     /**
      * Sets the detonationChain property value. The chain of detonation.
@@ -235,10 +292,38 @@ public class DetonationDetails implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("detonationVerdictReason", value);
     }
     /**
+     * Sets the entityMetadata property value. Additional metadata about the entity in JSON format.
+     * @param value Value to set for the entityMetadata property.
+     */
+    public void setEntityMetadata(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("entityMetadata", value);
+    }
+    /**
+     * Sets the mitreTechniques property value. The attack techniques, as aligned with the MITRE ATT&amp;CK framework.
+     * @param value Value to set for the mitreTechniques property.
+     */
+    public void setMitreTechniques(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("mitreTechniques", value);
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the staticAnalysis property value. The results of static analysis performed on the file or URL.
+     * @param value Value to set for the staticAnalysis property.
+     */
+    public void setStaticAnalysis(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("staticAnalysis", value);
+    }
+    /**
+     * Sets the submissionSource property value. The source of the submission.
+     * @param value Value to set for the submissionSource property.
+     */
+    public void setSubmissionSource(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("submissionSource", value);
     }
 }

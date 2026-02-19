@@ -359,7 +359,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("defenderMonitorFileActivity");
     }
     /**
-     * Gets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. The possible values are: deviceDefault, block, audit.
+     * Gets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
      * @return a {@link DefenderPotentiallyUnwantedAppAction}
      */
     @jakarta.annotation.Nullable
@@ -527,7 +527,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         return this.backingStore.get("defenderSignatureUpdateIntervalInHours");
     }
     /**
-     * Gets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. The possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
+     * Gets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
      * @return a {@link DefenderSubmitSamplesConsentType}
      */
     @jakarta.annotation.Nullable
@@ -3165,7 +3165,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this.backingStore.set("defenderMonitorFileActivity", value);
     }
     /**
-     * Sets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. The possible values are: deviceDefault, block, audit.
+     * Sets the defenderPotentiallyUnwantedAppAction property value. Gets or sets Defenders action to take on Potentially Unwanted Application (PUA), which includes software with behaviors of ad-injection, software bundling, persistent solicitation for payment or subscription, etc. Defender alerts user when PUA is being downloaded or attempts to install itself. Added in Windows 10 for desktop. Possible values are: deviceDefault, block, audit.
      * @param value Value to set for the defenderPotentiallyUnwantedAppAction property.
      */
     public void setDefenderPotentiallyUnwantedAppAction(@jakarta.annotation.Nullable final DefenderPotentiallyUnwantedAppAction value) {
@@ -3312,7 +3312,7 @@ public class Windows10GeneralConfiguration extends DeviceConfiguration implement
         this.backingStore.set("defenderSignatureUpdateIntervalInHours", value);
     }
     /**
-     * Sets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. The possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
+     * Sets the defenderSubmitSamplesConsentType property value. Checks for the user consent level in Windows Defender to send data. Possible values are: sendSafeSamplesAutomatically, alwaysPrompt, neverSend, sendAllSamplesAutomatically.
      * @param value Value to set for the defenderSubmitSamplesConsentType property.
      */
     public void setDefenderSubmitSamplesConsentType(@jakarta.annotation.Nullable final DefenderSubmitSamplesConsentType value) {

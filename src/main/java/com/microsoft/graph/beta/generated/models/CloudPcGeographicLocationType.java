@@ -19,7 +19,8 @@ public enum CloudPcGeographicLocationType implements ValuedEnum {
     MiddleEast("middleEast"),
     CentralAmerica("centralAmerica"),
     UsGovernment("usGovernment"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Mexico("mexico");
     public final String value;
     CloudPcGeographicLocationType(final String value) {
         this.value = value;
@@ -45,6 +46,7 @@ public enum CloudPcGeographicLocationType implements ValuedEnum {
             case "centralAmerica": return CentralAmerica;
             case "usGovernment": return UsGovernment;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "mexico": return Mexico;
             default: return null;
         }
     }

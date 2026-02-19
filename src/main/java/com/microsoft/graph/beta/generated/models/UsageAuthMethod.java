@@ -32,7 +32,8 @@ public enum UsageAuthMethod implements ValuedEnum {
     AlternateMobilePhone("alternateMobilePhone"),
     Fido2SecurityKey("fido2SecurityKey"),
     OneTimePasscode("oneTimePasscode"),
-    PassKeySynced("passKeySynced");
+    PassKeySynced("passKeySynced"),
+    QrCode("qrCode");
     public final String value;
     UsageAuthMethod(final String value) {
         this.value = value;
@@ -71,6 +72,7 @@ public enum UsageAuthMethod implements ValuedEnum {
             case "fido2SecurityKey": return Fido2SecurityKey;
             case "oneTimePasscode": return OneTimePasscode;
             case "passKeySynced": return PassKeySynced;
+            case "qrCode": return QrCode;
             default: return null;
         }
     }

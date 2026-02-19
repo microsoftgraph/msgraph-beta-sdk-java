@@ -29,7 +29,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         return new IosEnterpriseWiFiConfiguration();
     }
     /**
-     * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. The possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Gets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @return a {@link WiFiAuthenticationMethod}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         return this.backingStore.get("derivedCredentialSettings");
     }
     /**
-     * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. The possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+     * Gets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @return a {@link EapFastConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         return this.backingStore.get("identityCertificateForClientAuthentication");
     }
     /**
-     * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Gets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @return a {@link NonEapAuthenticationMethodForEapTtlsType}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         writer.writeStringValue("usernameFormatString", this.getUsernameFormatString());
     }
     /**
-     * Sets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. The possible values are: certificate, usernameAndPassword, derivedCredential.
+     * Sets the authenticationMethod property value. Authentication Method when EAP Type is configured to PEAP or EAP-TTLS. Possible values are: certificate, usernameAndPassword, derivedCredential.
      * @param value Value to set for the authenticationMethod property.
      */
     public void setAuthenticationMethod(@jakarta.annotation.Nullable final WiFiAuthenticationMethod value) {
@@ -170,7 +170,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         this.backingStore.set("derivedCredentialSettings", value);
     }
     /**
-     * Sets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. The possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
+     * Sets the eapFastConfiguration property value. EAP-FAST Configuration Option when EAP-FAST is the selected EAP Type. Possible values are: noProtectedAccessCredential, useProtectedAccessCredential, useProtectedAccessCredentialAndProvision, useProtectedAccessCredentialAndProvisionAnonymously.
      * @param value Value to set for the eapFastConfiguration property.
      */
     public void setEapFastConfiguration(@jakarta.annotation.Nullable final EapFastConfiguration value) {
@@ -191,7 +191,7 @@ public class IosEnterpriseWiFiConfiguration extends IosWiFiConfiguration impleme
         this.backingStore.set("identityCertificateForClientAuthentication", value);
     }
     /**
-     * Sets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. The possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
+     * Sets the innerAuthenticationProtocolForEapTtls property value. Non-EAP Method for Authentication when EAP Type is EAP-TTLS and Authenticationmethod is Username and Password. Possible values are: unencryptedPassword, challengeHandshakeAuthenticationProtocol, microsoftChap, microsoftChapVersionTwo.
      * @param value Value to set for the innerAuthenticationProtocolForEapTtls property.
      */
     public void setInnerAuthenticationProtocolForEapTtls(@jakarta.annotation.Nullable final NonEapAuthenticationMethodForEapTtlsType value) {

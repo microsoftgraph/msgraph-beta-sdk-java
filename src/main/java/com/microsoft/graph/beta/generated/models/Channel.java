@@ -66,7 +66,7 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("email");
     }
     /**
-     * Gets the enabledApps property value. The enabledApps property
+     * Gets the enabledApps property value. A collection of enabled apps in the channel.
      * @return a {@link java.util.List<TeamsApp>}
      */
     @jakarta.annotation.Nullable
@@ -298,7 +298,7 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("email", value);
     }
     /**
-     * Sets the enabledApps property value. The enabledApps property
+     * Sets the enabledApps property value. A collection of enabled apps in the channel.
      * @param value Value to set for the enabledApps property.
      */
     public void setEnabledApps(@jakarta.annotation.Nullable final java.util.List<TeamsApp> value) {

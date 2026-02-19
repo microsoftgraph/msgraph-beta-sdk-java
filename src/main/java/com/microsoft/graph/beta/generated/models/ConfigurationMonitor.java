@@ -42,7 +42,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the monitor was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. User-friendly description of the monitor given by the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. User-friendly name given by the user to the monitor.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,14 +83,12 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         deserializerMap.put("mode", (n) -> { this.setMode(n.getEnumValue(MonitorMode::forValue)); });
         deserializerMap.put("monitorRunFrequencyInHours", (n) -> { this.setMonitorRunFrequencyInHours(n.getIntegerValue()); });
         deserializerMap.put("parameters", (n) -> { this.setParameters(n.getObjectValue(OpenComplexDictionaryType::createFromDiscriminatorValue)); });
-        deserializerMap.put("runAsUTCMServicePrincipal", (n) -> { this.setRunAsUTCMServicePrincipal(n.getBooleanValue()); });
-        deserializerMap.put("runningOnBehalfOf", (n) -> { this.setRunningOnBehalfOf(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(MonitorStatus::forValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the inactivationReason property value. The inactivationReason property
+     * Gets the inactivationReason property value. The reason for the monitor&apos;s inactivation.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +104,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the monitor was last modified. If no modifications are made to the monitor, it&apos;s the same as createdDateTime. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +120,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         return this.backingStore.get("mode");
     }
     /**
-     * Gets the monitorRunFrequencyInHours property value. The monitorRunFrequencyInHours property
+     * Gets the monitorRunFrequencyInHours property value. Frequency at which the monitor runs. The default frequency is six hours. Regardless of when you create or update a monitor, it gets triggered within the next 6 hours. Currently, monitors are picked up at fixed times: 6 AM, 12 PM, 6 PM, and 12 AM (all in GMT). For example, if you create a monitor at 9 AM, it gets triggered around 12 PM. If you update a monitor at 4 PM, it gets triggered around 6 PM.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -130,28 +128,12 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         return this.backingStore.get("monitorRunFrequencyInHours");
     }
     /**
-     * Gets the parameters property value. The parameters property
+     * Gets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline.
      * @return a {@link OpenComplexDictionaryType}
      */
     @jakarta.annotation.Nullable
     public OpenComplexDictionaryType getParameters() {
         return this.backingStore.get("parameters");
-    }
-    /**
-     * Gets the runAsUTCMServicePrincipal property value. The runAsUTCMServicePrincipal property
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getRunAsUTCMServicePrincipal() {
-        return this.backingStore.get("runAsUTCMServicePrincipal");
-    }
-    /**
-     * Gets the runningOnBehalfOf property value. The runningOnBehalfOf property
-     * @return a {@link IdentitySet}
-     */
-    @jakarta.annotation.Nullable
-    public IdentitySet getRunningOnBehalfOf() {
-        return this.backingStore.get("runningOnBehalfOf");
     }
     /**
      * Gets the status property value. The status property
@@ -162,7 +144,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -182,10 +164,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeEnumValue("mode", this.getMode());
-        writer.writeIntegerValue("monitorRunFrequencyInHours", this.getMonitorRunFrequencyInHours());
         writer.writeObjectValue("parameters", this.getParameters());
-        writer.writeBooleanValue("runAsUTCMServicePrincipal", this.getRunAsUTCMServicePrincipal());
-        writer.writeObjectValue("runningOnBehalfOf", this.getRunningOnBehalfOf());
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
@@ -203,28 +182,28 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the monitor was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. User-friendly description of the monitor given by the user.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. User-friendly name given by the user to the monitor.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the inactivationReason property value. The inactivationReason property
+     * Sets the inactivationReason property value. The reason for the monitor&apos;s inactivation.
      * @param value Value to set for the inactivationReason property.
      */
     public void setInactivationReason(@jakarta.annotation.Nullable final String value) {
@@ -238,7 +217,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the monitor was last modified. If no modifications are made to the monitor, it&apos;s the same as createdDateTime. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -252,32 +231,18 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         this.backingStore.set("mode", value);
     }
     /**
-     * Sets the monitorRunFrequencyInHours property value. The monitorRunFrequencyInHours property
+     * Sets the monitorRunFrequencyInHours property value. Frequency at which the monitor runs. The default frequency is six hours. Regardless of when you create or update a monitor, it gets triggered within the next 6 hours. Currently, monitors are picked up at fixed times: 6 AM, 12 PM, 6 PM, and 12 AM (all in GMT). For example, if you create a monitor at 9 AM, it gets triggered around 12 PM. If you update a monitor at 4 PM, it gets triggered around 6 PM.
      * @param value Value to set for the monitorRunFrequencyInHours property.
      */
     public void setMonitorRunFrequencyInHours(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("monitorRunFrequencyInHours", value);
     }
     /**
-     * Sets the parameters property value. The parameters property
+     * Sets the parameters property value. Key-value pairs that contain parameter values which might be used in the baseline.
      * @param value Value to set for the parameters property.
      */
     public void setParameters(@jakarta.annotation.Nullable final OpenComplexDictionaryType value) {
         this.backingStore.set("parameters", value);
-    }
-    /**
-     * Sets the runAsUTCMServicePrincipal property value. The runAsUTCMServicePrincipal property
-     * @param value Value to set for the runAsUTCMServicePrincipal property.
-     */
-    public void setRunAsUTCMServicePrincipal(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("runAsUTCMServicePrincipal", value);
-    }
-    /**
-     * Sets the runningOnBehalfOf property value. The runningOnBehalfOf property
-     * @param value Value to set for the runningOnBehalfOf property.
-     */
-    public void setRunningOnBehalfOf(@jakarta.annotation.Nullable final IdentitySet value) {
-        this.backingStore.set("runningOnBehalfOf", value);
     }
     /**
      * Sets the status property value. The status property
@@ -287,7 +252,7 @@ public class ConfigurationMonitor extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

@@ -81,6 +81,7 @@ public class CopilotPackage extends Entity implements Parsable {
         deserializerMap.put("shortDescription", (n) -> { this.setShortDescription(n.getStringValue()); });
         deserializerMap.put("supportedHosts", (n) -> { this.setSupportedHosts(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PackageType::forValue)); });
+        deserializerMap.put("zipFile", (n) -> { this.setZipFile(n.getByteArrayValue()); });
         return deserializerMap;
     }
     /**
@@ -132,6 +133,14 @@ public class CopilotPackage extends Entity implements Parsable {
         return this.backingStore.get("type");
     }
     /**
+     * Gets the zipFile property value. The zipFile property
+     * @return a {@link byte[]}
+     */
+    @jakarta.annotation.Nullable
+    public byte[] getZipFile() {
+        return this.backingStore.get("zipFile");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -148,6 +157,7 @@ public class CopilotPackage extends Entity implements Parsable {
         writer.writeStringValue("shortDescription", this.getShortDescription());
         writer.writeCollectionOfPrimitiveValues("supportedHosts", this.getSupportedHosts());
         writer.writeEnumValue("type", this.getType());
+        writer.writeByteArrayValue("zipFile", this.getZipFile());
     }
     /**
      * Sets the availableTo property value. The availableTo property
@@ -218,5 +228,12 @@ public class CopilotPackage extends Entity implements Parsable {
      */
     public void setType(@jakarta.annotation.Nullable final PackageType value) {
         this.backingStore.set("type", value);
+    }
+    /**
+     * Sets the zipFile property value. The zipFile property
+     * @param value Value to set for the zipFile property.
+     */
+    public void setZipFile(@jakarta.annotation.Nullable final byte[] value) {
+        this.backingStore.set("zipFile", value);
     }
 }

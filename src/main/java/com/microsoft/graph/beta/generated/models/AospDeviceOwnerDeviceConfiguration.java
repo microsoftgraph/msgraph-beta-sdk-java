@@ -108,7 +108,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
         return this.backingStore.get("passwordMinutesOfInactivityBeforeScreenTimeout");
     }
     /**
-     * Gets the passwordRequiredType property value. Indicates the minimum password quality required on the device. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Gets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @return a {@link AndroidDeviceOwnerRequiredPasswordType}
      */
     @jakarta.annotation.Nullable
@@ -235,7 +235,7 @@ public class AospDeviceOwnerDeviceConfiguration extends DeviceConfiguration impl
         this.backingStore.set("passwordMinutesOfInactivityBeforeScreenTimeout", value);
     }
     /**
-     * Sets the passwordRequiredType property value. Indicates the minimum password quality required on the device. The possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
+     * Sets the passwordRequiredType property value. Indicates the minimum password quality required on the device. Possible values are: deviceDefault, required, numeric, numericComplex, alphabetic, alphanumeric, alphanumericWithSymbols, lowSecurityBiometric, customPassword.
      * @param value Value to set for the passwordRequiredType property.
      */
     public void setPasswordRequiredType(@jakarta.annotation.Nullable final AndroidDeviceOwnerRequiredPasswordType value) {

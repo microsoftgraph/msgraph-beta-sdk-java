@@ -80,6 +80,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("offboardRequestedDateTime", (n) -> { this.setOffboardRequestedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("protectionMode", (n) -> { this.setProtectionMode(n.getEnumValue(BackupPolicyProtectionMode::forValue)); });
         deserializerMap.put("protectionPolicyArtifactCount", (n) -> { this.setProtectionPolicyArtifactCount(n.getObjectValue(ProtectionPolicyArtifactCount::createFromDiscriminatorValue)); });
         deserializerMap.put("retentionSettings", (n) -> { this.setRetentionSettings(n.getCollectionOfObjectValues(RetentionSetting::createFromDiscriminatorValue)); });
@@ -109,6 +110,14 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the offboardRequestedDateTime property value. The offboardRequestedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getOffboardRequestedDateTime() {
+        return this.backingStore.get("offboardRequestedDateTime");
     }
     /**
      * Gets the protectionMode property value. The protectionMode property
@@ -156,6 +165,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeOffsetDateTimeValue("offboardRequestedDateTime", this.getOffboardRequestedDateTime());
         writer.writeEnumValue("protectionMode", this.getProtectionMode());
         writer.writeObjectValue("protectionPolicyArtifactCount", this.getProtectionPolicyArtifactCount());
         writer.writeCollectionOfObjectValues("retentionSettings", this.getRetentionSettings());
@@ -209,6 +219,13 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
+    }
+    /**
+     * Sets the offboardRequestedDateTime property value. The offboardRequestedDateTime property
+     * @param value Value to set for the offboardRequestedDateTime property.
+     */
+    public void setOffboardRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("offboardRequestedDateTime", value);
     }
     /**
      * Sets the protectionMode property value. The protectionMode property

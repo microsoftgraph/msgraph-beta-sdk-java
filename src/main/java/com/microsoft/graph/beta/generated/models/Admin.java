@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.cloudlicensing.AdminCloudLicensing;
 import com.microsoft.graph.beta.models.teamsadministration.TeamsAdminRoot;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
@@ -65,6 +66,14 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
+     * Gets the cloudLicensing property value. The root of the cloud licensing API for the entire organization. Read-only.
+     * @return a {@link AdminCloudLicensing}
+     */
+    @jakarta.annotation.Nullable
+    public AdminCloudLicensing getCloudLicensing() {
+        return this.backingStore.get("cloudLicensing");
+    }
+    /**
      * Gets the configurationManagement property value. The configurationManagement property
      * @return a {@link ConfigurationManagement}
      */
@@ -110,8 +119,9 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(16);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(17);
         deserializerMap.put("appsAndServices", (n) -> { this.setAppsAndServices(n.getObjectValue(AdminAppsAndServices::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudLicensing", (n) -> { this.setCloudLicensing(n.getObjectValue(AdminCloudLicensing::createFromDiscriminatorValue)); });
         deserializerMap.put("configurationManagement", (n) -> { this.setConfigurationManagement(n.getObjectValue(ConfigurationManagement::createFromDiscriminatorValue)); });
         deserializerMap.put("dynamics", (n) -> { this.setDynamics(n.getObjectValue(AdminDynamics::createFromDiscriminatorValue)); });
         deserializerMap.put("edge", (n) -> { this.setEdge(n.getObjectValue(Edge::createFromDiscriminatorValue)); });
@@ -216,6 +226,7 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("appsAndServices", this.getAppsAndServices());
+        writer.writeObjectValue("cloudLicensing", this.getCloudLicensing());
         writer.writeObjectValue("configurationManagement", this.getConfigurationManagement());
         writer.writeObjectValue("dynamics", this.getDynamics());
         writer.writeObjectValue("edge", this.getEdge());
@@ -254,6 +265,13 @@ public class Admin implements AdditionalDataHolder, BackedModel, Parsable {
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the cloudLicensing property value. The root of the cloud licensing API for the entire organization. Read-only.
+     * @param value Value to set for the cloudLicensing property.
+     */
+    public void setCloudLicensing(@jakarta.annotation.Nullable final AdminCloudLicensing value) {
+        this.backingStore.set("cloudLicensing", value);
     }
     /**
      * Sets the configurationManagement property value. The configurationManagement property

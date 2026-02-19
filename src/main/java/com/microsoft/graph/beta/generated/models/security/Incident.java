@@ -117,6 +117,7 @@ public class Incident extends Entity implements Parsable {
         deserializerMap.put("incidentWebUrl", (n) -> { this.setIncidentWebUrl(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getStringValue()); });
         deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("priorityScore", (n) -> { this.setPriorityScore(n.getIntegerValue()); });
         deserializerMap.put("recommendedActions", (n) -> { this.setRecommendedActions(n.getStringValue()); });
         deserializerMap.put("recommendedHuntingQueries", (n) -> { this.setRecommendedHuntingQueries(n.getCollectionOfObjectValues(RecommendedHuntingQuery::createFromDiscriminatorValue)); });
         deserializerMap.put("redirectIncidentId", (n) -> { this.setRedirectIncidentId(n.getStringValue()); });
@@ -151,6 +152,14 @@ public class Incident extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastUpdateDateTime() {
         return this.backingStore.get("lastUpdateDateTime");
+    }
+    /**
+     * Gets the priorityScore property value. A priority score for the incident from 0 to 100, with &gt; 85 being the top priority, 15 - 85 medium priority, and &lt; 15 low priority. This score is generated using machine learning and is based on multiple factors, including severity, disruption impact, threat intelligence, alert types, asset criticality, threat analytics, incident rarity, and additional priority signals. The value can also be null which indicates the feature is not open for the tenant or the value of the score is pending calculation.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getPriorityScore() {
+        return this.backingStore.get("priorityScore");
     }
     /**
      * Gets the recommendedActions property value. A rich text string that represents the actions that are reccomnded to take in order to resolve the incident.
@@ -243,6 +252,7 @@ public class Incident extends Entity implements Parsable {
         writer.writeStringValue("incidentWebUrl", this.getIncidentWebUrl());
         writer.writeStringValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastUpdateDateTime", this.getLastUpdateDateTime());
+        writer.writeIntegerValue("priorityScore", this.getPriorityScore());
         writer.writeStringValue("recommendedActions", this.getRecommendedActions());
         writer.writeCollectionOfObjectValues("recommendedHuntingQueries", this.getRecommendedHuntingQueries());
         writer.writeStringValue("redirectIncidentId", this.getRedirectIncidentId());
@@ -336,6 +346,13 @@ public class Incident extends Entity implements Parsable {
      */
     public void setLastUpdateDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastUpdateDateTime", value);
+    }
+    /**
+     * Sets the priorityScore property value. A priority score for the incident from 0 to 100, with &gt; 85 being the top priority, 15 - 85 medium priority, and &lt; 15 low priority. This score is generated using machine learning and is based on multiple factors, including severity, disruption impact, threat intelligence, alert types, asset criticality, threat analytics, incident rarity, and additional priority signals. The value can also be null which indicates the feature is not open for the tenant or the value of the score is pending calculation.
+     * @param value Value to set for the priorityScore property.
+     */
+    public void setPriorityScore(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("priorityScore", value);
     }
     /**
      * Sets the recommendedActions property value. A rich text string that represents the actions that are reccomnded to take in order to resolve the incident.

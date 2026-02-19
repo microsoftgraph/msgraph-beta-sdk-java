@@ -57,7 +57,7 @@ public class DriftedProperty implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the currentValue property value. The currentValue property
+     * Gets the currentValue property value. The current value of the property.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class DriftedProperty implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("currentValue");
     }
     /**
-     * Gets the desiredValue property value. The desiredValue property
+     * Gets the desiredValue property value. The desired value of the property as specified by admins in the baseline of the monitor body.
      * @return a {@link UntypedNode}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class DriftedProperty implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the propertyName property value. The propertyName property
+     * Gets the propertyName property value. The name of the property.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -126,14 +126,14 @@ public class DriftedProperty implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the currentValue property value. The currentValue property
+     * Sets the currentValue property value. The current value of the property.
      * @param value Value to set for the currentValue property.
      */
     public void setCurrentValue(@jakarta.annotation.Nullable final UntypedNode value) {
         this.backingStore.set("currentValue", value);
     }
     /**
-     * Sets the desiredValue property value. The desiredValue property
+     * Sets the desiredValue property value. The desired value of the property as specified by admins in the baseline of the monitor body.
      * @param value Value to set for the desiredValue property.
      */
     public void setDesiredValue(@jakarta.annotation.Nullable final UntypedNode value) {
@@ -147,7 +147,7 @@ public class DriftedProperty implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the propertyName property value. The propertyName property
+     * Sets the propertyName property value. The name of the property.
      * @param value Value to set for the propertyName property.
      */
     public void setPropertyName(@jakarta.annotation.Nullable final String value) {

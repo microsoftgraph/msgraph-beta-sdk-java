@@ -37,7 +37,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
         return this.backingStore.get("allowAllAppsAccess");
     }
     /**
-     * Gets the certificateStore property value. Target store certificate. The possible values are: user, machine.
+     * Gets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @return a {@link CertificateStore}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
         return this.backingStore.get("customSubjectAlternativeNames");
     }
     /**
-     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. The possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @return a {@link AppleDeploymentChannel}
      */
     @jakarta.annotation.Nullable
@@ -153,7 +153,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
         this.backingStore.set("allowAllAppsAccess", value);
     }
     /**
-     * Sets the certificateStore property value. Target store certificate. The possible values are: user, machine.
+     * Sets the certificateStore property value. Target store certificate. Possible values are: user, machine.
      * @param value Value to set for the certificateStore property.
      */
     public void setCertificateStore(@jakarta.annotation.Nullable final CertificateStore value) {
@@ -188,7 +188,7 @@ public class MacOSPkcsCertificateProfile extends MacOSCertificateProfileBase imp
         this.backingStore.set("customSubjectAlternativeNames", value);
     }
     /**
-     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. The possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @param value Value to set for the deploymentChannel property.
      */
     public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
