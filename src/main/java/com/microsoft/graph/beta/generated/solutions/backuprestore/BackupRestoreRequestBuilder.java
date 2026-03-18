@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.solutions.backuprestore;
 
 import com.microsoft.graph.beta.models.BackupRestoreRoot;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.solutions.backuprestore.activitylogs.ActivityLogsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.alldrivesbackup.AllDrivesBackupRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.allmailboxesbackup.AllMailboxesBackupRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.allsitesbackup.AllSitesBackupRequestBuilder;
@@ -21,6 +22,7 @@ import com.microsoft.graph.beta.solutions.backuprestore.onedriveforbusinessprote
 import com.microsoft.graph.beta.solutions.backuprestore.onedriveforbusinessrestoresessions.OneDriveForBusinessRestoreSessionsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.protectionpolicies.ProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.protectionunits.ProtectionUnitsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.reports.ReportsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.restorepoints.RestorePointsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.restoresessions.RestoreSessionsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.serviceapps.ServiceAppsRequestBuilder;
@@ -48,6 +50,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the activityLogs property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link ActivityLogsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ActivityLogsRequestBuilder activityLogs() {
+        return new ActivityLogsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the allDrivesBackup property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link AllDrivesBackupRequestBuilder}
@@ -199,6 +209,14 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ProtectionUnitsRequestBuilder protectionUnits() {
         return new ProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the reports property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link ReportsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReportsRequestBuilder reports() {
+        return new ReportsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the restorePoints property of the microsoft.graph.backupRestoreRoot entity.

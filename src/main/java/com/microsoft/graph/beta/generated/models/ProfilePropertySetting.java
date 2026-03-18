@@ -25,12 +25,12 @@ public class ProfilePropertySetting extends Entity implements Parsable {
         return new ProfilePropertySetting();
     }
     /**
-     * Gets the allowedAudiences property value. A privacy setting that reflects the allowed audience for the configured property. The possible values are: me, organization, federatedOrganizations, everyone, unknownFutureValue.
-     * @return a {@link OrganizationAllowedAudiences}
+     * Gets the displayName property value. Name of the property-level setting.
+     * @return a {@link String}
      */
     @jakarta.annotation.Nullable
-    public OrganizationAllowedAudiences getAllowedAudiences() {
-        return this.backingStore.get("allowedAudiences");
+    public String getDisplayName() {
+        return this.backingStore.get("displayName");
     }
     /**
      * The deserialization information for the current model
@@ -39,22 +39,13 @@ public class ProfilePropertySetting extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("allowedAudiences", (n) -> { this.setAllowedAudiences(n.getEnumValue(OrganizationAllowedAudiences::forValue)); });
-        deserializerMap.put("isUserOverrideForAudienceEnabled", (n) -> { this.setIsUserOverrideForAudienceEnabled(n.getBooleanValue()); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("prioritizedSourceUrls", (n) -> { this.setPrioritizedSourceUrls(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
     /**
-     * Gets the isUserOverrideForAudienceEnabled property value. Defines whether a user is allowed to override the tenant admin privacy setting.
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getIsUserOverrideForAudienceEnabled() {
-        return this.backingStore.get("isUserOverrideForAudienceEnabled");
-    }
-    /**
-     * Gets the name property value. Name of the property-level setting.
+     * Gets the name property value. Other name of the property-level setting. For backward compatibility.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -76,27 +67,19 @@ public class ProfilePropertySetting extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeEnumValue("allowedAudiences", this.getAllowedAudiences());
-        writer.writeBooleanValue("isUserOverrideForAudienceEnabled", this.getIsUserOverrideForAudienceEnabled());
+        writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("name", this.getName());
         writer.writeCollectionOfPrimitiveValues("prioritizedSourceUrls", this.getPrioritizedSourceUrls());
     }
     /**
-     * Sets the allowedAudiences property value. A privacy setting that reflects the allowed audience for the configured property. The possible values are: me, organization, federatedOrganizations, everyone, unknownFutureValue.
-     * @param value Value to set for the allowedAudiences property.
+     * Sets the displayName property value. Name of the property-level setting.
+     * @param value Value to set for the displayName property.
      */
-    public void setAllowedAudiences(@jakarta.annotation.Nullable final OrganizationAllowedAudiences value) {
-        this.backingStore.set("allowedAudiences", value);
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the isUserOverrideForAudienceEnabled property value. Defines whether a user is allowed to override the tenant admin privacy setting.
-     * @param value Value to set for the isUserOverrideForAudienceEnabled property.
-     */
-    public void setIsUserOverrideForAudienceEnabled(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("isUserOverrideForAudienceEnabled", value);
-    }
-    /**
-     * Sets the name property value. Name of the property-level setting.
+     * Sets the name property value. Other name of the property-level setting. For backward compatibility.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {

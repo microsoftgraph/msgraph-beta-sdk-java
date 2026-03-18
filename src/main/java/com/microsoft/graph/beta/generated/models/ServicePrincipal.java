@@ -156,7 +156,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         return this.backingStore.get("claimsPolicy");
     }
     /**
-     * Gets the createdByAppId property value. The appId (called Application (client) ID on the Microsoft Entra admin center) of the application used to create the service principal. Set internally by Microsoft Entra ID. Read-only.
+     * Gets the createdByAppId property value. The appId of the application that created this service principal. Set internally by Microsoft Entra ID. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -768,7 +768,7 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         this.backingStore.set("claimsPolicy", value);
     }
     /**
-     * Sets the createdByAppId property value. The appId (called Application (client) ID on the Microsoft Entra admin center) of the application used to create the service principal. Set internally by Microsoft Entra ID. Read-only.
+     * Sets the createdByAppId property value. The appId of the application that created this service principal. Set internally by Microsoft Entra ID. Read-only.
      * @param value Value to set for the createdByAppId property.
      */
     public void setCreatedByAppId(@jakarta.annotation.Nullable final String value) {

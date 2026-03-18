@@ -21,7 +21,13 @@ public enum DeviceVendor implements ValuedEnum {
     Versa("versa"),
     Other("other"),
     CiscoCatalyst("ciscoCatalyst"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Aviatrix("aviatrix"),
+    Netskope("netskope"),
+    Teridion("teridion"),
+    AristaNetworks("aristaNetworks"),
+    AristaVeloCloud("aristaVeloCloud"),
+    JuniperNetworks("juniperNetworks");
     public final String value;
     DeviceVendor(final String value) {
         this.value = value;
@@ -49,6 +55,12 @@ public enum DeviceVendor implements ValuedEnum {
             case "other": return Other;
             case "ciscoCatalyst": return CiscoCatalyst;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "aviatrix": return Aviatrix;
+            case "netskope": return Netskope;
+            case "teridion": return Teridion;
+            case "aristaNetworks": return AristaNetworks;
+            case "aristaVeloCloud": return AristaVeloCloud;
+            case "juniperNetworks": return JuniperNetworks;
             default: return null;
         }
     }

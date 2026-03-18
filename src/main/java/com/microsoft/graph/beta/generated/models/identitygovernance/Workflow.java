@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models.identitygovernance;
 
+import com.microsoft.graph.beta.models.DirectoryObject;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -53,6 +54,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         deserializerMap.put("executionScope", (n) -> { this.setExecutionScope(n.getCollectionOfObjectValues(UserProcessingResult::createFromDiscriminatorValue)); });
         deserializerMap.put("id", (n) -> { this.setId(n.getStringValue()); });
         deserializerMap.put("nextScheduleRunDateTime", (n) -> { this.setNextScheduleRunDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("previewScope", (n) -> { this.setPreviewScope(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("runs", (n) -> { this.setRuns(n.getCollectionOfObjectValues(Run::createFromDiscriminatorValue)); });
         deserializerMap.put("taskReports", (n) -> { this.setTaskReports(n.getCollectionOfObjectValues(TaskReport::createFromDiscriminatorValue)); });
         deserializerMap.put("userProcessingResults", (n) -> { this.setUserProcessingResults(n.getCollectionOfObjectValues(UserProcessingResult::createFromDiscriminatorValue)); });
@@ -75,6 +77,14 @@ public class Workflow extends WorkflowBase implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getNextScheduleRunDateTime() {
         return this.backingStore.get("nextScheduleRunDateTime");
+    }
+    /**
+     * Gets the previewScope property value. The previewScope property
+     * @return a {@link java.util.List<DirectoryObject>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DirectoryObject> getPreviewScope() {
+        return this.backingStore.get("previewScope");
     }
     /**
      * Gets the runs property value. Workflow runs.
@@ -127,6 +137,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         writer.writeCollectionOfObjectValues("executionScope", this.getExecutionScope());
         writer.writeStringValue("id", this.getId());
         writer.writeOffsetDateTimeValue("nextScheduleRunDateTime", this.getNextScheduleRunDateTime());
+        writer.writeCollectionOfObjectValues("previewScope", this.getPreviewScope());
         writer.writeCollectionOfObjectValues("runs", this.getRuns());
         writer.writeCollectionOfObjectValues("taskReports", this.getTaskReports());
         writer.writeCollectionOfObjectValues("userProcessingResults", this.getUserProcessingResults());
@@ -160,6 +171,13 @@ public class Workflow extends WorkflowBase implements Parsable {
      */
     public void setNextScheduleRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("nextScheduleRunDateTime", value);
+    }
+    /**
+     * Sets the previewScope property value. The previewScope property
+     * @param value Value to set for the previewScope property.
+     */
+    public void setPreviewScope(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {
+        this.backingStore.set("previewScope", value);
     }
     /**
      * Sets the runs property value. Workflow runs.

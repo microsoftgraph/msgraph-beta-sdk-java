@@ -60,6 +60,7 @@ public class MobileApp extends Entity implements Parsable {
                 case "#microsoft.graph.win32CatalogApp": return new Win32CatalogApp();
                 case "#microsoft.graph.win32LobApp": return new Win32LobApp();
                 case "#microsoft.graph.windowsAppX": return new WindowsAppX();
+                case "#microsoft.graph.windowsAutoUpdateCatalogApp": return new WindowsAutoUpdateCatalogApp();
                 case "#microsoft.graph.windowsMicrosoftEdgeApp": return new WindowsMicrosoftEdgeApp();
                 case "#microsoft.graph.windowsMobileMSI": return new WindowsMobileMSI();
                 case "#microsoft.graph.windowsPhone81AppX": return new WindowsPhone81AppX();

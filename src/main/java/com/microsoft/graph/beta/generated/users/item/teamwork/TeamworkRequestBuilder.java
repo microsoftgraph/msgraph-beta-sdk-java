@@ -3,6 +3,9 @@ package com.microsoft.graph.beta.users.item.teamwork;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.UserTeamwork;
 import com.microsoft.graph.beta.users.item.teamwork.associatedteams.AssociatedTeamsRequestBuilder;
+import com.microsoft.graph.beta.users.item.teamwork.deletetargetedmessage.DeleteTargetedMessageRequestBuilder;
+import com.microsoft.graph.beta.users.item.teamwork.getallretainedtargetedmessages.GetAllRetainedTargetedMessagesRequestBuilder;
+import com.microsoft.graph.beta.users.item.teamwork.getalltargetedmessages.GetAllTargetedMessagesRequestBuilder;
 import com.microsoft.graph.beta.users.item.teamwork.installedapps.InstalledAppsRequestBuilder;
 import com.microsoft.graph.beta.users.item.teamwork.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -30,6 +33,30 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AssociatedTeamsRequestBuilder associatedTeams() {
         return new AssociatedTeamsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the deleteTargetedMessage method.
+     * @return a {@link DeleteTargetedMessageRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeleteTargetedMessageRequestBuilder deleteTargetedMessage() {
+        return new DeleteTargetedMessageRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getAllRetainedTargetedMessages method.
+     * @return a {@link GetAllRetainedTargetedMessagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllRetainedTargetedMessagesRequestBuilder getAllRetainedTargetedMessages() {
+        return new GetAllRetainedTargetedMessagesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getAllTargetedMessages method.
+     * @return a {@link GetAllTargetedMessagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetAllTargetedMessagesRequestBuilder getAllTargetedMessages() {
+        return new GetAllTargetedMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.

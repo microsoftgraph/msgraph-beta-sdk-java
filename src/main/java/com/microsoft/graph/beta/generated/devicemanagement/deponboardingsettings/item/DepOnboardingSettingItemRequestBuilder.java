@@ -8,6 +8,7 @@ import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.enro
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.generateencryptionpublickey.GenerateEncryptionPublicKeyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.getencryptionpublickey.GetEncryptionPublicKeyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.importedappledeviceidentities.ImportedAppleDeviceIdentitiesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.releaseappledevices.ReleaseAppleDevicesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.shareforschooldatasyncservice.ShareForSchoolDataSyncServiceRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.syncwithappledeviceenrollmentprogram.SyncWithAppleDeviceEnrollmentProgramRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deponboardingsettings.item.unshareforschooldatasyncservice.UnshareForSchoolDataSyncServiceRequestBuilder;
@@ -95,6 +96,14 @@ public class DepOnboardingSettingItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ImportedAppleDeviceIdentitiesRequestBuilder importedAppleDeviceIdentities() {
         return new ImportedAppleDeviceIdentitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the releaseAppleDevices method.
+     * @return a {@link ReleaseAppleDevicesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReleaseAppleDevicesRequestBuilder releaseAppleDevices() {
+        return new ReleaseAppleDevicesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the shareForSchoolDataSyncService method.

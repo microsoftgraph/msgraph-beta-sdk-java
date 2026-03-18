@@ -216,6 +216,7 @@ public class PolicyRoot extends Entity implements Parsable {
         deserializerMap.put("mobileAppManagementPolicies", (n) -> { this.setMobileAppManagementPolicies(n.getCollectionOfObjectValues(MobileAppManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("mobileDeviceManagementPolicies", (n) -> { this.setMobileDeviceManagementPolicies(n.getCollectionOfObjectValues(MobileDeviceManagementPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremAuthenticationPolicies", (n) -> { this.setOnPremAuthenticationPolicies(n.getCollectionOfObjectValues(OnPremAuthenticationPolicy::createFromDiscriminatorValue)); });
+        deserializerMap.put("ownerlessGroupPolicy", (n) -> { this.setOwnerlessGroupPolicy(n.getObjectValue(OwnerlessGroupPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("permissionGrantPolicies", (n) -> { this.setPermissionGrantPolicies(n.getCollectionOfObjectValues(PermissionGrantPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("permissionGrantPreApprovalPolicies", (n) -> { this.setPermissionGrantPreApprovalPolicies(n.getCollectionOfObjectValues(PermissionGrantPreApprovalPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("roleManagementPolicies", (n) -> { this.setRoleManagementPolicies(n.getCollectionOfObjectValues(UnifiedRoleManagementPolicy::createFromDiscriminatorValue)); });
@@ -264,6 +265,14 @@ public class PolicyRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<OnPremAuthenticationPolicy> getOnPremAuthenticationPolicies() {
         return this.backingStore.get("onPremAuthenticationPolicies");
+    }
+    /**
+     * Gets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * @return a {@link OwnerlessGroupPolicy}
+     */
+    @jakarta.annotation.Nullable
+    public OwnerlessGroupPolicy getOwnerlessGroupPolicy() {
+        return this.backingStore.get("ownerlessGroupPolicy");
     }
     /**
      * Gets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
@@ -353,6 +362,7 @@ public class PolicyRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("mobileAppManagementPolicies", this.getMobileAppManagementPolicies());
         writer.writeCollectionOfObjectValues("mobileDeviceManagementPolicies", this.getMobileDeviceManagementPolicies());
         writer.writeCollectionOfObjectValues("onPremAuthenticationPolicies", this.getOnPremAuthenticationPolicies());
+        writer.writeObjectValue("ownerlessGroupPolicy", this.getOwnerlessGroupPolicy());
         writer.writeCollectionOfObjectValues("permissionGrantPolicies", this.getPermissionGrantPolicies());
         writer.writeCollectionOfObjectValues("permissionGrantPreApprovalPolicies", this.getPermissionGrantPreApprovalPolicies());
         writer.writeCollectionOfObjectValues("roleManagementPolicies", this.getRoleManagementPolicies());
@@ -535,6 +545,13 @@ public class PolicyRoot extends Entity implements Parsable {
      */
     public void setOnPremAuthenticationPolicies(@jakarta.annotation.Nullable final java.util.List<OnPremAuthenticationPolicy> value) {
         this.backingStore.set("onPremAuthenticationPolicies", value);
+    }
+    /**
+     * Sets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * @param value Value to set for the ownerlessGroupPolicy property.
+     */
+    public void setOwnerlessGroupPolicy(@jakarta.annotation.Nullable final OwnerlessGroupPolicy value) {
+        this.backingStore.set("ownerlessGroupPolicy", value);
     }
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.

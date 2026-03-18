@@ -129,7 +129,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
         return this.backingStore.get("passcodeBlockSimple");
     }
     /**
-     * Gets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
+     * Gets the passcodeExpirationDays property value. Number of days before the passcode expires. Starting January 2026 (Intune release version: 2601), the maximum expiration days will be limited to 730 days. Any setting above 730 days will be default to 730 days. Valid values 1 to 65535
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -299,7 +299,7 @@ public class IosCompliancePolicy extends DeviceCompliancePolicy implements Parsa
         this.backingStore.set("passcodeBlockSimple", value);
     }
     /**
-     * Sets the passcodeExpirationDays property value. Number of days before the passcode expires. Valid values 1 to 65535
+     * Sets the passcodeExpirationDays property value. Number of days before the passcode expires. Starting January 2026 (Intune release version: 2601), the maximum expiration days will be limited to 730 days. Any setting above 730 days will be default to 730 days. Valid values 1 to 65535
      * @param value Value to set for the passcodeExpirationDays property.
      */
     public void setPasscodeExpirationDays(@jakarta.annotation.Nullable final Integer value) {

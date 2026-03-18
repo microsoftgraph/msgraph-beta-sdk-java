@@ -143,6 +143,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         deserializerMap.put("isExternallyVisible", (n) -> { this.setIsExternallyVisible(n.getBooleanValue()); });
         deserializerMap.put("modifiedBy", (n) -> { this.setModifiedBy(n.getStringValue()); });
         deserializerMap.put("modifiedDateTime", (n) -> { this.setModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("privilegeLevel", (n) -> { this.setPrivilegeLevel(n.getEnumValue(PrivilegeLevel::forValue)); });
         deserializerMap.put("uniqueName", (n) -> { this.setUniqueName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -169,6 +170,14 @@ public class AccessPackageCatalog extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getModifiedDateTime() {
         return this.backingStore.get("modifiedDateTime");
+    }
+    /**
+     * Gets the privilegeLevel property value. The privilegeLevel property
+     * @return a {@link PrivilegeLevel}
+     */
+    @jakarta.annotation.Nullable
+    public PrivilegeLevel getPrivilegeLevel() {
+        return this.backingStore.get("privilegeLevel");
     }
     /**
      * Gets the uniqueName property value. The uniqueName property
@@ -200,6 +209,7 @@ public class AccessPackageCatalog extends Entity implements Parsable {
         writer.writeBooleanValue("isExternallyVisible", this.getIsExternallyVisible());
         writer.writeStringValue("modifiedBy", this.getModifiedBy());
         writer.writeOffsetDateTimeValue("modifiedDateTime", this.getModifiedDateTime());
+        writer.writeEnumValue("privilegeLevel", this.getPrivilegeLevel());
         writer.writeStringValue("uniqueName", this.getUniqueName());
     }
     /**
@@ -306,6 +316,13 @@ public class AccessPackageCatalog extends Entity implements Parsable {
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("modifiedDateTime", value);
+    }
+    /**
+     * Sets the privilegeLevel property value. The privilegeLevel property
+     * @param value Value to set for the privilegeLevel property.
+     */
+    public void setPrivilegeLevel(@jakarta.annotation.Nullable final PrivilegeLevel value) {
+        this.backingStore.set("privilegeLevel", value);
     }
     /**
      * Sets the uniqueName property value. The uniqueName property

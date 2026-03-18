@@ -36,7 +36,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return new MacOSWiFiConfiguration();
     }
     /**
-     * Gets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
+     * Gets the connectAutomatically property value. Indicates whether to automatically connect to this network when it is in range of the device. When TRUE will skip the user prompt and automatically connect the device to Wi-Fi network. Default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -44,7 +44,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this.backingStore.get("connectAutomatically");
     }
     /**
-     * Gets the connectWhenNetworkNameIsHidden property value. Connect when the network is not broadcasting its name (SSID). When set to true, this profile forces the device to connect to a network that doesn&apos;t broadcast its SSID to all devices.
+     * Gets the connectWhenNetworkNameIsHidden property value. Indicates whether the device should connect to the network when it is not broadcasting its name (SSID). When TRUE, this profile forces the device to connect to a network that doesn&apos;t broadcast its SSID to all devices. Default is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this.backingStore.get("connectWhenNetworkNameIsHidden");
     }
     /**
-     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Gets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Once set, cannot be changed. Possible values are deviceChannel, and userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @return a {@link AppleDeploymentChannel}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return deserializerMap;
     }
     /**
-     * Gets the networkName property value. Network Name
+     * Gets the networkName property value. Indicates the Wi-Fi configuration profile name. Used to identify the configuration profile.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this.backingStore.get("preSharedKey");
     }
     /**
-     * Gets the proxyAutomaticConfigurationUrl property value. URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+     * Gets the proxyAutomaticConfigurationUrl property value. Indicates URL of the proxy server automatic configuration (PAC) script when proxySettings is automatic. Used to find the location of PAC (Proxy Auto Configuration) file. Example: itproxy.contoso.com
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this.backingStore.get("proxyAutomaticConfigurationUrl");
     }
     /**
-     * Gets the proxyManualAddress property value. IP Address or DNS hostname of the proxy server when manual configuration is selected.
+     * Gets the proxyManualAddress property value. Indicates IP Address or DNS hostname of the proxy server when manual configuration is selected. Used for proxy settings. Example: 10.0.0.2
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this.backingStore.get("proxyManualAddress");
     }
     /**
-     * Gets the proxyManualPort property value. Port of the proxy server when manual configuration is selected.
+     * Gets the proxyManualPort property value. Indicates the proxy server TCP port to use when proxySettings is manual. Used for proxy settings. Example: 8080
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -163,28 +163,28 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         writer.writeEnumValue("wiFiSecurityType", this.getWiFiSecurityType());
     }
     /**
-     * Sets the connectAutomatically property value. Connect automatically when this network is in range. Setting this to true will skip the user prompt and automatically connect the device to Wi-Fi network.
+     * Sets the connectAutomatically property value. Indicates whether to automatically connect to this network when it is in range of the device. When TRUE will skip the user prompt and automatically connect the device to Wi-Fi network. Default is false.
      * @param value Value to set for the connectAutomatically property.
      */
     public void setConnectAutomatically(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("connectAutomatically", value);
     }
     /**
-     * Sets the connectWhenNetworkNameIsHidden property value. Connect when the network is not broadcasting its name (SSID). When set to true, this profile forces the device to connect to a network that doesn&apos;t broadcast its SSID to all devices.
+     * Sets the connectWhenNetworkNameIsHidden property value. Indicates whether the device should connect to the network when it is not broadcasting its name (SSID). When TRUE, this profile forces the device to connect to a network that doesn&apos;t broadcast its SSID to all devices. Default is false.
      * @param value Value to set for the connectWhenNetworkNameIsHidden property.
      */
     public void setConnectWhenNetworkNameIsHidden(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("connectWhenNetworkNameIsHidden", value);
     }
     /**
-     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Possible values are deviceChannel, userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
+     * Sets the deploymentChannel property value. Indicates the deployment channel type used to deploy the configuration profile. Once set, cannot be changed. Possible values are deviceChannel, and userChannel. Possible values are: deviceChannel, userChannel, unknownFutureValue.
      * @param value Value to set for the deploymentChannel property.
      */
     public void setDeploymentChannel(@jakarta.annotation.Nullable final AppleDeploymentChannel value) {
         this.backingStore.set("deploymentChannel", value);
     }
     /**
-     * Sets the networkName property value. Network Name
+     * Sets the networkName property value. Indicates the Wi-Fi configuration profile name. Used to identify the configuration profile.
      * @param value Value to set for the networkName property.
      */
     public void setNetworkName(@jakarta.annotation.Nullable final String value) {
@@ -198,21 +198,21 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         this.backingStore.set("preSharedKey", value);
     }
     /**
-     * Sets the proxyAutomaticConfigurationUrl property value. URL of the proxy server automatic configuration script when automatic configuration is selected. This URL is typically the location of PAC (Proxy Auto Configuration) file.
+     * Sets the proxyAutomaticConfigurationUrl property value. Indicates URL of the proxy server automatic configuration (PAC) script when proxySettings is automatic. Used to find the location of PAC (Proxy Auto Configuration) file. Example: itproxy.contoso.com
      * @param value Value to set for the proxyAutomaticConfigurationUrl property.
      */
     public void setProxyAutomaticConfigurationUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("proxyAutomaticConfigurationUrl", value);
     }
     /**
-     * Sets the proxyManualAddress property value. IP Address or DNS hostname of the proxy server when manual configuration is selected.
+     * Sets the proxyManualAddress property value. Indicates IP Address or DNS hostname of the proxy server when manual configuration is selected. Used for proxy settings. Example: 10.0.0.2
      * @param value Value to set for the proxyManualAddress property.
      */
     public void setProxyManualAddress(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("proxyManualAddress", value);
     }
     /**
-     * Sets the proxyManualPort property value. Port of the proxy server when manual configuration is selected.
+     * Sets the proxyManualPort property value. Indicates the proxy server TCP port to use when proxySettings is manual. Used for proxy settings. Example: 8080
      * @param value Value to set for the proxyManualPort property.
      */
     public void setProxyManualPort(@jakarta.annotation.Nullable final Integer value) {

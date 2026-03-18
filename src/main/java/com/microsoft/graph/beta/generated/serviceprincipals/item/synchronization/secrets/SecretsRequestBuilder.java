@@ -22,7 +22,10 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * Use connectivityParameters for oauth flows and scim endpoint connectivity. Use SynchronizationJobSettings for job-specific settings This property will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -48,9 +51,12 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link SecretsPutResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Use connectivityParameters for oauth flows and scim endpoint connectivity. Use SynchronizationJobSettings for job-specific settings This property will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-serviceprincipal-put-synchronization?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body) {
         return put(body, null);
     }
@@ -60,9 +66,12 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SecretsPutResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Use connectivityParameters for oauth flows and scim endpoint connectivity. Use SynchronizationJobSettings for job-specific settings This property will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-serviceprincipal-put-synchronization?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SecretsPutResponse put(@jakarta.annotation.Nonnull final SecretsPutRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPutRequestInformation(body, requestConfiguration);
@@ -74,8 +83,11 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * Provide credentials for establishing connectivity with the target system.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Use connectivityParameters for oauth flows and scim endpoint connectivity. Use SynchronizationJobSettings for job-specific settings This property will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final SecretsPutRequestBody body) {
         return toPutRequestInformation(body, null);
     }
@@ -84,8 +96,11 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Use connectivityParameters for oauth flows and scim endpoint connectivity. Use SynchronizationJobSettings for job-specific settings This property will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPutRequestInformation(@jakarta.annotation.Nonnull final SecretsPutRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PutRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PUT, urlTemplate, pathParameters);
@@ -98,8 +113,11 @@ public class SecretsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SecretsRequestBuilder}
+     * @deprecated
+     * Use connectivityParameters for oauth flows and scim endpoint connectivity. Use SynchronizationJobSettings for job-specific settings This property will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SecretsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SecretsRequestBuilder(rawUrl, requestAdapter);

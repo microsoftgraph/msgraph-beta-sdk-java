@@ -60,7 +60,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/externalAuthenticationMethods{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Represents the external methods registered to a user for authentication.
+     * Represents the external MFA registered to a user for authentication.
      * @return a {@link ExternalAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Represents the external methods registered to a user for authentication.
+     * Represents the external MFA registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalAuthenticationMethodCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -109,7 +109,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalAuthenticationMethod::createFromDiscriminatorValue);
     }
     /**
-     * Represents the external methods registered to a user for authentication.
+     * Represents the external MFA registered to a user for authentication.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -117,7 +117,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Represents the external methods registered to a user for authentication.
+     * Represents the external MFA registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -163,7 +163,7 @@ public class ExternalAuthenticationMethodsRequestBuilder extends BaseRequestBuil
         return new ExternalAuthenticationMethodsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Represents the external methods registered to a user for authentication.
+     * Represents the external MFA registered to a user for authentication.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

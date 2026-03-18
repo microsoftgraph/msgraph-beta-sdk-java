@@ -168,7 +168,7 @@ public class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(30);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(29);
         deserializerMap.put("companyPortalBlockedActions", (n) -> { this.setCompanyPortalBlockedActions(n.getCollectionOfObjectValues(CompanyPortalBlockedAction::createFromDiscriminatorValue)); });
         deserializerMap.put("contactITEmailAddress", (n) -> { this.setContactITEmailAddress(n.getStringValue()); });
         deserializerMap.put("contactITName", (n) -> { this.setContactITName(n.getStringValue()); });
@@ -191,7 +191,6 @@ public class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable 
         deserializerMap.put("onlineSupportSiteUrl", (n) -> { this.setOnlineSupportSiteUrl(n.getStringValue()); });
         deserializerMap.put("privacyUrl", (n) -> { this.setPrivacyUrl(n.getStringValue()); });
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
-        deserializerMap.put("sendDeviceOwnershipChangePushNotification", (n) -> { this.setSendDeviceOwnershipChangePushNotification(n.getBooleanValue()); });
         deserializerMap.put("showAzureADEnterpriseApps", (n) -> { this.setShowAzureADEnterpriseApps(n.getBooleanValue()); });
         deserializerMap.put("showConfigurationManagerApps", (n) -> { this.setShowConfigurationManagerApps(n.getBooleanValue()); });
         deserializerMap.put("showDisplayNameNextToLogo", (n) -> { this.setShowDisplayNameNextToLogo(n.getBooleanValue()); });
@@ -272,14 +271,6 @@ public class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable 
     @jakarta.annotation.Nullable
     public java.util.List<String> getRoleScopeTagIds() {
         return this.backingStore.get("roleScopeTagIds");
-    }
-    /**
-     * Gets the sendDeviceOwnershipChangePushNotification property value. Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
-     * @return a {@link Boolean}
-     */
-    @jakarta.annotation.Nullable
-    public Boolean getSendDeviceOwnershipChangePushNotification() {
-        return this.backingStore.get("sendDeviceOwnershipChangePushNotification");
     }
     /**
      * Gets the showAzureADEnterpriseApps property value. Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
@@ -365,7 +356,6 @@ public class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable 
         writer.writeStringValue("onlineSupportSiteUrl", this.getOnlineSupportSiteUrl());
         writer.writeStringValue("privacyUrl", this.getPrivacyUrl());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
-        writer.writeBooleanValue("sendDeviceOwnershipChangePushNotification", this.getSendDeviceOwnershipChangePushNotification());
         writer.writeBooleanValue("showAzureADEnterpriseApps", this.getShowAzureADEnterpriseApps());
         writer.writeBooleanValue("showConfigurationManagerApps", this.getShowConfigurationManagerApps());
         writer.writeBooleanValue("showDisplayNameNextToLogo", this.getShowDisplayNameNextToLogo());
@@ -543,13 +533,6 @@ public class IntuneBrand implements AdditionalDataHolder, BackedModel, Parsable 
      */
     public void setRoleScopeTagIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("roleScopeTagIds", value);
-    }
-    /**
-     * Sets the sendDeviceOwnershipChangePushNotification property value. Boolean that indicates if a push notification is sent to users when their device ownership type changes from personal to corporate
-     * @param value Value to set for the sendDeviceOwnershipChangePushNotification property.
-     */
-    public void setSendDeviceOwnershipChangePushNotification(@jakarta.annotation.Nullable final Boolean value) {
-        this.backingStore.set("sendDeviceOwnershipChangePushNotification", value);
     }
     /**
      * Sets the showAzureADEnterpriseApps property value. Boolean that indicates if AzureAD Enterprise Apps will be shown in Company Portal
