@@ -15,6 +15,7 @@ import com.microsoft.graph.beta.chats.item.removeallaccessforuser.RemoveAllAcces
 import com.microsoft.graph.beta.chats.item.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.graph.beta.chats.item.startmigration.StartMigrationRequestBuilder;
 import com.microsoft.graph.beta.chats.item.tabs.TabsRequestBuilder;
+import com.microsoft.graph.beta.chats.item.targetedmessages.TargetedMessagesRequestBuilder;
 import com.microsoft.graph.beta.chats.item.unhideforuser.UnhideForUserRequestBuilder;
 import com.microsoft.graph.beta.models.Chat;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -155,6 +156,14 @@ public class ChatItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TabsRequestBuilder tabs() {
         return new TabsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the targetedMessages property of the microsoft.graph.chat entity.
+     * @return a {@link TargetedMessagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TargetedMessagesRequestBuilder targetedMessages() {
+        return new TargetedMessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unhideForUser method.

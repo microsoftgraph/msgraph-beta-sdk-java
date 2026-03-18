@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.networkaccess;
 import com.microsoft.graph.beta.models.networkaccess.NetworkAccessRoot;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.alerts.AlertsRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.cloudfirewallpolicies.CloudFirewallPoliciesRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.connectivity.ConnectivityRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.filteringpolicies.FilteringPoliciesRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.filteringprofiles.FilteringProfilesRequestBuilder;
@@ -41,6 +42,14 @@ public class NetworkAccessRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AlertsRequestBuilder alerts() {
         return new AlertsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the cloudFirewallPolicies property of the microsoft.graph.networkaccess.networkAccessRoot entity.
+     * @return a {@link CloudFirewallPoliciesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CloudFirewallPoliciesRequestBuilder cloudFirewallPolicies() {
+        return new CloudFirewallPoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the connectivity property of the microsoft.graph.networkaccess.networkAccessRoot entity.

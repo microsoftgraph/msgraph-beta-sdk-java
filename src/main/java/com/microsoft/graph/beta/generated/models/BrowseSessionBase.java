@@ -77,6 +77,7 @@ public class BrowseSessionBase extends Entity implements Parsable {
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("restorePointDateTime", (n) -> { this.setRestorePointDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("restorePointId", (n) -> { this.setRestorePointId(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(BrowseSessionStatus::forValue)); });
         return deserializerMap;
     }
@@ -87,6 +88,14 @@ public class BrowseSessionBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getRestorePointDateTime() {
         return this.backingStore.get("restorePointDateTime");
+    }
+    /**
+     * Gets the restorePointId property value. The restorePointId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRestorePointId() {
+        return this.backingStore.get("restorePointId");
     }
     /**
      * Gets the status property value. The status property
@@ -108,6 +117,7 @@ public class BrowseSessionBase extends Entity implements Parsable {
         writer.writeObjectValue("error", this.getError());
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeOffsetDateTimeValue("restorePointDateTime", this.getRestorePointDateTime());
+        writer.writeStringValue("restorePointId", this.getRestorePointId());
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
@@ -144,6 +154,13 @@ public class BrowseSessionBase extends Entity implements Parsable {
      */
     public void setRestorePointDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("restorePointDateTime", value);
+    }
+    /**
+     * Sets the restorePointId property value. The restorePointId property
+     * @param value Value to set for the restorePointId property.
+     */
+    public void setRestorePointId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("restorePointId", value);
     }
     /**
      * Sets the status property value. The status property

@@ -69,9 +69,7 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("elementDetails", (n) -> { this.setElementDetails(n.getCollectionOfObjectValues(PackageElementDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("longDescription", (n) -> { this.setLongDescription(n.getStringValue()); });
-        deserializerMap.put("manifestVersion", (n) -> { this.setManifestVersion(n.getStringValue()); });
         deserializerMap.put("sensitivity", (n) -> { this.setSensitivity(n.getStringValue()); });
-        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -83,28 +81,12 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         return this.backingStore.get("longDescription");
     }
     /**
-     * Gets the manifestVersion property value. The manifestVersion property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getManifestVersion() {
-        return this.backingStore.get("manifestVersion");
-    }
-    /**
      * Gets the sensitivity property value. The sensitivity property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getSensitivity() {
         return this.backingStore.get("sensitivity");
-    }
-    /**
-     * Gets the version property value. The version property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getVersion() {
-        return this.backingStore.get("version");
     }
     /**
      * Serializes information the current object
@@ -118,9 +100,7 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
         writer.writeCollectionOfObjectValues("elementDetails", this.getElementDetails());
         writer.writeStringValue("longDescription", this.getLongDescription());
-        writer.writeStringValue("manifestVersion", this.getManifestVersion());
         writer.writeStringValue("sensitivity", this.getSensitivity());
-        writer.writeStringValue("version", this.getVersion());
     }
     /**
      * Sets the acquireUsersAndGroups property value. The acquireUsersAndGroups property
@@ -158,24 +138,10 @@ public class CopilotPackageDetail extends CopilotPackage implements Parsable {
         this.backingStore.set("longDescription", value);
     }
     /**
-     * Sets the manifestVersion property value. The manifestVersion property
-     * @param value Value to set for the manifestVersion property.
-     */
-    public void setManifestVersion(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("manifestVersion", value);
-    }
-    /**
      * Sets the sensitivity property value. The sensitivity property
      * @param value Value to set for the sensitivity property.
      */
     public void setSensitivity(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("sensitivity", value);
-    }
-    /**
-     * Sets the version property value. The version property
-     * @param value Value to set for the version property.
-     */
-    public void setVersion(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("version", value);
     }
 }

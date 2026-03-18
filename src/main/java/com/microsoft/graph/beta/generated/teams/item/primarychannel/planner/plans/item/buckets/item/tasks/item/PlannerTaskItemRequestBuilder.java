@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.PlannerTask;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.buckets.item.tasks.item.assignedtotaskboardformat.AssignedToTaskBoardFormatRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.buckets.item.tasks.item.buckettaskboardformat.BucketTaskBoardFormatRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.buckets.item.tasks.item.details.DetailsRequestBuilder;
+import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.buckets.item.tasks.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.plans.item.buckets.item.tasks.item.progresstaskboardformat.ProgressTaskBoardFormatRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -47,6 +48,14 @@ public class PlannerTaskItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DetailsRequestBuilder details() {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.plannerTask entity.
+     * @return a {@link MessagesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MessagesRequestBuilder messages() {
+        return new MessagesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the progressTaskBoardFormat property of the microsoft.graph.plannerTask entity.

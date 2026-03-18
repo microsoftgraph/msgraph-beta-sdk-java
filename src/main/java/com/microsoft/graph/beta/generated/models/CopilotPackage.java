@@ -33,6 +33,22 @@ public class CopilotPackage extends Entity implements Parsable {
         return new CopilotPackage();
     }
     /**
+     * Gets the appId property value. The appId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAppId() {
+        return this.backingStore.get("appId");
+    }
+    /**
+     * Gets the assetId property value. The assetId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getAssetId() {
+        return this.backingStore.get("assetId");
+    }
+    /**
      * Gets the availableTo property value. The availableTo property
      * @return a {@link PackageStatus}
      */
@@ -71,16 +87,22 @@ public class CopilotPackage extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appId", (n) -> { this.setAppId(n.getStringValue()); });
+        deserializerMap.put("assetId", (n) -> { this.setAssetId(n.getStringValue()); });
         deserializerMap.put("availableTo", (n) -> { this.setAvailableTo(n.getEnumValue(PackageStatus::forValue)); });
         deserializerMap.put("deployedTo", (n) -> { this.setDeployedTo(n.getEnumValue(PackageStatus::forValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("elementTypes", (n) -> { this.setElementTypes(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("isBlocked", (n) -> { this.setIsBlocked(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("manifestId", (n) -> { this.setManifestId(n.getStringValue()); });
+        deserializerMap.put("manifestVersion", (n) -> { this.setManifestVersion(n.getStringValue()); });
+        deserializerMap.put("platform", (n) -> { this.setPlatform(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
         deserializerMap.put("shortDescription", (n) -> { this.setShortDescription(n.getStringValue()); });
         deserializerMap.put("supportedHosts", (n) -> { this.setSupportedHosts(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(PackageType::forValue)); });
+        deserializerMap.put("version", (n) -> { this.setVersion(n.getStringValue()); });
         deserializerMap.put("zipFile", (n) -> { this.setZipFile(n.getByteArrayValue()); });
         return deserializerMap;
     }
@@ -99,6 +121,30 @@ public class CopilotPackage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
+    }
+    /**
+     * Gets the manifestId property value. The manifestId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getManifestId() {
+        return this.backingStore.get("manifestId");
+    }
+    /**
+     * Gets the manifestVersion property value. The manifestVersion property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getManifestVersion() {
+        return this.backingStore.get("manifestVersion");
+    }
+    /**
+     * Gets the platform property value. The platform property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPlatform() {
+        return this.backingStore.get("platform");
     }
     /**
      * Gets the publisher property value. The publisher property
@@ -133,6 +179,14 @@ public class CopilotPackage extends Entity implements Parsable {
         return this.backingStore.get("type");
     }
     /**
+     * Gets the version property value. The version property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getVersion() {
+        return this.backingStore.get("version");
+    }
+    /**
      * Gets the zipFile property value. The zipFile property
      * @return a {@link byte[]}
      */
@@ -147,17 +201,37 @@ public class CopilotPackage extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("appId", this.getAppId());
+        writer.writeStringValue("assetId", this.getAssetId());
         writer.writeEnumValue("availableTo", this.getAvailableTo());
         writer.writeEnumValue("deployedTo", this.getDeployedTo());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("elementTypes", this.getElementTypes());
         writer.writeBooleanValue("isBlocked", this.getIsBlocked());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeStringValue("manifestId", this.getManifestId());
+        writer.writeStringValue("manifestVersion", this.getManifestVersion());
+        writer.writeStringValue("platform", this.getPlatform());
         writer.writeStringValue("publisher", this.getPublisher());
         writer.writeStringValue("shortDescription", this.getShortDescription());
         writer.writeCollectionOfPrimitiveValues("supportedHosts", this.getSupportedHosts());
         writer.writeEnumValue("type", this.getType());
+        writer.writeStringValue("version", this.getVersion());
         writer.writeByteArrayValue("zipFile", this.getZipFile());
+    }
+    /**
+     * Sets the appId property value. The appId property
+     * @param value Value to set for the appId property.
+     */
+    public void setAppId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("appId", value);
+    }
+    /**
+     * Sets the assetId property value. The assetId property
+     * @param value Value to set for the assetId property.
+     */
+    public void setAssetId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("assetId", value);
     }
     /**
      * Sets the availableTo property value. The availableTo property
@@ -202,6 +276,27 @@ public class CopilotPackage extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
+     * Sets the manifestId property value. The manifestId property
+     * @param value Value to set for the manifestId property.
+     */
+    public void setManifestId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("manifestId", value);
+    }
+    /**
+     * Sets the manifestVersion property value. The manifestVersion property
+     * @param value Value to set for the manifestVersion property.
+     */
+    public void setManifestVersion(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("manifestVersion", value);
+    }
+    /**
+     * Sets the platform property value. The platform property
+     * @param value Value to set for the platform property.
+     */
+    public void setPlatform(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("platform", value);
+    }
+    /**
      * Sets the publisher property value. The publisher property
      * @param value Value to set for the publisher property.
      */
@@ -228,6 +323,13 @@ public class CopilotPackage extends Entity implements Parsable {
      */
     public void setType(@jakarta.annotation.Nullable final PackageType value) {
         this.backingStore.set("type", value);
+    }
+    /**
+     * Sets the version property value. The version property
+     * @param value Value to set for the version property.
+     */
+    public void setVersion(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("version", value);
     }
     /**
      * Sets the zipFile property value. The zipFile property

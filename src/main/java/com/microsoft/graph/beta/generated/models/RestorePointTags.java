@@ -7,7 +7,8 @@ import java.util.Objects;
 public enum RestorePointTags implements ValuedEnum {
     None("none"),
     FastRestore("fastRestore"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    IncludeNewerItems("includeNewerItems");
     public final String value;
     RestorePointTags(final String value) {
         this.value = value;
@@ -21,6 +22,7 @@ public enum RestorePointTags implements ValuedEnum {
             case "none": return None;
             case "fastRestore": return FastRestore;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "includeNewerItems": return IncludeNewerItems;
             default: return null;
         }
     }

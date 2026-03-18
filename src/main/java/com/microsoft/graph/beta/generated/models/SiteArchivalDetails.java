@@ -49,7 +49,7 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
         return value;
     }
     /**
-     * Gets the archivedBy property value. The archivedBy property
+     * Gets the archivedBy property value. The user or application that archived the container.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("archivedBy");
     }
     /**
-     * Gets the archivedDateTime property value. The archivedDateTime property
+     * Gets the archivedDateTime property value. Time when the container was archived. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -121,14 +121,14 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the archivedBy property value. The archivedBy property
+     * Sets the archivedBy property value. The user or application that archived the container.
      * @param value Value to set for the archivedBy property.
      */
     public void setArchivedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("archivedBy", value);
     }
     /**
-     * Sets the archivedDateTime property value. The archivedDateTime property
+     * Sets the archivedDateTime property value. Time when the container was archived. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the archivedDateTime property.
      */
     public void setArchivedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

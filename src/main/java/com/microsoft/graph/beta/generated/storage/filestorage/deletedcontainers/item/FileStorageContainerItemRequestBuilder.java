@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item;
 import com.microsoft.graph.beta.models.FileStorageContainer;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.activate.ActivateRequestBuilder;
+import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.columns.ColumnsRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.lock.LockRequestBuilder;
@@ -13,6 +14,7 @@ import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.provi
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.recyclebin.RecycleBinRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.restore.RestoreRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.sharepointgroups.SharePointGroupsRequestBuilder;
+import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.unlock.UnlockRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -39,6 +41,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ActivateRequestBuilder activate() {
         return new ActivateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the archive method.
+     * @return a {@link ArchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ArchiveRequestBuilder archive() {
+        return new ArchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the columns property of the microsoft.graph.fileStorageContainer entity.
@@ -119,6 +129,14 @@ public class FileStorageContainerItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SharePointGroupsRequestBuilder sharePointGroups() {
         return new SharePointGroupsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unarchive method.
+     * @return a {@link UnarchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnarchiveRequestBuilder unarchive() {
+        return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unlock method.

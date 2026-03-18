@@ -38,8 +38,11 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
      * Acquire an OAuth Access token to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This action acquires an access token via Oauth Code Grant Flow. Code Grant will be completely deprecated so this action will be obsolete. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-acquireaccesstoken?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nonnull final AcquireAccessTokenPostRequestBody body) {
         post(body, null);
     }
@@ -48,8 +51,11 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * This action acquires an access token via Oauth Code Grant Flow. Code Grant will be completely deprecated so this action will be obsolete. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-acquireaccesstoken?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nonnull final AcquireAccessTokenPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -61,8 +67,11 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
      * Acquire an OAuth Access token to authorize the Microsoft Entra provisioning service to provision users into an application.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This action acquires an access token via Oauth Code Grant Flow. Code Grant will be completely deprecated so this action will be obsolete. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AcquireAccessTokenPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -71,8 +80,11 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * This action acquires an access token via Oauth Code Grant Flow. Code Grant will be completely deprecated so this action will be obsolete. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AcquireAccessTokenPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -85,8 +97,11 @@ public class AcquireAccessTokenRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AcquireAccessTokenRequestBuilder}
+     * @deprecated
+     * This action acquires an access token via Oauth Code Grant Flow. Code Grant will be completely deprecated so this action will be obsolete. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AcquireAccessTokenRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AcquireAccessTokenRequestBuilder(rawUrl, requestAdapter);

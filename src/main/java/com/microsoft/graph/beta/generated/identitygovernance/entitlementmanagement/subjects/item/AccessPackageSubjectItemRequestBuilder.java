@@ -86,7 +86,7 @@ public class AccessPackageSubjectItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AccessPackageSubject::createFromDiscriminatorValue);
     }
     /**
-     * Update an existing accessPackageSubject object to change the subject lifecycle.
+     * Update an external directory user represented by an existing accessPackageSubject object to change the subject lifecycle.
      * @param body The request body
      * @return a {@link AccessPackageSubject}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -97,7 +97,7 @@ public class AccessPackageSubjectItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update an existing accessPackageSubject object to change the subject lifecycle.
+     * Update an external directory user represented by an existing accessPackageSubject object to change the subject lifecycle.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageSubject}
@@ -153,7 +153,7 @@ public class AccessPackageSubjectItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update an existing accessPackageSubject object to change the subject lifecycle.
+     * Update an external directory user represented by an existing accessPackageSubject object to change the subject lifecycle.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -162,7 +162,7 @@ public class AccessPackageSubjectItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an existing accessPackageSubject object to change the subject lifecycle.
+     * Update an external directory user represented by an existing accessPackageSubject object to change the subject lifecycle.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

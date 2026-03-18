@@ -71,7 +71,7 @@ public class ProfileSource extends Entity implements Parsable {
         return this.backingStore.get("sourceId");
     }
     /**
-     * Gets the webUrl property value. Web URL of the profile source that directs users to the page view of profile data.
+     * Gets the webUrl property value. Web URL of the profile source that directs users to the page view of the profile data.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class ProfileSource extends Entity implements Parsable {
         this.backingStore.set("sourceId", value);
     }
     /**
-     * Sets the webUrl property value. Web URL of the profile source that directs users to the page view of profile data.
+     * Sets the webUrl property value. Web URL of the profile source that directs users to the page view of the profile data.
      * @param value Value to set for the webUrl property.
      */
     public void setWebUrl(@jakarta.annotation.Nullable final String value) {

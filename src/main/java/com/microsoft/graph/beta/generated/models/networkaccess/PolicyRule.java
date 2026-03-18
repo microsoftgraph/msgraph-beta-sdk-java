@@ -27,6 +27,7 @@ public class PolicyRule extends Entity implements Parsable {
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.networkaccess.cloudFirewallRule": return new CloudFirewallRule();
                 case "#microsoft.graph.networkaccess.filteringRule": return new FilteringRule();
                 case "#microsoft.graph.networkaccess.forwardingRule": return new ForwardingRule();
                 case "#microsoft.graph.networkaccess.fqdnFilteringRule": return new FqdnFilteringRule();

@@ -44,6 +44,7 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("assignedRoles", (n) -> { this.setAssignedRoles(n.getCollectionOfObjectValues(EngagementRole::createFromDiscriminatorValue)); });
         deserializerMap.put("learningCourseActivities", (n) -> { this.setLearningCourseActivities(n.getCollectionOfObjectValues(LearningCourseActivity::createFromDiscriminatorValue)); });
+        deserializerMap.put("storyline", (n) -> { this.setStoryline(n.getObjectValue(Storyline::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -55,6 +56,14 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
         return this.backingStore.get("learningCourseActivities");
     }
     /**
+     * Gets the storyline property value. The storyline property
+     * @return a {@link Storyline}
+     */
+    @jakarta.annotation.Nullable
+    public Storyline getStoryline() {
+        return this.backingStore.get("storyline");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -63,6 +72,7 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("assignedRoles", this.getAssignedRoles());
         writer.writeCollectionOfObjectValues("learningCourseActivities", this.getLearningCourseActivities());
+        writer.writeObjectValue("storyline", this.getStoryline());
     }
     /**
      * Sets the assignedRoles property value. Represents the collection of Viva Engage roles assigned to a user.
@@ -77,5 +87,12 @@ public class EmployeeExperienceUser extends Entity implements Parsable {
      */
     public void setLearningCourseActivities(@jakarta.annotation.Nullable final java.util.List<LearningCourseActivity> value) {
         this.backingStore.set("learningCourseActivities", value);
+    }
+    /**
+     * Sets the storyline property value. The storyline property
+     * @param value Value to set for the storyline property.
+     */
+    public void setStoryline(@jakarta.annotation.Nullable final Storyline value) {
+        this.backingStore.set("storyline", value);
     }
 }

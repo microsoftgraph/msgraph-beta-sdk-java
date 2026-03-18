@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.drives.item.items.item;
 
 import com.microsoft.graph.beta.drives.item.items.item.activities.ActivitiesRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.analytics.AnalyticsRequestBuilder;
+import com.microsoft.graph.beta.drives.item.items.item.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.assignsensitivitylabel.AssignSensitivityLabelRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.checkin.CheckinRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.checkout.CheckoutRequestBuilder;
@@ -30,6 +31,7 @@ import com.microsoft.graph.beta.drives.item.items.item.retentionlabel.RetentionL
 import com.microsoft.graph.beta.drives.item.items.item.searchwithq.SearchWithQRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.thumbnails.ThumbnailsRequestBuilder;
+import com.microsoft.graph.beta.drives.item.items.item.unarchive.UnarchiveRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.unfollow.UnfollowRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.validatepermission.ValidatePermissionRequestBuilder;
 import com.microsoft.graph.beta.drives.item.items.item.versions.VersionsRequestBuilder;
@@ -69,6 +71,14 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AnalyticsRequestBuilder analytics() {
         return new AnalyticsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the archive method.
+     * @return a {@link ArchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ArchiveRequestBuilder archive() {
+        return new ArchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the assignSensitivityLabel method.
@@ -269,6 +279,14 @@ public class DriveItemItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ThumbnailsRequestBuilder thumbnails() {
         return new ThumbnailsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the unarchive method.
+     * @return a {@link UnarchiveRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnarchiveRequestBuilder unarchive() {
+        return new UnarchiveRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the unfollow method.

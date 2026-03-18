@@ -41,11 +41,20 @@ public class MobileAppCatalogPackage extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("productDescription", (n) -> { this.setProductDescription(n.getStringValue()); });
         deserializerMap.put("productDisplayName", (n) -> { this.setProductDisplayName(n.getStringValue()); });
         deserializerMap.put("productId", (n) -> { this.setProductId(n.getStringValue()); });
         deserializerMap.put("publisherDisplayName", (n) -> { this.setPublisherDisplayName(n.getStringValue()); });
         deserializerMap.put("versionDisplayName", (n) -> { this.setVersionDisplayName(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the productDescription property value. The description of the product (example: &quot;Fabrikam for Business is a productivity app.&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getProductDescription() {
+        return this.backingStore.get("productDescription");
     }
     /**
      * Gets the productDisplayName property value. The name of the product (example: &quot;Fabrikam for Business&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
@@ -86,6 +95,13 @@ public class MobileAppCatalogPackage extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+    }
+    /**
+     * Sets the productDescription property value. The description of the product (example: &quot;Fabrikam for Business is a productivity app.&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.
+     * @param value Value to set for the productDescription property.
+     */
+    public void setProductDescription(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("productDescription", value);
     }
     /**
      * Sets the productDisplayName property value. The name of the product (example: &quot;Fabrikam for Business&quot;). Returned by default. Read-only. Supports: $filter, $search, $select. This property is read-only.

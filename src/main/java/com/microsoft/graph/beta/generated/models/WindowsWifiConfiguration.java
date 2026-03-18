@@ -154,7 +154,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         return this.backingStore.get("ssid");
     }
     /**
-     * Gets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
+     * Gets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise, unknownFutureValue, wpa3Personal.
      * @return a {@link WiFiSecurityType}
      */
     @jakarta.annotation.Nullable
@@ -267,7 +267,7 @@ public class WindowsWifiConfiguration extends DeviceConfiguration implements Par
         this.backingStore.set("ssid", value);
     }
     /**
-     * Sets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise.
+     * Sets the wifiSecurityType property value. Specify the Wifi Security Type. Possible values are: open, wpaPersonal, wpaEnterprise, wep, wpa2Personal, wpa2Enterprise, unknownFutureValue, wpa3Personal.
      * @param value Value to set for the wifiSecurityType property.
      */
     public void setWifiSecurityType(@jakarta.annotation.Nullable final WiFiSecurityType value) {

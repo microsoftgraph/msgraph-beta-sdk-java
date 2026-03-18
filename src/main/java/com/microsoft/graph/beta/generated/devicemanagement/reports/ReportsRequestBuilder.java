@@ -70,7 +70,6 @@ import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdate
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdatealertsummaryreport.GetWindowsQualityUpdateAlertSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport.GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsummaryreport.GetWindowsUpdateAlertSummaryReportRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.reports.getzebrafotadeploymentreport.GetZebraFotaDeploymentReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrieveandroidworkprofiledevicemigrationstatuses.RetrieveAndroidWorkProfileDeviceMigrationStatusesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrieveappledeviceosupdatestatus.RetrieveAppleDeviceOSUpdateStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.retrieveappleosupdatefailures.RetrieveAppleOSUpdateFailuresRequestBuilder;
@@ -659,14 +658,6 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetWindowsUpdateAlertSummaryReportRequestBuilder getWindowsUpdateAlertSummaryReport() {
         return new GetWindowsUpdateAlertSummaryReportRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the getZebraFotaDeploymentReport method.
-     * @return a {@link GetZebraFotaDeploymentReportRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public GetZebraFotaDeploymentReportRequestBuilder getZebraFotaDeploymentReport() {
-        return new GetZebraFotaDeploymentReportRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the retrieveAndroidWorkProfileDeviceMigrationStatuses method.

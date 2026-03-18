@@ -45,6 +45,14 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
         return this.backingStore.get("connectedAppsEnabled");
     }
     /**
+     * Gets the credentialProviderRoleState property value. The Android credential provider role state for apps.
+     * @return a {@link AndroidAppCredentialProviderRoleState}
+     */
+    @jakarta.annotation.Nullable
+    public AndroidAppCredentialProviderRoleState getCredentialProviderRoleState() {
+        return this.backingStore.get("credentialProviderRoleState");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -53,6 +61,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("appSupportsOemConfig", (n) -> { this.setAppSupportsOemConfig(n.getBooleanValue()); });
         deserializerMap.put("connectedAppsEnabled", (n) -> { this.setConnectedAppsEnabled(n.getBooleanValue()); });
+        deserializerMap.put("credentialProviderRoleState", (n) -> { this.setCredentialProviderRoleState(n.getEnumValue(AndroidAppCredentialProviderRoleState::forValue)); });
         deserializerMap.put("packageId", (n) -> { this.setPackageId(n.getStringValue()); });
         deserializerMap.put("payloadJson", (n) -> { this.setPayloadJson(n.getStringValue()); });
         deserializerMap.put("permissionActions", (n) -> { this.setPermissionActions(n.getCollectionOfObjectValues(AndroidPermissionAction::createFromDiscriminatorValue)); });
@@ -99,6 +108,7 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeBooleanValue("connectedAppsEnabled", this.getConnectedAppsEnabled());
+        writer.writeEnumValue("credentialProviderRoleState", this.getCredentialProviderRoleState());
         writer.writeStringValue("packageId", this.getPackageId());
         writer.writeStringValue("payloadJson", this.getPayloadJson());
         writer.writeCollectionOfObjectValues("permissionActions", this.getPermissionActions());
@@ -117,6 +127,13 @@ public class AndroidManagedStoreAppConfiguration extends ManagedDeviceMobileAppC
      */
     public void setConnectedAppsEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("connectedAppsEnabled", value);
+    }
+    /**
+     * Sets the credentialProviderRoleState property value. The Android credential provider role state for apps.
+     * @param value Value to set for the credentialProviderRoleState property.
+     */
+    public void setCredentialProviderRoleState(@jakarta.annotation.Nullable final AndroidAppCredentialProviderRoleState value) {
+        this.backingStore.set("credentialProviderRoleState", value);
     }
     /**
      * Sets the packageId property value. Android Enterprise app configuration package id.

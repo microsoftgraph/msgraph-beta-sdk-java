@@ -56,6 +56,7 @@ public class Identity implements AdditionalDataHolder, BackedModel, Parsable {
                 case "#microsoft.graph.provisioningSystem": return new ProvisioningSystem();
                 case "#microsoft.graph.security.submissionUserIdentity": return new SubmissionUserIdentity();
                 case "#microsoft.graph.servicePrincipalIdentity": return new ServicePrincipalIdentity();
+                case "#microsoft.graph.sharePointGroupIdentity": return new SharePointGroupIdentity();
                 case "#microsoft.graph.sharePointIdentity": return new SharePointIdentity();
                 case "#microsoft.graph.sourceProvisionedIdentity": return new SourceProvisionedIdentity();
                 case "#microsoft.graph.targetProvisionedIdentity": return new TargetProvisionedIdentity();

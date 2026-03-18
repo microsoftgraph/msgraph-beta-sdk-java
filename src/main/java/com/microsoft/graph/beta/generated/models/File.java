@@ -48,6 +48,14 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
         return value;
     }
     /**
+     * Gets the archiveStatus property value. The archiveStatus property
+     * @return a {@link FileArchiveStatus}
+     */
+    @jakarta.annotation.Nullable
+    public FileArchiveStatus getArchiveStatus() {
+        return this.backingStore.get("archiveStatus");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -61,7 +69,8 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("archiveStatus", (n) -> { this.setArchiveStatus(n.getEnumValue(FileArchiveStatus::forValue)); });
         deserializerMap.put("hashes", (n) -> { this.setHashes(n.getObjectValue(Hashes::createFromDiscriminatorValue)); });
         deserializerMap.put("mimeType", (n) -> { this.setMimeType(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -106,6 +115,7 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("archiveStatus", this.getArchiveStatus());
         writer.writeObjectValue("hashes", this.getHashes());
         writer.writeStringValue("mimeType", this.getMimeType());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -118,6 +128,13 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the archiveStatus property value. The archiveStatus property
+     * @param value Value to set for the archiveStatus property.
+     */
+    public void setArchiveStatus(@jakarta.annotation.Nullable final FileArchiveStatus value) {
+        this.backingStore.set("archiveStatus", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

@@ -1,5 +1,9 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item;
 
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.configureagent.ConfigureAgentRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.deployagent.DeployAgentRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.retrieveactionreports.RetrieveActionReportsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.retrievedeployagentactionresultsactivityidactivityidcloudpcidcloudpcid.RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcExternalPartner;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +24,38 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcExternalPartnerItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the configureAgent method.
+     * @return a {@link ConfigureAgentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ConfigureAgentRequestBuilder configureAgent() {
+        return new ConfigureAgentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the deployAgent method.
+     * @return a {@link DeployAgentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DeployAgentRequestBuilder deployAgent() {
+        return new DeployAgentRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveActionReports method.
+     * @return a {@link RetrieveActionReportsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveActionReportsRequestBuilder retrieveActionReports() {
+        return new RetrieveActionReportsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveDeployAgentActionResults method.
+     * @return a {@link RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder retrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcId() {
+        return new RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link CloudPcExternalPartnerItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

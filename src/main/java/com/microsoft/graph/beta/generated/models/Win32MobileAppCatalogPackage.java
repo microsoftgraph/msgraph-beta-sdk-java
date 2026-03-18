@@ -46,6 +46,14 @@ public class Win32MobileAppCatalogPackage extends MobileAppCatalogPackage implem
         return this.backingStore.get("branchDisplayName");
     }
     /**
+     * Gets the branchId property value. The identifier of a specific branch irrespective of version, or other attributes. This id is associated with the branchDisplayName. Read-only. This property is read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getBranchId() {
+        return this.backingStore.get("branchId");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -54,6 +62,7 @@ public class Win32MobileAppCatalogPackage extends MobileAppCatalogPackage implem
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicableArchitectures", (n) -> { this.setApplicableArchitectures(n.getEnumSetValue(WindowsArchitecture::forValue)); });
         deserializerMap.put("branchDisplayName", (n) -> { this.setBranchDisplayName(n.getStringValue()); });
+        deserializerMap.put("branchId", (n) -> { this.setBranchId(n.getStringValue()); });
         deserializerMap.put("locales", (n) -> { this.setLocales(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("packageAutoUpdateCapable", (n) -> { this.setPackageAutoUpdateCapable(n.getBooleanValue()); });
         return deserializerMap;
@@ -96,6 +105,13 @@ public class Win32MobileAppCatalogPackage extends MobileAppCatalogPackage implem
      */
     public void setBranchDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("branchDisplayName", value);
+    }
+    /**
+     * Sets the branchId property value. The identifier of a specific branch irrespective of version, or other attributes. This id is associated with the branchDisplayName. Read-only. This property is read-only.
+     * @param value Value to set for the branchId property.
+     */
+    public void setBranchId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("branchId", value);
     }
     /**
      * Sets the locales property value. One or more locale(s) supported by the branch. Value is a two-letter ISO 639 language tags with optional two-letter subtags (example: en-US, ko, de, de-DE), or mul to indicate multi-language. Read-only. This property is read-only.

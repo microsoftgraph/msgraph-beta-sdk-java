@@ -670,6 +670,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("roleAssignments", (n) -> { this.setRoleAssignments(n.getCollectionOfObjectValues(DeviceAndAppManagementRoleAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("roleDefinitions", (n) -> { this.setRoleDefinitions(n.getCollectionOfObjectValues(RoleDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("roleScopeTags", (n) -> { this.setRoleScopeTags(n.getCollectionOfObjectValues(RoleScopeTag::createFromDiscriminatorValue)); });
+        deserializerMap.put("samsungEFotaFirmwareVersions", (n) -> { this.setSamsungEFotaFirmwareVersions(n.getCollectionOfObjectValues(SamsungEFotaFirmwareVersion::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceNowConnections", (n) -> { this.setServiceNowConnections(n.getCollectionOfObjectValues(ServiceNowConnection::createFromDiscriminatorValue)); });
         deserializerMap.put("settingDefinitions", (n) -> { this.setSettingDefinitions(n.getCollectionOfObjectValues(DeviceManagementSettingDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(DeviceManagementSettings::createFromDiscriminatorValue)); });
@@ -1147,6 +1148,14 @@ public class DeviceManagement extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<RoleScopeTag> getRoleScopeTags() {
         return this.backingStore.get("roleScopeTags");
+    }
+    /**
+     * Gets the samsungEFotaFirmwareVersions property value. The collection of Samsung EFOTA firmware versions.
+     * @return a {@link java.util.List<SamsungEFotaFirmwareVersion>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SamsungEFotaFirmwareVersion> getSamsungEFotaFirmwareVersions() {
+        return this.backingStore.get("samsungEFotaFirmwareVersions");
     }
     /**
      * Gets the serviceNowConnections property value. A list of ServiceNowConnections
@@ -1875,6 +1884,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("roleAssignments", this.getRoleAssignments());
         writer.writeCollectionOfObjectValues("roleDefinitions", this.getRoleDefinitions());
         writer.writeCollectionOfObjectValues("roleScopeTags", this.getRoleScopeTags());
+        writer.writeCollectionOfObjectValues("samsungEFotaFirmwareVersions", this.getSamsungEFotaFirmwareVersions());
         writer.writeCollectionOfObjectValues("serviceNowConnections", this.getServiceNowConnections());
         writer.writeCollectionOfObjectValues("settingDefinitions", this.getSettingDefinitions());
         writer.writeObjectValue("settings", this.getSettings());
@@ -2755,6 +2765,13 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setRoleScopeTags(@jakarta.annotation.Nullable final java.util.List<RoleScopeTag> value) {
         this.backingStore.set("roleScopeTags", value);
+    }
+    /**
+     * Sets the samsungEFotaFirmwareVersions property value. The collection of Samsung EFOTA firmware versions.
+     * @param value Value to set for the samsungEFotaFirmwareVersions property.
+     */
+    public void setSamsungEFotaFirmwareVersions(@jakarta.annotation.Nullable final java.util.List<SamsungEFotaFirmwareVersion> value) {
+        this.backingStore.set("samsungEFotaFirmwareVersions", value);
     }
     /**
      * Sets the serviceNowConnections property value. A list of ServiceNowConnections
