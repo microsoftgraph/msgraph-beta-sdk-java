@@ -27,6 +27,7 @@ import com.microsoft.graph.beta.policies.identitysecuritydefaultsenforcementpoli
 import com.microsoft.graph.beta.policies.mobileappmanagementpolicies.MobileAppManagementPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.mobiledevicemanagementpolicies.MobileDeviceManagementPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.onpremauthenticationpolicies.OnPremAuthenticationPoliciesRequestBuilder;
+import com.microsoft.graph.beta.policies.ownerlessgrouppolicy.OwnerlessGroupPolicyRequestBuilder;
 import com.microsoft.graph.beta.policies.permissiongrantpolicies.PermissionGrantPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.permissiongrantpreapprovalpolicies.PermissionGrantPreApprovalPoliciesRequestBuilder;
 import com.microsoft.graph.beta.policies.rolemanagementpolicies.RoleManagementPoliciesRequestBuilder;
@@ -251,6 +252,14 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OnPremAuthenticationPoliciesRequestBuilder onPremAuthenticationPolicies() {
         return new OnPremAuthenticationPoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the ownerlessGroupPolicy property of the microsoft.graph.policyRoot entity.
+     * @return a {@link OwnerlessGroupPolicyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OwnerlessGroupPolicyRequestBuilder ownerlessGroupPolicy() {
+        return new OwnerlessGroupPolicyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the permissionGrantPolicies property of the microsoft.graph.policyRoot entity.

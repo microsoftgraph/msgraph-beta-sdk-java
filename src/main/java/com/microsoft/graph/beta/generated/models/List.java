@@ -77,6 +77,7 @@ public class List extends BaseItem implements Parsable {
         deserializerMap.put("contentTypes", (n) -> { this.setContentTypes(n.getCollectionOfObjectValues(ContentType::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
+        deserializerMap.put("itemCount", (n) -> { this.setItemCount(n.getIntegerValue()); });
         deserializerMap.put("items", (n) -> { this.setItems(n.getCollectionOfObjectValues(ListItem::createFromDiscriminatorValue)); });
         deserializerMap.put("list", (n) -> { this.setList(n.getObjectValue(ListInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("operations", (n) -> { this.setOperations(n.getCollectionOfObjectValues(RichLongRunningOperation::createFromDiscriminatorValue)); });
@@ -85,6 +86,14 @@ public class List extends BaseItem implements Parsable {
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(Subscription::createFromDiscriminatorValue)); });
         deserializerMap.put("system", (n) -> { this.setSystem(n.getObjectValue(SystemFacet::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the itemCount property value. The itemCount property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getItemCount() {
+        return this.backingStore.get("itemCount");
     }
     /**
      * Gets the items property value. All items contained in the list.
@@ -154,6 +163,7 @@ public class List extends BaseItem implements Parsable {
         writer.writeCollectionOfObjectValues("contentTypes", this.getContentTypes());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeObjectValue("drive", this.getDrive());
+        writer.writeIntegerValue("itemCount", this.getItemCount());
         writer.writeCollectionOfObjectValues("items", this.getItems());
         writer.writeObjectValue("list", this.getList());
         writer.writeCollectionOfObjectValues("operations", this.getOperations());
@@ -196,6 +206,13 @@ public class List extends BaseItem implements Parsable {
      */
     public void setDrive(@jakarta.annotation.Nullable final Drive value) {
         this.backingStore.set("drive", value);
+    }
+    /**
+     * Sets the itemCount property value. The itemCount property
+     * @param value Value to set for the itemCount property.
+     */
+    public void setItemCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("itemCount", value);
     }
     /**
      * Sets the items property value. All items contained in the list.

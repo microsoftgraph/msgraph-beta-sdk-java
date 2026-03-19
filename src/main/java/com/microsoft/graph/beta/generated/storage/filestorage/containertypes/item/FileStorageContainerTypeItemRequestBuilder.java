@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.storage.filestorage.containertypes.item;
 
 import com.microsoft.graph.beta.models.FileStorageContainerType;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.storage.filestorage.containertypes.item.permissions.PermissionsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class FileStorageContainerTypeItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.fileStorageContainerType entity.
+     * @return a {@link PermissionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public PermissionsRequestBuilder permissions() {
+        return new PermissionsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link FileStorageContainerTypeItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

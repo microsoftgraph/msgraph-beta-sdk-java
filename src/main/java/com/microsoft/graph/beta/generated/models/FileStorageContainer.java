@@ -27,7 +27,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         return new FileStorageContainer();
     }
     /**
-     * Gets the archivalDetails property value. The archivalDetails property
+     * Gets the archivalDetails property value. Archival details of the fileStorageContainer. Read-write.
      * @return a {@link SiteArchivalDetails}
      */
     @jakarta.annotation.Nullable
@@ -264,7 +264,7 @@ public class FileStorageContainer extends Entity implements Parsable {
         writer.writeObjectValue("viewpoint", this.getViewpoint());
     }
     /**
-     * Sets the archivalDetails property value. The archivalDetails property
+     * Sets the archivalDetails property value. Archival details of the fileStorageContainer. Read-write.
      * @param value Value to set for the archivalDetails property.
      */
     public void setArchivalDetails(@jakarta.annotation.Nullable final SiteArchivalDetails value) {

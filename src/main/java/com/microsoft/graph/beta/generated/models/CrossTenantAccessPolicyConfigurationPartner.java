@@ -66,6 +66,14 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         return this.backingStore.get("b2bDirectConnectOutbound");
     }
     /**
+     * Gets the blockServiceProviderOutboundAccess property value. The blockServiceProviderOutboundAccess property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getBlockServiceProviderOutboundAccess() {
+        return this.backingStore.get("blockServiceProviderOutboundAccess");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -77,6 +85,7 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectInbound", (n) -> { this.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectOutbound", (n) -> { this.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("blockServiceProviderOutboundAccess", (n) -> { this.setBlockServiceProviderOutboundAccess(n.getBooleanValue()); });
         deserializerMap.put("identitySynchronization", (n) -> { this.setIdentitySynchronization(n.getObjectValue(CrossTenantIdentitySyncPolicyPartner::createFromDiscriminatorValue)); });
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
         deserializerMap.put("isInMultiTenantOrganization", (n) -> { this.setIsInMultiTenantOrganization(n.getBooleanValue()); });
@@ -145,6 +154,7 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         writer.writeObjectValue("b2bCollaborationOutbound", this.getB2bCollaborationOutbound());
         writer.writeObjectValue("b2bDirectConnectInbound", this.getB2bDirectConnectInbound());
         writer.writeObjectValue("b2bDirectConnectOutbound", this.getB2bDirectConnectOutbound());
+        writer.writeBooleanValue("blockServiceProviderOutboundAccess", this.getBlockServiceProviderOutboundAccess());
         writer.writeObjectValue("identitySynchronization", this.getIdentitySynchronization());
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeBooleanValue("isInMultiTenantOrganization", this.getIsInMultiTenantOrganization());
@@ -186,6 +196,13 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
      */
     public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.backingStore.set("b2bDirectConnectOutbound", value);
+    }
+    /**
+     * Sets the blockServiceProviderOutboundAccess property value. The blockServiceProviderOutboundAccess property
+     * @param value Value to set for the blockServiceProviderOutboundAccess property.
+     */
+    public void setBlockServiceProviderOutboundAccess(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("blockServiceProviderOutboundAccess", value);
     }
     /**
      * Sets the identitySynchronization property value. Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multitenant organization by automating the creation, update, and deletion of users from one tenant to another.

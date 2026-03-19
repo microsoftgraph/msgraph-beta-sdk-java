@@ -34,6 +34,14 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         return this.backingStore.get("alerts");
     }
     /**
+     * Gets the cloudFirewallPolicies property value. A collection of cloud firewall policies that define rules for managing network traffic through the Global Secure Access services.
+     * @return a {@link java.util.List<CloudFirewallPolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudFirewallPolicy> getCloudFirewallPolicies() {
+        return this.backingStore.get("cloudFirewallPolicies");
+    }
+    /**
      * Gets the connectivity property value. Connectivity represents all the connectivity components in Global Secure Access.
      * @return a {@link Connectivity}
      */
@@ -49,6 +57,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudFirewallPolicies", (n) -> { this.setCloudFirewallPolicies(n.getCollectionOfObjectValues(CloudFirewallPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("connectivity", (n) -> { this.setConnectivity(n.getObjectValue(Connectivity::createFromDiscriminatorValue)); });
         deserializerMap.put("filteringPolicies", (n) -> { this.setFilteringPolicies(n.getCollectionOfObjectValues(FilteringPolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("filteringProfiles", (n) -> { this.setFilteringProfiles(n.getCollectionOfObjectValues(FilteringProfile::createFromDiscriminatorValue)); });
@@ -159,6 +168,7 @@ public class NetworkAccessRoot extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("alerts", this.getAlerts());
+        writer.writeCollectionOfObjectValues("cloudFirewallPolicies", this.getCloudFirewallPolicies());
         writer.writeObjectValue("connectivity", this.getConnectivity());
         writer.writeCollectionOfObjectValues("filteringPolicies", this.getFilteringPolicies());
         writer.writeCollectionOfObjectValues("filteringProfiles", this.getFilteringProfiles());
@@ -178,6 +188,13 @@ public class NetworkAccessRoot extends Entity implements Parsable {
      */
     public void setAlerts(@jakarta.annotation.Nullable final java.util.List<Alert> value) {
         this.backingStore.set("alerts", value);
+    }
+    /**
+     * Sets the cloudFirewallPolicies property value. A collection of cloud firewall policies that define rules for managing network traffic through the Global Secure Access services.
+     * @param value Value to set for the cloudFirewallPolicies property.
+     */
+    public void setCloudFirewallPolicies(@jakarta.annotation.Nullable final java.util.List<CloudFirewallPolicy> value) {
+        this.backingStore.set("cloudFirewallPolicies", value);
     }
     /**
      * Sets the connectivity property value. Connectivity represents all the connectivity components in Global Secure Access.

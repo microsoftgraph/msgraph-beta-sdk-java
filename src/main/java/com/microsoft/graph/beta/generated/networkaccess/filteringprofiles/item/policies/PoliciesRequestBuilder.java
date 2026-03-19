@@ -60,21 +60,21 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/policies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the threatIntelligencePolicyLink objects and their properties.
+     * Get a list of the filteringPolicyLink objects and their properties. The response can include one or more of the following objects:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink objects
      * @return a {@link PolicyLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLinkCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get a list of the threatIntelligencePolicyLink objects and their properties.
+     * Get a list of the filteringPolicyLink objects and their properties. The response can include one or more of the following objects:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink objects
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyLinkCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-list?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-list?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLinkCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -84,23 +84,23 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLinkCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new tlsInspectionPolicyLink to connect a filtering profile with a tlsInspectionPolicy. One 1 tlsInspectionPolicy is allowed for every filtering profile.
+     * Add a Global Secure Access network policy to a filteringProfile. The policy can be one of the following types:
      * @param body The request body
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tlsinspectionpolicylink-post?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink post(@jakarta.annotation.Nonnull final PolicyLink body) {
         return post(body, null);
     }
     /**
-     * Create a new tlsInspectionPolicyLink to connect a filtering profile with a tlsInspectionPolicy. One 1 tlsInspectionPolicy is allowed for every filtering profile.
+     * Add a Global Secure Access network policy to a filteringProfile. The policy can be one of the following types:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-tlsinspectionpolicylink-post?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-post?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink post(@jakarta.annotation.Nonnull final PolicyLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -111,7 +111,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLink::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the threatIntelligencePolicyLink objects and their properties.
+     * Get a list of the filteringPolicyLink objects and their properties. The response can include one or more of the following objects:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink objects
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the threatIntelligencePolicyLink objects and their properties.
+     * Get a list of the filteringPolicyLink objects and their properties. The response can include one or more of the following objects:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink objects
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +131,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new tlsInspectionPolicyLink to connect a filtering profile with a tlsInspectionPolicy. One 1 tlsInspectionPolicy is allowed for every filtering profile.
+     * Add a Global Secure Access network policy to a filteringProfile. The policy can be one of the following types:
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new tlsInspectionPolicyLink to connect a filtering profile with a tlsInspectionPolicy. One 1 tlsInspectionPolicy is allowed for every filtering profile.
+     * Add a Global Secure Access network policy to a filteringProfile. The policy can be one of the following types:
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -165,7 +165,7 @@ public class PoliciesRequestBuilder extends BaseRequestBuilder {
         return new PoliciesRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the threatIntelligencePolicyLink objects and their properties.
+     * Get a list of the filteringPolicyLink objects and their properties. The response can include one or more of the following objects:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink objects
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -43,7 +43,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return this.backingStore.get("billingPolicyId");
     }
     /**
-     * Gets the createdBy property value. The identity of person who created the policy.
+     * Gets the createdBy property value. The identity of the person who created the policy.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the displayName property value. The name of the policy to be created.
+     * Gets the displayName property value. The name of the policy.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,7 +112,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the offboardRequestedDateTime property value. The offboardRequestedDateTime property
+     * Gets the offboardRequestedDateTime property value. The date and time when offboarding was requested for the protection policy. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return this.backingStore.get("retentionSettings");
     }
     /**
-     * Gets the status property value. The aggregated status of the protection units associated with the policy. The possible values are: inactive, activeWithErrors, updating, active, unknownFutureValue.
+     * Gets the status property value. The aggregated status of the protection units associated with the policy. The possible values are: inactive, activeWithErrors, updating, active, unknownFutureValue, offboardRequested, offboarded. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: offboardRequested, offboarded.
      * @return a {@link ProtectionPolicyStatus}
      */
     @jakarta.annotation.Nullable
@@ -179,7 +179,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("billingPolicyId", value);
     }
     /**
-     * Sets the createdBy property value. The identity of person who created the policy.
+     * Sets the createdBy property value. The identity of the person who created the policy.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
@@ -193,7 +193,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the displayName property value. The name of the policy to be created.
+     * Sets the displayName property value. The name of the policy.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -221,7 +221,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the offboardRequestedDateTime property value. The offboardRequestedDateTime property
+     * Sets the offboardRequestedDateTime property value. The date and time when offboarding was requested for the protection policy. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the offboardRequestedDateTime property.
      */
     public void setOffboardRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -249,7 +249,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("retentionSettings", value);
     }
     /**
-     * Sets the status property value. The aggregated status of the protection units associated with the policy. The possible values are: inactive, activeWithErrors, updating, active, unknownFutureValue.
+     * Sets the status property value. The aggregated status of the protection units associated with the policy. The possible values are: inactive, activeWithErrors, updating, active, unknownFutureValue, offboardRequested, offboarded. You must use the Prefer: include-unknown-enum-members request header to get the following values in this evolvable enum: offboardRequested, offboarded.
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final ProtectionPolicyStatus value) {

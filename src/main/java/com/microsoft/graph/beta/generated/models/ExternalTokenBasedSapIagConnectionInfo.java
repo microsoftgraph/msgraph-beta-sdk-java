@@ -42,14 +42,6 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         return this.backingStore.get("clientId");
     }
     /**
-     * Gets the domain property value. The domain property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getDomain() {
-        return this.backingStore.get("domain");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -58,7 +50,6 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("accessTokenUrl", (n) -> { this.setAccessTokenUrl(n.getStringValue()); });
         deserializerMap.put("clientId", (n) -> { this.setClientId(n.getStringValue()); });
-        deserializerMap.put("domain", (n) -> { this.setDomain(n.getStringValue()); });
         deserializerMap.put("keyVaultName", (n) -> { this.setKeyVaultName(n.getStringValue()); });
         deserializerMap.put("resourceGroup", (n) -> { this.setResourceGroup(n.getStringValue()); });
         deserializerMap.put("secretName", (n) -> { this.setSecretName(n.getStringValue()); });
@@ -106,7 +97,6 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         super.serialize(writer);
         writer.writeStringValue("accessTokenUrl", this.getAccessTokenUrl());
         writer.writeStringValue("clientId", this.getClientId());
-        writer.writeStringValue("domain", this.getDomain());
         writer.writeStringValue("keyVaultName", this.getKeyVaultName());
         writer.writeStringValue("resourceGroup", this.getResourceGroup());
         writer.writeStringValue("secretName", this.getSecretName());
@@ -125,13 +115,6 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientId", value);
-    }
-    /**
-     * Sets the domain property value. The domain property
-     * @param value Value to set for the domain property.
-     */
-    public void setDomain(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("domain", value);
     }
     /**
      * Sets the keyVaultName property value. The keyVaultName property

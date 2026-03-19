@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.employeeexperience.assignedroles.AssignedRolesRequestBuilder;
 import com.microsoft.graph.beta.users.item.employeeexperience.learningcourseactivities.LearningCourseActivitiesRequestBuilder;
 import com.microsoft.graph.beta.users.item.employeeexperience.learningcourseactivitieswithexternalcourseactivityid.LearningCourseActivitiesWithExternalcourseActivityIdRequestBuilder;
+import com.microsoft.graph.beta.users.item.employeeexperience.storyline.StorylineRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -38,6 +39,14 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public LearningCourseActivitiesRequestBuilder learningCourseActivities() {
         return new LearningCourseActivitiesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the storyline property of the microsoft.graph.employeeExperienceUser entity.
+     * @return a {@link StorylineRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public StorylineRequestBuilder storyline() {
+        return new StorylineRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link EmployeeExperienceRequestBuilder} and sets the default values.
@@ -74,7 +83,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get employeeExperience from users
+     * The employee experience resources for the user. Read-only. Nullable.
      * @return a {@link EmployeeExperienceUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -83,7 +92,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get employeeExperience from users
+     * The employee experience resources for the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link EmployeeExperienceUser}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -151,7 +160,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get employeeExperience from users
+     * The employee experience resources for the user. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -159,7 +168,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get employeeExperience from users
+     * The employee experience resources for the user. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -211,7 +220,7 @@ public class EmployeeExperienceRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get employeeExperience from users
+     * The employee experience resources for the user. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

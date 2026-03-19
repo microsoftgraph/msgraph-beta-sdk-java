@@ -41,6 +41,7 @@ public class SharePointGroup extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(SharePointGroupMember::createFromDiscriminatorValue)); });
+        deserializerMap.put("principalId", (n) -> { this.setPrincipalId(n.getStringValue()); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
     }
@@ -51,6 +52,14 @@ public class SharePointGroup extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<SharePointGroupMember> getMembers() {
         return this.backingStore.get("members");
+    }
+    /**
+     * Gets the principalId property value. The principalId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPrincipalId() {
+        return this.backingStore.get("principalId");
     }
     /**
      * Gets the title property value. The user-visible title of the sharePointGroup. Read-write.
@@ -69,6 +78,7 @@ public class SharePointGroup extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("description", this.getDescription());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
+        writer.writeStringValue("principalId", this.getPrincipalId());
         writer.writeStringValue("title", this.getTitle());
     }
     /**
@@ -84,6 +94,13 @@ public class SharePointGroup extends Entity implements Parsable {
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<SharePointGroupMember> value) {
         this.backingStore.set("members", value);
+    }
+    /**
+     * Sets the principalId property value. The principalId property
+     * @param value Value to set for the principalId property.
+     */
+    public void setPrincipalId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("principalId", value);
     }
     /**
      * Sets the title property value. The user-visible title of the sharePointGroup. Read-write.

@@ -244,6 +244,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         deserializerMap.put("factoryResetDeviceAdministratorEmails", (n) -> { this.setFactoryResetDeviceAdministratorEmails(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("globalProxy", (n) -> { this.setGlobalProxy(n.getObjectValue(AndroidDeviceOwnerGlobalProxy::createFromDiscriminatorValue)); });
         deserializerMap.put("googleAccountsBlocked", (n) -> { this.setGoogleAccountsBlocked(n.getBooleanValue()); });
+        deserializerMap.put("isKioskModeExitCodeSet", (n) -> { this.setIsKioskModeExitCodeSet(n.getBooleanValue()); });
         deserializerMap.put("kioskCustomizationDeviceSettingsBlocked", (n) -> { this.setKioskCustomizationDeviceSettingsBlocked(n.getBooleanValue()); });
         deserializerMap.put("kioskCustomizationPowerButtonActionsBlocked", (n) -> { this.setKioskCustomizationPowerButtonActionsBlocked(n.getBooleanValue()); });
         deserializerMap.put("kioskCustomizationStatusBar", (n) -> { this.setKioskCustomizationStatusBar(n.getEnumValue(AndroidDeviceOwnerKioskCustomizationStatusBar::forValue)); });
@@ -376,6 +377,14 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
     @jakarta.annotation.Nullable
     public Boolean getGoogleAccountsBlocked() {
         return this.backingStore.get("googleAccountsBlocked");
+    }
+    /**
+     * Gets the isKioskModeExitCodeSet property value. Exit code to allow a user to escape from Kiosk Mode when the device is in Kiosk Mode.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsKioskModeExitCodeSet() {
+        return this.backingStore.get("isKioskModeExitCodeSet");
     }
     /**
      * Gets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device&apos;s Settings app while in Kiosk Mode.
@@ -1329,6 +1338,7 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
         writer.writeCollectionOfPrimitiveValues("factoryResetDeviceAdministratorEmails", this.getFactoryResetDeviceAdministratorEmails());
         writer.writeObjectValue("globalProxy", this.getGlobalProxy());
         writer.writeBooleanValue("googleAccountsBlocked", this.getGoogleAccountsBlocked());
+        writer.writeBooleanValue("isKioskModeExitCodeSet", this.getIsKioskModeExitCodeSet());
         writer.writeBooleanValue("kioskCustomizationDeviceSettingsBlocked", this.getKioskCustomizationDeviceSettingsBlocked());
         writer.writeBooleanValue("kioskCustomizationPowerButtonActionsBlocked", this.getKioskCustomizationPowerButtonActionsBlocked());
         writer.writeEnumValue("kioskCustomizationStatusBar", this.getKioskCustomizationStatusBar());
@@ -1619,6 +1629,13 @@ public class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfigur
      */
     public void setGoogleAccountsBlocked(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("googleAccountsBlocked", value);
+    }
+    /**
+     * Sets the isKioskModeExitCodeSet property value. Exit code to allow a user to escape from Kiosk Mode when the device is in Kiosk Mode.
+     * @param value Value to set for the isKioskModeExitCodeSet property.
+     */
+    public void setIsKioskModeExitCodeSet(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isKioskModeExitCodeSet", value);
     }
     /**
      * Sets the kioskCustomizationDeviceSettingsBlocked property value. Indicateswhether a user can access the device&apos;s Settings app while in Kiosk Mode.

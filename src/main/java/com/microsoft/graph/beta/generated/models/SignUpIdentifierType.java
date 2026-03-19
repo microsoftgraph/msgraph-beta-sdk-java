@@ -6,7 +6,8 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum SignUpIdentifierType implements ValuedEnum {
     EmailAddress("emailAddress"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Federation("federation");
     public final String value;
     SignUpIdentifierType(final String value) {
         this.value = value;
@@ -19,6 +20,7 @@ public enum SignUpIdentifierType implements ValuedEnum {
         switch(searchValue) {
             case "emailAddress": return EmailAddress;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "federation": return Federation;
             default: return null;
         }
     }

@@ -38,7 +38,10 @@ public class ValidateCredentialsRequestBuilder extends BaseRequestBuilder {
      * Invoke action validateCredentials
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Use validateConnectivity instead. This action will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nonnull final ValidateCredentialsPostRequestBody body) {
         post(body, null);
     }
@@ -47,7 +50,10 @@ public class ValidateCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Use validateConnectivity instead. This action will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nonnull final ValidateCredentialsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -59,8 +65,11 @@ public class ValidateCredentialsRequestBuilder extends BaseRequestBuilder {
      * Invoke action validateCredentials
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Use validateConnectivity instead. This action will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ValidateCredentialsPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
@@ -69,8 +78,11 @@ public class ValidateCredentialsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Use validateConnectivity instead. This action will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ValidateCredentialsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -83,8 +95,11 @@ public class ValidateCredentialsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ValidateCredentialsRequestBuilder}
+     * @deprecated
+     * Use validateConnectivity instead. This action will be removed. as of 2026-02/SynchronizationSecret_Deprecation on 2026-02-06 and will be removed 2027-07-06
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ValidateCredentialsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ValidateCredentialsRequestBuilder(rawUrl, requestAdapter);

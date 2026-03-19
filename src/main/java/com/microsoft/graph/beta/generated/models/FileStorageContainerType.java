@@ -80,6 +80,7 @@ public class FileStorageContainerType extends Entity implements Parsable {
         deserializerMap.put("expirationDateTime", (n) -> { this.setExpirationDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("owningAppId", (n) -> { this.setOwningAppId(n.getUUIDValue()); });
+        deserializerMap.put("permissions", (n) -> { this.setPermissions(n.getCollectionOfObjectValues(Permission::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(FileStorageContainerTypeSettings::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -98,6 +99,14 @@ public class FileStorageContainerType extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public UUID getOwningAppId() {
         return this.backingStore.get("owningAppId");
+    }
+    /**
+     * Gets the permissions property value. The permissions property
+     * @return a {@link java.util.List<Permission>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<Permission> getPermissions() {
+        return this.backingStore.get("permissions");
     }
     /**
      * Gets the settings property value. The settings property
@@ -121,6 +130,7 @@ public class FileStorageContainerType extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("expirationDateTime", this.getExpirationDateTime());
         writer.writeStringValue("name", this.getName());
         writer.writeUUIDValue("owningAppId", this.getOwningAppId());
+        writer.writeCollectionOfObjectValues("permissions", this.getPermissions());
         writer.writeObjectValue("settings", this.getSettings());
     }
     /**
@@ -171,6 +181,13 @@ public class FileStorageContainerType extends Entity implements Parsable {
      */
     public void setOwningAppId(@jakarta.annotation.Nullable final UUID value) {
         this.backingStore.set("owningAppId", value);
+    }
+    /**
+     * Sets the permissions property value. The permissions property
+     * @param value Value to set for the permissions property.
+     */
+    public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {
+        this.backingStore.set("permissions", value);
     }
     /**
      * Sets the settings property value. The settings property

@@ -201,6 +201,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         deserializerMap.put("isOnMyDayLastModifiedDate", (n) -> { this.setIsOnMyDayLastModifiedDate(n.getLocalDateValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("messages", (n) -> { this.setMessages(n.getCollectionOfObjectValues(PlannerTaskChatMessage::createFromDiscriminatorValue)); });
         deserializerMap.put("orderHint", (n) -> { this.setOrderHint(n.getStringValue()); });
         deserializerMap.put("percentComplete", (n) -> { this.setPercentComplete(n.getIntegerValue()); });
         deserializerMap.put("planId", (n) -> { this.setPlanId(n.getStringValue()); });
@@ -215,7 +216,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the hasChat property value. The hasChat property
+     * Gets the hasChat property value. Read-only. This value is true if the task has chat messages associated with it. Otherwise, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -223,7 +224,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("hasChat");
     }
     /**
-     * Gets the hasDescription property value. Read-only. This value is true if the details object of the task has a nonempty description. Otherwise,false.
+     * Gets the hasDescription property value. Read-only. This value is true if the details object of the task has a nonempty description. Otherwise, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -271,7 +272,15 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in plannern.
+     * Gets the messages property value. Read-only. Nullable. Chat messages associated with the task.
+     * @return a {@link java.util.List<PlannerTaskChatMessage>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PlannerTaskChatMessage> getMessages() {
+        return this.backingStore.get("messages");
+    }
+    /**
+     * Gets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in planner.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -389,6 +398,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         writer.writeLocalDateValue("isOnMyDayLastModifiedDate", this.getIsOnMyDayLastModifiedDate());
         writer.writeObjectValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeCollectionOfObjectValues("messages", this.getMessages());
         writer.writeStringValue("orderHint", this.getOrderHint());
         writer.writeIntegerValue("percentComplete", this.getPercentComplete());
         writer.writeStringValue("planId", this.getPlanId());
@@ -521,14 +531,14 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("dueDateTime", value);
     }
     /**
-     * Sets the hasChat property value. The hasChat property
+     * Sets the hasChat property value. Read-only. This value is true if the task has chat messages associated with it. Otherwise, false.
      * @param value Value to set for the hasChat property.
      */
     public void setHasChat(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hasChat", value);
     }
     /**
-     * Sets the hasDescription property value. Read-only. This value is true if the details object of the task has a nonempty description. Otherwise,false.
+     * Sets the hasDescription property value. Read-only. This value is true if the details object of the task has a nonempty description. Otherwise, false.
      * @param value Value to set for the hasDescription property.
      */
     public void setHasDescription(@jakarta.annotation.Nullable final Boolean value) {
@@ -570,7 +580,14 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in plannern.
+     * Sets the messages property value. Read-only. Nullable. Chat messages associated with the task.
+     * @param value Value to set for the messages property.
+     */
+    public void setMessages(@jakarta.annotation.Nullable final java.util.List<PlannerTaskChatMessage> value) {
+        this.backingStore.set("messages", value);
+    }
+    /**
+     * Sets the orderHint property value. The hint used to order items of this type in a list view. For more information, see Using order hints in planner.
      * @param value Value to set for the orderHint property.
      */
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {

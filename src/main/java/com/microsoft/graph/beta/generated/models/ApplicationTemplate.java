@@ -79,6 +79,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         deserializerMap.put("endpoints", (n) -> { this.setEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("homePageUrl", (n) -> { this.setHomePageUrl(n.getStringValue()); });
         deserializerMap.put("informationalUrls", (n) -> { this.setInformationalUrls(n.getObjectValue(InformationalUrls::createFromDiscriminatorValue)); });
+        deserializerMap.put("isEntraIntegrated", (n) -> { this.setIsEntraIntegrated(n.getBooleanValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("logoUrl", (n) -> { this.setLogoUrl(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
@@ -104,6 +105,14 @@ public class ApplicationTemplate extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public InformationalUrls getInformationalUrls() {
         return this.backingStore.get("informationalUrls");
+    }
+    /**
+     * Gets the isEntraIntegrated property value. Indicates whether the application is integrated with Entra ID (for example, through single sign-on or user provisioning).
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsEntraIntegrated() {
+        return this.backingStore.get("isEntraIntegrated");
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the data for the application was last updated, represented using ISO 8601 format and always in UTC time.
@@ -183,6 +192,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("endpoints", this.getEndpoints());
         writer.writeStringValue("homePageUrl", this.getHomePageUrl());
         writer.writeObjectValue("informationalUrls", this.getInformationalUrls());
+        writer.writeBooleanValue("isEntraIntegrated", this.getIsEntraIntegrated());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("logoUrl", this.getLogoUrl());
         writer.writeStringValue("publisher", this.getPublisher());
@@ -240,6 +250,13 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     public void setInformationalUrls(@jakarta.annotation.Nullable final InformationalUrls value) {
         this.backingStore.set("informationalUrls", value);
+    }
+    /**
+     * Sets the isEntraIntegrated property value. Indicates whether the application is integrated with Entra ID (for example, through single sign-on or user provisioning).
+     * @param value Value to set for the isEntraIntegrated property.
+     */
+    public void setIsEntraIntegrated(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isEntraIntegrated", value);
     }
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the data for the application was last updated, represented using ISO 8601 format and always in UTC time.

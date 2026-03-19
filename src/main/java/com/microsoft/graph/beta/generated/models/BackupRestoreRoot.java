@@ -25,6 +25,14 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return new BackupRestoreRoot();
     }
     /**
+     * Gets the activityLogs property value. The activityLogs property
+     * @return a {@link java.util.List<ActivityLogBase>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ActivityLogBase> getActivityLogs() {
+        return this.backingStore.get("activityLogs");
+    }
+    /**
      * Gets the allDrivesBackup property value. The allDrivesBackup property
      * @return a {@link AllDrivesBackup}
      */
@@ -111,6 +119,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activityLogs", (n) -> { this.setActivityLogs(n.getCollectionOfObjectValues(ActivityLogBase::createFromDiscriminatorValue)); });
         deserializerMap.put("allDrivesBackup", (n) -> { this.setAllDrivesBackup(n.getObjectValue(AllDrivesBackup::createFromDiscriminatorValue)); });
         deserializerMap.put("allMailboxesBackup", (n) -> { this.setAllMailboxesBackup(n.getObjectValue(AllMailboxesBackup::createFromDiscriminatorValue)); });
         deserializerMap.put("allSitesBackup", (n) -> { this.setAllSitesBackup(n.getObjectValue(AllSitesBackup::createFromDiscriminatorValue)); });
@@ -129,6 +138,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         deserializerMap.put("oneDriveForBusinessRestoreSessions", (n) -> { this.setOneDriveForBusinessRestoreSessions(n.getCollectionOfObjectValues(OneDriveForBusinessRestoreSession::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionPolicies", (n) -> { this.setProtectionPolicies(n.getCollectionOfObjectValues(ProtectionPolicyBase::createFromDiscriminatorValue)); });
         deserializerMap.put("protectionUnits", (n) -> { this.setProtectionUnits(n.getCollectionOfObjectValues(ProtectionUnitBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("reports", (n) -> { this.setReports(n.getObjectValue(BackupReport::createFromDiscriminatorValue)); });
         deserializerMap.put("restorePoints", (n) -> { this.setRestorePoints(n.getCollectionOfObjectValues(RestorePoint::createFromDiscriminatorValue)); });
         deserializerMap.put("restoreSessions", (n) -> { this.setRestoreSessions(n.getCollectionOfObjectValues(RestoreSessionBase::createFromDiscriminatorValue)); });
         deserializerMap.put("serviceApps", (n) -> { this.setServiceApps(n.getCollectionOfObjectValues(ServiceApp::createFromDiscriminatorValue)); });
@@ -204,6 +214,14 @@ public class BackupRestoreRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<ProtectionUnitBase> getProtectionUnits() {
         return this.backingStore.get("protectionUnits");
+    }
+    /**
+     * Gets the reports property value. The reports property
+     * @return a {@link BackupReport}
+     */
+    @jakarta.annotation.Nullable
+    public BackupReport getReports() {
+        return this.backingStore.get("reports");
     }
     /**
      * Gets the restorePoints property value. List of restore points in the tenant.
@@ -292,6 +310,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("activityLogs", this.getActivityLogs());
         writer.writeObjectValue("allDrivesBackup", this.getAllDrivesBackup());
         writer.writeObjectValue("allMailboxesBackup", this.getAllMailboxesBackup());
         writer.writeObjectValue("allSitesBackup", this.getAllSitesBackup());
@@ -310,6 +329,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("oneDriveForBusinessRestoreSessions", this.getOneDriveForBusinessRestoreSessions());
         writer.writeCollectionOfObjectValues("protectionPolicies", this.getProtectionPolicies());
         writer.writeCollectionOfObjectValues("protectionUnits", this.getProtectionUnits());
+        writer.writeObjectValue("reports", this.getReports());
         writer.writeCollectionOfObjectValues("restorePoints", this.getRestorePoints());
         writer.writeCollectionOfObjectValues("restoreSessions", this.getRestoreSessions());
         writer.writeCollectionOfObjectValues("serviceApps", this.getServiceApps());
@@ -320,6 +340,13 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("siteInclusionRules", this.getSiteInclusionRules());
         writer.writeCollectionOfObjectValues("siteProtectionUnits", this.getSiteProtectionUnits());
         writer.writeCollectionOfObjectValues("siteProtectionUnitsBulkAdditionJobs", this.getSiteProtectionUnitsBulkAdditionJobs());
+    }
+    /**
+     * Sets the activityLogs property value. The activityLogs property
+     * @param value Value to set for the activityLogs property.
+     */
+    public void setActivityLogs(@jakarta.annotation.Nullable final java.util.List<ActivityLogBase> value) {
+        this.backingStore.set("activityLogs", value);
     }
     /**
      * Sets the allDrivesBackup property value. The allDrivesBackup property
@@ -446,6 +473,13 @@ public class BackupRestoreRoot extends Entity implements Parsable {
      */
     public void setProtectionUnits(@jakarta.annotation.Nullable final java.util.List<ProtectionUnitBase> value) {
         this.backingStore.set("protectionUnits", value);
+    }
+    /**
+     * Sets the reports property value. The reports property
+     * @param value Value to set for the reports property.
+     */
+    public void setReports(@jakarta.annotation.Nullable final BackupReport value) {
+        this.backingStore.set("reports", value);
     }
     /**
      * Sets the restorePoints property value. List of restore points in the tenant.

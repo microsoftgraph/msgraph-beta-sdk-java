@@ -101,7 +101,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(28);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(29);
         deserializerMap.put("alternateUrl", (n) -> { this.setAlternateUrl(n.getStringValue()); });
         deserializerMap.put("applicationServerTimeout", (n) -> { this.setApplicationServerTimeout(n.getStringValue()); });
         deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getStringValue()); });
@@ -123,6 +123,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("onPremisesApplicationSegments", (n) -> { this.setOnPremisesApplicationSegments(n.getCollectionOfObjectValues(OnPremisesApplicationSegment::createFromDiscriminatorValue)); });
         deserializerMap.put("segmentsConfiguration", (n) -> { this.setSegmentsConfiguration(n.getObjectValue(SegmentConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("singleSignOnSettings", (n) -> { this.setSingleSignOnSettings(n.getObjectValue(OnPremisesPublishingSingleSignOn::createFromDiscriminatorValue)); });
+        deserializerMap.put("trafficRoutingMethod", (n) -> { this.setTrafficRoutingMethod(n.getEnumValue(TrafficRoutingMethod::forValue)); });
         deserializerMap.put("useAlternateUrlForTranslationAndRedirect", (n) -> { this.setUseAlternateUrlForTranslationAndRedirect(n.getBooleanValue()); });
         deserializerMap.put("verifiedCustomDomainCertificatesMetadata", (n) -> { this.setVerifiedCustomDomainCertificatesMetadata(n.getObjectValue(VerifiedCustomDomainCertificatesMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("verifiedCustomDomainKeyCredential", (n) -> { this.setVerifiedCustomDomainKeyCredential(n.getObjectValue(KeyCredential::createFromDiscriminatorValue)); });
@@ -261,6 +262,14 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("singleSignOnSettings");
     }
     /**
+     * Gets the trafficRoutingMethod property value. The trafficRoutingMethod property
+     * @return a {@link TrafficRoutingMethod}
+     */
+    @jakarta.annotation.Nullable
+    public TrafficRoutingMethod getTrafficRoutingMethod() {
+        return this.backingStore.get("trafficRoutingMethod");
+    }
+    /**
      * Gets the useAlternateUrlForTranslationAndRedirect property value. Indicates whether the application should use alternateUrl instead of externalUrl.
      * @return a {@link Boolean}
      */
@@ -343,6 +352,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         writer.writeCollectionOfObjectValues("onPremisesApplicationSegments", this.getOnPremisesApplicationSegments());
         writer.writeObjectValue("segmentsConfiguration", this.getSegmentsConfiguration());
         writer.writeObjectValue("singleSignOnSettings", this.getSingleSignOnSettings());
+        writer.writeEnumValue("trafficRoutingMethod", this.getTrafficRoutingMethod());
         writer.writeBooleanValue("useAlternateUrlForTranslationAndRedirect", this.getUseAlternateUrlForTranslationAndRedirect());
         writer.writeObjectValue("verifiedCustomDomainCertificatesMetadata", this.getVerifiedCustomDomainCertificatesMetadata());
         writer.writeObjectValue("verifiedCustomDomainKeyCredential", this.getVerifiedCustomDomainKeyCredential());
@@ -513,6 +523,13 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
      */
     public void setSingleSignOnSettings(@jakarta.annotation.Nullable final OnPremisesPublishingSingleSignOn value) {
         this.backingStore.set("singleSignOnSettings", value);
+    }
+    /**
+     * Sets the trafficRoutingMethod property value. The trafficRoutingMethod property
+     * @param value Value to set for the trafficRoutingMethod property.
+     */
+    public void setTrafficRoutingMethod(@jakarta.annotation.Nullable final TrafficRoutingMethod value) {
+        this.backingStore.set("trafficRoutingMethod", value);
     }
     /**
      * Sets the useAlternateUrlForTranslationAndRedirect property value. Indicates whether the application should use alternateUrl instead of externalUrl.

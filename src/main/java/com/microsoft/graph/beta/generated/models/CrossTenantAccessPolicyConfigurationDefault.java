@@ -65,6 +65,14 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         return this.backingStore.get("b2bDirectConnectOutbound");
     }
     /**
+     * Gets the blockServiceProviderOutboundAccess property value. The blockServiceProviderOutboundAccess property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getBlockServiceProviderOutboundAccess() {
+        return this.backingStore.get("blockServiceProviderOutboundAccess");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -76,6 +84,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectInbound", (n) -> { this.setB2bDirectConnectInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bDirectConnectOutbound", (n) -> { this.setB2bDirectConnectOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("blockServiceProviderOutboundAccess", (n) -> { this.setBlockServiceProviderOutboundAccess(n.getBooleanValue()); });
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
         deserializerMap.put("invitationRedemptionIdentityProviderConfiguration", (n) -> { this.setInvitationRedemptionIdentityProviderConfiguration(n.getObjectValue(DefaultInvitationRedemptionIdentityProviderConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("isServiceDefault", (n) -> { this.setIsServiceDefault(n.getBooleanValue()); });
@@ -126,6 +135,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         writer.writeObjectValue("b2bCollaborationOutbound", this.getB2bCollaborationOutbound());
         writer.writeObjectValue("b2bDirectConnectInbound", this.getB2bDirectConnectInbound());
         writer.writeObjectValue("b2bDirectConnectOutbound", this.getB2bDirectConnectOutbound());
+        writer.writeBooleanValue("blockServiceProviderOutboundAccess", this.getBlockServiceProviderOutboundAccess());
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeObjectValue("invitationRedemptionIdentityProviderConfiguration", this.getInvitationRedemptionIdentityProviderConfiguration());
         writer.writeBooleanValue("isServiceDefault", this.getIsServiceDefault());
@@ -165,6 +175,13 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
      */
     public void setB2bDirectConnectOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyB2BSetting value) {
         this.backingStore.set("b2bDirectConnectOutbound", value);
+    }
+    /**
+     * Sets the blockServiceProviderOutboundAccess property value. The blockServiceProviderOutboundAccess property
+     * @param value Value to set for the blockServiceProviderOutboundAccess property.
+     */
+    public void setBlockServiceProviderOutboundAccess(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("blockServiceProviderOutboundAccess", value);
     }
     /**
      * Sets the inboundTrust property value. Determines the default configuration for trusting other Conditional Access claims from external Microsoft Entra organizations.

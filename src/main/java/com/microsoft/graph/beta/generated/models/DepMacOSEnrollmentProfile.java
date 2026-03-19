@@ -136,6 +136,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
         deserializerMap.put("requestRequiresNetworkTether", (n) -> { this.setRequestRequiresNetworkTether(n.getBooleanValue()); });
         deserializerMap.put("setPrimarySetupAccountAsRegularUser", (n) -> { this.setSetPrimarySetupAccountAsRegularUser(n.getBooleanValue()); });
         deserializerMap.put("skipPrimarySetupAccountCreation", (n) -> { this.setSkipPrimarySetupAccountCreation(n.getBooleanValue()); });
+        deserializerMap.put("usePlatformSSODuringSetupAssistant", (n) -> { this.setUsePlatformSSODuringSetupAssistant(n.getBooleanValue()); });
         deserializerMap.put("zoomDisabled", (n) -> { this.setZoomDisabled(n.getBooleanValue()); });
         return deserializerMap;
     }
@@ -228,6 +229,14 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
         return this.backingStore.get("skipPrimarySetupAccountCreation");
     }
     /**
+     * Gets the usePlatformSSODuringSetupAssistant property value. Indicates whether Platform SSO is used as part of device enrollment during Setup Assistant. When TRUE, Platform SSO is used in device enrollment during Setup Assistant. When FALSE Platform SSO is not used in enrollment during Setup Assistant. Note: This value cannot be TRUE when configurationWebUrl is TRUE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getUsePlatformSSODuringSetupAssistant() {
+        return this.backingStore.get("usePlatformSSODuringSetupAssistant");
+    }
+    /**
      * Gets the zoomDisabled property value. Indicates if zoom setup pane is disabled
      * @return a {@link Boolean}
      */
@@ -263,6 +272,7 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
         writer.writeBooleanValue("requestRequiresNetworkTether", this.getRequestRequiresNetworkTether());
         writer.writeBooleanValue("setPrimarySetupAccountAsRegularUser", this.getSetPrimarySetupAccountAsRegularUser());
         writer.writeBooleanValue("skipPrimarySetupAccountCreation", this.getSkipPrimarySetupAccountCreation());
+        writer.writeBooleanValue("usePlatformSSODuringSetupAssistant", this.getUsePlatformSSODuringSetupAssistant());
         writer.writeBooleanValue("zoomDisabled", this.getZoomDisabled());
     }
     /**
@@ -411,6 +421,13 @@ public class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile implemen
      */
     public void setSkipPrimarySetupAccountCreation(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("skipPrimarySetupAccountCreation", value);
+    }
+    /**
+     * Sets the usePlatformSSODuringSetupAssistant property value. Indicates whether Platform SSO is used as part of device enrollment during Setup Assistant. When TRUE, Platform SSO is used in device enrollment during Setup Assistant. When FALSE Platform SSO is not used in enrollment during Setup Assistant. Note: This value cannot be TRUE when configurationWebUrl is TRUE.
+     * @param value Value to set for the usePlatformSSODuringSetupAssistant property.
+     */
+    public void setUsePlatformSSODuringSetupAssistant(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("usePlatformSSODuringSetupAssistant", value);
     }
     /**
      * Sets the zoomDisabled property value. Indicates if zoom setup pane is disabled

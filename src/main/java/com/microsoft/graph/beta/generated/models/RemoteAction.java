@@ -85,7 +85,11 @@ public enum RemoteAction implements ValuedEnum {
     /** Indicates remote device action to override assignments for a Device. */
     ChangeAssignments("changeAssignments"),
     /** Indicates remote device action to delete a device from Intune portal. */
-    Delete("delete");
+    Delete("delete"),
+    /** Indicates remote device action to temporarily suspend the Managed Home Screen kiosk app. */
+    SuspendManagedHomeScreen("suspendManagedHomeScreen"),
+    /** Indicates remote device action to restore the Managed Home Screen kiosk app. */
+    RestoreManagedHomeScreen("restoreManagedHomeScreen");
     public final String value;
     RemoteAction(final String value) {
         this.value = value;
@@ -135,6 +139,8 @@ public enum RemoteAction implements ValuedEnum {
             case "initiateDeviceAttestation": return InitiateDeviceAttestation;
             case "changeAssignments": return ChangeAssignments;
             case "delete": return Delete;
+            case "suspendManagedHomeScreen": return SuspendManagedHomeScreen;
+            case "restoreManagedHomeScreen": return RestoreManagedHomeScreen;
             default: return null;
         }
     }

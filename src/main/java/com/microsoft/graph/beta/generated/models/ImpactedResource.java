@@ -69,7 +69,7 @@ public class ImpactedResource extends Entity implements Parsable {
         deserializerMap.put("apiUrl", (n) -> { this.setApiUrl(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getStringValue()); });
-        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getStringValue()); });
+        deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("owner", (n) -> { this.setOwner(n.getStringValue()); });
         deserializerMap.put("portalUrl", (n) -> { this.setPortalUrl(n.getStringValue()); });
         deserializerMap.put("postponeUntilDateTime", (n) -> { this.setPostponeUntilDateTime(n.getOffsetDateTimeValue()); });
@@ -90,10 +90,10 @@ public class ImpactedResource extends Entity implements Parsable {
     }
     /**
      * Gets the lastModifiedDateTime property value. The date and time when the status was last updated.
-     * @return a {@link String}
+     * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
-    public String getLastModifiedDateTime() {
+    public OffsetDateTime getLastModifiedDateTime() {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
@@ -172,7 +172,7 @@ public class ImpactedResource extends Entity implements Parsable {
         writer.writeStringValue("apiUrl", this.getApiUrl());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("lastModifiedBy", this.getLastModifiedBy());
-        writer.writeStringValue("lastModifiedDateTime", this.getLastModifiedDateTime());
+        writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("owner", this.getOwner());
         writer.writeStringValue("portalUrl", this.getPortalUrl());
         writer.writeOffsetDateTimeValue("postponeUntilDateTime", this.getPostponeUntilDateTime());
@@ -221,7 +221,7 @@ public class ImpactedResource extends Entity implements Parsable {
      * Sets the lastModifiedDateTime property value. The date and time when the status was last updated.
      * @param value Value to set for the lastModifiedDateTime property.
      */
-    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final String value) {
+    public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**

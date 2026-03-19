@@ -420,7 +420,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("drives");
     }
     /**
-     * Gets the employeeExperience property value. The employeeExperience property
+     * Gets the employeeExperience property value. The employee experience resources for the user. Read-only. Nullable.
      * @return a {@link EmployeeExperienceUser}
      */
     @jakarta.annotation.Nullable
@@ -2009,7 +2009,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("drives", value);
     }
     /**
-     * Sets the employeeExperience property value. The employeeExperience property
+     * Sets the employeeExperience property value. The employee experience resources for the user. Read-only. Nullable.
      * @param value Value to set for the employeeExperience property.
      */
     public void setEmployeeExperience(@jakarta.annotation.Nullable final EmployeeExperienceUser value) {

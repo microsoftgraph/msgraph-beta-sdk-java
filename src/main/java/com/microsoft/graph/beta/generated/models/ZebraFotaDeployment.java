@@ -28,14 +28,6 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
         return new ZebraFotaDeployment();
     }
     /**
-     * Gets the deploymentAssignments property value. Collection of Android FOTA Assignment
-     * @return a {@link java.util.List<AndroidFotaDeploymentAssignment>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<AndroidFotaDeploymentAssignment> getDeploymentAssignments() {
-        return this.backingStore.get("deploymentAssignments");
-    }
-    /**
      * Gets the deploymentSettings property value. The Zebra FOTA deployment complex type that describes the settings required to create a FOTA deployment.
      * @return a {@link ZebraFotaDeploymentSettings}
      */
@@ -74,7 +66,6 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("deploymentAssignments", (n) -> { this.setDeploymentAssignments(n.getCollectionOfObjectValues(AndroidFotaDeploymentAssignment::createFromDiscriminatorValue)); });
         deserializerMap.put("deploymentSettings", (n) -> { this.setDeploymentSettings(n.getObjectValue(ZebraFotaDeploymentSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("deploymentStatus", (n) -> { this.setDeploymentStatus(n.getObjectValue(ZebraFotaDeploymentStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
@@ -97,19 +88,11 @@ public class ZebraFotaDeployment extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
-        writer.writeCollectionOfObjectValues("deploymentAssignments", this.getDeploymentAssignments());
         writer.writeObjectValue("deploymentSettings", this.getDeploymentSettings());
         writer.writeObjectValue("deploymentStatus", this.getDeploymentStatus());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("roleScopeTagIds", this.getRoleScopeTagIds());
-    }
-    /**
-     * Sets the deploymentAssignments property value. Collection of Android FOTA Assignment
-     * @param value Value to set for the deploymentAssignments property.
-     */
-    public void setDeploymentAssignments(@jakarta.annotation.Nullable final java.util.List<AndroidFotaDeploymentAssignment> value) {
-        this.backingStore.set("deploymentAssignments", value);
     }
     /**
      * Sets the deploymentSettings property value. The Zebra FOTA deployment complex type that describes the settings required to create a FOTA deployment.

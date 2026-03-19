@@ -46,18 +46,18 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/policies/{policyLink%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete a threatIntelligencePolicyLink object.
+     * Delete a filteringPolicyLink object. Use this operation to delete any derived type, including:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-delete?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a threatIntelligencePolicyLink object.
+     * Delete a filteringPolicyLink object. Use this operation to delete any derived type, including:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-delete?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -66,21 +66,21 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a threatIntelligencePolicyLink object.
+     * Get a filteringPolicyLink object. The returned object can be a:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a threatIntelligencePolicyLink object.
+     * Get a filteringPolicyLink object. The returned object can be a:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -90,23 +90,23 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLink::createFromDiscriminatorValue);
     }
     /**
-     * Update the properties of a threatIntelligencePolicyLink object.
+     * Modify the properties of an existing filteringPolicyLink object to update its traffic rules. Use this operation to update any derived type, including:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @param body The request body
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-update?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink patch(@jakarta.annotation.Nonnull final PolicyLink body) {
         return patch(body, null);
     }
     /**
-     * Update the properties of a threatIntelligencePolicyLink object.
+     * Modify the properties of an existing filteringPolicyLink object to update its traffic rules. Use this operation to update any derived type, including:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PolicyLink}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-threatintelligencepolicylink-update?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/networkaccess-filteringpolicylink-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PolicyLink patch(@jakarta.annotation.Nonnull final PolicyLink body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -117,7 +117,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PolicyLink::createFromDiscriminatorValue);
     }
     /**
-     * Delete a threatIntelligencePolicyLink object.
+     * Delete a filteringPolicyLink object. Use this operation to delete any derived type, including:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a threatIntelligencePolicyLink object.
+     * Delete a filteringPolicyLink object. Use this operation to delete any derived type, including:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +137,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a threatIntelligencePolicyLink object.
+     * Get a filteringPolicyLink object. The returned object can be a:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a threatIntelligencePolicyLink object.
+     * Get a filteringPolicyLink object. The returned object can be a:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a threatIntelligencePolicyLink object.
+     * Modify the properties of an existing filteringPolicyLink object to update its traffic rules. Use this operation to update any derived type, including:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +166,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a threatIntelligencePolicyLink object.
+     * Modify the properties of an existing filteringPolicyLink object to update its traffic rules. Use this operation to update any derived type, including:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -197,7 +197,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a threatIntelligencePolicyLink object.
+     * Get a filteringPolicyLink object. The returned object can be a:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

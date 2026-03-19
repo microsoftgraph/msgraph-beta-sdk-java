@@ -64,7 +64,7 @@ public class RestorePoint extends Entity implements Parsable {
         return this.backingStore.get("protectionUnit");
     }
     /**
-     * Gets the tags property value. The type of the restore point. The possible values are: none, fastRestore, unknownFutureValue.
+     * Gets the tags property value. The type of the restore point. The possible values are: none, fastRestore, unknownFutureValue, includeNewerItems. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: includeNewerItems.
      * @return a {@link EnumSet<RestorePointTags>}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class RestorePoint extends Entity implements Parsable {
         this.backingStore.set("protectionUnit", value);
     }
     /**
-     * Sets the tags property value. The type of the restore point. The possible values are: none, fastRestore, unknownFutureValue.
+     * Sets the tags property value. The type of the restore point. The possible values are: none, fastRestore, unknownFutureValue, includeNewerItems. Use the Prefer: include-unknown-enum-members request header to get the following value in this evolvable enum: includeNewerItems.
      * @param value Value to set for the tags property.
      */
     public void setTags(@jakarta.annotation.Nullable final EnumSet<RestorePointTags> value) {

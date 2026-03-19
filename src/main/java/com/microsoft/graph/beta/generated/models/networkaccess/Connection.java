@@ -51,6 +51,14 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
+     * Gets the crossTenantAccessType property value. Cross tenant access details, for B2B scenarios. The possible values are: none, b2bCollaboration, unknownFutureValue.
+     * @return a {@link CrossTenantAccessType}
+     */
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessType getCrossTenantAccessType() {
+        return this.backingStore.get("crossTenantAccessType");
+    }
+    /**
      * Gets the destinationFqdn property value. The destination FQDN of the connection.
      * @return a {@link String}
      */
@@ -91,6 +99,14 @@ public class Connection extends Entity implements Parsable {
         return this.backingStore.get("deviceId");
     }
     /**
+     * Gets the deviceJoinType property value. Device registration type, for BYOD scenarios. The possible values are: none, microsoftEntraJoined, microsoftEntraRegistered, unknownFutureValue.
+     * @return a {@link DeviceJoinType}
+     */
+    @jakarta.annotation.Nullable
+    public DeviceJoinType getDeviceJoinType() {
+        return this.backingStore.get("deviceJoinType");
+    }
+    /**
      * Gets the deviceOperatingSystem property value. The device operating system type.
      * @return a {@link String}
      */
@@ -124,14 +140,17 @@ public class Connection extends Entity implements Parsable {
         deserializerMap.put("agentVersion", (n) -> { this.setAgentVersion(n.getStringValue()); });
         deserializerMap.put("applicationSnapshot", (n) -> { this.setApplicationSnapshot(n.getObjectValue(ApplicationSnapshot::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("crossTenantAccessType", (n) -> { this.setCrossTenantAccessType(n.getEnumValue(CrossTenantAccessType::forValue)); });
         deserializerMap.put("destinationFqdn", (n) -> { this.setDestinationFqdn(n.getStringValue()); });
         deserializerMap.put("destinationIp", (n) -> { this.setDestinationIp(n.getStringValue()); });
         deserializerMap.put("destinationPort", (n) -> { this.setDestinationPort(n.getIntegerValue()); });
         deserializerMap.put("deviceCategory", (n) -> { this.setDeviceCategory(n.getEnumValue(DeviceCategory::forValue)); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
+        deserializerMap.put("deviceJoinType", (n) -> { this.setDeviceJoinType(n.getEnumValue(DeviceJoinType::forValue)); });
         deserializerMap.put("deviceOperatingSystem", (n) -> { this.setDeviceOperatingSystem(n.getStringValue()); });
         deserializerMap.put("deviceOperatingSystemVersion", (n) -> { this.setDeviceOperatingSystemVersion(n.getStringValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("homeTenantId", (n) -> { this.setHomeTenantId(n.getStringValue()); });
         deserializerMap.put("initiatingProcessName", (n) -> { this.setInitiatingProcessName(n.getStringValue()); });
         deserializerMap.put("lastUpdateDateTime", (n) -> { this.setLastUpdateDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("networkProtocol", (n) -> { this.setNetworkProtocol(n.getEnumValue(NetworkingProtocol::forValue)); });
@@ -150,6 +169,14 @@ public class Connection extends Entity implements Parsable {
         deserializerMap.put("userId", (n) -> { this.setUserId(n.getStringValue()); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the homeTenantId property value. The identifier of the home tenant, for Entra B2B scenarios.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getHomeTenantId() {
+        return this.backingStore.get("homeTenantId");
     }
     /**
      * Gets the initiatingProcessName property value. The process initiating the traffic connection.
@@ -297,14 +324,17 @@ public class Connection extends Entity implements Parsable {
         writer.writeStringValue("agentVersion", this.getAgentVersion());
         writer.writeObjectValue("applicationSnapshot", this.getApplicationSnapshot());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeEnumValue("crossTenantAccessType", this.getCrossTenantAccessType());
         writer.writeStringValue("destinationFqdn", this.getDestinationFqdn());
         writer.writeStringValue("destinationIp", this.getDestinationIp());
         writer.writeIntegerValue("destinationPort", this.getDestinationPort());
         writer.writeEnumValue("deviceCategory", this.getDeviceCategory());
         writer.writeStringValue("deviceId", this.getDeviceId());
+        writer.writeEnumValue("deviceJoinType", this.getDeviceJoinType());
         writer.writeStringValue("deviceOperatingSystem", this.getDeviceOperatingSystem());
         writer.writeStringValue("deviceOperatingSystemVersion", this.getDeviceOperatingSystemVersion());
         writer.writeOffsetDateTimeValue("endDateTime", this.getEndDateTime());
+        writer.writeStringValue("homeTenantId", this.getHomeTenantId());
         writer.writeStringValue("initiatingProcessName", this.getInitiatingProcessName());
         writer.writeOffsetDateTimeValue("lastUpdateDateTime", this.getLastUpdateDateTime());
         writer.writeEnumValue("networkProtocol", this.getNetworkProtocol());
@@ -345,6 +375,13 @@ public class Connection extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
+     * Sets the crossTenantAccessType property value. Cross tenant access details, for B2B scenarios. The possible values are: none, b2bCollaboration, unknownFutureValue.
+     * @param value Value to set for the crossTenantAccessType property.
+     */
+    public void setCrossTenantAccessType(@jakarta.annotation.Nullable final CrossTenantAccessType value) {
+        this.backingStore.set("crossTenantAccessType", value);
+    }
+    /**
      * Sets the destinationFqdn property value. The destination FQDN of the connection.
      * @param value Value to set for the destinationFqdn property.
      */
@@ -380,6 +417,13 @@ public class Connection extends Entity implements Parsable {
         this.backingStore.set("deviceId", value);
     }
     /**
+     * Sets the deviceJoinType property value. Device registration type, for BYOD scenarios. The possible values are: none, microsoftEntraJoined, microsoftEntraRegistered, unknownFutureValue.
+     * @param value Value to set for the deviceJoinType property.
+     */
+    public void setDeviceJoinType(@jakarta.annotation.Nullable final DeviceJoinType value) {
+        this.backingStore.set("deviceJoinType", value);
+    }
+    /**
      * Sets the deviceOperatingSystem property value. The device operating system type.
      * @param value Value to set for the deviceOperatingSystem property.
      */
@@ -399,6 +443,13 @@ public class Connection extends Entity implements Parsable {
      */
     public void setEndDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("endDateTime", value);
+    }
+    /**
+     * Sets the homeTenantId property value. The identifier of the home tenant, for Entra B2B scenarios.
+     * @param value Value to set for the homeTenantId property.
+     */
+    public void setHomeTenantId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("homeTenantId", value);
     }
     /**
      * Sets the initiatingProcessName property value. The process initiating the traffic connection.

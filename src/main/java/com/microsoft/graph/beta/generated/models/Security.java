@@ -89,7 +89,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("attackSimulation");
     }
     /**
-     * Gets the auditLog property value. The auditLog property
+     * Gets the auditLog property value. The entry point for Microsoft Purview audit log queries and operations.
      * @return a {@link AuditCoreRoot}
      */
     @jakarta.annotation.Nullable
@@ -348,7 +348,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("threatSubmission");
     }
     /**
-     * Gets the tiIndicators property value. The tiIndicators property
+     * Gets the tiIndicators property value. Deprecated. The tiIndicator entity is deprecated and will be removed by April 2026.
      * @return a {@link java.util.List<TiIndicator>}
      */
     @jakarta.annotation.Nullable
@@ -458,7 +458,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("attackSimulation", value);
     }
     /**
-     * Sets the auditLog property value. The auditLog property
+     * Sets the auditLog property value. The entry point for Microsoft Purview audit log queries and operations.
      * @param value Value to set for the auditLog property.
      */
     public void setAuditLog(@jakarta.annotation.Nullable final AuditCoreRoot value) {
@@ -648,7 +648,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("threatSubmission", value);
     }
     /**
-     * Sets the tiIndicators property value. The tiIndicators property
+     * Sets the tiIndicators property value. Deprecated. The tiIndicator entity is deprecated and will be removed by April 2026.
      * @param value Value to set for the tiIndicators property.
      */
     public void setTiIndicators(@jakarta.annotation.Nullable final java.util.List<TiIndicator> value) {

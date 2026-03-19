@@ -26,6 +26,14 @@ public class CloudPcExternalPartner extends Entity implements Parsable {
         return new CloudPcExternalPartner();
     }
     /**
+     * Gets the agentSetting property value. The agent settings associated with the external partner.
+     * @return a {@link CloudPcExternalPartnerAgentSetting}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcExternalPartnerAgentSetting getAgentSetting() {
+        return this.backingStore.get("agentSetting");
+    }
+    /**
      * Gets the connectionStatus property value. The connectionStatus property
      * @return a {@link CloudPcExternalPartnerStatus}
      */
@@ -48,6 +56,7 @@ public class CloudPcExternalPartner extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("agentSetting", (n) -> { this.setAgentSetting(n.getObjectValue(CloudPcExternalPartnerAgentSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("connectionStatus", (n) -> { this.setConnectionStatus(n.getEnumValue(CloudPcExternalPartnerStatus::forValue)); });
         deserializerMap.put("enableConnection", (n) -> { this.setEnableConnection(n.getBooleanValue()); });
         deserializerMap.put("lastSyncDateTime", (n) -> { this.setLastSyncDateTime(n.getOffsetDateTimeValue()); });
@@ -86,11 +95,19 @@ public class CloudPcExternalPartner extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("agentSetting", this.getAgentSetting());
         writer.writeEnumValue("connectionStatus", this.getConnectionStatus());
         writer.writeBooleanValue("enableConnection", this.getEnableConnection());
         writer.writeOffsetDateTimeValue("lastSyncDateTime", this.getLastSyncDateTime());
         writer.writeStringValue("partnerId", this.getPartnerId());
         writer.writeStringValue("statusDetails", this.getStatusDetails());
+    }
+    /**
+     * Sets the agentSetting property value. The agent settings associated with the external partner.
+     * @param value Value to set for the agentSetting property.
+     */
+    public void setAgentSetting(@jakarta.annotation.Nullable final CloudPcExternalPartnerAgentSetting value) {
+        this.backingStore.set("agentSetting", value);
     }
     /**
      * Sets the connectionStatus property value. The connectionStatus property

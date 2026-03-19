@@ -92,7 +92,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("connectorGroup");
     }
     /**
-     * Gets the createdByAppId property value. The globally unique appId (called Application (client) ID on the Microsoft Entra admin center) of the application that created this application. Set internally by Microsoft Entra ID. Read-only.
+     * Gets the createdByAppId property value. The appId of the application that created this application. Set internally by Microsoft Entra ID. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -195,6 +195,7 @@ public class Application extends DirectoryObject implements Parsable {
         deserializerMap.put("isFallbackPublicClient", (n) -> { this.setIsFallbackPublicClient(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("logo", (n) -> { this.setLogo(n.getByteArrayValue()); });
+        deserializerMap.put("managerApplications", (n) -> { this.setManagerApplications(n.getCollectionOfPrimitiveValues(UUID.class)); });
         deserializerMap.put("nativeAuthenticationApisEnabled", (n) -> { this.setNativeAuthenticationApisEnabled(n.getEnumSetValue(NativeAuthenticationApisEnabled::forValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
         deserializerMap.put("onPremisesPublishing", (n) -> { this.setOnPremisesPublishing(n.getObjectValue(OnPremisesPublishing::createFromDiscriminatorValue)); });
@@ -294,6 +295,14 @@ public class Application extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public byte[] getLogo() {
         return this.backingStore.get("logo");
+    }
+    /**
+     * Gets the managerApplications property value. A collection of application IDs for applications designated as managers of this application. Manager applications can create service principals for the applications they manage. Currently, only Microsoft first-party application IDs can be set as values. Maximum of 10 values. Not nullable. Read-only for third-party (3P) callers; writes by 3P callers are rejected with a 400 Bad Request error. Returned only on $select.
+     * @return a {@link java.util.List<UUID>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<UUID> getManagerApplications() {
+        return this.backingStore.get("managerApplications");
     }
     /**
      * Gets the nativeAuthenticationApisEnabled property value. Specifies whether the Native Authentication APIs are enabled for the application. The possible values are: noneand all. Default is none. For more information, see Native Authentication.
@@ -535,6 +544,7 @@ public class Application extends DirectoryObject implements Parsable {
         writer.writeBooleanValue("isFallbackPublicClient", this.getIsFallbackPublicClient());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeByteArrayValue("logo", this.getLogo());
+        writer.writeCollectionOfPrimitiveValues("managerApplications", this.getManagerApplications());
         writer.writeEnumSetValue("nativeAuthenticationApisEnabled", this.getNativeAuthenticationApisEnabled());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeObjectValue("onPremisesPublishing", this.getOnPremisesPublishing());
@@ -612,7 +622,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("connectorGroup", value);
     }
     /**
-     * Sets the createdByAppId property value. The globally unique appId (called Application (client) ID on the Microsoft Entra admin center) of the application that created this application. Set internally by Microsoft Entra ID. Read-only.
+     * Sets the createdByAppId property value. The appId of the application that created this application. Set internally by Microsoft Entra ID. Read-only.
      * @param value Value to set for the createdByAppId property.
      */
     public void setCreatedByAppId(@jakarta.annotation.Nullable final String value) {
@@ -736,6 +746,13 @@ public class Application extends DirectoryObject implements Parsable {
      */
     public void setLogo(@jakarta.annotation.Nullable final byte[] value) {
         this.backingStore.set("logo", value);
+    }
+    /**
+     * Sets the managerApplications property value. A collection of application IDs for applications designated as managers of this application. Manager applications can create service principals for the applications they manage. Currently, only Microsoft first-party application IDs can be set as values. Maximum of 10 values. Not nullable. Read-only for third-party (3P) callers; writes by 3P callers are rejected with a 400 Bad Request error. Returned only on $select.
+     * @param value Value to set for the managerApplications property.
+     */
+    public void setManagerApplications(@jakarta.annotation.Nullable final java.util.List<UUID> value) {
+        this.backingStore.set("managerApplications", value);
     }
     /**
      * Sets the nativeAuthenticationApisEnabled property value. Specifies whether the Native Authentication APIs are enabled for the application. The possible values are: noneand all. Default is none. For more information, see Native Authentication.

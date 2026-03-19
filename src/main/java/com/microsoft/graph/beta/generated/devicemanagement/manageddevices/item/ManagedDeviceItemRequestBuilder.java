@@ -36,16 +36,21 @@ import com.microsoft.graph.beta.devicemanagement.manageddevices.item.remotelock.
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.removedevicefirmwareconfigurationinterfacemanagement.RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.manageddevices.item.restoremanagedhomescreen.RestoreManagedHomeScreenRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.retire.RetireRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.manageddevices.item.retrievedevicelocaladminaccountdetail.RetrieveDeviceLocalAdminAccountDetailRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.retrievemacosmanageddevicelocaladminaccountdetail.RetrieveMacOSManagedDeviceLocalAdminAccountDetailRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.manageddevices.item.retrieverecoverylockpasscode.RetrieveRecoveryLockPasscodeRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.revokeapplevpplicenses.RevokeAppleVppLicensesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.rotatebitlockerkeys.RotateBitLockerKeysRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.rotatefilevaultkey.RotateFileVaultKeyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.rotatelocaladminpassword.RotateLocalAdminPasswordRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.manageddevices.item.rotaterecoverylockpasscode.RotateRecoveryLockPasscodeRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.securitybaselinestates.SecurityBaselineStatesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.sendcustomnotificationtocompanyportal.SendCustomNotificationToCompanyPortalRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.setdevicename.SetDeviceNameRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.shutdown.ShutDownRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.manageddevices.item.suspendmanagedhomescreen.SuspendManagedHomeScreenRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.syncdevice.SyncDeviceRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.triggerconfigurationmanageraction.TriggerConfigurationManagerActionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.updatewindowsdeviceaccount.UpdateWindowsDeviceAccountRequestBuilder;
@@ -363,6 +368,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return new ResetPasscodeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the restoreManagedHomeScreen method.
+     * @return a {@link RestoreManagedHomeScreenRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RestoreManagedHomeScreenRequestBuilder restoreManagedHomeScreen() {
+        return new RestoreManagedHomeScreenRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the retire method.
      * @return a {@link RetireRequestBuilder}
      */
@@ -371,12 +384,28 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return new RetireRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the retrieveDeviceLocalAdminAccountDetail method.
+     * @return a {@link RetrieveDeviceLocalAdminAccountDetailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveDeviceLocalAdminAccountDetailRequestBuilder retrieveDeviceLocalAdminAccountDetail() {
+        return new RetrieveDeviceLocalAdminAccountDetailRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the retrieveMacOSManagedDeviceLocalAdminAccountDetail method.
      * @return a {@link RetrieveMacOSManagedDeviceLocalAdminAccountDetailRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public RetrieveMacOSManagedDeviceLocalAdminAccountDetailRequestBuilder retrieveMacOSManagedDeviceLocalAdminAccountDetail() {
         return new RetrieveMacOSManagedDeviceLocalAdminAccountDetailRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the retrieveRecoveryLockPasscode method.
+     * @return a {@link RetrieveRecoveryLockPasscodeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveRecoveryLockPasscodeRequestBuilder retrieveRecoveryLockPasscode() {
+        return new RetrieveRecoveryLockPasscodeRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the revokeAppleVppLicenses method.
@@ -411,6 +440,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return new RotateLocalAdminPasswordRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the rotateRecoveryLockPasscode method.
+     * @return a {@link RotateRecoveryLockPasscodeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RotateRecoveryLockPasscodeRequestBuilder rotateRecoveryLockPasscode() {
+        return new RotateRecoveryLockPasscodeRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the securityBaselineStates property of the microsoft.graph.managedDevice entity.
      * @return a {@link SecurityBaselineStatesRequestBuilder}
      */
@@ -441,6 +478,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ShutDownRequestBuilder shutDown() {
         return new ShutDownRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the suspendManagedHomeScreen method.
+     * @return a {@link SuspendManagedHomeScreenRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SuspendManagedHomeScreenRequestBuilder suspendManagedHomeScreen() {
+        return new SuspendManagedHomeScreenRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the syncDevice method.

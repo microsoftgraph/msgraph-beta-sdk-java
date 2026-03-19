@@ -10,6 +10,12 @@ import java.util.Objects;
 public enum OperationApprovalPolicyType implements ValuedEnum {
     /** Default. Indicates that the configured policy type is unknown. Not a valid policy type in an OperationApprovalPolicy. */
     Unknown("unknown"),
+    /** Indicates that the configured policy type is for a Device Wipe Action. */
+    DeviceWipe("deviceWipe"),
+    /** Indicates that the configured policy type is for a Device Retire Action */
+    DeviceRetire("deviceRetire"),
+    /** Indicates that the configured policy type is for a Device Delete Action. */
+    DeviceDelete("deviceDelete"),
     /** Indicates that the configured policy type is an application type, such as mobile apps or built-in apps. */
     App("app"),
     /** Indicates that the configured policy type is a script type, such as PowerShell scripts or remediation scripts. */
@@ -17,7 +23,9 @@ public enum OperationApprovalPolicyType implements ValuedEnum {
     /** Indicates that the configured policy type type is for Intune roles, such as application administrator or a custom role. */
     Role("role"),
     /** Evolvable enumeration sentinel value. Do not use. */
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    /** Indicates that the configured policy type is for Tenant Configuration operations. */
+    TenantConfiguration("tenantConfiguration");
     public final String value;
     OperationApprovalPolicyType(final String value) {
         this.value = value;
@@ -29,10 +37,14 @@ public enum OperationApprovalPolicyType implements ValuedEnum {
         Objects.requireNonNull(searchValue);
         switch(searchValue) {
             case "unknown": return Unknown;
+            case "deviceWipe": return DeviceWipe;
+            case "deviceRetire": return DeviceRetire;
+            case "deviceDelete": return DeviceDelete;
             case "app": return App;
             case "script": return Script;
             case "role": return Role;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "tenantConfiguration": return TenantConfiguration;
             default: return null;
         }
     }
