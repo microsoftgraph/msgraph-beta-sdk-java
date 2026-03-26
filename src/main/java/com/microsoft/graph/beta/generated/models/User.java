@@ -577,6 +577,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("givenName", (n) -> { this.setGivenName(n.getStringValue()); });
         deserializerMap.put("hireDate", (n) -> { this.setHireDate(n.getOffsetDateTimeValue()); });
         deserializerMap.put("identities", (n) -> { this.setIdentities(n.getCollectionOfObjectValues(ObjectIdentity::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityGovernance", (n) -> { this.setIdentityGovernance(n.getObjectValue(IdentityGovernanceUserSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("identityParentId", (n) -> { this.setIdentityParentId(n.getStringValue()); });
         deserializerMap.put("imAddresses", (n) -> { this.setImAddresses(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("inferenceClassification", (n) -> { this.setInferenceClassification(n.getObjectValue(InferenceClassification::createFromDiscriminatorValue)); });
@@ -709,6 +710,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<ObjectIdentity> getIdentities() {
         return this.backingStore.get("identities");
+    }
+    /**
+     * Gets the identityGovernance property value. The identityGovernance property
+     * @return a {@link IdentityGovernanceUserSettings}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityGovernanceUserSettings getIdentityGovernance() {
+        return this.backingStore.get("identityGovernance");
     }
     /**
      * Gets the identityParentId property value. The object ID of the parent identity for agent users. Always null for regular user accounts. For agentUser resources, this property references the object ID of the associated agent identity.
@@ -1572,6 +1581,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("givenName", this.getGivenName());
         writer.writeOffsetDateTimeValue("hireDate", this.getHireDate());
         writer.writeCollectionOfObjectValues("identities", this.getIdentities());
+        writer.writeObjectValue("identityGovernance", this.getIdentityGovernance());
         writer.writeStringValue("identityParentId", this.getIdentityParentId());
         writer.writeCollectionOfPrimitiveValues("imAddresses", this.getImAddresses());
         writer.writeObjectValue("inferenceClassification", this.getInferenceClassification());
@@ -2112,6 +2122,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setIdentities(@jakarta.annotation.Nullable final java.util.List<ObjectIdentity> value) {
         this.backingStore.set("identities", value);
+    }
+    /**
+     * Sets the identityGovernance property value. The identityGovernance property
+     * @param value Value to set for the identityGovernance property.
+     */
+    public void setIdentityGovernance(@jakarta.annotation.Nullable final IdentityGovernanceUserSettings value) {
+        this.backingStore.set("identityGovernance", value);
     }
     /**
      * Sets the identityParentId property value. The object ID of the parent identity for agent users. Always null for regular user accounts. For agentUser resources, this property references the object ID of the associated agent identity.

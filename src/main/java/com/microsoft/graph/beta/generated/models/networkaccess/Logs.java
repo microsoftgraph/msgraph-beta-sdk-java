@@ -41,9 +41,18 @@ public class Logs extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("connections", (n) -> { this.setConnections(n.getCollectionOfObjectValues(Connection::createFromDiscriminatorValue)); });
+        deserializerMap.put("generativeAIInsights", (n) -> { this.setGenerativeAIInsights(n.getCollectionOfObjectValues(GenerativeAIInsight::createFromDiscriminatorValue)); });
         deserializerMap.put("remoteNetworks", (n) -> { this.setRemoteNetworks(n.getCollectionOfObjectValues(RemoteNetworkHealthEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("traffic", (n) -> { this.setTraffic(n.getCollectionOfObjectValues(NetworkAccessTraffic::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the generativeAIInsights property value. The generativeAIInsights property
+     * @return a {@link java.util.List<GenerativeAIInsight>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<GenerativeAIInsight> getGenerativeAIInsights() {
+        return this.backingStore.get("generativeAIInsights");
     }
     /**
      * Gets the remoteNetworks property value. A collection of remote network health events.
@@ -69,6 +78,7 @@ public class Logs extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("connections", this.getConnections());
+        writer.writeCollectionOfObjectValues("generativeAIInsights", this.getGenerativeAIInsights());
         writer.writeCollectionOfObjectValues("remoteNetworks", this.getRemoteNetworks());
         writer.writeCollectionOfObjectValues("traffic", this.getTraffic());
     }
@@ -78,6 +88,13 @@ public class Logs extends Entity implements Parsable {
      */
     public void setConnections(@jakarta.annotation.Nullable final java.util.List<Connection> value) {
         this.backingStore.set("connections", value);
+    }
+    /**
+     * Sets the generativeAIInsights property value. The generativeAIInsights property
+     * @param value Value to set for the generativeAIInsights property.
+     */
+    public void setGenerativeAIInsights(@jakarta.annotation.Nullable final java.util.List<GenerativeAIInsight> value) {
+        this.backingStore.set("generativeAIInsights", value);
     }
     /**
      * Sets the remoteNetworks property value. A collection of remote network health events.

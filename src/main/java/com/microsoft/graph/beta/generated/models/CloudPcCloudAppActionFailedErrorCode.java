@@ -9,7 +9,9 @@ public enum CloudPcCloudAppActionFailedErrorCode implements ValuedEnum {
     CloudPcLicenseNotFound("cloudPcLicenseNotFound"),
     InternalServerError("internalServerError"),
     AppDiscoveryFailed("appDiscoveryFailed"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    IconPathInvalid("iconPathInvalid"),
+    FilePathInvalid("filePathInvalid");
     public final String value;
     CloudPcCloudAppActionFailedErrorCode(final String value) {
         this.value = value;
@@ -25,6 +27,8 @@ public enum CloudPcCloudAppActionFailedErrorCode implements ValuedEnum {
             case "internalServerError": return InternalServerError;
             case "appDiscoveryFailed": return AppDiscoveryFailed;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "iconPathInvalid": return IconPathInvalid;
+            case "filePathInvalid": return FilePathInvalid;
             default: return null;
         }
     }

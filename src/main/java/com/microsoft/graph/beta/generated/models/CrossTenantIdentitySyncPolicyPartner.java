@@ -26,7 +26,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         return new CrossTenantIdentitySyncPolicyPartner();
     }
     /**
-     * Gets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
+     * Gets the displayName property value. Display name for the cross-tenant user and group synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -56,7 +56,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         return deserializerMap;
     }
     /**
-     * Gets the groupSyncInbound property value. Defines whether groups can be synchronized from a partner tenant. Key.
+     * Gets the groupSyncInbound property value. Defines whether groups can be synchronized from a partner tenant.
      * @return a {@link CrossTenantGroupSyncInbound}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         return this.backingStore.get("groupSyncInbound");
     }
     /**
-     * Gets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Read-only.
+     * Gets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Key. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         return this.backingStore.get("tenantId");
     }
     /**
-     * Gets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant. Key.
+     * Gets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant.
      * @return a {@link CrossTenantUserSyncInbound}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         writer.writeObjectValue("userSyncInbound", this.getUserSyncInbound());
     }
     /**
-     * Sets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
+     * Sets the displayName property value. Display name for the cross-tenant user and group synchronization policy. Use the name of the partner Microsoft Entra tenant to easily identify the policy. Optional.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -107,21 +107,21 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         this.backingStore.set("externalCloudAuthorizedApplicationId", value);
     }
     /**
-     * Sets the groupSyncInbound property value. Defines whether groups can be synchronized from a partner tenant. Key.
+     * Sets the groupSyncInbound property value. Defines whether groups can be synchronized from a partner tenant.
      * @param value Value to set for the groupSyncInbound property.
      */
     public void setGroupSyncInbound(@jakarta.annotation.Nullable final CrossTenantGroupSyncInbound value) {
         this.backingStore.set("groupSyncInbound", value);
     }
     /**
-     * Sets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Read-only.
+     * Sets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Key. Read-only.
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("tenantId", value);
     }
     /**
-     * Sets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant. Key.
+     * Sets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant.
      * @param value Value to set for the userSyncInbound property.
      */
     public void setUserSyncInbound(@jakarta.annotation.Nullable final CrossTenantUserSyncInbound value) {

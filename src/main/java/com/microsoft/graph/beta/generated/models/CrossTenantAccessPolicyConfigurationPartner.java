@@ -26,6 +26,14 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         return new CrossTenantAccessPolicyConfigurationPartner();
     }
     /**
+     * Gets the appServiceConnectInbound property value. The appServiceConnectInbound property
+     * @return a {@link CrossTenantAccessPolicyAppServiceConnectSetting}
+     */
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyAppServiceConnectSetting getAppServiceConnectInbound() {
+        return this.backingStore.get("appServiceConnectInbound");
+    }
+    /**
      * Gets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @return a {@link InboundOutboundPolicyConfiguration}
      */
@@ -80,6 +88,7 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appServiceConnectInbound", (n) -> { this.setAppServiceConnectInbound(n.getObjectValue(CrossTenantAccessPolicyAppServiceConnectSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("automaticUserConsentSettings", (n) -> { this.setAutomaticUserConsentSettings(n.getObjectValue(InboundOutboundPolicyConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationInbound", (n) -> { this.setB2bCollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("b2bCollaborationOutbound", (n) -> { this.setB2bCollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyB2BSetting::createFromDiscriminatorValue)); });
@@ -90,6 +99,8 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         deserializerMap.put("inboundTrust", (n) -> { this.setInboundTrust(n.getObjectValue(CrossTenantAccessPolicyInboundTrust::createFromDiscriminatorValue)); });
         deserializerMap.put("isInMultiTenantOrganization", (n) -> { this.setIsInMultiTenantOrganization(n.getBooleanValue()); });
         deserializerMap.put("isServiceProvider", (n) -> { this.setIsServiceProvider(n.getBooleanValue()); });
+        deserializerMap.put("m365CollaborationInbound", (n) -> { this.setM365CollaborationInbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationInboundSetting::createFromDiscriminatorValue)); });
+        deserializerMap.put("m365CollaborationOutbound", (n) -> { this.setM365CollaborationOutbound(n.getObjectValue(CrossTenantAccessPolicyM365CollaborationOutboundSetting::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("tenantRestrictions", (n) -> { this.setTenantRestrictions(n.getObjectValue(CrossTenantAccessPolicyTenantRestrictions::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -127,6 +138,22 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         return this.backingStore.get("isServiceProvider");
     }
     /**
+     * Gets the m365CollaborationInbound property value. The m365CollaborationInbound property
+     * @return a {@link CrossTenantAccessPolicyM365CollaborationInboundSetting}
+     */
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyM365CollaborationInboundSetting getM365CollaborationInbound() {
+        return this.backingStore.get("m365CollaborationInbound");
+    }
+    /**
+     * Gets the m365CollaborationOutbound property value. The m365CollaborationOutbound property
+     * @return a {@link CrossTenantAccessPolicyM365CollaborationOutboundSetting}
+     */
+    @jakarta.annotation.Nullable
+    public CrossTenantAccessPolicyM365CollaborationOutboundSetting getM365CollaborationOutbound() {
+        return this.backingStore.get("m365CollaborationOutbound");
+    }
+    /**
      * Gets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.
      * @return a {@link String}
      */
@@ -149,6 +176,7 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("appServiceConnectInbound", this.getAppServiceConnectInbound());
         writer.writeObjectValue("automaticUserConsentSettings", this.getAutomaticUserConsentSettings());
         writer.writeObjectValue("b2bCollaborationInbound", this.getB2bCollaborationInbound());
         writer.writeObjectValue("b2bCollaborationOutbound", this.getB2bCollaborationOutbound());
@@ -159,8 +187,17 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
         writer.writeObjectValue("inboundTrust", this.getInboundTrust());
         writer.writeBooleanValue("isInMultiTenantOrganization", this.getIsInMultiTenantOrganization());
         writer.writeBooleanValue("isServiceProvider", this.getIsServiceProvider());
+        writer.writeObjectValue("m365CollaborationInbound", this.getM365CollaborationInbound());
+        writer.writeObjectValue("m365CollaborationOutbound", this.getM365CollaborationOutbound());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeObjectValue("tenantRestrictions", this.getTenantRestrictions());
+    }
+    /**
+     * Sets the appServiceConnectInbound property value. The appServiceConnectInbound property
+     * @param value Value to set for the appServiceConnectInbound property.
+     */
+    public void setAppServiceConnectInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyAppServiceConnectSetting value) {
+        this.backingStore.set("appServiceConnectInbound", value);
     }
     /**
      * Sets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
@@ -231,6 +268,20 @@ public class CrossTenantAccessPolicyConfigurationPartner extends PolicyDeletable
      */
     public void setIsServiceProvider(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isServiceProvider", value);
+    }
+    /**
+     * Sets the m365CollaborationInbound property value. The m365CollaborationInbound property
+     * @param value Value to set for the m365CollaborationInbound property.
+     */
+    public void setM365CollaborationInbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyM365CollaborationInboundSetting value) {
+        this.backingStore.set("m365CollaborationInbound", value);
+    }
+    /**
+     * Sets the m365CollaborationOutbound property value. The m365CollaborationOutbound property
+     * @param value Value to set for the m365CollaborationOutbound property.
+     */
+    public void setM365CollaborationOutbound(@jakarta.annotation.Nullable final CrossTenantAccessPolicyM365CollaborationOutboundSetting value) {
+        this.backingStore.set("m365CollaborationOutbound", value);
     }
     /**
      * Sets the tenantId property value. The tenant identifier for the partner Microsoft Entra organization. Read-only. Key.

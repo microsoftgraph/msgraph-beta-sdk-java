@@ -26,7 +26,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return new ConfigurationSnapshotJob();
     }
     /**
-     * Gets the completedDateTime property value. The date and time when the snapshot job was completed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the completedDateTime property value. The date and time when the snapshot job was completed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, ge, le) and $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The date and time when the snapshot job was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the createdDateTime property value. The date and time when the snapshot job was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, ge, le) and $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. User-friendly description of the snapshot given by the user.
+     * Gets the description property value. User-friendly description of the snapshot given by the user. Supports $filter (eq, ne, startsWith) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. User-friendly name provided by the user during snapshot creation.
+     * Gets the displayName property value. User-friendly name provided by the user during snapshot creation. Supports $filter (eq, ne, startsWith) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the errorDetails property value. Details of errors related to the reasons why the snapshot can&apos;t complete.
+     * Gets the errorDetails property value. Details of errors related to the reasons why the snapshot can&apos;t complete. Returned only on $select.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the resourceLocation property value. The URL at which the snapshot file resides.
+     * Gets the resourceLocation property value. The URL at which the snapshot file resides. Returned only on $select.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return this.backingStore.get("resourceLocation");
     }
     /**
-     * Gets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system.
+     * Gets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Returned only on $select.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the snapshot is created.
+     * Gets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the snapshot is created. Supports $filter (eq, ne).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the completedDateTime property value. The date and time when the snapshot job was completed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the completedDateTime property value. The date and time when the snapshot job was completed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, ge, le) and $orderby.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -152,42 +152,42 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The date and time when the snapshot job was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the createdDateTime property value. The date and time when the snapshot job was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, ge, le) and $orderby.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. User-friendly description of the snapshot given by the user.
+     * Sets the description property value. User-friendly description of the snapshot given by the user. Supports $filter (eq, ne, startsWith) and $orderby.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. User-friendly name provided by the user during snapshot creation.
+     * Sets the displayName property value. User-friendly name provided by the user during snapshot creation. Supports $filter (eq, ne, startsWith) and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the errorDetails property value. Details of errors related to the reasons why the snapshot can&apos;t complete.
+     * Sets the errorDetails property value. Details of errors related to the reasons why the snapshot can&apos;t complete. Returned only on $select.
      * @param value Value to set for the errorDetails property.
      */
     public void setErrorDetails(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("errorDetails", value);
     }
     /**
-     * Sets the resourceLocation property value. The URL at which the snapshot file resides.
+     * Sets the resourceLocation property value. The URL at which the snapshot file resides. Returned only on $select.
      * @param value Value to set for the resourceLocation property.
      */
     public void setResourceLocation(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceLocation", value);
     }
     /**
-     * Sets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system.
+     * Sets the resources property value. The names of all resources included in the request body by the user who created the snapshot. Fetched by the system. Returned only on $select.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -201,7 +201,7 @@ public class ConfigurationSnapshotJob extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the snapshot is created.
+     * Sets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the snapshot is created. Supports $filter (eq, ne).
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
