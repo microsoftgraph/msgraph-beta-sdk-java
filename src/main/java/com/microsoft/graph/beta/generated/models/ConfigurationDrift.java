@@ -26,7 +26,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return new ConfigurationDrift();
     }
     /**
-     * Gets the baselineResourceDisplayName property value. Resource instance for which the drift is detected.
+     * Gets the baselineResourceDisplayName property value. Resource instance for which the drift is detected. Supports $filter (eq, ne, startsWith) and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return this.backingStore.get("baselineResourceDisplayName");
     }
     /**
-     * Gets the driftedProperties property value. Properties within one or more resource instances in which drift is detected.
+     * Gets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Returned only on $select.
      * @return a {@link java.util.List<DriftedProperty>}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the firstReportedDateTime property value. The date and time at which drift is first detected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Gets the firstReportedDateTime property value. The date and time at which drift is first detected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, ge, le) and $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -67,7 +67,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return this.backingStore.get("firstReportedDateTime");
     }
     /**
-     * Gets the monitorId property value. Globally unique identifier (GUID) of the monitor. System-generated.
+     * Gets the monitorId property value. Globally unique identifier (GUID) of the monitor. System-generated. Supports $filter (eq, ne).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -83,7 +83,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return this.backingStore.get("resourceInstanceIdentifier");
     }
     /**
-     * Gets the resourceType property value. Resource for which the drift is detected.
+     * Gets the resourceType property value. Resource for which the drift is detected. Supports $filter (eq, ne, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system.
+     * Gets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system. Supports $filter (eq, ne).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -117,28 +117,28 @@ public class ConfigurationDrift extends Entity implements Parsable {
         writer.writeEnumValue("status", this.getStatus());
     }
     /**
-     * Sets the baselineResourceDisplayName property value. Resource instance for which the drift is detected.
+     * Sets the baselineResourceDisplayName property value. Resource instance for which the drift is detected. Supports $filter (eq, ne, startsWith) and $orderby.
      * @param value Value to set for the baselineResourceDisplayName property.
      */
     public void setBaselineResourceDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("baselineResourceDisplayName", value);
     }
     /**
-     * Sets the driftedProperties property value. Properties within one or more resource instances in which drift is detected.
+     * Sets the driftedProperties property value. Properties within one or more resource instances in which drift is detected. Returned only on $select.
      * @param value Value to set for the driftedProperties property.
      */
     public void setDriftedProperties(@jakarta.annotation.Nullable final java.util.List<DriftedProperty> value) {
         this.backingStore.set("driftedProperties", value);
     }
     /**
-     * Sets the firstReportedDateTime property value. The date and time at which drift is first detected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
+     * Sets the firstReportedDateTime property value. The date and time at which drift is first detected. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, ge, le) and $orderby.
      * @param value Value to set for the firstReportedDateTime property.
      */
     public void setFirstReportedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("firstReportedDateTime", value);
     }
     /**
-     * Sets the monitorId property value. Globally unique identifier (GUID) of the monitor. System-generated.
+     * Sets the monitorId property value. Globally unique identifier (GUID) of the monitor. System-generated. Supports $filter (eq, ne).
      * @param value Value to set for the monitorId property.
      */
     public void setMonitorId(@jakarta.annotation.Nullable final String value) {
@@ -152,7 +152,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         this.backingStore.set("resourceInstanceIdentifier", value);
     }
     /**
-     * Sets the resourceType property value. Resource for which the drift is detected.
+     * Sets the resourceType property value. Resource for which the drift is detected. Supports $filter (eq, ne, startsWith).
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class ConfigurationDrift extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system.
+     * Sets the tenantId property value. Globally unique identifier (GUID) of the tenant for which the monitor runs. Fetched automatically by the system. Supports $filter (eq, ne).
      * @param value Value to set for the tenantId property.
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {

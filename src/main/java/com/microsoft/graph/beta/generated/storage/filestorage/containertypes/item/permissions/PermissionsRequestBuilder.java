@@ -60,19 +60,21 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/storage/fileStorage/containerTypes/{fileStorageContainerType%2Did}/permissions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get permissions from storage
+     * Get the list of permission objects associated with a fileStorageContainerType. Each permission represents a user with management rights to the container type. The calling user must be listed in the permissions collection for the container type with the owner role, or be a SharePoint Embedded Administrator or Global Administrator.
      * @return a {@link PermissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertype-list-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get permissions from storage
+     * Get the list of permission objects associated with a fileStorageContainerType. Each permission represents a user with management rights to the container type. The calling user must be listed in the permissions collection for the container type with the owner role, or be a SharePoint Embedded Administrator or Global Administrator.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertype-list-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PermissionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PermissionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to permissions for storage
+     * Create a user permission object, which adds this permission to a fileStorageContainerType. Only existing owners (users with the owner role in the permissions collection of the container type), SharePoint Embedded Administrators, or Global Administrators can add permissions. The following constraints apply:- A maximum of 3 permissions per container type is allowed. Adding a fourth permission returns a 400 Bad Request error.- Duplicate permissions are treated as idempotent. If the specified user already has a permission on the container type, the service makes no changes and returns the existing permission resource in the response body with a 201 Created status, even though no new permission is created.- Currently only the owner role is supported.
      * @param body The request body
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final Permission body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to permissions for storage
+     * Create a user permission object, which adds this permission to a fileStorageContainerType. Only existing owners (users with the owner role in the permissions collection of the container type), SharePoint Embedded Administrators, or Global Administrators can add permissions. The following constraints apply:- A maximum of 3 permissions per container type is allowed. Adding a fourth permission returns a 400 Bad Request error.- Duplicate permissions are treated as idempotent. If the specified user already has a permission on the container type, the service makes no changes and returns the existing permission resource in the response body with a 201 Created status, even though no new permission is created.- Currently only the owner role is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Permission}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/filestoragecontainertype-post-permissions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Permission post(@jakarta.annotation.Nonnull final Permission body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Permission::createFromDiscriminatorValue);
     }
     /**
-     * Get permissions from storage
+     * Get the list of permission objects associated with a fileStorageContainerType. Each permission represents a user with management rights to the container type. The calling user must be listed in the permissions collection for the container type with the owner role, or be a SharePoint Embedded Administrator or Global Administrator.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get permissions from storage
+     * Get the list of permission objects associated with a fileStorageContainerType. Each permission represents a user with management rights to the container type. The calling user must be listed in the permissions collection for the container type with the owner role, or be a SharePoint Embedded Administrator or Global Administrator.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to permissions for storage
+     * Create a user permission object, which adds this permission to a fileStorageContainerType. Only existing owners (users with the owner role in the permissions collection of the container type), SharePoint Embedded Administrators, or Global Administrators can add permissions. The following constraints apply:- A maximum of 3 permissions per container type is allowed. Adding a fourth permission returns a 400 Bad Request error.- Duplicate permissions are treated as idempotent. If the specified user already has a permission on the container type, the service makes no changes and returns the existing permission resource in the response body with a 201 Created status, even though no new permission is created.- Currently only the owner role is supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to permissions for storage
+     * Create a user permission object, which adds this permission to a fileStorageContainerType. Only existing owners (users with the owner role in the permissions collection of the container type), SharePoint Embedded Administrators, or Global Administrators can add permissions. The following constraints apply:- A maximum of 3 permissions per container type is allowed. Adding a fourth permission returns a 400 Bad Request error.- Duplicate permissions are treated as idempotent. If the specified user already has a permission on the container type, the service makes no changes and returns the existing permission resource in the response body with a 201 Created status, even though no new permission is created.- Currently only the owner role is supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class PermissionsRequestBuilder extends BaseRequestBuilder {
         return new PermissionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get permissions from storage
+     * Get the list of permission objects associated with a fileStorageContainerType. Each permission represents a user with management rights to the container type. The calling user must be listed in the permissions collection for the container type with the owner role, or be a SharePoint Embedded Administrator or Global Administrator.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

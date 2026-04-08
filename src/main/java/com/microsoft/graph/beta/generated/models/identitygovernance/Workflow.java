@@ -79,7 +79,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         return this.backingStore.get("nextScheduleRunDateTime");
     }
     /**
-     * Gets the previewScope property value. The previewScope property
+     * Gets the previewScope property value. A read-only collection of directory objects that are currently in-scope for the workflow based on its execution conditions. This property helps preview which users would be affected before running the workflow. Nullable. Read-only. Returned only on $expand. Supports $expand.
      * @return a {@link java.util.List<DirectoryObject>}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class Workflow extends WorkflowBase implements Parsable {
         this.backingStore.set("nextScheduleRunDateTime", value);
     }
     /**
-     * Sets the previewScope property value. The previewScope property
+     * Sets the previewScope property value. A read-only collection of directory objects that are currently in-scope for the workflow based on its execution conditions. This property helps preview which users would be affected before running the workflow. Nullable. Read-only. Returned only on $expand. Supports $expand.
      * @param value Value to set for the previewScope property.
      */
     public void setPreviewScope(@jakarta.annotation.Nullable final java.util.List<DirectoryObject> value) {

@@ -55,16 +55,18 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/chats/{chat%2Did}/targetedMessages/{targetedChatMessage%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property targetedMessages for users
+     * Delete a specific targeted message from a chat context. Teams administrators can use this API to remove targeted messages from group chats.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-targetedmessages?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property targetedMessages for users
+     * Delete a specific targeted message from a chat context. Teams administrators can use this API to remove targeted messages from group chats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/chat-delete-targetedmessages?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -73,7 +75,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get targetedMessages from users
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable.
      * @return a {@link TargetedChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -82,7 +84,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get targetedMessages from users
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TargetedChatMessage}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -120,7 +122,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TargetedChatMessage::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property targetedMessages for users
+     * Delete a specific targeted message from a chat context. Teams administrators can use this API to remove targeted messages from group chats.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -128,7 +130,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property targetedMessages for users
+     * Delete a specific targeted message from a chat context. Teams administrators can use this API to remove targeted messages from group chats.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -140,7 +142,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get targetedMessages from users
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -148,7 +150,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get targetedMessages from users
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -200,7 +202,7 @@ public class TargetedChatMessageItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get targetedMessages from users
+     * A collection of targeted messages in the chat that are visible only to specific users. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

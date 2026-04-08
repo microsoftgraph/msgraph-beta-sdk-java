@@ -35,6 +35,14 @@ public class CloudApplicationMetadata implements AdditionalDataHolder, BackedMod
         return new CloudApplicationMetadata();
     }
     /**
+     * Gets the activity property value. The activity property
+     * @return a {@link ApplicationActivity}
+     */
+    @jakarta.annotation.Nullable
+    public ApplicationActivity getActivity() {
+        return this.backingStore.get("activity");
+    }
+    /**
      * Gets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
      * @return a {@link Map<String, Object>}
      */
@@ -85,7 +93,8 @@ public class CloudApplicationMetadata implements AdditionalDataHolder, BackedMod
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(12);
+        deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(ApplicationActivity::forValue)); });
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("cloudApplicationCatalogId", (n) -> { this.setCloudApplicationCatalogId(n.getStringValue()); });
         deserializerMap.put("complianceScore", (n) -> { this.setComplianceScore(n.getIntegerValue()); });
@@ -124,7 +133,7 @@ public class CloudApplicationMetadata implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("loginUser");
     }
     /**
-     * Gets the name property value. The name of the application (e.g., ChatGPT, Salesforce, Bing).
+     * Gets the name property value. The name of the application, for example, ChatGPT, Salesforce, or Bing.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +165,7 @@ public class CloudApplicationMetadata implements AdditionalDataHolder, BackedMod
         return this.backingStore.get("securityScore");
     }
     /**
-     * Gets the subactivity property value. The subactivity property
+     * Gets the subactivity property value. A finer-grained activity classification, for example, chat-interaction or tools/call.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -169,6 +178,7 @@ public class CloudApplicationMetadata implements AdditionalDataHolder, BackedMod
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("activity", this.getActivity());
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
         writer.writeStringValue("cloudApplicationCatalogId", this.getCloudApplicationCatalogId());
         writer.writeIntegerValue("complianceScore", this.getComplianceScore());
@@ -181,6 +191,13 @@ public class CloudApplicationMetadata implements AdditionalDataHolder, BackedMod
         writer.writeIntegerValue("securityScore", this.getSecurityScore());
         writer.writeStringValue("subactivity", this.getSubactivity());
         writer.writeAdditionalData(this.getAdditionalData());
+    }
+    /**
+     * Sets the activity property value. The activity property
+     * @param value Value to set for the activity property.
+     */
+    public void setActivity(@jakarta.annotation.Nullable final ApplicationActivity value) {
+        this.backingStore.set("activity", value);
     }
     /**
      * Sets the AdditionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
@@ -240,7 +257,7 @@ public class CloudApplicationMetadata implements AdditionalDataHolder, BackedMod
         this.backingStore.set("loginUser", value);
     }
     /**
-     * Sets the name property value. The name of the application (e.g., ChatGPT, Salesforce, Bing).
+     * Sets the name property value. The name of the application, for example, ChatGPT, Salesforce, or Bing.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -268,7 +285,7 @@ public class CloudApplicationMetadata implements AdditionalDataHolder, BackedMod
         this.backingStore.set("securityScore", value);
     }
     /**
-     * Sets the subactivity property value. The subactivity property
+     * Sets the subactivity property value. A finer-grained activity classification, for example, chat-interaction or tools/call.
      * @param value Value to set for the subactivity property.
      */
     public void setSubactivity(@jakarta.annotation.Nullable final String value) {

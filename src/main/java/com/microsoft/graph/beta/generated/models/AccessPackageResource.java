@@ -97,7 +97,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the externalOriginResourceConnector property value. The externalOriginResourceConnector property
+     * Gets the externalOriginResourceConnector property value. The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
      * @return a {@link ExternalOriginResourceConnector}
      */
     @jakarta.annotation.Nullable
@@ -145,7 +145,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         return this.backingStore.get("originId");
     }
     /**
-     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AadGroup or CustomDataProvidedResource. Supports $filter (eq).
+     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AadGroup or CustomDataProvidedResource. Supports $filter and $expand (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the externalOriginResourceConnector property value. The externalOriginResourceConnector property
+     * Sets the externalOriginResourceConnector property value. The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
      * @param value Value to set for the externalOriginResourceConnector property.
      */
     public void setExternalOriginResourceConnector(@jakarta.annotation.Nullable final ExternalOriginResourceConnector value) {
@@ -277,7 +277,7 @@ public class AccessPackageResource extends Entity implements Parsable {
         this.backingStore.set("originId", value);
     }
     /**
-     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AadGroup or CustomDataProvidedResource. Supports $filter (eq).
+     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AadGroup or CustomDataProvidedResource. Supports $filter and $expand (eq).
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {

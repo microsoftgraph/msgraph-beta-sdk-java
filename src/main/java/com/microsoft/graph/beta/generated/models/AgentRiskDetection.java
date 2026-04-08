@@ -58,6 +58,14 @@ public class AgentRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("agentId");
     }
     /**
+     * Gets the blueprintId property value. The identifier of the blueprint associated with the agent. Nullable.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getBlueprintId() {
+        return this.backingStore.get("blueprintId");
+    }
+    /**
      * Gets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, le, and ge).
      * @return a {@link OffsetDateTime}
      */
@@ -84,6 +92,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         deserializerMap.put("additionalInfo", (n) -> { this.setAdditionalInfo(n.getStringValue()); });
         deserializerMap.put("agentDisplayName", (n) -> { this.setAgentDisplayName(n.getStringValue()); });
         deserializerMap.put("agentId", (n) -> { this.setAgentId(n.getStringValue()); });
+        deserializerMap.put("blueprintId", (n) -> { this.setBlueprintId(n.getStringValue()); });
         deserializerMap.put("detectedDateTime", (n) -> { this.setDetectedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType::forValue)); });
         deserializerMap.put("identityType", (n) -> { this.setIdentityType(n.getEnumValue(AgentIdentityType::forValue)); });
@@ -93,6 +102,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         deserializerMap.put("riskEvidence", (n) -> { this.setRiskEvidence(n.getStringValue()); });
         deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
         deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -152,6 +162,14 @@ public class AgentRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("riskState");
     }
     /**
+     * Gets the source property value. The source system that generated the risk detection. Nullable.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSource() {
+        return this.backingStore.get("source");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -162,6 +180,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         writer.writeStringValue("additionalInfo", this.getAdditionalInfo());
         writer.writeStringValue("agentDisplayName", this.getAgentDisplayName());
         writer.writeStringValue("agentId", this.getAgentId());
+        writer.writeStringValue("blueprintId", this.getBlueprintId());
         writer.writeOffsetDateTimeValue("detectedDateTime", this.getDetectedDateTime());
         writer.writeEnumValue("detectionTimingType", this.getDetectionTimingType());
         writer.writeEnumValue("identityType", this.getIdentityType());
@@ -171,6 +190,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         writer.writeStringValue("riskEvidence", this.getRiskEvidence());
         writer.writeEnumValue("riskLevel", this.getRiskLevel());
         writer.writeEnumValue("riskState", this.getRiskState());
+        writer.writeStringValue("source", this.getSource());
     }
     /**
      * Sets the activityDateTime property value. Date and time that the risky activity occurred. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, le, and ge).
@@ -199,6 +219,13 @@ public class AgentRiskDetection extends Entity implements Parsable {
      */
     public void setAgentId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentId", value);
+    }
+    /**
+     * Sets the blueprintId property value. The identifier of the blueprint associated with the agent. Nullable.
+     * @param value Value to set for the blueprintId property.
+     */
+    public void setBlueprintId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("blueprintId", value);
     }
     /**
      * Sets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, le, and ge).
@@ -262,5 +289,12 @@ public class AgentRiskDetection extends Entity implements Parsable {
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
         this.backingStore.set("riskState", value);
+    }
+    /**
+     * Sets the source property value. The source system that generated the risk detection. Nullable.
+     * @param value Value to set for the source property.
+     */
+    public void setSource(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("source", value);
     }
 }

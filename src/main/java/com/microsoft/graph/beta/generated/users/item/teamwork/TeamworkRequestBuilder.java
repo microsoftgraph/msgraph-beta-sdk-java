@@ -7,6 +7,7 @@ import com.microsoft.graph.beta.users.item.teamwork.deletetargetedmessage.Delete
 import com.microsoft.graph.beta.users.item.teamwork.getallretainedtargetedmessages.GetAllRetainedTargetedMessagesRequestBuilder;
 import com.microsoft.graph.beta.users.item.teamwork.getalltargetedmessages.GetAllTargetedMessagesRequestBuilder;
 import com.microsoft.graph.beta.users.item.teamwork.installedapps.InstalledAppsRequestBuilder;
+import com.microsoft.graph.beta.users.item.teamwork.sections.SectionsRequestBuilder;
 import com.microsoft.graph.beta.users.item.teamwork.sendactivitynotification.SendActivityNotificationRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -65,6 +66,14 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public InstalledAppsRequestBuilder installedApps() {
         return new InstalledAppsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sections property of the microsoft.graph.userTeamwork entity.
+     * @return a {@link SectionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SectionsRequestBuilder sections() {
+        return new SectionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the sendActivityNotification method.

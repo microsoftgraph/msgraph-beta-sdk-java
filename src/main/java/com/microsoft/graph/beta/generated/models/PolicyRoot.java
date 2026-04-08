@@ -267,7 +267,7 @@ public class PolicyRoot extends Entity implements Parsable {
         return this.backingStore.get("onPremAuthenticationPolicies");
     }
     /**
-     * Gets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * Gets the ownerlessGroupPolicy property value. The policy configuration for managing groups that have lost their sole owner.
      * @return a {@link OwnerlessGroupPolicy}
      */
     @jakarta.annotation.Nullable
@@ -547,7 +547,7 @@ public class PolicyRoot extends Entity implements Parsable {
         this.backingStore.set("onPremAuthenticationPolicies", value);
     }
     /**
-     * Sets the ownerlessGroupPolicy property value. The ownerlessGroupPolicy property
+     * Sets the ownerlessGroupPolicy property value. The policy configuration for managing groups that have lost their sole owner.
      * @param value Value to set for the ownerlessGroupPolicy property.
      */
     public void setOwnerlessGroupPolicy(@jakarta.annotation.Nullable final OwnerlessGroupPolicy value) {

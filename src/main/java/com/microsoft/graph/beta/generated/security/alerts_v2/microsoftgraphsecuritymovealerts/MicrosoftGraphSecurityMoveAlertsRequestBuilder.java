@@ -36,21 +36,23 @@ public class MicrosoftGraphSecurityMoveAlertsRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/security/alerts_v2/microsoft.graph.security.moveAlerts", rawUrl);
     }
     /**
-     * Invoke action moveAlerts
+     * Move one or more alert resources to an existing incident.
      * @param body The request body
      * @return a {@link MergeResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-alert-movealerts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MergeResponse post(@jakarta.annotation.Nonnull final MoveAlertsPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action moveAlerts
+     * Move one or more alert resources to an existing incident.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MergeResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-alert-movealerts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MergeResponse post(@jakarta.annotation.Nonnull final MoveAlertsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class MicrosoftGraphSecurityMoveAlertsRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, MergeResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action moveAlerts
+     * Move one or more alert resources to an existing incident.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class MicrosoftGraphSecurityMoveAlertsRequestBuilder extends BaseRequestB
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action moveAlerts
+     * Move one or more alert resources to an existing incident.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

@@ -43,6 +43,7 @@ public class UserTeamwork extends Entity implements Parsable {
         deserializerMap.put("installedApps", (n) -> { this.setInstalledApps(n.getCollectionOfObjectValues(UserScopeTeamsAppInstallation::createFromDiscriminatorValue)); });
         deserializerMap.put("locale", (n) -> { this.setLocale(n.getStringValue()); });
         deserializerMap.put("region", (n) -> { this.setRegion(n.getStringValue()); });
+        deserializerMap.put("sections", (n) -> { this.setSections(n.getCollectionOfObjectValues(TeamworkSection::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -70,6 +71,14 @@ public class UserTeamwork extends Entity implements Parsable {
         return this.backingStore.get("region");
     }
     /**
+     * Gets the sections property value. User&apos;s teamwork sections for organizing chats and channels. The collection response may include @microsoft.graph.sectionsOrder and @microsoft.graph.sectionsVersion instance annotations for ordering and optimistic concurrency control.
+     * @return a {@link java.util.List<TeamworkSection>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<TeamworkSection> getSections() {
+        return this.backingStore.get("sections");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -80,6 +89,7 @@ public class UserTeamwork extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("installedApps", this.getInstalledApps());
         writer.writeStringValue("locale", this.getLocale());
         writer.writeStringValue("region", this.getRegion());
+        writer.writeCollectionOfObjectValues("sections", this.getSections());
     }
     /**
      * Sets the associatedTeams property value. The list of associatedTeamInfo objects that a user is associated with.
@@ -108,5 +118,12 @@ public class UserTeamwork extends Entity implements Parsable {
      */
     public void setRegion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("region", value);
+    }
+    /**
+     * Sets the sections property value. User&apos;s teamwork sections for organizing chats and channels. The collection response may include @microsoft.graph.sectionsOrder and @microsoft.graph.sectionsVersion instance annotations for ordering and optimistic concurrency control.
+     * @param value Value to set for the sections property.
+     */
+    public void setSections(@jakarta.annotation.Nullable final java.util.List<TeamworkSection> value) {
+        this.backingStore.set("sections", value);
     }
 }

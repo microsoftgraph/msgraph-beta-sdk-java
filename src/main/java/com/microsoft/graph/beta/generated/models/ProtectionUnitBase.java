@@ -44,6 +44,14 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("backupRetentionPeriodInDays");
     }
     /**
+     * Gets the billingPolicyId property value. The unique identifier of the billing policy assigned to the protection unit for cost allocation.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getBillingPolicyId() {
+        return this.backingStore.get("billingPolicyId");
+    }
+    /**
      * Gets the createdBy property value. The identity of person who created the protection unit.
      * @return a {@link IdentitySet}
      */
@@ -75,6 +83,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("backupRetentionPeriodInDays", (n) -> { this.setBackupRetentionPeriodInDays(n.getIntegerValue()); });
+        deserializerMap.put("billingPolicyId", (n) -> { this.setBillingPolicyId(n.getStringValue()); });
         deserializerMap.put("createdBy", (n) -> { this.setCreatedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("error", (n) -> { this.setError(n.getObjectValue(PublicError::createFromDiscriminatorValue)); });
@@ -142,6 +151,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeIntegerValue("backupRetentionPeriodInDays", this.getBackupRetentionPeriodInDays());
+        writer.writeStringValue("billingPolicyId", this.getBillingPolicyId());
         writer.writeObjectValue("createdBy", this.getCreatedBy());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("error", this.getError());
@@ -158,6 +168,13 @@ public class ProtectionUnitBase extends Entity implements Parsable {
      */
     public void setBackupRetentionPeriodInDays(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("backupRetentionPeriodInDays", value);
+    }
+    /**
+     * Sets the billingPolicyId property value. The unique identifier of the billing policy assigned to the protection unit for cost allocation.
+     * @param value Value to set for the billingPolicyId property.
+     */
+    public void setBillingPolicyId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("billingPolicyId", value);
     }
     /**
      * Sets the createdBy property value. The identity of person who created the protection unit.

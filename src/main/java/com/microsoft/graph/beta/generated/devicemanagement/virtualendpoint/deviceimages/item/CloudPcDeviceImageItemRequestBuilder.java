@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.deviceimages.item;
 
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.deviceimages.item.retryupload.RetryUploadRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.deviceimages.item.reupload.ReuploadRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcDeviceImage;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -21,6 +22,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudPcDeviceImageItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the retryUpload method.
+     * @return a {@link RetryUploadRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetryUploadRequestBuilder retryUpload() {
+        return new RetryUploadRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the reupload method.
      * @return a {@link ReuploadRequestBuilder}

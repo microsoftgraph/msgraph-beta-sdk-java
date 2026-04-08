@@ -32,6 +32,14 @@ public class CloudPcCloudAppDetail implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nonnull
     public static CloudPcCloudAppDetail createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.cloudPcAutomaticDiscoveredAppDetail": return new CloudPcAutomaticDiscoveredAppDetail();
+                case "#microsoft.graph.cloudPcFilePathAppDetail": return new CloudPcFilePathAppDetail();
+            }
+        }
         return new CloudPcCloudAppDetail();
     }
     /**

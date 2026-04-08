@@ -41,7 +41,7 @@ public class RetrieveCloudPcRecommendationReportsRequestBuilder extends BaseRequ
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
+     * Starting from December 31, 2025, this API (&apos;cloudPcReports/retrieveCloudPcRecommendationReports&apos;) will be deprecated and no longer supported. Please use the cloudPcReport/retrieveCloudPcRecommendationReports API. as of 2025-09/cloudPcReports/retrieveCloudPcRecommendationReports on 2025-09-01 and will be removed 2025-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -55,7 +55,7 @@ public class RetrieveCloudPcRecommendationReportsRequestBuilder extends BaseRequ
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
+     * Starting from December 31, 2025, this API (&apos;cloudPcReports/retrieveCloudPcRecommendationReports&apos;) will be deprecated and no longer supported. Please use the cloudPcReport/retrieveCloudPcRecommendationReports API. as of 2025-09/cloudPcReports/retrieveCloudPcRecommendationReports on 2025-09-01 and will be removed 2025-12-31
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -71,7 +71,7 @@ public class RetrieveCloudPcRecommendationReportsRequestBuilder extends BaseRequ
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
+     * Starting from December 31, 2025, this API (&apos;cloudPcReports/retrieveCloudPcRecommendationReports&apos;) will be deprecated and no longer supported. Please use the cloudPcReport/retrieveCloudPcRecommendationReports API. as of 2025-09/cloudPcReports/retrieveCloudPcRecommendationReports on 2025-09-01 and will be removed 2025-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -84,7 +84,7 @@ public class RetrieveCloudPcRecommendationReportsRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
+     * Starting from December 31, 2025, this API (&apos;cloudPcReports/retrieveCloudPcRecommendationReports&apos;) will be deprecated and no longer supported. Please use the cloudPcReport/retrieveCloudPcRecommendationReports API. as of 2025-09/cloudPcReports/retrieveCloudPcRecommendationReports on 2025-09-01 and will be removed 2025-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -101,7 +101,7 @@ public class RetrieveCloudPcRecommendationReportsRequestBuilder extends BaseRequ
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link RetrieveCloudPcRecommendationReportsRequestBuilder}
      * @deprecated
-     * Starting from December 31, 2026, this entity type (&apos;cloudPcReports&apos;) will be deprecated and no longer supported. Please use &apos;cloudPcReport&apos; instead. as of 2025-09/cloudPcReports on 2025-09-01 and will be removed 2026-12-31
+     * Starting from December 31, 2025, this API (&apos;cloudPcReports/retrieveCloudPcRecommendationReports&apos;) will be deprecated and no longer supported. Please use the cloudPcReport/retrieveCloudPcRecommendationReports API. as of 2025-09/cloudPcReports/retrieveCloudPcRecommendationReports on 2025-09-01 and will be removed 2025-12-31
      */
     @jakarta.annotation.Nonnull
     @Deprecated

@@ -184,7 +184,7 @@ public class Chat extends Entity implements Parsable {
         return this.backingStore.get("tabs");
     }
     /**
-     * Gets the targetedMessages property value. The targetedMessages property
+     * Gets the targetedMessages property value. A collection of targeted messages in the chat that are visible only to specific users. Nullable.
      * @return a {@link java.util.List<TargetedChatMessage>}
      */
     @jakarta.annotation.Nullable
@@ -365,7 +365,7 @@ public class Chat extends Entity implements Parsable {
         this.backingStore.set("tabs", value);
     }
     /**
-     * Sets the targetedMessages property value. The targetedMessages property
+     * Sets the targetedMessages property value. A collection of targeted messages in the chat that are visible only to specific users. Nullable.
      * @param value Value to set for the targetedMessages property.
      */
     public void setTargetedMessages(@jakarta.annotation.Nullable final java.util.List<TargetedChatMessage> value) {

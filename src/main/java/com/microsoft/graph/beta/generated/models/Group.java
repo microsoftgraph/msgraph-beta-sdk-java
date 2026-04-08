@@ -267,6 +267,7 @@ public class Group extends DirectoryObject implements Parsable {
         deserializerMap.put("membersWithLicenseErrors", (n) -> { this.setMembersWithLicenseErrors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("onenote", (n) -> { this.setOnenote(n.getObjectValue(Onenote::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesDomainName", (n) -> { this.setOnPremisesDomainName(n.getStringValue()); });
+        deserializerMap.put("onPremisesExtensionAttributes", (n) -> { this.setOnPremisesExtensionAttributes(n.getObjectValue(OnPremisesExtensionAttributes::createFromDiscriminatorValue)); });
         deserializerMap.put("onPremisesLastSyncDateTime", (n) -> { this.setOnPremisesLastSyncDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("onPremisesNetBiosName", (n) -> { this.setOnPremisesNetBiosName(n.getStringValue()); });
         deserializerMap.put("onPremisesProvisioningErrors", (n) -> { this.setOnPremisesProvisioningErrors(n.getCollectionOfObjectValues(OnPremisesProvisioningError::createFromDiscriminatorValue)); });
@@ -489,6 +490,14 @@ public class Group extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public String getOnPremisesDomainName() {
         return this.backingStore.get("onPremisesDomainName");
+    }
+    /**
+     * Gets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
+     * @return a {@link OnPremisesExtensionAttributes}
+     */
+    @jakarta.annotation.Nullable
+    public OnPremisesExtensionAttributes getOnPremisesExtensionAttributes() {
+        return this.backingStore.get("onPremisesExtensionAttributes");
     }
     /**
      * Gets the onPremisesLastSyncDateTime property value. Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).
@@ -839,6 +848,7 @@ public class Group extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("membersWithLicenseErrors", this.getMembersWithLicenseErrors());
         writer.writeObjectValue("onenote", this.getOnenote());
         writer.writeStringValue("onPremisesDomainName", this.getOnPremisesDomainName());
+        writer.writeObjectValue("onPremisesExtensionAttributes", this.getOnPremisesExtensionAttributes());
         writer.writeOffsetDateTimeValue("onPremisesLastSyncDateTime", this.getOnPremisesLastSyncDateTime());
         writer.writeStringValue("onPremisesNetBiosName", this.getOnPremisesNetBiosName());
         writer.writeCollectionOfObjectValues("onPremisesProvisioningErrors", this.getOnPremisesProvisioningErrors());
@@ -1198,6 +1208,13 @@ public class Group extends DirectoryObject implements Parsable {
      */
     public void setOnPremisesDomainName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("onPremisesDomainName", value);
+    }
+    /**
+     * Sets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
+     * @param value Value to set for the onPremisesExtensionAttributes property.
+     */
+    public void setOnPremisesExtensionAttributes(@jakarta.annotation.Nullable final OnPremisesExtensionAttributes value) {
+        this.backingStore.set("onPremisesExtensionAttributes", value);
     }
     /**
      * Sets the onPremisesLastSyncDateTime property value. Indicates the last time at which the group was synced with the on-premises directory.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Read-only. Supports $filter (eq, ne, not, ge, le, in).

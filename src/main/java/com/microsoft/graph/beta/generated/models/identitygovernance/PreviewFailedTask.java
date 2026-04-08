@@ -56,7 +56,7 @@ public class PreviewFailedTask implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore;
     }
     /**
-     * Gets the definitionId property value. The definitionId property
+     * Gets the definitionId property value. The identifier of the task definition of the task that failed during the preview operation of a workflow.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class PreviewFailedTask implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("definitionId");
     }
     /**
-     * Gets the failureReason property value. The failureReason property
+     * Gets the failureReason property value. The reason why the task failed in the preview operation of a workflow.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class PreviewFailedTask implements AdditionalDataHolder, BackedModel, Par
         return deserializerMap;
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the task that failed within the preview operation of a workflow.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class PreviewFailedTask implements AdditionalDataHolder, BackedModel, Par
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the taskId property value. The taskId property
+     * Gets the taskId property value. The identifier of the task that failed during the preview operation of a workflow.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class PreviewFailedTask implements AdditionalDataHolder, BackedModel, Par
         this.backingStore = value;
     }
     /**
-     * Sets the definitionId property value. The definitionId property
+     * Sets the definitionId property value. The identifier of the task definition of the task that failed during the preview operation of a workflow.
      * @param value Value to set for the definitionId property.
      */
     public void setDefinitionId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("definitionId", value);
     }
     /**
-     * Sets the failureReason property value. The failureReason property
+     * Sets the failureReason property value. The reason why the task failed in the preview operation of a workflow.
      * @param value Value to set for the failureReason property.
      */
     public void setFailureReason(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("failureReason", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the task that failed within the preview operation of a workflow.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class PreviewFailedTask implements AdditionalDataHolder, BackedModel, Par
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the taskId property value. The taskId property
+     * Sets the taskId property value. The identifier of the task that failed during the preview operation of a workflow.
      * @param value Value to set for the taskId property.
      */
     public void setTaskId(@jakarta.annotation.Nullable final String value) {

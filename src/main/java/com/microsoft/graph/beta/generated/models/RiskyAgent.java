@@ -43,6 +43,14 @@ public class RiskyAgent extends Entity implements Parsable {
         return this.backingStore.get("agentDisplayName");
     }
     /**
+     * Gets the blueprintId property value. The identifier of the blueprint associated with the agent. Nullable.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getBlueprintId() {
+        return this.backingStore.get("blueprintId");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -50,6 +58,7 @@ public class RiskyAgent extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agentDisplayName", (n) -> { this.setAgentDisplayName(n.getStringValue()); });
+        deserializerMap.put("blueprintId", (n) -> { this.setBlueprintId(n.getStringValue()); });
         deserializerMap.put("identityType", (n) -> { this.setIdentityType(n.getEnumValue(AgentIdentityType::forValue)); });
         deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
         deserializerMap.put("isEnabled", (n) -> { this.setIsEnabled(n.getBooleanValue()); });
@@ -132,6 +141,7 @@ public class RiskyAgent extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("agentDisplayName", this.getAgentDisplayName());
+        writer.writeStringValue("blueprintId", this.getBlueprintId());
         writer.writeEnumValue("identityType", this.getIdentityType());
         writer.writeBooleanValue("isDeleted", this.getIsDeleted());
         writer.writeBooleanValue("isEnabled", this.getIsEnabled());
@@ -147,6 +157,13 @@ public class RiskyAgent extends Entity implements Parsable {
      */
     public void setAgentDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentDisplayName", value);
+    }
+    /**
+     * Sets the blueprintId property value. The identifier of the blueprint associated with the agent. Nullable.
+     * @param value Value to set for the blueprintId property.
+     */
+    public void setBlueprintId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("blueprintId", value);
     }
     /**
      * Sets the identityType property value. The identityType property
