@@ -1,5 +1,7 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.entrarecoveryservices.Recovery;
+import com.microsoft.graph.beta.models.tenantgovernanceservices.TenantGovernance;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -129,9 +131,11 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("publicKeyInfrastructure", (n) -> { this.setPublicKeyInfrastructure(n.getObjectValue(PublicKeyInfrastructureRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("recommendationConfiguration", (n) -> { this.setRecommendationConfiguration(n.getObjectValue(RecommendationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("recommendations", (n) -> { this.setRecommendations(n.getCollectionOfObjectValues(Recommendation::createFromDiscriminatorValue)); });
+        deserializerMap.put("recovery", (n) -> { this.setRecovery(n.getObjectValue(Recovery::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedEmailDomains", (n) -> { this.setSharedEmailDomains(n.getCollectionOfObjectValues(SharedEmailDomain::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
         deserializerMap.put("templates", (n) -> { this.setTemplates(n.getObjectValue(Template::createFromDiscriminatorValue)); });
+        deserializerMap.put("tenantGovernance", (n) -> { this.setTenantGovernance(n.getObjectValue(TenantGovernance::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -199,6 +203,14 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("recommendations");
     }
     /**
+     * Gets the recovery property value. Represents the Entra backup and recovery service for the tenant.
+     * @return a {@link Recovery}
+     */
+    @jakarta.annotation.Nullable
+    public Recovery getRecovery() {
+        return this.backingStore.get("recovery");
+    }
+    /**
      * Gets the sharedEmailDomains property value. The sharedEmailDomains property
      * @return a {@link java.util.List<SharedEmailDomain>}
      */
@@ -221,6 +233,14 @@ public class Directory extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Template getTemplates() {
         return this.backingStore.get("templates");
+    }
+    /**
+     * Gets the tenantGovernance property value. Container for Microsoft Entra Tenant Governance capabilities.
+     * @return a {@link TenantGovernance}
+     */
+    @jakarta.annotation.Nullable
+    public TenantGovernance getTenantGovernance() {
+        return this.backingStore.get("tenantGovernance");
     }
     /**
      * Serializes information the current object
@@ -247,9 +267,11 @@ public class Directory extends Entity implements Parsable {
         writer.writeObjectValue("publicKeyInfrastructure", this.getPublicKeyInfrastructure());
         writer.writeObjectValue("recommendationConfiguration", this.getRecommendationConfiguration());
         writer.writeCollectionOfObjectValues("recommendations", this.getRecommendations());
+        writer.writeObjectValue("recovery", this.getRecovery());
         writer.writeCollectionOfObjectValues("sharedEmailDomains", this.getSharedEmailDomains());
         writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
         writer.writeObjectValue("templates", this.getTemplates());
+        writer.writeObjectValue("tenantGovernance", this.getTenantGovernance());
     }
     /**
      * Sets the administrativeUnits property value. Conceptual container for user and group directory objects.
@@ -378,6 +400,13 @@ public class Directory extends Entity implements Parsable {
         this.backingStore.set("recommendations", value);
     }
     /**
+     * Sets the recovery property value. Represents the Entra backup and recovery service for the tenant.
+     * @param value Value to set for the recovery property.
+     */
+    public void setRecovery(@jakarta.annotation.Nullable final Recovery value) {
+        this.backingStore.set("recovery", value);
+    }
+    /**
      * Sets the sharedEmailDomains property value. The sharedEmailDomains property
      * @param value Value to set for the sharedEmailDomains property.
      */
@@ -397,5 +426,12 @@ public class Directory extends Entity implements Parsable {
      */
     public void setTemplates(@jakarta.annotation.Nullable final Template value) {
         this.backingStore.set("templates", value);
+    }
+    /**
+     * Sets the tenantGovernance property value. Container for Microsoft Entra Tenant Governance capabilities.
+     * @param value Value to set for the tenantGovernance property.
+     */
+    public void setTenantGovernance(@jakarta.annotation.Nullable final TenantGovernance value) {
+        this.backingStore.set("tenantGovernance", value);
     }
 }

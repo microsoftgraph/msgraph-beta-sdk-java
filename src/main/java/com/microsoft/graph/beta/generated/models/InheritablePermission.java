@@ -68,7 +68,7 @@ public class InheritablePermission implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the inheritableScopes property value. The inheritableScopes property
+     * Gets the inheritableScopes property value. Inheritance configuration for delegated permission scopes published by the resource application. Supports three patterns: allAllowedScopes (inherit all available scopes), enumeratedScopes (inherit only the listed scopes), and noScopes (inherit none). Each pattern exposes a kind discriminator for filtering.
      * @return a {@link InheritableScopes}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class InheritablePermission implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the inheritableScopes property value. The inheritableScopes property
+     * Sets the inheritableScopes property value. Inheritance configuration for delegated permission scopes published by the resource application. Supports three patterns: allAllowedScopes (inherit all available scopes), enumeratedScopes (inherit only the listed scopes), and noScopes (inherit none). Each pattern exposes a kind discriminator for filtering.
      * @param value Value to set for the inheritableScopes property.
      */
     public void setInheritableScopes(@jakarta.annotation.Nullable final InheritableScopes value) {

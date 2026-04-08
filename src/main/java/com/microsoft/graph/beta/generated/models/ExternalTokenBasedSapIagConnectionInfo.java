@@ -26,7 +26,7 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         return new ExternalTokenBasedSapIagConnectionInfo();
     }
     /**
-     * Gets the accessTokenUrl property value. The accessTokenUrl property
+     * Gets the accessTokenUrl property value. The URL endpoint used to obtain access tokens for authentication with the SAP IAG system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         return this.backingStore.get("accessTokenUrl");
     }
     /**
-     * Gets the clientId property value. The clientId property
+     * Gets the clientId property value. The client identifier used for authentication with the SAP IAG system.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -57,7 +57,7 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         return deserializerMap;
     }
     /**
-     * Gets the keyVaultName property value. The keyVaultName property
+     * Gets the keyVaultName property value. The name of the Azure Key Vault that stores the client secret for authentication.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         return this.backingStore.get("keyVaultName");
     }
     /**
-     * Gets the resourceGroup property value. The resourceGroup property
+     * Gets the resourceGroup property value. The Azure resource group that contains the Key Vault.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         return this.backingStore.get("resourceGroup");
     }
     /**
-     * Gets the secretName property value. The secretName property
+     * Gets the secretName property value. The name of the secret in Azure Key Vault that contains the client secret.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         return this.backingStore.get("secretName");
     }
     /**
-     * Gets the subscriptionId property value. The subscriptionId property
+     * Gets the subscriptionId property value. The Azure subscription ID that contains the Key Vault.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -103,42 +103,42 @@ public class ExternalTokenBasedSapIagConnectionInfo extends ConnectionInfo imple
         writer.writeStringValue("subscriptionId", this.getSubscriptionId());
     }
     /**
-     * Sets the accessTokenUrl property value. The accessTokenUrl property
+     * Sets the accessTokenUrl property value. The URL endpoint used to obtain access tokens for authentication with the SAP IAG system.
      * @param value Value to set for the accessTokenUrl property.
      */
     public void setAccessTokenUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("accessTokenUrl", value);
     }
     /**
-     * Sets the clientId property value. The clientId property
+     * Sets the clientId property value. The client identifier used for authentication with the SAP IAG system.
      * @param value Value to set for the clientId property.
      */
     public void setClientId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("clientId", value);
     }
     /**
-     * Sets the keyVaultName property value. The keyVaultName property
+     * Sets the keyVaultName property value. The name of the Azure Key Vault that stores the client secret for authentication.
      * @param value Value to set for the keyVaultName property.
      */
     public void setKeyVaultName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("keyVaultName", value);
     }
     /**
-     * Sets the resourceGroup property value. The resourceGroup property
+     * Sets the resourceGroup property value. The Azure resource group that contains the Key Vault.
      * @param value Value to set for the resourceGroup property.
      */
     public void setResourceGroup(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceGroup", value);
     }
     /**
-     * Sets the secretName property value. The secretName property
+     * Sets the secretName property value. The name of the secret in Azure Key Vault that contains the client secret.
      * @param value Value to set for the secretName property.
      */
     public void setSecretName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("secretName", value);
     }
     /**
-     * Sets the subscriptionId property value. The subscriptionId property
+     * Sets the subscriptionId property value. The Azure subscription ID that contains the Key Vault.
      * @param value Value to set for the subscriptionId property.
      */
     public void setSubscriptionId(@jakarta.annotation.Nullable final String value) {

@@ -36,21 +36,23 @@ public class MicrosoftGraphSecurityMergeIncidentsRequestBuilder extends BaseRequ
         super(requestAdapter, "{+baseurl}/security/incidents/microsoft.graph.security.mergeIncidents", rawUrl);
     }
     /**
-     * Invoke action mergeIncidents
+     * Merge multiple incident resources into a single incident.
      * @param body The request body
      * @return a {@link MergeResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-incident-mergeincidents?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MergeResponse post(@jakarta.annotation.Nonnull final MergeIncidentsPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action mergeIncidents
+     * Merge multiple incident resources into a single incident.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MergeResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-incident-mergeincidents?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MergeResponse post(@jakarta.annotation.Nonnull final MergeIncidentsPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class MicrosoftGraphSecurityMergeIncidentsRequestBuilder extends BaseRequ
         return this.requestAdapter.send(requestInfo, errorMapping, MergeResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action mergeIncidents
+     * Merge multiple incident resources into a single incident.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class MicrosoftGraphSecurityMergeIncidentsRequestBuilder extends BaseRequ
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action mergeIncidents
+     * Merge multiple incident resources into a single incident.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

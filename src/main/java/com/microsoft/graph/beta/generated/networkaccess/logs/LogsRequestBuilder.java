@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.networkaccess.logs;
 import com.microsoft.graph.beta.models.networkaccess.Logs;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.logs.connections.ConnectionsRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.logs.generativeaiinsights.GenerativeAIInsightsRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.logs.remotenetworks.RemoteNetworksRequestBuilder;
 import com.microsoft.graph.beta.networkaccess.logs.traffic.TrafficRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -30,6 +31,14 @@ public class LogsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ConnectionsRequestBuilder connections() {
         return new ConnectionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the generativeAIInsights property of the microsoft.graph.networkaccess.logs entity.
+     * @return a {@link GenerativeAIInsightsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GenerativeAIInsightsRequestBuilder generativeAIInsights() {
+        return new GenerativeAIInsightsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the remoteNetworks property of the microsoft.graph.networkaccess.logs entity.

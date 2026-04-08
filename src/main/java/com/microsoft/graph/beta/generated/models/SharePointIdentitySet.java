@@ -47,7 +47,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         return this.backingStore.get("group");
     }
     /**
-     * Gets the sharePointGroup property value. The sharePointGroup property
+     * Gets the sharePointGroup property value. The SharePoint group associated with this action. Optional.
      * @return a {@link SharePointGroupIdentity}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class SharePointIdentitySet extends IdentitySet implements Parsable {
         this.backingStore.set("group", value);
     }
     /**
-     * Sets the sharePointGroup property value. The sharePointGroup property
+     * Sets the sharePointGroup property value. The SharePoint group associated with this action. Optional.
      * @param value Value to set for the sharePointGroup property.
      */
     public void setSharePointGroup(@jakarta.annotation.Nullable final SharePointGroupIdentity value) {

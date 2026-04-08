@@ -18,11 +18,13 @@ import com.microsoft.graph.beta.directory.pendingexternaluserprofiles.PendingExt
 import com.microsoft.graph.beta.directory.publickeyinfrastructure.PublicKeyInfrastructureRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendationconfiguration.RecommendationConfigurationRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.RecommendationsRequestBuilder;
+import com.microsoft.graph.beta.directory.recovery.RecoveryRequestBuilder;
 import com.microsoft.graph.beta.directory.sharedemaildomains.SharedEmailDomainsRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptionswithcommercesubscriptionid.SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptionswithocpsubscriptionid.SubscriptionsWithOcpSubscriptionIdRequestBuilder;
 import com.microsoft.graph.beta.directory.templates.TemplatesRequestBuilder;
+import com.microsoft.graph.beta.directory.tenantgovernance.TenantGovernanceRequestBuilder;
 import com.microsoft.graph.beta.models.Directory;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -188,6 +190,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
         return new RecommendationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the recovery property of the microsoft.graph.directory entity.
+     * @return a {@link RecoveryRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RecoveryRequestBuilder recovery() {
+        return new RecoveryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the sharedEmailDomains property of the microsoft.graph.directory entity.
      * @return a {@link SharedEmailDomainsRequestBuilder}
      */
@@ -210,6 +220,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public TemplatesRequestBuilder templates() {
         return new TemplatesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tenantGovernance property of the microsoft.graph.directory entity.
+     * @return a {@link TenantGovernanceRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TenantGovernanceRequestBuilder tenantGovernance() {
+        return new TenantGovernanceRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link DirectoryRequestBuilder} and sets the default values.

@@ -37,7 +37,7 @@ public class ExternalOriginResourceConnectorRequestBuilder extends BaseRequestBu
         super(requestAdapter, "{+baseurl}/identityGovernance/catalogs/{accessPackageCatalog%2Did}/accessPackageResources/{accessPackageResource%2Did}/accessPackageResourceScopes/{accessPackageResourceScope%2Did}/accessPackageResource/accessPackageResourceRoles/{accessPackageResourceRole%2Did}/accessPackageResource/externalOriginResourceConnector{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get externalOriginResourceConnector from identityGovernance
+     * The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
      * @return a {@link ExternalOriginResourceConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -49,7 +49,7 @@ public class ExternalOriginResourceConnectorRequestBuilder extends BaseRequestBu
         return get(null);
     }
     /**
-     * Get externalOriginResourceConnector from identityGovernance
+     * The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalOriginResourceConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -65,7 +65,7 @@ public class ExternalOriginResourceConnectorRequestBuilder extends BaseRequestBu
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalOriginResourceConnector::createFromDiscriminatorValue);
     }
     /**
-     * Get externalOriginResourceConnector from identityGovernance
+     * The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -76,7 +76,7 @@ public class ExternalOriginResourceConnectorRequestBuilder extends BaseRequestBu
         return toGetRequestInformation(null);
     }
     /**
-     * Get externalOriginResourceConnector from identityGovernance
+     * The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -104,7 +104,7 @@ public class ExternalOriginResourceConnectorRequestBuilder extends BaseRequestBu
         return new ExternalOriginResourceConnectorRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get externalOriginResourceConnector from identityGovernance
+     * The connector that integrates with external origin systems to provision access to resources from those systems. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

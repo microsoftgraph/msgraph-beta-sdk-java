@@ -37,16 +37,18 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/externalOriginResourceConnectors/{externalOriginResourceConnector%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property externalOriginResourceConnectors for identityGovernance
+     * Delete an externalOriginResourceConnector object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externaloriginresourceconnector-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property externalOriginResourceConnectors for identityGovernance
+     * Delete an externalOriginResourceConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externaloriginresourceconnector-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -55,7 +57,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get externalOriginResourceConnectors from identityGovernance
+     * Represents the connectors used to communicate with external resource systems.
      * @return a {@link ExternalOriginResourceConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +66,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         return get(null);
     }
     /**
-     * Get externalOriginResourceConnectors from identityGovernance
+     * Represents the connectors used to communicate with external resource systems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalOriginResourceConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -77,21 +79,23 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalOriginResourceConnector::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property externalOriginResourceConnectors in identityGovernance
+     * Update the properties of an externalOriginResourceConnector object.
      * @param body The request body
      * @return a {@link ExternalOriginResourceConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externaloriginresourceconnector-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalOriginResourceConnector patch(@jakarta.annotation.Nonnull final ExternalOriginResourceConnector body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property externalOriginResourceConnectors in identityGovernance
+     * Update the properties of an externalOriginResourceConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExternalOriginResourceConnector}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/externaloriginresourceconnector-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ExternalOriginResourceConnector patch(@jakarta.annotation.Nonnull final ExternalOriginResourceConnector body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, ExternalOriginResourceConnector::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property externalOriginResourceConnectors for identityGovernance
+     * Delete an externalOriginResourceConnector object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property externalOriginResourceConnectors for identityGovernance
+     * Delete an externalOriginResourceConnector object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -122,7 +126,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Get externalOriginResourceConnectors from identityGovernance
+     * Represents the connectors used to communicate with external resource systems.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +134,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Get externalOriginResourceConnectors from identityGovernance
+     * Represents the connectors used to communicate with external resource systems.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         return requestInfo;
     }
     /**
-     * Update the navigation property externalOriginResourceConnectors in identityGovernance
+     * Update the properties of an externalOriginResourceConnector object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property externalOriginResourceConnectors in identityGovernance
+     * Update the properties of an externalOriginResourceConnector object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -182,7 +186,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get externalOriginResourceConnectors from identityGovernance
+     * Represents the connectors used to communicate with external resource systems.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

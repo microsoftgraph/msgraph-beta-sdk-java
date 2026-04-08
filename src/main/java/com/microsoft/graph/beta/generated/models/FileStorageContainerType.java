@@ -101,7 +101,7 @@ public class FileStorageContainerType extends Entity implements Parsable {
         return this.backingStore.get("owningAppId");
     }
     /**
-     * Gets the permissions property value. The permissions property
+     * Gets the permissions property value. The set of permissions for users in the container type. The permissions collection defines who has access to manage the container type. Use the owner role to grant management access.
      * @return a {@link java.util.List<Permission>}
      */
     @jakarta.annotation.Nullable
@@ -183,7 +183,7 @@ public class FileStorageContainerType extends Entity implements Parsable {
         this.backingStore.set("owningAppId", value);
     }
     /**
-     * Sets the permissions property value. The permissions property
+     * Sets the permissions property value. The set of permissions for users in the container type. The permissions collection defines who has access to manage the container type. Use the owner role to grant management access.
      * @param value Value to set for the permissions property.
      */
     public void setPermissions(@jakarta.annotation.Nullable final java.util.List<Permission> value) {

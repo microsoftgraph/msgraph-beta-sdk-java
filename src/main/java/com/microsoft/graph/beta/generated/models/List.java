@@ -88,7 +88,7 @@ public class List extends BaseItem implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the itemCount property value. The itemCount property
+     * Gets the itemCount property value. The number of items in the list. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -208,7 +208,7 @@ public class List extends BaseItem implements Parsable {
         this.backingStore.set("drive", value);
     }
     /**
-     * Sets the itemCount property value. The itemCount property
+     * Sets the itemCount property value. The number of items in the list. Read-only.
      * @param value Value to set for the itemCount property.
      */
     public void setItemCount(@jakarta.annotation.Nullable final Integer value) {

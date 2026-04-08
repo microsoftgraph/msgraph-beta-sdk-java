@@ -9,7 +9,9 @@ public enum CloudPcConnectivityStatus implements ValuedEnum {
     Available("available"),
     AvailableWithWarning("availableWithWarning"),
     Unavailable("unavailable"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    UnderServiceMaintenance("underServiceMaintenance"),
+    InUse("inUse");
     public final String value;
     CloudPcConnectivityStatus(final String value) {
         this.value = value;
@@ -25,6 +27,8 @@ public enum CloudPcConnectivityStatus implements ValuedEnum {
             case "availableWithWarning": return AvailableWithWarning;
             case "unavailable": return Unavailable;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "underServiceMaintenance": return UnderServiceMaintenance;
+            case "inUse": return InUse;
             default: return null;
         }
     }

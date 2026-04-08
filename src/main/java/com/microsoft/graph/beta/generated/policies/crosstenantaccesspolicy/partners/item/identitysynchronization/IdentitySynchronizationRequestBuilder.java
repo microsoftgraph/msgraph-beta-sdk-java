@@ -46,7 +46,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/partners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}/identitySynchronization{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete the user synchronization policy for a partner-specific configuration.
+     * Delete the user and group synchronization policy for a partner-specific configuration.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * Delete the user synchronization policy for a partner-specific configuration.
+     * Delete the user and group synchronization policy for a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-delete?view=graph-rest-beta">Find more info here</a>
@@ -66,7 +66,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
+     * Get the user and group synchronization policy of a partner-specific configuration.
      * @return a {@link CrossTenantIdentitySyncPolicyPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-get?view=graph-rest-beta">Find more info here</a>
@@ -76,7 +76,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
+     * Get the user and group synchronization policy of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantIdentitySyncPolicyPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -90,7 +90,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantIdentitySyncPolicyPartner::createFromDiscriminatorValue);
     }
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Create a cross-tenant user and optionally group synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @return a {@link CrossTenantIdentitySyncPolicyPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -101,7 +101,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return put(body, null);
     }
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Create a cross-tenant user and optionally group synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantIdentitySyncPolicyPartner}
@@ -117,7 +117,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantIdentitySyncPolicyPartner::createFromDiscriminatorValue);
     }
     /**
-     * Delete the user synchronization policy for a partner-specific configuration.
+     * Delete the user and group synchronization policy for a partner-specific configuration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -125,7 +125,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete the user synchronization policy for a partner-specific configuration.
+     * Delete the user and group synchronization policy for a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -137,7 +137,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
+     * Get the user and group synchronization policy of a partner-specific configuration.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -145,7 +145,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
+     * Get the user and group synchronization policy of a partner-specific configuration.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -157,7 +157,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Create a cross-tenant user and optionally group synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -166,7 +166,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
         return toPutRequestInformation(body, null);
     }
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Create a cross-tenant user and optionally group synchronization policy for a partner-specific configuration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -197,7 +197,7 @@ public class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get the user synchronization policy of a partner-specific configuration.
+     * Get the user and group synchronization policy of a partner-specific configuration.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

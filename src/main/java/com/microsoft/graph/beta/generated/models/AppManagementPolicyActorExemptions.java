@@ -56,7 +56,7 @@ public class AppManagementPolicyActorExemptions implements AdditionalDataHolder,
         return this.backingStore;
     }
     /**
-     * Gets the customSecurityAttributes property value. The customSecurityAttributes property
+     * Gets the customSecurityAttributes property value. The collection of customSecurityAttributeExemption to exempt from the policy enforcement. Limit of 5.
      * @return a {@link java.util.List<CustomSecurityAttributeExemption>}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class AppManagementPolicyActorExemptions implements AdditionalDataHolder,
         this.backingStore = value;
     }
     /**
-     * Sets the customSecurityAttributes property value. The customSecurityAttributes property
+     * Sets the customSecurityAttributes property value. The collection of customSecurityAttributeExemption to exempt from the policy enforcement. Limit of 5.
      * @param value Value to set for the customSecurityAttributes property.
      */
     public void setCustomSecurityAttributes(@jakarta.annotation.Nullable final java.util.List<CustomSecurityAttributeExemption> value) {

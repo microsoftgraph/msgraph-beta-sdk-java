@@ -153,7 +153,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         return this.backingStore.get("controlConfigurations");
     }
     /**
-     * Gets the externalOriginResourceConnectors property value. The externalOriginResourceConnectors property
+     * Gets the externalOriginResourceConnectors property value. Represents the connectors used to communicate with external resource systems.
      * @return a {@link java.util.List<ExternalOriginResourceConnector>}
      */
     @jakarta.annotation.Nullable
@@ -344,7 +344,7 @@ public class EntitlementManagement extends Entity implements Parsable {
         this.backingStore.set("controlConfigurations", value);
     }
     /**
-     * Sets the externalOriginResourceConnectors property value. The externalOriginResourceConnectors property
+     * Sets the externalOriginResourceConnectors property value. Represents the connectors used to communicate with external resource systems.
      * @param value Value to set for the externalOriginResourceConnectors property.
      */
     public void setExternalOriginResourceConnectors(@jakarta.annotation.Nullable final java.util.List<ExternalOriginResourceConnector> value) {

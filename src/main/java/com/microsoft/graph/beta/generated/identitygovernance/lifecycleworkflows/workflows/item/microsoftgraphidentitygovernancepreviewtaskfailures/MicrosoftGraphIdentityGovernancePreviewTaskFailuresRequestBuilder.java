@@ -35,11 +35,12 @@ public class MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder e
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/microsoft.graph.identityGovernance.previewTaskFailures", rawUrl);
     }
     /**
-     * Invoke action previewTaskFailures
+     * Validate the tasks configured in a workflow to check for configuration errors. This action identifies any tasks that would fail during execution, allowing you to fix issues before running the workflow. Returns an empty collection if no task failures are detected.
      * @return a {@link PreviewTaskFailuresPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-08-12 and will be removed 2026-02-28
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-previewtaskfailures?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -47,12 +48,13 @@ public class MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder e
         return post(null);
     }
     /**
-     * Invoke action previewTaskFailures
+     * Validate the tasks configured in a workflow to check for configuration errors. This action identifies any tasks that would fail during execution, allowing you to fix issues before running the workflow. Returns an empty collection if no task failures are detected.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PreviewTaskFailuresPostResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-08-12 and will be removed 2026-02-28
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-previewtaskfailures?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -63,7 +65,7 @@ public class MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder e
         return this.requestAdapter.send(requestInfo, errorMapping, PreviewTaskFailuresPostResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action previewTaskFailures
+     * Validate the tasks configured in a workflow to check for configuration errors. This action identifies any tasks that would fail during execution, allowing you to fix issues before running the workflow. Returns an empty collection if no task failures are detected.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-08-12 and will be removed 2026-02-28
@@ -74,7 +76,7 @@ public class MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder e
         return toPostRequestInformation(null);
     }
     /**
-     * Invoke action previewTaskFailures
+     * Validate the tasks configured in a workflow to check for configuration errors. This action identifies any tasks that would fail during execution, allowing you to fix issues before running the workflow. Returns an empty collection if no task failures are detected.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated

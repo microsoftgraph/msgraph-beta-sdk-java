@@ -35,23 +35,25 @@ public class MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder exten
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/microsoft.graph.identityGovernance.previewWorkflow", rawUrl);
     }
     /**
-     * Invoke action previewWorkflow
+     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;previewMode&apos;.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-08-12 and will be removed 2026-02-28
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-previewworkflow?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final PreviewWorkflowPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action previewWorkflow
+     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;previewMode&apos;.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-08-12 and will be removed 2026-02-28
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-previewworkflow?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final PreviewWorkflowPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -62,7 +64,7 @@ public class MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder exten
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action previewWorkflow
+     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;previewMode&apos;.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -74,7 +76,7 @@ public class MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder exten
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action previewWorkflow
+     * Run a workflow in preview mode for selected directory objects without affecting production users. This action triggers workflow processing in preview mode, and results can be retrieved using the List userProcessingResults operation with $filter=workflowExecutionType eq &apos;previewMode&apos;.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

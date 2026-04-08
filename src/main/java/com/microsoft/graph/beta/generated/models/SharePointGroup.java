@@ -54,7 +54,7 @@ public class SharePointGroup extends Entity implements Parsable {
         return this.backingStore.get("members");
     }
     /**
-     * Gets the principalId property value. The principalId property
+     * Gets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class SharePointGroup extends Entity implements Parsable {
         this.backingStore.set("members", value);
     }
     /**
-     * Sets the principalId property value. The principalId property
+     * Sets the principalId property value. The principal ID of the SharePoint group in the tenant. Read-only.
      * @param value Value to set for the principalId property.
      */
     public void setPrincipalId(@jakarta.annotation.Nullable final String value) {

@@ -114,7 +114,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         return this.backingStore.get("restrictForAppsCreatedAfterDateTime");
     }
     /**
-     * Gets the restrictionType property value. The restrictionType property
+     * Gets the restrictionType property value. A unique identifier key for keyCredentialConfiguration. This value also represents the type of restriction being applied. Possible values are asymmetricKeyLifetime, trustedCertificateAuthority, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @return a {@link AppKeyCredentialRestrictionType}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore.set("restrictForAppsCreatedAfterDateTime", value);
     }
     /**
-     * Sets the restrictionType property value. The restrictionType property
+     * Sets the restrictionType property value. A unique identifier key for keyCredentialConfiguration. This value also represents the type of restriction being applied. Possible values are asymmetricKeyLifetime, trustedCertificateAuthority, and unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @param value Value to set for the restrictionType property.
      */
     public void setRestrictionType(@jakarta.annotation.Nullable final AppKeyCredentialRestrictionType value) {

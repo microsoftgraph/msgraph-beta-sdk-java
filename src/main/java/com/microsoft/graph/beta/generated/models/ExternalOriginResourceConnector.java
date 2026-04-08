@@ -42,7 +42,7 @@ public class ExternalOriginResourceConnector extends Entity implements Parsable 
         return this.backingStore.get("connectorType");
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The identifier of the user or application that created the connector.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class ExternalOriginResourceConnector extends Entity implements Parsable 
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the connector was created.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class ExternalOriginResourceConnector extends Entity implements Parsable 
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. A description of the connector.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class ExternalOriginResourceConnector extends Entity implements Parsable 
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the connector.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class ExternalOriginResourceConnector extends Entity implements Parsable 
         return deserializerMap;
     }
     /**
-     * Gets the modifiedBy property value. The modifiedBy property
+     * Gets the modifiedBy property value. The identifier of the user or application that last modified the connector.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -99,7 +99,7 @@ public class ExternalOriginResourceConnector extends Entity implements Parsable 
         return this.backingStore.get("modifiedBy");
     }
     /**
-     * Gets the modifiedDateTime property value. The modifiedDateTime property
+     * Gets the modifiedDateTime property value. The date and time when the connector was last modified.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -137,42 +137,42 @@ public class ExternalOriginResourceConnector extends Entity implements Parsable 
         this.backingStore.set("connectorType", value);
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The identifier of the user or application that created the connector.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the connector was created.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. A description of the connector.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the connector.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the modifiedBy property value. The modifiedBy property
+     * Sets the modifiedBy property value. The identifier of the user or application that last modified the connector.
      * @param value Value to set for the modifiedBy property.
      */
     public void setModifiedBy(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("modifiedBy", value);
     }
     /**
-     * Sets the modifiedDateTime property value. The modifiedDateTime property
+     * Sets the modifiedDateTime property value. The date and time when the connector was last modified.
      * @param value Value to set for the modifiedDateTime property.
      */
     public void setModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

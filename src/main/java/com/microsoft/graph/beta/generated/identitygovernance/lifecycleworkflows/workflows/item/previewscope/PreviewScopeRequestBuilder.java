@@ -65,7 +65,7 @@ public class PreviewScopeRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}/previewScope{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get previewScope from identityGovernance
+     * A read-only collection of directory objects that are currently in-scope for the workflow based on its execution conditions. This property helps preview which users would be affected before running the workflow. Nullable. Read-only. Returned only on $expand. Supports $expand.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -77,7 +77,7 @@ public class PreviewScopeRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get previewScope from identityGovernance
+     * A read-only collection of directory objects that are currently in-scope for the workflow based on its execution conditions. This property helps preview which users would be affected before running the workflow. Nullable. Read-only. Returned only on $expand. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -93,7 +93,7 @@ public class PreviewScopeRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DirectoryObjectCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get previewScope from identityGovernance
+     * A read-only collection of directory objects that are currently in-scope for the workflow based on its execution conditions. This property helps preview which users would be affected before running the workflow. Nullable. Read-only. Returned only on $expand. Supports $expand.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2025-01/PrivatePreview:organizationalUnit on 2025-08-12 and will be removed 2026-02-28
@@ -104,7 +104,7 @@ public class PreviewScopeRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get previewScope from identityGovernance
+     * A read-only collection of directory objects that are currently in-scope for the workflow based on its execution conditions. This property helps preview which users would be affected before running the workflow. Nullable. Read-only. Returned only on $expand. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -132,7 +132,7 @@ public class PreviewScopeRequestBuilder extends BaseRequestBuilder {
         return new PreviewScopeRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get previewScope from identityGovernance
+     * A read-only collection of directory objects that are currently in-scope for the workflow based on its execution conditions. This property helps preview which users would be affected before running the workflow. Nullable. Read-only. Returned only on $expand. Supports $expand.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {
