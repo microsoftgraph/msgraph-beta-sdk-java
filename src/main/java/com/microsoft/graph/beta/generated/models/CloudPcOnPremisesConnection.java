@@ -97,6 +97,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         deserializerMap.put("resourceGroupId", (n) -> { this.setResourceGroupId(n.getStringValue()); });
         deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("subnetId", (n) -> { this.setSubnetId(n.getStringValue()); });
+        deserializerMap.put("subnetPrivateIpDetail", (n) -> { this.setSubnetPrivateIpDetail(n.getObjectValue(CloudPcOnPremisesConnectionSubnetIpDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptionId", (n) -> { this.setSubscriptionId(n.getStringValue()); });
         deserializerMap.put("subscriptionName", (n) -> { this.setSubscriptionName(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(CloudPcOnPremisesConnectionType::forValue)); });
@@ -193,6 +194,14 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         return this.backingStore.get("subnetId");
     }
     /**
+     * Gets the subnetPrivateIpDetail property value. The subnetPrivateIpDetail property
+     * @return a {@link CloudPcOnPremisesConnectionSubnetIpDetail}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcOnPremisesConnectionSubnetIpDetail getSubnetPrivateIpDetail() {
+        return this.backingStore.get("subnetPrivateIpDetail");
+    }
+    /**
      * Gets the subscriptionId property value. The ID of the target Azure subscription associated with your tenant.
      * @return a {@link String}
      */
@@ -256,6 +265,7 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
         writer.writeStringValue("resourceGroupId", this.getResourceGroupId());
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
         writer.writeStringValue("subnetId", this.getSubnetId());
+        writer.writeObjectValue("subnetPrivateIpDetail", this.getSubnetPrivateIpDetail());
         writer.writeStringValue("subscriptionId", this.getSubscriptionId());
         writer.writeStringValue("subscriptionName", this.getSubscriptionName());
         writer.writeEnumValue("type", this.getType());
@@ -380,6 +390,13 @@ public class CloudPcOnPremisesConnection extends Entity implements Parsable {
      */
     public void setSubnetId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subnetId", value);
+    }
+    /**
+     * Sets the subnetPrivateIpDetail property value. The subnetPrivateIpDetail property
+     * @param value Value to set for the subnetPrivateIpDetail property.
+     */
+    public void setSubnetPrivateIpDetail(@jakarta.annotation.Nullable final CloudPcOnPremisesConnectionSubnetIpDetail value) {
+        this.backingStore.set("subnetPrivateIpDetail", value);
     }
     /**
      * Sets the subscriptionId property value. The ID of the target Azure subscription associated with your tenant.

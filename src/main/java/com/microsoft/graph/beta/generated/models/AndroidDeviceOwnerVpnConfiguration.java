@@ -90,6 +90,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
         deserializerMap.put("customKeyValueData", (n) -> { this.setCustomKeyValueData(n.getCollectionOfObjectValues(KeyValuePair::createFromDiscriminatorValue)); });
         deserializerMap.put("derivedCredentialSettings", (n) -> { this.setDerivedCredentialSettings(n.getObjectValue(DeviceManagementDerivedCredentialSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("identityCertificate", (n) -> { this.setIdentityCertificate(n.getObjectValue(AndroidDeviceOwnerCertificateProfileBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("lockdownExclusionList", (n) -> { this.setLockdownExclusionList(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("microsoftTunnelSiteId", (n) -> { this.setMicrosoftTunnelSiteId(n.getStringValue()); });
         deserializerMap.put("proxyExclusionList", (n) -> { this.setProxyExclusionList(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("proxyServer", (n) -> { this.setProxyServer(n.getObjectValue(VpnProxyServer::createFromDiscriminatorValue)); });
@@ -104,6 +105,14 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
     @jakarta.annotation.Nullable
     public AndroidDeviceOwnerCertificateProfileBase getIdentityCertificate() {
         return this.backingStore.get("identityCertificate");
+    }
+    /**
+     * Gets the lockdownExclusionList property value. List of app package names that will be able to access the network directly when VPN is in lockdown mode but not connected.
+     * @return a {@link java.util.List<String>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<String> getLockdownExclusionList() {
+        return this.backingStore.get("lockdownExclusionList");
     }
     /**
      * Gets the microsoftTunnelSiteId property value. Microsoft Tunnel site ID.
@@ -159,6 +168,7 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
         writer.writeCollectionOfObjectValues("customKeyValueData", this.getCustomKeyValueData());
         writer.writeObjectValue("derivedCredentialSettings", this.getDerivedCredentialSettings());
         writer.writeObjectValue("identityCertificate", this.getIdentityCertificate());
+        writer.writeCollectionOfPrimitiveValues("lockdownExclusionList", this.getLockdownExclusionList());
         writer.writeStringValue("microsoftTunnelSiteId", this.getMicrosoftTunnelSiteId());
         writer.writeCollectionOfPrimitiveValues("proxyExclusionList", this.getProxyExclusionList());
         writer.writeObjectValue("proxyServer", this.getProxyServer());
@@ -213,6 +223,13 @@ public class AndroidDeviceOwnerVpnConfiguration extends VpnConfiguration impleme
      */
     public void setIdentityCertificate(@jakarta.annotation.Nullable final AndroidDeviceOwnerCertificateProfileBase value) {
         this.backingStore.set("identityCertificate", value);
+    }
+    /**
+     * Sets the lockdownExclusionList property value. List of app package names that will be able to access the network directly when VPN is in lockdown mode but not connected.
+     * @param value Value to set for the lockdownExclusionList property.
+     */
+    public void setLockdownExclusionList(@jakarta.annotation.Nullable final java.util.List<String> value) {
+        this.backingStore.set("lockdownExclusionList", value);
     }
     /**
      * Sets the microsoftTunnelSiteId property value. Microsoft Tunnel site ID.
