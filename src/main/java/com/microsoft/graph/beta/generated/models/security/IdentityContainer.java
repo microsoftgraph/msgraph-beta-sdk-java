@@ -36,6 +36,7 @@ public class IdentityContainer extends Entity implements Parsable {
         deserializerMap.put("identityAccounts", (n) -> { this.setIdentityAccounts(n.getCollectionOfObjectValues(IdentityAccounts::createFromDiscriminatorValue)); });
         deserializerMap.put("sensorCandidateActivationConfiguration", (n) -> { this.setSensorCandidateActivationConfiguration(n.getObjectValue(SensorCandidateActivationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("sensorCandidates", (n) -> { this.setSensorCandidates(n.getCollectionOfObjectValues(SensorCandidate::createFromDiscriminatorValue)); });
+        deserializerMap.put("sensorMigration", (n) -> { this.setSensorMigration(n.getCollectionOfObjectValues(SensorMigration::createFromDiscriminatorValue)); });
         deserializerMap.put("sensors", (n) -> { this.setSensors(n.getCollectionOfObjectValues(Sensor::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(SettingsContainer::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -73,6 +74,14 @@ public class IdentityContainer extends Entity implements Parsable {
         return this.backingStore.get("sensorCandidates");
     }
     /**
+     * Gets the sensorMigration property value. The sensorMigration property
+     * @return a {@link java.util.List<SensorMigration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SensorMigration> getSensorMigration() {
+        return this.backingStore.get("sensorMigration");
+    }
+    /**
      * Gets the sensors property value. Represents a customer&apos;s Microsoft Defender for Identity sensors.
      * @return a {@link java.util.List<Sensor>}
      */
@@ -99,6 +108,7 @@ public class IdentityContainer extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("identityAccounts", this.getIdentityAccounts());
         writer.writeObjectValue("sensorCandidateActivationConfiguration", this.getSensorCandidateActivationConfiguration());
         writer.writeCollectionOfObjectValues("sensorCandidates", this.getSensorCandidates());
+        writer.writeCollectionOfObjectValues("sensorMigration", this.getSensorMigration());
         writer.writeCollectionOfObjectValues("sensors", this.getSensors());
         writer.writeObjectValue("settings", this.getSettings());
     }
@@ -129,6 +139,13 @@ public class IdentityContainer extends Entity implements Parsable {
      */
     public void setSensorCandidates(@jakarta.annotation.Nullable final java.util.List<SensorCandidate> value) {
         this.backingStore.set("sensorCandidates", value);
+    }
+    /**
+     * Sets the sensorMigration property value. The sensorMigration property
+     * @param value Value to set for the sensorMigration property.
+     */
+    public void setSensorMigration(@jakarta.annotation.Nullable final java.util.List<SensorMigration> value) {
+        this.backingStore.set("sensorMigration", value);
     }
     /**
      * Sets the sensors property value. Represents a customer&apos;s Microsoft Defender for Identity sensors.

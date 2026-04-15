@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.security.identities.healthissues.HealthIssuesReq
 import com.microsoft.graph.beta.security.identities.identityaccounts.IdentityAccountsRequestBuilder;
 import com.microsoft.graph.beta.security.identities.sensorcandidateactivationconfiguration.SensorCandidateActivationConfigurationRequestBuilder;
 import com.microsoft.graph.beta.security.identities.sensorcandidates.SensorCandidatesRequestBuilder;
+import com.microsoft.graph.beta.security.identities.sensormigration.SensorMigrationRequestBuilder;
 import com.microsoft.graph.beta.security.identities.sensors.SensorsRequestBuilder;
 import com.microsoft.graph.beta.security.identities.settings.SettingsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -57,6 +58,14 @@ public class IdentitiesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SensorCandidatesRequestBuilder sensorCandidates() {
         return new SensorCandidatesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the sensorMigration property of the microsoft.graph.security.identityContainer entity.
+     * @return a {@link SensorMigrationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SensorMigrationRequestBuilder sensorMigration() {
+        return new SensorMigrationRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sensors property of the microsoft.graph.security.identityContainer entity.

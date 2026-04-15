@@ -5,6 +5,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -53,6 +54,7 @@ public class SensorCandidate extends Entity implements Parsable {
         deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
         deserializerMap.put("lastSeenDateTime", (n) -> { this.setLastSeenDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("senseClientVersion", (n) -> { this.setSenseClientVersion(n.getStringValue()); });
+        deserializerMap.put("sensorTypes", (n) -> { this.setSensorTypes(n.getCollectionOfEnumValues(DeviceType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -72,6 +74,14 @@ public class SensorCandidate extends Entity implements Parsable {
         return this.backingStore.get("senseClientVersion");
     }
     /**
+     * Gets the sensorTypes property value. The list of device types for the sensor. The possible values are: domainController, adfs, adcs, entraConnect unknownFutureValue. This flagged enumeration allows multiple members to be returned simultaneously.
+     * @return a {@link java.util.List<DeviceType>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DeviceType> getSensorTypes() {
+        return this.backingStore.get("sensorTypes");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -82,6 +92,7 @@ public class SensorCandidate extends Entity implements Parsable {
         writer.writeStringValue("domainName", this.getDomainName());
         writer.writeOffsetDateTimeValue("lastSeenDateTime", this.getLastSeenDateTime());
         writer.writeStringValue("senseClientVersion", this.getSenseClientVersion());
+        writer.writeCollectionOfEnumValues("sensorTypes", this.getSensorTypes());
     }
     /**
      * Sets the computerDnsName property value. The DNS name of the computer associated with the sensor.
@@ -110,5 +121,12 @@ public class SensorCandidate extends Entity implements Parsable {
      */
     public void setSenseClientVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("senseClientVersion", value);
+    }
+    /**
+     * Sets the sensorTypes property value. The list of device types for the sensor. The possible values are: domainController, adfs, adcs, entraConnect unknownFutureValue. This flagged enumeration allows multiple members to be returned simultaneously.
+     * @param value Value to set for the sensorTypes property.
+     */
+    public void setSensorTypes(@jakarta.annotation.Nullable final java.util.List<DeviceType> value) {
+        this.backingStore.set("sensorTypes", value);
     }
 }

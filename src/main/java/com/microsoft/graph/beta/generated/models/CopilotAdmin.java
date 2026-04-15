@@ -40,8 +40,17 @@ public class CopilotAdmin extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("catalog", (n) -> { this.setCatalog(n.getObjectValue(CopilotAdminCatalog::createFromDiscriminatorValue)); });
+        deserializerMap.put("policySettings", (n) -> { this.setPolicySettings(n.getCollectionOfObjectValues(CopilotPolicySetting::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(CopilotAdminSetting::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the policySettings property value. The policySettings property
+     * @return a {@link java.util.List<CopilotPolicySetting>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CopilotPolicySetting> getPolicySettings() {
+        return this.backingStore.get("policySettings");
     }
     /**
      * Gets the settings property value. The settings property
@@ -59,6 +68,7 @@ public class CopilotAdmin extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("catalog", this.getCatalog());
+        writer.writeCollectionOfObjectValues("policySettings", this.getPolicySettings());
         writer.writeObjectValue("settings", this.getSettings());
     }
     /**
@@ -67,6 +77,13 @@ public class CopilotAdmin extends Entity implements Parsable {
      */
     public void setCatalog(@jakarta.annotation.Nullable final CopilotAdminCatalog value) {
         this.backingStore.set("catalog", value);
+    }
+    /**
+     * Sets the policySettings property value. The policySettings property
+     * @param value Value to set for the policySettings property.
+     */
+    public void setPolicySettings(@jakarta.annotation.Nullable final java.util.List<CopilotPolicySetting> value) {
+        this.backingStore.set("policySettings", value);
     }
     /**
      * Sets the settings property value. The settings property

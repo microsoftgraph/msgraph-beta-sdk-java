@@ -48,6 +48,14 @@ public class CloudPcSupportedRegionRestrictionDetail implements AdditionalDataHo
         return value;
     }
     /**
+     * Gets the availabilityZoneRestricted property value. The availabilityZoneRestricted property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getAvailabilityZoneRestricted() {
+        return this.backingStore.get("availabilityZoneRestricted");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -69,7 +77,8 @@ public class CloudPcSupportedRegionRestrictionDetail implements AdditionalDataHo
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        deserializerMap.put("availabilityZoneRestricted", (n) -> { this.setAvailabilityZoneRestricted(n.getBooleanValue()); });
         deserializerMap.put("cPURestricted", (n) -> { this.setCPURestricted(n.getBooleanValue()); });
         deserializerMap.put("gPURestricted", (n) -> { this.setGPURestricted(n.getBooleanValue()); });
         deserializerMap.put("nestedVirtualizationRestricted", (n) -> { this.setNestedVirtualizationRestricted(n.getBooleanValue()); });
@@ -106,6 +115,7 @@ public class CloudPcSupportedRegionRestrictionDetail implements AdditionalDataHo
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeBooleanValue("availabilityZoneRestricted", this.getAvailabilityZoneRestricted());
         writer.writeBooleanValue("cPURestricted", this.getCPURestricted());
         writer.writeBooleanValue("gPURestricted", this.getGPURestricted());
         writer.writeBooleanValue("nestedVirtualizationRestricted", this.getNestedVirtualizationRestricted());
@@ -118,6 +128,13 @@ public class CloudPcSupportedRegionRestrictionDetail implements AdditionalDataHo
      */
     public void setAdditionalData(@jakarta.annotation.Nullable final Map<String, Object> value) {
         this.backingStore.set("additionalData", value);
+    }
+    /**
+     * Sets the availabilityZoneRestricted property value. The availabilityZoneRestricted property
+     * @param value Value to set for the availabilityZoneRestricted property.
+     */
+    public void setAvailabilityZoneRestricted(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("availabilityZoneRestricted", value);
     }
     /**
      * Sets the backingStore property value. Stores model information.

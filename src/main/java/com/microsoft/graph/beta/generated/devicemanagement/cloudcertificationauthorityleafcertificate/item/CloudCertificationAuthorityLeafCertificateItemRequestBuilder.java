@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.cloudcertificationauthorityleafcertificate.item;
 
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthorityleafcertificate.item.cloudcertificationauthorityversion.CloudCertificationAuthorityVersionRequestBuilder;
 import com.microsoft.graph.beta.models.CloudCertificationAuthorityLeafCertificate;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudCertificationAuthorityLeafCertificateItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the cloudCertificationAuthorityVersion property of the microsoft.graph.cloudCertificationAuthorityLeafCertificate entity.
+     * @return a {@link CloudCertificationAuthorityVersionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CloudCertificationAuthorityVersionRequestBuilder cloudCertificationAuthorityVersion() {
+        return new CloudCertificationAuthorityVersionRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link CloudCertificationAuthorityLeafCertificateItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

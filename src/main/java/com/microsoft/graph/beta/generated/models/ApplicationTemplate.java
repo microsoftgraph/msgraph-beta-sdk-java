@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.LocalDate;
 import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,6 +43,14 @@ public class ApplicationTemplate extends Entity implements Parsable {
         return this.backingStore.get("configurationUris");
     }
     /**
+     * Gets the deprecationDate property value. Deprecation date for this application. If specified, the application will be removed from the Microsoft Entra application gallery on this date.
+     * @return a {@link LocalDate}
+     */
+    @jakarta.annotation.Nullable
+    public LocalDate getDeprecationDate() {
+        return this.backingStore.get("deprecationDate");
+    }
+    /**
      * Gets the description property value. A description of the application.
      * @return a {@link String}
      */
@@ -74,6 +83,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("categories", (n) -> { this.setCategories(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("configurationUris", (n) -> { this.setConfigurationUris(n.getCollectionOfObjectValues(ConfigurationUri::createFromDiscriminatorValue)); });
+        deserializerMap.put("deprecationDate", (n) -> { this.setDeprecationDate(n.getLocalDateValue()); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("endpoints", (n) -> { this.setEndpoints(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -187,6 +197,7 @@ public class ApplicationTemplate extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("categories", this.getCategories());
         writer.writeCollectionOfObjectValues("configurationUris", this.getConfigurationUris());
+        writer.writeLocalDateValue("deprecationDate", this.getDeprecationDate());
         writer.writeStringValue("description", this.getDescription());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeCollectionOfPrimitiveValues("endpoints", this.getEndpoints());
@@ -215,6 +226,13 @@ public class ApplicationTemplate extends Entity implements Parsable {
      */
     public void setConfigurationUris(@jakarta.annotation.Nullable final java.util.List<ConfigurationUri> value) {
         this.backingStore.set("configurationUris", value);
+    }
+    /**
+     * Sets the deprecationDate property value. Deprecation date for this application. If specified, the application will be removed from the Microsoft Entra application gallery on this date.
+     * @param value Value to set for the deprecationDate property.
+     */
+    public void setDeprecationDate(@jakarta.annotation.Nullable final LocalDate value) {
+        this.backingStore.set("deprecationDate", value);
     }
     /**
      * Sets the description property value. A description of the application.
