@@ -11,7 +11,8 @@ public enum LifecycleWorkflowProcessingStatus implements ValuedEnum {
     CompletedWithErrors("completedWithErrors"),
     Canceled("canceled"),
     Failed("failed"),
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    Canceling("canceling");
     public final String value;
     LifecycleWorkflowProcessingStatus(final String value) {
         this.value = value;
@@ -29,6 +30,7 @@ public enum LifecycleWorkflowProcessingStatus implements ValuedEnum {
             case "canceled": return Canceled;
             case "failed": return Failed;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "canceling": return Canceling;
             default: return null;
         }
     }

@@ -57,7 +57,7 @@ public class ChangeCloudCertificationAuthorityStatusPostRequestBody implements A
         return this.backingStore;
     }
     /**
-     * Gets the certificationAuthorityStatus property value. Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates or temporarily paused or permanently revoked.
+     * Gets the certificationAuthorityStatus property value. Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates, temporarily paused, pending signing, revoked, or expired.
      * @return a {@link CloudCertificationAuthorityStatus}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class ChangeCloudCertificationAuthorityStatusPostRequestBody implements A
         this.backingStore = value;
     }
     /**
-     * Sets the certificationAuthorityStatus property value. Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates or temporarily paused or permanently revoked.
+     * Sets the certificationAuthorityStatus property value. Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates, temporarily paused, pending signing, revoked, or expired.
      * @param value Value to set for the certificationAuthorityStatus property.
      */
     public void setCertificationAuthorityStatus(@jakarta.annotation.Nullable final CloudCertificationAuthorityStatus value) {

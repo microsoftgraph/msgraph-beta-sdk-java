@@ -45,6 +45,22 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         return this.backingStore.get("certificationAuthorityIssuerUri");
     }
     /**
+     * Gets the certificationAuthorityVersionNumber property value. The version number of the certification authority that issued this leaf certificate. Read-only.
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getCertificationAuthorityVersionNumber() {
+        return this.backingStore.get("certificationAuthorityVersionNumber");
+    }
+    /**
+     * Gets the cloudCertificationAuthorityVersion property value. The certification authority version that issued this leaf certificate. Read-only.
+     * @return a {@link CloudCertificationAuthorityVersion}
+     */
+    @jakarta.annotation.Nullable
+    public CloudCertificationAuthorityVersion getCloudCertificationAuthorityVersion() {
+        return this.backingStore.get("cloudCertificationAuthorityVersion");
+    }
+    /**
      * Gets the crlDistributionPointUrl property value. URL to find the relevant Certificate Revocation List for this certificate. Read-only.
      * @return a {@link String}
      */
@@ -93,6 +109,8 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("certificateStatus", (n) -> { this.setCertificateStatus(n.getEnumValue(CloudCertificationAuthorityLeafCertificateStatus::forValue)); });
         deserializerMap.put("certificationAuthorityIssuerUri", (n) -> { this.setCertificationAuthorityIssuerUri(n.getStringValue()); });
+        deserializerMap.put("certificationAuthorityVersionNumber", (n) -> { this.setCertificationAuthorityVersionNumber(n.getIntegerValue()); });
+        deserializerMap.put("cloudCertificationAuthorityVersion", (n) -> { this.setCloudCertificationAuthorityVersion(n.getObjectValue(CloudCertificationAuthorityVersion::createFromDiscriminatorValue)); });
         deserializerMap.put("crlDistributionPointUrl", (n) -> { this.setCrlDistributionPointUrl(n.getStringValue()); });
         deserializerMap.put("deviceId", (n) -> { this.setDeviceId(n.getStringValue()); });
         deserializerMap.put("deviceName", (n) -> { this.setDeviceName(n.getStringValue()); });
@@ -217,6 +235,8 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
         super.serialize(writer);
         writer.writeEnumValue("certificateStatus", this.getCertificateStatus());
         writer.writeStringValue("certificationAuthorityIssuerUri", this.getCertificationAuthorityIssuerUri());
+        writer.writeIntegerValue("certificationAuthorityVersionNumber", this.getCertificationAuthorityVersionNumber());
+        writer.writeObjectValue("cloudCertificationAuthorityVersion", this.getCloudCertificationAuthorityVersion());
         writer.writeStringValue("crlDistributionPointUrl", this.getCrlDistributionPointUrl());
         writer.writeStringValue("deviceId", this.getDeviceId());
         writer.writeStringValue("deviceName", this.getDeviceName());
@@ -248,6 +268,20 @@ public class CloudCertificationAuthorityLeafCertificate extends Entity implement
      */
     public void setCertificationAuthorityIssuerUri(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("certificationAuthorityIssuerUri", value);
+    }
+    /**
+     * Sets the certificationAuthorityVersionNumber property value. The version number of the certification authority that issued this leaf certificate. Read-only.
+     * @param value Value to set for the certificationAuthorityVersionNumber property.
+     */
+    public void setCertificationAuthorityVersionNumber(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("certificationAuthorityVersionNumber", value);
+    }
+    /**
+     * Sets the cloudCertificationAuthorityVersion property value. The certification authority version that issued this leaf certificate. Read-only.
+     * @param value Value to set for the cloudCertificationAuthorityVersion property.
+     */
+    public void setCloudCertificationAuthorityVersion(@jakarta.annotation.Nullable final CloudCertificationAuthorityVersion value) {
+        this.backingStore.set("cloudCertificationAuthorityVersion", value);
     }
     /**
      * Sets the crlDistributionPointUrl property value. URL to find the relevant Certificate Revocation List for this certificate. Read-only.

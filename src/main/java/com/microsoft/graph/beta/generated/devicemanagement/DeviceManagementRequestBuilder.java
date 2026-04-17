@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.devicemanagement;
 
 import com.microsoft.graph.beta.devicemanagement.advancedthreatprotectiononboardingstatesummary.AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.androidappconfigurationschema.AndroidAppConfigurationSchemaRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androiddeviceownerenrollmentprofiles.AndroidDeviceOwnerEnrollmentProfilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidforworkappconfigurationschemas.AndroidForWorkAppConfigurationSchemasRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.androidforworkenrollmentprofiles.AndroidForWorkEnrollmentProfilesRequestBuilder;
@@ -219,6 +220,14 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder advancedThreatProtectionOnboardingStateSummary() {
         return new AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the androidAppConfigurationSchema property of the microsoft.graph.deviceManagement entity.
+     * @return a {@link AndroidAppConfigurationSchemaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AndroidAppConfigurationSchemaRequestBuilder androidAppConfigurationSchema() {
+        return new AndroidAppConfigurationSchemaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the androidDeviceOwnerEnrollmentProfiles property of the microsoft.graph.deviceManagement entity.

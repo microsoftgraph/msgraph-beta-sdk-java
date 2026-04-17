@@ -71,6 +71,7 @@ public class Sensor extends Entity implements Parsable {
         deserializerMap.put("domainName", (n) -> { this.setDomainName(n.getStringValue()); });
         deserializerMap.put("healthIssues", (n) -> { this.setHealthIssues(n.getCollectionOfObjectValues(HealthIssue::createFromDiscriminatorValue)); });
         deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(SensorHealthStatus::forValue)); });
+        deserializerMap.put("migrationState", (n) -> { this.setMigrationState(n.getEnumValue(MigrationState::forValue)); });
         deserializerMap.put("openHealthIssuesCount", (n) -> { this.setOpenHealthIssuesCount(n.getLongValue()); });
         deserializerMap.put("sensorType", (n) -> { this.setSensorType(n.getEnumValue(SensorType::forValue)); });
         deserializerMap.put("serviceStatus", (n) -> { this.setServiceStatus(n.getEnumValue(ServiceStatus::forValue)); });
@@ -93,6 +94,14 @@ public class Sensor extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public SensorHealthStatus getHealthStatus() {
         return this.backingStore.get("healthStatus");
+    }
+    /**
+     * Gets the migrationState property value. The migrationState property
+     * @return a {@link MigrationState}
+     */
+    @jakarta.annotation.Nullable
+    public MigrationState getMigrationState() {
+        return this.backingStore.get("migrationState");
     }
     /**
      * Gets the openHealthIssuesCount property value. This field displays the count of health issues related to this sensor.
@@ -147,6 +156,7 @@ public class Sensor extends Entity implements Parsable {
         writer.writeStringValue("domainName", this.getDomainName());
         writer.writeCollectionOfObjectValues("healthIssues", this.getHealthIssues());
         writer.writeEnumValue("healthStatus", this.getHealthStatus());
+        writer.writeEnumValue("migrationState", this.getMigrationState());
         writer.writeLongValue("openHealthIssuesCount", this.getOpenHealthIssuesCount());
         writer.writeEnumValue("sensorType", this.getSensorType());
         writer.writeEnumValue("serviceStatus", this.getServiceStatus());
@@ -194,6 +204,13 @@ public class Sensor extends Entity implements Parsable {
      */
     public void setHealthStatus(@jakarta.annotation.Nullable final SensorHealthStatus value) {
         this.backingStore.set("healthStatus", value);
+    }
+    /**
+     * Sets the migrationState property value. The migrationState property
+     * @param value Value to set for the migrationState property.
+     */
+    public void setMigrationState(@jakarta.annotation.Nullable final MigrationState value) {
+        this.backingStore.set("migrationState", value);
     }
     /**
      * Sets the openHealthIssuesCount property value. This field displays the count of health issues related to this sensor.

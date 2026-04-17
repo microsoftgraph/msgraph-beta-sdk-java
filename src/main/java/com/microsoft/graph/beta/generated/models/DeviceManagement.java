@@ -53,6 +53,14 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("advancedThreatProtectionOnboardingStateSummary");
     }
     /**
+     * Gets the androidAppConfigurationSchema property value. Android App Configurations Schema entity.
+     * @return a {@link AndroidAppConfigurationSchema}
+     */
+    @jakarta.annotation.Nullable
+    public AndroidAppConfigurationSchema getAndroidAppConfigurationSchema() {
+        return this.backingStore.get("androidAppConfigurationSchema");
+    }
+    /**
      * Gets the androidDeviceOwnerEnrollmentProfiles property value. Android device owner enrollment profile entities.
      * @return a {@link java.util.List<AndroidDeviceOwnerEnrollmentProfile>}
      */
@@ -558,6 +566,7 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("accountMoveCompletionDateTime", (n) -> { this.setAccountMoveCompletionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("adminConsent", (n) -> { this.setAdminConsent(n.getObjectValue(AdminConsent::createFromDiscriminatorValue)); });
         deserializerMap.put("advancedThreatProtectionOnboardingStateSummary", (n) -> { this.setAdvancedThreatProtectionOnboardingStateSummary(n.getObjectValue(AdvancedThreatProtectionOnboardingStateSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("androidAppConfigurationSchema", (n) -> { this.setAndroidAppConfigurationSchema(n.getObjectValue(AndroidAppConfigurationSchema::createFromDiscriminatorValue)); });
         deserializerMap.put("androidDeviceOwnerEnrollmentProfiles", (n) -> { this.setAndroidDeviceOwnerEnrollmentProfiles(n.getCollectionOfObjectValues(AndroidDeviceOwnerEnrollmentProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("androidForWorkAppConfigurationSchemas", (n) -> { this.setAndroidForWorkAppConfigurationSchemas(n.getCollectionOfObjectValues(AndroidForWorkAppConfigurationSchema::createFromDiscriminatorValue)); });
         deserializerMap.put("androidForWorkEnrollmentProfiles", (n) -> { this.setAndroidForWorkEnrollmentProfiles(n.getCollectionOfObjectValues(AndroidForWorkEnrollmentProfile::createFromDiscriminatorValue)); });
@@ -1775,6 +1784,7 @@ public class DeviceManagement extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("accountMoveCompletionDateTime", this.getAccountMoveCompletionDateTime());
         writer.writeObjectValue("adminConsent", this.getAdminConsent());
         writer.writeObjectValue("advancedThreatProtectionOnboardingStateSummary", this.getAdvancedThreatProtectionOnboardingStateSummary());
+        writer.writeObjectValue("androidAppConfigurationSchema", this.getAndroidAppConfigurationSchema());
         writer.writeCollectionOfObjectValues("androidDeviceOwnerEnrollmentProfiles", this.getAndroidDeviceOwnerEnrollmentProfiles());
         writer.writeCollectionOfObjectValues("androidForWorkAppConfigurationSchemas", this.getAndroidForWorkAppConfigurationSchemas());
         writer.writeCollectionOfObjectValues("androidForWorkEnrollmentProfiles", this.getAndroidForWorkEnrollmentProfiles());
@@ -1981,6 +1991,13 @@ public class DeviceManagement extends Entity implements Parsable {
      */
     public void setAdvancedThreatProtectionOnboardingStateSummary(@jakarta.annotation.Nullable final AdvancedThreatProtectionOnboardingStateSummary value) {
         this.backingStore.set("advancedThreatProtectionOnboardingStateSummary", value);
+    }
+    /**
+     * Sets the androidAppConfigurationSchema property value. Android App Configurations Schema entity.
+     * @param value Value to set for the androidAppConfigurationSchema property.
+     */
+    public void setAndroidAppConfigurationSchema(@jakarta.annotation.Nullable final AndroidAppConfigurationSchema value) {
+        this.backingStore.set("androidAppConfigurationSchema", value);
     }
     /**
      * Sets the androidDeviceOwnerEnrollmentProfiles property value. Android device owner enrollment profile entities.

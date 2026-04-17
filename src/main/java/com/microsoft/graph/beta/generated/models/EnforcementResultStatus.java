@@ -12,8 +12,7 @@ public enum EnforcementResultStatus implements ValuedEnum {
     EnforcementTimeout("enforcementTimeout"),
     OSOverride("oSOverride"),
     ProcessNonExistent("processNonExistent"),
-    Other("other"),
-    UnknownFutureValue("unknownFutureValue");
+    Other("other");
     public final String value;
     EnforcementResultStatus(final String value) {
         this.value = value;
@@ -32,7 +31,6 @@ public enum EnforcementResultStatus implements ValuedEnum {
             case "oSOverride": return OSOverride;
             case "processNonExistent": return ProcessNonExistent;
             case "other": return Other;
-            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

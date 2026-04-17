@@ -13,10 +13,12 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.galleryimages.G
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.geteffectivepermissions.GetEffectivePermissionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.managedlicenses.ManagedLicensesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.onpremisesconnections.OnPremisesConnectionsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.organizationaction.OrganizationActionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.organizationsettings.OrganizationSettingsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.ProvisioningPoliciesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.report.ReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.reports.ReportsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.retrieveorganizationactiondetailwithactiontype.RetrieveOrganizationActionDetailWithActionTypeRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.retrievescopedpermissions.RetrieveScopedPermissionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.retrievetenantencryptionsetting.RetrieveTenantEncryptionSettingRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.serviceplans.ServicePlansRequestBuilder;
@@ -146,6 +148,14 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public OnPremisesConnectionsRequestBuilder onPremisesConnections() {
         return new OnPremisesConnectionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the organizationAction method.
+     * @return a {@link OrganizationActionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public OrganizationActionRequestBuilder organizationAction() {
+        return new OrganizationActionRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the organizationSettings property of the microsoft.graph.virtualEndpoint entity.
@@ -307,6 +317,16 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEndpoint::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the retrieveOrganizationActionDetail method.
+     * @param actionType Usage: actionType=&apos;{actionType}&apos;
+     * @return a {@link RetrieveOrganizationActionDetailWithActionTypeRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RetrieveOrganizationActionDetailWithActionTypeRequestBuilder retrieveOrganizationActionDetailWithActionType(@jakarta.annotation.Nonnull final String actionType) {
+        Objects.requireNonNull(actionType);
+        return new RetrieveOrganizationActionDetailWithActionTypeRequestBuilder(pathParameters, requestAdapter, actionType);
     }
     /**
      * Delete navigation property virtualEndpoint for deviceManagement

@@ -50,6 +50,14 @@ public class ReportRoot extends Entity implements Parsable {
         return this.backingStore.get("authenticationMethods");
     }
     /**
+     * Gets the azureADPremiumLicenseInsight property value. The azureADPremiumLicenseInsight property
+     * @return a {@link AzureADPremiumLicenseInsight}
+     */
+    @jakarta.annotation.Nullable
+    public AzureADPremiumLicenseInsight getAzureADPremiumLicenseInsight() {
+        return this.backingStore.get("azureADPremiumLicenseInsight");
+    }
+    /**
      * Gets the credentialUserRegistrationDetails property value. Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @return a {@link java.util.List<CredentialUserRegistrationDetails>}
      */
@@ -107,6 +115,7 @@ public class ReportRoot extends Entity implements Parsable {
         deserializerMap.put("appCredentialSignInActivities", (n) -> { this.setAppCredentialSignInActivities(n.getCollectionOfObjectValues(AppCredentialSignInActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("applicationSignInDetailedSummary", (n) -> { this.setApplicationSignInDetailedSummary(n.getCollectionOfObjectValues(ApplicationSignInDetailedSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationMethods", (n) -> { this.setAuthenticationMethods(n.getObjectValue(AuthenticationMethodsRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("azureADPremiumLicenseInsight", (n) -> { this.setAzureADPremiumLicenseInsight(n.getObjectValue(AzureADPremiumLicenseInsight::createFromDiscriminatorValue)); });
         deserializerMap.put("credentialUserRegistrationDetails", (n) -> { this.setCredentialUserRegistrationDetails(n.getCollectionOfObjectValues(CredentialUserRegistrationDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsage", (n) -> { this.setDailyPrintUsage(n.getCollectionOfObjectValues(PrintUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageByPrinter", (n) -> { this.setDailyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
@@ -233,6 +242,7 @@ public class ReportRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("appCredentialSignInActivities", this.getAppCredentialSignInActivities());
         writer.writeCollectionOfObjectValues("applicationSignInDetailedSummary", this.getApplicationSignInDetailedSummary());
         writer.writeObjectValue("authenticationMethods", this.getAuthenticationMethods());
+        writer.writeObjectValue("azureADPremiumLicenseInsight", this.getAzureADPremiumLicenseInsight());
         writer.writeCollectionOfObjectValues("credentialUserRegistrationDetails", this.getCredentialUserRegistrationDetails());
         writer.writeCollectionOfObjectValues("dailyPrintUsage", this.getDailyPrintUsage());
         writer.writeCollectionOfObjectValues("dailyPrintUsageByPrinter", this.getDailyPrintUsageByPrinter());
@@ -272,6 +282,13 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public void setAuthenticationMethods(@jakarta.annotation.Nullable final AuthenticationMethodsRoot value) {
         this.backingStore.set("authenticationMethods", value);
+    }
+    /**
+     * Sets the azureADPremiumLicenseInsight property value. The azureADPremiumLicenseInsight property
+     * @param value Value to set for the azureADPremiumLicenseInsight property.
+     */
+    public void setAzureADPremiumLicenseInsight(@jakarta.annotation.Nullable final AzureADPremiumLicenseInsight value) {
+        this.backingStore.set("azureADPremiumLicenseInsight", value);
     }
     /**
      * Sets the credentialUserRegistrationDetails property value. Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.

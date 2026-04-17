@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.ReportRoot;
 import com.microsoft.graph.beta.reports.appcredentialsigninactivities.AppCredentialSignInActivitiesRequestBuilder;
 import com.microsoft.graph.beta.reports.applicationsignindetailedsummary.ApplicationSignInDetailedSummaryRequestBuilder;
 import com.microsoft.graph.beta.reports.authenticationmethods.AuthenticationMethodsRequestBuilder;
+import com.microsoft.graph.beta.reports.azureadpremiumlicenseinsight.AzureADPremiumLicenseInsightRequestBuilder;
 import com.microsoft.graph.beta.reports.credentialuserregistrationdetails.CredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.beta.reports.dailyprintusage.DailyPrintUsageRequestBuilder;
 import com.microsoft.graph.beta.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
@@ -195,6 +196,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AuthenticationMethodsRequestBuilder authenticationMethods() {
         return new AuthenticationMethodsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the azureADPremiumLicenseInsight property of the microsoft.graph.reportRoot entity.
+     * @return a {@link AzureADPremiumLicenseInsightRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AzureADPremiumLicenseInsightRequestBuilder azureADPremiumLicenseInsight() {
+        return new AzureADPremiumLicenseInsightRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the credentialUserRegistrationDetails property of the microsoft.graph.reportRoot entity.

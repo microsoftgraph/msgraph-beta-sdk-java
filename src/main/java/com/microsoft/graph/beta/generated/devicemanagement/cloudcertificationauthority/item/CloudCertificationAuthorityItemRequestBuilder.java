@@ -1,17 +1,23 @@
 package com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item;
 
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.activate.ActivateRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.activeversion.ActiveVersionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.changecloudcertificationauthoritystatus.ChangeCloudCertificationAuthorityStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.cloudcertificationauthorityleafcertificate.CloudCertificationAuthorityLeafCertificateRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.getallcloudcertificationauthority.GetAllCloudCertificationAuthorityRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.getallcloudcertificationauthorityleafcertificates.GetAllCloudCertificationAuthorityLeafCertificatesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.getcloudcertificationauthority.GetCloudCertificationAuthorityRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.getcloudcertificationauthorityversion.GetCloudCertificationAuthorityVersionRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.getcloudcertificationauthorityversions.GetCloudCertificationAuthorityVersionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.patchcloudcertificationauthority.PatchCloudCertificationAuthorityRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.postcloudcertificationauthority.PostCloudCertificationAuthorityRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.renew.RenewRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.revokecloudcertificationauthoritycertificate.RevokeCloudCertificationAuthorityCertificateRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.revokeleafcertificate.RevokeLeafCertificateRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.revokeleafcertificatebyserialnumber.RevokeLeafCertificateBySerialNumberRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.searchcloudcertificationauthorityleafcertificatebyserialnumber.SearchCloudCertificationAuthorityLeafCertificateBySerialNumberRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.uploadexternallysignedcertificationauthoritycertificate.UploadExternallySignedCertificationAuthorityCertificateRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.versions.VersionsRequestBuilder;
 import com.microsoft.graph.beta.models.CloudCertificationAuthority;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -32,6 +38,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CloudCertificationAuthorityItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the activate method.
+     * @return a {@link ActivateRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ActivateRequestBuilder activate() {
+        return new ActivateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the activeVersion property of the microsoft.graph.cloudCertificationAuthority entity.
+     * @return a {@link ActiveVersionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ActiveVersionRequestBuilder activeVersion() {
+        return new ActiveVersionRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the changeCloudCertificationAuthorityStatus method.
      * @return a {@link ChangeCloudCertificationAuthorityStatusRequestBuilder}
@@ -73,6 +95,22 @@ public class CloudCertificationAuthorityItemRequestBuilder extends BaseRequestBu
         return new GetCloudCertificationAuthorityRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getCloudCertificationAuthorityVersion method.
+     * @return a {@link GetCloudCertificationAuthorityVersionRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetCloudCertificationAuthorityVersionRequestBuilder getCloudCertificationAuthorityVersion() {
+        return new GetCloudCertificationAuthorityVersionRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getCloudCertificationAuthorityVersions method.
+     * @return a {@link GetCloudCertificationAuthorityVersionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetCloudCertificationAuthorityVersionsRequestBuilder getCloudCertificationAuthorityVersions() {
+        return new GetCloudCertificationAuthorityVersionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the patchCloudCertificationAuthority method.
      * @return a {@link PatchCloudCertificationAuthorityRequestBuilder}
      */
@@ -87,6 +125,14 @@ public class CloudCertificationAuthorityItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public PostCloudCertificationAuthorityRequestBuilder postCloudCertificationAuthority() {
         return new PostCloudCertificationAuthorityRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the renew method.
+     * @return a {@link RenewRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RenewRequestBuilder renew() {
+        return new RenewRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the revokeCloudCertificationAuthorityCertificate method.
@@ -127,6 +173,14 @@ public class CloudCertificationAuthorityItemRequestBuilder extends BaseRequestBu
     @jakarta.annotation.Nonnull
     public UploadExternallySignedCertificationAuthorityCertificateRequestBuilder uploadExternallySignedCertificationAuthorityCertificate() {
         return new UploadExternallySignedCertificationAuthorityCertificateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.cloudCertificationAuthority entity.
+     * @return a {@link VersionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public VersionsRequestBuilder versions() {
+        return new VersionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CloudCertificationAuthorityItemRequestBuilder} and sets the default values.

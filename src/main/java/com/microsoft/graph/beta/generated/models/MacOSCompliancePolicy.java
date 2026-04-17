@@ -37,6 +37,14 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         return this.backingStore.get("advancedThreatProtectionRequiredSecurityLevel");
     }
     /**
+     * Gets the deviceCompliancePolicyScript property value. Custom compliance configuration for the policy (script identifier and rules content). When set, custom compliance rules are evaluated and the device is marked noncompliant when any rule evaluates to noncompliant. When not set, no custom compliance rules are evaluated. Default is null, when set to default it is not evaluated.
+     * @return a {@link DeviceCompliancePolicyScript}
+     */
+    @jakarta.annotation.Nullable
+    public DeviceCompliancePolicyScript getDeviceCompliancePolicyScript() {
+        return this.backingStore.get("deviceCompliancePolicyScript");
+    }
+    /**
      * Gets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
      * @return a {@link Boolean}
      */
@@ -60,6 +68,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("advancedThreatProtectionRequiredSecurityLevel", (n) -> { this.setAdvancedThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel::forValue)); });
+        deserializerMap.put("deviceCompliancePolicyScript", (n) -> { this.setDeviceCompliancePolicyScript(n.getObjectValue(DeviceCompliancePolicyScript::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceThreatProtectionEnabled", (n) -> { this.setDeviceThreatProtectionEnabled(n.getBooleanValue()); });
         deserializerMap.put("deviceThreatProtectionRequiredSecurityLevel", (n) -> { this.setDeviceThreatProtectionRequiredSecurityLevel(n.getEnumValue(DeviceThreatProtectionLevel::forValue)); });
         deserializerMap.put("firewallBlockAllIncoming", (n) -> { this.setFirewallBlockAllIncoming(n.getBooleanValue()); });
@@ -234,6 +243,7 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("advancedThreatProtectionRequiredSecurityLevel", this.getAdvancedThreatProtectionRequiredSecurityLevel());
+        writer.writeObjectValue("deviceCompliancePolicyScript", this.getDeviceCompliancePolicyScript());
         writer.writeBooleanValue("deviceThreatProtectionEnabled", this.getDeviceThreatProtectionEnabled());
         writer.writeEnumValue("deviceThreatProtectionRequiredSecurityLevel", this.getDeviceThreatProtectionRequiredSecurityLevel());
         writer.writeBooleanValue("firewallBlockAllIncoming", this.getFirewallBlockAllIncoming());
@@ -261,6 +271,13 @@ public class MacOSCompliancePolicy extends DeviceCompliancePolicy implements Par
      */
     public void setAdvancedThreatProtectionRequiredSecurityLevel(@jakarta.annotation.Nullable final DeviceThreatProtectionLevel value) {
         this.backingStore.set("advancedThreatProtectionRequiredSecurityLevel", value);
+    }
+    /**
+     * Sets the deviceCompliancePolicyScript property value. Custom compliance configuration for the policy (script identifier and rules content). When set, custom compliance rules are evaluated and the device is marked noncompliant when any rule evaluates to noncompliant. When not set, no custom compliance rules are evaluated. Default is null, when set to default it is not evaluated.
+     * @param value Value to set for the deviceCompliancePolicyScript property.
+     */
+    public void setDeviceCompliancePolicyScript(@jakarta.annotation.Nullable final DeviceCompliancePolicyScript value) {
+        this.backingStore.set("deviceCompliancePolicyScript", value);
     }
     /**
      * Sets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.

@@ -4,7 +4,7 @@ import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
 /**
- * Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates or temporarily paused or permanently revoked.
+ * Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates, temporarily paused, pending signing, revoked, or expired.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum CloudCertificationAuthorityStatus implements ValuedEnum {
@@ -19,7 +19,9 @@ public enum CloudCertificationAuthorityStatus implements ValuedEnum {
     /** Indicates certification authority certificate signing request has been created and can be downloaded for signing and then be uploaded. */
     SigningPending("signingPending"),
     /** Evolvable enumeration sentinel value. Do not use. */
-    UnknownFutureValue("unknownFutureValue");
+    UnknownFutureValue("unknownFutureValue"),
+    /** Indicates certification authority has expired and cannot issue certificates until renewed and activated. */
+    Expired("expired");
     public final String value;
     CloudCertificationAuthorityStatus(final String value) {
         this.value = value;
@@ -36,6 +38,7 @@ public enum CloudCertificationAuthorityStatus implements ValuedEnum {
             case "revoked": return Revoked;
             case "signingPending": return SigningPending;
             case "unknownFutureValue": return UnknownFutureValue;
+            case "expired": return Expired;
             default: return null;
         }
     }

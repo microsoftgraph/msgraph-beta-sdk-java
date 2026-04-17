@@ -29,6 +29,14 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return new CloudCertificationAuthority();
     }
     /**
+     * Gets the activeVersion property value. The currently active certification authority version. This navigation property provides direct access to the active version&apos;s details including certificate information, URLs, and validity periods. The active version is automatically included in the default response when retrieving a certification authority entity without requiring $expand. Read-only.
+     * @return a {@link CloudCertificationAuthorityVersion}
+     */
+    @jakarta.annotation.Nullable
+    public CloudCertificationAuthorityVersion getActiveVersion() {
+        return this.backingStore.get("activeVersion");
+    }
+    /**
      * Gets the certificateDownloadUrl property value. The URL to download the certification authority certificate. Read-only.
      * @return a {@link String}
      */
@@ -77,7 +85,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("certificationAuthorityIssuerUri");
     }
     /**
-     * Gets the certificationAuthorityStatus property value. Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates or temporarily paused or permanently revoked.
+     * Gets the certificationAuthorityStatus property value. Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates, temporarily paused, pending signing, revoked, or expired.
      * @return a {@link CloudCertificationAuthorityStatus}
      */
     @jakarta.annotation.Nullable
@@ -171,6 +179,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("activeVersion", (n) -> { this.setActiveVersion(n.getObjectValue(CloudCertificationAuthorityVersion::createFromDiscriminatorValue)); });
         deserializerMap.put("certificateDownloadUrl", (n) -> { this.setCertificateDownloadUrl(n.getStringValue()); });
         deserializerMap.put("certificateKeySize", (n) -> { this.setCertificateKeySize(n.getEnumValue(CloudCertificationAuthorityCertificateKeySize::forValue)); });
         deserializerMap.put("certificateRevocationListUrl", (n) -> { this.setCertificateRevocationListUrl(n.getStringValue()); });
@@ -206,6 +215,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         deserializerMap.put("validityPeriodInYears", (n) -> { this.setValidityPeriodInYears(n.getIntegerValue()); });
         deserializerMap.put("validityStartDateTime", (n) -> { this.setValidityStartDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("versionNumber", (n) -> { this.setVersionNumber(n.getIntegerValue()); });
+        deserializerMap.put("versions", (n) -> { this.setVersions(n.getCollectionOfObjectValues(CloudCertificationAuthorityVersion::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -353,12 +363,21 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         return this.backingStore.get("versionNumber");
     }
     /**
+     * Gets the versions property value. The collection of all certification authority versions, including active, staged, retired, and expired versions. This navigation property provides access to the full version history of the certification authority. Use $expand=versions to include this collection in the response. Read-only.
+     * @return a {@link java.util.List<CloudCertificationAuthorityVersion>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudCertificationAuthorityVersion> getVersions() {
+        return this.backingStore.get("versions");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("activeVersion", this.getActiveVersion());
         writer.writeStringValue("certificateDownloadUrl", this.getCertificateDownloadUrl());
         writer.writeEnumValue("certificateKeySize", this.getCertificateKeySize());
         writer.writeStringValue("certificateRevocationListUrl", this.getCertificateRevocationListUrl());
@@ -394,6 +413,14 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         writer.writeIntegerValue("validityPeriodInYears", this.getValidityPeriodInYears());
         writer.writeOffsetDateTimeValue("validityStartDateTime", this.getValidityStartDateTime());
         writer.writeIntegerValue("versionNumber", this.getVersionNumber());
+        writer.writeCollectionOfObjectValues("versions", this.getVersions());
+    }
+    /**
+     * Sets the activeVersion property value. The currently active certification authority version. This navigation property provides direct access to the active version&apos;s details including certificate information, URLs, and validity periods. The active version is automatically included in the default response when retrieving a certification authority entity without requiring $expand. Read-only.
+     * @param value Value to set for the activeVersion property.
+     */
+    public void setActiveVersion(@jakarta.annotation.Nullable final CloudCertificationAuthorityVersion value) {
+        this.backingStore.set("activeVersion", value);
     }
     /**
      * Sets the certificateDownloadUrl property value. The URL to download the certification authority certificate. Read-only.
@@ -438,7 +465,7 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
         this.backingStore.set("certificationAuthorityIssuerUri", value);
     }
     /**
-     * Sets the certificationAuthorityStatus property value. Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates or temporarily paused or permanently revoked.
+     * Sets the certificationAuthorityStatus property value. Enum type of possible certification authority statuses. These statuses indicate whether a certification authority is currently able to issue certificates, temporarily paused, pending signing, revoked, or expired.
      * @param value Value to set for the certificationAuthorityStatus property.
      */
     public void setCertificationAuthorityStatus(@jakarta.annotation.Nullable final CloudCertificationAuthorityStatus value) {
@@ -639,5 +666,12 @@ public class CloudCertificationAuthority extends Entity implements Parsable {
      */
     public void setVersionNumber(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("versionNumber", value);
+    }
+    /**
+     * Sets the versions property value. The collection of all certification authority versions, including active, staged, retired, and expired versions. This navigation property provides access to the full version history of the certification authority. Use $expand=versions to include this collection in the response. Read-only.
+     * @param value Value to set for the versions property.
+     */
+    public void setVersions(@jakarta.annotation.Nullable final java.util.List<CloudCertificationAuthorityVersion> value) {
+        this.backingStore.set("versions", value);
     }
 }
