@@ -26,6 +26,22 @@ public class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase im
         return new OneDriveForBusinessProtectionPolicy();
     }
     /**
+     * Gets the driveExclusionUnits property value. The driveExclusionUnits property
+     * @return a {@link java.util.List<DriveExclusionUnit>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DriveExclusionUnit> getDriveExclusionUnits() {
+        return this.backingStore.get("driveExclusionUnits");
+    }
+    /**
+     * Gets the driveExclusionUnitsBulkAdditionJobs property value. The driveExclusionUnitsBulkAdditionJobs property
+     * @return a {@link java.util.List<DriveExclusionUnitsBulkAdditionJob>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DriveExclusionUnitsBulkAdditionJob> getDriveExclusionUnitsBulkAdditionJobs() {
+        return this.backingStore.get("driveExclusionUnitsBulkAdditionJobs");
+    }
+    /**
      * Gets the driveInclusionRules property value. Contains the details of the OneDrive for Work or School protection rule.
      * @return a {@link java.util.List<DriveProtectionRule>}
      */
@@ -56,6 +72,8 @@ public class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase im
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("driveExclusionUnits", (n) -> { this.setDriveExclusionUnits(n.getCollectionOfObjectValues(DriveExclusionUnit::createFromDiscriminatorValue)); });
+        deserializerMap.put("driveExclusionUnitsBulkAdditionJobs", (n) -> { this.setDriveExclusionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(DriveExclusionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
         deserializerMap.put("driveInclusionRules", (n) -> { this.setDriveInclusionRules(n.getCollectionOfObjectValues(DriveProtectionRule::createFromDiscriminatorValue)); });
         deserializerMap.put("driveProtectionUnits", (n) -> { this.setDriveProtectionUnits(n.getCollectionOfObjectValues(DriveProtectionUnit::createFromDiscriminatorValue)); });
         deserializerMap.put("driveProtectionUnitsBulkAdditionJobs", (n) -> { this.setDriveProtectionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(DriveProtectionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
@@ -68,9 +86,25 @@ public class OneDriveForBusinessProtectionPolicy extends ProtectionPolicyBase im
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("driveExclusionUnits", this.getDriveExclusionUnits());
+        writer.writeCollectionOfObjectValues("driveExclusionUnitsBulkAdditionJobs", this.getDriveExclusionUnitsBulkAdditionJobs());
         writer.writeCollectionOfObjectValues("driveInclusionRules", this.getDriveInclusionRules());
         writer.writeCollectionOfObjectValues("driveProtectionUnits", this.getDriveProtectionUnits());
         writer.writeCollectionOfObjectValues("driveProtectionUnitsBulkAdditionJobs", this.getDriveProtectionUnitsBulkAdditionJobs());
+    }
+    /**
+     * Sets the driveExclusionUnits property value. The driveExclusionUnits property
+     * @param value Value to set for the driveExclusionUnits property.
+     */
+    public void setDriveExclusionUnits(@jakarta.annotation.Nullable final java.util.List<DriveExclusionUnit> value) {
+        this.backingStore.set("driveExclusionUnits", value);
+    }
+    /**
+     * Sets the driveExclusionUnitsBulkAdditionJobs property value. The driveExclusionUnitsBulkAdditionJobs property
+     * @param value Value to set for the driveExclusionUnitsBulkAdditionJobs property.
+     */
+    public void setDriveExclusionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<DriveExclusionUnitsBulkAdditionJob> value) {
+        this.backingStore.set("driveExclusionUnitsBulkAdditionJobs", value);
     }
     /**
      * Sets the driveInclusionRules property value. Contains the details of the OneDrive for Work or School protection rule.

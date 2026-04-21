@@ -6,24 +6,27 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for Compliance DLP SharePoint Classification events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ComplianceDlpSharePointClassificationAuditRecord extends AuditData implements Parsable {
+public class ComplianceDLPSharePointClassificationAuditRecord extends AuditData implements Parsable {
     /**
-     * Instantiates a new {@link ComplianceDlpSharePointClassificationAuditRecord} and sets the default values.
+     * Instantiates a new {@link ComplianceDLPSharePointClassificationAuditRecord} and sets the default values.
      */
-    public ComplianceDlpSharePointClassificationAuditRecord() {
+    public ComplianceDLPSharePointClassificationAuditRecord() {
         super();
-        this.setOdataType("#microsoft.graph.security.complianceDlpSharePointClassificationAuditRecord");
+        this.setOdataType("#microsoft.graph.security.complianceDLPSharePointClassificationAuditRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link ComplianceDlpSharePointClassificationAuditRecord}
+     * @return a {@link ComplianceDLPSharePointClassificationAuditRecord}
      */
     @jakarta.annotation.Nonnull
-    public static ComplianceDlpSharePointClassificationAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static ComplianceDLPSharePointClassificationAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new ComplianceDlpSharePointClassificationAuditRecord();
+        return new ComplianceDLPSharePointClassificationAuditRecord();
     }
     /**
      * The deserialization information for the current model

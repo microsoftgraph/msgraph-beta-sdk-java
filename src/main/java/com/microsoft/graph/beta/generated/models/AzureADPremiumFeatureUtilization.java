@@ -75,7 +75,7 @@ public class AzureADPremiumFeatureUtilization implements AdditionalDataHolder, B
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the userCount property value. The userCount property
+     * Gets the userCount property value. The number of users who have used this premium feature.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class AzureADPremiumFeatureUtilization implements AdditionalDataHolder, B
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the userCount property value. The userCount property
+     * Sets the userCount property value. The number of users who have used this premium feature.
      * @param value Value to set for the userCount property.
      */
     public void setUserCount(@jakarta.annotation.Nullable final Long value) {

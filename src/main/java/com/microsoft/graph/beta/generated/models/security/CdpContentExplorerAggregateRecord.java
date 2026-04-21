@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for CDP Content Explorer Aggregate events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CdpContentExplorerAggregateRecord extends AuditData implements Parsable {
     /**

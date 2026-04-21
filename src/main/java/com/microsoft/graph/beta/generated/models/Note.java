@@ -42,6 +42,14 @@ public class Note extends OutlookItem implements Parsable {
         return this.backingStore.get("body");
     }
     /**
+     * Gets the bodyPreview property value. Auto-generated preview of the note body content (first ~255 characters). Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getBodyPreview() {
+        return this.backingStore.get("bodyPreview");
+    }
+    /**
      * Gets the extensions property value. The extensions property
      * @return a {@link java.util.List<Extension>}
      */
@@ -58,6 +66,7 @@ public class Note extends OutlookItem implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(Attachment::createFromDiscriminatorValue)); });
         deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("bodyPreview", (n) -> { this.setBodyPreview(n.getStringValue()); });
         deserializerMap.put("extensions", (n) -> { this.setExtensions(n.getCollectionOfObjectValues(Extension::createFromDiscriminatorValue)); });
         deserializerMap.put("hasAttachments", (n) -> { this.setHasAttachments(n.getBooleanValue()); });
         deserializerMap.put("isDeleted", (n) -> { this.setIsDeleted(n.getBooleanValue()); });
@@ -116,8 +125,6 @@ public class Note extends OutlookItem implements Parsable {
         writer.writeCollectionOfObjectValues("attachments", this.getAttachments());
         writer.writeObjectValue("body", this.getBody());
         writer.writeCollectionOfObjectValues("extensions", this.getExtensions());
-        writer.writeBooleanValue("hasAttachments", this.getHasAttachments());
-        writer.writeBooleanValue("isDeleted", this.getIsDeleted());
         writer.writeCollectionOfObjectValues("multiValueExtendedProperties", this.getMultiValueExtendedProperties());
         writer.writeCollectionOfObjectValues("singleValueExtendedProperties", this.getSingleValueExtendedProperties());
         writer.writeStringValue("subject", this.getSubject());
@@ -135,6 +142,13 @@ public class Note extends OutlookItem implements Parsable {
      */
     public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
         this.backingStore.set("body", value);
+    }
+    /**
+     * Sets the bodyPreview property value. Auto-generated preview of the note body content (first ~255 characters). Read-only.
+     * @param value Value to set for the bodyPreview property.
+     */
+    public void setBodyPreview(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("bodyPreview", value);
     }
     /**
      * Sets the extensions property value. The extensions property

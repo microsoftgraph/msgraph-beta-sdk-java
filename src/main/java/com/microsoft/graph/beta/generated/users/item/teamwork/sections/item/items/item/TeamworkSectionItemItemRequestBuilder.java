@@ -46,16 +46,18 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections/{teamworkSection%2Did}/items/{teamworkSectionItem%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property items for users
+     * Remove an item from a user-defined section in a user&apos;s teamwork. This API doesn&apos;t delete the underlying chat, channel, meeting, or community; it only removes the item from the user-defined section. The item is automatically moved back to its default system-defined section.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworksectionitem-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property items for users
+     * Remove an item from a user-defined section in a user&apos;s teamwork. This API doesn&apos;t delete the underlying chat, channel, meeting, or community; it only removes the item from the user-defined section. The item is automatically moved back to its default system-defined section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/teamworksectionitem-delete?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -64,7 +66,7 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get items from users
+     * The items (chats, channels, meetings, or communities) organized within the section.
      * @return a {@link TeamworkSectionItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +75,7 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get items from users
+     * The items (chats, channels, meetings, or communities) organized within the section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkSectionItem}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -111,7 +113,7 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkSectionItem::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property items for users
+     * Remove an item from a user-defined section in a user&apos;s teamwork. This API doesn&apos;t delete the underlying chat, channel, meeting, or community; it only removes the item from the user-defined section. The item is automatically moved back to its default system-defined section.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +121,7 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property items for users
+     * Remove an item from a user-defined section in a user&apos;s teamwork. This API doesn&apos;t delete the underlying chat, channel, meeting, or community; it only removes the item from the user-defined section. The item is automatically moved back to its default system-defined section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -131,7 +133,7 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get items from users
+     * The items (chats, channels, meetings, or communities) organized within the section.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +141,7 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get items from users
+     * The items (chats, channels, meetings, or communities) organized within the section.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +193,7 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get items from users
+     * The items (chats, channels, meetings, or communities) organized within the section.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

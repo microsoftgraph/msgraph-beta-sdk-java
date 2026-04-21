@@ -2,6 +2,8 @@ package com.microsoft.graph.beta.solutions.backuprestore.onedriveforbusinessprot
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.OneDriveForBusinessProtectionPolicy;
+import com.microsoft.graph.beta.solutions.backuprestore.onedriveforbusinessprotectionpolicies.item.driveexclusionunits.DriveExclusionUnitsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.onedriveforbusinessprotectionpolicies.item.driveexclusionunitsbulkadditionjobs.DriveExclusionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.onedriveforbusinessprotectionpolicies.item.driveinclusionrules.DriveInclusionRulesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.onedriveforbusinessprotectionpolicies.item.driveprotectionunits.DriveProtectionUnitsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.onedriveforbusinessprotectionpolicies.item.driveprotectionunitsbulkadditionjobs.DriveProtectionUnitsBulkAdditionJobsRequestBuilder;
@@ -23,6 +25,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the driveExclusionUnits property of the microsoft.graph.oneDriveForBusinessProtectionPolicy entity.
+     * @return a {@link DriveExclusionUnitsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DriveExclusionUnitsRequestBuilder driveExclusionUnits() {
+        return new DriveExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the driveExclusionUnitsBulkAdditionJobs property of the microsoft.graph.oneDriveForBusinessProtectionPolicy entity.
+     * @return a {@link DriveExclusionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DriveExclusionUnitsBulkAdditionJobsRequestBuilder driveExclusionUnitsBulkAdditionJobs() {
+        return new DriveExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the driveInclusionRules property of the microsoft.graph.oneDriveForBusinessProtectionPolicy entity.
      * @return a {@link DriveInclusionRulesRequestBuilder}

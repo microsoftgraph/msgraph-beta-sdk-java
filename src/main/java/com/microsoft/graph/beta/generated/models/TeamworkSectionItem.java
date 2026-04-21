@@ -26,7 +26,7 @@ public class TeamworkSectionItem extends Entity implements Parsable {
         return new TeamworkSectionItem();
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. Date and time when the item was added to the section. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class TeamworkSectionItem extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the itemType property value. The itemType property
+     * Gets the itemType property value. The type of the item. The possible values are: chat, channel, meeting, community, unknownFutureValue. Read-only.
      * @return a {@link SectionItemType}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class TeamworkSectionItem extends Entity implements Parsable {
         return this.backingStore.get("itemType");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Date and time when the item was last modified. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -73,21 +73,21 @@ public class TeamworkSectionItem extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. Date and time when the item was added to the section. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the itemType property value. The itemType property
+     * Sets the itemType property value. The type of the item. The possible values are: chat, channel, meeting, community, unknownFutureValue. Read-only.
      * @param value Value to set for the itemType property.
      */
     public void setItemType(@jakarta.annotation.Nullable final SectionItemType value) {
         this.backingStore.set("itemType", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Date and time when the item was last modified. Read-only. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

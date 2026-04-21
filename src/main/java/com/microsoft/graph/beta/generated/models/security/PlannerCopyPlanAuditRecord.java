@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for Planner Copy Plan events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class PlannerCopyPlanAuditRecord extends AuditData implements Parsable {
     /**

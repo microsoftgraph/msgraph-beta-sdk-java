@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for MIP Label Analytics events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MipLabelAnalyticsAuditRecord extends AuditData implements Parsable {
     /**

@@ -2,6 +2,8 @@ package com.microsoft.graph.beta.solutions.backuprestore.exchangeprotectionpolic
 
 import com.microsoft.graph.beta.models.ExchangeProtectionPolicy;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.solutions.backuprestore.exchangeprotectionpolicies.item.mailboxexclusionunits.MailboxExclusionUnitsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.exchangeprotectionpolicies.item.mailboxexclusionunitsbulkadditionjobs.MailboxExclusionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.exchangeprotectionpolicies.item.mailboxinclusionrules.MailboxInclusionRulesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.exchangeprotectionpolicies.item.mailboxprotectionunits.MailboxProtectionUnitsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.exchangeprotectionpolicies.item.mailboxprotectionunitsbulkadditionjobs.MailboxProtectionUnitsBulkAdditionJobsRequestBuilder;
@@ -23,6 +25,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the mailboxExclusionUnits property of the microsoft.graph.exchangeProtectionPolicy entity.
+     * @return a {@link MailboxExclusionUnitsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MailboxExclusionUnitsRequestBuilder mailboxExclusionUnits() {
+        return new MailboxExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mailboxExclusionUnitsBulkAdditionJobs property of the microsoft.graph.exchangeProtectionPolicy entity.
+     * @return a {@link MailboxExclusionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MailboxExclusionUnitsBulkAdditionJobsRequestBuilder mailboxExclusionUnitsBulkAdditionJobs() {
+        return new MailboxExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the mailboxInclusionRules property of the microsoft.graph.exchangeProtectionPolicy entity.
      * @return a {@link MailboxInclusionRulesRequestBuilder}

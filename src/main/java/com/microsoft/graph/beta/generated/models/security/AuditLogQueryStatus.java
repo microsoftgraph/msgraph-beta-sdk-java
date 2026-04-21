@@ -3,6 +3,9 @@ package com.microsoft.graph.beta.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+/**
+ * Status of an audit log query.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AuditLogQueryStatus implements ValuedEnum {
     NotStarted("notStarted"),
