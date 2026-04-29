@@ -56,7 +56,7 @@ public class SectionDisplayIcon implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore;
     }
     /**
-     * Gets the contentUrl property value. The contentUrl property
+     * Gets the contentUrl property value. The URL to a custom icon image. Applicable when iconType is custom.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class SectionDisplayIcon implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("contentUrl");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The human-readable name of the icon.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class SectionDisplayIcon implements AdditionalDataHolder, BackedModel, Pa
         return deserializerMap;
     }
     /**
-     * Gets the iconType property value. The iconType property
+     * Gets the iconType property value. The type of icon. Use an emoji character such as  for an emoji icon, or custom for a custom image icon.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class SectionDisplayIcon implements AdditionalDataHolder, BackedModel, Pa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the skinTone property value. The skinTone property
+     * Gets the skinTone property value. The skin tone variant applied to the icon. Read-only. The possible values are: light, mediumLight, medium, mediumDark, dark, unknownFutureValue.
      * @return a {@link SectionIconSkinTone}
      */
     @jakarta.annotation.Nullable
@@ -138,21 +138,21 @@ public class SectionDisplayIcon implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore = value;
     }
     /**
-     * Sets the contentUrl property value. The contentUrl property
+     * Sets the contentUrl property value. The URL to a custom icon image. Applicable when iconType is custom.
      * @param value Value to set for the contentUrl property.
      */
     public void setContentUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("contentUrl", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The human-readable name of the icon.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the iconType property value. The iconType property
+     * Sets the iconType property value. The type of icon. Use an emoji character such as  for an emoji icon, or custom for a custom image icon.
      * @param value Value to set for the iconType property.
      */
     public void setIconType(@jakarta.annotation.Nullable final String value) {
@@ -166,7 +166,7 @@ public class SectionDisplayIcon implements AdditionalDataHolder, BackedModel, Pa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the skinTone property value. The skinTone property
+     * Sets the skinTone property value. The skin tone variant applied to the icon. Read-only. The possible values are: light, mediumLight, medium, mediumDark, dark, unknownFutureValue.
      * @param value Value to set for the skinTone property.
      */
     public void setSkinTone(@jakarta.annotation.Nullable final SectionIconSkinTone value) {

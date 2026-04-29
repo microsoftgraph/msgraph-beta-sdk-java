@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for AIR Admin Action Investigation events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AirAdminActionInvestigationData extends AuditData implements Parsable {
     /**

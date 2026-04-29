@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for Microsoft Teams Retention Label Action events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MicrosoftTeamsRetentionLabelActionAuditRecord extends AuditData implements Parsable {
     /**

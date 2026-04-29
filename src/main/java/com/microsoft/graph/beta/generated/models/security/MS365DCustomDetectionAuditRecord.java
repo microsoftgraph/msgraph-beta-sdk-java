@@ -6,24 +6,27 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for MS365D Custom Detection events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class MS365DCustomDetectionAuditRecord extends AuditData implements Parsable {
+public class Ms365dCustomDetectionAuditRecord extends AuditData implements Parsable {
     /**
-     * Instantiates a new {@link MS365DCustomDetectionAuditRecord} and sets the default values.
+     * Instantiates a new {@link Ms365dCustomDetectionAuditRecord} and sets the default values.
      */
-    public MS365DCustomDetectionAuditRecord() {
+    public Ms365dCustomDetectionAuditRecord() {
         super();
-        this.setOdataType("#microsoft.graph.security.mS365DCustomDetectionAuditRecord");
+        this.setOdataType("#microsoft.graph.security.ms365dCustomDetectionAuditRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link MS365DCustomDetectionAuditRecord}
+     * @return a {@link Ms365dCustomDetectionAuditRecord}
      */
     @jakarta.annotation.Nonnull
-    public static MS365DCustomDetectionAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static Ms365dCustomDetectionAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new MS365DCustomDetectionAuditRecord();
+        return new Ms365dCustomDetectionAuditRecord();
     }
     /**
      * The deserialization information for the current model

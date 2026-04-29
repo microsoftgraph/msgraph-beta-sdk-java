@@ -6,24 +6,27 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for Power BI events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class PowerBiAuditRecord extends AuditData implements Parsable {
+public class PowerBIAuditRecord extends AuditData implements Parsable {
     /**
-     * Instantiates a new {@link PowerBiAuditRecord} and sets the default values.
+     * Instantiates a new {@link PowerBIAuditRecord} and sets the default values.
      */
-    public PowerBiAuditRecord() {
+    public PowerBIAuditRecord() {
         super();
-        this.setOdataType("#microsoft.graph.security.powerBiAuditRecord");
+        this.setOdataType("#microsoft.graph.security.powerBIAuditRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link PowerBiAuditRecord}
+     * @return a {@link PowerBIAuditRecord}
      */
     @jakarta.annotation.Nonnull
-    public static PowerBiAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static PowerBIAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new PowerBiAuditRecord();
+        return new PowerBIAuditRecord();
     }
     /**
      * The deserialization information for the current model

@@ -6,24 +6,27 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for On Premises File Share Scanner DLP events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class OnPremisesFileShareScannerDlpAuditRecord extends AuditData implements Parsable {
+public class OnPremisesFileShareScannerDLPAuditRecord extends AuditData implements Parsable {
     /**
-     * Instantiates a new {@link OnPremisesFileShareScannerDlpAuditRecord} and sets the default values.
+     * Instantiates a new {@link OnPremisesFileShareScannerDLPAuditRecord} and sets the default values.
      */
-    public OnPremisesFileShareScannerDlpAuditRecord() {
+    public OnPremisesFileShareScannerDLPAuditRecord() {
         super();
-        this.setOdataType("#microsoft.graph.security.onPremisesFileShareScannerDlpAuditRecord");
+        this.setOdataType("#microsoft.graph.security.onPremisesFileShareScannerDLPAuditRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link OnPremisesFileShareScannerDlpAuditRecord}
+     * @return a {@link OnPremisesFileShareScannerDLPAuditRecord}
      */
     @jakarta.annotation.Nonnull
-    public static OnPremisesFileShareScannerDlpAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static OnPremisesFileShareScannerDLPAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new OnPremisesFileShareScannerDlpAuditRecord();
+        return new OnPremisesFileShareScannerDLPAuditRecord();
     }
     /**
      * The deserialization information for the current model

@@ -65,7 +65,7 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("archivedDateTime");
     }
     /**
-     * Gets the archiveStatus property value. Represents the current archive status of the site collection. Returned only on $select.
+     * Gets the archiveStatus property value. Represents the current archive status of the site collection. Requires $select to retrieve.
      * @return a {@link SiteArchiveStatus}
      */
     @jakarta.annotation.Nullable
@@ -135,7 +135,7 @@ public class SiteArchivalDetails implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("archivedDateTime", value);
     }
     /**
-     * Sets the archiveStatus property value. Represents the current archive status of the site collection. Returned only on $select.
+     * Sets the archiveStatus property value. Represents the current archive status of the site collection. Requires $select to retrieve.
      * @param value Value to set for the archiveStatus property.
      */
     public void setArchiveStatus(@jakarta.annotation.Nullable final SiteArchiveStatus value) {

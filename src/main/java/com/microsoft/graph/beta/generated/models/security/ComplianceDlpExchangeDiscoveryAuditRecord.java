@@ -6,24 +6,27 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for Compliance DLP Exchange Discovery events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ComplianceDlpExchangeDiscoveryAuditRecord extends AuditData implements Parsable {
+public class ComplianceDLPExchangeDiscoveryAuditRecord extends AuditData implements Parsable {
     /**
-     * Instantiates a new {@link ComplianceDlpExchangeDiscoveryAuditRecord} and sets the default values.
+     * Instantiates a new {@link ComplianceDLPExchangeDiscoveryAuditRecord} and sets the default values.
      */
-    public ComplianceDlpExchangeDiscoveryAuditRecord() {
+    public ComplianceDLPExchangeDiscoveryAuditRecord() {
         super();
-        this.setOdataType("#microsoft.graph.security.complianceDlpExchangeDiscoveryAuditRecord");
+        this.setOdataType("#microsoft.graph.security.complianceDLPExchangeDiscoveryAuditRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link ComplianceDlpExchangeDiscoveryAuditRecord}
+     * @return a {@link ComplianceDLPExchangeDiscoveryAuditRecord}
      */
     @jakarta.annotation.Nonnull
-    public static ComplianceDlpExchangeDiscoveryAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static ComplianceDLPExchangeDiscoveryAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new ComplianceDlpExchangeDiscoveryAuditRecord();
+        return new ComplianceDLPExchangeDiscoveryAuditRecord();
     }
     /**
      * The deserialization information for the current model

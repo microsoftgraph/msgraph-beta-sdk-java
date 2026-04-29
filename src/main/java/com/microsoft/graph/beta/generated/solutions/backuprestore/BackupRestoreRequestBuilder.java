@@ -3,10 +3,9 @@ package com.microsoft.graph.beta.solutions.backuprestore;
 import com.microsoft.graph.beta.models.BackupRestoreRoot;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.solutions.backuprestore.activitylogs.ActivityLogsRequestBuilder;
-import com.microsoft.graph.beta.solutions.backuprestore.alldrivesbackup.AllDrivesBackupRequestBuilder;
-import com.microsoft.graph.beta.solutions.backuprestore.allmailboxesbackup.AllMailboxesBackupRequestBuilder;
-import com.microsoft.graph.beta.solutions.backuprestore.allsitesbackup.AllSitesBackupRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.browsesessions.BrowseSessionsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.driveexclusionunits.DriveExclusionUnitsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.driveexclusionunitsbulkadditionjobs.DriveExclusionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.driveinclusionrules.DriveInclusionRulesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.driveprotectionunits.DriveProtectionUnitsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.driveprotectionunitsbulkadditionjobs.DriveProtectionUnitsBulkAdditionJobsRequestBuilder;
@@ -14,6 +13,9 @@ import com.microsoft.graph.beta.solutions.backuprestore.emailnotificationssettin
 import com.microsoft.graph.beta.solutions.backuprestore.enable.EnableRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.exchangeprotectionpolicies.ExchangeProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.exchangerestoresessions.ExchangeRestoreSessionsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.exclusionunits.ExclusionUnitsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.mailboxexclusionunits.MailboxExclusionUnitsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.mailboxexclusionunitsbulkadditionjobs.MailboxExclusionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.mailboxinclusionrules.MailboxInclusionRulesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.mailboxprotectionunits.MailboxProtectionUnitsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.mailboxprotectionunitsbulkadditionjobs.MailboxProtectionUnitsBulkAdditionJobsRequestBuilder;
@@ -29,6 +31,8 @@ import com.microsoft.graph.beta.solutions.backuprestore.serviceapps.ServiceAppsR
 import com.microsoft.graph.beta.solutions.backuprestore.sharepointbrowsesessions.SharePointBrowseSessionsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.sharepointprotectionpolicies.SharePointProtectionPoliciesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.sharepointrestoresessions.SharePointRestoreSessionsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.siteexclusionunits.SiteExclusionUnitsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.siteexclusionunitsbulkadditionjobs.SiteExclusionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.siteinclusionrules.SiteInclusionRulesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.siteprotectionunits.SiteProtectionUnitsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.siteprotectionunitsbulkadditionjobs.SiteProtectionUnitsBulkAdditionJobsRequestBuilder;
@@ -59,36 +63,28 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
         return new ActivityLogsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the allDrivesBackup property of the microsoft.graph.backupRestoreRoot entity.
-     * @return a {@link AllDrivesBackupRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public AllDrivesBackupRequestBuilder allDrivesBackup() {
-        return new AllDrivesBackupRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the allMailboxesBackup property of the microsoft.graph.backupRestoreRoot entity.
-     * @return a {@link AllMailboxesBackupRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public AllMailboxesBackupRequestBuilder allMailboxesBackup() {
-        return new AllMailboxesBackupRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to manage the allSitesBackup property of the microsoft.graph.backupRestoreRoot entity.
-     * @return a {@link AllSitesBackupRequestBuilder}
-     */
-    @jakarta.annotation.Nonnull
-    public AllSitesBackupRequestBuilder allSitesBackup() {
-        return new AllSitesBackupRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
      * Provides operations to manage the browseSessions property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link BrowseSessionsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public BrowseSessionsRequestBuilder browseSessions() {
         return new BrowseSessionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the driveExclusionUnits property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link DriveExclusionUnitsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DriveExclusionUnitsRequestBuilder driveExclusionUnits() {
+        return new DriveExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the driveExclusionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link DriveExclusionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DriveExclusionUnitsBulkAdditionJobsRequestBuilder driveExclusionUnitsBulkAdditionJobs() {
+        return new DriveExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the driveInclusionRules property of the microsoft.graph.backupRestoreRoot entity.
@@ -145,6 +141,30 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ExchangeRestoreSessionsRequestBuilder exchangeRestoreSessions() {
         return new ExchangeRestoreSessionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the exclusionUnits property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link ExclusionUnitsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ExclusionUnitsRequestBuilder exclusionUnits() {
+        return new ExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mailboxExclusionUnits property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link MailboxExclusionUnitsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MailboxExclusionUnitsRequestBuilder mailboxExclusionUnits() {
+        return new MailboxExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the mailboxExclusionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link MailboxExclusionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MailboxExclusionUnitsBulkAdditionJobsRequestBuilder mailboxExclusionUnitsBulkAdditionJobs() {
+        return new MailboxExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the mailboxInclusionRules property of the microsoft.graph.backupRestoreRoot entity.
@@ -265,6 +285,22 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public SharePointRestoreSessionsRequestBuilder sharePointRestoreSessions() {
         return new SharePointRestoreSessionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the siteExclusionUnits property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link SiteExclusionUnitsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SiteExclusionUnitsRequestBuilder siteExclusionUnits() {
+        return new SiteExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the siteExclusionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
+     * @return a {@link SiteExclusionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SiteExclusionUnitsBulkAdditionJobsRequestBuilder siteExclusionUnitsBulkAdditionJobs() {
+        return new SiteExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the siteInclusionRules property of the microsoft.graph.backupRestoreRoot entity.

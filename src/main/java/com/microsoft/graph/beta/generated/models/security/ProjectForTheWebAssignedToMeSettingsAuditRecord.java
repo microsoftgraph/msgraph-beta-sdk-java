@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for Project for the Web Assigned To Me Settings events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProjectForTheWebAssignedToMeSettingsAuditRecord extends AuditData implements Parsable {
     /**

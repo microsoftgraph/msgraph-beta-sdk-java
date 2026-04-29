@@ -35,7 +35,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         return new EducationalActivityDetail();
     }
     /**
-     * Gets the abbreviation property value. Shortened name of the degree or program (example: PhD, MBA)
+     * Gets the abbreviation property value. Shortened name of the degree or program, for example, PhD and MBA.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         return deserializerMap;
     }
     /**
-     * Gets the fieldsOfStudy property value. Majors and minors associated with the program. (if applicable)
+     * Gets the fieldsOfStudy property value. Majors and minors associated with the program, if applicable.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -123,7 +123,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("fieldsOfStudy");
     }
     /**
-     * Gets the grade property value. The final grade, class, GPA, or score.
+     * Gets the grade property value. The final grade, class, grade point average (GPA), or score.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -131,7 +131,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         return this.backingStore.get("grade");
     }
     /**
-     * Gets the notes property value. More notes the user provided.
+     * Gets the notes property value. More notes provided by the user.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -173,7 +173,7 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the abbreviation property value. Shortened name of the degree or program (example: PhD, MBA)
+     * Sets the abbreviation property value. Shortened name of the degree or program, for example, PhD and MBA.
      * @param value Value to set for the abbreviation property.
      */
     public void setAbbreviation(@jakarta.annotation.Nullable final String value) {
@@ -223,21 +223,21 @@ public class EducationalActivityDetail implements AdditionalDataHolder, BackedMo
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the fieldsOfStudy property value. Majors and minors associated with the program. (if applicable)
+     * Sets the fieldsOfStudy property value. Majors and minors associated with the program, if applicable.
      * @param value Value to set for the fieldsOfStudy property.
      */
     public void setFieldsOfStudy(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("fieldsOfStudy", value);
     }
     /**
-     * Sets the grade property value. The final grade, class, GPA, or score.
+     * Sets the grade property value. The final grade, class, grade point average (GPA), or score.
      * @param value Value to set for the grade property.
      */
     public void setGrade(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("grade", value);
     }
     /**
-     * Sets the notes property value. More notes the user provided.
+     * Sets the notes property value. More notes provided by the user.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final String value) {

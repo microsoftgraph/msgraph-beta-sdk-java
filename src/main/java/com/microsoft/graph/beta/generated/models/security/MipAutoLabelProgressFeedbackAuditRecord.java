@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for MIP Auto Label Progress Feedback events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MipAutoLabelProgressFeedbackAuditRecord extends AuditData implements Parsable {
     /**

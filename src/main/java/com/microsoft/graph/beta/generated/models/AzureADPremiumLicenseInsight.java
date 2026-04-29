@@ -25,7 +25,7 @@ public class AzureADPremiumLicenseInsight extends Entity implements Parsable {
         return new AzureADPremiumLicenseInsight();
     }
     /**
-     * Gets the entitledP1LicenseCount property value. The entitledP1LicenseCount property
+     * Gets the entitledP1LicenseCount property value. The number of Microsoft Entra ID P1 licenses entitled to the tenant.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -33,7 +33,7 @@ public class AzureADPremiumLicenseInsight extends Entity implements Parsable {
         return this.backingStore.get("entitledP1LicenseCount");
     }
     /**
-     * Gets the entitledP2LicenseCount property value. The entitledP2LicenseCount property
+     * Gets the entitledP2LicenseCount property value. The number of Microsoft Entra ID P2 licenses entitled to the tenant.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class AzureADPremiumLicenseInsight extends Entity implements Parsable {
         return this.backingStore.get("entitledP2LicenseCount");
     }
     /**
-     * Gets the entitledTotalLicenseCount property value. The entitledTotalLicenseCount property
+     * Gets the entitledTotalLicenseCount property value. The total number of Microsoft Entra ID premium licenses (P1 + P2) entitled to the tenant.
      * @return a {@link Long}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class AzureADPremiumLicenseInsight extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the internetAccessFeatureUtilizations property value. The internetAccessFeatureUtilizations property
+     * Gets the internetAccessFeatureUtilizations property value. The utilization data for Microsoft Entra Internet Access features.
      * @return a {@link InternetAccessFeatureUtilizations}
      */
     @jakarta.annotation.Nullable
@@ -89,7 +89,7 @@ public class AzureADPremiumLicenseInsight extends Entity implements Parsable {
         return this.backingStore.get("p2FeatureUtilizations");
     }
     /**
-     * Gets the privateAccessFeatureUtilizations property value. The privateAccessFeatureUtilizations property
+     * Gets the privateAccessFeatureUtilizations property value. The utilization data for Microsoft Entra Private Access features.
      * @return a {@link PrivateAccessFeatureUtilizations}
      */
     @jakarta.annotation.Nullable
@@ -112,28 +112,28 @@ public class AzureADPremiumLicenseInsight extends Entity implements Parsable {
         writer.writeObjectValue("privateAccessFeatureUtilizations", this.getPrivateAccessFeatureUtilizations());
     }
     /**
-     * Sets the entitledP1LicenseCount property value. The entitledP1LicenseCount property
+     * Sets the entitledP1LicenseCount property value. The number of Microsoft Entra ID P1 licenses entitled to the tenant.
      * @param value Value to set for the entitledP1LicenseCount property.
      */
     public void setEntitledP1LicenseCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("entitledP1LicenseCount", value);
     }
     /**
-     * Sets the entitledP2LicenseCount property value. The entitledP2LicenseCount property
+     * Sets the entitledP2LicenseCount property value. The number of Microsoft Entra ID P2 licenses entitled to the tenant.
      * @param value Value to set for the entitledP2LicenseCount property.
      */
     public void setEntitledP2LicenseCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("entitledP2LicenseCount", value);
     }
     /**
-     * Sets the entitledTotalLicenseCount property value. The entitledTotalLicenseCount property
+     * Sets the entitledTotalLicenseCount property value. The total number of Microsoft Entra ID premium licenses (P1 + P2) entitled to the tenant.
      * @param value Value to set for the entitledTotalLicenseCount property.
      */
     public void setEntitledTotalLicenseCount(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("entitledTotalLicenseCount", value);
     }
     /**
-     * Sets the internetAccessFeatureUtilizations property value. The internetAccessFeatureUtilizations property
+     * Sets the internetAccessFeatureUtilizations property value. The utilization data for Microsoft Entra Internet Access features.
      * @param value Value to set for the internetAccessFeatureUtilizations property.
      */
     public void setInternetAccessFeatureUtilizations(@jakarta.annotation.Nullable final InternetAccessFeatureUtilizations value) {
@@ -154,7 +154,7 @@ public class AzureADPremiumLicenseInsight extends Entity implements Parsable {
         this.backingStore.set("p2FeatureUtilizations", value);
     }
     /**
-     * Sets the privateAccessFeatureUtilizations property value. The privateAccessFeatureUtilizations property
+     * Sets the privateAccessFeatureUtilizations property value. The utilization data for Microsoft Entra Private Access features.
      * @param value Value to set for the privateAccessFeatureUtilizations property.
      */
     public void setPrivateAccessFeatureUtilizations(@jakarta.annotation.Nullable final PrivateAccessFeatureUtilizations value) {

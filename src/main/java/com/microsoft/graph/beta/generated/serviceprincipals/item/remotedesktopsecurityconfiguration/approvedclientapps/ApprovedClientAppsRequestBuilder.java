@@ -60,19 +60,21 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/remoteDesktopSecurityConfiguration/approvedClientApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get approvedClientApps from servicePrincipals
+     * Get a list of the approvedClientApp objects and their properties on the remoteDesktopSecurityConfiguration resource on a service principal.
      * @return a {@link ApprovedClientAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-list-approvedclientapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovedClientAppCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get approvedClientApps from servicePrincipals
+     * Get a list of the approvedClientApp objects and their properties on the remoteDesktopSecurityConfiguration resource on a service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovedClientAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-list-approvedclientapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovedClientAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApprovedClientAppCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to approvedClientApps for servicePrincipals
+     * Create a new approvedClientApp object for the remoteDesktopSecurityConfiguration object on a service principal. You can configure a maximum of 20 approved client apps.
      * @param body The request body
      * @return a {@link ApprovedClientApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-post-approvedclientapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovedClientApp post(@jakarta.annotation.Nonnull final ApprovedClientApp body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to approvedClientApps for servicePrincipals
+     * Create a new approvedClientApp object for the remoteDesktopSecurityConfiguration object on a service principal. You can configure a maximum of 20 approved client apps.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovedClientApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-post-approvedclientapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ApprovedClientApp post(@jakarta.annotation.Nonnull final ApprovedClientApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApprovedClientApp::createFromDiscriminatorValue);
     }
     /**
-     * Get approvedClientApps from servicePrincipals
+     * Get a list of the approvedClientApp objects and their properties on the remoteDesktopSecurityConfiguration resource on a service principal.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get approvedClientApps from servicePrincipals
+     * Get a list of the approvedClientApp objects and their properties on the remoteDesktopSecurityConfiguration resource on a service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to approvedClientApps for servicePrincipals
+     * Create a new approvedClientApp object for the remoteDesktopSecurityConfiguration object on a service principal. You can configure a maximum of 20 approved client apps.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to approvedClientApps for servicePrincipals
+     * Create a new approvedClientApp object for the remoteDesktopSecurityConfiguration object on a service principal. You can configure a maximum of 20 approved client apps.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
         return new ApprovedClientAppsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get approvedClientApps from servicePrincipals
+     * Get a list of the approvedClientApp objects and their properties on the remoteDesktopSecurityConfiguration resource on a service principal.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

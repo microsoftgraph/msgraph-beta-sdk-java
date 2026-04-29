@@ -60,19 +60,21 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * User&apos;s teamwork sections for organizing chats and channels. The collection response may include @microsoft.graph.sectionsOrder and @microsoft.graph.sectionsVersion instance annotations for ordering and optimistic concurrency control.
+     * Get the list of sections in a user&apos;s teamwork.
      * @return a {@link TeamworkSectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-sections?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkSectionCollectionResponse get() {
         return get(null);
     }
     /**
-     * User&apos;s teamwork sections for organizing chats and channels. The collection response may include @microsoft.graph.sectionsOrder and @microsoft.graph.sectionsVersion instance annotations for ordering and optimistic concurrency control.
+     * Get the list of sections in a user&apos;s teamwork.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkSectionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-list-sections?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkSectionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkSectionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to sections for users
+     * Create a new section in a user&apos;s teamwork.
      * @param body The request body
      * @return a {@link TeamworkSection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-post-sections?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkSection post(@jakarta.annotation.Nonnull final TeamworkSection body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to sections for users
+     * Create a new section in a user&apos;s teamwork.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkSection}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/userteamwork-post-sections?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public TeamworkSection post(@jakarta.annotation.Nonnull final TeamworkSection body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, TeamworkSection::createFromDiscriminatorValue);
     }
     /**
-     * User&apos;s teamwork sections for organizing chats and channels. The collection response may include @microsoft.graph.sectionsOrder and @microsoft.graph.sectionsVersion instance annotations for ordering and optimistic concurrency control.
+     * Get the list of sections in a user&apos;s teamwork.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * User&apos;s teamwork sections for organizing chats and channels. The collection response may include @microsoft.graph.sectionsOrder and @microsoft.graph.sectionsVersion instance annotations for ordering and optimistic concurrency control.
+     * Get the list of sections in a user&apos;s teamwork.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to sections for users
+     * Create a new section in a user&apos;s teamwork.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to sections for users
+     * Create a new section in a user&apos;s teamwork.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
         return new SectionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * User&apos;s teamwork sections for organizing chats and channels. The collection response may include @microsoft.graph.sectionsOrder and @microsoft.graph.sectionsVersion instance annotations for ordering and optimistic concurrency control.
+     * Get the list of sections in a user&apos;s teamwork.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

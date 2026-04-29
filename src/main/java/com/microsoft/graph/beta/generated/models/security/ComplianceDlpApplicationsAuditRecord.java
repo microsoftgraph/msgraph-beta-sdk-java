@@ -6,24 +6,27 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for Compliance DLP Applications events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class ComplianceDlpApplicationsAuditRecord extends AuditData implements Parsable {
+public class ComplianceDLPApplicationsAuditRecord extends AuditData implements Parsable {
     /**
-     * Instantiates a new {@link ComplianceDlpApplicationsAuditRecord} and sets the default values.
+     * Instantiates a new {@link ComplianceDLPApplicationsAuditRecord} and sets the default values.
      */
-    public ComplianceDlpApplicationsAuditRecord() {
+    public ComplianceDLPApplicationsAuditRecord() {
         super();
-        this.setOdataType("#microsoft.graph.security.complianceDlpApplicationsAuditRecord");
+        this.setOdataType("#microsoft.graph.security.complianceDLPApplicationsAuditRecord");
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
      * @param parseNode The parse node to use to read the discriminator value and create the object
-     * @return a {@link ComplianceDlpApplicationsAuditRecord}
+     * @return a {@link ComplianceDLPApplicationsAuditRecord}
      */
     @jakarta.annotation.Nonnull
-    public static ComplianceDlpApplicationsAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+    public static ComplianceDLPApplicationsAuditRecord createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
-        return new ComplianceDlpApplicationsAuditRecord();
+        return new ComplianceDLPApplicationsAuditRecord();
     }
     /**
      * The deserialization information for the current model

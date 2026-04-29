@@ -174,7 +174,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("report");
     }
     /**
-     * Gets the reports property value. Cloud PC-related reports.
+     * Gets the reports property value. Cloud PC-related reports. Read-only.
      * @return a {@link CloudPcReports}
      */
     @jakarta.annotation.Nullable
@@ -347,7 +347,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.backingStore.set("report", value);
     }
     /**
-     * Sets the reports property value. Cloud PC-related reports.
+     * Sets the reports property value. Cloud PC-related reports. Read-only.
      * @param value Value to set for the reports property.
      */
     public void setReports(@jakarta.annotation.Nullable final CloudPcReports value) {
