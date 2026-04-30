@@ -65,7 +65,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         return this.backingStore.get("regionGroup");
     }
     /**
-     * Gets the regionRestrictionDetail property value. When the region isn&apos;t available, all region restrictions are set to true. These restrictions apply to three properties: cPURestricted, gPURestricted, and nestedVirtualizationRestricted. cPURestricted indicates whether the region is available for CPU, gPURestricted indicates whether the region is available for GPU, and nestedVirtualizationRestricted indicates whether the region is available for nested virtualization. Read-only.
+     * Gets the regionRestrictionDetail property value. When the region isn&apos;t available, all region restrictions are set to true. These restrictions apply to four properties: cPURestricted, gPURestricted, nestedVirtualizationRestricted and availabilityZoneRestricted. cPURestricted indicates whether the region is available for CPU, gPURestricted indicates whether the region is available for GPU, nestedVirtualizationRestricted indicates whether the region is available for nested virtualization, and availabilityZoneRestricted indicates whether the region is available for availability zone support. Read-only.
      * @return a {@link CloudPcSupportedRegionRestrictionDetail}
      */
     @jakarta.annotation.Nullable
@@ -124,7 +124,7 @@ public class CloudPcSupportedRegion extends Entity implements Parsable {
         this.backingStore.set("regionGroup", value);
     }
     /**
-     * Sets the regionRestrictionDetail property value. When the region isn&apos;t available, all region restrictions are set to true. These restrictions apply to three properties: cPURestricted, gPURestricted, and nestedVirtualizationRestricted. cPURestricted indicates whether the region is available for CPU, gPURestricted indicates whether the region is available for GPU, and nestedVirtualizationRestricted indicates whether the region is available for nested virtualization. Read-only.
+     * Sets the regionRestrictionDetail property value. When the region isn&apos;t available, all region restrictions are set to true. These restrictions apply to four properties: cPURestricted, gPURestricted, nestedVirtualizationRestricted and availabilityZoneRestricted. cPURestricted indicates whether the region is available for CPU, gPURestricted indicates whether the region is available for GPU, nestedVirtualizationRestricted indicates whether the region is available for nested virtualization, and availabilityZoneRestricted indicates whether the region is available for availability zone support. Read-only.
      * @param value Value to set for the regionRestrictionDetail property.
      */
     public void setRegionRestrictionDetail(@jakarta.annotation.Nullable final CloudPcSupportedRegionRestrictionDetail value) {

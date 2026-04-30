@@ -2,6 +2,8 @@ package com.microsoft.graph.beta.solutions.backuprestore.sharepointprotectionpol
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SharePointProtectionPolicy;
+import com.microsoft.graph.beta.solutions.backuprestore.sharepointprotectionpolicies.item.siteexclusionunits.SiteExclusionUnitsRequestBuilder;
+import com.microsoft.graph.beta.solutions.backuprestore.sharepointprotectionpolicies.item.siteexclusionunitsbulkadditionjobs.SiteExclusionUnitsBulkAdditionJobsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.sharepointprotectionpolicies.item.siteinclusionrules.SiteInclusionRulesRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.sharepointprotectionpolicies.item.siteprotectionunits.SiteProtectionUnitsRequestBuilder;
 import com.microsoft.graph.beta.solutions.backuprestore.sharepointprotectionpolicies.item.siteprotectionunitsbulkadditionjobs.SiteProtectionUnitsBulkAdditionJobsRequestBuilder;
@@ -23,6 +25,22 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the siteExclusionUnits property of the microsoft.graph.sharePointProtectionPolicy entity.
+     * @return a {@link SiteExclusionUnitsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SiteExclusionUnitsRequestBuilder siteExclusionUnits() {
+        return new SiteExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the siteExclusionUnitsBulkAdditionJobs property of the microsoft.graph.sharePointProtectionPolicy entity.
+     * @return a {@link SiteExclusionUnitsBulkAdditionJobsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SiteExclusionUnitsBulkAdditionJobsRequestBuilder siteExclusionUnitsBulkAdditionJobs() {
+        return new SiteExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to manage the siteInclusionRules property of the microsoft.graph.sharePointProtectionPolicy entity.
      * @return a {@link SiteInclusionRulesRequestBuilder}

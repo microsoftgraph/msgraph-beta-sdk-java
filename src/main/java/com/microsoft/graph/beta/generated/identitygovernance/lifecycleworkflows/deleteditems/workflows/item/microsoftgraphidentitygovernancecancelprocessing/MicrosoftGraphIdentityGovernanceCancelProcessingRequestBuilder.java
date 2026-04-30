@@ -35,23 +35,25 @@ public class MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder exte
         super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow%2Did}/microsoft.graph.identityGovernance.cancelProcessing", rawUrl);
     }
     /**
-     * Invoke action cancelProcessing
+     * Cancel one or more workflow runs that are currently in queued or inProgress status. Currently limited to canceling one run per request.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2025-11/PrivatePreview:cancelWorkflows on 2025-10-28 and will be removed 2026-10-28
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-cancelprocessing?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final CancelProcessingPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action cancelProcessing
+     * Cancel one or more workflow runs that are currently in queued or inProgress status. Currently limited to canceling one run per request.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2025-11/PrivatePreview:cancelWorkflows on 2025-10-28 and will be removed 2026-10-28
+     * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-cancelprocessing?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void post(@jakarta.annotation.Nonnull final CancelProcessingPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -62,7 +64,7 @@ public class MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder exte
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action cancelProcessing
+     * Cancel one or more workflow runs that are currently in queued or inProgress status. Currently limited to canceling one run per request.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -74,7 +76,7 @@ public class MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder exte
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action cancelProcessing
+     * Cancel one or more workflow runs that are currently in queued or inProgress status. Currently limited to canceling one run per request.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

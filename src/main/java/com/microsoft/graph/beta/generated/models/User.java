@@ -36,7 +36,7 @@ public class User extends DirectoryObject implements Parsable {
         return new User();
     }
     /**
-     * Gets the aboutMe property value. A freeform text entry field for users to describe themselves. Returned only on $select.
+     * Gets the aboutMe property value. A freeform text entry field for users to describe themselves. Requires $select to retrieve.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("authorizationInfo");
     }
     /**
-     * Gets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
+     * Gets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Requires $select to retrieve.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -234,6 +234,14 @@ public class User extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public UserCloudLicensing getCloudLicensing() {
         return this.backingStore.get("cloudLicensing");
+    }
+    /**
+     * Gets the cloudPcPools property value. The cloudPcPools property
+     * @return a {@link java.util.List<CloudPcPool>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudPcPool> getCloudPcPools() {
+        return this.backingStore.get("cloudPcPools");
     }
     /**
      * Gets the cloudPCs property value. The user&apos;s Cloud PCs. Read-only. Nullable.
@@ -324,7 +332,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("creationType");
     }
     /**
-     * Gets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). The filter value is case-sensitive. To read this property, the calling app must be assigned the CustomSecAttributeAssignment.Read.All permission. To write this property, the calling app must be assigned the CustomSecAttributeAssignment.ReadWrite.All permissions. To read or write this property in delegated scenarios, the admin must be assigned the Attribute Assignment Administrator role. Supports $filter (eq, ne, not , ge, le, in).
+     * Gets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Requires $select to retrieve. Supports $filter (eq, ne, not, startsWith). The filter value is case-sensitive. To read this property, the calling app must be assigned the CustomSecAttributeAssignment.Read.All permission. To write this property, the calling app must be assigned the CustomSecAttributeAssignment.ReadWrite.All permissions. To read or write this property in delegated scenarios, the admin must be assigned the Attribute Assignment Administrator role. Supports $filter (eq, ne, not , ge, le, in).
      * @return a {@link CustomSecurityAttributeValue}
      */
     @jakarta.annotation.Nullable
@@ -539,6 +547,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("city", (n) -> { this.setCity(n.getStringValue()); });
         deserializerMap.put("cloudClipboard", (n) -> { this.setCloudClipboard(n.getObjectValue(CloudClipboardRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudLicensing", (n) -> { this.setCloudLicensing(n.getObjectValue(UserCloudLicensing::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudPcPools", (n) -> { this.setCloudPcPools(n.getCollectionOfObjectValues(CloudPcPool::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudRealtimeCommunicationInfo", (n) -> { this.setCloudRealtimeCommunicationInfo(n.getObjectValue(CloudRealtimeCommunicationInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("communications", (n) -> { this.setCommunications(n.getObjectValue(UserCloudCommunication::createFromDiscriminatorValue)); });
@@ -696,7 +705,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("givenName");
     }
     /**
-     * Gets the hireDate property value. The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+     * Gets the hireDate property value. The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Requires $select to retrieve.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -768,7 +777,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("insights");
     }
     /**
-     * Gets the interests property value. A list for users to describe their interests. Returned only on $select.
+     * Gets the interests property value. A list for users to describe their interests. Requires $select to retrieve.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -832,7 +841,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("joinedTeams");
     }
     /**
-     * Gets the lastPasswordChangeDateTime property value. When this Microsoft Entra user last changed their password or when their password was created, whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
+     * Gets the lastPasswordChangeDateTime property value. When this Microsoft Entra user last changed their password or when their password was created, whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Requires $select to retrieve.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -840,7 +849,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("lastPasswordChangeDateTime");
     }
     /**
-     * Gets the legalAgeGroupClassification property value. Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, Undefined, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult, and Adult. For more information, see legal age group property definitions. Returned only on $select.
+     * Gets the legalAgeGroupClassification property value. Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, Undefined, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult, and Adult. For more information, see legal age group property definitions. Requires $select to retrieve.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -848,7 +857,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("legalAgeGroupClassification");
     }
     /**
-     * Gets the licenseAssignmentStates property value. State of license assignments for this user. It also indicates licenses that are directly assigned and the ones the user inherited through group memberships. Read-only. Returned only on $select.
+     * Gets the licenseAssignmentStates property value. State of license assignments for this user. It also indicates licenses that are directly assigned and the ones the user inherited through group memberships. Read-only. Requires $select to retrieve.
      * @return a {@link java.util.List<LicenseAssignmentState>}
      */
     @jakarta.annotation.Nullable
@@ -872,7 +881,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("mail");
     }
     /**
-     * Gets the mailboxSettings property value. Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select.
+     * Gets the mailboxSettings property value. Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Requires $select to retrieve.
      * @return a {@link MailboxSettings}
      */
     @jakarta.annotation.Nullable
@@ -968,7 +977,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("mobilePhone");
     }
     /**
-     * Gets the mySite property value. The URL for the user&apos;s site. Returned only on $select.
+     * Gets the mySite property value. The URL for the user&apos;s site. Requires $select to retrieve.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1160,7 +1169,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("passwordProfile");
     }
     /**
-     * Gets the pastProjects property value. A list for users to enumerate their past projects. Returned only on $select.
+     * Gets the pastProjects property value. A list for users to enumerate their past projects. Requires $select to retrieve.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -1240,7 +1249,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("preferredLanguage");
     }
     /**
-     * Gets the preferredName property value. The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
+     * Gets the preferredName property value. The preferred name for the user. Not Supported. This attribute returns an empty string.Requires $select to retrieve.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1304,7 +1313,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("registeredDevices");
     }
     /**
-     * Gets the responsibilities property value. A list for the user to enumerate their responsibilities. Returned only on $select.
+     * Gets the responsibilities property value. A list for the user to enumerate their responsibilities. Requires $select to retrieve.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -1312,7 +1321,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("responsibilities");
     }
     /**
-     * Gets the schools property value. A list for the user to enumerate the schools they have attended. Returned only on $select.
+     * Gets the schools property value. A list for the user to enumerate the schools they have attended. Requires $select to retrieve.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -1368,7 +1377,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("showInAddressList");
     }
     /**
-     * Gets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require a Microsoft Entra ID P1 or P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020.
+     * Gets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Requires $select to retrieve. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require a Microsoft Entra ID P1 or P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020.
      * @return a {@link SignInActivity}
      */
     @jakarta.annotation.Nullable
@@ -1384,7 +1393,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("signInSessionsValidFromDateTime");
     }
     /**
-     * Gets the skills property value. A list for the user to enumerate their skills. Returned only on $select.
+     * Gets the skills property value. A list for the user to enumerate their skills. Requires $select to retrieve.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -1543,6 +1552,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeStringValue("city", this.getCity());
         writer.writeObjectValue("cloudClipboard", this.getCloudClipboard());
         writer.writeObjectValue("cloudLicensing", this.getCloudLicensing());
+        writer.writeCollectionOfObjectValues("cloudPcPools", this.getCloudPcPools());
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
         writer.writeObjectValue("cloudRealtimeCommunicationInfo", this.getCloudRealtimeCommunicationInfo());
         writer.writeObjectValue("communications", this.getCommunications());
@@ -1683,7 +1693,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("windowsInformationProtectionDeviceRegistrations", this.getWindowsInformationProtectionDeviceRegistrations());
     }
     /**
-     * Sets the aboutMe property value. A freeform text entry field for users to describe themselves. Returned only on $select.
+     * Sets the aboutMe property value. A freeform text entry field for users to describe themselves. Requires $select to retrieve.
      * @param value Value to set for the aboutMe property.
      */
     public void setAboutMe(@jakarta.annotation.Nullable final String value) {
@@ -1788,7 +1798,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("authorizationInfo", value);
     }
     /**
-     * Sets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Returned only on $select.
+     * Sets the birthday property value. The birthday of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Requires $select to retrieve.
      * @param value Value to set for the birthday property.
      */
     public void setBirthday(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -1856,6 +1866,13 @@ public class User extends DirectoryObject implements Parsable {
      */
     public void setCloudLicensing(@jakarta.annotation.Nullable final UserCloudLicensing value) {
         this.backingStore.set("cloudLicensing", value);
+    }
+    /**
+     * Sets the cloudPcPools property value. The cloudPcPools property
+     * @param value Value to set for the cloudPcPools property.
+     */
+    public void setCloudPcPools(@jakarta.annotation.Nullable final java.util.List<CloudPcPool> value) {
+        this.backingStore.set("cloudPcPools", value);
     }
     /**
      * Sets the cloudPCs property value. The user&apos;s Cloud PCs. Read-only. Nullable.
@@ -1935,7 +1952,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("creationType", value);
     }
     /**
-     * Sets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). The filter value is case-sensitive. To read this property, the calling app must be assigned the CustomSecAttributeAssignment.Read.All permission. To write this property, the calling app must be assigned the CustomSecAttributeAssignment.ReadWrite.All permissions. To read or write this property in delegated scenarios, the admin must be assigned the Attribute Assignment Administrator role. Supports $filter (eq, ne, not , ge, le, in).
+     * Sets the customSecurityAttributes property value. An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Requires $select to retrieve. Supports $filter (eq, ne, not, startsWith). The filter value is case-sensitive. To read this property, the calling app must be assigned the CustomSecAttributeAssignment.Read.All permission. To write this property, the calling app must be assigned the CustomSecAttributeAssignment.ReadWrite.All permissions. To read or write this property in delegated scenarios, the admin must be assigned the Attribute Assignment Administrator role. Supports $filter (eq, ne, not , ge, le, in).
      * @param value Value to set for the customSecurityAttributes property.
      */
     public void setCustomSecurityAttributes(@jakarta.annotation.Nullable final CustomSecurityAttributeValue value) {
@@ -2110,7 +2127,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("givenName", value);
     }
     /**
-     * Sets the hireDate property value. The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Returned only on $select.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
+     * Sets the hireDate property value. The hire date of the user. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Requires $select to retrieve.  Note: This property is specific to SharePoint Online. We recommend using the native employeeHireDate property to set and update hire date values using Microsoft Graph APIs.
      * @param value Value to set for the hireDate property.
      */
     public void setHireDate(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -2173,7 +2190,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("insights", value);
     }
     /**
-     * Sets the interests property value. A list for users to describe their interests. Returned only on $select.
+     * Sets the interests property value. A list for users to describe their interests. Requires $select to retrieve.
      * @param value Value to set for the interests property.
      */
     public void setInterests(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -2229,21 +2246,21 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("joinedTeams", value);
     }
     /**
-     * Sets the lastPasswordChangeDateTime property value. When this Microsoft Entra user last changed their password or when their password was created, whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Returned only on $select.
+     * Sets the lastPasswordChangeDateTime property value. When this Microsoft Entra user last changed their password or when their password was created, whichever date the latest action was performed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Requires $select to retrieve.
      * @param value Value to set for the lastPasswordChangeDateTime property.
      */
     public void setLastPasswordChangeDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastPasswordChangeDateTime", value);
     }
     /**
-     * Sets the legalAgeGroupClassification property value. Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, Undefined, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult, and Adult. For more information, see legal age group property definitions. Returned only on $select.
+     * Sets the legalAgeGroupClassification property value. Used by enterprise applications to determine the legal age group of the user. This property is read-only and calculated based on ageGroup and consentProvidedForMinor properties. Allowed values: null, Undefined, MinorWithOutParentalConsent, MinorWithParentalConsent, MinorNoParentalConsentRequired, NotAdult, and Adult. For more information, see legal age group property definitions. Requires $select to retrieve.
      * @param value Value to set for the legalAgeGroupClassification property.
      */
     public void setLegalAgeGroupClassification(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("legalAgeGroupClassification", value);
     }
     /**
-     * Sets the licenseAssignmentStates property value. State of license assignments for this user. It also indicates licenses that are directly assigned and the ones the user inherited through group memberships. Read-only. Returned only on $select.
+     * Sets the licenseAssignmentStates property value. State of license assignments for this user. It also indicates licenses that are directly assigned and the ones the user inherited through group memberships. Read-only. Requires $select to retrieve.
      * @param value Value to set for the licenseAssignmentStates property.
      */
     public void setLicenseAssignmentStates(@jakarta.annotation.Nullable final java.util.List<LicenseAssignmentState> value) {
@@ -2264,7 +2281,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("mail", value);
     }
     /**
-     * Sets the mailboxSettings property value. Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Returned only on $select.
+     * Sets the mailboxSettings property value. Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale, and time zone. For more information, see User preferences for languages and regional formats. Requires $select to retrieve.
      * @param value Value to set for the mailboxSettings property.
      */
     public void setMailboxSettings(@jakarta.annotation.Nullable final MailboxSettings value) {
@@ -2348,7 +2365,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("mobilePhone", value);
     }
     /**
-     * Sets the mySite property value. The URL for the user&apos;s site. Returned only on $select.
+     * Sets the mySite property value. The URL for the user&apos;s site. Requires $select to retrieve.
      * @param value Value to set for the mySite property.
      */
     public void setMySite(@jakarta.annotation.Nullable final String value) {
@@ -2516,7 +2533,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("passwordProfile", value);
     }
     /**
-     * Sets the pastProjects property value. A list for users to enumerate their past projects. Returned only on $select.
+     * Sets the pastProjects property value. A list for users to enumerate their past projects. Requires $select to retrieve.
      * @param value Value to set for the pastProjects property.
      */
     public void setPastProjects(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -2586,7 +2603,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("preferredLanguage", value);
     }
     /**
-     * Sets the preferredName property value. The preferred name for the user. Not Supported. This attribute returns an empty string.Returned only on $select.
+     * Sets the preferredName property value. The preferred name for the user. Not Supported. This attribute returns an empty string.Requires $select to retrieve.
      * @param value Value to set for the preferredName property.
      */
     public void setPreferredName(@jakarta.annotation.Nullable final String value) {
@@ -2642,14 +2659,14 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("registeredDevices", value);
     }
     /**
-     * Sets the responsibilities property value. A list for the user to enumerate their responsibilities. Returned only on $select.
+     * Sets the responsibilities property value. A list for the user to enumerate their responsibilities. Requires $select to retrieve.
      * @param value Value to set for the responsibilities property.
      */
     public void setResponsibilities(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("responsibilities", value);
     }
     /**
-     * Sets the schools property value. A list for the user to enumerate the schools they have attended. Returned only on $select.
+     * Sets the schools property value. A list for the user to enumerate the schools they have attended. Requires $select to retrieve.
      * @param value Value to set for the schools property.
      */
     public void setSchools(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -2698,7 +2715,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("showInAddressList", value);
     }
     /**
-     * Sets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require a Microsoft Entra ID P1 or P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020.
+     * Sets the signInActivity property value. Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Requires $select to retrieve. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note:  Details for this property require a Microsoft Entra ID P1 or P2 license and the AuditLog.Read.All permission.This property is not returned for a user who has never signed in or last signed in before April 2020.
      * @param value Value to set for the signInActivity property.
      */
     public void setSignInActivity(@jakarta.annotation.Nullable final SignInActivity value) {
@@ -2712,7 +2729,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("signInSessionsValidFromDateTime", value);
     }
     /**
-     * Sets the skills property value. A list for the user to enumerate their skills. Returned only on $select.
+     * Sets the skills property value. A list for the user to enumerate their skills. Requires $select to retrieve.
      * @param value Value to set for the skills property.
      */
     public void setSkills(@jakarta.annotation.Nullable final java.util.List<String> value) {

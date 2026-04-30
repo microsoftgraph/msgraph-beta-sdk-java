@@ -7,6 +7,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Root entity for the audit log API.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class AuditCoreRoot extends Entity implements Parsable {
     /**

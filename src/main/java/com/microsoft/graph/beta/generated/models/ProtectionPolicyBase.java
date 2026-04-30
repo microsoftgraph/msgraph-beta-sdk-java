@@ -128,7 +128,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return this.backingStore.get("protectionMode");
     }
     /**
-     * Gets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Returned only on $select.
+     * Gets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Requires $select to retrieve.
      * @return a {@link ProtectionPolicyArtifactCount}
      */
     @jakarta.annotation.Nullable
@@ -235,7 +235,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("protectionMode", value);
     }
     /**
-     * Sets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Returned only on $select.
+     * Sets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Requires $select to retrieve.
      * @param value Value to set for the protectionPolicyArtifactCount property.
      */
     public void setProtectionPolicyArtifactCount(@jakarta.annotation.Nullable final ProtectionPolicyArtifactCount value) {

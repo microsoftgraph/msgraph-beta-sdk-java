@@ -71,7 +71,7 @@ public class UserTeamwork extends Entity implements Parsable {
         return this.backingStore.get("region");
     }
     /**
-     * Gets the sections property value. User&apos;s teamwork sections for organizing chats and channels. The collection response may include @microsoft.graph.sectionsOrder and @microsoft.graph.sectionsVersion instance annotations for ordering and optimistic concurrency control.
+     * Gets the sections property value. The sections in the user&apos;s chat list.
      * @return a {@link java.util.List<TeamworkSection>}
      */
     @jakarta.annotation.Nullable
@@ -120,7 +120,7 @@ public class UserTeamwork extends Entity implements Parsable {
         this.backingStore.set("region", value);
     }
     /**
-     * Sets the sections property value. User&apos;s teamwork sections for organizing chats and channels. The collection response may include @microsoft.graph.sectionsOrder and @microsoft.graph.sectionsVersion instance annotations for ordering and optimistic concurrency control.
+     * Sets the sections property value. The sections in the user&apos;s chat list.
      * @param value Value to set for the sections property.
      */
     public void setSections(@jakarta.annotation.Nullable final java.util.List<TeamworkSection> value) {

@@ -22,6 +22,7 @@ import com.microsoft.graph.beta.users.item.chats.ChatsRequestBuilder;
 import com.microsoft.graph.beta.users.item.checkmembergroups.CheckMemberGroupsRequestBuilder;
 import com.microsoft.graph.beta.users.item.checkmemberobjects.CheckMemberObjectsRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudclipboard.CloudClipboardRequestBuilder;
+import com.microsoft.graph.beta.users.item.cloudpcpools.CloudPcPoolsRequestBuilder;
 import com.microsoft.graph.beta.users.item.cloudpcs.CloudPCsRequestBuilder;
 import com.microsoft.graph.beta.users.item.communications.CommunicationsRequestBuilder;
 import com.microsoft.graph.beta.users.item.contactfolders.ContactFoldersRequestBuilder;
@@ -292,6 +293,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CloudClipboardRequestBuilder cloudClipboard() {
         return new CloudClipboardRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the cloudPcPools property of the microsoft.graph.user entity.
+     * @return a {@link CloudPcPoolsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CloudPcPoolsRequestBuilder cloudPcPools() {
+        return new CloudPcPoolsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the cloudPCs property of the microsoft.graph.user entity.

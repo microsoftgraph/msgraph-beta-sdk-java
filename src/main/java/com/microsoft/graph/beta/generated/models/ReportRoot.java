@@ -50,7 +50,7 @@ public class ReportRoot extends Entity implements Parsable {
         return this.backingStore.get("authenticationMethods");
     }
     /**
-     * Gets the azureADPremiumLicenseInsight property value. The azureADPremiumLicenseInsight property
+     * Gets the azureADPremiumLicenseInsight property value. Provides insight into the Microsoft Entra ID P1 and P2 premium license utilization for the tenant.
      * @return a {@link AzureADPremiumLicenseInsight}
      */
     @jakarta.annotation.Nullable
@@ -284,7 +284,7 @@ public class ReportRoot extends Entity implements Parsable {
         this.backingStore.set("authenticationMethods", value);
     }
     /**
-     * Sets the azureADPremiumLicenseInsight property value. The azureADPremiumLicenseInsight property
+     * Sets the azureADPremiumLicenseInsight property value. Provides insight into the Microsoft Entra ID P1 and P2 premium license utilization for the tenant.
      * @param value Value to set for the azureADPremiumLicenseInsight property.
      */
     public void setAzureADPremiumLicenseInsight(@jakarta.annotation.Nullable final AzureADPremiumLicenseInsight value) {

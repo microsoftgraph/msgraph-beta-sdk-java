@@ -68,7 +68,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("appRoles");
     }
     /**
-     * Gets the authenticationBehaviors property value. The collection of breaking change behaviors related to token issuance that are configured for the application. Authentication behaviors are unset by default (null) and must be explicitly enabled or disabled. Nullable. Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
+     * Gets the authenticationBehaviors property value. The collection of breaking change behaviors related to token issuance that are configured for the application. Authentication behaviors are unset by default (null) and must be explicitly enabled or disabled. Nullable. Requires $select to retrieve.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
      * @return a {@link AuthenticationBehaviors}
      */
     @jakarta.annotation.Nullable
@@ -297,7 +297,7 @@ public class Application extends DirectoryObject implements Parsable {
         return this.backingStore.get("logo");
     }
     /**
-     * Gets the managerApplications property value. A collection of application IDs for applications designated as managers of this application. Manager applications can create service principals for the applications they manage. Currently, only Microsoft first-party application IDs can be set as values. Maximum of 10 values. Not nullable. Read-only for third-party (3P) callers; writes by 3P callers are rejected with a 400 Bad Request error. Returned only on $select.
+     * Gets the managerApplications property value. A collection of application IDs for applications designated as managers of this application. Manager applications can create service principals for the applications they manage. Currently, only Microsoft first-party application IDs can be set as values. Maximum of 10 values. Not nullable. Read-only for third-party (3P) callers; writes by 3P callers are rejected with a 400 Bad Request error. Requires $select to retrieve.
      * @return a {@link java.util.List<UUID>}
      */
     @jakarta.annotation.Nullable
@@ -601,7 +601,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("appRoles", value);
     }
     /**
-     * Sets the authenticationBehaviors property value. The collection of breaking change behaviors related to token issuance that are configured for the application. Authentication behaviors are unset by default (null) and must be explicitly enabled or disabled. Nullable. Returned only on $select.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
+     * Sets the authenticationBehaviors property value. The collection of breaking change behaviors related to token issuance that are configured for the application. Authentication behaviors are unset by default (null) and must be explicitly enabled or disabled. Nullable. Requires $select to retrieve.  For more information about authentication behaviors, see Manage application authenticationBehaviors to avoid unverified use of email claims for user identification or authorization.
      * @param value Value to set for the authenticationBehaviors property.
      */
     public void setAuthenticationBehaviors(@jakarta.annotation.Nullable final AuthenticationBehaviors value) {
@@ -748,7 +748,7 @@ public class Application extends DirectoryObject implements Parsable {
         this.backingStore.set("logo", value);
     }
     /**
-     * Sets the managerApplications property value. A collection of application IDs for applications designated as managers of this application. Manager applications can create service principals for the applications they manage. Currently, only Microsoft first-party application IDs can be set as values. Maximum of 10 values. Not nullable. Read-only for third-party (3P) callers; writes by 3P callers are rejected with a 400 Bad Request error. Returned only on $select.
+     * Sets the managerApplications property value. A collection of application IDs for applications designated as managers of this application. Manager applications can create service principals for the applications they manage. Currently, only Microsoft first-party application IDs can be set as values. Maximum of 10 values. Not nullable. Read-only for third-party (3P) callers; writes by 3P callers are rejected with a 400 Bad Request error. Requires $select to retrieve.
      * @param value Value to set for the managerApplications property.
      */
     public void setManagerApplications(@jakarta.annotation.Nullable final java.util.List<UUID> value) {

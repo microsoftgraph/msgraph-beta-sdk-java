@@ -129,7 +129,7 @@ public class Channel extends Entity implements Parsable {
         return this.backingStore.get("isFavoriteByDefault");
     }
     /**
-     * Gets the layoutType property value. The layout type of the channel. Can be set during creation and can be updated. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with post layout use traditional post-reply conversation format, while channels with chat layout provide a chat-like threading experience similar to group chats.
+     * Gets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional postreply conversation format, and channels with the chat layout provide a chatlike threading experience similar to group chats.
      * @return a {@link ChannelLayoutType}
      */
     @jakarta.annotation.Nullable
@@ -326,7 +326,7 @@ public class Channel extends Entity implements Parsable {
         this.backingStore.set("isFavoriteByDefault", value);
     }
     /**
-     * Sets the layoutType property value. The layout type of the channel. Can be set during creation and can be updated. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with post layout use traditional post-reply conversation format, while channels with chat layout provide a chat-like threading experience similar to group chats.
+     * Sets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional postreply conversation format, and channels with the chat layout provide a chatlike threading experience similar to group chats.
      * @param value Value to set for the layoutType property.
      */
     public void setLayoutType(@jakarta.annotation.Nullable final ChannelLayoutType value) {

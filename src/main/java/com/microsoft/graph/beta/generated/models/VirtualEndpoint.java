@@ -49,6 +49,14 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("cloudApps");
     }
     /**
+     * Gets the cloudPcPools property value. The cloudPcPools property
+     * @return a {@link java.util.List<CloudPcPool>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CloudPcPool> getCloudPcPools() {
+        return this.backingStore.get("cloudPcPools");
+    }
+    /**
      * Gets the cloudPCs property value. Cloud managed virtual desktops.
      * @return a {@link java.util.List<CloudPC>}
      */
@@ -98,6 +106,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         deserializerMap.put("auditEvents", (n) -> { this.setAuditEvents(n.getCollectionOfObjectValues(CloudPcAuditEvent::createFromDiscriminatorValue)); });
         deserializerMap.put("bulkActions", (n) -> { this.setBulkActions(n.getCollectionOfObjectValues(CloudPcBulkAction::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudApps", (n) -> { this.setCloudApps(n.getCollectionOfObjectValues(CloudPcCloudApp::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudPcPools", (n) -> { this.setCloudPcPools(n.getCollectionOfObjectValues(CloudPcPool::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudPCs", (n) -> { this.setCloudPCs(n.getCollectionOfObjectValues(CloudPC::createFromDiscriminatorValue)); });
         deserializerMap.put("crossCloudGovernmentOrganizationMapping", (n) -> { this.setCrossCloudGovernmentOrganizationMapping(n.getObjectValue(CloudPcCrossCloudGovernmentOrganizationMapping::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceImages", (n) -> { this.setDeviceImages(n.getCollectionOfObjectValues(CloudPcDeviceImage::createFromDiscriminatorValue)); });
@@ -174,7 +183,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("report");
     }
     /**
-     * Gets the reports property value. Cloud PC-related reports.
+     * Gets the reports property value. Cloud PC-related reports. Read-only.
      * @return a {@link CloudPcReports}
      */
     @jakarta.annotation.Nullable
@@ -223,6 +232,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("auditEvents", this.getAuditEvents());
         writer.writeCollectionOfObjectValues("bulkActions", this.getBulkActions());
         writer.writeCollectionOfObjectValues("cloudApps", this.getCloudApps());
+        writer.writeCollectionOfObjectValues("cloudPcPools", this.getCloudPcPools());
         writer.writeCollectionOfObjectValues("cloudPCs", this.getCloudPCs());
         writer.writeObjectValue("crossCloudGovernmentOrganizationMapping", this.getCrossCloudGovernmentOrganizationMapping());
         writer.writeCollectionOfObjectValues("deviceImages", this.getDeviceImages());
@@ -261,6 +271,13 @@ public class VirtualEndpoint extends Entity implements Parsable {
      */
     public void setCloudApps(@jakarta.annotation.Nullable final java.util.List<CloudPcCloudApp> value) {
         this.backingStore.set("cloudApps", value);
+    }
+    /**
+     * Sets the cloudPcPools property value. The cloudPcPools property
+     * @param value Value to set for the cloudPcPools property.
+     */
+    public void setCloudPcPools(@jakarta.annotation.Nullable final java.util.List<CloudPcPool> value) {
+        this.backingStore.set("cloudPcPools", value);
     }
     /**
      * Sets the cloudPCs property value. Cloud managed virtual desktops.
@@ -347,7 +364,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.backingStore.set("report", value);
     }
     /**
-     * Sets the reports property value. Cloud PC-related reports.
+     * Sets the reports property value. Cloud PC-related reports. Read-only.
      * @param value Value to set for the reports property.
      */
     public void setReports(@jakarta.annotation.Nullable final CloudPcReports value) {

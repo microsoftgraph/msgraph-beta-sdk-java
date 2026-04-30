@@ -32,7 +32,16 @@ public class ForwardingPolicyLink extends PolicyLink implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("priority", (n) -> { this.setPriority(n.getLongValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the priority property value. The priority property
+     * @return a {@link Long}
+     */
+    @jakarta.annotation.Nullable
+    public Long getPriority() {
+        return this.backingStore.get("priority");
     }
     /**
      * Serializes information the current object
@@ -41,5 +50,13 @@ public class ForwardingPolicyLink extends PolicyLink implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeLongValue("priority", this.getPriority());
+    }
+    /**
+     * Sets the priority property value. The priority property
+     * @param value Value to set for the priority property.
+     */
+    public void setPriority(@jakarta.annotation.Nullable final Long value) {
+        this.backingStore.set("priority", value);
     }
 }
