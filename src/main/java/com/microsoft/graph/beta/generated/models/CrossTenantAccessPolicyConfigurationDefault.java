@@ -73,7 +73,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         return this.backingStore.get("b2bDirectConnectOutbound");
     }
     /**
-     * Gets the blockServiceProviderOutboundAccess property value. The blockServiceProviderOutboundAccess property
+     * Gets the blockServiceProviderOutboundAccess property value. Specifies whether users can use granular delegated admin privileges (GDAP) to sign-in and access resources in other organizations. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -214,7 +214,7 @@ public class CrossTenantAccessPolicyConfigurationDefault extends Entity implemen
         this.backingStore.set("b2bDirectConnectOutbound", value);
     }
     /**
-     * Sets the blockServiceProviderOutboundAccess property value. The blockServiceProviderOutboundAccess property
+     * Sets the blockServiceProviderOutboundAccess property value. Specifies whether users can use granular delegated admin privileges (GDAP) to sign-in and access resources in other organizations. Default value is false.
      * @param value Value to set for the blockServiceProviderOutboundAccess property.
      */
     public void setBlockServiceProviderOutboundAccess(@jakarta.annotation.Nullable final Boolean value) {

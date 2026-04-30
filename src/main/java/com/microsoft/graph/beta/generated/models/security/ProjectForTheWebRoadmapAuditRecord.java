@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for Project for the Web Roadmap events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ProjectForTheWebRoadmapAuditRecord extends AuditData implements Parsable {
     /**

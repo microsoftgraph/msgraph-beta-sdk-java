@@ -77,7 +77,7 @@ public class CloudPcOnPremisesConnectionSubnetIpDetail implements AdditionalData
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the subnetAvailableIpCount property value. The subnetAvailableIpCount property
+     * Gets the subnetAvailableIpCount property value. The number of available private IP addresses within the subnet.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class CloudPcOnPremisesConnectionSubnetIpDetail implements AdditionalData
         return this.backingStore.get("subnetAvailableIpCount");
     }
     /**
-     * Gets the subnetAvailableIpCountLastSyncDateTime property value. The subnetAvailableIpCountLastSyncDateTime property
+     * Gets the subnetAvailableIpCountLastSyncDateTime property value. Indicates the date and time at which the subnet available IP count was synced with Azure. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -126,14 +126,14 @@ public class CloudPcOnPremisesConnectionSubnetIpDetail implements AdditionalData
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the subnetAvailableIpCount property value. The subnetAvailableIpCount property
+     * Sets the subnetAvailableIpCount property value. The number of available private IP addresses within the subnet.
      * @param value Value to set for the subnetAvailableIpCount property.
      */
     public void setSubnetAvailableIpCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("subnetAvailableIpCount", value);
     }
     /**
-     * Sets the subnetAvailableIpCountLastSyncDateTime property value. The subnetAvailableIpCountLastSyncDateTime property
+     * Sets the subnetAvailableIpCountLastSyncDateTime property value. Indicates the date and time at which the subnet available IP count was synced with Azure. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the subnetAvailableIpCountLastSyncDateTime property.
      */
     public void setSubnetAvailableIpCountLastSyncDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

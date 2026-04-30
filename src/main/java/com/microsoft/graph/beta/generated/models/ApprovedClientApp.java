@@ -25,7 +25,7 @@ public class ApprovedClientApp extends Entity implements Parsable {
         return new ApprovedClientApp();
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name for the client application.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class ApprovedClientApp extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name for the client application.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.devicemanagement.virtualendpoint;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.auditevents.AuditEventsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.bulkactions.BulkActionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudapps.CloudAppsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcpools.CloudPcPoolsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudpcs.CloudPCsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.crosscloudgovernmentorganizationmapping.CrossCloudGovernmentOrganizationMappingRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.deviceimages.DeviceImagesRequestBuilder;
@@ -68,6 +69,14 @@ public class VirtualEndpointRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CloudAppsRequestBuilder cloudApps() {
         return new CloudAppsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the cloudPcPools property of the microsoft.graph.virtualEndpoint entity.
+     * @return a {@link CloudPcPoolsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CloudPcPoolsRequestBuilder cloudPcPools() {
+        return new CloudPcPoolsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the cloudPCs property of the microsoft.graph.virtualEndpoint entity.

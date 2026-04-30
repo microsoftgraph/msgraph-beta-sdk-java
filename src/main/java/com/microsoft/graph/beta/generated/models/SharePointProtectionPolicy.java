@@ -32,10 +32,28 @@ public class SharePointProtectionPolicy extends ProtectionPolicyBase implements 
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("siteExclusionUnits", (n) -> { this.setSiteExclusionUnits(n.getCollectionOfObjectValues(SiteExclusionUnit::createFromDiscriminatorValue)); });
+        deserializerMap.put("siteExclusionUnitsBulkAdditionJobs", (n) -> { this.setSiteExclusionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(SiteExclusionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
         deserializerMap.put("siteInclusionRules", (n) -> { this.setSiteInclusionRules(n.getCollectionOfObjectValues(SiteProtectionRule::createFromDiscriminatorValue)); });
         deserializerMap.put("siteProtectionUnits", (n) -> { this.setSiteProtectionUnits(n.getCollectionOfObjectValues(SiteProtectionUnit::createFromDiscriminatorValue)); });
         deserializerMap.put("siteProtectionUnitsBulkAdditionJobs", (n) -> { this.setSiteProtectionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(SiteProtectionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the siteExclusionUnits property value. The siteExclusionUnits property
+     * @return a {@link java.util.List<SiteExclusionUnit>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SiteExclusionUnit> getSiteExclusionUnits() {
+        return this.backingStore.get("siteExclusionUnits");
+    }
+    /**
+     * Gets the siteExclusionUnitsBulkAdditionJobs property value. The siteExclusionUnitsBulkAdditionJobs property
+     * @return a {@link java.util.List<SiteExclusionUnitsBulkAdditionJob>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<SiteExclusionUnitsBulkAdditionJob> getSiteExclusionUnitsBulkAdditionJobs() {
+        return this.backingStore.get("siteExclusionUnitsBulkAdditionJobs");
     }
     /**
      * Gets the siteInclusionRules property value. The rules associated with the SharePoint Protection policy.
@@ -68,9 +86,25 @@ public class SharePointProtectionPolicy extends ProtectionPolicyBase implements 
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("siteExclusionUnits", this.getSiteExclusionUnits());
+        writer.writeCollectionOfObjectValues("siteExclusionUnitsBulkAdditionJobs", this.getSiteExclusionUnitsBulkAdditionJobs());
         writer.writeCollectionOfObjectValues("siteInclusionRules", this.getSiteInclusionRules());
         writer.writeCollectionOfObjectValues("siteProtectionUnits", this.getSiteProtectionUnits());
         writer.writeCollectionOfObjectValues("siteProtectionUnitsBulkAdditionJobs", this.getSiteProtectionUnitsBulkAdditionJobs());
+    }
+    /**
+     * Sets the siteExclusionUnits property value. The siteExclusionUnits property
+     * @param value Value to set for the siteExclusionUnits property.
+     */
+    public void setSiteExclusionUnits(@jakarta.annotation.Nullable final java.util.List<SiteExclusionUnit> value) {
+        this.backingStore.set("siteExclusionUnits", value);
+    }
+    /**
+     * Sets the siteExclusionUnitsBulkAdditionJobs property value. The siteExclusionUnitsBulkAdditionJobs property
+     * @param value Value to set for the siteExclusionUnitsBulkAdditionJobs property.
+     */
+    public void setSiteExclusionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<SiteExclusionUnitsBulkAdditionJob> value) {
+        this.backingStore.set("siteExclusionUnitsBulkAdditionJobs", value);
     }
     /**
      * Sets the siteInclusionRules property value. The rules associated with the SharePoint Protection policy.

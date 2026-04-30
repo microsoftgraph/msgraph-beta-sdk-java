@@ -48,7 +48,7 @@ public class CloudPcSupportedRegionRestrictionDetail implements AdditionalDataHo
         return value;
     }
     /**
-     * Gets the availabilityZoneRestricted property value. The availabilityZoneRestricted property
+     * Gets the availabilityZoneRestricted property value. Indicates that the region is restricted due to lack of availability zone support. When True, the region does not have availability zone infrastructure and is intended for disaster recovery scenarios only. When false, the region has full availability zone support. The default is false. Read-Only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class CloudPcSupportedRegionRestrictionDetail implements AdditionalDataHo
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the availabilityZoneRestricted property value. The availabilityZoneRestricted property
+     * Sets the availabilityZoneRestricted property value. Indicates that the region is restricted due to lack of availability zone support. When True, the region does not have availability zone infrastructure and is intended for disaster recovery scenarios only. When false, the region has full availability zone support. The default is false. Read-Only.
      * @param value Value to set for the availabilityZoneRestricted property.
      */
     public void setAvailabilityZoneRestricted(@jakarta.annotation.Nullable final Boolean value) {

@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.models.AccessReviewInstance;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.users.item.pendingaccessreviewinstances.item.acceptrecommendations.AcceptRecommendationsRequestBuilder;
 import com.microsoft.graph.beta.users.item.pendingaccessreviewinstances.item.applydecisions.ApplyDecisionsRequestBuilder;
+import com.microsoft.graph.beta.users.item.pendingaccessreviewinstances.item.batchapplycustomdataprovidedresourcedecisions.BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder;
 import com.microsoft.graph.beta.users.item.pendingaccessreviewinstances.item.batchrecorddecisions.BatchRecordDecisionsRequestBuilder;
 import com.microsoft.graph.beta.users.item.pendingaccessreviewinstances.item.contactedreviewers.ContactedReviewersRequestBuilder;
 import com.microsoft.graph.beta.users.item.pendingaccessreviewinstances.item.decisions.DecisionsRequestBuilder;
@@ -46,6 +47,14 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ApplyDecisionsRequestBuilder applyDecisions() {
         return new ApplyDecisionsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the batchApplyCustomDataProvidedResourceDecisions method.
+     * @return a {@link BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder batchApplyCustomDataProvidedResourceDecisions() {
+        return new BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the batchRecordDecisions method.

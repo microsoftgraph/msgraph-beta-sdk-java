@@ -3,6 +3,9 @@ package com.microsoft.graph.beta.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+/**
+ * Specifies the type of audit log record.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AuditLogRecordType implements ValuedEnum {
     ExchangeAdmin("ExchangeAdmin"),
@@ -292,6 +295,164 @@ public enum AuditLogRecordType implements ValuedEnum {
     CPSOperation("CPSOperation"),
     ComplianceDLPExchangeDiscovery("ComplianceDLPExchangeDiscovery"),
     PurviewMCRecommendation("PurviewMCRecommendation"),
+    ComplianceDLPEndpointDiscovery("ComplianceDLPEndpointDiscovery"),
+    InsiderRiskScopedUserInsights("InsiderRiskScopedUserInsights"),
+    MicrosoftTeamsRetentionLabelAction("MicrosoftTeamsRetentionLabelAction"),
+    AadRiskDetection("AadRiskDetection"),
+    AuditSearch("AuditSearch"),
+    AuditRetentionPolicy("AuditRetentionPolicy"),
+    AuditConfig("AuditConfig"),
+    Microsoft365BackupBackupPolicy("Microsoft365BackupBackupPolicy"),
+    Microsoft365BackupRestoreTask("Microsoft365BackupRestoreTask"),
+    Microsoft365BackupRestoreItem("Microsoft365BackupRestoreItem"),
+    Microsoft365BackupBackupItem("Microsoft365BackupBackupItem"),
+    URBACAssignment("URBACAssignment"),
+    URBACRole("URBACRole"),
+    URBACEnableState("URBACEnableState"),
+    IRMSecurityAlert("IRMSecurityAlert"),
+    PurviewInsiderRiskCases("PurviewInsiderRiskCases"),
+    PurviewInsiderRiskAlerts("PurviewInsiderRiskAlerts"),
+    InsiderRiskScopedUsers("InsiderRiskScopedUsers"),
+    CdpConsumptionResource("CdpConsumptionResource"),
+    CreateCopilotPlugin("CreateCopilotPlugin"),
+    UpdateCopilotPlugin("UpdateCopilotPlugin"),
+    DeleteCopilotPlugin("DeleteCopilotPlugin"),
+    EnableCopilotPlugin("EnableCopilotPlugin"),
+    DisableCopilotPlugin("DisableCopilotPlugin"),
+    CreateCopilotWorkspace("CreateCopilotWorkspace"),
+    UpdateCopilotWorkspace("UpdateCopilotWorkspace"),
+    DeleteCopilotWorkspace("DeleteCopilotWorkspace"),
+    EnableCopilotWorkspace("EnableCopilotWorkspace"),
+    DisableCopilotWorkspace("DisableCopilotWorkspace"),
+    CreateCopilotPromptBook("CreateCopilotPromptBook"),
+    UpdateCopilotPromptBook("UpdateCopilotPromptBook"),
+    DeleteCopilotPromptBook("DeleteCopilotPromptBook"),
+    EnableCopilotPromptBook("EnableCopilotPromptBook"),
+    DisableCopilotPromptBook("DisableCopilotPromptBook"),
+    UpdateCopilotSettings("UpdateCopilotSettings"),
+    P4AIAssessmentRecord("P4AIAssessmentRecord"),
+    P4AIAssessmentLocationResultRecord("P4AIAssessmentLocationResultRecord"),
+    ConnectedAIAppInteraction("ConnectedAIAppInteraction"),
+    PrivaPrivacyConsentOperation("PrivaPrivacyConsentOperation"),
+    PrivaPrivacyAssessmentOperation("PrivaPrivacyAssessmentOperation"),
+    DataCatalogAccessRequests("DataCatalogAccessRequests"),
+    ComplianceSettingsChange("ComplianceSettingsChange"),
+    DataSecurityInvestigation("DataSecurityInvestigation"),
+    TeamCopilotInteraction("TeamCopilotInteraction"),
+    IRMActivityAuditTrail("IRMActivityAuditTrail"),
+    SharePointContentSecurityPolicy("SharePointContentSecurityPolicy"),
+    CloudUpdateProfileConfig("CloudUpdateProfileConfig"),
+    CloudUpdateTenantConfig("CloudUpdateTenantConfig"),
+    CloudUpdateDeviceConfig("CloudUpdateDeviceConfig"),
+    DefenderPreviewFeatures("DefenderPreviewFeatures"),
+    DeviceDiscoverySettingsExclusion("DeviceDiscoverySettingsExclusion"),
+    DeviceDiscoverySettingsAuthenticatedScans("DeviceDiscoverySettingsAuthenticatedScans"),
+    CriticalAssetManagementClassification("CriticalAssetManagementClassification"),
+    DeviceDiscoverySettings("DeviceDiscoverySettings"),
+    USXWorkspaceOnboarding("USXWorkspaceOnboarding"),
+    VivaGlintAdvancedConfiguration("VivaGlintAdvancedConfiguration"),
+    VivaGlintPulseProgram("VivaGlintPulseProgram"),
+    VivaGlintPulseProgramRespondentRate("VivaGlintPulseProgramRespondentRate"),
+    VivaGlintQuestion("VivaGlintQuestion"),
+    VivaGlintRole("VivaGlintRole"),
+    VivaGlintRubicon("VivaGlintRubicon"),
+    VivaGlintSupportAccess("VivaGlintSupportAccess"),
+    VivaGlintSystem("VivaGlintSystem"),
+    VivaGlintUser("VivaGlintUser"),
+    VivaGlintUserGroup("VivaGlintUserGroup"),
+    VivaGlintFeedbackProgram("VivaGlintFeedbackProgram"),
+    FabricAudit("FabricAudit"),
+    TrainableClassifier("TrainableClassifier"),
+    WebContentFiltering("WebContentFiltering"),
+    NoisyAlertPolicy("NoisyAlertPolicy"),
+    OnDemandSharePointClassification("OnDemandSharePointClassification"),
+    AIInteractionsExport("AIInteractionsExport"),
+    Microsoft365CopilotScheduledPrompt("Microsoft365CopilotScheduledPrompt"),
+    PlacesDirectory("PlacesDirectory"),
+    MDAAudit("MDAAudit"),
+    OpticalCharacterRecognition("OpticalCharacterRecognition"),
+    M365SearchSections("M365SearchSections"),
+    OfficeClientRestrictedModeAction("OfficeClientRestrictedModeAction"),
+    CrossTenantAccessPolicy("CrossTenantAccessPolicy"),
+    OutlookCopilotAutomation("OutlookCopilotAutomation"),
+    VivaEngageNetworkAssociation("VivaEngageNetworkAssociation"),
+    AppAdminActivity("AppAdminActivity"),
+    AppSettingsAdminActivity("AppSettingsAdminActivity"),
+    UniversalPrintPrintJob("UniversalPrintPrintJob"),
+    SentinelNotebookOnLake("SentinelNotebookOnLake"),
+    SentinelJob("SentinelJob"),
+    SentinelGraph("SentinelGraph"),
+    SentinelKQLOnLake("SentinelKQLOnLake"),
+    SentinelPackage("SentinelPackage"),
+    VivaAmplifyOutlookSensitivityLabel("VivaAmplifyOutlookSensitivityLabel"),
+    CopilotActions("CopilotActions"),
+    AIInteractionsSubscription("AIInteractionsSubscription"),
+    AIInteractionsChangeNotification("AIInteractionsChangeNotification"),
+    FilteringMailMetadataExtended("FilteringMailMetadataExtended"),
+    SentinelLakeOnboarding("SentinelLakeOnboarding"),
+    SentinelLakeDataOnboarding("SentinelLakeDataOnboarding"),
+    OfficeRestrictedModeAction("OfficeRestrictedModeAction"),
+    CopilotForSecurityTrigger("CopilotForSecurityTrigger"),
+    CopilotAgentManagement("CopilotAgentManagement"),
+    P4AIAssessmentFabricScannerRecord("P4AIAssessmentFabricScannerRecord"),
+    PlannerGoal("PlannerGoal"),
+    PlannerGoalList("PlannerGoalList"),
+    ThreatIntelligenceObject("ThreatIntelligenceObject"),
+    ThreatIntelligenceExport("ThreatIntelligenceExport"),
+    SubmissionAgenticGradingResult("SubmissionAgenticGradingResult"),
+    AgentAdminActivity("AgentAdminActivity"),
+    DeployFeatureActivity("DeployFeatureActivity"),
+    AgentSettingsAdminActivity("AgentSettingsAdminActivity"),
+    OrganizationalDataInM365("OrganizationalDataInM365"),
+    PlannerChatMessage("PlannerChatMessage"),
+    PlannerChatMessageList("PlannerChatMessageList"),
+    SentinelAITool("SentinelAITool"),
+    M365ODSPAssetMetadata("M365ODSPAssetMetadata"),
+    AIExecuteTool("AIExecuteTool"),
+    AIInvokeAgent("AIInvokeAgent"),
+    AIInferenceCall("AIInferenceCall"),
+    CdpClassifierHealthRecord("CdpClassifierHealthRecord"),
+    SensitiveInfoRemediationAgentData("SensitiveInfoRemediationAgentData"),
+    ComplianceDLPEnforcement("ComplianceDLPEnforcement"),
+    A365AIExecuteTool("A365AIExecuteTool"),
+    A365AIInvokeAgent("A365AIInvokeAgent"),
+    A365AIInferenceCall("A365AIInferenceCall"),
+    VivaEngageSegment("VivaEngageSegment"),
+    RTIOperationsAgent("RTIOperationsAgent"),
+    ContentStoreMetadata("ContentStoreMetadata"),
+    CCRAIPolicyViolation("CCRAIPolicyViolation"),
+    PlannerPlanSensitivityLabel("PlannerPlanSensitivityLabel"),
+    MosAgentInfoRecord("MosAgentInfoRecord"),
+    A365AIRunSummary("A365AIRunSummary"),
+    UnifiedCatalogConceptAction("UnifiedCatalogConceptAction"),
+    DefenderCaseManagement("DefenderCaseManagement"),
+    CopilotForSecurityLogging("CopilotForSecurityLogging"),
+    VivaEngageEvents("VivaEngageEvents"),
+    CallActivityEvent("CallActivityEvent"),
+    SonarDetonationContentMetadata("SonarDetonationContentMetadata"),
+    UniversalPrintManagement("UniversalPrintManagement"),
+    YammerUserHiding("YammerUserHiding"),
+    Microsoft365BackupGranularBrowseTask("Microsoft365BackupGranularBrowseTask"),
+    PurviewPostureAgent("PurviewPostureAgent"),
+    MSDECustomCollection("MSDECustomCollection"),
+    SCPUsageEvent("SCPUsageEvent"),
+    SCPConfigurationEvent("SCPConfigurationEvent"),
+    MDCConfigurationEvent("MDCConfigurationEvent"),
+    MDCUsageEvent("MDCUsageEvent"),
+    A365SpanOutputs("A365SpanOutputs"),
+    PowerPlatformTenantIsolation("PowerPlatformTenantIsolation"),
+    CDPDLMAIInteractionInsights("CDPDLMAIInteractionInsights"),
+    P4AIAssessmentCategoryRecord("P4AIAssessmentCategoryRecord"),
+    SentinelLakeEncryption("SentinelLakeEncryption"),
+    AZFWNetworkRule("AZFWNetworkRule"),
+    AZFWDnsQuery("AZFWDnsQuery"),
+    AZFWApplicationRuleAggregation("AZFWApplicationRuleAggregation"),
+    TeamsEvalDataHubDataAccess("TeamsEvalDataHubDataAccess"),
+    TeamsEvalDataHubPermissionChange("TeamsEvalDataHubPermissionChange"),
+    TeamsEvalDataHubAdminOperation("TeamsEvalDataHubAdminOperation"),
+    VivaGlintOrganizationalData("VivaGlintOrganizationalData"),
+    ReportSubmission("ReportSubmission"),
+    ReportSubmissionResultDetail("ReportSubmissionResultDetail"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AuditLogRecordType(final String value) {
@@ -590,6 +751,164 @@ public enum AuditLogRecordType implements ValuedEnum {
             case "CPSOperation": return CPSOperation;
             case "ComplianceDLPExchangeDiscovery": return ComplianceDLPExchangeDiscovery;
             case "PurviewMCRecommendation": return PurviewMCRecommendation;
+            case "ComplianceDLPEndpointDiscovery": return ComplianceDLPEndpointDiscovery;
+            case "InsiderRiskScopedUserInsights": return InsiderRiskScopedUserInsights;
+            case "MicrosoftTeamsRetentionLabelAction": return MicrosoftTeamsRetentionLabelAction;
+            case "AadRiskDetection": return AadRiskDetection;
+            case "AuditSearch": return AuditSearch;
+            case "AuditRetentionPolicy": return AuditRetentionPolicy;
+            case "AuditConfig": return AuditConfig;
+            case "Microsoft365BackupBackupPolicy": return Microsoft365BackupBackupPolicy;
+            case "Microsoft365BackupRestoreTask": return Microsoft365BackupRestoreTask;
+            case "Microsoft365BackupRestoreItem": return Microsoft365BackupRestoreItem;
+            case "Microsoft365BackupBackupItem": return Microsoft365BackupBackupItem;
+            case "URBACAssignment": return URBACAssignment;
+            case "URBACRole": return URBACRole;
+            case "URBACEnableState": return URBACEnableState;
+            case "IRMSecurityAlert": return IRMSecurityAlert;
+            case "PurviewInsiderRiskCases": return PurviewInsiderRiskCases;
+            case "PurviewInsiderRiskAlerts": return PurviewInsiderRiskAlerts;
+            case "InsiderRiskScopedUsers": return InsiderRiskScopedUsers;
+            case "CdpConsumptionResource": return CdpConsumptionResource;
+            case "CreateCopilotPlugin": return CreateCopilotPlugin;
+            case "UpdateCopilotPlugin": return UpdateCopilotPlugin;
+            case "DeleteCopilotPlugin": return DeleteCopilotPlugin;
+            case "EnableCopilotPlugin": return EnableCopilotPlugin;
+            case "DisableCopilotPlugin": return DisableCopilotPlugin;
+            case "CreateCopilotWorkspace": return CreateCopilotWorkspace;
+            case "UpdateCopilotWorkspace": return UpdateCopilotWorkspace;
+            case "DeleteCopilotWorkspace": return DeleteCopilotWorkspace;
+            case "EnableCopilotWorkspace": return EnableCopilotWorkspace;
+            case "DisableCopilotWorkspace": return DisableCopilotWorkspace;
+            case "CreateCopilotPromptBook": return CreateCopilotPromptBook;
+            case "UpdateCopilotPromptBook": return UpdateCopilotPromptBook;
+            case "DeleteCopilotPromptBook": return DeleteCopilotPromptBook;
+            case "EnableCopilotPromptBook": return EnableCopilotPromptBook;
+            case "DisableCopilotPromptBook": return DisableCopilotPromptBook;
+            case "UpdateCopilotSettings": return UpdateCopilotSettings;
+            case "P4AIAssessmentRecord": return P4AIAssessmentRecord;
+            case "P4AIAssessmentLocationResultRecord": return P4AIAssessmentLocationResultRecord;
+            case "ConnectedAIAppInteraction": return ConnectedAIAppInteraction;
+            case "PrivaPrivacyConsentOperation": return PrivaPrivacyConsentOperation;
+            case "PrivaPrivacyAssessmentOperation": return PrivaPrivacyAssessmentOperation;
+            case "DataCatalogAccessRequests": return DataCatalogAccessRequests;
+            case "ComplianceSettingsChange": return ComplianceSettingsChange;
+            case "DataSecurityInvestigation": return DataSecurityInvestigation;
+            case "TeamCopilotInteraction": return TeamCopilotInteraction;
+            case "IRMActivityAuditTrail": return IRMActivityAuditTrail;
+            case "SharePointContentSecurityPolicy": return SharePointContentSecurityPolicy;
+            case "CloudUpdateProfileConfig": return CloudUpdateProfileConfig;
+            case "CloudUpdateTenantConfig": return CloudUpdateTenantConfig;
+            case "CloudUpdateDeviceConfig": return CloudUpdateDeviceConfig;
+            case "DefenderPreviewFeatures": return DefenderPreviewFeatures;
+            case "DeviceDiscoverySettingsExclusion": return DeviceDiscoverySettingsExclusion;
+            case "DeviceDiscoverySettingsAuthenticatedScans": return DeviceDiscoverySettingsAuthenticatedScans;
+            case "CriticalAssetManagementClassification": return CriticalAssetManagementClassification;
+            case "DeviceDiscoverySettings": return DeviceDiscoverySettings;
+            case "USXWorkspaceOnboarding": return USXWorkspaceOnboarding;
+            case "VivaGlintAdvancedConfiguration": return VivaGlintAdvancedConfiguration;
+            case "VivaGlintPulseProgram": return VivaGlintPulseProgram;
+            case "VivaGlintPulseProgramRespondentRate": return VivaGlintPulseProgramRespondentRate;
+            case "VivaGlintQuestion": return VivaGlintQuestion;
+            case "VivaGlintRole": return VivaGlintRole;
+            case "VivaGlintRubicon": return VivaGlintRubicon;
+            case "VivaGlintSupportAccess": return VivaGlintSupportAccess;
+            case "VivaGlintSystem": return VivaGlintSystem;
+            case "VivaGlintUser": return VivaGlintUser;
+            case "VivaGlintUserGroup": return VivaGlintUserGroup;
+            case "VivaGlintFeedbackProgram": return VivaGlintFeedbackProgram;
+            case "FabricAudit": return FabricAudit;
+            case "TrainableClassifier": return TrainableClassifier;
+            case "WebContentFiltering": return WebContentFiltering;
+            case "NoisyAlertPolicy": return NoisyAlertPolicy;
+            case "OnDemandSharePointClassification": return OnDemandSharePointClassification;
+            case "AIInteractionsExport": return AIInteractionsExport;
+            case "Microsoft365CopilotScheduledPrompt": return Microsoft365CopilotScheduledPrompt;
+            case "PlacesDirectory": return PlacesDirectory;
+            case "MDAAudit": return MDAAudit;
+            case "OpticalCharacterRecognition": return OpticalCharacterRecognition;
+            case "M365SearchSections": return M365SearchSections;
+            case "OfficeClientRestrictedModeAction": return OfficeClientRestrictedModeAction;
+            case "CrossTenantAccessPolicy": return CrossTenantAccessPolicy;
+            case "OutlookCopilotAutomation": return OutlookCopilotAutomation;
+            case "VivaEngageNetworkAssociation": return VivaEngageNetworkAssociation;
+            case "AppAdminActivity": return AppAdminActivity;
+            case "AppSettingsAdminActivity": return AppSettingsAdminActivity;
+            case "UniversalPrintPrintJob": return UniversalPrintPrintJob;
+            case "SentinelNotebookOnLake": return SentinelNotebookOnLake;
+            case "SentinelJob": return SentinelJob;
+            case "SentinelGraph": return SentinelGraph;
+            case "SentinelKQLOnLake": return SentinelKQLOnLake;
+            case "SentinelPackage": return SentinelPackage;
+            case "VivaAmplifyOutlookSensitivityLabel": return VivaAmplifyOutlookSensitivityLabel;
+            case "CopilotActions": return CopilotActions;
+            case "AIInteractionsSubscription": return AIInteractionsSubscription;
+            case "AIInteractionsChangeNotification": return AIInteractionsChangeNotification;
+            case "FilteringMailMetadataExtended": return FilteringMailMetadataExtended;
+            case "SentinelLakeOnboarding": return SentinelLakeOnboarding;
+            case "SentinelLakeDataOnboarding": return SentinelLakeDataOnboarding;
+            case "OfficeRestrictedModeAction": return OfficeRestrictedModeAction;
+            case "CopilotForSecurityTrigger": return CopilotForSecurityTrigger;
+            case "CopilotAgentManagement": return CopilotAgentManagement;
+            case "P4AIAssessmentFabricScannerRecord": return P4AIAssessmentFabricScannerRecord;
+            case "PlannerGoal": return PlannerGoal;
+            case "PlannerGoalList": return PlannerGoalList;
+            case "ThreatIntelligenceObject": return ThreatIntelligenceObject;
+            case "ThreatIntelligenceExport": return ThreatIntelligenceExport;
+            case "SubmissionAgenticGradingResult": return SubmissionAgenticGradingResult;
+            case "AgentAdminActivity": return AgentAdminActivity;
+            case "DeployFeatureActivity": return DeployFeatureActivity;
+            case "AgentSettingsAdminActivity": return AgentSettingsAdminActivity;
+            case "OrganizationalDataInM365": return OrganizationalDataInM365;
+            case "PlannerChatMessage": return PlannerChatMessage;
+            case "PlannerChatMessageList": return PlannerChatMessageList;
+            case "SentinelAITool": return SentinelAITool;
+            case "M365ODSPAssetMetadata": return M365ODSPAssetMetadata;
+            case "AIExecuteTool": return AIExecuteTool;
+            case "AIInvokeAgent": return AIInvokeAgent;
+            case "AIInferenceCall": return AIInferenceCall;
+            case "CdpClassifierHealthRecord": return CdpClassifierHealthRecord;
+            case "SensitiveInfoRemediationAgentData": return SensitiveInfoRemediationAgentData;
+            case "ComplianceDLPEnforcement": return ComplianceDLPEnforcement;
+            case "A365AIExecuteTool": return A365AIExecuteTool;
+            case "A365AIInvokeAgent": return A365AIInvokeAgent;
+            case "A365AIInferenceCall": return A365AIInferenceCall;
+            case "VivaEngageSegment": return VivaEngageSegment;
+            case "RTIOperationsAgent": return RTIOperationsAgent;
+            case "ContentStoreMetadata": return ContentStoreMetadata;
+            case "CCRAIPolicyViolation": return CCRAIPolicyViolation;
+            case "PlannerPlanSensitivityLabel": return PlannerPlanSensitivityLabel;
+            case "MosAgentInfoRecord": return MosAgentInfoRecord;
+            case "A365AIRunSummary": return A365AIRunSummary;
+            case "UnifiedCatalogConceptAction": return UnifiedCatalogConceptAction;
+            case "DefenderCaseManagement": return DefenderCaseManagement;
+            case "CopilotForSecurityLogging": return CopilotForSecurityLogging;
+            case "VivaEngageEvents": return VivaEngageEvents;
+            case "CallActivityEvent": return CallActivityEvent;
+            case "SonarDetonationContentMetadata": return SonarDetonationContentMetadata;
+            case "UniversalPrintManagement": return UniversalPrintManagement;
+            case "YammerUserHiding": return YammerUserHiding;
+            case "Microsoft365BackupGranularBrowseTask": return Microsoft365BackupGranularBrowseTask;
+            case "PurviewPostureAgent": return PurviewPostureAgent;
+            case "MSDECustomCollection": return MSDECustomCollection;
+            case "SCPUsageEvent": return SCPUsageEvent;
+            case "SCPConfigurationEvent": return SCPConfigurationEvent;
+            case "MDCConfigurationEvent": return MDCConfigurationEvent;
+            case "MDCUsageEvent": return MDCUsageEvent;
+            case "A365SpanOutputs": return A365SpanOutputs;
+            case "PowerPlatformTenantIsolation": return PowerPlatformTenantIsolation;
+            case "CDPDLMAIInteractionInsights": return CDPDLMAIInteractionInsights;
+            case "P4AIAssessmentCategoryRecord": return P4AIAssessmentCategoryRecord;
+            case "SentinelLakeEncryption": return SentinelLakeEncryption;
+            case "AZFWNetworkRule": return AZFWNetworkRule;
+            case "AZFWDnsQuery": return AZFWDnsQuery;
+            case "AZFWApplicationRuleAggregation": return AZFWApplicationRuleAggregation;
+            case "TeamsEvalDataHubDataAccess": return TeamsEvalDataHubDataAccess;
+            case "TeamsEvalDataHubPermissionChange": return TeamsEvalDataHubPermissionChange;
+            case "TeamsEvalDataHubAdminOperation": return TeamsEvalDataHubAdminOperation;
+            case "VivaGlintOrganizationalData": return VivaGlintOrganizationalData;
+            case "ReportSubmission": return ReportSubmission;
+            case "ReportSubmissionResultDetail": return ReportSubmissionResultDetail;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for CDP Log events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CdpLogRecord extends AuditData implements Parsable {
     /**

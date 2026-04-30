@@ -32,10 +32,28 @@ public class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Pa
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("mailboxExclusionUnits", (n) -> { this.setMailboxExclusionUnits(n.getCollectionOfObjectValues(MailboxExclusionUnit::createFromDiscriminatorValue)); });
+        deserializerMap.put("mailboxExclusionUnitsBulkAdditionJobs", (n) -> { this.setMailboxExclusionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(MailboxExclusionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
         deserializerMap.put("mailboxInclusionRules", (n) -> { this.setMailboxInclusionRules(n.getCollectionOfObjectValues(MailboxProtectionRule::createFromDiscriminatorValue)); });
         deserializerMap.put("mailboxProtectionUnits", (n) -> { this.setMailboxProtectionUnits(n.getCollectionOfObjectValues(MailboxProtectionUnit::createFromDiscriminatorValue)); });
         deserializerMap.put("mailboxProtectionUnitsBulkAdditionJobs", (n) -> { this.setMailboxProtectionUnitsBulkAdditionJobs(n.getCollectionOfObjectValues(MailboxProtectionUnitsBulkAdditionJob::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the mailboxExclusionUnits property value. The mailboxExclusionUnits property
+     * @return a {@link java.util.List<MailboxExclusionUnit>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MailboxExclusionUnit> getMailboxExclusionUnits() {
+        return this.backingStore.get("mailboxExclusionUnits");
+    }
+    /**
+     * Gets the mailboxExclusionUnitsBulkAdditionJobs property value. The mailboxExclusionUnitsBulkAdditionJobs property
+     * @return a {@link java.util.List<MailboxExclusionUnitsBulkAdditionJob>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MailboxExclusionUnitsBulkAdditionJob> getMailboxExclusionUnitsBulkAdditionJobs() {
+        return this.backingStore.get("mailboxExclusionUnitsBulkAdditionJobs");
     }
     /**
      * Gets the mailboxInclusionRules property value. The rules associated with the Exchange protection policy.
@@ -68,9 +86,25 @@ public class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Pa
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("mailboxExclusionUnits", this.getMailboxExclusionUnits());
+        writer.writeCollectionOfObjectValues("mailboxExclusionUnitsBulkAdditionJobs", this.getMailboxExclusionUnitsBulkAdditionJobs());
         writer.writeCollectionOfObjectValues("mailboxInclusionRules", this.getMailboxInclusionRules());
         writer.writeCollectionOfObjectValues("mailboxProtectionUnits", this.getMailboxProtectionUnits());
         writer.writeCollectionOfObjectValues("mailboxProtectionUnitsBulkAdditionJobs", this.getMailboxProtectionUnitsBulkAdditionJobs());
+    }
+    /**
+     * Sets the mailboxExclusionUnits property value. The mailboxExclusionUnits property
+     * @param value Value to set for the mailboxExclusionUnits property.
+     */
+    public void setMailboxExclusionUnits(@jakarta.annotation.Nullable final java.util.List<MailboxExclusionUnit> value) {
+        this.backingStore.set("mailboxExclusionUnits", value);
+    }
+    /**
+     * Sets the mailboxExclusionUnitsBulkAdditionJobs property value. The mailboxExclusionUnitsBulkAdditionJobs property
+     * @param value Value to set for the mailboxExclusionUnitsBulkAdditionJobs property.
+     */
+    public void setMailboxExclusionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<MailboxExclusionUnitsBulkAdditionJob> value) {
+        this.backingStore.set("mailboxExclusionUnitsBulkAdditionJobs", value);
     }
     /**
      * Sets the mailboxInclusionRules property value. The rules associated with the Exchange protection policy.

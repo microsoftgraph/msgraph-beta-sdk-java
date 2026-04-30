@@ -3,6 +3,9 @@ package com.microsoft.graph.beta.models.security;
 import com.microsoft.kiota.serialization.ValuedEnum;
 import java.util.Objects;
 
+/**
+ * Type of user associated with an audit log record.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public enum AuditLogUserType implements ValuedEnum {
     Regular("Regular"),

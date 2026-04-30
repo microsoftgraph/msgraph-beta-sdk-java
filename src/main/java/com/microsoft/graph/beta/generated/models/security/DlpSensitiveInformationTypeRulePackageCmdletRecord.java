@@ -6,6 +6,9 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+/**
+ * Audit data for DLP Sensitive Information Type Rule Package cmdlet events.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DlpSensitiveInformationTypeRulePackageCmdletRecord extends AuditData implements Parsable {
     /**
