@@ -50,6 +50,14 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         return this.backingStore.get("completionDateTime");
     }
     /**
+     * Gets the destinationType property value. The destinationType property
+     * @return a {@link DestinationType}
+     */
+    @jakarta.annotation.Nullable
+    public DestinationType getDestinationType() {
+        return this.backingStore.get("destinationType");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -58,6 +66,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("browseSessionId", (n) -> { this.setBrowseSessionId(n.getStringValue()); });
         deserializerMap.put("completionDateTime", (n) -> { this.setCompletionDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("destinationType", (n) -> { this.setDestinationType(n.getEnumValue(DestinationType::forValue)); });
         deserializerMap.put("restoredItemKey", (n) -> { this.setRestoredItemKey(n.getStringValue()); });
         deserializerMap.put("restoredItemPath", (n) -> { this.setRestoredItemPath(n.getStringValue()); });
         deserializerMap.put("restoredItemWebUrl", (n) -> { this.setRestoredItemWebUrl(n.getStringValue()); });
@@ -132,6 +141,7 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("browseSessionId", this.getBrowseSessionId());
         writer.writeOffsetDateTimeValue("completionDateTime", this.getCompletionDateTime());
+        writer.writeEnumValue("destinationType", this.getDestinationType());
         writer.writeStringValue("restoredItemKey", this.getRestoredItemKey());
         writer.writeStringValue("restoredItemPath", this.getRestoredItemPath());
         writer.writeStringValue("restoredItemWebUrl", this.getRestoredItemWebUrl());
@@ -153,6 +163,13 @@ public class GranularRestoreArtifactBase extends Entity implements Parsable {
      */
     public void setCompletionDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("completionDateTime", value);
+    }
+    /**
+     * Sets the destinationType property value. The destinationType property
+     * @param value Value to set for the destinationType property.
+     */
+    public void setDestinationType(@jakarta.annotation.Nullable final DestinationType value) {
+        this.backingStore.set("destinationType", value);
     }
     /**
      * Sets the restoredItemKey property value. The unique identifier for the restored artifact.

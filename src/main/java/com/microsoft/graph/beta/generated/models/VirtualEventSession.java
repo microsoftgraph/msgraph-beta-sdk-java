@@ -26,6 +26,14 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         return new VirtualEventSession();
     }
     /**
+     * Gets the capacity property value. The capacity property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getCapacity() {
+        return this.backingStore.get("capacity");
+    }
+    /**
      * Gets the endDateTime property value. The virtual event session end time.
      * @return a {@link DateTimeTimeZone}
      */
@@ -40,6 +48,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("capacity", (n) -> { this.setCapacity(n.getIntegerValue()); });
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("presenters", (n) -> { this.setPresenters(n.getCollectionOfObjectValues(VirtualEventPresenter::createFromDiscriminatorValue)); });
         deserializerMap.put("registrations", (n) -> { this.setRegistrations(n.getCollectionOfObjectValues(VirtualEventRegistration::createFromDiscriminatorValue)); });
@@ -86,11 +95,19 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeIntegerValue("capacity", this.getCapacity());
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
         writer.writeCollectionOfObjectValues("presenters", this.getPresenters());
         writer.writeCollectionOfObjectValues("registrations", this.getRegistrations());
         writer.writeObjectValue("startDateTime", this.getStartDateTime());
         writer.writeStringValue("videoOnDemandWebUrl", this.getVideoOnDemandWebUrl());
+    }
+    /**
+     * Sets the capacity property value. The capacity property
+     * @param value Value to set for the capacity property.
+     */
+    public void setCapacity(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("capacity", value);
     }
     /**
      * Sets the endDateTime property value. The virtual event session end time.

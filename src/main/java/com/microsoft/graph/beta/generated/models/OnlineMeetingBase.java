@@ -186,6 +186,14 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         return this.backingStore.get("chatRestrictions");
     }
     /**
+     * Gets the cloudVideoInteropInfo property value. The cloudVideoInteropInfo property
+     * @return a {@link CloudVideoInteropInfo}
+     */
+    @jakarta.annotation.Nullable
+    public CloudVideoInteropInfo getCloudVideoInteropInfo() {
+        return this.backingStore.get("cloudVideoInteropInfo");
+    }
+    /**
      * Gets the expiryDateTime property value. Indicates the date and time when the meeting resource expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
@@ -219,6 +227,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         deserializerMap.put("audioConferencing", (n) -> { this.setAudioConferencing(n.getObjectValue(AudioConferencing::createFromDiscriminatorValue)); });
         deserializerMap.put("chatInfo", (n) -> { this.setChatInfo(n.getObjectValue(ChatInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("chatRestrictions", (n) -> { this.setChatRestrictions(n.getObjectValue(ChatRestrictions::createFromDiscriminatorValue)); });
+        deserializerMap.put("cloudVideoInteropInfo", (n) -> { this.setCloudVideoInteropInfo(n.getObjectValue(CloudVideoInteropInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("expiryDateTime", (n) -> { this.setExpiryDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("isEndToEndEncryptionEnabled", (n) -> { this.setIsEndToEndEncryptionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isEntryExitAnnounced", (n) -> { this.setIsEntryExitAnnounced(n.getBooleanValue()); });
@@ -374,6 +383,7 @@ public class OnlineMeetingBase extends Entity implements Parsable {
         writer.writeObjectValue("audioConferencing", this.getAudioConferencing());
         writer.writeObjectValue("chatInfo", this.getChatInfo());
         writer.writeObjectValue("chatRestrictions", this.getChatRestrictions());
+        writer.writeObjectValue("cloudVideoInteropInfo", this.getCloudVideoInteropInfo());
         writer.writeOffsetDateTimeValue("expiryDateTime", this.getExpiryDateTime());
         writer.writeBooleanValue("isEndToEndEncryptionEnabled", this.getIsEndToEndEncryptionEnabled());
         writer.writeBooleanValue("isEntryExitAnnounced", this.getIsEntryExitAnnounced());
@@ -522,6 +532,13 @@ public class OnlineMeetingBase extends Entity implements Parsable {
      */
     public void setChatRestrictions(@jakarta.annotation.Nullable final ChatRestrictions value) {
         this.backingStore.set("chatRestrictions", value);
+    }
+    /**
+     * Sets the cloudVideoInteropInfo property value. The cloudVideoInteropInfo property
+     * @param value Value to set for the cloudVideoInteropInfo property.
+     */
+    public void setCloudVideoInteropInfo(@jakarta.annotation.Nullable final CloudVideoInteropInfo value) {
+        this.backingStore.set("cloudVideoInteropInfo", value);
     }
     /**
      * Sets the expiryDateTime property value. Indicates the date and time when the meeting resource expires. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.

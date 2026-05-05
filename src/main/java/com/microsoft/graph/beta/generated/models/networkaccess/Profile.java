@@ -30,6 +30,7 @@ public class Profile extends BaseEntity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.networkaccess.filteringProfile": return new FilteringProfile();
                 case "#microsoft.graph.networkaccess.forwardingProfile": return new ForwardingProfile();
+                case "#microsoft.graph.networkaccess.forwardingProfileBase": return new ForwardingProfileBase();
             }
         }
         return new Profile();

@@ -41,7 +41,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return this.backingStore.get("azureADRegistration");
     }
     /**
-     * Gets the description property value. The description of the device registration policy. It&apos;s always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
+     * Gets the description property value. The description of the device registration policy. Always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the displayName property value. The name of the device registration policy. It&apos;s always set to Device Registration Policy. Read-only.
+     * Gets the displayName property value. The name of the device registration policy. Always set to Device Registration Policy. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -126,14 +126,14 @@ public class DeviceRegistrationPolicy extends Entity implements Parsable {
         this.backingStore.set("azureADRegistration", value);
     }
     /**
-     * Sets the description property value. The description of the device registration policy. It&apos;s always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
+     * Sets the description property value. The description of the device registration policy. Always set to Tenant-wide policy that manages intial provisioning controls using quota restrictions, additional authentication and authorization checks. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the displayName property value. The name of the device registration policy. It&apos;s always set to Device Registration Policy. Read-only.
+     * Sets the displayName property value. The name of the device registration policy. Always set to Device Registration Policy. Read-only.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

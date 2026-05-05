@@ -31,7 +31,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the servicePrincipal property of the microsoft.graph.networkaccess.forwardingProfile entity.
+     * Provides operations to manage the servicePrincipal property of the microsoft.graph.networkaccess.forwardingProfileBase entity.
      * @return a {@link ServicePrincipalRequestBuilder}
      */
     @jakarta.annotation.Nonnull

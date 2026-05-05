@@ -64,7 +64,7 @@ public class VerifiedIdRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get verifiedId from identity
+     * Entry point for verified ID operations.
      * @return a {@link IdentityVerifiedIdRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class VerifiedIdRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get verifiedId from identity
+     * Entry point for verified ID operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityVerifiedIdRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class VerifiedIdRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get verifiedId from identity
+     * Entry point for verified ID operations.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class VerifiedIdRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get verifiedId from identity
+     * Entry point for verified ID operations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class VerifiedIdRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get verifiedId from identity
+     * Entry point for verified ID operations.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

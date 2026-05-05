@@ -51,8 +51,26 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("agentIdentityBlueprintId", (n) -> { this.setAgentIdentityBlueprintId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("inheritedAppRoleAssignments", (n) -> { this.setInheritedAppRoleAssignments(n.getCollectionOfObjectValues(AppRoleAssignment::createFromDiscriminatorValue)); });
+        deserializerMap.put("inheritedOauth2PermissionGrants", (n) -> { this.setInheritedOauth2PermissionGrants(n.getCollectionOfObjectValues(OAuth2PermissionGrant::createFromDiscriminatorValue)); });
         deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the inheritedAppRoleAssignments property value. Application role assignments that this agent identity inherits from its parent Agent Identity Blueprint service principal. Read-only. Nullable.
+     * @return a {@link java.util.List<AppRoleAssignment>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<AppRoleAssignment> getInheritedAppRoleAssignments() {
+        return this.backingStore.get("inheritedAppRoleAssignments");
+    }
+    /**
+     * Gets the inheritedOauth2PermissionGrants property value. Delegated permission grants that this agent identity inherits from its parent Agent Identity Blueprint service principal. Read-only. Nullable.
+     * @return a {@link java.util.List<OAuth2PermissionGrant>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<OAuth2PermissionGrant> getInheritedOauth2PermissionGrants() {
+        return this.backingStore.get("inheritedOauth2PermissionGrants");
     }
     /**
      * Gets the sponsors property value. The sponsors for this agent identity.
@@ -71,6 +89,8 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
         super.serialize(writer);
         writer.writeStringValue("agentIdentityBlueprintId", this.getAgentIdentityBlueprintId());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
+        writer.writeCollectionOfObjectValues("inheritedAppRoleAssignments", this.getInheritedAppRoleAssignments());
+        writer.writeCollectionOfObjectValues("inheritedOauth2PermissionGrants", this.getInheritedOauth2PermissionGrants());
         writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
     }
     /**
@@ -86,6 +106,20 @@ public class AgentIdentity extends ServicePrincipal implements Parsable {
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the inheritedAppRoleAssignments property value. Application role assignments that this agent identity inherits from its parent Agent Identity Blueprint service principal. Read-only. Nullable.
+     * @param value Value to set for the inheritedAppRoleAssignments property.
+     */
+    public void setInheritedAppRoleAssignments(@jakarta.annotation.Nullable final java.util.List<AppRoleAssignment> value) {
+        this.backingStore.set("inheritedAppRoleAssignments", value);
+    }
+    /**
+     * Sets the inheritedOauth2PermissionGrants property value. Delegated permission grants that this agent identity inherits from its parent Agent Identity Blueprint service principal. Read-only. Nullable.
+     * @param value Value to set for the inheritedOauth2PermissionGrants property.
+     */
+    public void setInheritedOauth2PermissionGrants(@jakarta.annotation.Nullable final java.util.List<OAuth2PermissionGrant> value) {
+        this.backingStore.set("inheritedOauth2PermissionGrants", value);
     }
     /**
      * Sets the sponsors property value. The sponsors for this agent identity.

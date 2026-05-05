@@ -97,6 +97,7 @@ public class CopilotPackage extends Entity implements Parsable {
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("manifestId", (n) -> { this.setManifestId(n.getStringValue()); });
         deserializerMap.put("manifestVersion", (n) -> { this.setManifestVersion(n.getStringValue()); });
+        deserializerMap.put("ownerId", (n) -> { this.setOwnerId(n.getStringValue()); });
         deserializerMap.put("platform", (n) -> { this.setPlatform(n.getStringValue()); });
         deserializerMap.put("publisher", (n) -> { this.setPublisher(n.getStringValue()); });
         deserializerMap.put("shortDescription", (n) -> { this.setShortDescription(n.getStringValue()); });
@@ -137,6 +138,14 @@ public class CopilotPackage extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getManifestVersion() {
         return this.backingStore.get("manifestVersion");
+    }
+    /**
+     * Gets the ownerId property value. The ownerId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getOwnerId() {
+        return this.backingStore.get("ownerId");
     }
     /**
      * Gets the platform property value. The platform property
@@ -211,6 +220,7 @@ public class CopilotPackage extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeStringValue("manifestId", this.getManifestId());
         writer.writeStringValue("manifestVersion", this.getManifestVersion());
+        writer.writeStringValue("ownerId", this.getOwnerId());
         writer.writeStringValue("platform", this.getPlatform());
         writer.writeStringValue("publisher", this.getPublisher());
         writer.writeStringValue("shortDescription", this.getShortDescription());
@@ -288,6 +298,13 @@ public class CopilotPackage extends Entity implements Parsable {
      */
     public void setManifestVersion(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("manifestVersion", value);
+    }
+    /**
+     * Sets the ownerId property value. The ownerId property
+     * @param value Value to set for the ownerId property.
+     */
+    public void setOwnerId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("ownerId", value);
     }
     /**
      * Sets the platform property value. The platform property

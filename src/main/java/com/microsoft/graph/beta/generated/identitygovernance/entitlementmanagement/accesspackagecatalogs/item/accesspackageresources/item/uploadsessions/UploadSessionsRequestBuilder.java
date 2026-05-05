@@ -66,7 +66,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackageResources/{accessPackageResource%2Did}/uploadSessions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
+     * Get uploadSessions from identityGovernance
      * @return a {@link CustomDataProvidedResourceUploadSessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -78,7 +78,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
+     * Get uploadSessions from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomDataProvidedResourceUploadSessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -94,13 +94,12 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomDataProvidedResourceUploadSessionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new customDataProvidedResourceUploadSession object.
+     * Create new navigation property to uploadSessions for identityGovernance
      * @param body The request body
      * @return a {@link CustomDataProvidedResourceUploadSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://learn.microsoft.com/graph/api/customdataprovidedresource-post-uploadsessions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -108,14 +107,13 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new customDataProvidedResourceUploadSession object.
+     * Create new navigation property to uploadSessions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomDataProvidedResourceUploadSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
-     * @see <a href="https://learn.microsoft.com/graph/api/customdataprovidedresource-post-uploadsessions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -127,7 +125,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomDataProvidedResourceUploadSession::createFromDiscriminatorValue);
     }
     /**
-     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
+     * Get uploadSessions from identityGovernance
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -138,7 +136,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
+     * Get uploadSessions from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -153,7 +151,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new customDataProvidedResourceUploadSession object.
+     * Create new navigation property to uploadSessions for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -165,7 +163,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new customDataProvidedResourceUploadSession object.
+     * Create new navigation property to uploadSessions for identityGovernance
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -196,7 +194,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return new UploadSessionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
+     * Get uploadSessions from identityGovernance
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

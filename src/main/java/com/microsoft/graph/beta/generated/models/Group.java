@@ -492,7 +492,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesDomainName");
     }
     /**
-     * Gets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
+     * Gets the onPremisesExtensionAttributes property value. Complex type containing extension attributes 1-15 for the group, synchronized from on-premises Active Directory. Returned only on $select. Supports $filter (eq, ne, not, in).
      * @return a {@link OnPremisesExtensionAttributes}
      */
     @jakarta.annotation.Nullable
@@ -652,7 +652,7 @@ public class Group extends DirectoryObject implements Parsable {
         return this.backingStore.get("resourceBehaviorOptions");
     }
     /**
-     * Gets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
+     * Gets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -1210,7 +1210,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesDomainName", value);
     }
     /**
-     * Sets the onPremisesExtensionAttributes property value. The onPremisesExtensionAttributes property
+     * Sets the onPremisesExtensionAttributes property value. Complex type containing extension attributes 1-15 for the group, synchronized from on-premises Active Directory. Returned only on $select. Supports $filter (eq, ne, not, in).
      * @param value Value to set for the onPremisesExtensionAttributes property.
      */
     public void setOnPremisesExtensionAttributes(@jakarta.annotation.Nullable final OnPremisesExtensionAttributes value) {
@@ -1350,7 +1350,7 @@ public class Group extends DirectoryObject implements Parsable {
         this.backingStore.set("resourceBehaviorOptions", value);
     }
     /**
-     * Sets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith.
+     * Sets the resourceProvisioningOptions property value. Specifies the group resources that are associated with the Microsoft 365 group. The possible value is Team. For more information, see Microsoft 365 group behaviors and provisioning options. Returned by default. Supports $filter (eq, not, startsWith).
      * @param value Value to set for the resourceProvisioningOptions property.
      */
     public void setResourceProvisioningOptions(@jakarta.annotation.Nullable final java.util.List<String> value) {

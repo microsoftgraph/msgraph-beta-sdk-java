@@ -36,7 +36,7 @@ public class ExchangeSettings extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the inPlaceArchiveMailboxId property value. The inPlaceArchiveMailboxId property
+     * Gets the inPlaceArchiveMailboxId property value. The unique identifier for the user&apos;s In-Place Archive mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class ExchangeSettings extends Entity implements Parsable {
         writer.writeStringValue("primaryMailboxId", this.getPrimaryMailboxId());
     }
     /**
-     * Sets the inPlaceArchiveMailboxId property value. The inPlaceArchiveMailboxId property
+     * Sets the inPlaceArchiveMailboxId property value. The unique identifier for the user&apos;s In-Place Archive mailbox.
      * @param value Value to set for the inPlaceArchiveMailboxId property.
      */
     public void setInPlaceArchiveMailboxId(@jakarta.annotation.Nullable final String value) {
