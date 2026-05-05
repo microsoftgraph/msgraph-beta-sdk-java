@@ -29,6 +29,7 @@ public class BaseEntity extends Entity implements Parsable {
             switch (mappingValue) {
                 case "#microsoft.graph.networkaccess.filteringProfile": return new FilteringProfile();
                 case "#microsoft.graph.networkaccess.forwardingProfile": return new ForwardingProfile();
+                case "#microsoft.graph.networkaccess.forwardingProfileBase": return new ForwardingProfileBase();
                 case "#microsoft.graph.networkaccess.profile": return new Profile();
                 case "#microsoft.graph.networkaccess.remoteNetwork": return new RemoteNetwork();
             }

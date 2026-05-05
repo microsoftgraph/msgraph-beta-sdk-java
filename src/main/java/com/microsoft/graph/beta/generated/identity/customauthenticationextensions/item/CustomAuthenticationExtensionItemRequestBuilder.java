@@ -90,21 +90,23 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, CustomAuthenticationExtension::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomAuthenticationExtension}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/customauthenticationextension-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CustomAuthenticationExtension patch(@jakarta.annotation.Nonnull final CustomAuthenticationExtension body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -155,7 +157,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -164,7 +166,7 @@ public class CustomAuthenticationExtensionItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property customAuthenticationExtensions in identity
+     * Update the properties of a customAuthenticationExtension object. The following derived types are currently supported.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

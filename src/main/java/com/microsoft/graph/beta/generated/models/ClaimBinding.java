@@ -61,11 +61,20 @@ public class ClaimBinding implements AdditionalDataHolder, BackedModel, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("matchConfidenceLevel", (n) -> { this.setMatchConfidenceLevel(n.getEnumValue(MatchConfidenceLevel::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("sourceAttribute", (n) -> { this.setSourceAttribute(n.getStringValue()); });
         deserializerMap.put("verifiedIdClaim", (n) -> { this.setVerifiedIdClaim(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the matchConfidenceLevel property value. The matchConfidenceLevel property
+     * @return a {@link MatchConfidenceLevel}
+     */
+    @jakarta.annotation.Nullable
+    public MatchConfidenceLevel getMatchConfidenceLevel() {
+        return this.backingStore.get("matchConfidenceLevel");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -97,6 +106,7 @@ public class ClaimBinding implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeEnumValue("matchConfidenceLevel", this.getMatchConfidenceLevel());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("sourceAttribute", this.getSourceAttribute());
         writer.writeStringValue("verifiedIdClaim", this.getVerifiedIdClaim());
@@ -116,6 +126,13 @@ public class ClaimBinding implements AdditionalDataHolder, BackedModel, Parsable
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the matchConfidenceLevel property value. The matchConfidenceLevel property
+     * @param value Value to set for the matchConfidenceLevel property.
+     */
+    public void setMatchConfidenceLevel(@jakarta.annotation.Nullable final MatchConfidenceLevel value) {
+        this.backingStore.set("matchConfidenceLevel", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

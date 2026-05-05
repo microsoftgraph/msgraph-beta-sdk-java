@@ -34,7 +34,7 @@ public class ForwardingProfileItemRequestBuilder extends BaseRequestBuilder {
         return new PoliciesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the servicePrincipal property of the microsoft.graph.networkaccess.forwardingProfile entity.
+     * Provides operations to manage the servicePrincipal property of the microsoft.graph.networkaccess.forwardingProfileBase entity.
      * @return a {@link ServicePrincipalRequestBuilder}
      * @deprecated
      * The Branches API is deprecated and will stop returning data on March 20, 2024. Please use the new Remote Network API. as of 2022-06/PrivatePreview:NetworkAccess on 2023-12-19 and will be removed 2024-03-20

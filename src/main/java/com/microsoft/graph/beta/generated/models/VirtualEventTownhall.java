@@ -34,6 +34,14 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         return this.backingStore.get("audience");
     }
     /**
+     * Gets the capacity property value. The capacity property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getCapacity() {
+        return this.backingStore.get("capacity");
+    }
+    /**
      * Gets the coOrganizers property value. Identity information of the coorganizers of the town hall.
      * @return a {@link java.util.List<CommunicationsUserIdentity>}
      */
@@ -49,6 +57,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("audience", (n) -> { this.setAudience(n.getEnumValue(MeetingAudience::forValue)); });
+        deserializerMap.put("capacity", (n) -> { this.setCapacity(n.getIntegerValue()); });
         deserializerMap.put("coOrganizers", (n) -> { this.setCoOrganizers(n.getCollectionOfObjectValues(CommunicationsUserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("invitedAttendees", (n) -> { this.setInvitedAttendees(n.getCollectionOfObjectValues(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("isInviteOnly", (n) -> { this.setIsInviteOnly(n.getBooleanValue()); });
@@ -78,6 +87,7 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeEnumValue("audience", this.getAudience());
+        writer.writeIntegerValue("capacity", this.getCapacity());
         writer.writeCollectionOfObjectValues("coOrganizers", this.getCoOrganizers());
         writer.writeCollectionOfObjectValues("invitedAttendees", this.getInvitedAttendees());
         writer.writeBooleanValue("isInviteOnly", this.getIsInviteOnly());
@@ -88,6 +98,13 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
      */
     public void setAudience(@jakarta.annotation.Nullable final MeetingAudience value) {
         this.backingStore.set("audience", value);
+    }
+    /**
+     * Sets the capacity property value. The capacity property
+     * @param value Value to set for the capacity property.
+     */
+    public void setCapacity(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("capacity", value);
     }
     /**
      * Sets the coOrganizers property value. Identity information of the coorganizers of the town hall.

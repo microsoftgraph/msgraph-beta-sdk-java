@@ -35,7 +35,7 @@ public class UpdateAdDomainPasswordRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/onPremisesConnections/{cloudPcOnPremisesConnection%2Did}/updateAdDomainPassword", rawUrl);
     }
     /**
-     * Update the Active Directory domain password for a cloudPcOnPremisesConnection object. This API is supported when the type of the cloudPcOnPremisesConnection object is hybridAzureADJoin.
+     * Update the Active Directory domain password for a successful cloudPcOnPremisesConnection. This API is supported when the type of the cloudPcOnPremisesConnection object is hybridAzureADJoin.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpconpremisesconnection-updateaddomainpassword?view=graph-rest-beta">Find more info here</a>
@@ -44,7 +44,7 @@ public class UpdateAdDomainPasswordRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Update the Active Directory domain password for a cloudPcOnPremisesConnection object. This API is supported when the type of the cloudPcOnPremisesConnection object is hybridAzureADJoin.
+     * Update the Active Directory domain password for a successful cloudPcOnPremisesConnection. This API is supported when the type of the cloudPcOnPremisesConnection object is hybridAzureADJoin.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class UpdateAdDomainPasswordRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Update the Active Directory domain password for a cloudPcOnPremisesConnection object. This API is supported when the type of the cloudPcOnPremisesConnection object is hybridAzureADJoin.
+     * Update the Active Directory domain password for a successful cloudPcOnPremisesConnection. This API is supported when the type of the cloudPcOnPremisesConnection object is hybridAzureADJoin.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class UpdateAdDomainPasswordRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Update the Active Directory domain password for a cloudPcOnPremisesConnection object. This API is supported when the type of the cloudPcOnPremisesConnection object is hybridAzureADJoin.
+     * Update the Active Directory domain password for a successful cloudPcOnPremisesConnection. This API is supported when the type of the cloudPcOnPremisesConnection object is hybridAzureADJoin.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

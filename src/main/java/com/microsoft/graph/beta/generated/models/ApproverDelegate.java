@@ -57,10 +57,10 @@ public class ApproverDelegate implements AdditionalDataHolder, BackedModel, Pars
     }
     /**
      * Gets the delegate property value. The delegate property
-     * @return a {@link SubjectSet}
+     * @return a {@link UserSet}
      */
     @jakarta.annotation.Nullable
-    public SubjectSet getDelegate() {
+    public UserSet getDelegate() {
         return this.backingStore.get("delegate");
     }
     /**
@@ -70,7 +70,7 @@ public class ApproverDelegate implements AdditionalDataHolder, BackedModel, Pars
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
-        deserializerMap.put("delegate", (n) -> { this.setDelegate(n.getObjectValue(SubjectSet::createFromDiscriminatorValue)); });
+        deserializerMap.put("delegate", (n) -> { this.setDelegate(n.getObjectValue(UserSet::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("schedule", (n) -> { this.setSchedule(n.getObjectValue(RequestSchedule::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -121,7 +121,7 @@ public class ApproverDelegate implements AdditionalDataHolder, BackedModel, Pars
      * Sets the delegate property value. The delegate property
      * @param value Value to set for the delegate property.
      */
-    public void setDelegate(@jakarta.annotation.Nullable final SubjectSet value) {
+    public void setDelegate(@jakarta.annotation.Nullable final UserSet value) {
         this.backingStore.set("delegate", value);
     }
     /**

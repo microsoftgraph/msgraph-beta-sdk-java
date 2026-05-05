@@ -80,15 +80,24 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore.get("claimBindingSource");
     }
     /**
+     * Gets the claimValidation property value. The claimValidation property
+     * @return a {@link ClaimValidation}
+     */
+    @jakarta.annotation.Nullable
+    public ClaimValidation getClaimValidation() {
+        return this.backingStore.get("claimValidation");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("acceptedIssuer", (n) -> { this.setAcceptedIssuer(n.getStringValue()); });
         deserializerMap.put("claimBindings", (n) -> { this.setClaimBindings(n.getCollectionOfObjectValues(ClaimBinding::createFromDiscriminatorValue)); });
         deserializerMap.put("claimBindingSource", (n) -> { this.setClaimBindingSource(n.getEnumValue(ClaimBindingSource::forValue)); });
+        deserializerMap.put("claimValidation", (n) -> { this.setClaimValidation(n.getObjectValue(ClaimValidation::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
@@ -118,6 +127,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         writer.writeStringValue("acceptedIssuer", this.getAcceptedIssuer());
         writer.writeCollectionOfObjectValues("claimBindings", this.getClaimBindings());
         writer.writeEnumValue("claimBindingSource", this.getClaimBindingSource());
+        writer.writeObjectValue("claimValidation", this.getClaimValidation());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -157,6 +167,13 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
      */
     public void setClaimBindingSource(@jakarta.annotation.Nullable final ClaimBindingSource value) {
         this.backingStore.set("claimBindingSource", value);
+    }
+    /**
+     * Sets the claimValidation property value. The claimValidation property
+     * @param value Value to set for the claimValidation property.
+     */
+    public void setClaimValidation(@jakarta.annotation.Nullable final ClaimValidation value) {
+        this.backingStore.set("claimValidation", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

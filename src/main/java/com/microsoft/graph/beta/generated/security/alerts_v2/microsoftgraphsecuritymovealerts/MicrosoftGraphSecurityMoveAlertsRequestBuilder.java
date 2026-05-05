@@ -36,7 +36,7 @@ public class MicrosoftGraphSecurityMoveAlertsRequestBuilder extends BaseRequestB
         super(requestAdapter, "{+baseurl}/security/alerts_v2/microsoft.graph.security.moveAlerts", rawUrl);
     }
     /**
-     * Move one or more alert resources to an existing incident.
+     * Move one or more alert resources to a new or existing incident.
      * @param body The request body
      * @return a {@link MergeResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -47,7 +47,7 @@ public class MicrosoftGraphSecurityMoveAlertsRequestBuilder extends BaseRequestB
         return post(body, null);
     }
     /**
-     * Move one or more alert resources to an existing incident.
+     * Move one or more alert resources to a new or existing incident.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MergeResponse}
@@ -63,7 +63,7 @@ public class MicrosoftGraphSecurityMoveAlertsRequestBuilder extends BaseRequestB
         return this.requestAdapter.send(requestInfo, errorMapping, MergeResponse::createFromDiscriminatorValue);
     }
     /**
-     * Move one or more alert resources to an existing incident.
+     * Move one or more alert resources to a new or existing incident.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -72,7 +72,7 @@ public class MicrosoftGraphSecurityMoveAlertsRequestBuilder extends BaseRequestB
         return toPostRequestInformation(body, null);
     }
     /**
-     * Move one or more alert resources to an existing incident.
+     * Move one or more alert resources to a new or existing incident.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

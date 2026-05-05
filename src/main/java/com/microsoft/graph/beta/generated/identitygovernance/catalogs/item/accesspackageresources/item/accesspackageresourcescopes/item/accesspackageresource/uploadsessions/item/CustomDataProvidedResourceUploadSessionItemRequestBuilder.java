@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.accesspackageresourcescopes.item.accesspackageresource.uploadsessions.item;
 
+import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.accesspackageresourcescopes.item.accesspackageresource.uploadsessions.item.files.FilesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.accesspackageresourcescopes.item.accesspackageresource.uploadsessions.item.uploadfile.UploadFileRequestBuilder;
 import com.microsoft.graph.beta.models.CustomDataProvidedResourceUploadSession;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -21,6 +22,17 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the files property of the microsoft.graph.customDataProvidedResourceUploadSession entity.
+     * @return a {@link FilesRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public FilesRequestBuilder files() {
+        return new FilesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the uploadFile method.
      * @return a {@link UploadFileRequestBuilder}

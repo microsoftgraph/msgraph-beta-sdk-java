@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.uploadsessions.item;
 
+import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.uploadsessions.item.files.FilesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.catalogs.item.accesspackageresources.item.uploadsessions.item.uploadfile.UploadFileRequestBuilder;
 import com.microsoft.graph.beta.models.CustomDataProvidedResourceUploadSession;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -21,6 +22,17 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the files property of the microsoft.graph.customDataProvidedResourceUploadSession entity.
+     * @return a {@link FilesRequestBuilder}
+     * @deprecated
+     *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public FilesRequestBuilder files() {
+        return new FilesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the uploadFile method.
      * @return a {@link UploadFileRequestBuilder}
@@ -49,21 +61,23 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         super(requestAdapter, "{+baseurl}/identityGovernance/catalogs/{accessPackageCatalog%2Did}/accessPackageResources/{accessPackageResource%2Did}/uploadSessions/{customDataProvidedResourceUploadSession%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property uploadSessions for identityGovernance
+     * Delete a customDataProvidedResourceUploadSession object.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageresource-delete-uploadsessions?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property uploadSessions for identityGovernance
+     * Delete a customDataProvidedResourceUploadSession object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     * @see <a href="https://learn.microsoft.com/graph/api/accesspackageresource-delete-uploadsessions?view=graph-rest-beta">Find more info here</a>
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -73,11 +87,12 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get uploadSessions from identityGovernance
+     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
      * @return a {@link CustomDataProvidedResourceUploadSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     * @see <a href="https://learn.microsoft.com/graph/api/customdataprovidedresourceuploadsession-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -85,12 +100,13 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         return get(null);
     }
     /**
-     * Get uploadSessions from identityGovernance
+     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomDataProvidedResourceUploadSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     * @see <a href="https://learn.microsoft.com/graph/api/customdataprovidedresourceuploadsession-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -101,12 +117,13 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, CustomDataProvidedResourceUploadSession::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property uploadSessions in identityGovernance
+     * Update the properties of a customDataProvidedResourceUploadSession created for a customDataProvidedResource object.
      * @param body The request body
      * @return a {@link CustomDataProvidedResourceUploadSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     * @see <a href="https://learn.microsoft.com/graph/api/customdataprovidedresourceuploadsession-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -114,13 +131,14 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         return patch(body, null);
     }
     /**
-     * Update the navigation property uploadSessions in identityGovernance
+     * Update the properties of a customDataProvidedResourceUploadSession created for a customDataProvidedResource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomDataProvidedResourceUploadSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
+     * @see <a href="https://learn.microsoft.com/graph/api/customdataprovidedresourceuploadsession-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -132,7 +150,7 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         return this.requestAdapter.send(requestInfo, errorMapping, CustomDataProvidedResourceUploadSession::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property uploadSessions for identityGovernance
+     * Delete a customDataProvidedResourceUploadSession object.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -143,7 +161,7 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property uploadSessions for identityGovernance
+     * Delete a customDataProvidedResourceUploadSession object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -158,7 +176,7 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Get uploadSessions from identityGovernance
+     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -169,7 +187,7 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         return toGetRequestInformation(null);
     }
     /**
-     * Get uploadSessions from identityGovernance
+     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -184,7 +202,7 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         return requestInfo;
     }
     /**
-     * Update the navigation property uploadSessions in identityGovernance
+     * Update the properties of a customDataProvidedResourceUploadSession created for a customDataProvidedResource object.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -196,7 +214,7 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property uploadSessions in identityGovernance
+     * Update the properties of a customDataProvidedResourceUploadSession created for a customDataProvidedResource object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -233,7 +251,7 @@ public class CustomDataProvidedResourceUploadSessionItemRequestBuilder extends B
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get uploadSessions from identityGovernance
+     * Read the properties and relationships of a customDataProvidedResourceUploadSession object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

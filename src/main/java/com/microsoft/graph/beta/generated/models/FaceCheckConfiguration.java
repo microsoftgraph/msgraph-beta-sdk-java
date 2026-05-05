@@ -84,7 +84,7 @@ public class FaceCheckConfiguration implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sourcePhotoClaimName property value. The sourcePhotoClaimName property
+     * Gets the sourcePhotoClaimName property value. Source of photo to validate Face Check against. Currently must always be portrait
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -132,7 +132,7 @@ public class FaceCheckConfiguration implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sourcePhotoClaimName property value. The sourcePhotoClaimName property
+     * Sets the sourcePhotoClaimName property value. Source of photo to validate Face Check against. Currently must always be portrait
      * @param value Value to set for the sourcePhotoClaimName property.
      */
     public void setSourcePhotoClaimName(@jakarta.annotation.Nullable final String value) {

@@ -26,7 +26,7 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         return new CustomDataProvidedResourceUploadSession();
     }
     /**
-     * Gets the createdDateTime property value. DateTime when the upload session was created. Read-only.
+     * Gets the createdDateTime property value. DateTime when the upload session was created. Read-only. Supports $orderby.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,12 +50,22 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("data", (n) -> { this.setData(n.getObjectValue(CustomExtensionData::createFromDiscriminatorValue)); });
+        deserializerMap.put("files", (n) -> { this.setFiles(n.getCollectionOfObjectValues(CustomDataProvidedResourceFile::createFromDiscriminatorValue)); });
         deserializerMap.put("isUploadDone", (n) -> { this.setIsUploadDone(n.getBooleanValue()); });
+        deserializerMap.put("referenceId", (n) -> { this.setReferenceId(n.getStringValue()); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
         deserializerMap.put("stats", (n) -> { this.setStats(n.getObjectValue(CustomDataProvidedResourceUploadStats::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CustomDataProvidedResourceUploadStatus::forValue)); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the files property value. The files uploaded during this upload session. Supports $expand and $expand with nested $filter and $orderby.
+     * @return a {@link java.util.List<CustomDataProvidedResourceFile>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CustomDataProvidedResourceFile> getFiles() {
+        return this.backingStore.get("files");
     }
     /**
      * Gets the isUploadDone property value. Indicates if all the necessary files have been uploaded to this session.
@@ -64,6 +74,14 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
     @jakarta.annotation.Nullable
     public Boolean getIsUploadDone() {
         return this.backingStore.get("isUploadDone");
+    }
+    /**
+     * Gets the referenceId property value. The ID of the context for which data is being uploaded, for example, the Access Review instance ID. Supports $filter (eq).
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getReferenceId() {
+        return this.backingStore.get("referenceId");
     }
     /**
      * Gets the source property value. The source of the access data. This should be set to the customdataprovidedresource&apos;s name when creating the session.
@@ -106,14 +124,16 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeObjectValue("data", this.getData());
+        writer.writeCollectionOfObjectValues("files", this.getFiles());
         writer.writeBooleanValue("isUploadDone", this.getIsUploadDone());
+        writer.writeStringValue("referenceId", this.getReferenceId());
         writer.writeStringValue("source", this.getSource());
         writer.writeObjectValue("stats", this.getStats());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("type", this.getType());
     }
     /**
-     * Sets the createdDateTime property value. DateTime when the upload session was created. Read-only.
+     * Sets the createdDateTime property value. DateTime when the upload session was created. Read-only. Supports $orderby.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -127,11 +147,25 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         this.backingStore.set("data", value);
     }
     /**
+     * Sets the files property value. The files uploaded during this upload session. Supports $expand and $expand with nested $filter and $orderby.
+     * @param value Value to set for the files property.
+     */
+    public void setFiles(@jakarta.annotation.Nullable final java.util.List<CustomDataProvidedResourceFile> value) {
+        this.backingStore.set("files", value);
+    }
+    /**
      * Sets the isUploadDone property value. Indicates if all the necessary files have been uploaded to this session.
      * @param value Value to set for the isUploadDone property.
      */
     public void setIsUploadDone(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isUploadDone", value);
+    }
+    /**
+     * Sets the referenceId property value. The ID of the context for which data is being uploaded, for example, the Access Review instance ID. Supports $filter (eq).
+     * @param value Value to set for the referenceId property.
+     */
+    public void setReferenceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("referenceId", value);
     }
     /**
      * Sets the source property value. The source of the access data. This should be set to the customdataprovidedresource&apos;s name when creating the session.

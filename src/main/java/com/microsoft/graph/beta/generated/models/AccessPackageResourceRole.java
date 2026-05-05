@@ -60,6 +60,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("originId", (n) -> { this.setOriginId(n.getStringValue()); });
         deserializerMap.put("originSystem", (n) -> { this.setOriginSystem(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(RoleType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -71,12 +72,20 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         return this.backingStore.get("originId");
     }
     /**
-     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
+     * Gets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AzureResources or AadGroup.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getOriginSystem() {
         return this.backingStore.get("originSystem");
+    }
+    /**
+     * Gets the type property value. The role type for the Azure resource role. The possible values are: active, eligible, application, delegated, unknownFutureValue. The values active and eligible are only supported where originSystem is AzureResources while application and delegated aren&apos;t currently implemented.
+     * @return a {@link RoleType}
+     */
+    @jakarta.annotation.Nullable
+    public RoleType getType() {
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -90,6 +99,7 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("originId", this.getOriginId());
         writer.writeStringValue("originSystem", this.getOriginSystem());
+        writer.writeEnumValue("type", this.getType());
     }
     /**
      * Sets the accessPackageResource property value. The accessPackageResource property
@@ -120,10 +130,17 @@ public class AccessPackageResourceRole extends Entity implements Parsable {
         this.backingStore.set("originId", value);
     }
     /**
-     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication or AadGroup.
+     * Sets the originSystem property value. The type of the resource in the origin system, such as SharePointOnline, AadApplication, AzureResources or AadGroup.
      * @param value Value to set for the originSystem property.
      */
     public void setOriginSystem(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("originSystem", value);
+    }
+    /**
+     * Sets the type property value. The role type for the Azure resource role. The possible values are: active, eligible, application, delegated, unknownFutureValue. The values active and eligible are only supported where originSystem is AzureResources while application and delegated aren&apos;t currently implemented.
+     * @param value Value to set for the type property.
+     */
+    public void setType(@jakarta.annotation.Nullable final RoleType value) {
+        this.backingStore.set("type", value);
     }
 }

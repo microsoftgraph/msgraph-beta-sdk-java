@@ -36,7 +36,7 @@ public class OnVerifiedIdClaimValidationListener extends AuthenticationEventList
         return deserializerMap;
     }
     /**
-     * Gets the handler property value. The handler property
+     * Gets the handler property value. Configuration for the handler to invoke when this listener is triggered. For Verified ID claim validation scenarios, this is typically an onVerifiedIdClaimValidationCustomExtensionHandler.
      * @return a {@link OnVerifiedIdClaimValidationHandler}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class OnVerifiedIdClaimValidationListener extends AuthenticationEventList
         writer.writeObjectValue("handler", this.getHandler());
     }
     /**
-     * Sets the handler property value. The handler property
+     * Sets the handler property value. Configuration for the handler to invoke when this listener is triggered. For Verified ID claim validation scenarios, this is typically an onVerifiedIdClaimValidationCustomExtensionHandler.
      * @param value Value to set for the handler property.
      */
     public void setHandler(@jakarta.annotation.Nullable final OnVerifiedIdClaimValidationHandler value) {

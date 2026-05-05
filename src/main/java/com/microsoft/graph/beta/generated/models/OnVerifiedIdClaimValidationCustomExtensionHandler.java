@@ -26,7 +26,7 @@ public class OnVerifiedIdClaimValidationCustomExtensionHandler extends OnVerifie
         return new OnVerifiedIdClaimValidationCustomExtensionHandler();
     }
     /**
-     * Gets the configuration property value. The configuration property
+     * Gets the configuration property value. Configuration that overrides the default settings from the referenced custom extension, such as timeout and retry values. Optional.
      * @return a {@link CustomExtensionOverwriteConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class OnVerifiedIdClaimValidationCustomExtensionHandler extends OnVerifie
         writer.writeObjectValue("customExtension", this.getCustomExtension());
     }
     /**
-     * Sets the configuration property value. The configuration property
+     * Sets the configuration property value. Configuration that overrides the default settings from the referenced custom extension, such as timeout and retry values. Optional.
      * @param value Value to set for the configuration property.
      */
     public void setConfiguration(@jakarta.annotation.Nullable final CustomExtensionOverwriteConfiguration value) {
