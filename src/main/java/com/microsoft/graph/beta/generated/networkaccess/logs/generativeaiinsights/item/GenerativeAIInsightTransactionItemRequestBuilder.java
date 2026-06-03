@@ -26,7 +26,7 @@ public class GenerativeAIInsightTransactionItemRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GenerativeAIInsightTransactionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/logs/generativeAIInsights/{generativeAIInsight%2DtransactionId}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/networkAccess/logs/generativeAIInsights/{generativeAIInsight%2DtransactionId}", pathParameters);
     }
     /**
      * Instantiates a new {@link GenerativeAIInsightTransactionItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class GenerativeAIInsightTransactionItemRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GenerativeAIInsightTransactionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/logs/generativeAIInsights/{generativeAIInsight%2DtransactionId}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/networkAccess/logs/generativeAIInsights/{generativeAIInsight%2DtransactionId}", rawUrl);
     }
     /**
      * Delete navigation property generativeAIInsights for networkAccess

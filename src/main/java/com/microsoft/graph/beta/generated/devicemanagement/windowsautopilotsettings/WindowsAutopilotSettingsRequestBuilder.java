@@ -35,7 +35,7 @@ public class WindowsAutopilotSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WindowsAutopilotSettingsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/windowsAutopilotSettings{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/windowsAutopilotSettings", pathParameters);
     }
     /**
      * Instantiates a new {@link WindowsAutopilotSettingsRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class WindowsAutopilotSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WindowsAutopilotSettingsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/windowsAutopilotSettings{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/windowsAutopilotSettings", rawUrl);
     }
     /**
      * Delete navigation property windowsAutopilotSettings for deviceManagement

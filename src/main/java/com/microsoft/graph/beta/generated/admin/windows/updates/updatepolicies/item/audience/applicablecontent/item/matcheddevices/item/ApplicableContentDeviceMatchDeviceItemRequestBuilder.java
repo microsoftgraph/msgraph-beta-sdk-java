@@ -26,7 +26,7 @@ public class ApplicableContentDeviceMatchDeviceItemRequestBuilder extends BaseRe
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ApplicableContentDeviceMatchDeviceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/audience/applicableContent/{applicableContent%2DcatalogEntryId}/matchedDevices/{applicableContentDeviceMatch%2DdeviceId}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/audience/applicableContent/{applicableContent%2DcatalogEntryId}/matchedDevices/{applicableContentDeviceMatch%2DdeviceId}", pathParameters);
     }
     /**
      * Instantiates a new {@link ApplicableContentDeviceMatchDeviceItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ApplicableContentDeviceMatchDeviceItemRequestBuilder extends BaseRe
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ApplicableContentDeviceMatchDeviceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/audience/applicableContent/{applicableContent%2DcatalogEntryId}/matchedDevices/{applicableContentDeviceMatch%2DdeviceId}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/updatePolicies/{updatePolicy%2Did}/audience/applicableContent/{applicableContent%2DcatalogEntryId}/matchedDevices/{applicableContentDeviceMatch%2DdeviceId}", rawUrl);
     }
     /**
      * Delete navigation property matchedDevices for admin

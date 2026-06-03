@@ -35,7 +35,7 @@ public class CloudAppDiscoveryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudAppDiscoveryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataDiscovery/cloudAppDiscovery{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/dataDiscovery/cloudAppDiscovery", pathParameters);
     }
     /**
      * Instantiates a new {@link CloudAppDiscoveryRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class CloudAppDiscoveryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudAppDiscoveryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataDiscovery/cloudAppDiscovery{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/dataDiscovery/cloudAppDiscovery", rawUrl);
     }
     /**
      * Delete navigation property cloudAppDiscovery for security

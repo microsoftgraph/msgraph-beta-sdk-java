@@ -49,7 +49,7 @@ public class EnterpriseCodeSigningCertificatesRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EnterpriseCodeSigningCertificatesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/enterpriseCodeSigningCertificates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link EnterpriseCodeSigningCertificatesRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class EnterpriseCodeSigningCertificatesRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EnterpriseCodeSigningCertificatesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/enterpriseCodeSigningCertificates{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * The Windows Enterprise Code Signing Certificate.

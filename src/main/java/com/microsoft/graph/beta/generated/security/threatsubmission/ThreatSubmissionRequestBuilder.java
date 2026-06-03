@@ -62,7 +62,7 @@ public class ThreatSubmissionRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ThreatSubmissionRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/threatSubmission{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/threatSubmission", pathParameters);
     }
     /**
      * Instantiates a new {@link ThreatSubmissionRequestBuilder} and sets the default values.
@@ -70,7 +70,7 @@ public class ThreatSubmissionRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ThreatSubmissionRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/threatSubmission{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/threatSubmission", rawUrl);
     }
     /**
      * Delete navigation property threatSubmission for security

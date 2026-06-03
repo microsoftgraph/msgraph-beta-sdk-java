@@ -54,7 +54,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/templates/deviceTemplates/{deviceTemplate%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/templates/deviceTemplates/{deviceTemplate%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceTemplateItemRequestBuilder} and sets the default values.
@@ -62,7 +62,7 @@ public class DeviceTemplateItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceTemplateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/templates/deviceTemplates/{deviceTemplate%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/templates/deviceTemplates/{deviceTemplate%2Did}", rawUrl);
     }
     /**
      * Delete a registered deviceTemplate. You must first delete all devices linked to the template before deleting the template itself. Only registered owners of the template can perform this operation.

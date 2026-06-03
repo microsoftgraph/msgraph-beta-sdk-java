@@ -49,7 +49,7 @@ public class PermissionsCreepIndexDistributionsRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PermissionsCreepIndexDistributionsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/azure/permissionsCreepIndexDistributions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link PermissionsCreepIndexDistributionsRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class PermissionsCreepIndexDistributionsRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PermissionsCreepIndexDistributionsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/azure/permissionsCreepIndexDistributions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Represents the Permissions Creep Index (PCI) for the authorization system. PCI distribution chart shows the classification of human and nonhuman identities based on the PCI score in three buckets (low, medium, high).

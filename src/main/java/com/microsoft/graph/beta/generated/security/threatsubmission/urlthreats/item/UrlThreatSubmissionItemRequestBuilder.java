@@ -26,7 +26,7 @@ public class UrlThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UrlThreatSubmissionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/threatSubmission/urlThreats/{urlThreatSubmission%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/threatSubmission/urlThreats/{urlThreatSubmission%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link UrlThreatSubmissionItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class UrlThreatSubmissionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UrlThreatSubmissionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/threatSubmission/urlThreats/{urlThreatSubmission%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/threatSubmission/urlThreats/{urlThreatSubmission%2Did}", rawUrl);
     }
     /**
      * Delete navigation property urlThreats for security

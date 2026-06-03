@@ -35,7 +35,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WindowsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/windows", pathParameters);
     }
     /**
      * Instantiates a new {@link WindowsRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class WindowsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WindowsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/windows", rawUrl);
     }
     /**
      * Delete navigation property windows for admin

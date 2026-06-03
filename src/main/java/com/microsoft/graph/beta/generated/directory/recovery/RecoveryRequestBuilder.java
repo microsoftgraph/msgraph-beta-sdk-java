@@ -44,7 +44,7 @@ public class RecoveryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RecoveryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/recovery{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/recovery", pathParameters);
     }
     /**
      * Instantiates a new {@link RecoveryRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class RecoveryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RecoveryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/recovery{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/recovery", rawUrl);
     }
     /**
      * Delete navigation property recovery for directory

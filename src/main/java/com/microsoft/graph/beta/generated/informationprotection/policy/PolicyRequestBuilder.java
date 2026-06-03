@@ -38,7 +38,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/informationProtection/policy{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/informationProtection/policy", pathParameters);
     }
     /**
      * Instantiates a new {@link PolicyRequestBuilder} and sets the default values.
@@ -46,7 +46,7 @@ public class PolicyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/informationProtection/policy{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/informationProtection/policy", rawUrl);
     }
     /**
      * Delete navigation property policy for informationProtection

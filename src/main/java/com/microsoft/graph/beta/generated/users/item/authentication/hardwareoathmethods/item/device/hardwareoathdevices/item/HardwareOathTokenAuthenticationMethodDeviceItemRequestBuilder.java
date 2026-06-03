@@ -35,7 +35,7 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/hardwareOathMethods/{hardwareOathAuthenticationMethod%2Did}/device/hardwareOathDevices/{hardwareOathTokenAuthenticationMethodDevice%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/hardwareOathMethods/{hardwareOathAuthenticationMethod%2Did}/device/hardwareOathDevices/{hardwareOathTokenAuthenticationMethodDevice%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder exten
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public HardwareOathTokenAuthenticationMethodDeviceItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/hardwareOathMethods/{hardwareOathAuthenticationMethod%2Did}/device/hardwareOathDevices/{hardwareOathTokenAuthenticationMethodDevice%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/hardwareOathMethods/{hardwareOathAuthenticationMethod%2Did}/device/hardwareOathDevices/{hardwareOathTokenAuthenticationMethodDevice%2Did}", rawUrl);
     }
     /**
      * Delete navigation property hardwareOathDevices for users

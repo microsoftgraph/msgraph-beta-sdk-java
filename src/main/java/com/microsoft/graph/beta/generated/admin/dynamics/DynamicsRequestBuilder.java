@@ -26,7 +26,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DynamicsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/dynamics{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/dynamics", pathParameters);
     }
     /**
      * Instantiates a new {@link DynamicsRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class DynamicsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DynamicsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/dynamics{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/dynamics", rawUrl);
     }
     /**
      * Delete navigation property dynamics for admin

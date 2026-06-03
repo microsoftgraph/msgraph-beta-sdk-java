@@ -26,7 +26,7 @@ public class RecommendationConfigurationRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RecommendationConfigurationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/recommendationConfiguration{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/recommendationConfiguration", pathParameters);
     }
     /**
      * Instantiates a new {@link RecommendationConfigurationRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class RecommendationConfigurationRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RecommendationConfigurationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/recommendationConfiguration{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/recommendationConfiguration", rawUrl);
     }
     /**
      * Delete navigation property recommendationConfiguration for directory

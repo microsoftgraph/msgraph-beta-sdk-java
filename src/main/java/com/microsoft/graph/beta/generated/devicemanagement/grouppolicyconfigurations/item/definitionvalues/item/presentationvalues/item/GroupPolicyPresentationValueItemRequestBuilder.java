@@ -44,7 +44,7 @@ public class GroupPolicyPresentationValueItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupPolicyPresentationValueItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}/definitionValues/{groupPolicyDefinitionValue%2Did}/presentationValues/{groupPolicyPresentationValue%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}/definitionValues/{groupPolicyDefinitionValue%2Did}/presentationValues/{groupPolicyPresentationValue%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link GroupPolicyPresentationValueItemRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class GroupPolicyPresentationValueItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GroupPolicyPresentationValueItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}/definitionValues/{groupPolicyDefinitionValue%2Did}/presentationValues/{groupPolicyPresentationValue%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/groupPolicyConfigurations/{groupPolicyConfiguration%2Did}/definitionValues/{groupPolicyDefinitionValue%2Did}/presentationValues/{groupPolicyPresentationValue%2Did}", rawUrl);
     }
     /**
      * Delete navigation property presentationValues for deviceManagement

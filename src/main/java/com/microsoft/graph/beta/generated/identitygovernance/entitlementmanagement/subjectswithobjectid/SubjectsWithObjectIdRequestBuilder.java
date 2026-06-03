@@ -27,7 +27,7 @@ public class SubjectsWithObjectIdRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SubjectsWithObjectIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String objectId) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/subjects(objectId='{objectId}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/subjects(objectId='{objectId}')", pathParameters);
         this.pathParameters.put("objectId", objectId);
     }
     /**
@@ -36,7 +36,7 @@ public class SubjectsWithObjectIdRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SubjectsWithObjectIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/subjects(objectId='{objectId}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/subjects(objectId='{objectId}')", rawUrl);
     }
     /**
      * Delete navigation property subjects for identityGovernance

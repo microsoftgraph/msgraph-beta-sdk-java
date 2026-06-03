@@ -107,7 +107,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DailyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/userInsights/daily{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/userInsights/daily", pathParameters);
     }
     /**
      * Instantiates a new {@link DailyRequestBuilder} and sets the default values.
@@ -115,7 +115,7 @@ public class DailyRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DailyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/userInsights/daily{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/userInsights/daily", rawUrl);
     }
     /**
      * Delete navigation property daily for reports

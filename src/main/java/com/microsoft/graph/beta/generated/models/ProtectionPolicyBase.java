@@ -120,7 +120,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return this.backingStore.get("offboardRequestedDateTime");
     }
     /**
-     * Gets the protectionMode property value. The protectionMode property
+     * Gets the protectionMode property value. The backup mode for the protection policy. The possible values are: standard, fullServiceBackup, unknownFutureValue. When set to fullServiceBackup, the entire workload is backed up and specific items can be excluded using exclusion units. When set to standard, only the items explicitly added as protection units are backed up.
      * @return a {@link BackupPolicyProtectionMode}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         return this.backingStore.get("protectionMode");
     }
     /**
-     * Gets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Requires $select to retrieve.
+     * Gets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Returned only on $select.
      * @return a {@link ProtectionPolicyArtifactCount}
      */
     @jakarta.annotation.Nullable
@@ -228,14 +228,14 @@ public class ProtectionPolicyBase extends Entity implements Parsable {
         this.backingStore.set("offboardRequestedDateTime", value);
     }
     /**
-     * Sets the protectionMode property value. The protectionMode property
+     * Sets the protectionMode property value. The backup mode for the protection policy. The possible values are: standard, fullServiceBackup, unknownFutureValue. When set to fullServiceBackup, the entire workload is backed up and specific items can be excluded using exclusion units. When set to standard, only the items explicitly added as protection units are backed up.
      * @param value Value to set for the protectionMode property.
      */
     public void setProtectionMode(@jakarta.annotation.Nullable final BackupPolicyProtectionMode value) {
         this.backingStore.set("protectionMode", value);
     }
     /**
-     * Sets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Requires $select to retrieve.
+     * Sets the protectionPolicyArtifactCount property value. The count of artifacts in the protection policy by status. Returned only on $select.
      * @param value Value to set for the protectionPolicyArtifactCount property.
      */
     public void setProtectionPolicyArtifactCount(@jakarta.annotation.Nullable final ProtectionPolicyArtifactCount value) {

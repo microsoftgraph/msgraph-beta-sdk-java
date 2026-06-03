@@ -35,7 +35,7 @@ public class DeviceHealthScriptDeviceStateItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceHealthScriptDeviceStateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceHealthScripts/{deviceHealthScript%2Did}/deviceRunStates/{deviceHealthScriptDeviceState%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/deviceHealthScripts/{deviceHealthScript%2Did}/deviceRunStates/{deviceHealthScriptDeviceState%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceHealthScriptDeviceStateItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class DeviceHealthScriptDeviceStateItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceHealthScriptDeviceStateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceHealthScripts/{deviceHealthScript%2Did}/deviceRunStates/{deviceHealthScriptDeviceState%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/deviceHealthScripts/{deviceHealthScript%2Did}/deviceRunStates/{deviceHealthScriptDeviceState%2Did}", rawUrl);
     }
     /**
      * Delete navigation property deviceRunStates for deviceManagement

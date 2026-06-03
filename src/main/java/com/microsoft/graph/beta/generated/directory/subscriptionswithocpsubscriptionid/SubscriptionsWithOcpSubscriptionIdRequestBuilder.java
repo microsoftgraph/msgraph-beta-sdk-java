@@ -27,7 +27,7 @@ public class SubscriptionsWithOcpSubscriptionIdRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SubscriptionsWithOcpSubscriptionIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String ocpSubscriptionId) {
-        super(requestAdapter, "{+baseurl}/directory/subscriptions(ocpSubscriptionId='{ocpSubscriptionId}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/subscriptions(ocpSubscriptionId='{ocpSubscriptionId}')", pathParameters);
         this.pathParameters.put("ocpSubscriptionId", ocpSubscriptionId);
     }
     /**
@@ -36,7 +36,7 @@ public class SubscriptionsWithOcpSubscriptionIdRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SubscriptionsWithOcpSubscriptionIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/subscriptions(ocpSubscriptionId='{ocpSubscriptionId}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/subscriptions(ocpSubscriptionId='{ocpSubscriptionId}')", rawUrl);
     }
     /**
      * Delete navigation property subscriptions for directory

@@ -53,7 +53,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmbeddedSIMActivationCodePoolItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/embeddedSIMActivationCodePools/{embeddedSIMActivationCodePool%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/embeddedSIMActivationCodePools/{embeddedSIMActivationCodePool%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link EmbeddedSIMActivationCodePoolItemRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class EmbeddedSIMActivationCodePoolItemRequestBuilder extends BaseRequest
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmbeddedSIMActivationCodePoolItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/embeddedSIMActivationCodePools/{embeddedSIMActivationCodePool%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/embeddedSIMActivationCodePools/{embeddedSIMActivationCodePool%2Did}", rawUrl);
     }
     /**
      * Delete navigation property embeddedSIMActivationCodePools for deviceManagement

@@ -26,7 +26,7 @@ public class PartnerInformationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PartnerInformationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/partnerInformation{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/partnerInformation", pathParameters);
     }
     /**
      * Instantiates a new {@link PartnerInformationRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class PartnerInformationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PartnerInformationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/partnerInformation{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/partnerInformation", rawUrl);
     }
     /**
      * Delete navigation property partnerInformation for organization

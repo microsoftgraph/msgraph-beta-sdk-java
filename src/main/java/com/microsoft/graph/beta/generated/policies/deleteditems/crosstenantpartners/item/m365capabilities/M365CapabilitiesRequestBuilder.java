@@ -49,7 +49,7 @@ public class M365CapabilitiesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public M365CapabilitiesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/deletedItems/crossTenantPartners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}/m365Capabilities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link M365CapabilitiesRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class M365CapabilitiesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public M365CapabilitiesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/deletedItems/crossTenantPartners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}/m365Capabilities{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Defines the partner-specific Microsoft 365 cross-tenant capabilities for inbound access from the partner organization.

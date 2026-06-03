@@ -26,7 +26,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public InformationProtectionLabelItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/policy/labels/{informationProtectionLabel%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/policy/labels/{informationProtectionLabel%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link InformationProtectionLabelItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class InformationProtectionLabelItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public InformationProtectionLabelItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/policy/labels/{informationProtectionLabel%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/policy/labels/{informationProtectionLabel%2Did}", rawUrl);
     }
     /**
      * Delete navigation property labels for users

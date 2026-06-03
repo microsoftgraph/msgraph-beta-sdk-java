@@ -26,7 +26,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SiteExclusionUnitsBulkAdditionJobItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/siteExclusionUnitsBulkAdditionJobs/{siteExclusionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/backupRestore/siteExclusionUnitsBulkAdditionJobs/{siteExclusionUnitsBulkAdditionJob%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link SiteExclusionUnitsBulkAdditionJobItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SiteExclusionUnitsBulkAdditionJobItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/siteExclusionUnitsBulkAdditionJobs/{siteExclusionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/backupRestore/siteExclusionUnitsBulkAdditionJobs/{siteExclusionUnitsBulkAdditionJob%2Did}", rawUrl);
     }
     /**
      * Delete navigation property siteExclusionUnitsBulkAdditionJobs for solutions
@@ -55,7 +55,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      * @return a {@link SiteExclusionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
         return get(null);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteExclusionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
         return requestInfo;
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -26,7 +26,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         return new VirtualEventSession();
     }
     /**
-     * Gets the capacity property value. The capacity property
+     * Gets the capacity property value. Represents the expected number of attendees for town hall session.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -103,7 +103,7 @@ public class VirtualEventSession extends OnlineMeetingBase implements Parsable {
         writer.writeStringValue("videoOnDemandWebUrl", this.getVideoOnDemandWebUrl());
     }
     /**
-     * Sets the capacity property value. The capacity property
+     * Sets the capacity property value. Represents the expected number of attendees for town hall session.
      * @param value Value to set for the capacity property.
      */
     public void setCapacity(@jakarta.annotation.Nullable final Integer value) {

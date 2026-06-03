@@ -26,7 +26,7 @@ public class DeviceHealthStatusItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceHealthStatusItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/deviceHealthStatuses/{deviceHealthStatus%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/deviceHealthStatuses/{deviceHealthStatus%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceHealthStatusItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class DeviceHealthStatusItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceHealthStatusItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/deviceHealthStatuses/{deviceHealthStatus%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/deviceHealthStatuses/{deviceHealthStatus%2Did}", rawUrl);
     }
     /**
      * Delete navigation property deviceHealthStatuses for tenantRelationships

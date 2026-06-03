@@ -49,7 +49,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReferencingConfigurationPoliciesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/reusablePolicySettings/{deviceManagementReusablePolicySetting%2Did}/referencingConfigurationPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link ReferencingConfigurationPoliciesRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class ReferencingConfigurationPoliciesRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReferencingConfigurationPoliciesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/reusablePolicySettings/{deviceManagementReusablePolicySetting%2Did}/referencingConfigurationPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * configuration policies referencing the current reusable setting. This property is read-only.

@@ -26,7 +26,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/healthMonitoring/alerts/{alert%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/healthMonitoring/alerts/{alert%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link AlertItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class AlertItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/healthMonitoring/alerts/{alert%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/healthMonitoring/alerts/{alert%2Did}", rawUrl);
     }
     /**
      * Delete navigation property alerts for reports

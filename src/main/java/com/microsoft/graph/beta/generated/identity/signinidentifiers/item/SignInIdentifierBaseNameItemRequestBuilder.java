@@ -26,7 +26,7 @@ public class SignInIdentifierBaseNameItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SignInIdentifierBaseNameItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/signInIdentifiers/{signInIdentifierBase%2Dname}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identity/signInIdentifiers/{signInIdentifierBase%2Dname}", pathParameters);
     }
     /**
      * Instantiates a new {@link SignInIdentifierBaseNameItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class SignInIdentifierBaseNameItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SignInIdentifierBaseNameItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/signInIdentifiers/{signInIdentifierBase%2Dname}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identity/signInIdentifiers/{signInIdentifierBase%2Dname}", rawUrl);
     }
     /**
      * Delete navigation property signInIdentifiers for identity

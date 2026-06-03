@@ -58,7 +58,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackageAssignmentResourceRolesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentResourceRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link AccessPackageAssignmentResourceRolesRequestBuilder} and sets the default values.
@@ -66,7 +66,7 @@ public class AccessPackageAssignmentResourceRolesRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackageAssignmentResourceRolesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentResourceRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * The resource roles delivered to the target user for this assignment. Read-only. Nullable.

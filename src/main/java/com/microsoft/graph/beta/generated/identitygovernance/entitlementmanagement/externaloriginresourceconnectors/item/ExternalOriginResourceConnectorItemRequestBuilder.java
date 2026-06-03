@@ -26,7 +26,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExternalOriginResourceConnectorItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/externalOriginResourceConnectors/{externalOriginResourceConnector%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/externalOriginResourceConnectors/{externalOriginResourceConnector%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ExternalOriginResourceConnectorItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ExternalOriginResourceConnectorItemRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExternalOriginResourceConnectorItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/externalOriginResourceConnectors/{externalOriginResourceConnector%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/externalOriginResourceConnectors/{externalOriginResourceConnector%2Did}", rawUrl);
     }
     /**
      * Delete an externalOriginResourceConnector object.

@@ -29,7 +29,7 @@ public class UnifiedRoleManagementAlertConfiguration extends Entity implements P
                 case "#microsoft.graph.invalidLicenseAlertConfiguration": return new InvalidLicenseAlertConfiguration();
                 case "#microsoft.graph.noMfaOnRoleActivationAlertConfiguration": return new NoMfaOnRoleActivationAlertConfiguration();
                 case "#microsoft.graph.redundantAssignmentAlertConfiguration": return new RedundantAssignmentAlertConfiguration();
-                case "#microsoft.graph.rolesAssignedOutsidePrivilegedIdentityManagementAlertConfiguration": return new RolesAssignedOutsidePrivilegedIdentityManagementAlertConfiguration();
+                case "#microsoft.graph.rolesAssignedOutsidePrivilegedIdentityManagementAlertConfiguration": return new RolesAssignedOutsidePrivilegedIdentityManagementAlertCo_5cc28e38();
                 case "#microsoft.graph.sequentialActivationRenewalsAlertConfiguration": return new SequentialActivationRenewalsAlertConfiguration();
                 case "#microsoft.graph.staleSignInAlertConfiguration": return new StaleSignInAlertConfiguration();
                 case "#microsoft.graph.tooManyGlobalAdminsAssignedToTenantAlertConfiguration": return new TooManyGlobalAdminsAssignedToTenantAlertConfiguration();

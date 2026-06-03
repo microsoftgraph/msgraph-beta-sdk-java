@@ -27,7 +27,7 @@ public class CatalogsWithUniqueNameRequestBuilder extends BaseRequestBuilder {
      * @param uniqueName Alternate key of accessPackageCatalog
      */
     public CatalogsWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String uniqueName) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs(uniqueName='{uniqueName}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs(uniqueName='{uniqueName}')", pathParameters);
         this.pathParameters.put("uniqueName", uniqueName);
     }
     /**
@@ -36,7 +36,7 @@ public class CatalogsWithUniqueNameRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CatalogsWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs(uniqueName='{uniqueName}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs(uniqueName='{uniqueName}')", rawUrl);
     }
     /**
      * Delete navigation property catalogs for identityGovernance

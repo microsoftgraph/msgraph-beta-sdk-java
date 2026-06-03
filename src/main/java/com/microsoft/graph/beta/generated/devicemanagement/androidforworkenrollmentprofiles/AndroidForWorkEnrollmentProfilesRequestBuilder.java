@@ -49,7 +49,7 @@ public class AndroidForWorkEnrollmentProfilesRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AndroidForWorkEnrollmentProfilesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/androidForWorkEnrollmentProfiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link AndroidForWorkEnrollmentProfilesRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class AndroidForWorkEnrollmentProfilesRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AndroidForWorkEnrollmentProfilesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/androidForWorkEnrollmentProfiles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Android for Work enrollment profile entities.

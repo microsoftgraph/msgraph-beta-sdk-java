@@ -3,7 +3,7 @@ package com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartne
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.configureagent.ConfigureAgentRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.deployagent.DeployAgentRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.retrieveactionreports.RetrieveActionReportsRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.retrievedeployagentactionresultsactivityidactivityidcloudpcidcloudpcid.RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.retrievedeployagentactionresultsactivityidactivityidclo_e05880cd.RetrieveDeployAgentActionResultsactivityIdActivityIdClo_aaebe13d;
 import com.microsoft.graph.beta.models.CloudPcExternalPartner;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -50,11 +50,11 @@ public class CloudPcExternalPartnerItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to call the retrieveDeployAgentActionResults method.
-     * @return a {@link RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder}
+     * @return a {@link RetrieveDeployAgentActionResultsactivityIdActivityIdClo_aaebe13d}
      */
     @jakarta.annotation.Nonnull
-    public RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder retrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcId() {
-        return new RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder(pathParameters, requestAdapter);
+    public RetrieveDeployAgentActionResultsactivityIdActivityIdClo_aaebe13d retrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcId() {
+        return new RetrieveDeployAgentActionResultsactivityIdActivityIdClo_aaebe13d(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CloudPcExternalPartnerItemRequestBuilder} and sets the default values.
@@ -62,7 +62,7 @@ public class CloudPcExternalPartnerItemRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcExternalPartnerItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/externalPartners/{cloudPcExternalPartner%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/externalPartners/{cloudPcExternalPartner%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link CloudPcExternalPartnerItemRequestBuilder} and sets the default values.
@@ -70,7 +70,7 @@ public class CloudPcExternalPartnerItemRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcExternalPartnerItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/externalPartners/{cloudPcExternalPartner%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/externalPartners/{cloudPcExternalPartner%2Did}", rawUrl);
     }
     /**
      * Delete navigation property externalPartners for deviceManagement

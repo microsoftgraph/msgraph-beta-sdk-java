@@ -26,7 +26,7 @@ public class CustomBlockPageRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CustomBlockPageRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/settings/customBlockPage{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/networkAccess/settings/customBlockPage", pathParameters);
     }
     /**
      * Instantiates a new {@link CustomBlockPageRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CustomBlockPageRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CustomBlockPageRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/settings/customBlockPage{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/networkAccess/settings/customBlockPage", rawUrl);
     }
     /**
      * Delete navigation property customBlockPage for networkAccess

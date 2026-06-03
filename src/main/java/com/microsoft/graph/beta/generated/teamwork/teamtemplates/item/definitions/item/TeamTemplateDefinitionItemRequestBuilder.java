@@ -35,7 +35,7 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamTemplateDefinitionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link TeamTemplateDefinitionItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class TeamTemplateDefinitionItemRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamTemplateDefinitionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}", rawUrl);
     }
     /**
      * Delete navigation property definitions for teamwork

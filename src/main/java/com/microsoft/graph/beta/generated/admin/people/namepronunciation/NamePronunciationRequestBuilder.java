@@ -26,7 +26,7 @@ public class NamePronunciationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public NamePronunciationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/people/namePronunciation{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/people/namePronunciation", pathParameters);
     }
     /**
      * Instantiates a new {@link NamePronunciationRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class NamePronunciationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public NamePronunciationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/people/namePronunciation{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/people/namePronunciation", rawUrl);
     }
     /**
      * Delete navigation property namePronunciation for admin

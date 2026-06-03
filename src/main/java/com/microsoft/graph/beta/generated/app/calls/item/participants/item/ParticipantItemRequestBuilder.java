@@ -53,7 +53,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ParticipantItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/app/calls/{call%2Did}/participants/{participant%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/app/calls/{call%2Did}/participants/{participant%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ParticipantItemRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ParticipantItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/app/calls/{call%2Did}/participants/{participant%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/app/calls/{call%2Did}/participants/{participant%2Did}", rawUrl);
     }
     /**
      * Delete navigation property participants for app

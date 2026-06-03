@@ -35,7 +35,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyLinkItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/policies/{policyLink%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/policies/{policyLink%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link PolicyLinkItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class PolicyLinkItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyLinkItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/policies/{policyLink%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/networkAccess/filteringProfiles/{filteringProfile%2Did}/policies/{policyLink%2Did}", rawUrl);
     }
     /**
      * Delete a filteringPolicyLink object. Use this operation to delete any derived type, including:- cloudFirewallPolicyLink- threatIntelligencePolicyLink- tlsInspectionPolicyLink

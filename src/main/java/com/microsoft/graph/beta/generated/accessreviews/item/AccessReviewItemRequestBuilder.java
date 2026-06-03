@@ -98,7 +98,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessReviewItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/accessReviews/{accessReview%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/accessReviews/{accessReview%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link AccessReviewItemRequestBuilder} and sets the default values.
@@ -106,7 +106,7 @@ public class AccessReviewItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessReviewItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/accessReviews/{accessReview%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/accessReviews/{accessReview%2Did}", rawUrl);
     }
     /**
      * In the Microsoft Entra access reviews feature, delete an accessReview object.

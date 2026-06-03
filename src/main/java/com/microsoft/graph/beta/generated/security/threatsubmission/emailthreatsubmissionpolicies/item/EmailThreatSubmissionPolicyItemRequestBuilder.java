@@ -26,7 +26,7 @@ public class EmailThreatSubmissionPolicyItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmailThreatSubmissionPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/threatSubmission/emailThreatSubmissionPolicies/{emailThreatSubmissionPolicy%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/threatSubmission/emailThreatSubmissionPolicies/{emailThreatSubmissionPolicy%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link EmailThreatSubmissionPolicyItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class EmailThreatSubmissionPolicyItemRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EmailThreatSubmissionPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/threatSubmission/emailThreatSubmissionPolicies/{emailThreatSubmissionPolicy%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/threatSubmission/emailThreatSubmissionPolicies/{emailThreatSubmissionPolicy%2Did}", rawUrl);
     }
     /**
      * Delete navigation property emailThreatSubmissionPolicies for security

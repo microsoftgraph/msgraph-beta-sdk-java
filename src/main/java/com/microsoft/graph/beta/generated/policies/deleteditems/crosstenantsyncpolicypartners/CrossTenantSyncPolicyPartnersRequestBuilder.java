@@ -49,7 +49,7 @@ public class CrossTenantSyncPolicyPartnersRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossTenantSyncPolicyPartnersRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/deletedItems/crossTenantSyncPolicyPartners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link CrossTenantSyncPolicyPartnersRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class CrossTenantSyncPolicyPartnersRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossTenantSyncPolicyPartnersRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/deletedItems/crossTenantSyncPolicyPartners{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get a list of the policyDeletableItem objects and their properties, which might be one of the following deleted policy types:- crossTenantAccessPolicyConfigurationPartner- crossTenantIdentitySyncPolicyPartner- conditionalAccessPolicy- namedLocation

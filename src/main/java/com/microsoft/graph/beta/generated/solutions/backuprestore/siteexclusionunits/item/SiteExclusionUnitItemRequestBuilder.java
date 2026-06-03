@@ -26,7 +26,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SiteExclusionUnitItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/siteExclusionUnits/{siteExclusionUnit%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/backupRestore/siteExclusionUnits/{siteExclusionUnit%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link SiteExclusionUnitItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SiteExclusionUnitItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/siteExclusionUnits/{siteExclusionUnit%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/backupRestore/siteExclusionUnits/{siteExclusionUnit%2Did}", rawUrl);
     }
     /**
      * Delete navigation property siteExclusionUnits for solutions
@@ -55,7 +55,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * The list of site exclusion units in the tenant.
      * @return a {@link SiteExclusionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * The list of site exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteExclusionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * The list of site exclusion units in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * The list of site exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * The list of site exclusion units in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

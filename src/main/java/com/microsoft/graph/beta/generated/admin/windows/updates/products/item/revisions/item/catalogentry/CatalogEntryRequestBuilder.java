@@ -26,7 +26,7 @@ public class CatalogEntryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CatalogEntryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/revisions/{productRevision%2Did}/catalogEntry{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/revisions/{productRevision%2Did}/catalogEntry", pathParameters);
     }
     /**
      * Instantiates a new {@link CatalogEntryRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CatalogEntryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CatalogEntryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/revisions/{productRevision%2Did}/catalogEntry{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/revisions/{productRevision%2Did}/catalogEntry", rawUrl);
     }
     /**
      * Delete navigation property catalogEntry for admin

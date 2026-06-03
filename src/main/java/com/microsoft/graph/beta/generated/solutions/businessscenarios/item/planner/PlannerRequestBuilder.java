@@ -62,7 +62,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PlannerRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}/planner{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}/planner", pathParameters);
     }
     /**
      * Instantiates a new {@link PlannerRequestBuilder} and sets the default values.
@@ -70,7 +70,7 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PlannerRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}/planner{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/businessScenarios/{businessScenario%2Did}/planner", rawUrl);
     }
     /**
      * Delete navigation property planner for solutions

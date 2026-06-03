@@ -35,7 +35,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramControlItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ProgramControlItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class ProgramControlItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramControlItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}", rawUrl);
     }
     /**
      * In the Microsoft Entra access reviews feature, delete a programControl object.  This unlinks an access review from a program.

@@ -26,7 +26,7 @@ public class StandardQRCodeRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public StandardQRCodeRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/qrCodePinMethod/standardQRCode{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/qrCodePinMethod/standardQRCode", pathParameters);
     }
     /**
      * Instantiates a new {@link StandardQRCodeRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class StandardQRCodeRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public StandardQRCodeRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/qrCodePinMethod/standardQRCode{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/qrCodePinMethod/standardQRCode", rawUrl);
     }
     /**
      * Delete a standard or temporary qrCode object.

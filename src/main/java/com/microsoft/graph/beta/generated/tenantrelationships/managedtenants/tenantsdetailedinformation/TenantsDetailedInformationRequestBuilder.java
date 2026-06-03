@@ -49,7 +49,7 @@ public class TenantsDetailedInformationRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TenantsDetailedInformationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantsDetailedInformation{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link TenantsDetailedInformationRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class TenantsDetailedInformationRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TenantsDetailedInformationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenantsDetailedInformation{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get a list of the tenantDetailedInformation objects and their properties.

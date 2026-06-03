@@ -26,7 +26,7 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UxSettingRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/entra/uxSetting{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/entra/uxSetting", pathParameters);
     }
     /**
      * Instantiates a new {@link UxSettingRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class UxSettingRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UxSettingRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/entra/uxSetting{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/entra/uxSetting", rawUrl);
     }
     /**
      * Delete navigation property uxSetting for admin

@@ -44,7 +44,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RoleDefinitionRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/governanceRoleAssignments/{governanceRoleAssignment%2Did}/roleDefinition{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/governanceRoleAssignments/{governanceRoleAssignment%2Did}/roleDefinition", pathParameters);
     }
     /**
      * Instantiates a new {@link RoleDefinitionRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class RoleDefinitionRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RoleDefinitionRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/governanceRoleAssignments/{governanceRoleAssignment%2Did}/roleDefinition{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/governanceRoleAssignments/{governanceRoleAssignment%2Did}/roleDefinition", rawUrl);
     }
     /**
      * Delete navigation property roleDefinition for governanceRoleAssignments

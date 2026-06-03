@@ -26,7 +26,7 @@ public class ManagedTenantTicketingEndpointItemRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagedTenantTicketingEndpointItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantTicketingEndpoints/{managedTenantTicketingEndpoint%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantTicketingEndpoints/{managedTenantTicketingEndpoint%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ManagedTenantTicketingEndpointItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ManagedTenantTicketingEndpointItemRequestBuilder extends BaseReques
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagedTenantTicketingEndpointItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantTicketingEndpoints/{managedTenantTicketingEndpoint%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managedTenantTicketingEndpoints/{managedTenantTicketingEndpoint%2Did}", rawUrl);
     }
     /**
      * Delete navigation property managedTenantTicketingEndpoints for tenantRelationships

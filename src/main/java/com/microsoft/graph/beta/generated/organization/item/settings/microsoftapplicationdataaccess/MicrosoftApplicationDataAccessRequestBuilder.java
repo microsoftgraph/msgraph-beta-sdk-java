@@ -26,7 +26,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MicrosoftApplicationDataAccessRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/microsoftApplicationDataAccess{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/microsoftApplicationDataAccess", pathParameters);
     }
     /**
      * Instantiates a new {@link MicrosoftApplicationDataAccessRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class MicrosoftApplicationDataAccessRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MicrosoftApplicationDataAccessRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/microsoftApplicationDataAccess{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/microsoftApplicationDataAccess", rawUrl);
     }
     /**
      * Delete navigation property microsoftApplicationDataAccess for organization

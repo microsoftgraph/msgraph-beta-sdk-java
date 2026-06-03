@@ -35,7 +35,7 @@ public class GoalsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GoalsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience/goals{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/employeeExperience/goals", pathParameters);
     }
     /**
      * Instantiates a new {@link GoalsRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class GoalsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GoalsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/employeeExperience/goals{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/employeeExperience/goals", rawUrl);
     }
     /**
      * Delete navigation property goals for employeeExperience

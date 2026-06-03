@@ -38,7 +38,7 @@ public class TracingRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TracingRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/exchange/tracing{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/exchange/tracing", pathParameters);
     }
     /**
      * Instantiates a new {@link TracingRequestBuilder} and sets the default values.
@@ -46,7 +46,7 @@ public class TracingRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TracingRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/exchange/tracing{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/exchange/tracing", rawUrl);
     }
     /**
      * Delete navigation property tracing for admin

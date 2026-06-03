@@ -23,6 +23,8 @@ public class UpdateAllMessagesReadStatePostRequestBody implements AdditionalData
     public UpdateAllMessagesReadStatePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setIsRead(false);
+        this.setSuppressReadReceipts(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

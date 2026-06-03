@@ -44,7 +44,7 @@ public class TenantAttachRBACRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TenantAttachRBACRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/tenantAttachRBAC{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/tenantAttachRBAC", pathParameters);
     }
     /**
      * Instantiates a new {@link TenantAttachRBACRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class TenantAttachRBACRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TenantAttachRBACRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/tenantAttachRBAC{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/tenantAttachRBAC", rawUrl);
     }
     /**
      * Delete navigation property tenantAttachRBAC for deviceManagement

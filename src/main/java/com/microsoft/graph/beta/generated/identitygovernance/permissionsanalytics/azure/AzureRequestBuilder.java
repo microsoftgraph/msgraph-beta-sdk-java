@@ -44,7 +44,7 @@ public class AzureRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AzureRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/azure{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/azure", pathParameters);
     }
     /**
      * Instantiates a new {@link AzureRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class AzureRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AzureRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/azure{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/azure", rawUrl);
     }
     /**
      * Delete navigation property azure for identityGovernance

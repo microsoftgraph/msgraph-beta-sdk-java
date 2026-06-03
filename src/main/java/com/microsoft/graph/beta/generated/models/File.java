@@ -69,9 +69,10 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("archiveStatus", (n) -> { this.setArchiveStatus(n.getEnumValue(FileArchiveStatus::forValue)); });
         deserializerMap.put("hashes", (n) -> { this.setHashes(n.getObjectValue(Hashes::createFromDiscriminatorValue)); });
+        deserializerMap.put("lockInfo", (n) -> { this.setLockInfo(n.getObjectValue(LockInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("mimeType", (n) -> { this.setMimeType(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("processingMetadata", (n) -> { this.setProcessingMetadata(n.getBooleanValue()); });
@@ -84,6 +85,14 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
     @jakarta.annotation.Nullable
     public Hashes getHashes() {
         return this.backingStore.get("hashes");
+    }
+    /**
+     * Gets the lockInfo property value. The lockInfo property
+     * @return a {@link LockInfo}
+     */
+    @jakarta.annotation.Nullable
+    public LockInfo getLockInfo() {
+        return this.backingStore.get("lockInfo");
     }
     /**
      * Gets the mimeType property value. The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.
@@ -117,6 +126,7 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
         Objects.requireNonNull(writer);
         writer.writeEnumValue("archiveStatus", this.getArchiveStatus());
         writer.writeObjectValue("hashes", this.getHashes());
+        writer.writeObjectValue("lockInfo", this.getLockInfo());
         writer.writeStringValue("mimeType", this.getMimeType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeBooleanValue("processingMetadata", this.getProcessingMetadata());
@@ -150,6 +160,13 @@ public class File implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void setHashes(@jakarta.annotation.Nullable final Hashes value) {
         this.backingStore.set("hashes", value);
+    }
+    /**
+     * Sets the lockInfo property value. The lockInfo property
+     * @param value Value to set for the lockInfo property.
+     */
+    public void setLockInfo(@jakarta.annotation.Nullable final LockInfo value) {
+        this.backingStore.set("lockInfo", value);
     }
     /**
      * Sets the mimeType property value. The MIME type for the file. This is determined by logic on the server and might not be the value provided when the file was uploaded. Read-only.

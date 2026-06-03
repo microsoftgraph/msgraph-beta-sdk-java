@@ -26,7 +26,7 @@ public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsRemoteConnectionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/{userExperienceAnalyticsRemoteConnection%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/{userExperienceAnalyticsRemoteConnection%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link UserExperienceAnalyticsRemoteConnectionItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class UserExperienceAnalyticsRemoteConnectionItemRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsRemoteConnectionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/{userExperienceAnalyticsRemoteConnection%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsRemoteConnection/{userExperienceAnalyticsRemoteConnection%2Did}", rawUrl);
     }
     /**
      * Delete navigation property userExperienceAnalyticsRemoteConnection for deviceManagement

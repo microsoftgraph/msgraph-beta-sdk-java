@@ -26,7 +26,7 @@ public class ExternalUserProfileItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExternalUserProfileItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/externalUserProfiles/{externalUserProfile%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/directory/externalUserProfiles/{externalUserProfile%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ExternalUserProfileItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ExternalUserProfileItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExternalUserProfileItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/directory/externalUserProfiles/{externalUserProfile%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/directory/externalUserProfiles/{externalUserProfile%2Did}", rawUrl);
     }
     /**
      * Delete an externalUserProfile object. Note: To permanently delete the externalUserProfile, follow permanently delete an item. To restore an externalUserProfile, follow restore a deleted item.

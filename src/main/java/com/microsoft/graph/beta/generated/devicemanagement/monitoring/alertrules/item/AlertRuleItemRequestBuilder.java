@@ -26,7 +26,7 @@ public class AlertRuleItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertRuleItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRules/{alertRule%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRules/{alertRule%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link AlertRuleItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class AlertRuleItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertRuleItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRules/{alertRule%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRules/{alertRule%2Did}", rawUrl);
     }
     /**
      * Delete navigation property alertRules for deviceManagement

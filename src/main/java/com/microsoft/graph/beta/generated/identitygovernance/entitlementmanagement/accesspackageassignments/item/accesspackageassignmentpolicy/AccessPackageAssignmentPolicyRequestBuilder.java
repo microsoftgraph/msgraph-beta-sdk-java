@@ -74,7 +74,7 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackageAssignmentPolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentPolicy{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentPolicy", pathParameters);
     }
     /**
      * Instantiates a new {@link AccessPackageAssignmentPolicyRequestBuilder} and sets the default values.
@@ -82,7 +82,7 @@ public class AccessPackageAssignmentPolicyRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackageAssignmentPolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentPolicy{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageAssignments/{accessPackageAssignment%2Did}/accessPackageAssignmentPolicy", rawUrl);
     }
     /**
      * Delete navigation property accessPackageAssignmentPolicy for identityGovernance

@@ -278,7 +278,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceAppManagementRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceAppManagementRequestBuilder} and sets the default values.
@@ -286,7 +286,7 @@ public class DeviceAppManagementRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceAppManagementRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get deviceAppManagement

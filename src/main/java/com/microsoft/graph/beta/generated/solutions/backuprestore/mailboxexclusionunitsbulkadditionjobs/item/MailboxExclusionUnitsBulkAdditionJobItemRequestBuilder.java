@@ -26,7 +26,7 @@ public class MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder extends Base
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/mailboxExclusionUnitsBulkAdditionJobs/{mailboxExclusionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/backupRestore/mailboxExclusionUnitsBulkAdditionJobs/{mailboxExclusionUnitsBulkAdditionJob%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder extends Base
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/mailboxExclusionUnitsBulkAdditionJobs/{mailboxExclusionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/backupRestore/mailboxExclusionUnitsBulkAdditionJobs/{mailboxExclusionUnitsBulkAdditionJob%2Did}", rawUrl);
     }
     /**
      * Delete navigation property mailboxExclusionUnitsBulkAdditionJobs for solutions
@@ -55,7 +55,7 @@ public class MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder extends Base
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for mailbox exclusion units in the tenant.
      * @return a {@link MailboxExclusionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder extends Base
         return get(null);
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for mailbox exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxExclusionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder extends Base
         return requestInfo;
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for mailbox exclusion units in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder extends Base
         return toGetRequestInformation(null);
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for mailbox exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder extends Base
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for mailbox exclusion units in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

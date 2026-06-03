@@ -125,7 +125,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/androidManagedStoreAccountEnterpriseSettings{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/androidManagedStoreAccountEnterpriseSettings", pathParameters);
     }
     /**
      * Instantiates a new {@link AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder} and sets the default values.
@@ -133,7 +133,7 @@ public class AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder extends 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AndroidManagedStoreAccountEnterpriseSettingsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/androidManagedStoreAccountEnterpriseSettings{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/androidManagedStoreAccountEnterpriseSettings", rawUrl);
     }
     /**
      * Delete navigation property androidManagedStoreAccountEnterpriseSettings for deviceManagement

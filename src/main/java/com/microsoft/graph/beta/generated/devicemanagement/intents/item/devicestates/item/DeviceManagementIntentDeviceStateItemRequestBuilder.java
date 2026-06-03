@@ -26,7 +26,7 @@ public class DeviceManagementIntentDeviceStateItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementIntentDeviceStateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}/deviceStates/{deviceManagementIntentDeviceState%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}/deviceStates/{deviceManagementIntentDeviceState%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceManagementIntentDeviceStateItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class DeviceManagementIntentDeviceStateItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceManagementIntentDeviceStateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}/deviceStates/{deviceManagementIntentDeviceState%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}/deviceStates/{deviceManagementIntentDeviceState%2Did}", rawUrl);
     }
     /**
      * Delete navigation property deviceStates for deviceManagement

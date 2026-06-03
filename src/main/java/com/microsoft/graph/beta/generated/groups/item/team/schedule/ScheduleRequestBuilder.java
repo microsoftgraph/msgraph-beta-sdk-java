@@ -143,7 +143,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ScheduleRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule", pathParameters);
     }
     /**
      * Instantiates a new {@link ScheduleRequestBuilder} and sets the default values.
@@ -151,7 +151,7 @@ public class ScheduleRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ScheduleRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/team/schedule", rawUrl);
     }
     /**
      * Delete navigation property schedule for groups

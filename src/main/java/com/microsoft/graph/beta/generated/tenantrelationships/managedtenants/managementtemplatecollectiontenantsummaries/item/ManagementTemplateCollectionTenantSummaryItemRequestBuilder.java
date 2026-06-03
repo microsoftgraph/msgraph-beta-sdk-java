@@ -26,7 +26,7 @@ public class ManagementTemplateCollectionTenantSummaryItemRequestBuilder extends
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagementTemplateCollectionTenantSummaryItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managementTemplateCollectionTenantSummaries/{managementTemplateCollectionTenantSummary%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managementTemplateCollectionTenantSummaries/{managementTemplateCollectionTenantSummary%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ManagementTemplateCollectionTenantSummaryItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ManagementTemplateCollectionTenantSummaryItemRequestBuilder extends
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagementTemplateCollectionTenantSummaryItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managementTemplateCollectionTenantSummaries/{managementTemplateCollectionTenantSummary%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/managementTemplateCollectionTenantSummaries/{managementTemplateCollectionTenantSummary%2Did}", rawUrl);
     }
     /**
      * Delete navigation property managementTemplateCollectionTenantSummaries for tenantRelationships

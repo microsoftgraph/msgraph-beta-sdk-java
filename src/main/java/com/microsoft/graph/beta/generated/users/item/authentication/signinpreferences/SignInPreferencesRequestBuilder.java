@@ -26,7 +26,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SignInPreferencesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/signInPreferences{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link SignInPreferencesRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class SignInPreferencesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SignInPreferencesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/signInPreferences{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Read the properties of a user&apos;s authentication states. Use this API to retrieve the following information:

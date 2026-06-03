@@ -26,7 +26,7 @@ public class OriginatingKnowledgeBaseArticleRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OriginatingKnowledgeBaseArticleRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/knownIssues/{knownIssue%2Did}/originatingKnowledgeBaseArticle{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/knownIssues/{knownIssue%2Did}/originatingKnowledgeBaseArticle", pathParameters);
     }
     /**
      * Instantiates a new {@link OriginatingKnowledgeBaseArticleRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class OriginatingKnowledgeBaseArticleRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OriginatingKnowledgeBaseArticleRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/knownIssues/{knownIssue%2Did}/originatingKnowledgeBaseArticle{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/knownIssues/{knownIssue%2Did}/originatingKnowledgeBaseArticle", rawUrl);
     }
     /**
      * Delete navigation property originatingKnowledgeBaseArticle for admin

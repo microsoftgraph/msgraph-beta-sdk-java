@@ -44,7 +44,7 @@ public class GcpRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GcpRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/gcp{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/gcp", pathParameters);
     }
     /**
      * Instantiates a new {@link GcpRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class GcpRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GcpRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/gcp{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics/gcp", rawUrl);
     }
     /**
      * Delete navigation property gcp for identityGovernance

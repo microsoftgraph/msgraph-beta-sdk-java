@@ -26,7 +26,7 @@ public class CopilotToolCopilotToolNameItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CopilotToolCopilotToolNameItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/agents/{agent%2Did}/copilotTools/{copilotTool%2DcopilotToolName}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/agents/{agent%2Did}/copilotTools/{copilotTool%2DcopilotToolName}", pathParameters);
     }
     /**
      * Instantiates a new {@link CopilotToolCopilotToolNameItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CopilotToolCopilotToolNameItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CopilotToolCopilotToolNameItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/agents/{agent%2Did}/copilotTools/{copilotTool%2DcopilotToolName}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/agents/{agent%2Did}/copilotTools/{copilotTool%2DcopilotToolName}", rawUrl);
     }
     /**
      * Delete navigation property copilotTools for agents

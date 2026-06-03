@@ -44,7 +44,7 @@ public class AssignmentItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/cloudLicensing/assignments/{assignment%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/cloudLicensing/assignments/{assignment%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link AssignmentItemRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class AssignmentItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/cloudLicensing/assignments/{assignment%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/cloudLicensing/assignments/{assignment%2Did}", rawUrl);
     }
     /**
      * Delete an assignment object.

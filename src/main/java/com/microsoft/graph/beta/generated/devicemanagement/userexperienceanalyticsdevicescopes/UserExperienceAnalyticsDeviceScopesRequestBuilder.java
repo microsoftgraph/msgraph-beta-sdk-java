@@ -49,7 +49,7 @@ public class UserExperienceAnalyticsDeviceScopesRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsDeviceScopesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsDeviceScopes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link UserExperienceAnalyticsDeviceScopesRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsDeviceScopesRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsDeviceScopesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsDeviceScopes{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * The user experience analytics device scope entity contains device scope configuration use to apply filtering on the endpoint analytics reports.

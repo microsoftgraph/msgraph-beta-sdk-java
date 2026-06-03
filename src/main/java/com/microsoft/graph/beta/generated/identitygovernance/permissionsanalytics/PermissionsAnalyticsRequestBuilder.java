@@ -53,7 +53,7 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PermissionsAnalyticsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics", pathParameters);
     }
     /**
      * Instantiates a new {@link PermissionsAnalyticsRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PermissionsAnalyticsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/permissionsAnalytics", rawUrl);
     }
     /**
      * Delete navigation property permissionsAnalytics for identityGovernance

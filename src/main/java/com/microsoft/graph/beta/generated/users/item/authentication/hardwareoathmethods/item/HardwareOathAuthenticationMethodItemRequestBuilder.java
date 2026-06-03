@@ -53,7 +53,7 @@ public class HardwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public HardwareOathAuthenticationMethodItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/hardwareOathMethods/{hardwareOathAuthenticationMethod%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link HardwareOathAuthenticationMethodItemRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class HardwareOathAuthenticationMethodItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public HardwareOathAuthenticationMethodItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/hardwareOathMethods/{hardwareOathAuthenticationMethod%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Delete navigation property hardwareOathMethods for users

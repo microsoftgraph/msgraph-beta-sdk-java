@@ -49,7 +49,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsDeviceMetricHistory{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder} and sets the default values.
@@ -57,7 +57,7 @@ public class UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder extends Ba
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsDeviceMetricHistoryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsDeviceMetricHistory{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * User experience analytics device metric history. The report will be retired on December 31, 2024. You can start using the Cloud PC connection quality report now via https://learn.microsoft.com/windows-365/enterprise/report-cloud-pc-connection-quality.

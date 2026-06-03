@@ -44,7 +44,7 @@ public class PartnerRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PartnerRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/partner{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/partner", pathParameters);
     }
     /**
      * Instantiates a new {@link PartnerRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class PartnerRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PartnerRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/partner{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/partner", rawUrl);
     }
     /**
      * Delete navigation property partner for security

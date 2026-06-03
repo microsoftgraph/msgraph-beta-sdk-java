@@ -3,6 +3,8 @@ package com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobswi
 import com.microsoft.graph.beta.models.CrossTenantMigrationJob;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobswithdisplayname.cancel.CancelRequestBuilder;
+import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobswithdisplayname.migrate.MigrateRequestBuilder;
+import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobswithdisplayname.validate.ValidateRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -33,13 +35,35 @@ public class CrossTenantMigrationJobsWithDisplayNameRequestBuilder extends BaseR
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the migrate method.
+     * @return a {@link MigrateRequestBuilder}
+     * @deprecated
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public MigrateRequestBuilder migrate() {
+        return new MigrateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the validate method.
+     * @return a {@link ValidateRequestBuilder}
+     * @deprecated
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public ValidateRequestBuilder validate() {
+        return new ValidateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new {@link CrossTenantMigrationJobsWithDisplayNameRequestBuilder} and sets the default values.
      * @param displayName Alternate key of crossTenantMigrationJob
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossTenantMigrationJobsWithDisplayNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String displayName) {
-        super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs(displayName='{displayName}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs(displayName='{displayName}')", pathParameters);
         this.pathParameters.put("displayName", displayName);
     }
     /**
@@ -48,7 +72,7 @@ public class CrossTenantMigrationJobsWithDisplayNameRequestBuilder extends BaseR
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossTenantMigrationJobsWithDisplayNameRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs(displayName='{displayName}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs(displayName='{displayName}')", rawUrl);
     }
     /**
      * Delete navigation property crossTenantMigrationJobs for solutions

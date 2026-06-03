@@ -89,7 +89,7 @@ public class OrganizationalBrandingThemeLocalizationLocaleItemRequestBuilder ext
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OrganizationalBrandingThemeLocalizationLocaleItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/themes/{organizationalBrandingTheme%2Did}/localizations/{organizationalBrandingThemeLocalization%2Dlocale}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/themes/{organizationalBrandingTheme%2Did}/localizations/{organizationalBrandingThemeLocalization%2Dlocale}", pathParameters);
     }
     /**
      * Instantiates a new {@link OrganizationalBrandingThemeLocalizationLocaleItemRequestBuilder} and sets the default values.
@@ -97,7 +97,7 @@ public class OrganizationalBrandingThemeLocalizationLocaleItemRequestBuilder ext
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OrganizationalBrandingThemeLocalizationLocaleItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/themes/{organizationalBrandingTheme%2Did}/localizations/{organizationalBrandingThemeLocalization%2Dlocale}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/branding/themes/{organizationalBrandingTheme%2Did}/localizations/{organizationalBrandingThemeLocalization%2Dlocale}", rawUrl);
     }
     /**
      * Delete navigation property localizations for organization

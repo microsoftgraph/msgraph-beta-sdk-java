@@ -26,7 +26,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AppsAndServicesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/appsAndServices{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/appsAndServices", pathParameters);
     }
     /**
      * Instantiates a new {@link AppsAndServicesRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class AppsAndServicesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AppsAndServicesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/appsAndServices{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/appsAndServices", rawUrl);
     }
     /**
      * Delete navigation property appsAndServices for admin

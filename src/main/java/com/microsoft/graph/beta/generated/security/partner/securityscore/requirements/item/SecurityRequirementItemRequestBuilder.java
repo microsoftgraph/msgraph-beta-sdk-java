@@ -26,7 +26,7 @@ public class SecurityRequirementItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SecurityRequirementItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/partner/securityScore/requirements/{securityRequirement%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/partner/securityScore/requirements/{securityRequirement%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link SecurityRequirementItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class SecurityRequirementItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SecurityRequirementItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/partner/securityScore/requirements/{securityRequirement%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/partner/securityScore/requirements/{securityRequirement%2Did}", rawUrl);
     }
     /**
      * Delete navigation property requirements for security

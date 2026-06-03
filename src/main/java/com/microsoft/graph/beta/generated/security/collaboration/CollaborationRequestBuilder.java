@@ -35,7 +35,7 @@ public class CollaborationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CollaborationRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/collaboration{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/collaboration", pathParameters);
     }
     /**
      * Instantiates a new {@link CollaborationRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class CollaborationRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CollaborationRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/collaboration{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/collaboration", rawUrl);
     }
     /**
      * Delete navigation property collaboration for security

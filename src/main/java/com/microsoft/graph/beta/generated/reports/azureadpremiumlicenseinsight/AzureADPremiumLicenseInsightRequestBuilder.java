@@ -26,7 +26,7 @@ public class AzureADPremiumLicenseInsightRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AzureADPremiumLicenseInsightRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/azureADPremiumLicenseInsight{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/reports/azureADPremiumLicenseInsight", pathParameters);
     }
     /**
      * Instantiates a new {@link AzureADPremiumLicenseInsightRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class AzureADPremiumLicenseInsightRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AzureADPremiumLicenseInsightRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/azureADPremiumLicenseInsight{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/reports/azureADPremiumLicenseInsight", rawUrl);
     }
     /**
      * Delete navigation property azureADPremiumLicenseInsight for reports

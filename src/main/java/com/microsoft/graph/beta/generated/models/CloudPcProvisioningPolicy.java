@@ -239,7 +239,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("provisioningType");
     }
     /**
-     * Gets the scopeIds property value. The scopeIds property
+     * Gets the scopeIds property value. The list of scope tag IDs for this resource. Read-only.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -468,7 +468,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.backingStore.set("provisioningType", value);
     }
     /**
-     * Sets the scopeIds property value. The scopeIds property
+     * Sets the scopeIds property value. The list of scope tag IDs for this resource. Read-only.
      * @param value Value to set for the scopeIds property.
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

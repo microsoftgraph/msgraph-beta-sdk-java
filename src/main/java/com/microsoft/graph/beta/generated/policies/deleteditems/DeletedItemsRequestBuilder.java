@@ -44,7 +44,7 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeletedItemsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/deletedItems{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/deletedItems", pathParameters);
     }
     /**
      * Instantiates a new {@link DeletedItemsRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeletedItemsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/deletedItems{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/deletedItems", rawUrl);
     }
     /**
      * Delete navigation property deletedItems for policies

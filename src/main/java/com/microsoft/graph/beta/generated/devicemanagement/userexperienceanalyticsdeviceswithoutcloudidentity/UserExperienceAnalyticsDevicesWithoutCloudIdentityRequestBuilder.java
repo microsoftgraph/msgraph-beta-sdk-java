@@ -1,10 +1,10 @@
 package com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdeviceswithoutcloudidentity;
 
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdeviceswithoutcloudidentity.count.CountRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdeviceswithoutcloudidentity.item.UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdeviceswithoutcloudidentity.item.UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRe_a3c70812;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.UserExperienceAnalyticsDeviceWithoutCloudIdentity;
-import com.microsoft.graph.beta.models.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse;
+import com.microsoft.graph.beta.models.UserExperienceAnalyticsDeviceWithoutCloudIdentityCollec_327a2df1;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,14 +34,14 @@ public class UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder ex
     /**
      * Provides operations to manage the userExperienceAnalyticsDevicesWithoutCloudIdentity property of the microsoft.graph.deviceManagement entity.
      * @param userExperienceAnalyticsDeviceWithoutCloudIdentityId The unique identifier of userExperienceAnalyticsDeviceWithoutCloudIdentity
-     * @return a {@link UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRe_a3c70812}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder byUserExperienceAnalyticsDeviceWithoutCloudIdentityId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsDeviceWithoutCloudIdentityId) {
+    public UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRe_a3c70812 byUserExperienceAnalyticsDeviceWithoutCloudIdentityId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsDeviceWithoutCloudIdentityId) {
         Objects.requireNonNull(userExperienceAnalyticsDeviceWithoutCloudIdentityId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userExperienceAnalyticsDeviceWithoutCloudIdentity%2Did", userExperienceAnalyticsDeviceWithoutCloudIdentityId);
-        return new UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRequestBuilder(urlTplParams, requestAdapter);
+        return new UserExperienceAnalyticsDeviceWithoutCloudIdentityItemRe_a3c70812(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder} and sets the default values.
@@ -49,7 +49,7 @@ public class UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder ex
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsDevicesWithoutCloudIdentity{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder} and sets the default values.
@@ -57,29 +57,29 @@ public class UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder ex
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsDevicesWithoutCloudIdentity{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * User experience analytics devices without cloud identity.
-     * @return a {@link UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse}
+     * @return a {@link UserExperienceAnalyticsDeviceWithoutCloudIdentityCollec_327a2df1}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse get() {
+    public UserExperienceAnalyticsDeviceWithoutCloudIdentityCollec_327a2df1 get() {
         return get(null);
     }
     /**
      * User experience analytics devices without cloud identity.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse}
+     * @return a {@link UserExperienceAnalyticsDeviceWithoutCloudIdentityCollec_327a2df1}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public UserExperienceAnalyticsDeviceWithoutCloudIdentityCollec_327a2df1 get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsDeviceWithoutCloudIdentityCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsDeviceWithoutCloudIdentityCollec_327a2df1::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsDevicesWithoutCloudIdentity for deviceManagement

@@ -53,7 +53,7 @@ public class QrCodePinMethodRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public QrCodePinMethodRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/qrCodePinMethod{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link QrCodePinMethodRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class QrCodePinMethodRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public QrCodePinMethodRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/authentication/qrCodePinMethod{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Deletes user&apos;s qrCodePinAuthenticationMethod object. Once the object is deleted, it can&apos;t be retrieved. The user won&apos;t be able to sign-in with any QR codes associated with the deleted object. 

@@ -45,7 +45,7 @@ public class AccessPackagesWithUniqueNameRequestBuilder extends BaseRequestBuild
      * @param uniqueName Alternate key of accessPackage
      */
     public AccessPackagesWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String uniqueName) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages(uniqueName='{uniqueName}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages(uniqueName='{uniqueName}')", pathParameters);
         this.pathParameters.put("uniqueName", uniqueName);
     }
     /**
@@ -54,7 +54,7 @@ public class AccessPackagesWithUniqueNameRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackagesWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages(uniqueName='{uniqueName}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackages(uniqueName='{uniqueName}')", rawUrl);
     }
     /**
      * Delete an accessPackage object. You can&apos;t delete an access package if it has any accessPackageAssignment. To delete the access package, first query if there are any assignments with a filter to indicate the specific access package, such as: $filter=accessPackage/id eq &apos;a914b616-e04e-476b-aa37-91038f0b165b&apos;. For more information on how to remove assignments that are still in the delivered state, see Remove an assignment.

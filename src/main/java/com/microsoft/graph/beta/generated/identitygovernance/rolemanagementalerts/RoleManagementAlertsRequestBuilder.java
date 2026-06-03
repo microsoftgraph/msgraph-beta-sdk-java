@@ -62,7 +62,7 @@ public class RoleManagementAlertsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RoleManagementAlertsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts", pathParameters);
     }
     /**
      * Instantiates a new {@link RoleManagementAlertsRequestBuilder} and sets the default values.
@@ -70,7 +70,7 @@ public class RoleManagementAlertsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RoleManagementAlertsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/roleManagementAlerts", rawUrl);
     }
     /**
      * Delete navigation property roleManagementAlerts for identityGovernance

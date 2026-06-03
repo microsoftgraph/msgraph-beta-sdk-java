@@ -35,7 +35,7 @@ public class TermsAndConditionsGroupAssignmentItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TermsAndConditionsGroupAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/groupAssignments/{termsAndConditionsGroupAssignment%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/groupAssignments/{termsAndConditionsGroupAssignment%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link TermsAndConditionsGroupAssignmentItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class TermsAndConditionsGroupAssignmentItemRequestBuilder extends BaseReq
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TermsAndConditionsGroupAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/groupAssignments/{termsAndConditionsGroupAssignment%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}/groupAssignments/{termsAndConditionsGroupAssignment%2Did}", rawUrl);
     }
     /**
      * Delete navigation property groupAssignments for deviceManagement

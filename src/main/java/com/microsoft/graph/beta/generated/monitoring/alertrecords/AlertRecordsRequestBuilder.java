@@ -5,8 +5,8 @@ import com.microsoft.graph.beta.models.devicemanagement.AlertRecordCollectionRes
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.monitoring.alertrecords.count.CountRequestBuilder;
 import com.microsoft.graph.beta.monitoring.alertrecords.item.AlertRecordItemRequestBuilder;
-import com.microsoft.graph.beta.monitoring.alertrecords.microsoftgraphdevicemanagementchangealertrecordsportalnotificationassent.MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder;
-import com.microsoft.graph.beta.monitoring.alertrecords.microsoftgraphdevicemanagementgetportalnotifications.MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder;
+import com.microsoft.graph.beta.monitoring.alertrecords.microsoftgraphdevicemanagementchangealertrecordsportaln_47fd93f4.MicrosoftGraphDeviceManagementChangeAlertRecordsPortalN_5b94bff7;
+import com.microsoft.graph.beta.monitoring.alertrecords.microsoftgraphdevicemanagementgetportalnotifications.MicrosoftGraphDeviceManagementGetPortalNotificationsReq_8191e564;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -35,19 +35,19 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the changeAlertRecordsPortalNotificationAsSent method.
-     * @return a {@link MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder}
+     * @return a {@link MicrosoftGraphDeviceManagementChangeAlertRecordsPortalN_5b94bff7}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder microsoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSent() {
-        return new MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphDeviceManagementChangeAlertRecordsPortalN_5b94bff7 microsoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSent() {
+        return new MicrosoftGraphDeviceManagementChangeAlertRecordsPortalN_5b94bff7(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getPortalNotifications method.
-     * @return a {@link MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder}
+     * @return a {@link MicrosoftGraphDeviceManagementGetPortalNotificationsReq_8191e564}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder microsoftGraphDeviceManagementGetPortalNotifications() {
-        return new MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphDeviceManagementGetPortalNotificationsReq_8191e564 microsoftGraphDeviceManagementGetPortalNotifications() {
+        return new MicrosoftGraphDeviceManagementGetPortalNotificationsReq_8191e564(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the alertRecords property of the microsoft.graph.deviceManagement.monitoring entity.
@@ -67,7 +67,7 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertRecordsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/monitoring/alertRecords{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link AlertRecordsRequestBuilder} and sets the default values.
@@ -75,7 +75,7 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertRecordsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/monitoring/alertRecords{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * The collection of records of alert events.

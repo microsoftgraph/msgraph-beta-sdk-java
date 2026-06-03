@@ -80,7 +80,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceCustomAttributeShellScriptItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceCustomAttributeShellScripts/{deviceCustomAttributeShellScript%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/deviceCustomAttributeShellScripts/{deviceCustomAttributeShellScript%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceCustomAttributeShellScriptItemRequestBuilder} and sets the default values.
@@ -88,7 +88,7 @@ public class DeviceCustomAttributeShellScriptItemRequestBuilder extends BaseRequ
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceCustomAttributeShellScriptItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceCustomAttributeShellScripts/{deviceCustomAttributeShellScript%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/deviceCustomAttributeShellScripts/{deviceCustomAttributeShellScript%2Did}", rawUrl);
     }
     /**
      * Delete navigation property deviceCustomAttributeShellScripts for deviceManagement

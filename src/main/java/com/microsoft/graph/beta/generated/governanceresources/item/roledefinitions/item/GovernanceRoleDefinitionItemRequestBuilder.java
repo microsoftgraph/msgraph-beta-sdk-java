@@ -44,7 +44,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GovernanceRoleDefinitionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/governanceResources/{governanceResource%2Did}/roleDefinitions/{governanceRoleDefinition%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/governanceResources/{governanceResource%2Did}/roleDefinitions/{governanceRoleDefinition%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link GovernanceRoleDefinitionItemRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class GovernanceRoleDefinitionItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public GovernanceRoleDefinitionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/governanceResources/{governanceResource%2Did}/roleDefinitions/{governanceRoleDefinition%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/governanceResources/{governanceResource%2Did}/roleDefinitions/{governanceRoleDefinition%2Did}", rawUrl);
     }
     /**
      * Delete navigation property roleDefinitions for governanceResources

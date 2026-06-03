@@ -53,7 +53,7 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MigrationsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations", pathParameters);
     }
     /**
      * Instantiates a new {@link MigrationsRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MigrationsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations", rawUrl);
     }
     /**
      * Delete navigation property migrations for solutions

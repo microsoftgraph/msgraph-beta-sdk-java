@@ -26,7 +26,7 @@ public class ActivityStatisticsItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ActivityStatisticsItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/activitystatistics/{activityStatistics%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/activitystatistics/{activityStatistics%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ActivityStatisticsItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ActivityStatisticsItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ActivityStatisticsItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/activitystatistics/{activityStatistics%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/activitystatistics/{activityStatistics%2Did}", rawUrl);
     }
     /**
      * Delete entity from activitystatistics

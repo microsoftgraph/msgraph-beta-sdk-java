@@ -35,7 +35,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MeetingAttendanceReportRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/meetingAttendanceReport{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/meetingAttendanceReport", pathParameters);
     }
     /**
      * Instantiates a new {@link MeetingAttendanceReportRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class MeetingAttendanceReportRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MeetingAttendanceReportRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/meetingAttendanceReport{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/meetingAttendanceReport", rawUrl);
     }
     /**
      * Delete navigation property meetingAttendanceReport for communications

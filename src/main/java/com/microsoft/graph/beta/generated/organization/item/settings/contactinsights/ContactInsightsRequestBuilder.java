@@ -26,7 +26,7 @@ public class ContactInsightsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContactInsightsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/contactInsights{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/contactInsights", pathParameters);
     }
     /**
      * Instantiates a new {@link ContactInsightsRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ContactInsightsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContactInsightsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/contactInsights{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/organization/{organization%2Did}/settings/contactInsights", rawUrl);
     }
     /**
      * Delete navigation property contactInsights for organization

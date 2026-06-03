@@ -26,7 +26,7 @@ public class ExternalCertificateAuthorityCertificateItemRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExternalCertificateAuthorityCertificateItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/tls/externalCertificateAuthorityCertificates/{externalCertificateAuthorityCertificate%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/networkAccess/tls/externalCertificateAuthorityCertificates/{externalCertificateAuthorityCertificate%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ExternalCertificateAuthorityCertificateItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ExternalCertificateAuthorityCertificateItemRequestBuilder extends B
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ExternalCertificateAuthorityCertificateItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/tls/externalCertificateAuthorityCertificates/{externalCertificateAuthorityCertificate%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/networkAccess/tls/externalCertificateAuthorityCertificates/{externalCertificateAuthorityCertificate%2Did}", rawUrl);
     }
     /**
      * Delete an externalCertificateAuthorityCertificate object.

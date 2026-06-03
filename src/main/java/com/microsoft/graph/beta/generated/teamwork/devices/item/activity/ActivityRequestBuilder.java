@@ -26,7 +26,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ActivityRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/devices/{teamworkDevice%2Did}/activity{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/teamwork/devices/{teamworkDevice%2Did}/activity", pathParameters);
     }
     /**
      * Instantiates a new {@link ActivityRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ActivityRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ActivityRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/devices/{teamworkDevice%2Did}/activity{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/teamwork/devices/{teamworkDevice%2Did}/activity", rawUrl);
     }
     /**
      * Delete navigation property activity for teamwork

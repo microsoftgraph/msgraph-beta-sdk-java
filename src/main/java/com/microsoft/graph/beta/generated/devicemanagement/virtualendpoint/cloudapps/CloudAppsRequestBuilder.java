@@ -4,7 +4,7 @@ import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudapps.count
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudapps.item.CloudPcCloudAppItemRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudapps.publish.PublishRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudapps.reset.ResetRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudapps.retrievediscoveredappswithsourceidprovisioningpolicyidprovisioningpolicyid.RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudapps.retrievediscoveredappswithsourceidprovisioningpolicyidp_9be16c94.RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdP_7469a058;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.cloudapps.unpublish.UnpublishRequestBuilder;
 import com.microsoft.graph.beta.models.CloudPcCloudApp;
 import com.microsoft.graph.beta.models.CloudPcCloudAppCollectionResponse;
@@ -77,7 +77,7 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudAppsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link CloudAppsRequestBuilder} and sets the default values.
@@ -85,7 +85,7 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudAppsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudApps{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * List all the cloudPcCloudApp objects filtered by a provision policy ID.
@@ -112,21 +112,23 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcCloudAppCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to cloudApps for deviceManagement
+     * Create a new cloudPcCloudApp object.
      * @param body The request body
      * @return a {@link CloudPcCloudApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-cloudapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCloudApp post(@jakarta.annotation.Nonnull final CloudPcCloudApp body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to cloudApps for deviceManagement
+     * Create a new cloudPcCloudApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcCloudApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-cloudapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcCloudApp post(@jakarta.annotation.Nonnull final CloudPcCloudApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -139,12 +141,12 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrieveDiscoveredApps method.
      * @param sourceId Usage: sourceId=&apos;{sourceId}&apos;
-     * @return a {@link RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdRequestBuilder}
+     * @return a {@link RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdP_7469a058}
      */
     @jakarta.annotation.Nonnull
-    public RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdRequestBuilder retrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyId(@jakarta.annotation.Nonnull final String sourceId) {
+    public RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdP_7469a058 retrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyId(@jakarta.annotation.Nonnull final String sourceId) {
         Objects.requireNonNull(sourceId);
-        return new RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdProvisioningPolicyIdRequestBuilder(pathParameters, requestAdapter, sourceId);
+        return new RetrieveDiscoveredAppsWithSourceIdprovisioningPolicyIdP_7469a058(pathParameters, requestAdapter, sourceId);
     }
     /**
      * List all the cloudPcCloudApp objects filtered by a provision policy ID.
@@ -167,7 +169,7 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to cloudApps for deviceManagement
+     * Create a new cloudPcCloudApp object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -176,7 +178,7 @@ public class CloudAppsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to cloudApps for deviceManagement
+     * Create a new cloudPcCloudApp object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

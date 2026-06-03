@@ -26,7 +26,7 @@ public class DeviceHealthScriptAssignmentItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceHealthScriptAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceHealthScripts/{deviceHealthScript%2Did}/assignments/{deviceHealthScriptAssignment%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/deviceHealthScripts/{deviceHealthScript%2Did}/assignments/{deviceHealthScriptAssignment%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceHealthScriptAssignmentItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class DeviceHealthScriptAssignmentItemRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceHealthScriptAssignmentItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/deviceHealthScripts/{deviceHealthScript%2Did}/assignments/{deviceHealthScriptAssignment%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/deviceHealthScripts/{deviceHealthScript%2Did}/assignments/{deviceHealthScriptAssignment%2Did}", rawUrl);
     }
     /**
      * Delete navigation property assignments for deviceManagement

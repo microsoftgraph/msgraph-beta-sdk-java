@@ -54,7 +54,7 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnlineMeetingsWithJoinWebUrlRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String joinWebUrl) {
-        super(requestAdapter, "{+baseurl}/communications/onlineMeetings(joinWebUrl='{joinWebUrl}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetings(joinWebUrl='{joinWebUrl}')", pathParameters);
         this.pathParameters.put("joinWebUrl", joinWebUrl);
     }
     /**
@@ -63,7 +63,7 @@ public class OnlineMeetingsWithJoinWebUrlRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public OnlineMeetingsWithJoinWebUrlRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/communications/onlineMeetings(joinWebUrl='{joinWebUrl}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/communications/onlineMeetings(joinWebUrl='{joinWebUrl}')", rawUrl);
     }
     /**
      * Delete navigation property onlineMeetings for communications

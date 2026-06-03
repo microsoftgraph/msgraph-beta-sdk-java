@@ -49,7 +49,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcPoolsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPcPools{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link CloudPcPoolsRequestBuilder} and sets the default values.
@@ -57,22 +57,24 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcPoolsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/cloudPcPools{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
-     * Get cloudPcPools from deviceManagement
+     * List the properties and relationships of the cloudPcPool objects.
      * @return a {@link CloudPcPoolCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcpools?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPoolCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get cloudPcPools from deviceManagement
+     * List the properties and relationships of the cloudPcPool objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcPoolCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-list-cloudpcpools?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPoolCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -82,21 +84,23 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcPoolCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to cloudPcPools for deviceManagement
+     * Create a new cloudPcPool object.
      * @param body The request body
      * @return a {@link CloudPcPool}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-cloudpcpools?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPool post(@jakarta.annotation.Nonnull final CloudPcPool body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to cloudPcPools for deviceManagement
+     * Create a new cloudPcPool object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcPool}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/virtualendpoint-post-cloudpcpools?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcPool post(@jakarta.annotation.Nonnull final CloudPcPool body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -107,7 +111,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcPool::createFromDiscriminatorValue);
     }
     /**
-     * Get cloudPcPools from deviceManagement
+     * List the properties and relationships of the cloudPcPool objects.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +119,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get cloudPcPools from deviceManagement
+     * List the properties and relationships of the cloudPcPool objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -127,7 +131,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to cloudPcPools for deviceManagement
+     * Create a new cloudPcPool object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -136,7 +140,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to cloudPcPools for deviceManagement
+     * Create a new cloudPcPool object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -161,7 +165,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return new CloudPcPoolsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get cloudPcPools from deviceManagement
+     * List the properties and relationships of the cloudPcPool objects.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -35,7 +35,7 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamworkSectionItemItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections/{teamworkSection%2Did}/items/{teamworkSectionItem%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections/{teamworkSection%2Did}/items/{teamworkSectionItem%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link TeamworkSectionItemItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class TeamworkSectionItemItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamworkSectionItemItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections/{teamworkSection%2Did}/items/{teamworkSectionItem%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections/{teamworkSection%2Did}/items/{teamworkSectionItem%2Did}", rawUrl);
     }
     /**
      * Remove an item from a user-defined section in a user&apos;s teamwork. This API doesn&apos;t delete the underlying chat, channel, meeting, or community; it only removes the item from the user-defined section. The item is automatically moved back to its default system-defined section.

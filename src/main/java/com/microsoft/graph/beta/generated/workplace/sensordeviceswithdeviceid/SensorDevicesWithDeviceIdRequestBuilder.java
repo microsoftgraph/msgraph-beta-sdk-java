@@ -27,7 +27,7 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SensorDevicesWithDeviceIdRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String deviceId) {
-        super(requestAdapter, "{+baseurl}/workplace/sensorDevices(deviceId='{deviceId}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/workplace/sensorDevices(deviceId='{deviceId}')", pathParameters);
         this.pathParameters.put("deviceId", deviceId);
     }
     /**
@@ -36,7 +36,7 @@ public class SensorDevicesWithDeviceIdRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SensorDevicesWithDeviceIdRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/workplace/sensorDevices(deviceId='{deviceId}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/workplace/sensorDevices(deviceId='{deviceId}')", rawUrl);
     }
     /**
      * Delete a workplace sensor device.

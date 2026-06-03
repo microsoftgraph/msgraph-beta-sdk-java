@@ -71,7 +71,7 @@ public class CustomerItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CustomerItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/customers/{customer%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/customers/{customer%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link CustomerItemRequestBuilder} and sets the default values.
@@ -79,7 +79,7 @@ public class CustomerItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CustomerItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/customers/{customer%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/customers/{customer%2Did}", rawUrl);
     }
     /**
      * Delete navigation property customers for financials

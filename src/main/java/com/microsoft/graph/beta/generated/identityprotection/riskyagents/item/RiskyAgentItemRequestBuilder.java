@@ -26,7 +26,7 @@ public class RiskyAgentItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RiskyAgentItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityProtection/riskyAgents/{riskyAgent%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityProtection/riskyAgents/{riskyAgent%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link RiskyAgentItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class RiskyAgentItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RiskyAgentItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityProtection/riskyAgents/{riskyAgent%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityProtection/riskyAgents/{riskyAgent%2Did}", rawUrl);
     }
     /**
      * Delete navigation property riskyAgents for identityProtection

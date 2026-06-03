@@ -59,19 +59,21 @@ public class DriveExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessProtectionPolicies/{oneDriveForBusinessProtectionPolicy%2Did}/driveExclusionUnits{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * Get a list of drive exclusion units associated with a OneDrive for work or school protection policy.
      * @return a {@link DriveExclusionUnitCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessprotectionpolicy-list-driveexclusionunits?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveExclusionUnitCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * Get a list of drive exclusion units associated with a OneDrive for work or school protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveExclusionUnitCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessprotectionpolicy-list-driveexclusionunits?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveExclusionUnitCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class DriveExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, DriveExclusionUnitCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * Get a list of drive exclusion units associated with a OneDrive for work or school protection policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class DriveExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * Get a list of drive exclusion units associated with a OneDrive for work or school protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class DriveExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return new DriveExclusionUnitsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get driveExclusionUnits from solutions
+     * Get a list of drive exclusion units associated with a OneDrive for work or school protection policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

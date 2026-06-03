@@ -49,7 +49,7 @@ public class MailboxExclusionUnitsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MailboxExclusionUnitsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/mailboxExclusionUnits{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link MailboxExclusionUnitsRequestBuilder} and sets the default values.
@@ -57,10 +57,10 @@ public class MailboxExclusionUnitsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MailboxExclusionUnitsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/backupRestore/mailboxExclusionUnits{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * The list of mailbox exclusion units in the tenant.
      * @return a {@link MailboxExclusionUnitCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class MailboxExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * The list of mailbox exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxExclusionUnitCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class MailboxExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxExclusionUnit::createFromDiscriminatorValue);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * The list of mailbox exclusion units in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class MailboxExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * The list of mailbox exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class MailboxExclusionUnitsRequestBuilder extends BaseRequestBuilder {
         return new MailboxExclusionUnitsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * The list of mailbox exclusion units in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

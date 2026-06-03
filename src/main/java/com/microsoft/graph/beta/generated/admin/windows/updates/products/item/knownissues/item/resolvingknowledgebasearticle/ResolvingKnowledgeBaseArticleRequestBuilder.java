@@ -26,7 +26,7 @@ public class ResolvingKnowledgeBaseArticleRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ResolvingKnowledgeBaseArticleRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/knownIssues/{knownIssue%2Did}/resolvingKnowledgeBaseArticle{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/knownIssues/{knownIssue%2Did}/resolvingKnowledgeBaseArticle", pathParameters);
     }
     /**
      * Instantiates a new {@link ResolvingKnowledgeBaseArticleRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ResolvingKnowledgeBaseArticleRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ResolvingKnowledgeBaseArticleRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/knownIssues/{knownIssue%2Did}/resolvingKnowledgeBaseArticle{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/products/{product%2Did}/knownIssues/{knownIssue%2Did}/resolvingKnowledgeBaseArticle", rawUrl);
     }
     /**
      * Delete navigation property resolvingKnowledgeBaseArticle for admin

@@ -1,6 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.item;
 
-import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.item.microsoftgraphdevicemanagementsetportalnotificationassent.MicrosoftGraphDeviceManagementSetPortalNotificationAsSentRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.item.microsoftgraphdevicemanagementsetportalnotificationassent.MicrosoftGraphDeviceManagementSetPortalNotificationAsSe_e2ad4c0f;
 import com.microsoft.graph.beta.models.devicemanagement.AlertRecord;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,11 +23,11 @@ import java.util.Objects;
 public class AlertRecordItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the setPortalNotificationAsSent method.
-     * @return a {@link MicrosoftGraphDeviceManagementSetPortalNotificationAsSentRequestBuilder}
+     * @return a {@link MicrosoftGraphDeviceManagementSetPortalNotificationAsSe_e2ad4c0f}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphDeviceManagementSetPortalNotificationAsSentRequestBuilder microsoftGraphDeviceManagementSetPortalNotificationAsSent() {
-        return new MicrosoftGraphDeviceManagementSetPortalNotificationAsSentRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphDeviceManagementSetPortalNotificationAsSe_e2ad4c0f microsoftGraphDeviceManagementSetPortalNotificationAsSent() {
+        return new MicrosoftGraphDeviceManagementSetPortalNotificationAsSe_e2ad4c0f(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AlertRecordItemRequestBuilder} and sets the default values.
@@ -35,7 +35,7 @@ public class AlertRecordItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertRecordItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRecords/{alertRecord%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRecords/{alertRecord%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link AlertRecordItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class AlertRecordItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AlertRecordItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRecords/{alertRecord%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/monitoring/alertRecords/{alertRecord%2Did}", rawUrl);
     }
     /**
      * Delete navigation property alertRecords for deviceManagement

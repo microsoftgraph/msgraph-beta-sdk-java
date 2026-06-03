@@ -26,7 +26,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContinuousAccessEvaluationPolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/continuousAccessEvaluationPolicy{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identity/continuousAccessEvaluationPolicy", pathParameters);
     }
     /**
      * Instantiates a new {@link ContinuousAccessEvaluationPolicyRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ContinuousAccessEvaluationPolicyRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ContinuousAccessEvaluationPolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identity/continuousAccessEvaluationPolicy{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identity/continuousAccessEvaluationPolicy", rawUrl);
     }
     /**
      * Delete navigation property continuousAccessEvaluationPolicy for identity

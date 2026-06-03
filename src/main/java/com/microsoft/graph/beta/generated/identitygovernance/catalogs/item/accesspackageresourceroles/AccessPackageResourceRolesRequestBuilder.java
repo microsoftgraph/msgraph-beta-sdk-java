@@ -55,7 +55,7 @@ public class AccessPackageResourceRolesRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackageResourceRolesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs/{accessPackageCatalog%2Did}/accessPackageResourceRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link AccessPackageResourceRolesRequestBuilder} and sets the default values.
@@ -63,7 +63,7 @@ public class AccessPackageResourceRolesRequestBuilder extends BaseRequestBuilder
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackageResourceRolesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs/{accessPackageCatalog%2Did}/accessPackageResourceRoles{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * The roles in each resource in a catalog. Read-only.

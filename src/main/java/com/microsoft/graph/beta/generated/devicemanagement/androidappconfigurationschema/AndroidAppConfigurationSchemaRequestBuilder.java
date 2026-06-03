@@ -35,7 +35,7 @@ public class AndroidAppConfigurationSchemaRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AndroidAppConfigurationSchemaRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/androidAppConfigurationSchema{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/androidAppConfigurationSchema", pathParameters);
     }
     /**
      * Instantiates a new {@link AndroidAppConfigurationSchemaRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class AndroidAppConfigurationSchemaRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AndroidAppConfigurationSchemaRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/androidAppConfigurationSchema{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/androidAppConfigurationSchema", rawUrl);
     }
     /**
      * Delete navigation property androidAppConfigurationSchema for deviceManagement

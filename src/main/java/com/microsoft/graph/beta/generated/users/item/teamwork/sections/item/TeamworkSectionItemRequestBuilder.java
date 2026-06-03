@@ -35,7 +35,7 @@ public class TeamworkSectionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamworkSectionItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections/{teamworkSection%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections/{teamworkSection%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link TeamworkSectionItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class TeamworkSectionItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TeamworkSectionItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections/{teamworkSection%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/users/{user%2Did}/teamwork/sections/{teamworkSection%2Did}", rawUrl);
     }
     /**
      * Delete a user-defined section from a user&apos;s teamwork. System-defined sections can&apos;t be deleted.

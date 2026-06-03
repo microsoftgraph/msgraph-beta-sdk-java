@@ -53,7 +53,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/policies/{policy%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/policies/{policy%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link PolicyItemRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class PolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/policies/{policy%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/policies/{policy%2Did}", rawUrl);
     }
     /**
      * Delete a Windows update policy object. You can use this method with the following child object type: qualityUpdatePolicy.

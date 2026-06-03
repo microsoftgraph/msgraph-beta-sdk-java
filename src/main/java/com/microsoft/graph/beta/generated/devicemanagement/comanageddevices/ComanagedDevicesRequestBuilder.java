@@ -7,7 +7,7 @@ import com.microsoft.graph.beta.devicemanagement.comanageddevices.downloadpowerl
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.executeaction.ExecuteActionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.comanageddevices.retrievepowerliftappdiagnosticsdetailswithuserprincipalname.RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.comanageddevices.retrievepowerliftappdiagnosticsdetailswithuserprincipalname.RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7;
 import com.microsoft.graph.beta.models.ManagedDevice;
 import com.microsoft.graph.beta.models.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -97,7 +97,7 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ComanagedDevicesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link ComanagedDevicesRequestBuilder} and sets the default values.
@@ -105,7 +105,7 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ComanagedDevicesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/comanagedDevices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * The list of co-managed devices report
@@ -157,12 +157,12 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrievePowerliftAppDiagnosticsDetails method.
      * @param userPrincipalName Usage: userPrincipalName=&apos;{userPrincipalName}&apos;
-     * @return a {@link RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder}
+     * @return a {@link RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7}
      */
     @jakarta.annotation.Nonnull
-    public RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder retrievePowerliftAppDiagnosticsDetailsWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+    public RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7 retrievePowerliftAppDiagnosticsDetailsWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
         Objects.requireNonNull(userPrincipalName);
-        return new RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
+        return new RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * The list of co-managed devices report

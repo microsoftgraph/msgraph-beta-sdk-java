@@ -35,7 +35,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}/program{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}/program", pathParameters);
     }
     /**
      * Instantiates a new {@link ProgramRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class ProgramRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}/program{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/programControls/{programControl%2Did}/program", rawUrl);
     }
     /**
      * Delete navigation property program for programControls

@@ -3,7 +3,7 @@ package com.microsoft.graph.beta.tenantrelationships.managedtenants.tenants.item
 import com.microsoft.graph.beta.models.managedtenants.Tenant;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.tenantrelationships.managedtenants.tenants.item.microsoftgraphmanagedtenantsoffboardtenant.MicrosoftGraphManagedTenantsOffboardTenantRequestBuilder;
-import com.microsoft.graph.beta.tenantrelationships.managedtenants.tenants.item.microsoftgraphmanagedtenantsresettenantonboardingstatus.MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuilder;
+import com.microsoft.graph.beta.tenantrelationships.managedtenants.tenants.item.microsoftgraphmanagedtenantsresettenantonboardingstatus.MicrosoftGraphManagedTenantsResetTenantOnboardingStatus_bec559ea;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -32,11 +32,11 @@ public class TenantItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the resetTenantOnboardingStatus method.
-     * @return a {@link MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuilder}
+     * @return a {@link MicrosoftGraphManagedTenantsResetTenantOnboardingStatus_bec559ea}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuilder microsoftGraphManagedTenantsResetTenantOnboardingStatus() {
-        return new MicrosoftGraphManagedTenantsResetTenantOnboardingStatusRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphManagedTenantsResetTenantOnboardingStatus_bec559ea microsoftGraphManagedTenantsResetTenantOnboardingStatus() {
+        return new MicrosoftGraphManagedTenantsResetTenantOnboardingStatus_bec559ea(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link TenantItemRequestBuilder} and sets the default values.
@@ -44,7 +44,7 @@ public class TenantItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TenantItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenants/{tenant%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenants/{tenant%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link TenantItemRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class TenantItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public TenantItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenants/{tenant%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/tenantRelationships/managedTenants/tenants/{tenant%2Did}", rawUrl);
     }
     /**
      * Delete navigation property tenants for tenantRelationships

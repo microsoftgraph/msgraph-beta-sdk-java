@@ -12,8 +12,8 @@ import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.roledefinitio
 import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.roleeligibilityscheduleinstances.RoleEligibilityScheduleInstancesRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.roleeligibilityschedulerequests.RoleEligibilityScheduleRequestsRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.roleeligibilityschedules.RoleEligibilitySchedulesRequestBuilder;
-import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.rolescheduleinstancesdirectoryscopeiddirectoryscopeidappscopeidappscopeidprincipalidprincipalidroledefinitionidroledefinitionid.RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder;
-import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.roleschedulesdirectoryscopeiddirectoryscopeidappscopeidappscopeidprincipalidprincipalidroledefinitionidroledefinitionid.RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder;
+import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.rolescheduleinstancesdirectoryscopeiddirectoryscopeidap_efd21927.RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAp_f138522e;
+import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.roleschedulesdirectoryscopeiddirectoryscopeidappscopeid_9d7ef2e9.RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeId_aaff52a1;
 import com.microsoft.graph.beta.rolemanagement.enterpriseapps.item.transitiveroleassignments.TransitiveRoleAssignmentsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -145,25 +145,25 @@ public class RbacApplicationItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the roleScheduleInstances method.
-     * @return a {@link RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder}
+     * @return a {@link RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAp_f138522e}
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
-    public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
-        return new RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
+    public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAp_f138522e roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
+        return new RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAp_f138522e(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the roleSchedules method.
-     * @return a {@link RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder}
+     * @return a {@link RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeId_aaff52a1}
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
-    public RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
-        return new RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
+    public RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeId_aaff52a1 roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
+        return new RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeId_aaff52a1(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the transitiveRoleAssignments property of the microsoft.graph.rbacApplication entity.
@@ -182,7 +182,7 @@ public class RbacApplicationItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RbacApplicationItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/enterpriseApps/{rbacApplication%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/roleManagement/enterpriseApps/{rbacApplication%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link RbacApplicationItemRequestBuilder} and sets the default values.
@@ -190,7 +190,7 @@ public class RbacApplicationItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RbacApplicationItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/enterpriseApps/{rbacApplication%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/roleManagement/enterpriseApps/{rbacApplication%2Did}", rawUrl);
     }
     /**
      * Delete navigation property enterpriseApps for roleManagement

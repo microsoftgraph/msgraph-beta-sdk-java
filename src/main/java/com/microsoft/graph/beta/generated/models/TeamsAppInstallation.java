@@ -53,7 +53,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the scopeInfo property value. The scopeInfo property
+     * Gets the scopeInfo property value. The details of the scope in which the app is installed.
      * @return a {@link TeamsAppInstallationScopeInfo}
      */
     @jakarta.annotation.Nullable
@@ -96,7 +96,7 @@ public class TeamsAppInstallation extends Entity implements Parsable {
         this.backingStore.set("consentedPermissionSet", value);
     }
     /**
-     * Sets the scopeInfo property value. The scopeInfo property
+     * Sets the scopeInfo property value. The details of the scope in which the app is installed.
      * @param value Value to set for the scopeInfo property.
      */
     public void setScopeInfo(@jakarta.annotation.Nullable final TeamsAppInstallationScopeInfo value) {

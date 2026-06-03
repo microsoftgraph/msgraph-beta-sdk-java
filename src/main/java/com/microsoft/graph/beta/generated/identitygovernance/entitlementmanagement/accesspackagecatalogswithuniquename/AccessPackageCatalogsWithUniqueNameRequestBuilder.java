@@ -27,7 +27,7 @@ public class AccessPackageCatalogsWithUniqueNameRequestBuilder extends BaseReque
      * @param uniqueName Alternate key of accessPackageCatalog
      */
     public AccessPackageCatalogsWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String uniqueName) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs(uniqueName='{uniqueName}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs(uniqueName='{uniqueName}')", pathParameters);
         this.pathParameters.put("uniqueName", uniqueName);
     }
     /**
@@ -36,7 +36,7 @@ public class AccessPackageCatalogsWithUniqueNameRequestBuilder extends BaseReque
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AccessPackageCatalogsWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs(uniqueName='{uniqueName}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs(uniqueName='{uniqueName}')", rawUrl);
     }
     /**
      * Delete an accessPackageCatalog.

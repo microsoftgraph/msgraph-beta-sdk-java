@@ -1,10 +1,10 @@
 package com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies;
 
 import com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.count.CountRequestBuilder;
-import com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder;
+import com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.WindowsDefenderApplicationControlSupplementalPolicyItem_56d8edc3;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicy;
-import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse;
+import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyColl_dbd9b171;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,14 +34,14 @@ public class WdacSupplementalPoliciesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the wdacSupplementalPolicies property of the microsoft.graph.deviceAppManagement entity.
      * @param windowsDefenderApplicationControlSupplementalPolicyId The unique identifier of windowsDefenderApplicationControlSupplementalPolicy
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyItem_56d8edc3}
      */
     @jakarta.annotation.Nonnull
-    public WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder byWindowsDefenderApplicationControlSupplementalPolicyId(@jakarta.annotation.Nonnull final String windowsDefenderApplicationControlSupplementalPolicyId) {
+    public WindowsDefenderApplicationControlSupplementalPolicyItem_56d8edc3 byWindowsDefenderApplicationControlSupplementalPolicyId(@jakarta.annotation.Nonnull final String windowsDefenderApplicationControlSupplementalPolicyId) {
         Objects.requireNonNull(windowsDefenderApplicationControlSupplementalPolicyId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsDefenderApplicationControlSupplementalPolicy%2Did", windowsDefenderApplicationControlSupplementalPolicyId);
-        return new WindowsDefenderApplicationControlSupplementalPolicyItemRequestBuilder(urlTplParams, requestAdapter);
+        return new WindowsDefenderApplicationControlSupplementalPolicyItem_56d8edc3(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link WdacSupplementalPoliciesRequestBuilder} and sets the default values.
@@ -49,7 +49,7 @@ public class WdacSupplementalPoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WdacSupplementalPoliciesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link WdacSupplementalPoliciesRequestBuilder} and sets the default values.
@@ -57,29 +57,29 @@ public class WdacSupplementalPoliciesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WdacSupplementalPoliciesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * The collection of Windows Defender Application Control Supplemental Policies.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyColl_dbd9b171}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse get() {
+    public WindowsDefenderApplicationControlSupplementalPolicyColl_dbd9b171 get() {
         return get(null);
     }
     /**
      * The collection of Windows Defender Application Control Supplemental Policies.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyColl_dbd9b171}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public WindowsDefenderApplicationControlSupplementalPolicyColl_dbd9b171 get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyColl_dbd9b171::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to wdacSupplementalPolicies for deviceAppManagement

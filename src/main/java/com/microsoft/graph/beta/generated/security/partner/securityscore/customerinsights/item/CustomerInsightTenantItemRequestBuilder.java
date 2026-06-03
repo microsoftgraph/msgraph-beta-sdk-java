@@ -26,7 +26,7 @@ public class CustomerInsightTenantItemRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CustomerInsightTenantItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/partner/securityScore/customerInsights/{customerInsight%2DtenantId}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/partner/securityScore/customerInsights/{customerInsight%2DtenantId}", pathParameters);
     }
     /**
      * Instantiates a new {@link CustomerInsightTenantItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CustomerInsightTenantItemRequestBuilder extends BaseRequestBuilder 
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CustomerInsightTenantItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/partner/securityScore/customerInsights/{customerInsight%2DtenantId}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/partner/securityScore/customerInsights/{customerInsight%2DtenantId}", rawUrl);
     }
     /**
      * Delete navigation property customerInsights for security

@@ -8,7 +8,7 @@ import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernanceactivatewithscope.MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancecancelprocessing.MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancecreatenewversion.MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder;
-import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancepreviewtaskfailures.MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancepreviewtaskfailures.MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancepreviewworkflow.MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancerestore.MicrosoftGraphIdentityGovernanceRestoreRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.previewscope.PreviewScopeRequestBuilder;
@@ -103,11 +103,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the previewTaskFailures method.
-     * @return a {@link MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder}
+     * @return a {@link MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder microsoftGraphIdentityGovernancePreviewTaskFailures() {
-        return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef microsoftGraphIdentityGovernancePreviewTaskFailures() {
+        return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the previewWorkflow method.
@@ -179,7 +179,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WorkflowItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link WorkflowItemRequestBuilder} and sets the default values.
@@ -187,7 +187,7 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WorkflowItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/lifecycleWorkflows/workflows/{workflow%2Did}", rawUrl);
     }
     /**
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. You can restore a deleted workflow and its associated objects within 30 days of deletion.

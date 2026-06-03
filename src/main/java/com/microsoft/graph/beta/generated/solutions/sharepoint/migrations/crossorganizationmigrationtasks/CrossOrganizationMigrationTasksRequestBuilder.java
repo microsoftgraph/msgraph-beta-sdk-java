@@ -4,9 +4,9 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SharePointMigrationTask;
 import com.microsoft.graph.beta.models.SharePointMigrationTaskCollectionResponse;
 import com.microsoft.graph.beta.solutions.sharepoint.migrations.crossorganizationmigrationtasks.count.CountRequestBuilder;
-import com.microsoft.graph.beta.solutions.sharepoint.migrations.crossorganizationmigrationtasks.getbysourcegroupmailnicknamewithsourcegroupmailnickname.GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuilder;
+import com.microsoft.graph.beta.solutions.sharepoint.migrations.crossorganizationmigrationtasks.getbysourcegroupmailnicknamewithsourcegroupmailnickname.GetBySourceGroupMailNicknameWithSourceGroupMailNickname_7ae2e2d4;
 import com.microsoft.graph.beta.solutions.sharepoint.migrations.crossorganizationmigrationtasks.getbysourcesiteurlwithsourcesiteurl.GetBySourceSiteUrlWithSourceSiteUrlRequestBuilder;
-import com.microsoft.graph.beta.solutions.sharepoint.migrations.crossorganizationmigrationtasks.getbysourceuserprincipalnamewithsourceprincipalname.GetBySourceUserPrincipalNameWithSourcePrincipalNameRequestBuilder;
+import com.microsoft.graph.beta.solutions.sharepoint.migrations.crossorganizationmigrationtasks.getbysourceuserprincipalnamewithsourceprincipalname.GetBySourceUserPrincipalNameWithSourcePrincipalNameRequ_31d27436;
 import com.microsoft.graph.beta.solutions.sharepoint.migrations.crossorganizationmigrationtasks.item.SharePointMigrationTaskItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -52,7 +52,7 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossOrganizationMigrationTasksRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations/crossOrganizationMigrationTasks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link CrossOrganizationMigrationTasksRequestBuilder} and sets the default values.
@@ -60,7 +60,7 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossOrganizationMigrationTasksRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/sharePoint/migrations/crossOrganizationMigrationTasks{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
@@ -87,12 +87,12 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to call the getBySourceGroupMailNickname method.
      * @param sourceGroupMailNickname Usage: sourceGroupMailNickname=&apos;{sourceGroupMailNickname}&apos;
-     * @return a {@link GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuilder}
+     * @return a {@link GetBySourceGroupMailNicknameWithSourceGroupMailNickname_7ae2e2d4}
      */
     @jakarta.annotation.Nonnull
-    public GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuilder getBySourceGroupMailNicknameWithSourceGroupMailNickname(@jakarta.annotation.Nonnull final String sourceGroupMailNickname) {
+    public GetBySourceGroupMailNicknameWithSourceGroupMailNickname_7ae2e2d4 getBySourceGroupMailNicknameWithSourceGroupMailNickname(@jakarta.annotation.Nonnull final String sourceGroupMailNickname) {
         Objects.requireNonNull(sourceGroupMailNickname);
-        return new GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuilder(pathParameters, requestAdapter, sourceGroupMailNickname);
+        return new GetBySourceGroupMailNicknameWithSourceGroupMailNickname_7ae2e2d4(pathParameters, requestAdapter, sourceGroupMailNickname);
     }
     /**
      * Provides operations to call the getBySourceSiteUrl method.
@@ -107,12 +107,12 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to call the getBySourceUserPrincipalName method.
      * @param sourcePrincipalName Usage: sourcePrincipalName=&apos;{sourcePrincipalName}&apos;
-     * @return a {@link GetBySourceUserPrincipalNameWithSourcePrincipalNameRequestBuilder}
+     * @return a {@link GetBySourceUserPrincipalNameWithSourcePrincipalNameRequ_31d27436}
      */
     @jakarta.annotation.Nonnull
-    public GetBySourceUserPrincipalNameWithSourcePrincipalNameRequestBuilder getBySourceUserPrincipalNameWithSourcePrincipalName(@jakarta.annotation.Nonnull final String sourcePrincipalName) {
+    public GetBySourceUserPrincipalNameWithSourcePrincipalNameRequ_31d27436 getBySourceUserPrincipalNameWithSourcePrincipalName(@jakarta.annotation.Nonnull final String sourcePrincipalName) {
         Objects.requireNonNull(sourcePrincipalName);
-        return new GetBySourceUserPrincipalNameWithSourcePrincipalNameRequestBuilder(pathParameters, requestAdapter, sourcePrincipalName);
+        return new GetBySourceUserPrincipalNameWithSourcePrincipalNameRequ_31d27436(pathParameters, requestAdapter, sourcePrincipalName);
     }
     /**
      * Create or update a sharePointMigrationTask to migrate a resource from the source organization to the target organization, using the sharePointMigrationTaskParameters. The resource can be a user, a group, or a site. When an existing sharePointMigrationTask is retrieved, it might contain not only the specifics of the source and target organizations and resources, but also the status of the migration and errors encountered during the migration operation. The API calls occur on the source site and only add list items to the my site root web, for example, contoso-my.sharepoint.com. Then, it triggers a multi-geo site move job in the backend to enqueue and orchestrate several tenant workflow jobs, such as backup, restore, and cleanup, supported by TJ infrastructure. The OData type of sharePointResourceMigrationParameters differentiates user migration from site migration, rather than using different subpaths. For a user&apos;s OneDrive migration, specify sharePointUserMigrationParameters. If this migration task is a regular SharePoint site migration, specify sharePointSiteMigrationParameters. If this migration task is a group-connected site migration, specify sharePointGroupMigrationParameters.

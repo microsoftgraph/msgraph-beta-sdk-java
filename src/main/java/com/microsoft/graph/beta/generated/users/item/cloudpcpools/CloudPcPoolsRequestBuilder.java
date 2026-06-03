@@ -49,7 +49,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcPoolsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPcPools{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link CloudPcPoolsRequestBuilder} and sets the default values.
@@ -57,10 +57,10 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudPcPoolsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/cloudPcPools{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
-     * Get cloudPcPools from users
+     * The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @return a {@link CloudPcPoolCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get cloudPcPools from users
+     * The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcPoolCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcPool::createFromDiscriminatorValue);
     }
     /**
-     * Get cloudPcPools from users
+     * The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get cloudPcPools from users
+     * The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class CloudPcPoolsRequestBuilder extends BaseRequestBuilder {
         return new CloudPcPoolsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get cloudPcPools from users
+     * The user&apos;s Cloud PC pools. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

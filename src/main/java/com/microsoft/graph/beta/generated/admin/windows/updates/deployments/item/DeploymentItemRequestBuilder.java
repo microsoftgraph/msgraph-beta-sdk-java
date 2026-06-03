@@ -35,7 +35,7 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeploymentItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/deployments/{deployment%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/deployments/{deployment%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link DeploymentItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class DeploymentItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeploymentItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/deployments/{deployment%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/windows/updates/deployments/{deployment%2Did}", rawUrl);
     }
     /**
      * Delete a deployment object.

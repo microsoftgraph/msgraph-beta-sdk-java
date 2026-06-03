@@ -3,7 +3,9 @@ package com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.i
 import com.microsoft.graph.beta.models.CrossTenantMigrationJob;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.item.migrate.MigrateRequestBuilder;
 import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.item.users.UsersRequestBuilder;
+import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.item.validate.ValidateRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,6 +36,17 @@ public class CrossTenantMigrationJobItemRequestBuilder extends BaseRequestBuilde
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the migrate method.
+     * @return a {@link MigrateRequestBuilder}
+     * @deprecated
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public MigrateRequestBuilder migrate() {
+        return new MigrateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the users property of the microsoft.graph.crossTenantMigrationJob entity.
      * @return a {@link UsersRequestBuilder}
      * @deprecated
@@ -45,12 +58,23 @@ public class CrossTenantMigrationJobItemRequestBuilder extends BaseRequestBuilde
         return new UsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the validate method.
+     * @return a {@link ValidateRequestBuilder}
+     * @deprecated
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public ValidateRequestBuilder validate() {
+        return new ValidateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new {@link CrossTenantMigrationJobItemRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossTenantMigrationJobItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs/{crossTenantMigrationJob%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs/{crossTenantMigrationJob%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link CrossTenantMigrationJobItemRequestBuilder} and sets the default values.
@@ -58,7 +82,7 @@ public class CrossTenantMigrationJobItemRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossTenantMigrationJobItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs/{crossTenantMigrationJob%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs/{crossTenantMigrationJob%2Did}", rawUrl);
     }
     /**
      * Delete navigation property crossTenantMigrationJobs for solutions

@@ -35,7 +35,7 @@ public class PromptItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PromptItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/securityCopilot/workspaces/{workspace%2Did}/sessions/{session%2Did}/prompts/{prompt%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/securityCopilot/workspaces/{workspace%2Did}/sessions/{session%2Did}/prompts/{prompt%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link PromptItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class PromptItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PromptItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/securityCopilot/workspaces/{workspace%2Did}/sessions/{session%2Did}/prompts/{prompt%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/securityCopilot/workspaces/{workspace%2Did}/sessions/{session%2Did}/prompts/{prompt%2Did}", rawUrl);
     }
     /**
      * Delete navigation property prompts for security

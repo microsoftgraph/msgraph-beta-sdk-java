@@ -53,7 +53,7 @@ public class JournalItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public JournalItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/journals/{journal%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/journals/{journal%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link JournalItemRequestBuilder} and sets the default values.
@@ -61,7 +61,7 @@ public class JournalItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public JournalItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/journals/{journal%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/financials/companies/{company%2Did}/journals/{journal%2Did}", rawUrl);
     }
     /**
      * Delete navigation property journals for financials
