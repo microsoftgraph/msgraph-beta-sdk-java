@@ -5,9 +5,10 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.allmembers.AllMembersRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.completemigration.CompleteMigrationRequestBuilder;
-import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprinc_363088ef.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.enabledapps.EnabledAppsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.filesfolder.FilesFolderRequestBuilder;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.joinedusers.JoinedUsersRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.planner.PlannerRequestBuilder;
@@ -61,11 +62,11 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the doesUserHaveAccess method.
-     * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder}
+     * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e}
      */
     @jakarta.annotation.Nonnull
-    public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName() {
-        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder(pathParameters, requestAdapter);
+    public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName() {
+        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the enabledApps property of the microsoft.graph.channel entity.
@@ -82,6 +83,14 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the joinedUsers property of the microsoft.graph.channel entity.
+     * @return a {@link JoinedUsersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public JoinedUsersRequestBuilder joinedUsers() {
+        return new JoinedUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.
@@ -161,7 +170,7 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrimaryChannelRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel", pathParameters);
     }
     /**
      * Instantiates a new {@link PrimaryChannelRequestBuilder} and sets the default values.
@@ -169,7 +178,7 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PrimaryChannelRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel", rawUrl);
     }
     /**
      * Delete navigation property primaryChannel for teamwork
@@ -271,7 +280,7 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/teamwork/teamTemplates/{teamTemplate%2Did}/definitions/{teamTemplateDefinition%2Did}/teamDefinition/primaryChannel{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

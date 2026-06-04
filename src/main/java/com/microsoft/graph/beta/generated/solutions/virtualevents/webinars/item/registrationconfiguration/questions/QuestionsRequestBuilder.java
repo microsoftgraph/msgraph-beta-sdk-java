@@ -49,7 +49,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public QuestionsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration/questions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link QuestionsRequestBuilder} and sets the default values.
@@ -57,10 +57,10 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public QuestionsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration/questions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
-     * Get a list of all registration questions for a webinar. The list can include either predefined registration questions or custom registration questions.
+     * Get a list of all registration questions for a webinar or town hall. The list can include either predefined registration questions or custom registration questions.
      * @return a {@link VirtualEventRegistrationQuestionBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventregistrationconfiguration-list-questions?view=graph-rest-beta">Find more info here</a>
@@ -70,7 +70,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of all registration questions for a webinar. The list can include either predefined registration questions or custom registration questions.
+     * Get a list of all registration questions for a webinar or town hall. The list can include either predefined registration questions or custom registration questions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventRegistrationQuestionBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -84,7 +84,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventRegistrationQuestionBaseCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a registration question for a webinar. You can create either a predefined registration question or a custom registration question.
+     * Create a registration question for a webinar or town hall. You can create either a predefined registration question or a custom registration question.
      * @param body The request body
      * @return a {@link VirtualEventRegistrationQuestionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -95,7 +95,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a registration question for a webinar. You can create either a predefined registration question or a custom registration question.
+     * Create a registration question for a webinar or town hall. You can create either a predefined registration question or a custom registration question.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventRegistrationQuestionBase}
@@ -111,7 +111,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventRegistrationQuestionBase::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of all registration questions for a webinar. The list can include either predefined registration questions or custom registration questions.
+     * Get a list of all registration questions for a webinar or town hall. The list can include either predefined registration questions or custom registration questions.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,19 +119,19 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of all registration questions for a webinar. The list can include either predefined registration questions or custom registration questions.
+     * Get a list of all registration questions for a webinar or town hall. The list can include either predefined registration questions or custom registration questions.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration/questions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
     }
     /**
-     * Create a registration question for a webinar. You can create either a predefined registration question or a custom registration question.
+     * Create a registration question for a webinar or town hall. You can create either a predefined registration question or a custom registration question.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -140,7 +140,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a registration question for a webinar. You can create either a predefined registration question or a custom registration question.
+     * Create a registration question for a webinar or town hall. You can create either a predefined registration question or a custom registration question.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
@@ -148,7 +148,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEventRegistrationQuestionBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/solutions/virtualEvents/webinars/{virtualEventWebinar%2Did}/registrationConfiguration/questions", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -165,7 +165,7 @@ public class QuestionsRequestBuilder extends BaseRequestBuilder {
         return new QuestionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of all registration questions for a webinar. The list can include either predefined registration questions or custom registration questions.
+     * Get a list of all registration questions for a webinar or town hall. The list can include either predefined registration questions or custom registration questions.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -85,6 +85,7 @@ public class VirtualEvent extends Entity implements Parsable {
         deserializerMap.put("endDateTime", (n) -> { this.setEndDateTime(n.getObjectValue(DateTimeTimeZone::createFromDiscriminatorValue)); });
         deserializerMap.put("externalEventInformation", (n) -> { this.setExternalEventInformation(n.getCollectionOfObjectValues(VirtualEventExternalInformation::createFromDiscriminatorValue)); });
         deserializerMap.put("isRegistrationEnabled", (n) -> { this.setIsRegistrationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isRegistrationRequired", (n) -> { this.setIsRegistrationRequired(n.getBooleanValue()); });
         deserializerMap.put("presenters", (n) -> { this.setPresenters(n.getCollectionOfObjectValues(VirtualEventPresenter::createFromDiscriminatorValue)); });
         deserializerMap.put("sessions", (n) -> { this.setSessions(n.getCollectionOfObjectValues(VirtualEventSession::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(VirtualEventSettings::createFromDiscriminatorValue)); });
@@ -99,6 +100,14 @@ public class VirtualEvent extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsRegistrationEnabled() {
         return this.backingStore.get("isRegistrationEnabled");
+    }
+    /**
+     * Gets the isRegistrationRequired property value. The isRegistrationRequired property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsRegistrationRequired() {
+        return this.backingStore.get("isRegistrationRequired");
     }
     /**
      * Gets the presenters property value. The virtual event presenters.
@@ -153,6 +162,7 @@ public class VirtualEvent extends Entity implements Parsable {
         writer.writeObjectValue("endDateTime", this.getEndDateTime());
         writer.writeCollectionOfObjectValues("externalEventInformation", this.getExternalEventInformation());
         writer.writeBooleanValue("isRegistrationEnabled", this.getIsRegistrationEnabled());
+        writer.writeBooleanValue("isRegistrationRequired", this.getIsRegistrationRequired());
         writer.writeCollectionOfObjectValues("presenters", this.getPresenters());
         writer.writeCollectionOfObjectValues("sessions", this.getSessions());
         writer.writeObjectValue("settings", this.getSettings());
@@ -200,6 +210,13 @@ public class VirtualEvent extends Entity implements Parsable {
      */
     public void setIsRegistrationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isRegistrationEnabled", value);
+    }
+    /**
+     * Sets the isRegistrationRequired property value. The isRegistrationRequired property
+     * @param value Value to set for the isRegistrationRequired property.
+     */
+    public void setIsRegistrationRequired(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isRegistrationRequired", value);
     }
     /**
      * Sets the presenters property value. The virtual event presenters.

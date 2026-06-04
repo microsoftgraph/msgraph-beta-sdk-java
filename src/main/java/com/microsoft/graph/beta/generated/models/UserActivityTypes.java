@@ -10,6 +10,7 @@ public enum UserActivityTypes implements ValuedEnum {
     UploadFile("uploadFile"),
     DownloadText("downloadText"),
     DownloadFile("downloadFile"),
+    CopyToClipboard("copyToClipboard"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     UserActivityTypes(final String value) {
@@ -26,6 +27,7 @@ public enum UserActivityTypes implements ValuedEnum {
             case "uploadFile": return UploadFile;
             case "downloadText": return DownloadText;
             case "downloadFile": return DownloadFile;
+            case "copyToClipboard": return CopyToClipboard;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

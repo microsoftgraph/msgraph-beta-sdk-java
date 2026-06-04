@@ -61,6 +61,8 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         deserializerMap.put("coOrganizers", (n) -> { this.setCoOrganizers(n.getCollectionOfObjectValues(CommunicationsUserIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("invitedAttendees", (n) -> { this.setInvitedAttendees(n.getCollectionOfObjectValues(Identity::createFromDiscriminatorValue)); });
         deserializerMap.put("isInviteOnly", (n) -> { this.setIsInviteOnly(n.getBooleanValue()); });
+        deserializerMap.put("registrationConfiguration", (n) -> { this.setRegistrationConfiguration(n.getObjectValue(VirtualEventTownhallRegistrationConfiguration::createFromDiscriminatorValue)); });
+        deserializerMap.put("registrations", (n) -> { this.setRegistrations(n.getCollectionOfObjectValues(VirtualEventRegistration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -80,6 +82,22 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         return this.backingStore.get("isInviteOnly");
     }
     /**
+     * Gets the registrationConfiguration property value. Registration configuration of the town hall.
+     * @return a {@link VirtualEventTownhallRegistrationConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public VirtualEventTownhallRegistrationConfiguration getRegistrationConfiguration() {
+        return this.backingStore.get("registrationConfiguration");
+    }
+    /**
+     * Gets the registrations property value. Registration records of the town hall.
+     * @return a {@link java.util.List<VirtualEventRegistration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<VirtualEventRegistration> getRegistrations() {
+        return this.backingStore.get("registrations");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -91,6 +109,8 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
         writer.writeCollectionOfObjectValues("coOrganizers", this.getCoOrganizers());
         writer.writeCollectionOfObjectValues("invitedAttendees", this.getInvitedAttendees());
         writer.writeBooleanValue("isInviteOnly", this.getIsInviteOnly());
+        writer.writeObjectValue("registrationConfiguration", this.getRegistrationConfiguration());
+        writer.writeCollectionOfObjectValues("registrations", this.getRegistrations());
     }
     /**
      * Sets the audience property value. The audience to whom the town hall is visible. The possible values are: everyone, organization, unknownFutureValue.
@@ -126,5 +146,19 @@ public class VirtualEventTownhall extends VirtualEvent implements Parsable {
      */
     public void setIsInviteOnly(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isInviteOnly", value);
+    }
+    /**
+     * Sets the registrationConfiguration property value. Registration configuration of the town hall.
+     * @param value Value to set for the registrationConfiguration property.
+     */
+    public void setRegistrationConfiguration(@jakarta.annotation.Nullable final VirtualEventTownhallRegistrationConfiguration value) {
+        this.backingStore.set("registrationConfiguration", value);
+    }
+    /**
+     * Sets the registrations property value. Registration records of the town hall.
+     * @param value Value to set for the registrations property.
+     */
+    public void setRegistrations(@jakarta.annotation.Nullable final java.util.List<VirtualEventRegistration> value) {
+        this.backingStore.set("registrations", value);
     }
 }

@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.admin.reportsettings;
 
+import com.microsoft.graph.beta.admin.reportsettings.sharepoint.SharePointRequestBuilder;
 import com.microsoft.graph.beta.models.AdminReportSettings;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -21,12 +22,20 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the sharePoint property of the microsoft.graph.adminReportSettings entity.
+     * @return a {@link SharePointRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SharePointRequestBuilder sharePoint() {
+        return new SharePointRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Instantiates a new {@link ReportSettingsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReportSettingsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/reportSettings{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/reportSettings", pathParameters);
     }
     /**
      * Instantiates a new {@link ReportSettingsRequestBuilder} and sets the default values.
@@ -34,7 +43,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReportSettingsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/reportSettings{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/reportSettings", rawUrl);
     }
     /**
      * Delete navigation property reportSettings for admin
@@ -140,7 +149,7 @@ public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/admin/reportSettings{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

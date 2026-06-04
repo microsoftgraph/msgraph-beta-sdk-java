@@ -3,7 +3,7 @@ package com.microsoft.graph.beta.networkaccess.connectivity;
 import com.microsoft.graph.beta.models.networkaccess.Connectivity;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.connectivity.branches.BranchesRequestBuilder;
-import com.microsoft.graph.beta.networkaccess.connectivity.microsoftgraphnetworkaccessgetwebcategorybyurlwithurl.MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.connectivity.microsoftgraphnetworkaccessgetwebcategorybyurlwithurl.MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRe_738c2fcb;
 import com.microsoft.graph.beta.networkaccess.connectivity.remotenetworks.RemoteNetworksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -45,7 +45,7 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConnectivityRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/connectivity{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/networkAccess/connectivity", pathParameters);
     }
     /**
      * Instantiates a new {@link ConnectivityRequestBuilder} and sets the default values.
@@ -53,7 +53,7 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ConnectivityRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/connectivity{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/networkAccess/connectivity", rawUrl);
     }
     /**
      * Delete navigation property connectivity for networkAccess
@@ -98,12 +98,12 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getWebCategoryByUrl method.
      * @param url Usage: url=&apos;{url}&apos;
-     * @return a {@link MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRequestBuilder}
+     * @return a {@link MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRe_738c2fcb}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRequestBuilder microsoftGraphNetworkaccessGetWebCategoryByUrlWithUrl(@jakarta.annotation.Nonnull final String url) {
+    public MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRe_738c2fcb microsoftGraphNetworkaccessGetWebCategoryByUrlWithUrl(@jakarta.annotation.Nonnull final String url) {
         Objects.requireNonNull(url);
-        return new MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRequestBuilder(pathParameters, requestAdapter, url);
+        return new MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRe_738c2fcb(pathParameters, requestAdapter, url);
     }
     /**
      * Update the navigation property connectivity in networkAccess
@@ -165,7 +165,7 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/networkAccess/connectivity{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

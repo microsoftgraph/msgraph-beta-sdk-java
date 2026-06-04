@@ -20,6 +20,7 @@ import com.microsoft.graph.beta.security.incidenttasks.IncidentTasksRequestBuild
 import com.microsoft.graph.beta.security.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.labels.LabelsRequestBuilder;
+import com.microsoft.graph.beta.security.microsoftgraphsecuritygethuntingschema.MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.beta.security.partner.PartnerRequestBuilder;
 import com.microsoft.graph.beta.security.providertenantsettings.ProviderTenantSettingsRequestBuilder;
@@ -199,6 +200,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return new LabelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getHuntingSchema method.
+     * @return a {@link MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder microsoftGraphSecurityGetHuntingSchema() {
+        return new MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the runHuntingQuery method.
      * @return a {@link MicrosoftGraphSecurityRunHuntingQueryRequestBuilder}
      */
@@ -332,7 +341,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SecurityRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link SecurityRequestBuilder} and sets the default values.
@@ -340,7 +349,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SecurityRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get security
@@ -404,7 +413,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/security{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -427,7 +436,7 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Security body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/security", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

@@ -26,7 +26,7 @@ public class PhotoUpdateSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotoUpdateSettingsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/people/photoUpdateSettings{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/admin/people/photoUpdateSettings", pathParameters);
     }
     /**
      * Instantiates a new {@link PhotoUpdateSettingsRequestBuilder} and sets the default values.
@@ -34,21 +34,19 @@ public class PhotoUpdateSettingsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public PhotoUpdateSettingsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/people/photoUpdateSettings{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/admin/people/photoUpdateSettings", rawUrl);
     }
     /**
-     * Delete a photoUpdateSettings object.
+     * Delete navigation property photoUpdateSettings for admin
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-delete-photoupdatesettings?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete a photoUpdateSettings object.
+     * Delete navigation property photoUpdateSettings for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-delete-photoupdatesettings?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -57,21 +55,21 @@ public class PhotoUpdateSettingsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Read the properties and relationships of a photoUpdateSettings object.
+     * Get the properties of a photoUpdateSettings object.
      * @return a {@link PhotoUpdateSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/photoupdatesettings-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-photoupdatesettings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PhotoUpdateSettings get() {
         return get(null);
     }
     /**
-     * Read the properties and relationships of a photoUpdateSettings object.
+     * Get the properties of a photoUpdateSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PhotoUpdateSettings}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/photoupdatesettings-get?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-photoupdatesettings?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public PhotoUpdateSettings get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -108,7 +106,7 @@ public class PhotoUpdateSettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PhotoUpdateSettings::createFromDiscriminatorValue);
     }
     /**
-     * Delete a photoUpdateSettings object.
+     * Delete navigation property photoUpdateSettings for admin
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -116,7 +114,7 @@ public class PhotoUpdateSettingsRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete a photoUpdateSettings object.
+     * Delete navigation property photoUpdateSettings for admin
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -128,7 +126,7 @@ public class PhotoUpdateSettingsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Read the properties and relationships of a photoUpdateSettings object.
+     * Get the properties of a photoUpdateSettings object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -136,13 +134,13 @@ public class PhotoUpdateSettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Read the properties and relationships of a photoUpdateSettings object.
+     * Get the properties of a photoUpdateSettings object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/admin/people/photoUpdateSettings{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -188,7 +186,7 @@ public class PhotoUpdateSettingsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Read the properties and relationships of a photoUpdateSettings object.
+     * Get the properties of a photoUpdateSettings object.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

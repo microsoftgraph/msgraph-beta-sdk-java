@@ -89,6 +89,7 @@ public class Channel extends Entity implements Parsable {
         deserializerMap.put("filesFolder", (n) -> { this.setFilesFolder(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("isArchived", (n) -> { this.setIsArchived(n.getBooleanValue()); });
         deserializerMap.put("isFavoriteByDefault", (n) -> { this.setIsFavoriteByDefault(n.getBooleanValue()); });
+        deserializerMap.put("joinedUsers", (n) -> { this.setJoinedUsers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("layoutType", (n) -> { this.setLayoutType(n.getEnumValue(ChannelLayoutType::forValue)); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(ConversationMember::createFromDiscriminatorValue)); });
         deserializerMap.put("membershipType", (n) -> { this.setMembershipType(n.getEnumValue(ChannelMembershipType::forValue)); });
@@ -127,6 +128,14 @@ public class Channel extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsFavoriteByDefault() {
         return this.backingStore.get("isFavoriteByDefault");
+    }
+    /**
+     * Gets the joinedUsers property value. The joinedUsers property
+     * @return a {@link java.util.List<ConversationMember>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConversationMember> getJoinedUsers() {
+        return this.backingStore.get("joinedUsers");
     }
     /**
      * Gets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional postreply conversation format, and channels with the chat layout provide a chatlike threading experience similar to group chats.
@@ -248,6 +257,7 @@ public class Channel extends Entity implements Parsable {
         writer.writeObjectValue("filesFolder", this.getFilesFolder());
         writer.writeBooleanValue("isArchived", this.getIsArchived());
         writer.writeBooleanValue("isFavoriteByDefault", this.getIsFavoriteByDefault());
+        writer.writeCollectionOfObjectValues("joinedUsers", this.getJoinedUsers());
         writer.writeEnumValue("layoutType", this.getLayoutType());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeEnumValue("membershipType", this.getMembershipType());
@@ -324,6 +334,13 @@ public class Channel extends Entity implements Parsable {
      */
     public void setIsFavoriteByDefault(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isFavoriteByDefault", value);
+    }
+    /**
+     * Sets the joinedUsers property value. The joinedUsers property
+     * @param value Value to set for the joinedUsers property.
+     */
+    public void setJoinedUsers(@jakarta.annotation.Nullable final java.util.List<ConversationMember> value) {
+        this.backingStore.set("joinedUsers", value);
     }
     /**
      * Sets the layoutType property value. The layout type of the channel. It can be set during creation and updated later. The possible values are: post, chat, unknownFutureValue. The default value is post. Channels with the post layout use a traditional postreply conversation format, and channels with the chat layout provide a chatlike threading experience similar to group chats.

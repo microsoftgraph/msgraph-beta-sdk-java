@@ -3,7 +3,7 @@ package com.microsoft.graph.beta.users.item.informationprotection.sensitivitylab
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.SensitivityLabel;
 import com.microsoft.graph.beta.models.SensitivityLabelCollectionResponse;
-import com.microsoft.graph.beta.users.item.informationprotection.sensitivitylabels.item.sublabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
+import com.microsoft.graph.beta.users.item.informationprotection.sensitivitylabels.item.sublabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e;
 import com.microsoft.graph.beta.users.item.informationprotection.sensitivitylabels.item.sublabels.computerightsandinheritance.ComputeRightsAndInheritanceRequestBuilder;
 import com.microsoft.graph.beta.users.item.informationprotection.sensitivitylabels.item.sublabels.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.informationprotection.sensitivitylabels.item.sublabels.evaluate.EvaluateRequestBuilder;
@@ -67,14 +67,14 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
      * @param contentFormats Usage: contentFormats={contentFormats}
      * @param labelIds Usage: labelIds={labelIds}
      * @param locale Usage: locale=&apos;{locale}&apos;
-     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder}
+     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e}
      */
     @jakarta.annotation.Nonnull
-    public ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
+    public ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
         Objects.requireNonNull(contentFormats);
         Objects.requireNonNull(labelIds);
         Objects.requireNonNull(locale);
-        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder(pathParameters, requestAdapter, contentFormats, labelIds, locale);
+        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e(pathParameters, requestAdapter, contentFormats, labelIds, locale);
     }
     /**
      * Instantiates a new {@link SublabelsRequestBuilder} and sets the default values.
@@ -82,7 +82,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SublabelsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/sensitivityLabels/{sensitivityLabel%2Did}/sublabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link SublabelsRequestBuilder} and sets the default values.
@@ -90,7 +90,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SublabelsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/users/{user%2Did}/informationProtection/sensitivityLabels/{sensitivityLabel%2Did}/sublabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get sublabels from users
@@ -154,7 +154,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/users/{user%2Did}/informationProtection/sensitivityLabels/{sensitivityLabel%2Did}/sublabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -177,7 +177,7 @@ public class SublabelsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SensitivityLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/users/{user%2Did}/informationProtection/sensitivityLabels/{sensitivityLabel%2Did}/sublabels", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

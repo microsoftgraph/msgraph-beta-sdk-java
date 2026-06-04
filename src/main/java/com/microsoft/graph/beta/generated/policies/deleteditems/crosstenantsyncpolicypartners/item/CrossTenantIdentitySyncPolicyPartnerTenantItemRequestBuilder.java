@@ -35,7 +35,7 @@ public class CrossTenantIdentitySyncPolicyPartnerTenantItemRequestBuilder extend
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossTenantIdentitySyncPolicyPartnerTenantItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/deletedItems/crossTenantSyncPolicyPartners/{crossTenantIdentitySyncPolicyPartner%2DtenantId}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/deletedItems/crossTenantSyncPolicyPartners/{crossTenantIdentitySyncPolicyPartner%2DtenantId}", pathParameters);
     }
     /**
      * Instantiates a new {@link CrossTenantIdentitySyncPolicyPartnerTenantItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class CrossTenantIdentitySyncPolicyPartnerTenantItemRequestBuilder extend
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossTenantIdentitySyncPolicyPartnerTenantItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/deletedItems/crossTenantSyncPolicyPartners/{crossTenantIdentitySyncPolicyPartner%2DtenantId}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/deletedItems/crossTenantSyncPolicyPartners/{crossTenantIdentitySyncPolicyPartner%2DtenantId}", rawUrl);
     }
     /**
      * Permanently delete a policyDeletableItem object, which might be one of the following deleted policy types:- crossTenantAccessPolicyConfigurationPartner- crossTenantIdentitySyncPolicyPartner- conditionalAccessPolicy- namedLocation
@@ -149,7 +149,7 @@ public class CrossTenantIdentitySyncPolicyPartnerTenantItemRequestBuilder extend
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/policies/deletedItems/crossTenantSyncPolicyPartners/{crossTenantIdentitySyncPolicyPartner%2DtenantId}{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

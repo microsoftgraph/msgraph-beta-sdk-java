@@ -35,7 +35,7 @@ public class B2bManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public B2bManagementPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/b2bManagementPolicies/{b2bManagementPolicy%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/b2bManagementPolicies/{b2bManagementPolicy%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link B2bManagementPolicyItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class B2bManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public B2bManagementPolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/b2bManagementPolicies/{b2bManagementPolicy%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/b2bManagementPolicies/{b2bManagementPolicy%2Did}", rawUrl);
     }
     /**
      * Delete a b2bManagementPolicy object.
@@ -151,7 +151,7 @@ public class B2bManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/policies/b2bManagementPolicies/{b2bManagementPolicy%2Did}{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

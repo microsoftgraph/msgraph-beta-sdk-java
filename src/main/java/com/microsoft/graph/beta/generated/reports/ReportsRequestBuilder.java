@@ -14,7 +14,7 @@ import com.microsoft.graph.beta.reports.dailyprintusagesummariesbyprinter.DailyP
 import com.microsoft.graph.beta.reports.dailyprintusagesummariesbyuser.DailyPrintUsageSummariesByUserRequestBuilder;
 import com.microsoft.graph.beta.reports.deviceconfigurationdeviceactivity.DeviceConfigurationDeviceActivityRequestBuilder;
 import com.microsoft.graph.beta.reports.deviceconfigurationuseractivity.DeviceConfigurationUserActivityRequestBuilder;
-import com.microsoft.graph.beta.reports.getapiusageserviceareaserviceareaperiodperiodappidappid.GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppIdRequestBuilder;
+import com.microsoft.graph.beta.reports.getapiusageserviceareaserviceareaperiodperiodappidappid.GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppId_0ddf95d0;
 import com.microsoft.graph.beta.reports.getattacksimulationrepeatoffenders.GetAttackSimulationRepeatOffendersRequestBuilder;
 import com.microsoft.graph.beta.reports.getattacksimulationsimulationusercoverage.GetAttackSimulationSimulationUserCoverageRequestBuilder;
 import com.microsoft.graph.beta.reports.getattacksimulationtrainingusercoverage.GetAttackSimulationTrainingUserCoverageRequestBuilder;
@@ -37,7 +37,7 @@ import com.microsoft.graph.beta.reports.getformsuseractivitycountswithperiod.Get
 import com.microsoft.graph.beta.reports.getformsuseractivityusercountswithperiod.GetFormsUserActivityUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getformsuseractivityuserdetailwithdate.GetFormsUserActivityUserDetailWithDateRequestBuilder;
 import com.microsoft.graph.beta.reports.getformsuseractivityuserdetailwithperiod.GetFormsUserActivityUserDetailWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getgrouparchivedprintjobswithgroupidwithstartdatetimewithenddatetime.GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.reports.getgrouparchivedprintjobswithgroupidwithstartdatetimewi_5cadb876.GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWi_146a4be3;
 import com.microsoft.graph.beta.reports.getm365appplatformusercountswithperiod.GetM365AppPlatformUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getm365appusercountswithperiod.GetM365AppUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getm365appuserdetailwithdate.GetM365AppUserDetailWithDateRequestBuilder;
@@ -71,7 +71,7 @@ import com.microsoft.graph.beta.reports.getonedriveusageaccountdetailwithdate.Ge
 import com.microsoft.graph.beta.reports.getonedriveusageaccountdetailwithperiod.GetOneDriveUsageAccountDetailWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getonedriveusagefilecountswithperiod.GetOneDriveUsageFileCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getonedriveusagestoragewithperiod.GetOneDriveUsageStorageWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getprinterarchivedprintjobswithprinteridwithstartdatetimewithenddatetime.GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.reports.getprinterarchivedprintjobswithprinteridwithstartdateti_006e0572.GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTi_ef6034cc;
 import com.microsoft.graph.beta.reports.getrelyingpartydetailedsummarywithperiod.GetRelyingPartyDetailedSummaryWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getsharepointactivityfilecountswithperiod.GetSharePointActivityFileCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getsharepointactivitypageswithperiod.GetSharePointActivityPagesWithPeriodRequestBuilder;
@@ -88,21 +88,21 @@ import com.microsoft.graph.beta.reports.getskypeforbusinessactivitycountswithper
 import com.microsoft.graph.beta.reports.getskypeforbusinessactivityusercountswithperiod.GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getskypeforbusinessactivityuserdetailwithdate.GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder;
 import com.microsoft.graph.beta.reports.getskypeforbusinessactivityuserdetailwithperiod.GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinessdeviceusagedistributionusercountswithperiod.GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.getskypeforbusinessdeviceusagedistributionusercountswithperiod.GetSkypeForBusinessDeviceUsageDistributionUserCountsWit_616f6a94;
 import com.microsoft.graph.beta.reports.getskypeforbusinessdeviceusageusercountswithperiod.GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getskypeforbusinessdeviceusageuserdetailwithdate.GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder;
 import com.microsoft.graph.beta.reports.getskypeforbusinessdeviceusageuserdetailwithperiod.GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinessorganizeractivitycountswithperiod.GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinessorganizeractivityminutecountswithperiod.GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinessorganizeractivityusercountswithperiod.GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinessparticipantactivitycountswithperiod.GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinessparticipantactivityminutecountswithperiod.GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinessparticipantactivityusercountswithperiod.GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinesspeertopeeractivitycountswithperiod.GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinesspeertopeeractivityminutecountswithperiod.GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getskypeforbusinesspeertopeeractivityusercountswithperiod.GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getteamsdeviceusagedistributiontotalusercountswithperiod.GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getteamsdeviceusagedistributionusercountswithperiod.GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.getskypeforbusinessorganizeractivitycountswithperiod.GetSkypeForBusinessOrganizerActivityCountsWithPeriodReq_2bbcab82;
+import com.microsoft.graph.beta.reports.getskypeforbusinessorganizeractivityminutecountswithperiod.GetSkypeForBusinessOrganizerActivityMinuteCountsWithPer_4abffb88;
+import com.microsoft.graph.beta.reports.getskypeforbusinessorganizeractivityusercountswithperiod.GetSkypeForBusinessOrganizerActivityUserCountsWithPerio_a2cc3a13;
+import com.microsoft.graph.beta.reports.getskypeforbusinessparticipantactivitycountswithperiod.GetSkypeForBusinessParticipantActivityCountsWithPeriodR_7c266894;
+import com.microsoft.graph.beta.reports.getskypeforbusinessparticipantactivityminutecountswithperiod.GetSkypeForBusinessParticipantActivityMinuteCountsWithP_b63f3625;
+import com.microsoft.graph.beta.reports.getskypeforbusinessparticipantactivityusercountswithperiod.GetSkypeForBusinessParticipantActivityUserCountsWithPer_3fafe971;
+import com.microsoft.graph.beta.reports.getskypeforbusinesspeertopeeractivitycountswithperiod.GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRe_a8e49833;
+import com.microsoft.graph.beta.reports.getskypeforbusinesspeertopeeractivityminutecountswithperiod.GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPe_f7936023;
+import com.microsoft.graph.beta.reports.getskypeforbusinesspeertopeeractivityusercountswithperiod.GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeri_417e02f1;
+import com.microsoft.graph.beta.reports.getteamsdeviceusagedistributiontotalusercountswithperiod.GetTeamsDeviceUsageDistributionTotalUserCountsWithPerio_64dc85bf;
+import com.microsoft.graph.beta.reports.getteamsdeviceusagedistributionusercountswithperiod.GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequ_6f50b0f5;
 import com.microsoft.graph.beta.reports.getteamsdeviceusagetotalusercountswithperiod.GetTeamsDeviceUsageTotalUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getteamsdeviceusageusercountswithperiod.GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getteamsdeviceusageuserdetailwithdate.GetTeamsDeviceUsageUserDetailWithDateRequestBuilder;
@@ -113,20 +113,20 @@ import com.microsoft.graph.beta.reports.getteamsteamactivitydetailwithperiod.Get
 import com.microsoft.graph.beta.reports.getteamsteamactivitydistributioncountswithperiod.GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getteamsteamcountswithperiod.GetTeamsTeamCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getteamsuseractivitycountswithperiod.GetTeamsUserActivityCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getteamsuseractivitydistributiontotalusercountswithperiod.GetTeamsUserActivityDistributionTotalUserCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getteamsuseractivitydistributionusercountswithperiod.GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.getteamsuseractivitydistributiontotalusercountswithperiod.GetTeamsUserActivityDistributionTotalUserCountsWithPeri_19f19a77;
+import com.microsoft.graph.beta.reports.getteamsuseractivitydistributionusercountswithperiod.GetTeamsUserActivityDistributionUserCountsWithPeriodReq_ac9a26dd;
 import com.microsoft.graph.beta.reports.getteamsuseractivitytotalcountswithperiod.GetTeamsUserActivityTotalCountsWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getteamsuseractivitytotaldistributioncountswithperiod.GetTeamsUserActivityTotalDistributionCountsWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.getteamsuseractivitytotaldistributioncountswithperiod.GetTeamsUserActivityTotalDistributionCountsWithPeriodRe_5022666f;
 import com.microsoft.graph.beta.reports.getteamsuseractivitytotalusercountswithperiod.GetTeamsUserActivityTotalUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getteamsuseractivityusercountswithperiod.GetTeamsUserActivityUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getteamsuseractivityuserdetailwithdate.GetTeamsUserActivityUserDetailWithDateRequestBuilder;
 import com.microsoft.graph.beta.reports.getteamsuseractivityuserdetailwithperiod.GetTeamsUserActivityUserDetailWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getuserarchivedprintjobswithuseridwithstartdatetimewithenddatetime.GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+import com.microsoft.graph.beta.reports.getuserarchivedprintjobswithuseridwithstartdatetimewith_0af82fa5.GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWith_3d550e0f;
 import com.microsoft.graph.beta.reports.getyammeractivitycountswithperiod.GetYammerActivityCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammeractivityusercountswithperiod.GetYammerActivityUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammeractivityuserdetailwithdate.GetYammerActivityUserDetailWithDateRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammeractivityuserdetailwithperiod.GetYammerActivityUserDetailWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getyammerdeviceusagedistributionusercountswithperiod.GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.getyammerdeviceusagedistributionusercountswithperiod.GetYammerDeviceUsageDistributionUserCountsWithPeriodReq_19decbc0;
 import com.microsoft.graph.beta.reports.getyammerdeviceusageusercountswithperiod.GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammerdeviceusageuserdetailwithdate.GetYammerDeviceUsageUserDetailWithDateRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammerdeviceusageuserdetailwithperiod.GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder;
@@ -135,10 +135,10 @@ import com.microsoft.graph.beta.reports.getyammergroupsactivitydetailwithdate.Ge
 import com.microsoft.graph.beta.reports.getyammergroupsactivitydetailwithperiod.GetYammerGroupsActivityDetailWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammergroupsactivitygroupcountswithperiod.GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.healthmonitoring.HealthMonitoringRequestBuilder;
-import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentdetailswithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
-import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentsummarywithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
+import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentdetailswithskipwithto_416e24f9.ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTo_f10df1d0;
+import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentsummarywithskipwithto_254a224a.ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTo_47ff20b7;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentfailuredetails.ManagedDeviceEnrollmentFailureDetailsRequestBuilder;
-import com.microsoft.graph.beta.reports.manageddeviceenrollmentfailuredetailswithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
+import com.microsoft.graph.beta.reports.manageddeviceenrollmentfailuredetailswithskipwithtopwit_49904c71.ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWit_20e92280;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentfailuretrends.ManagedDeviceEnrollmentFailureTrendsRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmenttopfailures.ManagedDeviceEnrollmentTopFailuresRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmenttopfailureswithperiod.ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
@@ -271,11 +271,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getApiUsage method.
-     * @return a {@link GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppIdRequestBuilder}
+     * @return a {@link GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppId_0ddf95d0}
      */
     @jakarta.annotation.Nonnull
-    public GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppIdRequestBuilder getApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppId() {
-        return new GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppIdRequestBuilder(pathParameters, requestAdapter);
+    public GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppId_0ddf95d0 getApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppId() {
+        return new GetApiUsageserviceAreaServiceAreaPeriodPeriodAppIdAppId_0ddf95d0(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getAttackSimulationRepeatOffenders method.
@@ -459,7 +459,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReportsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link ReportsRequestBuilder} and sets the default values.
@@ -467,7 +467,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ReportsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Get reports
@@ -676,14 +676,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param groupId Usage: groupId=&apos;{groupId}&apos;
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a {@link GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWi_146a4be3}
      */
     @jakarta.annotation.Nonnull
-    public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final String groupId, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+    public GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWi_146a4be3 getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final String groupId, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(groupId);
         Objects.requireNonNull(startDateTime);
-        return new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, groupId, startDateTime);
+        return new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWi_146a4be3(pathParameters, requestAdapter, endDateTime, groupId, startDateTime);
     }
     /**
      * Provides operations to call the getM365AppPlatformUserCounts method.
@@ -990,14 +990,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param printerId Usage: printerId=&apos;{printerId}&apos;
      * @param startDateTime Usage: startDateTime={startDateTime}
-     * @return a {@link GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTi_ef6034cc}
      */
     @jakarta.annotation.Nonnull
-    public GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final String printerId, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+    public GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTi_ef6034cc getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final String printerId, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(printerId);
         Objects.requireNonNull(startDateTime);
-        return new GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, printerId, startDateTime);
+        return new GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTi_ef6034cc(pathParameters, requestAdapter, endDateTime, printerId, startDateTime);
     }
     /**
      * Provides operations to call the getRelyingPartyDetailedSummary method.
@@ -1162,12 +1162,12 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessDeviceUsageDistributionUserCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessDeviceUsageDistributionUserCountsWit_616f6a94}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder getSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessDeviceUsageDistributionUserCountsWit_616f6a94 getSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessDeviceUsageDistributionUserCountsWit_616f6a94(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSkypeForBusinessDeviceUsageUserCounts method.
@@ -1202,112 +1202,112 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSkypeForBusinessOrganizerActivityCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessOrganizerActivityCountsWithPeriodReq_2bbcab82}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder getSkypeForBusinessOrganizerActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessOrganizerActivityCountsWithPeriodReq_2bbcab82 getSkypeForBusinessOrganizerActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessOrganizerActivityCountsWithPeriodReq_2bbcab82(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSkypeForBusinessOrganizerActivityMinuteCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessOrganizerActivityMinuteCountsWithPer_4abffb88}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder getSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessOrganizerActivityMinuteCountsWithPer_4abffb88 getSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessOrganizerActivityMinuteCountsWithPer_4abffb88(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSkypeForBusinessOrganizerActivityUserCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessOrganizerActivityUserCountsWithPerio_a2cc3a13}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder getSkypeForBusinessOrganizerActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessOrganizerActivityUserCountsWithPerio_a2cc3a13 getSkypeForBusinessOrganizerActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessOrganizerActivityUserCountsWithPerio_a2cc3a13(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSkypeForBusinessParticipantActivityCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessParticipantActivityCountsWithPeriodR_7c266894}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder getSkypeForBusinessParticipantActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessParticipantActivityCountsWithPeriodR_7c266894 getSkypeForBusinessParticipantActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessParticipantActivityCountsWithPeriodR_7c266894(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSkypeForBusinessParticipantActivityMinuteCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessParticipantActivityMinuteCountsWithP_b63f3625}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder getSkypeForBusinessParticipantActivityMinuteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessParticipantActivityMinuteCountsWithP_b63f3625 getSkypeForBusinessParticipantActivityMinuteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessParticipantActivityMinuteCountsWithP_b63f3625(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSkypeForBusinessParticipantActivityUserCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessParticipantActivityUserCountsWithPer_3fafe971}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder getSkypeForBusinessParticipantActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessParticipantActivityUserCountsWithPer_3fafe971 getSkypeForBusinessParticipantActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessParticipantActivityUserCountsWithPer_3fafe971(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSkypeForBusinessPeerToPeerActivityCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRe_a8e49833}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder getSkypeForBusinessPeerToPeerActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRe_a8e49833 getSkypeForBusinessPeerToPeerActivityCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRe_a8e49833(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSkypeForBusinessPeerToPeerActivityMinuteCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPe_f7936023}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder getSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPe_f7936023 getSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPe_f7936023(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getSkypeForBusinessPeerToPeerActivityUserCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder}
+     * @return a {@link GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeri_417e02f1}
      */
     @jakarta.annotation.Nonnull
-    public GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder getSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeri_417e02f1 getSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeri_417e02f1(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getTeamsDeviceUsageDistributionTotalUserCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilder}
+     * @return a {@link GetTeamsDeviceUsageDistributionTotalUserCountsWithPerio_64dc85bf}
      */
     @jakarta.annotation.Nonnull
-    public GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilder getTeamsDeviceUsageDistributionTotalUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetTeamsDeviceUsageDistributionTotalUserCountsWithPerio_64dc85bf getTeamsDeviceUsageDistributionTotalUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetTeamsDeviceUsageDistributionTotalUserCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetTeamsDeviceUsageDistributionTotalUserCountsWithPerio_64dc85bf(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getTeamsDeviceUsageDistributionUserCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder}
+     * @return a {@link GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequ_6f50b0f5}
      */
     @jakarta.annotation.Nonnull
-    public GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder getTeamsDeviceUsageDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequ_6f50b0f5 getTeamsDeviceUsageDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequ_6f50b0f5(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getTeamsDeviceUsageTotalUserCounts method.
@@ -1412,22 +1412,22 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityDistributionTotalUserCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetTeamsUserActivityDistributionTotalUserCountsWithPeriodRequestBuilder}
+     * @return a {@link GetTeamsUserActivityDistributionTotalUserCountsWithPeri_19f19a77}
      */
     @jakarta.annotation.Nonnull
-    public GetTeamsUserActivityDistributionTotalUserCountsWithPeriodRequestBuilder getTeamsUserActivityDistributionTotalUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetTeamsUserActivityDistributionTotalUserCountsWithPeri_19f19a77 getTeamsUserActivityDistributionTotalUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetTeamsUserActivityDistributionTotalUserCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetTeamsUserActivityDistributionTotalUserCountsWithPeri_19f19a77(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getTeamsUserActivityDistributionUserCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder}
+     * @return a {@link GetTeamsUserActivityDistributionUserCountsWithPeriodReq_ac9a26dd}
      */
     @jakarta.annotation.Nonnull
-    public GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder getTeamsUserActivityDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetTeamsUserActivityDistributionUserCountsWithPeriodReq_ac9a26dd getTeamsUserActivityDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetTeamsUserActivityDistributionUserCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetTeamsUserActivityDistributionUserCountsWithPeriodReq_ac9a26dd(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getTeamsUserActivityTotalCounts method.
@@ -1442,12 +1442,12 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsUserActivityTotalDistributionCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetTeamsUserActivityTotalDistributionCountsWithPeriodRequestBuilder}
+     * @return a {@link GetTeamsUserActivityTotalDistributionCountsWithPeriodRe_5022666f}
      */
     @jakarta.annotation.Nonnull
-    public GetTeamsUserActivityTotalDistributionCountsWithPeriodRequestBuilder getTeamsUserActivityTotalDistributionCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetTeamsUserActivityTotalDistributionCountsWithPeriodRe_5022666f getTeamsUserActivityTotalDistributionCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetTeamsUserActivityTotalDistributionCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetTeamsUserActivityTotalDistributionCountsWithPeriodRe_5022666f(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getTeamsUserActivityTotalUserCounts method.
@@ -1494,14 +1494,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param endDateTime Usage: endDateTime={endDateTime}
      * @param startDateTime Usage: startDateTime={startDateTime}
      * @param userId Usage: userId=&apos;{userId}&apos;
-     * @return a {@link GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @return a {@link GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWith_3d550e0f}
      */
     @jakarta.annotation.Nonnull
-    public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime, @jakarta.annotation.Nonnull final String userId) {
+    public GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWith_3d550e0f getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime, @jakarta.annotation.Nonnull final String userId) {
         Objects.requireNonNull(endDateTime);
         Objects.requireNonNull(startDateTime);
         Objects.requireNonNull(userId);
-        return new GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime, userId);
+        return new GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWith_3d550e0f(pathParameters, requestAdapter, endDateTime, startDateTime, userId);
     }
     /**
      * Provides operations to call the getYammerActivityCounts method.
@@ -1546,12 +1546,12 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getYammerDeviceUsageDistributionUserCounts method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder}
+     * @return a {@link GetYammerDeviceUsageDistributionUserCountsWithPeriodReq_19decbc0}
      */
     @jakarta.annotation.Nonnull
-    public GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder getYammerDeviceUsageDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetYammerDeviceUsageDistributionUserCountsWithPeriodReq_19decbc0 getYammerDeviceUsageDistributionUserCountsWithPeriod(@jakarta.annotation.Nonnull final String period) {
         Objects.requireNonNull(period);
-        return new GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new GetYammerDeviceUsageDistributionUserCountsWithPeriodReq_19decbc0(pathParameters, requestAdapter, period);
     }
     /**
      * Provides operations to call the getYammerDeviceUsageUserCounts method.
@@ -1629,15 +1629,15 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param skip Usage: skip={skip}
      * @param skipToken Usage: skipToken=&apos;{skipToken}&apos;
      * @param top Usage: top={top}
-     * @return a {@link ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder}
+     * @return a {@link ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTo_f10df1d0}
      */
     @jakarta.annotation.Nonnull
-    public ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder managedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipToken(@jakarta.annotation.Nonnull final String filter, @jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final String skipToken, @jakarta.annotation.Nonnull final Integer top) {
+    public ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTo_f10df1d0 managedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipToken(@jakarta.annotation.Nonnull final String filter, @jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final String skipToken, @jakarta.annotation.Nonnull final Integer top) {
         Objects.requireNonNull(filter);
         Objects.requireNonNull(skip);
         Objects.requireNonNull(skipToken);
         Objects.requireNonNull(top);
-        return new ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder(pathParameters, requestAdapter, filter, skip, skipToken, top);
+        return new ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTo_f10df1d0(pathParameters, requestAdapter, filter, skip, skipToken, top);
     }
     /**
      * Provides operations to call the managedDeviceEnrollmentAbandonmentSummary method.
@@ -1645,15 +1645,15 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param skip Usage: skip={skip}
      * @param skipToken Usage: skipToken=&apos;{skipToken}&apos;
      * @param top Usage: top={top}
-     * @return a {@link ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder}
+     * @return a {@link ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTo_47ff20b7}
      */
     @jakarta.annotation.Nonnull
-    public ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder managedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipToken(@jakarta.annotation.Nonnull final String filter, @jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final String skipToken, @jakarta.annotation.Nonnull final Integer top) {
+    public ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTo_47ff20b7 managedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipToken(@jakarta.annotation.Nonnull final String filter, @jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final String skipToken, @jakarta.annotation.Nonnull final Integer top) {
         Objects.requireNonNull(filter);
         Objects.requireNonNull(skip);
         Objects.requireNonNull(skipToken);
         Objects.requireNonNull(top);
-        return new ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder(pathParameters, requestAdapter, filter, skip, skipToken, top);
+        return new ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTo_47ff20b7(pathParameters, requestAdapter, filter, skip, skipToken, top);
     }
     /**
      * Provides operations to call the managedDeviceEnrollmentFailureDetails method.
@@ -1661,15 +1661,15 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      * @param skip Usage: skip={skip}
      * @param skipToken Usage: skipToken=&apos;{skipToken}&apos;
      * @param top Usage: top={top}
-     * @return a {@link ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder}
+     * @return a {@link ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWit_20e92280}
      */
     @jakarta.annotation.Nonnull
-    public ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder managedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken(@jakarta.annotation.Nonnull final String filter, @jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final String skipToken, @jakarta.annotation.Nonnull final Integer top) {
+    public ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWit_20e92280 managedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken(@jakarta.annotation.Nonnull final String filter, @jakarta.annotation.Nonnull final Integer skip, @jakarta.annotation.Nonnull final String skipToken, @jakarta.annotation.Nonnull final Integer top) {
         Objects.requireNonNull(filter);
         Objects.requireNonNull(skip);
         Objects.requireNonNull(skipToken);
         Objects.requireNonNull(top);
-        return new ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder(pathParameters, requestAdapter, filter, skip, skipToken, top);
+        return new ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWit_20e92280(pathParameters, requestAdapter, filter, skip, skipToken, top);
     }
     /**
      * Provides operations to call the managedDeviceEnrollmentTopFailures method.
@@ -1721,7 +1721,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/reports{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -1744,7 +1744,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ReportRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, "{+baseurl}/reports", pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

@@ -2,7 +2,7 @@ package com.microsoft.graph.beta.security.datadiscovery.cloudappdiscovery.upload
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.CloudAppDiscoveryReport;
-import com.microsoft.graph.beta.security.datadiscovery.cloudappdiscovery.uploadedstreams.item.microsoftgraphsecurityaggregatedappsdetailswithperiod.MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.security.datadiscovery.cloudappdiscovery.uploadedstreams.item.microsoftgraphsecurityaggregatedappsdetailswithperiod.MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRe_e0d636f0;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,7 +28,7 @@ public class CloudAppDiscoveryReportItemRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudAppDiscoveryReportItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataDiscovery/cloudAppDiscovery/uploadedStreams/{cloudAppDiscoveryReport%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/security/dataDiscovery/cloudAppDiscovery/uploadedStreams/{cloudAppDiscoveryReport%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link CloudAppDiscoveryReportItemRequestBuilder} and sets the default values.
@@ -36,7 +36,7 @@ public class CloudAppDiscoveryReportItemRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CloudAppDiscoveryReportItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/dataDiscovery/cloudAppDiscovery/uploadedStreams/{cloudAppDiscoveryReport%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/security/dataDiscovery/cloudAppDiscovery/uploadedStreams/{cloudAppDiscoveryReport%2Did}", rawUrl);
     }
     /**
      * Delete navigation property uploadedStreams for security
@@ -81,12 +81,12 @@ public class CloudAppDiscoveryReportItemRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to call the aggregatedAppsDetails method.
      * @param period Usage: period={period}
-     * @return a {@link MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRequestBuilder}
+     * @return a {@link MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRe_e0d636f0}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRequestBuilder microsoftGraphSecurityAggregatedAppsDetailsWithPeriod(@jakarta.annotation.Nonnull final PeriodAndDuration period) {
+    public MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRe_e0d636f0 microsoftGraphSecurityAggregatedAppsDetailsWithPeriod(@jakarta.annotation.Nonnull final PeriodAndDuration period) {
         Objects.requireNonNull(period);
-        return new MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRe_e0d636f0(pathParameters, requestAdapter, period);
     }
     /**
      * Update the navigation property uploadedStreams in security
@@ -148,7 +148,7 @@ public class CloudAppDiscoveryReportItemRequestBuilder extends BaseRequestBuilde
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/security/dataDiscovery/cloudAppDiscovery/uploadedStreams/{cloudAppDiscoveryReport%2Did}{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

@@ -24,6 +24,8 @@ public class StartBreakPostRequestBody implements AdditionalDataHolder, BackedMo
     public StartBreakPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setAtApprovedLocation(false);
+        this.setIsAtApprovedLocation(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

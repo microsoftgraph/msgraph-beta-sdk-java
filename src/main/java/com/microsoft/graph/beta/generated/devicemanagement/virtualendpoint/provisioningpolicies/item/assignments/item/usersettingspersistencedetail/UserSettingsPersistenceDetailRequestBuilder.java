@@ -1,8 +1,8 @@
 package com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail;
 
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.batchcleanupusersettingspersistenceprofile.BatchCleanupUserSettingsPersistenceProfileRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.retrieveusersettingspersistenceprofileswithconfigurationid.RetrieveUserSettingsPersistenceProfilesWithConfigurationIdRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.retrieveusersettingspersistenceprofileusagewithconfigurationid.RetrieveUserSettingsPersistenceProfileUsageWithConfigurationIdRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.retrieveusersettingspersistenceprofileswithconfigurationid.RetrieveUserSettingsPersistenceProfilesWithConfiguratio_aec17823;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.provisioningpolicies.item.assignments.item.usersettingspersistencedetail.retrieveusersettingspersistenceprofileusagewithconfigurationid.RetrieveUserSettingsPersistenceProfileUsageWithConfigur_91ba7696;
 import com.microsoft.graph.beta.models.CloudPCUserSettingsPersistenceDetail;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -37,7 +37,7 @@ public class UserSettingsPersistenceDetailRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserSettingsPersistenceDetailRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assignments/{cloudPcProvisioningPolicyAssignment%2Did}/userSettingsPersistenceDetail{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assignments/{cloudPcProvisioningPolicyAssignment%2Did}/userSettingsPersistenceDetail", pathParameters);
     }
     /**
      * Instantiates a new {@link UserSettingsPersistenceDetailRequestBuilder} and sets the default values.
@@ -45,7 +45,7 @@ public class UserSettingsPersistenceDetailRequestBuilder extends BaseRequestBuil
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserSettingsPersistenceDetailRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assignments/{cloudPcProvisioningPolicyAssignment%2Did}/userSettingsPersistenceDetail{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assignments/{cloudPcProvisioningPolicyAssignment%2Did}/userSettingsPersistenceDetail", rawUrl);
     }
     /**
      * Delete navigation property userSettingsPersistenceDetail for deviceManagement
@@ -115,22 +115,22 @@ public class UserSettingsPersistenceDetailRequestBuilder extends BaseRequestBuil
     /**
      * Provides operations to call the retrieveUserSettingsPersistenceProfiles method.
      * @param configurationId Usage: configurationId=&apos;{configurationId}&apos;
-     * @return a {@link RetrieveUserSettingsPersistenceProfilesWithConfigurationIdRequestBuilder}
+     * @return a {@link RetrieveUserSettingsPersistenceProfilesWithConfiguratio_aec17823}
      */
     @jakarta.annotation.Nonnull
-    public RetrieveUserSettingsPersistenceProfilesWithConfigurationIdRequestBuilder retrieveUserSettingsPersistenceProfilesWithConfigurationId(@jakarta.annotation.Nonnull final String configurationId) {
+    public RetrieveUserSettingsPersistenceProfilesWithConfiguratio_aec17823 retrieveUserSettingsPersistenceProfilesWithConfigurationId(@jakarta.annotation.Nonnull final String configurationId) {
         Objects.requireNonNull(configurationId);
-        return new RetrieveUserSettingsPersistenceProfilesWithConfigurationIdRequestBuilder(pathParameters, requestAdapter, configurationId);
+        return new RetrieveUserSettingsPersistenceProfilesWithConfiguratio_aec17823(pathParameters, requestAdapter, configurationId);
     }
     /**
      * Provides operations to call the retrieveUserSettingsPersistenceProfileUsage method.
      * @param configurationId Usage: configurationId=&apos;{configurationId}&apos;
-     * @return a {@link RetrieveUserSettingsPersistenceProfileUsageWithConfigurationIdRequestBuilder}
+     * @return a {@link RetrieveUserSettingsPersistenceProfileUsageWithConfigur_91ba7696}
      */
     @jakarta.annotation.Nonnull
-    public RetrieveUserSettingsPersistenceProfileUsageWithConfigurationIdRequestBuilder retrieveUserSettingsPersistenceProfileUsageWithConfigurationId(@jakarta.annotation.Nonnull final String configurationId) {
+    public RetrieveUserSettingsPersistenceProfileUsageWithConfigur_91ba7696 retrieveUserSettingsPersistenceProfileUsageWithConfigurationId(@jakarta.annotation.Nonnull final String configurationId) {
         Objects.requireNonNull(configurationId);
-        return new RetrieveUserSettingsPersistenceProfileUsageWithConfigurationIdRequestBuilder(pathParameters, requestAdapter, configurationId);
+        return new RetrieveUserSettingsPersistenceProfileUsageWithConfigur_91ba7696(pathParameters, requestAdapter, configurationId);
     }
     /**
      * Delete navigation property userSettingsPersistenceDetail for deviceManagement
@@ -167,7 +167,7 @@ public class UserSettingsPersistenceDetailRequestBuilder extends BaseRequestBuil
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/assignments/{cloudPcProvisioningPolicyAssignment%2Did}/userSettingsPersistenceDetail{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

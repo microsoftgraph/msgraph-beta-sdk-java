@@ -9,9 +9,9 @@ public enum SnapshotJobStatus implements ValuedEnum {
     Running("running"),
     Succeeded("succeeded"),
     Failed("failed"),
+    PartiallySuccessful("partiallySuccessful"),
     /** A marker value for members added after the release of this API. */
-    UnknownFutureValue("unknownFutureValue"),
-    PartiallySuccessful("partiallySuccessful");
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     SnapshotJobStatus(final String value) {
         this.value = value;
@@ -26,8 +26,8 @@ public enum SnapshotJobStatus implements ValuedEnum {
             case "running": return Running;
             case "succeeded": return Succeeded;
             case "failed": return Failed;
-            case "unknownFutureValue": return UnknownFutureValue;
             case "partiallySuccessful": return PartiallySuccessful;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

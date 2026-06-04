@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.deploysummary;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary;
+import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -26,7 +26,7 @@ public class DeploySummaryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeploySummaryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy%2Did}/deploySummary{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy%2Did}/deploySummary", pathParameters);
     }
     /**
      * Instantiates a new {@link DeploySummaryRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class DeploySummaryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeploySummaryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy%2Did}/deploySummary{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy%2Did}/deploySummary", rawUrl);
     }
     /**
      * Delete navigation property deploySummary for deviceAppManagement
@@ -56,50 +56,50 @@ public class DeploySummaryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * WindowsDefenderApplicationControl supplemental policy deployment summary.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary get() {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 get() {
         return get(null);
     }
     /**
      * WindowsDefenderApplicationControl supplemental policy deployment summary.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552::createFromDiscriminatorValue);
     }
     /**
      * Update the navigation property deploySummary in deviceAppManagement
      * @param body The request body
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary patch(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary body) {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 patch(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 body) {
         return patch(body, null);
     }
     /**
      * Update the navigation property deploySummary in deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary patch(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 patch(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552::createFromDiscriminatorValue);
     }
     /**
      * Delete navigation property deploySummary for deviceAppManagement
@@ -136,7 +136,7 @@ public class DeploySummaryRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy%2Did}/deploySummary{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -147,7 +147,7 @@ public class DeploySummaryRequestBuilder extends BaseRequestBuilder {
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary body) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 body) {
         return toPatchRequestInformation(body, null);
     }
     /**
@@ -157,7 +157,7 @@ public class DeploySummaryRequestBuilder extends BaseRequestBuilder {
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);

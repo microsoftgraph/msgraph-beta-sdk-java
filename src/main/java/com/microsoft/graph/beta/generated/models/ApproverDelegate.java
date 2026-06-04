@@ -56,7 +56,7 @@ public class ApproverDelegate implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore;
     }
     /**
-     * Gets the delegate property value. The delegate property
+     * Gets the delegate property value. The identity that receives the approval delegation. Only singleUser and groupMembers are currently supported.
      * @return a {@link UserSet}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class ApproverDelegate implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the schedule property value. The schedule property
+     * Gets the schedule property value. The schedule for the delegation, including start date and expiration pattern (duration, end date, or no expiration).
      * @return a {@link RequestSchedule}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class ApproverDelegate implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore = value;
     }
     /**
-     * Sets the delegate property value. The delegate property
+     * Sets the delegate property value. The identity that receives the approval delegation. Only singleUser and groupMembers are currently supported.
      * @param value Value to set for the delegate property.
      */
     public void setDelegate(@jakarta.annotation.Nullable final UserSet value) {
@@ -132,7 +132,7 @@ public class ApproverDelegate implements AdditionalDataHolder, BackedModel, Pars
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the schedule property value. The schedule property
+     * Sets the schedule property value. The schedule for the delegation, including start date and expiration pattern (duration, end date, or no expiration).
      * @param value Value to set for the schedule property.
      */
     public void setSchedule(@jakarta.annotation.Nullable final RequestSchedule value) {

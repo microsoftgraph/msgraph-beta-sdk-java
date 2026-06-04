@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.devicemanagement.applepushnotificationcertificate;
 
-import com.microsoft.graph.beta.devicemanagement.applepushnotificationcertificate.downloadapplepushnotificationcertificatesigningrequest.DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.applepushnotificationcertificate.generateapplepushnotificationcertificatesigningrequest.GenerateApplePushNotificationCertificateSigningRequestRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.applepushnotificationcertificate.downloadapplepushnotificationcertificatesigningrequest.DownloadApplePushNotificationCertificateSigningRequestR_030b19cc;
+import com.microsoft.graph.beta.devicemanagement.applepushnotificationcertificate.generateapplepushnotificationcertificatesigningrequest.GenerateApplePushNotificationCertificateSigningRequestR_6d3c8f87;
 import com.microsoft.graph.beta.models.ApplePushNotificationCertificate;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -24,19 +24,19 @@ import java.util.Objects;
 public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the downloadApplePushNotificationCertificateSigningRequest method.
-     * @return a {@link DownloadApplePushNotificationCertificateSigningRequestRequestBuilder}
+     * @return a {@link DownloadApplePushNotificationCertificateSigningRequestR_030b19cc}
      */
     @jakarta.annotation.Nonnull
-    public DownloadApplePushNotificationCertificateSigningRequestRequestBuilder downloadApplePushNotificationCertificateSigningRequest() {
-        return new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder(pathParameters, requestAdapter);
+    public DownloadApplePushNotificationCertificateSigningRequestR_030b19cc downloadApplePushNotificationCertificateSigningRequest() {
+        return new DownloadApplePushNotificationCertificateSigningRequestR_030b19cc(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the generateApplePushNotificationCertificateSigningRequest method.
-     * @return a {@link GenerateApplePushNotificationCertificateSigningRequestRequestBuilder}
+     * @return a {@link GenerateApplePushNotificationCertificateSigningRequestR_6d3c8f87}
      */
     @jakarta.annotation.Nonnull
-    public GenerateApplePushNotificationCertificateSigningRequestRequestBuilder generateApplePushNotificationCertificateSigningRequest() {
-        return new GenerateApplePushNotificationCertificateSigningRequestRequestBuilder(pathParameters, requestAdapter);
+    public GenerateApplePushNotificationCertificateSigningRequestR_6d3c8f87 generateApplePushNotificationCertificateSigningRequest() {
+        return new GenerateApplePushNotificationCertificateSigningRequestR_6d3c8f87(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link ApplePushNotificationCertificateRequestBuilder} and sets the default values.
@@ -44,7 +44,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ApplePushNotificationCertificateRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/applePushNotificationCertificate{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/applePushNotificationCertificate", pathParameters);
     }
     /**
      * Instantiates a new {@link ApplePushNotificationCertificateRequestBuilder} and sets the default values.
@@ -52,7 +52,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ApplePushNotificationCertificateRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/applePushNotificationCertificate{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/applePushNotificationCertificate", rawUrl);
     }
     /**
      * Delete navigation property applePushNotificationCertificate for deviceManagement
@@ -154,7 +154,7 @@ public class ApplePushNotificationCertificateRequestBuilder extends BaseRequestB
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceManagement/applePushNotificationCertificate{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

@@ -90,7 +90,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         return deserializerMap;
     }
     /**
-     * Gets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
+     * Gets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to asymmetricKeyLifetime.
      * @return a {@link PeriodAndDuration}
      */
     @jakarta.annotation.Nullable
@@ -174,7 +174,7 @@ public class KeyCredentialConfiguration implements AdditionalDataHolder, BackedM
         this.backingStore.set("excludeActors", value);
     }
     /**
-     * Sets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to keyLifetime.
+     * Sets the maxLifetime property value. String value that indicates the maximum lifetime for key expiration, defined as an ISO 8601 duration. For example, P4DT12H30M5S represents four days, 12 hours, 30 minutes, and five seconds. This property is required when restrictionType is set to asymmetricKeyLifetime.
      * @param value Value to set for the maxLifetime property.
      */
     public void setMaxLifetime(@jakarta.annotation.Nullable final PeriodAndDuration value) {

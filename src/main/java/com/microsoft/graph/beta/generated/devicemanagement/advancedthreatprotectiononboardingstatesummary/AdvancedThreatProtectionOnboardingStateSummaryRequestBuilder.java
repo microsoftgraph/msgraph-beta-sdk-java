@@ -1,6 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.advancedthreatprotectiononboardingstatesummary;
 
-import com.microsoft.graph.beta.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.AdvancedThreatProtectionOnboardingDeviceSettingStatesRe_23f016bc;
 import com.microsoft.graph.beta.models.AdvancedThreatProtectionOnboardingStateSummary;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,11 +23,11 @@ import java.util.Objects;
 public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the advancedThreatProtectionOnboardingDeviceSettingStates property of the microsoft.graph.advancedThreatProtectionOnboardingStateSummary entity.
-     * @return a {@link AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder}
+     * @return a {@link AdvancedThreatProtectionOnboardingDeviceSettingStatesRe_23f016bc}
      */
     @jakarta.annotation.Nonnull
-    public AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates() {
-        return new AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder(pathParameters, requestAdapter);
+    public AdvancedThreatProtectionOnboardingDeviceSettingStatesRe_23f016bc advancedThreatProtectionOnboardingDeviceSettingStates() {
+        return new AdvancedThreatProtectionOnboardingDeviceSettingStatesRe_23f016bc(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder} and sets the default values.
@@ -35,7 +35,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/advancedThreatProtectionOnboardingStateSummary{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/advancedThreatProtectionOnboardingStateSummary", pathParameters);
     }
     /**
      * Instantiates a new {@link AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/advancedThreatProtectionOnboardingStateSummary{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/advancedThreatProtectionOnboardingStateSummary", rawUrl);
     }
     /**
      * Delete navigation property advancedThreatProtectionOnboardingStateSummary for deviceManagement
@@ -145,7 +145,7 @@ public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extend
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceManagement/advancedThreatProtectionOnboardingStateSummary{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

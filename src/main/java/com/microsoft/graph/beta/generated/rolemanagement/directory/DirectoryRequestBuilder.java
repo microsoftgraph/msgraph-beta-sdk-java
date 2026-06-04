@@ -12,8 +12,8 @@ import com.microsoft.graph.beta.rolemanagement.directory.roledefinitions.RoleDef
 import com.microsoft.graph.beta.rolemanagement.directory.roleeligibilityscheduleinstances.RoleEligibilityScheduleInstancesRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.directory.roleeligibilityschedulerequests.RoleEligibilityScheduleRequestsRequestBuilder;
 import com.microsoft.graph.beta.rolemanagement.directory.roleeligibilityschedules.RoleEligibilitySchedulesRequestBuilder;
-import com.microsoft.graph.beta.rolemanagement.directory.rolescheduleinstancesdirectoryscopeiddirectoryscopeidappscopeidappscopeidprincipalidprincipalidroledefinitionidroledefinitionid.RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder;
-import com.microsoft.graph.beta.rolemanagement.directory.roleschedulesdirectoryscopeiddirectoryscopeidappscopeidappscopeidprincipalidprincipalidroledefinitionidroledefinitionid.RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder;
+import com.microsoft.graph.beta.rolemanagement.directory.rolescheduleinstancesdirectoryscopeiddirectoryscopeidap_efd21927.RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAp_f138522e;
+import com.microsoft.graph.beta.rolemanagement.directory.roleschedulesdirectoryscopeiddirectoryscopeidappscopeid_9d7ef2e9.RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeId_aaff52a1;
 import com.microsoft.graph.beta.rolemanagement.directory.transitiveroleassignments.TransitiveRoleAssignmentsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -145,25 +145,25 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the roleScheduleInstances method.
-     * @return a {@link RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder}
+     * @return a {@link RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAp_f138522e}
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
-    public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
-        return new RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
+    public RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAp_f138522e roleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
+        return new RoleScheduleInstancesdirectoryScopeIdDirectoryScopeIdAp_f138522e(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the roleSchedules method.
-     * @return a {@link RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder}
+     * @return a {@link RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeId_aaff52a1}
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
-    public RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
-        return new RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionIdRequestBuilder(pathParameters, requestAdapter);
+    public RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeId_aaff52a1 roleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeIdAppScopeIdPrincipalIdPrincipalIdRoleDefinitionIdRoleDefinitionId() {
+        return new RoleSchedulesdirectoryScopeIdDirectoryScopeIdAppScopeId_aaff52a1(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the transitiveRoleAssignments property of the microsoft.graph.rbacApplication entity.
@@ -182,7 +182,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/directory{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/roleManagement/directory", pathParameters);
     }
     /**
      * Instantiates a new {@link DirectoryRequestBuilder} and sets the default values.
@@ -190,7 +190,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DirectoryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/directory{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/roleManagement/directory", rawUrl);
     }
     /**
      * Delete navigation property directory for roleManagement
@@ -322,7 +322,7 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/roleManagement/directory{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

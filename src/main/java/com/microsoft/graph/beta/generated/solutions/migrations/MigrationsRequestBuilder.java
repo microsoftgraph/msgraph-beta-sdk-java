@@ -39,7 +39,7 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MigrationsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/migrations{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/migrations", pathParameters);
     }
     /**
      * Instantiates a new {@link MigrationsRequestBuilder} and sets the default values.
@@ -47,7 +47,7 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public MigrationsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/migrations{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/migrations", rawUrl);
     }
     /**
      * Provides operations to manage the crossTenantMigrationJobs property of the microsoft.graph.migrationsRoot entity.
@@ -192,7 +192,7 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/solutions/migrations{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

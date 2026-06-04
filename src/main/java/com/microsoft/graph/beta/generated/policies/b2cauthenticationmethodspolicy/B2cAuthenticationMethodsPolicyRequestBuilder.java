@@ -26,7 +26,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public B2cAuthenticationMethodsPolicyRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/b2cAuthenticationMethodsPolicy{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/policies/b2cAuthenticationMethodsPolicy", pathParameters);
     }
     /**
      * Instantiates a new {@link B2cAuthenticationMethodsPolicyRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public B2cAuthenticationMethodsPolicyRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/policies/b2cAuthenticationMethodsPolicy{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/policies/b2cAuthenticationMethodsPolicy", rawUrl);
     }
     /**
      * Delete navigation property b2cAuthenticationMethodsPolicy for policies
@@ -140,7 +140,7 @@ public class B2cAuthenticationMethodsPolicyRequestBuilder extends BaseRequestBui
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/policies/b2cAuthenticationMethodsPolicy{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

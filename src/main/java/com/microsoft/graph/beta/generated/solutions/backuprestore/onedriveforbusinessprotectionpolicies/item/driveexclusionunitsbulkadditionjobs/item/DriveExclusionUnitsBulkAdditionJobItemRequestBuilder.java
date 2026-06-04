@@ -37,19 +37,21 @@ public class DriveExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseRe
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/oneDriveForBusinessProtectionPolicies/{oneDriveForBusinessProtectionPolicy%2Did}/driveExclusionUnitsBulkAdditionJobs/{driveExclusionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * Get a drive exclusion units bulk addition job associated with a OneDrive for work or school protection policy.
      * @return a {@link DriveExclusionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driveexclusionunitsbulkadditionjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveExclusionUnitsBulkAdditionJob get() {
         return get(null);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * Get a drive exclusion units bulk addition job associated with a OneDrive for work or school protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveExclusionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/driveexclusionunitsbulkadditionjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public DriveExclusionUnitsBulkAdditionJob get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class DriveExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseRe
         return this.requestAdapter.send(requestInfo, errorMapping, DriveExclusionUnitsBulkAdditionJob::createFromDiscriminatorValue);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * Get a drive exclusion units bulk addition job associated with a OneDrive for work or school protection policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class DriveExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseRe
         return toGetRequestInformation(null);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * Get a drive exclusion units bulk addition job associated with a OneDrive for work or school protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class DriveExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseRe
         return new DriveExclusionUnitsBulkAdditionJobItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * Get a drive exclusion units bulk addition job associated with a OneDrive for work or school protection policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

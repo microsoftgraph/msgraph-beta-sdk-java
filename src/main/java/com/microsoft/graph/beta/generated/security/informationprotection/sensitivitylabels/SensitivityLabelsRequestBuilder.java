@@ -6,7 +6,7 @@ import com.microsoft.graph.beta.models.security.SensitivityLabelCollectionRespon
 import com.microsoft.graph.beta.security.informationprotection.sensitivitylabels.count.CountRequestBuilder;
 import com.microsoft.graph.beta.security.informationprotection.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
 import com.microsoft.graph.beta.security.informationprotection.sensitivitylabels.microsoftgraphsecurityevaluateapplication.MicrosoftGraphSecurityEvaluateApplicationRequestBuilder;
-import com.microsoft.graph.beta.security.informationprotection.sensitivitylabels.microsoftgraphsecurityevaluateclassificationresults.MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder;
+import com.microsoft.graph.beta.security.informationprotection.sensitivitylabels.microsoftgraphsecurityevaluateclassificationresults.MicrosoftGraphSecurityEvaluateClassificationResultsRequ_fb04bbec;
 import com.microsoft.graph.beta.security.informationprotection.sensitivitylabels.microsoftgraphsecurityevaluateremoval.MicrosoftGraphSecurityEvaluateRemovalRequestBuilder;
 import com.microsoft.graph.beta.security.informationprotection.sensitivitylabels.microsoftgraphsecurityextractcontentlabel.MicrosoftGraphSecurityExtractContentLabelRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -45,11 +45,11 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the evaluateClassificationResults method.
-     * @return a {@link MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder}
+     * @return a {@link MicrosoftGraphSecurityEvaluateClassificationResultsRequ_fb04bbec}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder microsoftGraphSecurityEvaluateClassificationResults() {
-        return new MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityEvaluateClassificationResultsRequ_fb04bbec microsoftGraphSecurityEvaluateClassificationResults() {
+        return new MicrosoftGraphSecurityEvaluateClassificationResultsRequ_fb04bbec(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the evaluateRemoval method.
@@ -85,7 +85,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SensitivityLabelsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/informationProtection/sensitivityLabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link SensitivityLabelsRequestBuilder} and sets the default values.
@@ -93,7 +93,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public SensitivityLabelsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/security/informationProtection/sensitivityLabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Read the Microsoft Purview Information Protection labels for the user or organization.
@@ -157,7 +157,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/security/informationProtection/sensitivityLabels{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -180,7 +180,7 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SensitivityLabel body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/security/informationProtection/sensitivityLabels", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

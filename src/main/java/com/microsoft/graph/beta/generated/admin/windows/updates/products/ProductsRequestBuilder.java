@@ -2,8 +2,8 @@ package com.microsoft.graph.beta.admin.windows.updates.products;
 
 import com.microsoft.graph.beta.admin.windows.updates.products.count.CountRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.products.item.ProductItemRequestBuilder;
-import com.microsoft.graph.beta.admin.windows.updates.products.microsoftgraphwindowsupdatesfindbycatalogidwithcatalogid.MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder;
-import com.microsoft.graph.beta.admin.windows.updates.products.microsoftgraphwindowsupdatesfindbykbnumberwithkbnumber.MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberRequestBuilder;
+import com.microsoft.graph.beta.admin.windows.updates.products.microsoftgraphwindowsupdatesfindbycatalogidwithcatalogid.MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogI_0a172f28;
+import com.microsoft.graph.beta.admin.windows.updates.products.microsoftgraphwindowsupdatesfindbykbnumberwithkbnumber.MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberR_ea5669b7;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.windowsupdates.Product;
 import com.microsoft.graph.beta.models.windowsupdates.ProductCollectionResponse;
@@ -51,7 +51,7 @@ public class ProductsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProductsRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/products{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link ProductsRequestBuilder} and sets the default values.
@@ -59,7 +59,7 @@ public class ProductsRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProductsRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/admin/windows/updates/products{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * A collection of Windows products.
@@ -86,22 +86,22 @@ public class ProductsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the findByCatalogId method.
      * @param catalogID Usage: catalogID=&apos;{catalogID}&apos;
-     * @return a {@link MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder}
+     * @return a {@link MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogI_0a172f28}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder microsoftGraphWindowsUpdatesFindByCatalogIdWithCatalogID(@jakarta.annotation.Nonnull final String catalogID) {
+    public MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogI_0a172f28 microsoftGraphWindowsUpdatesFindByCatalogIdWithCatalogID(@jakarta.annotation.Nonnull final String catalogID) {
         Objects.requireNonNull(catalogID);
-        return new MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder(pathParameters, requestAdapter, catalogID);
+        return new MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogI_0a172f28(pathParameters, requestAdapter, catalogID);
     }
     /**
      * Provides operations to call the findByKbNumber method.
      * @param kbNumber Usage: kbNumber={kbNumber}
-     * @return a {@link MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberRequestBuilder}
+     * @return a {@link MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberR_ea5669b7}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberRequestBuilder microsoftGraphWindowsUpdatesFindByKbNumberWithKbNumber(@jakarta.annotation.Nonnull final Integer kbNumber) {
+    public MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberR_ea5669b7 microsoftGraphWindowsUpdatesFindByKbNumberWithKbNumber(@jakarta.annotation.Nonnull final Integer kbNumber) {
         Objects.requireNonNull(kbNumber);
-        return new MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberRequestBuilder(pathParameters, requestAdapter, kbNumber);
+        return new MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberR_ea5669b7(pathParameters, requestAdapter, kbNumber);
     }
     /**
      * Create new navigation property to products for admin
@@ -143,7 +143,7 @@ public class ProductsRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/admin/windows/updates/products{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -166,7 +166,7 @@ public class ProductsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final Product body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/admin/windows/updates/products", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

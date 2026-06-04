@@ -26,7 +26,7 @@ public class ProgramControlTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramControlTypeItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programControlTypes/{programControlType%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/programControlTypes/{programControlType%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ProgramControlTypeItemRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class ProgramControlTypeItemRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ProgramControlTypeItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/programControlTypes/{programControlType%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/programControlTypes/{programControlType%2Did}", rawUrl);
     }
     /**
      * Delete entity from programControlTypes
@@ -136,7 +136,7 @@ public class ProgramControlTypeItemRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/programControlTypes/{programControlType%2Did}{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

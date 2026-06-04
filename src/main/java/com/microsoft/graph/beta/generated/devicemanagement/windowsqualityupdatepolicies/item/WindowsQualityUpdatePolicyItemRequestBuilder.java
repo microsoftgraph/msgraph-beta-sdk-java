@@ -3,7 +3,7 @@ package com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.i
 import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.bulkaction.BulkActionRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.retrievewindowsqualityupdatecatalogitemdetailswithids.RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.retrievewindowsqualityupdatecatalogitemdetailswithids.RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRe_d92dd7ca;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.WindowsQualityUpdatePolicy;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -54,7 +54,7 @@ public class WindowsQualityUpdatePolicyItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WindowsQualityUpdatePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/windowsQualityUpdatePolicies/{windowsQualityUpdatePolicy%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/windowsQualityUpdatePolicies/{windowsQualityUpdatePolicy%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link WindowsQualityUpdatePolicyItemRequestBuilder} and sets the default values.
@@ -62,7 +62,7 @@ public class WindowsQualityUpdatePolicyItemRequestBuilder extends BaseRequestBui
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public WindowsQualityUpdatePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/windowsQualityUpdatePolicies/{windowsQualityUpdatePolicy%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/windowsQualityUpdatePolicies/{windowsQualityUpdatePolicy%2Did}", rawUrl);
     }
     /**
      * Delete navigation property windowsQualityUpdatePolicies for deviceManagement
@@ -132,12 +132,12 @@ public class WindowsQualityUpdatePolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to call the retrieveWindowsQualityUpdateCatalogItemDetails method.
      * @param ids Usage: ids={ids}
-     * @return a {@link RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRequestBuilder}
+     * @return a {@link RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRe_d92dd7ca}
      */
     @jakarta.annotation.Nonnull
-    public RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRequestBuilder retrieveWindowsQualityUpdateCatalogItemDetailsWithIds(@jakarta.annotation.Nonnull final String ids) {
+    public RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRe_d92dd7ca retrieveWindowsQualityUpdateCatalogItemDetailsWithIds(@jakarta.annotation.Nonnull final String ids) {
         Objects.requireNonNull(ids);
-        return new RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRequestBuilder(pathParameters, requestAdapter, ids);
+        return new RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRe_d92dd7ca(pathParameters, requestAdapter, ids);
     }
     /**
      * Delete navigation property windowsQualityUpdatePolicies for deviceManagement
@@ -174,7 +174,7 @@ public class WindowsQualityUpdatePolicyItemRequestBuilder extends BaseRequestBui
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceManagement/windowsQualityUpdatePolicies/{windowsQualityUpdatePolicy%2Did}{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

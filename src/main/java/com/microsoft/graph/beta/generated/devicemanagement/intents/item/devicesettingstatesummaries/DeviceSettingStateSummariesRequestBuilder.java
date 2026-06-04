@@ -1,9 +1,9 @@
 package com.microsoft.graph.beta.devicemanagement.intents.item.devicesettingstatesummaries;
 
 import com.microsoft.graph.beta.devicemanagement.intents.item.devicesettingstatesummaries.count.CountRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.intents.item.devicesettingstatesummaries.item.DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.intents.item.devicesettingstatesummaries.item.DeviceManagementIntentDeviceSettingStateSummaryItemRequ_03bbc11a;
 import com.microsoft.graph.beta.models.DeviceManagementIntentDeviceSettingStateSummary;
-import com.microsoft.graph.beta.models.DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse;
+import com.microsoft.graph.beta.models.DeviceManagementIntentDeviceSettingStateSummaryCollecti_6e7a63fe;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -34,14 +34,14 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to manage the deviceSettingStateSummaries property of the microsoft.graph.deviceManagementIntent entity.
      * @param deviceManagementIntentDeviceSettingStateSummaryId The unique identifier of deviceManagementIntentDeviceSettingStateSummary
-     * @return a {@link DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder}
+     * @return a {@link DeviceManagementIntentDeviceSettingStateSummaryItemRequ_03bbc11a}
      */
     @jakarta.annotation.Nonnull
-    public DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder byDeviceManagementIntentDeviceSettingStateSummaryId(@jakarta.annotation.Nonnull final String deviceManagementIntentDeviceSettingStateSummaryId) {
+    public DeviceManagementIntentDeviceSettingStateSummaryItemRequ_03bbc11a byDeviceManagementIntentDeviceSettingStateSummaryId(@jakarta.annotation.Nonnull final String deviceManagementIntentDeviceSettingStateSummaryId) {
         Objects.requireNonNull(deviceManagementIntentDeviceSettingStateSummaryId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceManagementIntentDeviceSettingStateSummary%2Did", deviceManagementIntentDeviceSettingStateSummaryId);
-        return new DeviceManagementIntentDeviceSettingStateSummaryItemRequestBuilder(urlTplParams, requestAdapter);
+        return new DeviceManagementIntentDeviceSettingStateSummaryItemRequ_03bbc11a(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link DeviceSettingStateSummariesRequestBuilder} and sets the default values.
@@ -49,7 +49,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceSettingStateSummariesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}/deviceSettingStateSummaries{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceSettingStateSummariesRequestBuilder} and sets the default values.
@@ -57,29 +57,29 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceSettingStateSummariesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}/deviceSettingStateSummaries{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
-     * @return a {@link DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse}
+     * @return a {@link DeviceManagementIntentDeviceSettingStateSummaryCollecti_6e7a63fe}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse get() {
+    public DeviceManagementIntentDeviceSettingStateSummaryCollecti_6e7a63fe get() {
         return get(null);
     }
     /**
      * Collection of settings and their states and counts of devices that belong to corresponding state for all settings within the intent
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse}
+     * @return a {@link DeviceManagementIntentDeviceSettingStateSummaryCollecti_6e7a63fe}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public DeviceManagementIntentDeviceSettingStateSummaryCollecti_6e7a63fe get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementIntentDeviceSettingStateSummaryCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementIntentDeviceSettingStateSummaryCollecti_6e7a63fe::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceSettingStateSummaries for deviceManagement
@@ -121,7 +121,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}/deviceSettingStateSummaries{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -144,7 +144,7 @@ public class DeviceSettingStateSummariesRequestBuilder extends BaseRequestBuilde
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DeviceManagementIntentDeviceSettingStateSummary body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/intents/{deviceManagementIntent%2Did}/deviceSettingStateSummaries", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

@@ -38,7 +38,7 @@ public class EdiscoveryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EdiscoveryRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/compliance/ediscovery{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/compliance/ediscovery", pathParameters);
     }
     /**
      * Instantiates a new {@link EdiscoveryRequestBuilder} and sets the default values.
@@ -46,7 +46,7 @@ public class EdiscoveryRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public EdiscoveryRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/compliance/ediscovery{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/compliance/ediscovery", rawUrl);
     }
     /**
      * Delete navigation property ediscovery for compliance
@@ -178,7 +178,7 @@ public class EdiscoveryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/compliance/ediscovery{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

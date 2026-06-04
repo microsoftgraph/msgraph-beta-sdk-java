@@ -27,7 +27,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
      * @param uniqueName Alternate key of businessScenario
      */
     public BusinessScenariosWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String uniqueName) {
-        super(requestAdapter, "{+baseurl}/solutions/businessScenarios(uniqueName='{uniqueName}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/solutions/businessScenarios(uniqueName='{uniqueName}')", pathParameters);
         this.pathParameters.put("uniqueName", uniqueName);
     }
     /**
@@ -36,7 +36,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public BusinessScenariosWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/solutions/businessScenarios(uniqueName='{uniqueName}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/solutions/businessScenarios(uniqueName='{uniqueName}')", rawUrl);
     }
     /**
      * Delete a businessScenario object. The deletion of a scenario causes all data associated with the scenario to be deleted.
@@ -144,7 +144,7 @@ public class BusinessScenariosWithUniqueNameRequestBuilder extends BaseRequestBu
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/solutions/businessScenarios(uniqueName='{uniqueName}'){?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

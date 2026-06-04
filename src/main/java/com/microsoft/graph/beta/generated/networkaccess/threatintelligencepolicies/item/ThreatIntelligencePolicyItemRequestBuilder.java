@@ -35,7 +35,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ThreatIntelligencePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/threatIntelligencePolicies/{threatIntelligencePolicy%2Did}{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/networkAccess/threatIntelligencePolicies/{threatIntelligencePolicy%2Did}", pathParameters);
     }
     /**
      * Instantiates a new {@link ThreatIntelligencePolicyItemRequestBuilder} and sets the default values.
@@ -43,7 +43,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ThreatIntelligencePolicyItemRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/networkAccess/threatIntelligencePolicies/{threatIntelligencePolicy%2Did}{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/networkAccess/threatIntelligencePolicies/{threatIntelligencePolicy%2Did}", rawUrl);
     }
     /**
      * Delete a threatIntelligencePolicy object.
@@ -151,7 +151,7 @@ public class ThreatIntelligencePolicyItemRequestBuilder extends BaseRequestBuild
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/networkAccess/threatIntelligencePolicies/{threatIntelligencePolicy%2Did}{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

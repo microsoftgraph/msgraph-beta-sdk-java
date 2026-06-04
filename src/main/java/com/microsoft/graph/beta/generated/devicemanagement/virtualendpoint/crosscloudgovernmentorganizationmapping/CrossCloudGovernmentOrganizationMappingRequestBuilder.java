@@ -26,7 +26,7 @@ public class CrossCloudGovernmentOrganizationMappingRequestBuilder extends BaseR
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossCloudGovernmentOrganizationMappingRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/crossCloudGovernmentOrganizationMapping{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/crossCloudGovernmentOrganizationMapping", pathParameters);
     }
     /**
      * Instantiates a new {@link CrossCloudGovernmentOrganizationMappingRequestBuilder} and sets the default values.
@@ -34,7 +34,7 @@ public class CrossCloudGovernmentOrganizationMappingRequestBuilder extends BaseR
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CrossCloudGovernmentOrganizationMappingRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/crossCloudGovernmentOrganizationMapping{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/crossCloudGovernmentOrganizationMapping", rawUrl);
     }
     /**
      * Delete navigation property crossCloudGovernmentOrganizationMapping for deviceManagement
@@ -138,7 +138,7 @@ public class CrossCloudGovernmentOrganizationMappingRequestBuilder extends BaseR
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceManagement/virtualEndpoint/crossCloudGovernmentOrganizationMapping{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

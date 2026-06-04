@@ -1,10 +1,10 @@
 package com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthosperformance;
 
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthosperformance.count.CountRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthosperformance.item.UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthosperformance.item.UserExperienceAnalyticsBatteryHealthOsPerformanceItemRe_313fb409;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.UserExperienceAnalyticsBatteryHealthOsPerformance;
-import com.microsoft.graph.beta.models.UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionResponse;
+import com.microsoft.graph.beta.models.UserExperienceAnalyticsBatteryHealthOsPerformanceCollec_4e55f377;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,14 +34,14 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder ext
     /**
      * Provides operations to manage the userExperienceAnalyticsBatteryHealthOsPerformance property of the microsoft.graph.deviceManagement entity.
      * @param userExperienceAnalyticsBatteryHealthOsPerformanceId The unique identifier of userExperienceAnalyticsBatteryHealthOsPerformance
-     * @return a {@link UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsBatteryHealthOsPerformanceItemRe_313fb409}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder byUserExperienceAnalyticsBatteryHealthOsPerformanceId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsBatteryHealthOsPerformanceId) {
+    public UserExperienceAnalyticsBatteryHealthOsPerformanceItemRe_313fb409 byUserExperienceAnalyticsBatteryHealthOsPerformanceId(@jakarta.annotation.Nonnull final String userExperienceAnalyticsBatteryHealthOsPerformanceId) {
         Objects.requireNonNull(userExperienceAnalyticsBatteryHealthOsPerformanceId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("userExperienceAnalyticsBatteryHealthOsPerformance%2Did", userExperienceAnalyticsBatteryHealthOsPerformanceId);
-        return new UserExperienceAnalyticsBatteryHealthOsPerformanceItemRequestBuilder(urlTplParams, requestAdapter);
+        return new UserExperienceAnalyticsBatteryHealthOsPerformanceItemRe_313fb409(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder} and sets the default values.
@@ -49,7 +49,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder ext
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsBatteryHealthOsPerformance{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder} and sets the default values.
@@ -57,29 +57,29 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder ext
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/userExperienceAnalyticsBatteryHealthOsPerformance{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * User Experience Analytics Battery Health Os Performance
-     * @return a {@link UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionResponse}
+     * @return a {@link UserExperienceAnalyticsBatteryHealthOsPerformanceCollec_4e55f377}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionResponse get() {
+    public UserExperienceAnalyticsBatteryHealthOsPerformanceCollec_4e55f377 get() {
         return get(null);
     }
     /**
      * User Experience Analytics Battery Health Os Performance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionResponse}
+     * @return a {@link UserExperienceAnalyticsBatteryHealthOsPerformanceCollec_4e55f377}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public UserExperienceAnalyticsBatteryHealthOsPerformanceCollec_4e55f377 get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsBatteryHealthOsPerformanceCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, UserExperienceAnalyticsBatteryHealthOsPerformanceCollec_4e55f377::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to userExperienceAnalyticsBatteryHealthOsPerformance for deviceManagement
@@ -121,7 +121,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder ext
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceManagement/userExperienceAnalyticsBatteryHealthOsPerformance{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -144,7 +144,7 @@ public class UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder ext
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UserExperienceAnalyticsBatteryHealthOsPerformance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/userExperienceAnalyticsBatteryHealthOsPerformance", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

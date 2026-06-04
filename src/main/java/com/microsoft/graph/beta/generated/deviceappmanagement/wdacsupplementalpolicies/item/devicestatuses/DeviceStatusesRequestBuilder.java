@@ -1,10 +1,10 @@
 package com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.devicestatuses;
 
 import com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.devicestatuses.count.CountRequestBuilder;
-import com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.devicestatuses.item.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder;
+import com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.devicestatuses.item.WindowsDefenderApplicationControlSupplementalPolicyDepl_051f2aac;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus;
-import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse;
+import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6;
+import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyDepl_3b8c58ee;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,14 +34,14 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deviceStatuses property of the microsoft.graph.windowsDefenderApplicationControlSupplementalPolicy entity.
      * @param windowsDefenderApplicationControlSupplementalPolicyDeploymentStatusId The unique identifier of windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_051f2aac}
      */
     @jakarta.annotation.Nonnull
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder byWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusId(@jakarta.annotation.Nonnull final String windowsDefenderApplicationControlSupplementalPolicyDeploymentStatusId) {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_051f2aac byWindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusId(@jakarta.annotation.Nonnull final String windowsDefenderApplicationControlSupplementalPolicyDeploymentStatusId) {
         Objects.requireNonNull(windowsDefenderApplicationControlSupplementalPolicyDeploymentStatusId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsDefenderApplicationControlSupplementalPolicyDeploymentStatus%2Did", windowsDefenderApplicationControlSupplementalPolicyDeploymentStatusId);
-        return new WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusItemRequestBuilder(urlTplParams, requestAdapter);
+        return new WindowsDefenderApplicationControlSupplementalPolicyDepl_051f2aac(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link DeviceStatusesRequestBuilder} and sets the default values.
@@ -49,7 +49,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceStatusesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy%2Did}/deviceStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link DeviceStatusesRequestBuilder} and sets the default values.
@@ -57,54 +57,54 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DeviceStatusesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy%2Did}/deviceStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_3b8c58ee}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse get() {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_3b8c58ee get() {
         return get(null);
     }
     /**
      * The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_3b8c58ee}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_3b8c58ee get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatusCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyDepl_3b8c58ee::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to deviceStatuses for deviceAppManagement
      * @param body The request body
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus post(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus body) {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6 post(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6 body) {
         return post(body, null);
     }
     /**
      * Create new navigation property to deviceStatuses for deviceAppManagement
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus post(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6 post(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6 body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6::createFromDiscriminatorValue);
     }
     /**
      * The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
@@ -121,7 +121,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy%2Did}/deviceStatuses{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -132,7 +132,7 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus body) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6 body) {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -142,9 +142,9 @@ public class DeviceStatusesRequestBuilder extends BaseRequestBuilder {
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6 body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceAppManagement/wdacSupplementalPolicies/{windowsDefenderApplicationControlSupplementalPolicy%2Did}/deviceStatuses", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

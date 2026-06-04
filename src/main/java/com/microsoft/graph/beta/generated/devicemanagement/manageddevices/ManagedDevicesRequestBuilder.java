@@ -7,7 +7,7 @@ import com.microsoft.graph.beta.devicemanagement.manageddevices.downloadpowerlif
 import com.microsoft.graph.beta.devicemanagement.manageddevices.executeaction.ExecuteActionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.manageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.manageddevices.retrievepowerliftappdiagnosticsdetailswithuserprincipalname.RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.manageddevices.retrievepowerliftappdiagnosticsdetailswithuserprincipalname.RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7;
 import com.microsoft.graph.beta.models.ManagedDevice;
 import com.microsoft.graph.beta.models.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -97,7 +97,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagedDevicesRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "", pathParameters);
     }
     /**
      * Instantiates a new {@link ManagedDevicesRequestBuilder} and sets the default values.
@@ -105,7 +105,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public ManagedDevicesRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/deviceManagement/managedDevices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "", rawUrl);
     }
     /**
      * The list of managed devices.
@@ -157,12 +157,12 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrievePowerliftAppDiagnosticsDetails method.
      * @param userPrincipalName Usage: userPrincipalName=&apos;{userPrincipalName}&apos;
-     * @return a {@link RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder}
+     * @return a {@link RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7}
      */
     @jakarta.annotation.Nonnull
-    public RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder retrievePowerliftAppDiagnosticsDetailsWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+    public RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7 retrievePowerliftAppDiagnosticsDetailsWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
         Objects.requireNonNull(userPrincipalName);
-        return new RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
+        return new RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * The list of managed devices.
@@ -179,7 +179,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/deviceManagement/managedDevices{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -202,7 +202,7 @@ public class ManagedDevicesRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ManagedDevice body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/deviceManagement/managedDevices", pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);

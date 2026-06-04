@@ -48,7 +48,7 @@ public class IdentityGovernanceUserSettings implements AdditionalDataHolder, Bac
         return value;
     }
     /**
-     * Gets the approverDelegate property value. The approverDelegate property
+     * Gets the approverDelegate property value. The approver delegate configuration for the user, including the delegate identity and delegation schedule. Nullable.
      * @return a {@link ApproverDelegate}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class IdentityGovernanceUserSettings implements AdditionalDataHolder, Bac
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the approverDelegate property value. The approverDelegate property
+     * Sets the approverDelegate property value. The approver delegate configuration for the user, including the delegate identity and delegation schedule. Nullable.
      * @param value Value to set for the approverDelegate property.
      */
     public void setApproverDelegate(@jakarta.annotation.Nullable final ApproverDelegate value) {

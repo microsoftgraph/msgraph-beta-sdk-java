@@ -27,7 +27,7 @@ public class CatalogsWithUniqueNameRequestBuilder extends BaseRequestBuilder {
      * @param uniqueName Alternate key of accessPackageCatalog
      */
     public CatalogsWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String uniqueName) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs(uniqueName='{uniqueName}'){?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs(uniqueName='{uniqueName}')", pathParameters);
         this.pathParameters.put("uniqueName", uniqueName);
     }
     /**
@@ -36,7 +36,7 @@ public class CatalogsWithUniqueNameRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public CatalogsWithUniqueNameRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs(uniqueName='{uniqueName}'){?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/identityGovernance/catalogs(uniqueName='{uniqueName}')", rawUrl);
     }
     /**
      * Delete navigation property catalogs for identityGovernance
@@ -168,7 +168,7 @@ public class CatalogsWithUniqueNameRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/identityGovernance/catalogs(uniqueName='{uniqueName}'){?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;

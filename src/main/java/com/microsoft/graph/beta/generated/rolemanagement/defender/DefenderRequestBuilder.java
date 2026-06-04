@@ -74,7 +74,7 @@ public class DefenderRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DefenderRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/defender{?%24expand,%24select}", pathParameters);
+        super(requestAdapter, "{+baseurl}/roleManagement/defender", pathParameters);
     }
     /**
      * Instantiates a new {@link DefenderRequestBuilder} and sets the default values.
@@ -82,7 +82,7 @@ public class DefenderRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public DefenderRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/roleManagement/defender{?%24expand,%24select}", rawUrl);
+        super(requestAdapter, "{+baseurl}/roleManagement/defender", rawUrl);
     }
     /**
      * Delete navigation property defender for roleManagement
@@ -214,7 +214,7 @@ public class DefenderRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/roleManagement/defender{?%24expand,%24select}", pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
