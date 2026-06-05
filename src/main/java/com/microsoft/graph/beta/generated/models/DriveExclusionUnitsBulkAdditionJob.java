@@ -26,7 +26,7 @@ public class DriveExclusionUnitsBulkAdditionJob extends ExclusionUnitBulkAdditio
         return new DriveExclusionUnitsBulkAdditionJob();
     }
     /**
-     * Gets the drives property value. The drives property
+     * Gets the drives property value. The email addresses or user principal names of the users whose OneDrive drives are to be added as exclusion units to the protection policy.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class DriveExclusionUnitsBulkAdditionJob extends ExclusionUnitBulkAdditio
         writer.writeCollectionOfPrimitiveValues("drives", this.getDrives());
     }
     /**
-     * Sets the drives property value. The drives property
+     * Sets the drives property value. The email addresses or user principal names of the users whose OneDrive drives are to be added as exclusion units to the protection policy.
      * @param value Value to set for the drives property.
      */
     public void setDrives(@jakarta.annotation.Nullable final java.util.List<String> value) {

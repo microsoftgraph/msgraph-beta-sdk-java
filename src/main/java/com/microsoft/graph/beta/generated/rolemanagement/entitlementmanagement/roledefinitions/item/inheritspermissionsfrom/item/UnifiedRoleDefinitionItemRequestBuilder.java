@@ -2,7 +2,7 @@ package com.microsoft.graph.beta.rolemanagement.entitlementmanagement.roledefini
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.UnifiedRoleDefinition;
-import com.microsoft.graph.beta.rolemanagement.entitlementmanagement.roledefinitions.item.inheritspermissionsfrom.item.assignedprincipalswithtransitivedirectoryscopetypedirectoryscopetypedirectoryscopeiddirectoryscopeid.AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder;
+import com.microsoft.graph.beta.rolemanagement.entitlementmanagement.roledefinitions.item.inheritspermissionsfrom.item.assignedprincipalswithtransitivedirectoryscopetypedirec_e9d82f33.AssignedPrincipalsWithTransitivedirectoryScopeTypeDirec_c9177a9a;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -23,14 +23,14 @@ import java.util.Objects;
 public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the assignedPrincipals method.
-     * @return a {@link AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder}
+     * @return a {@link AssignedPrincipalsWithTransitivedirectoryScopeTypeDirec_c9177a9a}
      * @deprecated
      * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @Deprecated
     @jakarta.annotation.Nonnull
-    public AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder assignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeId() {
-        return new AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder(pathParameters, requestAdapter);
+    public AssignedPrincipalsWithTransitivedirectoryScopeTypeDirec_c9177a9a assignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeId() {
+        return new AssignedPrincipalsWithTransitivedirectoryScopeTypeDirec_c9177a9a(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link UnifiedRoleDefinitionItemRequestBuilder} and sets the default values.

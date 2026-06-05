@@ -8,7 +8,7 @@ import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernanceactivatewithscope.MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancecancelprocessing.MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancecreatenewversion.MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder;
-import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancepreviewtaskfailures.MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancepreviewtaskfailures.MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancepreviewworkflow.MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancerestore.MicrosoftGraphIdentityGovernanceRestoreRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.previewscope.PreviewScopeRequestBuilder;
@@ -103,11 +103,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the previewTaskFailures method.
-     * @return a {@link MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder}
+     * @return a {@link MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder microsoftGraphIdentityGovernancePreviewTaskFailures() {
-        return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef microsoftGraphIdentityGovernancePreviewTaskFailures() {
+        return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the previewWorkflow method.

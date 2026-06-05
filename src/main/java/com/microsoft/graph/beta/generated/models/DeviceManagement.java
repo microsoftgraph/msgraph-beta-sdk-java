@@ -10,6 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
+/**
+ * Singleton that acts as container for a collection of Resource Access entities.
+ */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeviceManagement extends Entity implements Parsable {
     /**
@@ -699,8 +702,8 @@ public class DeviceManagement extends Entity implements Parsable {
         deserializerMap.put("userExperienceAnalyticsAnomalySeverityOverview", (n) -> { this.setUserExperienceAnalyticsAnomalySeverityOverview(n.getObjectValue(UserExperienceAnalyticsAnomalySeverityOverview::createFromDiscriminatorValue)); });
         deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthApplicationPerformance::createFromDiscriminatorValue)); });
         deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersion::createFromDiscriminatorValue)); });
-        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails::createFromDiscriminatorValue)); });
-        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_ba5b7522::createFromDiscriminatorValue)); });
+        deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_2e6b881b::createFromDiscriminatorValue)); });
         deserializerMap.put("userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion", (n) -> { this.setUserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion::createFromDiscriminatorValue)); });
         deserializerMap.put("userExperienceAnalyticsAppHealthDeviceModelPerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthDeviceModelPerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDeviceModelPerformance::createFromDiscriminatorValue)); });
         deserializerMap.put("userExperienceAnalyticsAppHealthDevicePerformance", (n) -> { this.setUserExperienceAnalyticsAppHealthDevicePerformance(n.getCollectionOfObjectValues(UserExperienceAnalyticsAppHealthDevicePerformance::createFromDiscriminatorValue)); });
@@ -1320,18 +1323,18 @@ public class DeviceManagement extends Entity implements Parsable {
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
-     * @return a {@link java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails>}
+     * @return a {@link java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_ba5b7522>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
+    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_ba5b7522> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
         return this.backingStore.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails");
     }
     /**
      * Gets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
-     * @return a {@link java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId>}
+     * @return a {@link java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_2e6b881b>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
+    public java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_2e6b881b> getUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
         return this.backingStore.get("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId");
     }
     /**
@@ -2927,14 +2930,14 @@ public class DeviceManagement extends Entity implements Parsable {
      * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property value. User experience analytics appHealth Application Performance by App Version details
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property.
      */
-    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails> value) {
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_ba5b7522> value) {
         this.backingStore.set("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails", value);
     }
     /**
      * Sets the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property value. User experience analytics appHealth Application Performance by App Version Device Id
      * @param value Value to set for the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property.
      */
-    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId> value) {
+    public void setUserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId(@jakarta.annotation.Nullable final java.util.List<UserExperienceAnalyticsAppHealthAppPerformanceByAppVers_2e6b881b> value) {
         this.backingStore.set("userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId", value);
     }
     /**

@@ -72,9 +72,10 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("daysUntilForcedReboot", (n) -> { this.setDaysUntilForcedReboot(n.getIntegerValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("qualityUpdateCatalogItemId", (n) -> { this.setQualityUpdateCatalogItemId(n.getStringValue()); });
         deserializerMap.put("qualityUpdateRelease", (n) -> { this.setQualityUpdateRelease(n.getStringValue()); });
         return deserializerMap;
     }
@@ -85,6 +86,14 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
     @jakarta.annotation.Nullable
     public String getOdataType() {
         return this.backingStore.get("odataType");
+    }
+    /**
+     * Gets the qualityUpdateCatalogItemId property value. The unique identifier for the quality update catalog item targeted by the expedite.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getQualityUpdateCatalogItemId() {
+        return this.backingStore.get("qualityUpdateCatalogItemId");
     }
     /**
      * Gets the qualityUpdateRelease property value. The release date to identify a quality update.
@@ -102,6 +111,7 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
         Objects.requireNonNull(writer);
         writer.writeIntegerValue("daysUntilForcedReboot", this.getDaysUntilForcedReboot());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeStringValue("qualityUpdateCatalogItemId", this.getQualityUpdateCatalogItemId());
         writer.writeStringValue("qualityUpdateRelease", this.getQualityUpdateRelease());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -133,6 +143,13 @@ public class ExpeditedWindowsQualityUpdateSettings implements AdditionalDataHold
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the qualityUpdateCatalogItemId property value. The unique identifier for the quality update catalog item targeted by the expedite.
+     * @param value Value to set for the qualityUpdateCatalogItemId property.
+     */
+    public void setQualityUpdateCatalogItemId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("qualityUpdateCatalogItemId", value);
     }
     /**
      * Sets the qualityUpdateRelease property value. The release date to identify a quality update.

@@ -1,0 +1,65 @@
+package com.microsoft.graph.beta.models;
+
+import com.microsoft.kiota.serialization.Parsable;
+import com.microsoft.kiota.serialization.ParseNode;
+import com.microsoft.kiota.serialization.SerializationWriter;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+/**
+ * Integer Setting Value Constant Default Template Original name: DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate
+ */
+@jakarta.annotation.Generated("com.microsoft.kiota")
+public class DeviceManagementConfigurationIntegerSettingValueConstan_9c422b3e extends DeviceManagementConfigurationIntegerSettingValueDefaultTemplate implements Parsable {
+    /**
+     * Instantiates a new {@link DeviceManagementConfigurationIntegerSettingValueConstan_9c422b3e} and sets the default values.
+     */
+    public DeviceManagementConfigurationIntegerSettingValueConstan_9c422b3e() {
+        super();
+        this.setOdataType("#microsoft.graph.deviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate");
+    }
+    /**
+     * Creates a new instance of the appropriate class based on discriminator value
+     * @param parseNode The parse node to use to read the discriminator value and create the object
+     * @return a {@link DeviceManagementConfigurationIntegerSettingValueConstan_9c422b3e}
+     */
+    @jakarta.annotation.Nonnull
+    public static DeviceManagementConfigurationIntegerSettingValueConstan_9c422b3e createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
+        Objects.requireNonNull(parseNode);
+        return new DeviceManagementConfigurationIntegerSettingValueConstan_9c422b3e();
+    }
+    /**
+     * Gets the constantValue property value. Default Constant Value. Valid values -2147483648 to 2147483647
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getConstantValue() {
+        return this.backingStore.get("constantValue");
+    }
+    /**
+     * The deserialization information for the current model
+     * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
+     */
+    @jakarta.annotation.Nonnull
+    public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("constantValue", (n) -> { this.setConstantValue(n.getIntegerValue()); });
+        return deserializerMap;
+    }
+    /**
+     * Serializes information the current object
+     * @param writer Serialization writer to use to serialize this model
+     */
+    public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
+        Objects.requireNonNull(writer);
+        super.serialize(writer);
+        writer.writeIntegerValue("constantValue", this.getConstantValue());
+    }
+    /**
+     * Sets the constantValue property value. Default Constant Value. Valid values -2147483648 to 2147483647
+     * @param value Value to set for the constantValue property.
+     */
+    public void setConstantValue(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("constantValue", value);
+    }
+}

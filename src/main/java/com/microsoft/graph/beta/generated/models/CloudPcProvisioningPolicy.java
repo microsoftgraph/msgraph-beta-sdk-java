@@ -43,7 +43,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
-     * Gets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. Supports $select.
+     * Gets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. When you create or update a provisioning policy with autopatch, you must use a delegated token and the signed-in user must have the Intune Administrator role. Supports $select.
      * @return a {@link CloudPcProvisioningPolicyAutopatch}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("autopatch");
     }
     /**
-     * Gets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. Supports $select.
+     * Gets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. When you create or update a provisioning policy with autopilotConfiguration, use the required Microsoft Graph permissions listed on the corresponding create and update API pages. In delegated scenarios, the signed-in user must also have the Microsoft.Intune/DeviceConfigurations/Assign Intune RBAC permission. Supports $select.
      * @return a {@link CloudPcAutopilotConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("provisioningType");
     }
     /**
-     * Gets the scopeIds property value. The scopeIds property
+     * Gets the scopeIds property value. The list of scope tag IDs for this resource. Read-only.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -328,14 +328,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.backingStore.set("assignments", value);
     }
     /**
-     * Sets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. Supports $select.
+     * Sets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. When you create or update a provisioning policy with autopatch, you must use a delegated token and the signed-in user must have the Intune Administrator role. Supports $select.
      * @param value Value to set for the autopatch property.
      */
     public void setAutopatch(@jakarta.annotation.Nullable final CloudPcProvisioningPolicyAutopatch value) {
         this.backingStore.set("autopatch", value);
     }
     /**
-     * Sets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. Supports $select.
+     * Sets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. When you create or update a provisioning policy with autopilotConfiguration, use the required Microsoft Graph permissions listed on the corresponding create and update API pages. In delegated scenarios, the signed-in user must also have the Microsoft.Intune/DeviceConfigurations/Assign Intune RBAC permission. Supports $select.
      * @param value Value to set for the autopilotConfiguration property.
      */
     public void setAutopilotConfiguration(@jakarta.annotation.Nullable final CloudPcAutopilotConfiguration value) {
@@ -468,7 +468,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.backingStore.set("provisioningType", value);
     }
     /**
-     * Sets the scopeIds property value. The scopeIds property
+     * Sets the scopeIds property value. The list of scope tag IDs for this resource. Read-only.
      * @param value Value to set for the scopeIds property.
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

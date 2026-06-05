@@ -3,7 +3,7 @@ package com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.i
 import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.assign.AssignRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.assignments.AssignmentsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.bulkaction.BulkActionRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.retrievewindowsqualityupdatecatalogitemdetailswithids.RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.item.retrievewindowsqualityupdatecatalogitemdetailswithids.RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRe_d92dd7ca;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.WindowsQualityUpdatePolicy;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -132,12 +132,12 @@ public class WindowsQualityUpdatePolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to call the retrieveWindowsQualityUpdateCatalogItemDetails method.
      * @param ids Usage: ids={ids}
-     * @return a {@link RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRequestBuilder}
+     * @return a {@link RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRe_d92dd7ca}
      */
     @jakarta.annotation.Nonnull
-    public RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRequestBuilder retrieveWindowsQualityUpdateCatalogItemDetailsWithIds(@jakarta.annotation.Nonnull final String ids) {
+    public RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRe_d92dd7ca retrieveWindowsQualityUpdateCatalogItemDetailsWithIds(@jakarta.annotation.Nonnull final String ids) {
         Objects.requireNonNull(ids);
-        return new RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRequestBuilder(pathParameters, requestAdapter, ids);
+        return new RetrieveWindowsQualityUpdateCatalogItemDetailsWithIdsRe_d92dd7ca(pathParameters, requestAdapter, ids);
     }
     /**
      * Delete navigation property windowsQualityUpdatePolicies for deviceManagement

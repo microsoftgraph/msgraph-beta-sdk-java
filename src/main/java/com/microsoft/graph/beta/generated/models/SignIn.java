@@ -76,7 +76,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("appOwnerTenantId");
     }
     /**
-     * Gets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the app token was bound to the device.
+     * Gets the appTokenProtectionStatus property value. Deprecated. Use tokenProtectionStatusDetails instead. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the app token was bound to the device.
      * @return a {@link TokenProtectionStatus}
      */
     @jakarta.annotation.Nullable
@@ -188,6 +188,14 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("clientCredentialType");
     }
     /**
+     * Gets the clientSessionId property value. The clientSessionId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getClientSessionId() {
+        return this.backingStore.get("clientSessionId");
+    }
+    /**
      * Gets the conditionalAccessAudiences property value. A list that indicates the audience that Conditional Access evaluated during a sign-in event.  Supports $filter (eq).
      * @return a {@link java.util.List<String>}
      */
@@ -270,6 +278,7 @@ public class SignIn extends Entity implements Parsable {
         deserializerMap.put("azureResourceId", (n) -> { this.setAzureResourceId(n.getStringValue()); });
         deserializerMap.put("clientAppUsed", (n) -> { this.setClientAppUsed(n.getStringValue()); });
         deserializerMap.put("clientCredentialType", (n) -> { this.setClientCredentialType(n.getEnumValue(ClientCredentialType::forValue)); });
+        deserializerMap.put("clientSessionId", (n) -> { this.setClientSessionId(n.getStringValue()); });
         deserializerMap.put("conditionalAccessAudiences", (n) -> { this.setConditionalAccessAudiences(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("conditionalAccessStatus", (n) -> { this.setConditionalAccessStatus(n.getEnumValue(ConditionalAccessStatus::forValue)); });
         deserializerMap.put("correlationId", (n) -> { this.setCorrelationId(n.getStringValue()); });
@@ -624,7 +633,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("signInIdentifierType");
     }
     /**
-     * Gets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
+     * Gets the signInTokenProtectionStatus property value. Deprecated. Use tokenProtectionStatusDetails instead. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the sign-in token was bound to the device. The possible values are: none, bound, unbound, unknownFutureValue.
      * @return a {@link TokenProtectionStatus}
      */
     @jakarta.annotation.Nullable
@@ -656,7 +665,7 @@ public class SignIn extends Entity implements Parsable {
         return this.backingStore.get("tokenIssuerType");
     }
     /**
-     * Gets the tokenProtectionStatusDetails property value. The tokenProtectionStatusDetails property
+     * Gets the tokenProtectionStatusDetails property value. The status of the token protection for a request in the sign-in logs. For more information, see Conditional Access: Token Protection.
      * @return a {@link TokenProtectionStatusDetails}
      */
     @jakarta.annotation.Nullable
@@ -738,6 +747,7 @@ public class SignIn extends Entity implements Parsable {
         writer.writeStringValue("azureResourceId", this.getAzureResourceId());
         writer.writeStringValue("clientAppUsed", this.getClientAppUsed());
         writer.writeEnumValue("clientCredentialType", this.getClientCredentialType());
+        writer.writeStringValue("clientSessionId", this.getClientSessionId());
         writer.writeCollectionOfPrimitiveValues("conditionalAccessAudiences", this.getConditionalAccessAudiences());
         writer.writeEnumValue("conditionalAccessStatus", this.getConditionalAccessStatus());
         writer.writeStringValue("correlationId", this.getCorrelationId());
@@ -837,7 +847,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("appOwnerTenantId", value);
     }
     /**
-     * Sets the appTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the app token was bound to the device.
+     * Sets the appTokenProtectionStatus property value. Deprecated. Use tokenProtectionStatusDetails instead. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the app token was bound to the device.
      * @param value Value to set for the appTokenProtectionStatus property.
      */
     public void setAppTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {
@@ -933,6 +943,13 @@ public class SignIn extends Entity implements Parsable {
      */
     public void setClientCredentialType(@jakarta.annotation.Nullable final ClientCredentialType value) {
         this.backingStore.set("clientCredentialType", value);
+    }
+    /**
+     * Sets the clientSessionId property value. The clientSessionId property
+     * @param value Value to set for the clientSessionId property.
+     */
+    public void setClientSessionId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("clientSessionId", value);
     }
     /**
      * Sets the conditionalAccessAudiences property value. A list that indicates the audience that Conditional Access evaluated during a sign-in event.  Supports $filter (eq).
@@ -1243,7 +1260,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("signInIdentifierType", value);
     }
     /**
-     * Sets the signInTokenProtectionStatus property value. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the signin token was bound to the device or not. The possible values are: none, bound, unbound, unknownFutureValue.
+     * Sets the signInTokenProtectionStatus property value. Deprecated. Use tokenProtectionStatusDetails instead. Token protection creates a cryptographically secure tie between the token and the device it&apos;s issued to. This field indicates whether the sign-in token was bound to the device. The possible values are: none, bound, unbound, unknownFutureValue.
      * @param value Value to set for the signInTokenProtectionStatus property.
      */
     public void setSignInTokenProtectionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {
@@ -1271,7 +1288,7 @@ public class SignIn extends Entity implements Parsable {
         this.backingStore.set("tokenIssuerType", value);
     }
     /**
-     * Sets the tokenProtectionStatusDetails property value. The tokenProtectionStatusDetails property
+     * Sets the tokenProtectionStatusDetails property value. The status of the token protection for a request in the sign-in logs. For more information, see Conditional Access: Token Protection.
      * @param value Value to set for the tokenProtectionStatusDetails property.
      */
     public void setTokenProtectionStatusDetails(@jakarta.annotation.Nullable final TokenProtectionStatusDetails value) {

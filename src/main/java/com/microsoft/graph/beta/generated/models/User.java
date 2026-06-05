@@ -236,7 +236,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("cloudLicensing");
     }
     /**
-     * Gets the cloudPcPools property value. The cloudPcPools property
+     * Gets the cloudPcPools property value. The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @return a {@link java.util.List<CloudPcPool>}
      */
     @jakarta.annotation.Nullable
@@ -721,7 +721,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("identities");
     }
     /**
-     * Gets the identityGovernance property value. The identityGovernance property
+     * Gets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. Nullable. Returned only on $select. Supports $expand.
      * @return a {@link IdentityGovernanceUserSettings}
      */
     @jakarta.annotation.Nullable
@@ -809,7 +809,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("isManagementRestricted");
     }
     /**
-     * Gets the isResourceAccount property value. Do not use  reserved for future use.
+     * Gets the isResourceAccount property value. Do not use. Reserved for future use.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1868,7 +1868,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("cloudLicensing", value);
     }
     /**
-     * Sets the cloudPcPools property value. The cloudPcPools property
+     * Sets the cloudPcPools property value. The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @param value Value to set for the cloudPcPools property.
      */
     public void setCloudPcPools(@jakarta.annotation.Nullable final java.util.List<CloudPcPool> value) {
@@ -2141,7 +2141,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("identities", value);
     }
     /**
-     * Sets the identityGovernance property value. The identityGovernance property
+     * Sets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. Nullable. Returned only on $select. Supports $expand.
      * @param value Value to set for the identityGovernance property.
      */
     public void setIdentityGovernance(@jakarta.annotation.Nullable final IdentityGovernanceUserSettings value) {
@@ -2218,7 +2218,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("isManagementRestricted", value);
     }
     /**
-     * Sets the isResourceAccount property value. Do not use  reserved for future use.
+     * Sets the isResourceAccount property value. Do not use. Reserved for future use.
      * @param value Value to set for the isResourceAccount property.
      */
     public void setIsResourceAccount(@jakarta.annotation.Nullable final Boolean value) {

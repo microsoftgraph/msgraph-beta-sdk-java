@@ -20,6 +20,7 @@ import com.microsoft.graph.beta.security.incidenttasks.IncidentTasksRequestBuild
 import com.microsoft.graph.beta.security.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.labels.LabelsRequestBuilder;
+import com.microsoft.graph.beta.security.microsoftgraphsecuritygethuntingschema.MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder;
 import com.microsoft.graph.beta.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.beta.security.partner.PartnerRequestBuilder;
 import com.microsoft.graph.beta.security.providertenantsettings.ProviderTenantSettingsRequestBuilder;
@@ -197,6 +198,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public LabelsRequestBuilder labels() {
         return new LabelsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the getHuntingSchema method.
+     * @return a {@link MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder microsoftGraphSecurityGetHuntingSchema() {
+        return new MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the runHuntingQuery method.

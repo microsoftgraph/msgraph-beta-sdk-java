@@ -93,21 +93,23 @@ public class AlertsV2RequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, AlertCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create new navigation property to alerts_v2 for security
+     * Create a manual security alert in Microsoft 365 Defender with specified entities and metadata. When the alert is created, the backend automatically creates a new incident to contain the alert, or links the alert to an existing incident if linkToIncident is specified.
      * @param body The request body
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-alert-post-manualalert?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Alert post(@jakarta.annotation.Nonnull final Alert body) {
         return post(body, null);
     }
     /**
-     * Create new navigation property to alerts_v2 for security
+     * Create a manual security alert in Microsoft 365 Defender with specified entities and metadata. When the alert is created, the backend automatically creates a new incident to contain the alert, or links the alert to an existing incident if linkToIncident is specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Alert}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-alert-post-manualalert?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public Alert post(@jakarta.annotation.Nonnull final Alert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -138,7 +140,7 @@ public class AlertsV2RequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create new navigation property to alerts_v2 for security
+     * Create a manual security alert in Microsoft 365 Defender with specified entities and metadata. When the alert is created, the backend automatically creates a new incident to contain the alert, or links the alert to an existing incident if linkToIncident is specified.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -147,7 +149,7 @@ public class AlertsV2RequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create new navigation property to alerts_v2 for security
+     * Create a manual security alert in Microsoft 365 Defender with specified entities and metadata. When the alert is created, the backend automatically creates a new incident to contain the alert, or links the alert to an existing incident if linkToIncident is specified.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

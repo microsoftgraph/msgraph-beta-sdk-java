@@ -40,7 +40,7 @@ public class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Pa
         return deserializerMap;
     }
     /**
-     * Gets the mailboxExclusionUnits property value. The mailboxExclusionUnits property
+     * Gets the mailboxExclusionUnits property value. The mailbox exclusion units associated with the Exchange protection policy.
      * @return a {@link java.util.List<MailboxExclusionUnit>}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Pa
         return this.backingStore.get("mailboxExclusionUnits");
     }
     /**
-     * Gets the mailboxExclusionUnitsBulkAdditionJobs property value. The mailboxExclusionUnitsBulkAdditionJobs property
+     * Gets the mailboxExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for mailbox exclusion units associated with the Exchange protection policy.
      * @return a {@link java.util.List<MailboxExclusionUnitsBulkAdditionJob>}
      */
     @jakarta.annotation.Nullable
@@ -93,14 +93,14 @@ public class ExchangeProtectionPolicy extends ProtectionPolicyBase implements Pa
         writer.writeCollectionOfObjectValues("mailboxProtectionUnitsBulkAdditionJobs", this.getMailboxProtectionUnitsBulkAdditionJobs());
     }
     /**
-     * Sets the mailboxExclusionUnits property value. The mailboxExclusionUnits property
+     * Sets the mailboxExclusionUnits property value. The mailbox exclusion units associated with the Exchange protection policy.
      * @param value Value to set for the mailboxExclusionUnits property.
      */
     public void setMailboxExclusionUnits(@jakarta.annotation.Nullable final java.util.List<MailboxExclusionUnit> value) {
         this.backingStore.set("mailboxExclusionUnits", value);
     }
     /**
-     * Sets the mailboxExclusionUnitsBulkAdditionJobs property value. The mailboxExclusionUnitsBulkAdditionJobs property
+     * Sets the mailboxExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for mailbox exclusion units associated with the Exchange protection policy.
      * @param value Value to set for the mailboxExclusionUnitsBulkAdditionJobs property.
      */
     public void setMailboxExclusionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<MailboxExclusionUnitsBulkAdditionJob> value) {

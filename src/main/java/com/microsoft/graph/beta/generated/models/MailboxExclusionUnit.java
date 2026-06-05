@@ -26,7 +26,7 @@ public class MailboxExclusionUnit extends ExclusionUnitBase implements Parsable 
         return new MailboxExclusionUnit();
     }
     /**
-     * Gets the directoryObjectId property value. The directoryObjectId property
+     * Gets the directoryObjectId property value. The unique identifier of the directory object (user) associated with the mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class MailboxExclusionUnit extends ExclusionUnitBase implements Parsable 
         return this.backingStore.get("directoryObjectId");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The display name of the mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class MailboxExclusionUnit extends ExclusionUnitBase implements Parsable 
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the email property value. The email property
+     * Gets the email property value. The email address of the mailbox.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -81,21 +81,21 @@ public class MailboxExclusionUnit extends ExclusionUnitBase implements Parsable 
         writer.writeEnumValue("mailboxType", this.getMailboxType());
     }
     /**
-     * Sets the directoryObjectId property value. The directoryObjectId property
+     * Sets the directoryObjectId property value. The unique identifier of the directory object (user) associated with the mailbox.
      * @param value Value to set for the directoryObjectId property.
      */
     public void setDirectoryObjectId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("directoryObjectId", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The display name of the mailbox.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the email property value. The email property
+     * Sets the email property value. The email address of the mailbox.
      * @param value Value to set for the email property.
      */
     public void setEmail(@jakarta.annotation.Nullable final String value) {

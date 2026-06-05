@@ -33,7 +33,7 @@ public class OwnerlessGroupPolicy extends Entity implements Parsable {
         return this.backingStore.get("emailInfo");
     }
     /**
-     * Gets the enabledGroupIds property value. The collection of IDs for groups to which the policy is enabled.
+     * Gets the enabledGroupIds property value. The collection of IDs for groups to which the policy is enabled. If empty, the policy is enabled for all groups in the tenant.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class OwnerlessGroupPolicy extends Entity implements Parsable {
         this.backingStore.set("emailInfo", value);
     }
     /**
-     * Sets the enabledGroupIds property value. The collection of IDs for groups to which the policy is enabled.
+     * Sets the enabledGroupIds property value. The collection of IDs for groups to which the policy is enabled. If empty, the policy is enabled for all groups in the tenant.
      * @param value Value to set for the enabledGroupIds property.
      */
     public void setEnabledGroupIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

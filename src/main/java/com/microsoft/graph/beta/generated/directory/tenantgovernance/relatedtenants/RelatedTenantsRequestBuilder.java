@@ -3,7 +3,7 @@ package com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants;
 import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.count.CountRequestBuilder;
 import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.item.RelatedTenantItemRequestBuilder;
 import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.microsoftgraphtenantgovernanceservicesrefresh.MicrosoftGraphTenantGovernanceServicesRefreshRequestBuilder;
-import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.microsoftgraphtenantgovernanceservicesrefreshstatus.MicrosoftGraphTenantGovernanceServicesRefreshStatusRequestBuilder;
+import com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.microsoftgraphtenantgovernanceservicesrefreshstatus.MicrosoftGraphTenantGovernanceServicesRefreshStatusRequ_f386b52a;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.tenantgovernanceservices.RelatedTenant;
 import com.microsoft.graph.beta.models.tenantgovernanceservices.RelatedTenantCollectionResponse;
@@ -43,11 +43,11 @@ public class RelatedTenantsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the refreshStatus method.
-     * @return a {@link MicrosoftGraphTenantGovernanceServicesRefreshStatusRequestBuilder}
+     * @return a {@link MicrosoftGraphTenantGovernanceServicesRefreshStatusRequ_f386b52a}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphTenantGovernanceServicesRefreshStatusRequestBuilder microsoftGraphTenantGovernanceServicesRefreshStatus() {
-        return new MicrosoftGraphTenantGovernanceServicesRefreshStatusRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphTenantGovernanceServicesRefreshStatusRequ_f386b52a microsoftGraphTenantGovernanceServicesRefreshStatus() {
+        return new MicrosoftGraphTenantGovernanceServicesRefreshStatusRequ_f386b52a(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the relatedTenants property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.

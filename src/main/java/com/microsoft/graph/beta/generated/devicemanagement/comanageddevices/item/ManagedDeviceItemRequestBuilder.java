@@ -33,7 +33,7 @@ import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.rebootnow
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.recoverpasscode.RecoverPasscodeRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.reenable.ReenableRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.remotelock.RemoteLockRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.removedevicefirmwareconfigurationinterfacemanagement.RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.removedevicefirmwareconfigurationinterfacemanagement.RemoveDeviceFirmwareConfigurationInterfaceManagementReq_abf9bd5f;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.restoremanagedhomescreen.RestoreManagedHomeScreenRequestBuilder;
@@ -345,11 +345,11 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the removeDeviceFirmwareConfigurationInterfaceManagement method.
-     * @return a {@link RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder}
+     * @return a {@link RemoveDeviceFirmwareConfigurationInterfaceManagementReq_abf9bd5f}
      */
     @jakarta.annotation.Nonnull
-    public RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder removeDeviceFirmwareConfigurationInterfaceManagement() {
-        return new RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder(pathParameters, requestAdapter);
+    public RemoveDeviceFirmwareConfigurationInterfaceManagementReq_abf9bd5f removeDeviceFirmwareConfigurationInterfaceManagement() {
+        return new RemoveDeviceFirmwareConfigurationInterfaceManagementReq_abf9bd5f(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the requestRemoteAssistance method.

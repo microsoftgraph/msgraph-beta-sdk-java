@@ -2,7 +2,7 @@ package com.microsoft.graph.beta.security.datadiscovery.cloudappdiscovery.upload
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.CloudAppDiscoveryReport;
-import com.microsoft.graph.beta.security.datadiscovery.cloudappdiscovery.uploadedstreams.item.microsoftgraphsecurityaggregatedappsdetailswithperiod.MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.security.datadiscovery.cloudappdiscovery.uploadedstreams.item.microsoftgraphsecurityaggregatedappsdetailswithperiod.MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRe_e0d636f0;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -81,12 +81,12 @@ public class CloudAppDiscoveryReportItemRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to call the aggregatedAppsDetails method.
      * @param period Usage: period={period}
-     * @return a {@link MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRequestBuilder}
+     * @return a {@link MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRe_e0d636f0}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRequestBuilder microsoftGraphSecurityAggregatedAppsDetailsWithPeriod(@jakarta.annotation.Nonnull final PeriodAndDuration period) {
+    public MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRe_e0d636f0 microsoftGraphSecurityAggregatedAppsDetailsWithPeriod(@jakarta.annotation.Nonnull final PeriodAndDuration period) {
         Objects.requireNonNull(period);
-        return new MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        return new MicrosoftGraphSecurityAggregatedAppsDetailsWithPeriodRe_e0d636f0(pathParameters, requestAdapter, period);
     }
     /**
      * Update the navigation property uploadedStreams in security
