@@ -1213,7 +1213,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
         deserializerMap.put("localSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts", (n) -> { this.setLocalSecurityOptionsDoNotAllowAnonymousEnumerationOfSAMAccounts(n.getBooleanValue()); });
         deserializerMap.put("localSecurityOptionsDoNotRequireCtrlAltDel", (n) -> { this.setLocalSecurityOptionsDoNotRequireCtrlAltDel(n.getBooleanValue()); });
         deserializerMap.put("localSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange", (n) -> { this.setLocalSecurityOptionsDoNotStoreLANManagerHashValueOnNextPasswordChange(n.getBooleanValue()); });
-        deserializerMap.put("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", (n) -> { this.setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(n.getEnumValue(LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType::forValue)); });
+        deserializerMap.put("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", (n) -> { this.setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(n.getEnumValue(LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllow_b7ae6724::forValue)); });
         deserializerMap.put("localSecurityOptionsGuestAccountName", (n) -> { this.setLocalSecurityOptionsGuestAccountName(n.getStringValue()); });
         deserializerMap.put("localSecurityOptionsHideLastSignedInUser", (n) -> { this.setLocalSecurityOptionsHideLastSignedInUser(n.getBooleanValue()); });
         deserializerMap.put("localSecurityOptionsHideUsernameAtSignIn", (n) -> { this.setLocalSecurityOptionsHideUsernameAtSignIn(n.getBooleanValue()); });
@@ -1618,10 +1618,10 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
     }
     /**
      * Gets the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser property value. Possible values for LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
-     * @return a {@link LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType}
+     * @return a {@link LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllow_b7ae6724}
      */
     @jakarta.annotation.Nullable
-    public LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType getLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser() {
+    public LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllow_b7ae6724 getLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser() {
         return this.backingStore.get("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser");
     }
     /**
@@ -3493,7 +3493,7 @@ public class Windows10EndpointProtectionConfiguration extends DeviceConfiguratio
      * Sets the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser property value. Possible values for LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser
      * @param value Value to set for the localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser property.
      */
-    public void setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(@jakarta.annotation.Nullable final LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUserType value) {
+    public void setLocalSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser(@jakarta.annotation.Nullable final LocalSecurityOptionsFormatAndEjectOfRemovableMediaAllow_b7ae6724 value) {
         this.backingStore.set("localSecurityOptionsFormatAndEjectOfRemovableMediaAllowedUser", value);
     }
     /**

@@ -39,11 +39,11 @@ public class DeviceManagementConfigurationSettingInstanceTemplate implements Add
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate": return new DeviceManagementConfigurationChoiceSettingCollectionInstanceTemplate();
+                case "#microsoft.graph.deviceManagementConfigurationChoiceSettingCollectionInstanceTemplate": return new DeviceManagementConfigurationChoiceSettingCollectionIns_548e14e3();
                 case "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstanceTemplate": return new DeviceManagementConfigurationChoiceSettingInstanceTemplate();
-                case "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstanceTemplate": return new DeviceManagementConfigurationGroupSettingCollectionInstanceTemplate();
+                case "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstanceTemplate": return new DeviceManagementConfigurationGroupSettingCollectionInst_d212f703();
                 case "#microsoft.graph.deviceManagementConfigurationGroupSettingInstanceTemplate": return new DeviceManagementConfigurationGroupSettingInstanceTemplate();
-                case "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstanceTemplate": return new DeviceManagementConfigurationSimpleSettingCollectionInstanceTemplate();
+                case "#microsoft.graph.deviceManagementConfigurationSimpleSettingCollectionInstanceTemplate": return new DeviceManagementConfigurationSimpleSettingCollectionIns_1c50c385();
                 case "#microsoft.graph.deviceManagementConfigurationSimpleSettingInstanceTemplate": return new DeviceManagementConfigurationSimpleSettingInstanceTemplate();
             }
         }

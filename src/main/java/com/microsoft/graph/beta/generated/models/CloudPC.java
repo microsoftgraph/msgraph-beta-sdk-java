@@ -42,7 +42,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("allotmentDisplayName");
     }
     /**
-     * Gets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read Only.
+     * Gets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read-only.
      * @return a {@link CloudPcConnectionSetting}
      */
     @jakarta.annotation.Nullable
@@ -117,6 +117,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("gracePeriodEndDateTime", (n) -> { this.setGracePeriodEndDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("groupDetail", (n) -> { this.setGroupDetail(n.getObjectValue(CloudPcEntraGroupDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("imageDisplayName", (n) -> { this.setImageDisplayName(n.getStringValue()); });
+        deserializerMap.put("isDisasterRecoveryActive", (n) -> { this.setIsDisasterRecoveryActive(n.getBooleanValue()); });
         deserializerMap.put("lastLoginResult", (n) -> { this.setLastLoginResult(n.getObjectValue(CloudPcLoginResult::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("lastRemoteActionResult", (n) -> { this.setLastRemoteActionResult(n.getObjectValue(CloudPcRemoteActionResult::createFromDiscriminatorValue)); });
@@ -176,6 +177,14 @@ public class CloudPC extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getImageDisplayName() {
         return this.backingStore.get("imageDisplayName");
+    }
+    /**
+     * Gets the isDisasterRecoveryActive property value. The isDisasterRecoveryActive property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDisasterRecoveryActive() {
+        return this.backingStore.get("isDisasterRecoveryActive");
     }
     /**
      * Gets the lastLoginResult property value. The last login result of the Cloud PC. For example, { &apos;time&apos;: &apos;2014-01-01T00:00:00Z&apos;}.
@@ -290,7 +299,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisioningType");
     }
     /**
-     * Gets the scopeIds property value. The scopeIds property
+     * Gets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it&apos;s the Intune scope tag ID. Read-only.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -405,6 +414,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("gracePeriodEndDateTime", this.getGracePeriodEndDateTime());
         writer.writeObjectValue("groupDetail", this.getGroupDetail());
         writer.writeStringValue("imageDisplayName", this.getImageDisplayName());
+        writer.writeBooleanValue("isDisasterRecoveryActive", this.getIsDisasterRecoveryActive());
         writer.writeObjectValue("lastLoginResult", this.getLastLoginResult());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeObjectValue("lastRemoteActionResult", this.getLastRemoteActionResult());
@@ -447,7 +457,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("allotmentDisplayName", value);
     }
     /**
-     * Sets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read Only.
+     * Sets the connectionSetting property value. The connection setting of the Cloud PC. Possible values: enableSingleSignOn. Read-only.
      * @param value Value to set for the connectionSetting property.
      */
     public void setConnectionSetting(@jakarta.annotation.Nullable final CloudPcConnectionSetting value) {
@@ -522,6 +532,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setImageDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("imageDisplayName", value);
+    }
+    /**
+     * Sets the isDisasterRecoveryActive property value. The isDisasterRecoveryActive property
+     * @param value Value to set for the isDisasterRecoveryActive property.
+     */
+    public void setIsDisasterRecoveryActive(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isDisasterRecoveryActive", value);
     }
     /**
      * Sets the lastLoginResult property value. The last login result of the Cloud PC. For example, { &apos;time&apos;: &apos;2014-01-01T00:00:00Z&apos;}.
@@ -622,7 +639,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("provisioningType", value);
     }
     /**
-     * Sets the scopeIds property value. The scopeIds property
+     * Sets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it&apos;s the Intune scope tag ID. Read-only.
      * @param value Value to set for the scopeIds property.
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

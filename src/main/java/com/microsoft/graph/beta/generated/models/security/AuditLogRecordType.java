@@ -451,8 +451,34 @@ public enum AuditLogRecordType implements ValuedEnum {
     TeamsEvalDataHubPermissionChange("TeamsEvalDataHubPermissionChange"),
     TeamsEvalDataHubAdminOperation("TeamsEvalDataHubAdminOperation"),
     VivaGlintOrganizationalData("VivaGlintOrganizationalData"),
-    ReportSubmission("ReportSubmission"),
-    ReportSubmissionResultDetail("ReportSubmissionResultDetail"),
+    AlertSubmission("AlertSubmission"),
+    AlertSubmissionResultDetail("AlertSubmissionResultDetail"),
+    ComplianceSitGradingSharePoint("ComplianceSitGradingSharePoint"),
+    CompliancePolicyGradingSharePoint("CompliancePolicyGradingSharePoint"),
+    AzureAISearchAudit("AzureAISearchAudit"),
+    P4AIRiskScoreRecord("P4AIRiskScoreRecord"),
+    DragonCopilotAdmin("DragonCopilotAdmin"),
+    AISpanOutputs("AISpanOutputs"),
+    EopSubmissionFeedEntity("EopSubmissionFeedEntity"),
+    SonarFileDetonationEntity("SonarFileDetonationEntity"),
+    SonarSubmissionEntity("SonarSubmissionEntity"),
+    SonarUrlDetonationEntity("SonarUrlDetonationEntity"),
+    SubmissionEntity("SubmissionEntity"),
+    SonarDetonationEntity("SonarDetonationEntity"),
+    MicrosoftTeamsUserConcern("MicrosoftTeamsUserConcern"),
+    VivaGlintAgenticCampaign("VivaGlintAgenticCampaign"),
+    MSPVectorSearchContentMetadata("MSPVectorSearchContentMetadata"),
+    FabricPolicy("FabricPolicy"),
+    SecurityCopilotAgentIdentityManagement("SecurityCopilotAgentIdentityManagement"),
+    CopilotSessionSharing("CopilotSessionSharing"),
+    DragonCopilotAccess("DragonCopilotAccess"),
+    DragonCopilotClinicalData("DragonCopilotClinicalData"),
+    DragonCopilotSession("DragonCopilotSession"),
+    MosAgentInfoRecordV2("MosAgentInfoRecordV2"),
+    SecurityDevelopmentLifecycleAILog("SecurityDevelopmentLifecycleAILog"),
+    MDASH("MDASH"),
+    DefenderSecurityForAIConfiguration("DefenderSecurityForAIConfiguration"),
+    SparkCoreCustomLivePool("SparkCoreCustomLivePool"),
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     AuditLogRecordType(final String value) {
@@ -907,8 +933,34 @@ public enum AuditLogRecordType implements ValuedEnum {
             case "TeamsEvalDataHubPermissionChange": return TeamsEvalDataHubPermissionChange;
             case "TeamsEvalDataHubAdminOperation": return TeamsEvalDataHubAdminOperation;
             case "VivaGlintOrganizationalData": return VivaGlintOrganizationalData;
-            case "ReportSubmission": return ReportSubmission;
-            case "ReportSubmissionResultDetail": return ReportSubmissionResultDetail;
+            case "AlertSubmission": return AlertSubmission;
+            case "AlertSubmissionResultDetail": return AlertSubmissionResultDetail;
+            case "ComplianceSitGradingSharePoint": return ComplianceSitGradingSharePoint;
+            case "CompliancePolicyGradingSharePoint": return CompliancePolicyGradingSharePoint;
+            case "AzureAISearchAudit": return AzureAISearchAudit;
+            case "P4AIRiskScoreRecord": return P4AIRiskScoreRecord;
+            case "DragonCopilotAdmin": return DragonCopilotAdmin;
+            case "AISpanOutputs": return AISpanOutputs;
+            case "EopSubmissionFeedEntity": return EopSubmissionFeedEntity;
+            case "SonarFileDetonationEntity": return SonarFileDetonationEntity;
+            case "SonarSubmissionEntity": return SonarSubmissionEntity;
+            case "SonarUrlDetonationEntity": return SonarUrlDetonationEntity;
+            case "SubmissionEntity": return SubmissionEntity;
+            case "SonarDetonationEntity": return SonarDetonationEntity;
+            case "MicrosoftTeamsUserConcern": return MicrosoftTeamsUserConcern;
+            case "VivaGlintAgenticCampaign": return VivaGlintAgenticCampaign;
+            case "MSPVectorSearchContentMetadata": return MSPVectorSearchContentMetadata;
+            case "FabricPolicy": return FabricPolicy;
+            case "SecurityCopilotAgentIdentityManagement": return SecurityCopilotAgentIdentityManagement;
+            case "CopilotSessionSharing": return CopilotSessionSharing;
+            case "DragonCopilotAccess": return DragonCopilotAccess;
+            case "DragonCopilotClinicalData": return DragonCopilotClinicalData;
+            case "DragonCopilotSession": return DragonCopilotSession;
+            case "MosAgentInfoRecordV2": return MosAgentInfoRecordV2;
+            case "SecurityDevelopmentLifecycleAILog": return SecurityDevelopmentLifecycleAILog;
+            case "MDASH": return MDASH;
+            case "DefenderSecurityForAIConfiguration": return DefenderSecurityForAIConfiguration;
+            case "SparkCoreCustomLivePool": return SparkCoreCustomLivePool;
             case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }

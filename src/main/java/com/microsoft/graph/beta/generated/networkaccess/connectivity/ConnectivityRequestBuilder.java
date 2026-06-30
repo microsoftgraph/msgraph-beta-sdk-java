@@ -3,7 +3,7 @@ package com.microsoft.graph.beta.networkaccess.connectivity;
 import com.microsoft.graph.beta.models.networkaccess.Connectivity;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.networkaccess.connectivity.branches.BranchesRequestBuilder;
-import com.microsoft.graph.beta.networkaccess.connectivity.microsoftgraphnetworkaccessgetwebcategorybyurlwithurl.MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRequestBuilder;
+import com.microsoft.graph.beta.networkaccess.connectivity.microsoftgraphnetworkaccessgetwebcategorybyurlwithurl.MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRe_738c2fcb;
 import com.microsoft.graph.beta.networkaccess.connectivity.remotenetworks.RemoteNetworksRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -98,12 +98,12 @@ public class ConnectivityRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getWebCategoryByUrl method.
      * @param url Usage: url=&apos;{url}&apos;
-     * @return a {@link MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRequestBuilder}
+     * @return a {@link MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRe_738c2fcb}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRequestBuilder microsoftGraphNetworkaccessGetWebCategoryByUrlWithUrl(@jakarta.annotation.Nonnull final String url) {
+    public MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRe_738c2fcb microsoftGraphNetworkaccessGetWebCategoryByUrlWithUrl(@jakarta.annotation.Nonnull final String url) {
         Objects.requireNonNull(url);
-        return new MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRequestBuilder(pathParameters, requestAdapter, url);
+        return new MicrosoftGraphNetworkaccessGetWebCategoryByUrlWithUrlRe_738c2fcb(pathParameters, requestAdapter, url);
     }
     /**
      * Update the navigation property connectivity in networkAccess

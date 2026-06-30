@@ -3,6 +3,8 @@ package com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobswi
 import com.microsoft.graph.beta.models.CrossTenantMigrationJob;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobswithdisplayname.cancel.CancelRequestBuilder;
+import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobswithdisplayname.migrate.MigrateRequestBuilder;
+import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobswithdisplayname.validate.ValidateRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -31,6 +33,28 @@ public class CrossTenantMigrationJobsWithDisplayNameRequestBuilder extends BaseR
     @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the migrate method.
+     * @return a {@link MigrateRequestBuilder}
+     * @deprecated
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public MigrateRequestBuilder migrate() {
+        return new MigrateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the validate method.
+     * @return a {@link ValidateRequestBuilder}
+     * @deprecated
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public ValidateRequestBuilder validate() {
+        return new ValidateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CrossTenantMigrationJobsWithDisplayNameRequestBuilder} and sets the default values.

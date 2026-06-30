@@ -23,6 +23,7 @@ public class CreateDeviceFromTemplatePostRequestBody implements AdditionalDataHo
      */
     public CreateDeviceFromTemplatePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
+        this.setAccountEnabled(false);
         this.setAdditionalData(new HashMap<>());
     }
     /**

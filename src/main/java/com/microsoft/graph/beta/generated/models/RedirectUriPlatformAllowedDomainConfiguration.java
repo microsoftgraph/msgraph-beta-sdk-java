@@ -48,7 +48,7 @@ public class RedirectUriPlatformAllowedDomainConfiguration implements Additional
         return value;
     }
     /**
-     * Gets the allowedDomains property value. The allowedDomains property
+     * Gets the allowedDomains property value. Collection of domain names that are allowed for this specific platform. Domain validation follows RFC 3986 (URI syntax, section 3.2.2 for the host component). Domain matching is case-insensitive and exact; wildcards are not supported.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -100,7 +100,7 @@ public class RedirectUriPlatformAllowedDomainConfiguration implements Additional
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the allowedDomains property value. The allowedDomains property
+     * Sets the allowedDomains property value. Collection of domain names that are allowed for this specific platform. Domain validation follows RFC 3986 (URI syntax, section 3.2.2 for the host component). Domain matching is case-insensitive and exact; wildcards are not supported.
      * @param value Value to set for the allowedDomains property.
      */
     public void setAllowedDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {

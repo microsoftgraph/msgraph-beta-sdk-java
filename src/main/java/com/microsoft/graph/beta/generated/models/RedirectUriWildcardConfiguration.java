@@ -57,7 +57,7 @@ public class RedirectUriWildcardConfiguration implements AdditionalDataHolder, B
         return this.backingStore;
     }
     /**
-     * Gets the excludeActors property value. The excludeActors property
+     * Gets the excludeActors property value. Applications or service principals that are exempt from this restriction.
      * @return a {@link AppManagementPolicyActorExemptions}
      */
     @jakarta.annotation.Nullable
@@ -65,7 +65,7 @@ public class RedirectUriWildcardConfiguration implements AdditionalDataHolder, B
         return this.backingStore.get("excludeActors");
     }
     /**
-     * Gets the excludeFormats property value. The excludeFormats property
+     * Gets the excludeFormats property value. Configuration that specifies exceptions to the wildcard restriction, such as allowing wildcards for specific trusted domains.
      * @return a {@link RedirectUriWildcardExcludeFormats}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class RedirectUriWildcardConfiguration implements AdditionalDataHolder, B
         return deserializerMap;
     }
     /**
-     * Gets the isStateSetByMicrosoft property value. The isStateSetByMicrosoft property
+     * Gets the isStateSetByMicrosoft property value. Indicates whether the restriction state was set by Microsoft.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -104,7 +104,7 @@ public class RedirectUriWildcardConfiguration implements AdditionalDataHolder, B
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the restrictForAppsCreatedAfterDateTime property value. The restrictForAppsCreatedAfterDateTime property
+     * Gets the restrictForAppsCreatedAfterDateTime property value. Date and time when this restriction starts applying to newly created applications. Applications created before this date are not affected.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -148,21 +148,21 @@ public class RedirectUriWildcardConfiguration implements AdditionalDataHolder, B
         this.backingStore = value;
     }
     /**
-     * Sets the excludeActors property value. The excludeActors property
+     * Sets the excludeActors property value. Applications or service principals that are exempt from this restriction.
      * @param value Value to set for the excludeActors property.
      */
     public void setExcludeActors(@jakarta.annotation.Nullable final AppManagementPolicyActorExemptions value) {
         this.backingStore.set("excludeActors", value);
     }
     /**
-     * Sets the excludeFormats property value. The excludeFormats property
+     * Sets the excludeFormats property value. Configuration that specifies exceptions to the wildcard restriction, such as allowing wildcards for specific trusted domains.
      * @param value Value to set for the excludeFormats property.
      */
     public void setExcludeFormats(@jakarta.annotation.Nullable final RedirectUriWildcardExcludeFormats value) {
         this.backingStore.set("excludeFormats", value);
     }
     /**
-     * Sets the isStateSetByMicrosoft property value. The isStateSetByMicrosoft property
+     * Sets the isStateSetByMicrosoft property value. Indicates whether the restriction state was set by Microsoft.
      * @param value Value to set for the isStateSetByMicrosoft property.
      */
     public void setIsStateSetByMicrosoft(@jakarta.annotation.Nullable final Boolean value) {
@@ -176,7 +176,7 @@ public class RedirectUriWildcardConfiguration implements AdditionalDataHolder, B
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the restrictForAppsCreatedAfterDateTime property value. The restrictForAppsCreatedAfterDateTime property
+     * Sets the restrictForAppsCreatedAfterDateTime property value. Date and time when this restriction starts applying to newly created applications. Applications created before this date are not affected.
      * @param value Value to set for the restrictForAppsCreatedAfterDateTime property.
      */
     public void setRestrictForAppsCreatedAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

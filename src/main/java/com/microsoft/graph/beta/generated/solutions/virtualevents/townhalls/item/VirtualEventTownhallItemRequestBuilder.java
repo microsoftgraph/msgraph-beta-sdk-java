@@ -3,6 +3,10 @@ package com.microsoft.graph.beta.solutions.virtualevents.townhalls.item;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.VirtualEventTownhall;
 import com.microsoft.graph.beta.solutions.virtualevents.townhalls.item.presenters.PresentersRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.townhalls.item.registrationconfiguration.RegistrationConfigurationRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.townhalls.item.registrations.RegistrationsRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.townhalls.item.registrationswithemail.RegistrationsWithEmailRequestBuilder;
+import com.microsoft.graph.beta.solutions.virtualevents.townhalls.item.registrationswithuserid.RegistrationsWithUserIdRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.townhalls.item.sessions.SessionsRequestBuilder;
 import com.microsoft.graph.beta.solutions.virtualevents.townhalls.item.sessionswithjoinweburl.SessionsWithJoinWebUrlRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -30,6 +34,22 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PresentersRequestBuilder presenters() {
         return new PresentersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the registrationConfiguration property of the microsoft.graph.virtualEventTownhall entity.
+     * @return a {@link RegistrationConfigurationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrationConfigurationRequestBuilder registrationConfiguration() {
+        return new RegistrationConfigurationRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventTownhall entity.
+     * @return a {@link RegistrationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrationsRequestBuilder registrations() {
+        return new RegistrationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.
@@ -123,6 +143,26 @@ public class VirtualEventTownhallItemRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, VirtualEventTownhall::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventTownhall entity.
+     * @param email Alternate key of virtualEventRegistration
+     * @return a {@link RegistrationsWithEmailRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrationsWithEmailRequestBuilder registrationsWithEmail(@jakarta.annotation.Nonnull final String email) {
+        Objects.requireNonNull(email);
+        return new RegistrationsWithEmailRequestBuilder(pathParameters, requestAdapter, email);
+    }
+    /**
+     * Provides operations to manage the registrations property of the microsoft.graph.virtualEventTownhall entity.
+     * @param userId Alternate key of virtualEventRegistration
+     * @return a {@link RegistrationsWithUserIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RegistrationsWithUserIdRequestBuilder registrationsWithUserId(@jakarta.annotation.Nonnull final String userId) {
+        Objects.requireNonNull(userId);
+        return new RegistrationsWithUserIdRequestBuilder(pathParameters, requestAdapter, userId);
     }
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.

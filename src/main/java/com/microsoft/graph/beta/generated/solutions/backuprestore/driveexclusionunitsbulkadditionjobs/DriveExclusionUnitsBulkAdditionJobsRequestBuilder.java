@@ -60,7 +60,7 @@ public class DriveExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReque
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/driveExclusionUnitsBulkAdditionJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for drive exclusion units in the tenant.
      * @return a {@link DriveExclusionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class DriveExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReque
         return get(null);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for drive exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveExclusionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class DriveExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReque
         return this.requestAdapter.send(requestInfo, errorMapping, DriveExclusionUnitsBulkAdditionJob::createFromDiscriminatorValue);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for drive exclusion units in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class DriveExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReque
         return toGetRequestInformation(null);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for drive exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class DriveExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReque
         return new DriveExclusionUnitsBulkAdditionJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get driveExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for drive exclusion units in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

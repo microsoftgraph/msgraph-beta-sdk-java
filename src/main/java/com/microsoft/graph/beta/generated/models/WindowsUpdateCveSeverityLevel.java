@@ -14,7 +14,7 @@ public enum WindowsUpdateCveSeverityLevel implements ValuedEnum {
     Important("important"),
     /** Severity of Moderate */
     Moderate("moderate"),
-    /** Evolvable enumeration sentinel value. Do not use. */
+    /** Reserved value of UnknownFutureValue */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsUpdateCveSeverityLevel(final String value) {

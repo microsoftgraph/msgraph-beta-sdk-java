@@ -4,6 +4,7 @@ import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans.it
 import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans.item.buckets.BucketsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans.item.details.DetailsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans.item.getusagerights.GetUsageRightsRequestBuilder;
+import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans.item.historyitems.HistoryItemsRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans.item.movetocontainer.MoveToContainerRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans.item.tasks.TasksRequestBuilder;
 import com.microsoft.graph.beta.groups.item.team.primarychannel.planner.plans.item.unarchive.UnarchiveRequestBuilder;
@@ -58,6 +59,14 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetUsageRightsRequestBuilder getUsageRights() {
         return new GetUsageRightsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the historyItems property of the microsoft.graph.plannerPlan entity.
+     * @return a {@link HistoryItemsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public HistoryItemsRequestBuilder historyItems() {
+        return new HistoryItemsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the moveToContainer method.

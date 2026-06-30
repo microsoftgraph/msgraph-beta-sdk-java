@@ -108,7 +108,7 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantMigrationJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new crossTenantMigrationJob.
+     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @return a {@link CrossTenantMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new crossTenantMigrationJob.
+     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantMigrationJob}
@@ -167,7 +167,7 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new crossTenantMigrationJob.
+     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -179,7 +179,7 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new crossTenantMigrationJob.
+     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

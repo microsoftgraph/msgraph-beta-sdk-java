@@ -38,7 +38,7 @@ public class SiteExclusionUnit extends ExclusionUnitBase implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the siteId property value. The siteId property
+     * Gets the siteId property value. The unique identifier of the SharePoint site.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -46,7 +46,7 @@ public class SiteExclusionUnit extends ExclusionUnitBase implements Parsable {
         return this.backingStore.get("siteId");
     }
     /**
-     * Gets the siteName property value. The siteName property
+     * Gets the siteName property value. The display name of the SharePoint site.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class SiteExclusionUnit extends ExclusionUnitBase implements Parsable {
         return this.backingStore.get("siteName");
     }
     /**
-     * Gets the siteWebUrl property value. The siteWebUrl property
+     * Gets the siteWebUrl property value. The URL of the SharePoint site.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -71,21 +71,21 @@ public class SiteExclusionUnit extends ExclusionUnitBase implements Parsable {
         writer.writeStringValue("siteId", this.getSiteId());
     }
     /**
-     * Sets the siteId property value. The siteId property
+     * Sets the siteId property value. The unique identifier of the SharePoint site.
      * @param value Value to set for the siteId property.
      */
     public void setSiteId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("siteId", value);
     }
     /**
-     * Sets the siteName property value. The siteName property
+     * Sets the siteName property value. The display name of the SharePoint site.
      * @param value Value to set for the siteName property.
      */
     public void setSiteName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("siteName", value);
     }
     /**
-     * Sets the siteWebUrl property value. The siteWebUrl property
+     * Sets the siteWebUrl property value. The URL of the SharePoint site.
      * @param value Value to set for the siteWebUrl property.
      */
     public void setSiteWebUrl(@jakarta.annotation.Nullable final String value) {

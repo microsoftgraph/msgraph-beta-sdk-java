@@ -47,7 +47,7 @@ public class CloudPcAgentPool extends CloudPcPool implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the poolUrl property value. The poolUrl property
+     * Gets the poolUrl property value. The endpoint URL used to check out and check in agent sessions. This value becomes available after the pool reaches the active status. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class CloudPcAgentPool extends CloudPcPool implements Parsable {
         this.backingStore.set("billingConfiguration", value);
     }
     /**
-     * Sets the poolUrl property value. The poolUrl property
+     * Sets the poolUrl property value. The endpoint URL used to check out and check in agent sessions. This value becomes available after the pool reaches the active status. Read-only.
      * @param value Value to set for the poolUrl property.
      */
     public void setPoolUrl(@jakarta.annotation.Nullable final String value) {

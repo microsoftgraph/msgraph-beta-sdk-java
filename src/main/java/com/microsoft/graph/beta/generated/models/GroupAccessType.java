@@ -8,7 +8,8 @@ public enum GroupAccessType implements ValuedEnum {
     None("none"),
     Private("private"),
     Secret("secret"),
-    Public("public");
+    Public("public"),
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     GroupAccessType(final String value) {
         this.value = value;
@@ -23,6 +24,7 @@ public enum GroupAccessType implements ValuedEnum {
             case "private": return Private;
             case "secret": return Secret;
             case "public": return Public;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

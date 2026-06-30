@@ -103,6 +103,9 @@ public class Subscription extends Entity implements Parsable {
         deserializerMap.put("notificationUrl", (n) -> { this.setNotificationUrl(n.getStringValue()); });
         deserializerMap.put("notificationUrlAppId", (n) -> { this.setNotificationUrlAppId(n.getStringValue()); });
         deserializerMap.put("resource", (n) -> { this.setResource(n.getStringValue()); });
+        deserializerMap.put("vapidPublicKey", (n) -> { this.setVapidPublicKey(n.getStringValue()); });
+        deserializerMap.put("webPushEncryptionP256dhPublicKey", (n) -> { this.setWebPushEncryptionP256dhPublicKey(n.getStringValue()); });
+        deserializerMap.put("webPushEncryptionSecret", (n) -> { this.setWebPushEncryptionSecret(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -170,6 +173,30 @@ public class Subscription extends Entity implements Parsable {
         return this.backingStore.get("resource");
     }
     /**
+     * Gets the vapidPublicKey property value. The vapidPublicKey property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getVapidPublicKey() {
+        return this.backingStore.get("vapidPublicKey");
+    }
+    /**
+     * Gets the webPushEncryptionP256dhPublicKey property value. The webPushEncryptionP256dhPublicKey property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getWebPushEncryptionP256dhPublicKey() {
+        return this.backingStore.get("webPushEncryptionP256dhPublicKey");
+    }
+    /**
+     * Gets the webPushEncryptionSecret property value. The webPushEncryptionSecret property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getWebPushEncryptionSecret() {
+        return this.backingStore.get("webPushEncryptionSecret");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -191,6 +218,9 @@ public class Subscription extends Entity implements Parsable {
         writer.writeStringValue("notificationUrl", this.getNotificationUrl());
         writer.writeStringValue("notificationUrlAppId", this.getNotificationUrlAppId());
         writer.writeStringValue("resource", this.getResource());
+        writer.writeStringValue("vapidPublicKey", this.getVapidPublicKey());
+        writer.writeStringValue("webPushEncryptionP256dhPublicKey", this.getWebPushEncryptionP256dhPublicKey());
+        writer.writeStringValue("webPushEncryptionSecret", this.getWebPushEncryptionSecret());
     }
     /**
      * Sets the applicationId property value. Optional. Identifier of the application used to create the subscription. Read-only.
@@ -296,5 +326,26 @@ public class Subscription extends Entity implements Parsable {
      */
     public void setResource(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resource", value);
+    }
+    /**
+     * Sets the vapidPublicKey property value. The vapidPublicKey property
+     * @param value Value to set for the vapidPublicKey property.
+     */
+    public void setVapidPublicKey(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("vapidPublicKey", value);
+    }
+    /**
+     * Sets the webPushEncryptionP256dhPublicKey property value. The webPushEncryptionP256dhPublicKey property
+     * @param value Value to set for the webPushEncryptionP256dhPublicKey property.
+     */
+    public void setWebPushEncryptionP256dhPublicKey(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("webPushEncryptionP256dhPublicKey", value);
+    }
+    /**
+     * Sets the webPushEncryptionSecret property value. The webPushEncryptionSecret property
+     * @param value Value to set for the webPushEncryptionSecret property.
+     */
+    public void setWebPushEncryptionSecret(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("webPushEncryptionSecret", value);
     }
 }

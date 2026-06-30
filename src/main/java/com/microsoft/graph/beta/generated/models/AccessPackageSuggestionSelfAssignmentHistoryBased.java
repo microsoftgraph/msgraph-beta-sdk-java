@@ -34,7 +34,7 @@ public class AccessPackageSuggestionSelfAssignmentHistoryBased extends AccessPac
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("lastAssignmentDateTime", (n) -> { this.setLastAssignmentDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("pastAssigmentCount", (n) -> { this.setPastAssigmentCount(n.getIntegerValue()); });
+        deserializerMap.put("pastAssignmentCount", (n) -> { this.setPastAssignmentCount(n.getIntegerValue()); });
         return deserializerMap;
     }
     /**
@@ -46,12 +46,12 @@ public class AccessPackageSuggestionSelfAssignmentHistoryBased extends AccessPac
         return this.backingStore.get("lastAssignmentDateTime");
     }
     /**
-     * Gets the pastAssigmentCount property value. The pastAssigmentCount property
+     * Gets the pastAssignmentCount property value. The number of times the user has been assigned to this access package in the past. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
-    public Integer getPastAssigmentCount() {
-        return this.backingStore.get("pastAssigmentCount");
+    public Integer getPastAssignmentCount() {
+        return this.backingStore.get("pastAssignmentCount");
     }
     /**
      * Serializes information the current object
@@ -61,7 +61,7 @@ public class AccessPackageSuggestionSelfAssignmentHistoryBased extends AccessPac
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("lastAssignmentDateTime", this.getLastAssignmentDateTime());
-        writer.writeIntegerValue("pastAssigmentCount", this.getPastAssigmentCount());
+        writer.writeIntegerValue("pastAssignmentCount", this.getPastAssignmentCount());
     }
     /**
      * Sets the lastAssignmentDateTime property value. The date and time when the user was last assigned to this access package. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
@@ -71,10 +71,10 @@ public class AccessPackageSuggestionSelfAssignmentHistoryBased extends AccessPac
         this.backingStore.set("lastAssignmentDateTime", value);
     }
     /**
-     * Sets the pastAssigmentCount property value. The pastAssigmentCount property
-     * @param value Value to set for the pastAssigmentCount property.
+     * Sets the pastAssignmentCount property value. The number of times the user has been assigned to this access package in the past. Read-only.
+     * @param value Value to set for the pastAssignmentCount property.
      */
-    public void setPastAssigmentCount(@jakarta.annotation.Nullable final Integer value) {
-        this.backingStore.set("pastAssigmentCount", value);
+    public void setPastAssignmentCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("pastAssignmentCount", value);
     }
 }

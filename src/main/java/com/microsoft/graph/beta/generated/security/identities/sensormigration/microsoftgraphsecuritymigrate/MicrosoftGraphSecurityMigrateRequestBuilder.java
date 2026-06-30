@@ -36,21 +36,23 @@ public class MicrosoftGraphSecurityMigrateRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/security/identities/sensorMigration/microsoft.graph.security.migrate", rawUrl);
     }
     /**
-     * Invoke action migrate
+     * Migrate the specified sensors to the unified security portal. This action initiates the migration process for one or more Microsoft Defender for Identity sensors.
      * @param body The request body
      * @return a {@link MigrateSensorsResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensormigration-migrate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MigrateSensorsResult post(@jakarta.annotation.Nonnull final MigratePostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action migrate
+     * Migrate the specified sensors to the unified security portal. This action initiates the migration process for one or more Microsoft Defender for Identity sensors.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MigrateSensorsResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/security-sensormigration-migrate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MigrateSensorsResult post(@jakarta.annotation.Nonnull final MigratePostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class MicrosoftGraphSecurityMigrateRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, MigrateSensorsResult::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action migrate
+     * Migrate the specified sensors to the unified security portal. This action initiates the migration process for one or more Microsoft Defender for Identity sensors.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class MicrosoftGraphSecurityMigrateRequestBuilder extends BaseRequestBuil
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action migrate
+     * Migrate the specified sensors to the unified security portal. This action initiates the migration process for one or more Microsoft Defender for Identity sensors.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

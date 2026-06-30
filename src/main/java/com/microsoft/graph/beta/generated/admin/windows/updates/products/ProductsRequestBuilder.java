@@ -2,8 +2,8 @@ package com.microsoft.graph.beta.admin.windows.updates.products;
 
 import com.microsoft.graph.beta.admin.windows.updates.products.count.CountRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.products.item.ProductItemRequestBuilder;
-import com.microsoft.graph.beta.admin.windows.updates.products.microsoftgraphwindowsupdatesfindbycatalogidwithcatalogid.MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder;
-import com.microsoft.graph.beta.admin.windows.updates.products.microsoftgraphwindowsupdatesfindbykbnumberwithkbnumber.MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberRequestBuilder;
+import com.microsoft.graph.beta.admin.windows.updates.products.microsoftgraphwindowsupdatesfindbycatalogidwithcatalogid.MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogI_0a172f28;
+import com.microsoft.graph.beta.admin.windows.updates.products.microsoftgraphwindowsupdatesfindbykbnumberwithkbnumber.MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberR_ea5669b7;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.windowsupdates.Product;
 import com.microsoft.graph.beta.models.windowsupdates.ProductCollectionResponse;
@@ -86,22 +86,22 @@ public class ProductsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the findByCatalogId method.
      * @param catalogID Usage: catalogID=&apos;{catalogID}&apos;
-     * @return a {@link MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder}
+     * @return a {@link MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogI_0a172f28}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder microsoftGraphWindowsUpdatesFindByCatalogIdWithCatalogID(@jakarta.annotation.Nonnull final String catalogID) {
+    public MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogI_0a172f28 microsoftGraphWindowsUpdatesFindByCatalogIdWithCatalogID(@jakarta.annotation.Nonnull final String catalogID) {
         Objects.requireNonNull(catalogID);
-        return new MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogIDRequestBuilder(pathParameters, requestAdapter, catalogID);
+        return new MicrosoftGraphWindowsUpdatesFindByCatalogIdWithCatalogI_0a172f28(pathParameters, requestAdapter, catalogID);
     }
     /**
      * Provides operations to call the findByKbNumber method.
      * @param kbNumber Usage: kbNumber={kbNumber}
-     * @return a {@link MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberRequestBuilder}
+     * @return a {@link MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberR_ea5669b7}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberRequestBuilder microsoftGraphWindowsUpdatesFindByKbNumberWithKbNumber(@jakarta.annotation.Nonnull final Integer kbNumber) {
+    public MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberR_ea5669b7 microsoftGraphWindowsUpdatesFindByKbNumberWithKbNumber(@jakarta.annotation.Nonnull final Integer kbNumber) {
         Objects.requireNonNull(kbNumber);
-        return new MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberRequestBuilder(pathParameters, requestAdapter, kbNumber);
+        return new MicrosoftGraphWindowsUpdatesFindByKbNumberWithKbNumberR_ea5669b7(pathParameters, requestAdapter, kbNumber);
     }
     /**
      * Create new navigation property to products for admin

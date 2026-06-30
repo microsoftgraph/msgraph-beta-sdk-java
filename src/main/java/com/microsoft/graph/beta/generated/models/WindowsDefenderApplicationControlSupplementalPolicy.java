@@ -59,10 +59,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the deploySummary property value. WindowsDefenderApplicationControl supplemental policy deployment summary.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552}
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary getDeploySummary() {
+    public WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 getDeploySummary() {
         return this.backingStore.get("deploySummary");
     }
     /**
@@ -75,10 +75,10 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
     }
     /**
      * Gets the deviceStatuses property value. The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
-     * @return a {@link java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus>}
+     * @return a {@link java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> getDeviceStatuses() {
+    public java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6> getDeviceStatuses() {
         return this.backingStore.get("deviceStatuses");
     }
     /**
@@ -100,9 +100,9 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
         deserializerMap.put("content", (n) -> { this.setContent(n.getByteArrayValue()); });
         deserializerMap.put("contentFileName", (n) -> { this.setContentFileName(n.getStringValue()); });
         deserializerMap.put("creationDateTime", (n) -> { this.setCreationDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("deploySummary", (n) -> { this.setDeploySummary(n.getObjectValue(WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary::createFromDiscriminatorValue)); });
+        deserializerMap.put("deploySummary", (n) -> { this.setDeploySummary(n.getObjectValue(WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
-        deserializerMap.put("deviceStatuses", (n) -> { this.setDeviceStatuses(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus::createFromDiscriminatorValue)); });
+        deserializerMap.put("deviceStatuses", (n) -> { this.setDeviceStatuses(n.getCollectionOfObjectValues(WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
@@ -184,7 +184,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * Sets the deploySummary property value. WindowsDefenderApplicationControl supplemental policy deployment summary.
      * @param value Value to set for the deploySummary property.
      */
-    public void setDeploySummary(@jakarta.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicyDeploymentSummary value) {
+    public void setDeploySummary(@jakarta.annotation.Nullable final WindowsDefenderApplicationControlSupplementalPolicyDepl_9bac1552 value) {
         this.backingStore.set("deploySummary", value);
     }
     /**
@@ -198,7 +198,7 @@ public class WindowsDefenderApplicationControlSupplementalPolicy extends Entity 
      * Sets the deviceStatuses property value. The list of device deployment states for this WindowsDefenderApplicationControl supplemental policy.
      * @param value Value to set for the deviceStatuses property.
      */
-    public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDeploymentStatus> value) {
+    public void setDeviceStatuses(@jakarta.annotation.Nullable final java.util.List<WindowsDefenderApplicationControlSupplementalPolicyDepl_1d9b5ab6> value) {
         this.backingStore.set("deviceStatuses", value);
     }
     /**

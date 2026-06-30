@@ -1,10 +1,10 @@
 package com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.assignments;
 
 import com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.assignments.count.CountRequestBuilder;
-import com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.assignments.item.WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder;
+import com.microsoft.graph.beta.deviceappmanagement.wdacsupplementalpolicies.item.assignments.item.WindowsDefenderApplicationControlSupplementalPolicyAssi_f0ba402d;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
+import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyAssi_bcd43d2c;
 import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyAssignment;
-import com.microsoft.graph.beta.models.WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,14 +34,14 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.windowsDefenderApplicationControlSupplementalPolicy entity.
      * @param windowsDefenderApplicationControlSupplementalPolicyAssignmentId The unique identifier of windowsDefenderApplicationControlSupplementalPolicyAssignment
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyAssi_f0ba402d}
      */
     @jakarta.annotation.Nonnull
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder byWindowsDefenderApplicationControlSupplementalPolicyAssignmentId(@jakarta.annotation.Nonnull final String windowsDefenderApplicationControlSupplementalPolicyAssignmentId) {
+    public WindowsDefenderApplicationControlSupplementalPolicyAssi_f0ba402d byWindowsDefenderApplicationControlSupplementalPolicyAssignmentId(@jakarta.annotation.Nonnull final String windowsDefenderApplicationControlSupplementalPolicyAssignmentId) {
         Objects.requireNonNull(windowsDefenderApplicationControlSupplementalPolicyAssignmentId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("windowsDefenderApplicationControlSupplementalPolicyAssignment%2Did", windowsDefenderApplicationControlSupplementalPolicyAssignmentId);
-        return new WindowsDefenderApplicationControlSupplementalPolicyAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
+        return new WindowsDefenderApplicationControlSupplementalPolicyAssi_f0ba402d(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link AssignmentsRequestBuilder} and sets the default values.
@@ -61,25 +61,25 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The associated group assignments for the Windows Defender Application Control Supplemental Policy.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyAssi_bcd43d2c}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse get() {
+    public WindowsDefenderApplicationControlSupplementalPolicyAssi_bcd43d2c get() {
         return get(null);
     }
     /**
      * The associated group assignments for the Windows Defender Application Control Supplemental Policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse}
+     * @return a {@link WindowsDefenderApplicationControlSupplementalPolicyAssi_bcd43d2c}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public WindowsDefenderApplicationControlSupplementalPolicyAssi_bcd43d2c get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyAssignmentCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, WindowsDefenderApplicationControlSupplementalPolicyAssi_bcd43d2c::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to assignments for deviceAppManagement

@@ -1,6 +1,6 @@
 package com.microsoft.graph.beta.devicemanagement.advancedthreatprotectiononboardingstatesummary;
 
-import com.microsoft.graph.beta.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.advancedthreatprotectiononboardingstatesummary.advancedthreatprotectiononboardingdevicesettingstates.AdvancedThreatProtectionOnboardingDeviceSettingStatesRe_23f016bc;
 import com.microsoft.graph.beta.models.AdvancedThreatProtectionOnboardingStateSummary;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,11 +23,11 @@ import java.util.Objects;
 public class AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the advancedThreatProtectionOnboardingDeviceSettingStates property of the microsoft.graph.advancedThreatProtectionOnboardingStateSummary entity.
-     * @return a {@link AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder}
+     * @return a {@link AdvancedThreatProtectionOnboardingDeviceSettingStatesRe_23f016bc}
      */
     @jakarta.annotation.Nonnull
-    public AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder advancedThreatProtectionOnboardingDeviceSettingStates() {
-        return new AdvancedThreatProtectionOnboardingDeviceSettingStatesRequestBuilder(pathParameters, requestAdapter);
+    public AdvancedThreatProtectionOnboardingDeviceSettingStatesRe_23f016bc advancedThreatProtectionOnboardingDeviceSettingStates() {
+        return new AdvancedThreatProtectionOnboardingDeviceSettingStatesRe_23f016bc(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AdvancedThreatProtectionOnboardingStateSummaryRequestBuilder} and sets the default values.

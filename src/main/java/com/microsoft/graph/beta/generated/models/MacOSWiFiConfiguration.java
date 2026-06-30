@@ -76,6 +76,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         deserializerMap.put("proxyManualPort", (n) -> { this.setProxyManualPort(n.getIntegerValue()); });
         deserializerMap.put("proxySettings", (n) -> { this.setProxySettings(n.getEnumValue(WiFiProxySetting::forValue)); });
         deserializerMap.put("ssid", (n) -> { this.setSsid(n.getStringValue()); });
+        deserializerMap.put("wifiRequirePhysicalMacAddressEnabled", (n) -> { this.setWifiRequirePhysicalMacAddressEnabled(n.getBooleanValue()); });
         deserializerMap.put("wiFiSecurityType", (n) -> { this.setWiFiSecurityType(n.getEnumValue(WiFiSecurityType::forValue)); });
         return deserializerMap;
     }
@@ -136,6 +137,14 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         return this.backingStore.get("ssid");
     }
     /**
+     * Gets the wifiRequirePhysicalMacAddressEnabled property value. Indicates whether devices connecting with this Wi-Fi profile must use their physical MAC address instead of a randomized MAC address. When TRUE, it uses the actual Wi-Fi MAC address. When FALSE, it enables the MAC address randomization. Applies to macOS 15 and later. Default is false.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getWifiRequirePhysicalMacAddressEnabled() {
+        return this.backingStore.get("wifiRequirePhysicalMacAddressEnabled");
+    }
+    /**
      * Gets the wiFiSecurityType property value. Wi-Fi Security Types.
      * @return a {@link WiFiSecurityType}
      */
@@ -160,6 +169,7 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
         writer.writeIntegerValue("proxyManualPort", this.getProxyManualPort());
         writer.writeEnumValue("proxySettings", this.getProxySettings());
         writer.writeStringValue("ssid", this.getSsid());
+        writer.writeBooleanValue("wifiRequirePhysicalMacAddressEnabled", this.getWifiRequirePhysicalMacAddressEnabled());
         writer.writeEnumValue("wiFiSecurityType", this.getWiFiSecurityType());
     }
     /**
@@ -231,6 +241,13 @@ public class MacOSWiFiConfiguration extends DeviceConfiguration implements Parsa
      */
     public void setSsid(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("ssid", value);
+    }
+    /**
+     * Sets the wifiRequirePhysicalMacAddressEnabled property value. Indicates whether devices connecting with this Wi-Fi profile must use their physical MAC address instead of a randomized MAC address. When TRUE, it uses the actual Wi-Fi MAC address. When FALSE, it enables the MAC address randomization. Applies to macOS 15 and later. Default is false.
+     * @param value Value to set for the wifiRequirePhysicalMacAddressEnabled property.
+     */
+    public void setWifiRequirePhysicalMacAddressEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("wifiRequirePhysicalMacAddressEnabled", value);
     }
     /**
      * Sets the wiFiSecurityType property value. Wi-Fi Security Types.
