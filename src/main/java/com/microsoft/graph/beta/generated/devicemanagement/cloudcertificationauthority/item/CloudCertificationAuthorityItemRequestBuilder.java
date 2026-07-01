@@ -15,8 +15,8 @@ import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.ite
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.revokecloudcertificationauthoritycertificate.RevokeCloudCertificationAuthorityCertificateRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.revokeleafcertificate.RevokeLeafCertificateRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.revokeleafcertificatebyserialnumber.RevokeLeafCertificateBySerialNumberRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.searchcloudcertificationauthorityleafcertificatebyserialnumber.SearchCloudCertificationAuthorityLeafCertificateBySerialNumberRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.uploadexternallysignedcertificationauthoritycertificate.UploadExternallySignedCertificationAuthorityCertificateRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.searchcloudcertificationauthorityleafcertificatebyserialnumber.SearchCloudCertificationAuthorityLeafCertificateBySeria_1a22156b;
+import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.uploadexternallysignedcertificationauthoritycertificate.UploadExternallySignedCertificationAuthorityCertificate_fa0c0209;
 import com.microsoft.graph.beta.devicemanagement.cloudcertificationauthority.item.versions.VersionsRequestBuilder;
 import com.microsoft.graph.beta.models.CloudCertificationAuthority;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -160,19 +160,19 @@ public class CloudCertificationAuthorityItemRequestBuilder extends BaseRequestBu
     }
     /**
      * Provides operations to call the searchCloudCertificationAuthorityLeafCertificateBySerialNumber method.
-     * @return a {@link SearchCloudCertificationAuthorityLeafCertificateBySerialNumberRequestBuilder}
+     * @return a {@link SearchCloudCertificationAuthorityLeafCertificateBySeria_1a22156b}
      */
     @jakarta.annotation.Nonnull
-    public SearchCloudCertificationAuthorityLeafCertificateBySerialNumberRequestBuilder searchCloudCertificationAuthorityLeafCertificateBySerialNumber() {
-        return new SearchCloudCertificationAuthorityLeafCertificateBySerialNumberRequestBuilder(pathParameters, requestAdapter);
+    public SearchCloudCertificationAuthorityLeafCertificateBySeria_1a22156b searchCloudCertificationAuthorityLeafCertificateBySerialNumber() {
+        return new SearchCloudCertificationAuthorityLeafCertificateBySeria_1a22156b(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the uploadExternallySignedCertificationAuthorityCertificate method.
-     * @return a {@link UploadExternallySignedCertificationAuthorityCertificateRequestBuilder}
+     * @return a {@link UploadExternallySignedCertificationAuthorityCertificate_fa0c0209}
      */
     @jakarta.annotation.Nonnull
-    public UploadExternallySignedCertificationAuthorityCertificateRequestBuilder uploadExternallySignedCertificationAuthorityCertificate() {
-        return new UploadExternallySignedCertificationAuthorityCertificateRequestBuilder(pathParameters, requestAdapter);
+    public UploadExternallySignedCertificationAuthorityCertificate_fa0c0209 uploadExternallySignedCertificationAuthorityCertificate() {
+        return new UploadExternallySignedCertificationAuthorityCertificate_fa0c0209(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the versions property of the microsoft.graph.cloudCertificationAuthority entity.

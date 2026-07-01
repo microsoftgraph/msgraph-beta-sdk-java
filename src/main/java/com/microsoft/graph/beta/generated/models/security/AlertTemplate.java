@@ -56,12 +56,20 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the category property value. Category assigned to the alert triggered by the custom detection rule.
+     * Gets the category property value. Indicates the category assigned to the alert triggered by the custom detection rule. Deprecated. Use tactics instead. This property will be removed from this resource on 2026-10-01.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getCategory() {
         return this.backingStore.get("category");
+    }
+    /**
+     * Gets the customDetails property value. Custom key-value detail pairs to include in the alert. Each value identifies the detection query column that supplies the corresponding custom detail.
+     * @return a {@link AlertCustomDetails}
+     */
+    @jakarta.annotation.Nullable
+    public AlertCustomDetails getCustomDetails() {
+        return this.backingStore.get("customDetails");
     }
     /**
      * Gets the description property value. Description of the alert triggered by the custom detection rule.
@@ -72,24 +80,35 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("description");
     }
     /**
+     * Gets the entityMappings property value. The entityMappings property
+     * @return a {@link EntityMappingConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public EntityMappingConfiguration getEntityMappings() {
+        return this.backingStore.get("entityMappings");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(11);
         deserializerMap.put("category", (n) -> { this.setCategory(n.getStringValue()); });
+        deserializerMap.put("customDetails", (n) -> { this.setCustomDetails(n.getObjectValue(AlertCustomDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("description", (n) -> { this.setDescription(n.getStringValue()); });
+        deserializerMap.put("entityMappings", (n) -> { this.setEntityMappings(n.getObjectValue(EntityMappingConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("impactedAssets", (n) -> { this.setImpactedAssets(n.getCollectionOfObjectValues(ImpactedAsset::createFromDiscriminatorValue)); });
         deserializerMap.put("mitreTechniques", (n) -> { this.setMitreTechniques(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("recommendedActions", (n) -> { this.setRecommendedActions(n.getStringValue()); });
         deserializerMap.put("severity", (n) -> { this.setSeverity(n.getEnumValue(AlertSeverity::forValue)); });
+        deserializerMap.put("tactics", (n) -> { this.setTactics(n.getCollectionOfObjectValues(MitreTactic::createFromDiscriminatorValue)); });
         deserializerMap.put("title", (n) -> { this.setTitle(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the impactedAssets property value. Which asset or assets were impacted based on the alert triggered by the custom detection rule.
+     * Gets the impactedAssets property value. Indicates the impacted assets for the alert triggered by the custom detection rule. Deprecated. Use entityMappings instead. This property will be removed from this resource on 2026-10-01.
      * @return a {@link java.util.List<ImpactedAsset>}
      */
     @jakarta.annotation.Nullable
@@ -97,7 +116,7 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("impactedAssets");
     }
     /**
-     * Gets the mitreTechniques property value. MITRE technique assigned to the alert triggered by the custom detection rule.
+     * Gets the mitreTechniques property value. Indicates the MITRE techniques assigned to the alert triggered by the custom detection rule. Deprecated. Use tactics instead. This property will be removed from this resource on 2026-10-01.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -129,6 +148,14 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("severity");
     }
     /**
+     * Gets the tactics property value. The MITRE ATT&amp;CK tactics framing for this alert.
+     * @return a {@link java.util.List<MitreTactic>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<MitreTactic> getTactics() {
+        return this.backingStore.get("tactics");
+    }
+    /**
      * Gets the title property value. Name of the alert triggered by the custom detection rule.
      * @return a {@link String}
      */
@@ -143,12 +170,15 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeStringValue("category", this.getCategory());
+        writer.writeObjectValue("customDetails", this.getCustomDetails());
         writer.writeStringValue("description", this.getDescription());
+        writer.writeObjectValue("entityMappings", this.getEntityMappings());
         writer.writeCollectionOfObjectValues("impactedAssets", this.getImpactedAssets());
         writer.writeCollectionOfPrimitiveValues("mitreTechniques", this.getMitreTechniques());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("recommendedActions", this.getRecommendedActions());
         writer.writeEnumValue("severity", this.getSeverity());
+        writer.writeCollectionOfObjectValues("tactics", this.getTactics());
         writer.writeStringValue("title", this.getTitle());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -168,11 +198,18 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the category property value. Category assigned to the alert triggered by the custom detection rule.
+     * Sets the category property value. Indicates the category assigned to the alert triggered by the custom detection rule. Deprecated. Use tactics instead. This property will be removed from this resource on 2026-10-01.
      * @param value Value to set for the category property.
      */
     public void setCategory(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("category", value);
+    }
+    /**
+     * Sets the customDetails property value. Custom key-value detail pairs to include in the alert. Each value identifies the detection query column that supplies the corresponding custom detail.
+     * @param value Value to set for the customDetails property.
+     */
+    public void setCustomDetails(@jakarta.annotation.Nullable final AlertCustomDetails value) {
+        this.backingStore.set("customDetails", value);
     }
     /**
      * Sets the description property value. Description of the alert triggered by the custom detection rule.
@@ -182,14 +219,21 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the impactedAssets property value. Which asset or assets were impacted based on the alert triggered by the custom detection rule.
+     * Sets the entityMappings property value. The entityMappings property
+     * @param value Value to set for the entityMappings property.
+     */
+    public void setEntityMappings(@jakarta.annotation.Nullable final EntityMappingConfiguration value) {
+        this.backingStore.set("entityMappings", value);
+    }
+    /**
+     * Sets the impactedAssets property value. Indicates the impacted assets for the alert triggered by the custom detection rule. Deprecated. Use entityMappings instead. This property will be removed from this resource on 2026-10-01.
      * @param value Value to set for the impactedAssets property.
      */
     public void setImpactedAssets(@jakarta.annotation.Nullable final java.util.List<ImpactedAsset> value) {
         this.backingStore.set("impactedAssets", value);
     }
     /**
-     * Sets the mitreTechniques property value. MITRE technique assigned to the alert triggered by the custom detection rule.
+     * Sets the mitreTechniques property value. Indicates the MITRE techniques assigned to the alert triggered by the custom detection rule. Deprecated. Use tactics instead. This property will be removed from this resource on 2026-10-01.
      * @param value Value to set for the mitreTechniques property.
      */
     public void setMitreTechniques(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -215,6 +259,13 @@ public class AlertTemplate implements AdditionalDataHolder, BackedModel, Parsabl
      */
     public void setSeverity(@jakarta.annotation.Nullable final AlertSeverity value) {
         this.backingStore.set("severity", value);
+    }
+    /**
+     * Sets the tactics property value. The MITRE ATT&amp;CK tactics framing for this alert.
+     * @param value Value to set for the tactics property.
+     */
+    public void setTactics(@jakarta.annotation.Nullable final java.util.List<MitreTactic> value) {
+        this.backingStore.set("tactics", value);
     }
     /**
      * Sets the title property value. Name of the alert triggered by the custom detection rule.

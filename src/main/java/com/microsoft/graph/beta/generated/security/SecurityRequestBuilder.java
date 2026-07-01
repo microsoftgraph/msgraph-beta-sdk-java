@@ -20,6 +20,8 @@ import com.microsoft.graph.beta.security.incidenttasks.IncidentTasksRequestBuild
 import com.microsoft.graph.beta.security.informationprotection.InformationProtectionRequestBuilder;
 import com.microsoft.graph.beta.security.ipsecurityprofiles.IpSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.labels.LabelsRequestBuilder;
+import com.microsoft.graph.beta.security.microsoftgraphsecuritygethuntingschema.MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder;
+import com.microsoft.graph.beta.security.microsoftgraphsecuritygetrunhuntingquerywithquerytimesp_459ba1fe.MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimesp_0505dfd4;
 import com.microsoft.graph.beta.security.microsoftgraphsecurityrunhuntingquery.MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 import com.microsoft.graph.beta.security.partner.PartnerRequestBuilder;
 import com.microsoft.graph.beta.security.providertenantsettings.ProviderTenantSettingsRequestBuilder;
@@ -199,6 +201,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         return new LabelsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getHuntingSchema method.
+     * @return a {@link MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder microsoftGraphSecurityGetHuntingSchema() {
+        return new MicrosoftGraphSecurityGetHuntingSchemaRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the runHuntingQuery method.
      * @return a {@link MicrosoftGraphSecurityRunHuntingQueryRequestBuilder}
      */
@@ -363,6 +373,16 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, Security::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the getRunHuntingQuery method.
+     * @param query Usage: query=&apos;{query}&apos;
+     * @return a {@link MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimesp_0505dfd4}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimesp_0505dfd4 microsoftGraphSecurityGetRunHuntingQueryWithQuerytimespanTimespanWithWorkspaceId(@jakarta.annotation.Nonnull final String query) {
+        Objects.requireNonNull(query);
+        return new MicrosoftGraphSecurityGetRunHuntingQueryWithQuerytimesp_0505dfd4(pathParameters, requestAdapter, query);
     }
     /**
      * Update security

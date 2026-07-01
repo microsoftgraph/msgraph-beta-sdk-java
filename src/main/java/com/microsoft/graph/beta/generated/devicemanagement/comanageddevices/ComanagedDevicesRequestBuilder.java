@@ -7,7 +7,7 @@ import com.microsoft.graph.beta.devicemanagement.comanageddevices.downloadpowerl
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.executeaction.ExecuteActionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.ManagedDeviceItemRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.movedevicestoou.MoveDevicesToOURequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.comanageddevices.retrievepowerliftappdiagnosticsdetailswithuserprincipalname.RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.comanageddevices.retrievepowerliftappdiagnosticsdetailswithuserprincipalname.RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7;
 import com.microsoft.graph.beta.models.ManagedDevice;
 import com.microsoft.graph.beta.models.ManagedDeviceCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -157,12 +157,12 @@ public class ComanagedDevicesRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the retrievePowerliftAppDiagnosticsDetails method.
      * @param userPrincipalName Usage: userPrincipalName=&apos;{userPrincipalName}&apos;
-     * @return a {@link RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder}
+     * @return a {@link RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7}
      */
     @jakarta.annotation.Nonnull
-    public RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder retrievePowerliftAppDiagnosticsDetailsWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+    public RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7 retrievePowerliftAppDiagnosticsDetailsWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
         Objects.requireNonNull(userPrincipalName);
-        return new RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
+        return new RetrievePowerliftAppDiagnosticsDetailsWithUserPrincipal_dd1e6da7(pathParameters, requestAdapter, userPrincipalName);
     }
     /**
      * The list of co-managed devices report

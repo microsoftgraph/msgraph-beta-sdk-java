@@ -23,6 +23,7 @@ public class MigrateToTemplatePostRequestBody implements AdditionalDataHolder, B
     public MigrateToTemplatePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setPreserveCustomValues(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

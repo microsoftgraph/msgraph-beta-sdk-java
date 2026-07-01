@@ -5,14 +5,17 @@ import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.executionscope.ExecutionScopeRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.lastmodifiedby.LastModifiedByRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernanceactivate.MicrosoftGraphIdentityGovernanceActivateRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernanceactivateandwait.MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernanceactivatewithscope.MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancecancelprocessing.MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernanceclearquarantine.MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancecreatenewversion.MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder;
-import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancepreviewtaskfailures.MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancepreviewtaskfailures.MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancepreviewworkflow.MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.microsoftgraphidentitygovernancerestore.MicrosoftGraphIdentityGovernanceRestoreRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.previewscope.PreviewScopeRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.runs.RunsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.subjectprocessingresults.SubjectProcessingResultsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.taskreports.TaskReportsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.tasks.TasksRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.userprocessingresults.UserProcessingResultsRequestBuilder;
@@ -78,6 +81,14 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceActivateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the activateAndWait method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder microsoftGraphIdentityGovernanceActivateAndWait() {
+        return new MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the activateWithScope method.
      * @return a {@link MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder}
      */
@@ -94,6 +105,14 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
         return new MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the clearQuarantine method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder microsoftGraphIdentityGovernanceClearQuarantine() {
+        return new MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the createNewVersion method.
      * @return a {@link MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder}
      */
@@ -103,11 +122,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the previewTaskFailures method.
-     * @return a {@link MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder}
+     * @return a {@link MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder microsoftGraphIdentityGovernancePreviewTaskFailures() {
-        return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef microsoftGraphIdentityGovernancePreviewTaskFailures() {
+        return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequ_71c2adef(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the previewWorkflow method.
@@ -140,6 +159,14 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RunsRequestBuilder runs() {
         return new RunsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the subjectProcessingResults property of the microsoft.graph.identityGovernance.workflow entity.
+     * @return a {@link SubjectProcessingResultsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SubjectProcessingResultsRequestBuilder subjectProcessingResults() {
+        return new SubjectProcessingResultsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the taskReports property of the microsoft.graph.identityGovernance.workflow entity.

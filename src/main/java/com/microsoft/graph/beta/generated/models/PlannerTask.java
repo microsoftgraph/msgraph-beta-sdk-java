@@ -256,7 +256,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("isOnMyDayLastModifiedDate");
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. Read-only. User ID by which this is last modified.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -264,7 +264,7 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -566,14 +566,14 @@ public class PlannerTask extends PlannerDelta implements Parsable {
         this.backingStore.set("isOnMyDayLastModifiedDate", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. Read-only. User ID by which this is last modified.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. Read-only. Date and time at which this is last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

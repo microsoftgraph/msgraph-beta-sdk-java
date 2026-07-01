@@ -37,19 +37,21 @@ public class MailboxExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/exchangeProtectionPolicies/{exchangeProtectionPolicy%2Did}/mailboxExclusionUnits/{mailboxExclusionUnit%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * Get a mailbox exclusion unit associated with an Exchange protection policy.
      * @return a {@link MailboxExclusionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxexclusionunit-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxExclusionUnit get() {
         return get(null);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * Get a mailbox exclusion unit associated with an Exchange protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxExclusionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxexclusionunit-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxExclusionUnit get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class MailboxExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxExclusionUnit::createFromDiscriminatorValue);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * Get a mailbox exclusion unit associated with an Exchange protection policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class MailboxExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * Get a mailbox exclusion unit associated with an Exchange protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class MailboxExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return new MailboxExclusionUnitItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get mailboxExclusionUnits from solutions
+     * Get a mailbox exclusion unit associated with an Exchange protection policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

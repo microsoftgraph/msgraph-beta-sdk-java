@@ -35,7 +35,7 @@ public class ExclusionUnitBase extends Entity implements Parsable {
         return new ExclusionUnitBase();
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The identity of the person who created the exclusion unit.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class ExclusionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the exclusion unit was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class ExclusionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. Contains error details if the exclusion unit is in a failed state.
      * @return a {@link PublicError}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class ExclusionUnitBase extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. The identity of the person who last modified the exclusion unit.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -82,7 +82,7 @@ public class ExclusionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedBy");
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the exclusion unit was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class ExclusionUnitBase extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the policyId property value. The policyId property
+     * Gets the policyId property value. The unique identifier of the protection policy that contains this exclusion unit.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -112,42 +112,42 @@ public class ExclusionUnitBase extends Entity implements Parsable {
         writer.writeStringValue("policyId", this.getPolicyId());
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The identity of the person who created the exclusion unit.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the exclusion unit was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. Contains error details if the exclusion unit is in a failed state.
      * @param value Value to set for the error property.
      */
     public void setError(@jakarta.annotation.Nullable final PublicError value) {
         this.backingStore.set("error", value);
     }
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. The identity of the person who last modified the exclusion unit.
      * @param value Value to set for the lastModifiedBy property.
      */
     public void setLastModifiedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("lastModifiedBy", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the exclusion unit was last modified. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the policyId property value. The policyId property
+     * Sets the policyId property value. The unique identifier of the protection policy that contains this exclusion unit.
      * @param value Value to set for the policyId property.
      */
     public void setPolicyId(@jakarta.annotation.Nullable final String value) {

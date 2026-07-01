@@ -23,6 +23,7 @@ public class ImportResourceActionsPostRequestBody implements AdditionalDataHolde
     public ImportResourceActionsPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setOverwriteResourceNamespace(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

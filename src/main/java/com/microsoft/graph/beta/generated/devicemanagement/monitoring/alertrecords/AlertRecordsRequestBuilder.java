@@ -2,8 +2,8 @@ package com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords;
 
 import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.count.CountRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.item.AlertRecordItemRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.microsoftgraphdevicemanagementchangealertrecordsportalnotificationassent.MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.microsoftgraphdevicemanagementgetportalnotifications.MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.microsoftgraphdevicemanagementchangealertrecordsportaln_47fd93f4.MicrosoftGraphDeviceManagementChangeAlertRecordsPortalN_5b94bff7;
+import com.microsoft.graph.beta.devicemanagement.monitoring.alertrecords.microsoftgraphdevicemanagementgetportalnotifications.MicrosoftGraphDeviceManagementGetPortalNotificationsReq_8191e564;
 import com.microsoft.graph.beta.models.devicemanagement.AlertRecord;
 import com.microsoft.graph.beta.models.devicemanagement.AlertRecordCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -35,19 +35,19 @@ public class AlertRecordsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the changeAlertRecordsPortalNotificationAsSent method.
-     * @return a {@link MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder}
+     * @return a {@link MicrosoftGraphDeviceManagementChangeAlertRecordsPortalN_5b94bff7}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder microsoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSent() {
-        return new MicrosoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSentRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphDeviceManagementChangeAlertRecordsPortalN_5b94bff7 microsoftGraphDeviceManagementChangeAlertRecordsPortalNotificationAsSent() {
+        return new MicrosoftGraphDeviceManagementChangeAlertRecordsPortalN_5b94bff7(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getPortalNotifications method.
-     * @return a {@link MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder}
+     * @return a {@link MicrosoftGraphDeviceManagementGetPortalNotificationsReq_8191e564}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder microsoftGraphDeviceManagementGetPortalNotifications() {
-        return new MicrosoftGraphDeviceManagementGetPortalNotificationsRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphDeviceManagementGetPortalNotificationsReq_8191e564 microsoftGraphDeviceManagementGetPortalNotifications() {
+        return new MicrosoftGraphDeviceManagementGetPortalNotificationsReq_8191e564(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the alertRecords property of the microsoft.graph.deviceManagement.monitoring entity.

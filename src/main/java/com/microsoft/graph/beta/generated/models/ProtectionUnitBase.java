@@ -90,6 +90,7 @@ public class ProtectionUnitBase extends Entity implements Parsable {
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("offboardRequestedDateTime", (n) -> { this.setOffboardRequestedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("pendingRetentionPeriodChange", (n) -> { this.setPendingRetentionPeriodChange(n.getObjectValue(RetentionPeriodChange::createFromDiscriminatorValue)); });
         deserializerMap.put("policyId", (n) -> { this.setPolicyId(n.getStringValue()); });
         deserializerMap.put("protectionSources", (n) -> { this.setProtectionSources(n.getEnumSetValue(ProtectionSource::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(ProtectionUnitStatus::forValue)); });
@@ -118,6 +119,14 @@ public class ProtectionUnitBase extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getOffboardRequestedDateTime() {
         return this.backingStore.get("offboardRequestedDateTime");
+    }
+    /**
+     * Gets the pendingRetentionPeriodChange property value. The pendingRetentionPeriodChange property
+     * @return a {@link RetentionPeriodChange}
+     */
+    @jakarta.annotation.Nullable
+    public RetentionPeriodChange getPendingRetentionPeriodChange() {
+        return this.backingStore.get("pendingRetentionPeriodChange");
     }
     /**
      * Gets the policyId property value. The unique identifier of the protection policy based on which protection unit was created.
@@ -217,6 +226,13 @@ public class ProtectionUnitBase extends Entity implements Parsable {
      */
     public void setOffboardRequestedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("offboardRequestedDateTime", value);
+    }
+    /**
+     * Sets the pendingRetentionPeriodChange property value. The pendingRetentionPeriodChange property
+     * @param value Value to set for the pendingRetentionPeriodChange property.
+     */
+    public void setPendingRetentionPeriodChange(@jakarta.annotation.Nullable final RetentionPeriodChange value) {
+        this.backingStore.set("pendingRetentionPeriodChange", value);
     }
     /**
      * Sets the policyId property value. The unique identifier of the protection policy based on which protection unit was created.

@@ -69,7 +69,7 @@ public class QueryCondition implements AdditionalDataHolder, BackedModel, Parsab
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. Timestamp of when the query in the custom detection rule was last updated.
+     * Gets the lastModifiedDateTime property value. Timestamp of when the query in the custom detection rule was last updated. Deprecated. This property will be removed from this resource on 2026-10-01.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -119,7 +119,7 @@ public class QueryCondition implements AdditionalDataHolder, BackedModel, Parsab
         this.backingStore = value;
     }
     /**
-     * Sets the lastModifiedDateTime property value. Timestamp of when the query in the custom detection rule was last updated.
+     * Sets the lastModifiedDateTime property value. Timestamp of when the query in the custom detection rule was last updated. Deprecated. This property will be removed from this resource on 2026-10-01.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {

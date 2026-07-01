@@ -236,7 +236,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("cloudLicensing");
     }
     /**
-     * Gets the cloudPcPools property value. The cloudPcPools property
+     * Gets the cloudPcPools property value. The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @return a {@link java.util.List<CloudPcPool>}
      */
     @jakarta.annotation.Nullable
@@ -412,6 +412,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the distributionLists property value. The personal distribution lists in the user&apos;s mailbox. Read-only. Nullable.
+     * @return a {@link java.util.List<DistributionList>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DistributionList> getDistributionLists() {
+        return this.backingStore.get("distributionLists");
+    }
+    /**
      * Gets the drive property value. The user&apos;s OneDrive. Read-only.
      * @return a {@link Drive}
      */
@@ -569,6 +577,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("devices", (n) -> { this.setDevices(n.getCollectionOfObjectValues(Device::createFromDiscriminatorValue)); });
         deserializerMap.put("directReports", (n) -> { this.setDirectReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("distributionLists", (n) -> { this.setDistributionLists(n.getCollectionOfObjectValues(DistributionList::createFromDiscriminatorValue)); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("employeeExperience", (n) -> { this.setEmployeeExperience(n.getObjectValue(EmployeeExperienceUser::createFromDiscriminatorValue)); });
@@ -721,7 +730,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("identities");
     }
     /**
-     * Gets the identityGovernance property value. The identityGovernance property
+     * Gets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. Nullable. Returned only on $select. Supports $expand.
      * @return a {@link IdentityGovernanceUserSettings}
      */
     @jakarta.annotation.Nullable
@@ -809,7 +818,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("isManagementRestricted");
     }
     /**
-     * Gets the isResourceAccount property value. Do not use  reserved for future use.
+     * Gets the isResourceAccount property value. Do not use. Reserved for future use.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -1574,6 +1583,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("devices", this.getDevices());
         writer.writeCollectionOfObjectValues("directReports", this.getDirectReports());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeCollectionOfObjectValues("distributionLists", this.getDistributionLists());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
         writer.writeObjectValue("employeeExperience", this.getEmployeeExperience());
@@ -1868,7 +1878,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("cloudLicensing", value);
     }
     /**
-     * Sets the cloudPcPools property value. The cloudPcPools property
+     * Sets the cloudPcPools property value. The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @param value Value to set for the cloudPcPools property.
      */
     public void setCloudPcPools(@jakarta.annotation.Nullable final java.util.List<CloudPcPool> value) {
@@ -2022,6 +2032,13 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the distributionLists property value. The personal distribution lists in the user&apos;s mailbox. Read-only. Nullable.
+     * @param value Value to set for the distributionLists property.
+     */
+    public void setDistributionLists(@jakarta.annotation.Nullable final java.util.List<DistributionList> value) {
+        this.backingStore.set("distributionLists", value);
+    }
+    /**
      * Sets the drive property value. The user&apos;s OneDrive. Read-only.
      * @param value Value to set for the drive property.
      */
@@ -2141,7 +2158,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("identities", value);
     }
     /**
-     * Sets the identityGovernance property value. The identityGovernance property
+     * Sets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. Nullable. Returned only on $select. Supports $expand.
      * @param value Value to set for the identityGovernance property.
      */
     public void setIdentityGovernance(@jakarta.annotation.Nullable final IdentityGovernanceUserSettings value) {
@@ -2218,7 +2235,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("isManagementRestricted", value);
     }
     /**
-     * Sets the isResourceAccount property value. Do not use  reserved for future use.
+     * Sets the isResourceAccount property value. Do not use. Reserved for future use.
      * @param value Value to set for the isResourceAccount property.
      */
     public void setIsResourceAccount(@jakarta.annotation.Nullable final Boolean value) {

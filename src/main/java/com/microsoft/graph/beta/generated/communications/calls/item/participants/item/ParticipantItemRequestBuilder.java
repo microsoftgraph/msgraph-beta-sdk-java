@@ -1,6 +1,8 @@
 package com.microsoft.graph.beta.communications.calls.item.participants.item;
 
+import com.microsoft.graph.beta.communications.calls.item.participants.item.admitfromlobby.AdmitFromLobbyRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.item.participants.item.mute.MuteRequestBuilder;
+import com.microsoft.graph.beta.communications.calls.item.participants.item.removefromlobby.RemoveFromLobbyRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.item.participants.item.startholdmusic.StartHoldMusicRequestBuilder;
 import com.microsoft.graph.beta.communications.calls.item.participants.item.stopholdmusic.StopHoldMusicRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -24,12 +26,28 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to call the admitFromLobby method.
+     * @return a {@link AdmitFromLobbyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AdmitFromLobbyRequestBuilder admitFromLobby() {
+        return new AdmitFromLobbyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the mute method.
      * @return a {@link MuteRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public MuteRequestBuilder mute() {
         return new MuteRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the removeFromLobby method.
+     * @return a {@link RemoveFromLobbyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveFromLobbyRequestBuilder removeFromLobby() {
+        return new RemoveFromLobbyRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the startHoldMusic method.

@@ -76,7 +76,7 @@ public class TokenProtectionStatusDetails implements AdditionalDataHolder, Backe
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the signInSessionStatus property value. The signInSessionStatus property
+     * Gets the signInSessionStatus property value. The token protection status of the sign-in session. The possible values are: none, bound, unbound, unknownFutureValue.
      * @return a {@link TokenProtectionStatus}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class TokenProtectionStatusDetails implements AdditionalDataHolder, Backe
         return this.backingStore.get("signInSessionStatus");
     }
     /**
-     * Gets the signInSessionStatusCode property value. The signInSessionStatusCode property
+     * Gets the signInSessionStatusCode property value. Additional information about the status.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -125,14 +125,14 @@ public class TokenProtectionStatusDetails implements AdditionalDataHolder, Backe
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the signInSessionStatus property value. The signInSessionStatus property
+     * Sets the signInSessionStatus property value. The token protection status of the sign-in session. The possible values are: none, bound, unbound, unknownFutureValue.
      * @param value Value to set for the signInSessionStatus property.
      */
     public void setSignInSessionStatus(@jakarta.annotation.Nullable final TokenProtectionStatus value) {
         this.backingStore.set("signInSessionStatus", value);
     }
     /**
-     * Sets the signInSessionStatusCode property value. The signInSessionStatusCode property
+     * Sets the signInSessionStatusCode property value. Additional information about the status.
      * @param value Value to set for the signInSessionStatusCode property.
      */
     public void setSignInSessionStatusCode(@jakarta.annotation.Nullable final Integer value) {

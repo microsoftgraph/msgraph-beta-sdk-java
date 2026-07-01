@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.app.calls.item.participants;
 
+import com.microsoft.graph.beta.app.calls.item.participants.admitallfromlobby.AdmitAllFromLobbyRequestBuilder;
 import com.microsoft.graph.beta.app.calls.item.participants.count.CountRequestBuilder;
 import com.microsoft.graph.beta.app.calls.item.participants.invite.InviteRequestBuilder;
 import com.microsoft.graph.beta.app.calls.item.participants.item.ParticipantItemRequestBuilder;
@@ -25,6 +26,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ParticipantsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the admitAllFromLobby method.
+     * @return a {@link AdmitAllFromLobbyRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AdmitAllFromLobbyRequestBuilder admitAllFromLobby() {
+        return new AdmitAllFromLobbyRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}

@@ -40,7 +40,7 @@ public class SharePointProtectionPolicy extends ProtectionPolicyBase implements 
         return deserializerMap;
     }
     /**
-     * Gets the siteExclusionUnits property value. The siteExclusionUnits property
+     * Gets the siteExclusionUnits property value. The site exclusion units associated with the SharePoint protection policy.
      * @return a {@link java.util.List<SiteExclusionUnit>}
      */
     @jakarta.annotation.Nullable
@@ -48,7 +48,7 @@ public class SharePointProtectionPolicy extends ProtectionPolicyBase implements 
         return this.backingStore.get("siteExclusionUnits");
     }
     /**
-     * Gets the siteExclusionUnitsBulkAdditionJobs property value. The siteExclusionUnitsBulkAdditionJobs property
+     * Gets the siteExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for site exclusion units associated with the SharePoint protection policy.
      * @return a {@link java.util.List<SiteExclusionUnitsBulkAdditionJob>}
      */
     @jakarta.annotation.Nullable
@@ -93,14 +93,14 @@ public class SharePointProtectionPolicy extends ProtectionPolicyBase implements 
         writer.writeCollectionOfObjectValues("siteProtectionUnitsBulkAdditionJobs", this.getSiteProtectionUnitsBulkAdditionJobs());
     }
     /**
-     * Sets the siteExclusionUnits property value. The siteExclusionUnits property
+     * Sets the siteExclusionUnits property value. The site exclusion units associated with the SharePoint protection policy.
      * @param value Value to set for the siteExclusionUnits property.
      */
     public void setSiteExclusionUnits(@jakarta.annotation.Nullable final java.util.List<SiteExclusionUnit> value) {
         this.backingStore.set("siteExclusionUnits", value);
     }
     /**
-     * Sets the siteExclusionUnitsBulkAdditionJobs property value. The siteExclusionUnitsBulkAdditionJobs property
+     * Sets the siteExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for site exclusion units associated with the SharePoint protection policy.
      * @param value Value to set for the siteExclusionUnitsBulkAdditionJobs property.
      */
     public void setSiteExclusionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<SiteExclusionUnitsBulkAdditionJob> value) {

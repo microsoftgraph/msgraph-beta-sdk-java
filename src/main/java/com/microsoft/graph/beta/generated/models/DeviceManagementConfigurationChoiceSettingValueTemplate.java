@@ -75,8 +75,8 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("recommendedValueDefinition", (n) -> { this.setRecommendedValueDefinition(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
-        deserializerMap.put("requiredValueDefinition", (n) -> { this.setRequiredValueDefinition(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendedValueDefinition", (n) -> { this.setRecommendedValueDefinition(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefiniti_ea7d9162::createFromDiscriminatorValue)); });
+        deserializerMap.put("requiredValueDefinition", (n) -> { this.setRequiredValueDefinition(n.getObjectValue(DeviceManagementConfigurationChoiceSettingValueDefiniti_ea7d9162::createFromDiscriminatorValue)); });
         deserializerMap.put("settingValueTemplateId", (n) -> { this.setSettingValueTemplateId(n.getStringValue()); });
         return deserializerMap;
     }
@@ -90,18 +90,18 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
     }
     /**
      * Gets the recommendedValueDefinition property value. Recommended definition override.
-     * @return a {@link DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate}
+     * @return a {@link DeviceManagementConfigurationChoiceSettingValueDefiniti_ea7d9162}
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate getRecommendedValueDefinition() {
+    public DeviceManagementConfigurationChoiceSettingValueDefiniti_ea7d9162 getRecommendedValueDefinition() {
         return this.backingStore.get("recommendedValueDefinition");
     }
     /**
      * Gets the requiredValueDefinition property value. Required definition override.
-     * @return a {@link DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate}
+     * @return a {@link DeviceManagementConfigurationChoiceSettingValueDefiniti_ea7d9162}
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate getRequiredValueDefinition() {
+    public DeviceManagementConfigurationChoiceSettingValueDefiniti_ea7d9162 getRequiredValueDefinition() {
         return this.backingStore.get("requiredValueDefinition");
     }
     /**
@@ -158,14 +158,14 @@ public class DeviceManagementConfigurationChoiceSettingValueTemplate implements 
      * Sets the recommendedValueDefinition property value. Recommended definition override.
      * @param value Value to set for the recommendedValueDefinition property.
      */
-    public void setRecommendedValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate value) {
+    public void setRecommendedValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefiniti_ea7d9162 value) {
         this.backingStore.set("recommendedValueDefinition", value);
     }
     /**
      * Sets the requiredValueDefinition property value. Required definition override.
      * @param value Value to set for the requiredValueDefinition property.
      */
-    public void setRequiredValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefinitionTemplate value) {
+    public void setRequiredValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationChoiceSettingValueDefiniti_ea7d9162 value) {
         this.backingStore.set("requiredValueDefinition", value);
     }
     /**

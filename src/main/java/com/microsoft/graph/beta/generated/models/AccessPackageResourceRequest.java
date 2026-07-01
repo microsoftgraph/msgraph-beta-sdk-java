@@ -101,7 +101,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         return this.backingStore.get("requestor");
     }
     /**
-     * Gets the requestState property value. The outcome of whether the service was able to add the resource to the catalog. The value is Delivered if the resource was added or removed. Read-Only.
+     * Gets the requestState property value. The outcome of whether the service was able to add the resource to the catalog. The value is Delivered if the resource was added or removed. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -192,7 +192,7 @@ public class AccessPackageResourceRequest extends Entity implements Parsable {
         this.backingStore.set("requestor", value);
     }
     /**
-     * Sets the requestState property value. The outcome of whether the service was able to add the resource to the catalog. The value is Delivered if the resource was added or removed. Read-Only.
+     * Sets the requestState property value. The outcome of whether the service was able to add the resource to the catalog. The value is Delivered if the resource was added or removed. Read-only.
      * @param value Value to set for the requestState property.
      */
     public void setRequestState(@jakarta.annotation.Nullable final String value) {

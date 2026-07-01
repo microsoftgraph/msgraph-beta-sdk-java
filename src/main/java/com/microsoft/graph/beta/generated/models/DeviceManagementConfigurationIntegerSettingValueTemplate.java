@@ -44,24 +44,24 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("defaultValue", (n) -> { this.setDefaultValue(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefaultTemplate::createFromDiscriminatorValue)); });
-        deserializerMap.put("recommendedValueDefinition", (n) -> { this.setRecommendedValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
-        deserializerMap.put("requiredValueDefinition", (n) -> { this.setRequiredValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("recommendedValueDefinition", (n) -> { this.setRecommendedValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinit_8cf5f357::createFromDiscriminatorValue)); });
+        deserializerMap.put("requiredValueDefinition", (n) -> { this.setRequiredValueDefinition(n.getObjectValue(DeviceManagementConfigurationIntegerSettingValueDefinit_8cf5f357::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
      * Gets the recommendedValueDefinition property value. Recommended value definition.
-     * @return a {@link DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate}
+     * @return a {@link DeviceManagementConfigurationIntegerSettingValueDefinit_8cf5f357}
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate getRecommendedValueDefinition() {
+    public DeviceManagementConfigurationIntegerSettingValueDefinit_8cf5f357 getRecommendedValueDefinition() {
         return this.backingStore.get("recommendedValueDefinition");
     }
     /**
      * Gets the requiredValueDefinition property value. Required value definition.
-     * @return a {@link DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate}
+     * @return a {@link DeviceManagementConfigurationIntegerSettingValueDefinit_8cf5f357}
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate getRequiredValueDefinition() {
+    public DeviceManagementConfigurationIntegerSettingValueDefinit_8cf5f357 getRequiredValueDefinition() {
         return this.backingStore.get("requiredValueDefinition");
     }
     /**
@@ -86,14 +86,14 @@ public class DeviceManagementConfigurationIntegerSettingValueTemplate extends De
      * Sets the recommendedValueDefinition property value. Recommended value definition.
      * @param value Value to set for the recommendedValueDefinition property.
      */
-    public void setRecommendedValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
+    public void setRecommendedValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinit_8cf5f357 value) {
         this.backingStore.set("recommendedValueDefinition", value);
     }
     /**
      * Sets the requiredValueDefinition property value. Required value definition.
      * @param value Value to set for the requiredValueDefinition property.
      */
-    public void setRequiredValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinitionTemplate value) {
+    public void setRequiredValueDefinition(@jakarta.annotation.Nullable final DeviceManagementConfigurationIntegerSettingValueDefinit_8cf5f357 value) {
         this.backingStore.set("requiredValueDefinition", value);
     }
 }

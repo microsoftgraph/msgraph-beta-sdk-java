@@ -1,9 +1,9 @@
 package com.microsoft.graph.beta.devicemanagement.resourceaccessprofiles.item.assignments;
 
 import com.microsoft.graph.beta.devicemanagement.resourceaccessprofiles.item.assignments.count.CountRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.resourceaccessprofiles.item.assignments.item.DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.resourceaccessprofiles.item.assignments.item.DeviceManagementResourceAccessProfileAssignmentItemRequ_909d4c28;
 import com.microsoft.graph.beta.models.DeviceManagementResourceAccessProfileAssignment;
-import com.microsoft.graph.beta.models.DeviceManagementResourceAccessProfileAssignmentCollectionResponse;
+import com.microsoft.graph.beta.models.DeviceManagementResourceAccessProfileAssignmentCollecti_c42feb94;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -34,14 +34,14 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceManagementResourceAccessProfileBase entity.
      * @param deviceManagementResourceAccessProfileAssignmentId The unique identifier of deviceManagementResourceAccessProfileAssignment
-     * @return a {@link DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder}
+     * @return a {@link DeviceManagementResourceAccessProfileAssignmentItemRequ_909d4c28}
      */
     @jakarta.annotation.Nonnull
-    public DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder byDeviceManagementResourceAccessProfileAssignmentId(@jakarta.annotation.Nonnull final String deviceManagementResourceAccessProfileAssignmentId) {
+    public DeviceManagementResourceAccessProfileAssignmentItemRequ_909d4c28 byDeviceManagementResourceAccessProfileAssignmentId(@jakarta.annotation.Nonnull final String deviceManagementResourceAccessProfileAssignmentId) {
         Objects.requireNonNull(deviceManagementResourceAccessProfileAssignmentId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceManagementResourceAccessProfileAssignment%2Did", deviceManagementResourceAccessProfileAssignmentId);
-        return new DeviceManagementResourceAccessProfileAssignmentItemRequestBuilder(urlTplParams, requestAdapter);
+        return new DeviceManagementResourceAccessProfileAssignmentItemRequ_909d4c28(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link AssignmentsRequestBuilder} and sets the default values.
@@ -61,25 +61,25 @@ public class AssignmentsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of assignments for the device configuration profile.
-     * @return a {@link DeviceManagementResourceAccessProfileAssignmentCollectionResponse}
+     * @return a {@link DeviceManagementResourceAccessProfileAssignmentCollecti_c42feb94}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementResourceAccessProfileAssignmentCollectionResponse get() {
+    public DeviceManagementResourceAccessProfileAssignmentCollecti_c42feb94 get() {
         return get(null);
     }
     /**
      * The list of assignments for the device configuration profile.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DeviceManagementResourceAccessProfileAssignmentCollectionResponse}
+     * @return a {@link DeviceManagementResourceAccessProfileAssignmentCollecti_c42feb94}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementResourceAccessProfileAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public DeviceManagementResourceAccessProfileAssignmentCollecti_c42feb94 get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementResourceAccessProfileAssignmentCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementResourceAccessProfileAssignmentCollecti_c42feb94::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to assignments for deviceManagement

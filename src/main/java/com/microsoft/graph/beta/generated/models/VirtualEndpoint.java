@@ -49,7 +49,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         return this.backingStore.get("cloudApps");
     }
     /**
-     * Gets the cloudPcPools property value. The cloudPcPools property
+     * Gets the cloudPcPools property value. The Cloud PC pools managed by the virtual endpoint.
      * @return a {@link java.util.List<CloudPcPool>}
      */
     @jakarta.annotation.Nullable
@@ -273,7 +273,7 @@ public class VirtualEndpoint extends Entity implements Parsable {
         this.backingStore.set("cloudApps", value);
     }
     /**
-     * Sets the cloudPcPools property value. The cloudPcPools property
+     * Sets the cloudPcPools property value. The Cloud PC pools managed by the virtual endpoint.
      * @param value Value to set for the cloudPcPools property.
      */
     public void setCloudPcPools(@jakarta.annotation.Nullable final java.util.List<CloudPcPool> value) {

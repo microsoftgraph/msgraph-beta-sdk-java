@@ -5,8 +5,8 @@ import com.microsoft.graph.beta.auditlogs.customsecurityattributeaudits.CustomSe
 import com.microsoft.graph.beta.auditlogs.directoryaudits.DirectoryAuditsRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.directoryprovisioning.DirectoryProvisioningRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.getsummarizedmsisigninswithaggregationwindow.GetSummarizedMSISignInsWithAggregationWindowRequestBuilder;
-import com.microsoft.graph.beta.auditlogs.getsummarizednoninteractivesigninswithaggregationwindow.GetSummarizedNonInteractiveSignInsWithAggregationWindowRequestBuilder;
-import com.microsoft.graph.beta.auditlogs.getsummarizedserviceprincipalsigninswithaggregationwindow.GetSummarizedServicePrincipalSignInsWithAggregationWindowRequestBuilder;
+import com.microsoft.graph.beta.auditlogs.getsummarizednoninteractivesigninswithaggregationwindow.GetSummarizedNonInteractiveSignInsWithAggregationWindow_0c89c0fa;
+import com.microsoft.graph.beta.auditlogs.getsummarizedserviceprincipalsigninswithaggregationwindow.GetSummarizedServicePrincipalSignInsWithAggregationWind_b32fa68a;
 import com.microsoft.graph.beta.auditlogs.provisioning.ProvisioningRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signineventsappsummary.SignInEventsAppSummaryRequestBuilder;
 import com.microsoft.graph.beta.auditlogs.signineventssummary.SignInEventsSummaryRequestBuilder;
@@ -155,22 +155,22 @@ public class AuditLogsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getSummarizedNonInteractiveSignIns method.
      * @param aggregationWindow Usage: aggregationWindow=&apos;{aggregationWindow}&apos;
-     * @return a {@link GetSummarizedNonInteractiveSignInsWithAggregationWindowRequestBuilder}
+     * @return a {@link GetSummarizedNonInteractiveSignInsWithAggregationWindow_0c89c0fa}
      */
     @jakarta.annotation.Nonnull
-    public GetSummarizedNonInteractiveSignInsWithAggregationWindowRequestBuilder getSummarizedNonInteractiveSignInsWithAggregationWindow(@jakarta.annotation.Nonnull final String aggregationWindow) {
+    public GetSummarizedNonInteractiveSignInsWithAggregationWindow_0c89c0fa getSummarizedNonInteractiveSignInsWithAggregationWindow(@jakarta.annotation.Nonnull final String aggregationWindow) {
         Objects.requireNonNull(aggregationWindow);
-        return new GetSummarizedNonInteractiveSignInsWithAggregationWindowRequestBuilder(pathParameters, requestAdapter, aggregationWindow);
+        return new GetSummarizedNonInteractiveSignInsWithAggregationWindow_0c89c0fa(pathParameters, requestAdapter, aggregationWindow);
     }
     /**
      * Provides operations to call the getSummarizedServicePrincipalSignIns method.
      * @param aggregationWindow Usage: aggregationWindow=&apos;{aggregationWindow}&apos;
-     * @return a {@link GetSummarizedServicePrincipalSignInsWithAggregationWindowRequestBuilder}
+     * @return a {@link GetSummarizedServicePrincipalSignInsWithAggregationWind_b32fa68a}
      */
     @jakarta.annotation.Nonnull
-    public GetSummarizedServicePrincipalSignInsWithAggregationWindowRequestBuilder getSummarizedServicePrincipalSignInsWithAggregationWindow(@jakarta.annotation.Nonnull final String aggregationWindow) {
+    public GetSummarizedServicePrincipalSignInsWithAggregationWind_b32fa68a getSummarizedServicePrincipalSignInsWithAggregationWindow(@jakarta.annotation.Nonnull final String aggregationWindow) {
         Objects.requireNonNull(aggregationWindow);
-        return new GetSummarizedServicePrincipalSignInsWithAggregationWindowRequestBuilder(pathParameters, requestAdapter, aggregationWindow);
+        return new GetSummarizedServicePrincipalSignInsWithAggregationWind_b32fa68a(pathParameters, requestAdapter, aggregationWindow);
     }
     /**
      * Update auditLogs
