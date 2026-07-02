@@ -45,7 +45,7 @@ import com.microsoft.graph.beta.devicemanagement.deviceconfigurationconflictsumm
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationdevicestatesummaries.DeviceConfigurationDeviceStateSummariesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationrestrictedappsviolations.DeviceConfigurationRestrictedAppsViolationsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurations.DeviceConfigurationsRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates.DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.deviceconfigurationsallmanageddevicecertificatestates.DeviceConfigurationsAllManagedDeviceCertificateStatesRe_d8a714a9;
 import com.microsoft.graph.beta.devicemanagement.deviceconfigurationuserstatesummaries.DeviceConfigurationUserStateSummariesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.devicecustomattributeshellscripts.DeviceCustomAttributeShellScriptsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.deviceenrollmentconfigurations.DeviceEnrollmentConfigurationsRequestBuilder;
@@ -131,25 +131,25 @@ import com.microsoft.graph.beta.devicemanagement.tenantattachrbac.TenantAttachRB
 import com.microsoft.graph.beta.devicemanagement.termsandconditions.TermsAndConditionsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.troubleshootingevents.TroubleshootingEventsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsanomaly.UserExperienceAnalyticsAnomalyRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsanomalycorrelationgroupoverview.UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsanomalycorrelationgroupoverview.UserExperienceAnalyticsAnomalyCorrelationGroupOverviewR_71683ae6;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsanomalydevice.UserExperienceAnalyticsAnomalyDeviceRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformance.UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversion.UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversiondetails.UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyappversiondeviceid.UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformancebyosversion.UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthdevicemodelperformance.UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformance.UserExperienceAnalyticsAppHealthApplicationPerformanceR_639a6000;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformanceb_8097ef0c.UserExperienceAnalyticsAppHealthApplicationPerformanceB_b0ce4c31;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformanceb_843de5b0.UserExperienceAnalyticsAppHealthApplicationPerformanceB_899202bd;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformanceb_88803963.UserExperienceAnalyticsAppHealthApplicationPerformanceB_73937166;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthapplicationperformanceb_d202d87a.UserExperienceAnalyticsAppHealthApplicationPerformanceB_70be83d2;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthdevicemodelperformance.UserExperienceAnalyticsAppHealthDeviceModelPerformanceR_4dcbff66;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthdeviceperformance.UserExperienceAnalyticsAppHealthDevicePerformanceRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthdeviceperformancedetails.UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthosversionperformance.UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthdeviceperformancedetails.UserExperienceAnalyticsAppHealthDevicePerformanceDetail_4ca850b6;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthosversionperformance.UserExperienceAnalyticsAppHealthOSVersionPerformanceReq_fdb3de6d;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsapphealthoverview.UserExperienceAnalyticsAppHealthOverviewRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbaselines.UserExperienceAnalyticsBaselinesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthappimpact.UserExperienceAnalyticsBatteryHealthAppImpactRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthcapacitydetails.UserExperienceAnalyticsBatteryHealthCapacityDetailsRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthdeviceappimpact.UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthdeviceperformance.UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthdeviceruntimehistory.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthmodelperformance.UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthcapacitydetails.UserExperienceAnalyticsBatteryHealthCapacityDetailsRequ_64948acf;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthdeviceappimpact.UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequ_fbd82418;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthdeviceperformance.UserExperienceAnalyticsBatteryHealthDevicePerformanceRe_cfe5ecff;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthdeviceruntimehistory.UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistor_0792f10d;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthmodelperformance.UserExperienceAnalyticsBatteryHealthModelPerformanceReq_280ce9aa;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthosperformance.UserExperienceAnalyticsBatteryHealthOsPerformanceRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsbatteryhealthruntimedetails.UserExperienceAnalyticsBatteryHealthRuntimeDetailsRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticscategories.UserExperienceAnalyticsCategoriesRequestBuilder;
@@ -160,7 +160,7 @@ import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdevicesc
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdevicescores.UserExperienceAnalyticsDeviceScoresRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdevicestartuphistory.UserExperienceAnalyticsDeviceStartupHistoryRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdevicestartupprocesses.UserExperienceAnalyticsDeviceStartupProcessesRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdevicestartupprocessperformance.UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdevicestartupprocessperformance.UserExperienceAnalyticsDeviceStartupProcessPerformanceR_4c8ce676;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdeviceswithoutcloudidentity.UserExperienceAnalyticsDevicesWithoutCloudIdentityRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsdevicetimelineevent.UserExperienceAnalyticsDeviceTimelineEventRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsimpactingprocess.UserExperienceAnalyticsImpactingProcessRequestBuilder;
@@ -172,10 +172,10 @@ import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsremoteco
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsresourceperformance.UserExperienceAnalyticsResourcePerformanceRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsscorehistory.UserExperienceAnalyticsScoreHistoryRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticssummarizeddevicescopes.UserExperienceAnalyticsSummarizedDeviceScopesRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticssummarizeworkfromanywheredevices.UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsworkfromanywherehardwarereadinessmetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticssummarizeworkfromanywheredevices.UserExperienceAnalyticsSummarizeWorkFromAnywhereDevices_2417dbae;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsworkfromanywherehardwarereadinessmetric.UserExperienceAnalyticsWorkFromAnywhereHardwareReadines_08ab2d74;
 import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsworkfromanywheremetrics.UserExperienceAnalyticsWorkFromAnywhereMetricsRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsworkfromanywheremodelperformance.UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.userexperienceanalyticsworkfromanywheremodelperformance.UserExperienceAnalyticsWorkFromAnywhereModelPerformance_95ddf1fd;
 import com.microsoft.graph.beta.devicemanagement.userpfxcertificates.UserPfxCertificatesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.verifywindowsenrollmentautodiscoverywithdomainname.VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.VirtualEndpointRequestBuilder;
@@ -185,7 +185,7 @@ import com.microsoft.graph.beta.devicemanagement.windowsautopilotsettings.Window
 import com.microsoft.graph.beta.devicemanagement.windowsdriverupdateprofiles.WindowsDriverUpdateProfilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsfeatureupdateprofiles.WindowsFeatureUpdateProfilesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsinformationprotectionapplearningsummaries.WindowsInformationProtectionAppLearningSummariesRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.windowsinformationprotectionnetworklearningsummaries.WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.windowsinformationprotectionnetworklearningsummaries.WindowsInformationProtectionNetworkLearningSummariesReq_49622581;
 import com.microsoft.graph.beta.devicemanagement.windowsmalwareinformation.WindowsMalwareInformationRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsqualityupdatepolicies.WindowsQualityUpdatePoliciesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.windowsqualityupdateprofiles.WindowsQualityUpdateProfilesRequestBuilder;
@@ -575,11 +575,11 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the deviceConfigurationsAllManagedDeviceCertificateStates property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder}
+     * @return a {@link DeviceConfigurationsAllManagedDeviceCertificateStatesRe_d8a714a9}
      */
     @jakarta.annotation.Nonnull
-    public DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder deviceConfigurationsAllManagedDeviceCertificateStates() {
-        return new DeviceConfigurationsAllManagedDeviceCertificateStatesRequestBuilder(pathParameters, requestAdapter);
+    public DeviceConfigurationsAllManagedDeviceCertificateStatesRe_d8a714a9 deviceConfigurationsAllManagedDeviceCertificateStates() {
+        return new DeviceConfigurationsAllManagedDeviceCertificateStatesRe_d8a714a9(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the deviceConfigurationUserStateSummaries property of the microsoft.graph.deviceManagement entity.
@@ -1215,11 +1215,11 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAnomalyCorrelationGroupOverview property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAnomalyCorrelationGroupOverviewR_71683ae6}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder userExperienceAnalyticsAnomalyCorrelationGroupOverview() {
-        return new UserExperienceAnalyticsAnomalyCorrelationGroupOverviewRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsAnomalyCorrelationGroupOverviewR_71683ae6 userExperienceAnalyticsAnomalyCorrelationGroupOverview() {
+        return new UserExperienceAnalyticsAnomalyCorrelationGroupOverviewR_71683ae6(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAnomalyDevice property of the microsoft.graph.deviceManagement entity.
@@ -1231,51 +1231,51 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformance property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceR_639a6000}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformance() {
-        return new UserExperienceAnalyticsAppHealthApplicationPerformanceRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceR_639a6000 userExperienceAnalyticsAppHealthApplicationPerformance() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceR_639a6000(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceB_70be83d2}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion() {
-        return new UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceB_70be83d2 userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersion() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceB_70be83d2(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceB_73937166}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
-        return new UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetailsRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceB_73937166 userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDetails() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceB_73937166(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceB_b0ce4c31}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
-        return new UserExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceIdRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceB_b0ce4c31 userExperienceAnalyticsAppHealthApplicationPerformanceByAppVersionDeviceId() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceB_b0ce4c31(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAppHealthApplicationPerformanceB_899202bd}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion() {
-        return new UserExperienceAnalyticsAppHealthApplicationPerformanceByOSVersionRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsAppHealthApplicationPerformanceB_899202bd userExperienceAnalyticsAppHealthApplicationPerformanceByOSVersion() {
+        return new UserExperienceAnalyticsAppHealthApplicationPerformanceB_899202bd(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthDeviceModelPerformance property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAppHealthDeviceModelPerformanceR_4dcbff66}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder userExperienceAnalyticsAppHealthDeviceModelPerformance() {
-        return new UserExperienceAnalyticsAppHealthDeviceModelPerformanceRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsAppHealthDeviceModelPerformanceR_4dcbff66 userExperienceAnalyticsAppHealthDeviceModelPerformance() {
+        return new UserExperienceAnalyticsAppHealthDeviceModelPerformanceR_4dcbff66(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthDevicePerformance property of the microsoft.graph.deviceManagement entity.
@@ -1287,19 +1287,19 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthDevicePerformanceDetails property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAppHealthDevicePerformanceDetail_4ca850b6}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder userExperienceAnalyticsAppHealthDevicePerformanceDetails() {
-        return new UserExperienceAnalyticsAppHealthDevicePerformanceDetailsRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsAppHealthDevicePerformanceDetail_4ca850b6 userExperienceAnalyticsAppHealthDevicePerformanceDetails() {
+        return new UserExperienceAnalyticsAppHealthDevicePerformanceDetail_4ca850b6(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthOSVersionPerformance property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsAppHealthOSVersionPerformanceReq_fdb3de6d}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder userExperienceAnalyticsAppHealthOSVersionPerformance() {
-        return new UserExperienceAnalyticsAppHealthOSVersionPerformanceRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsAppHealthOSVersionPerformanceReq_fdb3de6d userExperienceAnalyticsAppHealthOSVersionPerformance() {
+        return new UserExperienceAnalyticsAppHealthOSVersionPerformanceReq_fdb3de6d(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsAppHealthOverview property of the microsoft.graph.deviceManagement entity.
@@ -1327,43 +1327,43 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsBatteryHealthCapacityDetails property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsBatteryHealthCapacityDetailsRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsBatteryHealthCapacityDetailsRequ_64948acf}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsBatteryHealthCapacityDetailsRequestBuilder userExperienceAnalyticsBatteryHealthCapacityDetails() {
-        return new UserExperienceAnalyticsBatteryHealthCapacityDetailsRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsBatteryHealthCapacityDetailsRequ_64948acf userExperienceAnalyticsBatteryHealthCapacityDetails() {
+        return new UserExperienceAnalyticsBatteryHealthCapacityDetailsRequ_64948acf(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsBatteryHealthDeviceAppImpact property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequ_fbd82418}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder userExperienceAnalyticsBatteryHealthDeviceAppImpact() {
-        return new UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequ_fbd82418 userExperienceAnalyticsBatteryHealthDeviceAppImpact() {
+        return new UserExperienceAnalyticsBatteryHealthDeviceAppImpactRequ_fbd82418(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsBatteryHealthDevicePerformance property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsBatteryHealthDevicePerformanceRe_cfe5ecff}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder userExperienceAnalyticsBatteryHealthDevicePerformance() {
-        return new UserExperienceAnalyticsBatteryHealthDevicePerformanceRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsBatteryHealthDevicePerformanceRe_cfe5ecff userExperienceAnalyticsBatteryHealthDevicePerformance() {
+        return new UserExperienceAnalyticsBatteryHealthDevicePerformanceRe_cfe5ecff(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistor_0792f10d}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
-        return new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistoryRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistor_0792f10d userExperienceAnalyticsBatteryHealthDeviceRuntimeHistory() {
+        return new UserExperienceAnalyticsBatteryHealthDeviceRuntimeHistor_0792f10d(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsBatteryHealthModelPerformance property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsBatteryHealthModelPerformanceReq_280ce9aa}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder userExperienceAnalyticsBatteryHealthModelPerformance() {
-        return new UserExperienceAnalyticsBatteryHealthModelPerformanceRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsBatteryHealthModelPerformanceReq_280ce9aa userExperienceAnalyticsBatteryHealthModelPerformance() {
+        return new UserExperienceAnalyticsBatteryHealthModelPerformanceReq_280ce9aa(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsBatteryHealthOsPerformance property of the microsoft.graph.deviceManagement entity.
@@ -1447,11 +1447,11 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsDeviceStartupProcessPerformance property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsDeviceStartupProcessPerformanceR_4c8ce676}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder userExperienceAnalyticsDeviceStartupProcessPerformance() {
-        return new UserExperienceAnalyticsDeviceStartupProcessPerformanceRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsDeviceStartupProcessPerformanceR_4c8ce676 userExperienceAnalyticsDeviceStartupProcessPerformance() {
+        return new UserExperienceAnalyticsDeviceStartupProcessPerformanceR_4c8ce676(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsDevicesWithoutCloudIdentity property of the microsoft.graph.deviceManagement entity.
@@ -1543,19 +1543,19 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the userExperienceAnalyticsSummarizeWorkFromAnywhereDevices method.
-     * @return a {@link UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsSummarizeWorkFromAnywhereDevices_2417dbae}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder userExperienceAnalyticsSummarizeWorkFromAnywhereDevices() {
-        return new UserExperienceAnalyticsSummarizeWorkFromAnywhereDevicesRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsSummarizeWorkFromAnywhereDevices_2417dbae userExperienceAnalyticsSummarizeWorkFromAnywhereDevices() {
+        return new UserExperienceAnalyticsSummarizeWorkFromAnywhereDevices_2417dbae(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereHardwareReadines_08ab2d74}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
-        return new UserExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetricRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsWorkFromAnywhereHardwareReadines_08ab2d74 userExperienceAnalyticsWorkFromAnywhereHardwareReadinessMetric() {
+        return new UserExperienceAnalyticsWorkFromAnywhereHardwareReadines_08ab2d74(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereMetrics property of the microsoft.graph.deviceManagement entity.
@@ -1567,11 +1567,11 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the userExperienceAnalyticsWorkFromAnywhereModelPerformance property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder}
+     * @return a {@link UserExperienceAnalyticsWorkFromAnywhereModelPerformance_95ddf1fd}
      */
     @jakarta.annotation.Nonnull
-    public UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder userExperienceAnalyticsWorkFromAnywhereModelPerformance() {
-        return new UserExperienceAnalyticsWorkFromAnywhereModelPerformanceRequestBuilder(pathParameters, requestAdapter);
+    public UserExperienceAnalyticsWorkFromAnywhereModelPerformance_95ddf1fd userExperienceAnalyticsWorkFromAnywhereModelPerformance() {
+        return new UserExperienceAnalyticsWorkFromAnywhereModelPerformance_95ddf1fd(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the userPfxCertificates property of the microsoft.graph.deviceManagement entity.
@@ -1639,11 +1639,11 @@ public class DeviceManagementRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to manage the windowsInformationProtectionNetworkLearningSummaries property of the microsoft.graph.deviceManagement entity.
-     * @return a {@link WindowsInformationProtectionNetworkLearningSummariesRequestBuilder}
+     * @return a {@link WindowsInformationProtectionNetworkLearningSummariesReq_49622581}
      */
     @jakarta.annotation.Nonnull
-    public WindowsInformationProtectionNetworkLearningSummariesRequestBuilder windowsInformationProtectionNetworkLearningSummaries() {
-        return new WindowsInformationProtectionNetworkLearningSummariesRequestBuilder(pathParameters, requestAdapter);
+    public WindowsInformationProtectionNetworkLearningSummariesReq_49622581 windowsInformationProtectionNetworkLearningSummaries() {
+        return new WindowsInformationProtectionNetworkLearningSummariesReq_49622581(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the windowsMalwareInformation property of the microsoft.graph.deviceManagement entity.

@@ -96,7 +96,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CustomDataProvidedResourceUploadSessionCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a customDataProvidedResourceUploadSession object. Only one upload session is allowed per reference instance (for example, access review instance) and customDataProvidedResource pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can delete the active upload session to create a new one.
+     * Create a customDataProvidedResourceUploadSession object. Only one upload session is allowed per reference instance (for example, access review instance) and customDataProvidedResource pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can delete the active upload session to create a new one. The following table lists the derived types of customDataProvidedResourceUploadSession that can be created. Specify the @odata.type in the request body to indicate the derived type.
      * @param body The request body
      * @return a {@link CustomDataProvidedResourceUploadSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -110,7 +110,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a customDataProvidedResourceUploadSession object. Only one upload session is allowed per reference instance (for example, access review instance) and customDataProvidedResource pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can delete the active upload session to create a new one.
+     * Create a customDataProvidedResourceUploadSession object. Only one upload session is allowed per reference instance (for example, access review instance) and customDataProvidedResource pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can delete the active upload session to create a new one. The following table lists the derived types of customDataProvidedResourceUploadSession that can be created. Specify the @odata.type in the request body to indicate the derived type.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomDataProvidedResourceUploadSession}
@@ -155,7 +155,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a customDataProvidedResourceUploadSession object. Only one upload session is allowed per reference instance (for example, access review instance) and customDataProvidedResource pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can delete the active upload session to create a new one.
+     * Create a customDataProvidedResourceUploadSession object. Only one upload session is allowed per reference instance (for example, access review instance) and customDataProvidedResource pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can delete the active upload session to create a new one. The following table lists the derived types of customDataProvidedResourceUploadSession that can be created. Specify the @odata.type in the request body to indicate the derived type.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -167,7 +167,7 @@ public class UploadSessionsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a customDataProvidedResourceUploadSession object. Only one upload session is allowed per reference instance (for example, access review instance) and customDataProvidedResource pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can delete the active upload session to create a new one.
+     * Create a customDataProvidedResourceUploadSession object. Only one upload session is allowed per reference instance (for example, access review instance) and customDataProvidedResource pair. Once you create an upload session, upload files, and complete the session, the data is processed and you cannot create another upload session for that same pair. If you encounter errors with files uploaded or need to start fresh, you can delete the active upload session to create a new one. The following table lists the derived types of customDataProvidedResourceUploadSession that can be created. Specify the @odata.type in the request body to indicate the derived type.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

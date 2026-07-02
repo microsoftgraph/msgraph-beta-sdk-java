@@ -287,7 +287,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("providerTenantSettings");
     }
     /**
-     * Gets the rules property value. The rules property
+     * Gets the rules property value. Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
      * @return a {@link RulesRoot}
      */
     @jakarta.annotation.Nullable
@@ -595,7 +595,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("providerTenantSettings", value);
     }
     /**
-     * Sets the rules property value. The rules property
+     * Sets the rules property value. Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
      * @param value Value to set for the rules property.
      */
     public void setRules(@jakarta.annotation.Nullable final RulesRoot value) {

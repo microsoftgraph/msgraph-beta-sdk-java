@@ -141,7 +141,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return this.requestAdapter.send(requestInfo, errorMapping, UnifiedRoleAssignmentMultiple::createFromDiscriminatorValue);
     }
     /**
-     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
+     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment doesn&apos;t support update.
      * @param body The request body
      * @return a {@link UnifiedRoleAssignmentMultiple}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -155,7 +155,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return patch(body, null);
     }
     /**
-     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
+     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment doesn&apos;t support update.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleAssignmentMultiple}
@@ -226,7 +226,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return requestInfo;
     }
     /**
-     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
+     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment doesn&apos;t support update.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -238,7 +238,7 @@ public class UnifiedRoleAssignmentMultipleItemRequestBuilder extends BaseRequest
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment does not support update.
+     * Update an existing unifiedRoleAssignmentMultiple object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune) In contrast, unifiedRoleAssignment doesn&apos;t support update.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

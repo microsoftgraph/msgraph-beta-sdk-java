@@ -46,7 +46,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/programs/{program%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * In the Microsoft Entra access reviews feature, delete a program object. Do not delete a program which still has programControl linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
+     * In the Microsoft Entra access reviews feature, delete a program object. Don&apos;t delete a program which still has programControl linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/program-delete?view=graph-rest-beta">Find more info here</a>
      */
@@ -54,7 +54,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
         delete(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, delete a program object. Do not delete a program which still has programControl linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
+     * In the Microsoft Entra access reviews feature, delete a program object. Don&apos;t delete a program which still has programControl linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/program-delete?view=graph-rest-beta">Find more info here</a>
@@ -115,7 +115,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, Program::createFromDiscriminatorValue);
     }
     /**
-     * In the Microsoft Entra access reviews feature, delete a program object. Do not delete a program which still has programControl linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
+     * In the Microsoft Entra access reviews feature, delete a program object. Don&apos;t delete a program which still has programControl linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -123,7 +123,7 @@ public class ProgramItemRequestBuilder extends BaseRequestBuilder {
         return toDeleteRequestInformation(null);
     }
     /**
-     * In the Microsoft Entra access reviews feature, delete a program object. Do not delete a program which still has programControl linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
+     * In the Microsoft Entra access reviews feature, delete a program object. Don&apos;t delete a program which still has programControl linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

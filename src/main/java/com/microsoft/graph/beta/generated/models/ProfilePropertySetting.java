@@ -25,7 +25,7 @@ public class ProfilePropertySetting extends Entity implements Parsable {
         return new ProfilePropertySetting();
     }
     /**
-     * Gets the displayName property value. Name of the property-level setting.
+     * Gets the displayName property value. Name of the property associated with this setting.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class ProfilePropertySetting extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the prioritizedSourceUrls property value. A collection of prioritized profile source URLs ordered by data precedence within an organization.
+     * Gets the prioritizedSourceUrls property value. A collection of prioritized profile source URLs ordered by data precedence within an organization. For details, see Manage profile source precedence in Microsoft 365.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class ProfilePropertySetting extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("prioritizedSourceUrls", this.getPrioritizedSourceUrls());
     }
     /**
-     * Sets the displayName property value. Name of the property-level setting.
+     * Sets the displayName property value. Name of the property associated with this setting.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -86,7 +86,7 @@ public class ProfilePropertySetting extends Entity implements Parsable {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the prioritizedSourceUrls property value. A collection of prioritized profile source URLs ordered by data precedence within an organization.
+     * Sets the prioritizedSourceUrls property value. A collection of prioritized profile source URLs ordered by data precedence within an organization. For details, see Manage profile source precedence in Microsoft 365.
      * @param value Value to set for the prioritizedSourceUrls property.
      */
     public void setPrioritizedSourceUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {

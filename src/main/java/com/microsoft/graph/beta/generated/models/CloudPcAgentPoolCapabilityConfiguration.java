@@ -26,7 +26,7 @@ public class CloudPcAgentPoolCapabilityConfiguration extends CloudPcPoolCapabili
         return new CloudPcAgentPoolCapabilityConfiguration();
     }
     /**
-     * Gets the enableSingleSignOn property value. The enableSingleSignOn property
+     * Gets the enableSingleSignOn property value. When true, provisioned Cloud PCs support single sign-on, allowing users to authenticate with password-less options (such as FIDO2 keys) via Microsoft Entra ID. Default value is false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class CloudPcAgentPoolCapabilityConfiguration extends CloudPcPoolCapabili
         writer.writeBooleanValue("enableSingleSignOn", this.getEnableSingleSignOn());
     }
     /**
-     * Sets the enableSingleSignOn property value. The enableSingleSignOn property
+     * Sets the enableSingleSignOn property value. When true, provisioned Cloud PCs support single sign-on, allowing users to authenticate with password-less options (such as FIDO2 keys) via Microsoft Entra ID. Default value is false.
      * @param value Value to set for the enableSingleSignOn property.
      */
     public void setEnableSingleSignOn(@jakarta.annotation.Nullable final Boolean value) {

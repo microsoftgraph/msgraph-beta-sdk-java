@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models.security;
 
+import com.microsoft.kiota.PeriodAndDuration;
 import com.microsoft.kiota.serialization.AdditionalDataHolder;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -62,14 +63,23 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("frequency", (n) -> { this.setFrequency(n.getPeriodAndDurationValue()); });
         deserializerMap.put("nextRunDateTime", (n) -> { this.setNextRunDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("period", (n) -> { this.setPeriod(n.getStringValue()); });
         return deserializerMap;
     }
     /**
-     * Gets the nextRunDateTime property value. Timestamp of the custom detection rule&apos;s next scheduled run.
+     * Gets the frequency property value. The recurring time interval at which the rule runs (ISO 8601 duration, for example P1D for daily, PT1H for hourly).
+     * @return a {@link PeriodAndDuration}
+     */
+    @jakarta.annotation.Nullable
+    public PeriodAndDuration getFrequency() {
+        return this.backingStore.get("frequency");
+    }
+    /**
+     * Gets the nextRunDateTime property value. Timestamp of the custom detection rule&apos;s next scheduled run. Deprecated. This property will be removed from this resource on 2026-10-01.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +95,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the period property value. How often the detection rule is set to run. The allowed values are: 0, 1H, 3H, 12H, or 24H. &apos;0&apos; signifies the rule is run continuously.
+     * Gets the period property value. How often the detection rule is set to run. The allowed values are: 0, 1H, 3H, 12H, or 24H. 0 signifies the rule is run continuously. Deprecated. Use frequency instead. This property will be removed from this resource on 2026-10-01.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -98,6 +108,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writePeriodAndDurationValue("frequency", this.getFrequency());
         writer.writeOffsetDateTimeValue("nextRunDateTime", this.getNextRunDateTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("period", this.getPeriod());
@@ -119,7 +130,14 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the nextRunDateTime property value. Timestamp of the custom detection rule&apos;s next scheduled run.
+     * Sets the frequency property value. The recurring time interval at which the rule runs (ISO 8601 duration, for example P1D for daily, PT1H for hourly).
+     * @param value Value to set for the frequency property.
+     */
+    public void setFrequency(@jakarta.annotation.Nullable final PeriodAndDuration value) {
+        this.backingStore.set("frequency", value);
+    }
+    /**
+     * Sets the nextRunDateTime property value. Timestamp of the custom detection rule&apos;s next scheduled run. Deprecated. This property will be removed from this resource on 2026-10-01.
      * @param value Value to set for the nextRunDateTime property.
      */
     public void setNextRunDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -133,7 +151,7 @@ public class RuleSchedule implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the period property value. How often the detection rule is set to run. The allowed values are: 0, 1H, 3H, 12H, or 24H. &apos;0&apos; signifies the rule is run continuously.
+     * Sets the period property value. How often the detection rule is set to run. The allowed values are: 0, 1H, 3H, 12H, or 24H. 0 signifies the rule is run continuously. Deprecated. Use frequency instead. This property will be removed from this resource on 2026-10-01.
      * @param value Value to set for the period property.
      */
     public void setPeriod(@jakarta.annotation.Nullable final String value) {

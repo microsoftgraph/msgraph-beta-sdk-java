@@ -56,7 +56,7 @@ public class CloudPcAgentPoolBillingConfiguration implements AdditionalDataHolde
         return this.backingStore;
     }
     /**
-     * Gets the billingPlanId property value. The billingPlanId property
+     * Gets the billingPlanId property value. The identifier of the billing plan.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class CloudPcAgentPoolBillingConfiguration implements AdditionalDataHolde
         this.backingStore = value;
     }
     /**
-     * Sets the billingPlanId property value. The billingPlanId property
+     * Sets the billingPlanId property value. The identifier of the billing plan.
      * @param value Value to set for the billingPlanId property.
      */
     public void setBillingPlanId(@jakarta.annotation.Nullable final String value) {

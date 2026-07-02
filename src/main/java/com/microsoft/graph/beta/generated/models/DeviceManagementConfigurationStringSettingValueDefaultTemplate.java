@@ -39,7 +39,7 @@ public class DeviceManagementConfigurationStringSettingValueDefaultTemplate impl
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementConfigurationStringSettingValueConstantDefaultTemplate": return new DeviceManagementConfigurationStringSettingValueConstantDefaultTemplate();
+                case "#microsoft.graph.deviceManagementConfigurationStringSettingValueConstantDefaultTemplate": return new DeviceManagementConfigurationStringSettingValueConstant_a54093e9();
             }
         }
         return new DeviceManagementConfigurationStringSettingValueDefaultTemplate();

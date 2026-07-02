@@ -36,13 +36,12 @@ public class ValidateRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/migrations/crossTenantMigrationJobs/validate", rawUrl);
     }
     /**
-     * Validate the configuration of a crossTenantMigrationJob. This function doesn&apos;t migrate any content, but goes through validation for the specified workloads to find any errors or misconfigurations that would affect an actual migration job. 
+     * Invoke action validate
      * @param body The request body
      * @return a {@link CrossTenantMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2025-07/PrivatePreview:CrossTenantContentMigrationAPI on 2025-07-09 and will be removed 2026-07-09
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationjob-validate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -50,14 +49,13 @@ public class ValidateRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Validate the configuration of a crossTenantMigrationJob. This function doesn&apos;t migrate any content, but goes through validation for the specified workloads to find any errors or misconfigurations that would affect an actual migration job. 
+     * Invoke action validate
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
      *  as of 2025-07/PrivatePreview:CrossTenantContentMigrationAPI on 2025-07-09 and will be removed 2026-07-09
-     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationjob-validate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -69,7 +67,7 @@ public class ValidateRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantMigrationJob::createFromDiscriminatorValue);
     }
     /**
-     * Validate the configuration of a crossTenantMigrationJob. This function doesn&apos;t migrate any content, but goes through validation for the specified workloads to find any errors or misconfigurations that would affect an actual migration job. 
+     * Invoke action validate
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -81,7 +79,7 @@ public class ValidateRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Validate the configuration of a crossTenantMigrationJob. This function doesn&apos;t migrate any content, but goes through validation for the specified workloads to find any errors or misconfigurations that would affect an actual migration job. 
+     * Invoke action validate
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

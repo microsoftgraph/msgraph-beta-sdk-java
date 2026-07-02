@@ -30,6 +30,14 @@ public class IosVppApp extends MobileApp implements Parsable {
         return new IosVppApp();
     }
     /**
+     * Gets the appleDeviceAppDeliveryProtocolType property value. The appleDeviceAppDeliveryProtocolType property
+     * @return a {@link AppleDeviceDeliveryProtocol}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeviceDeliveryProtocol getAppleDeviceAppDeliveryProtocolType() {
+        return this.backingStore.get("appleDeviceAppDeliveryProtocolType");
+    }
+    /**
      * Gets the applicableDeviceType property value. The applicable iOS Device Type.
      * @return a {@link IosDeviceType}
      */
@@ -68,6 +76,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleDeviceAppDeliveryProtocolType", (n) -> { this.setAppleDeviceAppDeliveryProtocolType(n.getEnumValue(AppleDeviceDeliveryProtocol::forValue)); });
         deserializerMap.put("applicableDeviceType", (n) -> { this.setApplicableDeviceType(n.getObjectValue(IosDeviceType::createFromDiscriminatorValue)); });
         deserializerMap.put("appStoreUrl", (n) -> { this.setAppStoreUrl(n.getStringValue()); });
         deserializerMap.put("assignedLicenses", (n) -> { this.setAssignedLicenses(n.getCollectionOfObjectValues(IosVppAppAssignedLicense::createFromDiscriminatorValue)); });
@@ -171,6 +180,7 @@ public class IosVppApp extends MobileApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("appleDeviceAppDeliveryProtocolType", this.getAppleDeviceAppDeliveryProtocolType());
         writer.writeObjectValue("applicableDeviceType", this.getApplicableDeviceType());
         writer.writeStringValue("appStoreUrl", this.getAppStoreUrl());
         writer.writeCollectionOfObjectValues("assignedLicenses", this.getAssignedLicenses());
@@ -185,6 +195,13 @@ public class IosVppApp extends MobileApp implements Parsable {
         writer.writeStringValue("vppTokenDisplayName", this.getVppTokenDisplayName());
         writer.writeStringValue("vppTokenId", this.getVppTokenId());
         writer.writeStringValue("vppTokenOrganizationName", this.getVppTokenOrganizationName());
+    }
+    /**
+     * Sets the appleDeviceAppDeliveryProtocolType property value. The appleDeviceAppDeliveryProtocolType property
+     * @param value Value to set for the appleDeviceAppDeliveryProtocolType property.
+     */
+    public void setAppleDeviceAppDeliveryProtocolType(@jakarta.annotation.Nullable final AppleDeviceDeliveryProtocol value) {
+        this.backingStore.set("appleDeviceAppDeliveryProtocolType", value);
     }
     /**
      * Sets the applicableDeviceType property value. The applicable iOS Device Type.

@@ -1,9 +1,9 @@
 package com.microsoft.graph.beta.users.item.authentication.passwordlessmicrosoftauthenticatormethods;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse;
+import com.microsoft.graph.beta.models.PasswordlessMicrosoftAuthenticatorAuthenticationMethodC_7b744822;
 import com.microsoft.graph.beta.users.item.authentication.passwordlessmicrosoftauthenticatormethods.count.CountRequestBuilder;
-import com.microsoft.graph.beta.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder;
+import com.microsoft.graph.beta.users.item.authentication.passwordlessmicrosoftauthenticatormethods.item.PasswordlessMicrosoftAuthenticatorAuthenticationMethodI_a9962b72;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -33,14 +33,14 @@ public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder extends Bas
     /**
      * Provides operations to manage the passwordlessMicrosoftAuthenticatorMethods property of the microsoft.graph.authentication entity.
      * @param passwordlessMicrosoftAuthenticatorAuthenticationMethodId The unique identifier of passwordlessMicrosoftAuthenticatorAuthenticationMethod
-     * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder}
+     * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethodI_a9962b72}
      */
     @jakarta.annotation.Nonnull
-    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder byPasswordlessMicrosoftAuthenticatorAuthenticationMethodId(@jakarta.annotation.Nonnull final String passwordlessMicrosoftAuthenticatorAuthenticationMethodId) {
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodI_a9962b72 byPasswordlessMicrosoftAuthenticatorAuthenticationMethodId(@jakarta.annotation.Nonnull final String passwordlessMicrosoftAuthenticatorAuthenticationMethodId) {
         Objects.requireNonNull(passwordlessMicrosoftAuthenticatorAuthenticationMethodId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("passwordlessMicrosoftAuthenticatorAuthenticationMethod%2Did", passwordlessMicrosoftAuthenticatorAuthenticationMethodId);
-        return new PasswordlessMicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder(urlTplParams, requestAdapter);
+        return new PasswordlessMicrosoftAuthenticatorAuthenticationMethodI_a9962b72(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder} and sets the default values.
@@ -60,25 +60,25 @@ public class PasswordlessMicrosoftAuthenticatorMethodsRequestBuilder extends Bas
     }
     /**
      * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
-     * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse}
+     * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethodC_7b744822}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse get() {
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodC_7b744822 get() {
         return get(null);
     }
     /**
      * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse}
+     * @return a {@link PasswordlessMicrosoftAuthenticatorAuthenticationMethodC_7b744822}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public PasswordlessMicrosoftAuthenticatorAuthenticationMethodC_7b744822 get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, PasswordlessMicrosoftAuthenticatorAuthenticationMethodCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, PasswordlessMicrosoftAuthenticatorAuthenticationMethodC_7b744822::createFromDiscriminatorValue);
     }
     /**
      * Represents the Microsoft Authenticator Passwordless Phone Sign-in methods registered to a user for authentication.

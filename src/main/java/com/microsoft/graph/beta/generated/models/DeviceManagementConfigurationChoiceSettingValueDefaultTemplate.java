@@ -39,7 +39,7 @@ public class DeviceManagementConfigurationChoiceSettingValueDefaultTemplate impl
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate": return new DeviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate();
+                case "#microsoft.graph.deviceManagementConfigurationChoiceSettingValueConstantDefaultTemplate": return new DeviceManagementConfigurationChoiceSettingValueConstant_24db14cd();
             }
         }
         return new DeviceManagementConfigurationChoiceSettingValueDefaultTemplate();

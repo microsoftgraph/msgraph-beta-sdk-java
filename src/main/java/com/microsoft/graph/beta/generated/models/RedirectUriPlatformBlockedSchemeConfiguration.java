@@ -56,7 +56,7 @@ public class RedirectUriPlatformBlockedSchemeConfiguration implements Additional
         return this.backingStore;
     }
     /**
-     * Gets the blockedSchemes property value. The blockedSchemes property
+     * Gets the blockedSchemes property value. Collection of URI schemes that are blocked for this specific platform. Schemes refer to URI schemes as defined in RFC 3986 3.1.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class RedirectUriPlatformBlockedSchemeConfiguration implements Additional
         return this.backingStore.get("blockedSchemes");
     }
     /**
-     * Gets the exemptFormats property value. The exemptFormats property
+     * Gets the exemptFormats property value. Collection of URI patterns that are exempt from the blocked scheme restrictions for this platform. Patterns must follow specific validation rules for standard URI formats or URN formats.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -118,14 +118,14 @@ public class RedirectUriPlatformBlockedSchemeConfiguration implements Additional
         this.backingStore = value;
     }
     /**
-     * Sets the blockedSchemes property value. The blockedSchemes property
+     * Sets the blockedSchemes property value. Collection of URI schemes that are blocked for this specific platform. Schemes refer to URI schemes as defined in RFC 3986 3.1.
      * @param value Value to set for the blockedSchemes property.
      */
     public void setBlockedSchemes(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("blockedSchemes", value);
     }
     /**
-     * Sets the exemptFormats property value. The exemptFormats property
+     * Sets the exemptFormats property value. Collection of URI patterns that are exempt from the blocked scheme restrictions for this platform. Patterns must follow specific validation rules for standard URI formats or URN formats.
      * @param value Value to set for the exemptFormats property.
      */
     public void setExemptFormats(@jakarta.annotation.Nullable final java.util.List<String> value) {

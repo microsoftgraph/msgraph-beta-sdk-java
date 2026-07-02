@@ -35,7 +35,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/provisioningPolicies/{cloudPcProvisioningPolicy%2Did}/apply", rawUrl);
     }
     /**
-     * Apply the current provisioning policy configuration to all Cloud PC devices under a specified policy. Currently, the region is the only policy setting that you can apply.
+     * Apply the current provisioning policy configuration to all Cloud PC devices under a specified policy. You can apply policy settings such as region and singleSignOn. This action also supports reprovisioning for frontline shared mode Cloud PCs by using the reservePercentage parameter to control the percentage of Cloud PCs that remain available during the process.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/cloudpcprovisioningpolicy-apply?view=graph-rest-beta">Find more info here</a>
@@ -44,7 +44,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         post(body, null);
     }
     /**
-     * Apply the current provisioning policy configuration to all Cloud PC devices under a specified policy. Currently, the region is the only policy setting that you can apply.
+     * Apply the current provisioning policy configuration to all Cloud PC devices under a specified policy. You can apply policy settings such as region and singleSignOn. This action also supports reprovisioning for frontline shared mode Cloud PCs by using the reservePercentage parameter to control the percentage of Cloud PCs that remain available during the process.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Apply the current provisioning policy configuration to all Cloud PC devices under a specified policy. Currently, the region is the only policy setting that you can apply.
+     * Apply the current provisioning policy configuration to all Cloud PC devices under a specified policy. You can apply policy settings such as region and singleSignOn. This action also supports reprovisioning for frontline shared mode Cloud PCs by using the reservePercentage parameter to control the percentage of Cloud PCs that remain available during the process.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class ApplyRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Apply the current provisioning policy configuration to all Cloud PC devices under a specified policy. Currently, the region is the only policy setting that you can apply.
+     * Apply the current provisioning policy configuration to all Cloud PC devices under a specified policy. You can apply policy settings such as region and singleSignOn. This action also supports reprovisioning for frontline shared mode Cloud PCs by using the reservePercentage parameter to control the percentage of Cloud PCs that remain available during the process.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

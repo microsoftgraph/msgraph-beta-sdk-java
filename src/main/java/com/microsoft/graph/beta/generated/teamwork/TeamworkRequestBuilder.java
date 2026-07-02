@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.teamwork.deletedchats.DeletedChatsRequestBuilder
 import com.microsoft.graph.beta.teamwork.deletedteams.DeletedTeamsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.determineifinteractionisallowed.DetermineIfInteractionIsAllowedRequestBuilder;
 import com.microsoft.graph.beta.teamwork.devices.DevicesRequestBuilder;
+import com.microsoft.graph.beta.teamwork.messaging.MessagingRequestBuilder;
 import com.microsoft.graph.beta.teamwork.sendactivitynotificationtorecipients.SendActivityNotificationToRecipientsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamsappsettings.TeamsAppSettingsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.TeamTemplatesRequestBuilder;
@@ -59,6 +60,14 @@ public class TeamworkRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DevicesRequestBuilder devices() {
         return new DevicesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the messaging property of the microsoft.graph.teamwork entity.
+     * @return a {@link MessagingRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MessagingRequestBuilder messaging() {
+        return new MessagingRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the sendActivityNotificationToRecipients method.

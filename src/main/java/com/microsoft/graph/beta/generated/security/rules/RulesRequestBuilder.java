@@ -64,7 +64,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get rules from security
+     * Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
      * @return a {@link RulesRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -73,7 +73,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get rules from security
+     * Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RulesRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -131,7 +131,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get rules from security
+     * Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -139,7 +139,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get rules from security
+     * Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -191,7 +191,7 @@ public class RulesRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get rules from security
+     * Container for the security rules configured in Microsoft Defender XDR, including custom detection rules.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

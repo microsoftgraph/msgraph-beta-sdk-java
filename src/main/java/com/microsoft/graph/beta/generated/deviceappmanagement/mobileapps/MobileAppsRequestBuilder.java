@@ -1,6 +1,6 @@
 package com.microsoft.graph.beta.deviceappmanagement.mobileapps;
 
-import com.microsoft.graph.beta.deviceappmanagement.mobileapps.convertfrommobileappcatalogpackagewithmobileappcatalogpackageid.ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder;
+import com.microsoft.graph.beta.deviceappmanagement.mobileapps.convertfrommobileappcatalogpackagewithmobileappcatalogpackageid.ConvertFromMobileAppCatalogPackageWithMobileAppCatalogP_bc00b82f;
 import com.microsoft.graph.beta.deviceappmanagement.mobileapps.count.CountRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileapps.graphandroidforworkapp.GraphAndroidForWorkAppRequestBuilder;
 import com.microsoft.graph.beta.deviceappmanagement.mobileapps.graphandroidlobapp.GraphAndroidLobAppRequestBuilder;
@@ -270,12 +270,12 @@ public class MobileAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the convertFromMobileAppCatalogPackage method.
      * @param mobileAppCatalogPackageId Usage: mobileAppCatalogPackageId=&apos;{mobileAppCatalogPackageId}&apos;
-     * @return a {@link ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder}
+     * @return a {@link ConvertFromMobileAppCatalogPackageWithMobileAppCatalogP_bc00b82f}
      */
     @jakarta.annotation.Nonnull
-    public ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder convertFromMobileAppCatalogPackageWithMobileAppCatalogPackageId(@jakarta.annotation.Nonnull final String mobileAppCatalogPackageId) {
+    public ConvertFromMobileAppCatalogPackageWithMobileAppCatalogP_bc00b82f convertFromMobileAppCatalogPackageWithMobileAppCatalogPackageId(@jakarta.annotation.Nonnull final String mobileAppCatalogPackageId) {
         Objects.requireNonNull(mobileAppCatalogPackageId);
-        return new ConvertFromMobileAppCatalogPackageWithMobileAppCatalogPackageIdRequestBuilder(pathParameters, requestAdapter, mobileAppCatalogPackageId);
+        return new ConvertFromMobileAppCatalogPackageWithMobileAppCatalogP_bc00b82f(pathParameters, requestAdapter, mobileAppCatalogPackageId);
     }
     /**
      * The mobile apps.

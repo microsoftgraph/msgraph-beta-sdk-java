@@ -1,6 +1,6 @@
 package com.microsoft.graph.beta.informationprotection.sensitivitylabels;
 
-import com.microsoft.graph.beta.informationprotection.sensitivitylabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder;
+import com.microsoft.graph.beta.informationprotection.sensitivitylabels.computeinheritancewithlabelidswithlocalewithcontentformats.ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e;
 import com.microsoft.graph.beta.informationprotection.sensitivitylabels.computerightsandinheritance.ComputeRightsAndInheritanceRequestBuilder;
 import com.microsoft.graph.beta.informationprotection.sensitivitylabels.count.CountRequestBuilder;
 import com.microsoft.graph.beta.informationprotection.sensitivitylabels.evaluate.EvaluateRequestBuilder;
@@ -67,14 +67,14 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
      * @param contentFormats Usage: contentFormats={contentFormats}
      * @param labelIds Usage: labelIds={labelIds}
      * @param locale Usage: locale=&apos;{locale}&apos;
-     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder}
+     * @return a {@link ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e}
      */
     @jakarta.annotation.Nonnull
-    public ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
+    public ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e computeInheritanceWithLabelIdsWithLocaleWithContentFormats(@jakarta.annotation.Nonnull final String contentFormats, @jakarta.annotation.Nonnull final String labelIds, @jakarta.annotation.Nonnull final String locale) {
         Objects.requireNonNull(contentFormats);
         Objects.requireNonNull(labelIds);
         Objects.requireNonNull(locale);
-        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentFormatsRequestBuilder(pathParameters, requestAdapter, contentFormats, labelIds, locale);
+        return new ComputeInheritanceWithLabelIdsWithLocaleWithContentForm_9657694e(pathParameters, requestAdapter, contentFormats, labelIds, locale);
     }
     /**
      * Instantiates a new {@link SensitivityLabelsRequestBuilder} and sets the default values.
