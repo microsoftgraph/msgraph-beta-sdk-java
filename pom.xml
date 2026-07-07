@@ -182,7 +182,7 @@
                 <configuration>
                     <doclint>-missing</doclint>
                     <quiet>true</quiet>
-                    <additionalJOption>-J-Xmx2g</additionalJOption>
+                    <additionalJOption>-J-Xmx4g</additionalJOption>
                 </configuration>
             </plugin>
 
