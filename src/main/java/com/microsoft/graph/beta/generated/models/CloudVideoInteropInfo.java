@@ -69,7 +69,7 @@ public class CloudVideoInteropInfo implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the moreInfoWebUrl property value. The moreInfoWebUrl property
+     * Gets the moreInfoWebUrl property value. Provides other video teleconferencing (VTC) dial-in options. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -85,7 +85,7 @@ public class CloudVideoInteropInfo implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the tenantKey property value. The tenantKey property
+     * Gets the tenantKey property value. The tenant key that is used to dial into the interactive voice response (IVR) of the partner CVI service.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class CloudVideoInteropInfo implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("tenantKey");
     }
     /**
-     * Gets the videoTeleconferenceId property value. The videoTeleconferenceId property
+     * Gets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class CloudVideoInteropInfo implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the moreInfoWebUrl property value. The moreInfoWebUrl property
+     * Sets the moreInfoWebUrl property value. Provides other video teleconferencing (VTC) dial-in options. Read-only.
      * @param value Value to set for the moreInfoWebUrl property.
      */
     public void setMoreInfoWebUrl(@jakarta.annotation.Nullable final String value) {
@@ -142,14 +142,14 @@ public class CloudVideoInteropInfo implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the tenantKey property value. The tenantKey property
+     * Sets the tenantKey property value. The tenant key that is used to dial into the interactive voice response (IVR) of the partner CVI service.
      * @param value Value to set for the tenantKey property.
      */
     public void setTenantKey(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("tenantKey", value);
     }
     /**
-     * Sets the videoTeleconferenceId property value. The videoTeleconferenceId property
+     * Sets the videoTeleconferenceId property value. The video teleconferencing ID. Read-only.
      * @param value Value to set for the videoTeleconferenceId property.
      */
     public void setVideoTeleconferenceId(@jakarta.annotation.Nullable final String value) {

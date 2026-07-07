@@ -42,9 +42,11 @@ public class PolicyDeletableItem implements AdditionalDataHolder, BackedModel, P
                 case "#microsoft.graph.countryNamedLocation": return new CountryNamedLocation();
                 case "#microsoft.graph.crossTenantAccessPolicyConfigurationPartner": return new CrossTenantAccessPolicyConfigurationPartner();
                 case "#microsoft.graph.crossTenantIdentitySyncPolicyPartner": return new CrossTenantIdentitySyncPolicyPartner();
+                case "#microsoft.graph.delegatedAdminServiceProviderConstraints": return new DelegatedAdminServiceProviderConstraints();
                 case "#microsoft.graph.ipNamedLocation": return new IpNamedLocation();
                 case "#microsoft.graph.namedLocation": return new NamedLocation();
                 case "#microsoft.graph.privateLinkNamedLocation": return new PrivateLinkNamedLocation();
+                case "#microsoft.graph.serviceProviderConstraints": return new ServiceProviderConstraints();
                 case "#microsoft.graph.serviceTagNamedLocation": return new ServiceTagNamedLocation();
                 case "#microsoft.graph.whatIfAnalysisResult": return new WhatIfAnalysisResult();
             }

@@ -5,7 +5,6 @@ import com.microsoft.graph.beta.models.CrossTenantMigrationJobCollectionResponse
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.count.CountRequestBuilder;
 import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.item.CrossTenantMigrationJobItemRequestBuilder;
-import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.validate.ValidateRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,17 +33,6 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
-    }
-    /**
-     * Provides operations to call the validate method.
-     * @return a {@link ValidateRequestBuilder}
-     * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
-     */
-    @Deprecated
-    @jakarta.annotation.Nonnull
-    public ValidateRequestBuilder validate() {
-        return new ValidateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the crossTenantMigrationJobs property of the microsoft.graph.migrationsRoot entity.
@@ -108,7 +96,7 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantMigrationJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Create a new crossTenantMigrationJob.
+     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @return a {@link CrossTenantMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +110,7 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return post(body, null);
     }
     /**
-     * Create a new crossTenantMigrationJob.
+     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantMigrationJob}
@@ -167,7 +155,7 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Create a new crossTenantMigrationJob.
+     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
@@ -179,7 +167,7 @@ public class CrossTenantMigrationJobsRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Create a new crossTenantMigrationJob.
+     * Create a new crossTenantMigrationJob. A job defines the migration batch but doesn&apos;t start validation or migration. After you create the job, call validate to verify tenant and resource configuration, then call migrate to begin the actual migration.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

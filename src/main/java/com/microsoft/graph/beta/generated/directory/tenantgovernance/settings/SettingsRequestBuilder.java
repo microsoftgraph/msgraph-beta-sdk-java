@@ -1,6 +1,6 @@
 package com.microsoft.graph.beta.directory.tenantgovernance.settings;
 
-import com.microsoft.graph.beta.directory.tenantgovernance.settings.microsoftgraphtenantgovernanceservicesenablerelatedtenants.MicrosoftGraphTenantGovernanceServicesEnableRelatedTenantsRequestBuilder;
+import com.microsoft.graph.beta.directory.tenantgovernance.settings.microsoftgraphtenantgovernanceservicesenablerelatedtenants.MicrosoftGraphTenantGovernanceServicesEnableRelatedTena_9dd95bab;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.tenantgovernanceservices.TenantGovernanceSetting;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -23,11 +23,11 @@ import java.util.Objects;
 public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the enableRelatedTenants method.
-     * @return a {@link MicrosoftGraphTenantGovernanceServicesEnableRelatedTenantsRequestBuilder}
+     * @return a {@link MicrosoftGraphTenantGovernanceServicesEnableRelatedTena_9dd95bab}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphTenantGovernanceServicesEnableRelatedTenantsRequestBuilder microsoftGraphTenantGovernanceServicesEnableRelatedTenants() {
-        return new MicrosoftGraphTenantGovernanceServicesEnableRelatedTenantsRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphTenantGovernanceServicesEnableRelatedTena_9dd95bab microsoftGraphTenantGovernanceServicesEnableRelatedTenants() {
+        return new MicrosoftGraphTenantGovernanceServicesEnableRelatedTena_9dd95bab(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SettingsRequestBuilder} and sets the default values.

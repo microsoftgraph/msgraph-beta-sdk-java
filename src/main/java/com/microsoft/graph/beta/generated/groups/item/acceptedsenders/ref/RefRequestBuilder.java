@@ -27,7 +27,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RefRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/acceptedSenders/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", pathParameters);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/acceptedSenders/$ref{?%24count,%24filter,%24orderby,%24search,%24skip,%24top}", pathParameters);
     }
     /**
      * Instantiates a new {@link RefRequestBuilder} and sets the default values.
@@ -35,7 +35,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
      * @param requestAdapter The request adapter to use to execute the requests.
      */
     public RefRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/acceptedSenders/$ref?@id={%40id}{&%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
+        super(requestAdapter, "{+baseurl}/groups/{group%2Did}/acceptedSenders/$ref{?%24count,%24filter,%24orderby,%24search,%24skip,%24top}", rawUrl);
     }
     /**
      * Remove a user or group from the accepted-senders list of the specified group.
@@ -58,7 +58,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
+     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you don&apos;t specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/group-list-acceptedsenders?view=graph-rest-beta">Find more info here</a>
@@ -68,7 +68,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
+     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you don&apos;t specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link StringCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -125,7 +125,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
+     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you don&apos;t specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -133,13 +133,13 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
+     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you don&apos;t specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, "{+baseurl}/groups/{group%2Did}/acceptedSenders/$ref{?%24count,%24filter,%24orderby,%24search,%24skip,%24top}", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
         requestInfo.headers.tryAdd("Accept", "application/json");
         return requestInfo;
@@ -162,7 +162,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ReferenceCreate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
-        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, "{+baseurl}/groups/{group%2Did}/acceptedSenders/$ref", pathParameters);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
         requestInfo.headers.tryAdd("Accept", "application/json");
         requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
@@ -211,7 +211,7 @@ public class RefRequestBuilder extends BaseRequestBuilder {
         public DeleteQueryParameters queryParameters = new DeleteQueryParameters();
     }
     /**
-     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
+     * Get a list of users or groups that are in the accepted-senders list for this group. Users in the accepted senders list can post to conversations of the group (identified in the GET request URL). Make sure you don&apos;t specify the same user or group in the accepted senders and rejected senders lists, otherwise you will get an error.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

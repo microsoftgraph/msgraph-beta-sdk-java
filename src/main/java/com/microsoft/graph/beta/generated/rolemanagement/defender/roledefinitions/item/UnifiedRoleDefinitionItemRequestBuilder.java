@@ -2,7 +2,7 @@ package com.microsoft.graph.beta.rolemanagement.defender.roledefinitions.item;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.UnifiedRoleDefinition;
-import com.microsoft.graph.beta.rolemanagement.defender.roledefinitions.item.assignedprincipalswithtransitivedirectoryscopetypedirectoryscopetypedirectoryscopeiddirectoryscopeid.AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder;
+import com.microsoft.graph.beta.rolemanagement.defender.roledefinitions.item.assignedprincipalswithtransitivedirectoryscopetypedirec_e9d82f33.AssignedPrincipalsWithTransitivedirectoryScopeTypeDirec_c9177a9a;
 import com.microsoft.graph.beta.rolemanagement.defender.roledefinitions.item.inheritspermissionsfrom.InheritsPermissionsFromRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -24,22 +24,16 @@ import java.util.Objects;
 public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the assignedPrincipals method.
-     * @return a {@link AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
+     * @return a {@link AssignedPrincipalsWithTransitivedirectoryScopeTypeDirec_c9177a9a}
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
-    public AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder assignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeId() {
-        return new AssignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeIdRequestBuilder(pathParameters, requestAdapter);
+    public AssignedPrincipalsWithTransitivedirectoryScopeTypeDirec_c9177a9a assignedPrincipalsWithTransitivedirectoryScopeTypeDirectoryScopeTypeDirectoryScopeIdDirectoryScopeId() {
+        return new AssignedPrincipalsWithTransitivedirectoryScopeTypeDirec_c9177a9a(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity.
      * @return a {@link InheritsPermissionsFromRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public InheritsPermissionsFromRequestBuilder inheritsPermissionsFrom() {
         return new InheritsPermissionsFromRequestBuilder(pathParameters, requestAdapter);
@@ -63,11 +57,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- Defender (Microsoft Defender XDR Unified RBAC)- directory (Microsoft Entra ID) 
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-delete?view=graph-rest-beta">Find more info here</a>
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -75,11 +66,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- Defender (Microsoft Defender XDR Unified RBAC)- directory (Microsoft Entra ID) 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-delete?view=graph-rest-beta">Find more info here</a>
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -90,12 +78,9 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * Get the properties and relationships of a unifiedRoleDefinition object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune)- Defender (Microsoft Defender XDR Unified RBAC)- directory (Microsoft Entra directory roles)- entitlement management (Microsoft Entra entitlement management)- Exchange Online (Except China operated by 21Vianet)
      * @return a {@link UnifiedRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleDefinition get() {
         return get(null);
     }
@@ -104,12 +89,9 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      * @see <a href="https://learn.microsoft.com/graph/api/unifiedroledefinition-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleDefinition get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -121,11 +103,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @return a {@link UnifiedRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleDefinition patch(@jakarta.annotation.Nonnull final UnifiedRoleDefinition body) {
         return patch(body, null);
     }
@@ -135,11 +114,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleDefinition}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleDefinition patch(@jakarta.annotation.Nonnull final UnifiedRoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -150,11 +126,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- Defender (Microsoft Defender XDR Unified RBAC)- directory (Microsoft Entra ID) 
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -162,11 +135,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * Delete a unifiedRoleDefinition object for an RBAC provider. You cannot delete built-in roles. This feature requires a Microsoft Entra ID P1 or P2 license. The following RBAC providers are currently supported:- Cloud PC- device management (Intune)- Defender (Microsoft Defender XDR Unified RBAC)- directory (Microsoft Entra ID) 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -176,11 +146,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
     /**
      * Get the properties and relationships of a unifiedRoleDefinition object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune)- Defender (Microsoft Defender XDR Unified RBAC)- directory (Microsoft Entra directory roles)- entitlement management (Microsoft Entra entitlement management)- Exchange Online (Except China operated by 21Vianet)
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -188,11 +155,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * Get the properties and relationships of a unifiedRoleDefinition object of an RBAC provider.  The following RBAC providers are currently supported:- Cloud PC - device management (Intune)- Defender (Microsoft Defender XDR Unified RBAC)- directory (Microsoft Entra directory roles)- entitlement management (Microsoft Entra entitlement management)- Exchange Online (Except China operated by 21Vianet)
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -203,11 +167,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property roleDefinitions in roleManagement
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleDefinition body) {
         return toPatchRequestInformation(body, null);
     }
@@ -216,11 +177,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleDefinition body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -233,11 +191,8 @@ public class UnifiedRoleDefinitionItemRequestBuilder extends BaseRequestBuilder 
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link UnifiedRoleDefinitionItemRequestBuilder}
-     * @deprecated
-     * This version is being deprecated and is scheduled for removal on 2025-12-01.Please migrate to the latest version before the removal date. as of 2025-01/PrivatePreview:microsoft.applicationAuthorization on 2025-01-01 and will be removed 2025-12-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public UnifiedRoleDefinitionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new UnifiedRoleDefinitionItemRequestBuilder(rawUrl, requestAdapter);

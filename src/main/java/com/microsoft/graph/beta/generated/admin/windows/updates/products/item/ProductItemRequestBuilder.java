@@ -2,7 +2,7 @@ package com.microsoft.graph.beta.admin.windows.updates.products.item;
 
 import com.microsoft.graph.beta.admin.windows.updates.products.item.editions.EditionsRequestBuilder;
 import com.microsoft.graph.beta.admin.windows.updates.products.item.knownissues.KnownIssuesRequestBuilder;
-import com.microsoft.graph.beta.admin.windows.updates.products.item.microsoftgraphwindowsupdatesgetknownissuesbytimerangewithdaysinpastwithincludeallactive.MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder;
+import com.microsoft.graph.beta.admin.windows.updates.products.item.microsoftgraphwindowsupdatesgetknownissuesbytimerangewi_d25cf54f.MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWi_8adb2905;
 import com.microsoft.graph.beta.admin.windows.updates.products.item.revisions.RevisionsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.windowsupdates.Product;
@@ -107,12 +107,12 @@ public class ProductItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getKnownIssuesByTimeRange method.
      * @param daysInPast Usage: daysInPast={daysInPast}
-     * @return a {@link MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder}
+     * @return a {@link MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWi_8adb2905}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder microsoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActive(@jakarta.annotation.Nonnull final Integer daysInPast) {
+    public MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWi_8adb2905 microsoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActive(@jakarta.annotation.Nonnull final Integer daysInPast) {
         Objects.requireNonNull(daysInPast);
-        return new MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWithDaysInPastWithIncludeAllActiveRequestBuilder(pathParameters, requestAdapter, daysInPast);
+        return new MicrosoftGraphWindowsUpdatesGetKnownIssuesByTimeRangeWi_8adb2905(pathParameters, requestAdapter, daysInPast);
     }
     /**
      * Update the navigation property products in admin

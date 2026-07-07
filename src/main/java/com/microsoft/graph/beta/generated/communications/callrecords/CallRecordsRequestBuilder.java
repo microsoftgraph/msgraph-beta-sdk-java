@@ -2,11 +2,11 @@ package com.microsoft.graph.beta.communications.callrecords;
 
 import com.microsoft.graph.beta.communications.callrecords.count.CountRequestBuilder;
 import com.microsoft.graph.beta.communications.callrecords.item.CallRecordItemRequestBuilder;
-import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetdirectroutingcallswithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
-import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetpstnblockeduserslogwithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeRequestBuilder;
-import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetpstncallswithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
-import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetpstnonlinemeetingdialoutreportwithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder;
-import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetsmslogwithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder;
+import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetdirectroutingcallswithfromd_89393f3d.MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_973ac11c;
+import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetpstnblockeduserslogwithfrom_c28befbe.MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFrom_80046c42;
+import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetpstncallswithfromdatetimewi_60515f08.MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_5a427c7c;
+import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetpstnonlinemeetingdialoutrep_bd97ac7a.MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutRep_6b86f077;
+import com.microsoft.graph.beta.communications.callrecords.microsoftgraphcallrecordsgetsmslogwithfromdatetimewithtodatetime.MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithT_26e71051;
 import com.microsoft.graph.beta.models.callrecords.CallRecord;
 import com.microsoft.graph.beta.models.callrecords.CallRecordCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -93,61 +93,61 @@ public class CallRecordsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getDirectRoutingCalls method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a {@link MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_973ac11c}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
+    public MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_973ac11c microsoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
         Objects.requireNonNull(fromDateTime);
         Objects.requireNonNull(toDateTime);
-        return new MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+        return new MicrosoftGraphCallRecordsGetDirectRoutingCallsWithFromD_973ac11c(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Provides operations to call the getPstnBlockedUsersLog method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a {@link MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFrom_80046c42}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
+    public MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFrom_80046c42 microsoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
         Objects.requireNonNull(fromDateTime);
         Objects.requireNonNull(toDateTime);
-        return new MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+        return new MicrosoftGraphCallRecordsGetPstnBlockedUsersLogWithFrom_80046c42(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Provides operations to call the getPstnCalls method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a {@link MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_5a427c7c}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
+    public MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_5a427c7c microsoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
         Objects.requireNonNull(fromDateTime);
         Objects.requireNonNull(toDateTime);
-        return new MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+        return new MicrosoftGraphCallRecordsGetPstnCallsWithFromDateTimeWi_5a427c7c(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Provides operations to call the getPstnOnlineMeetingDialoutReport method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a {@link MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutRep_6b86f077}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
+    public MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutRep_6b86f077 microsoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
         Objects.requireNonNull(fromDateTime);
         Objects.requireNonNull(toDateTime);
-        return new MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutReportWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+        return new MicrosoftGraphCallRecordsGetPstnOnlineMeetingDialoutRep_6b86f077(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Provides operations to call the getSmsLog method.
      * @param fromDateTime Usage: fromDateTime={fromDateTime}
      * @param toDateTime Usage: toDateTime={toDateTime}
-     * @return a {@link MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder}
+     * @return a {@link MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithT_26e71051}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder microsoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
+    public MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithT_26e71051 microsoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTime(@jakarta.annotation.Nonnull final OffsetDateTime fromDateTime, @jakarta.annotation.Nonnull final OffsetDateTime toDateTime) {
         Objects.requireNonNull(fromDateTime);
         Objects.requireNonNull(toDateTime);
-        return new MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithToDateTimeRequestBuilder(pathParameters, requestAdapter, fromDateTime, toDateTime);
+        return new MicrosoftGraphCallRecordsGetSmsLogWithFromDateTimeWithT_26e71051(pathParameters, requestAdapter, fromDateTime, toDateTime);
     }
     /**
      * Create new navigation property to callRecords for communications

@@ -114,7 +114,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         return this.backingStore.get("osVersionNumber");
     }
     /**
-     * Gets the scopeIds property value. The scopeIds property
+     * Gets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it&apos;s the Intune scope tag ID. Read-only.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -240,7 +240,7 @@ public class CloudPcDeviceImage extends Entity implements Parsable {
         this.backingStore.set("osVersionNumber", value);
     }
     /**
-     * Sets the scopeIds property value. The scopeIds property
+     * Sets the scopeIds property value. The scope IDs of the corresponding permission. Currently, it&apos;s the Intune scope tag ID. Read-only.
      * @param value Value to set for the scopeIds property.
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

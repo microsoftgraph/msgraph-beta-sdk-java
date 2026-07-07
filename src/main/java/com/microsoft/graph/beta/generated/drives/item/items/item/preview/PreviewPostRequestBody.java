@@ -23,6 +23,8 @@ public class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel
     public PreviewPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setAllowEdit(false);
+        this.setChromeless(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

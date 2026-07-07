@@ -37,19 +37,21 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/sharePointProtectionPolicies/{sharePointProtectionPolicy%2Did}/siteExclusionUnitsBulkAdditionJobs/{siteExclusionUnitsBulkAdditionJob%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * Get a site exclusion units bulk addition job associated with a SharePoint protection policy.
      * @return a {@link SiteExclusionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/siteexclusionunitsbulkadditionjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteExclusionUnitsBulkAdditionJob get() {
         return get(null);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * Get a site exclusion units bulk addition job associated with a SharePoint protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteExclusionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/siteexclusionunitsbulkadditionjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteExclusionUnitsBulkAdditionJob get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, SiteExclusionUnitsBulkAdditionJob::createFromDiscriminatorValue);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * Get a site exclusion units bulk addition job associated with a SharePoint protection policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * Get a site exclusion units bulk addition job associated with a SharePoint protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class SiteExclusionUnitsBulkAdditionJobItemRequestBuilder extends BaseReq
         return new SiteExclusionUnitsBulkAdditionJobItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * Get a site exclusion units bulk addition job associated with a SharePoint protection policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

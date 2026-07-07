@@ -29,7 +29,7 @@ import com.microsoft.graph.beta.devicemanagement.reports.getconfigurationsetting
 import com.microsoft.graph.beta.devicemanagement.reports.getconfigurationsettingsreport.GetConfigurationSettingsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdeviceconfigurationpolicysettingssummaryreport.GetDeviceConfigurationPolicySettingsSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdeviceconfigurationpolicystatussummary.GetDeviceConfigurationPolicyStatusSummaryRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.reports.getdevicemanagementintentpersettingcontributingprofiles.GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.getdevicemanagementintentpersettingcontributingprofiles.GetDeviceManagementIntentPerSettingContributingProfiles_0f5720ea;
 import com.microsoft.graph.beta.devicemanagement.reports.getdevicemanagementintentsettingsreport.GetDeviceManagementIntentSettingsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdevicenoncompliancereport.GetDeviceNonComplianceReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdevicepoliciescompliancereport.GetDevicePoliciesComplianceReportRequestBuilder;
@@ -39,7 +39,7 @@ import com.microsoft.graph.beta.devicemanagement.reports.getdevicesstatusbysetti
 import com.microsoft.graph.beta.devicemanagement.reports.getdevicestatusbycompliacepolicyreport.GetDeviceStatusByCompliacePolicyReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdevicestatusbycompliancepolicysettingreport.GetDeviceStatusByCompliancePolicySettingReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getdevicestatussummarybycompliacepolicyreport.GetDeviceStatusSummaryByCompliacePolicyReportRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.reports.getdevicestatussummarybycompliancepolicysettingsreport.GetDeviceStatusSummaryByCompliancePolicySettingsReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.getdevicestatussummarybycompliancepolicysettingsreport.GetDeviceStatusSummaryByCompliancePolicySettingsReportR_42144a17;
 import com.microsoft.graph.beta.devicemanagement.reports.getdeviceswithoutcompliancepolicyreport.GetDevicesWithoutCompliancePolicyReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getencryptionreportfordevices.GetEncryptionReportForDevicesRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getenrollmentconfigurationpoliciesbydevice.GetEnrollmentConfigurationPoliciesByDeviceRequestBuilder;
@@ -48,8 +48,8 @@ import com.microsoft.graph.beta.devicemanagement.reports.getfailedmobileappssumm
 import com.microsoft.graph.beta.devicemanagement.reports.getgrouppolicysettingsdevicesettingsreport.GetGroupPolicySettingsDeviceSettingsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.gethistoricalreport.GetHistoricalReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getmalwaresummaryreport.GetMalwareSummaryReportRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.reports.getmobileapplicationmanagementappconfigurationreport.GetMobileApplicationManagementAppConfigurationReportRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.reports.getmobileapplicationmanagementappregistrationsummaryreport.GetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.getmobileapplicationmanagementappconfigurationreport.GetMobileApplicationManagementAppConfigurationReportReq_bcc872f3;
+import com.microsoft.graph.beta.devicemanagement.reports.getmobileapplicationmanagementappregistrationsummaryreport.GetMobileApplicationManagementAppRegistrationSummaryRep_fa50c4b5;
 import com.microsoft.graph.beta.devicemanagement.reports.getnoncompliantdevicesandsettingsreport.GetNoncompliantDevicesAndSettingsReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getpolicynoncompliancemetadata.GetPolicyNonComplianceMetadataRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getpolicynoncompliancereport.GetPolicyNonComplianceReportRequestBuilder;
@@ -64,9 +64,9 @@ import com.microsoft.graph.beta.devicemanagement.reports.getunhealthydefenderage
 import com.microsoft.graph.beta.devicemanagement.reports.getunhealthyfirewallreport.GetUnhealthyFirewallReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getunhealthyfirewallsummaryreport.GetUnhealthyFirewallSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getuserinstallstatusreport.GetUserInstallStatusReportRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.reports.getwindowsdriverupdatealertsperpolicyperdevicereport.GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.getwindowsdriverupdatealertsperpolicyperdevicereport.GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportReq_6fe65ded;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsdriverupdatealertsummaryreport.GetWindowsDriverUpdateAlertSummaryReportRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdatealertsperpolicyperdevicereport.GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdatealertsperpolicyperdevicereport.GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRe_ae0faab0;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsqualityupdatealertsummaryreport.GetWindowsQualityUpdateAlertSummaryReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsperpolicyperdevicereport.GetWindowsUpdateAlertsPerPolicyPerDeviceReportRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.reports.getwindowsupdatealertsummaryreport.GetWindowsUpdateAlertSummaryReportRequestBuilder;
@@ -333,11 +333,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceManagementIntentPerSettingContributingProfiles method.
-     * @return a {@link GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder}
+     * @return a {@link GetDeviceManagementIntentPerSettingContributingProfiles_0f5720ea}
      */
     @jakarta.annotation.Nonnull
-    public GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder getDeviceManagementIntentPerSettingContributingProfiles() {
-        return new GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder(pathParameters, requestAdapter);
+    public GetDeviceManagementIntentPerSettingContributingProfiles_0f5720ea getDeviceManagementIntentPerSettingContributingProfiles() {
+        return new GetDeviceManagementIntentPerSettingContributingProfiles_0f5720ea(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getDeviceManagementIntentSettingsReport method.
@@ -413,11 +413,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getDeviceStatusSummaryByCompliancePolicySettingsReport method.
-     * @return a {@link GetDeviceStatusSummaryByCompliancePolicySettingsReportRequestBuilder}
+     * @return a {@link GetDeviceStatusSummaryByCompliancePolicySettingsReportR_42144a17}
      */
     @jakarta.annotation.Nonnull
-    public GetDeviceStatusSummaryByCompliancePolicySettingsReportRequestBuilder getDeviceStatusSummaryByCompliancePolicySettingsReport() {
-        return new GetDeviceStatusSummaryByCompliancePolicySettingsReportRequestBuilder(pathParameters, requestAdapter);
+    public GetDeviceStatusSummaryByCompliancePolicySettingsReportR_42144a17 getDeviceStatusSummaryByCompliancePolicySettingsReport() {
+        return new GetDeviceStatusSummaryByCompliancePolicySettingsReportR_42144a17(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getDevicesWithoutCompliancePolicyReport method.
@@ -485,19 +485,19 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getMobileApplicationManagementAppConfigurationReport method.
-     * @return a {@link GetMobileApplicationManagementAppConfigurationReportRequestBuilder}
+     * @return a {@link GetMobileApplicationManagementAppConfigurationReportReq_bcc872f3}
      */
     @jakarta.annotation.Nonnull
-    public GetMobileApplicationManagementAppConfigurationReportRequestBuilder getMobileApplicationManagementAppConfigurationReport() {
-        return new GetMobileApplicationManagementAppConfigurationReportRequestBuilder(pathParameters, requestAdapter);
+    public GetMobileApplicationManagementAppConfigurationReportReq_bcc872f3 getMobileApplicationManagementAppConfigurationReport() {
+        return new GetMobileApplicationManagementAppConfigurationReportReq_bcc872f3(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getMobileApplicationManagementAppRegistrationSummaryReport method.
-     * @return a {@link GetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder}
+     * @return a {@link GetMobileApplicationManagementAppRegistrationSummaryRep_fa50c4b5}
      */
     @jakarta.annotation.Nonnull
-    public GetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder getMobileApplicationManagementAppRegistrationSummaryReport() {
-        return new GetMobileApplicationManagementAppRegistrationSummaryReportRequestBuilder(pathParameters, requestAdapter);
+    public GetMobileApplicationManagementAppRegistrationSummaryRep_fa50c4b5 getMobileApplicationManagementAppRegistrationSummaryReport() {
+        return new GetMobileApplicationManagementAppRegistrationSummaryRep_fa50c4b5(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getNoncompliantDevicesAndSettingsReport method.
@@ -613,11 +613,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getWindowsDriverUpdateAlertsPerPolicyPerDeviceReport method.
-     * @return a {@link GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportRequestBuilder}
+     * @return a {@link GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportReq_6fe65ded}
      */
     @jakarta.annotation.Nonnull
-    public GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportRequestBuilder getWindowsDriverUpdateAlertsPerPolicyPerDeviceReport() {
-        return new GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportRequestBuilder(pathParameters, requestAdapter);
+    public GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportReq_6fe65ded getWindowsDriverUpdateAlertsPerPolicyPerDeviceReport() {
+        return new GetWindowsDriverUpdateAlertsPerPolicyPerDeviceReportReq_6fe65ded(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getWindowsDriverUpdateAlertSummaryReport method.
@@ -629,11 +629,11 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport method.
-     * @return a {@link GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder}
+     * @return a {@link GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRe_ae0faab0}
      */
     @jakarta.annotation.Nonnull
-    public GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport() {
-        return new GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRequestBuilder(pathParameters, requestAdapter);
+    public GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRe_ae0faab0 getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport() {
+        return new GetWindowsQualityUpdateAlertsPerPolicyPerDeviceReportRe_ae0faab0(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the getWindowsQualityUpdateAlertSummaryReport method.
@@ -766,7 +766,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get reports from deviceManagement
+     * Reports singleton
      * @return a {@link DeviceManagementReports}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -775,7 +775,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get reports from deviceManagement
+     * Reports singleton
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeviceManagementReports}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -833,7 +833,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Get reports from deviceManagement
+     * Reports singleton
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -841,7 +841,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get reports from deviceManagement
+     * Reports singleton
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -893,7 +893,7 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get reports from deviceManagement
+     * Reports singleton
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

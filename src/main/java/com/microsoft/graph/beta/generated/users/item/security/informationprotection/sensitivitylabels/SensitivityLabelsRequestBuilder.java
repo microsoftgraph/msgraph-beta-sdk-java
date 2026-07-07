@@ -6,7 +6,7 @@ import com.microsoft.graph.beta.models.security.SensitivityLabelCollectionRespon
 import com.microsoft.graph.beta.users.item.security.informationprotection.sensitivitylabels.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.security.informationprotection.sensitivitylabels.item.SensitivityLabelItemRequestBuilder;
 import com.microsoft.graph.beta.users.item.security.informationprotection.sensitivitylabels.microsoftgraphsecurityevaluateapplication.MicrosoftGraphSecurityEvaluateApplicationRequestBuilder;
-import com.microsoft.graph.beta.users.item.security.informationprotection.sensitivitylabels.microsoftgraphsecurityevaluateclassificationresults.MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder;
+import com.microsoft.graph.beta.users.item.security.informationprotection.sensitivitylabels.microsoftgraphsecurityevaluateclassificationresults.MicrosoftGraphSecurityEvaluateClassificationResultsRequ_fb04bbec;
 import com.microsoft.graph.beta.users.item.security.informationprotection.sensitivitylabels.microsoftgraphsecurityevaluateremoval.MicrosoftGraphSecurityEvaluateRemovalRequestBuilder;
 import com.microsoft.graph.beta.users.item.security.informationprotection.sensitivitylabels.microsoftgraphsecurityextractcontentlabel.MicrosoftGraphSecurityExtractContentLabelRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -45,11 +45,11 @@ public class SensitivityLabelsRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the evaluateClassificationResults method.
-     * @return a {@link MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder}
+     * @return a {@link MicrosoftGraphSecurityEvaluateClassificationResultsRequ_fb04bbec}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder microsoftGraphSecurityEvaluateClassificationResults() {
-        return new MicrosoftGraphSecurityEvaluateClassificationResultsRequestBuilder(pathParameters, requestAdapter);
+    public MicrosoftGraphSecurityEvaluateClassificationResultsRequ_fb04bbec microsoftGraphSecurityEvaluateClassificationResults() {
+        return new MicrosoftGraphSecurityEvaluateClassificationResultsRequ_fb04bbec(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the evaluateRemoval method.

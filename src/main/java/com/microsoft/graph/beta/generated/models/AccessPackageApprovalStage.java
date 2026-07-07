@@ -81,7 +81,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         return this.backingStore.get("durationBeforeEscalation");
     }
     /**
-     * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers don&apos;t respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
+     * Gets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who are asked to approve requests.
      * @return a {@link java.util.List<SubjectSet>}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
+     * Gets the primaryApprovers property value. The subjects, typically users, who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
      * @return a {@link java.util.List<SubjectSet>}
      */
     @jakarta.annotation.Nullable
@@ -210,7 +210,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         this.backingStore.set("durationBeforeEscalation", value);
     }
     /**
-     * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers don&apos;t respond before the escalation time, the escalationApprovers are the users who will be asked to approve requests.
+     * Sets the escalationApprovers property value. If escalation is enabled and the primary approvers do not respond before the escalation time, the escalationApprovers are the users who are asked to approve requests.
      * @param value Value to set for the escalationApprovers property.
      */
     public void setEscalationApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {
@@ -252,7 +252,7 @@ public class AccessPackageApprovalStage implements AdditionalDataHolder, BackedM
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the primaryApprovers property value. The subjects, typically users, who will be asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
+     * Sets the primaryApprovers property value. The subjects, typically users, who are asked to approve requests. A collection of singleUser, groupMembers, requestorManager, internalSponsors, externalSponsors, or targetUserSponsors.
      * @param value Value to set for the primaryApprovers property.
      */
     public void setPrimaryApprovers(@jakarta.annotation.Nullable final java.util.List<SubjectSet> value) {

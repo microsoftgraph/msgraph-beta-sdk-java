@@ -1,9 +1,9 @@
 package com.microsoft.graph.beta.devicemanagement.compliancepolicies.item.scheduledactionsforrule;
 
 import com.microsoft.graph.beta.devicemanagement.compliancepolicies.item.scheduledactionsforrule.count.CountRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.compliancepolicies.item.scheduledactionsforrule.item.DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.compliancepolicies.item.scheduledactionsforrule.item.DeviceManagementComplianceScheduledActionForRuleItemReq_0081baa3;
 import com.microsoft.graph.beta.models.DeviceManagementComplianceScheduledActionForRule;
-import com.microsoft.graph.beta.models.DeviceManagementComplianceScheduledActionForRuleCollectionResponse;
+import com.microsoft.graph.beta.models.DeviceManagementComplianceScheduledActionForRuleCollect_0fcf9923;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -34,14 +34,14 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceManagementCompliancePolicy entity.
      * @param deviceManagementComplianceScheduledActionForRuleId The unique identifier of deviceManagementComplianceScheduledActionForRule
-     * @return a {@link DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder}
+     * @return a {@link DeviceManagementComplianceScheduledActionForRuleItemReq_0081baa3}
      */
     @jakarta.annotation.Nonnull
-    public DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder byDeviceManagementComplianceScheduledActionForRuleId(@jakarta.annotation.Nonnull final String deviceManagementComplianceScheduledActionForRuleId) {
+    public DeviceManagementComplianceScheduledActionForRuleItemReq_0081baa3 byDeviceManagementComplianceScheduledActionForRuleId(@jakarta.annotation.Nonnull final String deviceManagementComplianceScheduledActionForRuleId) {
         Objects.requireNonNull(deviceManagementComplianceScheduledActionForRuleId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
         urlTplParams.put("deviceManagementComplianceScheduledActionForRule%2Did", deviceManagementComplianceScheduledActionForRuleId);
-        return new DeviceManagementComplianceScheduledActionForRuleItemRequestBuilder(urlTplParams, requestAdapter);
+        return new DeviceManagementComplianceScheduledActionForRuleItemReq_0081baa3(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link ScheduledActionsForRuleRequestBuilder} and sets the default values.
@@ -61,25 +61,25 @@ public class ScheduledActionsForRuleRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * The list of scheduled action for this rule
-     * @return a {@link DeviceManagementComplianceScheduledActionForRuleCollectionResponse}
+     * @return a {@link DeviceManagementComplianceScheduledActionForRuleCollect_0fcf9923}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementComplianceScheduledActionForRuleCollectionResponse get() {
+    public DeviceManagementComplianceScheduledActionForRuleCollect_0fcf9923 get() {
         return get(null);
     }
     /**
      * The list of scheduled action for this rule
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link DeviceManagementComplianceScheduledActionForRuleCollectionResponse}
+     * @return a {@link DeviceManagementComplianceScheduledActionForRuleCollect_0fcf9923}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
     @jakarta.annotation.Nullable
-    public DeviceManagementComplianceScheduledActionForRuleCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public DeviceManagementComplianceScheduledActionForRuleCollect_0fcf9923 get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementComplianceScheduledActionForRuleCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, DeviceManagementComplianceScheduledActionForRuleCollect_0fcf9923::createFromDiscriminatorValue);
     }
     /**
      * Create new navigation property to scheduledActionsForRule for deviceManagement

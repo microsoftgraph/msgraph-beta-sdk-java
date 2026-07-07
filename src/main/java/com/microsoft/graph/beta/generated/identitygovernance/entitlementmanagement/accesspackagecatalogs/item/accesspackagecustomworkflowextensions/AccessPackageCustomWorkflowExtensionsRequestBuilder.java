@@ -66,7 +66,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/identityGovernance/entitlementManagement/accessPackageCatalogs/{accessPackageCatalog%2Did}/accessPackageCustomWorkflowExtensions{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a list of the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an  accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
+     * List the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects in the accessPackageCustomWorkflowExtensions relationship of an accessPackageCatalog. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
      * @return a {@link CustomCalloutExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
@@ -79,7 +79,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
         return get(null);
     }
     /**
-     * Get a list of the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an  accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
+     * List the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects in the accessPackageCustomWorkflowExtensions relationship of an accessPackageCatalog. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CustomCalloutExtensionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -127,7 +127,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, CustomCalloutExtension::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an  accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
+     * List the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects in the accessPackageCustomWorkflowExtensions relationship of an accessPackageCatalog. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
      * @return a {@link RequestInformation}
      * @deprecated
      *  as of 2022-10/PrivatePreview:MicrosofEntitlementManagementCustomextensions on 2023-03-01 and will be removed 2023-12-31
@@ -138,7 +138,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Get a list of the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an  accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
+     * List the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects in the accessPackageCustomWorkflowExtensions relationship of an accessPackageCatalog. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -196,7 +196,7 @@ public class AccessPackageCustomWorkflowExtensionsRequestBuilder extends BaseReq
         return new AccessPackageCustomWorkflowExtensionsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a list of the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects and their properties. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an  accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
+     * List the accessPackageAssignmentRequestWorkflowExtension and accessPackageAssignmentWorkflowExtension objects in the accessPackageCustomWorkflowExtensions relationship of an accessPackageCatalog. The resulting list includes all the customAccessPackageWorkflowExtension objects for the catalog that the caller has access to read. Each object includes an @odata.type property that indicates whether the object is an accessPackageAssignmentRequestWorkflowExtension or an accessPackageAssignmentWorkflowExtension.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

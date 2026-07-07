@@ -23,6 +23,7 @@ public class EnablePostRequestBody implements AdditionalDataHolder, BackedModel,
     public EnablePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setEnable(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

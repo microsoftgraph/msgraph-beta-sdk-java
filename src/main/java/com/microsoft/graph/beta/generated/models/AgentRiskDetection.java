@@ -66,6 +66,14 @@ public class AgentRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("blueprintId");
     }
     /**
+     * Gets the clientSessionId property value. The clientSessionId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getClientSessionId() {
+        return this.backingStore.get("clientSessionId");
+    }
+    /**
      * Gets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, le, and ge).
      * @return a {@link OffsetDateTime}
      */
@@ -82,6 +90,14 @@ public class AgentRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("detectionTimingType");
     }
     /**
+     * Gets the displayName property value. The displayName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDisplayName() {
+        return this.backingStore.get("displayName");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -93,8 +109,11 @@ public class AgentRiskDetection extends Entity implements Parsable {
         deserializerMap.put("agentDisplayName", (n) -> { this.setAgentDisplayName(n.getStringValue()); });
         deserializerMap.put("agentId", (n) -> { this.setAgentId(n.getStringValue()); });
         deserializerMap.put("blueprintId", (n) -> { this.setBlueprintId(n.getStringValue()); });
+        deserializerMap.put("clientSessionId", (n) -> { this.setClientSessionId(n.getStringValue()); });
         deserializerMap.put("detectedDateTime", (n) -> { this.setDetectedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("detectionTimingType", (n) -> { this.setDetectionTimingType(n.getEnumValue(RiskDetectionTimingType::forValue)); });
+        deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("identityId", (n) -> { this.setIdentityId(n.getStringValue()); });
         deserializerMap.put("identityType", (n) -> { this.setIdentityType(n.getEnumValue(AgentIdentityType::forValue)); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("riskDetail", (n) -> { this.setRiskDetail(n.getEnumValue(RiskDetail::forValue)); });
@@ -102,8 +121,19 @@ public class AgentRiskDetection extends Entity implements Parsable {
         deserializerMap.put("riskEvidence", (n) -> { this.setRiskEvidence(n.getStringValue()); });
         deserializerMap.put("riskLevel", (n) -> { this.setRiskLevel(n.getEnumValue(RiskLevel::forValue)); });
         deserializerMap.put("riskState", (n) -> { this.setRiskState(n.getEnumValue(RiskState::forValue)); });
+        deserializerMap.put("signInClientDisplayName", (n) -> { this.setSignInClientDisplayName(n.getStringValue()); });
+        deserializerMap.put("signInCorrelationId", (n) -> { this.setSignInCorrelationId(n.getStringValue()); });
+        deserializerMap.put("signInRequestId", (n) -> { this.setSignInRequestId(n.getStringValue()); });
         deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the identityId property value. The identityId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getIdentityId() {
+        return this.backingStore.get("identityId");
     }
     /**
      * Gets the identityType property value. The identityType property
@@ -162,6 +192,30 @@ public class AgentRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("riskState");
     }
     /**
+     * Gets the signInClientDisplayName property value. The signInClientDisplayName property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSignInClientDisplayName() {
+        return this.backingStore.get("signInClientDisplayName");
+    }
+    /**
+     * Gets the signInCorrelationId property value. The signInCorrelationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSignInCorrelationId() {
+        return this.backingStore.get("signInCorrelationId");
+    }
+    /**
+     * Gets the signInRequestId property value. The signInRequestId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getSignInRequestId() {
+        return this.backingStore.get("signInRequestId");
+    }
+    /**
      * Gets the source property value. The source system that generated the risk detection. Nullable.
      * @return a {@link String}
      */
@@ -181,8 +235,11 @@ public class AgentRiskDetection extends Entity implements Parsable {
         writer.writeStringValue("agentDisplayName", this.getAgentDisplayName());
         writer.writeStringValue("agentId", this.getAgentId());
         writer.writeStringValue("blueprintId", this.getBlueprintId());
+        writer.writeStringValue("clientSessionId", this.getClientSessionId());
         writer.writeOffsetDateTimeValue("detectedDateTime", this.getDetectedDateTime());
         writer.writeEnumValue("detectionTimingType", this.getDetectionTimingType());
+        writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeStringValue("identityId", this.getIdentityId());
         writer.writeEnumValue("identityType", this.getIdentityType());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeEnumValue("riskDetail", this.getRiskDetail());
@@ -190,6 +247,9 @@ public class AgentRiskDetection extends Entity implements Parsable {
         writer.writeStringValue("riskEvidence", this.getRiskEvidence());
         writer.writeEnumValue("riskLevel", this.getRiskLevel());
         writer.writeEnumValue("riskState", this.getRiskState());
+        writer.writeStringValue("signInClientDisplayName", this.getSignInClientDisplayName());
+        writer.writeStringValue("signInCorrelationId", this.getSignInCorrelationId());
+        writer.writeStringValue("signInRequestId", this.getSignInRequestId());
         writer.writeStringValue("source", this.getSource());
     }
     /**
@@ -228,6 +288,13 @@ public class AgentRiskDetection extends Entity implements Parsable {
         this.backingStore.set("blueprintId", value);
     }
     /**
+     * Sets the clientSessionId property value. The clientSessionId property
+     * @param value Value to set for the clientSessionId property.
+     */
+    public void setClientSessionId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("clientSessionId", value);
+    }
+    /**
      * Sets the detectedDateTime property value. Date and time that the risk was detected. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $filter (eq, le, and ge).
      * @param value Value to set for the detectedDateTime property.
      */
@@ -240,6 +307,20 @@ public class AgentRiskDetection extends Entity implements Parsable {
      */
     public void setDetectionTimingType(@jakarta.annotation.Nullable final RiskDetectionTimingType value) {
         this.backingStore.set("detectionTimingType", value);
+    }
+    /**
+     * Sets the displayName property value. The displayName property
+     * @param value Value to set for the displayName property.
+     */
+    public void setDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the identityId property value. The identityId property
+     * @param value Value to set for the identityId property.
+     */
+    public void setIdentityId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("identityId", value);
     }
     /**
      * Sets the identityType property value. The identityType property
@@ -289,6 +370,27 @@ public class AgentRiskDetection extends Entity implements Parsable {
      */
     public void setRiskState(@jakarta.annotation.Nullable final RiskState value) {
         this.backingStore.set("riskState", value);
+    }
+    /**
+     * Sets the signInClientDisplayName property value. The signInClientDisplayName property
+     * @param value Value to set for the signInClientDisplayName property.
+     */
+    public void setSignInClientDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("signInClientDisplayName", value);
+    }
+    /**
+     * Sets the signInCorrelationId property value. The signInCorrelationId property
+     * @param value Value to set for the signInCorrelationId property.
+     */
+    public void setSignInCorrelationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("signInCorrelationId", value);
+    }
+    /**
+     * Sets the signInRequestId property value. The signInRequestId property
+     * @param value Value to set for the signInRequestId property.
+     */
+    public void setSignInRequestId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("signInRequestId", value);
     }
     /**
      * Sets the source property value. The source system that generated the risk detection. Nullable.

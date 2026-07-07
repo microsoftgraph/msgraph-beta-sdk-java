@@ -39,7 +39,7 @@ public class DeviceManagementConfigurationIntegerSettingValueDefaultTemplate imp
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
-                case "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate": return new DeviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate();
+                case "#microsoft.graph.deviceManagementConfigurationIntegerSettingValueConstantDefaultTemplate": return new DeviceManagementConfigurationIntegerSettingValueConstan_9c422b3e();
             }
         }
         return new DeviceManagementConfigurationIntegerSettingValueDefaultTemplate();

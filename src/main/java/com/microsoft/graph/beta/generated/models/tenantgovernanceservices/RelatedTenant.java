@@ -78,8 +78,17 @@ public class RelatedTenant extends Entity implements Parsable {
         deserializerMap.put("b2BSignInActivityMetrics", (n) -> { this.setB2BSignInActivityMetrics(n.getObjectValue(B2BSignInActivityMetrics::createFromDiscriminatorValue)); });
         deserializerMap.put("billingMetrics", (n) -> { this.setBillingMetrics(n.getObjectValue(BillingMetrics::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("isMicrosoftInfrastructure", (n) -> { this.setIsMicrosoftInfrastructure(n.getBooleanValue()); });
         deserializerMap.put("multiTenantApplicationMetrics", (n) -> { this.setMultiTenantApplicationMetrics(n.getObjectValue(MultiTenantApplicationMetrics::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the isMicrosoftInfrastructure property value. Indicates whether this tenant is a Microsoft infrastructure tenant.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsMicrosoftInfrastructure() {
+        return this.backingStore.get("isMicrosoftInfrastructure");
     }
     /**
      * Gets the multiTenantApplicationMetrics property value. Multi-tenant application usage metrics for this related tenant. Expanded by default.
@@ -137,6 +146,13 @@ public class RelatedTenant extends Entity implements Parsable {
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
+    }
+    /**
+     * Sets the isMicrosoftInfrastructure property value. Indicates whether this tenant is a Microsoft infrastructure tenant.
+     * @param value Value to set for the isMicrosoftInfrastructure property.
+     */
+    public void setIsMicrosoftInfrastructure(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isMicrosoftInfrastructure", value);
     }
     /**
      * Sets the multiTenantApplicationMetrics property value. Multi-tenant application usage metrics for this related tenant. Expanded by default.

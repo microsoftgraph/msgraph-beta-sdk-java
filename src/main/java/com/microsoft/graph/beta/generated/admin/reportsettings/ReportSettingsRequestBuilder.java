@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.admin.reportsettings;
 
+import com.microsoft.graph.beta.admin.reportsettings.sharepoint.SharePointRequestBuilder;
 import com.microsoft.graph.beta.models.AdminReportSettings;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -20,6 +21,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ReportSettingsRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to manage the sharePoint property of the microsoft.graph.adminReportSettings entity.
+     * @return a {@link SharePointRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public SharePointRequestBuilder sharePoint() {
+        return new SharePointRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Instantiates a new {@link ReportSettingsRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request

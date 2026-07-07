@@ -94,7 +94,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         return this.backingStore.get("localAdminEnabled");
     }
     /**
-     * Gets the notificationSetting property value. Defines the setting of the Cloud PC notification prompts for the Cloud PC user.
+     * Gets the notificationSetting property value. Defines the setting of the Cloud PC notification prompts for the Cloud PC user. The notificationSetting property is deprecated and will stop returning data on July 14, 2026.
      * @return a {@link CloudPcNotificationSetting}
      */
     @jakarta.annotation.Nullable
@@ -195,7 +195,7 @@ public class CloudPcUserSetting extends Entity implements Parsable {
         this.backingStore.set("localAdminEnabled", value);
     }
     /**
-     * Sets the notificationSetting property value. Defines the setting of the Cloud PC notification prompts for the Cloud PC user.
+     * Sets the notificationSetting property value. Defines the setting of the Cloud PC notification prompts for the Cloud PC user. The notificationSetting property is deprecated and will stop returning data on July 14, 2026.
      * @param value Value to set for the notificationSetting property.
      */
     public void setNotificationSetting(@jakarta.annotation.Nullable final CloudPcNotificationSetting value) {

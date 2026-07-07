@@ -212,6 +212,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         deserializerMap.put("previousPinBlockCount", (n) -> { this.setPreviousPinBlockCount(n.getIntegerValue()); });
         deserializerMap.put("printBlocked", (n) -> { this.setPrintBlocked(n.getBooleanValue()); });
         deserializerMap.put("protectedMessagingRedirectAppType", (n) -> { this.setProtectedMessagingRedirectAppType(n.getEnumValue(MessagingRedirectAppType::forValue)); });
+        deserializerMap.put("purviewContentEvaluationRequired", (n) -> { this.setPurviewContentEvaluationRequired(n.getEnumValue(ManagedAppPurviewEvaluationRequirement::forValue)); });
         deserializerMap.put("saveAsBlocked", (n) -> { this.setSaveAsBlocked(n.getBooleanValue()); });
         deserializerMap.put("simplePinBlocked", (n) -> { this.setSimplePinBlocked(n.getBooleanValue()); });
         return deserializerMap;
@@ -457,6 +458,14 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         return this.backingStore.get("protectedMessagingRedirectAppType");
     }
     /**
+     * Gets the purviewContentEvaluationRequired property value. Specifies whether Microsoft Purview Data Loss Prevention (DLP) content evaluation is required before data sharing.
+     * @return a {@link ManagedAppPurviewEvaluationRequirement}
+     */
+    @jakarta.annotation.Nullable
+    public ManagedAppPurviewEvaluationRequirement getPurviewContentEvaluationRequired() {
+        return this.backingStore.get("purviewContentEvaluationRequired");
+    }
+    /**
      * Gets the saveAsBlocked property value. Indicates whether users may use the &apos;Save As&apos; menu item to save a copy of protected files.
      * @return a {@link Boolean}
      */
@@ -524,6 +533,7 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
         writer.writeIntegerValue("previousPinBlockCount", this.getPreviousPinBlockCount());
         writer.writeBooleanValue("printBlocked", this.getPrintBlocked());
         writer.writeEnumValue("protectedMessagingRedirectAppType", this.getProtectedMessagingRedirectAppType());
+        writer.writeEnumValue("purviewContentEvaluationRequired", this.getPurviewContentEvaluationRequired());
         writer.writeBooleanValue("saveAsBlocked", this.getSaveAsBlocked());
         writer.writeBooleanValue("simplePinBlocked", this.getSimplePinBlocked());
     }
@@ -841,6 +851,13 @@ public class ManagedAppProtection extends ManagedAppPolicy implements Parsable {
      */
     public void setProtectedMessagingRedirectAppType(@jakarta.annotation.Nullable final MessagingRedirectAppType value) {
         this.backingStore.set("protectedMessagingRedirectAppType", value);
+    }
+    /**
+     * Sets the purviewContentEvaluationRequired property value. Specifies whether Microsoft Purview Data Loss Prevention (DLP) content evaluation is required before data sharing.
+     * @param value Value to set for the purviewContentEvaluationRequired property.
+     */
+    public void setPurviewContentEvaluationRequired(@jakarta.annotation.Nullable final ManagedAppPurviewEvaluationRequirement value) {
+        this.backingStore.set("purviewContentEvaluationRequired", value);
     }
     /**
      * Sets the saveAsBlocked property value. Indicates whether users may use the &apos;Save As&apos; menu item to save a copy of protected files.

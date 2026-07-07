@@ -26,7 +26,7 @@ public class ConnectedOrganizationMembers extends UserSet implements Parsable {
         return new ConnectedOrganizationMembers();
     }
     /**
-     * Gets the description property value. The name of the connected organization. Read only.
+     * Gets the description property value. The name of the connected organization. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -63,7 +63,7 @@ public class ConnectedOrganizationMembers extends UserSet implements Parsable {
         writer.writeStringValue("id", this.getId());
     }
     /**
-     * Sets the description property value. The name of the connected organization. Read only.
+     * Sets the description property value. The name of the connected organization. Read-only.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {

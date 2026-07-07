@@ -3,7 +3,7 @@ package com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartne
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.configureagent.ConfigureAgentRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.deployagent.DeployAgentRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.retrieveactionreports.RetrieveActionReportsRequestBuilder;
-import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.retrievedeployagentactionresultsactivityidactivityidcloudpcidcloudpcid.RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.virtualendpoint.externalpartners.item.retrievedeployagentactionresultsactivityidactivityidclo_e05880cd.RetrieveDeployAgentActionResultsactivityIdActivityIdClo_aaebe13d;
 import com.microsoft.graph.beta.models.CloudPcExternalPartner;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -50,11 +50,11 @@ public class CloudPcExternalPartnerItemRequestBuilder extends BaseRequestBuilder
     }
     /**
      * Provides operations to call the retrieveDeployAgentActionResults method.
-     * @return a {@link RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder}
+     * @return a {@link RetrieveDeployAgentActionResultsactivityIdActivityIdClo_aaebe13d}
      */
     @jakarta.annotation.Nonnull
-    public RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder retrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcId() {
-        return new RetrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcIdRequestBuilder(pathParameters, requestAdapter);
+    public RetrieveDeployAgentActionResultsactivityIdActivityIdClo_aaebe13d retrieveDeployAgentActionResultsactivityIdActivityIdCloudPcIdCloudPcId() {
+        return new RetrieveDeployAgentActionResultsactivityIdActivityIdClo_aaebe13d(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CloudPcExternalPartnerItemRequestBuilder} and sets the default values.

@@ -5,9 +5,10 @@ import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.allmembers.AllMembersRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.archive.ArchiveRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.completemigration.CompleteMigrationRequestBuilder;
-import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprinc_363088ef.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.enabledapps.EnabledAppsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.filesfolder.FilesFolderRequestBuilder;
+import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.joinedusers.JoinedUsersRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.teamwork.teamtemplates.item.definitions.item.teamdefinition.primarychannel.planner.PlannerRequestBuilder;
@@ -61,11 +62,11 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     }
     /**
      * Provides operations to call the doesUserHaveAccess method.
-     * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder}
+     * @return a {@link DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e}
      */
     @jakarta.annotation.Nonnull
-    public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName() {
-        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder(pathParameters, requestAdapter);
+    public DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName() {
+        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrinc_40d13b0e(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the enabledApps property of the microsoft.graph.channel entity.
@@ -82,6 +83,14 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the joinedUsers property of the microsoft.graph.channel entity.
+     * @return a {@link JoinedUsersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public JoinedUsersRequestBuilder joinedUsers() {
+        return new JoinedUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.

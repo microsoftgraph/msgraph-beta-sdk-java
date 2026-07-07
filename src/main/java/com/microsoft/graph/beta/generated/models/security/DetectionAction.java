@@ -56,6 +56,14 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("alertTemplate");
     }
     /**
+     * Gets the automatedActions property value. The set of automated actions to run against entities that match the detection. Replaces the deprecated responseActions property.
+     * @return a {@link AutomatedActionSet}
+     */
+    @jakarta.annotation.Nullable
+    public AutomatedActionSet getAutomatedActions() {
+        return this.backingStore.get("automatedActions");
+    }
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return a {@link BackingStore}
      */
@@ -69,8 +77,9 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("alertTemplate", (n) -> { this.setAlertTemplate(n.getObjectValue(AlertTemplate::createFromDiscriminatorValue)); });
+        deserializerMap.put("automatedActions", (n) -> { this.setAutomatedActions(n.getObjectValue(AutomatedActionSet::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("organizationalScope", (n) -> { this.setOrganizationalScope(n.getObjectValue(OrganizationalScope::createFromDiscriminatorValue)); });
         deserializerMap.put("responseActions", (n) -> { this.setResponseActions(n.getCollectionOfObjectValues(ResponseAction::createFromDiscriminatorValue)); });
@@ -85,7 +94,7 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the organizationalScope property value. Groups to which the custom detection rule applies.
+     * Gets the organizationalScope property value. The set of groups (for example, device groups) to which the parent custom detection rule applies.
      * @return a {@link OrganizationalScope}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +102,7 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("organizationalScope");
     }
     /**
-     * Gets the responseActions property value. Actions taken on impacted assets as set in the custom detection rule.
+     * Gets the responseActions property value. Actions taken on impacted assets as set in the custom detection rule. Deprecated. Use automatedActions instead. This property will be removed from this resource on 2026-10-01.
      * @return a {@link java.util.List<ResponseAction>}
      */
     @jakarta.annotation.Nullable
@@ -107,6 +116,7 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("alertTemplate", this.getAlertTemplate());
+        writer.writeObjectValue("automatedActions", this.getAutomatedActions());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("organizationalScope", this.getOrganizationalScope());
         writer.writeCollectionOfObjectValues("responseActions", this.getResponseActions());
@@ -127,6 +137,13 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("alertTemplate", value);
     }
     /**
+     * Sets the automatedActions property value. The set of automated actions to run against entities that match the detection. Replaces the deprecated responseActions property.
+     * @param value Value to set for the automatedActions property.
+     */
+    public void setAutomatedActions(@jakarta.annotation.Nullable final AutomatedActionSet value) {
+        this.backingStore.set("automatedActions", value);
+    }
+    /**
      * Sets the backingStore property value. Stores model information.
      * @param value Value to set for the backingStore property.
      */
@@ -142,14 +159,14 @@ public class DetectionAction implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the organizationalScope property value. Groups to which the custom detection rule applies.
+     * Sets the organizationalScope property value. The set of groups (for example, device groups) to which the parent custom detection rule applies.
      * @param value Value to set for the organizationalScope property.
      */
     public void setOrganizationalScope(@jakarta.annotation.Nullable final OrganizationalScope value) {
         this.backingStore.set("organizationalScope", value);
     }
     /**
-     * Sets the responseActions property value. Actions taken on impacted assets as set in the custom detection rule.
+     * Sets the responseActions property value. Actions taken on impacted assets as set in the custom detection rule. Deprecated. Use automatedActions instead. This property will be removed from this resource on 2026-10-01.
      * @param value Value to set for the responseActions property.
      */
     public void setResponseActions(@jakarta.annotation.Nullable final java.util.List<ResponseAction> value) {

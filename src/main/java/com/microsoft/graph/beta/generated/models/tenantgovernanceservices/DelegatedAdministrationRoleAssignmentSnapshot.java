@@ -61,11 +61,20 @@ public class DelegatedAdministrationRoleAssignmentSnapshot implements Additional
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("groupDisplayName", (n) -> { this.setGroupDisplayName(n.getStringValue()); });
         deserializerMap.put("groupId", (n) -> { this.setGroupId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("roleTemplates", (n) -> { this.setRoleTemplates(n.getCollectionOfObjectValues(RoleTemplate::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the groupDisplayName property value. The display name of the security group identified by groupId at the time the snapshot was created. Read-only.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getGroupDisplayName() {
+        return this.backingStore.get("groupDisplayName");
     }
     /**
      * Gets the groupId property value. The object ID of the role-assignable security group in the governing tenant that will be assigned the specified roles.
@@ -97,6 +106,7 @@ public class DelegatedAdministrationRoleAssignmentSnapshot implements Additional
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeStringValue("groupDisplayName", this.getGroupDisplayName());
         writer.writeStringValue("groupId", this.getGroupId());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("roleTemplates", this.getRoleTemplates());
@@ -116,6 +126,13 @@ public class DelegatedAdministrationRoleAssignmentSnapshot implements Additional
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the groupDisplayName property value. The display name of the security group identified by groupId at the time the snapshot was created. Read-only.
+     * @param value Value to set for the groupDisplayName property.
+     */
+    public void setGroupDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("groupDisplayName", value);
     }
     /**
      * Sets the groupId property value. The object ID of the role-assignable security group in the governing tenant that will be assigned the specified roles.
