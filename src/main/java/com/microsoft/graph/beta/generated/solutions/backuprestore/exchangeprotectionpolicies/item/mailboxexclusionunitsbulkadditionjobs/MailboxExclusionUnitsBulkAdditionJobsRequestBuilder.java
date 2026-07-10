@@ -59,19 +59,21 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/exchangeProtectionPolicies/{exchangeProtectionPolicy%2Did}/mailboxExclusionUnitsBulkAdditionJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailbox exclusion units bulk addition jobs associated with an Exchange protection policy.
      * @return a {@link MailboxExclusionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-list-mailboxexclusionunitsbulkadditionjobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxExclusionUnitsBulkAdditionJobCollectionResponse get() {
         return get(null);
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailbox exclusion units bulk addition jobs associated with an Exchange protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxExclusionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-list-mailboxexclusionunitsbulkadditionjobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public MailboxExclusionUnitsBulkAdditionJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -81,7 +83,7 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxExclusionUnitsBulkAdditionJobCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailbox exclusion units bulk addition jobs associated with an Exchange protection policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -89,7 +91,7 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
         return toGetRequestInformation(null);
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailbox exclusion units bulk addition jobs associated with an Exchange protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -111,7 +113,7 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
         return new MailboxExclusionUnitsBulkAdditionJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get mailboxExclusionUnitsBulkAdditionJobs from solutions
+     * Get a list of mailbox exclusion units bulk addition jobs associated with an Exchange protection policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

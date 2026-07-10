@@ -60,7 +60,7 @@ public class SiteExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReques
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/siteExclusionUnitsBulkAdditionJobs{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      * @return a {@link SiteExclusionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class SiteExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteExclusionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class SiteExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReques
         return this.requestAdapter.send(requestInfo, errorMapping, SiteExclusionUnitsBulkAdditionJob::createFromDiscriminatorValue);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class SiteExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class SiteExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReques
         return new SiteExclusionUnitsBulkAdditionJobsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get siteExclusionUnitsBulkAdditionJobs from solutions
+     * The list of bulk addition jobs for site exclusion units in the tenant.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -26,12 +26,21 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
         return new VoiceAuthenticationMethodConfiguration();
     }
     /**
+     * Gets the callerIdNumber property value. The phone number used as the caller ID when voice call authentication is initiated.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCallerIdNumber() {
+        return this.backingStore.get("callerIdNumber");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("callerIdNumber", (n) -> { this.setCallerIdNumber(n.getStringValue()); });
         deserializerMap.put("includeTargets", (n) -> { this.setIncludeTargets(n.getCollectionOfObjectValues(VoiceAuthenticationMethodTarget::createFromDiscriminatorValue)); });
         deserializerMap.put("isOfficePhoneAllowed", (n) -> { this.setIsOfficePhoneAllowed(n.getBooleanValue()); });
         return deserializerMap;
@@ -59,8 +68,16 @@ public class VoiceAuthenticationMethodConfiguration extends AuthenticationMethod
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("callerIdNumber", this.getCallerIdNumber());
         writer.writeCollectionOfObjectValues("includeTargets", this.getIncludeTargets());
         writer.writeBooleanValue("isOfficePhoneAllowed", this.getIsOfficePhoneAllowed());
+    }
+    /**
+     * Sets the callerIdNumber property value. The phone number used as the caller ID when voice call authentication is initiated.
+     * @param value Value to set for the callerIdNumber property.
+     */
+    public void setCallerIdNumber(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("callerIdNumber", value);
     }
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method. Expanded by default.

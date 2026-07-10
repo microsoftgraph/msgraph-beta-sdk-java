@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.customdataprovidedresourcepayloads.Data;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -23,6 +24,13 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
     @jakarta.annotation.Nonnull
     public static CustomDataProvidedResourceUploadSession createFromDiscriminatorValue(@jakarta.annotation.Nonnull final ParseNode parseNode) {
         Objects.requireNonNull(parseNode);
+        final ParseNode mappingValueNode = parseNode.getChildNode("@odata.type");
+        if (mappingValueNode != null) {
+            final String mappingValue = mappingValueNode.getStringValue();
+            switch (mappingValue) {
+                case "#microsoft.graph.customDataProvidedResourceAccessReviewUploadSession": return new CustomDataProvidedResourceAccessReviewUploadSession();
+            }
+        }
         return new CustomDataProvidedResourceUploadSession();
     }
     /**
@@ -34,11 +42,11 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the data property value. An object containing the context for which this data is being uploaded. Currently the only possible concrete type is accessReviewResourceDataUploadSessionContextData
-     * @return a {@link CustomExtensionData}
+     * Gets the data property value. An object containing the context for which this data is being uploaded.
+     * @return a {@link Data}
      */
     @jakarta.annotation.Nullable
-    public CustomExtensionData getData() {
+    public Data getData() {
         return this.backingStore.get("data");
     }
     /**
@@ -49,14 +57,12 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
-        deserializerMap.put("data", (n) -> { this.setData(n.getObjectValue(CustomExtensionData::createFromDiscriminatorValue)); });
+        deserializerMap.put("data", (n) -> { this.setData(n.getObjectValue(Data::createFromDiscriminatorValue)); });
         deserializerMap.put("files", (n) -> { this.setFiles(n.getCollectionOfObjectValues(CustomDataProvidedResourceFile::createFromDiscriminatorValue)); });
         deserializerMap.put("isUploadDone", (n) -> { this.setIsUploadDone(n.getBooleanValue()); });
         deserializerMap.put("referenceId", (n) -> { this.setReferenceId(n.getStringValue()); });
-        deserializerMap.put("source", (n) -> { this.setSource(n.getStringValue()); });
         deserializerMap.put("stats", (n) -> { this.setStats(n.getObjectValue(CustomDataProvidedResourceUploadStats::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(CustomDataProvidedResourceUploadStatus::forValue)); });
-        deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -84,14 +90,6 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         return this.backingStore.get("referenceId");
     }
     /**
-     * Gets the source property value. The source of the access data. This should be set to the customdataprovidedresource&apos;s name when creating the session.
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getSource() {
-        return this.backingStore.get("source");
-    }
-    /**
      * Gets the stats property value. The stats property
      * @return a {@link CustomDataProvidedResourceUploadStats}
      */
@@ -108,14 +106,6 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         return this.backingStore.get("status");
     }
     /**
-     * Gets the type property value. Schematized form of the expected CSV columns in the uploaded file. The only possible value currently is: accessReviewDataUploadTriggerCallbackData
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getType() {
-        return this.backingStore.get("type");
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -127,10 +117,8 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         writer.writeCollectionOfObjectValues("files", this.getFiles());
         writer.writeBooleanValue("isUploadDone", this.getIsUploadDone());
         writer.writeStringValue("referenceId", this.getReferenceId());
-        writer.writeStringValue("source", this.getSource());
         writer.writeObjectValue("stats", this.getStats());
         writer.writeEnumValue("status", this.getStatus());
-        writer.writeStringValue("type", this.getType());
     }
     /**
      * Sets the createdDateTime property value. DateTime when the upload session was created. Read-only. Supports $orderby.
@@ -140,10 +128,10 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the data property value. An object containing the context for which this data is being uploaded. Currently the only possible concrete type is accessReviewResourceDataUploadSessionContextData
+     * Sets the data property value. An object containing the context for which this data is being uploaded.
      * @param value Value to set for the data property.
      */
-    public void setData(@jakarta.annotation.Nullable final CustomExtensionData value) {
+    public void setData(@jakarta.annotation.Nullable final Data value) {
         this.backingStore.set("data", value);
     }
     /**
@@ -168,13 +156,6 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
         this.backingStore.set("referenceId", value);
     }
     /**
-     * Sets the source property value. The source of the access data. This should be set to the customdataprovidedresource&apos;s name when creating the session.
-     * @param value Value to set for the source property.
-     */
-    public void setSource(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("source", value);
-    }
-    /**
      * Sets the stats property value. The stats property
      * @param value Value to set for the stats property.
      */
@@ -187,12 +168,5 @@ public class CustomDataProvidedResourceUploadSession extends Entity implements P
      */
     public void setStatus(@jakarta.annotation.Nullable final CustomDataProvidedResourceUploadStatus value) {
         this.backingStore.set("status", value);
-    }
-    /**
-     * Sets the type property value. Schematized form of the expected CSV columns in the uploaded file. The only possible value currently is: accessReviewDataUploadTriggerCallbackData
-     * @param value Value to set for the type property.
-     */
-    public void setType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("type", value);
     }
 }

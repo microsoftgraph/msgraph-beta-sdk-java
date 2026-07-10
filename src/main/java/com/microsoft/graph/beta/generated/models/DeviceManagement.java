@@ -1095,7 +1095,7 @@ public class DeviceManagement extends Entity implements Parsable {
         return this.backingStore.get("remoteAssistanceSettings");
     }
     /**
-     * Gets the reports property value. The reports property
+     * Gets the reports property value. Reports singleton
      * @return a {@link DeviceManagementReports}
      */
     @jakarta.annotation.Nullable
@@ -2728,7 +2728,7 @@ public class DeviceManagement extends Entity implements Parsable {
         this.backingStore.set("remoteAssistanceSettings", value);
     }
     /**
-     * Sets the reports property value. The reports property
+     * Sets the reports property value. Reports singleton
      * @param value Value to set for the reports property.
      */
     public void setReports(@jakarta.annotation.Nullable final DeviceManagementReports value) {

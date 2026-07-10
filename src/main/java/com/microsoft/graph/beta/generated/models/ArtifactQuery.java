@@ -69,10 +69,11 @@ public class ArtifactQuery implements AdditionalDataHolder, BackedModel, Parsabl
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("artifactType", (n) -> { this.setArtifactType(n.getEnumValue(RestorableArtifact::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("queryExpression", (n) -> { this.setQueryExpression(n.getStringValue()); });
+        deserializerMap.put("structuredQueryExpression", (n) -> { this.setStructuredQueryExpression(n.getObjectValue(RestoreSearchArtifactQueryExpression::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -84,12 +85,20 @@ public class ArtifactQuery implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the queryExpression property value. Specifies criteria to retrieve artifacts.
+     * Gets the queryExpression property value. Deprecated. Going forward, use the structuredQueryExpression property instead. Specifies criteria to retrieve artifacts.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getQueryExpression() {
         return this.backingStore.get("queryExpression");
+    }
+    /**
+     * Gets the structuredQueryExpression property value. Contains a structured query expression for searching artifacts.
+     * @return a {@link RestoreSearchArtifactQueryExpression}
+     */
+    @jakarta.annotation.Nullable
+    public RestoreSearchArtifactQueryExpression getStructuredQueryExpression() {
+        return this.backingStore.get("structuredQueryExpression");
     }
     /**
      * Serializes information the current object
@@ -100,6 +109,7 @@ public class ArtifactQuery implements AdditionalDataHolder, BackedModel, Parsabl
         writer.writeEnumValue("artifactType", this.getArtifactType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("queryExpression", this.getQueryExpression());
+        writer.writeObjectValue("structuredQueryExpression", this.getStructuredQueryExpression());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -132,10 +142,17 @@ public class ArtifactQuery implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the queryExpression property value. Specifies criteria to retrieve artifacts.
+     * Sets the queryExpression property value. Deprecated. Going forward, use the structuredQueryExpression property instead. Specifies criteria to retrieve artifacts.
      * @param value Value to set for the queryExpression property.
      */
     public void setQueryExpression(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("queryExpression", value);
+    }
+    /**
+     * Sets the structuredQueryExpression property value. Contains a structured query expression for searching artifacts.
+     * @param value Value to set for the structuredQueryExpression property.
+     */
+    public void setStructuredQueryExpression(@jakarta.annotation.Nullable final RestoreSearchArtifactQueryExpression value) {
+        this.backingStore.set("structuredQueryExpression", value);
     }
 }

@@ -26,7 +26,7 @@ public class RulesRoot extends Entity implements Parsable {
         return new RulesRoot();
     }
     /**
-     * Gets the detectionRules property value. The detectionRules property
+     * Gets the detectionRules property value. The custom detection rules configured for the tenant.
      * @return a {@link java.util.List<DetectionRule>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class RulesRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("detectionRules", this.getDetectionRules());
     }
     /**
-     * Sets the detectionRules property value. The detectionRules property
+     * Sets the detectionRules property value. The custom detection rules configured for the tenant.
      * @param value Value to set for the detectionRules property.
      */
     public void setDetectionRules(@jakarta.annotation.Nullable final java.util.List<DetectionRule> value) {

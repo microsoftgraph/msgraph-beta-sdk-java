@@ -45,6 +45,30 @@ public class IosDdmLobAppAssignmentSettings extends MobileAppAssignmentSettings 
         return this.backingStore.get("associatedDomainsDirectDownloadAllowed");
     }
     /**
+     * Gets the cellularSliceConfigurationId property value. The cellularSliceConfigurationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getCellularSliceConfigurationId() {
+        return this.backingStore.get("cellularSliceConfigurationId");
+    }
+    /**
+     * Gets the contentFilterConfigurationId property value. The contentFilterConfigurationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getContentFilterConfigurationId() {
+        return this.backingStore.get("contentFilterConfigurationId");
+    }
+    /**
+     * Gets the dnsProxyConfigurationId property value. The dnsProxyConfigurationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getDnsProxyConfigurationId() {
+        return this.backingStore.get("dnsProxyConfigurationId");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -53,7 +77,11 @@ public class IosDdmLobAppAssignmentSettings extends MobileAppAssignmentSettings 
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("associatedDomains", (n) -> { this.setAssociatedDomains(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("associatedDomainsDirectDownloadAllowed", (n) -> { this.setAssociatedDomainsDirectDownloadAllowed(n.getBooleanValue()); });
+        deserializerMap.put("cellularSliceConfigurationId", (n) -> { this.setCellularSliceConfigurationId(n.getStringValue()); });
+        deserializerMap.put("contentFilterConfigurationId", (n) -> { this.setContentFilterConfigurationId(n.getStringValue()); });
+        deserializerMap.put("dnsProxyConfigurationId", (n) -> { this.setDnsProxyConfigurationId(n.getStringValue()); });
         deserializerMap.put("preventManagedAppBackup", (n) -> { this.setPreventManagedAppBackup(n.getBooleanValue()); });
+        deserializerMap.put("relayConfigurationId", (n) -> { this.setRelayConfigurationId(n.getStringValue()); });
         deserializerMap.put("tapToPayScreenLockEnabled", (n) -> { this.setTapToPayScreenLockEnabled(n.getBooleanValue()); });
         deserializerMap.put("vpnConfigurationId", (n) -> { this.setVpnConfigurationId(n.getStringValue()); });
         return deserializerMap;
@@ -65,6 +93,14 @@ public class IosDdmLobAppAssignmentSettings extends MobileAppAssignmentSettings 
     @jakarta.annotation.Nullable
     public Boolean getPreventManagedAppBackup() {
         return this.backingStore.get("preventManagedAppBackup");
+    }
+    /**
+     * Gets the relayConfigurationId property value. The relayConfigurationId property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getRelayConfigurationId() {
+        return this.backingStore.get("relayConfigurationId");
     }
     /**
      * Gets the tapToPayScreenLockEnabled property value. When true, the device locks its screen after every transaction that requires a customers card PIN. When false, the user can choose the behavior. Default value is false.
@@ -91,7 +127,11 @@ public class IosDdmLobAppAssignmentSettings extends MobileAppAssignmentSettings 
         super.serialize(writer);
         writer.writeCollectionOfPrimitiveValues("associatedDomains", this.getAssociatedDomains());
         writer.writeBooleanValue("associatedDomainsDirectDownloadAllowed", this.getAssociatedDomainsDirectDownloadAllowed());
+        writer.writeStringValue("cellularSliceConfigurationId", this.getCellularSliceConfigurationId());
+        writer.writeStringValue("contentFilterConfigurationId", this.getContentFilterConfigurationId());
+        writer.writeStringValue("dnsProxyConfigurationId", this.getDnsProxyConfigurationId());
         writer.writeBooleanValue("preventManagedAppBackup", this.getPreventManagedAppBackup());
+        writer.writeStringValue("relayConfigurationId", this.getRelayConfigurationId());
         writer.writeBooleanValue("tapToPayScreenLockEnabled", this.getTapToPayScreenLockEnabled());
         writer.writeStringValue("vpnConfigurationId", this.getVpnConfigurationId());
     }
@@ -110,11 +150,39 @@ public class IosDdmLobAppAssignmentSettings extends MobileAppAssignmentSettings 
         this.backingStore.set("associatedDomainsDirectDownloadAllowed", value);
     }
     /**
+     * Sets the cellularSliceConfigurationId property value. The cellularSliceConfigurationId property
+     * @param value Value to set for the cellularSliceConfigurationId property.
+     */
+    public void setCellularSliceConfigurationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("cellularSliceConfigurationId", value);
+    }
+    /**
+     * Sets the contentFilterConfigurationId property value. The contentFilterConfigurationId property
+     * @param value Value to set for the contentFilterConfigurationId property.
+     */
+    public void setContentFilterConfigurationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("contentFilterConfigurationId", value);
+    }
+    /**
+     * Sets the dnsProxyConfigurationId property value. The dnsProxyConfigurationId property
+     * @param value Value to set for the dnsProxyConfigurationId property.
+     */
+    public void setDnsProxyConfigurationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("dnsProxyConfigurationId", value);
+    }
+    /**
      * Sets the preventManagedAppBackup property value. When true, indicates that the app should not be backed up to iCloud. When false, indicates that the app may be backed up to iCloud. Default is false.
      * @param value Value to set for the preventManagedAppBackup property.
      */
     public void setPreventManagedAppBackup(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("preventManagedAppBackup", value);
+    }
+    /**
+     * Sets the relayConfigurationId property value. The relayConfigurationId property
+     * @param value Value to set for the relayConfigurationId property.
+     */
+    public void setRelayConfigurationId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("relayConfigurationId", value);
     }
     /**
      * Sets the tapToPayScreenLockEnabled property value. When true, the device locks its screen after every transaction that requires a customers card PIN. When false, the user can choose the behavior. Default value is false.

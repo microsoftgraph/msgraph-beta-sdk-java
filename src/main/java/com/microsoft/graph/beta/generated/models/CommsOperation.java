@@ -27,12 +27,15 @@ public class CommsOperation extends Entity implements Parsable {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
                 case "#microsoft.graph.addLargeGalleryViewOperation": return new AddLargeGalleryViewOperation();
+                case "#microsoft.graph.admitAllFromLobbyOperation": return new AdmitAllFromLobbyOperation();
+                case "#microsoft.graph.admitFromLobbyOperation": return new AdmitFromLobbyOperation();
                 case "#microsoft.graph.cancelMediaProcessingOperation": return new CancelMediaProcessingOperation();
                 case "#microsoft.graph.inviteParticipantsOperation": return new InviteParticipantsOperation();
                 case "#microsoft.graph.muteParticipantOperation": return new MuteParticipantOperation();
                 case "#microsoft.graph.muteParticipantsOperation": return new MuteParticipantsOperation();
                 case "#microsoft.graph.playPromptOperation": return new PlayPromptOperation();
                 case "#microsoft.graph.recordOperation": return new RecordOperation();
+                case "#microsoft.graph.removeFromLobbyOperation": return new RemoveFromLobbyOperation();
                 case "#microsoft.graph.sendDtmfTonesOperation": return new SendDtmfTonesOperation();
                 case "#microsoft.graph.startHoldMusicOperation": return new StartHoldMusicOperation();
                 case "#microsoft.graph.startRecordingOperation": return new StartRecordingOperation();

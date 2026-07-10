@@ -60,7 +60,7 @@ public class ProfilePropertySettingsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/people/profilePropertySettings{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get a collection of profilePropertySetting objects that define the configuration for user profile properties in an organization. The id property identifies each resource object uniquely.
+     * Get a collection of profilePropertySetting objects that define the configuration for user profile property settings in an organization. The id property identifies each resource object uniquely.
      * @return a {@link ProfilePropertySettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/peopleadminsettings-list-profilepropertysettings?view=graph-rest-beta">Find more info here</a>
@@ -70,7 +70,7 @@ public class ProfilePropertySettingsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get a collection of profilePropertySetting objects that define the configuration for user profile properties in an organization. The id property identifies each resource object uniquely.
+     * Get a collection of profilePropertySetting objects that define the configuration for user profile property settings in an organization. The id property identifies each resource object uniquely.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProfilePropertySettingCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -111,7 +111,7 @@ public class ProfilePropertySettingsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProfilePropertySetting::createFromDiscriminatorValue);
     }
     /**
-     * Get a collection of profilePropertySetting objects that define the configuration for user profile properties in an organization. The id property identifies each resource object uniquely.
+     * Get a collection of profilePropertySetting objects that define the configuration for user profile property settings in an organization. The id property identifies each resource object uniquely.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -119,7 +119,7 @@ public class ProfilePropertySettingsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get a collection of profilePropertySetting objects that define the configuration for user profile properties in an organization. The id property identifies each resource object uniquely.
+     * Get a collection of profilePropertySetting objects that define the configuration for user profile property settings in an organization. The id property identifies each resource object uniquely.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -165,7 +165,7 @@ public class ProfilePropertySettingsRequestBuilder extends BaseRequestBuilder {
         return new ProfilePropertySettingsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get a collection of profilePropertySetting objects that define the configuration for user profile properties in an organization. The id property identifies each resource object uniquely.
+     * Get a collection of profilePropertySetting objects that define the configuration for user profile property settings in an organization. The id property identifies each resource object uniquely.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -128,7 +128,7 @@ public class Room extends Place implements Parsable {
         return this.backingStore.get("nickname");
     }
     /**
-     * Gets the placeId property value. An alternative immutable unique identifier of the room. Read-only.
+     * Gets the placeId property value. The placeId property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -243,7 +243,7 @@ public class Room extends Place implements Parsable {
         this.backingStore.set("nickname", value);
     }
     /**
-     * Sets the placeId property value. An alternative immutable unique identifier of the room. Read-only.
+     * Sets the placeId property value. The placeId property
      * @param value Value to set for the placeId property.
      */
     public void setPlaceId(@jakarta.annotation.Nullable final String value) {

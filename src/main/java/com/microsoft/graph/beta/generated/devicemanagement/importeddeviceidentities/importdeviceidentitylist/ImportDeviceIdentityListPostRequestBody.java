@@ -24,6 +24,7 @@ public class ImportDeviceIdentityListPostRequestBody implements AdditionalDataHo
     public ImportDeviceIdentityListPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setOverwriteImportedDeviceIdentities(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value

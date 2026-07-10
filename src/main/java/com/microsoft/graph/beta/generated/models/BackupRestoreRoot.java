@@ -41,7 +41,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("browseSessions");
     }
     /**
-     * Gets the driveExclusionUnits property value. The driveExclusionUnits property
+     * Gets the driveExclusionUnits property value. The list of drive exclusion units in the tenant.
      * @return a {@link java.util.List<DriveExclusionUnit>}
      */
     @jakarta.annotation.Nullable
@@ -49,7 +49,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("driveExclusionUnits");
     }
     /**
-     * Gets the driveExclusionUnitsBulkAdditionJobs property value. The driveExclusionUnitsBulkAdditionJobs property
+     * Gets the driveExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for drive exclusion units in the tenant.
      * @return a {@link java.util.List<DriveExclusionUnitsBulkAdditionJob>}
      */
     @jakarta.annotation.Nullable
@@ -105,7 +105,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("exchangeRestoreSessions");
     }
     /**
-     * Gets the exclusionUnits property value. The exclusionUnits property
+     * Gets the exclusionUnits property value. The list of exclusion units in the tenant.
      * @return a {@link java.util.List<ExclusionUnitBase>}
      */
     @jakarta.annotation.Nullable
@@ -156,7 +156,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the mailboxExclusionUnits property value. The mailboxExclusionUnits property
+     * Gets the mailboxExclusionUnits property value. The list of mailbox exclusion units in the tenant.
      * @return a {@link java.util.List<MailboxExclusionUnit>}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("mailboxExclusionUnits");
     }
     /**
-     * Gets the mailboxExclusionUnitsBulkAdditionJobs property value. The mailboxExclusionUnitsBulkAdditionJobs property
+     * Gets the mailboxExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for mailbox exclusion units in the tenant.
      * @return a {@link java.util.List<MailboxExclusionUnitsBulkAdditionJob>}
      */
     @jakarta.annotation.Nullable
@@ -196,7 +196,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("mailboxProtectionUnitsBulkAdditionJobs");
     }
     /**
-     * Gets the oneDriveForBusinessBrowseSessions property value. The list of onedriveforbusiness browse sessions in the tenant.
+     * Gets the oneDriveForBusinessBrowseSessions property value. The list of OneDrive for work or school browse sessions in the tenant.
      * @return a {@link java.util.List<OneDriveForBusinessBrowseSession>}
      */
     @jakarta.annotation.Nullable
@@ -276,7 +276,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("serviceStatus");
     }
     /**
-     * Gets the sharePointBrowseSessions property value. The list of sharepoint browse sessions in the tenant.
+     * Gets the sharePointBrowseSessions property value. The list of SharePoint browse sessions in the tenant.
      * @return a {@link java.util.List<SharePointBrowseSession>}
      */
     @jakarta.annotation.Nullable
@@ -300,7 +300,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("sharePointRestoreSessions");
     }
     /**
-     * Gets the siteExclusionUnits property value. The siteExclusionUnits property
+     * Gets the siteExclusionUnits property value. The list of site exclusion units in the tenant.
      * @return a {@link java.util.List<SiteExclusionUnit>}
      */
     @jakarta.annotation.Nullable
@@ -308,7 +308,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         return this.backingStore.get("siteExclusionUnits");
     }
     /**
-     * Gets the siteExclusionUnitsBulkAdditionJobs property value. The siteExclusionUnitsBulkAdditionJobs property
+     * Gets the siteExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for site exclusion units in the tenant.
      * @return a {@link java.util.List<SiteExclusionUnitsBulkAdditionJob>}
      */
     @jakarta.annotation.Nullable
@@ -396,14 +396,14 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         this.backingStore.set("browseSessions", value);
     }
     /**
-     * Sets the driveExclusionUnits property value. The driveExclusionUnits property
+     * Sets the driveExclusionUnits property value. The list of drive exclusion units in the tenant.
      * @param value Value to set for the driveExclusionUnits property.
      */
     public void setDriveExclusionUnits(@jakarta.annotation.Nullable final java.util.List<DriveExclusionUnit> value) {
         this.backingStore.set("driveExclusionUnits", value);
     }
     /**
-     * Sets the driveExclusionUnitsBulkAdditionJobs property value. The driveExclusionUnitsBulkAdditionJobs property
+     * Sets the driveExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for drive exclusion units in the tenant.
      * @param value Value to set for the driveExclusionUnitsBulkAdditionJobs property.
      */
     public void setDriveExclusionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<DriveExclusionUnitsBulkAdditionJob> value) {
@@ -452,21 +452,21 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         this.backingStore.set("exchangeRestoreSessions", value);
     }
     /**
-     * Sets the exclusionUnits property value. The exclusionUnits property
+     * Sets the exclusionUnits property value. The list of exclusion units in the tenant.
      * @param value Value to set for the exclusionUnits property.
      */
     public void setExclusionUnits(@jakarta.annotation.Nullable final java.util.List<ExclusionUnitBase> value) {
         this.backingStore.set("exclusionUnits", value);
     }
     /**
-     * Sets the mailboxExclusionUnits property value. The mailboxExclusionUnits property
+     * Sets the mailboxExclusionUnits property value. The list of mailbox exclusion units in the tenant.
      * @param value Value to set for the mailboxExclusionUnits property.
      */
     public void setMailboxExclusionUnits(@jakarta.annotation.Nullable final java.util.List<MailboxExclusionUnit> value) {
         this.backingStore.set("mailboxExclusionUnits", value);
     }
     /**
-     * Sets the mailboxExclusionUnitsBulkAdditionJobs property value. The mailboxExclusionUnitsBulkAdditionJobs property
+     * Sets the mailboxExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for mailbox exclusion units in the tenant.
      * @param value Value to set for the mailboxExclusionUnitsBulkAdditionJobs property.
      */
     public void setMailboxExclusionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<MailboxExclusionUnitsBulkAdditionJob> value) {
@@ -494,7 +494,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         this.backingStore.set("mailboxProtectionUnitsBulkAdditionJobs", value);
     }
     /**
-     * Sets the oneDriveForBusinessBrowseSessions property value. The list of onedriveforbusiness browse sessions in the tenant.
+     * Sets the oneDriveForBusinessBrowseSessions property value. The list of OneDrive for work or school browse sessions in the tenant.
      * @param value Value to set for the oneDriveForBusinessBrowseSessions property.
      */
     public void setOneDriveForBusinessBrowseSessions(@jakarta.annotation.Nullable final java.util.List<OneDriveForBusinessBrowseSession> value) {
@@ -564,7 +564,7 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         this.backingStore.set("serviceStatus", value);
     }
     /**
-     * Sets the sharePointBrowseSessions property value. The list of sharepoint browse sessions in the tenant.
+     * Sets the sharePointBrowseSessions property value. The list of SharePoint browse sessions in the tenant.
      * @param value Value to set for the sharePointBrowseSessions property.
      */
     public void setSharePointBrowseSessions(@jakarta.annotation.Nullable final java.util.List<SharePointBrowseSession> value) {
@@ -585,14 +585,14 @@ public class BackupRestoreRoot extends Entity implements Parsable {
         this.backingStore.set("sharePointRestoreSessions", value);
     }
     /**
-     * Sets the siteExclusionUnits property value. The siteExclusionUnits property
+     * Sets the siteExclusionUnits property value. The list of site exclusion units in the tenant.
      * @param value Value to set for the siteExclusionUnits property.
      */
     public void setSiteExclusionUnits(@jakarta.annotation.Nullable final java.util.List<SiteExclusionUnit> value) {
         this.backingStore.set("siteExclusionUnits", value);
     }
     /**
-     * Sets the siteExclusionUnitsBulkAdditionJobs property value. The siteExclusionUnitsBulkAdditionJobs property
+     * Sets the siteExclusionUnitsBulkAdditionJobs property value. The list of bulk addition jobs for site exclusion units in the tenant.
      * @param value Value to set for the siteExclusionUnitsBulkAdditionJobs property.
      */
     public void setSiteExclusionUnitsBulkAdditionJobs(@jakarta.annotation.Nullable final java.util.List<SiteExclusionUnitsBulkAdditionJob> value) {

@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.reports.appcredentialsigninactivities.AppCredent
 import com.microsoft.graph.beta.reports.applicationsignindetailedsummary.ApplicationSignInDetailedSummaryRequestBuilder;
 import com.microsoft.graph.beta.reports.authenticationmethods.AuthenticationMethodsRequestBuilder;
 import com.microsoft.graph.beta.reports.azureadpremiumlicenseinsight.AzureADPremiumLicenseInsightRequestBuilder;
+import com.microsoft.graph.beta.reports.correlations.CorrelationsRequestBuilder;
 import com.microsoft.graph.beta.reports.credentialuserregistrationdetails.CredentialUserRegistrationDetailsRequestBuilder;
 import com.microsoft.graph.beta.reports.dailyprintusage.DailyPrintUsageRequestBuilder;
 import com.microsoft.graph.beta.reports.dailyprintusagebyprinter.DailyPrintUsageByPrinterRequestBuilder;
@@ -135,6 +136,7 @@ import com.microsoft.graph.beta.reports.getyammergroupsactivitydetailwithdate.Ge
 import com.microsoft.graph.beta.reports.getyammergroupsactivitydetailwithperiod.GetYammerGroupsActivityDetailWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getyammergroupsactivitygroupcountswithperiod.GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.healthmonitoring.HealthMonitoringRequestBuilder;
+import com.microsoft.graph.beta.reports.identityanalytics.IdentityAnalyticsRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentdetailswithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentAbandonmentDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentabandonmentsummarywithskipwithtopwithfilterwithskiptoken.ManagedDeviceEnrollmentAbandonmentSummaryWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
 import com.microsoft.graph.beta.reports.manageddeviceenrollmentfailuredetails.ManagedDeviceEnrollmentFailureDetailsRequestBuilder;
@@ -204,6 +206,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AzureADPremiumLicenseInsightRequestBuilder azureADPremiumLicenseInsight() {
         return new AzureADPremiumLicenseInsightRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the correlations property of the microsoft.graph.reportRoot entity.
+     * @return a {@link CorrelationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CorrelationsRequestBuilder correlations() {
+        return new CorrelationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the credentialUserRegistrationDetails property of the microsoft.graph.reportRoot entity.
@@ -340,6 +350,14 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public HealthMonitoringRequestBuilder healthMonitoring() {
         return new HealthMonitoringRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the identityAnalytics property of the microsoft.graph.reportRoot entity.
+     * @return a {@link IdentityAnalyticsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public IdentityAnalyticsRequestBuilder identityAnalytics() {
+        return new IdentityAnalyticsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the managedDeviceEnrollmentFailureDetails method.

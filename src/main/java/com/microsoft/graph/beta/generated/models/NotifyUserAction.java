@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class NotifyUserAction extends DlpActionInfo implements Parsable {
+public class NotifyUserAction extends PolicyTipAction implements Parsable {
     /**
      * Instantiates a new {@link NotifyUserAction} and sets the default values.
      */
@@ -50,17 +50,8 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("actionLastModifiedDateTime", (n) -> { this.setActionLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("emailText", (n) -> { this.setEmailText(n.getStringValue()); });
-        deserializerMap.put("policyTip", (n) -> { this.setPolicyTip(n.getStringValue()); });
         deserializerMap.put("recipients", (n) -> { this.setRecipients(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
-    }
-    /**
-     * Gets the policyTip property value. The text of the policy tip displayed to the user within the application (For example, Outlook, Word).
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getPolicyTip() {
-        return this.backingStore.get("policyTip");
     }
     /**
      * Gets the recipients property value. List of email addresses or user identifiers designated to receive the notification email. Can include sender, owner, manager, etc.
@@ -79,7 +70,6 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
         super.serialize(writer);
         writer.writeOffsetDateTimeValue("actionLastModifiedDateTime", this.getActionLastModifiedDateTime());
         writer.writeStringValue("emailText", this.getEmailText());
-        writer.writeStringValue("policyTip", this.getPolicyTip());
         writer.writeCollectionOfPrimitiveValues("recipients", this.getRecipients());
     }
     /**
@@ -95,13 +85,6 @@ public class NotifyUserAction extends DlpActionInfo implements Parsable {
      */
     public void setEmailText(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("emailText", value);
-    }
-    /**
-     * Sets the policyTip property value. The text of the policy tip displayed to the user within the application (For example, Outlook, Word).
-     * @param value Value to set for the policyTip property.
-     */
-    public void setPolicyTip(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("policyTip", value);
     }
     /**
      * Sets the recipients property value. List of email addresses or user identifiers designated to receive the notification email. Can include sender, owner, manager, etc.

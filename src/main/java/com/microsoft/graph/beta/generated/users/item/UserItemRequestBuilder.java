@@ -36,6 +36,7 @@ import com.microsoft.graph.beta.users.item.devicemanagementtroubleshootingevents
 import com.microsoft.graph.beta.users.item.devices.DevicesRequestBuilder;
 import com.microsoft.graph.beta.users.item.deviceswithdeviceid.DevicesWithDeviceIdRequestBuilder;
 import com.microsoft.graph.beta.users.item.directreports.DirectReportsRequestBuilder;
+import com.microsoft.graph.beta.users.item.distributionlists.DistributionListsRequestBuilder;
 import com.microsoft.graph.beta.users.item.drive.DriveRequestBuilder;
 import com.microsoft.graph.beta.users.item.drives.DrivesRequestBuilder;
 import com.microsoft.graph.beta.users.item.employeeexperience.EmployeeExperienceRequestBuilder;
@@ -397,6 +398,14 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public DirectReportsRequestBuilder directReports() {
         return new DirectReportsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the distributionLists property of the microsoft.graph.user entity.
+     * @return a {@link DistributionListsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public DistributionListsRequestBuilder distributionLists() {
+        return new DistributionListsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the drive property of the microsoft.graph.user entity.
@@ -1183,7 +1192,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return new OnlineMeetingsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
     }
     /**
-     * Update the properties of a user or agentUser object.
+     * Update the properties of a user. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param body The request body
      * @return a {@link User}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -1194,7 +1203,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Update the properties of a user or agentUser object.
+     * Update the properties of a user. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link User}
@@ -1262,7 +1271,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Update the properties of a user or agentUser object.
+     * Update the properties of a user. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -1271,7 +1280,7 @@ public class UserItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the properties of a user or agentUser object.
+     * Update the properties of a user. To use this API to update an agentUser, specify an @odata.type property with a value of #microsoft.graph.agentUser in the request body.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

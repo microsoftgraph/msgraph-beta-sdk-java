@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.applicationtemplates;
 
+import com.microsoft.graph.beta.applicationtemplates.categories.CategoriesRequestBuilder;
 import com.microsoft.graph.beta.applicationtemplates.count.CountRequestBuilder;
 import com.microsoft.graph.beta.applicationtemplates.item.ApplicationTemplateItemRequestBuilder;
 import com.microsoft.graph.beta.models.ApplicationTemplateCollectionResponse;
@@ -22,6 +23,14 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ApplicationTemplatesRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the categories method.
+     * @return a {@link CategoriesRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CategoriesRequestBuilder categories() {
+        return new CategoriesRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}

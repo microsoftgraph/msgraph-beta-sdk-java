@@ -35,7 +35,7 @@ public class BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder extends
         super(requestAdapter, "{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}/batchApplyCustomDataProvidedResourceDecisions", rawUrl);
     }
     /**
-     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state.
+     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-batchapplycustomdataprovidedresourcedecisions?view=graph-rest-beta">Find more info here</a>
@@ -44,7 +44,7 @@ public class BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder extends
         post(body, null);
     }
     /**
-     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state.
+     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -58,7 +58,7 @@ public class BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder extends
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state.
+     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -67,7 +67,7 @@ public class BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder extends
         return toPostRequestInformation(body, null);
     }
     /**
-     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state.
+     * Enables reviewers to set the applyResult and applyDescription on all accessReviewInstanceDecisionItem objects in a specific accessReviewInstance in batches by using customDataProvidedResourceId. NOTE: The access review instance must be in an Applying state.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

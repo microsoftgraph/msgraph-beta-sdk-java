@@ -54,7 +54,7 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
         return this.backingStore.get("identifierUris");
     }
     /**
-     * Gets the redirectUris property value. The redirectUris property
+     * Gets the redirectUris property value. Configuration object for redirect URI validation rules and restrictions for an application.
      * @return a {@link RedirectUriConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class AppManagementApplicationConfiguration extends AppManagementConfigur
         this.backingStore.set("identifierUris", value);
     }
     /**
-     * Sets the redirectUris property value. The redirectUris property
+     * Sets the redirectUris property value. Configuration object for redirect URI validation rules and restrictions for an application.
      * @param value Value to set for the redirectUris property.
      */
     public void setRedirectUris(@jakarta.annotation.Nullable final RedirectUriConfiguration value) {
