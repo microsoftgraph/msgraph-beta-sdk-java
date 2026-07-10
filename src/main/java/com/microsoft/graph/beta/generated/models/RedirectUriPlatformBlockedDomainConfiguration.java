@@ -56,7 +56,7 @@ public class RedirectUriPlatformBlockedDomainConfiguration implements Additional
         return this.backingStore;
     }
     /**
-     * Gets the blockedDomains property value. The blockedDomains property
+     * Gets the blockedDomains property value. Collection of domain names that are blocked for this specific platform. Domain validation follows RFC 3986 (URI syntax, section 3.2.2 for the host component). Domain matching is case-insensitive and exact; wildcards are not supported.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class RedirectUriPlatformBlockedDomainConfiguration implements Additional
         this.backingStore = value;
     }
     /**
-     * Sets the blockedDomains property value. The blockedDomains property
+     * Sets the blockedDomains property value. Collection of domain names that are blocked for this specific platform. Domain validation follows RFC 3986 (URI syntax, section 3.2.2 for the host component). Domain matching is case-insensitive and exact; wildcards are not supported.
      * @param value Value to set for the blockedDomains property.
      */
     public void setBlockedDomains(@jakarta.annotation.Nullable final java.util.List<String> value) {

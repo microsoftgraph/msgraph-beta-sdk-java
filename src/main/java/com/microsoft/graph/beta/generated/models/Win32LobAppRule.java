@@ -41,6 +41,7 @@ public class Win32LobAppRule implements AdditionalDataHolder, BackedModel, Parsa
             switch (mappingValue) {
                 case "#microsoft.graph.win32LobAppFileSystemRule": return new Win32LobAppFileSystemRule();
                 case "#microsoft.graph.win32LobAppPowerShellScriptRule": return new Win32LobAppPowerShellScriptRule();
+                case "#microsoft.graph.win32LobAppProcessRule": return new Win32LobAppProcessRule();
                 case "#microsoft.graph.win32LobAppProductCodeRule": return new Win32LobAppProductCodeRule();
                 case "#microsoft.graph.win32LobAppRegistryRule": return new Win32LobAppRegistryRule();
             }

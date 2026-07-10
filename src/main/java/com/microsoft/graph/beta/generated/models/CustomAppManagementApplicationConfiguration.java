@@ -93,7 +93,7 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the redirectUris property value. The redirectUris property
+     * Gets the redirectUris property value. Configuration for redirect URI validation rules and restrictions.
      * @return a {@link RedirectUriConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class CustomAppManagementApplicationConfiguration implements AdditionalDa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the redirectUris property value. The redirectUris property
+     * Sets the redirectUris property value. Configuration for redirect URI validation rules and restrictions.
      * @param value Value to set for the redirectUris property.
      */
     public void setRedirectUris(@jakarta.annotation.Nullable final RedirectUriConfiguration value) {

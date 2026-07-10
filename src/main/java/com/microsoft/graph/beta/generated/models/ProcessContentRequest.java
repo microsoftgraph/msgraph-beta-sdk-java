@@ -64,12 +64,20 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore;
     }
     /**
-     * Gets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. Required.
+     * Gets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses, file metadata for files, and content activity metadata for enforcement result status entries. Required.
      * @return a {@link java.util.List<ProcessContentMetadataBase>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<ProcessContentMetadataBase> getContentEntries() {
         return this.backingStore.get("contentEntries");
+    }
+    /**
+     * Gets the contextMetadata property value. The contextMetadata property
+     * @return a {@link ContextMetadata}
+     */
+    @jakarta.annotation.Nullable
+    public ContextMetadata getContextMetadata() {
+        return this.backingStore.get("contextMetadata");
     }
     /**
      * Gets the deviceMetadata property value. The deviceMetadata property
@@ -85,9 +93,10 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
         deserializerMap.put("activityMetadata", (n) -> { this.setActivityMetadata(n.getObjectValue(ActivityMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("contentEntries", (n) -> { this.setContentEntries(n.getCollectionOfObjectValues(ProcessContentMetadataBase::createFromDiscriminatorValue)); });
+        deserializerMap.put("contextMetadata", (n) -> { this.setContextMetadata(n.getObjectValue(ContextMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceMetadata", (n) -> { this.setDeviceMetadata(n.getObjectValue(DeviceMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("integratedAppMetadata", (n) -> { this.setIntegratedAppMetadata(n.getObjectValue(IntegratedApplicationMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -126,6 +135,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         Objects.requireNonNull(writer);
         writer.writeObjectValue("activityMetadata", this.getActivityMetadata());
         writer.writeCollectionOfObjectValues("contentEntries", this.getContentEntries());
+        writer.writeObjectValue("contextMetadata", this.getContextMetadata());
         writer.writeObjectValue("deviceMetadata", this.getDeviceMetadata());
         writer.writeObjectValue("integratedAppMetadata", this.getIntegratedAppMetadata());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -155,11 +165,18 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses and file metadata for files. Required.
+     * Sets the contentEntries property value. A collection of content entries to be processed. Each entry contains the content itself and its metadata. Use conversation metadata for content like prompts and responses, file metadata for files, and content activity metadata for enforcement result status entries. Required.
      * @param value Value to set for the contentEntries property.
      */
     public void setContentEntries(@jakarta.annotation.Nullable final java.util.List<ProcessContentMetadataBase> value) {
         this.backingStore.set("contentEntries", value);
+    }
+    /**
+     * Sets the contextMetadata property value. The contextMetadata property
+     * @param value Value to set for the contextMetadata property.
+     */
+    public void setContextMetadata(@jakarta.annotation.Nullable final ContextMetadata value) {
+        this.backingStore.set("contextMetadata", value);
     }
     /**
      * Sets the deviceMetadata property value. The deviceMetadata property

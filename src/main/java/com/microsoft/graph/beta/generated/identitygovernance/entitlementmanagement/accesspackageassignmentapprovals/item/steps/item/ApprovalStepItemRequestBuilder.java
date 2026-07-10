@@ -79,7 +79,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ApprovalStep::createFromDiscriminatorValue);
     }
     /**
-     * Apply approve or deny decision on an approvalStep object.
+     * Apply an approve or deny decision on an approvalStep object.
      * @param body The request body
      * @return a {@link ApprovalStep}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -90,7 +90,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return patch(body, null);
     }
     /**
-     * Apply approve or deny decision on an approvalStep object.
+     * Apply an approve or deny decision on an approvalStep object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovalStep}
@@ -146,7 +146,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
-     * Apply approve or deny decision on an approvalStep object.
+     * Apply an approve or deny decision on an approvalStep object.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -155,7 +155,7 @@ public class ApprovalStepItemRequestBuilder extends BaseRequestBuilder {
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Apply approve or deny decision on an approvalStep object.
+     * Apply an approve or deny decision on an approvalStep object.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

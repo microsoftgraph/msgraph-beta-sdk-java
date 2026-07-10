@@ -88,6 +88,7 @@ public class SummarizedSignIn extends Entity implements Parsable {
         deserializerMap.put("signInCount", (n) -> { this.setSignInCount(n.getLongValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getObjectValue(SignInStatus::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
+        deserializerMap.put("tokenIssuerType", (n) -> { this.setTokenIssuerType(n.getEnumValue(TokenIssuerType::forValue)); });
         deserializerMap.put("userPrincipalName", (n) -> { this.setUserPrincipalName(n.getStringValue()); });
         return deserializerMap;
     }
@@ -172,6 +173,14 @@ public class SummarizedSignIn extends Entity implements Parsable {
         return this.backingStore.get("tenantId");
     }
     /**
+     * Gets the tokenIssuerType property value. The tokenIssuerType property
+     * @return a {@link TokenIssuerType}
+     */
+    @jakarta.annotation.Nullable
+    public TokenIssuerType getTokenIssuerType() {
+        return this.backingStore.get("tokenIssuerType");
+    }
+    /**
      * Gets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the &apos;true&apos; format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq).
      * @return a {@link String}
      */
@@ -201,6 +210,7 @@ public class SummarizedSignIn extends Entity implements Parsable {
         writer.writeLongValue("signInCount", this.getSignInCount());
         writer.writeObjectValue("status", this.getStatus());
         writer.writeStringValue("tenantId", this.getTenantId());
+        writer.writeEnumValue("tokenIssuerType", this.getTokenIssuerType());
         writer.writeStringValue("userPrincipalName", this.getUserPrincipalName());
     }
     /**
@@ -307,6 +317,13 @@ public class SummarizedSignIn extends Entity implements Parsable {
      */
     public void setTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("tenantId", value);
+    }
+    /**
+     * Sets the tokenIssuerType property value. The tokenIssuerType property
+     * @param value Value to set for the tokenIssuerType property.
+     */
+    public void setTokenIssuerType(@jakarta.annotation.Nullable final TokenIssuerType value) {
+        this.backingStore.set("tokenIssuerType", value);
     }
     /**
      * Sets the userPrincipalName property value. User principal name of the user that initiated the sign-in. This value is always in lowercase. For guest users whose values in the user object typically contain #EXT# before the domain part, this property stores the value in both lowercase and the &apos;true&apos; format. For example, while the user object stores AdeleVance_fabrikam.com#EXT#@contoso.com, the sign-in logs store adelevance@fabrikam.com. Supports $filter (eq).

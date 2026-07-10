@@ -62,8 +62,9 @@ public class DelegatedAdministrationRoleAssignment implements AdditionalDataHold
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("group", (n) -> { this.setGroup(n.getObjectValue(Group::createFromDiscriminatorValue)); });
+        deserializerMap.put("groupDisplayName", (n) -> { this.setGroupDisplayName(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("roleTemplates", (n) -> { this.setRoleTemplates(n.getCollectionOfObjectValues(RoleTemplate::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -75,6 +76,14 @@ public class DelegatedAdministrationRoleAssignment implements AdditionalDataHold
     @jakarta.annotation.Nullable
     public Group getGroup() {
         return this.backingStore.get("group");
+    }
+    /**
+     * Gets the groupDisplayName property value. The display name of the security group referenced by the group navigation property. Server-populated and read-only; returns null if the referenced group has been deleted.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getGroupDisplayName() {
+        return this.backingStore.get("groupDisplayName");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -99,6 +108,7 @@ public class DelegatedAdministrationRoleAssignment implements AdditionalDataHold
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeObjectValue("group", this.getGroup());
+        writer.writeStringValue("groupDisplayName", this.getGroupDisplayName());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("roleTemplates", this.getRoleTemplates());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -124,6 +134,13 @@ public class DelegatedAdministrationRoleAssignment implements AdditionalDataHold
      */
     public void setGroup(@jakarta.annotation.Nullable final Group value) {
         this.backingStore.set("group", value);
+    }
+    /**
+     * Sets the groupDisplayName property value. The display name of the security group referenced by the group navigation property. Server-populated and read-only; returns null if the referenced group has been deleted.
+     * @param value Value to set for the groupDisplayName property.
+     */
+    public void setGroupDisplayName(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("groupDisplayName", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

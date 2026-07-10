@@ -38,7 +38,7 @@ public class UsedInsight extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
+     * Gets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read-only.
      * @return a {@link UsageDetails}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class UsedInsight extends Entity implements Parsable {
         writer.writeObjectValue("resource", this.getResource());
     }
     /**
-     * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read only.
+     * Sets the lastUsed property value. Information about when the item was last viewed or modified by the user. Read-only.
      * @param value Value to set for the lastUsed property.
      */
     public void setLastUsed(@jakarta.annotation.Nullable final UsageDetails value) {

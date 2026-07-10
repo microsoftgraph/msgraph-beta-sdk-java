@@ -30,6 +30,14 @@ public class MacOsVppApp extends MobileApp implements Parsable {
         return new MacOsVppApp();
     }
     /**
+     * Gets the appleDeviceAppDeliveryProtocolType property value. Enum of the supported types of Apple delivery protocols, representing the available protocols to deliver payloads to Apple devices
+     * @return a {@link AppleDeviceDeliveryProtocol}
+     */
+    @jakarta.annotation.Nullable
+    public AppleDeviceDeliveryProtocol getAppleDeviceAppDeliveryProtocolType() {
+        return this.backingStore.get("appleDeviceAppDeliveryProtocolType");
+    }
+    /**
      * Gets the appStoreUrl property value. The store URL.
      * @return a {@link String}
      */
@@ -60,6 +68,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("appleDeviceAppDeliveryProtocolType", (n) -> { this.setAppleDeviceAppDeliveryProtocolType(n.getEnumValue(AppleDeviceDeliveryProtocol::forValue)); });
         deserializerMap.put("appStoreUrl", (n) -> { this.setAppStoreUrl(n.getStringValue()); });
         deserializerMap.put("assignedLicenses", (n) -> { this.setAssignedLicenses(n.getCollectionOfObjectValues(MacOsVppAppAssignedLicense::createFromDiscriminatorValue)); });
         deserializerMap.put("bundleId", (n) -> { this.setBundleId(n.getStringValue()); });
@@ -162,6 +171,7 @@ public class MacOsVppApp extends MobileApp implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeEnumValue("appleDeviceAppDeliveryProtocolType", this.getAppleDeviceAppDeliveryProtocolType());
         writer.writeStringValue("appStoreUrl", this.getAppStoreUrl());
         writer.writeCollectionOfObjectValues("assignedLicenses", this.getAssignedLicenses());
         writer.writeStringValue("bundleId", this.getBundleId());
@@ -175,6 +185,13 @@ public class MacOsVppApp extends MobileApp implements Parsable {
         writer.writeStringValue("vppTokenDisplayName", this.getVppTokenDisplayName());
         writer.writeStringValue("vppTokenId", this.getVppTokenId());
         writer.writeStringValue("vppTokenOrganizationName", this.getVppTokenOrganizationName());
+    }
+    /**
+     * Sets the appleDeviceAppDeliveryProtocolType property value. Enum of the supported types of Apple delivery protocols, representing the available protocols to deliver payloads to Apple devices
+     * @param value Value to set for the appleDeviceAppDeliveryProtocolType property.
+     */
+    public void setAppleDeviceAppDeliveryProtocolType(@jakarta.annotation.Nullable final AppleDeviceDeliveryProtocol value) {
+        this.backingStore.set("appleDeviceAppDeliveryProtocolType", value);
     }
     /**
      * Sets the appStoreUrl property value. The store URL.

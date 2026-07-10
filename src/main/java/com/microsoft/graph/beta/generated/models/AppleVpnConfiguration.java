@@ -134,6 +134,14 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         return this.backingStore.get("excludedDomains");
     }
     /**
+     * Gets the excludeLocalNetworks property value. Indicates whether local network traffic is excluded from the VPN tunnel. When TRUE, local network traffic bypasses the VPN tunnel. Default value is null. Only takes effect when includeAllNetworks is TRUE or enforceVpnRouting is TRUE. Not applicable when enablePerApp is TRUE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getExcludeLocalNetworks() {
+        return this.backingStore.get("excludeLocalNetworks");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -152,7 +160,9 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         deserializerMap.put("enablePerApp", (n) -> { this.setEnablePerApp(n.getBooleanValue()); });
         deserializerMap.put("enableSplitTunneling", (n) -> { this.setEnableSplitTunneling(n.getBooleanValue()); });
         deserializerMap.put("excludedDomains", (n) -> { this.setExcludedDomains(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("excludeLocalNetworks", (n) -> { this.setExcludeLocalNetworks(n.getBooleanValue()); });
         deserializerMap.put("identifier", (n) -> { this.setIdentifier(n.getStringValue()); });
+        deserializerMap.put("includeAllNetworks", (n) -> { this.setIncludeAllNetworks(n.getBooleanValue()); });
         deserializerMap.put("loginGroupOrDomain", (n) -> { this.setLoginGroupOrDomain(n.getStringValue()); });
         deserializerMap.put("onDemandRules", (n) -> { this.setOnDemandRules(n.getCollectionOfObjectValues(VpnOnDemandRule::createFromDiscriminatorValue)); });
         deserializerMap.put("optInToDeviceIdSharing", (n) -> { this.setOptInToDeviceIdSharing(n.getBooleanValue()); });
@@ -171,6 +181,14 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
     @jakarta.annotation.Nullable
     public String getIdentifier() {
         return this.backingStore.get("identifier");
+    }
+    /**
+     * Gets the includeAllNetworks property value. Indicates whether most network traffic is routed through the VPN tunnel. When TRUE, most network traffic is sent through the VPN tunnel. Default value is null. Not applicable when enablePerApp is TRUE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIncludeAllNetworks() {
+        return this.backingStore.get("includeAllNetworks");
     }
     /**
      * Gets the loginGroupOrDomain property value. Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.
@@ -263,7 +281,9 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         writer.writeBooleanValue("enablePerApp", this.getEnablePerApp());
         writer.writeBooleanValue("enableSplitTunneling", this.getEnableSplitTunneling());
         writer.writeCollectionOfPrimitiveValues("excludedDomains", this.getExcludedDomains());
+        writer.writeBooleanValue("excludeLocalNetworks", this.getExcludeLocalNetworks());
         writer.writeStringValue("identifier", this.getIdentifier());
+        writer.writeBooleanValue("includeAllNetworks", this.getIncludeAllNetworks());
         writer.writeStringValue("loginGroupOrDomain", this.getLoginGroupOrDomain());
         writer.writeCollectionOfObjectValues("onDemandRules", this.getOnDemandRules());
         writer.writeBooleanValue("optInToDeviceIdSharing", this.getOptInToDeviceIdSharing());
@@ -359,11 +379,25 @@ public class AppleVpnConfiguration extends DeviceConfiguration implements Parsab
         this.backingStore.set("excludedDomains", value);
     }
     /**
+     * Sets the excludeLocalNetworks property value. Indicates whether local network traffic is excluded from the VPN tunnel. When TRUE, local network traffic bypasses the VPN tunnel. Default value is null. Only takes effect when includeAllNetworks is TRUE or enforceVpnRouting is TRUE. Not applicable when enablePerApp is TRUE.
+     * @param value Value to set for the excludeLocalNetworks property.
+     */
+    public void setExcludeLocalNetworks(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("excludeLocalNetworks", value);
+    }
+    /**
      * Sets the identifier property value. Identifier provided by VPN vendor when connection type is set to Custom VPN. For example: Cisco AnyConnect uses an identifier of the form com.cisco.anyconnect.applevpn.plugin
      * @param value Value to set for the identifier property.
      */
     public void setIdentifier(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("identifier", value);
+    }
+    /**
+     * Sets the includeAllNetworks property value. Indicates whether most network traffic is routed through the VPN tunnel. When TRUE, most network traffic is sent through the VPN tunnel. Default value is null. Not applicable when enablePerApp is TRUE.
+     * @param value Value to set for the includeAllNetworks property.
+     */
+    public void setIncludeAllNetworks(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("includeAllNetworks", value);
     }
     /**
      * Sets the loginGroupOrDomain property value. Login group or domain when connection type is set to Dell SonicWALL Mobile Connection.

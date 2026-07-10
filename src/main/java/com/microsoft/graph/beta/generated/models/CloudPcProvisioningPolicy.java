@@ -43,7 +43,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("assignments");
     }
     /**
-     * Gets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. Supports $select.
+     * Gets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. When you create or update a provisioning policy with autopatch, you must use a delegated token and the signed-in user must have the Intune Administrator role. Supports $select.
      * @return a {@link CloudPcProvisioningPolicyAutopatch}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("autopatch");
     }
     /**
-     * Gets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. Supports $select.
+     * Gets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. When you create or update a provisioning policy with autopilotConfiguration, use the required Microsoft Graph permissions listed on the corresponding create and update API pages. In delegated scenarios, the signed-in user must also have the Microsoft.Intune/DeviceConfigurations/Assign Intune RBAC permission. Supports $select.
      * @return a {@link CloudPcAutopilotConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -152,6 +152,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         deserializerMap.put("microsoftManagedDesktop", (n) -> { this.setMicrosoftManagedDesktop(n.getObjectValue(MicrosoftManagedDesktop::createFromDiscriminatorValue)); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
         deserializerMap.put("scopeIds", (n) -> { this.setScopeIds(n.getCollectionOfPrimitiveValues(String.class)); });
+        deserializerMap.put("snapshotResetMode", (n) -> { this.setSnapshotResetMode(n.getEnumValue(CloudPcSnapshotResetMode::forValue)); });
         deserializerMap.put("userExperienceType", (n) -> { this.setUserExperienceType(n.getEnumValue(CloudPcUserExperienceType::forValue)); });
         deserializerMap.put("userSettingsPersistenceConfiguration", (n) -> { this.setUserSettingsPersistenceConfiguration(n.getObjectValue(CloudPcUserSettingsPersistenceConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("windowsSetting", (n) -> { this.setWindowsSetting(n.getObjectValue(CloudPcWindowsSetting::createFromDiscriminatorValue)); });
@@ -239,12 +240,20 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         return this.backingStore.get("provisioningType");
     }
     /**
-     * Gets the scopeIds property value. The scopeIds property
+     * Gets the scopeIds property value. The list of scope tag IDs for this resource. Read-only.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
     public java.util.List<String> getScopeIds() {
         return this.backingStore.get("scopeIds");
+    }
+    /**
+     * Gets the snapshotResetMode property value. The snapshotResetMode property
+     * @return a {@link CloudPcSnapshotResetMode}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcSnapshotResetMode getSnapshotResetMode() {
+        return this.backingStore.get("snapshotResetMode");
     }
     /**
      * Gets the userExperienceType property value. Specifies the type of cloud object the end user can access. The possible values are: cloudPc, cloudApp, unknownFutureValue. cloudPc indicates that the end user can access the entire desktop. cloudApp indicates that the end user can only access apps published under this provisioning policy. The type can&apos;t be changed once the provisioning policy is created. If not specified during creation, the default value is cloudPc. When cloudApp is selected, the provisioningType must be sharedByEntraGroup. Supports $filter, $select, $orderBy.
@@ -308,6 +317,7 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         writer.writeObjectValue("microsoftManagedDesktop", this.getMicrosoftManagedDesktop());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
         writer.writeCollectionOfPrimitiveValues("scopeIds", this.getScopeIds());
+        writer.writeEnumValue("snapshotResetMode", this.getSnapshotResetMode());
         writer.writeEnumValue("userExperienceType", this.getUserExperienceType());
         writer.writeObjectValue("userSettingsPersistenceConfiguration", this.getUserSettingsPersistenceConfiguration());
         writer.writeObjectValue("windowsSetting", this.getWindowsSetting());
@@ -328,14 +338,14 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.backingStore.set("assignments", value);
     }
     /**
-     * Sets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. Supports $select.
+     * Sets the autopatch property value. Indicates the Windows Autopatch settings for Cloud PCs using this provisioning policy. The settings take effect when the tenant enrolls in Autopatch and the managedType of the microsoftManagedDesktop property is set as starterManaged. When you create or update a provisioning policy with autopatch, you must use a delegated token and the signed-in user must have the Intune Administrator role. Supports $select.
      * @param value Value to set for the autopatch property.
      */
     public void setAutopatch(@jakarta.annotation.Nullable final CloudPcProvisioningPolicyAutopatch value) {
         this.backingStore.set("autopatch", value);
     }
     /**
-     * Sets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. Supports $select.
+     * Sets the autopilotConfiguration property value. The specific settings for Windows Autopilot that enable Windows 365 customers to experience it on Cloud PC. When you create or update a provisioning policy with autopilotConfiguration, use the required Microsoft Graph permissions listed on the corresponding create and update API pages. In delegated scenarios, the signed-in user must also have the Microsoft.Intune/DeviceConfigurations/Assign Intune RBAC permission. Supports $select.
      * @param value Value to set for the autopilotConfiguration property.
      */
     public void setAutopilotConfiguration(@jakarta.annotation.Nullable final CloudPcAutopilotConfiguration value) {
@@ -468,11 +478,18 @@ public class CloudPcProvisioningPolicy extends Entity implements Parsable {
         this.backingStore.set("provisioningType", value);
     }
     /**
-     * Sets the scopeIds property value. The scopeIds property
+     * Sets the scopeIds property value. The list of scope tag IDs for this resource. Read-only.
      * @param value Value to set for the scopeIds property.
      */
     public void setScopeIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("scopeIds", value);
+    }
+    /**
+     * Sets the snapshotResetMode property value. The snapshotResetMode property
+     * @param value Value to set for the snapshotResetMode property.
+     */
+    public void setSnapshotResetMode(@jakarta.annotation.Nullable final CloudPcSnapshotResetMode value) {
+        this.backingStore.set("snapshotResetMode", value);
     }
     /**
      * Sets the userExperienceType property value. Specifies the type of cloud object the end user can access. The possible values are: cloudPc, cloudApp, unknownFutureValue. cloudPc indicates that the end user can access the entire desktop. cloudApp indicates that the end user can only access apps published under this provisioning policy. The type can&apos;t be changed once the provisioning policy is created. If not specified during creation, the default value is cloudPc. When cloudApp is selected, the provisioningType must be sharedByEntraGroup. Supports $filter, $select, $orderBy.

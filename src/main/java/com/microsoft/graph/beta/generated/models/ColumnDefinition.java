@@ -137,6 +137,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         deserializerMap.put("isDeletable", (n) -> { this.setIsDeletable(n.getBooleanValue()); });
         deserializerMap.put("isReorderable", (n) -> { this.setIsReorderable(n.getBooleanValue()); });
         deserializerMap.put("isSealed", (n) -> { this.setIsSealed(n.getBooleanValue()); });
+        deserializerMap.put("isSearchable", (n) -> { this.setIsSearchable(n.getBooleanValue()); });
         deserializerMap.put("lookup", (n) -> { this.setLookup(n.getObjectValue(LookupColumn::createFromDiscriminatorValue)); });
         deserializerMap.put("name", (n) -> { this.setName(n.getStringValue()); });
         deserializerMap.put("number", (n) -> { this.setNumber(n.getObjectValue(NumberColumn::createFromDiscriminatorValue)); });
@@ -178,7 +179,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         return this.backingStore.get("hyperlinkOrPicture");
     }
     /**
-     * Gets the indexed property value. Specifies whether the column values can used for sorting and searching.
+     * Gets the indexed property value. Specifies whether the column values can be used for sorting and searching.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -208,6 +209,14 @@ public class ColumnDefinition extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsSealed() {
         return this.backingStore.get("isSealed");
+    }
+    /**
+     * Gets the isSearchable property value. Specifies whether the column values can be used for searching. Currently supported only for columns in a fileStorageContainer.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsSearchable() {
+        return this.backingStore.get("isSearchable");
     }
     /**
      * Gets the lookup property value. This column&apos;s data is looked up from another source in the site.
@@ -346,6 +355,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         writer.writeBooleanValue("isDeletable", this.getIsDeletable());
         writer.writeBooleanValue("isReorderable", this.getIsReorderable());
         writer.writeBooleanValue("isSealed", this.getIsSealed());
+        writer.writeBooleanValue("isSearchable", this.getIsSearchable());
         writer.writeObjectValue("lookup", this.getLookup());
         writer.writeStringValue("name", this.getName());
         writer.writeObjectValue("number", this.getNumber());
@@ -460,7 +470,7 @@ public class ColumnDefinition extends Entity implements Parsable {
         this.backingStore.set("hyperlinkOrPicture", value);
     }
     /**
-     * Sets the indexed property value. Specifies whether the column values can used for sorting and searching.
+     * Sets the indexed property value. Specifies whether the column values can be used for sorting and searching.
      * @param value Value to set for the indexed property.
      */
     public void setIndexed(@jakarta.annotation.Nullable final Boolean value) {
@@ -486,6 +496,13 @@ public class ColumnDefinition extends Entity implements Parsable {
      */
     public void setIsSealed(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isSealed", value);
+    }
+    /**
+     * Sets the isSearchable property value. Specifies whether the column values can be used for searching. Currently supported only for columns in a fileStorageContainer.
+     * @param value Value to set for the isSearchable property.
+     */
+    public void setIsSearchable(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isSearchable", value);
     }
     /**
      * Sets the lookup property value. This column&apos;s data is looked up from another source in the site.

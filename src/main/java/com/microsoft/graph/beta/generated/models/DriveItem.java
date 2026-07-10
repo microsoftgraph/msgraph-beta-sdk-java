@@ -128,6 +128,7 @@ public class DriveItem extends BaseItem implements Parsable {
         deserializerMap.put("image", (n) -> { this.setImage(n.getObjectValue(Image::createFromDiscriminatorValue)); });
         deserializerMap.put("listItem", (n) -> { this.setListItem(n.getObjectValue(ListItem::createFromDiscriminatorValue)); });
         deserializerMap.put("location", (n) -> { this.setLocation(n.getObjectValue(GeoCoordinates::createFromDiscriminatorValue)); });
+        deserializerMap.put("lockInfo", (n) -> { this.setLockInfo(n.getObjectValue(LockInfo::createFromDiscriminatorValue)); });
         deserializerMap.put("malware", (n) -> { this.setMalware(n.getObjectValue(Malware::createFromDiscriminatorValue)); });
         deserializerMap.put("media", (n) -> { this.setMedia(n.getObjectValue(Media::createFromDiscriminatorValue)); });
         deserializerMap.put("package", (n) -> { this.setPackage(n.getObjectValue(PackageEscaped::createFromDiscriminatorValue)); });
@@ -200,6 +201,14 @@ public class DriveItem extends BaseItem implements Parsable {
     @jakarta.annotation.Nullable
     public GeoCoordinates getLocation() {
         return this.backingStore.get("location");
+    }
+    /**
+     * Gets the lockInfo property value. Lock metadata for the item, including the lock type, when it was created, when it expires, and which users currently hold the lock. Read-only.
+     * @return a {@link LockInfo}
+     */
+    @jakarta.annotation.Nullable
+    public LockInfo getLockInfo() {
+        return this.backingStore.get("lockInfo");
     }
     /**
      * Gets the malware property value. Malware metadata, if the item was detected to contain malware. Read-only.
@@ -408,6 +417,7 @@ public class DriveItem extends BaseItem implements Parsable {
         writer.writeObjectValue("image", this.getImage());
         writer.writeObjectValue("listItem", this.getListItem());
         writer.writeObjectValue("location", this.getLocation());
+        writer.writeObjectValue("lockInfo", this.getLockInfo());
         writer.writeObjectValue("malware", this.getMalware());
         writer.writeObjectValue("media", this.getMedia());
         writer.writeObjectValue("package", this.getPackage());
@@ -543,6 +553,13 @@ public class DriveItem extends BaseItem implements Parsable {
      */
     public void setLocation(@jakarta.annotation.Nullable final GeoCoordinates value) {
         this.backingStore.set("location", value);
+    }
+    /**
+     * Sets the lockInfo property value. Lock metadata for the item, including the lock type, when it was created, when it expires, and which users currently hold the lock. Read-only.
+     * @param value Value to set for the lockInfo property.
+     */
+    public void setLockInfo(@jakarta.annotation.Nullable final LockInfo value) {
+        this.backingStore.set("lockInfo", value);
     }
     /**
      * Sets the malware property value. Malware metadata, if the item was detected to contain malware. Read-only.

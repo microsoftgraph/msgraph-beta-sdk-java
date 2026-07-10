@@ -26,7 +26,7 @@ public class GroupChatTeamsAppInstallationScopeInfo extends TeamsAppInstallation
         return new GroupChatTeamsAppInstallationScopeInfo();
     }
     /**
-     * Gets the chatId property value. The chatId property
+     * Gets the chatId property value. The ID of the chat where the Teams app is installed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class GroupChatTeamsAppInstallationScopeInfo extends TeamsAppInstallation
         writer.writeStringValue("chatId", this.getChatId());
     }
     /**
-     * Sets the chatId property value. The chatId property
+     * Sets the chatId property value. The ID of the chat where the Teams app is installed.
      * @param value Value to set for the chatId property.
      */
     public void setChatId(@jakarta.annotation.Nullable final String value) {

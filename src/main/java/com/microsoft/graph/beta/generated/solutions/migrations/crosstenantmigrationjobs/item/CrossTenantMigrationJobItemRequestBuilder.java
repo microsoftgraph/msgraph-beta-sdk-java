@@ -3,7 +3,9 @@ package com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.i
 import com.microsoft.graph.beta.models.CrossTenantMigrationJob;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.item.cancel.CancelRequestBuilder;
+import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.item.migrate.MigrateRequestBuilder;
 import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.item.users.UsersRequestBuilder;
+import com.microsoft.graph.beta.solutions.migrations.crosstenantmigrationjobs.item.validate.ValidateRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -34,6 +36,17 @@ public class CrossTenantMigrationJobItemRequestBuilder extends BaseRequestBuilde
         return new CancelRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the migrate method.
+     * @return a {@link MigrateRequestBuilder}
+     * @deprecated
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public MigrateRequestBuilder migrate() {
+        return new MigrateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the users property of the microsoft.graph.crossTenantMigrationJob entity.
      * @return a {@link UsersRequestBuilder}
      * @deprecated
@@ -43,6 +56,17 @@ public class CrossTenantMigrationJobItemRequestBuilder extends BaseRequestBuilde
     @jakarta.annotation.Nonnull
     public UsersRequestBuilder users() {
         return new UsersRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the validate method.
+     * @return a {@link ValidateRequestBuilder}
+     * @deprecated
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public ValidateRequestBuilder validate() {
+        return new ValidateRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CrossTenantMigrationJobItemRequestBuilder} and sets the default values.

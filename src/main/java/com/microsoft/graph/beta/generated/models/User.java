@@ -44,7 +44,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("aboutMe");
     }
     /**
-     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when creating the object. Supports $filter (eq, ne, not, and in).
+     * Gets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when creating the object. Supports $filter (eq, ne, not, and in). This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -164,7 +164,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("birthday");
     }
     /**
-     * Gets the businessPhones property value. The telephone numbers for the user. Only one number can be set for this property. Read-only for users synced from on-premises directory. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the businessPhones property value. The telephone numbers for the user. Only one number can be set for this property. Read-only for users synced from on-premises directory. Supports $filter (eq, not, ge, le, startsWith). This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -236,7 +236,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("cloudLicensing");
     }
     /**
-     * Gets the cloudPcPools property value. The cloudPcPools property
+     * Gets the cloudPcPools property value. The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @return a {@link java.util.List<CloudPcPool>}
      */
     @jakarta.annotation.Nullable
@@ -412,6 +412,14 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the distributionLists property value. The personal distribution lists in the user&apos;s mailbox. Read-only. Nullable.
+     * @return a {@link java.util.List<DistributionList>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<DistributionList> getDistributionLists() {
+        return this.backingStore.get("distributionLists");
+    }
+    /**
      * Gets the drive property value. The user&apos;s OneDrive. Read-only.
      * @return a {@link Drive}
      */
@@ -569,6 +577,7 @@ public class User extends DirectoryObject implements Parsable {
         deserializerMap.put("devices", (n) -> { this.setDevices(n.getCollectionOfObjectValues(Device::createFromDiscriminatorValue)); });
         deserializerMap.put("directReports", (n) -> { this.setDirectReports(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("distributionLists", (n) -> { this.setDistributionLists(n.getCollectionOfObjectValues(DistributionList::createFromDiscriminatorValue)); });
         deserializerMap.put("drive", (n) -> { this.setDrive(n.getObjectValue(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("drives", (n) -> { this.setDrives(n.getCollectionOfObjectValues(Drive::createFromDiscriminatorValue)); });
         deserializerMap.put("employeeExperience", (n) -> { this.setEmployeeExperience(n.getObjectValue(EmployeeExperienceUser::createFromDiscriminatorValue)); });
@@ -721,7 +730,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("identities");
     }
     /**
-     * Gets the identityGovernance property value. The identityGovernance property
+     * Gets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. Nullable. Returned only on $select. Supports $expand.
      * @return a {@link IdentityGovernanceUserSettings}
      */
     @jakarta.annotation.Nullable
@@ -809,7 +818,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("isManagementRestricted");
     }
     /**
-     * Gets the isResourceAccount property value. Do not use  reserved for future use.
+     * Gets the isResourceAccount property value. Do not use. Reserved for future use.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -969,7 +978,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("mobileAppTroubleshootingEvents");
     }
     /**
-     * Gets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from the on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
+     * Gets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from the on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search. This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1049,7 +1058,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesExtensionAttributes");
     }
     /**
-     * Gets the onPremisesImmutableId property value. This property associates an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you&apos;re using a federated domain for the user&apos;s userPrincipalName (UPN) property. Note: The $ and _ characters can&apos;t be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
+     * Gets the onPremisesImmutableId property value. This property associates an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you&apos;re using a federated domain for the user&apos;s userPrincipalName (UPN) property. Note: The $ and _ characters can&apos;t be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in). This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1121,7 +1130,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("onPremisesUserPrincipalName");
     }
     /**
-     * Gets the otherMails property value. A list of additional email addresses for the user; for example: [&apos;bob@contoso.com&apos;, &apos;Robert@fabrikam.com&apos;]. Can store up to 250 values, each with a limit of 250 characters. NOTE: This property can&apos;t contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
+     * Gets the otherMails property value. A list of additional email addresses for the user; for example: [&apos;bob@contoso.com&apos;, &apos;Robert@fabrikam.com&apos;]. Can store up to 250 values, each with a limit of 250 characters. NOTE: This property can&apos;t contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0). This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -1161,7 +1170,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("passwordPolicies");
     }
     /**
-     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Supports $filter (eq, ne, not, in, and eq on null values).  User-PasswordProfile.ReadWrite.All is the least privileged permission to update this property.  In delegated scenarios, the User Administrator Microsoft Entra role is the least privileged admin role supported to update this property for nonadmin users. Privileged Authentication Administrator is the least privileged role that&apos;s allowed to update this property for all administrators in the tenant. In general, the signed-in user must have a higher privileged administrator role as indicated in Who can reset passwords.  In app-only scenarios, the calling app must be assigned a supported permission and at least the User Administrator Microsoft Entra role.
+     * Gets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Supports $filter (eq, ne, not, in, and eq on null values).  User-PasswordProfile.ReadWrite.All is the least privileged permission to update this property.  In delegated scenarios, the User Administrator Microsoft Entra role is the least privileged admin role supported to update this property for nonadmin users. Privileged Authentication Administrator is the least privileged role that&apos;s allowed to update this property for all administrators in the tenant. In general, the signed-in user must have a higher privileged administrator role as indicated in Who can reset passwords.  In app-only scenarios, the calling app must be assigned a supported permission and at least the User Administrator Microsoft Entra role.This property is also subject to sensitive action restrictions.
      * @return a {@link PasswordProfile}
      */
     @jakarta.annotation.Nullable
@@ -1489,7 +1498,7 @@ public class User extends DirectoryObject implements Parsable {
         return this.backingStore.get("usageRights");
     }
     /**
-     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user&apos;s email name. The general format is alias@domain, where the domain must be present in the tenant&apos;s verified domain collection. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can&apos;t contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, &apos; . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
+     * Gets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user&apos;s email name. The general format is alias@domain, where the domain must be present in the tenant&apos;s verified domain collection. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can&apos;t contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, &apos; . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby. This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -1574,6 +1583,7 @@ public class User extends DirectoryObject implements Parsable {
         writer.writeCollectionOfObjectValues("devices", this.getDevices());
         writer.writeCollectionOfObjectValues("directReports", this.getDirectReports());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeCollectionOfObjectValues("distributionLists", this.getDistributionLists());
         writer.writeObjectValue("drive", this.getDrive());
         writer.writeCollectionOfObjectValues("drives", this.getDrives());
         writer.writeObjectValue("employeeExperience", this.getEmployeeExperience());
@@ -1700,7 +1710,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("aboutMe", value);
     }
     /**
-     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when creating the object. Supports $filter (eq, ne, not, and in).
+     * Sets the accountEnabled property value. true if the account is enabled; otherwise, false. This property is required when creating the object. Supports $filter (eq, ne, not, and in). This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @param value Value to set for the accountEnabled property.
      */
     public void setAccountEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -1805,7 +1815,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("birthday", value);
     }
     /**
-     * Sets the businessPhones property value. The telephone numbers for the user. Only one number can be set for this property. Read-only for users synced from on-premises directory. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the businessPhones property value. The telephone numbers for the user. Only one number can be set for this property. Read-only for users synced from on-premises directory. Supports $filter (eq, not, ge, le, startsWith). This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @param value Value to set for the businessPhones property.
      */
     public void setBusinessPhones(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -1868,7 +1878,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("cloudLicensing", value);
     }
     /**
-     * Sets the cloudPcPools property value. The cloudPcPools property
+     * Sets the cloudPcPools property value. The user&apos;s Cloud PC pools. Read-only. Nullable.
      * @param value Value to set for the cloudPcPools property.
      */
     public void setCloudPcPools(@jakarta.annotation.Nullable final java.util.List<CloudPcPool> value) {
@@ -2022,6 +2032,13 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
+     * Sets the distributionLists property value. The personal distribution lists in the user&apos;s mailbox. Read-only. Nullable.
+     * @param value Value to set for the distributionLists property.
+     */
+    public void setDistributionLists(@jakarta.annotation.Nullable final java.util.List<DistributionList> value) {
+        this.backingStore.set("distributionLists", value);
+    }
+    /**
      * Sets the drive property value. The user&apos;s OneDrive. Read-only.
      * @param value Value to set for the drive property.
      */
@@ -2141,7 +2158,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("identities", value);
     }
     /**
-     * Sets the identityGovernance property value. The identityGovernance property
+     * Sets the identityGovernance property value. The identity governance settings for the user, including the approver delegate configuration. Nullable. Returned only on $select. Supports $expand.
      * @param value Value to set for the identityGovernance property.
      */
     public void setIdentityGovernance(@jakarta.annotation.Nullable final IdentityGovernanceUserSettings value) {
@@ -2218,7 +2235,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("isManagementRestricted", value);
     }
     /**
-     * Sets the isResourceAccount property value. Do not use  reserved for future use.
+     * Sets the isResourceAccount property value. Do not use. Reserved for future use.
      * @param value Value to set for the isResourceAccount property.
      */
     public void setIsResourceAccount(@jakarta.annotation.Nullable final Boolean value) {
@@ -2358,7 +2375,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("mobileAppTroubleshootingEvents", value);
     }
     /**
-     * Sets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from the on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
+     * Sets the mobilePhone property value. The primary cellular telephone number for the user. Read-only for users synced from the on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search. This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @param value Value to set for the mobilePhone property.
      */
     public void setMobilePhone(@jakarta.annotation.Nullable final String value) {
@@ -2428,7 +2445,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesExtensionAttributes", value);
     }
     /**
-     * Sets the onPremisesImmutableId property value. This property associates an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you&apos;re using a federated domain for the user&apos;s userPrincipalName (UPN) property. Note: The $ and _ characters can&apos;t be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in).
+     * Sets the onPremisesImmutableId property value. This property associates an on-premises Active Directory user account to their Microsoft Entra user object. This property must be specified when creating a new user account in the Graph if you&apos;re using a federated domain for the user&apos;s userPrincipalName (UPN) property. Note: The $ and _ characters can&apos;t be used when specifying this property. Supports $filter (eq, ne, not, ge, le, in). This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @param value Value to set for the onPremisesImmutableId property.
      */
     public void setOnPremisesImmutableId(@jakarta.annotation.Nullable final String value) {
@@ -2491,7 +2508,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("onPremisesUserPrincipalName", value);
     }
     /**
-     * Sets the otherMails property value. A list of additional email addresses for the user; for example: [&apos;bob@contoso.com&apos;, &apos;Robert@fabrikam.com&apos;]. Can store up to 250 values, each with a limit of 250 characters. NOTE: This property can&apos;t contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0).
+     * Sets the otherMails property value. A list of additional email addresses for the user; for example: [&apos;bob@contoso.com&apos;, &apos;Robert@fabrikam.com&apos;]. Can store up to 250 values, each with a limit of 250 characters. NOTE: This property can&apos;t contain accent characters.Supports $filter (eq, not, ge, le, in, startsWith, endsWith, /$count eq 0, /$count ne 0). This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @param value Value to set for the otherMails property.
      */
     public void setOtherMails(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -2526,7 +2543,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("passwordPolicies", value);
     }
     /**
-     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Supports $filter (eq, ne, not, in, and eq on null values).  User-PasswordProfile.ReadWrite.All is the least privileged permission to update this property.  In delegated scenarios, the User Administrator Microsoft Entra role is the least privileged admin role supported to update this property for nonadmin users. Privileged Authentication Administrator is the least privileged role that&apos;s allowed to update this property for all administrators in the tenant. In general, the signed-in user must have a higher privileged administrator role as indicated in Who can reset passwords.  In app-only scenarios, the calling app must be assigned a supported permission and at least the User Administrator Microsoft Entra role.
+     * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user&apos;s password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required. Supports $filter (eq, ne, not, in, and eq on null values).  User-PasswordProfile.ReadWrite.All is the least privileged permission to update this property.  In delegated scenarios, the User Administrator Microsoft Entra role is the least privileged admin role supported to update this property for nonadmin users. Privileged Authentication Administrator is the least privileged role that&apos;s allowed to update this property for all administrators in the tenant. In general, the signed-in user must have a higher privileged administrator role as indicated in Who can reset passwords.  In app-only scenarios, the calling app must be assigned a supported permission and at least the User Administrator Microsoft Entra role.This property is also subject to sensitive action restrictions.
      * @param value Value to set for the passwordProfile property.
      */
     public void setPasswordProfile(@jakarta.annotation.Nullable final PasswordProfile value) {
@@ -2813,7 +2830,7 @@ public class User extends DirectoryObject implements Parsable {
         this.backingStore.set("usageRights", value);
     }
     /**
-     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user&apos;s email name. The general format is alias@domain, where the domain must be present in the tenant&apos;s verified domain collection. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can&apos;t contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, &apos; . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby.
+     * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an Internet-style sign-in name for the user based on the Internet standard RFC 822. By convention, this should map to the user&apos;s email name. The general format is alias@domain, where the domain must be present in the tenant&apos;s verified domain collection. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of organization.NOTE: This property can&apos;t contain accent characters. Only the following characters are allowed A - Z, a - z, 0 - 9, &apos; . - _ ! # ^ ~. For the complete list of allowed characters, see username policies. Supports $filter (eq, ne, not, ge, le, in, startsWith, endsWith) and $orderby. This property is subject to sensitive action restrictions; only specific privileged administrator roles can update it.
      * @param value Value to set for the userPrincipalName property.
      */
     public void setUserPrincipalName(@jakarta.annotation.Nullable final String value) {

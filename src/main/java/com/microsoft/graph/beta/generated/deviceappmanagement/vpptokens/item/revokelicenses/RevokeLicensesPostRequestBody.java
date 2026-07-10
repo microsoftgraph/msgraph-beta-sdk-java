@@ -23,6 +23,8 @@ public class RevokeLicensesPostRequestBody implements AdditionalDataHolder, Back
     public RevokeLicensesPostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setNotifyManagedDevices(false);
+        this.setRevokeUntrackedLicenses(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
