@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.60.1](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.60.0...v6.60.1) (2026-07-13)
+
+
+### Bug Fixes
+
+* Merge pull request [#1366](https://github.com/microsoftgraph/msgraph-beta-sdk-java/issues/1366) from microsoftgraph/ci/update-deployment-approver ([f4cdb4a](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/f4cdb4af453f71aa4a2b4e41974d9a10a2e78f9a))
+
 ## [6.60.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.59.0...v6.60.0) (2026-07-10)
 
 
