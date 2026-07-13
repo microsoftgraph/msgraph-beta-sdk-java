@@ -21,7 +21,9 @@ public enum CloudPcStatus implements ValuedEnum {
     UpdatingSingleSignOn("updatingSingleSignOn"),
     ModifyingSingleSignOn("modifyingSingleSignOn"),
     RefreshPolicyConfiguration("refreshPolicyConfiguration"),
-    Preparing("preparing");
+    Preparing("preparing"),
+    FailoverInProgress("failoverInProgress"),
+    FailbackInProgress("failbackInProgress");
     public final String value;
     CloudPcStatus(final String value) {
         this.value = value;
@@ -49,6 +51,8 @@ public enum CloudPcStatus implements ValuedEnum {
             case "modifyingSingleSignOn": return ModifyingSingleSignOn;
             case "refreshPolicyConfiguration": return RefreshPolicyConfiguration;
             case "preparing": return Preparing;
+            case "failoverInProgress": return FailoverInProgress;
+            case "failbackInProgress": return FailbackInProgress;
             default: return null;
         }
     }

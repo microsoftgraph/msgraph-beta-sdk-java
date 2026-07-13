@@ -8,6 +8,7 @@ import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.chann
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.enabledapps.EnabledAppsRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.filesfolder.FilesFolderRequestBuilder;
+import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.joinedusers.JoinedUsersRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.teamtemplatedefinition.item.teamdefinition.channels.item.planner.PlannerRequestBuilder;
@@ -82,6 +83,14 @@ public class ChannelItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the joinedUsers property of the microsoft.graph.channel entity.
+     * @return a {@link JoinedUsersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public JoinedUsersRequestBuilder joinedUsers() {
+        return new JoinedUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.

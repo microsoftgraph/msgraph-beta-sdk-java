@@ -12,7 +12,7 @@ public enum ServiceNowConnectionStatus implements ValuedEnum {
     Disabled("disabled"),
     /** Tenant has enabled the connection */
     Enabled("enabled"),
-    /** Evolvable enumeration sentinel value. Do not use. */
+    /** Future authentication method to be added here. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     ServiceNowConnectionStatus(final String value) {

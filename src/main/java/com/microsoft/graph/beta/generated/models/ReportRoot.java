@@ -58,6 +58,14 @@ public class ReportRoot extends Entity implements Parsable {
         return this.backingStore.get("azureADPremiumLicenseInsight");
     }
     /**
+     * Gets the correlations property value. The identity correlation reports in the tenant.
+     * @return a {@link java.util.List<IdentityCorrelation>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<IdentityCorrelation> getCorrelations() {
+        return this.backingStore.get("correlations");
+    }
+    /**
      * Gets the credentialUserRegistrationDetails property value. Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
      * @return a {@link java.util.List<CredentialUserRegistrationDetails>}
      */
@@ -116,6 +124,7 @@ public class ReportRoot extends Entity implements Parsable {
         deserializerMap.put("applicationSignInDetailedSummary", (n) -> { this.setApplicationSignInDetailedSummary(n.getCollectionOfObjectValues(ApplicationSignInDetailedSummary::createFromDiscriminatorValue)); });
         deserializerMap.put("authenticationMethods", (n) -> { this.setAuthenticationMethods(n.getObjectValue(AuthenticationMethodsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("azureADPremiumLicenseInsight", (n) -> { this.setAzureADPremiumLicenseInsight(n.getObjectValue(AzureADPremiumLicenseInsight::createFromDiscriminatorValue)); });
+        deserializerMap.put("correlations", (n) -> { this.setCorrelations(n.getCollectionOfObjectValues(IdentityCorrelation::createFromDiscriminatorValue)); });
         deserializerMap.put("credentialUserRegistrationDetails", (n) -> { this.setCredentialUserRegistrationDetails(n.getCollectionOfObjectValues(CredentialUserRegistrationDetails::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsage", (n) -> { this.setDailyPrintUsage(n.getCollectionOfObjectValues(PrintUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageByPrinter", (n) -> { this.setDailyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
@@ -123,6 +132,7 @@ public class ReportRoot extends Entity implements Parsable {
         deserializerMap.put("dailyPrintUsageSummariesByPrinter", (n) -> { this.setDailyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("dailyPrintUsageSummariesByUser", (n) -> { this.setDailyPrintUsageSummariesByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("healthMonitoring", (n) -> { this.setHealthMonitoring(n.getObjectValue(HealthMonitoringRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("identityAnalytics", (n) -> { this.setIdentityAnalytics(n.getObjectValue(IdentityAnalyticsRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByPrinter", (n) -> { this.setMonthlyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByUser", (n) -> { this.setMonthlyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageSummariesByPrinter", (n) -> { this.setMonthlyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
@@ -143,6 +153,14 @@ public class ReportRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public HealthMonitoringRoot getHealthMonitoring() {
         return this.backingStore.get("healthMonitoring");
+    }
+    /**
+     * Gets the identityAnalytics property value. Microsoft Entra identity analytics for the tenant, including its groups.
+     * @return a {@link IdentityAnalyticsRoot}
+     */
+    @jakarta.annotation.Nullable
+    public IdentityAnalyticsRoot getIdentityAnalytics() {
+        return this.backingStore.get("identityAnalytics");
     }
     /**
      * Gets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
@@ -243,6 +261,7 @@ public class ReportRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("applicationSignInDetailedSummary", this.getApplicationSignInDetailedSummary());
         writer.writeObjectValue("authenticationMethods", this.getAuthenticationMethods());
         writer.writeObjectValue("azureADPremiumLicenseInsight", this.getAzureADPremiumLicenseInsight());
+        writer.writeCollectionOfObjectValues("correlations", this.getCorrelations());
         writer.writeCollectionOfObjectValues("credentialUserRegistrationDetails", this.getCredentialUserRegistrationDetails());
         writer.writeCollectionOfObjectValues("dailyPrintUsage", this.getDailyPrintUsage());
         writer.writeCollectionOfObjectValues("dailyPrintUsageByPrinter", this.getDailyPrintUsageByPrinter());
@@ -250,6 +269,7 @@ public class ReportRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("dailyPrintUsageSummariesByPrinter", this.getDailyPrintUsageSummariesByPrinter());
         writer.writeCollectionOfObjectValues("dailyPrintUsageSummariesByUser", this.getDailyPrintUsageSummariesByUser());
         writer.writeObjectValue("healthMonitoring", this.getHealthMonitoring());
+        writer.writeObjectValue("identityAnalytics", this.getIdentityAnalytics());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByPrinter", this.getMonthlyPrintUsageByPrinter());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByUser", this.getMonthlyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageSummariesByPrinter", this.getMonthlyPrintUsageSummariesByPrinter());
@@ -289,6 +309,13 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public void setAzureADPremiumLicenseInsight(@jakarta.annotation.Nullable final AzureADPremiumLicenseInsight value) {
         this.backingStore.set("azureADPremiumLicenseInsight", value);
+    }
+    /**
+     * Sets the correlations property value. The identity correlation reports in the tenant.
+     * @param value Value to set for the correlations property.
+     */
+    public void setCorrelations(@jakarta.annotation.Nullable final java.util.List<IdentityCorrelation> value) {
+        this.backingStore.set("correlations", value);
     }
     /**
      * Sets the credentialUserRegistrationDetails property value. Details of the usage of self-service password reset and multifactor authentication (MFA) for all registered users.
@@ -338,6 +365,13 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public void setHealthMonitoring(@jakarta.annotation.Nullable final HealthMonitoringRoot value) {
         this.backingStore.set("healthMonitoring", value);
+    }
+    /**
+     * Sets the identityAnalytics property value. Microsoft Entra identity analytics for the tenant, including its groups.
+     * @param value Value to set for the identityAnalytics property.
+     */
+    public void setIdentityAnalytics(@jakarta.annotation.Nullable final IdentityAnalyticsRoot value) {
+        this.backingStore.set("identityAnalytics", value);
     }
     /**
      * Sets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.

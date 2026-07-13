@@ -26,7 +26,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return new CrossTenantMigrationJob();
     }
     /**
-     * Gets the completeAfterDateTime property value. DateTime after which the migration should be performed
+     * Gets the completeAfterDateTime property value. Date and time after which the migration should be performed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -34,7 +34,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("completeAfterDateTime");
     }
     /**
-     * Gets the createdBy property value. ID of the user that created the job
+     * Gets the createdBy property value. User principal name (UPN) of the user who created the job. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -42,7 +42,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. When the job what created
+     * Gets the createdDateTime property value. When the job was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the displayName property value. Display name of the job. Must be unique per tenant
+     * Gets the displayName property value. Display name of the job. Must be unique per tenant.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the exchangeSettings property value. Settings to use for migration of Exchange workload
+     * Gets the exchangeSettings property value. Settings to use for migration of Exchange workload. Nullable.
      * @return a {@link ExchangeOnlineCrossTenantMigrationSettings}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("jobType");
     }
     /**
-     * Gets the lastUpdatedDateTime property value. When this migration job was last updated
+     * Gets the lastUpdatedDateTime property value. When this migration job was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z. Read-only.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("lastUpdatedDateTime");
     }
     /**
-     * Gets the message property value. Status message of the migration job
+     * Gets the message property value. Status message of the migration job. Nullable. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("message");
     }
     /**
-     * Gets the resources property value. IDs (GUID) of the resources being migrated with the migration job
+     * Gets the resources property value. IDs (GUID) of the resources that are migrated with the migration job.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("resources");
     }
     /**
-     * Gets the resourceType property value. Type of resource being migrated. Only Users is currently supported
+     * Gets the resourceType property value. Type of resource being migrated. Only Users is currently supported.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("resourceType");
     }
     /**
-     * Gets the sourceTenantId property value. ID (GUID) of the tenant that content is being migrated from
+     * Gets the sourceTenantId property value. ID (GUID) of the tenant that content is migrated from.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
-     * Gets the targetTenantId property value. ID of the tenant that content is being migrated to
+     * Gets the targetTenantId property value. ID of the tenant that content is migrated to. Read-only.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("targetTenantId");
     }
     /**
-     * Gets the users property value. Details and status of the users being migrated in this migration job
+     * Gets the users property value. Details and status of the users migrated in this migration job.
      * @return a {@link java.util.List<CrossTenantMigrationTask>}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         return this.backingStore.get("users");
     }
     /**
-     * Gets the workloads property value. Workloads to migrate. Supported workloads are Teams, Exchange, and ODSP (OneDrive/SharePoint)
+     * Gets the workloads property value. Workloads to migrate. Supported workloads are Teams, Exchange, and ODSP (OneDrive/SharePoint).
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -193,35 +193,35 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         writer.writeCollectionOfPrimitiveValues("workloads", this.getWorkloads());
     }
     /**
-     * Sets the completeAfterDateTime property value. DateTime after which the migration should be performed
+     * Sets the completeAfterDateTime property value. Date and time after which the migration should be performed. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the completeAfterDateTime property.
      */
     public void setCompleteAfterDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("completeAfterDateTime", value);
     }
     /**
-     * Sets the createdBy property value. ID of the user that created the job
+     * Sets the createdBy property value. User principal name (UPN) of the user who created the job. Read-only.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. When the job what created
+     * Sets the createdDateTime property value. When the job was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the displayName property value. Display name of the job. Must be unique per tenant
+     * Sets the displayName property value. Display name of the job. Must be unique per tenant.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the exchangeSettings property value. Settings to use for migration of Exchange workload
+     * Sets the exchangeSettings property value. Settings to use for migration of Exchange workload. Nullable.
      * @param value Value to set for the exchangeSettings property.
      */
     public void setExchangeSettings(@jakarta.annotation.Nullable final ExchangeOnlineCrossTenantMigrationSettings value) {
@@ -235,35 +235,35 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         this.backingStore.set("jobType", value);
     }
     /**
-     * Sets the lastUpdatedDateTime property value. When this migration job was last updated
+     * Sets the lastUpdatedDateTime property value. When this migration job was last updated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z. Read-only.
      * @param value Value to set for the lastUpdatedDateTime property.
      */
     public void setLastUpdatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastUpdatedDateTime", value);
     }
     /**
-     * Sets the message property value. Status message of the migration job
+     * Sets the message property value. Status message of the migration job. Nullable. Read-only.
      * @param value Value to set for the message property.
      */
     public void setMessage(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("message", value);
     }
     /**
-     * Sets the resources property value. IDs (GUID) of the resources being migrated with the migration job
+     * Sets the resources property value. IDs (GUID) of the resources that are migrated with the migration job.
      * @param value Value to set for the resources property.
      */
     public void setResources(@jakarta.annotation.Nullable final java.util.List<String> value) {
         this.backingStore.set("resources", value);
     }
     /**
-     * Sets the resourceType property value. Type of resource being migrated. Only Users is currently supported
+     * Sets the resourceType property value. Type of resource being migrated. Only Users is currently supported.
      * @param value Value to set for the resourceType property.
      */
     public void setResourceType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("resourceType", value);
     }
     /**
-     * Sets the sourceTenantId property value. ID (GUID) of the tenant that content is being migrated from
+     * Sets the sourceTenantId property value. ID (GUID) of the tenant that content is migrated from.
      * @param value Value to set for the sourceTenantId property.
      */
     public void setSourceTenantId(@jakarta.annotation.Nullable final String value) {
@@ -277,21 +277,21 @@ public class CrossTenantMigrationJob extends Entity implements Parsable {
         this.backingStore.set("status", value);
     }
     /**
-     * Sets the targetTenantId property value. ID of the tenant that content is being migrated to
+     * Sets the targetTenantId property value. ID of the tenant that content is migrated to. Read-only.
      * @param value Value to set for the targetTenantId property.
      */
     public void setTargetTenantId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("targetTenantId", value);
     }
     /**
-     * Sets the users property value. Details and status of the users being migrated in this migration job
+     * Sets the users property value. Details and status of the users migrated in this migration job.
      * @param value Value to set for the users property.
      */
     public void setUsers(@jakarta.annotation.Nullable final java.util.List<CrossTenantMigrationTask> value) {
         this.backingStore.set("users", value);
     }
     /**
-     * Sets the workloads property value. Workloads to migrate. Supported workloads are Teams, Exchange, and ODSP (OneDrive/SharePoint)
+     * Sets the workloads property value. Workloads to migrate. Supported workloads are Teams, Exchange, and ODSP (OneDrive/SharePoint).
      * @param value Value to set for the workloads property.
      */
     public void setWorkloads(@jakarta.annotation.Nullable final java.util.List<String> value) {

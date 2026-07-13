@@ -8,6 +8,7 @@ import com.microsoft.graph.beta.teams.item.primarychannel.completemigration.Comp
 import com.microsoft.graph.beta.teams.item.primarychannel.doesuserhaveaccessuseriduseridtenantidtenantiduserprincipalnameuserprincipalname.DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.enabledapps.EnabledAppsRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.filesfolder.FilesFolderRequestBuilder;
+import com.microsoft.graph.beta.teams.item.primarychannel.joinedusers.JoinedUsersRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.members.MembersRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.messages.MessagesRequestBuilder;
 import com.microsoft.graph.beta.teams.item.primarychannel.planner.PlannerRequestBuilder;
@@ -82,6 +83,14 @@ public class PrimaryChannelRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public FilesFolderRequestBuilder filesFolder() {
         return new FilesFolderRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the joinedUsers property of the microsoft.graph.channel entity.
+     * @return a {@link JoinedUsersRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public JoinedUsersRequestBuilder joinedUsers() {
+        return new JoinedUsersRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the members property of the microsoft.graph.channel entity.

@@ -56,7 +56,7 @@ public class MigrateSensorsResult implements AdditionalDataHolder, BackedModel, 
         return this.backingStore;
     }
     /**
-     * Gets the failedMigrationSensorIds property value. The failedMigrationSensorIds property
+     * Gets the failedMigrationSensorIds property value. The collection of sensor IDs that failed to migrate.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class MigrateSensorsResult implements AdditionalDataHolder, BackedModel, 
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the successfulMigrationSensorIds property value. The successfulMigrationSensorIds property
+     * Gets the successfulMigrationSensorIds property value. The collection of sensor IDs that were successfully migrated.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class MigrateSensorsResult implements AdditionalDataHolder, BackedModel, 
         this.backingStore = value;
     }
     /**
-     * Sets the failedMigrationSensorIds property value. The failedMigrationSensorIds property
+     * Sets the failedMigrationSensorIds property value. The collection of sensor IDs that failed to migrate.
      * @param value Value to set for the failedMigrationSensorIds property.
      */
     public void setFailedMigrationSensorIds(@jakarta.annotation.Nullable final java.util.List<String> value) {
@@ -132,7 +132,7 @@ public class MigrateSensorsResult implements AdditionalDataHolder, BackedModel, 
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the successfulMigrationSensorIds property value. The successfulMigrationSensorIds property
+     * Sets the successfulMigrationSensorIds property value. The collection of sensor IDs that were successfully migrated.
      * @param value Value to set for the successfulMigrationSensorIds property.
      */
     public void setSuccessfulMigrationSensorIds(@jakarta.annotation.Nullable final java.util.List<String> value) {

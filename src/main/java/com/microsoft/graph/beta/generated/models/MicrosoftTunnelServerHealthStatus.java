@@ -22,7 +22,7 @@ public enum MicrosoftTunnelServerHealthStatus implements ValuedEnum {
     UpgradeInProgress("upgradeInProgress"),
     /** Indicates the failure of the upgrade during the upgrade cycle of when Intune begins upgrading servers, one server at a time */
     UpgradeFailed("upgradeFailed"),
-    /** Evolvable enumeration sentinel value. Do not use. */
+    /** Evolvable enumeration sentinel value. Do not use enums. */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     MicrosoftTunnelServerHealthStatus(final String value) {

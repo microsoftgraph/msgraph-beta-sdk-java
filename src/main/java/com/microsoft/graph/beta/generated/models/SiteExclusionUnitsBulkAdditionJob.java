@@ -36,7 +36,7 @@ public class SiteExclusionUnitsBulkAdditionJob extends ExclusionUnitBulkAddition
         return deserializerMap;
     }
     /**
-     * Gets the siteWebUrls property value. The siteWebUrls property
+     * Gets the siteWebUrls property value. The URLs of SharePoint sites to be added as exclusion units to the protection policy.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -53,7 +53,7 @@ public class SiteExclusionUnitsBulkAdditionJob extends ExclusionUnitBulkAddition
         writer.writeCollectionOfPrimitiveValues("siteWebUrls", this.getSiteWebUrls());
     }
     /**
-     * Sets the siteWebUrls property value. The siteWebUrls property
+     * Sets the siteWebUrls property value. The URLs of SharePoint sites to be added as exclusion units to the protection policy.
      * @param value Value to set for the siteWebUrls property.
      */
     public void setSiteWebUrls(@jakarta.annotation.Nullable final java.util.List<String> value) {

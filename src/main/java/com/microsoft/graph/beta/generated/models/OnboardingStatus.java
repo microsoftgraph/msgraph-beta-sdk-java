@@ -18,7 +18,7 @@ public enum OnboardingStatus implements ValuedEnum {
     Failed("failed"),
     /** Offboarding */
     Offboarding("offboarding"),
-    /** Evolvable enumeration sentinel value. Do not use. */
+    /** UnknownFutureValue */
     UnknownFutureValue("unknownFutureValue");
     public final String value;
     OnboardingStatus(final String value) {

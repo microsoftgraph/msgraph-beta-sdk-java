@@ -37,19 +37,21 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/sharePointProtectionPolicies/{sharePointProtectionPolicy%2Did}/siteExclusionUnits/{siteExclusionUnit%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * Get a site exclusion unit associated with a SharePoint protection policy.
      * @return a {@link SiteExclusionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/siteexclusionunit-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteExclusionUnit get() {
         return get(null);
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * Get a site exclusion unit associated with a SharePoint protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SiteExclusionUnit}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/siteexclusionunit-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public SiteExclusionUnit get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -59,7 +61,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SiteExclusionUnit::createFromDiscriminatorValue);
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * Get a site exclusion unit associated with a SharePoint protection policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +69,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * Get a site exclusion unit associated with a SharePoint protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +91,7 @@ public class SiteExclusionUnitItemRequestBuilder extends BaseRequestBuilder {
         return new SiteExclusionUnitItemRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get siteExclusionUnits from solutions
+     * Get a site exclusion unit associated with a SharePoint protection policy.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

@@ -98,10 +98,12 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         deserializerMap.put("androidDeviceBlockedOnMissingPartnerData", (n) -> { this.setAndroidDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
         deserializerMap.put("androidEnabled", (n) -> { this.setAndroidEnabled(n.getBooleanValue()); });
         deserializerMap.put("androidMobileApplicationManagementEnabled", (n) -> { this.setAndroidMobileApplicationManagementEnabled(n.getBooleanValue()); });
+        deserializerMap.put("grantMobileThreatDefensePartnerRole", (n) -> { this.setGrantMobileThreatDefensePartnerRole(n.getBooleanValue()); });
         deserializerMap.put("iosDeviceBlockedOnMissingPartnerData", (n) -> { this.setIosDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
         deserializerMap.put("iosEnabled", (n) -> { this.setIosEnabled(n.getBooleanValue()); });
         deserializerMap.put("iosMobileApplicationManagementEnabled", (n) -> { this.setIosMobileApplicationManagementEnabled(n.getBooleanValue()); });
         deserializerMap.put("lastHeartbeatDateTime", (n) -> { this.setLastHeartbeatDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("launchMobileThreatDefensePartnerOnSetupEnabled", (n) -> { this.setLaunchMobileThreatDefensePartnerOnSetupEnabled(n.getBooleanValue()); });
         deserializerMap.put("macDeviceBlockedOnMissingPartnerData", (n) -> { this.setMacDeviceBlockedOnMissingPartnerData(n.getBooleanValue()); });
         deserializerMap.put("macEnabled", (n) -> { this.setMacEnabled(n.getBooleanValue()); });
         deserializerMap.put("microsoftDefenderForEndpointAttachEnabled", (n) -> { this.setMicrosoftDefenderForEndpointAttachEnabled(n.getBooleanValue()); });
@@ -112,6 +114,14 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         deserializerMap.put("windowsEnabled", (n) -> { this.setWindowsEnabled(n.getBooleanValue()); });
         deserializerMap.put("windowsMobileApplicationManagementEnabled", (n) -> { this.setWindowsMobileApplicationManagementEnabled(n.getBooleanValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the grantMobileThreatDefensePartnerRole property value. When TRUE, indicates that the Mobile Threat Defense partner is granted the Mobile Threat Defense role on enrolled Android Corporate Owned Business Only and Corporate Owned Personally Enabled devices. When FALSE, indicates that the Mobile Threat Defense partner is not granted the Mobile Threat Defense role. Default value is FALSE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getGrantMobileThreatDefensePartnerRole() {
+        return this.backingStore.get("grantMobileThreatDefensePartnerRole");
     }
     /**
      * Gets the iosDeviceBlockedOnMissingPartnerData property value. When TRUE, indicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant. When FALSE, indicates that Intune may not recieve data from Mobile Threat Defense partner prior to making device compliant. Default value is FALSE.
@@ -144,6 +154,14 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public OffsetDateTime getLastHeartbeatDateTime() {
         return this.backingStore.get("lastHeartbeatDateTime");
+    }
+    /**
+     * Gets the launchMobileThreatDefensePartnerOnSetupEnabled property value. When TRUE, indicates that the Mobile Threat Defense partner will be automatically launched during Android Corporate Owned Business Only and Corporate Owned Personally Enabled device setup. When FALSE, indicates that the Mobile Threat Defense partner will not be automatically launched during setup. Default value is FALSE.
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getLaunchMobileThreatDefensePartnerOnSetupEnabled() {
+        return this.backingStore.get("launchMobileThreatDefensePartnerOnSetupEnabled");
     }
     /**
      * Gets the macDeviceBlockedOnMissingPartnerData property value. When TRUE, indicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a Mac device compliant. When FALSE, indicates that Intune may mark a Mac device compliant prior to receiving data from the Mobile Threat Defense partner. Default value is FALSE.
@@ -231,10 +249,12 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         writer.writeBooleanValue("androidDeviceBlockedOnMissingPartnerData", this.getAndroidDeviceBlockedOnMissingPartnerData());
         writer.writeBooleanValue("androidEnabled", this.getAndroidEnabled());
         writer.writeBooleanValue("androidMobileApplicationManagementEnabled", this.getAndroidMobileApplicationManagementEnabled());
+        writer.writeBooleanValue("grantMobileThreatDefensePartnerRole", this.getGrantMobileThreatDefensePartnerRole());
         writer.writeBooleanValue("iosDeviceBlockedOnMissingPartnerData", this.getIosDeviceBlockedOnMissingPartnerData());
         writer.writeBooleanValue("iosEnabled", this.getIosEnabled());
         writer.writeBooleanValue("iosMobileApplicationManagementEnabled", this.getIosMobileApplicationManagementEnabled());
         writer.writeOffsetDateTimeValue("lastHeartbeatDateTime", this.getLastHeartbeatDateTime());
+        writer.writeBooleanValue("launchMobileThreatDefensePartnerOnSetupEnabled", this.getLaunchMobileThreatDefensePartnerOnSetupEnabled());
         writer.writeBooleanValue("macDeviceBlockedOnMissingPartnerData", this.getMacDeviceBlockedOnMissingPartnerData());
         writer.writeBooleanValue("macEnabled", this.getMacEnabled());
         writer.writeBooleanValue("microsoftDefenderForEndpointAttachEnabled", this.getMicrosoftDefenderForEndpointAttachEnabled());
@@ -295,6 +315,13 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
         this.backingStore.set("androidMobileApplicationManagementEnabled", value);
     }
     /**
+     * Sets the grantMobileThreatDefensePartnerRole property value. When TRUE, indicates that the Mobile Threat Defense partner is granted the Mobile Threat Defense role on enrolled Android Corporate Owned Business Only and Corporate Owned Personally Enabled devices. When FALSE, indicates that the Mobile Threat Defense partner is not granted the Mobile Threat Defense role. Default value is FALSE.
+     * @param value Value to set for the grantMobileThreatDefensePartnerRole property.
+     */
+    public void setGrantMobileThreatDefensePartnerRole(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("grantMobileThreatDefensePartnerRole", value);
+    }
+    /**
      * Sets the iosDeviceBlockedOnMissingPartnerData property value. When TRUE, indicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant. When FALSE, indicates that Intune may not recieve data from Mobile Threat Defense partner prior to making device compliant. Default value is FALSE.
      * @param value Value to set for the iosDeviceBlockedOnMissingPartnerData property.
      */
@@ -321,6 +348,13 @@ public class MobileThreatDefenseConnector extends Entity implements Parsable {
      */
     public void setLastHeartbeatDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastHeartbeatDateTime", value);
+    }
+    /**
+     * Sets the launchMobileThreatDefensePartnerOnSetupEnabled property value. When TRUE, indicates that the Mobile Threat Defense partner will be automatically launched during Android Corporate Owned Business Only and Corporate Owned Personally Enabled device setup. When FALSE, indicates that the Mobile Threat Defense partner will not be automatically launched during setup. Default value is FALSE.
+     * @param value Value to set for the launchMobileThreatDefensePartnerOnSetupEnabled property.
+     */
+    public void setLaunchMobileThreatDefensePartnerOnSetupEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("launchMobileThreatDefensePartnerOnSetupEnabled", value);
     }
     /**
      * Sets the macDeviceBlockedOnMissingPartnerData property value. When TRUE, indicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a Mac device compliant. When FALSE, indicates that Intune may mark a Mac device compliant prior to receiving data from the Mobile Threat Defense partner. Default value is FALSE.
