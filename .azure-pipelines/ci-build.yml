@@ -77,9 +77,9 @@ extends:
                 displayName: Import GPG signing key
 
               - pwsh: |
-$props = Get-Content local.properties -Raw
-$keyId = ($props | Select-String -Pattern 'signing\.keyId=([^\r\n]+)').Matches.Groups[1].Value.Trim()
-$keyPassword = ($props | Select-String -Pattern 'signing\.password=([^\r\n]+)').Matches.Groups[1].Value.Trim()
+                  $props = Get-Content local.properties -Raw
+                  $keyId = ($props | Select-String -Pattern 'signing\.keyId=([^\r\n]+)').Matches.Groups[1].Value.Trim()
+                  $keyPassword = ($props | Select-String -Pattern 'signing\.password=([^\r\n]+)').Matches.Groups[1].Value.Trim()
                   $settingsXml = @"
                   <settings>
                     <mirrors>
