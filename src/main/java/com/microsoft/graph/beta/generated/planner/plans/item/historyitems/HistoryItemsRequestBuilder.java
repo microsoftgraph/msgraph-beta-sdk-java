@@ -60,7 +60,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/planner/plans/{plannerPlan%2Did}/historyItems{?%24count,%24expand,%24filter,%24orderby,%24search,%24select,%24skip,%24top}", rawUrl);
     }
     /**
-     * Get historyItems from planner
+     * Collection of history items for entities in the plan. Read-only. Nullable.
      * @return a {@link PlannerHistoryItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -69,7 +69,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * Get historyItems from planner
+     * Collection of history items for entities in the plan. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PlannerHistoryItemCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -107,7 +107,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, PlannerHistoryItem::createFromDiscriminatorValue);
     }
     /**
-     * Get historyItems from planner
+     * Collection of history items for entities in the plan. Read-only. Nullable.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -115,7 +115,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * Get historyItems from planner
+     * Collection of history items for entities in the plan. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -161,7 +161,7 @@ public class HistoryItemsRequestBuilder extends BaseRequestBuilder {
         return new HistoryItemsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Get historyItems from planner
+     * Collection of history items for entities in the plan. Read-only. Nullable.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

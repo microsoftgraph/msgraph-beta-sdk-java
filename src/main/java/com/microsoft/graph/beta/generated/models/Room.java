@@ -90,7 +90,6 @@ public class Room extends Place implements Parsable {
         deserializerMap.put("floorNumber", (n) -> { this.setFloorNumber(n.getIntegerValue()); });
         deserializerMap.put("isTeamsEnabled", (n) -> { this.setIsTeamsEnabled(n.getBooleanValue()); });
         deserializerMap.put("nickname", (n) -> { this.setNickname(n.getStringValue()); });
-        deserializerMap.put("placeId", (n) -> { this.setPlaceId(n.getStringValue()); });
         deserializerMap.put("teamsEnabledState", (n) -> { this.setTeamsEnabledState(n.getEnumValue(PlaceFeatureEnablement::forValue)); });
         deserializerMap.put("videoDeviceName", (n) -> { this.setVideoDeviceName(n.getStringValue()); });
         return deserializerMap;
@@ -128,14 +127,6 @@ public class Room extends Place implements Parsable {
         return this.backingStore.get("nickname");
     }
     /**
-     * Gets the placeId property value. The placeId property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getPlaceId() {
-        return this.backingStore.get("placeId");
-    }
-    /**
      * Gets the teamsEnabledState property value. The teamsEnabledState property
      * @return a {@link PlaceFeatureEnablement}
      */
@@ -168,7 +159,6 @@ public class Room extends Place implements Parsable {
         writer.writeIntegerValue("floorNumber", this.getFloorNumber());
         writer.writeBooleanValue("isTeamsEnabled", this.getIsTeamsEnabled());
         writer.writeStringValue("nickname", this.getNickname());
-        writer.writeStringValue("placeId", this.getPlaceId());
         writer.writeEnumValue("teamsEnabledState", this.getTeamsEnabledState());
         writer.writeStringValue("videoDeviceName", this.getVideoDeviceName());
     }
@@ -241,13 +231,6 @@ public class Room extends Place implements Parsable {
      */
     public void setNickname(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("nickname", value);
-    }
-    /**
-     * Sets the placeId property value. The placeId property
-     * @param value Value to set for the placeId property.
-     */
-    public void setPlaceId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("placeId", value);
     }
     /**
      * Sets the teamsEnabledState property value. The teamsEnabledState property

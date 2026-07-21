@@ -61,6 +61,32 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/admin/exchange/mailboxes/{mailbox%2Did}/folders/{mailboxFolder%2Did}{?%24expand,%24select}", rawUrl);
     }
     /**
+     * Delete a mailboxFolder or a child mailboxFolder within a mailbox.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-delete-folders?view=graph-rest-beta">Find more info here</a>
+     */
+    @Deprecated
+    public void delete() {
+        delete(null);
+    }
+    /**
+     * Delete a mailboxFolder or a child mailboxFolder within a mailbox.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     * @see <a href="https://learn.microsoft.com/graph/api/mailbox-delete-folders?view=graph-rest-beta">Find more info here</a>
+     */
+    @Deprecated
+    public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
+    }
+    /**
      * Read the properties and relationships of a mailboxFolder object.
      * @return a {@link MailboxFolder}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -91,6 +117,65 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, MailboxFolder::createFromDiscriminatorValue);
     }
     /**
+     * Update mailboxFolder properties such as the displayName within a mailbox.
+     * @param body The request body
+     * @return a {@link MailboxFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-update?view=graph-rest-beta">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    @Deprecated
+    public MailboxFolder patch(@jakarta.annotation.Nonnull final MailboxFolder body) {
+        return patch(body, null);
+    }
+    /**
+     * Update mailboxFolder properties such as the displayName within a mailbox.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link MailboxFolder}
+     * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     * @see <a href="https://learn.microsoft.com/graph/api/mailboxfolder-update?view=graph-rest-beta">Find more info here</a>
+     */
+    @jakarta.annotation.Nullable
+    @Deprecated
+    public MailboxFolder patch(@jakarta.annotation.Nonnull final MailboxFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
+        final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
+        errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, MailboxFolder::createFromDiscriminatorValue);
+    }
+    /**
+     * Delete a mailboxFolder or a child mailboxFolder within a mailbox.
+     * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public RequestInformation toDeleteRequestInformation() {
+        return toDeleteRequestInformation(null);
+    }
+    /**
+     * Delete a mailboxFolder or a child mailboxFolder within a mailbox.
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        return requestInfo;
+    }
+    /**
      * Read the properties and relationships of a mailboxFolder object.
      * @return a {@link RequestInformation}
      * @deprecated
@@ -117,6 +202,36 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
         return requestInfo;
     }
     /**
+     * Update mailboxFolder properties such as the displayName within a mailbox.
+     * @param body The request body
+     * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MailboxFolder body) {
+        return toPatchRequestInformation(body, null);
+    }
+    /**
+     * Update mailboxFolder properties such as the displayName within a mailbox.
+     * @param body The request body
+     * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for Import Export APIs as of 2021-08/PrivatePreview:importExport on 2021-08-19 and will be removed 2021-11-15
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
+    public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MailboxFolder body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
+        Objects.requireNonNull(body);
+        final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
+        requestInfo.configure(requestConfiguration, PatchRequestConfiguration::new);
+        requestInfo.headers.tryAdd("Accept", "application/json");
+        requestInfo.setContentFromParsable(requestAdapter, "application/json", body);
+        return requestInfo;
+    }
+    /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MailboxFolderItemRequestBuilder}
@@ -128,6 +243,12 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
     public MailboxFolderItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MailboxFolderItemRequestBuilder(rawUrl, requestAdapter);
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
      * Read the properties and relationships of a mailboxFolder object.
@@ -166,5 +287,11 @@ public class MailboxFolderItemRequestBuilder extends BaseRequestBuilder {
          */
         @jakarta.annotation.Nullable
         public GetQueryParameters queryParameters = new GetQueryParameters();
+    }
+    /**
+     * Configuration for the request such as headers, query parameters, and middleware options.
+     */
+    @jakarta.annotation.Generated("com.microsoft.kiota")
+    public class PatchRequestConfiguration extends BaseRequestConfiguration {
     }
 }

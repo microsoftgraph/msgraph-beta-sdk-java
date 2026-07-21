@@ -48,7 +48,7 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         return value;
     }
     /**
-     * Gets the approvalAttachment property value. The approvalAttachment property
+     * Gets the approvalAttachment property value. Detailed information about the approval that is attached to the task.
      * @return a {@link PlannerBaseApprovalAttachment}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         return this.backingStore;
     }
     /**
-     * Gets the checklist property value. The checklist property
+     * Gets the checklist property value. The collection of checklist items on the task.
      * @return a {@link PlannerChecklistItems}
      */
     @jakarta.annotation.Nullable
@@ -72,7 +72,7 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("checklist");
     }
     /**
-     * Gets the completionRequirements property value. The completionRequirements property
+     * Gets the completionRequirements property value. Contains detailed information about requirements on the task.
      * @return a {@link PlannerTaskCompletionRequirementDetails}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("completionRequirements");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the task.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the forms property value. The forms property
+     * Gets the forms property value. The collection of forms associated with the task.
      * @return a {@link PlannerFormsDictionary}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("forms");
     }
     /**
-     * Gets the notes property value. The notes property
+     * Gets the notes property value. Rich text description of the task for use by applications that support HTML content.
      * @return a {@link ItemBody}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("previewType");
     }
     /**
-     * Gets the references property value. The references property
+     * Gets the references property value. The collection of references on the task.
      * @return a {@link PlannerExternalReferences}
      */
     @jakarta.annotation.Nullable
@@ -170,7 +170,7 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the approvalAttachment property value. The approvalAttachment property
+     * Sets the approvalAttachment property value. Detailed information about the approval that is attached to the task.
      * @param value Value to set for the approvalAttachment property.
      */
     public void setApprovalAttachment(@jakarta.annotation.Nullable final PlannerBaseApprovalAttachment value) {
@@ -185,35 +185,35 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the checklist property value. The checklist property
+     * Sets the checklist property value. The collection of checklist items on the task.
      * @param value Value to set for the checklist property.
      */
     public void setChecklist(@jakarta.annotation.Nullable final PlannerChecklistItems value) {
         this.backingStore.set("checklist", value);
     }
     /**
-     * Sets the completionRequirements property value. The completionRequirements property
+     * Sets the completionRequirements property value. Contains detailed information about requirements on the task.
      * @param value Value to set for the completionRequirements property.
      */
     public void setCompletionRequirements(@jakarta.annotation.Nullable final PlannerTaskCompletionRequirementDetails value) {
         this.backingStore.set("completionRequirements", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the task.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the forms property value. The forms property
+     * Sets the forms property value. The collection of forms associated with the task.
      * @param value Value to set for the forms property.
      */
     public void setForms(@jakarta.annotation.Nullable final PlannerFormsDictionary value) {
         this.backingStore.set("forms", value);
     }
     /**
-     * Sets the notes property value. The notes property
+     * Sets the notes property value. Rich text description of the task for use by applications that support HTML content.
      * @param value Value to set for the notes property.
      */
     public void setNotes(@jakarta.annotation.Nullable final ItemBody value) {
@@ -234,7 +234,7 @@ public class PlannerTaskDetailsData implements AdditionalDataHolder, BackedModel
         this.backingStore.set("previewType", value);
     }
     /**
-     * Sets the references property value. The references property
+     * Sets the references property value. The collection of references on the task.
      * @param value Value to set for the references property.
      */
     public void setReferences(@jakarta.annotation.Nullable final PlannerExternalReferences value) {

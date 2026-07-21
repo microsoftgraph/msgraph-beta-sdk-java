@@ -64,7 +64,7 @@ public class ExternalItem extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the informationProtectionLabel property value. The informationProtectionLabel property
+     * Gets the informationProtectionLabel property value. Specifies the Microsoft Purview sensitivity label for the item. Set the sensitivityLabelId property to the GUID of a Purview sensitivity label. The service then applies the label rules to the item. To get the label GUID, use the Get sensitivityLabel API or the Get-Label PowerShell command. Optional.
      * @return a {@link ExternalItemInformationProtectionLabel}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class ExternalItem extends Entity implements Parsable {
         this.backingStore.set("content", value);
     }
     /**
-     * Sets the informationProtectionLabel property value. The informationProtectionLabel property
+     * Sets the informationProtectionLabel property value. Specifies the Microsoft Purview sensitivity label for the item. Set the sensitivityLabelId property to the GUID of a Purview sensitivity label. The service then applies the label rules to the item. To get the label GUID, use the Get sensitivityLabel API or the Get-Label PowerShell command. Optional.
      * @param value Value to set for the informationProtectionLabel property.
      */
     public void setInformationProtectionLabel(@jakarta.annotation.Nullable final ExternalItemInformationProtectionLabel value) {

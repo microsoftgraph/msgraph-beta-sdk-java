@@ -122,7 +122,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the historyItems property value. The historyItems property
+     * Gets the historyItems property value. Collection of history items for entities in the plan. Read-only. Nullable.
      * @return a {@link java.util.List<PlannerHistoryItem>}
      */
     @jakarta.annotation.Nullable
@@ -256,7 +256,7 @@ public class PlannerPlan extends PlannerDelta implements Parsable {
         this.backingStore.set("details", value);
     }
     /**
-     * Sets the historyItems property value. The historyItems property
+     * Sets the historyItems property value. Collection of history items for entities in the plan. Read-only. Nullable.
      * @param value Value to set for the historyItems property.
      */
     public void setHistoryItems(@jakarta.annotation.Nullable final java.util.List<PlannerHistoryItem> value) {

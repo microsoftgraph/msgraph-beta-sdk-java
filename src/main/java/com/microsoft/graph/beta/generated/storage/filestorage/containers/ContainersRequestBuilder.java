@@ -4,6 +4,8 @@ import com.microsoft.graph.beta.models.FileStorageContainer;
 import com.microsoft.graph.beta.models.FileStorageContainerCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.storage.filestorage.containers.count.CountRequestBuilder;
+import com.microsoft.graph.beta.storage.filestorage.containers.getbyuserwithuserprincipalname.GetByUserWithUserPrincipalNameRequestBuilder;
+import com.microsoft.graph.beta.storage.filestorage.containers.getbyuserwithuserprincipalnamewithrole.GetByUserWithUserPrincipalNameWithRoleRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.containers.item.FileStorageContainerItemRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
@@ -82,6 +84,28 @@ public class ContainersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerCollectionResponse::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the getByUser method.
+     * @param userPrincipalName Usage: userPrincipalName=&apos;{userPrincipalName}&apos;
+     * @return a {@link GetByUserWithUserPrincipalNameRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetByUserWithUserPrincipalNameRequestBuilder getByUserWithUserPrincipalName(@jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(userPrincipalName);
+        return new GetByUserWithUserPrincipalNameRequestBuilder(pathParameters, requestAdapter, userPrincipalName);
+    }
+    /**
+     * Provides operations to call the getByUser method.
+     * @param role Usage: role=&apos;{role}&apos;
+     * @param userPrincipalName Usage: userPrincipalName=&apos;{userPrincipalName}&apos;
+     * @return a {@link GetByUserWithUserPrincipalNameWithRoleRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetByUserWithUserPrincipalNameWithRoleRequestBuilder getByUserWithUserPrincipalNameWithRole(@jakarta.annotation.Nonnull final String role, @jakarta.annotation.Nonnull final String userPrincipalName) {
+        Objects.requireNonNull(role);
+        Objects.requireNonNull(userPrincipalName);
+        return new GetByUserWithUserPrincipalNameWithRoleRequestBuilder(pathParameters, requestAdapter, role, userPrincipalName);
     }
     /**
      * Create a new fileStorageContainer object.  The respective container type identified by containerTypeId must be enabled in the tenant.  For delegated calls, the calling user is set as the owner of the fileStorageContainer. 

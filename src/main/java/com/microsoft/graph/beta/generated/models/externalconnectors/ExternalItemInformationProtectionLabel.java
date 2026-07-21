@@ -75,7 +75,7 @@ public class ExternalItemInformationProtectionLabel implements AdditionalDataHol
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sensitivityLabelId property value. The sensitivityLabelId property
+     * Gets the sensitivityLabelId property value. The GUID of the Purview sensitivity label. To get the label GUID, use the Get sensitivityLabel API or the Get-Label PowerShell command.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -115,7 +115,7 @@ public class ExternalItemInformationProtectionLabel implements AdditionalDataHol
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sensitivityLabelId property value. The sensitivityLabelId property
+     * Sets the sensitivityLabelId property value. The GUID of the Purview sensitivity label. To get the label GUID, use the Get sensitivityLabel API or the Get-Label PowerShell command.
      * @param value Value to set for the sensitivityLabelId property.
      */
     public void setSensitivityLabelId(@jakarta.annotation.Nullable final String value) {

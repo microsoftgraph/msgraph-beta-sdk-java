@@ -1,4 +1,4 @@
-package com.microsoft.graph.beta.reports.getmicrosoft365copilotusageuserdetailwithperiod;
+package com.microsoft.graph.beta.reports.getmicrosoft365copilotusercountsummarywithperiodwithversion;
 
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -15,44 +15,46 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to call the getMicrosoft365CopilotUsageUserDetail method.
+ * Provides operations to call the getMicrosoft365CopilotUserCountSummary method.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
-public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder extends BaseRequestBuilder {
+public class GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder extends BaseRequestBuilder {
     /**
-     * Instantiates a new {@link GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder} and sets the default values.
+     * Instantiates a new {@link GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder} and sets the default values.
      * @param pathParameters Path parameters for the request
      * @param period Usage: period=&apos;{period}&apos;
      * @param requestAdapter The request adapter to use to execute the requests.
+     * @param version Usage: version=&apos;{version}&apos;
      */
-    public GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String period) {
-        super(requestAdapter, "{+baseurl}/reports/getMicrosoft365CopilotUsageUserDetail(period='{period}')", pathParameters);
+    public GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder(@jakarta.annotation.Nonnull final HashMap<String, Object> pathParameters, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter, @jakarta.annotation.Nullable final String period, @jakarta.annotation.Nullable final String version) {
+        super(requestAdapter, "{+baseurl}/reports/getMicrosoft365CopilotUserCountSummary(period='{period}',version='{version}')", pathParameters);
         this.pathParameters.put("period", period);
+        this.pathParameters.put("version", version);
     }
     /**
-     * Instantiates a new {@link GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder} and sets the default values.
+     * Instantiates a new {@link GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder} and sets the default values.
      * @param rawUrl The raw URL to use for the request builder.
      * @param requestAdapter The request adapter to use to execute the requests.
      */
-    public GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
-        super(requestAdapter, "{+baseurl}/reports/getMicrosoft365CopilotUsageUserDetail(period='{period}')", rawUrl);
+    public GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder(@jakarta.annotation.Nonnull final String rawUrl, @jakarta.annotation.Nonnull final RequestAdapter requestAdapter) {
+        super(requestAdapter, "{+baseurl}/reports/getMicrosoft365CopilotUserCountSummary(period='{period}',version='{version}')", rawUrl);
     }
     /**
-     * Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.
+     * Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getmicrosoft365copilotusageuserdetail?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getmicrosoft365copilotusercountsummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get() {
         return get(null);
     }
     /**
-     * Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.
+     * Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link InputStream}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getmicrosoft365copilotusageuserdetail?view=graph-rest-beta">Find more info here</a>
+     * @see <a href="https://learn.microsoft.com/graph/api/reportroot-getmicrosoft365copilotusercountsummary?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public InputStream get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -62,7 +64,7 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
         return this.requestAdapter.sendPrimitive(requestInfo, errorMapping, InputStream.class);
     }
     /**
-     * Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.
+     * Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -70,7 +72,7 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
         return toGetRequestInformation(null);
     }
     /**
-     * Get the most recent activity data for enabled users of Microsoft 365 Copilot apps.
+     * Get the aggregated number of active and enabled users of Microsoft 365 Copilot for a specified time period.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -84,12 +86,12 @@ public class GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder exten
     /**
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
-     * @return a {@link GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder}
+     * @return a {@link GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
+    public GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
-        return new GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder(rawUrl, requestAdapter);
+        return new GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder(rawUrl, requestAdapter);
     }
     /**
      * Configuration for the request such as headers, query parameters, and middleware options.

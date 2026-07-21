@@ -37,7 +37,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return new PlannerTaskData();
     }
     /**
-     * Gets the activeChecklistItemCount property value. The activeChecklistItemCount property
+     * Gets the activeChecklistItemCount property value. The number of incomplete checklist items whose value is set to false.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -58,7 +58,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return value;
     }
     /**
-     * Gets the appliedCategories property value. The appliedCategories property
+     * Gets the appliedCategories property value. The categories to which the task is applied.
      * @return a {@link PlannerAppliedCategories}
      */
     @jakarta.annotation.Nullable
@@ -66,7 +66,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("appliedCategories");
     }
     /**
-     * Gets the archivalInfo property value. The archivalInfo property
+     * Gets the archivalInfo property value. Information about who archived or unarchived the task and why.
      * @return a {@link PlannerArchivalInfo}
      */
     @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("archivalInfo");
     }
     /**
-     * Gets the assignments property value. The assignments property
+     * Gets the assignments property value. The set of assignees the task is assigned to.
      * @return a {@link PlannerAssignments}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore;
     }
     /**
-     * Gets the bucketId property value. The bucketId property
+     * Gets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the same plan as the task.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -98,7 +98,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("bucketId");
     }
     /**
-     * Gets the checklistItemCount property value. The checklistItemCount property
+     * Gets the checklistItemCount property value. The number of checklist items that are present on the task.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -106,7 +106,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("checklistItemCount");
     }
     /**
-     * Gets the completedBy property value. The completedBy property
+     * Gets the completedBy property value. The identity of the user that completed the task.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -114,7 +114,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("completedBy");
     }
     /**
-     * Gets the completedDateTime property value. The completedDateTime property
+     * Gets the completedDateTime property value. The date and time at which the percentComplete of the task is set to 100. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -122,7 +122,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("completedDateTime");
     }
     /**
-     * Gets the conversationThreadId property value. The conversationThreadId property
+     * Gets the conversationThreadId property value. The thread ID of the conversation on the task that corresponds to the ID of the conversation thread object created in the group.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -130,7 +130,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("conversationThreadId");
     }
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. The identity of the user who created the task.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -138,7 +138,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time at which the task was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -146,7 +146,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the creationSource property value. The creationSource property
+     * Gets the creationSource property value. Information about the origin of the task.
      * @return a {@link PlannerTaskCreation}
      */
     @jakarta.annotation.Nullable
@@ -154,7 +154,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("creationSource");
     }
     /**
-     * Gets the details property value. The details property
+     * Gets the details property value. Additional details about the task.
      * @return a {@link PlannerTaskDetailsData}
      */
     @jakarta.annotation.Nullable
@@ -162,7 +162,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("details");
     }
     /**
-     * Gets the dueDateTime property value. The dueDateTime property
+     * Gets the dueDateTime property value. The date and time at which the task is due. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -206,7 +206,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return deserializerMap;
     }
     /**
-     * Gets the hasChat property value. The hasChat property
+     * Gets the hasChat property value. Set to true if the task has a chat associated with it; otherwise, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -214,7 +214,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("hasChat");
     }
     /**
-     * Gets the hasDescription property value. The hasDescription property
+     * Gets the hasDescription property value. Set to true if the details object of the task has a nonempty description; otherwise, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -222,7 +222,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("hasDescription");
     }
     /**
-     * Gets the isArchived property value. The isArchived property
+     * Gets the isArchived property value. Set to true if the task is archived; otherwise, false.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -238,7 +238,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the orderHint property value. The orderHint property
+     * Gets the orderHint property value. Hint used to order items of this type in a list view.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -246,7 +246,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("orderHint");
     }
     /**
-     * Gets the percentComplete property value. The percentComplete property
+     * Gets the percentComplete property value. Percentage of task completion. When set to 100, the task is considered completed.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -262,7 +262,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("previewType");
     }
     /**
-     * Gets the priority property value. The priority property
+     * Gets the priority property value. The priority of the task. Valid values are between 0 and 10, inclusive. Larger values indicate lower priority. For example, 0 has the highest priority and 10 has the lowest priority.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -270,7 +270,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("priority");
     }
     /**
-     * Gets the recurrence property value. The recurrence property
+     * Gets the recurrence property value. Defines active or inactive recurrence for the task. A null value indicates that the recurrence was never defined for the task.
      * @return a {@link PlannerTaskRecurrence}
      */
     @jakarta.annotation.Nullable
@@ -278,7 +278,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("recurrence");
     }
     /**
-     * Gets the referenceCount property value. The referenceCount property
+     * Gets the referenceCount property value. Number of external references that exist on the task.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -294,7 +294,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("specifiedCompletionRequirements");
     }
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. The date and time at which the task starts. The date and time information uses ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -302,7 +302,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         return this.backingStore.get("startDateTime");
     }
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. Title of the task.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -345,7 +345,7 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the activeChecklistItemCount property value. The activeChecklistItemCount property
+     * Sets the activeChecklistItemCount property value. The number of incomplete checklist items whose value is set to false.
      * @param value Value to set for the activeChecklistItemCount property.
      */
     public void setActiveChecklistItemCount(@jakarta.annotation.Nullable final Integer value) {
@@ -359,21 +359,21 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("additionalData", value);
     }
     /**
-     * Sets the appliedCategories property value. The appliedCategories property
+     * Sets the appliedCategories property value. The categories to which the task is applied.
      * @param value Value to set for the appliedCategories property.
      */
     public void setAppliedCategories(@jakarta.annotation.Nullable final PlannerAppliedCategories value) {
         this.backingStore.set("appliedCategories", value);
     }
     /**
-     * Sets the archivalInfo property value. The archivalInfo property
+     * Sets the archivalInfo property value. Information about who archived or unarchived the task and why.
      * @param value Value to set for the archivalInfo property.
      */
     public void setArchivalInfo(@jakarta.annotation.Nullable final PlannerArchivalInfo value) {
         this.backingStore.set("archivalInfo", value);
     }
     /**
-     * Sets the assignments property value. The assignments property
+     * Sets the assignments property value. The set of assignees the task is assigned to.
      * @param value Value to set for the assignments property.
      */
     public void setAssignments(@jakarta.annotation.Nullable final PlannerAssignments value) {
@@ -388,91 +388,91 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore = value;
     }
     /**
-     * Sets the bucketId property value. The bucketId property
+     * Sets the bucketId property value. Bucket ID to which the task belongs. The bucket needs to be in the same plan as the task.
      * @param value Value to set for the bucketId property.
      */
     public void setBucketId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("bucketId", value);
     }
     /**
-     * Sets the checklistItemCount property value. The checklistItemCount property
+     * Sets the checklistItemCount property value. The number of checklist items that are present on the task.
      * @param value Value to set for the checklistItemCount property.
      */
     public void setChecklistItemCount(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("checklistItemCount", value);
     }
     /**
-     * Sets the completedBy property value. The completedBy property
+     * Sets the completedBy property value. The identity of the user that completed the task.
      * @param value Value to set for the completedBy property.
      */
     public void setCompletedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("completedBy", value);
     }
     /**
-     * Sets the completedDateTime property value. The completedDateTime property
+     * Sets the completedDateTime property value. The date and time at which the percentComplete of the task is set to 100. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the completedDateTime property.
      */
     public void setCompletedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("completedDateTime", value);
     }
     /**
-     * Sets the conversationThreadId property value. The conversationThreadId property
+     * Sets the conversationThreadId property value. The thread ID of the conversation on the task that corresponds to the ID of the conversation thread object created in the group.
      * @param value Value to set for the conversationThreadId property.
      */
     public void setConversationThreadId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("conversationThreadId", value);
     }
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. The identity of the user who created the task.
      * @param value Value to set for the createdBy property.
      */
     public void setCreatedBy(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time at which the task was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the creationSource property value. The creationSource property
+     * Sets the creationSource property value. Information about the origin of the task.
      * @param value Value to set for the creationSource property.
      */
     public void setCreationSource(@jakarta.annotation.Nullable final PlannerTaskCreation value) {
         this.backingStore.set("creationSource", value);
     }
     /**
-     * Sets the details property value. The details property
+     * Sets the details property value. Additional details about the task.
      * @param value Value to set for the details property.
      */
     public void setDetails(@jakarta.annotation.Nullable final PlannerTaskDetailsData value) {
         this.backingStore.set("details", value);
     }
     /**
-     * Sets the dueDateTime property value. The dueDateTime property
+     * Sets the dueDateTime property value. The date and time at which the task is due. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("dueDateTime", value);
     }
     /**
-     * Sets the hasChat property value. The hasChat property
+     * Sets the hasChat property value. Set to true if the task has a chat associated with it; otherwise, false.
      * @param value Value to set for the hasChat property.
      */
     public void setHasChat(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hasChat", value);
     }
     /**
-     * Sets the hasDescription property value. The hasDescription property
+     * Sets the hasDescription property value. Set to true if the details object of the task has a nonempty description; otherwise, false.
      * @param value Value to set for the hasDescription property.
      */
     public void setHasDescription(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("hasDescription", value);
     }
     /**
-     * Sets the isArchived property value. The isArchived property
+     * Sets the isArchived property value. Set to true if the task is archived; otherwise, false.
      * @param value Value to set for the isArchived property.
      */
     public void setIsArchived(@jakarta.annotation.Nullable final Boolean value) {
@@ -486,14 +486,14 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the orderHint property value. The orderHint property
+     * Sets the orderHint property value. Hint used to order items of this type in a list view.
      * @param value Value to set for the orderHint property.
      */
     public void setOrderHint(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("orderHint", value);
     }
     /**
-     * Sets the percentComplete property value. The percentComplete property
+     * Sets the percentComplete property value. Percentage of task completion. When set to 100, the task is considered completed.
      * @param value Value to set for the percentComplete property.
      */
     public void setPercentComplete(@jakarta.annotation.Nullable final Integer value) {
@@ -507,21 +507,21 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("previewType", value);
     }
     /**
-     * Sets the priority property value. The priority property
+     * Sets the priority property value. The priority of the task. Valid values are between 0 and 10, inclusive. Larger values indicate lower priority. For example, 0 has the highest priority and 10 has the lowest priority.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("priority", value);
     }
     /**
-     * Sets the recurrence property value. The recurrence property
+     * Sets the recurrence property value. Defines active or inactive recurrence for the task. A null value indicates that the recurrence was never defined for the task.
      * @param value Value to set for the recurrence property.
      */
     public void setRecurrence(@jakarta.annotation.Nullable final PlannerTaskRecurrence value) {
         this.backingStore.set("recurrence", value);
     }
     /**
-     * Sets the referenceCount property value. The referenceCount property
+     * Sets the referenceCount property value. Number of external references that exist on the task.
      * @param value Value to set for the referenceCount property.
      */
     public void setReferenceCount(@jakarta.annotation.Nullable final Integer value) {
@@ -535,14 +535,14 @@ public class PlannerTaskData implements AdditionalDataHolder, BackedModel, Parsa
         this.backingStore.set("specifiedCompletionRequirements", value);
     }
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. The date and time at which the task starts. The date and time information uses ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
      * @param value Value to set for the startDateTime property.
      */
     public void setStartDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("startDateTime", value);
     }
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. Title of the task.
      * @param value Value to set for the title property.
      */
     public void setTitle(@jakarta.annotation.Nullable final String value) {

@@ -68,7 +68,7 @@ public class ApiUsageReportEnablementStatus implements AdditionalDataHolder, Bac
         return deserializerMap;
     }
     /**
-     * Gets the metric property value. The name of the API usage report metric. Currently, only EgressReport is supported.
+     * Gets the metric property value. The name of the API usage report metric. The supported values are: egressReport, throttlingReport.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class ApiUsageReportEnablementStatus implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
-     * Sets the metric property value. The name of the API usage report metric. Currently, only EgressReport is supported.
+     * Sets the metric property value. The name of the API usage report metric. The supported values are: egressReport, throttlingReport.
      * @param value Value to set for the metric property.
      */
     public void setMetric(@jakarta.annotation.Nullable final String value) {
