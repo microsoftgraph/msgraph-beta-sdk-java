@@ -33,7 +33,7 @@ public class PlannerHistoryItem extends PlannerDelta implements Parsable {
         return new PlannerHistoryItem();
     }
     /**
-     * Gets the actor property value. The actor property
+     * Gets the actor property value. The identity of the user or application that performed the change.
      * @return a {@link IdentitySet}
      */
     @jakarta.annotation.Nullable
@@ -41,7 +41,7 @@ public class PlannerHistoryItem extends PlannerDelta implements Parsable {
         return this.backingStore.get("actor");
     }
     /**
-     * Gets the entityId property value. The entityId property
+     * Gets the entityId property value. The ID of the entity that was changed.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class PlannerHistoryItem extends PlannerDelta implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the occurredDateTime property value. The occurredDateTime property
+     * Gets the occurredDateTime property value. The date and time when the change occurred. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -88,7 +88,7 @@ public class PlannerHistoryItem extends PlannerDelta implements Parsable {
         return this.backingStore.get("occurredDateTime");
     }
     /**
-     * Gets the planId property value. The planId property
+     * Gets the planId property value. The ID of the plan that contains the changed entity.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -110,14 +110,14 @@ public class PlannerHistoryItem extends PlannerDelta implements Parsable {
         writer.writeStringValue("planId", this.getPlanId());
     }
     /**
-     * Sets the actor property value. The actor property
+     * Sets the actor property value. The identity of the user or application that performed the change.
      * @param value Value to set for the actor property.
      */
     public void setActor(@jakarta.annotation.Nullable final IdentitySet value) {
         this.backingStore.set("actor", value);
     }
     /**
-     * Sets the entityId property value. The entityId property
+     * Sets the entityId property value. The ID of the entity that was changed.
      * @param value Value to set for the entityId property.
      */
     public void setEntityId(@jakarta.annotation.Nullable final String value) {
@@ -138,14 +138,14 @@ public class PlannerHistoryItem extends PlannerDelta implements Parsable {
         this.backingStore.set("eventType", value);
     }
     /**
-     * Sets the occurredDateTime property value. The occurredDateTime property
+     * Sets the occurredDateTime property value. The date and time when the change occurred. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the occurredDateTime property.
      */
     public void setOccurredDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("occurredDateTime", value);
     }
     /**
-     * Sets the planId property value. The planId property
+     * Sets the planId property value. The ID of the plan that contains the changed entity.
      * @param value Value to set for the planId property.
      */
     public void setPlanId(@jakarta.annotation.Nullable final String value) {

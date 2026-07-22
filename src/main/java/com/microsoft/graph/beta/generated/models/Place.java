@@ -85,6 +85,7 @@ public class Place extends Entity implements Parsable {
         deserializerMap.put("label", (n) -> { this.setLabel(n.getStringValue()); });
         deserializerMap.put("parentId", (n) -> { this.setParentId(n.getStringValue()); });
         deserializerMap.put("phone", (n) -> { this.setPhone(n.getStringValue()); });
+        deserializerMap.put("placeId", (n) -> { this.setPlaceId(n.getStringValue()); });
         deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfPrimitiveValues(String.class)); });
         return deserializerMap;
     }
@@ -129,6 +130,14 @@ public class Place extends Entity implements Parsable {
         return this.backingStore.get("phone");
     }
     /**
+     * Gets the placeId property value. A stable service-level identifier for the place object used by Places workloads.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getPlaceId() {
+        return this.backingStore.get("placeId");
+    }
+    /**
      * Gets the tags property value. Custom tags that are associated with the place for categorization or filtering.
      * @return a {@link java.util.List<String>}
      */
@@ -152,6 +161,7 @@ public class Place extends Entity implements Parsable {
         writer.writeStringValue("label", this.getLabel());
         writer.writeStringValue("parentId", this.getParentId());
         writer.writeStringValue("phone", this.getPhone());
+        writer.writeStringValue("placeId", this.getPlaceId());
         writer.writeCollectionOfPrimitiveValues("tags", this.getTags());
     }
     /**
@@ -216,6 +226,13 @@ public class Place extends Entity implements Parsable {
      */
     public void setPhone(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("phone", value);
+    }
+    /**
+     * Sets the placeId property value. A stable service-level identifier for the place object used by Places workloads.
+     * @param value Value to set for the placeId property.
+     */
+    public void setPlaceId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("placeId", value);
     }
     /**
      * Sets the tags property value. Custom tags that are associated with the place for categorization or filtering.

@@ -67,7 +67,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
         return this.backingStore.get("ramInGB");
     }
     /**
-     * Gets the storageInGB property value. The size of the OS Disk in GB. Read-only.
+     * Gets the storageInGB property value. The size of the operating system disk in GB. Read-only.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -144,7 +144,7 @@ public class CloudPcServicePlan extends Entity implements Parsable {
         this.backingStore.set("ramInGB", value);
     }
     /**
-     * Sets the storageInGB property value. The size of the OS Disk in GB. Read-only.
+     * Sets the storageInGB property value. The size of the operating system disk in GB. Read-only.
      * @param value Value to set for the storageInGB property.
      */
     public void setStorageInGB(@jakarta.annotation.Nullable final Integer value) {

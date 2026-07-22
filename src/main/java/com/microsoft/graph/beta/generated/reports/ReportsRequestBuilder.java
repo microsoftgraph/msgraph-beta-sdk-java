@@ -47,9 +47,9 @@ import com.microsoft.graph.beta.reports.getmailboxusagedetailwithperiod.GetMailb
 import com.microsoft.graph.beta.reports.getmailboxusagemailboxcountswithperiod.GetMailboxUsageMailboxCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getmailboxusagequotastatusmailboxcountswithperiod.GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder;
 import com.microsoft.graph.beta.reports.getmailboxusagestoragewithperiod.GetMailboxUsageStorageWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getmicrosoft365copilotusageuserdetailwithperiod.GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercountsummarywithperiod.GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder;
-import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercounttrendwithperiod.GetMicrosoft365CopilotUserCountTrendWithPeriodRequestBuilder;
+import com.microsoft.graph.beta.reports.getmicrosoft365copilotusageuserdetailwithperiodwithversion.GetMicrosoft365CopilotUsageUserDetailWithPeriodWithVersionRequestBuilder;
+import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercountsummarywithperiodwithversion.GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder;
+import com.microsoft.graph.beta.reports.getmicrosoft365copilotusercounttrendwithperiodwithversion.GetMicrosoft365CopilotUserCountTrendWithPeriodWithVersionRequestBuilder;
 import com.microsoft.graph.beta.reports.getoffice365activationcounts.GetOffice365ActivationCountsRequestBuilder;
 import com.microsoft.graph.beta.reports.getoffice365activationsusercounts.GetOffice365ActivationsUserCountsRequestBuilder;
 import com.microsoft.graph.beta.reports.getoffice365activationsuserdetail.GetOffice365ActivationsUserDetailRequestBuilder;
@@ -786,32 +786,38 @@ public class ReportsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getMicrosoft365CopilotUsageUserDetail method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder}
+     * @param version Usage: version=&apos;{version}&apos;
+     * @return a {@link GetMicrosoft365CopilotUsageUserDetailWithPeriodWithVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder getMicrosoft365CopilotUsageUserDetailWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetMicrosoft365CopilotUsageUserDetailWithPeriodWithVersionRequestBuilder getMicrosoft365CopilotUsageUserDetailWithPeriodWithVersion(@jakarta.annotation.Nonnull final String period, @jakarta.annotation.Nonnull final String version) {
         Objects.requireNonNull(period);
-        return new GetMicrosoft365CopilotUsageUserDetailWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        Objects.requireNonNull(version);
+        return new GetMicrosoft365CopilotUsageUserDetailWithPeriodWithVersionRequestBuilder(pathParameters, requestAdapter, period, version);
     }
     /**
      * Provides operations to call the getMicrosoft365CopilotUserCountSummary method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder}
+     * @param version Usage: version=&apos;{version}&apos;
+     * @return a {@link GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder getMicrosoft365CopilotUserCountSummaryWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder getMicrosoft365CopilotUserCountSummaryWithPeriodWithVersion(@jakarta.annotation.Nonnull final String period, @jakarta.annotation.Nonnull final String version) {
         Objects.requireNonNull(period);
-        return new GetMicrosoft365CopilotUserCountSummaryWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        Objects.requireNonNull(version);
+        return new GetMicrosoft365CopilotUserCountSummaryWithPeriodWithVersionRequestBuilder(pathParameters, requestAdapter, period, version);
     }
     /**
      * Provides operations to call the getMicrosoft365CopilotUserCountTrend method.
      * @param period Usage: period=&apos;{period}&apos;
-     * @return a {@link GetMicrosoft365CopilotUserCountTrendWithPeriodRequestBuilder}
+     * @param version Usage: version=&apos;{version}&apos;
+     * @return a {@link GetMicrosoft365CopilotUserCountTrendWithPeriodWithVersionRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GetMicrosoft365CopilotUserCountTrendWithPeriodRequestBuilder getMicrosoft365CopilotUserCountTrendWithPeriod(@jakarta.annotation.Nonnull final String period) {
+    public GetMicrosoft365CopilotUserCountTrendWithPeriodWithVersionRequestBuilder getMicrosoft365CopilotUserCountTrendWithPeriodWithVersion(@jakarta.annotation.Nonnull final String period, @jakarta.annotation.Nonnull final String version) {
         Objects.requireNonNull(period);
-        return new GetMicrosoft365CopilotUserCountTrendWithPeriodRequestBuilder(pathParameters, requestAdapter, period);
+        Objects.requireNonNull(version);
+        return new GetMicrosoft365CopilotUserCountTrendWithPeriodWithVersionRequestBuilder(pathParameters, requestAdapter, period, version);
     }
     /**
      * Provides operations to call the getOffice365ActiveUserCounts method.

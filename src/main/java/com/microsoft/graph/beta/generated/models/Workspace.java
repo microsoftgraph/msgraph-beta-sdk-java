@@ -72,7 +72,6 @@ public class Workspace extends Place implements Parsable {
         deserializerMap.put("floorNumber", (n) -> { this.setFloorNumber(n.getIntegerValue()); });
         deserializerMap.put("mode", (n) -> { this.setMode(n.getObjectValue(PlaceMode::createFromDiscriminatorValue)); });
         deserializerMap.put("nickname", (n) -> { this.setNickname(n.getStringValue()); });
-        deserializerMap.put("placeId", (n) -> { this.setPlaceId(n.getStringValue()); });
         return deserializerMap;
     }
     /**
@@ -108,14 +107,6 @@ public class Workspace extends Place implements Parsable {
         return this.backingStore.get("nickname");
     }
     /**
-     * Gets the placeId property value. The placeId property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getPlaceId() {
-        return this.backingStore.get("placeId");
-    }
-    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -130,7 +121,6 @@ public class Workspace extends Place implements Parsable {
         writer.writeIntegerValue("floorNumber", this.getFloorNumber());
         writer.writeObjectValue("mode", this.getMode());
         writer.writeStringValue("nickname", this.getNickname());
-        writer.writeStringValue("placeId", this.getPlaceId());
     }
     /**
      * Sets the building property value. The name or identifier of the building where the workspace is located.
@@ -187,12 +177,5 @@ public class Workspace extends Place implements Parsable {
      */
     public void setNickname(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("nickname", value);
-    }
-    /**
-     * Sets the placeId property value. The placeId property
-     * @param value Value to set for the placeId property.
-     */
-    public void setPlaceId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("placeId", value);
     }
 }

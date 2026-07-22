@@ -38,19 +38,21 @@ public class RetrieveOrganizationActionDetailWithActionTypeRequestBuilder extend
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/retrieveOrganizationActionDetail(actionType='{actionType}')", rawUrl);
     }
     /**
-     * Invoke function retrieveOrganizationActionDetail
+     * Retrieve the details of a cloudPcOrganizationActionDetail.
      * @return a {@link CloudPcOrganizationActionDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-retrieveorganizationactiondetail?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOrganizationActionDetail get() {
         return get(null);
     }
     /**
-     * Invoke function retrieveOrganizationActionDetail
+     * Retrieve the details of a cloudPcOrganizationActionDetail.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcOrganizationActionDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-retrieveorganizationactiondetail?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOrganizationActionDetail get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
@@ -60,7 +62,7 @@ public class RetrieveOrganizationActionDetailWithActionTypeRequestBuilder extend
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcOrganizationActionDetail::createFromDiscriminatorValue);
     }
     /**
-     * Invoke function retrieveOrganizationActionDetail
+     * Retrieve the details of a cloudPcOrganizationActionDetail.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +70,7 @@ public class RetrieveOrganizationActionDetailWithActionTypeRequestBuilder extend
         return toGetRequestInformation(null);
     }
     /**
-     * Invoke function retrieveOrganizationActionDetail
+     * Retrieve the details of a cloudPcOrganizationActionDetail.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

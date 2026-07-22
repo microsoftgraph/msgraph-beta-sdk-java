@@ -19,6 +19,7 @@ import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.enablelos
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.enrollnowaction.EnrollNowActionRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.getfilevaultkey.GetFileVaultKeyRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.getnoncompliantsettings.GetNonCompliantSettingsRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.getsyncstatus.GetSyncStatusRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.initiatedeviceattestation.InitiateDeviceAttestationRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.initiatemobiledevicemanagementkeyrecovery.InitiateMobileDeviceManagementKeyRecoveryRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.initiateondemandproactiveremediation.InitiateOnDemandProactiveRemediationRequestBuilder;
@@ -33,6 +34,7 @@ import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.rebootnow
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.recoverpasscode.RecoverPasscodeRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.reenable.ReenableRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.remotelock.RemoteLockRequestBuilder;
+import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.removedeviceesim.RemoveDeviceEsimRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.removedevicefirmwareconfigurationinterfacemanagement.RemoveDeviceFirmwareConfigurationInterfaceManagementRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.requestremoteassistance.RequestRemoteAssistanceRequestBuilder;
 import com.microsoft.graph.beta.devicemanagement.comanageddevices.item.resetpasscode.ResetPasscodeRequestBuilder;
@@ -232,6 +234,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
         return new GetNonCompliantSettingsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the getSyncStatus method.
+     * @return a {@link GetSyncStatusRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetSyncStatusRequestBuilder getSyncStatus() {
+        return new GetSyncStatusRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the initiateDeviceAttestation method.
      * @return a {@link InitiateDeviceAttestationRequestBuilder}
      */
@@ -342,6 +352,14 @@ public class ManagedDeviceItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RemoteLockRequestBuilder remoteLock() {
         return new RemoteLockRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the removeDeviceEsim method.
+     * @return a {@link RemoveDeviceEsimRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveDeviceEsimRequestBuilder removeDeviceEsim() {
+        return new RemoveDeviceEsimRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the removeDeviceFirmwareConfigurationInterfaceManagement method.

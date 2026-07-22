@@ -36,21 +36,23 @@ public class OrganizationActionRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/deviceManagement/virtualEndpoint/organizationAction", rawUrl);
     }
     /**
-     * Invoke action organizationAction
+     * Trigger a Cloud PC organization action.
      * @param body The request body
      * @return a {@link CloudPcOrganizationActionDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-organizationaction?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOrganizationActionDetail post(@jakarta.annotation.Nonnull final OrganizationActionPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action organizationAction
+     * Trigger a Cloud PC organization action.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CloudPcOrganizationActionDetail}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/cloudpc-organizationaction?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public CloudPcOrganizationActionDetail post(@jakarta.annotation.Nonnull final OrganizationActionPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class OrganizationActionRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CloudPcOrganizationActionDetail::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action organizationAction
+     * Trigger a Cloud PC organization action.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class OrganizationActionRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action organizationAction
+     * Trigger a Cloud PC organization action.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

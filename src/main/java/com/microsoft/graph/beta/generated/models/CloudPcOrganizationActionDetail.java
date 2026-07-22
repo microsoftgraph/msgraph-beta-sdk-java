@@ -56,7 +56,7 @@ public class CloudPcOrganizationActionDetail implements AdditionalDataHolder, Ba
         return this.backingStore;
     }
     /**
-     * Gets the errorDescription property value. The errorDescription property
+     * Gets the errorDescription property value. More user-friendly error details. For example, Activation failed due to invalid billing plan.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class CloudPcOrganizationActionDetail implements AdditionalDataHolder, Ba
         this.backingStore = value;
     }
     /**
-     * Sets the errorDescription property value. The errorDescription property
+     * Sets the errorDescription property value. More user-friendly error details. For example, Activation failed due to invalid billing plan.
      * @param value Value to set for the errorDescription property.
      */
     public void setErrorDescription(@jakarta.annotation.Nullable final String value) {

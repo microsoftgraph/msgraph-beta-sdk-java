@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.security.alerts_v2.AlertsV2RequestBuilder;
 import com.microsoft.graph.beta.security.alerts.AlertsRequestBuilder;
 import com.microsoft.graph.beta.security.attacksimulation.AttackSimulationRequestBuilder;
 import com.microsoft.graph.beta.security.auditlog.AuditLogRequestBuilder;
+import com.microsoft.graph.beta.security.casemanagement.CaseManagementRequestBuilder;
 import com.microsoft.graph.beta.security.cases.CasesRequestBuilder;
 import com.microsoft.graph.beta.security.cloudappsecurityprofiles.CloudAppSecurityProfilesRequestBuilder;
 import com.microsoft.graph.beta.security.collaboration.CollaborationRequestBuilder;
@@ -87,6 +88,14 @@ public class SecurityRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public AuditLogRequestBuilder auditLog() {
         return new AuditLogRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the caseManagement property of the microsoft.graph.security entity.
+     * @return a {@link CaseManagementRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CaseManagementRequestBuilder caseManagement() {
+        return new CaseManagementRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the cases property of the microsoft.graph.security entity.

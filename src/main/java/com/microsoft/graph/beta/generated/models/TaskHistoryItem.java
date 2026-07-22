@@ -37,7 +37,7 @@ public class TaskHistoryItem extends PlannerHistoryItem implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the newData property value. The newData property
+     * Gets the newData property value. A snapshot of the task state after the change. This property is null for deletion events.
      * @return a {@link PlannerTaskData}
      */
     @jakarta.annotation.Nullable
@@ -45,7 +45,7 @@ public class TaskHistoryItem extends PlannerHistoryItem implements Parsable {
         return this.backingStore.get("newData");
     }
     /**
-     * Gets the oldData property value. The oldData property
+     * Gets the oldData property value. A snapshot of the task state before the change. This property is null for creation and undeletion events.
      * @return a {@link PlannerTaskData}
      */
     @jakarta.annotation.Nullable
@@ -63,14 +63,14 @@ public class TaskHistoryItem extends PlannerHistoryItem implements Parsable {
         writer.writeObjectValue("oldData", this.getOldData());
     }
     /**
-     * Sets the newData property value. The newData property
+     * Sets the newData property value. A snapshot of the task state after the change. This property is null for deletion events.
      * @param value Value to set for the newData property.
      */
     public void setNewData(@jakarta.annotation.Nullable final PlannerTaskData value) {
         this.backingStore.set("newData", value);
     }
     /**
-     * Sets the oldData property value. The oldData property
+     * Sets the oldData property value. A snapshot of the task state before the change. This property is null for creation and undeletion events.
      * @param value Value to set for the oldData property.
      */
     public void setOldData(@jakarta.annotation.Nullable final PlannerTaskData value) {

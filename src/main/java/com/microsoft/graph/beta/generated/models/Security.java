@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.graph.beta.models.partner.security.PartnerSecurity;
 import com.microsoft.graph.beta.models.security.Alert;
 import com.microsoft.graph.beta.models.security.AuditCoreRoot;
+import com.microsoft.graph.beta.models.security.CaseManagementRoot;
 import com.microsoft.graph.beta.models.security.CasesRoot;
 import com.microsoft.graph.beta.models.security.CollaborationRoot;
 import com.microsoft.graph.beta.models.security.DataDiscoveryRoot;
@@ -108,6 +109,14 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
+     * Gets the caseManagement property value. The entry point for security case management APIs, including cases, tasks, activities, relations, and attachments.
+     * @return a {@link CaseManagementRoot}
+     */
+    @jakarta.annotation.Nullable
+    public CaseManagementRoot getCaseManagement() {
+        return this.backingStore.get("caseManagement");
+    }
+    /**
      * Gets the cases property value. The cases property
      * @return a {@link CasesRoot}
      */
@@ -161,11 +170,12 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(34);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(35);
         deserializerMap.put("alerts", (n) -> { this.setAlerts(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("alerts_v2", (n) -> { this.setAlertsV2(n.getCollectionOfObjectValues(Alert::createFromDiscriminatorValue)); });
         deserializerMap.put("attackSimulation", (n) -> { this.setAttackSimulation(n.getObjectValue(AttackSimulationRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("auditLog", (n) -> { this.setAuditLog(n.getObjectValue(AuditCoreRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("caseManagement", (n) -> { this.setCaseManagement(n.getObjectValue(CaseManagementRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cases", (n) -> { this.setCases(n.getObjectValue(CasesRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("cloudAppSecurityProfiles", (n) -> { this.setCloudAppSecurityProfiles(n.getCollectionOfObjectValues(CloudAppSecurityProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("collaboration", (n) -> { this.setCollaboration(n.getObjectValue(CollaborationRoot::createFromDiscriminatorValue)); });
@@ -400,6 +410,7 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
         writer.writeCollectionOfObjectValues("alerts_v2", this.getAlertsV2());
         writer.writeObjectValue("attackSimulation", this.getAttackSimulation());
         writer.writeObjectValue("auditLog", this.getAuditLog());
+        writer.writeObjectValue("caseManagement", this.getCaseManagement());
         writer.writeObjectValue("cases", this.getCases());
         writer.writeCollectionOfObjectValues("cloudAppSecurityProfiles", this.getCloudAppSecurityProfiles());
         writer.writeObjectValue("collaboration", this.getCollaboration());
@@ -474,6 +485,13 @@ public class Security implements AdditionalDataHolder, BackedModel, Parsable {
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the caseManagement property value. The entry point for security case management APIs, including cases, tasks, activities, relations, and attachments.
+     * @param value Value to set for the caseManagement property.
+     */
+    public void setCaseManagement(@jakarta.annotation.Nullable final CaseManagementRoot value) {
+        this.backingStore.set("caseManagement", value);
     }
     /**
      * Sets the cases property value. The cases property
