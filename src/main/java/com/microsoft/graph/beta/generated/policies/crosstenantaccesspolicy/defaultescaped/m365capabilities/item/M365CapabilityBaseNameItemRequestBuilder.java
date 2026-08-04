@@ -77,21 +77,23 @@ public class M365CapabilityBaseNameItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, M365CapabilityBase::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property m365Capabilities in policies
+     * Update an existing Microsoft 365 cross-tenant capability for the default cross-tenant access policy.
      * @param body The request body
      * @return a {@link M365CapabilityBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-update-m365capabilities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public M365CapabilityBase patch(@jakarta.annotation.Nonnull final M365CapabilityBase body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property m365Capabilities in policies
+     * Update an existing Microsoft 365 cross-tenant capability for the default cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link M365CapabilityBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-update-m365capabilities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public M365CapabilityBase patch(@jakarta.annotation.Nonnull final M365CapabilityBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -142,7 +144,7 @@ public class M365CapabilityBaseNameItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the navigation property m365Capabilities in policies
+     * Update an existing Microsoft 365 cross-tenant capability for the default cross-tenant access policy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +153,7 @@ public class M365CapabilityBaseNameItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property m365Capabilities in policies
+     * Update an existing Microsoft 365 cross-tenant capability for the default cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

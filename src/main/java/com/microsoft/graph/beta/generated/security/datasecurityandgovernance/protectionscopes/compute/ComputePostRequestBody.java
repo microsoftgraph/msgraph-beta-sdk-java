@@ -1,6 +1,7 @@
 package com.microsoft.graph.beta.security.datasecurityandgovernance.protectionscopes.compute;
 
 import com.microsoft.graph.beta.models.DeviceMetadata;
+import com.microsoft.graph.beta.models.EvaluationScope;
 import com.microsoft.graph.beta.models.IntegratedApplicationMetadata;
 import com.microsoft.graph.beta.models.PolicyLocation;
 import com.microsoft.graph.beta.models.PolicyPivotProperty;
@@ -78,14 +79,23 @@ public class ComputePostRequestBody implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("deviceMetadata");
     }
     /**
+     * Gets the evaluationScope property value. The evaluationScope property
+     * @return a {@link EvaluationScope}
+     */
+    @jakarta.annotation.Nullable
+    public EvaluationScope getEvaluationScope() {
+        return this.backingStore.get("evaluationScope");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("activities", (n) -> { this.setActivities(n.getEnumSetValue(UserActivityTypes::forValue)); });
         deserializerMap.put("deviceMetadata", (n) -> { this.setDeviceMetadata(n.getObjectValue(DeviceMetadata::createFromDiscriminatorValue)); });
+        deserializerMap.put("evaluationScope", (n) -> { this.setEvaluationScope(n.getObjectValue(EvaluationScope::createFromDiscriminatorValue)); });
         deserializerMap.put("integratedAppMetadata", (n) -> { this.setIntegratedAppMetadata(n.getObjectValue(IntegratedApplicationMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("locations", (n) -> { this.setLocations(n.getCollectionOfObjectValues(PolicyLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("pivotOn", (n) -> { this.setPivotOn(n.getEnumValue(PolicyPivotProperty::forValue)); });
@@ -123,6 +133,7 @@ public class ComputePostRequestBody implements AdditionalDataHolder, BackedModel
         Objects.requireNonNull(writer);
         writer.writeEnumSetValue("activities", this.getActivities());
         writer.writeObjectValue("deviceMetadata", this.getDeviceMetadata());
+        writer.writeObjectValue("evaluationScope", this.getEvaluationScope());
         writer.writeObjectValue("integratedAppMetadata", this.getIntegratedAppMetadata());
         writer.writeCollectionOfObjectValues("locations", this.getLocations());
         writer.writeEnumValue("pivotOn", this.getPivotOn());
@@ -156,6 +167,13 @@ public class ComputePostRequestBody implements AdditionalDataHolder, BackedModel
      */
     public void setDeviceMetadata(@jakarta.annotation.Nullable final DeviceMetadata value) {
         this.backingStore.set("deviceMetadata", value);
+    }
+    /**
+     * Sets the evaluationScope property value. The evaluationScope property
+     * @param value Value to set for the evaluationScope property.
+     */
+    public void setEvaluationScope(@jakarta.annotation.Nullable final EvaluationScope value) {
+        this.backingStore.set("evaluationScope", value);
     }
     /**
      * Sets the integratedAppMetadata property value. The integratedAppMetadata property

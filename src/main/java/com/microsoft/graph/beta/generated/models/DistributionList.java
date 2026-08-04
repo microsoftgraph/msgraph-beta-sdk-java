@@ -34,14 +34,6 @@ public class DistributionList extends OutlookItem implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
-     * Gets the distributionListMembers property value. The expanded members of the distribution list. Each member contains detailed information including resolved email addresses. Read-only.
-     * @return a {@link java.util.List<DistributionListMember>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<DistributionListMember> getDistributionListMembers() {
-        return this.backingStore.get("distributionListMembers");
-    }
-    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -49,7 +41,6 @@ public class DistributionList extends OutlookItem implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("distributionListMembers", (n) -> { this.setDistributionListMembers(n.getCollectionOfObjectValues(DistributionListMember::createFromDiscriminatorValue)); });
         deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(Member::createFromDiscriminatorValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
         deserializerMap.put("personIdentifier", (n) -> { this.setPersonIdentifier(n.getStringValue()); });
@@ -96,7 +87,6 @@ public class DistributionList extends OutlookItem implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeStringValue("displayName", this.getDisplayName());
-        writer.writeCollectionOfObjectValues("distributionListMembers", this.getDistributionListMembers());
         writer.writeCollectionOfObjectValues("members", this.getMembers());
         writer.writeStringValue("notes", this.getNotes());
         writer.writeStringValue("personIdentifier", this.getPersonIdentifier());
@@ -108,13 +98,6 @@ public class DistributionList extends OutlookItem implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
-    }
-    /**
-     * Sets the distributionListMembers property value. The expanded members of the distribution list. Each member contains detailed information including resolved email addresses. Read-only.
-     * @param value Value to set for the distributionListMembers property.
-     */
-    public void setDistributionListMembers(@jakarta.annotation.Nullable final java.util.List<DistributionListMember> value) {
-        this.backingStore.set("distributionListMembers", value);
     }
     /**
      * Sets the members property value. The list of members in the distribution list. Not returned by default; use $select=members to include.

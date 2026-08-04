@@ -38,6 +38,7 @@ public class PolicyLocation implements AdditionalDataHolder, BackedModel, Parsab
             switch (mappingValue) {
                 case "#microsoft.graph.policyLocationApplication": return new PolicyLocationApplication();
                 case "#microsoft.graph.policyLocationDomain": return new PolicyLocationDomain();
+                case "#microsoft.graph.policyLocationTool": return new PolicyLocationTool();
                 case "#microsoft.graph.policyLocationUrl": return new PolicyLocationUrl();
             }
         }

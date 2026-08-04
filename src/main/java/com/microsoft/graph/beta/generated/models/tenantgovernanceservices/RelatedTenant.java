@@ -83,7 +83,7 @@ public class RelatedTenant extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the isMicrosoftInfrastructure property value. Indicates whether this tenant is a Microsoft infrastructure tenant.
+     * Gets the isMicrosoftInfrastructure property value. Indicates whether the related tenant is a Microsoft infrastructure tenant. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class RelatedTenant extends Entity implements Parsable {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the isMicrosoftInfrastructure property value. Indicates whether this tenant is a Microsoft infrastructure tenant.
+     * Sets the isMicrosoftInfrastructure property value. Indicates whether the related tenant is a Microsoft infrastructure tenant. Read-only.
      * @param value Value to set for the isMicrosoftInfrastructure property.
      */
     public void setIsMicrosoftInfrastructure(@jakarta.annotation.Nullable final Boolean value) {

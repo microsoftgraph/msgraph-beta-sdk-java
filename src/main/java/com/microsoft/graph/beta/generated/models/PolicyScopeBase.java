@@ -86,13 +86,22 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
         deserializerMap.put("activities", (n) -> { this.setActivities(n.getEnumSetValue(UserActivityTypes::forValue)); });
         deserializerMap.put("executionMode", (n) -> { this.setExecutionMode(n.getEnumValue(ExecutionMode::forValue)); });
+        deserializerMap.put("locationExclusions", (n) -> { this.setLocationExclusions(n.getCollectionOfObjectValues(PolicyLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("locations", (n) -> { this.setLocations(n.getCollectionOfObjectValues(PolicyLocation::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("policyActions", (n) -> { this.setPolicyActions(n.getCollectionOfObjectValues(DlpActionInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the locationExclusions property value. The locationExclusions property
+     * @return a {@link java.util.List<PolicyLocation>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PolicyLocation> getLocationExclusions() {
+        return this.backingStore.get("locationExclusions");
     }
     /**
      * Gets the locations property value. The locations (like domains or URLs) to be protected. Required.
@@ -126,6 +135,7 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
         Objects.requireNonNull(writer);
         writer.writeEnumSetValue("activities", this.getActivities());
         writer.writeEnumValue("executionMode", this.getExecutionMode());
+        writer.writeCollectionOfObjectValues("locationExclusions", this.getLocationExclusions());
         writer.writeCollectionOfObjectValues("locations", this.getLocations());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeCollectionOfObjectValues("policyActions", this.getPolicyActions());
@@ -159,6 +169,13 @@ public class PolicyScopeBase implements AdditionalDataHolder, BackedModel, Parsa
      */
     public void setExecutionMode(@jakarta.annotation.Nullable final ExecutionMode value) {
         this.backingStore.set("executionMode", value);
+    }
+    /**
+     * Sets the locationExclusions property value. The locationExclusions property
+     * @param value Value to set for the locationExclusions property.
+     */
+    public void setLocationExclusions(@jakarta.annotation.Nullable final java.util.List<PolicyLocation> value) {
+        this.backingStore.set("locationExclusions", value);
     }
     /**
      * Sets the locations property value. The locations (like domains or URLs) to be protected. Required.

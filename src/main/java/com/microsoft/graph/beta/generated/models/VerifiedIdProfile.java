@@ -100,7 +100,7 @@ public class VerifiedIdProfile extends Entity implements Parsable {
         return this.backingStore.get("verifiedIdProfileConfiguration");
     }
     /**
-     * Gets the verifiedIdUsageConfigurations property value. Collection defining the usage purpose for the profile. The possible values are: recovery, onboarding, all, unknownFutureValue. Required.
+     * Gets the verifiedIdUsageConfigurations property value. Collection defining the usage purpose for the profile. The possible values are: recovery, onboarding, all, unknownFutureValue, verification. Use the Prefer: include-unknown-enum-members request header to get the following value from this evolvable enum: verification. Required.
      * @return a {@link java.util.List<VerifiedIdUsageConfiguration>}
      */
     @jakarta.annotation.Nullable
@@ -182,7 +182,7 @@ public class VerifiedIdProfile extends Entity implements Parsable {
         this.backingStore.set("verifiedIdProfileConfiguration", value);
     }
     /**
-     * Sets the verifiedIdUsageConfigurations property value. Collection defining the usage purpose for the profile. The possible values are: recovery, onboarding, all, unknownFutureValue. Required.
+     * Sets the verifiedIdUsageConfigurations property value. Collection defining the usage purpose for the profile. The possible values are: recovery, onboarding, all, unknownFutureValue, verification. Use the Prefer: include-unknown-enum-members request header to get the following value from this evolvable enum: verification. Required.
      * @param value Value to set for the verifiedIdUsageConfigurations property.
      */
     public void setVerifiedIdUsageConfigurations(@jakarta.annotation.Nullable final java.util.List<VerifiedIdUsageConfiguration> value) {
