@@ -27,10 +27,10 @@ public class ChatMessageInfo extends Entity implements Parsable {
     }
     /**
      * Gets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn&apos;t return @mentions and attachments.
-     * @return a {@link ItemBody}
+     * @return a {@link ChatMessageBody}
      */
     @jakarta.annotation.Nullable
-    public ItemBody getBody() {
+    public ChatMessageBody getBody() {
         return this.backingStore.get("body");
     }
     /**
@@ -56,7 +56,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
-        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ChatMessageBody::createFromDiscriminatorValue)); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("eventDetail", (n) -> { this.setEventDetail(n.getObjectValue(EventMessageDetail::createFromDiscriminatorValue)); });
         deserializerMap.put("from", (n) -> { this.setFrom(n.getObjectValue(ChatMessageFromIdentitySet::createFromDiscriminatorValue)); });
@@ -106,7 +106,7 @@ public class ChatMessageInfo extends Entity implements Parsable {
      * Sets the body property value. Body of the chatMessage. This will still contain markers for @mentions and attachments even though the object doesn&apos;t return @mentions and attachments.
      * @param value Value to set for the body property.
      */
-    public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
+    public void setBody(@jakarta.annotation.Nullable final ChatMessageBody value) {
         this.backingStore.set("body", value);
     }
     /**

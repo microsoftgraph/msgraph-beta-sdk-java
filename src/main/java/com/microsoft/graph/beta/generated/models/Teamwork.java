@@ -75,7 +75,7 @@ public class Teamwork extends Entity implements Parsable {
         return this.backingStore.get("isTeamsEnabled");
     }
     /**
-     * Gets the messaging property value. The messaging property
+     * Gets the messaging property value. The messaging functionality, including custom emojis.
      * @return a {@link TeamworkMessaging}
      */
     @jakarta.annotation.Nullable
@@ -160,7 +160,7 @@ public class Teamwork extends Entity implements Parsable {
         this.backingStore.set("isTeamsEnabled", value);
     }
     /**
-     * Sets the messaging property value. The messaging property
+     * Sets the messaging property value. The messaging functionality, including custom emojis.
      * @param value Value to set for the messaging property.
      */
     public void setMessaging(@jakarta.annotation.Nullable final TeamworkMessaging value) {

@@ -25,6 +25,7 @@ public class BrowsePostRequestBody implements AdditionalDataHolder, BackedModel,
     public BrowsePostRequestBody() {
         this.backingStore = BackingStoreFactorySingleton.instance.createBackingStore();
         this.setAdditionalData(new HashMap<>());
+        this.setOptimizedBrowse(false);
     }
     /**
      * Creates a new instance of the appropriate class based on discriminator value
@@ -79,10 +80,11 @@ public class BrowsePostRequestBody implements AdditionalDataHolder, BackedModel,
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("browseLocationItemKey", (n) -> { this.setBrowseLocationItemKey(n.getStringValue()); });
         deserializerMap.put("browseResourceType", (n) -> { this.setBrowseResourceType(n.getEnumValue(BrowsableResourceType::forValue)); });
         deserializerMap.put("filter", (n) -> { this.setFilter(n.getStringValue()); });
+        deserializerMap.put("optimizedBrowse", (n) -> { this.setOptimizedBrowse(n.getBooleanValue()); });
         deserializerMap.put("orderBy", (n) -> { this.setOrderBy(n.getEnumValue(BrowseQueryOrder::forValue)); });
         return deserializerMap;
     }
@@ -93,6 +95,14 @@ public class BrowsePostRequestBody implements AdditionalDataHolder, BackedModel,
     @jakarta.annotation.Nullable
     public String getFilter() {
         return this.backingStore.get("filter");
+    }
+    /**
+     * Gets the optimizedBrowse property value. The optimizedBrowse property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getOptimizedBrowse() {
+        return this.backingStore.get("optimizedBrowse");
     }
     /**
      * Gets the orderBy property value. The orderBy property
@@ -111,6 +121,7 @@ public class BrowsePostRequestBody implements AdditionalDataHolder, BackedModel,
         writer.writeStringValue("browseLocationItemKey", this.getBrowseLocationItemKey());
         writer.writeEnumValue("browseResourceType", this.getBrowseResourceType());
         writer.writeStringValue("filter", this.getFilter());
+        writer.writeBooleanValue("optimizedBrowse", this.getOptimizedBrowse());
         writer.writeEnumValue("orderBy", this.getOrderBy());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -149,6 +160,13 @@ public class BrowsePostRequestBody implements AdditionalDataHolder, BackedModel,
      */
     public void setFilter(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("filter", value);
+    }
+    /**
+     * Sets the optimizedBrowse property value. The optimizedBrowse property
+     * @param value Value to set for the optimizedBrowse property.
+     */
+    public void setOptimizedBrowse(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("optimizedBrowse", value);
     }
     /**
      * Sets the orderBy property value. The orderBy property

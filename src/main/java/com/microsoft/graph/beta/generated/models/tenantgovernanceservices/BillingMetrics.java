@@ -33,6 +33,7 @@ public class BillingMetrics extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("initial", (n) -> { this.setInitial(n.getObjectValue(BillingMetricsInitial::createFromDiscriminatorValue)); });
+        deserializerMap.put("investigationHints", (n) -> { this.setInvestigationHints(n.getCollectionOfObjectValues(ActionStep::createFromDiscriminatorValue)); });
         deserializerMap.put("recent", (n) -> { this.setRecent(n.getObjectValue(BillingMetricsRecent::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
@@ -43,6 +44,14 @@ public class BillingMetrics extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public BillingMetricsInitial getInitial() {
         return this.backingStore.get("initial");
+    }
+    /**
+     * Gets the investigationHints property value. Ordered drill-in guidance for investigating billing relationship counts. This collection is returned only when explicitly requested by using a nested $expand query parameter, for example $expand=billingMetrics($expand=investigationHints).
+     * @return a {@link java.util.List<ActionStep>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ActionStep> getInvestigationHints() {
+        return this.backingStore.get("investigationHints");
     }
     /**
      * Gets the recent property value. The recent property
@@ -60,6 +69,7 @@ public class BillingMetrics extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("initial", this.getInitial());
+        writer.writeCollectionOfObjectValues("investigationHints", this.getInvestigationHints());
         writer.writeObjectValue("recent", this.getRecent());
     }
     /**
@@ -68,6 +78,13 @@ public class BillingMetrics extends Entity implements Parsable {
      */
     public void setInitial(@jakarta.annotation.Nullable final BillingMetricsInitial value) {
         this.backingStore.set("initial", value);
+    }
+    /**
+     * Sets the investigationHints property value. Ordered drill-in guidance for investigating billing relationship counts. This collection is returned only when explicitly requested by using a nested $expand query parameter, for example $expand=billingMetrics($expand=investigationHints).
+     * @param value Value to set for the investigationHints property.
+     */
+    public void setInvestigationHints(@jakarta.annotation.Nullable final java.util.List<ActionStep> value) {
+        this.backingStore.set("investigationHints", value);
     }
     /**
      * Sets the recent property value. The recent property

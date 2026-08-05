@@ -37,16 +37,18 @@ public class M365CapabilityBaseNameItemRequestBuilder extends BaseRequestBuilder
         super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/partners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}/m365Capabilities/{m365CapabilityBase%2Dname}{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Delete navigation property m365Capabilities for policies
+     * Delete a Microsoft 365 cross-tenant capability from a partner organization in the cross-tenant access policy.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete-m365capabilities?view=graph-rest-beta">Find more info here</a>
      */
     public void delete() {
         delete(null);
     }
     /**
-     * Delete navigation property m365Capabilities for policies
+     * Delete a Microsoft 365 cross-tenant capability from a partner organization in the cross-tenant access policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete-m365capabilities?view=graph-rest-beta">Find more info here</a>
      */
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
@@ -77,21 +79,23 @@ public class M365CapabilityBaseNameItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, M365CapabilityBase::createFromDiscriminatorValue);
     }
     /**
-     * Update the navigation property m365Capabilities in policies
+     * Update an existing Microsoft 365 cross-tenant capability for a partner organization in the cross-tenant access policy.
      * @param body The request body
      * @return a {@link M365CapabilityBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update-m365capabilities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public M365CapabilityBase patch(@jakarta.annotation.Nonnull final M365CapabilityBase body) {
         return patch(body, null);
     }
     /**
-     * Update the navigation property m365Capabilities in policies
+     * Update an existing Microsoft 365 cross-tenant capability for a partner organization in the cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link M365CapabilityBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update-m365capabilities?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public M365CapabilityBase patch(@jakarta.annotation.Nonnull final M365CapabilityBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
@@ -102,7 +106,7 @@ public class M365CapabilityBaseNameItemRequestBuilder extends BaseRequestBuilder
         return this.requestAdapter.send(requestInfo, errorMapping, M365CapabilityBase::createFromDiscriminatorValue);
     }
     /**
-     * Delete navigation property m365Capabilities for policies
+     * Delete a Microsoft 365 cross-tenant capability from a partner organization in the cross-tenant access policy.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -110,7 +114,7 @@ public class M365CapabilityBaseNameItemRequestBuilder extends BaseRequestBuilder
         return toDeleteRequestInformation(null);
     }
     /**
-     * Delete navigation property m365Capabilities for policies
+     * Delete a Microsoft 365 cross-tenant capability from a partner organization in the cross-tenant access policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -142,7 +146,7 @@ public class M365CapabilityBaseNameItemRequestBuilder extends BaseRequestBuilder
         return requestInfo;
     }
     /**
-     * Update the navigation property m365Capabilities in policies
+     * Update an existing Microsoft 365 cross-tenant capability for a partner organization in the cross-tenant access policy.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -151,7 +155,7 @@ public class M365CapabilityBaseNameItemRequestBuilder extends BaseRequestBuilder
         return toPatchRequestInformation(body, null);
     }
     /**
-     * Update the navigation property m365Capabilities in policies
+     * Update an existing Microsoft 365 cross-tenant capability for a partner organization in the cross-tenant access policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

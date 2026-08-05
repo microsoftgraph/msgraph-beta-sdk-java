@@ -35,7 +35,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         return new VerifiedIdProfileConfiguration();
     }
     /**
-     * Gets the acceptedIssuer property value. Trusted Verified ID issuer.
+     * Gets the acceptedIssuer property value. Trusted Verified ID issuer. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore;
     }
     /**
-     * Gets the claimBindings property value. Claim bindings from Verified ID to source attributes.
+     * Gets the claimBindings property value. Claim bindings from Verified ID to source attributes. Required.
      * @return a {@link java.util.List<ClaimBinding>}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the type property value. Verified ID type.
+     * Gets the type property value. Verified ID type. Required.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
-     * Sets the acceptedIssuer property value. Trusted Verified ID issuer.
+     * Sets the acceptedIssuer property value. Trusted Verified ID issuer. Required.
      * @param value Value to set for the acceptedIssuer property.
      */
     public void setAcceptedIssuer(@jakarta.annotation.Nullable final String value) {
@@ -155,7 +155,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         this.backingStore = value;
     }
     /**
-     * Sets the claimBindings property value. Claim bindings from Verified ID to source attributes.
+     * Sets the claimBindings property value. Claim bindings from Verified ID to source attributes. Required.
      * @param value Value to set for the claimBindings property.
      */
     public void setClaimBindings(@jakarta.annotation.Nullable final java.util.List<ClaimBinding> value) {
@@ -183,7 +183,7 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the type property value. Verified ID type.
+     * Sets the type property value. Verified ID type. Required.
      * @param value Value to set for the type property.
      */
     public void setType(@jakarta.annotation.Nullable final String value) {

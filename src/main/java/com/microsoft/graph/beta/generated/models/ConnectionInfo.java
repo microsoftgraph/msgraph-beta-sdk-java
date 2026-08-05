@@ -36,6 +36,7 @@ public class ConnectionInfo implements AdditionalDataHolder, BackedModel, Parsab
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.externalSapAcConnectionInfo": return new ExternalSapAcConnectionInfo();
                 case "#microsoft.graph.externalTokenBasedSapIagConnectionInfo": return new ExternalTokenBasedSapIagConnectionInfo();
             }
         }

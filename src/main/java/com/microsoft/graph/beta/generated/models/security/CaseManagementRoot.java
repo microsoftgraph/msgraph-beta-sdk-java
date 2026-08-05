@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.models.security;
 
 import com.microsoft.graph.beta.models.Entity;
 import com.microsoft.graph.beta.models.security.casemanagement.CaseEscaped;
+import com.microsoft.graph.beta.models.security.casemanagement.CaseTypeConfiguration;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -35,6 +36,14 @@ public class CaseManagementRoot extends Entity implements Parsable {
         return this.backingStore.get("cases");
     }
     /**
+     * Gets the caseTypeConfigurations property value. The collection of case type configurations that define the statuses and custom fields available for each case type. Read-only. Supports $select, $count, and $expand of the statuses and customFields relationships.
+     * @return a {@link java.util.List<CaseTypeConfiguration>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CaseTypeConfiguration> getCaseTypeConfigurations() {
+        return this.backingStore.get("caseTypeConfigurations");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -42,6 +51,7 @@ public class CaseManagementRoot extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("cases", (n) -> { this.setCases(n.getCollectionOfObjectValues(CaseEscaped::createFromDiscriminatorValue)); });
+        deserializerMap.put("caseTypeConfigurations", (n) -> { this.setCaseTypeConfigurations(n.getCollectionOfObjectValues(CaseTypeConfiguration::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -52,6 +62,7 @@ public class CaseManagementRoot extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("cases", this.getCases());
+        writer.writeCollectionOfObjectValues("caseTypeConfigurations", this.getCaseTypeConfigurations());
     }
     /**
      * Sets the cases property value. The collection of security cases managed through the case management entry point. Supports $filter, $orderby, $select, $top, $skip, and $count.
@@ -59,5 +70,12 @@ public class CaseManagementRoot extends Entity implements Parsable {
      */
     public void setCases(@jakarta.annotation.Nullable final java.util.List<CaseEscaped> value) {
         this.backingStore.set("cases", value);
+    }
+    /**
+     * Sets the caseTypeConfigurations property value. The collection of case type configurations that define the statuses and custom fields available for each case type. Read-only. Supports $select, $count, and $expand of the statuses and customFields relationships.
+     * @param value Value to set for the caseTypeConfigurations property.
+     */
+    public void setCaseTypeConfigurations(@jakarta.annotation.Nullable final java.util.List<CaseTypeConfiguration> value) {
+        this.backingStore.set("caseTypeConfigurations", value);
     }
 }

@@ -57,7 +57,7 @@ public class TeamworkCustomEmoji implements AdditionalDataHolder, BackedModel, P
         return this.backingStore;
     }
     /**
-     * Gets the contentBytes property value. The contentBytes property
+     * Gets the contentBytes property value. The base64-encoded image content of the emoji. Supported formats include PNG and GIF.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class TeamworkCustomEmoji implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("createdBy");
     }
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The date and time when the emoji was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -81,7 +81,7 @@ public class TeamworkCustomEmoji implements AdditionalDataHolder, BackedModel, P
         return this.backingStore.get("createdDateTime");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The unique display name of the custom emoji. Key. Must be unique and must not conflict with existing emoji names.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -139,7 +139,7 @@ public class TeamworkCustomEmoji implements AdditionalDataHolder, BackedModel, P
         this.backingStore = value;
     }
     /**
-     * Sets the contentBytes property value. The contentBytes property
+     * Sets the contentBytes property value. The base64-encoded image content of the emoji. Supported formats include PNG and GIF.
      * @param value Value to set for the contentBytes property.
      */
     public void setContentBytes(@jakarta.annotation.Nullable final String value) {
@@ -153,14 +153,14 @@ public class TeamworkCustomEmoji implements AdditionalDataHolder, BackedModel, P
         this.backingStore.set("createdBy", value);
     }
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The date and time when the emoji was created. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2024, is 2024-01-01T00:00:00Z.
      * @param value Value to set for the createdDateTime property.
      */
     public void setCreatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("createdDateTime", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The unique display name of the custom emoji. Key. Must be unique and must not conflict with existing emoji names.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {

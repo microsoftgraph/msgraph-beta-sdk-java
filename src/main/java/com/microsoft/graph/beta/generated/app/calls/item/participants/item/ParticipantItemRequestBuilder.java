@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.app.calls.item.participants.item;
 import com.microsoft.graph.beta.app.calls.item.participants.item.admitfromlobby.AdmitFromLobbyRequestBuilder;
 import com.microsoft.graph.beta.app.calls.item.participants.item.mute.MuteRequestBuilder;
 import com.microsoft.graph.beta.app.calls.item.participants.item.removefromlobby.RemoveFromLobbyRequestBuilder;
+import com.microsoft.graph.beta.app.calls.item.participants.item.reportsyntheticmedia.ReportSyntheticMediaRequestBuilder;
 import com.microsoft.graph.beta.app.calls.item.participants.item.startholdmusic.StartHoldMusicRequestBuilder;
 import com.microsoft.graph.beta.app.calls.item.participants.item.stopholdmusic.StopHoldMusicRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -48,6 +49,14 @@ public class ParticipantItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RemoveFromLobbyRequestBuilder removeFromLobby() {
         return new RemoveFromLobbyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the reportSyntheticMedia method.
+     * @return a {@link ReportSyntheticMediaRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReportSyntheticMediaRequestBuilder reportSyntheticMedia() {
+        return new ReportSyntheticMediaRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the startHoldMusic method.

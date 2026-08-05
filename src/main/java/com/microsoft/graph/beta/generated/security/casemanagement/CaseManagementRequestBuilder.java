@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.security.casemanagement;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.security.CaseManagementRoot;
 import com.microsoft.graph.beta.security.casemanagement.cases.CasesRequestBuilder;
+import com.microsoft.graph.beta.security.casemanagement.casetypeconfigurations.CaseTypeConfigurationsRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -28,6 +29,14 @@ public class CaseManagementRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CasesRequestBuilder cases() {
         return new CasesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the caseTypeConfigurations property of the microsoft.graph.security.caseManagementRoot entity.
+     * @return a {@link CaseTypeConfigurationsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public CaseTypeConfigurationsRequestBuilder caseTypeConfigurations() {
+        return new CaseTypeConfigurationsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link CaseManagementRequestBuilder} and sets the default values.
