@@ -42,7 +42,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("additionalInfo");
     }
     /**
-     * Gets the agentDisplayName property value. Name of the agent.  Supports $filter (eq, startsWith).
+     * Gets the agentDisplayName property value. Name of the agent. Deprecated. Use displayName instead. This property will be removed after 2027-04-28.  Supports $filter (eq, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -50,7 +50,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("agentDisplayName");
     }
     /**
-     * Gets the agentId property value. The unique identifier for the agent. This is equivalent to &apos;id&apos; to the specific agent type. See riskyAgentIdentity, riskyAgentIdentityBlueprintPrincipal, and riskyAgentUser.  Supports $filter (eq, startsWith).
+     * Gets the agentId property value. The unique identifier for the agent. Deprecated. Use identityId instead. This property will be removed after 2027-04-28. See riskyAgentIdentity, riskyAgentIdentityBlueprintPrincipal, and riskyAgentUser.  Supports $filter (eq, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -90,7 +90,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         return this.backingStore.get("detectionTimingType");
     }
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Human-readable name of the identity associated with this risk detection.  Supports $filter (eq, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -128,7 +128,7 @@ public class AgentRiskDetection extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the identityId property value. The identityId property
+     * Gets the identityId property value. Unique identifier of the identity associated with this risk detection.  Supports $filter (eq, startsWith).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -267,14 +267,14 @@ public class AgentRiskDetection extends Entity implements Parsable {
         this.backingStore.set("additionalInfo", value);
     }
     /**
-     * Sets the agentDisplayName property value. Name of the agent.  Supports $filter (eq, startsWith).
+     * Sets the agentDisplayName property value. Name of the agent. Deprecated. Use displayName instead. This property will be removed after 2027-04-28.  Supports $filter (eq, startsWith).
      * @param value Value to set for the agentDisplayName property.
      */
     public void setAgentDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("agentDisplayName", value);
     }
     /**
-     * Sets the agentId property value. The unique identifier for the agent. This is equivalent to &apos;id&apos; to the specific agent type. See riskyAgentIdentity, riskyAgentIdentityBlueprintPrincipal, and riskyAgentUser.  Supports $filter (eq, startsWith).
+     * Sets the agentId property value. The unique identifier for the agent. Deprecated. Use identityId instead. This property will be removed after 2027-04-28. See riskyAgentIdentity, riskyAgentIdentityBlueprintPrincipal, and riskyAgentUser.  Supports $filter (eq, startsWith).
      * @param value Value to set for the agentId property.
      */
     public void setAgentId(@jakarta.annotation.Nullable final String value) {
@@ -309,14 +309,14 @@ public class AgentRiskDetection extends Entity implements Parsable {
         this.backingStore.set("detectionTimingType", value);
     }
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Human-readable name of the identity associated with this risk detection.  Supports $filter (eq, startsWith).
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the identityId property value. The identityId property
+     * Sets the identityId property value. Unique identifier of the identity associated with this risk detection.  Supports $filter (eq, startsWith).
      * @param value Value to set for the identityId property.
      */
     public void setIdentityId(@jakarta.annotation.Nullable final String value) {

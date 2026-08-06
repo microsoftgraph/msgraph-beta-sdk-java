@@ -41,7 +41,16 @@ public class ProtectedApplicationMetadata extends IntegratedApplicationMetadata 
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("applicationLocation", (n) -> { this.setApplicationLocation(n.getObjectValue(PolicyLocation::createFromDiscriminatorValue)); });
+        deserializerMap.put("sourceLocation", (n) -> { this.setSourceLocation(n.getObjectValue(PolicyLocation::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the sourceLocation property value. The sourceLocation property
+     * @return a {@link PolicyLocation}
+     */
+    @jakarta.annotation.Nullable
+    public PolicyLocation getSourceLocation() {
+        return this.backingStore.get("sourceLocation");
     }
     /**
      * Serializes information the current object
@@ -51,6 +60,7 @@ public class ProtectedApplicationMetadata extends IntegratedApplicationMetadata 
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("applicationLocation", this.getApplicationLocation());
+        writer.writeObjectValue("sourceLocation", this.getSourceLocation());
     }
     /**
      * Sets the applicationLocation property value. The client (application) ID of the Microsoft Entra application. Required.
@@ -58,5 +68,12 @@ public class ProtectedApplicationMetadata extends IntegratedApplicationMetadata 
      */
     public void setApplicationLocation(@jakarta.annotation.Nullable final PolicyLocation value) {
         this.backingStore.set("applicationLocation", value);
+    }
+    /**
+     * Sets the sourceLocation property value. The sourceLocation property
+     * @param value Value to set for the sourceLocation property.
+     */
+    public void setSourceLocation(@jakarta.annotation.Nullable final PolicyLocation value) {
+        this.backingStore.set("sourceLocation", value);
     }
 }

@@ -132,6 +132,7 @@ public class Directory extends Entity implements Parsable {
         deserializerMap.put("recommendationConfiguration", (n) -> { this.setRecommendationConfiguration(n.getObjectValue(RecommendationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("recommendations", (n) -> { this.setRecommendations(n.getCollectionOfObjectValues(Recommendation::createFromDiscriminatorValue)); });
         deserializerMap.put("recovery", (n) -> { this.setRecovery(n.getObjectValue(Recovery::createFromDiscriminatorValue)); });
+        deserializerMap.put("remoteTenantGroups", (n) -> { this.setRemoteTenantGroups(n.getCollectionOfObjectValues(RemoteTenantGroup::createFromDiscriminatorValue)); });
         deserializerMap.put("sharedEmailDomains", (n) -> { this.setSharedEmailDomains(n.getCollectionOfObjectValues(SharedEmailDomain::createFromDiscriminatorValue)); });
         deserializerMap.put("subscriptions", (n) -> { this.setSubscriptions(n.getCollectionOfObjectValues(CompanySubscription::createFromDiscriminatorValue)); });
         deserializerMap.put("templates", (n) -> { this.setTemplates(n.getObjectValue(Template::createFromDiscriminatorValue)); });
@@ -211,6 +212,14 @@ public class Directory extends Entity implements Parsable {
         return this.backingStore.get("recovery");
     }
     /**
+     * Gets the remoteTenantGroups property value. Collection of groups in remote Microsoft Entra tenants that are available in the directory.
+     * @return a {@link java.util.List<RemoteTenantGroup>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RemoteTenantGroup> getRemoteTenantGroups() {
+        return this.backingStore.get("remoteTenantGroups");
+    }
+    /**
      * Gets the sharedEmailDomains property value. The sharedEmailDomains property
      * @return a {@link java.util.List<SharedEmailDomain>}
      */
@@ -268,6 +277,7 @@ public class Directory extends Entity implements Parsable {
         writer.writeObjectValue("recommendationConfiguration", this.getRecommendationConfiguration());
         writer.writeCollectionOfObjectValues("recommendations", this.getRecommendations());
         writer.writeObjectValue("recovery", this.getRecovery());
+        writer.writeCollectionOfObjectValues("remoteTenantGroups", this.getRemoteTenantGroups());
         writer.writeCollectionOfObjectValues("sharedEmailDomains", this.getSharedEmailDomains());
         writer.writeCollectionOfObjectValues("subscriptions", this.getSubscriptions());
         writer.writeObjectValue("templates", this.getTemplates());
@@ -405,6 +415,13 @@ public class Directory extends Entity implements Parsable {
      */
     public void setRecovery(@jakarta.annotation.Nullable final Recovery value) {
         this.backingStore.set("recovery", value);
+    }
+    /**
+     * Sets the remoteTenantGroups property value. Collection of groups in remote Microsoft Entra tenants that are available in the directory.
+     * @param value Value to set for the remoteTenantGroups property.
+     */
+    public void setRemoteTenantGroups(@jakarta.annotation.Nullable final java.util.List<RemoteTenantGroup> value) {
+        this.backingStore.set("remoteTenantGroups", value);
     }
     /**
      * Sets the sharedEmailDomains property value. The sharedEmailDomains property

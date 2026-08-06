@@ -42,10 +42,10 @@ public class ChatMessage extends Entity implements Parsable {
     }
     /**
      * Gets the body property value. The body property
-     * @return a {@link ItemBody}
+     * @return a {@link ChatMessageBody}
      */
     @jakarta.annotation.Nullable
-    public ItemBody getBody() {
+    public ChatMessageBody getBody() {
         return this.backingStore.get("body");
     }
     /**
@@ -104,7 +104,7 @@ public class ChatMessage extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("attachments", (n) -> { this.setAttachments(n.getCollectionOfObjectValues(ChatMessageAttachment::createFromDiscriminatorValue)); });
-        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ItemBody::createFromDiscriminatorValue)); });
+        deserializerMap.put("body", (n) -> { this.setBody(n.getObjectValue(ChatMessageBody::createFromDiscriminatorValue)); });
         deserializerMap.put("channelIdentity", (n) -> { this.setChannelIdentity(n.getObjectValue(ChannelIdentity::createFromDiscriminatorValue)); });
         deserializerMap.put("chatId", (n) -> { this.setChatId(n.getStringValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
@@ -310,7 +310,7 @@ public class ChatMessage extends Entity implements Parsable {
      * Sets the body property value. The body property
      * @param value Value to set for the body property.
      */
-    public void setBody(@jakarta.annotation.Nullable final ItemBody value) {
+    public void setBody(@jakarta.annotation.Nullable final ChatMessageBody value) {
         this.backingStore.set("body", value);
     }
     /**

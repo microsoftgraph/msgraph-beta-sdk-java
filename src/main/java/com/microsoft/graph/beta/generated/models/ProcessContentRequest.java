@@ -88,16 +88,25 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("deviceMetadata");
     }
     /**
+     * Gets the evaluationScope property value. The evaluationScope property
+     * @return a {@link EvaluationScope}
+     */
+    @jakarta.annotation.Nullable
+    public EvaluationScope getEvaluationScope() {
+        return this.backingStore.get("evaluationScope");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(7);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("activityMetadata", (n) -> { this.setActivityMetadata(n.getObjectValue(ActivityMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("contentEntries", (n) -> { this.setContentEntries(n.getCollectionOfObjectValues(ProcessContentMetadataBase::createFromDiscriminatorValue)); });
         deserializerMap.put("contextMetadata", (n) -> { this.setContextMetadata(n.getObjectValue(ContextMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("deviceMetadata", (n) -> { this.setDeviceMetadata(n.getObjectValue(DeviceMetadata::createFromDiscriminatorValue)); });
+        deserializerMap.put("evaluationScope", (n) -> { this.setEvaluationScope(n.getObjectValue(EvaluationScope::createFromDiscriminatorValue)); });
         deserializerMap.put("integratedAppMetadata", (n) -> { this.setIntegratedAppMetadata(n.getObjectValue(IntegratedApplicationMetadata::createFromDiscriminatorValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("protectedAppMetadata", (n) -> { this.setProtectedAppMetadata(n.getObjectValue(ProtectedApplicationMetadata::createFromDiscriminatorValue)); });
@@ -137,6 +146,7 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
         writer.writeCollectionOfObjectValues("contentEntries", this.getContentEntries());
         writer.writeObjectValue("contextMetadata", this.getContextMetadata());
         writer.writeObjectValue("deviceMetadata", this.getDeviceMetadata());
+        writer.writeObjectValue("evaluationScope", this.getEvaluationScope());
         writer.writeObjectValue("integratedAppMetadata", this.getIntegratedAppMetadata());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeObjectValue("protectedAppMetadata", this.getProtectedAppMetadata());
@@ -184,6 +194,13 @@ public class ProcessContentRequest implements AdditionalDataHolder, BackedModel,
      */
     public void setDeviceMetadata(@jakarta.annotation.Nullable final DeviceMetadata value) {
         this.backingStore.set("deviceMetadata", value);
+    }
+    /**
+     * Sets the evaluationScope property value. The evaluationScope property
+     * @param value Value to set for the evaluationScope property.
+     */
+    public void setEvaluationScope(@jakarta.annotation.Nullable final EvaluationScope value) {
+        this.backingStore.set("evaluationScope", value);
     }
     /**
      * Sets the integratedAppMetadata property value. The integratedAppMetadata property

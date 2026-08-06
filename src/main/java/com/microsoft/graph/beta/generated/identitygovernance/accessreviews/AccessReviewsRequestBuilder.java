@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.identitygovernance.accessreviews.definitions.Def
 import com.microsoft.graph.beta.identitygovernance.accessreviews.historydefinitions.HistoryDefinitionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.accessreviews.instances.InstancesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.accessreviews.policy.PolicyRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.accessreviews.unified.UnifiedRequestBuilder;
 import com.microsoft.graph.beta.models.AccessReviewSet;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -64,6 +65,14 @@ public class AccessReviewsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public PolicyRequestBuilder policy() {
         return new PolicyRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the unified property of the microsoft.graph.accessReviewSet entity.
+     * @return a {@link UnifiedRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public UnifiedRequestBuilder unified() {
+        return new UnifiedRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link AccessReviewsRequestBuilder} and sets the default values.

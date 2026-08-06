@@ -42,6 +42,7 @@ public class Participant extends Entity implements Parsable {
         deserializerMap.put("removedState", (n) -> { this.setRemovedState(n.getObjectValue(RemovedState::createFromDiscriminatorValue)); });
         deserializerMap.put("restrictedExperience", (n) -> { this.setRestrictedExperience(n.getObjectValue(OnlineMeetingRestricted::createFromDiscriminatorValue)); });
         deserializerMap.put("rosterSequenceNumber", (n) -> { this.setRosterSequenceNumber(n.getLongValue()); });
+        deserializerMap.put("syntheticMediaDetection", (n) -> { this.setSyntheticMediaDetection(n.getObjectValue(SyntheticMediaDetectionInfo::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -133,6 +134,14 @@ public class Participant extends Entity implements Parsable {
         return this.backingStore.get("rosterSequenceNumber");
     }
     /**
+     * Gets the syntheticMediaDetection property value. The syntheticMediaDetection property
+     * @return a {@link SyntheticMediaDetectionInfo}
+     */
+    @jakarta.annotation.Nullable
+    public SyntheticMediaDetectionInfo getSyntheticMediaDetection() {
+        return this.backingStore.get("syntheticMediaDetection");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -150,6 +159,7 @@ public class Participant extends Entity implements Parsable {
         writer.writeObjectValue("removedState", this.getRemovedState());
         writer.writeObjectValue("restrictedExperience", this.getRestrictedExperience());
         writer.writeLongValue("rosterSequenceNumber", this.getRosterSequenceNumber());
+        writer.writeObjectValue("syntheticMediaDetection", this.getSyntheticMediaDetection());
     }
     /**
      * Sets the info property value. The info property
@@ -227,5 +237,12 @@ public class Participant extends Entity implements Parsable {
      */
     public void setRosterSequenceNumber(@jakarta.annotation.Nullable final Long value) {
         this.backingStore.set("rosterSequenceNumber", value);
+    }
+    /**
+     * Sets the syntheticMediaDetection property value. The syntheticMediaDetection property
+     * @param value Value to set for the syntheticMediaDetection property.
+     */
+    public void setSyntheticMediaDetection(@jakarta.annotation.Nullable final SyntheticMediaDetectionInfo value) {
+        this.backingStore.set("syntheticMediaDetection", value);
     }
 }

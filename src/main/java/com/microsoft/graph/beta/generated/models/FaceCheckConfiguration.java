@@ -68,7 +68,7 @@ public class FaceCheckConfiguration implements AdditionalDataHolder, BackedModel
         return deserializerMap;
     }
     /**
-     * Gets the isEnabled property value. Defines if Face Check is required. Currently must always be true.
+     * Gets the isEnabled property value. Indicates whether Face Check is required. Currently must be true.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -84,7 +84,7 @@ public class FaceCheckConfiguration implements AdditionalDataHolder, BackedModel
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sourcePhotoClaimName property value. Source of photo to validate Face Check against. Currently must always be portrait
+     * Gets the sourcePhotoClaimName property value. The source claim name for the photo used to validate Face Check. Currently must be portrait.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class FaceCheckConfiguration implements AdditionalDataHolder, BackedModel
         this.backingStore = value;
     }
     /**
-     * Sets the isEnabled property value. Defines if Face Check is required. Currently must always be true.
+     * Sets the isEnabled property value. Indicates whether Face Check is required. Currently must be true.
      * @param value Value to set for the isEnabled property.
      */
     public void setIsEnabled(@jakarta.annotation.Nullable final Boolean value) {
@@ -132,7 +132,7 @@ public class FaceCheckConfiguration implements AdditionalDataHolder, BackedModel
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sourcePhotoClaimName property value. Source of photo to validate Face Check against. Currently must always be portrait
+     * Sets the sourcePhotoClaimName property value. The source claim name for the photo used to validate Face Check. Currently must be portrait.
      * @param value Value to set for the sourcePhotoClaimName property.
      */
     public void setSourcePhotoClaimName(@jakarta.annotation.Nullable final String value) {

@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.62.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.61.0...v6.62.0) (2026-08-05)
+
+
+### Features
+
+* **generation:** update request builders and models ([9ed08f8](https://github.com/microsoftgraph/msgraph-beta-sdk-java/commit/9ed08f834919ed37c3d81f89d99a5654b49fcbcb))
+
 ## [6.61.0](https://github.com/microsoftgraph/msgraph-beta-sdk-java/compare/v6.60.1...v6.61.0) (2026-07-22)
 
 

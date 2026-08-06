@@ -133,6 +133,7 @@ public class ReportRoot extends Entity implements Parsable {
         deserializerMap.put("dailyPrintUsageSummariesByUser", (n) -> { this.setDailyPrintUsageSummariesByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("healthMonitoring", (n) -> { this.setHealthMonitoring(n.getObjectValue(HealthMonitoringRoot::createFromDiscriminatorValue)); });
         deserializerMap.put("identityAnalytics", (n) -> { this.setIdentityAnalytics(n.getObjectValue(IdentityAnalyticsRoot::createFromDiscriminatorValue)); });
+        deserializerMap.put("microsoftAppsFileStorageContainerUsageSummary", (n) -> { this.setMicrosoftAppsFileStorageContainerUsageSummary(n.getObjectValue(MicrosoftAppsFileStorageContainerUsage::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByPrinter", (n) -> { this.setMonthlyPrintUsageByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageByUser", (n) -> { this.setMonthlyPrintUsageByUser(n.getCollectionOfObjectValues(PrintUsageByUser::createFromDiscriminatorValue)); });
         deserializerMap.put("monthlyPrintUsageSummariesByPrinter", (n) -> { this.setMonthlyPrintUsageSummariesByPrinter(n.getCollectionOfObjectValues(PrintUsageByPrinter::createFromDiscriminatorValue)); });
@@ -161,6 +162,14 @@ public class ReportRoot extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public IdentityAnalyticsRoot getIdentityAnalytics() {
         return this.backingStore.get("identityAnalytics");
+    }
+    /**
+     * Gets the microsoftAppsFileStorageContainerUsageSummary property value. The microsoftAppsFileStorageContainerUsageSummary property
+     * @return a {@link MicrosoftAppsFileStorageContainerUsage}
+     */
+    @jakarta.annotation.Nullable
+    public MicrosoftAppsFileStorageContainerUsage getMicrosoftAppsFileStorageContainerUsageSummary() {
+        return this.backingStore.get("microsoftAppsFileStorageContainerUsageSummary");
     }
     /**
      * Gets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.
@@ -270,6 +279,7 @@ public class ReportRoot extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("dailyPrintUsageSummariesByUser", this.getDailyPrintUsageSummariesByUser());
         writer.writeObjectValue("healthMonitoring", this.getHealthMonitoring());
         writer.writeObjectValue("identityAnalytics", this.getIdentityAnalytics());
+        writer.writeObjectValue("microsoftAppsFileStorageContainerUsageSummary", this.getMicrosoftAppsFileStorageContainerUsageSummary());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByPrinter", this.getMonthlyPrintUsageByPrinter());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageByUser", this.getMonthlyPrintUsageByUser());
         writer.writeCollectionOfObjectValues("monthlyPrintUsageSummariesByPrinter", this.getMonthlyPrintUsageSummariesByPrinter());
@@ -372,6 +382,13 @@ public class ReportRoot extends Entity implements Parsable {
      */
     public void setIdentityAnalytics(@jakarta.annotation.Nullable final IdentityAnalyticsRoot value) {
         this.backingStore.set("identityAnalytics", value);
+    }
+    /**
+     * Sets the microsoftAppsFileStorageContainerUsageSummary property value. The microsoftAppsFileStorageContainerUsageSummary property
+     * @param value Value to set for the microsoftAppsFileStorageContainerUsageSummary property.
+     */
+    public void setMicrosoftAppsFileStorageContainerUsageSummary(@jakarta.annotation.Nullable final MicrosoftAppsFileStorageContainerUsage value) {
+        this.backingStore.set("microsoftAppsFileStorageContainerUsageSummary", value);
     }
     /**
      * Sets the monthlyPrintUsageByPrinter property value. Retrieve a list of monthly print usage summaries, grouped by printer.

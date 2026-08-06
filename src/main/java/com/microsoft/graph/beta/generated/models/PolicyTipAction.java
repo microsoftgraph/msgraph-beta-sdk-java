@@ -32,14 +32,32 @@ public class PolicyTipAction extends DlpActionInfo implements Parsable {
         return new PolicyTipAction();
     }
     /**
+     * Gets the complianceUrl property value. The complianceUrl property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getComplianceUrl() {
+        return this.backingStore.get("complianceUrl");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("complianceUrl", (n) -> { this.setComplianceUrl(n.getStringValue()); });
+        deserializerMap.put("matchedConditionsDescription", (n) -> { this.setMatchedConditionsDescription(n.getStringValue()); });
         deserializerMap.put("policyTip", (n) -> { this.setPolicyTip(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the matchedConditionsDescription property value. The matchedConditionsDescription property
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMatchedConditionsDescription() {
+        return this.backingStore.get("matchedConditionsDescription");
     }
     /**
      * Gets the policyTip property value. The text of the policy tip that explains what triggered the DLP policy. Developers can display this information to users in the app.
@@ -56,7 +74,23 @@ public class PolicyTipAction extends DlpActionInfo implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeStringValue("complianceUrl", this.getComplianceUrl());
+        writer.writeStringValue("matchedConditionsDescription", this.getMatchedConditionsDescription());
         writer.writeStringValue("policyTip", this.getPolicyTip());
+    }
+    /**
+     * Sets the complianceUrl property value. The complianceUrl property
+     * @param value Value to set for the complianceUrl property.
+     */
+    public void setComplianceUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("complianceUrl", value);
+    }
+    /**
+     * Sets the matchedConditionsDescription property value. The matchedConditionsDescription property
+     * @param value Value to set for the matchedConditionsDescription property.
+     */
+    public void setMatchedConditionsDescription(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("matchedConditionsDescription", value);
     }
     /**
      * Sets the policyTip property value. The text of the policy tip that explains what triggered the DLP policy. Developers can display this information to users in the app.

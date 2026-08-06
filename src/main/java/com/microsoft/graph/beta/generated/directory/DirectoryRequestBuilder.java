@@ -19,6 +19,7 @@ import com.microsoft.graph.beta.directory.publickeyinfrastructure.PublicKeyInfra
 import com.microsoft.graph.beta.directory.recommendationconfiguration.RecommendationConfigurationRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.RecommendationsRequestBuilder;
 import com.microsoft.graph.beta.directory.recovery.RecoveryRequestBuilder;
+import com.microsoft.graph.beta.directory.remotetenantgroups.RemoteTenantGroupsRequestBuilder;
 import com.microsoft.graph.beta.directory.sharedemaildomains.SharedEmailDomainsRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptions.SubscriptionsRequestBuilder;
 import com.microsoft.graph.beta.directory.subscriptionswithcommercesubscriptionid.SubscriptionsWithCommerceSubscriptionIdRequestBuilder;
@@ -196,6 +197,14 @@ public class DirectoryRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public RecoveryRequestBuilder recovery() {
         return new RecoveryRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the remoteTenantGroups property of the microsoft.graph.directory entity.
+     * @return a {@link RemoteTenantGroupsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoteTenantGroupsRequestBuilder remoteTenantGroups() {
+        return new RemoteTenantGroupsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sharedEmailDomains property of the microsoft.graph.directory entity.

@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.security.datasecurityandgovernance;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.TenantDataSecurityAndGovernance;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.policyfiles.PolicyFilesRequestBuilder;
+import com.microsoft.graph.beta.security.datasecurityandgovernance.processcontent.ProcessContentRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.processcontentasync.ProcessContentAsyncRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.protectionscopes.ProtectionScopesRequestBuilder;
 import com.microsoft.graph.beta.security.datasecurityandgovernance.sensitivitylabels.SensitivityLabelsRequestBuilder;
@@ -31,6 +32,14 @@ public class DataSecurityAndGovernanceRequestBuilder extends BaseRequestBuilder 
     @jakarta.annotation.Nonnull
     public PolicyFilesRequestBuilder policyFiles() {
         return new PolicyFilesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the processContent method.
+     * @return a {@link ProcessContentRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ProcessContentRequestBuilder processContent() {
+        return new ProcessContentRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to call the processContentAsync method.

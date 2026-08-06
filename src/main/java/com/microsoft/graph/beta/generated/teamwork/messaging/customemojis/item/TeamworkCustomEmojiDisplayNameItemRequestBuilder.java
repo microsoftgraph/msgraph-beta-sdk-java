@@ -55,7 +55,7 @@ public class TeamworkCustomEmojiDisplayNameItemRequestBuilder extends BaseReques
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Get customEmojis from teamwork
+     * The collection of custom emojis available in organization messaging.
      * @return a {@link TeamworkCustomEmoji}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -64,7 +64,7 @@ public class TeamworkCustomEmojiDisplayNameItemRequestBuilder extends BaseReques
         return get(null);
     }
     /**
-     * Get customEmojis from teamwork
+     * The collection of custom emojis available in organization messaging.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link TeamworkCustomEmoji}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -122,7 +122,7 @@ public class TeamworkCustomEmojiDisplayNameItemRequestBuilder extends BaseReques
         return requestInfo;
     }
     /**
-     * Get customEmojis from teamwork
+     * The collection of custom emojis available in organization messaging.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -130,7 +130,7 @@ public class TeamworkCustomEmojiDisplayNameItemRequestBuilder extends BaseReques
         return toGetRequestInformation(null);
     }
     /**
-     * Get customEmojis from teamwork
+     * The collection of custom emojis available in organization messaging.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -182,7 +182,7 @@ public class TeamworkCustomEmojiDisplayNameItemRequestBuilder extends BaseReques
     public class DeleteRequestConfiguration extends BaseRequestConfiguration {
     }
     /**
-     * Get customEmojis from teamwork
+     * The collection of custom emojis available in organization messaging.
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

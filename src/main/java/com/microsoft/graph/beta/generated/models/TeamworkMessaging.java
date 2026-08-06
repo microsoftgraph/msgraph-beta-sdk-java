@@ -25,7 +25,7 @@ public class TeamworkMessaging extends Entity implements Parsable {
         return new TeamworkMessaging();
     }
     /**
-     * Gets the customEmojis property value. The customEmojis property
+     * Gets the customEmojis property value. The collection of custom emojis available in organization messaging.
      * @return a {@link java.util.List<TeamworkCustomEmoji>}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class TeamworkMessaging extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("customEmojis", this.getCustomEmojis());
     }
     /**
-     * Sets the customEmojis property value. The customEmojis property
+     * Sets the customEmojis property value. The collection of custom emojis available in organization messaging.
      * @param value Value to set for the customEmojis property.
      */
     public void setCustomEmojis(@jakarta.annotation.Nullable final java.util.List<TeamworkCustomEmoji> value) {
