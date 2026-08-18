@@ -6,6 +6,7 @@ import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.planner
 import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.planner.plans.item.buckets.BucketsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.planner.plans.item.details.DetailsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.planner.plans.item.getusagerights.GetUsageRightsRequestBuilder;
+import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.planner.plans.item.goals.GoalsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.planner.plans.item.historyitems.HistoryItemsRequestBuilder;
 import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.planner.plans.item.movetocontainer.MoveToContainerRequestBuilder;
 import com.microsoft.graph.beta.teamwork.deletedteams.item.channels.item.planner.plans.item.tasks.TasksRequestBuilder;
@@ -59,6 +60,14 @@ public class PlannerPlanItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public GetUsageRightsRequestBuilder getUsageRights() {
         return new GetUsageRightsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the goals property of the microsoft.graph.plannerPlan entity.
+     * @return a {@link GoalsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GoalsRequestBuilder goals() {
+        return new GoalsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the historyItems property of the microsoft.graph.plannerPlan entity.

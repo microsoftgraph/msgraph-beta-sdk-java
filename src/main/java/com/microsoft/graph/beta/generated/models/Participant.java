@@ -134,7 +134,7 @@ public class Participant extends Entity implements Parsable {
         return this.backingStore.get("rosterSequenceNumber");
     }
     /**
-     * Gets the syntheticMediaDetection property value. The syntheticMediaDetection property
+     * Gets the syntheticMediaDetection property value. The latest synthetic media detection result reported for this participant by an in-call detection bot. Nullable. Set to null when no detection is reported. Populated asynchronously after a successful call to reportSyntheticMedia.
      * @return a {@link SyntheticMediaDetectionInfo}
      */
     @jakarta.annotation.Nullable
@@ -239,7 +239,7 @@ public class Participant extends Entity implements Parsable {
         this.backingStore.set("rosterSequenceNumber", value);
     }
     /**
-     * Sets the syntheticMediaDetection property value. The syntheticMediaDetection property
+     * Sets the syntheticMediaDetection property value. The latest synthetic media detection result reported for this participant by an in-call detection bot. Nullable. Set to null when no detection is reported. Populated asynchronously after a successful call to reportSyntheticMedia.
      * @param value Value to set for the syntheticMediaDetection property.
      */
     public void setSyntheticMediaDetection(@jakarta.annotation.Nullable final SyntheticMediaDetectionInfo value) {

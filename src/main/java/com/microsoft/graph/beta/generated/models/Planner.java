@@ -40,10 +40,19 @@ public class Planner extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("buckets", (n) -> { this.setBuckets(n.getCollectionOfObjectValues(PlannerBucket::createFromDiscriminatorValue)); });
+        deserializerMap.put("goals", (n) -> { this.setGoals(n.getCollectionOfObjectValues(PlannerGoal::createFromDiscriminatorValue)); });
         deserializerMap.put("plans", (n) -> { this.setPlans(n.getCollectionOfObjectValues(PlannerPlan::createFromDiscriminatorValue)); });
         deserializerMap.put("rosters", (n) -> { this.setRosters(n.getCollectionOfObjectValues(PlannerRoster::createFromDiscriminatorValue)); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(PlannerTask::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the goals property value. Read-only. Nullable. Returns a collection of the specified goals
+     * @return a {@link java.util.List<PlannerGoal>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<PlannerGoal> getGoals() {
+        return this.backingStore.get("goals");
     }
     /**
      * Gets the plans property value. Read-only. Nullable. Returns a collection of the specified plans
@@ -77,6 +86,7 @@ public class Planner extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeCollectionOfObjectValues("buckets", this.getBuckets());
+        writer.writeCollectionOfObjectValues("goals", this.getGoals());
         writer.writeCollectionOfObjectValues("plans", this.getPlans());
         writer.writeCollectionOfObjectValues("rosters", this.getRosters());
         writer.writeCollectionOfObjectValues("tasks", this.getTasks());
@@ -87,6 +97,13 @@ public class Planner extends Entity implements Parsable {
      */
     public void setBuckets(@jakarta.annotation.Nullable final java.util.List<PlannerBucket> value) {
         this.backingStore.set("buckets", value);
+    }
+    /**
+     * Sets the goals property value. Read-only. Nullable. Returns a collection of the specified goals
+     * @param value Value to set for the goals property.
+     */
+    public void setGoals(@jakarta.annotation.Nullable final java.util.List<PlannerGoal> value) {
+        this.backingStore.set("goals", value);
     }
     /**
      * Sets the plans property value. Read-only. Nullable. Returns a collection of the specified plans

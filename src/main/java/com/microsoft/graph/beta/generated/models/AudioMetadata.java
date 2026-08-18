@@ -56,7 +56,7 @@ public class AudioMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore;
     }
     /**
-     * Gets the bitDepth property value. The bitDepth property
+     * Gets the bitDepth property value. Bit depth of the audio samples (for example, 16, 24).
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -64,7 +64,7 @@ public class AudioMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("bitDepth");
     }
     /**
-     * Gets the channels property value. The channels property
+     * Gets the channels property value. Number of audio channels (for example, 1 for mono, 2 for stereo).
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class AudioMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the sampleRateHz property value. The sampleRateHz property
+     * Gets the sampleRateHz property value. Sample rate in Hertz (for example, 16000, 48000).
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class AudioMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore = value;
     }
     /**
-     * Sets the bitDepth property value. The bitDepth property
+     * Sets the bitDepth property value. Bit depth of the audio samples (for example, 16, 24).
      * @param value Value to set for the bitDepth property.
      */
     public void setBitDepth(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("bitDepth", value);
     }
     /**
-     * Sets the channels property value. The channels property
+     * Sets the channels property value. Number of audio channels (for example, 1 for mono, 2 for stereo).
      * @param value Value to set for the channels property.
      */
     public void setChannels(@jakarta.annotation.Nullable final Integer value) {
@@ -149,7 +149,7 @@ public class AudioMetadata implements AdditionalDataHolder, BackedModel, Parsabl
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the sampleRateHz property value. The sampleRateHz property
+     * Sets the sampleRateHz property value. Sample rate in Hertz (for example, 16000, 48000).
      * @param value Value to set for the sampleRateHz property.
      */
     public void setSampleRateHz(@jakarta.annotation.Nullable final Integer value) {

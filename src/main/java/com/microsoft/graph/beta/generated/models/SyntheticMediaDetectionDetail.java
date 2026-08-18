@@ -56,7 +56,7 @@ public class SyntheticMediaDetectionDetail implements AdditionalDataHolder, Back
         return this.backingStore;
     }
     /**
-     * Gets the confidence property value. The confidence property
+     * Gets the confidence property value. Confidence score for this specific detection, expressed as a value between 0.0 and 1.0.
      * @return a {@link Double}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class SyntheticMediaDetectionDetail implements AdditionalDataHolder, Back
         return this.backingStore.get("modality");
     }
     /**
-     * Gets the modelName property value. The modelName property
+     * Gets the modelName property value. Name of the detection model used (for example, DeepfakeDetector-v2, VoiceAuthenticator-v1).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -95,7 +95,7 @@ public class SyntheticMediaDetectionDetail implements AdditionalDataHolder, Back
         return this.backingStore.get("modelName");
     }
     /**
-     * Gets the modelTasks property value. The modelTasks property
+     * Gets the modelTasks property value. Detection tasks that the model performed. This value is free-form text. The bot can specify any task names that describe its analysis. Common examples include faceSwap, lipSync, and voiceClone.
      * @return a {@link java.util.List<String>}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class SyntheticMediaDetectionDetail implements AdditionalDataHolder, Back
         this.backingStore = value;
     }
     /**
-     * Sets the confidence property value. The confidence property
+     * Sets the confidence property value. Confidence score for this specific detection, expressed as a value between 0.0 and 1.0.
      * @param value Value to set for the confidence property.
      */
     public void setConfidence(@jakarta.annotation.Nullable final Double value) {
@@ -162,14 +162,14 @@ public class SyntheticMediaDetectionDetail implements AdditionalDataHolder, Back
         this.backingStore.set("modality", value);
     }
     /**
-     * Sets the modelName property value. The modelName property
+     * Sets the modelName property value. Name of the detection model used (for example, DeepfakeDetector-v2, VoiceAuthenticator-v1).
      * @param value Value to set for the modelName property.
      */
     public void setModelName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("modelName", value);
     }
     /**
-     * Sets the modelTasks property value. The modelTasks property
+     * Sets the modelTasks property value. Detection tasks that the model performed. This value is free-form text. The bot can specify any task names that describe its analysis. Common examples include faceSwap, lipSync, and voiceClone.
      * @param value Value to set for the modelTasks property.
      */
     public void setModelTasks(@jakarta.annotation.Nullable final java.util.List<String> value) {

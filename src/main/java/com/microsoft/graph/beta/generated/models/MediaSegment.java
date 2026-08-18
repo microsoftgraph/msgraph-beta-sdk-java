@@ -56,7 +56,7 @@ public class MediaSegment implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore;
     }
     /**
-     * Gets the endTimeSec property value. The endTimeSec property
+     * Gets the endTimeSec property value. End time of the segment, in seconds from the start of the analyzed live stream. Set to 0 for recorded or offline analysis, where a stream-relative time base doesn&apos;t apply.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -77,7 +77,7 @@ public class MediaSegment implements AdditionalDataHolder, BackedModel, Parsable
         return deserializerMap;
     }
     /**
-     * Gets the frameIndices property value. The frameIndices property
+     * Gets the frameIndices property value. Frame indices that identify the video frames in the segment. Applies only to video analysis; pass an empty array for audio-only segments.
      * @return a {@link java.util.List<Integer>}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class MediaSegment implements AdditionalDataHolder, BackedModel, Parsable
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the startTimeSec property value. The startTimeSec property
+     * Gets the startTimeSec property value. Start time of the segment, in seconds from the start of the analyzed live stream. Set to 0 for recorded or offline analysis, where a stream-relative time base doesn&apos;t apply.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -128,14 +128,14 @@ public class MediaSegment implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore = value;
     }
     /**
-     * Sets the endTimeSec property value. The endTimeSec property
+     * Sets the endTimeSec property value. End time of the segment, in seconds from the start of the analyzed live stream. Set to 0 for recorded or offline analysis, where a stream-relative time base doesn&apos;t apply.
      * @param value Value to set for the endTimeSec property.
      */
     public void setEndTimeSec(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("endTimeSec", value);
     }
     /**
-     * Sets the frameIndices property value. The frameIndices property
+     * Sets the frameIndices property value. Frame indices that identify the video frames in the segment. Applies only to video analysis; pass an empty array for audio-only segments.
      * @param value Value to set for the frameIndices property.
      */
     public void setFrameIndices(@jakarta.annotation.Nullable final java.util.List<Integer> value) {
@@ -149,7 +149,7 @@ public class MediaSegment implements AdditionalDataHolder, BackedModel, Parsable
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the startTimeSec property value. The startTimeSec property
+     * Sets the startTimeSec property value. Start time of the segment, in seconds from the start of the analyzed live stream. Set to 0 for recorded or offline analysis, where a stream-relative time base doesn&apos;t apply.
      * @param value Value to set for the startTimeSec property.
      */
     public void setStartTimeSec(@jakarta.annotation.Nullable final Integer value) {

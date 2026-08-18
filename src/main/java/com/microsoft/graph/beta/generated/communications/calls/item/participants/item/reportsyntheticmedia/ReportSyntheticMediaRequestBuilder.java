@@ -35,18 +35,20 @@ public class ReportSyntheticMediaRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/communications/calls/{call%2Did}/participants/{participant%2Did}/reportSyntheticMedia", rawUrl);
     }
     /**
-     * Invoke action reportSyntheticMedia
+     * Report synthetic media detections for a participant in a meeting call. This action is intended for certified third-party audio and video synthetic media detection bots admitted to the meeting call. The detection bot calls this action to flag a participant whose stream it identifies as AI-generated or synthetic media. The detection result is propagated to all participants via roster updates. After a successful request, the service stores the detection on the participant as a syntheticMediaDetectionInfo object in the participant&apos;s syntheticMediaDetection property and delivers it to all participants in a roster update notification. Each request with a new id creates a separate detection record; the service doesn&apos;t deduplicate or merge reports. When a participant has multiple detection records, the syntheticMediaDetection property reflects the most recent report. Third-party bots can invoke this action only when the meeting tenant administrator grants the app the Calls.ReportSyntheticMedia.All application permission. The detection bot must be admitted to the call before it can call this action. For more information about registering a calling bot and joining calls, see Calls and online meetings. The bot obtains the call ID and participant ID from the call roster and subsequent participant roster update notifications, and uses the call&apos;s id as {call-id} and the participant&apos;s id as {participant-id} in the request URL.
      * @param body The request body
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-reportsyntheticmedia?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ReportSyntheticMediaPostRequestBody body) {
         post(body, null);
     }
     /**
-     * Invoke action reportSyntheticMedia
+     * Report synthetic media detections for a participant in a meeting call. This action is intended for certified third-party audio and video synthetic media detection bots admitted to the meeting call. The detection bot calls this action to flag a participant whose stream it identifies as AI-generated or synthetic media. The detection result is propagated to all participants via roster updates. After a successful request, the service stores the detection on the participant as a syntheticMediaDetectionInfo object in the participant&apos;s syntheticMediaDetection property and delivers it to all participants in a roster update notification. Each request with a new id creates a separate detection record; the service doesn&apos;t deduplicate or merge reports. When a participant has multiple detection records, the syntheticMediaDetection property reflects the most recent report. Third-party bots can invoke this action only when the meeting tenant administrator grants the app the Calls.ReportSyntheticMedia.All application permission. The detection bot must be admitted to the call before it can call this action. For more information about registering a calling bot and joining calls, see Calls and online meetings. The bot obtains the call ID and participant ID from the call roster and subsequent participant roster update notifications, and uses the call&apos;s id as {call-id} and the participant&apos;s id as {participant-id} in the request URL.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/participant-reportsyntheticmedia?view=graph-rest-beta">Find more info here</a>
      */
     public void post(@jakarta.annotation.Nonnull final ReportSyntheticMediaPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
@@ -56,7 +58,7 @@ public class ReportSyntheticMediaRequestBuilder extends BaseRequestBuilder {
         this.requestAdapter.sendPrimitive(requestInfo, errorMapping, Void.class);
     }
     /**
-     * Invoke action reportSyntheticMedia
+     * Report synthetic media detections for a participant in a meeting call. This action is intended for certified third-party audio and video synthetic media detection bots admitted to the meeting call. The detection bot calls this action to flag a participant whose stream it identifies as AI-generated or synthetic media. The detection result is propagated to all participants via roster updates. After a successful request, the service stores the detection on the participant as a syntheticMediaDetectionInfo object in the participant&apos;s syntheticMediaDetection property and delivers it to all participants in a roster update notification. Each request with a new id creates a separate detection record; the service doesn&apos;t deduplicate or merge reports. When a participant has multiple detection records, the syntheticMediaDetection property reflects the most recent report. Third-party bots can invoke this action only when the meeting tenant administrator grants the app the Calls.ReportSyntheticMedia.All application permission. The detection bot must be admitted to the call before it can call this action. For more information about registering a calling bot and joining calls, see Calls and online meetings. The bot obtains the call ID and participant ID from the call roster and subsequent participant roster update notifications, and uses the call&apos;s id as {call-id} and the participant&apos;s id as {participant-id} in the request URL.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -65,7 +67,7 @@ public class ReportSyntheticMediaRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action reportSyntheticMedia
+     * Report synthetic media detections for a participant in a meeting call. This action is intended for certified third-party audio and video synthetic media detection bots admitted to the meeting call. The detection bot calls this action to flag a participant whose stream it identifies as AI-generated or synthetic media. The detection result is propagated to all participants via roster updates. After a successful request, the service stores the detection on the participant as a syntheticMediaDetectionInfo object in the participant&apos;s syntheticMediaDetection property and delivers it to all participants in a roster update notification. Each request with a new id creates a separate detection record; the service doesn&apos;t deduplicate or merge reports. When a participant has multiple detection records, the syntheticMediaDetection property reflects the most recent report. Third-party bots can invoke this action only when the meeting tenant administrator grants the app the Calls.ReportSyntheticMedia.All application permission. The detection bot must be admitted to the call before it can call this action. For more information about registering a calling bot and joining calls, see Calls and online meetings. The bot obtains the call ID and participant ID from the call roster and subsequent participant roster update notifications, and uses the call&apos;s id as {call-id} and the participant&apos;s id as {participant-id} in the request URL.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
