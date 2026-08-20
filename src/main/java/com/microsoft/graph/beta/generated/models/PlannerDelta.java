@@ -30,6 +30,7 @@ public class PlannerDelta extends Entity implements Parsable {
                 case "#microsoft.graph.plannerAssignedToTaskBoardTaskFormat": return new PlannerAssignedToTaskBoardTaskFormat();
                 case "#microsoft.graph.plannerBucket": return new PlannerBucket();
                 case "#microsoft.graph.plannerBucketTaskBoardTaskFormat": return new PlannerBucketTaskBoardTaskFormat();
+                case "#microsoft.graph.plannerGoal": return new PlannerGoal();
                 case "#microsoft.graph.plannerHistoryItem": return new PlannerHistoryItem();
                 case "#microsoft.graph.plannerPlan": return new PlannerPlan();
                 case "#microsoft.graph.plannerPlanDetails": return new PlannerPlanDetails();

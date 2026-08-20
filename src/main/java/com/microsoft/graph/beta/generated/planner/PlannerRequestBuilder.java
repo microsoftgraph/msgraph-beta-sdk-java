@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.planner;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Planner;
 import com.microsoft.graph.beta.planner.buckets.BucketsRequestBuilder;
+import com.microsoft.graph.beta.planner.goals.GoalsRequestBuilder;
 import com.microsoft.graph.beta.planner.plans.PlansRequestBuilder;
 import com.microsoft.graph.beta.planner.rosters.RostersRequestBuilder;
 import com.microsoft.graph.beta.planner.tasks.TasksRequestBuilder;
@@ -31,6 +32,14 @@ public class PlannerRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public BucketsRequestBuilder buckets() {
         return new BucketsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the goals property of the microsoft.graph.planner entity.
+     * @return a {@link GoalsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GoalsRequestBuilder goals() {
+        return new GoalsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the plans property of the microsoft.graph.planner entity.

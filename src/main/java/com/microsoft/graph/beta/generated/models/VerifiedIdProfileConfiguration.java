@@ -93,14 +93,32 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(8);
         deserializerMap.put("acceptedIssuer", (n) -> { this.setAcceptedIssuer(n.getStringValue()); });
         deserializerMap.put("claimBindings", (n) -> { this.setClaimBindings(n.getCollectionOfObjectValues(ClaimBinding::createFromDiscriminatorValue)); });
         deserializerMap.put("claimBindingSource", (n) -> { this.setClaimBindingSource(n.getEnumValue(ClaimBindingSource::forValue)); });
         deserializerMap.put("claimValidation", (n) -> { this.setClaimValidation(n.getObjectValue(ClaimValidation::createFromDiscriminatorValue)); });
+        deserializerMap.put("manifestUrl", (n) -> { this.setManifestUrl(n.getStringValue()); });
+        deserializerMap.put("methodType", (n) -> { this.setMethodType(n.getEnumValue(VerifiedIdMethodType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         deserializerMap.put("type", (n) -> { this.setType(n.getStringValue()); });
         return deserializerMap;
+    }
+    /**
+     * Gets the manifestUrl property value. The URL where the credential issuer&apos;s manifest can be found. The manifest defines the credential schema and issuer details. Optional.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getManifestUrl() {
+        return this.backingStore.get("manifestUrl");
+    }
+    /**
+     * Gets the methodType property value. The methodType property
+     * @return a {@link VerifiedIdMethodType}
+     */
+    @jakarta.annotation.Nullable
+    public VerifiedIdMethodType getMethodType() {
+        return this.backingStore.get("methodType");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -128,6 +146,8 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
         writer.writeCollectionOfObjectValues("claimBindings", this.getClaimBindings());
         writer.writeEnumValue("claimBindingSource", this.getClaimBindingSource());
         writer.writeObjectValue("claimValidation", this.getClaimValidation());
+        writer.writeStringValue("manifestUrl", this.getManifestUrl());
+        writer.writeEnumValue("methodType", this.getMethodType());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeStringValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
@@ -174,6 +194,20 @@ public class VerifiedIdProfileConfiguration implements AdditionalDataHolder, Bac
      */
     public void setClaimValidation(@jakarta.annotation.Nullable final ClaimValidation value) {
         this.backingStore.set("claimValidation", value);
+    }
+    /**
+     * Sets the manifestUrl property value. The URL where the credential issuer&apos;s manifest can be found. The manifest defines the credential schema and issuer details. Optional.
+     * @param value Value to set for the manifestUrl property.
+     */
+    public void setManifestUrl(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("manifestUrl", value);
+    }
+    /**
+     * Sets the methodType property value. The methodType property
+     * @param value Value to set for the methodType property.
+     */
+    public void setMethodType(@jakarta.annotation.Nullable final VerifiedIdMethodType value) {
+        this.backingStore.set("methodType", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

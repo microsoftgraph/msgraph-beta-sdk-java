@@ -56,7 +56,7 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the contactId property value. The ID of the referenced contact, if applicable. Optional.
+     * Gets the contactId property value. The contactId property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -87,7 +87,7 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the key property value. The email address or routing key of the member. Required.
+     * Gets the key property value. The email address or routing key of the member. Optional.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -111,7 +111,7 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("recipientType");
     }
     /**
-     * Gets the routingType property value. The routing type for the member, for example, SMTP. Optional.
+     * Gets the routingType property value. The routingType property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -148,7 +148,7 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the contactId property value. The ID of the referenced contact, if applicable. Optional.
+     * Sets the contactId property value. The contactId property
      * @param value Value to set for the contactId property.
      */
     public void setContactId(@jakarta.annotation.Nullable final String value) {
@@ -162,7 +162,7 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the key property value. The email address or routing key of the member. Required.
+     * Sets the key property value. The email address or routing key of the member. Optional.
      * @param value Value to set for the key property.
      */
     public void setKey(@jakarta.annotation.Nullable final String value) {
@@ -183,7 +183,7 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("recipientType", value);
     }
     /**
-     * Sets the routingType property value. The routing type for the member, for example, SMTP. Optional.
+     * Sets the routingType property value. The routingType property
      * @param value Value to set for the routingType property.
      */
     public void setRoutingType(@jakarta.annotation.Nullable final String value) {

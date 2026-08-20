@@ -65,7 +65,7 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
         return this.backingStore;
     }
     /**
-     * Gets the consumingTenantOverridables property value. A comma-separated list of settings that can be overridden in the consuming tenant. The possible values are: urlTemplate, isDiscoverabilityEnabled, isSearchEnabled, isItemVersioningEnabled, itemMajorVersionLimit, maxStoragePerContainerInBytes, unknownFutureValue.
+     * Gets the consumingTenantOverridables property value. A comma-separated list of settings that can be overridden in the consuming tenant. The possible values are: urlTemplate, isDiscoverabilityEnabled, isSearchEnabled, isItemVersioningEnabled, itemMajorVersionLimit, maxStoragePerContainerInBytes, unknownFutureValue, isOfficeRestricted.
      * @return a {@link EnumSet<FileStorageContainerTypeSettingsOverride>}
      */
     @jakarta.annotation.Nullable
@@ -206,7 +206,7 @@ public class FileStorageContainerTypeSettings implements AdditionalDataHolder, B
         this.backingStore = value;
     }
     /**
-     * Sets the consumingTenantOverridables property value. A comma-separated list of settings that can be overridden in the consuming tenant. The possible values are: urlTemplate, isDiscoverabilityEnabled, isSearchEnabled, isItemVersioningEnabled, itemMajorVersionLimit, maxStoragePerContainerInBytes, unknownFutureValue.
+     * Sets the consumingTenantOverridables property value. A comma-separated list of settings that can be overridden in the consuming tenant. The possible values are: urlTemplate, isDiscoverabilityEnabled, isSearchEnabled, isItemVersioningEnabled, itemMajorVersionLimit, maxStoragePerContainerInBytes, unknownFutureValue, isOfficeRestricted.
      * @param value Value to set for the consumingTenantOverridables property.
      */
     public void setConsumingTenantOverridables(@jakarta.annotation.Nullable final EnumSet<FileStorageContainerTypeSettingsOverride> value) {
