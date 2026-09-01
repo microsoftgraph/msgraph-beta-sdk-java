@@ -36,6 +36,7 @@ public class WorkflowSubject implements AdditionalDataHolder, BackedModel, Parsa
         if (mappingValueNode != null) {
             final String mappingValue = mappingValueNode.getStringValue();
             switch (mappingValue) {
+                case "#microsoft.graph.identityGovernance.directoryObjectWorkflowSubject": return new DirectoryObjectWorkflowSubject();
                 case "#microsoft.graph.identityGovernance.provisioningObjectWorkflowSubject": return new ProvisioningObjectWorkflowSubject();
             }
         }

@@ -32,7 +32,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity.
      * @return a {@link AppointmentsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AppointmentsRequestBuilder appointments() {
         return new AppointmentsRequestBuilder(pathParameters, requestAdapter);
@@ -40,7 +43,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity.
      * @return a {@link CalendarViewRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CalendarViewRequestBuilder calendarView() {
         return new CalendarViewRequestBuilder(pathParameters, requestAdapter);
@@ -48,7 +54,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity.
      * @return a {@link CustomersRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CustomersRequestBuilder customers() {
         return new CustomersRequestBuilder(pathParameters, requestAdapter);
@@ -56,7 +65,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity.
      * @return a {@link CustomQuestionsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CustomQuestionsRequestBuilder customQuestions() {
         return new CustomQuestionsRequestBuilder(pathParameters, requestAdapter);
@@ -64,7 +76,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getStaffAvailability method.
      * @return a {@link GetStaffAvailabilityRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetStaffAvailabilityRequestBuilder getStaffAvailability() {
         return new GetStaffAvailabilityRequestBuilder(pathParameters, requestAdapter);
@@ -72,7 +87,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the publish method.
      * @return a {@link PublishRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
@@ -80,7 +98,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity.
      * @return a {@link ServicesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ServicesRequestBuilder services() {
         return new ServicesRequestBuilder(pathParameters, requestAdapter);
@@ -88,7 +109,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
      * @return a {@link StaffMembersRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public StaffMembersRequestBuilder staffMembers() {
         return new StaffMembersRequestBuilder(pathParameters, requestAdapter);
@@ -96,7 +120,10 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the unpublish method.
      * @return a {@link UnpublishRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UnpublishRequestBuilder unpublish() {
         return new UnpublishRequestBuilder(pathParameters, requestAdapter);
@@ -120,8 +147,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a bookingBusiness object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -129,8 +159,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * Delete a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/bookingbusiness-delete?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -141,8 +174,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BookingBusiness get() {
         return get(null);
     }
@@ -151,8 +187,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BookingBusiness get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -164,8 +203,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BookingBusiness patch(@jakarta.annotation.Nonnull final BookingBusiness body) {
         return patch(body, null);
     }
@@ -175,8 +217,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BookingBusiness}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BookingBusiness patch(@jakarta.annotation.Nonnull final BookingBusiness body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -187,8 +232,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a bookingBusiness object.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -196,8 +244,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * Delete a bookingBusiness object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -207,8 +258,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
     /**
      * A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -216,8 +270,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * A collection of businesses in Microsoft Bookings. Read-only. Nullable.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -228,8 +285,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property bookingBusinesses in solutions
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BookingBusiness body) {
         return toPatchRequestInformation(body, null);
     }
@@ -238,8 +298,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BookingBusiness body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -252,8 +315,11 @@ public class BookingBusinessItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link BookingBusinessItemRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public BookingBusinessItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new BookingBusinessItemRequestBuilder(rawUrl, requestAdapter);

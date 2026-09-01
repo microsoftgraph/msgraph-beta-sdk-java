@@ -29,7 +29,10 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -38,8 +41,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * Provides operations to manage the crossOrganizationMigrationTasks property of the microsoft.graph.sharePointMigrationsRoot entity.
      * @param sharePointMigrationTaskId The unique identifier of sharePointMigrationTask
      * @return a {@link SharePointMigrationTaskItemRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SharePointMigrationTaskItemRequestBuilder bySharePointMigrationTaskId(@jakarta.annotation.Nonnull final String sharePointMigrationTaskId) {
         Objects.requireNonNull(sharePointMigrationTaskId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -66,8 +72,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link SharePointMigrationTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointMigrationTaskCollectionResponse get() {
         return get(null);
     }
@@ -76,8 +85,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationTaskCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointMigrationTaskCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -88,8 +100,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * Provides operations to call the getBySourceGroupMailNickname method.
      * @param sourceGroupMailNickname Usage: sourceGroupMailNickname=&apos;{sourceGroupMailNickname}&apos;
      * @return a {@link GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuilder getBySourceGroupMailNicknameWithSourceGroupMailNickname(@jakarta.annotation.Nonnull final String sourceGroupMailNickname) {
         Objects.requireNonNull(sourceGroupMailNickname);
         return new GetBySourceGroupMailNicknameWithSourceGroupMailNicknameRequestBuilder(pathParameters, requestAdapter, sourceGroupMailNickname);
@@ -98,8 +113,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * Provides operations to call the getBySourceSiteUrl method.
      * @param sourceSiteUrl Usage: sourceSiteUrl=&apos;{sourceSiteUrl}&apos;
      * @return a {@link GetBySourceSiteUrlWithSourceSiteUrlRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GetBySourceSiteUrlWithSourceSiteUrlRequestBuilder getBySourceSiteUrlWithSourceSiteUrl(@jakarta.annotation.Nonnull final String sourceSiteUrl) {
         Objects.requireNonNull(sourceSiteUrl);
         return new GetBySourceSiteUrlWithSourceSiteUrlRequestBuilder(pathParameters, requestAdapter, sourceSiteUrl);
@@ -108,8 +126,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * Provides operations to call the getBySourceUserPrincipalName method.
      * @param sourcePrincipalName Usage: sourcePrincipalName=&apos;{sourcePrincipalName}&apos;
      * @return a {@link GetBySourceUserPrincipalNameWithSourcePrincipalNameRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public GetBySourceUserPrincipalNameWithSourcePrincipalNameRequestBuilder getBySourceUserPrincipalNameWithSourcePrincipalName(@jakarta.annotation.Nonnull final String sourcePrincipalName) {
         Objects.requireNonNull(sourcePrincipalName);
         return new GetBySourceUserPrincipalNameWithSourcePrincipalNameRequestBuilder(pathParameters, requestAdapter, sourcePrincipalName);
@@ -119,9 +140,12 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * @param body The request body
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointMigrationTask post(@jakarta.annotation.Nonnull final SharePointMigrationTask body) {
         return post(body, null);
     }
@@ -131,9 +155,12 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointmigrationtask-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointMigrationTask post(@jakarta.annotation.Nonnull final SharePointMigrationTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -144,8 +171,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
     /**
      * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -153,8 +183,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * Get a sharePointMigrationTask that was previously created, using the task ID. The returned sharePointMigrationTask object includes the source and target site URLs, migration status, optional timestamps (startedDateTime and finishedDateTime), and error details about issues during processing.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -165,8 +198,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * Create or update a sharePointMigrationTask to migrate a resource from the source organization to the target organization, using the sharePointMigrationTaskParameters. The resource can be a user, a group, or a site. When an existing sharePointMigrationTask is retrieved, it might contain not only the specifics of the source and target organizations and resources, but also the status of the migration and errors encountered during the migration operation. The API calls occur on the source site and only add list items to the my site root web, for example, contoso-my.sharepoint.com. Then, it triggers a multi-geo site move job in the backend to enqueue and orchestrate several tenant workflow jobs, such as backup, restore, and cleanup, supported by TJ infrastructure. The OData type of sharePointResourceMigrationParameters differentiates user migration from site migration, rather than using different subpaths. For a user&apos;s OneDrive migration, specify sharePointUserMigrationParameters. If this migration task is a regular SharePoint site migration, specify sharePointSiteMigrationParameters. If this migration task is a group-connected site migration, specify sharePointGroupMigrationParameters.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SharePointMigrationTask body) {
         return toPostRequestInformation(body, null);
     }
@@ -175,8 +211,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SharePointMigrationTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -189,8 +228,11 @@ public class CrossOrganizationMigrationTasksRequestBuilder extends BaseRequestBu
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CrossOrganizationMigrationTasksRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public CrossOrganizationMigrationTasksRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CrossOrganizationMigrationTasksRequestBuilder(rawUrl, requestAdapter);

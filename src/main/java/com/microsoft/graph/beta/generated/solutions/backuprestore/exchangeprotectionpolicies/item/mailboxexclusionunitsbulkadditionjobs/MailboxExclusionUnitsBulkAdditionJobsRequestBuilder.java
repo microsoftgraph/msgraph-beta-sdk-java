@@ -25,7 +25,10 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -34,8 +37,11 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
      * Provides operations to manage the mailboxExclusionUnitsBulkAdditionJobs property of the microsoft.graph.exchangeProtectionPolicy entity.
      * @param mailboxExclusionUnitsBulkAdditionJobId The unique identifier of mailboxExclusionUnitsBulkAdditionJob
      * @return a {@link MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public MailboxExclusionUnitsBulkAdditionJobItemRequestBuilder byMailboxExclusionUnitsBulkAdditionJobId(@jakarta.annotation.Nonnull final String mailboxExclusionUnitsBulkAdditionJobId) {
         Objects.requireNonNull(mailboxExclusionUnitsBulkAdditionJobId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -62,9 +68,12 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
      * Get a list of mailbox exclusion units bulk addition jobs associated with an Exchange protection policy.
      * @return a {@link MailboxExclusionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-list-mailboxexclusionunitsbulkadditionjobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public MailboxExclusionUnitsBulkAdditionJobCollectionResponse get() {
         return get(null);
     }
@@ -73,9 +82,12 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxExclusionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-list-mailboxexclusionunitsbulkadditionjobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public MailboxExclusionUnitsBulkAdditionJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -85,8 +97,11 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
     /**
      * Get a list of mailbox exclusion units bulk addition jobs associated with an Exchange protection policy.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -94,8 +109,11 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
      * Get a list of mailbox exclusion units bulk addition jobs associated with an Exchange protection policy.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -106,8 +124,11 @@ public class MailboxExclusionUnitsBulkAdditionJobsRequestBuilder extends BaseReq
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MailboxExclusionUnitsBulkAdditionJobsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public MailboxExclusionUnitsBulkAdditionJobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MailboxExclusionUnitsBulkAdditionJobsRequestBuilder(rawUrl, requestAdapter);

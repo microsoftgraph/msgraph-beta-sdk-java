@@ -3,6 +3,8 @@ package com.microsoft.graph.beta.identitygovernance.lifecycleworkflows;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.customtaskextensions.CustomTaskExtensionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.deleteditems.DeletedItemsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.insights.InsightsRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.lifecyclepolicies.LifecyclePoliciesRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.lifecyclepolicypriorityconfigurations.LifecyclePolicyPriorityConfigurationsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.settings.SettingsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.taskdefinitions.TaskDefinitionsRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.WorkflowsRequestBuilder;
@@ -30,7 +32,10 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the customTaskExtensions property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
      * @return a {@link CustomTaskExtensionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CustomTaskExtensionsRequestBuilder customTaskExtensions() {
         return new CustomTaskExtensionsRequestBuilder(pathParameters, requestAdapter);
@@ -38,7 +43,10 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the deletedItems property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
      * @return a {@link DeletedItemsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DeletedItemsRequestBuilder deletedItems() {
         return new DeletedItemsRequestBuilder(pathParameters, requestAdapter);
@@ -46,15 +54,43 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the insights property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
      * @return a {@link InsightsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public InsightsRequestBuilder insights() {
         return new InsightsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the lifecyclePolicies property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
+     * @return a {@link LifecyclePoliciesRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public LifecyclePoliciesRequestBuilder lifecyclePolicies() {
+        return new LifecyclePoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the lifecyclePolicyPriorityConfigurations property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
+     * @return a {@link LifecyclePolicyPriorityConfigurationsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public LifecyclePolicyPriorityConfigurationsRequestBuilder lifecyclePolicyPriorityConfigurations() {
+        return new LifecyclePolicyPriorityConfigurationsRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the settings property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
      * @return a {@link SettingsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SettingsRequestBuilder settings() {
         return new SettingsRequestBuilder(pathParameters, requestAdapter);
@@ -62,7 +98,10 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the taskDefinitions property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
      * @return a {@link TaskDefinitionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TaskDefinitionsRequestBuilder taskDefinitions() {
         return new TaskDefinitionsRequestBuilder(pathParameters, requestAdapter);
@@ -70,7 +109,10 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the workflows property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
      * @return a {@link WorkflowsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public WorkflowsRequestBuilder workflows() {
         return new WorkflowsRequestBuilder(pathParameters, requestAdapter);
@@ -78,7 +120,10 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the workflowTemplates property of the microsoft.graph.identityGovernance.lifecycleWorkflowsContainer entity.
      * @return a {@link WorkflowTemplatesRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public WorkflowTemplatesRequestBuilder workflowTemplates() {
         return new WorkflowTemplatesRequestBuilder(pathParameters, requestAdapter);
@@ -102,7 +147,10 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property lifecycleWorkflows for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -110,7 +158,10 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property lifecycleWorkflows for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -121,8 +172,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * Get lifecycleWorkflows from identityGovernance
      * @return a {@link LifecycleWorkflowsContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public LifecycleWorkflowsContainer get() {
         return get(null);
     }
@@ -131,8 +185,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LifecycleWorkflowsContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public LifecycleWorkflowsContainer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -144,8 +201,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link LifecycleWorkflowsContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public LifecycleWorkflowsContainer patch(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body) {
         return patch(body, null);
     }
@@ -155,8 +215,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LifecycleWorkflowsContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public LifecycleWorkflowsContainer patch(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -167,8 +230,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property lifecycleWorkflows for identityGovernance
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -176,8 +242,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property lifecycleWorkflows for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -187,8 +256,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get lifecycleWorkflows from identityGovernance
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -196,8 +268,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * Get lifecycleWorkflows from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -208,8 +283,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property lifecycleWorkflows in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body) {
         return toPatchRequestInformation(body, null);
     }
@@ -218,8 +296,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final LifecycleWorkflowsContainer body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -232,8 +313,11 @@ public class LifecycleWorkflowsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link LifecycleWorkflowsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public LifecycleWorkflowsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new LifecycleWorkflowsRequestBuilder(rawUrl, requestAdapter);

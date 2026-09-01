@@ -35,7 +35,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the acceptRecommendations method.
      * @return a {@link AcceptRecommendationsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AcceptRecommendationsRequestBuilder acceptRecommendations() {
         return new AcceptRecommendationsRequestBuilder(pathParameters, requestAdapter);
@@ -43,7 +46,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the applyDecisions method.
      * @return a {@link ApplyDecisionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ApplyDecisionsRequestBuilder applyDecisions() {
         return new ApplyDecisionsRequestBuilder(pathParameters, requestAdapter);
@@ -51,7 +57,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the batchApplyCustomDataProvidedResourceDecisions method.
      * @return a {@link BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder batchApplyCustomDataProvidedResourceDecisions() {
         return new BatchApplyCustomDataProvidedResourceDecisionsRequestBuilder(pathParameters, requestAdapter);
@@ -59,7 +68,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the batchRecordDecisions method.
      * @return a {@link BatchRecordDecisionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public BatchRecordDecisionsRequestBuilder batchRecordDecisions() {
         return new BatchRecordDecisionsRequestBuilder(pathParameters, requestAdapter);
@@ -67,7 +79,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the contactedReviewers property of the microsoft.graph.accessReviewInstance entity.
      * @return a {@link ContactedReviewersRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ContactedReviewersRequestBuilder contactedReviewers() {
         return new ContactedReviewersRequestBuilder(pathParameters, requestAdapter);
@@ -75,7 +90,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the decisions property of the microsoft.graph.accessReviewInstance entity.
      * @return a {@link DecisionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DecisionsRequestBuilder decisions() {
         return new DecisionsRequestBuilder(pathParameters, requestAdapter);
@@ -83,7 +101,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the definition property of the microsoft.graph.accessReviewInstance entity.
      * @return a {@link DefinitionRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DefinitionRequestBuilder definition() {
         return new DefinitionRequestBuilder(pathParameters, requestAdapter);
@@ -91,7 +112,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the resetDecisions method.
      * @return a {@link ResetDecisionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ResetDecisionsRequestBuilder resetDecisions() {
         return new ResetDecisionsRequestBuilder(pathParameters, requestAdapter);
@@ -99,7 +123,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the sendReminder method.
      * @return a {@link SendReminderRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SendReminderRequestBuilder sendReminder() {
         return new SendReminderRequestBuilder(pathParameters, requestAdapter);
@@ -107,7 +134,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the stages property of the microsoft.graph.accessReviewInstance entity.
      * @return a {@link StagesRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public StagesRequestBuilder stages() {
         return new StagesRequestBuilder(pathParameters, requestAdapter);
@@ -115,7 +145,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the stop method.
      * @return a {@link StopRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public StopRequestBuilder stop() {
         return new StopRequestBuilder(pathParameters, requestAdapter);
@@ -123,7 +156,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the stopApplyDecisions method.
      * @return a {@link StopApplyDecisionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public StopApplyDecisionsRequestBuilder stopApplyDecisions() {
         return new StopApplyDecisionsRequestBuilder(pathParameters, requestAdapter);
@@ -147,7 +183,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property instances for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -155,7 +194,10 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property instances for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -166,9 +208,12 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve an accessReviewInstance object using the identifier of an accessReviewInstance and its parent accessReviewScheduleDefinition. This returns all properties of the instance except for the associated accessReviewInstanceDecisionItems. To retrieve the decisions on the instance, use List accessReviewInstanceDecisionItem.
      * @return a {@link AccessReviewInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AccessReviewInstance get() {
         return get(null);
     }
@@ -177,9 +222,12 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AccessReviewInstance get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -191,9 +239,12 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link AccessReviewInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AccessReviewInstance patch(@jakarta.annotation.Nonnull final AccessReviewInstance body) {
         return patch(body, null);
     }
@@ -203,9 +254,12 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessReviewInstance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/accessreviewinstance-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AccessReviewInstance patch(@jakarta.annotation.Nonnull final AccessReviewInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -216,8 +270,11 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property instances for identityGovernance
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -225,8 +282,11 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property instances for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -236,8 +296,11 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve an accessReviewInstance object using the identifier of an accessReviewInstance and its parent accessReviewScheduleDefinition. This returns all properties of the instance except for the associated accessReviewInstanceDecisionItems. To retrieve the decisions on the instance, use List accessReviewInstanceDecisionItem.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -245,8 +308,11 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve an accessReviewInstance object using the identifier of an accessReviewInstance and its parent accessReviewScheduleDefinition. This returns all properties of the instance except for the associated accessReviewInstanceDecisionItems. To retrieve the decisions on the instance, use List accessReviewInstanceDecisionItem.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -257,8 +323,11 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of an accessReviewInstance object. Only the reviewers and fallbackReviewers properties can be updated but the scope property is also required in the request body. You can only add reviewers to the fallbackReviewers property but can&apos;t remove existing fallbackReviewers. To update an accessReviewInstance, its status must be InProgress.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessReviewInstance body) {
         return toPatchRequestInformation(body, null);
     }
@@ -267,8 +336,11 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessReviewInstance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -281,8 +353,11 @@ public class AccessReviewInstanceItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AccessReviewInstanceItemRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AccessReviewInstanceItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AccessReviewInstanceItemRequestBuilder(rawUrl, requestAdapter);

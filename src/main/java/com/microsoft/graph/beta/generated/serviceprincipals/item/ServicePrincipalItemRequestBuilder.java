@@ -22,7 +22,9 @@ import com.microsoft.graph.beta.serviceprincipals.item.getmemberobjects.GetMembe
 import com.microsoft.graph.beta.serviceprincipals.item.getpasswordsinglesignoncredentials.GetPasswordSingleSignOnCredentialsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.homerealmdiscoverypolicies.HomeRealmDiscoveryPoliciesRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.licensedetails.LicenseDetailsRequestBuilder;
+import com.microsoft.graph.beta.serviceprincipals.item.lifecycle.LifecycleRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.memberof.MemberOfRequestBuilder;
+import com.microsoft.graph.beta.serviceprincipals.item.microsoftgraphidentitygovernanceattest.MicrosoftGraphIdentityGovernanceAttestRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.oauth2permissiongrants.Oauth2PermissionGrantsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.ownedobjects.OwnedObjectsRequestBuilder;
 import com.microsoft.graph.beta.serviceprincipals.item.owners.OwnersRequestBuilder;
@@ -55,7 +57,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the addTokenSigningCertificate method.
      * @return a {@link AddTokenSigningCertificateRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AddTokenSigningCertificateRequestBuilder addTokenSigningCertificate() {
         return new AddTokenSigningCertificateRequestBuilder(pathParameters, requestAdapter);
@@ -63,7 +68,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appManagementPolicies property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link AppManagementPoliciesRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AppManagementPoliciesRequestBuilder appManagementPolicies() {
         return new AppManagementPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -71,7 +79,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appRoleAssignedTo property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link AppRoleAssignedToRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AppRoleAssignedToRequestBuilder appRoleAssignedTo() {
         return new AppRoleAssignedToRequestBuilder(pathParameters, requestAdapter);
@@ -79,7 +90,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appRoleAssignments property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link AppRoleAssignmentsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AppRoleAssignmentsRequestBuilder appRoleAssignments() {
         return new AppRoleAssignmentsRequestBuilder(pathParameters, requestAdapter);
@@ -87,7 +101,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the checkMemberGroups method.
      * @return a {@link CheckMemberGroupsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CheckMemberGroupsRequestBuilder checkMemberGroups() {
         return new CheckMemberGroupsRequestBuilder(pathParameters, requestAdapter);
@@ -95,7 +112,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the checkMemberObjects method.
      * @return a {@link CheckMemberObjectsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CheckMemberObjectsRequestBuilder checkMemberObjects() {
         return new CheckMemberObjectsRequestBuilder(pathParameters, requestAdapter);
@@ -103,7 +123,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the claimsMappingPolicies property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link ClaimsMappingPoliciesRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ClaimsMappingPoliciesRequestBuilder claimsMappingPolicies() {
         return new ClaimsMappingPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -111,7 +134,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the claimsPolicy property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link ClaimsPolicyRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ClaimsPolicyRequestBuilder claimsPolicy() {
         return new ClaimsPolicyRequestBuilder(pathParameters, requestAdapter);
@@ -119,7 +145,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the createdObjects property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link CreatedObjectsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CreatedObjectsRequestBuilder createdObjects() {
         return new CreatedObjectsRequestBuilder(pathParameters, requestAdapter);
@@ -127,7 +156,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the createPasswordSingleSignOnCredentials method.
      * @return a {@link CreatePasswordSingleSignOnCredentialsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CreatePasswordSingleSignOnCredentialsRequestBuilder createPasswordSingleSignOnCredentials() {
         return new CreatePasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
@@ -135,7 +167,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the delegatedPermissionClassifications property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link DelegatedPermissionClassificationsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DelegatedPermissionClassificationsRequestBuilder delegatedPermissionClassifications() {
         return new DelegatedPermissionClassificationsRequestBuilder(pathParameters, requestAdapter);
@@ -143,7 +178,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the deletePasswordSingleSignOnCredentials method.
      * @return a {@link DeletePasswordSingleSignOnCredentialsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DeletePasswordSingleSignOnCredentialsRequestBuilder deletePasswordSingleSignOnCredentials() {
         return new DeletePasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
@@ -151,7 +189,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the endpoints property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link EndpointsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EndpointsRequestBuilder endpoints() {
         return new EndpointsRequestBuilder(pathParameters, requestAdapter);
@@ -159,7 +200,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link FederatedIdentityCredentialsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public FederatedIdentityCredentialsRequestBuilder federatedIdentityCredentials() {
         return new FederatedIdentityCredentialsRequestBuilder(pathParameters, requestAdapter);
@@ -167,7 +211,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getMemberGroups method.
      * @return a {@link GetMemberGroupsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetMemberGroupsRequestBuilder getMemberGroups() {
         return new GetMemberGroupsRequestBuilder(pathParameters, requestAdapter);
@@ -175,7 +222,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getMemberObjects method.
      * @return a {@link GetMemberObjectsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetMemberObjectsRequestBuilder getMemberObjects() {
         return new GetMemberObjectsRequestBuilder(pathParameters, requestAdapter);
@@ -183,7 +233,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getPasswordSingleSignOnCredentials method.
      * @return a {@link GetPasswordSingleSignOnCredentialsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetPasswordSingleSignOnCredentialsRequestBuilder getPasswordSingleSignOnCredentials() {
         return new GetPasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
@@ -191,7 +244,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link HomeRealmDiscoveryPoliciesRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public HomeRealmDiscoveryPoliciesRequestBuilder homeRealmDiscoveryPolicies() {
         return new HomeRealmDiscoveryPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -199,23 +255,54 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the licenseDetails property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link LicenseDetailsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public LicenseDetailsRequestBuilder licenseDetails() {
         return new LicenseDetailsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to manage the lifecycle property of the microsoft.graph.servicePrincipal entity.
+     * @return a {@link LifecycleRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public LifecycleRequestBuilder lifecycle() {
+        return new LifecycleRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the memberOf property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link MemberOfRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MemberOfRequestBuilder memberOf() {
         return new MemberOfRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the attest method.
+     * @return a {@link MicrosoftGraphIdentityGovernanceAttestRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public MicrosoftGraphIdentityGovernanceAttestRequestBuilder microsoftGraphIdentityGovernanceAttest() {
+        return new MicrosoftGraphIdentityGovernanceAttestRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link Oauth2PermissionGrantsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public Oauth2PermissionGrantsRequestBuilder oauth2PermissionGrants() {
         return new Oauth2PermissionGrantsRequestBuilder(pathParameters, requestAdapter);
@@ -223,7 +310,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the ownedObjects property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link OwnedObjectsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OwnedObjectsRequestBuilder ownedObjects() {
         return new OwnedObjectsRequestBuilder(pathParameters, requestAdapter);
@@ -231,7 +321,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the owners property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link OwnersRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OwnersRequestBuilder owners() {
         return new OwnersRequestBuilder(pathParameters, requestAdapter);
@@ -239,7 +332,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the permissionGrantPreApprovalPolicies property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link PermissionGrantPreApprovalPoliciesRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PermissionGrantPreApprovalPoliciesRequestBuilder permissionGrantPreApprovalPolicies() {
         return new PermissionGrantPreApprovalPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -247,7 +343,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the remoteDesktopSecurityConfiguration property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link RemoteDesktopSecurityConfigurationRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RemoteDesktopSecurityConfigurationRequestBuilder remoteDesktopSecurityConfiguration() {
         return new RemoteDesktopSecurityConfigurationRequestBuilder(pathParameters, requestAdapter);
@@ -255,7 +354,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the restore method.
      * @return a {@link RestoreRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RestoreRequestBuilder restore() {
         return new RestoreRequestBuilder(pathParameters, requestAdapter);
@@ -263,7 +365,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the synchronization property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link SynchronizationRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SynchronizationRequestBuilder synchronization() {
         return new SynchronizationRequestBuilder(pathParameters, requestAdapter);
@@ -271,7 +376,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link TokenIssuancePoliciesRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TokenIssuancePoliciesRequestBuilder tokenIssuancePolicies() {
         return new TokenIssuancePoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -279,7 +387,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link TokenLifetimePoliciesRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TokenLifetimePoliciesRequestBuilder tokenLifetimePolicies() {
         return new TokenLifetimePoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -287,7 +398,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.servicePrincipal entity.
      * @return a {@link TransitiveMemberOfRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TransitiveMemberOfRequestBuilder transitiveMemberOf() {
         return new TransitiveMemberOfRequestBuilder(pathParameters, requestAdapter);
@@ -295,7 +409,10 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the updatePasswordSingleSignOnCredentials method.
      * @return a {@link UpdatePasswordSingleSignOnCredentialsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UpdatePasswordSingleSignOnCredentialsRequestBuilder updatePasswordSingleSignOnCredentials() {
         return new UpdatePasswordSingleSignOnCredentialsRequestBuilder(pathParameters, requestAdapter);
@@ -319,8 +436,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -328,8 +448,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-delete?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -340,8 +463,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
      * @param name Alternate key of federatedIdentityCredential
      * @return a {@link FederatedIdentityCredentialsWithNameRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public FederatedIdentityCredentialsWithNameRequestBuilder federatedIdentityCredentialsWithName(@jakarta.annotation.Nonnull final String name) {
         Objects.requireNonNull(name);
         return new FederatedIdentityCredentialsWithNameRequestBuilder(pathParameters, requestAdapter, name);
@@ -350,9 +476,12 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ServicePrincipal get() {
         return get(null);
     }
@@ -361,9 +490,12 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ServicePrincipal get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -375,9 +507,12 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ServicePrincipal patch(@jakarta.annotation.Nonnull final ServicePrincipal body) {
         return patch(body, null);
     }
@@ -387,9 +522,12 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ServicePrincipal}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-upsert?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ServicePrincipal patch(@jakarta.annotation.Nonnull final ServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -400,8 +538,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -409,8 +550,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Delete a servicePrincipal object. This API can also delete an agentIdentityBlueprintPrincipal object by its ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -420,8 +564,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -429,8 +576,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve the properties and relationships of a servicePrincipal object. This API can be used to get agentIdentityBlueprintPrincipal objects as well by their ID.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -441,8 +591,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Create a new servicePrincipal object if it doesn&apos;t exist, or update the properties of an existing servicePrincipal object. This API can also create an agentIdentityBlueprintPrincipal object from an agentIdentityBlueprint if it doesn&apos;t exist, or update properties of an existing agentIdentityBlueprintPrincipal, when the @odata.type property is set to #microsoft.graph.agentIdentityBlueprintPrincipal.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ServicePrincipal body) {
         return toPatchRequestInformation(body, null);
     }
@@ -451,8 +604,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ServicePrincipal body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -465,8 +621,11 @@ public class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ServicePrincipalItemRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ServicePrincipalItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ServicePrincipalItemRequestBuilder(rawUrl, requestAdapter);

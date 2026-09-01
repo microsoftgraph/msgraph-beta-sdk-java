@@ -34,7 +34,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessReviews property of the microsoft.graph.identityGovernance entity.
      * @return a {@link AccessReviewsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessReviewsRequestBuilder accessReviews() {
         return new AccessReviewsRequestBuilder(pathParameters, requestAdapter);
@@ -42,7 +45,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the appConsent property of the microsoft.graph.identityGovernance entity.
      * @return a {@link AppConsentRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AppConsentRequestBuilder appConsent() {
         return new AppConsentRequestBuilder(pathParameters, requestAdapter);
@@ -50,7 +56,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the catalogs property of the microsoft.graph.identityGovernance entity.
      * @return a {@link CatalogsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CatalogsRequestBuilder catalogs() {
         return new CatalogsRequestBuilder(pathParameters, requestAdapter);
@@ -58,7 +67,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the entitlementManagement property of the microsoft.graph.identityGovernance entity.
      * @return a {@link EntitlementManagementRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EntitlementManagementRequestBuilder entitlementManagement() {
         return new EntitlementManagementRequestBuilder(pathParameters, requestAdapter);
@@ -66,7 +78,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the lifecycleWorkflows property of the microsoft.graph.identityGovernance entity.
      * @return a {@link LifecycleWorkflowsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public LifecycleWorkflowsRequestBuilder lifecycleWorkflows() {
         return new LifecycleWorkflowsRequestBuilder(pathParameters, requestAdapter);
@@ -74,7 +89,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the permissionsAnalytics property of the microsoft.graph.identityGovernance entity.
      * @return a {@link PermissionsAnalyticsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PermissionsAnalyticsRequestBuilder permissionsAnalytics() {
         return new PermissionsAnalyticsRequestBuilder(pathParameters, requestAdapter);
@@ -82,7 +100,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the permissionsManagement property of the microsoft.graph.identityGovernance entity.
      * @return a {@link PermissionsManagementRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PermissionsManagementRequestBuilder permissionsManagement() {
         return new PermissionsManagementRequestBuilder(pathParameters, requestAdapter);
@@ -90,7 +111,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the privilegedAccess property of the microsoft.graph.identityGovernance entity.
      * @return a {@link PrivilegedAccessRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PrivilegedAccessRequestBuilder privilegedAccess() {
         return new PrivilegedAccessRequestBuilder(pathParameters, requestAdapter);
@@ -98,7 +122,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the roleManagementAlerts property of the microsoft.graph.identityGovernance entity.
      * @return a {@link RoleManagementAlertsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RoleManagementAlertsRequestBuilder roleManagementAlerts() {
         return new RoleManagementAlertsRequestBuilder(pathParameters, requestAdapter);
@@ -106,7 +133,10 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the termsOfUse property of the microsoft.graph.identityGovernance entity.
      * @return a {@link TermsOfUseRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TermsOfUseRequestBuilder termsOfUse() {
         return new TermsOfUseRequestBuilder(pathParameters, requestAdapter);
@@ -144,8 +174,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Get identityGovernance
      * @return a {@link IdentityGovernance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityGovernance get() {
         return get(null);
     }
@@ -154,8 +187,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityGovernance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityGovernance get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -167,8 +203,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link IdentityGovernance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityGovernance patch(@jakarta.annotation.Nonnull final IdentityGovernance body) {
         return patch(body, null);
     }
@@ -178,8 +217,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link IdentityGovernance}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public IdentityGovernance patch(@jakarta.annotation.Nonnull final IdentityGovernance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -190,8 +232,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
     /**
      * Get identityGovernance
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -199,8 +244,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Get identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -211,8 +259,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Update identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityGovernance body) {
         return toPatchRequestInformation(body, null);
     }
@@ -221,8 +272,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final IdentityGovernance body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -235,8 +289,11 @@ public class IdentityGovernanceRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link IdentityGovernanceRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public IdentityGovernanceRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new IdentityGovernanceRequestBuilder(rawUrl, requestAdapter);

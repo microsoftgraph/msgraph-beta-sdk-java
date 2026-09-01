@@ -57,7 +57,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the activityLogs property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link ActivityLogsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ActivityLogsRequestBuilder activityLogs() {
         return new ActivityLogsRequestBuilder(pathParameters, requestAdapter);
@@ -65,7 +68,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the browseSessions property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link BrowseSessionsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public BrowseSessionsRequestBuilder browseSessions() {
         return new BrowseSessionsRequestBuilder(pathParameters, requestAdapter);
@@ -73,7 +79,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the driveExclusionUnits property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link DriveExclusionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveExclusionUnitsRequestBuilder driveExclusionUnits() {
         return new DriveExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -81,7 +90,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the driveExclusionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link DriveExclusionUnitsBulkAdditionJobsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveExclusionUnitsBulkAdditionJobsRequestBuilder driveExclusionUnitsBulkAdditionJobs() {
         return new DriveExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -89,7 +101,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the driveInclusionRules property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link DriveInclusionRulesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveInclusionRulesRequestBuilder driveInclusionRules() {
         return new DriveInclusionRulesRequestBuilder(pathParameters, requestAdapter);
@@ -97,7 +112,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the driveProtectionUnits property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link DriveProtectionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveProtectionUnitsRequestBuilder driveProtectionUnits() {
         return new DriveProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -105,7 +123,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the driveProtectionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link DriveProtectionUnitsBulkAdditionJobsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveProtectionUnitsBulkAdditionJobsRequestBuilder driveProtectionUnitsBulkAdditionJobs() {
         return new DriveProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -113,7 +134,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the emailNotificationsSetting property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link EmailNotificationsSettingRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EmailNotificationsSettingRequestBuilder emailNotificationsSetting() {
         return new EmailNotificationsSettingRequestBuilder(pathParameters, requestAdapter);
@@ -121,7 +145,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the enable method.
      * @return a {@link EnableRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public EnableRequestBuilder enable() {
         return new EnableRequestBuilder(pathParameters, requestAdapter);
@@ -129,7 +156,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the exchangeProtectionPolicies property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link ExchangeProtectionPoliciesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExchangeProtectionPoliciesRequestBuilder exchangeProtectionPolicies() {
         return new ExchangeProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -137,7 +167,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the exchangeRestoreSessions property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link ExchangeRestoreSessionsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExchangeRestoreSessionsRequestBuilder exchangeRestoreSessions() {
         return new ExchangeRestoreSessionsRequestBuilder(pathParameters, requestAdapter);
@@ -145,7 +178,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the exclusionUnits property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link ExclusionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExclusionUnitsRequestBuilder exclusionUnits() {
         return new ExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -153,7 +189,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the mailboxExclusionUnits property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link MailboxExclusionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxExclusionUnitsRequestBuilder mailboxExclusionUnits() {
         return new MailboxExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -161,7 +200,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the mailboxExclusionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link MailboxExclusionUnitsBulkAdditionJobsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxExclusionUnitsBulkAdditionJobsRequestBuilder mailboxExclusionUnitsBulkAdditionJobs() {
         return new MailboxExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -169,7 +211,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the mailboxInclusionRules property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link MailboxInclusionRulesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxInclusionRulesRequestBuilder mailboxInclusionRules() {
         return new MailboxInclusionRulesRequestBuilder(pathParameters, requestAdapter);
@@ -177,7 +222,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the mailboxProtectionUnits property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link MailboxProtectionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxProtectionUnitsRequestBuilder mailboxProtectionUnits() {
         return new MailboxProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -185,7 +233,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the mailboxProtectionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link MailboxProtectionUnitsBulkAdditionJobsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxProtectionUnitsBulkAdditionJobsRequestBuilder mailboxProtectionUnitsBulkAdditionJobs() {
         return new MailboxProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -193,7 +244,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the oneDriveForBusinessBrowseSessions property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link OneDriveForBusinessBrowseSessionsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OneDriveForBusinessBrowseSessionsRequestBuilder oneDriveForBusinessBrowseSessions() {
         return new OneDriveForBusinessBrowseSessionsRequestBuilder(pathParameters, requestAdapter);
@@ -201,7 +255,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the oneDriveForBusinessProtectionPolicies property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link OneDriveForBusinessProtectionPoliciesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OneDriveForBusinessProtectionPoliciesRequestBuilder oneDriveForBusinessProtectionPolicies() {
         return new OneDriveForBusinessProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -209,7 +266,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the oneDriveForBusinessRestoreSessions property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link OneDriveForBusinessRestoreSessionsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public OneDriveForBusinessRestoreSessionsRequestBuilder oneDriveForBusinessRestoreSessions() {
         return new OneDriveForBusinessRestoreSessionsRequestBuilder(pathParameters, requestAdapter);
@@ -217,7 +277,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the protectionPolicies property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link ProtectionPoliciesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ProtectionPoliciesRequestBuilder protectionPolicies() {
         return new ProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -225,7 +288,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the protectionUnits property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link ProtectionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ProtectionUnitsRequestBuilder protectionUnits() {
         return new ProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -233,7 +299,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the reports property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link ReportsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ReportsRequestBuilder reports() {
         return new ReportsRequestBuilder(pathParameters, requestAdapter);
@@ -241,7 +310,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the restorePoints property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link RestorePointsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RestorePointsRequestBuilder restorePoints() {
         return new RestorePointsRequestBuilder(pathParameters, requestAdapter);
@@ -249,7 +321,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the restoreSessions property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link RestoreSessionsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RestoreSessionsRequestBuilder restoreSessions() {
         return new RestoreSessionsRequestBuilder(pathParameters, requestAdapter);
@@ -257,7 +332,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the serviceApps property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link ServiceAppsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ServiceAppsRequestBuilder serviceApps() {
         return new ServiceAppsRequestBuilder(pathParameters, requestAdapter);
@@ -265,7 +343,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sharePointBrowseSessions property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link SharePointBrowseSessionsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SharePointBrowseSessionsRequestBuilder sharePointBrowseSessions() {
         return new SharePointBrowseSessionsRequestBuilder(pathParameters, requestAdapter);
@@ -273,7 +354,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sharePointProtectionPolicies property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link SharePointProtectionPoliciesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SharePointProtectionPoliciesRequestBuilder sharePointProtectionPolicies() {
         return new SharePointProtectionPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -281,7 +365,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sharePointRestoreSessions property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link SharePointRestoreSessionsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SharePointRestoreSessionsRequestBuilder sharePointRestoreSessions() {
         return new SharePointRestoreSessionsRequestBuilder(pathParameters, requestAdapter);
@@ -289,7 +376,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the siteExclusionUnits property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link SiteExclusionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteExclusionUnitsRequestBuilder siteExclusionUnits() {
         return new SiteExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -297,7 +387,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the siteExclusionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link SiteExclusionUnitsBulkAdditionJobsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteExclusionUnitsBulkAdditionJobsRequestBuilder siteExclusionUnitsBulkAdditionJobs() {
         return new SiteExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -305,7 +398,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the siteInclusionRules property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link SiteInclusionRulesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteInclusionRulesRequestBuilder siteInclusionRules() {
         return new SiteInclusionRulesRequestBuilder(pathParameters, requestAdapter);
@@ -313,7 +409,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the siteProtectionUnits property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link SiteProtectionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteProtectionUnitsRequestBuilder siteProtectionUnits() {
         return new SiteProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -321,7 +420,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the siteProtectionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
      * @return a {@link SiteProtectionUnitsBulkAdditionJobsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteProtectionUnitsBulkAdditionJobsRequestBuilder siteProtectionUnitsBulkAdditionJobs() {
         return new SiteProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -345,7 +447,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property backupRestore for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -353,7 +458,10 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property backupRestore for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -364,9 +472,12 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * Get the serviceStatus of the Microsoft 365 Backup Storage service in a tenant.
      * @return a {@link BackupRestoreRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BackupRestoreRoot get() {
         return get(null);
     }
@@ -375,9 +486,12 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BackupRestoreRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BackupRestoreRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -389,8 +503,11 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link BackupRestoreRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BackupRestoreRoot patch(@jakarta.annotation.Nonnull final BackupRestoreRoot body) {
         return patch(body, null);
     }
@@ -400,8 +517,11 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BackupRestoreRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BackupRestoreRoot patch(@jakarta.annotation.Nonnull final BackupRestoreRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -412,8 +532,11 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property backupRestore for solutions
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -421,8 +544,11 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property backupRestore for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -432,8 +558,11 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
     /**
      * Get the serviceStatus of the Microsoft 365 Backup Storage service in a tenant.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -441,8 +570,11 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * Get the serviceStatus of the Microsoft 365 Backup Storage service in a tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -453,8 +585,11 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property backupRestore in solutions
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BackupRestoreRoot body) {
         return toPatchRequestInformation(body, null);
     }
@@ -463,8 +598,11 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BackupRestoreRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -477,8 +615,11 @@ public class BackupRestoreRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link BackupRestoreRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public BackupRestoreRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new BackupRestoreRequestBuilder(rawUrl, requestAdapter);

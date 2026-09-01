@@ -1,10 +1,16 @@
 package com.microsoft.graph.beta.directory.recommendations.item;
 
+import com.microsoft.graph.beta.directory.recommendations.item.acceptrisk.AcceptRiskRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.addtag.AddTagRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.applyalternatemitigation.ApplyAlternateMitigationRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.complete.CompleteRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.dismiss.DismissRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.ImpactedResourcesRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.markplanned.MarkPlannedRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.postpone.PostponeRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.reactivate.ReactivateRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.removetag.RemoveTagRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.tags.TagsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.models.Recommendation;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -25,6 +31,30 @@ import java.util.Objects;
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
+    /**
+     * Provides operations to call the acceptRisk method.
+     * @return a {@link AcceptRiskRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AcceptRiskRequestBuilder acceptRisk() {
+        return new AcceptRiskRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the addTag method.
+     * @return a {@link AddTagRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AddTagRequestBuilder addTag() {
+        return new AddTagRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the applyAlternateMitigation method.
+     * @return a {@link ApplyAlternateMitigationRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ApplyAlternateMitigationRequestBuilder applyAlternateMitigation() {
+        return new ApplyAlternateMitigationRequestBuilder(pathParameters, requestAdapter);
+    }
     /**
      * Provides operations to call the complete method.
      * @return a {@link CompleteRequestBuilder}
@@ -50,6 +80,14 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
         return new ImpactedResourcesRequestBuilder(pathParameters, requestAdapter);
     }
     /**
+     * Provides operations to call the markPlanned method.
+     * @return a {@link MarkPlannedRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public MarkPlannedRequestBuilder markPlanned() {
+        return new MarkPlannedRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to call the postpone method.
      * @return a {@link PostponeRequestBuilder}
      */
@@ -64,6 +102,22 @@ public class RecommendationItemRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public ReactivateRequestBuilder reactivate() {
         return new ReactivateRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the removeTag method.
+     * @return a {@link RemoveTagRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveTagRequestBuilder removeTag() {
+        return new RemoveTagRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to manage the tags property of the microsoft.graph.recommendationBase entity.
+     * @return a {@link TagsRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public TagsRequestBuilder tags() {
+        return new TagsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link RecommendationItemRequestBuilder} and sets the default values.

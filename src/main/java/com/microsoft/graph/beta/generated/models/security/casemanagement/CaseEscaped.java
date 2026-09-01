@@ -51,7 +51,7 @@ public class CaseEscaped extends CaseManagementEntity implements Parsable {
         return this.backingStore.get("attachments");
     }
     /**
-     * Gets the customFields property value. Tenant-defined custom field values keyed by custom field identifier.
+     * Gets the customFields property value. Tenant-defined custom field values keyed by the exact displayName of each custom field definition. The property and its dynamic fields don&apos;t support $filter.
      * @return a {@link CustomFieldValues}
      */
     @jakarta.annotation.Nullable
@@ -59,7 +59,7 @@ public class CaseEscaped extends CaseManagementEntity implements Parsable {
         return this.backingStore.get("customFields");
     }
     /**
-     * Gets the displayName property value. The display name of the case. Supports $filter (eq, ne) and $orderby.
+     * Gets the displayName property value. The display name of the case. Supports $filter and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class CaseEscaped extends CaseManagementEntity implements Parsable {
         return this.backingStore.get("relations");
     }
     /**
-     * Gets the status property value. The lifecycle status of the case, such as open, in progress, or closed. Supports $filter (eq, ne) and $orderby.
+     * Gets the status property value. The tenant-defined lifecycle status of the case. Use a displayName value returned in the status tree by List statuses from /security/caseManagement/caseTypeConfigurations/genericCase/statuses or /security/caseManagement/caseTypeConfigurations/incidentCase/statuses, depending on the case type. Supports $filter (eq).
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -136,14 +136,14 @@ public class CaseEscaped extends CaseManagementEntity implements Parsable {
         this.backingStore.set("attachments", value);
     }
     /**
-     * Sets the customFields property value. Tenant-defined custom field values keyed by custom field identifier.
+     * Sets the customFields property value. Tenant-defined custom field values keyed by the exact displayName of each custom field definition. The property and its dynamic fields don&apos;t support $filter.
      * @param value Value to set for the customFields property.
      */
     public void setCustomFields(@jakarta.annotation.Nullable final CustomFieldValues value) {
         this.backingStore.set("customFields", value);
     }
     /**
-     * Sets the displayName property value. The display name of the case. Supports $filter (eq, ne) and $orderby.
+     * Sets the displayName property value. The display name of the case. Supports $filter and $orderby.
      * @param value Value to set for the displayName property.
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
@@ -157,7 +157,7 @@ public class CaseEscaped extends CaseManagementEntity implements Parsable {
         this.backingStore.set("relations", value);
     }
     /**
-     * Sets the status property value. The lifecycle status of the case, such as open, in progress, or closed. Supports $filter (eq, ne) and $orderby.
+     * Sets the status property value. The tenant-defined lifecycle status of the case. Use a displayName value returned in the status tree by List statuses from /security/caseManagement/caseTypeConfigurations/genericCase/statuses or /security/caseManagement/caseTypeConfigurations/incidentCase/statuses, depending on the case type. Supports $filter (eq).
      * @param value Value to set for the status property.
      */
     public void setStatus(@jakarta.annotation.Nullable final String value) {

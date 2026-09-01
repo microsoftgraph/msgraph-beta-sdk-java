@@ -32,7 +32,7 @@ public class PolicyTipAction extends DlpActionInfo implements Parsable {
         return new PolicyTipAction();
     }
     /**
-     * Gets the complianceUrl property value. The complianceUrl property
+     * Gets the complianceUrl property value. A URL that points users to additional compliance guidance or remediation details for the policy tip.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -52,7 +52,7 @@ public class PolicyTipAction extends DlpActionInfo implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the matchedConditionsDescription property value. The matchedConditionsDescription property
+     * Gets the matchedConditionsDescription property value. A user-friendly summary of the matched DLP conditions that triggered the policy tip.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -79,14 +79,14 @@ public class PolicyTipAction extends DlpActionInfo implements Parsable {
         writer.writeStringValue("policyTip", this.getPolicyTip());
     }
     /**
-     * Sets the complianceUrl property value. The complianceUrl property
+     * Sets the complianceUrl property value. A URL that points users to additional compliance guidance or remediation details for the policy tip.
      * @param value Value to set for the complianceUrl property.
      */
     public void setComplianceUrl(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("complianceUrl", value);
     }
     /**
-     * Sets the matchedConditionsDescription property value. The matchedConditionsDescription property
+     * Sets the matchedConditionsDescription property value. A user-friendly summary of the matched DLP conditions that triggered the policy tip.
      * @param value Value to set for the matchedConditionsDescription property.
      */
     public void setMatchedConditionsDescription(@jakarta.annotation.Nullable final String value) {

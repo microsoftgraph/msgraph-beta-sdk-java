@@ -41,18 +41,18 @@ public class DistributionList extends OutlookItem implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
-        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(Member::createFromDiscriminatorValue)); });
+        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(DistributionListMember::createFromDiscriminatorValue)); });
         deserializerMap.put("notes", (n) -> { this.setNotes(n.getStringValue()); });
         deserializerMap.put("personIdentifier", (n) -> { this.setPersonIdentifier(n.getStringValue()); });
         deserializerMap.put("singleValueExtendedProperties", (n) -> { this.setSingleValueExtendedProperties(n.getCollectionOfObjectValues(SingleValueLegacyExtendedProperty::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the members property value. The members property
-     * @return a {@link java.util.List<Member>}
+     * Gets the members property value. The members of the distribution list. Not returned by default; use $expand=members to include. Read-only.
+     * @return a {@link java.util.List<DistributionListMember>}
      */
     @jakarta.annotation.Nullable
-    public java.util.List<Member> getMembers() {
+    public java.util.List<DistributionListMember> getMembers() {
         return this.backingStore.get("members");
     }
     /**
@@ -100,10 +100,10 @@ public class DistributionList extends OutlookItem implements Parsable {
         this.backingStore.set("displayName", value);
     }
     /**
-     * Sets the members property value. The members property
+     * Sets the members property value. The members of the distribution list. Not returned by default; use $expand=members to include. Read-only.
      * @param value Value to set for the members property.
      */
-    public void setMembers(@jakarta.annotation.Nullable final java.util.List<Member> value) {
+    public void setMembers(@jakarta.annotation.Nullable final java.util.List<DistributionListMember> value) {
         this.backingStore.set("members", value);
     }
     /**

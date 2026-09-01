@@ -2,6 +2,7 @@ package com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows
 
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.runs.item.subjectprocessingresults.count.CountRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.runs.item.subjectprocessingresults.item.SubjectProcessingResultItemRequestBuilder;
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.workflows.item.runs.item.subjectprocessingresults.microsoftgraphidentitygovernancesummarywithstartdatetimewithenddatetime.MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder;
 import com.microsoft.graph.beta.models.identitygovernance.SubjectProcessingResultCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.kiota.BaseRequestBuilder;
@@ -13,6 +14,7 @@ import com.microsoft.kiota.RequestInformation;
 import com.microsoft.kiota.RequestOption;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParsableFactory;
+import java.time.OffsetDateTime;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +27,10 @@ public class SubjectProcessingResultsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -34,8 +39,11 @@ public class SubjectProcessingResultsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the subjectProcessingResults property of the microsoft.graph.identityGovernance.run entity.
      * @param subjectProcessingResultId The unique identifier of subjectProcessingResult
      * @return a {@link SubjectProcessingResultItemRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SubjectProcessingResultItemRequestBuilder bySubjectProcessingResultId(@jakarta.annotation.Nonnull final String subjectProcessingResultId) {
         Objects.requireNonNull(subjectProcessingResultId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -62,9 +70,12 @@ public class SubjectProcessingResultsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the subjectProcessingResult objects for a specific workflow run. Each result represents the processing outcome for a single subject.
      * @return a {@link SubjectProcessingResultCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-subjectprocessingresults?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SubjectProcessingResultCollectionResponse get() {
         return get(null);
     }
@@ -73,9 +84,12 @@ public class SubjectProcessingResultsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SubjectProcessingResultCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-run-list-subjectprocessingresults?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SubjectProcessingResultCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -83,10 +97,28 @@ public class SubjectProcessingResultsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, SubjectProcessingResultCollectionResponse::createFromDiscriminatorValue);
     }
     /**
-     * Get a list of the subjectProcessingResult objects for a specific workflow run. Each result represents the processing outcome for a single subject.
-     * @return a {@link RequestInformation}
+     * Provides operations to call the summary method.
+     * @param endDateTime Usage: endDateTime={endDateTime}
+     * @param startDateTime Usage: startDateTime={startDateTime}
+     * @return a {@link MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
+    public MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder microsoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTime(@jakarta.annotation.Nonnull final OffsetDateTime endDateTime, @jakarta.annotation.Nonnull final OffsetDateTime startDateTime) {
+        Objects.requireNonNull(endDateTime);
+        Objects.requireNonNull(startDateTime);
+        return new MicrosoftGraphIdentityGovernanceSummaryWithStartDateTimeWithEndDateTimeRequestBuilder(pathParameters, requestAdapter, endDateTime, startDateTime);
+    }
+    /**
+     * Get a list of the subjectProcessingResult objects for a specific workflow run. Each result represents the processing outcome for a single subject.
+     * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
+     */
+    @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -94,8 +126,11 @@ public class SubjectProcessingResultsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the subjectProcessingResult objects for a specific workflow run. Each result represents the processing outcome for a single subject.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -106,8 +141,11 @@ public class SubjectProcessingResultsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SubjectProcessingResultsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SubjectProcessingResultsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SubjectProcessingResultsRequestBuilder(rawUrl, requestAdapter);

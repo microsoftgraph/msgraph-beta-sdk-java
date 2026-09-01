@@ -2,9 +2,9 @@ package com.microsoft.graph.beta.directory.tenantgovernance.governancerelationsh
 
 import com.microsoft.graph.beta.directory.tenantgovernance.governancerelationships.count.CountRequestBuilder;
 import com.microsoft.graph.beta.directory.tenantgovernance.governancerelationships.item.GovernanceRelationshipItemRequestBuilder;
+import com.microsoft.graph.beta.models.GovernanceRelationship;
+import com.microsoft.graph.beta.models.GovernanceRelationshipCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.GovernanceRelationship;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.GovernanceRelationshipCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the governanceRelationships property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+ * Provides operations to manage the governanceRelationships property of the microsoft.graph.tenantGovernance entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceRelationshipsRequestBuilder extends BaseRequestBuilder {
@@ -32,7 +32,7 @@ public class GovernanceRelationshipsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the governanceRelationships property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+     * Provides operations to manage the governanceRelationships property of the microsoft.graph.tenantGovernance entity.
      * @param governanceRelationshipId The unique identifier of governanceRelationship
      * @return a {@link GovernanceRelationshipItemRequestBuilder}
      */

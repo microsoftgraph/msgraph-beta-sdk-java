@@ -26,12 +26,21 @@ public class AgentIdentityBlueprint extends Application implements Parsable {
         return new AgentIdentityBlueprint();
     }
     /**
+     * Gets the communicationConfiguration property value. The default communication configuration for agent identities created from this agent identity blueprint. Agent identities inherit this configuration unless they define their own override.
+     * @return a {@link AgentCommunicationConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public AgentCommunicationConfiguration getCommunicationConfiguration() {
+        return this.backingStore.get("communicationConfiguration");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("communicationConfiguration", (n) -> { this.setCommunicationConfiguration(n.getObjectValue(AgentCommunicationConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("inheritablePermissions", (n) -> { this.setInheritablePermissions(n.getCollectionOfObjectValues(InheritablePermission::createFromDiscriminatorValue)); });
         deserializerMap.put("sponsors", (n) -> { this.setSponsors(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -59,8 +68,16 @@ public class AgentIdentityBlueprint extends Application implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeObjectValue("communicationConfiguration", this.getCommunicationConfiguration());
         writer.writeCollectionOfObjectValues("inheritablePermissions", this.getInheritablePermissions());
         writer.writeCollectionOfObjectValues("sponsors", this.getSponsors());
+    }
+    /**
+     * Sets the communicationConfiguration property value. The default communication configuration for agent identities created from this agent identity blueprint. Agent identities inherit this configuration unless they define their own override.
+     * @param value Value to set for the communicationConfiguration property.
+     */
+    public void setCommunicationConfiguration(@jakarta.annotation.Nullable final AgentCommunicationConfiguration value) {
+        this.backingStore.set("communicationConfiguration", value);
     }
     /**
      * Sets the inheritablePermissions property value. Defines scopes of a resource application that may be automatically granted to agent identities without additional consent.

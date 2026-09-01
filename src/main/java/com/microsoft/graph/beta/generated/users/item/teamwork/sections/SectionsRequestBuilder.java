@@ -5,6 +5,7 @@ import com.microsoft.graph.beta.models.TeamworkSection;
 import com.microsoft.graph.beta.models.TeamworkSectionCollectionResponse;
 import com.microsoft.graph.beta.users.item.teamwork.sections.count.CountRequestBuilder;
 import com.microsoft.graph.beta.users.item.teamwork.sections.item.TeamworkSectionItemRequestBuilder;
+import com.microsoft.graph.beta.users.item.teamwork.sections.reorder.ReorderRequestBuilder;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -30,6 +31,14 @@ public class SectionsRequestBuilder extends BaseRequestBuilder {
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the reorder method.
+     * @return a {@link ReorderRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public ReorderRequestBuilder reorder() {
+        return new ReorderRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the sections property of the microsoft.graph.userTeamwork entity.

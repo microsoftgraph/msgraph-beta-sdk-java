@@ -11,7 +11,11 @@ public enum WindowsManagedAppDataTransferLevel implements ValuedEnum {
     /** All apps. */
     AllApps("allApps"),
     /** No apps. */
-    None("none");
+    None("none"),
+    /** Selected apps only. Allowed locations are specified by the child property. */
+    SelectedApps("selectedApps"),
+    /** Evolvable enumeration sentinel value. Do not use. */
+    UnknownFutureValue("unknownFutureValue");
     public final String value;
     WindowsManagedAppDataTransferLevel(final String value) {
         this.value = value;
@@ -24,6 +28,8 @@ public enum WindowsManagedAppDataTransferLevel implements ValuedEnum {
         switch(searchValue) {
             case "allApps": return AllApps;
             case "none": return None;
+            case "selectedApps": return SelectedApps;
+            case "unknownFutureValue": return UnknownFutureValue;
             default: return null;
         }
     }

@@ -130,6 +130,7 @@ public class CloudPC extends Entity implements Parsable {
         deserializerMap.put("powerState", (n) -> { this.setPowerState(n.getEnumValue(CloudPcPowerState::forValue)); });
         deserializerMap.put("productType", (n) -> { this.setProductType(n.getEnumValue(CloudPcProductType::forValue)); });
         deserializerMap.put("provisionedDateTime", (n) -> { this.setProvisionedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("provisioningConfiguration", (n) -> { this.setProvisioningConfiguration(n.getObjectValue(CloudPcProvisioningConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("provisioningPolicyId", (n) -> { this.setProvisioningPolicyId(n.getStringValue()); });
         deserializerMap.put("provisioningPolicyName", (n) -> { this.setProvisioningPolicyName(n.getStringValue()); });
         deserializerMap.put("provisioningType", (n) -> { this.setProvisioningType(n.getEnumValue(CloudPcProvisioningType::forValue)); });
@@ -284,6 +285,14 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisionedDateTime");
     }
     /**
+     * Gets the provisioningConfiguration property value. The provisioningConfiguration property
+     * @return a {@link CloudPcProvisioningConfiguration}
+     */
+    @jakarta.annotation.Nullable
+    public CloudPcProvisioningConfiguration getProvisioningConfiguration() {
+        return this.backingStore.get("provisioningConfiguration");
+    }
+    /**
      * Gets the provisioningPolicyId property value. The provisioning policy ID of the Cloud PC.
      * @return a {@link String}
      */
@@ -436,6 +445,7 @@ public class CloudPC extends Entity implements Parsable {
         writer.writeEnumValue("powerState", this.getPowerState());
         writer.writeEnumValue("productType", this.getProductType());
         writer.writeOffsetDateTimeValue("provisionedDateTime", this.getProvisionedDateTime());
+        writer.writeObjectValue("provisioningConfiguration", this.getProvisioningConfiguration());
         writer.writeStringValue("provisioningPolicyId", this.getProvisioningPolicyId());
         writer.writeStringValue("provisioningPolicyName", this.getProvisioningPolicyName());
         writer.writeEnumValue("provisioningType", this.getProvisioningType());
@@ -633,6 +643,13 @@ public class CloudPC extends Entity implements Parsable {
      */
     public void setProvisionedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("provisionedDateTime", value);
+    }
+    /**
+     * Sets the provisioningConfiguration property value. The provisioningConfiguration property
+     * @param value Value to set for the provisioningConfiguration property.
+     */
+    public void setProvisioningConfiguration(@jakarta.annotation.Nullable final CloudPcProvisioningConfiguration value) {
+        this.backingStore.set("provisioningConfiguration", value);
     }
     /**
      * Sets the provisioningPolicyId property value. The provisioning policy ID of the Cloud PC.

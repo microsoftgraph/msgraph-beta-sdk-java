@@ -27,7 +27,10 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,7 +38,10 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getTeamsLicensingDetails method.
      * @return a {@link GetTeamsLicensingDetailsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GetTeamsLicensingDetailsRequestBuilder getTeamsLicensingDetails() {
         return new GetTeamsLicensingDetailsRequestBuilder(pathParameters, requestAdapter);
@@ -44,8 +50,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the licenseDetails property of the microsoft.graph.servicePrincipal entity.
      * @param licenseDetailsId The unique identifier of licenseDetails
      * @return a {@link LicenseDetailsItemRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public LicenseDetailsItemRequestBuilder byLicenseDetailsId(@jakarta.annotation.Nonnull final String licenseDetailsId) {
         Objects.requireNonNull(licenseDetailsId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -72,8 +81,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * Get licenseDetails from servicePrincipals
      * @return a {@link LicenseDetailsCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public LicenseDetailsCollectionResponse get() {
         return get(null);
     }
@@ -82,8 +94,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LicenseDetailsCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public LicenseDetailsCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -95,8 +110,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link LicenseDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public LicenseDetails post(@jakarta.annotation.Nonnull final LicenseDetails body) {
         return post(body, null);
     }
@@ -106,8 +124,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link LicenseDetails}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public LicenseDetails post(@jakarta.annotation.Nonnull final LicenseDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -118,8 +139,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get licenseDetails from servicePrincipals
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -127,8 +151,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * Get licenseDetails from servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -139,8 +166,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to licenseDetails for servicePrincipals
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LicenseDetails body) {
         return toPostRequestInformation(body, null);
     }
@@ -149,8 +179,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final LicenseDetails body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -163,8 +196,11 @@ public class LicenseDetailsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link LicenseDetailsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public LicenseDetailsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new LicenseDetailsRequestBuilder(rawUrl, requestAdapter);

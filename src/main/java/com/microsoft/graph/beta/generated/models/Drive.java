@@ -65,6 +65,7 @@ public class Drive extends BaseItem implements Parsable {
         deserializerMap.put("owner", (n) -> { this.setOwner(n.getObjectValue(IdentitySet::createFromDiscriminatorValue)); });
         deserializerMap.put("quota", (n) -> { this.setQuota(n.getObjectValue(Quota::createFromDiscriminatorValue)); });
         deserializerMap.put("root", (n) -> { this.setRoot(n.getObjectValue(DriveItem::createFromDiscriminatorValue)); });
+        deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(DriveSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("sharePointIds", (n) -> { this.setSharePointIds(n.getObjectValue(SharepointIds::createFromDiscriminatorValue)); });
         deserializerMap.put("special", (n) -> { this.setSpecial(n.getCollectionOfObjectValues(DriveItem::createFromDiscriminatorValue)); });
         deserializerMap.put("system", (n) -> { this.setSystem(n.getObjectValue(SystemFacet::createFromDiscriminatorValue)); });
@@ -119,6 +120,14 @@ public class Drive extends BaseItem implements Parsable {
         return this.backingStore.get("root");
     }
     /**
+     * Gets the settings property value. The settings associated with the drive. Read-only. This property isn&apos;t returned by default and must be selected using the $select query parameter.
+     * @return a {@link DriveSettings}
+     */
+    @jakarta.annotation.Nullable
+    public DriveSettings getSettings() {
+        return this.backingStore.get("settings");
+    }
+    /**
      * Gets the sharePointIds property value. The sharePointIds property
      * @return a {@link SharepointIds}
      */
@@ -158,6 +167,7 @@ public class Drive extends BaseItem implements Parsable {
         writer.writeObjectValue("owner", this.getOwner());
         writer.writeObjectValue("quota", this.getQuota());
         writer.writeObjectValue("root", this.getRoot());
+        writer.writeObjectValue("settings", this.getSettings());
         writer.writeObjectValue("sharePointIds", this.getSharePointIds());
         writer.writeCollectionOfObjectValues("special", this.getSpecial());
         writer.writeObjectValue("system", this.getSystem());
@@ -224,6 +234,13 @@ public class Drive extends BaseItem implements Parsable {
      */
     public void setRoot(@jakarta.annotation.Nullable final DriveItem value) {
         this.backingStore.set("root", value);
+    }
+    /**
+     * Sets the settings property value. The settings associated with the drive. Read-only. This property isn&apos;t returned by default and must be selected using the $select query parameter.
+     * @param value Value to set for the settings property.
+     */
+    public void setSettings(@jakarta.annotation.Nullable final DriveSettings value) {
+        this.backingStore.set("settings", value);
     }
     /**
      * Sets the sharePointIds property value. The sharePointIds property

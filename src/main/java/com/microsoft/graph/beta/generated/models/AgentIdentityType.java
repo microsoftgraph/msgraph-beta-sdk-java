@@ -9,7 +9,8 @@ public enum AgentIdentityType implements ValuedEnum {
     AgentUser("agentUser"),
     UnknownFutureValue("unknownFutureValue"),
     AgentIdentityBlueprintPrincipal("agentIdentityBlueprintPrincipal"),
-    User("user");
+    User("user"),
+    DiscoveredAgentIdentity("discoveredAgentIdentity");
     public final String value;
     AgentIdentityType(final String value) {
         this.value = value;
@@ -25,6 +26,7 @@ public enum AgentIdentityType implements ValuedEnum {
             case "unknownFutureValue": return UnknownFutureValue;
             case "agentIdentityBlueprintPrincipal": return AgentIdentityBlueprintPrincipal;
             case "user": return User;
+            case "discoveredAgentIdentity": return DiscoveredAgentIdentity;
             default: return null;
         }
     }

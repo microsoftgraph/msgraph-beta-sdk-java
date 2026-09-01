@@ -28,7 +28,10 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the assignedToTaskBoardFormat property of the microsoft.graph.plannerTask entity.
      * @return a {@link AssignedToTaskBoardFormatRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AssignedToTaskBoardFormatRequestBuilder assignedToTaskBoardFormat() {
         return new AssignedToTaskBoardFormatRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +39,10 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the bucketTaskBoardFormat property of the microsoft.graph.plannerTask entity.
      * @return a {@link BucketTaskBoardFormatRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public BucketTaskBoardFormatRequestBuilder bucketTaskBoardFormat() {
         return new BucketTaskBoardFormatRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +50,10 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the details property of the microsoft.graph.plannerTask entity.
      * @return a {@link DetailsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public DetailsRequestBuilder details() {
         return new DetailsRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +61,10 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the messages property of the microsoft.graph.plannerTask entity.
      * @return a {@link MessagesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MessagesRequestBuilder messages() {
         return new MessagesRequestBuilder(pathParameters, requestAdapter);
@@ -60,7 +72,10 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the progressTaskBoardFormat property of the microsoft.graph.plannerTask entity.
      * @return a {@link ProgressTaskBoardFormatRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ProgressTaskBoardFormatRequestBuilder progressTaskBoardFormat() {
         return new ProgressTaskBoardFormatRequestBuilder(pathParameters, requestAdapter);
@@ -84,8 +99,11 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a businessScenarioTask object.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-delete-tasks?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -93,8 +111,11 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * Delete a businessScenarioTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenarioplanner-delete-tasks?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -105,9 +126,12 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a businessScenarioTask object.
      * @return a {@link BusinessScenarioTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenariotask-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BusinessScenarioTask get() {
         return get(null);
     }
@@ -116,9 +140,12 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenarioTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenariotask-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BusinessScenarioTask get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -130,9 +157,12 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link BusinessScenarioTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenariotask-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BusinessScenarioTask patch(@jakarta.annotation.Nonnull final BusinessScenarioTask body) {
         return patch(body, null);
     }
@@ -142,9 +172,12 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BusinessScenarioTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/businessscenariotask-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public BusinessScenarioTask patch(@jakarta.annotation.Nonnull final BusinessScenarioTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -155,8 +188,11 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a businessScenarioTask object.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -164,8 +200,11 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * Delete a businessScenarioTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -175,8 +214,11 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a businessScenarioTask object.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -184,8 +226,11 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a businessScenarioTask object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -196,8 +241,11 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a businessScenarioTask object.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BusinessScenarioTask body) {
         return toPatchRequestInformation(body, null);
     }
@@ -206,8 +254,11 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BusinessScenarioTask body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -220,8 +271,11 @@ public class BusinessScenarioTaskItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link BusinessScenarioTaskItemRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public BusinessScenarioTaskItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new BusinessScenarioTaskItemRequestBuilder(rawUrl, requestAdapter);

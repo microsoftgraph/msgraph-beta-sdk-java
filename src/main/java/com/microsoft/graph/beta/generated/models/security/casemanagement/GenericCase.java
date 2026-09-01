@@ -27,7 +27,7 @@ public class GenericCase extends CaseEscaped implements Parsable {
         return new GenericCase();
     }
     /**
-     * Gets the assignedTo property value. The user assigned to the generic case.
+     * Gets the assignedTo property value. The user assigned to the generic case. Supports $filter and $orderby.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class GenericCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("assignedTo");
     }
     /**
-     * Gets the closingNotes property value. Notes recorded when the generic case is closed.
+     * Gets the closingNotes property value. Notes recorded when the generic case is closed. Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -43,7 +43,7 @@ public class GenericCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("closingNotes");
     }
     /**
-     * Gets the description property value. The description of the generic case.
+     * Gets the description property value. The description of the generic case. Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -51,7 +51,7 @@ public class GenericCase extends CaseEscaped implements Parsable {
         return this.backingStore.get("description");
     }
     /**
-     * Gets the dueDateTime property value. The target completion date and time for the generic case.
+     * Gets the dueDateTime property value. The target completion date and time for the generic case. Supports $filter.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -73,7 +73,7 @@ public class GenericCase extends CaseEscaped implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the priority property value. The priority assigned to the generic case.
+     * Gets the priority property value. The priority assigned to the generic case. Possible values are: veryLow, low, medium, high, and critical. Supports $filter.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,35 +94,35 @@ public class GenericCase extends CaseEscaped implements Parsable {
         writer.writeStringValue("priority", this.getPriority());
     }
     /**
-     * Sets the assignedTo property value. The user assigned to the generic case.
+     * Sets the assignedTo property value. The user assigned to the generic case. Supports $filter and $orderby.
      * @param value Value to set for the assignedTo property.
      */
     public void setAssignedTo(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("assignedTo", value);
     }
     /**
-     * Sets the closingNotes property value. Notes recorded when the generic case is closed.
+     * Sets the closingNotes property value. Notes recorded when the generic case is closed. Supports $filter.
      * @param value Value to set for the closingNotes property.
      */
     public void setClosingNotes(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("closingNotes", value);
     }
     /**
-     * Sets the description property value. The description of the generic case.
+     * Sets the description property value. The description of the generic case. Supports $filter.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the dueDateTime property value. The target completion date and time for the generic case.
+     * Sets the dueDateTime property value. The target completion date and time for the generic case. Supports $filter.
      * @param value Value to set for the dueDateTime property.
      */
     public void setDueDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("dueDateTime", value);
     }
     /**
-     * Sets the priority property value. The priority assigned to the generic case.
+     * Sets the priority property value. The priority assigned to the generic case. Possible values are: veryLow, low, medium, high, and critical. Supports $filter.
      * @param value Value to set for the priority property.
      */
     public void setPriority(@jakarta.annotation.Nullable final String value) {

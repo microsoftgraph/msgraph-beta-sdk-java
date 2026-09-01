@@ -1,10 +1,10 @@
 package com.microsoft.graph.beta.directory.tenantgovernance.governancepolicytemplates;
 
 import com.microsoft.graph.beta.directory.tenantgovernance.governancepolicytemplates.count.CountRequestBuilder;
-import com.microsoft.graph.beta.directory.tenantgovernance.governancepolicytemplates.item.GovernancePolicyTemplateItemRequestBuilder;
+import com.microsoft.graph.beta.directory.tenantgovernance.governancepolicytemplates.item.TenantGovernancePolicyTemplateItemRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.GovernancePolicyTemplate;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.GovernancePolicyTemplateCollectionResponse;
+import com.microsoft.graph.beta.models.TenantGovernancePolicyTemplate;
+import com.microsoft.graph.beta.models.TenantGovernancePolicyTemplateCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the governancePolicyTemplates property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+ * Provides operations to manage the governancePolicyTemplates property of the microsoft.graph.tenantGovernance entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernancePolicyTemplatesRequestBuilder extends BaseRequestBuilder {
@@ -32,16 +32,16 @@ public class GovernancePolicyTemplatesRequestBuilder extends BaseRequestBuilder 
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the governancePolicyTemplates property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
-     * @param governancePolicyTemplateId The unique identifier of governancePolicyTemplate
-     * @return a {@link GovernancePolicyTemplateItemRequestBuilder}
+     * Provides operations to manage the governancePolicyTemplates property of the microsoft.graph.tenantGovernance entity.
+     * @param tenantGovernancePolicyTemplateId The unique identifier of tenantGovernancePolicyTemplate
+     * @return a {@link TenantGovernancePolicyTemplateItemRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public GovernancePolicyTemplateItemRequestBuilder byGovernancePolicyTemplateId(@jakarta.annotation.Nonnull final String governancePolicyTemplateId) {
-        Objects.requireNonNull(governancePolicyTemplateId);
+    public TenantGovernancePolicyTemplateItemRequestBuilder byTenantGovernancePolicyTemplateId(@jakarta.annotation.Nonnull final String tenantGovernancePolicyTemplateId) {
+        Objects.requireNonNull(tenantGovernancePolicyTemplateId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
-        urlTplParams.put("governancePolicyTemplate%2Did", governancePolicyTemplateId);
-        return new GovernancePolicyTemplateItemRequestBuilder(urlTplParams, requestAdapter);
+        urlTplParams.put("tenantGovernancePolicyTemplate%2Did", tenantGovernancePolicyTemplateId);
+        return new TenantGovernancePolicyTemplateItemRequestBuilder(urlTplParams, requestAdapter);
     }
     /**
      * Instantiates a new {@link GovernancePolicyTemplatesRequestBuilder} and sets the default values.
@@ -61,54 +61,54 @@ public class GovernancePolicyTemplatesRequestBuilder extends BaseRequestBuilder 
     }
     /**
      * Get a list of the governancePolicyTemplate objects and their properties. Policy templates define the configuration that is applied when establishing governance relationships.
-     * @return a {@link GovernancePolicyTemplateCollectionResponse}
+     * @return a {@link TenantGovernancePolicyTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-governancepolicytemplates?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GovernancePolicyTemplateCollectionResponse get() {
+    public TenantGovernancePolicyTemplateCollectionResponse get() {
         return get(null);
     }
     /**
      * Get a list of the governancePolicyTemplate objects and their properties. Policy templates define the configuration that is applied when establishing governance relationships.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GovernancePolicyTemplateCollectionResponse}
+     * @return a {@link TenantGovernancePolicyTemplateCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-list-governancepolicytemplates?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GovernancePolicyTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
+    public TenantGovernancePolicyTemplateCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GovernancePolicyTemplateCollectionResponse::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, TenantGovernancePolicyTemplateCollectionResponse::createFromDiscriminatorValue);
     }
     /**
      * Create a new governancePolicyTemplate that defines the configuration for establishing governance relationships, including role assignments and applications to provision.
      * @param body The request body
-     * @return a {@link GovernancePolicyTemplate}
+     * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-post-governancepolicytemplates?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GovernancePolicyTemplate post(@jakarta.annotation.Nonnull final GovernancePolicyTemplate body) {
+    public TenantGovernancePolicyTemplate post(@jakarta.annotation.Nonnull final TenantGovernancePolicyTemplate body) {
         return post(body, null);
     }
     /**
      * Create a new governancePolicyTemplate that defines the configuration for establishing governance relationships, including role assignments and applications to provision.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return a {@link GovernancePolicyTemplate}
+     * @return a {@link TenantGovernancePolicyTemplate}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/tenantgovernanceservices-post-governancepolicytemplates?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    public GovernancePolicyTemplate post(@jakarta.annotation.Nonnull final GovernancePolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public TenantGovernancePolicyTemplate post(@jakarta.annotation.Nonnull final TenantGovernancePolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
-        return this.requestAdapter.send(requestInfo, errorMapping, GovernancePolicyTemplate::createFromDiscriminatorValue);
+        return this.requestAdapter.send(requestInfo, errorMapping, TenantGovernancePolicyTemplate::createFromDiscriminatorValue);
     }
     /**
      * Get a list of the governancePolicyTemplate objects and their properties. Policy templates define the configuration that is applied when establishing governance relationships.
@@ -136,7 +136,7 @@ public class GovernancePolicyTemplatesRequestBuilder extends BaseRequestBuilder 
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GovernancePolicyTemplate body) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TenantGovernancePolicyTemplate body) {
         return toPostRequestInformation(body, null);
     }
     /**
@@ -146,7 +146,7 @@ public class GovernancePolicyTemplatesRequestBuilder extends BaseRequestBuilder 
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
-    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final GovernancePolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
+    public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final TenantGovernancePolicyTemplate body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);

@@ -2,9 +2,9 @@ package com.microsoft.graph.beta.directory.tenantgovernance.governancerequests;
 
 import com.microsoft.graph.beta.directory.tenantgovernance.governancerequests.count.CountRequestBuilder;
 import com.microsoft.graph.beta.directory.tenantgovernance.governancerequests.item.GovernanceRequestItemRequestBuilder;
+import com.microsoft.graph.beta.models.GovernanceRequest;
+import com.microsoft.graph.beta.models.GovernanceRequestCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.GovernanceRequest;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.GovernanceRequestCollectionResponse;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the governanceRequests property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+ * Provides operations to manage the governanceRequests property of the microsoft.graph.tenantGovernance entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceRequestsRequestBuilder extends BaseRequestBuilder {
@@ -32,7 +32,7 @@ public class GovernanceRequestsRequestBuilder extends BaseRequestBuilder {
         return new CountRequestBuilder(pathParameters, requestAdapter);
     }
     /**
-     * Provides operations to manage the governanceRequests property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+     * Provides operations to manage the governanceRequests property of the microsoft.graph.tenantGovernance entity.
      * @param governanceRequestId The unique identifier of governanceRequest
      * @return a {@link GovernanceRequestItemRequestBuilder}
      */

@@ -43,7 +43,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the administrationScopeTargets property of the microsoft.graph.identityGovernance.workflowBase entity.
      * @return a {@link AdministrationScopeTargetsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public AdministrationScopeTargetsRequestBuilder administrationScopeTargets() {
         return new AdministrationScopeTargetsRequestBuilder(pathParameters, requestAdapter);
@@ -51,7 +54,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the createdBy property of the microsoft.graph.identityGovernance.workflowBase entity.
      * @return a {@link CreatedByRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CreatedByRequestBuilder createdBy() {
         return new CreatedByRequestBuilder(pathParameters, requestAdapter);
@@ -59,7 +65,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the executionScope property of the microsoft.graph.identityGovernance.workflow entity.
      * @return a {@link ExecutionScopeRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ExecutionScopeRequestBuilder executionScope() {
         return new ExecutionScopeRequestBuilder(pathParameters, requestAdapter);
@@ -67,7 +76,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the lastModifiedBy property of the microsoft.graph.identityGovernance.workflowBase entity.
      * @return a {@link LastModifiedByRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public LastModifiedByRequestBuilder lastModifiedBy() {
         return new LastModifiedByRequestBuilder(pathParameters, requestAdapter);
@@ -75,7 +87,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the activate method.
      * @return a {@link MicrosoftGraphIdentityGovernanceActivateRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceActivateRequestBuilder microsoftGraphIdentityGovernanceActivate() {
         return new MicrosoftGraphIdentityGovernanceActivateRequestBuilder(pathParameters, requestAdapter);
@@ -83,7 +98,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the activateAndWait method.
      * @return a {@link MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder microsoftGraphIdentityGovernanceActivateAndWait() {
         return new MicrosoftGraphIdentityGovernanceActivateAndWaitRequestBuilder(pathParameters, requestAdapter);
@@ -91,7 +109,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the activateWithScope method.
      * @return a {@link MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder microsoftGraphIdentityGovernanceActivateWithScope() {
         return new MicrosoftGraphIdentityGovernanceActivateWithScopeRequestBuilder(pathParameters, requestAdapter);
@@ -99,7 +120,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the cancelProcessing method.
      * @return a {@link MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder microsoftGraphIdentityGovernanceCancelProcessing() {
         return new MicrosoftGraphIdentityGovernanceCancelProcessingRequestBuilder(pathParameters, requestAdapter);
@@ -107,7 +131,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the clearQuarantine method.
      * @return a {@link MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder microsoftGraphIdentityGovernanceClearQuarantine() {
         return new MicrosoftGraphIdentityGovernanceClearQuarantineRequestBuilder(pathParameters, requestAdapter);
@@ -115,7 +142,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the createNewVersion method.
      * @return a {@link MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder microsoftGraphIdentityGovernanceCreateNewVersion() {
         return new MicrosoftGraphIdentityGovernanceCreateNewVersionRequestBuilder(pathParameters, requestAdapter);
@@ -123,7 +153,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the previewTaskFailures method.
      * @return a {@link MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder microsoftGraphIdentityGovernancePreviewTaskFailures() {
         return new MicrosoftGraphIdentityGovernancePreviewTaskFailuresRequestBuilder(pathParameters, requestAdapter);
@@ -131,7 +164,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the previewWorkflow method.
      * @return a {@link MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder microsoftGraphIdentityGovernancePreviewWorkflow() {
         return new MicrosoftGraphIdentityGovernancePreviewWorkflowRequestBuilder(pathParameters, requestAdapter);
@@ -139,7 +175,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the restore method.
      * @return a {@link MicrosoftGraphIdentityGovernanceRestoreRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public MicrosoftGraphIdentityGovernanceRestoreRequestBuilder microsoftGraphIdentityGovernanceRestore() {
         return new MicrosoftGraphIdentityGovernanceRestoreRequestBuilder(pathParameters, requestAdapter);
@@ -147,7 +186,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the previewScope property of the microsoft.graph.identityGovernance.workflow entity.
      * @return a {@link PreviewScopeRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PreviewScopeRequestBuilder previewScope() {
         return new PreviewScopeRequestBuilder(pathParameters, requestAdapter);
@@ -155,7 +197,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the runs property of the microsoft.graph.identityGovernance.workflow entity.
      * @return a {@link RunsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public RunsRequestBuilder runs() {
         return new RunsRequestBuilder(pathParameters, requestAdapter);
@@ -163,7 +208,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the subjectProcessingResults property of the microsoft.graph.identityGovernance.workflow entity.
      * @return a {@link SubjectProcessingResultsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SubjectProcessingResultsRequestBuilder subjectProcessingResults() {
         return new SubjectProcessingResultsRequestBuilder(pathParameters, requestAdapter);
@@ -171,7 +219,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the taskReports property of the microsoft.graph.identityGovernance.workflow entity.
      * @return a {@link TaskReportsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TaskReportsRequestBuilder taskReports() {
         return new TaskReportsRequestBuilder(pathParameters, requestAdapter);
@@ -179,7 +230,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the tasks property of the microsoft.graph.identityGovernance.workflowBase entity.
      * @return a {@link TasksRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public TasksRequestBuilder tasks() {
         return new TasksRequestBuilder(pathParameters, requestAdapter);
@@ -187,7 +241,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userProcessingResults property of the microsoft.graph.identityGovernance.workflow entity.
      * @return a {@link UserProcessingResultsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public UserProcessingResultsRequestBuilder userProcessingResults() {
         return new UserProcessingResultsRequestBuilder(pathParameters, requestAdapter);
@@ -195,7 +252,10 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the versions property of the microsoft.graph.identityGovernance.workflow entity.
      * @return a {@link VersionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public VersionsRequestBuilder versions() {
         return new VersionsRequestBuilder(pathParameters, requestAdapter);
@@ -219,8 +279,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. The deleted workflow is sent to the deleted workflows container. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -228,8 +291,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. The deleted workflow is sent to the deleted workflows container. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-delete?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -240,9 +306,12 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a workflow object.
      * @return a {@link Workflow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Workflow get() {
         return get(null);
     }
@@ -251,9 +320,12 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Workflow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Workflow get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -265,9 +337,12 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link Workflow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Workflow patch(@jakarta.annotation.Nonnull final Workflow body) {
         return patch(body, null);
     }
@@ -277,9 +352,12 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Workflow}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/identitygovernance-workflow-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public Workflow patch(@jakarta.annotation.Nonnull final Workflow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -290,8 +368,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. The deleted workflow is sent to the deleted workflows container. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -299,8 +380,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Delete a workflow object and its associated tasks, taskProcessingResults and versions. The deleted workflow is sent to the deleted workflows container. You can restore a deleted workflow and its associated objects within 30 days of deletion.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -310,8 +394,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a workflow object.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -319,8 +406,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a workflow object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -331,8 +421,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Update the properties of a workflow object. Only the properties listed in the request body table can be updated. To update any other workflow properties, see workflow: createNewVersion.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Workflow body) {
         return toPatchRequestInformation(body, null);
     }
@@ -341,8 +434,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final Workflow body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -355,8 +451,11 @@ public class WorkflowItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link WorkflowItemRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public WorkflowItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new WorkflowItemRequestBuilder(rawUrl, requestAdapter);

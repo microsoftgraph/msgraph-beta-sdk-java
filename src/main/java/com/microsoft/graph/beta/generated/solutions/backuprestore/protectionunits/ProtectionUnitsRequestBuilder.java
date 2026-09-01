@@ -28,7 +28,10 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +39,10 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to driveProtectionUnit.
      * @return a {@link GraphDriveProtectionUnitRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GraphDriveProtectionUnitRequestBuilder graphDriveProtectionUnit() {
         return new GraphDriveProtectionUnitRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +50,10 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to mailboxProtectionUnit.
      * @return a {@link GraphMailboxProtectionUnitRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GraphMailboxProtectionUnitRequestBuilder graphMailboxProtectionUnit() {
         return new GraphMailboxProtectionUnitRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +61,10 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to siteProtectionUnit.
      * @return a {@link GraphSiteProtectionUnitRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public GraphSiteProtectionUnitRequestBuilder graphSiteProtectionUnit() {
         return new GraphSiteProtectionUnitRequestBuilder(pathParameters, requestAdapter);
@@ -61,8 +73,11 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the protectionUnits property of the microsoft.graph.backupRestoreRoot entity.
      * @param protectionUnitBaseId The unique identifier of protectionUnitBase
      * @return a {@link ProtectionUnitBaseItemRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ProtectionUnitBaseItemRequestBuilder byProtectionUnitBaseId(@jakarta.annotation.Nonnull final String protectionUnitBaseId) {
         Objects.requireNonNull(protectionUnitBaseId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -89,8 +104,11 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a protectionUnitBase object.
      * @return a {@link ProtectionUnitBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ProtectionUnitBaseCollectionResponse get() {
         return get(null);
     }
@@ -99,8 +117,11 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProtectionUnitBaseCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ProtectionUnitBaseCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -110,8 +131,11 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a protectionUnitBase object.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -119,8 +143,11 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a protectionUnitBase object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -131,8 +158,11 @@ public class ProtectionUnitsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ProtectionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ProtectionUnitsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ProtectionUnitsRequestBuilder(rawUrl, requestAdapter);

@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.deleteditems;
 
+import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.deleteditems.lifecyclepolicies.LifecyclePoliciesRequestBuilder;
 import com.microsoft.graph.beta.identitygovernance.lifecycleworkflows.deleteditems.workflows.WorkflowsRequestBuilder;
 import com.microsoft.graph.beta.models.DeletedItemContainer;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -22,9 +23,23 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to manage the lifecyclePolicies property of the microsoft.graph.deletedItemContainer entity.
+     * @return a {@link LifecyclePoliciesRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
+     */
+    @Deprecated
+    @jakarta.annotation.Nonnull
+    public LifecyclePoliciesRequestBuilder lifecyclePolicies() {
+        return new LifecyclePoliciesRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to manage the workflows property of the microsoft.graph.deletedItemContainer entity.
      * @return a {@link WorkflowsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public WorkflowsRequestBuilder workflows() {
         return new WorkflowsRequestBuilder(pathParameters, requestAdapter);
@@ -48,7 +63,10 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property deletedItems for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -56,7 +74,10 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property deletedItems for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -67,8 +88,11 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
      * Deleted workflows in your lifecycle workflows instance.
      * @return a {@link DeletedItemContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeletedItemContainer get() {
         return get(null);
     }
@@ -77,8 +101,11 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DeletedItemContainer}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public DeletedItemContainer get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -88,8 +115,11 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property deletedItems for identityGovernance
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -97,8 +127,11 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property deletedItems for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -108,8 +141,11 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
     /**
      * Deleted workflows in your lifecycle workflows instance.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -117,8 +153,11 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
      * Deleted workflows in your lifecycle workflows instance.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -129,8 +168,11 @@ public class DeletedItemsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link DeletedItemsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public DeletedItemsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new DeletedItemsRequestBuilder(rawUrl, requestAdapter);

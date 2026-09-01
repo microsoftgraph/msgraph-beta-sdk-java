@@ -57,6 +57,30 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("category");
     }
     /**
+     * Gets the categoryGroup property value. The categoryGroup property
+     * @return a {@link RecommendationCategoryGroup}
+     */
+    @jakarta.annotation.Nullable
+    public RecommendationCategoryGroup getCategoryGroup() {
+        return this.backingStore.get("categoryGroup");
+    }
+    /**
+     * Gets the completedBySystemDateTime property value. The completedBySystemDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCompletedBySystemDateTime() {
+        return this.backingStore.get("completedBySystemDateTime");
+    }
+    /**
+     * Gets the completedByUserDateTime property value. The completedByUserDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getCompletedByUserDateTime() {
+        return this.backingStore.get("completedByUserDateTime");
+    }
+    /**
      * Gets the createdDateTime property value. The date and time when the recommendation was detected as applicable to your directory.
      * @return a {@link OffsetDateTime}
      */
@@ -81,6 +105,14 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("displayName");
     }
     /**
+     * Gets the failedReviewDateTime property value. The failedReviewDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getFailedReviewDateTime() {
+        return this.backingStore.get("failedReviewDateTime");
+    }
+    /**
      * Gets the featureAreas property value. The directory feature that the recommendation is related to.
      * @return a {@link java.util.List<RecommendationFeatureAreas>}
      */
@@ -98,9 +130,13 @@ public class RecommendationBase extends Entity implements Parsable {
         deserializerMap.put("actionSteps", (n) -> { this.setActionSteps(n.getCollectionOfObjectValues(ActionStep::createFromDiscriminatorValue)); });
         deserializerMap.put("benefits", (n) -> { this.setBenefits(n.getStringValue()); });
         deserializerMap.put("category", (n) -> { this.setCategory(n.getEnumValue(RecommendationCategory::forValue)); });
+        deserializerMap.put("categoryGroup", (n) -> { this.setCategoryGroup(n.getEnumValue(RecommendationCategoryGroup::forValue)); });
+        deserializerMap.put("completedBySystemDateTime", (n) -> { this.setCompletedBySystemDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("completedByUserDateTime", (n) -> { this.setCompletedByUserDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("createdDateTime", (n) -> { this.setCreatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("currentScore", (n) -> { this.setCurrentScore(n.getDoubleValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
+        deserializerMap.put("failedReviewDateTime", (n) -> { this.setFailedReviewDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("featureAreas", (n) -> { this.setFeatureAreas(n.getCollectionOfEnumValues(RecommendationFeatureAreas::forValue)); });
         deserializerMap.put("impactedResources", (n) -> { this.setImpactedResources(n.getCollectionOfObjectValues(ImpactedResource::createFromDiscriminatorValue)); });
         deserializerMap.put("impactStartDateTime", (n) -> { this.setImpactStartDateTime(n.getOffsetDateTimeValue()); });
@@ -110,13 +146,18 @@ public class RecommendationBase extends Entity implements Parsable {
         deserializerMap.put("lastModifiedBy", (n) -> { this.setLastModifiedBy(n.getStringValue()); });
         deserializerMap.put("lastModifiedDateTime", (n) -> { this.setLastModifiedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("maxScore", (n) -> { this.setMaxScore(n.getDoubleValue()); });
+        deserializerMap.put("needsMoreActionResourceCount", (n) -> { this.setNeedsMoreActionResourceCount(n.getIntegerValue()); });
+        deserializerMap.put("nistClassifications", (n) -> { this.setNistClassifications(n.getCollectionOfObjectValues(NistClassification::createFromDiscriminatorValue)); });
         deserializerMap.put("postponeUntilDateTime", (n) -> { this.setPostponeUntilDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("priority", (n) -> { this.setPriority(n.getEnumValue(RecommendationPriority::forValue)); });
         deserializerMap.put("recommendationType", (n) -> { this.setRecommendationType(n.getEnumValue(RecommendationType::forValue)); });
         deserializerMap.put("releaseType", (n) -> { this.setReleaseType(n.getStringValue()); });
+        deserializerMap.put("remediatedDateTime", (n) -> { this.setRemediatedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("remediationImpact", (n) -> { this.setRemediationImpact(n.getStringValue()); });
         deserializerMap.put("requiredLicenses", (n) -> { this.setRequiredLicenses(n.getEnumValue(RequiredLicenses::forValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RecommendationStatus::forValue)); });
+        deserializerMap.put("statusModifiedDateTime", (n) -> { this.setStatusModifiedDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfObjectValues(RecommendationTag::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -184,6 +225,22 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("maxScore");
     }
     /**
+     * Gets the needsMoreActionResourceCount property value. The needsMoreActionResourceCount property
+     * @return a {@link Integer}
+     */
+    @jakarta.annotation.Nullable
+    public Integer getNeedsMoreActionResourceCount() {
+        return this.backingStore.get("needsMoreActionResourceCount");
+    }
+    /**
+     * Gets the nistClassifications property value. The nistClassifications property
+     * @return a {@link java.util.List<NistClassification>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<NistClassification> getNistClassifications() {
+        return this.backingStore.get("nistClassifications");
+    }
+    /**
      * Gets the postponeUntilDateTime property value. The future date and time when the status of a postponed recommendation will be active again.
      * @return a {@link OffsetDateTime}
      */
@@ -216,6 +273,14 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("releaseType");
     }
     /**
+     * Gets the remediatedDateTime property value. The remediatedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getRemediatedDateTime() {
+        return this.backingStore.get("remediatedDateTime");
+    }
+    /**
      * Gets the remediationImpact property value. Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
      * @return a {@link String}
      */
@@ -240,6 +305,22 @@ public class RecommendationBase extends Entity implements Parsable {
         return this.backingStore.get("status");
     }
     /**
+     * Gets the statusModifiedDateTime property value. The statusModifiedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getStatusModifiedDateTime() {
+        return this.backingStore.get("statusModifiedDateTime");
+    }
+    /**
+     * Gets the tags property value. The tags property
+     * @return a {@link java.util.List<RecommendationTag>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RecommendationTag> getTags() {
+        return this.backingStore.get("tags");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -249,9 +330,13 @@ public class RecommendationBase extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("actionSteps", this.getActionSteps());
         writer.writeStringValue("benefits", this.getBenefits());
         writer.writeEnumValue("category", this.getCategory());
+        writer.writeEnumValue("categoryGroup", this.getCategoryGroup());
+        writer.writeOffsetDateTimeValue("completedBySystemDateTime", this.getCompletedBySystemDateTime());
+        writer.writeOffsetDateTimeValue("completedByUserDateTime", this.getCompletedByUserDateTime());
         writer.writeOffsetDateTimeValue("createdDateTime", this.getCreatedDateTime());
         writer.writeDoubleValue("currentScore", this.getCurrentScore());
         writer.writeStringValue("displayName", this.getDisplayName());
+        writer.writeOffsetDateTimeValue("failedReviewDateTime", this.getFailedReviewDateTime());
         writer.writeCollectionOfEnumValues("featureAreas", this.getFeatureAreas());
         writer.writeCollectionOfObjectValues("impactedResources", this.getImpactedResources());
         writer.writeOffsetDateTimeValue("impactStartDateTime", this.getImpactStartDateTime());
@@ -261,13 +346,18 @@ public class RecommendationBase extends Entity implements Parsable {
         writer.writeStringValue("lastModifiedBy", this.getLastModifiedBy());
         writer.writeOffsetDateTimeValue("lastModifiedDateTime", this.getLastModifiedDateTime());
         writer.writeDoubleValue("maxScore", this.getMaxScore());
+        writer.writeIntegerValue("needsMoreActionResourceCount", this.getNeedsMoreActionResourceCount());
+        writer.writeCollectionOfObjectValues("nistClassifications", this.getNistClassifications());
         writer.writeOffsetDateTimeValue("postponeUntilDateTime", this.getPostponeUntilDateTime());
         writer.writeEnumValue("priority", this.getPriority());
         writer.writeEnumValue("recommendationType", this.getRecommendationType());
         writer.writeStringValue("releaseType", this.getReleaseType());
+        writer.writeOffsetDateTimeValue("remediatedDateTime", this.getRemediatedDateTime());
         writer.writeStringValue("remediationImpact", this.getRemediationImpact());
         writer.writeEnumValue("requiredLicenses", this.getRequiredLicenses());
         writer.writeEnumValue("status", this.getStatus());
+        writer.writeOffsetDateTimeValue("statusModifiedDateTime", this.getStatusModifiedDateTime());
+        writer.writeCollectionOfObjectValues("tags", this.getTags());
     }
     /**
      * Sets the actionSteps property value. List of actions to take to complete a recommendation.
@@ -291,6 +381,27 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("category", value);
     }
     /**
+     * Sets the categoryGroup property value. The categoryGroup property
+     * @param value Value to set for the categoryGroup property.
+     */
+    public void setCategoryGroup(@jakarta.annotation.Nullable final RecommendationCategoryGroup value) {
+        this.backingStore.set("categoryGroup", value);
+    }
+    /**
+     * Sets the completedBySystemDateTime property value. The completedBySystemDateTime property
+     * @param value Value to set for the completedBySystemDateTime property.
+     */
+    public void setCompletedBySystemDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("completedBySystemDateTime", value);
+    }
+    /**
+     * Sets the completedByUserDateTime property value. The completedByUserDateTime property
+     * @param value Value to set for the completedByUserDateTime property.
+     */
+    public void setCompletedByUserDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("completedByUserDateTime", value);
+    }
+    /**
      * Sets the createdDateTime property value. The date and time when the recommendation was detected as applicable to your directory.
      * @param value Value to set for the createdDateTime property.
      */
@@ -310,6 +421,13 @@ public class RecommendationBase extends Entity implements Parsable {
      */
     public void setDisplayName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("displayName", value);
+    }
+    /**
+     * Sets the failedReviewDateTime property value. The failedReviewDateTime property
+     * @param value Value to set for the failedReviewDateTime property.
+     */
+    public void setFailedReviewDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("failedReviewDateTime", value);
     }
     /**
      * Sets the featureAreas property value. The directory feature that the recommendation is related to.
@@ -375,6 +493,20 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("maxScore", value);
     }
     /**
+     * Sets the needsMoreActionResourceCount property value. The needsMoreActionResourceCount property
+     * @param value Value to set for the needsMoreActionResourceCount property.
+     */
+    public void setNeedsMoreActionResourceCount(@jakarta.annotation.Nullable final Integer value) {
+        this.backingStore.set("needsMoreActionResourceCount", value);
+    }
+    /**
+     * Sets the nistClassifications property value. The nistClassifications property
+     * @param value Value to set for the nistClassifications property.
+     */
+    public void setNistClassifications(@jakarta.annotation.Nullable final java.util.List<NistClassification> value) {
+        this.backingStore.set("nistClassifications", value);
+    }
+    /**
      * Sets the postponeUntilDateTime property value. The future date and time when the status of a postponed recommendation will be active again.
      * @param value Value to set for the postponeUntilDateTime property.
      */
@@ -403,6 +535,13 @@ public class RecommendationBase extends Entity implements Parsable {
         this.backingStore.set("releaseType", value);
     }
     /**
+     * Sets the remediatedDateTime property value. The remediatedDateTime property
+     * @param value Value to set for the remediatedDateTime property.
+     */
+    public void setRemediatedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("remediatedDateTime", value);
+    }
+    /**
      * Sets the remediationImpact property value. Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
      * @param value Value to set for the remediationImpact property.
      */
@@ -422,5 +561,19 @@ public class RecommendationBase extends Entity implements Parsable {
      */
     public void setStatus(@jakarta.annotation.Nullable final RecommendationStatus value) {
         this.backingStore.set("status", value);
+    }
+    /**
+     * Sets the statusModifiedDateTime property value. The statusModifiedDateTime property
+     * @param value Value to set for the statusModifiedDateTime property.
+     */
+    public void setStatusModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("statusModifiedDateTime", value);
+    }
+    /**
+     * Sets the tags property value. The tags property
+     * @param value Value to set for the tags property.
+     */
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<RecommendationTag> value) {
+        this.backingStore.set("tags", value);
     }
 }
