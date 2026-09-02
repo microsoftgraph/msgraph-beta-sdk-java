@@ -1,8 +1,8 @@
 package com.microsoft.graph.beta.directory.tenantgovernance.settings;
 
-import com.microsoft.graph.beta.directory.tenantgovernance.settings.microsoftgraphtenantgovernanceservicesenablerelatedtenants.MicrosoftGraphTenantGovernanceServicesEnableRelatedTenantsRequestBuilder;
+import com.microsoft.graph.beta.directory.tenantgovernance.settings.enablerelatedtenants.EnableRelatedTenantsRequestBuilder;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.TenantGovernanceSetting;
+import com.microsoft.graph.beta.models.TenantGovernanceSetting;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -17,17 +17,17 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the settings property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+ * Provides operations to manage the settings property of the microsoft.graph.tenantGovernance entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class SettingsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the enableRelatedTenants method.
-     * @return a {@link MicrosoftGraphTenantGovernanceServicesEnableRelatedTenantsRequestBuilder}
+     * @return a {@link EnableRelatedTenantsRequestBuilder}
      */
     @jakarta.annotation.Nonnull
-    public MicrosoftGraphTenantGovernanceServicesEnableRelatedTenantsRequestBuilder microsoftGraphTenantGovernanceServicesEnableRelatedTenants() {
-        return new MicrosoftGraphTenantGovernanceServicesEnableRelatedTenantsRequestBuilder(pathParameters, requestAdapter);
+    public EnableRelatedTenantsRequestBuilder enableRelatedTenants() {
+        return new EnableRelatedTenantsRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Instantiates a new {@link SettingsRequestBuilder} and sets the default values.

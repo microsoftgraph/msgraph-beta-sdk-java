@@ -51,6 +51,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("externalCloudAuthorizedApplicationId", (n) -> { this.setExternalCloudAuthorizedApplicationId(n.getStringValue()); });
         deserializerMap.put("groupSyncInbound", (n) -> { this.setGroupSyncInbound(n.getObjectValue(CrossTenantGroupSyncInbound::createFromDiscriminatorValue)); });
+        deserializerMap.put("roleEnabledGroupSyncInbound", (n) -> { this.setRoleEnabledGroupSyncInbound(n.getObjectValue(CrossTenantRoleEnabledGroupSyncInbound::createFromDiscriminatorValue)); });
         deserializerMap.put("tenantId", (n) -> { this.setTenantId(n.getStringValue()); });
         deserializerMap.put("userSyncInbound", (n) -> { this.setUserSyncInbound(n.getObjectValue(CrossTenantUserSyncInbound::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -62,6 +63,14 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
     @jakarta.annotation.Nullable
     public CrossTenantGroupSyncInbound getGroupSyncInbound() {
         return this.backingStore.get("groupSyncInbound");
+    }
+    /**
+     * Gets the roleEnabledGroupSyncInbound property value. The roleEnabledGroupSyncInbound property
+     * @return a {@link CrossTenantRoleEnabledGroupSyncInbound}
+     */
+    @jakarta.annotation.Nullable
+    public CrossTenantRoleEnabledGroupSyncInbound getRoleEnabledGroupSyncInbound() {
+        return this.backingStore.get("roleEnabledGroupSyncInbound");
     }
     /**
      * Gets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Key. Read-only.
@@ -89,6 +98,7 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("externalCloudAuthorizedApplicationId", this.getExternalCloudAuthorizedApplicationId());
         writer.writeObjectValue("groupSyncInbound", this.getGroupSyncInbound());
+        writer.writeObjectValue("roleEnabledGroupSyncInbound", this.getRoleEnabledGroupSyncInbound());
         writer.writeStringValue("tenantId", this.getTenantId());
         writer.writeObjectValue("userSyncInbound", this.getUserSyncInbound());
     }
@@ -112,6 +122,13 @@ public class CrossTenantIdentitySyncPolicyPartner extends PolicyDeletableItem im
      */
     public void setGroupSyncInbound(@jakarta.annotation.Nullable final CrossTenantGroupSyncInbound value) {
         this.backingStore.set("groupSyncInbound", value);
+    }
+    /**
+     * Sets the roleEnabledGroupSyncInbound property value. The roleEnabledGroupSyncInbound property
+     * @param value Value to set for the roleEnabledGroupSyncInbound property.
+     */
+    public void setRoleEnabledGroupSyncInbound(@jakarta.annotation.Nullable final CrossTenantRoleEnabledGroupSyncInbound value) {
+        this.backingStore.set("roleEnabledGroupSyncInbound", value);
     }
     /**
      * Sets the tenantId property value. Tenant identifier for the partner Microsoft Entra organization. Key. Read-only.

@@ -101,7 +101,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(29);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(30);
         deserializerMap.put("alternateUrl", (n) -> { this.setAlternateUrl(n.getStringValue()); });
         deserializerMap.put("applicationServerTimeout", (n) -> { this.setApplicationServerTimeout(n.getStringValue()); });
         deserializerMap.put("applicationType", (n) -> { this.setApplicationType(n.getStringValue()); });
@@ -111,6 +111,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         deserializerMap.put("isAccessibleViaZTNAClient", (n) -> { this.setIsAccessibleViaZTNAClient(n.getBooleanValue()); });
         deserializerMap.put("isBackendCertificateValidationEnabled", (n) -> { this.setIsBackendCertificateValidationEnabled(n.getBooleanValue()); });
         deserializerMap.put("isContinuousAccessEvaluationEnabled", (n) -> { this.setIsContinuousAccessEvaluationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("isDeviceAccessEnabled", (n) -> { this.setIsDeviceAccessEnabled(n.getBooleanValue()); });
         deserializerMap.put("isDnsResolutionEnabled", (n) -> { this.setIsDnsResolutionEnabled(n.getBooleanValue()); });
         deserializerMap.put("isHttpOnlyCookieEnabled", (n) -> { this.setIsHttpOnlyCookieEnabled(n.getBooleanValue()); });
         deserializerMap.put("isOnPremPublishingEnabled", (n) -> { this.setIsOnPremPublishingEnabled(n.getBooleanValue()); });
@@ -164,6 +165,14 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
     @jakarta.annotation.Nullable
     public Boolean getIsContinuousAccessEvaluationEnabled() {
         return this.backingStore.get("isContinuousAccessEvaluationEnabled");
+    }
+    /**
+     * Gets the isDeviceAccessEnabled property value. The isDeviceAccessEnabled property
+     * @return a {@link Boolean}
+     */
+    @jakarta.annotation.Nullable
+    public Boolean getIsDeviceAccessEnabled() {
+        return this.backingStore.get("isDeviceAccessEnabled");
     }
     /**
      * Gets the isDnsResolutionEnabled property value. Indicates Microsoft Entra Private Access should handle DNS resolution. false by default.
@@ -340,6 +349,7 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
         writer.writeBooleanValue("isAccessibleViaZTNAClient", this.getIsAccessibleViaZTNAClient());
         writer.writeBooleanValue("isBackendCertificateValidationEnabled", this.getIsBackendCertificateValidationEnabled());
         writer.writeBooleanValue("isContinuousAccessEvaluationEnabled", this.getIsContinuousAccessEvaluationEnabled());
+        writer.writeBooleanValue("isDeviceAccessEnabled", this.getIsDeviceAccessEnabled());
         writer.writeBooleanValue("isDnsResolutionEnabled", this.getIsDnsResolutionEnabled());
         writer.writeBooleanValue("isHttpOnlyCookieEnabled", this.getIsHttpOnlyCookieEnabled());
         writer.writeBooleanValue("isOnPremPublishingEnabled", this.getIsOnPremPublishingEnabled());
@@ -439,6 +449,13 @@ public class OnPremisesPublishing implements AdditionalDataHolder, BackedModel, 
      */
     public void setIsContinuousAccessEvaluationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isContinuousAccessEvaluationEnabled", value);
+    }
+    /**
+     * Sets the isDeviceAccessEnabled property value. The isDeviceAccessEnabled property
+     * @param value Value to set for the isDeviceAccessEnabled property.
+     */
+    public void setIsDeviceAccessEnabled(@jakarta.annotation.Nullable final Boolean value) {
+        this.backingStore.set("isDeviceAccessEnabled", value);
     }
     /**
      * Sets the isDnsResolutionEnabled property value. Indicates Microsoft Entra Private Access should handle DNS resolution. false by default.

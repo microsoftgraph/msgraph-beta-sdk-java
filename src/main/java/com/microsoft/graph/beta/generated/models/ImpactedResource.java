@@ -78,6 +78,7 @@ public class ImpactedResource extends Entity implements Parsable {
         deserializerMap.put("resourceType", (n) -> { this.setResourceType(n.getStringValue()); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getEnumValue(RecommendationStatus::forValue)); });
         deserializerMap.put("subjectId", (n) -> { this.setSubjectId(n.getStringValue()); });
+        deserializerMap.put("tags", (n) -> { this.setTags(n.getCollectionOfObjectValues(RecommendationTag::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -161,6 +162,14 @@ public class ImpactedResource extends Entity implements Parsable {
         return this.backingStore.get("subjectId");
     }
     /**
+     * Gets the tags property value. The tags property
+     * @return a {@link java.util.List<RecommendationTag>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<RecommendationTag> getTags() {
+        return this.backingStore.get("tags");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -181,6 +190,7 @@ public class ImpactedResource extends Entity implements Parsable {
         writer.writeStringValue("resourceType", this.getResourceType());
         writer.writeEnumValue("status", this.getStatus());
         writer.writeStringValue("subjectId", this.getSubjectId());
+        writer.writeCollectionOfObjectValues("tags", this.getTags());
     }
     /**
      * Sets the addedDateTime property value. The date and time when the impactedResource object was initially associated with the recommendation.
@@ -279,5 +289,12 @@ public class ImpactedResource extends Entity implements Parsable {
      */
     public void setSubjectId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("subjectId", value);
+    }
+    /**
+     * Sets the tags property value. The tags property
+     * @param value Value to set for the tags property.
+     */
+    public void setTags(@jakarta.annotation.Nullable final java.util.List<RecommendationTag> value) {
+        this.backingStore.set("tags", value);
     }
 }

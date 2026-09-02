@@ -37,8 +37,11 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
     /**
      * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job continues from where it left off when a start call is made.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-pause?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post() {
         post(null);
     }
@@ -46,8 +49,11 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
      * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job continues from where it left off when a start call is made.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-pause?view=graph-rest-beta">Find more info here</a>
      */
+    @Deprecated
     public void post(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toPostRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -57,8 +63,11 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
     /**
      * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job continues from where it left off when a start call is made.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation() {
         return toPostRequestInformation(null);
     }
@@ -66,8 +75,11 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
      * Temporarily stop a running synchronizationJob. All the progress, including job state, is persisted, and the job continues from where it left off when a start call is made.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, PostRequestConfiguration::new);
@@ -78,8 +90,11 @@ public class PauseRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link PauseRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public PauseRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new PauseRequestBuilder(rawUrl, requestAdapter);

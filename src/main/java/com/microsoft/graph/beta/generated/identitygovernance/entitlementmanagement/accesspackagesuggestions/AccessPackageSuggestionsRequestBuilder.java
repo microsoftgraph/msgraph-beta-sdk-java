@@ -27,7 +27,10 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -36,8 +39,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the accessPackageSuggestions property of the microsoft.graph.entitlementManagement entity.
      * @param accessPackageSuggestionId The unique identifier of accessPackageSuggestion
      * @return a {@link AccessPackageSuggestionItemRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AccessPackageSuggestionItemRequestBuilder byAccessPackageSuggestionId(@jakarta.annotation.Nonnull final String accessPackageSuggestionId) {
         Objects.requireNonNull(accessPackageSuggestionId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -64,8 +70,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on=&apos;{on}&apos;
      * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
         Objects.requireNonNull(on);
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
@@ -74,8 +83,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * Get accessPackageSuggestions from identityGovernance
      * @return a {@link AccessPackageSuggestionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AccessPackageSuggestionCollectionResponse get() {
         return get(null);
     }
@@ -84,8 +96,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageSuggestionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AccessPackageSuggestionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -97,8 +112,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link AccessPackageSuggestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AccessPackageSuggestion post(@jakarta.annotation.Nonnull final AccessPackageSuggestion body) {
         return post(body, null);
     }
@@ -108,8 +126,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageSuggestion}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public AccessPackageSuggestion post(@jakarta.annotation.Nonnull final AccessPackageSuggestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -120,8 +141,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get accessPackageSuggestions from identityGovernance
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -129,8 +153,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * Get accessPackageSuggestions from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -141,8 +168,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to accessPackageSuggestions for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AccessPackageSuggestion body) {
         return toPostRequestInformation(body, null);
     }
@@ -151,8 +181,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AccessPackageSuggestion body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -165,8 +198,11 @@ public class AccessPackageSuggestionsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AccessPackageSuggestionsRequestBuilder}
+     * @deprecated
+     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public AccessPackageSuggestionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AccessPackageSuggestionsRequestBuilder(rawUrl, requestAdapter);

@@ -1,7 +1,9 @@
 package com.microsoft.graph.beta.directory.recommendations.item.impactedresources;
 
+import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.addtag.AddTagRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.count.CountRequestBuilder;
 import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.item.ImpactedResourceItemRequestBuilder;
+import com.microsoft.graph.beta.directory.recommendations.item.impactedresources.removetag.RemoveTagRequestBuilder;
 import com.microsoft.graph.beta.models.ImpactedResource;
 import com.microsoft.graph.beta.models.ImpactedResourceCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
@@ -24,12 +26,28 @@ import java.util.Objects;
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class ImpactedResourcesRequestBuilder extends BaseRequestBuilder {
     /**
+     * Provides operations to call the addTag method.
+     * @return a {@link AddTagRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public AddTagRequestBuilder addTag() {
+        return new AddTagRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
      */
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
+    }
+    /**
+     * Provides operations to call the removeTag method.
+     * @return a {@link RemoveTagRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public RemoveTagRequestBuilder removeTag() {
+        return new RemoveTagRequestBuilder(pathParameters, requestAdapter);
     }
     /**
      * Provides operations to manage the impactedResources property of the microsoft.graph.recommendationBase entity.

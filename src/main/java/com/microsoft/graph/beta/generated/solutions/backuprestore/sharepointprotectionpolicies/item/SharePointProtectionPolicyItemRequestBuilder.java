@@ -28,7 +28,10 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to manage the siteExclusionUnits property of the microsoft.graph.sharePointProtectionPolicy entity.
      * @return a {@link SiteExclusionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteExclusionUnitsRequestBuilder siteExclusionUnits() {
         return new SiteExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -36,7 +39,10 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to manage the siteExclusionUnitsBulkAdditionJobs property of the microsoft.graph.sharePointProtectionPolicy entity.
      * @return a {@link SiteExclusionUnitsBulkAdditionJobsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteExclusionUnitsBulkAdditionJobsRequestBuilder siteExclusionUnitsBulkAdditionJobs() {
         return new SiteExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -44,7 +50,10 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to manage the siteInclusionRules property of the microsoft.graph.sharePointProtectionPolicy entity.
      * @return a {@link SiteInclusionRulesRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteInclusionRulesRequestBuilder siteInclusionRules() {
         return new SiteInclusionRulesRequestBuilder(pathParameters, requestAdapter);
@@ -52,7 +61,10 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to manage the siteProtectionUnits property of the microsoft.graph.sharePointProtectionPolicy entity.
      * @return a {@link SiteProtectionUnitsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteProtectionUnitsRequestBuilder siteProtectionUnits() {
         return new SiteProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -60,7 +72,10 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Provides operations to manage the siteProtectionUnitsBulkAdditionJobs property of the microsoft.graph.sharePointProtectionPolicy entity.
      * @return a {@link SiteProtectionUnitsBulkAdditionJobsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SiteProtectionUnitsBulkAdditionJobsRequestBuilder siteProtectionUnitsBulkAdditionJobs() {
         return new SiteProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -84,7 +99,10 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Delete navigation property sharePointProtectionPolicies for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -92,7 +110,10 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * Delete navigation property sharePointProtectionPolicies for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -103,8 +124,11 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * The list of SharePoint protection policies in the tenant.
      * @return a {@link SharePointProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointProtectionPolicy get() {
         return get(null);
     }
@@ -113,8 +137,11 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointProtectionPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -126,9 +153,12 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @return a {@link SharePointProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointprotectionpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointProtectionPolicy patch(@jakarta.annotation.Nonnull final SharePointProtectionPolicy body) {
         return patch(body, null);
     }
@@ -138,9 +168,12 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/sharepointprotectionpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointProtectionPolicy patch(@jakarta.annotation.Nonnull final SharePointProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -151,8 +184,11 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * Delete navigation property sharePointProtectionPolicies for solutions
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -160,8 +196,11 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * Delete navigation property sharePointProtectionPolicies for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -171,8 +210,11 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
     /**
      * The list of SharePoint protection policies in the tenant.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -180,8 +222,11 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * The list of SharePoint protection policies in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -192,8 +237,11 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * Update a SharePoint protection policy. This method adds a siteprotectionunit to or removes it from the protection policy.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SharePointProtectionPolicy body) {
         return toPatchRequestInformation(body, null);
     }
@@ -202,8 +250,11 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SharePointProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -216,8 +267,11 @@ public class SharePointProtectionPolicyItemRequestBuilder extends BaseRequestBui
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SharePointProtectionPolicyItemRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SharePointProtectionPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SharePointProtectionPolicyItemRequestBuilder(rawUrl, requestAdapter);

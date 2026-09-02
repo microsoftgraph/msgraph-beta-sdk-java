@@ -29,7 +29,10 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the cancel method.
      * @return a {@link CancelRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
@@ -37,7 +40,10 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the presenters property of the microsoft.graph.virtualEvent entity.
      * @return a {@link PresentersRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PresentersRequestBuilder presenters() {
         return new PresentersRequestBuilder(pathParameters, requestAdapter);
@@ -45,7 +51,10 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the publish method.
      * @return a {@link PublishRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public PublishRequestBuilder publish() {
         return new PublishRequestBuilder(pathParameters, requestAdapter);
@@ -53,7 +62,10 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.
      * @return a {@link SessionsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SessionsRequestBuilder sessions() {
         return new SessionsRequestBuilder(pathParameters, requestAdapter);
@@ -61,7 +73,10 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the setExternalEventInformation method.
      * @return a {@link SetExternalEventInformationRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public SetExternalEventInformationRequestBuilder setExternalEventInformation() {
         return new SetExternalEventInformationRequestBuilder(pathParameters, requestAdapter);
@@ -85,7 +100,10 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property events for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -93,7 +111,10 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property events for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -104,8 +125,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * Get events from solutions
      * @return a {@link VirtualEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public VirtualEvent get() {
         return get(null);
     }
@@ -114,8 +138,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public VirtualEvent get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -127,8 +154,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link VirtualEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public VirtualEvent patch(@jakarta.annotation.Nonnull final VirtualEvent body) {
         return patch(body, null);
     }
@@ -138,8 +168,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEvent}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public VirtualEvent patch(@jakarta.annotation.Nonnull final VirtualEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -151,8 +184,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the sessions property of the microsoft.graph.virtualEvent entity.
      * @param joinWebUrl Alternate key of virtualEventSession
      * @return a {@link SessionsWithJoinWebUrlRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SessionsWithJoinWebUrlRequestBuilder sessionsWithJoinWebUrl(@jakarta.annotation.Nonnull final String joinWebUrl) {
         Objects.requireNonNull(joinWebUrl);
         return new SessionsWithJoinWebUrlRequestBuilder(pathParameters, requestAdapter, joinWebUrl);
@@ -160,8 +196,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property events for solutions
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -169,8 +208,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property events for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -180,8 +222,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Get events from solutions
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -189,8 +234,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * Get events from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -201,8 +249,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property events in solutions
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final VirtualEvent body) {
         return toPatchRequestInformation(body, null);
     }
@@ -211,8 +262,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final VirtualEvent body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -225,8 +279,11 @@ public class VirtualEventItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link VirtualEventItemRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public VirtualEventItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new VirtualEventItemRequestBuilder(rawUrl, requestAdapter);

@@ -72,6 +72,8 @@ public enum ResultantAppStateDetail implements ValuedEnum {
     UntargetedSupersedingAppsDetected("untargetedSupersedingAppsDetected"),
     /** App was removed in order to install a superseding app. */
     AppRemovedBySupersedence("appRemovedBySupersedence"),
+    /** App cannot be installed. One or more of the application&apos;s dependencies are in use. */
+    DependencyAppInUse("dependencyAppInUse"),
     /** Application failed to uninstall. See error code property for more details. */
     SeeUninstallErrorCode("seeUninstallErrorCode"),
     /** Device must be rebooted to complete installation of the application. */
@@ -79,7 +81,13 @@ public enum ResultantAppStateDetail implements ValuedEnum {
     /** One or more of the application&apos;s dependencies are installing. */
     InstallingDependencies("installingDependencies"),
     /** Application content was downloaded to the device. */
-    ContentDownloaded("contentDownloaded");
+    ContentDownloaded("contentDownloaded"),
+    /** App enforcement is pending because the app is currently in use. */
+    InUse("inUse"),
+    /** App enforcement was deferred by the user because the app is currently in use. */
+    Deferred("deferred"),
+    /** App enforcement was automatically deferred because the app is currently in use and a user response was not available. */
+    AutoDeferred("autoDeferred");
     public final String value;
     ResultantAppStateDetail(final String value) {
         this.value = value;
@@ -122,10 +130,14 @@ public enum ResultantAppStateDetail implements ValuedEnum {
             case "userIsNotLoggedIntoAppStore": return UserIsNotLoggedIntoAppStore;
             case "untargetedSupersedingAppsDetected": return UntargetedSupersedingAppsDetected;
             case "appRemovedBySupersedence": return AppRemovedBySupersedence;
+            case "dependencyAppInUse": return DependencyAppInUse;
             case "seeUninstallErrorCode": return SeeUninstallErrorCode;
             case "pendingReboot": return PendingReboot;
             case "installingDependencies": return InstallingDependencies;
             case "contentDownloaded": return ContentDownloaded;
+            case "inUse": return InUse;
+            case "deferred": return Deferred;
+            case "autoDeferred": return AutoDeferred;
             default: return null;
         }
     }

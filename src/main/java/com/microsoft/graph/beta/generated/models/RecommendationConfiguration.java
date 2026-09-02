@@ -3,6 +3,7 @@ package com.microsoft.graph.beta.models;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -32,6 +33,7 @@ public class RecommendationConfiguration extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("isNotificationEnabled", (n) -> { this.setIsNotificationEnabled(n.getBooleanValue()); });
+        deserializerMap.put("lastRefreshedDateTime", (n) -> { this.setLastRefreshedDateTime(n.getOffsetDateTimeValue()); });
         return deserializerMap;
     }
     /**
@@ -41,6 +43,14 @@ public class RecommendationConfiguration extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Boolean getIsNotificationEnabled() {
         return this.backingStore.get("isNotificationEnabled");
+    }
+    /**
+     * Gets the lastRefreshedDateTime property value. The lastRefreshedDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getLastRefreshedDateTime() {
+        return this.backingStore.get("lastRefreshedDateTime");
     }
     /**
      * Serializes information the current object
@@ -57,5 +67,12 @@ public class RecommendationConfiguration extends Entity implements Parsable {
      */
     public void setIsNotificationEnabled(@jakarta.annotation.Nullable final Boolean value) {
         this.backingStore.set("isNotificationEnabled", value);
+    }
+    /**
+     * Sets the lastRefreshedDateTime property value. The lastRefreshedDateTime property
+     * @param value Value to set for the lastRefreshedDateTime property.
+     */
+    public void setLastRefreshedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("lastRefreshedDateTime", value);
     }
 }

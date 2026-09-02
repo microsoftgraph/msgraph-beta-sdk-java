@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Contains properties used to assign an iOS Declarative Device Management (DDM) VPP mobile app to a group.
  */
@@ -77,6 +78,14 @@ public class IosDdmVppAppAssignmentSettings extends MobileAppAssignmentSettings 
         return this.backingStore.get("contentFilterConfigurationId");
     }
     /**
+     * Gets the ddmAppConfigId property value. The unique identifier of the DDM app configuration to associate with the app.
+     * @return a {@link UUID}
+     */
+    @jakarta.annotation.Nullable
+    public UUID getDdmAppConfigId() {
+        return this.backingStore.get("ddmAppConfigId");
+    }
+    /**
      * Gets the dnsProxyConfigurationId property value. The unique identifier of the DNS proxy to associate with the app.
      * @return a {@link String}
      */
@@ -97,6 +106,7 @@ public class IosDdmVppAppAssignmentSettings extends MobileAppAssignmentSettings 
         deserializerMap.put("automaticAppUpdates", (n) -> { this.setAutomaticAppUpdates(n.getEnumValue(DdmAppAutomaticAppUpdates::forValue)); });
         deserializerMap.put("cellularSliceConfigurationId", (n) -> { this.setCellularSliceConfigurationId(n.getStringValue()); });
         deserializerMap.put("contentFilterConfigurationId", (n) -> { this.setContentFilterConfigurationId(n.getStringValue()); });
+        deserializerMap.put("ddmAppConfigId", (n) -> { this.setDdmAppConfigId(n.getUUIDValue()); });
         deserializerMap.put("dnsProxyConfigurationId", (n) -> { this.setDnsProxyConfigurationId(n.getStringValue()); });
         deserializerMap.put("preventManagedAppBackup", (n) -> { this.setPreventManagedAppBackup(n.getBooleanValue()); });
         deserializerMap.put("relayConfigurationId", (n) -> { this.setRelayConfigurationId(n.getStringValue()); });
@@ -167,6 +177,7 @@ public class IosDdmVppAppAssignmentSettings extends MobileAppAssignmentSettings 
         writer.writeEnumValue("automaticAppUpdates", this.getAutomaticAppUpdates());
         writer.writeStringValue("cellularSliceConfigurationId", this.getCellularSliceConfigurationId());
         writer.writeStringValue("contentFilterConfigurationId", this.getContentFilterConfigurationId());
+        writer.writeUUIDValue("ddmAppConfigId", this.getDdmAppConfigId());
         writer.writeStringValue("dnsProxyConfigurationId", this.getDnsProxyConfigurationId());
         writer.writeBooleanValue("preventManagedAppBackup", this.getPreventManagedAppBackup());
         writer.writeStringValue("relayConfigurationId", this.getRelayConfigurationId());
@@ -216,6 +227,13 @@ public class IosDdmVppAppAssignmentSettings extends MobileAppAssignmentSettings 
      */
     public void setContentFilterConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("contentFilterConfigurationId", value);
+    }
+    /**
+     * Sets the ddmAppConfigId property value. The unique identifier of the DDM app configuration to associate with the app.
+     * @param value Value to set for the ddmAppConfigId property.
+     */
+    public void setDdmAppConfigId(@jakarta.annotation.Nullable final UUID value) {
+        this.backingStore.set("ddmAppConfigId", value);
     }
     /**
      * Sets the dnsProxyConfigurationId property value. The unique identifier of the DNS proxy to associate with the app.

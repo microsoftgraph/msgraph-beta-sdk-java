@@ -27,7 +27,10 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,7 +38,10 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the validateCredentials method.
      * @return a {@link ValidateCredentialsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public ValidateCredentialsRequestBuilder validateCredentials() {
         return new ValidateCredentialsRequestBuilder(pathParameters, requestAdapter);
@@ -44,8 +50,11 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the jobs property of the microsoft.graph.synchronization entity.
      * @param synchronizationJobId The unique identifier of synchronizationJob
      * @return a {@link SynchronizationJobItemRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public SynchronizationJobItemRequestBuilder bySynchronizationJobId(@jakarta.annotation.Nonnull final String synchronizationJobId) {
         Objects.requireNonNull(synchronizationJobId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -72,9 +81,12 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * List existing synchronizationJob objects for a given application instance (service principal).
      * @return a {@link SynchronizationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SynchronizationJobCollectionResponse get() {
         return get(null);
     }
@@ -83,9 +95,12 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-list-jobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SynchronizationJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -97,9 +112,12 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SynchronizationJob post(@jakarta.annotation.Nonnull final SynchronizationJob body) {
         return post(body, null);
     }
@@ -109,9 +127,12 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronization-post-jobs?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SynchronizationJob post(@jakarta.annotation.Nonnull final SynchronizationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -122,8 +143,11 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
     /**
      * List existing synchronizationJob objects for a given application instance (service principal).
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -131,8 +155,11 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * List existing synchronizationJob objects for a given application instance (service principal).
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -143,8 +170,11 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * Create a new synchronizationJob with a default synchronization schema. The job is created in a disabled state. Call Start job to start synchronization.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SynchronizationJob body) {
         return toPostRequestInformation(body, null);
     }
@@ -153,8 +183,11 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SynchronizationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -167,8 +200,11 @@ public class JobsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link JobsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public JobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new JobsRequestBuilder(rawUrl, requestAdapter);

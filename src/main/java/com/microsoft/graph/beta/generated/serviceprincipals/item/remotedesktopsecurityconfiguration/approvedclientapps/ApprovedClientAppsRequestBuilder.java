@@ -26,7 +26,10 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -35,8 +38,11 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the approvedClientApps property of the microsoft.graph.remoteDesktopSecurityConfiguration entity.
      * @param approvedClientAppId The unique identifier of approvedClientApp
      * @return a {@link ApprovedClientAppItemRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ApprovedClientAppItemRequestBuilder byApprovedClientAppId(@jakarta.annotation.Nonnull final String approvedClientAppId) {
         Objects.requireNonNull(approvedClientAppId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -63,9 +69,12 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the approvedClientApp objects and their properties on the remoteDesktopSecurityConfiguration resource on a service principal.
      * @return a {@link ApprovedClientAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-list-approvedclientapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ApprovedClientAppCollectionResponse get() {
         return get(null);
     }
@@ -74,9 +83,12 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovedClientAppCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-list-approvedclientapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ApprovedClientAppCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -88,9 +100,12 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link ApprovedClientApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-post-approvedclientapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ApprovedClientApp post(@jakarta.annotation.Nonnull final ApprovedClientApp body) {
         return post(body, null);
     }
@@ -100,9 +115,12 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ApprovedClientApp}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/remotedesktopsecurityconfiguration-post-approvedclientapps?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public ApprovedClientApp post(@jakarta.annotation.Nonnull final ApprovedClientApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -113,8 +131,11 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the approvedClientApp objects and their properties on the remoteDesktopSecurityConfiguration resource on a service principal.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -122,8 +143,11 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the approvedClientApp objects and their properties on the remoteDesktopSecurityConfiguration resource on a service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -134,8 +158,11 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
      * Create a new approvedClientApp object for the remoteDesktopSecurityConfiguration object on a service principal. You can configure a maximum of 20 approved client apps.
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ApprovedClientApp body) {
         return toPostRequestInformation(body, null);
     }
@@ -144,8 +171,11 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final ApprovedClientApp body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -158,8 +188,11 @@ public class ApprovedClientAppsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ApprovedClientAppsRequestBuilder}
+     * @deprecated
+     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public ApprovedClientAppsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ApprovedClientAppsRequestBuilder(rawUrl, requestAdapter);

@@ -26,7 +26,10 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the crossOrganizationGroupMappings property of the microsoft.graph.sharePointMigrationsRoot entity.
      * @return a {@link CrossOrganizationGroupMappingsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CrossOrganizationGroupMappingsRequestBuilder crossOrganizationGroupMappings() {
         return new CrossOrganizationGroupMappingsRequestBuilder(pathParameters, requestAdapter);
@@ -34,7 +37,10 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the crossOrganizationMigrationTasks property of the microsoft.graph.sharePointMigrationsRoot entity.
      * @return a {@link CrossOrganizationMigrationTasksRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CrossOrganizationMigrationTasksRequestBuilder crossOrganizationMigrationTasks() {
         return new CrossOrganizationMigrationTasksRequestBuilder(pathParameters, requestAdapter);
@@ -42,7 +48,10 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the crossOrganizationUserMappings property of the microsoft.graph.sharePointMigrationsRoot entity.
      * @return a {@link CrossOrganizationUserMappingsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     @jakarta.annotation.Nonnull
     public CrossOrganizationUserMappingsRequestBuilder crossOrganizationUserMappings() {
         return new CrossOrganizationUserMappingsRequestBuilder(pathParameters, requestAdapter);
@@ -66,7 +75,10 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property migrations for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -74,7 +86,10 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property migrations for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
+    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -85,8 +100,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * The migration operations for cross-organization SharePoint migrations.
      * @return a {@link SharePointMigrationsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointMigrationsRoot get() {
         return get(null);
     }
@@ -95,8 +113,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointMigrationsRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -108,8 +129,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link SharePointMigrationsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointMigrationsRoot patch(@jakarta.annotation.Nonnull final SharePointMigrationsRoot body) {
         return patch(body, null);
     }
@@ -119,8 +143,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SharePointMigrationsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
+    @Deprecated
     public SharePointMigrationsRoot patch(@jakarta.annotation.Nonnull final SharePointMigrationsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -131,8 +158,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property migrations for solutions
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -140,8 +170,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property migrations for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -151,8 +184,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The migration operations for cross-organization SharePoint migrations.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -160,8 +196,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * The migration operations for cross-organization SharePoint migrations.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -172,8 +211,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property migrations in solutions
      * @param body The request body
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SharePointMigrationsRoot body) {
         return toPatchRequestInformation(body, null);
     }
@@ -182,8 +224,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SharePointMigrationsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -196,8 +241,11 @@ public class MigrationsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MigrationsRequestBuilder}
+     * @deprecated
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
+    @Deprecated
     public MigrationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MigrationsRequestBuilder(rawUrl, requestAdapter);

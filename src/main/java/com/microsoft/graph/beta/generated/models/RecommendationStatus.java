@@ -14,7 +14,8 @@ public enum RecommendationStatus implements ValuedEnum {
     RiskAccepted("riskAccepted"),
     ThirdParty("thirdParty"),
     Planned("planned"),
-    AlternateMitigation("alternateMitigation");
+    AlternateMitigation("alternateMitigation"),
+    NeedsMoreAction("needsMoreAction");
     public final String value;
     RecommendationStatus(final String value) {
         this.value = value;
@@ -35,6 +36,7 @@ public enum RecommendationStatus implements ValuedEnum {
             case "thirdParty": return ThirdParty;
             case "planned": return Planned;
             case "alternateMitigation": return AlternateMitigation;
+            case "needsMoreAction": return NeedsMoreAction;
             default: return null;
         }
     }

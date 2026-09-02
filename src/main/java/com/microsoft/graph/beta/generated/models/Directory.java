@@ -1,7 +1,6 @@
 package com.microsoft.graph.beta.models;
 
 import com.microsoft.graph.beta.models.entrarecoveryservices.Recovery;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.TenantGovernance;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;

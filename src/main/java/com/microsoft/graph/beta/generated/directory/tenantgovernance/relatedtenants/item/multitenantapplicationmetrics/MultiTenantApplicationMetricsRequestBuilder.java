@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.item.multitenantapplicationmetrics;
 
+import com.microsoft.graph.beta.models.MultiTenantApplicationMetrics;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.MultiTenantApplicationMetrics;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the multiTenantApplicationMetrics property of the microsoft.graph.tenantGovernanceServices.relatedTenant entity.
+ * Provides operations to manage the multiTenantApplicationMetrics property of the microsoft.graph.relatedTenant entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuilder {
@@ -37,7 +37,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/relatedTenants/{relatedTenant%2Did}/multiTenantApplicationMetrics{?%24expand,%24select}", rawUrl);
     }
     /**
-     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
+     * Get multiTenantApplicationMetrics from directory
      * @return a {@link MultiTenantApplicationMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         return get(null);
     }
     /**
-     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
+     * Get multiTenantApplicationMetrics from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MultiTenantApplicationMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         return this.requestAdapter.send(requestInfo, errorMapping, MultiTenantApplicationMetrics::createFromDiscriminatorValue);
     }
     /**
-     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
+     * Get multiTenantApplicationMetrics from directory
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         return toGetRequestInformation(null);
     }
     /**
-     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
+     * Get multiTenantApplicationMetrics from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class MultiTenantApplicationMetricsRequestBuilder extends BaseRequestBuil
         return new MultiTenantApplicationMetricsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * Multi-tenant application usage metrics for this related tenant. Expanded by default.
+     * Get multiTenantApplicationMetrics from directory
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

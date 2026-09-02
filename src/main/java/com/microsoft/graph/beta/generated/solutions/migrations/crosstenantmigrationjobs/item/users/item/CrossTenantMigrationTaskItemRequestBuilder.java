@@ -25,7 +25,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * Provides operations to call the cancel method.
      * @return a {@link CancelRequestBuilder}
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @Deprecated
     @jakarta.annotation.Nonnull
@@ -52,7 +52,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * Delete navigation property users for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @Deprecated
     public void delete() {
@@ -63,7 +63,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
@@ -77,7 +77,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @return a {@link CrossTenantMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationtask-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -91,7 +91,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @return a {@link CrossTenantMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationtask-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -108,7 +108,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @return a {@link CrossTenantMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -122,7 +122,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @return a {@link CrossTenantMigrationTask}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
     @Deprecated
@@ -137,7 +137,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * Delete navigation property users for solutions
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -149,7 +149,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -163,7 +163,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * Read the properties and relationships of crossTenantMigrationTask, which shows the details of the migration task for a single user of a crossTenantMigrationJob. The crossTenantMigrationTask contains the status details of migrations for the workloads specified in the crossTenantMigrationJob. 
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -175,7 +175,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -190,7 +190,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -203,7 +203,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -220,7 +220,7 @@ public class CrossTenantMigrationTaskItemRequestBuilder extends BaseRequestBuild
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CrossTenantMigrationTaskItemRequestBuilder}
      * @deprecated
-     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
+     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
     @Deprecated

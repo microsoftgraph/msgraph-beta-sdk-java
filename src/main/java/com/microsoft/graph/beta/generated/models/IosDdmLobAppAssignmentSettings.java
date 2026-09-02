@@ -6,6 +6,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Contains properties used to assign an iOS iOS Declarative Device Management (DDM) Line Of Business (LOB) mobile app to a group.
  */
@@ -61,6 +62,14 @@ public class IosDdmLobAppAssignmentSettings extends MobileAppAssignmentSettings 
         return this.backingStore.get("contentFilterConfigurationId");
     }
     /**
+     * Gets the ddmAppConfigId property value. The unique identifier of the DDM app configuration to associate with the app.
+     * @return a {@link UUID}
+     */
+    @jakarta.annotation.Nullable
+    public UUID getDdmAppConfigId() {
+        return this.backingStore.get("ddmAppConfigId");
+    }
+    /**
      * Gets the dnsProxyConfigurationId property value. The dnsProxyConfigurationId property
      * @return a {@link String}
      */
@@ -79,6 +88,7 @@ public class IosDdmLobAppAssignmentSettings extends MobileAppAssignmentSettings 
         deserializerMap.put("associatedDomainsDirectDownloadAllowed", (n) -> { this.setAssociatedDomainsDirectDownloadAllowed(n.getBooleanValue()); });
         deserializerMap.put("cellularSliceConfigurationId", (n) -> { this.setCellularSliceConfigurationId(n.getStringValue()); });
         deserializerMap.put("contentFilterConfigurationId", (n) -> { this.setContentFilterConfigurationId(n.getStringValue()); });
+        deserializerMap.put("ddmAppConfigId", (n) -> { this.setDdmAppConfigId(n.getUUIDValue()); });
         deserializerMap.put("dnsProxyConfigurationId", (n) -> { this.setDnsProxyConfigurationId(n.getStringValue()); });
         deserializerMap.put("preventManagedAppBackup", (n) -> { this.setPreventManagedAppBackup(n.getBooleanValue()); });
         deserializerMap.put("relayConfigurationId", (n) -> { this.setRelayConfigurationId(n.getStringValue()); });
@@ -129,6 +139,7 @@ public class IosDdmLobAppAssignmentSettings extends MobileAppAssignmentSettings 
         writer.writeBooleanValue("associatedDomainsDirectDownloadAllowed", this.getAssociatedDomainsDirectDownloadAllowed());
         writer.writeStringValue("cellularSliceConfigurationId", this.getCellularSliceConfigurationId());
         writer.writeStringValue("contentFilterConfigurationId", this.getContentFilterConfigurationId());
+        writer.writeUUIDValue("ddmAppConfigId", this.getDdmAppConfigId());
         writer.writeStringValue("dnsProxyConfigurationId", this.getDnsProxyConfigurationId());
         writer.writeBooleanValue("preventManagedAppBackup", this.getPreventManagedAppBackup());
         writer.writeStringValue("relayConfigurationId", this.getRelayConfigurationId());
@@ -162,6 +173,13 @@ public class IosDdmLobAppAssignmentSettings extends MobileAppAssignmentSettings 
      */
     public void setContentFilterConfigurationId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("contentFilterConfigurationId", value);
+    }
+    /**
+     * Sets the ddmAppConfigId property value. The unique identifier of the DDM app configuration to associate with the app.
+     * @param value Value to set for the ddmAppConfigId property.
+     */
+    public void setDdmAppConfigId(@jakarta.annotation.Nullable final UUID value) {
+        this.backingStore.set("ddmAppConfigId", value);
     }
     /**
      * Sets the dnsProxyConfigurationId property value. The dnsProxyConfigurationId property

@@ -62,11 +62,29 @@ public class NdesConnector extends Entity implements Parsable {
         deserializerMap.put("connectorVersion", (n) -> { this.setConnectorVersion(n.getStringValue()); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("enrolledDateTime", (n) -> { this.setEnrolledDateTime(n.getOffsetDateTimeValue()); });
+        deserializerMap.put("healthChecks", (n) -> { this.setHealthChecks(n.getCollectionOfObjectValues(ConnectorHealthCheck::createFromDiscriminatorValue)); });
+        deserializerMap.put("healthStatus", (n) -> { this.setHealthStatus(n.getEnumValue(NdesConnectorHealthStatus::forValue)); });
         deserializerMap.put("lastConnectionDateTime", (n) -> { this.setLastConnectionDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("machineName", (n) -> { this.setMachineName(n.getStringValue()); });
         deserializerMap.put("roleScopeTagIds", (n) -> { this.setRoleScopeTagIds(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("state", (n) -> { this.setState(n.getEnumValue(NdesConnectorState::forValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the healthChecks property value. The collection of individual health check results for this connector. Each entry represents an independent health metric with its current status. Empty when the connector is disconnected or when health has not been evaluated yet. Read-only.
+     * @return a {@link java.util.List<ConnectorHealthCheck>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ConnectorHealthCheck> getHealthChecks() {
+        return this.backingStore.get("healthChecks");
+    }
+    /**
+     * Gets the healthStatus property value. The overall health status of the connector, representing the worst status across all individual health checks. This value is pre-computed on each connector upload and may be overridden to disconnected at read time if the connector has not connected recently. Read-only.
+     * @return a {@link NdesConnectorHealthStatus}
+     */
+    @jakarta.annotation.Nullable
+    public NdesConnectorHealthStatus getHealthStatus() {
+        return this.backingStore.get("healthStatus");
     }
     /**
      * Gets the lastConnectionDateTime property value. Last connection time for the Ndes Connector
@@ -135,6 +153,20 @@ public class NdesConnector extends Entity implements Parsable {
      */
     public void setEnrolledDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("enrolledDateTime", value);
+    }
+    /**
+     * Sets the healthChecks property value. The collection of individual health check results for this connector. Each entry represents an independent health metric with its current status. Empty when the connector is disconnected or when health has not been evaluated yet. Read-only.
+     * @param value Value to set for the healthChecks property.
+     */
+    public void setHealthChecks(@jakarta.annotation.Nullable final java.util.List<ConnectorHealthCheck> value) {
+        this.backingStore.set("healthChecks", value);
+    }
+    /**
+     * Sets the healthStatus property value. The overall health status of the connector, representing the worst status across all individual health checks. This value is pre-computed on each connector upload and may be overridden to disconnected at read time if the connector has not connected recently. Read-only.
+     * @param value Value to set for the healthStatus property.
+     */
+    public void setHealthStatus(@jakarta.annotation.Nullable final NdesConnectorHealthStatus value) {
+        this.backingStore.set("healthStatus", value);
     }
     /**
      * Sets the lastConnectionDateTime property value. Last connection time for the Ndes Connector

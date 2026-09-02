@@ -1,5 +1,6 @@
 package com.microsoft.graph.beta.models;
 
+import com.microsoft.graph.beta.models.identitygovernance.LifecyclePolicy;
 import com.microsoft.graph.beta.models.identitygovernance.Workflow;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
@@ -32,8 +33,17 @@ public class DeletedItemContainer extends Entity implements Parsable {
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
+        deserializerMap.put("lifecyclePolicies", (n) -> { this.setLifecyclePolicies(n.getCollectionOfObjectValues(LifecyclePolicy::createFromDiscriminatorValue)); });
         deserializerMap.put("workflows", (n) -> { this.setWorkflows(n.getCollectionOfObjectValues(Workflow::createFromDiscriminatorValue)); });
         return deserializerMap;
+    }
+    /**
+     * Gets the lifecyclePolicies property value. The lifecyclePolicies property
+     * @return a {@link java.util.List<LifecyclePolicy>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<LifecyclePolicy> getLifecyclePolicies() {
+        return this.backingStore.get("lifecyclePolicies");
     }
     /**
      * Gets the workflows property value. Deleted workflows that end up in the deletedItemsContainer.
@@ -50,7 +60,15 @@ public class DeletedItemContainer extends Entity implements Parsable {
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         super.serialize(writer);
+        writer.writeCollectionOfObjectValues("lifecyclePolicies", this.getLifecyclePolicies());
         writer.writeCollectionOfObjectValues("workflows", this.getWorkflows());
+    }
+    /**
+     * Sets the lifecyclePolicies property value. The lifecyclePolicies property
+     * @param value Value to set for the lifecyclePolicies property.
+     */
+    public void setLifecyclePolicies(@jakarta.annotation.Nullable final java.util.List<LifecyclePolicy> value) {
+        this.backingStore.set("lifecyclePolicies", value);
     }
     /**
      * Sets the workflows property value. Deleted workflows that end up in the deletedItemsContainer.

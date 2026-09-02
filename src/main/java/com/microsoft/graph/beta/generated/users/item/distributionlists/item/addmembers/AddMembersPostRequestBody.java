@@ -63,11 +63,11 @@ public class AddMembersPostRequestBody implements AdditionalDataHolder, BackedMo
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(1);
-        deserializerMap.put("members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(Member::createFromDiscriminatorValue)); });
+        deserializerMap.put("Members", (n) -> { this.setMembers(n.getCollectionOfObjectValues(Member::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
-     * Gets the members property value. The members property
+     * Gets the Members property value. The Members property
      * @return a {@link java.util.List<Member>}
      */
     @jakarta.annotation.Nullable
@@ -80,7 +80,7 @@ public class AddMembersPostRequestBody implements AdditionalDataHolder, BackedMo
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeCollectionOfObjectValues("members", this.getMembers());
+        writer.writeCollectionOfObjectValues("Members", this.getMembers());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -99,8 +99,8 @@ public class AddMembersPostRequestBody implements AdditionalDataHolder, BackedMo
         this.backingStore = value;
     }
     /**
-     * Sets the members property value. The members property
-     * @param value Value to set for the members property.
+     * Sets the Members property value. The Members property
+     * @param value Value to set for the Members property.
      */
     public void setMembers(@jakarta.annotation.Nullable final java.util.List<Member> value) {
         this.backingStore.set("members", value);

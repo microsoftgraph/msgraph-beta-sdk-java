@@ -56,14 +56,6 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore;
     }
     /**
-     * Gets the contactId property value. The contactId property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getContactId() {
-        return this.backingStore.get("contactId");
-    }
-    /**
      * Gets the displayName property value. The display name of the member. Optional.
      * @return a {@link String}
      */
@@ -77,13 +69,12 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(6);
-        deserializerMap.put("contactId", (n) -> { this.setContactId(n.getStringValue()); });
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(5);
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("key", (n) -> { this.setKey(n.getStringValue()); });
+        deserializerMap.put("memberId", (n) -> { this.setMemberId(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
-        deserializerMap.put("recipientType", (n) -> { this.setRecipientType(n.getEnumValue(RecipientType::forValue)); });
-        deserializerMap.put("routingType", (n) -> { this.setRoutingType(n.getStringValue()); });
+        deserializerMap.put("type", (n) -> { this.setType(n.getEnumValue(RecipientType::forValue)); });
         return deserializerMap;
     }
     /**
@@ -95,6 +86,14 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("key");
     }
     /**
+     * Gets the memberId property value. A unique identifier system-generated for contact, privateDL, and mailbox members. Optional.
+     * @return a {@link String}
+     */
+    @jakarta.annotation.Nullable
+    public String getMemberId() {
+        return this.backingStore.get("memberId");
+    }
+    /**
      * Gets the @odata.type property value. The OdataType property
      * @return a {@link String}
      */
@@ -103,20 +102,12 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the recipientType property value. The recipientType property
+     * Gets the type property value. The type property
      * @return a {@link RecipientType}
      */
     @jakarta.annotation.Nullable
-    public RecipientType getRecipientType() {
-        return this.backingStore.get("recipientType");
-    }
-    /**
-     * Gets the routingType property value. The routingType property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getRoutingType() {
-        return this.backingStore.get("routingType");
+    public RecipientType getType() {
+        return this.backingStore.get("type");
     }
     /**
      * Serializes information the current object
@@ -124,12 +115,11 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
-        writer.writeStringValue("contactId", this.getContactId());
         writer.writeStringValue("displayName", this.getDisplayName());
         writer.writeStringValue("key", this.getKey());
+        writer.writeStringValue("memberId", this.getMemberId());
         writer.writeStringValue("@odata.type", this.getOdataType());
-        writer.writeEnumValue("recipientType", this.getRecipientType());
-        writer.writeStringValue("routingType", this.getRoutingType());
+        writer.writeEnumValue("type", this.getType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -148,13 +138,6 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore = value;
     }
     /**
-     * Sets the contactId property value. The contactId property
-     * @param value Value to set for the contactId property.
-     */
-    public void setContactId(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("contactId", value);
-    }
-    /**
      * Sets the displayName property value. The display name of the member. Optional.
      * @param value Value to set for the displayName property.
      */
@@ -169,6 +152,13 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("key", value);
     }
     /**
+     * Sets the memberId property value. A unique identifier system-generated for contact, privateDL, and mailbox members. Optional.
+     * @param value Value to set for the memberId property.
+     */
+    public void setMemberId(@jakarta.annotation.Nullable final String value) {
+        this.backingStore.set("memberId", value);
+    }
+    /**
      * Sets the @odata.type property value. The OdataType property
      * @param value Value to set for the @odata.type property.
      */
@@ -176,17 +166,10 @@ public class Member implements AdditionalDataHolder, BackedModel, Parsable {
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the recipientType property value. The recipientType property
-     * @param value Value to set for the recipientType property.
+     * Sets the type property value. The type property
+     * @param value Value to set for the type property.
      */
-    public void setRecipientType(@jakarta.annotation.Nullable final RecipientType value) {
-        this.backingStore.set("recipientType", value);
-    }
-    /**
-     * Sets the routingType property value. The routingType property
-     * @param value Value to set for the routingType property.
-     */
-    public void setRoutingType(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("routingType", value);
+    public void setType(@jakarta.annotation.Nullable final RecipientType value) {
+        this.backingStore.set("type", value);
     }
 }

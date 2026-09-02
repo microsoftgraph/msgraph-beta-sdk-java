@@ -34,6 +34,14 @@ public class TextClassificationRequest extends Entity implements Parsable {
         return this.backingStore.get("contentMetaData");
     }
     /**
+     * Gets the embeddings property value. Optional caller-supplied precomputed embeddings for the text, so the service can skip recomputing them. Embeddings for models outside the allow-list are rejected with a 400.
+     * @return a {@link java.util.List<EmbeddingInput>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<EmbeddingInput> getEmbeddings() {
+        return this.backingStore.get("embeddings");
+    }
+    /**
      * The deserialization information for the current model
      * @return a {@link Map<String, java.util.function.Consumer<ParseNode>>}
      */
@@ -41,6 +49,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(super.getFieldDeserializers());
         deserializerMap.put("contentMetaData", (n) -> { this.setContentMetaData(n.getObjectValue(ClassificationRequestContentMetaData::createFromDiscriminatorValue)); });
+        deserializerMap.put("embeddings", (n) -> { this.setEmbeddings(n.getCollectionOfObjectValues(EmbeddingInput::createFromDiscriminatorValue)); });
         deserializerMap.put("fileExtension", (n) -> { this.setFileExtension(n.getStringValue()); });
         deserializerMap.put("matchTolerancesToInclude", (n) -> { this.setMatchTolerancesToInclude(n.getEnumSetValue(MlClassificationMatchTolerance::forValue)); });
         deserializerMap.put("scopesToRun", (n) -> { this.setScopesToRun(n.getEnumSetValue(SensitiveTypeScope::forValue)); });
@@ -96,6 +105,7 @@ public class TextClassificationRequest extends Entity implements Parsable {
         Objects.requireNonNull(writer);
         super.serialize(writer);
         writer.writeObjectValue("contentMetaData", this.getContentMetaData());
+        writer.writeCollectionOfObjectValues("embeddings", this.getEmbeddings());
         writer.writeStringValue("fileExtension", this.getFileExtension());
         writer.writeEnumSetValue("matchTolerancesToInclude", this.getMatchTolerancesToInclude());
         writer.writeEnumSetValue("scopesToRun", this.getScopesToRun());
@@ -108,6 +118,13 @@ public class TextClassificationRequest extends Entity implements Parsable {
      */
     public void setContentMetaData(@jakarta.annotation.Nullable final ClassificationRequestContentMetaData value) {
         this.backingStore.set("contentMetaData", value);
+    }
+    /**
+     * Sets the embeddings property value. Optional caller-supplied precomputed embeddings for the text, so the service can skip recomputing them. Embeddings for models outside the allow-list are rejected with a 400.
+     * @param value Value to set for the embeddings property.
+     */
+    public void setEmbeddings(@jakarta.annotation.Nullable final java.util.List<EmbeddingInput> value) {
+        this.backingStore.set("embeddings", value);
     }
     /**
      * Sets the fileExtension property value. The file extension of the content being classified.

@@ -107,6 +107,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         deserializerMap.put("history", (n) -> { this.setHistory(n.getCollectionOfObjectValues(RequestActivity::createFromDiscriminatorValue)); });
         deserializerMap.put("isValidationOnly", (n) -> { this.setIsValidationOnly(n.getBooleanValue()); });
         deserializerMap.put("justification", (n) -> { this.setJustification(n.getStringValue()); });
+        deserializerMap.put("parameters", (n) -> { this.setParameters(n.getObjectValue(AccessPackageAssignmentRequestParameters::createFromDiscriminatorValue)); });
         deserializerMap.put("requestor", (n) -> { this.setRequestor(n.getObjectValue(AccessPackageSubject::createFromDiscriminatorValue)); });
         deserializerMap.put("requestState", (n) -> { this.setRequestState(n.getStringValue()); });
         deserializerMap.put("requestStatus", (n) -> { this.setRequestStatus(n.getStringValue()); });
@@ -138,6 +139,14 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public String getJustification() {
         return this.backingStore.get("justification");
+    }
+    /**
+     * Gets the parameters property value. Additional parameters that control how the request is processed, such as bypassing the approval requirement configured on the access package policy.
+     * @return a {@link AccessPackageAssignmentRequestParameters}
+     */
+    @jakarta.annotation.Nullable
+    public AccessPackageAssignmentRequestParameters getParameters() {
+        return this.backingStore.get("parameters");
     }
     /**
      * Gets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.
@@ -205,6 +214,7 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("history", this.getHistory());
         writer.writeBooleanValue("isValidationOnly", this.getIsValidationOnly());
         writer.writeStringValue("justification", this.getJustification());
+        writer.writeObjectValue("parameters", this.getParameters());
         writer.writeObjectValue("requestor", this.getRequestor());
         writer.writeStringValue("requestState", this.getRequestState());
         writer.writeStringValue("requestStatus", this.getRequestStatus());
@@ -288,6 +298,13 @@ public class AccessPackageAssignmentRequest extends Entity implements Parsable {
      */
     public void setJustification(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("justification", value);
+    }
+    /**
+     * Sets the parameters property value. Additional parameters that control how the request is processed, such as bypassing the approval requirement configured on the access package policy.
+     * @param value Value to set for the parameters property.
+     */
+    public void setParameters(@jakarta.annotation.Nullable final AccessPackageAssignmentRequestParameters value) {
+        this.backingStore.set("parameters", value);
     }
     /**
      * Sets the requestor property value. The subject who requested or, if a direct assignment, was assigned. Read-only. Nullable. Supports $expand.

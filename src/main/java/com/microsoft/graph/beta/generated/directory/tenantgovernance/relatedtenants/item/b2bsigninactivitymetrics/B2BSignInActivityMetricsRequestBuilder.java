@@ -1,7 +1,7 @@
 package com.microsoft.graph.beta.directory.tenantgovernance.relatedtenants.item.b2bsigninactivitymetrics;
 
+import com.microsoft.graph.beta.models.B2BSignInActivityMetrics;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.B2BSignInActivityMetrics;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the b2BSignInActivityMetrics property of the microsoft.graph.tenantGovernanceServices.relatedTenant entity.
+ * Provides operations to manage the b2BSignInActivityMetrics property of the microsoft.graph.relatedTenant entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class B2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilder {
@@ -37,7 +37,7 @@ public class B2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/directory/tenantGovernance/relatedTenants/{relatedTenant%2Did}/b2BSignInActivityMetrics{?%24expand,%24select}", rawUrl);
     }
     /**
-     * B2B sign-in activity metrics for this related tenant. Expanded by default.
+     * Get b2BSignInActivityMetrics from directory
      * @return a {@link B2BSignInActivityMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
      */
@@ -46,7 +46,7 @@ public class B2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilder {
         return get(null);
     }
     /**
-     * B2B sign-in activity metrics for this related tenant. Expanded by default.
+     * Get b2BSignInActivityMetrics from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link B2BSignInActivityMetrics}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -59,7 +59,7 @@ public class B2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, B2BSignInActivityMetrics::createFromDiscriminatorValue);
     }
     /**
-     * B2B sign-in activity metrics for this related tenant. Expanded by default.
+     * Get b2BSignInActivityMetrics from directory
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -67,7 +67,7 @@ public class B2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilder {
         return toGetRequestInformation(null);
     }
     /**
-     * B2B sign-in activity metrics for this related tenant. Expanded by default.
+     * Get b2BSignInActivityMetrics from directory
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */
@@ -89,7 +89,7 @@ public class B2BSignInActivityMetricsRequestBuilder extends BaseRequestBuilder {
         return new B2BSignInActivityMetricsRequestBuilder(rawUrl, requestAdapter);
     }
     /**
-     * B2B sign-in activity metrics for this related tenant. Expanded by default.
+     * Get b2BSignInActivityMetrics from directory
      */
     @jakarta.annotation.Generated("com.microsoft.kiota")
     public class GetQueryParameters implements QueryParameters {

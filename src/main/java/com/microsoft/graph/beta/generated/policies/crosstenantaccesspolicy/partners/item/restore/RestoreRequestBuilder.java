@@ -36,7 +36,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/policies/crossTenantAccessPolicy/partners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}/restore", rawUrl);
     }
     /**
-     * Restore a deleted crossTenantAccessPolicyConfigurationPartner object. 
+     * Restore a deleted crossTenantAccessPolicyConfigurationPartner object.
      * @return a {@link CrossTenantAccessPolicyConfigurationPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-restore?view=graph-rest-beta">Find more info here</a>
@@ -46,7 +46,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return post(null);
     }
     /**
-     * Restore a deleted crossTenantAccessPolicyConfigurationPartner object. 
+     * Restore a deleted crossTenantAccessPolicyConfigurationPartner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link CrossTenantAccessPolicyConfigurationPartner}
      * @throws ODataError When receiving a 4XX or 5XX status code
@@ -60,7 +60,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, CrossTenantAccessPolicyConfigurationPartner::createFromDiscriminatorValue);
     }
     /**
-     * Restore a deleted crossTenantAccessPolicyConfigurationPartner object. 
+     * Restore a deleted crossTenantAccessPolicyConfigurationPartner object.
      * @return a {@link RequestInformation}
      */
     @jakarta.annotation.Nonnull
@@ -68,7 +68,7 @@ public class RestoreRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(null);
     }
     /**
-     * Restore a deleted crossTenantAccessPolicyConfigurationPartner object. 
+     * Restore a deleted crossTenantAccessPolicyConfigurationPartner object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      */

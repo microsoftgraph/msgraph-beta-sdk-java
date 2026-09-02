@@ -1,8 +1,8 @@
 package com.microsoft.graph.beta.directory.tenantgovernance.governancerequests.item;
 
 import com.microsoft.graph.beta.directory.tenantgovernance.governancerequests.item.governancepolicytemplate.GovernancePolicyTemplateRequestBuilder;
+import com.microsoft.graph.beta.models.GovernanceRequest;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
-import com.microsoft.graph.beta.models.tenantgovernanceservices.GovernanceRequest;
 import com.microsoft.kiota.BaseRequestBuilder;
 import com.microsoft.kiota.BaseRequestConfiguration;
 import com.microsoft.kiota.HttpMethod;
@@ -17,12 +17,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 /**
- * Provides operations to manage the governanceRequests property of the microsoft.graph.tenantGovernanceServices.tenantGovernance entity.
+ * Provides operations to manage the governanceRequests property of the microsoft.graph.tenantGovernance entity.
  */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class GovernanceRequestItemRequestBuilder extends BaseRequestBuilder {
     /**
-     * Provides operations to manage the governancePolicyTemplate property of the microsoft.graph.tenantGovernanceServices.governanceRequest entity.
+     * Provides operations to manage the governancePolicyTemplate property of the microsoft.graph.governanceRequest entity.
      * @return a {@link GovernancePolicyTemplateRequestBuilder}
      */
     @jakarta.annotation.Nonnull

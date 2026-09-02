@@ -5,6 +5,7 @@ import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
 import java.time.OffsetDateTime;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -56,6 +57,7 @@ public class SubjectProcessingResult extends Entity implements Parsable {
         deserializerMap.put("scheduledDateTime", (n) -> { this.setScheduledDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("startedDateTime", (n) -> { this.setStartedDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("subject", (n) -> { this.setSubject(n.getObjectValue(WorkflowSubject::createFromDiscriminatorValue)); });
+        deserializerMap.put("subjectType", (n) -> { this.setSubjectType(n.getEnumSetValue(SubjectType::forValue)); });
         deserializerMap.put("taskProcessingResults", (n) -> { this.setTaskProcessingResults(n.getCollectionOfObjectValues(TaskProcessingResult::createFromDiscriminatorValue)); });
         deserializerMap.put("totalTasksCount", (n) -> { this.setTotalTasksCount(n.getIntegerValue()); });
         deserializerMap.put("totalUnprocessedTasksCount", (n) -> { this.setTotalUnprocessedTasksCount(n.getIntegerValue()); });
@@ -102,6 +104,14 @@ public class SubjectProcessingResult extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public WorkflowSubject getSubject() {
         return this.backingStore.get("subject");
+    }
+    /**
+     * Gets the subjectType property value. The subjectType property
+     * @return a {@link EnumSet<SubjectType>}
+     */
+    @jakarta.annotation.Nullable
+    public EnumSet<SubjectType> getSubjectType() {
+        return this.backingStore.get("subjectType");
     }
     /**
      * Gets the taskProcessingResults property value. The task-level processing results for this subject. Read-only.
@@ -157,6 +167,7 @@ public class SubjectProcessingResult extends Entity implements Parsable {
         writer.writeOffsetDateTimeValue("scheduledDateTime", this.getScheduledDateTime());
         writer.writeOffsetDateTimeValue("startedDateTime", this.getStartedDateTime());
         writer.writeObjectValue("subject", this.getSubject());
+        writer.writeEnumSetValue("subjectType", this.getSubjectType());
         writer.writeCollectionOfObjectValues("taskProcessingResults", this.getTaskProcessingResults());
         writer.writeIntegerValue("totalTasksCount", this.getTotalTasksCount());
         writer.writeIntegerValue("totalUnprocessedTasksCount", this.getTotalUnprocessedTasksCount());
@@ -211,6 +222,13 @@ public class SubjectProcessingResult extends Entity implements Parsable {
      */
     public void setSubject(@jakarta.annotation.Nullable final WorkflowSubject value) {
         this.backingStore.set("subject", value);
+    }
+    /**
+     * Sets the subjectType property value. The subjectType property
+     * @param value Value to set for the subjectType property.
+     */
+    public void setSubjectType(@jakarta.annotation.Nullable final EnumSet<SubjectType> value) {
+        this.backingStore.set("subjectType", value);
     }
     /**
      * Sets the taskProcessingResults property value. The task-level processing results for this subject. Read-only.
