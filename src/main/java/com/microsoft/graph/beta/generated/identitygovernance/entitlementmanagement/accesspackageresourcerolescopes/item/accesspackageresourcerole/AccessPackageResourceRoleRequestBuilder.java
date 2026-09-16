@@ -24,10 +24,7 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
     /**
      * Provides operations to manage the accessPackageResource property of the microsoft.graph.accessPackageResourceRole entity.
      * @return a {@link AccessPackageResourceRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackageResourceRequestBuilder accessPackageResource() {
         return new AccessPackageResourceRequestBuilder(pathParameters, requestAdapter);
@@ -51,10 +48,7 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete navigation property accessPackageResourceRole for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -62,10 +56,7 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * Delete navigation property accessPackageResourceRole for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -76,11 +67,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * Read-only. Nullable. Supports $expand.
      * @return a {@link AccessPackageResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackageResourceRole get() {
         return get(null);
     }
@@ -89,11 +77,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackageResourceRole get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -105,11 +90,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @return a {@link AccessPackageResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackageResourceRole patch(@jakarta.annotation.Nonnull final AccessPackageResourceRole body) {
         return patch(body, null);
     }
@@ -119,11 +101,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageResourceRole}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackageResourceRole patch(@jakarta.annotation.Nonnull final AccessPackageResourceRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -134,11 +113,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
     /**
      * Delete navigation property accessPackageResourceRole for identityGovernance
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -146,11 +122,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * Delete navigation property accessPackageResourceRole for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -160,11 +133,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
     /**
      * Read-only. Nullable. Supports $expand.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -172,11 +142,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * Read-only. Nullable. Supports $expand.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -187,11 +154,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * Update the navigation property accessPackageResourceRole in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageResourceRole body) {
         return toPatchRequestInformation(body, null);
     }
@@ -200,11 +164,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackageResourceRole body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -217,11 +178,8 @@ public class AccessPackageResourceRoleRequestBuilder extends BaseRequestBuilder 
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AccessPackageResourceRoleRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AccessPackageResourceRoleRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AccessPackageResourceRoleRequestBuilder(rawUrl, requestAdapter);

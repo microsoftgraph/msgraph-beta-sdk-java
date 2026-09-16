@@ -32,10 +32,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackageAssignmentPolicies property of the microsoft.graph.accessPackage entity.
      * @return a {@link AccessPackageAssignmentPoliciesRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackageAssignmentPoliciesRequestBuilder accessPackageAssignmentPolicies() {
         return new AccessPackageAssignmentPoliciesRequestBuilder(pathParameters, requestAdapter);
@@ -43,10 +40,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackageCatalog property of the microsoft.graph.accessPackage entity.
      * @return a {@link AccessPackageCatalogRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackageCatalogRequestBuilder accessPackageCatalog() {
         return new AccessPackageCatalogRequestBuilder(pathParameters, requestAdapter);
@@ -54,10 +48,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackageResourceRoleScopes property of the microsoft.graph.accessPackage entity.
      * @return a {@link AccessPackageResourceRoleScopesRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackageResourceRoleScopesRequestBuilder accessPackageResourceRoleScopes() {
         return new AccessPackageResourceRoleScopesRequestBuilder(pathParameters, requestAdapter);
@@ -65,10 +56,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
      * @return a {@link AccessPackagesIncompatibleWithRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AccessPackagesIncompatibleWithRequestBuilder accessPackagesIncompatibleWith() {
         return new AccessPackagesIncompatibleWithRequestBuilder(pathParameters, requestAdapter);
@@ -76,10 +64,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the getApplicablePolicyRequirements method.
      * @return a {@link GetApplicablePolicyRequirementsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GetApplicablePolicyRequirementsRequestBuilder getApplicablePolicyRequirements() {
         return new GetApplicablePolicyRequirementsRequestBuilder(pathParameters, requestAdapter);
@@ -87,10 +72,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the incompatibleAccessPackages property of the microsoft.graph.accessPackage entity.
      * @return a {@link IncompatibleAccessPackagesRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public IncompatibleAccessPackagesRequestBuilder incompatibleAccessPackages() {
         return new IncompatibleAccessPackagesRequestBuilder(pathParameters, requestAdapter);
@@ -98,10 +80,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the incompatibleGroups property of the microsoft.graph.accessPackage entity.
      * @return a {@link IncompatibleGroupsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public IncompatibleGroupsRequestBuilder incompatibleGroups() {
         return new IncompatibleGroupsRequestBuilder(pathParameters, requestAdapter);
@@ -109,10 +88,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the moveToCatalog method.
      * @return a {@link MoveToCatalogRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MoveToCatalogRequestBuilder moveToCatalog() {
         return new MoveToCatalogRequestBuilder(pathParameters, requestAdapter);
@@ -121,11 +97,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the accessPackagesIncompatibleWith property of the microsoft.graph.accessPackage entity.
      * @param uniqueName Alternate key of accessPackage
      * @return a {@link AccessPackagesIncompatibleWithWithUniqueNameRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AccessPackagesIncompatibleWithWithUniqueNameRequestBuilder accessPackagesIncompatibleWithWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
         Objects.requireNonNull(uniqueName);
         return new AccessPackagesIncompatibleWithWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
@@ -149,10 +122,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property accessPackage for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -160,10 +130,7 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property accessPackage for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -174,11 +141,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackage get() {
         return get(null);
     }
@@ -187,11 +151,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackage get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -203,11 +164,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackage patch(@jakarta.annotation.Nonnull final AccessPackage body) {
         return patch(body, null);
     }
@@ -217,11 +175,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackage}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackage patch(@jakarta.annotation.Nonnull final AccessPackage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -232,11 +187,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property accessPackage for identityGovernance
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -244,11 +196,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property accessPackage for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -258,11 +207,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
     /**
      * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -270,11 +216,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -285,11 +228,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property accessPackage in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackage body) {
         return toPatchRequestInformation(body, null);
     }
@@ -298,11 +238,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final AccessPackage body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -315,11 +252,8 @@ public class AccessPackageRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AccessPackageRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AccessPackageRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AccessPackageRequestBuilder(rawUrl, requestAdapter);

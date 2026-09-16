@@ -25,10 +25,7 @@ public class PermissionGrantPreApprovalPoliciesRequestBuilder extends BaseReques
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -37,11 +34,8 @@ public class PermissionGrantPreApprovalPoliciesRequestBuilder extends BaseReques
      * Provides operations to manage the permissionGrantPreApprovalPolicies property of the microsoft.graph.servicePrincipal entity.
      * @param permissionGrantPreApprovalPolicyId The unique identifier of permissionGrantPreApprovalPolicy
      * @return a {@link PermissionGrantPreApprovalPolicyItemRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public PermissionGrantPreApprovalPolicyItemRequestBuilder byPermissionGrantPreApprovalPolicyId(@jakarta.annotation.Nonnull final String permissionGrantPreApprovalPolicyId) {
         Objects.requireNonNull(permissionGrantPreApprovalPolicyId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -68,11 +62,8 @@ public class PermissionGrantPreApprovalPoliciesRequestBuilder extends BaseReques
      * Retrieve the permissionGrantPreApprovalPolicy object for the servicePrincipal.
      * @return a {@link PermissionGrantPreApprovalPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PermissionGrantPreApprovalPolicyCollectionResponse get() {
         return get(null);
     }
@@ -81,11 +72,8 @@ public class PermissionGrantPreApprovalPoliciesRequestBuilder extends BaseReques
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionGrantPreApprovalPolicyCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PermissionGrantPreApprovalPolicyCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -95,11 +83,8 @@ public class PermissionGrantPreApprovalPoliciesRequestBuilder extends BaseReques
     /**
      * Retrieve the permissionGrantPreApprovalPolicy object for the servicePrincipal.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -107,11 +92,8 @@ public class PermissionGrantPreApprovalPoliciesRequestBuilder extends BaseReques
      * Retrieve the permissionGrantPreApprovalPolicy object for the servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -122,11 +104,8 @@ public class PermissionGrantPreApprovalPoliciesRequestBuilder extends BaseReques
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link PermissionGrantPreApprovalPoliciesRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public PermissionGrantPreApprovalPoliciesRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new PermissionGrantPreApprovalPoliciesRequestBuilder(rawUrl, requestAdapter);

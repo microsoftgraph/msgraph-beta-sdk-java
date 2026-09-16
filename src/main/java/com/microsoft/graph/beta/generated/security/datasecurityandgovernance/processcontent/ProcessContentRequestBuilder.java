@@ -36,21 +36,23 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/security/dataSecurityAndGovernance/processContent", rawUrl);
     }
     /**
-     * Invoke action processContent
+     * Evaluate content against Microsoft Purview Data Loss Prevention (DLP) policies and return the policy actions that apply to the supplied content. Use this API when an application needs to evaluate content before or during data movement. In Agent-to-Tool (A2T) scenarios, the agent runtime calls this API before invoking an external tool to determine whether the content should be allowed, blocked, or audited according to Microsoft Purview policies. For A2T scenarios: The response contains any applicable policy actions together with the protection scope state, allowing callers to determine whether cached protection scopes should be refreshed.
      * @param body The request body
      * @return a {@link ProcessContentResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantdatasecurityandgovernance-processcontent?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProcessContentResponse post(@jakarta.annotation.Nonnull final ProcessContentPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Invoke action processContent
+     * Evaluate content against Microsoft Purview Data Loss Prevention (DLP) policies and return the policy actions that apply to the supplied content. Use this API when an application needs to evaluate content before or during data movement. In Agent-to-Tool (A2T) scenarios, the agent runtime calls this API before invoking an external tool to determine whether the content should be allowed, blocked, or audited according to Microsoft Purview policies. For A2T scenarios: The response contains any applicable policy actions together with the protection scope state, allowing callers to determine whether cached protection scopes should be refreshed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ProcessContentResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
+     * @see <a href="https://learn.microsoft.com/graph/api/tenantdatasecurityandgovernance-processcontent?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
     public ProcessContentResponse post(@jakarta.annotation.Nonnull final ProcessContentPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
@@ -61,7 +63,7 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, ProcessContentResponse::createFromDiscriminatorValue);
     }
     /**
-     * Invoke action processContent
+     * Evaluate content against Microsoft Purview Data Loss Prevention (DLP) policies and return the policy actions that apply to the supplied content. Use this API when an application needs to evaluate content before or during data movement. In Agent-to-Tool (A2T) scenarios, the agent runtime calls this API before invoking an external tool to determine whether the content should be allowed, blocked, or audited according to Microsoft Purview policies. For A2T scenarios: The response contains any applicable policy actions together with the protection scope state, allowing callers to determine whether cached protection scopes should be refreshed.
      * @param body The request body
      * @return a {@link RequestInformation}
      */
@@ -70,7 +72,7 @@ public class ProcessContentRequestBuilder extends BaseRequestBuilder {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Invoke action processContent
+     * Evaluate content against Microsoft Purview Data Loss Prevention (DLP) policies and return the policy actions that apply to the supplied content. Use this API when an application needs to evaluate content before or during data movement. In Agent-to-Tool (A2T) scenarios, the agent runtime calls this API before invoking an external tool to determine whether the content should be allowed, blocked, or audited according to Microsoft Purview policies. For A2T scenarios: The response contains any applicable policy actions together with the protection scope state, allowing callers to determine whether cached protection scopes should be refreshed.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}

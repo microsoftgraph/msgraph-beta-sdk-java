@@ -27,7 +27,7 @@ public class SensitiveType extends Entity implements Parsable {
         return new SensitiveType();
     }
     /**
-     * Gets the classificationMethod property value. The classificationMethod property
+     * Gets the classificationMethod property value. The classification method. The possible values are: patternMatch, exactDataMatch, fingerprint, machineLearning, privacyDataMatch, aiPowered, unknownFutureValue. privacyDataMatch performs privacy data matching based on tenant data. aiPowered performs AI-powered classification and can benefit from supported caller-supplied embeddings. unknownFutureValue is an evolvable enumeration sentinel value. Don&apos;t use it.
      * @return a {@link ClassificationMethod}
      */
     @jakarta.annotation.Nullable
@@ -35,7 +35,7 @@ public class SensitiveType extends Entity implements Parsable {
         return this.backingStore.get("classificationMethod");
     }
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. The description of the sensitive information type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -62,7 +62,7 @@ public class SensitiveType extends Entity implements Parsable {
         return deserializerMap;
     }
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The date and time when the sensitive information type was last modified.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -70,7 +70,7 @@ public class SensitiveType extends Entity implements Parsable {
         return this.backingStore.get("lastModifiedDateTime");
     }
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. The name of the sensitive information type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -78,7 +78,7 @@ public class SensitiveType extends Entity implements Parsable {
         return this.backingStore.get("name");
     }
     /**
-     * Gets the publisherName property value. The publisherName property
+     * Gets the publisherName property value. The name of the publisher.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -86,7 +86,7 @@ public class SensitiveType extends Entity implements Parsable {
         return this.backingStore.get("publisherName");
     }
     /**
-     * Gets the rulePackageId property value. The rulePackageId property
+     * Gets the rulePackageId property value. The identifier of the rule package.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -94,7 +94,7 @@ public class SensitiveType extends Entity implements Parsable {
         return this.backingStore.get("rulePackageId");
     }
     /**
-     * Gets the rulePackageType property value. The rulePackageType property
+     * Gets the rulePackageType property value. The type of the rule package.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -102,7 +102,7 @@ public class SensitiveType extends Entity implements Parsable {
         return this.backingStore.get("rulePackageType");
     }
     /**
-     * Gets the scope property value. The scope property
+     * Gets the scope property value. The scope of the sensitive information type. The possible values are: fullDocument, partialDocument.
      * @return a {@link EnumSet<SensitiveTypeScope>}
      */
     @jakarta.annotation.Nullable
@@ -110,7 +110,7 @@ public class SensitiveType extends Entity implements Parsable {
         return this.backingStore.get("scope");
     }
     /**
-     * Gets the sensitiveTypeSource property value. The sensitiveTypeSource property
+     * Gets the sensitiveTypeSource property value. The source of sensitive type. The possible values are: outOfBox, tenant.
      * @return a {@link SensitiveTypeSource}
      */
     @jakarta.annotation.Nullable
@@ -118,7 +118,7 @@ public class SensitiveType extends Entity implements Parsable {
         return this.backingStore.get("sensitiveTypeSource");
     }
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. The state of the sensitive information type.
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
@@ -144,70 +144,70 @@ public class SensitiveType extends Entity implements Parsable {
         writer.writeStringValue("state", this.getState());
     }
     /**
-     * Sets the classificationMethod property value. The classificationMethod property
+     * Sets the classificationMethod property value. The classification method. The possible values are: patternMatch, exactDataMatch, fingerprint, machineLearning, privacyDataMatch, aiPowered, unknownFutureValue. privacyDataMatch performs privacy data matching based on tenant data. aiPowered performs AI-powered classification and can benefit from supported caller-supplied embeddings. unknownFutureValue is an evolvable enumeration sentinel value. Don&apos;t use it.
      * @param value Value to set for the classificationMethod property.
      */
     public void setClassificationMethod(@jakarta.annotation.Nullable final ClassificationMethod value) {
         this.backingStore.set("classificationMethod", value);
     }
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. The description of the sensitive information type.
      * @param value Value to set for the description property.
      */
     public void setDescription(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("description", value);
     }
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The date and time when the sensitive information type was last modified.
      * @param value Value to set for the lastModifiedDateTime property.
      */
     public void setLastModifiedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
         this.backingStore.set("lastModifiedDateTime", value);
     }
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. The name of the sensitive information type.
      * @param value Value to set for the name property.
      */
     public void setName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("name", value);
     }
     /**
-     * Sets the publisherName property value. The publisherName property
+     * Sets the publisherName property value. The name of the publisher.
      * @param value Value to set for the publisherName property.
      */
     public void setPublisherName(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("publisherName", value);
     }
     /**
-     * Sets the rulePackageId property value. The rulePackageId property
+     * Sets the rulePackageId property value. The identifier of the rule package.
      * @param value Value to set for the rulePackageId property.
      */
     public void setRulePackageId(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("rulePackageId", value);
     }
     /**
-     * Sets the rulePackageType property value. The rulePackageType property
+     * Sets the rulePackageType property value. The type of the rule package.
      * @param value Value to set for the rulePackageType property.
      */
     public void setRulePackageType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("rulePackageType", value);
     }
     /**
-     * Sets the scope property value. The scope property
+     * Sets the scope property value. The scope of the sensitive information type. The possible values are: fullDocument, partialDocument.
      * @param value Value to set for the scope property.
      */
     public void setScope(@jakarta.annotation.Nullable final EnumSet<SensitiveTypeScope> value) {
         this.backingStore.set("scope", value);
     }
     /**
-     * Sets the sensitiveTypeSource property value. The sensitiveTypeSource property
+     * Sets the sensitiveTypeSource property value. The source of sensitive type. The possible values are: outOfBox, tenant.
      * @param value Value to set for the sensitiveTypeSource property.
      */
     public void setSensitiveTypeSource(@jakarta.annotation.Nullable final SensitiveTypeSource value) {
         this.backingStore.set("sensitiveTypeSource", value);
     }
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. The state of the sensitive information type.
      * @param value Value to set for the state property.
      */
     public void setState(@jakarta.annotation.Nullable final String value) {

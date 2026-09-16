@@ -40,7 +40,7 @@ public class ValidateRequestBuilder extends BaseRequestBuilder {
      * @return a {@link CrossTenantMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationjob-validate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class ValidateRequestBuilder extends BaseRequestBuilder {
      * @return a {@link CrossTenantMigrationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationjob-validate?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class ValidateRequestBuilder extends BaseRequestBuilder {
      * Validate the configuration of a cross-tenant migration job asynchronously. This action doesn&apos;t migrate any content, but goes through validation for the specified workloads to find any errors or misconfigurations that affect an actual migration job. The job must be in a submitted or validateFailed status before you can call this action. This action is asynchronous. After you call the validate API, poll the Get crossTenantMigrationJob endpoint to check for a terminal status of validatePassed or validateFailed.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -81,7 +81,7 @@ public class ValidateRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -96,7 +96,7 @@ public class ValidateRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ValidateRequestBuilder}
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
     @Deprecated

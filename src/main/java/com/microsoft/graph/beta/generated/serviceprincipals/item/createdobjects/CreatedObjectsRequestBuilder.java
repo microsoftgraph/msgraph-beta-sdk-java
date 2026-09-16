@@ -26,10 +26,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -37,10 +34,7 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Casts the previous resource to servicePrincipal.
      * @return a {@link GraphServicePrincipalRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GraphServicePrincipalRequestBuilder graphServicePrincipal() {
         return new GraphServicePrincipalRequestBuilder(pathParameters, requestAdapter);
@@ -49,11 +43,8 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the createdObjects property of the microsoft.graph.servicePrincipal entity.
      * @param directoryObjectId The unique identifier of directoryObject
      * @return a {@link DirectoryObjectItemRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public DirectoryObjectItemRequestBuilder byDirectoryObjectId(@jakarta.annotation.Nonnull final String directoryObjectId) {
         Objects.requireNonNull(directoryObjectId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -80,12 +71,9 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of directoryobject objects.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-createdobjects?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DirectoryObjectCollectionResponse get() {
         return get(null);
     }
@@ -94,12 +82,9 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DirectoryObjectCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-createdobjects?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DirectoryObjectCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -109,11 +94,8 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of directoryobject objects.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -121,11 +103,8 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of directoryobject objects.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -136,11 +115,8 @@ public class CreatedObjectsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CreatedObjectsRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public CreatedObjectsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new CreatedObjectsRequestBuilder(rawUrl, requestAdapter);

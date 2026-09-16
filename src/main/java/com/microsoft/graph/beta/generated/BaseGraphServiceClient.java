@@ -1174,11 +1174,8 @@ public class BaseGraphServiceClient extends BaseRequestBuilder {
      * Provides operations to manage the collection of servicePrincipal entities.
      * @param appId Alternate key of servicePrincipal
      * @return a {@link ServicePrincipalsWithAppIdRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ServicePrincipalsWithAppIdRequestBuilder servicePrincipalsWithAppId(@jakarta.annotation.Nonnull final String appId) {
         Objects.requireNonNull(appId);
         return new ServicePrincipalsWithAppIdRequestBuilder(pathParameters, requestAdapter, appId);

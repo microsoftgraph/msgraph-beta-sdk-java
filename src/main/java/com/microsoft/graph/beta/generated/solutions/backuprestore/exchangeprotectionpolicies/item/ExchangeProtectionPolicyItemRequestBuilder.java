@@ -28,10 +28,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the mailboxExclusionUnits property of the microsoft.graph.exchangeProtectionPolicy entity.
      * @return a {@link MailboxExclusionUnitsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxExclusionUnitsRequestBuilder mailboxExclusionUnits() {
         return new MailboxExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -39,10 +36,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the mailboxExclusionUnitsBulkAdditionJobs property of the microsoft.graph.exchangeProtectionPolicy entity.
      * @return a {@link MailboxExclusionUnitsBulkAdditionJobsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxExclusionUnitsBulkAdditionJobsRequestBuilder mailboxExclusionUnitsBulkAdditionJobs() {
         return new MailboxExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -50,10 +44,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the mailboxInclusionRules property of the microsoft.graph.exchangeProtectionPolicy entity.
      * @return a {@link MailboxInclusionRulesRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxInclusionRulesRequestBuilder mailboxInclusionRules() {
         return new MailboxInclusionRulesRequestBuilder(pathParameters, requestAdapter);
@@ -61,10 +52,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the mailboxProtectionUnits property of the microsoft.graph.exchangeProtectionPolicy entity.
      * @return a {@link MailboxProtectionUnitsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxProtectionUnitsRequestBuilder mailboxProtectionUnits() {
         return new MailboxProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -72,10 +60,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Provides operations to manage the mailboxProtectionUnitsBulkAdditionJobs property of the microsoft.graph.exchangeProtectionPolicy entity.
      * @return a {@link MailboxProtectionUnitsBulkAdditionJobsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MailboxProtectionUnitsBulkAdditionJobsRequestBuilder mailboxProtectionUnitsBulkAdditionJobs() {
         return new MailboxProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -99,10 +84,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Delete navigation property exchangeProtectionPolicies for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -110,10 +92,7 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * Delete navigation property exchangeProtectionPolicies for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -124,11 +103,8 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * The list of Exchange protection policies in the tenant.
      * @return a {@link ExchangeProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeProtectionPolicy get() {
         return get(null);
     }
@@ -137,11 +113,8 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExchangeProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeProtectionPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -153,12 +126,9 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @return a {@link ExchangeProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeProtectionPolicy patch(@jakarta.annotation.Nonnull final ExchangeProtectionPolicy body) {
         return patch(body, null);
     }
@@ -168,12 +138,9 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link ExchangeProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/exchangeprotectionpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public ExchangeProtectionPolicy patch(@jakarta.annotation.Nonnull final ExchangeProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -184,11 +151,8 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * Delete navigation property exchangeProtectionPolicies for solutions
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -196,11 +160,8 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * Delete navigation property exchangeProtectionPolicies for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -210,11 +171,8 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
     /**
      * The list of Exchange protection policies in the tenant.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -222,11 +180,8 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * The list of Exchange protection policies in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -237,11 +192,8 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * Update an Exchange protection policy. This method adds a mailboxprotectionunit to or removes it from the protection policy.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ExchangeProtectionPolicy body) {
         return toPatchRequestInformation(body, null);
     }
@@ -250,11 +202,8 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final ExchangeProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -267,11 +216,8 @@ public class ExchangeProtectionPolicyItemRequestBuilder extends BaseRequestBuild
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link ExchangeProtectionPolicyItemRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public ExchangeProtectionPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new ExchangeProtectionPolicyItemRequestBuilder(rawUrl, requestAdapter);

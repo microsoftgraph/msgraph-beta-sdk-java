@@ -28,10 +28,7 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
     /**
      * Provides operations to manage the driveExclusionUnits property of the microsoft.graph.oneDriveForBusinessProtectionPolicy entity.
      * @return a {@link DriveExclusionUnitsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveExclusionUnitsRequestBuilder driveExclusionUnits() {
         return new DriveExclusionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -39,10 +36,7 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
     /**
      * Provides operations to manage the driveExclusionUnitsBulkAdditionJobs property of the microsoft.graph.oneDriveForBusinessProtectionPolicy entity.
      * @return a {@link DriveExclusionUnitsBulkAdditionJobsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveExclusionUnitsBulkAdditionJobsRequestBuilder driveExclusionUnitsBulkAdditionJobs() {
         return new DriveExclusionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -50,10 +44,7 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
     /**
      * Provides operations to manage the driveInclusionRules property of the microsoft.graph.oneDriveForBusinessProtectionPolicy entity.
      * @return a {@link DriveInclusionRulesRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveInclusionRulesRequestBuilder driveInclusionRules() {
         return new DriveInclusionRulesRequestBuilder(pathParameters, requestAdapter);
@@ -61,10 +52,7 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
     /**
      * Provides operations to manage the driveProtectionUnits property of the microsoft.graph.oneDriveForBusinessProtectionPolicy entity.
      * @return a {@link DriveProtectionUnitsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveProtectionUnitsRequestBuilder driveProtectionUnits() {
         return new DriveProtectionUnitsRequestBuilder(pathParameters, requestAdapter);
@@ -72,10 +60,7 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
     /**
      * Provides operations to manage the driveProtectionUnitsBulkAdditionJobs property of the microsoft.graph.oneDriveForBusinessProtectionPolicy entity.
      * @return a {@link DriveProtectionUnitsBulkAdditionJobsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveProtectionUnitsBulkAdditionJobsRequestBuilder driveProtectionUnitsBulkAdditionJobs() {
         return new DriveProtectionUnitsBulkAdditionJobsRequestBuilder(pathParameters, requestAdapter);
@@ -99,10 +84,7 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
     /**
      * Delete navigation property oneDriveForBusinessProtectionPolicies for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -110,10 +92,7 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * Delete navigation property oneDriveForBusinessProtectionPolicies for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -124,11 +103,8 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * The list of OneDrive for Business protection policies in the tenant.
      * @return a {@link OneDriveForBusinessProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessProtectionPolicy get() {
         return get(null);
     }
@@ -137,11 +113,8 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OneDriveForBusinessProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessProtectionPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -153,12 +126,9 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * @param body The request body
      * @return a {@link OneDriveForBusinessProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessprotectionpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessProtectionPolicy patch(@jakarta.annotation.Nonnull final OneDriveForBusinessProtectionPolicy body) {
         return patch(body, null);
     }
@@ -168,12 +138,9 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OneDriveForBusinessProtectionPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessprotectionpolicy-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessProtectionPolicy patch(@jakarta.annotation.Nonnull final OneDriveForBusinessProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -184,11 +151,8 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
     /**
      * Delete navigation property oneDriveForBusinessProtectionPolicies for solutions
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -196,11 +160,8 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * Delete navigation property oneDriveForBusinessProtectionPolicies for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -210,11 +171,8 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
     /**
      * The list of OneDrive for Business protection policies in the tenant.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -222,11 +180,8 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * The list of OneDrive for Business protection policies in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -237,11 +192,8 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * Update the protection policy for the OneDrive service in Microsoft 365. This method adds a driveProtectionUnit to or removes it from a oneDriveForBusinessProtectionPolicy object.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OneDriveForBusinessProtectionPolicy body) {
         return toPatchRequestInformation(body, null);
     }
@@ -250,11 +202,8 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OneDriveForBusinessProtectionPolicy body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -267,11 +216,8 @@ public class OneDriveForBusinessProtectionPolicyItemRequestBuilder extends BaseR
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link OneDriveForBusinessProtectionPolicyItemRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public OneDriveForBusinessProtectionPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new OneDriveForBusinessProtectionPolicyItemRequestBuilder(rawUrl, requestAdapter);

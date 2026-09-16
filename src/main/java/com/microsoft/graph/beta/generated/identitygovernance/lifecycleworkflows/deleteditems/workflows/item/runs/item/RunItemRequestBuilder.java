@@ -27,10 +27,7 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the reprocessedRuns property of the microsoft.graph.identityGovernance.run entity.
      * @return a {@link ReprocessedRunsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ReprocessedRunsRequestBuilder reprocessedRuns() {
         return new ReprocessedRunsRequestBuilder(pathParameters, requestAdapter);
@@ -38,10 +35,7 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the subjectProcessingResults property of the microsoft.graph.identityGovernance.run entity.
      * @return a {@link SubjectProcessingResultsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SubjectProcessingResultsRequestBuilder subjectProcessingResults() {
         return new SubjectProcessingResultsRequestBuilder(pathParameters, requestAdapter);
@@ -49,10 +43,7 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the taskProcessingResults property of the microsoft.graph.identityGovernance.run entity.
      * @return a {@link TaskProcessingResultsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public TaskProcessingResultsRequestBuilder taskProcessingResults() {
         return new TaskProcessingResultsRequestBuilder(pathParameters, requestAdapter);
@@ -60,10 +51,7 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the userProcessingResults property of the microsoft.graph.identityGovernance.run entity.
      * @return a {@link UserProcessingResultsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public UserProcessingResultsRequestBuilder userProcessingResults() {
         return new UserProcessingResultsRequestBuilder(pathParameters, requestAdapter);
@@ -88,11 +76,8 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
      * Workflow runs.
      * @return a {@link Run}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Run get() {
         return get(null);
     }
@@ -101,11 +86,8 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link Run}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public Run get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -115,11 +97,8 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Workflow runs.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -127,11 +106,8 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
      * Workflow runs.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -142,11 +118,8 @@ public class RunItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link RunItemRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RunItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new RunItemRequestBuilder(rawUrl, requestAdapter);

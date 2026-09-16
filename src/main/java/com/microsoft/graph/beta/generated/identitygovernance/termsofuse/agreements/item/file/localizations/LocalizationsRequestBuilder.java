@@ -26,10 +26,7 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -38,11 +35,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the localizations property of the microsoft.graph.agreementFile entity.
      * @param agreementFileLocalizationId The unique identifier of agreementFileLocalization
      * @return a {@link AgreementFileLocalizationItemRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AgreementFileLocalizationItemRequestBuilder byAgreementFileLocalizationId(@jakarta.annotation.Nonnull final String agreementFileLocalizationId) {
         Objects.requireNonNull(agreementFileLocalizationId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -69,11 +63,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * The localized version of the terms of use agreement files attached to the agreement.
      * @return a {@link AgreementFileLocalizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AgreementFileLocalizationCollectionResponse get() {
         return get(null);
     }
@@ -82,11 +73,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AgreementFileLocalizationCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AgreementFileLocalizationCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -98,11 +86,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link AgreementFileLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AgreementFileLocalization post(@jakarta.annotation.Nonnull final AgreementFileLocalization body) {
         return post(body, null);
     }
@@ -112,11 +97,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AgreementFileLocalization}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AgreementFileLocalization post(@jakarta.annotation.Nonnull final AgreementFileLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -127,11 +109,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
     /**
      * The localized version of the terms of use agreement files attached to the agreement.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -139,11 +118,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * The localized version of the terms of use agreement files attached to the agreement.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -154,11 +130,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to localizations for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AgreementFileLocalization body) {
         return toPostRequestInformation(body, null);
     }
@@ -167,11 +140,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AgreementFileLocalization body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -184,11 +154,8 @@ public class LocalizationsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link LocalizationsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public LocalizationsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new LocalizationsRequestBuilder(rawUrl, requestAdapter);

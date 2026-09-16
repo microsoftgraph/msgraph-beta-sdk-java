@@ -40,11 +40,8 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
      * The appManagementPolicy applied to this service principal.
      * @return a {@link AppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AppManagementPolicy get() {
         return get(null);
     }
@@ -53,11 +50,8 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AppManagementPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AppManagementPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -67,11 +61,8 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The appManagementPolicy applied to this service principal.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -79,11 +70,8 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
      * The appManagementPolicy applied to this service principal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -94,11 +82,8 @@ public class AppManagementPolicyItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AppManagementPolicyItemRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AppManagementPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AppManagementPolicyItemRequestBuilder(rawUrl, requestAdapter);

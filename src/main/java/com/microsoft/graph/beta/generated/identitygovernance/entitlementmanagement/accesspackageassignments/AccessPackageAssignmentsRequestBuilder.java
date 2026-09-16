@@ -29,10 +29,7 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the additionalAccess method.
      * @return a {@link AdditionalAccessRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AdditionalAccessRequestBuilder additionalAccess() {
         return new AdditionalAccessRequestBuilder(pathParameters, requestAdapter);
@@ -40,10 +37,7 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -53,11 +47,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param accessPackageId Usage: accessPackageId=&apos;{accessPackageId}&apos;
      * @param incompatibleAccessPackageId Usage: incompatibleAccessPackageId=&apos;{incompatibleAccessPackageId}&apos;
      * @return a {@link AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder additionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(@jakarta.annotation.Nonnull final String accessPackageId, @jakarta.annotation.Nonnull final String incompatibleAccessPackageId) {
         Objects.requireNonNull(accessPackageId);
         Objects.requireNonNull(incompatibleAccessPackageId);
@@ -67,11 +58,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the accessPackageAssignments property of the microsoft.graph.entitlementManagement entity.
      * @param accessPackageAssignmentId The unique identifier of accessPackageAssignment
      * @return a {@link AccessPackageAssignmentItemRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AccessPackageAssignmentItemRequestBuilder byAccessPackageAssignmentId(@jakarta.annotation.Nonnull final String accessPackageAssignmentId) {
         Objects.requireNonNull(accessPackageAssignmentId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -98,11 +86,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the filterByCurrentUser method.
      * @param on Usage: on=&apos;{on}&apos;
      * @return a {@link FilterByCurrentUserWithOnRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public FilterByCurrentUserWithOnRequestBuilder filterByCurrentUserWithOn(@jakarta.annotation.Nonnull final String on) {
         Objects.requireNonNull(on);
         return new FilterByCurrentUserWithOnRequestBuilder(pathParameters, requestAdapter, on);
@@ -111,12 +96,9 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of accessPackageAssignment objects in Microsoft Entra entitlement management. For directory-wide administrators, the resulting list includes all the assignments, current and well as expired, that the caller has access to read, across all catalogs and access packages.  If the caller is on behalf of a delegated user who is assigned only to catalog-specific delegated administrative roles, the request must supply a filter to indicate a specific access package, such as: $filter=accessPackage/id eq &apos;a914b616-e04e-476b-aa37-91038f0b165b&apos;.
      * @return a {@link AccessPackageAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignments?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackageAssignmentCollectionResponse get() {
         return get(null);
     }
@@ -125,12 +107,9 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignmentCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/entitlementmanagement-list-accesspackageassignments?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackageAssignmentCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -142,11 +121,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link AccessPackageAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackageAssignment post(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
         return post(body, null);
     }
@@ -156,11 +132,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link AccessPackageAssignment}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public AccessPackageAssignment post(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -171,11 +144,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve a list of accessPackageAssignment objects in Microsoft Entra entitlement management. For directory-wide administrators, the resulting list includes all the assignments, current and well as expired, that the caller has access to read, across all catalogs and access packages.  If the caller is on behalf of a delegated user who is assigned only to catalog-specific delegated administrative roles, the request must supply a filter to indicate a specific access package, such as: $filter=accessPackage/id eq &apos;a914b616-e04e-476b-aa37-91038f0b165b&apos;.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -183,11 +153,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Retrieve a list of accessPackageAssignment objects in Microsoft Entra entitlement management. For directory-wide administrators, the resulting list includes all the assignments, current and well as expired, that the caller has access to read, across all catalogs and access packages.  If the caller is on behalf of a delegated user who is assigned only to catalog-specific delegated administrative roles, the request must supply a filter to indicate a specific access package, such as: $filter=accessPackage/id eq &apos;a914b616-e04e-476b-aa37-91038f0b165b&apos;.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -198,11 +165,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to accessPackageAssignments for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignment body) {
         return toPostRequestInformation(body, null);
     }
@@ -211,11 +175,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final AccessPackageAssignment body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -228,11 +189,8 @@ public class AccessPackageAssignmentsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AccessPackageAssignmentsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AccessPackageAssignmentsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AccessPackageAssignmentsRequestBuilder(rawUrl, requestAdapter);

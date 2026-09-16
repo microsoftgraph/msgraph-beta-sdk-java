@@ -26,10 +26,7 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the aws property of the microsoft.graph.permissionsAnalyticsAggregation entity.
      * @return a {@link AwsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AwsRequestBuilder aws() {
         return new AwsRequestBuilder(pathParameters, requestAdapter);
@@ -37,10 +34,7 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the azure property of the microsoft.graph.permissionsAnalyticsAggregation entity.
      * @return a {@link AzureRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public AzureRequestBuilder azure() {
         return new AzureRequestBuilder(pathParameters, requestAdapter);
@@ -48,10 +42,7 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the gcp property of the microsoft.graph.permissionsAnalyticsAggregation entity.
      * @return a {@link GcpRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GcpRequestBuilder gcp() {
         return new GcpRequestBuilder(pathParameters, requestAdapter);
@@ -75,10 +66,7 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property permissionsAnalytics for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -86,10 +74,7 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property permissionsAnalytics for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -100,11 +85,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * Get permissionsAnalytics from identityGovernance
      * @return a {@link PermissionsAnalyticsAggregation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PermissionsAnalyticsAggregation get() {
         return get(null);
     }
@@ -113,11 +95,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionsAnalyticsAggregation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PermissionsAnalyticsAggregation get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -129,11 +108,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link PermissionsAnalyticsAggregation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PermissionsAnalyticsAggregation patch(@jakarta.annotation.Nonnull final PermissionsAnalyticsAggregation body) {
         return patch(body, null);
     }
@@ -143,11 +119,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionsAnalyticsAggregation}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PermissionsAnalyticsAggregation patch(@jakarta.annotation.Nonnull final PermissionsAnalyticsAggregation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -158,11 +131,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property permissionsAnalytics for identityGovernance
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -170,11 +140,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property permissionsAnalytics for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -184,11 +151,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get permissionsAnalytics from identityGovernance
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -196,11 +160,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * Get permissionsAnalytics from identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -211,11 +172,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property permissionsAnalytics in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PermissionsAnalyticsAggregation body) {
         return toPatchRequestInformation(body, null);
     }
@@ -224,11 +182,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PermissionsAnalyticsAggregation body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -241,11 +196,8 @@ public class PermissionsAnalyticsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link PermissionsAnalyticsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public PermissionsAnalyticsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new PermissionsAnalyticsRequestBuilder(rawUrl, requestAdapter);

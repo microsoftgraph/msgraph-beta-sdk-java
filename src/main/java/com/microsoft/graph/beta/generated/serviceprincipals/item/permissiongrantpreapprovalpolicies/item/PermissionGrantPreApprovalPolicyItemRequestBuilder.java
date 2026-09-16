@@ -40,12 +40,9 @@ public class PermissionGrantPreApprovalPolicyItemRequestBuilder extends BaseRequ
      * Retrieve the permissionGrantPreApprovalPolicy object for the servicePrincipal.
      * @return a {@link PermissionGrantPreApprovalPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-permissiongrantpreapprovalpolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PermissionGrantPreApprovalPolicy get() {
         return get(null);
     }
@@ -54,12 +51,9 @@ public class PermissionGrantPreApprovalPolicyItemRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PermissionGrantPreApprovalPolicy}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/serviceprincipal-list-permissiongrantpreapprovalpolicies?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PermissionGrantPreApprovalPolicy get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -69,11 +63,8 @@ public class PermissionGrantPreApprovalPolicyItemRequestBuilder extends BaseRequ
     /**
      * Retrieve the permissionGrantPreApprovalPolicy object for the servicePrincipal.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -81,11 +72,8 @@ public class PermissionGrantPreApprovalPolicyItemRequestBuilder extends BaseRequ
      * Retrieve the permissionGrantPreApprovalPolicy object for the servicePrincipal.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -96,11 +84,8 @@ public class PermissionGrantPreApprovalPolicyItemRequestBuilder extends BaseRequ
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link PermissionGrantPreApprovalPolicyItemRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public PermissionGrantPreApprovalPolicyItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new PermissionGrantPreApprovalPolicyItemRequestBuilder(rawUrl, requestAdapter);

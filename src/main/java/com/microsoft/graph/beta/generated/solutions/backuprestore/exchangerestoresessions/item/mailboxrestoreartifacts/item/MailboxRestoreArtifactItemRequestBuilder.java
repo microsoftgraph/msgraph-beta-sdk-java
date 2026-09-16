@@ -24,10 +24,7 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to manage the restorePoint property of the microsoft.graph.restoreArtifactBase entity.
      * @return a {@link RestorePointRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RestorePointRequestBuilder restorePoint() {
         return new RestorePointRequestBuilder(pathParameters, requestAdapter);
@@ -51,10 +48,7 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * Delete navigation property mailboxRestoreArtifacts for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -62,10 +56,7 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * Delete navigation property mailboxRestoreArtifacts for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -76,11 +67,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * A collection of restore points and destination details that can be used to restore Exchange mailboxes.
      * @return a {@link MailboxRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailboxRestoreArtifact get() {
         return get(null);
     }
@@ -89,11 +77,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailboxRestoreArtifact get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -105,11 +90,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @return a {@link MailboxRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailboxRestoreArtifact patch(@jakarta.annotation.Nonnull final MailboxRestoreArtifact body) {
         return patch(body, null);
     }
@@ -119,11 +101,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link MailboxRestoreArtifact}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public MailboxRestoreArtifact patch(@jakarta.annotation.Nonnull final MailboxRestoreArtifact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -134,11 +113,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * Delete navigation property mailboxRestoreArtifacts for solutions
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -146,11 +122,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * Delete navigation property mailboxRestoreArtifacts for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -160,11 +133,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
     /**
      * A collection of restore points and destination details that can be used to restore Exchange mailboxes.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -172,11 +142,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * A collection of restore points and destination details that can be used to restore Exchange mailboxes.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -187,11 +154,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * Update the navigation property mailboxRestoreArtifacts in solutions
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MailboxRestoreArtifact body) {
         return toPatchRequestInformation(body, null);
     }
@@ -200,11 +164,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final MailboxRestoreArtifact body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -217,11 +178,8 @@ public class MailboxRestoreArtifactItemRequestBuilder extends BaseRequestBuilder
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link MailboxRestoreArtifactItemRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public MailboxRestoreArtifactItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new MailboxRestoreArtifactItemRequestBuilder(rawUrl, requestAdapter);

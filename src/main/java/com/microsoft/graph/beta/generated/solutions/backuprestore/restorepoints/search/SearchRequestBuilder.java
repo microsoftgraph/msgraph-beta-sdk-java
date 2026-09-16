@@ -36,31 +36,25 @@ public class SearchRequestBuilder extends BaseRequestBuilder {
         super(requestAdapter, "{+baseurl}/solutions/backupRestore/restorePoints/search", rawUrl);
     }
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. Optionally provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param body The request body
      * @return a {@link RestorePointSearchResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/restorepoint-search?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public RestorePointSearchResponse post(@jakarta.annotation.Nonnull final SearchPostRequestBody body) {
         return post(body, null);
     }
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. Optionally provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RestorePointSearchResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/restorepoint-search?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public RestorePointSearchResponse post(@jakarta.annotation.Nonnull final SearchPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -69,27 +63,21 @@ public class SearchRequestBuilder extends BaseRequestBuilder {
         return this.requestAdapter.send(requestInfo, errorMapping, RestorePointSearchResponse::createFromDiscriminatorValue);
     }
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. Optionally provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SearchPostRequestBody body) {
         return toPostRequestInformation(body, null);
     }
     /**
-     * Search for the restorePoint objects associated with a protectionUnit.
+     * Search for the restorePoint objects associated with a protectionUnit. Optionally provide policyId to scope the search to a protection policy and validate that the specified protection units belong to that policy.
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final SearchPostRequestBody body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -102,11 +90,8 @@ public class SearchRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SearchRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public SearchRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SearchRequestBuilder(rawUrl, requestAdapter);

@@ -10,9 +10,6 @@ import com.microsoft.kiota.store.BackingStoreFactorySingleton;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-/**
- * Singleton for network operations on Microsoft Graph.
- */
 @jakarta.annotation.Generated("com.microsoft.kiota")
 public class Network implements AdditionalDataHolder, BackedModel, Parsable {
     /**

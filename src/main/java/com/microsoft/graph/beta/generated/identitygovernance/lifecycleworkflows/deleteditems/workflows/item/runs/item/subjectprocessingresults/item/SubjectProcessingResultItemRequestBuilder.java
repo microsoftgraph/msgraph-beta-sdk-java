@@ -25,10 +25,7 @@ public class SubjectProcessingResultItemRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to manage the reprocessedRuns property of the microsoft.graph.identityGovernance.subjectProcessingResult entity.
      * @return a {@link ReprocessedRunsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ReprocessedRunsRequestBuilder reprocessedRuns() {
         return new ReprocessedRunsRequestBuilder(pathParameters, requestAdapter);
@@ -36,10 +33,7 @@ public class SubjectProcessingResultItemRequestBuilder extends BaseRequestBuilde
     /**
      * Provides operations to manage the taskProcessingResults property of the microsoft.graph.identityGovernance.subjectProcessingResult entity.
      * @return a {@link TaskProcessingResultsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public TaskProcessingResultsRequestBuilder taskProcessingResults() {
         return new TaskProcessingResultsRequestBuilder(pathParameters, requestAdapter);
@@ -64,11 +58,8 @@ public class SubjectProcessingResultItemRequestBuilder extends BaseRequestBuilde
      * The processing results for each subject in this workflow run.
      * @return a {@link SubjectProcessingResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SubjectProcessingResult get() {
         return get(null);
     }
@@ -77,11 +68,8 @@ public class SubjectProcessingResultItemRequestBuilder extends BaseRequestBuilde
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SubjectProcessingResult}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SubjectProcessingResult get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -91,11 +79,8 @@ public class SubjectProcessingResultItemRequestBuilder extends BaseRequestBuilde
     /**
      * The processing results for each subject in this workflow run.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -103,11 +88,8 @@ public class SubjectProcessingResultItemRequestBuilder extends BaseRequestBuilde
      * The processing results for each subject in this workflow run.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -118,11 +100,8 @@ public class SubjectProcessingResultItemRequestBuilder extends BaseRequestBuilde
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SubjectProcessingResultItemRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public SubjectProcessingResultItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SubjectProcessingResultItemRequestBuilder(rawUrl, requestAdapter);

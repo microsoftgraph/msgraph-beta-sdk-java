@@ -26,10 +26,7 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
     /**
      * Provides operations to manage the driveRestoreArtifacts property of the microsoft.graph.oneDriveForBusinessRestoreSession entity.
      * @return a {@link DriveRestoreArtifactsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveRestoreArtifactsRequestBuilder driveRestoreArtifacts() {
         return new DriveRestoreArtifactsRequestBuilder(pathParameters, requestAdapter);
@@ -37,10 +34,7 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
     /**
      * Provides operations to manage the driveRestoreArtifactsBulkAdditionRequests property of the microsoft.graph.oneDriveForBusinessRestoreSession entity.
      * @return a {@link DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder driveRestoreArtifactsBulkAdditionRequests() {
         return new DriveRestoreArtifactsBulkAdditionRequestsRequestBuilder(pathParameters, requestAdapter);
@@ -48,10 +42,7 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
     /**
      * Provides operations to manage the granularDriveRestoreArtifacts property of the microsoft.graph.oneDriveForBusinessRestoreSession entity.
      * @return a {@link GranularDriveRestoreArtifactsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GranularDriveRestoreArtifactsRequestBuilder granularDriveRestoreArtifacts() {
         return new GranularDriveRestoreArtifactsRequestBuilder(pathParameters, requestAdapter);
@@ -75,10 +66,7 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property oneDriveForBusinessRestoreSessions for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -86,10 +74,7 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * Delete navigation property oneDriveForBusinessRestoreSessions for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -100,11 +85,8 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * The list of OneDrive for Business restore sessions available in the tenant.
      * @return a {@link OneDriveForBusinessRestoreSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessRestoreSession get() {
         return get(null);
     }
@@ -113,11 +95,8 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OneDriveForBusinessRestoreSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessRestoreSession get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -129,12 +108,9 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * @param body The request body
      * @return a {@link OneDriveForBusinessRestoreSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessRestoreSession patch(@jakarta.annotation.Nonnull final OneDriveForBusinessRestoreSession body) {
         return patch(body, null);
     }
@@ -144,12 +120,9 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OneDriveForBusinessRestoreSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/onedriveforbusinessrestoresession-update?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessRestoreSession patch(@jakarta.annotation.Nonnull final OneDriveForBusinessRestoreSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -160,11 +133,8 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
     /**
      * Delete navigation property oneDriveForBusinessRestoreSessions for solutions
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -172,11 +142,8 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * Delete navigation property oneDriveForBusinessRestoreSessions for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -186,11 +153,8 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
     /**
      * The list of OneDrive for Business restore sessions available in the tenant.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -198,11 +162,8 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * The list of OneDrive for Business restore sessions available in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -213,11 +174,8 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * Update the properties of a oneDriveForBusinessRestoreSession object.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OneDriveForBusinessRestoreSession body) {
         return toPatchRequestInformation(body, null);
     }
@@ -226,11 +184,8 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final OneDriveForBusinessRestoreSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -243,11 +198,8 @@ public class OneDriveForBusinessRestoreSessionItemRequestBuilder extends BaseReq
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link OneDriveForBusinessRestoreSessionItemRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public OneDriveForBusinessRestoreSessionItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new OneDriveForBusinessRestoreSessionItemRequestBuilder(rawUrl, requestAdapter);

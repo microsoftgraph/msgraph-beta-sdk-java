@@ -27,10 +27,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the directories property of the microsoft.graph.synchronizationSchema entity.
      * @return a {@link DirectoriesRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public DirectoriesRequestBuilder directories() {
         return new DirectoriesRequestBuilder(pathParameters, requestAdapter);
@@ -38,10 +35,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the filterOperators method.
      * @return a {@link FilterOperatorsRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public FilterOperatorsRequestBuilder filterOperators() {
         return new FilterOperatorsRequestBuilder(pathParameters, requestAdapter);
@@ -49,10 +43,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the functions method.
      * @return a {@link FunctionsRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public FunctionsRequestBuilder functions() {
         return new FunctionsRequestBuilder(pathParameters, requestAdapter);
@@ -60,10 +51,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the parseExpression method.
      * @return a {@link ParseExpressionRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ParseExpressionRequestBuilder parseExpression() {
         return new ParseExpressionRequestBuilder(pathParameters, requestAdapter);
@@ -87,10 +75,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property schema for servicePrincipals
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -98,10 +83,7 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property schema for servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -112,11 +94,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Default synchronization schema for the jobs based on this template.
      * @return a {@link SynchronizationSchema}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SynchronizationSchema get() {
         return get(null);
     }
@@ -125,11 +104,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationSchema}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SynchronizationSchema get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -141,11 +117,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link SynchronizationSchema}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SynchronizationSchema patch(@jakarta.annotation.Nonnull final SynchronizationSchema body) {
         return patch(body, null);
     }
@@ -155,11 +128,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationSchema}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SynchronizationSchema patch(@jakarta.annotation.Nonnull final SynchronizationSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -170,11 +140,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property schema for servicePrincipals
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -182,11 +149,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property schema for servicePrincipals
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -196,11 +160,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
     /**
      * Default synchronization schema for the jobs based on this template.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -208,11 +169,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Default synchronization schema for the jobs based on this template.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -223,11 +181,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property schema in servicePrincipals
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SynchronizationSchema body) {
         return toPatchRequestInformation(body, null);
     }
@@ -236,11 +191,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SynchronizationSchema body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -253,11 +205,8 @@ public class SchemaRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SchemaRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public SchemaRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SchemaRequestBuilder(rawUrl, requestAdapter);

@@ -52,8 +52,6 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
         deserializerMap.put("customTaskExtensions", (n) -> { this.setCustomTaskExtensions(n.getCollectionOfObjectValues(CustomTaskExtension::createFromDiscriminatorValue)); });
         deserializerMap.put("deletedItems", (n) -> { this.setDeletedItems(n.getObjectValue(DeletedItemContainer::createFromDiscriminatorValue)); });
         deserializerMap.put("insights", (n) -> { this.setInsights(n.getObjectValue(Insights::createFromDiscriminatorValue)); });
-        deserializerMap.put("lifecyclePolicies", (n) -> { this.setLifecyclePolicies(n.getCollectionOfObjectValues(LifecyclePolicy::createFromDiscriminatorValue)); });
-        deserializerMap.put("lifecyclePolicyPriorityConfigurations", (n) -> { this.setLifecyclePolicyPriorityConfigurations(n.getCollectionOfObjectValues(LifecyclePolicyPriorityConfiguration::createFromDiscriminatorValue)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(LifecycleManagementSettings::createFromDiscriminatorValue)); });
         deserializerMap.put("taskDefinitions", (n) -> { this.setTaskDefinitions(n.getCollectionOfObjectValues(TaskDefinition::createFromDiscriminatorValue)); });
         deserializerMap.put("workflows", (n) -> { this.setWorkflows(n.getCollectionOfObjectValues(Workflow::createFromDiscriminatorValue)); });
@@ -67,22 +65,6 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
     @jakarta.annotation.Nullable
     public Insights getInsights() {
         return this.backingStore.get("insights");
-    }
-    /**
-     * Gets the lifecyclePolicies property value. The lifecyclePolicies property
-     * @return a {@link java.util.List<LifecyclePolicy>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<LifecyclePolicy> getLifecyclePolicies() {
-        return this.backingStore.get("lifecyclePolicies");
-    }
-    /**
-     * Gets the lifecyclePolicyPriorityConfigurations property value. The lifecyclePolicyPriorityConfigurations property
-     * @return a {@link java.util.List<LifecyclePolicyPriorityConfiguration>}
-     */
-    @jakarta.annotation.Nullable
-    public java.util.List<LifecyclePolicyPriorityConfiguration> getLifecyclePolicyPriorityConfigurations() {
-        return this.backingStore.get("lifecyclePolicyPriorityConfigurations");
     }
     /**
      * Gets the settings property value. The settings property
@@ -126,8 +108,6 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
         writer.writeCollectionOfObjectValues("customTaskExtensions", this.getCustomTaskExtensions());
         writer.writeObjectValue("deletedItems", this.getDeletedItems());
         writer.writeObjectValue("insights", this.getInsights());
-        writer.writeCollectionOfObjectValues("lifecyclePolicies", this.getLifecyclePolicies());
-        writer.writeCollectionOfObjectValues("lifecyclePolicyPriorityConfigurations", this.getLifecyclePolicyPriorityConfigurations());
         writer.writeObjectValue("settings", this.getSettings());
         writer.writeCollectionOfObjectValues("taskDefinitions", this.getTaskDefinitions());
         writer.writeCollectionOfObjectValues("workflows", this.getWorkflows());
@@ -153,20 +133,6 @@ public class LifecycleWorkflowsContainer extends Entity implements Parsable {
      */
     public void setInsights(@jakarta.annotation.Nullable final Insights value) {
         this.backingStore.set("insights", value);
-    }
-    /**
-     * Sets the lifecyclePolicies property value. The lifecyclePolicies property
-     * @param value Value to set for the lifecyclePolicies property.
-     */
-    public void setLifecyclePolicies(@jakarta.annotation.Nullable final java.util.List<LifecyclePolicy> value) {
-        this.backingStore.set("lifecyclePolicies", value);
-    }
-    /**
-     * Sets the lifecyclePolicyPriorityConfigurations property value. The lifecyclePolicyPriorityConfigurations property
-     * @param value Value to set for the lifecyclePolicyPriorityConfigurations property.
-     */
-    public void setLifecyclePolicyPriorityConfigurations(@jakarta.annotation.Nullable final java.util.List<LifecyclePolicyPriorityConfiguration> value) {
-        this.backingStore.set("lifecyclePolicyPriorityConfigurations", value);
     }
     /**
      * Sets the settings property value. The settings property

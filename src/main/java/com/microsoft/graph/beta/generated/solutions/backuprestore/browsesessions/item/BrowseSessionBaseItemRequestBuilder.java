@@ -25,10 +25,7 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the browse method.
      * @return a {@link BrowseRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public BrowseRequestBuilder browse() {
         return new BrowseRequestBuilder(pathParameters, requestAdapter);
@@ -37,11 +34,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the browse method.
      * @param nextFetchToken Usage: nextFetchToken=&apos;{nextFetchToken}&apos;
      * @return a {@link BrowseWithNextFetchTokenRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public BrowseWithNextFetchTokenRequestBuilder browseWithNextFetchToken(@jakarta.annotation.Nonnull final String nextFetchToken) {
         Objects.requireNonNull(nextFetchToken);
         return new BrowseWithNextFetchTokenRequestBuilder(pathParameters, requestAdapter, nextFetchToken);
@@ -65,10 +59,7 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property browseSessions for solutions
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -76,10 +67,7 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property browseSessions for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -90,11 +78,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * The list of browse sessions in the tenant.
      * @return a {@link BrowseSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public BrowseSessionBase get() {
         return get(null);
     }
@@ -103,11 +88,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BrowseSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public BrowseSessionBase get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -119,11 +101,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link BrowseSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public BrowseSessionBase patch(@jakarta.annotation.Nonnull final BrowseSessionBase body) {
         return patch(body, null);
     }
@@ -133,11 +112,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link BrowseSessionBase}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public BrowseSessionBase patch(@jakarta.annotation.Nonnull final BrowseSessionBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -148,11 +124,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Delete navigation property browseSessions for solutions
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -160,11 +133,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * Delete navigation property browseSessions for solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -174,11 +144,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
     /**
      * The list of browse sessions in the tenant.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -186,11 +153,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * The list of browse sessions in the tenant.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -201,11 +165,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property browseSessions in solutions
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BrowseSessionBase body) {
         return toPatchRequestInformation(body, null);
     }
@@ -214,11 +175,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final BrowseSessionBase body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -231,11 +189,8 @@ public class BrowseSessionBaseItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link BrowseSessionBaseItemRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public BrowseSessionBaseItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new BrowseSessionBaseItemRequestBuilder(rawUrl, requestAdapter);

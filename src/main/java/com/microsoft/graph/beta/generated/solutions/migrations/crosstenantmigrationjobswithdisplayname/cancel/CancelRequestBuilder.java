@@ -40,7 +40,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * @return a {@link CrossTenantMigrationCancelResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationjob-cancel?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -54,7 +54,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * @return a {@link CrossTenantMigrationCancelResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      * @see <a href="https://learn.microsoft.com/graph/api/crosstenantmigrationjob-cancel?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
@@ -69,7 +69,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * Cancel a crossTenantMigrationJob. All tasks within the job that were in a Sync state are canceled. If the job can&apos;t be canceled, a 409 Conflict response is returned and the migrations continue. This response happens when a migration is already in progress or is in a terminal state.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -81,7 +81,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
     @Deprecated
@@ -96,7 +96,7 @@ public class CancelRequestBuilder extends BaseRequestBuilder {
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link CancelRequestBuilder}
      * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
+     *  as of 2023-11/PrivatePreview:CrossTenantContentMigrationAPI on 2023-11-15 and will be removed 2026-07-09
      */
     @jakarta.annotation.Nonnull
     @Deprecated

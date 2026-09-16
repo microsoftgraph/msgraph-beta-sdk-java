@@ -28,10 +28,7 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -40,11 +37,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the townhalls property of the microsoft.graph.virtualEventsRoot entity.
      * @param virtualEventTownhallId The unique identifier of virtualEventTownhall
      * @return a {@link VirtualEventTownhallItemRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public VirtualEventTownhallItemRequestBuilder byVirtualEventTownhallId(@jakarta.annotation.Nonnull final String virtualEventTownhallId) {
         Objects.requireNonNull(virtualEventTownhallId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -71,11 +65,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a virtualEventTownhall object.
      * @return a {@link VirtualEventTownhallCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public VirtualEventTownhallCollectionResponse get() {
         return get(null);
     }
@@ -84,11 +75,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventTownhallCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public VirtualEventTownhallCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -100,11 +88,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * @param role Usage: role=&apos;{role}&apos;
      * @param userId Usage: userId=&apos;{userId}&apos;
      * @return a {@link GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public GetByUserIdAndRoleWithUserIdWithRoleRequestBuilder getByUserIdAndRoleWithUserIdWithRole(@jakarta.annotation.Nonnull final String role, @jakarta.annotation.Nonnull final String userId) {
         Objects.requireNonNull(role);
         Objects.requireNonNull(userId);
@@ -114,11 +99,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to call the getByUserRole method.
      * @param role Usage: role=&apos;{role}&apos;
      * @return a {@link GetByUserRoleWithRoleRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public GetByUserRoleWithRoleRequestBuilder getByUserRoleWithRole(@jakarta.annotation.Nonnull final String role) {
         Objects.requireNonNull(role);
         return new GetByUserRoleWithRoleRequestBuilder(pathParameters, requestAdapter, role);
@@ -128,12 +110,9 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link VirtualEventTownhall}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventsroot-post-townhalls?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public VirtualEventTownhall post(@jakarta.annotation.Nonnull final VirtualEventTownhall body) {
         return post(body, null);
     }
@@ -143,12 +122,9 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link VirtualEventTownhall}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/virtualeventsroot-post-townhalls?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public VirtualEventTownhall post(@jakarta.annotation.Nonnull final VirtualEventTownhall body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -159,11 +135,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
     /**
      * Read the properties and relationships of a virtualEventTownhall object.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -171,11 +144,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * Read the properties and relationships of a virtualEventTownhall object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -186,11 +156,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * Create a new virtualEventTownhall object in draft mode.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEventTownhall body) {
         return toPostRequestInformation(body, null);
     }
@@ -199,11 +166,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final VirtualEventTownhall body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -216,11 +180,8 @@ public class TownhallsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link TownhallsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public TownhallsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new TownhallsRequestBuilder(rawUrl, requestAdapter);

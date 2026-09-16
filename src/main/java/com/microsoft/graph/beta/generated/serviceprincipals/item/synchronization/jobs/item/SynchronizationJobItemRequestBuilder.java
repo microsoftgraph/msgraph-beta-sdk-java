@@ -30,10 +30,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the bulkUpload property of the microsoft.graph.synchronizationJob entity.
      * @return a {@link BulkUploadRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public BulkUploadRequestBuilder bulkUpload() {
         return new BulkUploadRequestBuilder(pathParameters, requestAdapter);
@@ -41,10 +38,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the pause method.
      * @return a {@link PauseRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PauseRequestBuilder pause() {
         return new PauseRequestBuilder(pathParameters, requestAdapter);
@@ -52,10 +46,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the provisionOnDemand method.
      * @return a {@link ProvisionOnDemandRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ProvisionOnDemandRequestBuilder provisionOnDemand() {
         return new ProvisionOnDemandRequestBuilder(pathParameters, requestAdapter);
@@ -63,10 +54,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the restart method.
      * @return a {@link RestartRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RestartRequestBuilder restart() {
         return new RestartRequestBuilder(pathParameters, requestAdapter);
@@ -74,10 +62,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the schema property of the microsoft.graph.synchronizationJob entity.
      * @return a {@link SchemaRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SchemaRequestBuilder schema() {
         return new SchemaRequestBuilder(pathParameters, requestAdapter);
@@ -85,10 +70,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the start method.
      * @return a {@link StartRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public StartRequestBuilder start() {
         return new StartRequestBuilder(pathParameters, requestAdapter);
@@ -96,10 +78,7 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the validateCredentials method.
      * @return a {@link ValidateCredentialsRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ValidateCredentialsRequestBuilder validateCredentials() {
         return new ValidateCredentialsRequestBuilder(pathParameters, requestAdapter);
@@ -123,11 +102,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Stop the synchronizationJob, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-beta">Find more info here</a>
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -135,11 +111,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Stop the synchronizationJob, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-delete?view=graph-rest-beta">Find more info here</a>
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -150,12 +123,9 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve an existing synchronizationJob and its properties.
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SynchronizationJob get() {
         return get(null);
     }
@@ -164,12 +134,9 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      * @see <a href="https://learn.microsoft.com/graph/api/synchronization-synchronizationjob-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SynchronizationJob get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -181,11 +148,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SynchronizationJob patch(@jakarta.annotation.Nonnull final SynchronizationJob body) {
         return patch(body, null);
     }
@@ -195,11 +159,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SynchronizationJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SynchronizationJob patch(@jakarta.annotation.Nonnull final SynchronizationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -210,11 +171,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Stop the synchronizationJob, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -222,11 +180,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Stop the synchronizationJob, and permanently delete all the state associated with it. Synchronized accounts are left as-is.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -236,11 +191,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
     /**
      * Retrieve an existing synchronizationJob and its properties.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -248,11 +200,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Retrieve an existing synchronizationJob and its properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -263,11 +212,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Update the navigation property jobs in servicePrincipals
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SynchronizationJob body) {
         return toPatchRequestInformation(body, null);
     }
@@ -276,11 +222,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SynchronizationJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -293,11 +236,8 @@ public class SynchronizationJobItemRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SynchronizationJobItemRequestBuilder}
-     * @deprecated
-     * Private preview for correlations report as of 2025-08/correlations on 2025-08-01 and will be removed 2026-08-01
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public SynchronizationJobItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SynchronizationJobItemRequestBuilder(rawUrl, requestAdapter);

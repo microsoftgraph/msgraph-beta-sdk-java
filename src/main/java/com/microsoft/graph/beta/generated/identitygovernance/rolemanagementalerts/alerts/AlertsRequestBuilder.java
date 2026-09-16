@@ -27,10 +27,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -38,10 +35,7 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to call the refresh method.
      * @return a {@link RefreshRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public RefreshRequestBuilder refresh() {
         return new RefreshRequestBuilder(pathParameters, requestAdapter);
@@ -50,11 +44,8 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the alerts property of the microsoft.graph.roleManagementAlert entity.
      * @param unifiedRoleManagementAlertId The unique identifier of unifiedRoleManagementAlert
      * @return a {@link UnifiedRoleManagementAlertItemRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public UnifiedRoleManagementAlertItemRequestBuilder byUnifiedRoleManagementAlertId(@jakarta.annotation.Nonnull final String unifiedRoleManagementAlertId) {
         Objects.requireNonNull(unifiedRoleManagementAlertId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -81,12 +72,9 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the unifiedRoleManagementAlert objects and their properties.
      * @return a {@link UnifiedRoleManagementAlertCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alerts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleManagementAlertCollectionResponse get() {
         return get(null);
     }
@@ -95,12 +83,9 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleManagementAlertCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/rolemanagementalert-list-alerts?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleManagementAlertCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -112,11 +97,8 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link UnifiedRoleManagementAlert}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleManagementAlert post(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlert body) {
         return post(body, null);
     }
@@ -126,11 +108,8 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link UnifiedRoleManagementAlert}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public UnifiedRoleManagementAlert post(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -141,11 +120,8 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get a list of the unifiedRoleManagementAlert objects and their properties.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -153,11 +129,8 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * Get a list of the unifiedRoleManagementAlert objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -168,11 +141,8 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * Create new navigation property to alerts for identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlert body) {
         return toPostRequestInformation(body, null);
     }
@@ -181,11 +151,8 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final UnifiedRoleManagementAlert body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -198,11 +165,8 @@ public class AlertsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link AlertsRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public AlertsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new AlertsRequestBuilder(rawUrl, requestAdapter);

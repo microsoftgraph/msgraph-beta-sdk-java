@@ -56,6 +56,14 @@ public class EmbeddingInput implements AdditionalDataHolder, BackedModel, Parsab
         return this.backingStore;
     }
     /**
+     * Gets the chunkOffsets property value. Optional offset metadata for the text chunks that produced this embedding data. The starts property is required when chunkOffsets is present. When lengths is also present, the decoded element counts must match and pair by index.
+     * @return a {@link ChunkOffsets}
+     */
+    @jakarta.annotation.Nullable
+    public ChunkOffsets getChunkOffsets() {
+        return this.backingStore.get("chunkOffsets");
+    }
+    /**
      * Gets the data property value. The embedding vectors the model produced for the text, encoded as a base64 string of little-endian 32-bit floats. Every vector the model emitted (for example, one per text chunk) is concatenated in order; each contributes exactly the modelType&apos;s embedding dimension worth of float components, so the decoded length must be a whole multiple of that dimension.
      * @return a {@link String}
      */
@@ -69,7 +77,8 @@ public class EmbeddingInput implements AdditionalDataHolder, BackedModel, Parsab
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
+        deserializerMap.put("chunkOffsets", (n) -> { this.setChunkOffsets(n.getObjectValue(ChunkOffsets::createFromDiscriminatorValue)); });
         deserializerMap.put("data", (n) -> { this.setData(n.getStringValue()); });
         deserializerMap.put("modelType", (n) -> { this.setModelType(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
@@ -97,6 +106,7 @@ public class EmbeddingInput implements AdditionalDataHolder, BackedModel, Parsab
      */
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
+        writer.writeObjectValue("chunkOffsets", this.getChunkOffsets());
         writer.writeStringValue("data", this.getData());
         writer.writeStringValue("modelType", this.getModelType());
         writer.writeStringValue("@odata.type", this.getOdataType());
@@ -116,6 +126,13 @@ public class EmbeddingInput implements AdditionalDataHolder, BackedModel, Parsab
     public void setBackingStore(@jakarta.annotation.Nonnull final BackingStore value) {
         Objects.requireNonNull(value);
         this.backingStore = value;
+    }
+    /**
+     * Sets the chunkOffsets property value. Optional offset metadata for the text chunks that produced this embedding data. The starts property is required when chunkOffsets is present. When lengths is also present, the decoded element counts must match and pair by index.
+     * @param value Value to set for the chunkOffsets property.
+     */
+    public void setChunkOffsets(@jakarta.annotation.Nullable final ChunkOffsets value) {
+        this.backingStore.set("chunkOffsets", value);
     }
     /**
      * Sets the data property value. The embedding vectors the model produced for the text, encoded as a base64 string of little-endian 32-bit floats. Every vector the model emitted (for example, one per text chunk) is concatenated in order; each contributes exactly the modelType&apos;s embedding dimension worth of float components, so the decoded length must be a whole multiple of that dimension.

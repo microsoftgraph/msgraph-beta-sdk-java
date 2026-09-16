@@ -26,10 +26,7 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -38,11 +35,8 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
      * Provides operations to manage the oneDriveForBusinessBrowseSessions property of the microsoft.graph.backupRestoreRoot entity.
      * @param oneDriveForBusinessBrowseSessionId The unique identifier of oneDriveForBusinessBrowseSession
      * @return a {@link OneDriveForBusinessBrowseSessionItemRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public OneDriveForBusinessBrowseSessionItemRequestBuilder byOneDriveForBusinessBrowseSessionId(@jakarta.annotation.Nonnull final String oneDriveForBusinessBrowseSessionId) {
         Objects.requireNonNull(oneDriveForBusinessBrowseSessionId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -69,12 +63,9 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
      * Get a list of the oneDriveForBusinessBrowseSession objects and their properties.
      * @return a {@link OneDriveForBusinessBrowseSessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-list-onedriveforbusinessbrowsesessions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessBrowseSessionCollectionResponse get() {
         return get(null);
     }
@@ -83,12 +74,9 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OneDriveForBusinessBrowseSessionCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-list-onedriveforbusinessbrowsesessions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessBrowseSessionCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -100,12 +88,9 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
      * @param body The request body
      * @return a {@link OneDriveForBusinessBrowseSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-post-onedriveforbusinessbrowsesessions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessBrowseSession post(@jakarta.annotation.Nonnull final OneDriveForBusinessBrowseSession body) {
         return post(body, null);
     }
@@ -115,12 +100,9 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link OneDriveForBusinessBrowseSession}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      * @see <a href="https://learn.microsoft.com/graph/api/backuprestoreroot-post-onedriveforbusinessbrowsesessions?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public OneDriveForBusinessBrowseSession post(@jakarta.annotation.Nonnull final OneDriveForBusinessBrowseSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -131,11 +113,8 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
     /**
      * Get a list of the oneDriveForBusinessBrowseSession objects and their properties.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -143,11 +122,8 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
      * Get a list of the oneDriveForBusinessBrowseSession objects and their properties.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -158,11 +134,8 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
      * Create a new oneDriveForBusinessBrowseSession object.
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OneDriveForBusinessBrowseSession body) {
         return toPostRequestInformation(body, null);
     }
@@ -171,11 +144,8 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final OneDriveForBusinessBrowseSession body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -188,11 +158,8 @@ public class OneDriveForBusinessBrowseSessionsRequestBuilder extends BaseRequest
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link OneDriveForBusinessBrowseSessionsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public OneDriveForBusinessBrowseSessionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new OneDriveForBusinessBrowseSessionsRequestBuilder(rawUrl, requestAdapter);

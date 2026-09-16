@@ -181,7 +181,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("imageDisplayName");
     }
     /**
-     * Gets the isDisasterRecoveryActive property value. The isDisasterRecoveryActive property
+     * Gets the isDisasterRecoveryActive property value. Indicates whether the Cloud PC currently runs in its disaster recovery region after a failover event. true if the Cloud PC is currently running in its disaster recovery region; otherwise, false. Read-only.
      * @return a {@link Boolean}
      */
     @jakarta.annotation.Nullable
@@ -285,7 +285,7 @@ public class CloudPC extends Entity implements Parsable {
         return this.backingStore.get("provisionedDateTime");
     }
     /**
-     * Gets the provisioningConfiguration property value. The provisioningConfiguration property
+     * Gets the provisioningConfiguration property value. The policy-derived configuration of the Cloud PC. Contains properties inherited from the provisioning policy that were applied during the most recent provisioning or reprovisioning. Returned only when explicitly selected with $select. Read-only.
      * @return a {@link CloudPcProvisioningConfiguration}
      */
     @jakarta.annotation.Nullable
@@ -554,7 +554,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("imageDisplayName", value);
     }
     /**
-     * Sets the isDisasterRecoveryActive property value. The isDisasterRecoveryActive property
+     * Sets the isDisasterRecoveryActive property value. Indicates whether the Cloud PC currently runs in its disaster recovery region after a failover event. true if the Cloud PC is currently running in its disaster recovery region; otherwise, false. Read-only.
      * @param value Value to set for the isDisasterRecoveryActive property.
      */
     public void setIsDisasterRecoveryActive(@jakarta.annotation.Nullable final Boolean value) {
@@ -645,7 +645,7 @@ public class CloudPC extends Entity implements Parsable {
         this.backingStore.set("provisionedDateTime", value);
     }
     /**
-     * Sets the provisioningConfiguration property value. The provisioningConfiguration property
+     * Sets the provisioningConfiguration property value. The policy-derived configuration of the Cloud PC. Contains properties inherited from the provisioning policy that were applied during the most recent provisioning or reprovisioning. Returned only when explicitly selected with $select. Read-only.
      * @param value Value to set for the provisioningConfiguration property.
      */
     public void setProvisioningConfiguration(@jakarta.annotation.Nullable final CloudPcProvisioningConfiguration value) {
