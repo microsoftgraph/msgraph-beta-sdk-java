@@ -162,6 +162,7 @@ public class Organization extends DirectoryObject implements Parsable {
         deserializerMap.put("preferredLanguage", (n) -> { this.setPreferredLanguage(n.getStringValue()); });
         deserializerMap.put("privacyProfile", (n) -> { this.setPrivacyProfile(n.getObjectValue(PrivacyProfile::createFromDiscriminatorValue)); });
         deserializerMap.put("provisionedPlans", (n) -> { this.setProvisionedPlans(n.getCollectionOfObjectValues(ProvisionedPlan::createFromDiscriminatorValue)); });
+        deserializerMap.put("resourceQuotas", (n) -> { this.setResourceQuotas(n.getCollectionOfObjectValues(ResourceQuota::createFromDiscriminatorValue)); });
         deserializerMap.put("securityComplianceNotificationMails", (n) -> { this.setSecurityComplianceNotificationMails(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("securityComplianceNotificationPhones", (n) -> { this.setSecurityComplianceNotificationPhones(n.getCollectionOfPrimitiveValues(String.class)); });
         deserializerMap.put("settings", (n) -> { this.setSettings(n.getObjectValue(OrganizationSettings::createFromDiscriminatorValue)); });
@@ -269,6 +270,14 @@ public class Organization extends DirectoryObject implements Parsable {
         return this.backingStore.get("provisionedPlans");
     }
     /**
+     * Gets the resourceQuotas property value. The resourceQuotas property
+     * @return a {@link java.util.List<ResourceQuota>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<ResourceQuota> getResourceQuotas() {
+        return this.backingStore.get("resourceQuotas");
+    }
+    /**
      * Gets the securityComplianceNotificationMails property value. Not nullable.
      * @return a {@link java.util.List<String>}
      */
@@ -364,6 +373,7 @@ public class Organization extends DirectoryObject implements Parsable {
         writer.writeStringValue("preferredLanguage", this.getPreferredLanguage());
         writer.writeObjectValue("privacyProfile", this.getPrivacyProfile());
         writer.writeCollectionOfObjectValues("provisionedPlans", this.getProvisionedPlans());
+        writer.writeCollectionOfObjectValues("resourceQuotas", this.getResourceQuotas());
         writer.writeCollectionOfPrimitiveValues("securityComplianceNotificationMails", this.getSecurityComplianceNotificationMails());
         writer.writeCollectionOfPrimitiveValues("securityComplianceNotificationPhones", this.getSecurityComplianceNotificationPhones());
         writer.writeObjectValue("settings", this.getSettings());
@@ -547,6 +557,13 @@ public class Organization extends DirectoryObject implements Parsable {
      */
     public void setProvisionedPlans(@jakarta.annotation.Nullable final java.util.List<ProvisionedPlan> value) {
         this.backingStore.set("provisionedPlans", value);
+    }
+    /**
+     * Sets the resourceQuotas property value. The resourceQuotas property
+     * @param value Value to set for the resourceQuotas property.
+     */
+    public void setResourceQuotas(@jakarta.annotation.Nullable final java.util.List<ResourceQuota> value) {
+        this.backingStore.set("resourceQuotas", value);
     }
     /**
      * Sets the securityComplianceNotificationMails property value. Not nullable.

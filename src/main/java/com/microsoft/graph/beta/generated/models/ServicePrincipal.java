@@ -1,6 +1,5 @@
 package com.microsoft.graph.beta.models;
 
-import com.microsoft.graph.beta.models.identitygovernance.IdentityLifecycle;
 import com.microsoft.kiota.serialization.Parsable;
 import com.microsoft.kiota.serialization.ParseNode;
 import com.microsoft.kiota.serialization.SerializationWriter;
@@ -274,7 +273,6 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         deserializerMap.put("isDisabled", (n) -> { this.setIsDisabled(n.getBooleanValue()); });
         deserializerMap.put("keyCredentials", (n) -> { this.setKeyCredentials(n.getCollectionOfObjectValues(KeyCredential::createFromDiscriminatorValue)); });
         deserializerMap.put("licenseDetails", (n) -> { this.setLicenseDetails(n.getCollectionOfObjectValues(LicenseDetails::createFromDiscriminatorValue)); });
-        deserializerMap.put("lifecycle", (n) -> { this.setLifecycle(n.getObjectValue(IdentityLifecycle::createFromDiscriminatorValue)); });
         deserializerMap.put("loginUrl", (n) -> { this.setLoginUrl(n.getStringValue()); });
         deserializerMap.put("logoutUrl", (n) -> { this.setLogoutUrl(n.getStringValue()); });
         deserializerMap.put("memberOf", (n) -> { this.setMemberOf(n.getCollectionOfObjectValues(DirectoryObject::createFromDiscriminatorValue)); });
@@ -354,14 +352,6 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<LicenseDetails> getLicenseDetails() {
         return this.backingStore.get("licenseDetails");
-    }
-    /**
-     * Gets the lifecycle property value. The lifecycle property
-     * @return a {@link IdentityLifecycle}
-     */
-    @jakarta.annotation.Nullable
-    public IdentityLifecycle getLifecycle() {
-        return this.backingStore.get("lifecycle");
     }
     /**
      * Gets the loginUrl property value. Specifies the URL where the service provider redirects the user to Microsoft Entra ID to authenticate. Microsoft Entra ID uses the URL to launch the application from Microsoft 365 or the Microsoft Entra My Apps. When blank, Microsoft Entra ID performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Microsoft Entra My Apps, or the Microsoft Entra SSO URL.
@@ -641,7 +631,6 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
         writer.writeBooleanValue("isDisabled", this.getIsDisabled());
         writer.writeCollectionOfObjectValues("keyCredentials", this.getKeyCredentials());
         writer.writeCollectionOfObjectValues("licenseDetails", this.getLicenseDetails());
-        writer.writeObjectValue("lifecycle", this.getLifecycle());
         writer.writeStringValue("loginUrl", this.getLoginUrl());
         writer.writeStringValue("logoutUrl", this.getLogoutUrl());
         writer.writeCollectionOfObjectValues("memberOf", this.getMemberOf());
@@ -889,13 +878,6 @@ public class ServicePrincipal extends DirectoryObject implements Parsable {
      */
     public void setLicenseDetails(@jakarta.annotation.Nullable final java.util.List<LicenseDetails> value) {
         this.backingStore.set("licenseDetails", value);
-    }
-    /**
-     * Sets the lifecycle property value. The lifecycle property
-     * @param value Value to set for the lifecycle property.
-     */
-    public void setLifecycle(@jakarta.annotation.Nullable final IdentityLifecycle value) {
-        this.backingStore.set("lifecycle", value);
     }
     /**
      * Sets the loginUrl property value. Specifies the URL where the service provider redirects the user to Microsoft Entra ID to authenticate. Microsoft Entra ID uses the URL to launch the application from Microsoft 365 or the Microsoft Entra My Apps. When blank, Microsoft Entra ID performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Microsoft Entra My Apps, or the Microsoft Entra SSO URL.

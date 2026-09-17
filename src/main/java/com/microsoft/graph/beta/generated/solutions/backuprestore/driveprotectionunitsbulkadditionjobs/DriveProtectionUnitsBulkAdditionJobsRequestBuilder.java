@@ -26,10 +26,7 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
     /**
      * Provides operations to count the resources in the collection.
      * @return a {@link CountRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CountRequestBuilder count() {
         return new CountRequestBuilder(pathParameters, requestAdapter);
@@ -38,11 +35,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
      * Provides operations to manage the driveProtectionUnitsBulkAdditionJobs property of the microsoft.graph.backupRestoreRoot entity.
      * @param driveProtectionUnitsBulkAdditionJobId The unique identifier of driveProtectionUnitsBulkAdditionJob
      * @return a {@link DriveProtectionUnitsBulkAdditionJobItemRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public DriveProtectionUnitsBulkAdditionJobItemRequestBuilder byDriveProtectionUnitsBulkAdditionJobId(@jakarta.annotation.Nonnull final String driveProtectionUnitsBulkAdditionJobId) {
         Objects.requireNonNull(driveProtectionUnitsBulkAdditionJobId);
         final HashMap<String, Object> urlTplParams = new HashMap<String, Object>(this.pathParameters);
@@ -69,11 +63,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
      * Get driveProtectionUnitsBulkAdditionJobs from solutions
      * @return a {@link DriveProtectionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DriveProtectionUnitsBulkAdditionJobCollectionResponse get() {
         return get(null);
     }
@@ -82,11 +73,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveProtectionUnitsBulkAdditionJobCollectionResponse}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DriveProtectionUnitsBulkAdditionJobCollectionResponse get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -98,11 +86,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
      * @param body The request body
      * @return a {@link DriveProtectionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DriveProtectionUnitsBulkAdditionJob post(@jakarta.annotation.Nonnull final DriveProtectionUnitsBulkAdditionJob body) {
         return post(body, null);
     }
@@ -112,11 +97,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link DriveProtectionUnitsBulkAdditionJob}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public DriveProtectionUnitsBulkAdditionJob post(@jakarta.annotation.Nonnull final DriveProtectionUnitsBulkAdditionJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPostRequestInformation(body, requestConfiguration);
@@ -127,11 +109,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
     /**
      * Get driveProtectionUnitsBulkAdditionJobs from solutions
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -139,11 +118,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
      * Get driveProtectionUnitsBulkAdditionJobs from solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -154,11 +130,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
      * Create new navigation property to driveProtectionUnitsBulkAdditionJobs for solutions
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DriveProtectionUnitsBulkAdditionJob body) {
         return toPostRequestInformation(body, null);
     }
@@ -167,11 +140,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPostRequestInformation(@jakarta.annotation.Nonnull final DriveProtectionUnitsBulkAdditionJob body, @jakarta.annotation.Nullable final java.util.function.Consumer<PostRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.POST, urlTemplate, pathParameters);
@@ -184,11 +154,8 @@ public class DriveProtectionUnitsBulkAdditionJobsRequestBuilder extends BaseRequ
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link DriveProtectionUnitsBulkAdditionJobsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public DriveProtectionUnitsBulkAdditionJobsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new DriveProtectionUnitsBulkAdditionJobsRequestBuilder(rawUrl, requestAdapter);

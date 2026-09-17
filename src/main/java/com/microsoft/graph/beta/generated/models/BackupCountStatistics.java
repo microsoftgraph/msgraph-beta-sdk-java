@@ -77,7 +77,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return deserializerMap;
     }
     /**
-     * Gets the lastComputedDateTime property value. The lastComputedDateTime property
+     * Gets the lastComputedDateTime property value. The date and time when this metric was calculated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return a {@link OffsetDateTime}
      */
     @jakarta.annotation.Nullable
@@ -93,7 +93,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("odataType");
     }
     /**
-     * Gets the offboardRequested property value. The offboardRequested property
+     * Gets the offboardRequested property value. The count of artifacts in offboardRequested state. This metric captures artifacts in protectionunitlevel offboarding and artifacts offboarded due to an unhealthy billing profile.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -101,7 +101,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("offboardRequested");
     }
     /**
-     * Gets the protectedCompleted property value. The protectedCompleted property
+     * Gets the protectedCompleted property value. The count of artifacts in protected state.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -109,7 +109,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("protectedCompleted");
     }
     /**
-     * Gets the protectedFailed property value. The protectedFailed property
+     * Gets the protectedFailed property value. The count of artifacts whose protection was attempted but failed. These artifacts typically have unprotected as their status.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -117,7 +117,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("protectedFailed");
     }
     /**
-     * Gets the protectedInProgress property value. The protectedInProgress property
+     * Gets the protectedInProgress property value. The count of artifacts whose protection attempt is currently in progress. This metric applies to artifacts for which the process to start or resume taking backups is still required.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -125,7 +125,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("protectedInProgress");
     }
     /**
-     * Gets the removed property value. The removed property
+     * Gets the removed property value. The count of artifacts not associated with any policy. This property is always null for a policy-level report. Nullable.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -133,7 +133,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("removed");
     }
     /**
-     * Gets the total property value. The total property
+     * Gets the total property value. The count of artifacts in the specified entity. The currently supported entity is a backup policy.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -141,7 +141,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("total");
     }
     /**
-     * Gets the unprotectedCompleted property value. The unprotectedCompleted property
+     * Gets the unprotectedCompleted property value. The count of artifacts that are no longer actively protected. These artifacts have historical restore points, but no new backups are being taken.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -149,7 +149,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("unprotectedCompleted");
     }
     /**
-     * Gets the unprotectedFailed property value. The unprotectedFailed property
+     * Gets the unprotectedFailed property value. The count of artifacts for which unprotection was attempted but didn&apos;t complete. These artifacts are typically in the protected state.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -157,7 +157,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         return this.backingStore.get("unprotectedFailed");
     }
     /**
-     * Gets the unprotectedInProgress property value. The unprotectedInProgress property
+     * Gets the unprotectedInProgress property value. The count of artifacts for which unprotection is currently in progress.
      * @return a {@link Integer}
      */
     @jakarta.annotation.Nullable
@@ -199,7 +199,7 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         this.backingStore = value;
     }
     /**
-     * Sets the lastComputedDateTime property value. The lastComputedDateTime property
+     * Sets the lastComputedDateTime property value. The date and time when this metric was calculated. The timestamp type represents date and time information using ISO 8601 format and is always in UTC. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param value Value to set for the lastComputedDateTime property.
      */
     public void setLastComputedDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
@@ -213,63 +213,63 @@ public class BackupCountStatistics implements AdditionalDataHolder, BackedModel,
         this.backingStore.set("odataType", value);
     }
     /**
-     * Sets the offboardRequested property value. The offboardRequested property
+     * Sets the offboardRequested property value. The count of artifacts in offboardRequested state. This metric captures artifacts in protectionunitlevel offboarding and artifacts offboarded due to an unhealthy billing profile.
      * @param value Value to set for the offboardRequested property.
      */
     public void setOffboardRequested(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("offboardRequested", value);
     }
     /**
-     * Sets the protectedCompleted property value. The protectedCompleted property
+     * Sets the protectedCompleted property value. The count of artifacts in protected state.
      * @param value Value to set for the protectedCompleted property.
      */
     public void setProtectedCompleted(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("protectedCompleted", value);
     }
     /**
-     * Sets the protectedFailed property value. The protectedFailed property
+     * Sets the protectedFailed property value. The count of artifacts whose protection was attempted but failed. These artifacts typically have unprotected as their status.
      * @param value Value to set for the protectedFailed property.
      */
     public void setProtectedFailed(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("protectedFailed", value);
     }
     /**
-     * Sets the protectedInProgress property value. The protectedInProgress property
+     * Sets the protectedInProgress property value. The count of artifacts whose protection attempt is currently in progress. This metric applies to artifacts for which the process to start or resume taking backups is still required.
      * @param value Value to set for the protectedInProgress property.
      */
     public void setProtectedInProgress(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("protectedInProgress", value);
     }
     /**
-     * Sets the removed property value. The removed property
+     * Sets the removed property value. The count of artifacts not associated with any policy. This property is always null for a policy-level report. Nullable.
      * @param value Value to set for the removed property.
      */
     public void setRemoved(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("removed", value);
     }
     /**
-     * Sets the total property value. The total property
+     * Sets the total property value. The count of artifacts in the specified entity. The currently supported entity is a backup policy.
      * @param value Value to set for the total property.
      */
     public void setTotal(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("total", value);
     }
     /**
-     * Sets the unprotectedCompleted property value. The unprotectedCompleted property
+     * Sets the unprotectedCompleted property value. The count of artifacts that are no longer actively protected. These artifacts have historical restore points, but no new backups are being taken.
      * @param value Value to set for the unprotectedCompleted property.
      */
     public void setUnprotectedCompleted(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("unprotectedCompleted", value);
     }
     /**
-     * Sets the unprotectedFailed property value. The unprotectedFailed property
+     * Sets the unprotectedFailed property value. The count of artifacts for which unprotection was attempted but didn&apos;t complete. These artifacts are typically in the protected state.
      * @param value Value to set for the unprotectedFailed property.
      */
     public void setUnprotectedFailed(@jakarta.annotation.Nullable final Integer value) {
         this.backingStore.set("unprotectedFailed", value);
     }
     /**
-     * Sets the unprotectedInProgress property value. The unprotectedInProgress property
+     * Sets the unprotectedInProgress property value. The count of artifacts for which unprotection is currently in progress.
      * @param value Value to set for the unprotectedInProgress property.
      */
     public void setUnprotectedInProgress(@jakarta.annotation.Nullable final Integer value) {

@@ -4,6 +4,8 @@ import com.microsoft.graph.beta.models.FileStorageContainer;
 import com.microsoft.graph.beta.models.FileStorageContainerCollectionResponse;
 import com.microsoft.graph.beta.models.odataerrors.ODataError;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.count.CountRequestBuilder;
+import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.getbyuserwithuserobjectid.GetByUserWithUserObjectIdRequestBuilder;
+import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.getbyuserwithuserobjectidwithrole.GetByUserWithUserObjectIdWithRoleRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.getbyuserwithuserprincipalname.GetByUserWithUserPrincipalNameRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.getbyuserwithuserprincipalnamewithrole.GetByUserWithUserPrincipalNameWithRoleRequestBuilder;
 import com.microsoft.graph.beta.storage.filestorage.deletedcontainers.item.FileStorageContainerItemRequestBuilder;
@@ -20,6 +22,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.UUID;
 /**
  * Provides operations to manage the deletedContainers property of the microsoft.graph.fileStorage entity.
  */
@@ -82,6 +85,28 @@ public class DeletedContainersRequestBuilder extends BaseRequestBuilder {
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
         errorMapping.put("XXX", ODataError::createFromDiscriminatorValue);
         return this.requestAdapter.send(requestInfo, errorMapping, FileStorageContainerCollectionResponse::createFromDiscriminatorValue);
+    }
+    /**
+     * Provides operations to call the getByUser method.
+     * @param userObjectId Usage: userObjectId={userObjectId}
+     * @return a {@link GetByUserWithUserObjectIdRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetByUserWithUserObjectIdRequestBuilder getByUserWithUserObjectId(@jakarta.annotation.Nonnull final UUID userObjectId) {
+        Objects.requireNonNull(userObjectId);
+        return new GetByUserWithUserObjectIdRequestBuilder(pathParameters, requestAdapter, userObjectId);
+    }
+    /**
+     * Provides operations to call the getByUser method.
+     * @param role Usage: role=&apos;{role}&apos;
+     * @param userObjectId Usage: userObjectId={userObjectId}
+     * @return a {@link GetByUserWithUserObjectIdWithRoleRequestBuilder}
+     */
+    @jakarta.annotation.Nonnull
+    public GetByUserWithUserObjectIdWithRoleRequestBuilder getByUserWithUserObjectIdWithRole(@jakarta.annotation.Nonnull final String role, @jakarta.annotation.Nonnull final UUID userObjectId) {
+        Objects.requireNonNull(role);
+        Objects.requireNonNull(userObjectId);
+        return new GetByUserWithUserObjectIdWithRoleRequestBuilder(pathParameters, requestAdapter, role, userObjectId);
     }
     /**
      * Provides operations to call the getByUser method.

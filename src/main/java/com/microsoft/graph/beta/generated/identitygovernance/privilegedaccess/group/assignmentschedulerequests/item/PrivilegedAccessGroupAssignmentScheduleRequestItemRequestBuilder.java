@@ -28,10 +28,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Provides operations to manage the activatedUsing property of the microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest entity.
      * @return a {@link ActivatedUsingRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ActivatedUsingRequestBuilder activatedUsing() {
         return new ActivatedUsingRequestBuilder(pathParameters, requestAdapter);
@@ -39,10 +36,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Provides operations to call the cancel method.
      * @return a {@link CancelRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public CancelRequestBuilder cancel() {
         return new CancelRequestBuilder(pathParameters, requestAdapter);
@@ -50,10 +44,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Provides operations to manage the group property of the microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest entity.
      * @return a {@link GroupRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public GroupRequestBuilder group() {
         return new GroupRequestBuilder(pathParameters, requestAdapter);
@@ -61,10 +52,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Provides operations to manage the principal property of the microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest entity.
      * @return a {@link PrincipalRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public PrincipalRequestBuilder principal() {
         return new PrincipalRequestBuilder(pathParameters, requestAdapter);
@@ -72,10 +60,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Provides operations to manage the targetSchedule property of the microsoft.graph.privilegedAccessGroupAssignmentScheduleRequest entity.
      * @return a {@link TargetScheduleRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public TargetScheduleRequestBuilder targetSchedule() {
         return new TargetScheduleRequestBuilder(pathParameters, requestAdapter);
@@ -99,10 +84,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Delete navigation property assignmentScheduleRequests for identityGovernance
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     public void delete() {
         delete(null);
     }
@@ -110,10 +92,7 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Delete navigation property assignmentScheduleRequests for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
-    @Deprecated
     public void delete(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toDeleteRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -124,12 +103,9 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PrivilegedAccessGroupAssignmentScheduleRequest get() {
         return get(null);
     }
@@ -138,12 +114,9 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      * @see <a href="https://learn.microsoft.com/graph/api/privilegedaccessgroupassignmentschedulerequest-get?view=graph-rest-beta">Find more info here</a>
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PrivilegedAccessGroupAssignmentScheduleRequest get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -155,11 +128,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param body The request body
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PrivilegedAccessGroupAssignmentScheduleRequest patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body) {
         return patch(body, null);
     }
@@ -169,11 +139,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequest}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public PrivilegedAccessGroupAssignmentScheduleRequest patch(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -184,11 +151,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Delete navigation property assignmentScheduleRequests for identityGovernance
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation() {
         return toDeleteRequestInformation(null);
     }
@@ -196,11 +160,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Delete navigation property assignmentScheduleRequests for identityGovernance
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toDeleteRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<DeleteRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.DELETE, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, DeleteRequestConfiguration::new);
@@ -210,11 +171,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
     /**
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -222,11 +180,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Read the properties and relationships of a privilegedAccessGroupAssignmentScheduleRequest object.
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -237,11 +192,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Update the navigation property assignmentScheduleRequests in identityGovernance
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body) {
         return toPatchRequestInformation(body, null);
     }
@@ -250,11 +202,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final PrivilegedAccessGroupAssignmentScheduleRequest body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -267,11 +216,8 @@ public class PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder ex
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder}
-     * @deprecated
-     *  as of 2022-02/PrivatePreview:groupPeerOutlierInsights on 2021-10-21 and will be removed 2022-02-18
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new PrivilegedAccessGroupAssignmentScheduleRequestItemRequestBuilder(rawUrl, requestAdapter);

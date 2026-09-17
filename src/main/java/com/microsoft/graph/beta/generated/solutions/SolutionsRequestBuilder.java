@@ -32,10 +32,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the approval property of the microsoft.graph.solutionsRoot entity.
      * @return a {@link ApprovalRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public ApprovalRequestBuilder approval() {
         return new ApprovalRequestBuilder(pathParameters, requestAdapter);
@@ -43,10 +40,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the backupRestore property of the microsoft.graph.solutionsRoot entity.
      * @return a {@link BackupRestoreRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public BackupRestoreRequestBuilder backupRestore() {
         return new BackupRestoreRequestBuilder(pathParameters, requestAdapter);
@@ -54,10 +48,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
      * @return a {@link BookingBusinessesRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public BookingBusinessesRequestBuilder bookingBusinesses() {
         return new BookingBusinessesRequestBuilder(pathParameters, requestAdapter);
@@ -65,10 +56,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
      * @return a {@link BookingCurrenciesRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public BookingCurrenciesRequestBuilder bookingCurrencies() {
         return new BookingCurrenciesRequestBuilder(pathParameters, requestAdapter);
@@ -76,10 +64,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the businessScenarios property of the microsoft.graph.solutionsRoot entity.
      * @return a {@link BusinessScenariosRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public BusinessScenariosRequestBuilder businessScenarios() {
         return new BusinessScenariosRequestBuilder(pathParameters, requestAdapter);
@@ -87,10 +72,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the migrations property of the microsoft.graph.solutionsRoot entity.
      * @return a {@link MigrationsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public MigrationsRequestBuilder migrations() {
         return new MigrationsRequestBuilder(pathParameters, requestAdapter);
@@ -98,10 +80,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the sharePoint property of the microsoft.graph.solutionsRoot entity.
      * @return a {@link SharePointRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public SharePointRequestBuilder sharePoint() {
         return new SharePointRequestBuilder(pathParameters, requestAdapter);
@@ -109,10 +88,7 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Provides operations to manage the virtualEvents property of the microsoft.graph.solutionsRoot entity.
      * @return a {@link VirtualEventsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
-    @Deprecated
     @jakarta.annotation.Nonnull
     public VirtualEventsRequestBuilder virtualEvents() {
         return new VirtualEventsRequestBuilder(pathParameters, requestAdapter);
@@ -121,11 +97,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * Provides operations to manage the businessScenarios property of the microsoft.graph.solutionsRoot entity.
      * @param uniqueName Alternate key of businessScenario
      * @return a {@link BusinessScenariosWithUniqueNameRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public BusinessScenariosWithUniqueNameRequestBuilder businessScenariosWithUniqueName(@jakarta.annotation.Nonnull final String uniqueName) {
         Objects.requireNonNull(uniqueName);
         return new BusinessScenariosWithUniqueNameRequestBuilder(pathParameters, requestAdapter, uniqueName);
@@ -150,11 +123,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * Get solutions
      * @return a {@link SolutionsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SolutionsRoot get() {
         return get(null);
     }
@@ -163,11 +133,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SolutionsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SolutionsRoot get(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = toGetRequestInformation(requestConfiguration);
         final HashMap<String, ParsableFactory<? extends Parsable>> errorMapping = new HashMap<String, ParsableFactory<? extends Parsable>>();
@@ -179,11 +146,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @return a {@link SolutionsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SolutionsRoot patch(@jakarta.annotation.Nonnull final SolutionsRoot body) {
         return patch(body, null);
     }
@@ -193,11 +157,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link SolutionsRoot}
      * @throws ODataError When receiving a 4XX or 5XX status code
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nullable
-    @Deprecated
     public SolutionsRoot patch(@jakarta.annotation.Nonnull final SolutionsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = toPatchRequestInformation(body, requestConfiguration);
@@ -208,11 +169,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
     /**
      * Get solutions
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation() {
         return toGetRequestInformation(null);
     }
@@ -220,11 +178,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * Get solutions
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toGetRequestInformation(@jakarta.annotation.Nullable final java.util.function.Consumer<GetRequestConfiguration> requestConfiguration) {
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.GET, urlTemplate, pathParameters);
         requestInfo.configure(requestConfiguration, GetRequestConfiguration::new, x -> x.queryParameters);
@@ -235,11 +190,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * Update solutions
      * @param body The request body
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SolutionsRoot body) {
         return toPatchRequestInformation(body, null);
     }
@@ -248,11 +200,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * @param body The request body
      * @param requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return a {@link RequestInformation}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public RequestInformation toPatchRequestInformation(@jakarta.annotation.Nonnull final SolutionsRoot body, @jakarta.annotation.Nullable final java.util.function.Consumer<PatchRequestConfiguration> requestConfiguration) {
         Objects.requireNonNull(body);
         final RequestInformation requestInfo = new RequestInformation(HttpMethod.PATCH, urlTemplate, pathParameters);
@@ -265,11 +214,8 @@ public class SolutionsRequestBuilder extends BaseRequestBuilder {
      * Returns a request builder with the provided arbitrary URL. Using this method means any other path or query parameters are ignored.
      * @param rawUrl The raw URL to use for the request builder.
      * @return a {@link SolutionsRequestBuilder}
-     * @deprecated
-     *  as of 2023-03/PrivatePreview:responderForm on 2025-06-17 and will be removed 2025-12-17
      */
     @jakarta.annotation.Nonnull
-    @Deprecated
     public SolutionsRequestBuilder withUrl(@jakarta.annotation.Nonnull final String rawUrl) {
         Objects.requireNonNull(rawUrl);
         return new SolutionsRequestBuilder(rawUrl, requestAdapter);

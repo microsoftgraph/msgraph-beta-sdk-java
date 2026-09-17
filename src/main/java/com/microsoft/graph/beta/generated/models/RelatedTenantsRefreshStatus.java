@@ -7,6 +7,7 @@ import com.microsoft.kiota.serialization.SerializationWriter;
 import com.microsoft.kiota.store.BackedModel;
 import com.microsoft.kiota.store.BackingStore;
 import com.microsoft.kiota.store.BackingStoreFactorySingleton;
+import java.time.OffsetDateTime;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -63,8 +64,8 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
         final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(4);
         deserializerMap.put("isFirstRefresh", (n) -> { this.setIsFirstRefresh(n.getBooleanValue()); });
+        deserializerMap.put("mostRecentRefreshDateTime", (n) -> { this.setMostRecentRefreshDateTime(n.getOffsetDateTimeValue()); });
         deserializerMap.put("mostRecentRefreshRequestStatus", (n) -> { this.setMostRecentRefreshRequestStatus(n.getStringValue()); });
-        deserializerMap.put("mostRecentRefreshTime", (n) -> { this.setMostRecentRefreshTime(n.getStringValue()); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
         return deserializerMap;
     }
@@ -77,20 +78,20 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         return this.backingStore.get("isFirstRefresh");
     }
     /**
+     * Gets the mostRecentRefreshDateTime property value. The mostRecentRefreshDateTime property
+     * @return a {@link OffsetDateTime}
+     */
+    @jakarta.annotation.Nullable
+    public OffsetDateTime getMostRecentRefreshDateTime() {
+        return this.backingStore.get("mostRecentRefreshDateTime");
+    }
+    /**
      * Gets the mostRecentRefreshRequestStatus property value. The mostRecentRefreshRequestStatus property
      * @return a {@link String}
      */
     @jakarta.annotation.Nullable
     public String getMostRecentRefreshRequestStatus() {
         return this.backingStore.get("mostRecentRefreshRequestStatus");
-    }
-    /**
-     * Gets the mostRecentRefreshTime property value. The mostRecentRefreshTime property
-     * @return a {@link String}
-     */
-    @jakarta.annotation.Nullable
-    public String getMostRecentRefreshTime() {
-        return this.backingStore.get("mostRecentRefreshTime");
     }
     /**
      * Gets the @odata.type property value. The OdataType property
@@ -107,8 +108,8 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
     public void serialize(@jakarta.annotation.Nonnull final SerializationWriter writer) {
         Objects.requireNonNull(writer);
         writer.writeBooleanValue("isFirstRefresh", this.getIsFirstRefresh());
+        writer.writeOffsetDateTimeValue("mostRecentRefreshDateTime", this.getMostRecentRefreshDateTime());
         writer.writeStringValue("mostRecentRefreshRequestStatus", this.getMostRecentRefreshRequestStatus());
-        writer.writeStringValue("mostRecentRefreshTime", this.getMostRecentRefreshTime());
         writer.writeStringValue("@odata.type", this.getOdataType());
         writer.writeAdditionalData(this.getAdditionalData());
     }
@@ -135,18 +136,18 @@ public class RelatedTenantsRefreshStatus implements AdditionalDataHolder, Backed
         this.backingStore.set("isFirstRefresh", value);
     }
     /**
+     * Sets the mostRecentRefreshDateTime property value. The mostRecentRefreshDateTime property
+     * @param value Value to set for the mostRecentRefreshDateTime property.
+     */
+    public void setMostRecentRefreshDateTime(@jakarta.annotation.Nullable final OffsetDateTime value) {
+        this.backingStore.set("mostRecentRefreshDateTime", value);
+    }
+    /**
      * Sets the mostRecentRefreshRequestStatus property value. The mostRecentRefreshRequestStatus property
      * @param value Value to set for the mostRecentRefreshRequestStatus property.
      */
     public void setMostRecentRefreshRequestStatus(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("mostRecentRefreshRequestStatus", value);
-    }
-    /**
-     * Sets the mostRecentRefreshTime property value. The mostRecentRefreshTime property
-     * @param value Value to set for the mostRecentRefreshTime property.
-     */
-    public void setMostRecentRefreshTime(@jakarta.annotation.Nullable final String value) {
-        this.backingStore.set("mostRecentRefreshTime", value);
     }
     /**
      * Sets the @odata.type property value. The OdataType property

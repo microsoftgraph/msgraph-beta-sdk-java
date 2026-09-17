@@ -69,9 +69,10 @@ public class ActivityMetadata implements AdditionalDataHolder, BackedModel, Pars
      */
     @jakarta.annotation.Nonnull
     public Map<String, java.util.function.Consumer<ParseNode>> getFieldDeserializers() {
-        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(2);
+        final HashMap<String, java.util.function.Consumer<ParseNode>> deserializerMap = new HashMap<String, java.util.function.Consumer<ParseNode>>(3);
         deserializerMap.put("activity", (n) -> { this.setActivity(n.getEnumValue(UserActivityType::forValue)); });
         deserializerMap.put("@odata.type", (n) -> { this.setOdataType(n.getStringValue()); });
+        deserializerMap.put("participants", (n) -> { this.setParticipants(n.getCollectionOfObjectValues(InteractionParticipant::createFromDiscriminatorValue)); });
         return deserializerMap;
     }
     /**
@@ -83,6 +84,14 @@ public class ActivityMetadata implements AdditionalDataHolder, BackedModel, Pars
         return this.backingStore.get("odataType");
     }
     /**
+     * Gets the participants property value. The participants property
+     * @return a {@link java.util.List<InteractionParticipant>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<InteractionParticipant> getParticipants() {
+        return this.backingStore.get("participants");
+    }
+    /**
      * Serializes information the current object
      * @param writer Serialization writer to use to serialize this model
      */
@@ -90,6 +99,7 @@ public class ActivityMetadata implements AdditionalDataHolder, BackedModel, Pars
         Objects.requireNonNull(writer);
         writer.writeEnumValue("activity", this.getActivity());
         writer.writeStringValue("@odata.type", this.getOdataType());
+        writer.writeCollectionOfObjectValues("participants", this.getParticipants());
         writer.writeAdditionalData(this.getAdditionalData());
     }
     /**
@@ -120,5 +130,12 @@ public class ActivityMetadata implements AdditionalDataHolder, BackedModel, Pars
      */
     public void setOdataType(@jakarta.annotation.Nullable final String value) {
         this.backingStore.set("odataType", value);
+    }
+    /**
+     * Sets the participants property value. The participants property
+     * @param value Value to set for the participants property.
+     */
+    public void setParticipants(@jakarta.annotation.Nullable final java.util.List<InteractionParticipant> value) {
+        this.backingStore.set("participants", value);
     }
 }

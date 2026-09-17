@@ -78,6 +78,7 @@ public class CaseEscaped extends CaseManagementEntity implements Parsable {
         deserializerMap.put("customFields", (n) -> { this.setCustomFields(n.getObjectValue(CustomFieldValues::createFromDiscriminatorValue)); });
         deserializerMap.put("displayName", (n) -> { this.setDisplayName(n.getStringValue()); });
         deserializerMap.put("relations", (n) -> { this.setRelations(n.getCollectionOfObjectValues(Relation::createFromDiscriminatorValue)); });
+        deserializerMap.put("slaPolicies", (n) -> { this.setSlaPolicies(n.getCollectionOfObjectValues(CaseSlaPolicyEntry::createFromDiscriminatorValue)); });
         deserializerMap.put("status", (n) -> { this.setStatus(n.getStringValue()); });
         deserializerMap.put("tasks", (n) -> { this.setTasks(n.getCollectionOfObjectValues(Task::createFromDiscriminatorValue)); });
         return deserializerMap;
@@ -89,6 +90,14 @@ public class CaseEscaped extends CaseManagementEntity implements Parsable {
     @jakarta.annotation.Nullable
     public java.util.List<Relation> getRelations() {
         return this.backingStore.get("relations");
+    }
+    /**
+     * Gets the slaPolicies property value. A denormalized, read-only collection of SLA (service level agreement) policy status entries for the case. Each entry represents one SLA policy applied to the case, including its current status and breach target time. Computed by the service; any value supplied in a create or update request is silently ignored. Supports $filter using the any() lambda operator only, for example, $filter=slaPolicies/any(p: p/status eq &apos;breached&apos;). The all() lambda operator and other collection functions aren&apos;t supported. Doesn&apos;t support $orderby.
+     * @return a {@link java.util.List<CaseSlaPolicyEntry>}
+     */
+    @jakarta.annotation.Nullable
+    public java.util.List<CaseSlaPolicyEntry> getSlaPolicies() {
+        return this.backingStore.get("slaPolicies");
     }
     /**
      * Gets the status property value. The tenant-defined lifecycle status of the case. Use a displayName value returned in the status tree by List statuses from /security/caseManagement/caseTypeConfigurations/genericCase/statuses or /security/caseManagement/caseTypeConfigurations/incidentCase/statuses, depending on the case type. Supports $filter (eq).
@@ -155,6 +164,13 @@ public class CaseEscaped extends CaseManagementEntity implements Parsable {
      */
     public void setRelations(@jakarta.annotation.Nullable final java.util.List<Relation> value) {
         this.backingStore.set("relations", value);
+    }
+    /**
+     * Sets the slaPolicies property value. A denormalized, read-only collection of SLA (service level agreement) policy status entries for the case. Each entry represents one SLA policy applied to the case, including its current status and breach target time. Computed by the service; any value supplied in a create or update request is silently ignored. Supports $filter using the any() lambda operator only, for example, $filter=slaPolicies/any(p: p/status eq &apos;breached&apos;). The all() lambda operator and other collection functions aren&apos;t supported. Doesn&apos;t support $orderby.
+     * @param value Value to set for the slaPolicies property.
+     */
+    public void setSlaPolicies(@jakarta.annotation.Nullable final java.util.List<CaseSlaPolicyEntry> value) {
+        this.backingStore.set("slaPolicies", value);
     }
     /**
      * Sets the status property value. The tenant-defined lifecycle status of the case. Use a displayName value returned in the status tree by List statuses from /security/caseManagement/caseTypeConfigurations/genericCase/statuses or /security/caseManagement/caseTypeConfigurations/incidentCase/statuses, depending on the case type. Supports $filter (eq).
